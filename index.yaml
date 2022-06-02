@@ -1,0 +1,17 @@
+%YAML 1.2
+---
+categories:
+  - &ua_folk_song Українська народна пісня
+scores:
+  - title: Ой піду я до млина
+    from: Скарбниця нородних пісень
+    composer: М. Різоль
+    arranger: А. Авдієвський
+    category: *ua_folk_song
+    origin: ua
+    genre: [folk, classical, jazz]
+    type: [song, dance, piece]
+    form: [polyphony, variations]
+    bass: [free_bass, stradella]
+    level: [beginner, intermediary, advanced, virtuoso]
+    file: Ой_піду_я_до_млина_1a2b3c

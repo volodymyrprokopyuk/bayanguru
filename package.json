@@ -1,0 +1,23 @@
+{
+  "name": "bayan",
+  "version": "0.1.0",
+  "description": "Music scores for bayan engraved with LilyPond",
+  "main": "index.js",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/volodymyrprokopyuk/bayan.git"
+  },
+  "keywords": [
+    "music",
+    "bayan",
+    "score",
+    "lilypond"
+  ],
+  "author": "Volodymyr Prokopyuk",
+  "license": "MIT",
+  "homepage": "https://volodymyrprokopyuk.github.io/bayan",
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}
