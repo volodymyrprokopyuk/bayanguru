@@ -69,14 +69,16 @@ async function lilypond(score, file, format) {
   return lilypond
 }
 
-// const { scores } = load(await readFile("index.yaml"))
-// console.log(scores)
+async function tasks(
+  index = "index.yaml", input = "source", output = "score", format = "pdf"
+) {
+  const { pieces } = load(await readFile(index))
+  return  pieces.filter(
+    piece => process.argv.slice(2).some(arg => piece.file.match(arg))
+  ).map(async (piece) => {
+    const score = stradella(await readFile(`${input}/${piece.file}.lys`))
+    lilypond(score, `${output}/${piece.file}`, format)
+  })
+}
 
-const input = "source"
-const output = "score"
-// const file = "stradella"
-const file = "Їхав-козак-на-війноньку-qxq9"
-const score = stradella(await readFile(`${input}/${file}.lys`))
-await Promise.all(
-  ["pdf", "svg"].map(format => lilypond(score, `${output}/${file}`, format))
-)
+await Promise.all(await tasks())

@@ -10,10 +10,17 @@ rightHand = {
   \key g \major
   \time 2/4
   \relative {
+    \override Score.BarNumber.break-visibility = ##(#f #f #f)
+    \override DynamicLineSpanner.staff-padding = #2.5
+    \override Hairpin.to-barline = ##f
     e'4\(\p e8 fis | g4 fis8 e |
     fis4 b | e,\) d |
     g='4\(\mp g8 a | b4 a8 g |
     a4 d | b2\) |
+    c=''4\(\mf b8 a | b4 g\) |
+    a4\( g8 fis | g4 e\) |
+    e='4\( e'8 c | b a g fis |
+    e2\)\< | <e e'>2\! |
   }
 }
 
@@ -25,6 +32,10 @@ leftHand = {
     dis8-. b,@7!-. b8-. b7-. | e-. em!-. fis-. d@7!-. |
     g,=,8-. gM!-. d'-. g,@M-. | g,8-. gM-. d'-. g,@M-. |
     fis8-. d@7!-. d8-. d7-. | g,( g,@M!-.) gis8( e@7!-.) |
+    a=,8( am!-.) fis'-. a@m-. | g,8-. e@m-. e'8-. em-. |
+    fis-. b,@7!-. dis8-. b,@7-. | e8-. em!-. g,-. e@m-. |
+    a=,8-. am-. fis-. a,@m-. | b8-. b7!-. dis-. b,@7-. |
+    e4 d | c b |
   }
 }
 
