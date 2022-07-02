@@ -1,5 +1,5 @@
 import { load } from "js-yaml"
-import { readFile, writeFile } from "fs/promises"
+import { readFile } from "fs/promises"
 import { $ } from "zx"
 const raw = String.raw
 
@@ -62,15 +62,21 @@ function stradella(score) {
   return String(score).replace(stNotation, lyNotation)
 }
 
-try {
-  // const { scores } = load(await readFile("index.yaml"))
-  // console.log(scores)
-  const input = "source"
-  const output = "score"
-  // const file = "stradella"
-  const file = "Їхав-козак-на-війноньку-qxq9"
-  const score = await readFile(`${input}/${file}.lys`)
-  const stScore = stradella(score)
-  await writeFile(`${output}/${file}.ly`, stScore)
-  await $`lilypond -o score -f pdf ${output}/${file}.ly`
-} catch (e) { console.error(e) }
+async function lilypond(score, file, format) {
+  const lilypond = $`lilypond -f ${format} -o ${file} -`
+  lilypond.stdin.write(score)
+  lilypond.stdin.end()
+  return lilypond
+}
+
+// const { scores } = load(await readFile("index.yaml"))
+// console.log(scores)
+
+const input = "source"
+const output = "score"
+// const file = "stradella"
+const file = "Їхав-козак-на-війноньку-qxq9"
+const score = stradella(await readFile(`${input}/${file}.lys`))
+await Promise.all(
+  ["pdf", "svg"].map(format => lilypond(score, `${output}/${file}`, format))
+)

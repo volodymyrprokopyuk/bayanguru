@@ -1,5 +1,8 @@
 # Music scores for bayan engraved with LilyPond
 
+Stradella bass and free bass musinc engraving system for bayan (button
+accordion) for web (via SVG) and print (via PDF)
+
 ## Structure of the index.yaml
 
 ``` yaml
