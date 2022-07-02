@@ -37,7 +37,7 @@ const stradellaChords = {
   ges7: "bes, fes ges", gesd: "beses, ees ges"
 }
 
-function stradella(score, bindAfter = true) {
+function stradella(score) {
   const stPatterns = [
     /\b(?:([cdefgab](?:es|is|eses|isis)?[,']*)\+)?/, // [bass]
     /([cdefgab](?:es|is)?[,']*)(@)?/, // root + [bind]
@@ -55,24 +55,22 @@ function stradella(score, bindAfter = true) {
     chord = bass ?
       raw`\fixed c' { <${bass} ${triad}>${mods}${name} }` :
       raw`\fixed c' { <${triad}>${mods}${name} }`
-    if (bindAfter) {
-      return bind ?
-        raw`\afterGrace 1/4 ${chord} { \fixed c { \once \hide Stem \parenthesize ${root}8 } }` :
-        chord
-    } else {
-      return bind ?
-        raw`\fixed c { \once \hide Stem \grace \parenthesize ${root}8 } ${chord}` :
-        chord
-    }
+    return bind ?
+      raw`\afterGrace 1/4 ${chord} { \fixed c { \once \hide Stem \parenthesize ${root}4 } }` :
+      chord
   }
   return String(score).replace(stNotation, lyNotation)
 }
 
 try {
-  // const { meta } = load(await readFile("index.yaml"))
-  const file = "stradella"
-  const score = await readFile(`${file}.lys`)
+  // const { scores } = load(await readFile("index.yaml"))
+  // console.log(scores)
+  const input = "source"
+  const output = "score"
+  // const file = "stradella"
+  const file = "Їхав-козак-на-війноньку-qxq9"
+  const score = await readFile(`${input}/${file}.lys`)
   const stScore = stradella(score)
-  await writeFile(`${file}.ly`, stScore)
-  await $`lilypond ${file}.ly`
+  await writeFile(`${output}/${file}.ly`, stScore)
+  await $`lilypond -o score -f pdf ${output}/${file}.ly`
 } catch (e) { console.error(e) }

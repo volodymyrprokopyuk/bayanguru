@@ -1,0 +1,35 @@
+\version "2.22.2"
+
+stradellaBass = \markup \larger \box Г % Готовий
+freeBass = \markup \larger \box В % Виборний
+pureBass = \markup \larger \box Б % Бас
+
+\relative {
+  \clef bass
+  \time 2/4
+  bis,@M!2 bis,@m!2 bis,@7!2 bis,@d!2 |
+  eis@M!2 eis@m!2 eis@7!2 eis@d!2 |
+
+  ais,@M!2 ais,@m!2 ais,@7!2 ais,@d!2 |
+  dis@M!2 dis@m!2 dis@7!2 dis@d!2 |
+  gis,@M!2 gis,@m!2 gis,@7!2 gis,@d!2 |
+  cis@M!2 cis@m!2 cis@7!2 cis@d!2 |
+  fis,@M!2 fis,@m!2 fis,@7!2 fis,@d!2 |
+
+  b,@M!2 b,@m!2 b,@7!2 b,@d!2 |
+  e@M!2 e@m!2 e@7!2 e@d!2 |
+  a,@M!2 a,@m!2 a,@7!2 a,@d!2 |
+  d@M!2 d@m!2 d@7!2 d@d!2 |
+  g,@M!2 g,@m!2 g,@7!2 g,@d!2 |
+  c@M!2 c@m!2 c@7!2 c@d!2 |
+  f,@M!2 f,@m!2 f,@7!2 f,@d!2 |
+
+  bes,@M!2 bes,@m!2 bes,@7!2 bes,@d!2 |
+  ees@M!2 ees@m!2 ees@7!2 ees@d!2 |
+  aes,@M!2 aes,@m!2 aes,@7!2 aes,@d!2 |
+  des@M!2 des@m!2 des@7!2 des@d!2 |
+  ges,@M!2 ges,@m!2 ges,@7!2 ges,@d!2 |
+
+  ces@M!2 ces@m!2 ces@7!2 ces@d!2 |
+  fes,@M!2 fes,@m!2 fes,@7!2 fes,@d!2 |
+}

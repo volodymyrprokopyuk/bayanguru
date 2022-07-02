@@ -1,10 +1,14 @@
 %YAML 1.2
 ---
 sources:
-  - &bayan_0_1973 Баян. Підготовча група, О. Денисов, Музична Україна, 1973
+  - &B0D1973 Баян. Підготовча група, О. Денисов, Музична Україна, 1973
+  - &B1AK1979 Баян. 1 клас, І. Алексєєв, М. Корецький, Музична Україна, 1979
 categories:
   - &ua_folk_song Українська народна пісня
 scores:
-  - { title: Ой піду я до млина, category: *ua_folk_song, source: *bayan_0_1973,
+  - { title: Ой піду я до млина, category: *ua_folk_song, source: *B0D1973,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Ой-піду-я-до-млина-1kae }
+  - { title: Їхав козак на війноньку, category: *ua_folk_song, source: *B1AK1979,
+      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
+      bass: stradella, level: elementary, file: Їхав-козак-на-війноньку-qxq9 }

@@ -1,0 +1,38 @@
+\version "2.22.2"
+
+stBass = \markup \larger \box Г % Готовий
+frBass = \markup \larger \box В % Виборний
+puBass = \markup \larger \box Б % Бас
+
+rightHand = {
+  \tempo Allegretto
+  \clef treble
+  \key g \major
+  \time 2/4
+  \relative {
+    e'4\(\p e8 fis | g4 fis8 e |
+    fis4 b | e,\) d |
+    g='4\(\mp g8 a | b4 a8 g |
+    a4 d | b2\) |
+  }
+}
+
+leftHand = {
+  \clef bass
+  \key g \major
+  \relative {
+    e8-\stBass-. em!-. b-. e@m-. | e8-. em-. b-. e@m-. |
+    dis8-. b,@7!-. b8-. b7-. | e-. em!-. fis-. d@7!-. |
+    g,=,8-. gM!-. d'-. g,@M-. | g,8-. gM-. d'-. g,@M-. |
+    fis8-. d@7!-. d8-. d7-. | g,( g,@M!-.) gis8( e@7!-.) |
+  }
+}
+
+\score {
+  \new PianoStaff = bayan {
+    <<
+      \new Staff = rightHand { \rightHand }
+      \new Staff = leftHand { \leftHand }
+    >>
+  }
+}

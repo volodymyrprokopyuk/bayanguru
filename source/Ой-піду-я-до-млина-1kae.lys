@@ -1,0 +1,35 @@
+\version "2.22.2"
+
+rightHand = {
+  \tempo Moderato
+  \clef treble
+  \key a \minor
+  \time 2/4
+  \relative {
+    a'8 \mf c e e | e e e4 | d8 e f4 | e8 d c4
+  }
+}
+
+leftHand = {
+  \clef bass
+  \relative {
+    a,4 a | a a | d d | a a
+  }
+}
+
+\book {
+  \score {
+    \new PianoStaff = bayan {
+      <<
+        \new Staff = rightHand {
+          \accidentalStyle default
+          \rightHand
+        }
+        \new Staff = leftHand {
+          \accidentalStyle default
+          \leftHand
+        }
+      >>
+    }
+  }
+}
