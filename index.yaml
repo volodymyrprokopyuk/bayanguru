@@ -6,6 +6,7 @@ sources:
 categories:
   - &ua_folk_song Українська народна пісня
 pieces:
+  - file: stradella
   - { title: Ой піду я до млина, category: *ua_folk_song, source: *B0D1973,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Ой-піду-я-до-млина-1kae }
