@@ -1,4 +1,4 @@
-\version "2.22.2"
+\version "2.23.10"
 
 stBass = \markup \larger \box Г % Готовий
 frBass = \markup \larger \box В % Виборний
@@ -17,10 +17,10 @@ rightHand = {
     a'='8\mf c e e | e e e4 | d8 e f4 | e8 d c4 |
     \repeat volta 2 {
       e=''8 d c b | a b c4 | b8 c d4 |
-    }
-    \alternative {
-      { a4 a | }
-      { a a \bar "|." }
+      \alternative {
+        \volta 1 { a4 a | }
+        \volta 2 { a a \bar "|." }
+      }
     }
   }
 }

@@ -1,4 +1,4 @@
-\version "2.22.2"
+\version "2.23.10"
 
 stBass = \markup \larger \box Г % Готовий
 frBass = \markup \larger \box В % Виборний
@@ -26,7 +26,8 @@ rightHand = {
     <fis a>4\( <e g>8 <dis fis> | <e g>4\> e\)\! |
     e='4\(\mp << \relative { e''8 c } \\ \relative { e'4 } >> |
     <g b>8 <fis a> <e g> <dis fis> |
-    << e2\) { s4.\> s8\! } >> | e4 r \bar "|."
+    % << e2\) { s4.\> s8\! } >> | e4 r \bar "|."
+    <>\> \after 4.\! e2\) | e4 r \bar "|."
   }
 }
 
