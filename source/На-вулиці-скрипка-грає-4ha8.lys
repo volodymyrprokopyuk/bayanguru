@@ -1,0 +1,22 @@
+{% macro rightHand(config) %}
+\tempo Allegretto
+\clef treble
+\key a \minor
+\time 2/4
+\relative {
+  {{ config() }}
+  a'='8\mp e' e e | f f e e | d d c c | b b a a |
+  e=' e a4 | d8 d c c | b b a a | e e a='4 \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key a \minor
+\relative {
+  {{ config() }}
+  a,=,8 am! a am | d dm a am | d dm a am | e' eM! a, am! |
+  e'= eM! a,4 | d8 dm! a am | e' eM! a, am! | e'= eM! a,,+am!4 |
+}
+
+{% endmacro %}

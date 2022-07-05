@@ -10,6 +10,9 @@ pieces:
   - { title: Ой піду я до млина, category: *ua_folk_song, source: *B0D1973,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Ой-піду-я-до-млина-1kae }
+  - { title: На вулиці скрипка грає, category: *ua_folk_song, source: *B0D1973,
+      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
+      bass: stradella, level: elementary, file: На-вулиці-скрипка-грає-4ha8 }
   - { title: Їхав козак на війноньку, category: *ua_folk_song, source: *B1AK1979,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Їхав-козак-на-війноньку-qxq9 }

@@ -17,7 +17,7 @@
   <fis a>4\( <e g>8 <dis fis> | <e g>4\> \after 4\! e\) |
   e='4\(\mp << \relative { e''8 c } \\ \relative { e'4 } >> |
   <g b>8 <fis a> <e g> <dis fis> |
-  <>\> \after 2\! e2\) | e4 r \bar "|."
+  <>\> \after 2\! e2\) | e='4 r \bar "|."
 }
 {% endmacro %}
 
@@ -37,6 +37,6 @@
   a=,8( am!-.) d( d7!-.) | g,( gM!-.) b( g,@M-.) |
   a8 am! b b7! | e em! g, e@m |
   a=,8 am fis a,@m | b8 b7! dis b,@7 |
-  e8 em! e em | e,+em4 r \bar "|."
+  e8 em! e= em | e,+em4 r \bar "|."
 }
 {% endmacro %}
