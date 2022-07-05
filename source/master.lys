@@ -1,0 +1,41 @@
+\version "2.23.10"
+
+stBass = \markup \larger \box Г % Готовий
+frBass = \markup \larger \box В % Вибiрний
+puBass = \markup \larger \box Б % Бас (вибiрний)
+artStaccato = \markup \italic staccato
+
+\paper {
+  print-all-headers = ##t
+}
+
+\header {
+  tagline = "https://volodymyrprokopyuk.github.io/bayan"
+}
+
+% \markuplist \table-of-contents
+
+{% macro rhConfig() %}
+\override Score.BarNumber.break-visibility = ##(#f #f #f)
+\override DynamicLineSpanner.staff-padding = #2.5
+{% endmacro %}
+
+{% macro lhConfig() %} {% endmacro %}
+
+{% for piece in pieces %}
+\tocItem \markup "{{ piece.title }}"
+\score {
+  \header {
+    title = "{{ piece.title }}"
+    subtitle = "{{ piece.category }}"
+  }
+  {% set source = args.i + "/" + piece.file + ".lys" %}
+  {% from source import rightHand, leftHand %}
+  \new PianoStaff = bayan {
+    <<
+      \new Staff = rightHand { {{ rightHand(rhConfig) }} }
+      \new Staff = leftHand { {{ leftHand(lhConfig) }} }
+    >>
+  }
+}
+{% endfor %}

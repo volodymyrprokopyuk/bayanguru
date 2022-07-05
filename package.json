@@ -19,6 +19,7 @@
   "homepage": "https://volodymyrprokopyuk.github.io/bayan",
   "dependencies": {
     "js-yaml": "^4.1.0",
+    "nunjucks": "^3.2.3",
     "zx": "^7.0.3"
   }
 }

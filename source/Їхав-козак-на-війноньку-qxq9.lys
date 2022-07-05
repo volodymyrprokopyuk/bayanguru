@@ -1,60 +1,42 @@
-\version "2.23.10"
-
-stBass = \markup \larger \box Г % Готовий
-frBass = \markup \larger \box В % Виборний
-puBass = \markup \larger \box Б % Бас
-artStaccato = \markup \italic staccato
-
-rightHand = {
-  \tempo Allegretto
-  \clef treble
-  \key g \major
-  \time 2/4
-  \relative {
-    \override Score.BarNumber.break-visibility = ##(#f #f #f)
-    \override DynamicLineSpanner.staff-padding = #2.5
-    \override Hairpin.to-barline = ##f
-    e'='4\(\p e8 fis | g4 fis8 e |
-    fis4 b | e,\) d |
-    g='4\(\mp g8 a | b4 a8 g |
-    a4 d | b2\) |
-    c=''4\(\mf b8 a | b4 g\) |
-    a4\( g8 fis | g4 e\) |
-    e='4\( e'8 c | b a g fis |
-    e2\)\< | <e e'>2\! |
-    <a=' c>4\(\f <g b>8 <fis a> | <g b>4\> g\)\! |
-    <fis a>4\( <e g>8 <dis fis> | <e g>4\> e\)\! |
-    e='4\(\mp << \relative { e''8 c } \\ \relative { e'4 } >> |
-    <g b>8 <fis a> <e g> <dis fis> |
-    % << e2\) { s4.\> s8\! } >> | e4 r \bar "|."
-    <>\> \after 4.\! e2\) | e4 r \bar "|."
-  }
+{% macro rightHand(config) %}
+\tempo Allegretto
+\clef treble
+\key g \major
+\time 2/4
+\relative {
+  {{ config() }}
+  e'='4\(\p e8 fis | g4 fis8 e |
+  fis4 b | e,\) d |
+  g='4\(\mp g8 a | b4 a8 g |
+  a4 d | b2\) |
+  c=''4\(\mf b8 a | b4 g\) |
+  a4\( g8 fis | g4 e\) |
+  e='4\( e'8 c | b a g fis |
+  e2\)\< | \after 2\! <e e'>2 |
+  <a=' c>4\(\f <g b>8 <fis a> | <g b>4\> \after 4\! g\) |
+  <fis a>4\( <e g>8 <dis fis> | <e g>4\> \after 4\! e\) |
+  e='4\(\mp << \relative { e''8 c } \\ \relative { e'4 } >> |
+  <g b>8 <fis a> <e g> <dis fis> |
+  <>\> \after 2\! e2\) | e4 r \bar "|."
 }
+{% endmacro %}
 
-leftHand = {
-  \clef bass
-  \key g \major
-  \relative {
-    e=8-\stBass em!_\artStaccato b e@m | e8 em b e@m |
-    dis8 b,@7! b8 b7 | e em! fis d@7! |
-    g,=,8 gM! d' g,@M | g,8 gM d' g,@M |
-    fis8 d@7! d8 d7 | g,( g,@M!-.) gis8( e@7!-.) |
-    a=,8( am!-.) fis' a@m | g,8 e@m e'8 em |
-    fis8 b,@7! dis8 b,@7 | e8 em! g, e@m |
-    a=,8 am fis a,@m | b8 b7! dis b,@7 |
-    e4 d | c b |
-    a=,8( am!-.) d( d7!-.) | g,( gM!-.) b( g,@M-.) |
-    a8 am! b b7! | e em! g, e@m |
-    a=,8 am fis a,@m | b8 b7! dis b,@7 |
-    e8 em! e em | e,+em4 r \bar "|."
-  }
+{% macro leftHand(config) %}
+\clef bass
+\key g \major
+\relative {
+  {{ config() }}
+  e=8-\stBass em!_\artStaccato b e@m | e8 em b e@m |
+  dis8 b,@7! b8 b7 | e em! fis d@7! |
+  g,=,8 gM! d' g,@M | g,8 gM d' g,@M |
+  fis8 d@7! d8 d7 | g,( g,@M!-.) gis8( e@7!-.) |
+  a=,8( am!-.) fis' a@m | g,8 e@m e'8 em |
+  fis8 b,@7! dis8 b,@7 | e8 em! g, e@m |
+  a=,8 am fis a,@m | b8 b7! dis b,@7 |
+  e4 d | c b |
+  a=,8( am!-.) d( d7!-.) | g,( gM!-.) b( g,@M-.) |
+  a8 am! b b7! | e em! g, e@m |
+  a=,8 am fis a,@m | b8 b7! dis b,@7 |
+  e8 em! e em | e,+em4 r \bar "|."
 }
-
-\score {
-  \new PianoStaff = bayan {
-    <<
-      \new Staff = rightHand { \rightHand }
-      \new Staff = leftHand { \leftHand }
-    >>
-  }
-}
+{% endmacro %}

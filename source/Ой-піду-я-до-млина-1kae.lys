@@ -1,19 +1,10 @@
-\version "2.23.10"
-
-stBass = \markup \larger \box Г % Готовий
-frBass = \markup \larger \box В % Виборний
-puBass = \markup \larger \box Б % Бас
-artStaccato = \markup \italic staccato
-
-rightHand = {
+{% macro rightHand(config) %}
   \tempo Moderato
   \clef treble
   \key a \minor
   \time 2/4
   \relative {
-    \override Score.BarNumber.break-visibility = ##(#f #f #f)
-    \override DynamicLineSpanner.staff-padding = #2.5
-    \override Hairpin.to-barline = ##f
+    {{ config() }}
     a'='8\mf c e e | e e e4 | d8 e f4 | e8 d c4 |
     \repeat volta 2 {
       e=''8 d c b | a b c4 | b8 c d4 |
@@ -23,22 +14,14 @@ rightHand = {
       }
     }
   }
-}
+{% endmacro %}
 
-leftHand = {
+{% macro leftHand(config) %}
   \clef bass
   \key a \minor
   \relative {
+    {{ config() }}
     a,=,8-\stBass am! a am | a am a am | d dm d dm | a am a am |
     d= dm! d dm | a am a am | e' eM! e eM | a, am! a am| a4 am \bar "|."
   }
-}
-
-\score {
-  \new PianoStaff = bayan {
-    <<
-      \new Staff = rightHand { \rightHand }
-      \new Staff = leftHand { \leftHand }
-    >>
-  }
-}
+{% endmacro %}

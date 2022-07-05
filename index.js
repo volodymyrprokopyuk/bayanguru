@@ -1,6 +1,9 @@
-import { load } from "js-yaml"
+import parseArgs from "minimist"
 import { readFile } from "fs/promises"
-import { $ } from "zx"
+import { load } from "js-yaml"
+import nj from "nunjucks"
+const { render } = nj
+import { $, argv } from "zx"
 const raw = String.raw
 
 const chordNames = { M: "Б", m: "М", 7: "7", d: "У" }
@@ -69,16 +72,20 @@ async function lilypond(score, file, format) {
   return lilypond
 }
 
-async function tasks(
-  index = "index.yaml", input = "source", output = "score", format = "pdf"
-) {
-  const { pieces } = load(await readFile(index))
-  return  pieces.filter(
-    piece => process.argv.slice(2).some(arg => piece.file.match(arg))
-  ).map(async (piece) => {
-    const score = stradella(await readFile(`${input}/${piece.file}.lys`))
-    lilypond(score, `${output}/${piece.file}`, format)
+async function scores(index = "index.yaml") {
+  let { pieces, books } = load(await readFile(index))
+  pieces = pieces.filter(piece => args._.some(arg => piece.file.match(arg)))
+  pieces = args.b ? [pieces] : pieces
+  return pieces.map(async (piece) => {
+    const score = stradella(
+      render(`${args.i}/master.lys`, { pieces: args.b ? piece : [piece], args })
+    )
+    return lilypond(score, `${args.o}/${args.b ? "book" : piece.file}`, args.f)
   })
 }
 
-await Promise.all(await tasks())
+const args = parseArgs(
+  process.argv.slice(2),
+  { boolean: [ "b" ], default: { i: "source", o: "score", f: "pdf" } },
+)
+await Promise.all(await scores())
