@@ -13,6 +13,9 @@ pieces:
   - { title: На вулиці скрипка грає, category: *ua_folk_song, source: *B0D1973,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: На-вулиці-скрипка-грає-4ha8 }
+  - { title: Веселі гуси, category: *ua_folk_song, source: *B0D1973,
+      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
+      bass: stradella, level: elementary, file: Веселі-гуси-7n13 }
   - { title: Їхав козак на війноньку, category: *ua_folk_song, source: *B1AK1979,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Їхав-козак-на-війноньку-qxq9 }
