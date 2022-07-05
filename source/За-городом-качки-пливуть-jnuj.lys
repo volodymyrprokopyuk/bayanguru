@@ -1,0 +1,23 @@
+{% macro rightHand(config) %}
+\tempo Allegretto
+\clef treble
+\key c \major
+\time 2/4
+\relative {
+  {{ config() }}
+  \repeat volta 2 {
+    e'='8-.\mp g-. g-. g-. | e-. g-. g-. g-. | c4 g | a8-. g-. f-. e-. |
+    d='8-. f-. f-. f-. | d-. f-. f-. f-. | d4 g | e8-. c-. c-. c='-. |
+  }
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key c \major
+\relative {
+  {{ config() }}
+  c=8-\stBass r-\artStaccato cM! r | c r cM r | c r cM r | c r cM r |
+  b=,8 r g,@M! r8 | b r g,@M r8 | g r gM r | c= r cM r |
+}
+{% endmacro %}
