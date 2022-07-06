@@ -9,11 +9,17 @@ artStaccato = \markup \italic staccato
   print-all-headers = ##t
 }
 
+{% set tagline = "https://volodymyrprokopyuk.github.io/bayan" %}
+{% if args.b %}
 \header {
-  tagline = "https://volodymyrprokopyuk.github.io/bayan"
+  title = "{{ book.title }}"
+  subtitle = "{{ book.subtitle }}"
+  tagline = "{{ tagline }}"
 }
-
-% \markuplist \table-of-contents
+\markuplist \table-of-contents
+{% else %}
+\header { tagline = "{{ tagline }}" }
+{% endif %}
 
 {% macro rhConfig() %}
 \override Score.BarNumber.break-visibility = ##(#f #f #f)

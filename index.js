@@ -65,27 +65,45 @@ function stradella(score) {
   return String(score).replace(stNotation, lyNotation)
 }
 
-async function lilypond(score, file, format) {
+function lilypond(score, file, format) {
   const lilypond = $`lilypond -f ${format} -o ${file} -`
   lilypond.stdin.write(score)
   lilypond.stdin.end()
   return lilypond
 }
 
-async function scores(index = "index.yaml") {
-  let { pieces, books } = load(await readFile(index))
-  pieces = pieces.filter(piece => args._.some(arg => piece.file.match(arg)))
-  pieces = args.b ? [pieces] : pieces
-  return pieces.map(async (piece) => {
+function engravePieces(pieces) {
+  pieces = args._.length && args._[0] === "all" ? pieces :
+    pieces.filter(piece => args._.some(arg => piece.file.match(arg)))
+  return pieces.map(piece => {
     const score = stradella(
-      render(`${args.i}/master.lys`, { pieces: args.b ? piece : [piece], args })
+      render(`${args.i}/master.lys`, { pieces: [piece], args })
     )
-    return lilypond(score, `${args.o}/${args.b ? "book" : piece.file}`, args.f)
+    return lilypond(score, `${args.o}/${piece.file}`, args.f)
   })
+}
+
+function engraveBooks(books, pieces) {
+  books = args._.length && args._[0] === "all" ? books :
+    books.filter(book => args._.some(arg => book.file.match(arg)))
+  return books.map(book => {
+    pieces = pieces.filter(piece =>
+      book.pieces.some(bpiece => piece.file.match(bpiece))
+    )
+    const score = stradella(
+      render(`${args.i}/master.lys`, { book, pieces, args })
+    )
+    return lilypond(score, `${args.o}/${book.file}`, args.f)
+  })
+}
+
+async function engrave(index = "index.yaml") {
+  let { pieces, books } = load(await readFile(index))
+  return args.b ? engraveBooks(books, pieces) : engravePieces(pieces)
 }
 
 const args = parseArgs(
   process.argv.slice(2),
-  { boolean: [ "b" ], default: { i: "source", o: "score", f: "pdf" } },
+  { boolean: ["b"], default: { i: "source", o: "score", f: "pdf" } },
 )
-await Promise.all(await scores())
+await Promise.all(await engrave())
