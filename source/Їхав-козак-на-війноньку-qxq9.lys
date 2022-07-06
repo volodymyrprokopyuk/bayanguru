@@ -37,6 +37,6 @@
   a=,8( am!-.) d( d7!-.) | g,( gM!-.) b( g,@M-.) |
   a8 am! b b7! | e em! g, e@m |
   a=,8 am fis a,@m | b8 b7! dis b,@7 |
-  e8 em! e= em | e,+em4 r \bar "|."
+  e8 em! e= em | e,+em4 r |
 }
 {% endmacro %}

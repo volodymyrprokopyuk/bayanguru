@@ -1,0 +1,23 @@
+{% macro rightHand(config) %}
+\tempo Moderato
+\clef treble
+\key c \major
+\time 2/4
+\relative {
+  {{ config() }}
+  c'='8-.\mf c-. e-. f-. | g4 g | a8-. a-. a-. a-. | g4 g4 |
+  e='8-. g-. d-. d-. | e-. e-. f4 | e8-. g-. d-. d-. | c4 g' |
+  e='8-. g-. d-. d-. | e-. e-. f4 | e8-. g-. d-. d-. | c4 c=' \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key c \major
+\relative {
+  {{ config() }}
+  c=4-\stBass cM! | c cM | g gM | c cM |
+  c=8-. cM!-. b-. g,@M-. | c8-. cM-. f,-. fM-. | c'-. cM-. g-. gM-. | c4 g,,+gM |
+  c=8-. cM!-. b-. g,@M-. | c8-. cM-. d-. dm!-. | g,-. c@M!-. g8-. gM-. | c=4 cM |
+}
+{% endmacro %}
