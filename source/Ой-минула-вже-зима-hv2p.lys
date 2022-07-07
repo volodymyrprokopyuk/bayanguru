@@ -1,0 +1,33 @@
+{% macro rightHand(config) %}
+\tempo Allegretto
+\clef treble
+\key c \major
+\time 2/4
+\relative {
+  {{ config() }}
+  g'='8-.\mf e-. f-. d-. | c-. d-. e-. f-. |
+  g8-. e-. f-. d-. | c-. c-. c4 |
+  g'='8-. e-. f-. d-. | c-. d-. e-. f-. |
+  g8-. e-. f-. d-. | c-. c-. c4 |
+  a'='8-. a-. a4 | g8-. g-. c4 |
+  g8-. e-. f-. d-. | c-. c-. c4 |
+  a'='8-. a-. a4 | g8-. g-. c4 |
+  g8-. e-. f-. d-.^"rit." | c-. c-. c4 \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key c \major
+\relative {
+  {{ config() }}
+  c@M!8-.[-\stBass cM8-.] g,@M-.[ gM8-.] | c@M-. r8 r4 |
+  c@M!8-.[ cM8-.] g,@M-.[ gM8-.] | c@M-.[ cM8-.] cM4 |
+  c=8-. cM!-. g-. gM-. | c-. cM-. g-. gM-. |
+  c-. cM-. g-. gM-. | c-. cM-. cM4 |
+  f,=,8-. fM!-. fM4 | g8-. c@M-. cM4 |
+  g8-. c@M-. g8-. gM-. | c-. cM-. cM4 |
+  f,=,8-. fM!-. fM4 | g8-. c@M-. cM4 |
+  g8-. c@M-. g8-. gM-. | c f,@M c@M4 |
+}
+{% endmacro %}
