@@ -1,0 +1,26 @@
+{% macro rightHand(config) %}
+\tempo Lento
+\clef treble
+\key a \minor
+\time 2/4
+\relative {
+  {{ config() }}
+  \repeat volta 2 {
+    a'='8\(\mp e' d f | e4 d8 c\) | b( d c4) |
+    \alternative {
+      \volta 1 { b8( b a4) | }
+      \volta 2 { b8( b a='4) \bar "|." }
+    }
+  }
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key c \major
+\relative {
+  {{ config() }}
+  a,=,8-\stBass am!-\artStaccato d dm | a[ am am am] | d dm e a,@m |
+  e8 eM! a, am! | e'= eM! a,,+am!4 |
+}
+{% endmacro %}
