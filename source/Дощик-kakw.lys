@@ -1,0 +1,26 @@
+{% macro rightHand(config) %}
+\tempo Allegretto
+\clef treble
+\key g \major
+\time 2/4
+\relative {
+  {{ config() }}
+  d''=''4(\mf b-.) | d( b-.) |
+  d8-.[ d-. d-. e-.] | d4( b-.) |
+  \repeat unfold 2 {
+    e,='8[( g-.) g-. g-.] | fis[( a-.) a-. a-.] | b( a g fis | e4) e=' |
+  } \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key g \major
+\relative {
+  {{ config() }}
+  g,=,8[-\stBass gM!-\artStaccato gM gM] |
+  \repeat unfold 3 { g[ gM gM gM] }
+  e'=8 em! e em | a, am a am | b bM! b bM | e em! e em |
+  e=8 em e em | a, am a am | b bM! b bM | e4 em! |
+}
+{% endmacro %}
