@@ -24,10 +24,19 @@ pieces:
   - { title: Ой минула вже зима, category: *ua_folk_song, source: *B0D1973,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Ой-минула-вже-зима-hv2p }
+  - { title: А вже красне сонечко, category: *ua_folk_song, source: *B0D1973,
+      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
+      bass: stradella, level: elementary, file: А-вже-красне-сонечко-siv0 }
+  - { title: Дощик, category: *ua_folk_song, source: *B0D1973,
+      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
+      bass: stradella, level: elementary, file: Дощик-kakw }
+  - { title: У сусіда хата біла, category: *ua_folk_song, source: *B0D1973,
+      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
+      bass: stradella, level: elementary, file: У-сусіда-хата-біла-6msd }
   - { title: Їхав козак на війноньку, category: *ua_folk_song, source: *B1AK1979,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Їхав-козак-на-війноньку-qxq9 }
 books:
   - { title: Українські народні пісні, subtitle: для баяна,
-      file: Українські-народні-пісні-byup,
-      pieces: ["1kae", "4ha8", "7n13", "jnuj", "1sxc", "hv2p", "qxq9"] }
+      file: Українські-народні-пісні-byup, pieces: ["1kae", "4ha8", "7n13",
+      "jnuj", "1sxc", "hv2p", "siv0", "kakw", "6msd", "qxq9"] }

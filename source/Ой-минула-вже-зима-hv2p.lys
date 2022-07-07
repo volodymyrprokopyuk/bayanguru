@@ -12,7 +12,7 @@
   a'='8-. a-. a4 | g8-. g-. c4 |
   g8-. e-. f-. d-. | c-. c-. c4 |
   a'='8-. a-. a4 | g8-. g-. c4 |
-  g8-. e-. f-. d-.^"rit." | c-. c-. c4 \bar "|."
+  g8-. e-. f-. d-.^"rit." | c-. c-. c='4 \bar "|."
 }
 {% endmacro %}
 
@@ -28,6 +28,6 @@
   f,=,8-. fM!-. fM4 | g8-. c@M-. cM4 |
   g8-. c@M-. g8-. gM-. | c-. cM-. cM4 |
   f,=,8-. fM!-. fM4 | g8-. c@M-. cM4 |
-  g8-. c@M-. g8-. gM-. | c f,@M c@M4 |
+  g8-. c@M-. g8-. gM-. | c= f,@M c@M4 |
 }
 {% endmacro %}
