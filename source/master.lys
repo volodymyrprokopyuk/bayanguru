@@ -5,20 +5,34 @@ frBass = \markup \larger \box В % Вибiрний
 puBass = \markup \larger \box Б % Бас (вибiрний)
 artStaccato = \markup \italic staccato
 
+{% macro logo(scale = 1) %}
+\roman \bold {
+  \magnify #{{ 1.5 * scale }} \musicglyph "clefs.G"
+  \magnify #{{ 2.5 * scale }} {
+    \rotate #30 Б
+    \lower #{{ 0.75 * scale }} а
+    \raise #{{ 0.75 * scale }} я
+    \rotate #-30 Н
+  }
+}
+{% endmacro %}
+
 \paper {
   print-all-headers = ##t
 }
 
-{% set tagline = "https://volodymyrprokopyuk.github.io/bayan" %}
+{% set url = "https://volodymyrprokopyuk.github.io/bayan" %}
 {% if args.b %}
 \header {
   title = "{{ book.title }}"
   subtitle = "{{ book.subtitle }}"
-  tagline = "{{ tagline }}"
+  tagline = \markup { {{ logo(0.5) }} "{{ url }}" }
 }
 \markuplist \table-of-contents
 {% else %}
-\header { tagline = "{{ tagline }}" }
+\header {
+  tagline = \markup { {{ logo(0.5) }} "{{ url }}" }
+}
 {% endif %}
 
 {% macro rhConfig() %}
