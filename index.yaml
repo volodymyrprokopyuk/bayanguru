@@ -44,6 +44,9 @@ pieces:
   - { title: Їхав козак за Дунай, category: *ua_folk_song, source: *B0D1973,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Їхав-козак-за-Дунай-xi84 }
+  - { title: "Ой не ходи, Грицю", category: *ua_folk_song, source: *B0D1973,
+      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
+      bass: stradella, level: elementary, file: Ой-не-ходи-Грицю-dysh }
   # B1AK1979
   - { title: Їхав козак на війноньку, category: *ua_folk_song, source: *B1AK1979,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
@@ -53,6 +56,6 @@ books:
       file: Українські-народні-пісні-byup, pieces: [
       # B0D1973
       "1kae", "4ha8", "7n13", "jnuj", "1sxc", "hv2p", "siv0", "kakw", "6msd",
-      "iso2", "xi84",
+      "iso2", "xi84", "dysh",
       # B1AK1979
       "qxq9"] }

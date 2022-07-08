@@ -1,0 +1,31 @@
+{% macro rightHand(config) %}
+\tempo Lento
+\clef treble
+\key a \minor
+\time 4/4
+\relative {
+  {{ config() }}
+  a'='4.\(\mp b8 c4 a | e' c b a\) | gis\( b e4. gis,8 | a2 a\) |
+  a='4.\( b8 c4 a | e' c b a\) | gis\( b e4. gis,8 | a2 b\) |
+  \repeat volta 2 {
+    c=''4.\( g'8 c,4 e | g2 f8 e d c\) | b4\( d g f | e d c b\) |
+    a='4.\( b8 c4 a | e' c d8 c b a\) | gis4\( b e4. gis,8 |
+    \alternative {
+      \volta 1 { a2 b\) | }
+      \volta 2 { a2 a='4 r \bar "|." }
+    }
+  }
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key a \minor
+\relative {
+  {{ config() }}
+  a,=,4-\stBass am! am am | a am am am | e' eM! eM eM | a, am! am am |
+  a=, am am am | a am am am | e' eM! eM eM | a, am! g gM! |
+  c= cM! cM cM | e c@M c@M4 c@M4 | g, gM gM gM | e' eM eM eM |
+  a,=, am! am am | a am d dm | e eM! eM eM | a, am! g gM! | a=, r am! r |
+}
+{% endmacro %}
