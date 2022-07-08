@@ -3,7 +3,6 @@
 stBass = \markup \larger \box Г % Готовий
 frBass = \markup \larger \box В % Вибiрний
 puBass = \markup \larger \box Б % Бас (вибiрний)
-artStaccato = \markup \italic staccato
 
 {% macro logo(scale = 1) %}
 \roman \bold {

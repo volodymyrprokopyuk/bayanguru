@@ -26,7 +26,7 @@
 \key g \major
 \relative {
   {{ config() }}
-  e=8-\stBass em!_\artStaccato b e@m | e8 em b e@m |
+  e=8-\stBass em! b e@m | e8 em b e@m |
   dis8 b,@7! b8 b7 | e em! fis d@7! |
   g,=,8 gM! d' g,@M | g,8 gM d' g,@M |
   fis8 d@7! d8 d7 | g,( g,@M!-.) gis8( e@7!-.) |

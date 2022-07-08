@@ -95,7 +95,6 @@ function engraveBooks(books, pieces) {
     const score = stradella(
       render(`${args.i}/master.lys`, { book, pieces, args })
     )
-    // return lilypond(score, `${args.o}/${book.file}`, args.f)
     return args.f.split(":").map(format =>
       lilypond(score, `${args.o}/${book.file}`, format)
     )
@@ -109,6 +108,6 @@ async function engrave(index = "index.yaml") {
 
 const args = parseArgs(
   process.argv.slice(2),
-  { boolean: ["b"], default: { i: "source", o: "score", f: "pdf" } },
+  { boolean: ["b"], default: { i: "source", o: "score", f: "ps" } },
 )
 await Promise.all(await engrave())

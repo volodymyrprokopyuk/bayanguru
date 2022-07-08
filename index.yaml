@@ -10,6 +10,7 @@ sources:
 categories:
   - &ua_folk_song Українська народна пісня
 pieces:
+  # B0D1973
   - { title: Ой піду я до млина, category: *ua_folk_song, source: *B0D1973,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Ой-піду-я-до-млина-1kae }
@@ -37,10 +38,21 @@ pieces:
   - { title: У сусіда хата біла, category: *ua_folk_song, source: *B0D1973,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: У-сусіда-хата-біла-6msd }
+  - { title: Дударик, category: *ua_folk_song, source: *B0D1973,
+      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
+      bass: stradella, level: elementary, file: Дударик-iso2 }
+  - { title: Їхав козак за Дунай, category: *ua_folk_song, source: *B0D1973,
+      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
+      bass: stradella, level: elementary, file: Їхав-козак-за-Дунай-xi84 }
+  # B1AK1979
   - { title: Їхав козак на війноньку, category: *ua_folk_song, source: *B1AK1979,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Їхав-козак-на-війноньку-qxq9 }
 books:
   - { title: Українські народні пісні, subtitle: для баяна,
-      file: Українські-народні-пісні-byup, pieces: ["1kae", "4ha8", "7n13",
-      "jnuj", "1sxc", "hv2p", "siv0", "kakw", "6msd", "qxq9"] }
+      file: Українські-народні-пісні-byup, pieces: [
+      # B0D1973
+      "1kae", "4ha8", "7n13", "jnuj", "1sxc", "hv2p", "siv0", "kakw", "6msd",
+      "iso2", "xi84",
+      # B1AK1979
+      "qxq9"] }
