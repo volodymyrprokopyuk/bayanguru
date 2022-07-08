@@ -79,8 +79,10 @@ function engravePieces(pieces) {
     const score = stradella(
       render(`${args.i}/master.lys`, { pieces: [piece], args })
     )
-    return lilypond(score, `${args.o}/${piece.file}`, args.f)
-  })
+    return args.f.split(":").map(format =>
+      lilypond(score, `${args.o}/${piece.file}`, format)
+    )
+  }).flat()
 }
 
 function engraveBooks(books, pieces) {
@@ -93,8 +95,11 @@ function engraveBooks(books, pieces) {
     const score = stradella(
       render(`${args.i}/master.lys`, { book, pieces, args })
     )
-    return lilypond(score, `${args.o}/${book.file}`, args.f)
-  })
+    // return lilypond(score, `${args.o}/${book.file}`, args.f)
+    return args.f.split(":").map(format =>
+      lilypond(score, `${args.o}/${book.file}`, format)
+    )
+  }).flat()
 }
 
 async function engrave(index = "index.yaml") {

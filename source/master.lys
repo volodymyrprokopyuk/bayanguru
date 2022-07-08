@@ -49,7 +49,7 @@ artStaccato = \markup \italic staccato
     title = "{{ piece.title }}"
     subtitle = "{{ piece.category }}"
   }
-  {% set source = args.i + "/" + piece.file + ".lys" %}
+  {% set source = args.i + "/" + piece.source.dir + "/" + piece.file + ".lys" %}
   {% from source import rightHand, leftHand %}
   \new PianoStaff = bayan {
     <<
