@@ -5,7 +5,16 @@
 \time 2/4
 \relative {
   {{ config() }}
-  a'='8\mf a a a |
+  a'='8\mf\( a a a | a c b a | gis gis gis gis | gis b a gis\) |
+  a='8\( a a a | a c b a | gis b e gis, | a4 b\) |
+  \repeat volta 2 {
+    c=''8\( c c c | c e d c | b b b b | b d c b\) |
+    a='8\( a a a | a c b a | gis b e gis, |
+    \alternative {
+      \volta 1 { a4 b\) | }
+      \volta 2 { <> a='4 r \bar "|." }
+    }
+  }
 }
 {% endmacro %}
 
@@ -14,6 +23,9 @@
 \key a \minor
 \relative {
   {{ config() }}
-  a,=,4-.-\stBass am!-. |
+  a,=,4-.-\stBass am!-. | a-. am-. | e'-. eM!-. | e-. eM-. |
+  a,=,4-. am!-. | a-. am-. | e'-. eM!-. | a,,+am! g,,+gM! |
+  c=4-. cM! | c-. cM-. | g-. gM-. | e'-. eM-. |
+  a,=,4-. am! | d-. dm-. | e-. eM!-. | a,,+am! g,,+gM! | a,=, am! |
 }
 {% endmacro %}
