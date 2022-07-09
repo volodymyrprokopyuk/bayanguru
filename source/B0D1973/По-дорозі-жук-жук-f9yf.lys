@@ -1,0 +1,27 @@
+{% macro rightHand(config) %}
+\tempo Moderato
+\clef treble
+\key f \major
+\time 2/4
+\relative {
+  {{ config() }}
+  \repeat volta 2 {
+    c'='8-.\mf c-. d-. e-. | f4 f |
+    c8-. c-. d-. e-. | f4 a |
+    bes='8-. bes-. bes-. g-. | a-. a-. a-. f-. | g-. g-. c,-. e-. | f-. a-. c4 |
+    bes='8-. bes-. bes-. g-. | a-. a-. a-. f-. | g-. g-. c,-. e-. | f4 f=' |
+  }
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key f \major
+\relative {
+  {{ config() }}
+  c=4-\stBass c7! f fM! | c c7! f fM! |
+  bes,@M!8-.[ bes,@M8-. bes,@M8-.] r8 | f@M8-.[ f@M8-. f@M8-.] r8 |
+  c@7!8-.[ c@78-. c@78-.] r8 | f@M!8-.[ f@M8-.] f@M4 |
+  g,=,4 gm! | c f@M! | c4 c7! | f= fM! |
+}
+{% endmacro %}
