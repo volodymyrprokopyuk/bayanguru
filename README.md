@@ -1,7 +1,7 @@
 # Music scores for bayan engraved with LilyPond
 
-Stradella bass and free bass musinc engraving system for bayan (button
-accordion) for web (via SVG) and print (via PDF)
+Stradella bass and free bass music quality engraving system for bayan (button
+accordion) for web (HTML + SVG) and print (PDF + PS)
 
 ## Structure of the index.yaml
 
@@ -9,16 +9,17 @@ accordion) for web (via SVG) and print (via PDF)
 %YAML 1.2
 ---
 sources:
-  - &bayan_0_1973 Баян. Підготовча група, О. Денисов, Музична Україна, 1973
+  - &B0D1973
+    title: Баян. Підготовча група, О. Денисов, Музична Україна, 1973
+    dir: B0D1973
 categories:
   - &ua_folk_song Українська народна пісня
 scores:
   - title: Ой піду я до млина # mandatory
-    from: Скарбниця народних пісень
+    category: *ua_folk_song
     composer: М. Різоль
     arranger: А. Авдієвський
-    category: *ua_folk_song
-    source: *bayan_0_1973
+    source: *B0D1973
     origin: ua
     style: [folk, classical, jazz, pop] # mandaroty (musical language)
     genre: [song, dance, piece, study] # mandatory (musical function)
@@ -27,5 +28,10 @@ scores:
     bass: [stradella, free_bass] # mandaroty
     level: [elementary, intermediary, advanced, virtuoso] # mandatory
     file: Ой-піду-я-до-млина-1kae # shuf -ern 4 {a..z} {0..9} | tr -d '\n'
+books:
+  - title: Українські народні пісні,
+    subtitle: для баяна,
+    file: Українські-народні-пісні-byup,
+    pieces: ["1kae"]
 ```
 
