@@ -53,6 +53,9 @@ pieces:
   - { title: Ой під горою, category: *ua_folk_song, source: *B0D1973,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Ой-під-горою-41tf }
+  - { title: Женчичок-бренчичок, category: *ua_folk_song, source: *B0D1973,
+      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
+      bass: stradella, level: elementary, file: Женчичок-бренчичок-g0q2 }
   # B1AK1979
   - { title: Їхав козак на війноньку, category: *ua_folk_song, source: *B1AK1979,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
@@ -62,6 +65,6 @@ books:
       file: Українські-народні-пісні-byup, pieces: [
       # B0D1973
       "1kae", "4ha8", "7n13", "jnuj", "1sxc", "hv2p", "siv0", "kakw", "6msd",
-      "iso2", "xi84", "dysh", "f9yf", "41tf",
+      "iso2", "xi84", "dysh", "f9yf", "41tf", "g0q2",
       # B1AK1979
       "qxq9"] }
