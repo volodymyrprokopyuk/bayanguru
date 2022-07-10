@@ -25,7 +25,7 @@
   {{ config() }}
   a,=,4-\stBass am! am am | a am am am | e' eM! eM eM | a, am! am am |
   a=, am am am | a am am am | e' eM! eM eM | a, am! g gM! |
-  c= cM! cM cM | e c@M c@M4 c@M4 | g, gM gM gM | e' eM eM eM |
+  c= cM! cM cM | e c@M cM4 cM | g, gM! gM gM | e' eM eM eM |
   a,=, am! am am | a am d dm | e eM! eM eM | a, am! g gM! | a=, r am! r |
 }
 {% endmacro %}

@@ -1,0 +1,25 @@
+{% macro rightHand(config) %}
+\tempo Allegretto
+\clef treble
+\key f \major
+\time 3/4
+\relative {
+  {{ config() }}
+  \repeat volta 2 {
+    f'='4\mf f8\( g a bes | c2 f4\) | d\( f d | c2 a4\) |
+    bes='4\( d bes | a c a | g bes e, | f8 g a bes c4\) |
+    bes='4\( d c8 bes | a4 c bes8 a | g4 bes e, | f='2.\) |
+  }
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key f \major
+\relative {
+  {{ config() }}
+  f,=,4 fM! fM | a f@M fM | bes besM! besM | a f@M fM |
+  bes=, besM! besM | c f@M fM | c c7! c7 | f, fM! fM |
+  g gm! gm | c f@M! fM | c c7! c7 | f, fM! fM |
+}
+{% endmacro %}

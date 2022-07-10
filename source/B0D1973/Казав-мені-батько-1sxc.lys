@@ -17,7 +17,7 @@
 \relative {
   {{ config() }}
   c=4-\stBass cM! | c cM | g gM | c cM |
-  c=8-. cM!-. b-. g,@M-. | c8-. cM-. f,-. fM-. | c'-. cM-. g-. gM-. | c4 g,,+gM |
-  c=8-. cM!-. b-. g,@M-. | c8-. cM-. d-. dm!-. | g,-. c@M!-. g8-. gM-. | c=4 cM |
+  c=8-. cM!-. b-. g,@M-. | c8-. cM-. f,-. fM-. | c'-. cM-. g-. gM-. | c4 g,,+gM! |
+  c=8-. cM!-. b-. g,@M-. | c8-. cM-. d-. dm!-. | g,-. c@M!-. g8-. gM-. | c=4 cM! |
 }
 {% endmacro %}
