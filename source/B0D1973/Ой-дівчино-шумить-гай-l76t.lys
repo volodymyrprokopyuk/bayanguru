@@ -1,0 +1,31 @@
+{% macro rightHand(config) %}
+\tempo Moderato
+\clef treble
+\key f \major
+\time 3/4
+\relative {
+  {{ config() }}
+  \repeat volta 2 {
+    c''=''2\(\mp c4 | f2 a,4 | c2 bes8 a | bes2.\) |
+    g'=''2\( f4 | e2 d4 | c d e | f a, bes\) |
+    c=''2\( c4 | f2 a,4 | c2 bes8 a | bes2.\) |
+    g'=''2\( f4 | e2 d4 | c d e |
+    \alternative {
+      \volta 1 { f2.\) | }
+      \volta 2 { f=''4 r r \bar "|." }
+    }
+  }
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key f \major
+\relative {
+  {{ config() }}
+  f=4-\stBass fM! fM | f fM fM | c c7! c7 | c c7 c7 |
+  c=4 c7! c7 | c c7 c7 | c c7 c7 | f fM! fM |
+  f=4 fM! fM | f fM fM | c c7! c7 | c c7 c7 |
+  c=4 c7! c7 | c c7 c7 | c c7 c7 | f= fM! fM | f,+fM! r r |
+}
+{% endmacro %}
