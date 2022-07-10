@@ -1,0 +1,35 @@
+{% macro rightHand(config) %}
+\tempo Allegretto
+\clef treble
+\key a \minor
+\time 2/4
+\relative {
+  {{ config() }}
+  a'='16(\mf b c b d c b a | b8-.) b-. b4 | e8-. e-. e16( d c b | a4) a |
+  a='16( b c b d c b a | b8-.) b-. b4 | e8-. e-. e16( d c b | a4) b |
+  \repeat volta 2 {
+    c=''8-. c-. g4 | c8-. c-. g4 | c8 c( b a | gis4 e) |
+    a='16( b c b d c b a | b8-.) b-. b4 | e8-. e-. e16( d c b |
+    \alternative {
+      \volta 1 { a4) b | }
+      \volta 2 { a4( a'='') \bar "|." }
+    }
+  }
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key a \minor
+\relative {
+  {{ config() }}
+  a,=,8-.-\stBass am!-. a-. am-. | a-. d@m-. a8-. d@m-. |
+  gis8-. e@M!-. e'8-. eM-. | a,-. am!-. e'-. a,@m-. |
+  a,=,8-. am!-. a-. am-. | a-. d@m-. a8-. d@m-. |
+  gis8-. e@M!-. e'8-. eM-. | a,,+am!4 g,,+gM! |
+  c=8-. cM!-. cM4 | c8-. cM!-. cM4 |
+  a8-. am!-. d-. dm-. | e r e7!4 |
+  a,=,8-. am!-. a-. am-. | a-. d@m-. a8-. d@m-. |
+  gis8-. e@M!-. e'8-. eM-. | a,,+am!4 g,,+gM! | a,=, am! |
+}
+{% endmacro %}
