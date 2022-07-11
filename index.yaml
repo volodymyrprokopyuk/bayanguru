@@ -11,9 +11,6 @@ categories:
   - &ua_folk_song Українська народна пісня
 pieces:
   # B0D1973
-  - { title: Ой піду я до млина, category: *ua_folk_song, source: *B0D1973,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Ой-піду-я-до-млина-1kae }
   - { title: На вулиці скрипка грає, category: *ua_folk_song, source: *B0D1973,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: На-вулиці-скрипка-грає-4ha8 }
@@ -62,6 +59,9 @@ pieces:
   - { title: Ти до мене не ходи, category: *ua_folk_song, source: *B0D1973,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Ти-до-мене-не-ходи-qr71 }
+  - { title: Ой піду я до млина, category: *ua_folk_song, source: *B0D1973,
+      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
+      bass: stradella, level: elementary, file: Ой-піду-я-до-млина-1kae }
   # B1AK1979
   - { title: Їхав козак на війноньку, category: *ua_folk_song, source: *B1AK1979,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
