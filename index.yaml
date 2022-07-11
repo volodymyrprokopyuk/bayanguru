@@ -9,6 +9,7 @@ sources:
     dir: B1AK1979
 categories:
   - &ua_folk_song Українська народна пісня
+  - &ua_folk_dance Український народний танець
 pieces:
   # B0D1973
   - { title: На вулиці скрипка грає, category: *ua_folk_song, source: *B0D1973,
@@ -62,6 +63,9 @@ pieces:
   - { title: Ой піду я до млина, category: *ua_folk_song, source: *B0D1973,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Ой-піду-я-до-млина-1kae }
+  - { title: Метелиця, category: *ua_folk_dance, source: *B0D1973,
+      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
+      bass: stradella, level: elementary, file: Метелиця-hdux }
   # B1AK1979
   - { title: Їхав козак на війноньку, category: *ua_folk_song, source: *B1AK1979,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
@@ -71,6 +75,6 @@ books:
       file: Українські-народні-пісні-byup, pieces: [
       # B0D1973
       "1kae", "4ha8", "7n13", "jnuj", "1sxc", "hv2p", "siv0", "kakw", "6msd",
-      "iso2", "xi84", "dysh", "f9yf", "41tf", "g0q2", "l76t", "qr71",
+      "iso2", "xi84", "dysh", "f9yf", "41tf", "g0q2", "l76t", "qr71", "hdux",
       # B1AK1979
       "qxq9"] }
