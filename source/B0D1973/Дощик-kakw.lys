@@ -18,11 +18,9 @@
 \key g \major
 \relative {
   {{ config() }}
-  g,=,8-.[-\stBass gM!-. gM-. gM-.] |
-  \repeat unfold 3 { g-.[ gM-. gM-. gM-.] }
-  e'=8-. em!-. e-. em-. | a,-. am-. a-. am-. |
-  b-. bM!-. b-. bM-. | e-. em!-. e-. em-. |
-  e=8-. em!-. e-. em-. | a,-. am-. a-. am-. |
-  b-. bM!-. b-. bM-. | e=4 em! |
+  g,=,8[-\stBass gM! gM gM] |
+  \repeat unfold 3 { g[ gM gM gM] }
+  e'=8 em! e em | a, am a am | b bM! b bM | e em! e em |
+  e=8 em! e em | a, am a am | b bM! b bM | e=4 em! |
 }
 {% endmacro %}

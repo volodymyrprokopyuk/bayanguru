@@ -23,7 +23,7 @@
 \key g \major
 \relative {
   {{ config() }}
-  g,,+gM!4-\stBass r | c@m!-. g,@M!4-. | g,@M-. r4 | c@m!-. g,@M!4 |
-  e,+em!4 r | a,@m-. e@m4-. | e@m!-. r4 | a,@m-. e@m4 | b,,+bM!-. e,+em! |
+  g,,+gM!4-\stBass r | c@m! g,@M!4 | g,@M r4 | c@m! g,@M!4 |
+  e,+em!4 r | a,@m e@m4 | e@m! r4 | a,@m e@m4 | b,,+bM! e,+em! |
 }
 {% endmacro %}
