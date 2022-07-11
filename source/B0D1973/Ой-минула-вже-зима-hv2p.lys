@@ -28,6 +28,6 @@
   f,=,8-. fM!-. fM4 | g8-. c@M-. cM4 |
   g8-. c@M-. g8-. gM-. | c-. cM-. cM4 |
   f,=,8-. fM!-. fM4 | g8-. c@M-. cM4 |
-  g8-. c@M-. g8-. gM-. | c= f,@M c@M!4 |
+  g8-. c@M-. g8-. gM-. | c= f,@M! c@M!4 |
 }
 {% endmacro %}

@@ -4,6 +4,10 @@ sources:
   - &B0D1973
     title: Баян. Підготовча група, О. Денисов, Музична Україна, 1973
     dir: B0D1973
+  - &B0DU1982
+    title: >
+      Баян. Підготовча група, О. Денисов, В. Угринович, Музична Україна, 1982
+    dir: B0DU1982
   - &B1AK1979
     title: Баян. 1 клас, І. Алексєєв, М. Корецький, Музична Україна, 1979
     dir: B1AK1979
@@ -66,6 +70,10 @@ pieces:
   - { title: Метелиця, category: *ua_folk_dance, source: *B0D1973,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Метелиця-hdux }
+  # B0DU1982
+  - { title: Ой лопнув обруч, category: *ua_folk_song, source: *B0DU1982,
+      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
+      bass: stradella, level: elementary, file: Ой-лопнув-обруч-zo21 }
   # B1AK1979
   - { title: Їхав козак на війноньку, category: *ua_folk_song, source: *B1AK1979,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
@@ -76,5 +84,7 @@ books:
       # B0D1973
       "1kae", "4ha8", "7n13", "jnuj", "1sxc", "hv2p", "siv0", "kakw", "6msd",
       "iso2", "xi84", "dysh", "f9yf", "41tf", "g0q2", "l76t", "qr71", "hdux",
+      # B0DU1982
+      "zo21",
       # B1AK1979
       "qxq9"] }
