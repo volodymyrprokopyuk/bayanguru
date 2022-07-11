@@ -47,6 +47,12 @@ puBass = \markup \larger \box Б % Бас (вибiрний)
   \header {
     title = "{{ piece.title }}"
     subtitle = "{{ piece.category }}"
+    {% if piece.composer %}
+    composer = "{{ piece.composer }}"
+    {% endif %}
+    {% if piece.arranger %}
+    arranger = "{{ piece.arranger }}"
+    {% endif %}
   }
   {% set source = args.i + "/" + piece.source.dir + "/" + piece.file + ".lys" %}
   {% from source import rightHand, leftHand %}

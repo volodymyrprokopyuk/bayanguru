@@ -1,0 +1,24 @@
+{% macro rightHand(config) %}
+\tempo Allegretto
+\clef treble
+\key a \minor
+\time 2/4
+\relative {
+  {{ config() }}
+  e''=''4\mf c8-. e-. | d16( c b8-.) c-. e-. |
+  c8-. e-. c-. e-. | d16( c b8-.) c4 |
+  e=''4 c8-. e-. | d16( c b8-.) c-. e-. |
+  c8-. e-. c-. e-. | d16( c b8-.) a='4 \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key a \minor
+\relative {
+  {{ config() }}
+  a,=,8-\stBass am! a am |
+  \repeat unfold 3 { e' e7! a, am! | a am a am | }
+  e'=8 e7! a,,+am!4 |
+}
+{% endmacro %}

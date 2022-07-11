@@ -1,4 +1,3 @@
-
 {% macro rightHand(config) %}
 \tempo Allegretto
 \clef treble
