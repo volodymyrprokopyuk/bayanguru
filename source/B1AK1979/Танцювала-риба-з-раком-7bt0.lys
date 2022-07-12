@@ -7,7 +7,7 @@
   {{ config() }}
   e'='8\mf e d d | e e f f | e e d d | c c c4 |
   e='8 e d d | e e f4 | e8 e d d | c c c4 |
-  e='8 e d d | e e f f | e e d d | c c c c \bar "|."
+  e='8 e d d | e e f f | e e d d | c c c c=' \bar "|."
 
 }
 {% endmacro %}
@@ -22,7 +22,7 @@
     c=8 cM! g gM | c cM f, fM | c' cM! g gM |
     \alternative {
       { c cM c cM | }
-      { c cM! c cM | }
+      { c cM! c= cM | }
     }
   }
 }
