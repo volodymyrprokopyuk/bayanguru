@@ -82,6 +82,9 @@ pieces:
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Козачок-m6m8 }
   # B1AK1979
+  - { title: Танцювала риба з раком, category: *ua_folk_song, source: *B1AK1979,
+      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
+      bass: stradella, level: elementary, file: Танцювала-риба-з-раком-7bt0 }
   - { title: Їхав козак на війноньку, category: *ua_folk_song, source: *B1AK1979,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Їхав-козак-на-війноньку-qxq9 }
@@ -94,4 +97,4 @@ books:
       # B0DU1982
       "zo21", "akqt", "m6m8",
       # B1AK1979
-      "qxq9"] }
+      "7bt0", "qxq9"] }

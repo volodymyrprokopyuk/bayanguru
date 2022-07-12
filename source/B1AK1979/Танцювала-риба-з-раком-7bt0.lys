@@ -1,0 +1,29 @@
+{% macro rightHand(config) %}
+\tempo Allegretto
+\clef treble
+\key c \major
+\time 2/4
+\relative {
+  {{ config() }}
+  e'='8\mf e d d | e e f f | e e d d | c c c4 |
+  e='8 e d d | e e f4 | e8 e d d | c c c4 |
+  e='8 e d d | e e f f | e e d d | c c c c \bar "|."
+
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key c \major
+\relative {
+  {{ config() }}
+  c=8-\stBass cM! g gM | c cM f, fM | c' cM! g gM | c cM c cM |
+  \repeat unfold 2 {
+    c=8 cM! g gM | c cM f, fM | c' cM! g gM |
+    \alternative {
+      { c cM c cM | }
+      { c cM! c cM | }
+    }
+  }
+}
+{% endmacro %}

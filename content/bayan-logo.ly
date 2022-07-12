@@ -1,5 +1,7 @@
 \version "2.23.10"
 
+% lilypond -f svg -o content content/bayan-logo.ly
+
 \markup {
   \roman \bold {
     \magnify #1.5 \musicglyph "clefs.G"
