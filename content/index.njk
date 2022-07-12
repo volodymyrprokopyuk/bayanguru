@@ -1,0 +1,10 @@
+{% extends "content/master.njk" %}
+
+{% block content %}
+  <h1>Pieces</h1>
+  <ul>
+    {% for piece in pieces %}
+      <li><a href="score/{{ piece.file }}.html">{{ piece.title }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}

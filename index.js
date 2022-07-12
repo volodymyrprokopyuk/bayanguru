@@ -1,5 +1,5 @@
 import parseArgs from "minimist"
-import { readFile } from "fs/promises"
+import { readFile, writeFile } from "fs/promises"
 import { load } from "js-yaml"
 import nj from "nunjucks"
 const { render } = nj
@@ -73,8 +73,6 @@ function lilypond(score, file, format) {
 }
 
 function engravePieces(pieces) {
-  pieces = args._.length && args._[0] === "all" ? pieces :
-    pieces.filter(piece => args._.some(arg => piece.file.match(arg)))
   return pieces.map(piece => {
     const score = stradella(
       render(`${args.i}/master.lys`, { pieces: [piece], args })
@@ -86,8 +84,6 @@ function engravePieces(pieces) {
 }
 
 function engraveBooks(books, pieces) {
-  books = args._.length && args._[0] === "all" ? books :
-    books.filter(book => args._.some(arg => book.file.match(arg)))
   return books.map(book => {
     pieces = pieces.filter(piece =>
       book.pieces.some(bpiece => piece.file.match(bpiece))
@@ -101,13 +97,33 @@ function engraveBooks(books, pieces) {
   }).flat()
 }
 
-async function engrave(index = "index.yaml") {
+async function markupPieces(pieces) {
+  for (const piece of pieces) {
+    await writeFile(
+      `score/${piece.file}.html`, render("content/score.njk", { piece })
+    )
+  }
+  await writeFile("index.html", render("content/index.njk", { pieces }))
+  console.log("Success: index.html")
+}
+
+async function engraveAndMarkup(index = "index.yaml") {
   let { pieces, books } = load(await readFile(index))
-  return args.b ? engraveBooks(books, pieces) : engravePieces(pieces)
+  if (args.b) {
+    books = args._.length && args._[0] === "all" ? books :
+      books.filter(book => args._.some(arg => book.file.match(arg)))
+    return engraveBooks(books, pieces)
+  } else {
+    pieces = args._.length && args._[0] === "all" ? pieces :
+      pieces.filter(piece => args._.some(arg => piece.file.match(arg)))
+    return args.f.match("svg") ?
+      [engravePieces(pieces), markupPieces(pieces)].flat() :
+      engravePieces(pieces)
+  }
 }
 
 const args = parseArgs(
   process.argv.slice(2),
   { boolean: ["b"], default: { i: "source", o: "score", f: "ps" } },
 )
-await Promise.all(await engrave())
+await Promise.all(await engraveAndMarkup())

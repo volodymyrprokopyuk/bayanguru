@@ -1,0 +1,7 @@
+{% extends "content/master.njk" %}
+
+{% block content %}
+  <a href="{{ piece.file }}.pdf">Download PDF</a>
+  <a href="{{ piece.file }}.ps">Download PS</a>
+  <img src="{{ piece.file }}.svg" alt="{{ piece.title }}">
+{% endblock %}
