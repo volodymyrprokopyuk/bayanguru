@@ -89,6 +89,10 @@ pieces:
       source: *B1AK1979,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Ви-музики-хлопці-добрі-tonl }
+  - { title: "Ой Василю, Василечку", category: *ua_folk_song,
+      composer: В. Верховинець, source: *B1AK1979,
+      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
+      bass: stradella, level: elementary, file: Ой-Василю-Василечку-a0xs }
   - { title: Їхав козак на війноньку, category: *ua_folk_song, source: *B1AK1979,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Їхав-козак-на-війноньку-qxq9 }
@@ -101,5 +105,5 @@ books:
       # B0DU1982
       "zo21", "akqt", "m6m8",
       # B1AK1979
-      "7bt0", "tonl",
+      "7bt0", "tonl", "a0xs",
       "qxq9"] }

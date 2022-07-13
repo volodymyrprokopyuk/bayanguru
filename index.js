@@ -1,10 +1,11 @@
-import parseArgs from "minimist"
+const raw = String.raw
 import { readFile, writeFile } from "fs/promises"
+import parseArgs from "minimist"
+import { globby } from "globby"
 import { load } from "js-yaml"
 import nj from "nunjucks"
 const { render } = nj
-import { $, argv } from "zx"
-const raw = String.raw
+import { $ } from "zx"
 
 const chordNames = { M: "Б", m: "М", 7: "7", d: "У" }
 
@@ -72,13 +73,30 @@ function lilypond(score, file, format) {
   return lilypond
 }
 
+function svgo(file) {
+  return  $`./node_modules/.bin/svgo --multipass ${file}.svg -o ${file}.min.svg`
+}
+
+function optimizeSvg(file) {
+  return async function() {
+    const files = await globby(`${file}@(|-+([0-9])).svg`)
+    return files.map(file => svgo(file.replace(/\.svg$/, "")))
+  }
+}
+
+function engrave(score, file, format) {
+  return format === "svg" ?
+    lilypond(score, file, format).then(optimizeSvg(file)) :
+    lilypond(score, file, format)
+}
+
 function engravePieces(pieces) {
   return pieces.map(piece => {
     const score = stradella(
       render(`${args.i}/master.lys`, { pieces: [piece], args })
     )
     return args.f.split(":").map(format =>
-      lilypond(score, `${args.o}/${piece.file}`, format)
+      engrave(score, `${args.o}/${piece.file}`, format)
     )
   }).flat()
 }
@@ -92,19 +110,17 @@ function engraveBooks(books, pieces) {
       render(`${args.i}/master.lys`, { book, pieces, args })
     )
     return args.f.split(":").map(format =>
-      lilypond(score, `${args.o}/${book.file}`, format)
+      engrave(score, `${args.o}/${book.file}`, format)
     )
   }).flat()
 }
 
-async function markupPieces(pieces) {
-  for (const piece of pieces) {
-    await writeFile(
-      `score/${piece.file}.html`, render("content/score.njk", { piece })
-    )
-  }
-  await writeFile("index.html", render("content/index.njk", { pieces }))
-  console.log("Success: index.html")
+async function markupScores(scores) {
+  const tasks = scores.map(score =>
+    writeFile(`score/${score.file}.html`, render("content/score.njk", { score }))
+  )
+  tasks.push(writeFile("index.html", render("content/index.njk", { scores })))
+  return tasks
 }
 
 async function engraveAndMarkup(index = "index.yaml") {
@@ -112,12 +128,14 @@ async function engraveAndMarkup(index = "index.yaml") {
   if (args.b) {
     books = args._.length && args._[0] === "all" ? books :
       books.filter(book => args._.some(arg => book.file.match(arg)))
-    return engraveBooks(books, pieces)
+    return args.f.match("svg") ?
+      [engraveBooks(books, pieces), markupScores(books)].flat() :
+      engraveBooks(books, pieces)
   } else {
     pieces = args._.length && args._[0] === "all" ? pieces :
       pieces.filter(piece => args._.some(arg => piece.file.match(arg)))
     return args.f.match("svg") ?
-      [engravePieces(pieces), markupPieces(pieces)].flat() :
+      [engravePieces(pieces), markupScores(pieces)].flat() :
       engravePieces(pieces)
   }
 }

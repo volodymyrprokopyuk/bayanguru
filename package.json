@@ -20,6 +20,7 @@
   "dependencies": {
     "js-yaml": "^4.1.0",
     "nunjucks": "^3.2.3",
+    "svgo": "^2.8.0",
     "zx": "^7.0.3"
   }
 }
