@@ -4,7 +4,7 @@
   <h1>Scores</h1>
   <ul>
     {% for score in scores %}
-      <li><a href="score/{{ score.file }}.html">{{ score.title }}</a></li>
+      <li><a href="/score/{{ score.file }}.html">{{ score.title }}</a></li>
     {% endfor %}
   </ul>
 {% endblock %}

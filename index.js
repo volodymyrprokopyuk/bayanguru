@@ -125,10 +125,9 @@ async function sortPages(file) {
 
 function markupScores(scores) {
   const tasks = scores.map(async score => {
-    score.pages = await sortPages(`${args.o}/${score.file}`)
-    return writeFile(
-      `score/${score.file}.html`, render("content/score.njk", { score })
-    )
+    const file = `${args.o}/${score.file}`
+    score.pages = await sortPages(file)
+    return writeFile(`${file}.html`, render("content/score.njk", { score }))
   })
   tasks.push(writeFile("index.html", render("content/index.njk", { scores })))
   return tasks
