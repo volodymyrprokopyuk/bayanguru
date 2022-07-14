@@ -25,12 +25,12 @@ puBass = \markup \larger \box Б % Бас (вибiрний)
 \header {
   title = "{{ book.title }}"
   subtitle = "{{ book.subtitle }}"
-  tagline = \markup { {{ logo(0.5) }} "{{ url }}" }
+  tagline = \markup { {{ logo(0.5) }} \with-url "{{ url }}" "{{ url }}" }
 }
 \markuplist \table-of-contents
 {% else %}
 \header {
-  tagline = \markup { {{ logo(0.5) }} "{{ url }}" }
+  tagline = \markup { {{ logo(0.5) }} \with-url "{{ url }}" "{{ url }}" }
 }
 {% endif %}
 
