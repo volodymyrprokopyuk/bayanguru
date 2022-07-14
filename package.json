@@ -18,6 +18,7 @@
   "license": "MIT",
   "homepage": "https://volodymyrprokopyuk.github.io/bayan",
   "dependencies": {
+    "http-server": "^14.1.1",
     "js-yaml": "^4.1.0",
     "nunjucks": "^3.2.3",
     "svgo": "^2.8.0",

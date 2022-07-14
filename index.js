@@ -74,35 +74,36 @@ function lilypond(score, file, format) {
 }
 
 function svgo(file) {
-  return  $`./node_modules/.bin/svgo --multipass ${file}.svg -o ${file}.min.svg`
+  return  $`./node_modules/.bin/svgo --multipass ${file}.svg -o ${file}.svg`
 }
 
 function optimizeSvg(file) {
   return async function() {
-    const files = await globby(`${file}@(|-+([0-9])).svg`)
-    return files.map(file => svgo(file.replace(/\.svg$/, "")))
+    const pages = await globby(`${file}@(|-+([0-9])).svg`)
+    const tasks = pages.map(page => svgo(page.replace(/\.svg$/, "")))
+    return Promise.all(tasks)
   }
 }
 
 function engrave(score, file, format) {
-  return format === "svg" ?
-    lilypond(score, file, format).then(optimizeSvg(file)) :
-    lilypond(score, file, format)
+  const task = lilypond(score, file, format)
+  if (format === "svg") { return task.then(optimizeSvg(file)) }
+  return task
 }
 
 function engravePieces(pieces) {
-  return pieces.map(piece => {
+  return pieces.flatMap(piece => {
     const score = stradella(
       render(`${args.i}/master.lys`, { pieces: [piece], args })
     )
     return args.f.split(":").map(format =>
       engrave(score, `${args.o}/${piece.file}`, format)
     )
-  }).flat()
+  })
 }
 
 function engraveBooks(books, pieces) {
-  return books.map(book => {
+  return books.flatMap(book => {
     pieces = pieces.filter(piece =>
       book.pieces.some(bpiece => piece.file.match(bpiece))
     )
@@ -112,13 +113,23 @@ function engraveBooks(books, pieces) {
     return args.f.split(":").map(format =>
       engrave(score, `${args.o}/${book.file}`, format)
     )
-  }).flat()
+  })
 }
 
-async function markupScores(scores) {
-  const tasks = scores.map(score =>
-    writeFile(`score/${score.file}.html`, render("content/score.njk", { score }))
-  )
+async function sortPages(file) {
+  const parsePage = page => parseInt(page.match(/-(\d+)\.svg$/)[1])
+  const pages = await globby(`${file}@(|-+([0-9])).svg`)
+  return pages.length > 1 ?
+    pages.sort((a, b) => parsePage(a) - parsePage(b)) : pages
+}
+
+function markupScores(scores) {
+  const tasks = scores.map(async score => {
+    score.pages = await sortPages(`${args.o}/${score.file}`)
+    return writeFile(
+      `score/${score.file}.html`, render("content/score.njk", { score })
+    )
+  })
   tasks.push(writeFile("index.html", render("content/index.njk", { scores })))
   return tasks
 }
@@ -128,20 +139,20 @@ async function engraveAndMarkup(index = "index.yaml") {
   if (args.b) {
     books = args._.length && args._[0] === "all" ? books :
       books.filter(book => args._.some(arg => book.file.match(arg)))
-    return args.f.match("svg") ?
-      [engraveBooks(books, pieces), markupScores(books)].flat() :
-      engraveBooks(books, pieces)
+    await Promise.all(engraveBooks(books, pieces))
+    if (args.f.match("svg")) { await Promise.all(markupScores(books)) }
   } else {
     pieces = args._.length && args._[0] === "all" ? pieces :
       pieces.filter(piece => args._.some(arg => piece.file.match(arg)))
-    return args.f.match("svg") ?
-      [engravePieces(pieces), markupScores(pieces)].flat() :
-      engravePieces(pieces)
+    await Promise.all(engravePieces(pieces))
+    if (args.f.match("svg")) { await Promise.all(markupScores(pieces)) }
   }
 }
 
-const args = parseArgs(
-  process.argv.slice(2),
-  { boolean: ["b"], default: { i: "source", o: "score", f: "ps" } },
-)
-await Promise.all(await engraveAndMarkup())
+const argsConfig = {
+  boolean: ["b"], default: { i: "source", o: "score", f: "ps" }
+}
+const args = parseArgs(process.argv.slice(2), argsConfig)
+engraveAndMarkup()
+
+// ./node_modules/.bin/http-server -c-1

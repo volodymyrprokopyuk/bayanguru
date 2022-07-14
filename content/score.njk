@@ -1,7 +1,9 @@
 {% extends "content/master.njk" %}
 
 {% block content %}
-  <img src="{{ score.file }}.svg" alt="{{ score.title }}" title="Page 1">
-  <a href="{{ score.file }}.pdf">Download PDF</a>
-  <a href="{{ score.file }}.ps">Download PS</a>
+  {% for page in score.pages %}
+  <img src="/{{ page }}" alt="{{ score.title }}" title="Page {{ loop.index }}">
+  {% endfor %}
+  <a href="/score/{{ score.file }}.pdf">Download PDF</a>
+  <a href="/score/{{ score.file }}.ps">Download PS</a>
 {% endblock %}
