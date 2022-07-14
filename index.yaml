@@ -85,6 +85,10 @@ pieces:
   - { title: Танцювала риба з раком, category: *ua_folk_song, source: *B1AK1979,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Танцювала-риба-з-раком-7bt0 }
+  - { title: Лисичка, category: *ua_folk_song, composer: М. Лисенко,
+      source: *B1AK1979,
+      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
+      bass: stradella, level: elementary, file: Лисичка-8mwk }
   - { title: "Ви музики, хлопці добрі", category: *ua_folk_song,
       source: *B1AK1979,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
@@ -105,5 +109,5 @@ books:
       # B0DU1982
       "zo21", "akqt", "m6m8",
       # B1AK1979
-      "7bt0", "tonl", "a0xs",
+      "7bt0", "8mwk", "tonl", "a0xs",
       "qxq9"] }

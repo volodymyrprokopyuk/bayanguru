@@ -1,0 +1,26 @@
+{% macro rightHand(config) %}
+\tempo Presto
+\clef treble
+\key c \major
+\time 2/4
+\relative {
+  {{ config() }}
+  c'='8(\mf d e f | g) g g g | a a a a | g4 g |
+  e='8( g) d d | e4 f | e8 e d d | c4( g') |
+  e='8( g) d d | e4 f | e8 e d d | c4 c=' \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key c \major
+\relative {
+  {{ config() }}
+  c=8[(-\stBass cM!) cM cM] | c[( cM) cM cM] |
+  f,[( fM!) fM fM] | c'[( cM) cM cM] |
+  \repeat unfold 3 {
+    c=8 cM! g gM | c cM f, fM |
+  }
+  g=,8 c@M! g8 g7! | c= cM! c,+cM4 |
+}
+{% endmacro %}
