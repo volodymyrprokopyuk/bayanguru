@@ -13,3 +13,7 @@
     }
   }
 }
+
+% lilypond -f svg -o content/favicon content/bayan-logo.ly
+
+% \markup { \roman \bold \magnify #1.5 \rotate #30 Б }
