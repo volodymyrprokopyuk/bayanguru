@@ -22,7 +22,7 @@
 \key f \major
 \relative {
   {{ config() }}
-  f,=,8-\stBass fM! bes besM | a f,@M f8 fM | bes besM! f fM | c' c7! f, fM |
+  f,=,8-\stBass fM! bes besM | a f,@M f8 fM | bes besM! f fM | c' c7! f, fM! |
   f=,8 fM! bes besM | a f,@M f8 fM | bes besM! c f,@M | c8 c7! f, fM! |
   \repeat unfold 2 {
     c'=8 c7! e c@7 | f,8 fM! a f,@M |

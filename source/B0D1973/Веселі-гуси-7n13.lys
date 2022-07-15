@@ -17,7 +17,7 @@
 \key c \major
 \relative {
   {{ config() }}
-  f=8-\stBass r fM! r | c4 cM | f8 r fM r | c4 cM |
-  f=8 r fM! r | c r cM r | g r gM r | c=4 cM! |
+  f=8-\stBass r fM! r | c4 cM | f8 r fM! r | c4 cM |
+  f=8 r fM! r | c r cM r | g r gM! r | c=4 cM! |
 }
 {% endmacro %}

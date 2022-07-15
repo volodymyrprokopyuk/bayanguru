@@ -8,7 +8,7 @@
   a'='4.\(\mp b8 c4 a | e' c b a\) | gis\( b e4. gis,8 | a2 a\) |
   a='4.\( b8 c4 a | e' c b a\) | gis\( b e4. gis,8 | a2 b\) |
   \repeat volta 2 {
-    c=''4.\( g'8 c,4 e | g2 f8 e d c\) | b4\( d g f | e d c b\) |
+    c=''4.\( g8 c4 e | g2 f8 e d c\) | b4\( d g f | e d c b\) |
     a='4.\( b8 c4 a | e' c d8 c b a\) | gis4\( b e4. gis,8 |
     \alternative {
       \volta 1 { a2 b\) | }
@@ -24,7 +24,7 @@
 \relative {
   {{ config() }}
   a,=,4-\stBass am! am am | a am am am | e' eM! eM eM | a, am! am am |
-  a=, am am am | a am am am | e' eM! eM eM | a, am! g gM! |
+  a=, am! am am | a am am am | e' eM! eM eM | a, am! g gM! |
   c= cM! cM cM | e c@M cM4 cM | g, gM! gM gM | e' eM eM eM |
   a,=, am! am am | a am d dm | e eM! eM eM | a, am! g gM! | a=, r am! r |
 }

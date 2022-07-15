@@ -5,7 +5,7 @@
 \time 4/4
 \relative {
   {{ config() }}
-  b'='8(\mf e b b c a b b) | b( g fis e c' a b4) |
+  b'='8(\mf e b b c a b b) | b( g' fis e c a b4) |
   b='8-. b-. a( fis-.) g-. g-. a( fis-.) |
   g-. g-. fis-. dis-. e( fis g a) |
   b='8-. b-. a( fis-.) g-. g-. a( fis-.) |

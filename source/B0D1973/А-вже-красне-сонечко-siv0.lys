@@ -20,7 +20,7 @@
 \key c \major
 \relative {
   {{ config() }}
-  a,=,8-\stBass am! d dm | a[ am am am] | d dm e a,@m |
+  a,=,8-\stBass am! d dm | a[ am am am] | d dm! e a,@m |
   e8 eM! a, am! | e'= eM! a,,+am!4 |
 }
 {% endmacro %}
