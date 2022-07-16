@@ -13,7 +13,6 @@
     e,='8\p e\( f e | a e c' e, | b' e, gis e | a\< e c e\)\! |
     d='8 d\( e d | g d b' d, | d' c b a | g\< f e d='\)\! \bar "||"
   }
-
 }
 {% endmacro %}
 

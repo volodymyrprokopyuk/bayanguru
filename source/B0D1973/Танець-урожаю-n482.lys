@@ -1,0 +1,29 @@
+{% macro rightHand(config) %}
+\tempo Moderato
+\clef treble
+\key c \major
+\time 2/4
+\relative {
+  {{ config() }}
+  \repeat volta 2 {
+    g'='4\mf c | e8-. g-. c,4 | d8( g-.) g-. f-. | e-. d-. c4 |
+  }
+  e,='8(\p a-.) e-. a-. | gis4->( e8) r | b'( d-.) c-. b-. | c( d e4) |
+  e=''8( a-.) e-. a-. | gis4->( e8) r | b'( d-.) c-. b-. | a4( a,8) r |
+  \repeat volta 2 {
+    g='4\mf c | e8-. g-. c,4 | d8( g-.) g-. f-. | e-. d-. c=''4 |
+  }
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key c \major
+\relative {
+  {{ config() }}
+  c,+cM!4-\stBass r | c,+cM8 r c,+cM4 | b,=,8 g,@M! g8 gM | a-. b-. d4 |
+  a=,8 am! a am | b e@7! e8 e7 | gis, e@7! e'8 e7 | a, am! e' a,@m |
+  a,=,8 am! a am | b e@7! e8 e7 | gis, e@7! e'8 e7 | a, am! a r |
+  c,+cM!4 r | c,+cM8 r c,+cM4 | b=,8 g,@M! g8 gM | a-. b-. d=4 |
+}
+{% endmacro %}
