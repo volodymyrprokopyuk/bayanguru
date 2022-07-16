@@ -16,7 +16,8 @@ categories:
   - &ua_folk_song Українська народна пісня
 scores:
   - title: Ой піду я до млина # mandatory
-    category: *ua_folk_song
+    subtitle: *ua_folk_song
+    category: *ua_folk_song # mandatory for search
     composer: М. Різоль
     arranger: А. Авдієвський
     source: *B0D1973

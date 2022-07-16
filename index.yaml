@@ -13,91 +13,115 @@ sources:
     dir: B1AK1979
 categories:
   - &ua_folk_song Українська народна пісня
+  - &ua_author_song Українська авторська пісня
   - &ua_folk_dance Український народний танець
+  - &ua_author_dance Український авторський танець
 pieces:
   # B0D1973
-  - { title: На вулиці скрипка грає, category: *ua_folk_song, source: *B0D1973,
+  - { title: На вулиці скрипка грає, subtitle: *ua_folk_song,
+      category: *ua_folk_song, source: *B0D1973,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: На-вулиці-скрипка-грає-4ha8 }
-  - { title: Веселі гуси, category: *ua_folk_song, source: *B0D1973,
+  - { title: Веселі гуси, subtitle: *ua_folk_song,
+      category: *ua_folk_song, source: *B0D1973,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Веселі-гуси-7n13 }
-  - { title: За городом качки пливуть, category: *ua_folk_song, source: *B0D1973,
+  - { title: За городом качки пливуть, subtitle: *ua_folk_song,
+      category: *ua_folk_song, source: *B0D1973,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: За-городом-качки-пливуть-jnuj }
-  - { title: Казав мені батько, category: *ua_folk_song, source: *B0D1973,
+  - { title: Казав мені батько, subtitle: *ua_folk_song,
+      category: *ua_folk_song, source: *B0D1973,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Казав-мені-батько-1sxc }
-  - { title: Ой минула вже зима, category: *ua_folk_song, source: *B0D1973,
+  - { title: Ой минула вже зима, subtitle: *ua_folk_song,
+      category: *ua_folk_song, source: *B0D1973,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Ой-минула-вже-зима-hv2p }
-  - { title: А вже красне сонечко, category: *ua_folk_song, source: *B0D1973,
+  - { title: А вже красне сонечко, subtitle: *ua_folk_song,
+      category: *ua_folk_song, source: *B0D1973,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: А-вже-красне-сонечко-siv0 }
-  - { title: Дощик, category: *ua_folk_song, source: *B0D1973,
+  - { title: Дощик, subtitle: *ua_folk_song,
+      category: *ua_folk_song, source: *B0D1973,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Дощик-kakw }
-  - { title: У сусіда хата біла, category: *ua_folk_song, source: *B0D1973,
+  - { title: У сусіда хата біла, subtitle: *ua_folk_song,
+      category: *ua_folk_song, source: *B0D1973,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: У-сусіда-хата-біла-6msd }
-  - { title: Дударик, category: *ua_folk_song, source: *B0D1973,
+  - { title: Дударик, subtitle: *ua_folk_song,
+      category: *ua_folk_song, source: *B0D1973,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Дударик-iso2 }
-  - { title: Їхав козак за Дунай, category: *ua_folk_song, source: *B0D1973,
+  - { title: Їхав козак за Дунай, subtitle: *ua_folk_song,
+      category: *ua_folk_song, source: *B0D1973,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Їхав-козак-за-Дунай-xi84 }
-  - { title: "Ой не ходи, Грицю", category: *ua_folk_song, source: *B0D1973,
+  - { title: "Ой не ходи, Грицю", subtitle: *ua_folk_song,
+      category: *ua_folk_song, source: *B0D1973,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Ой-не-ходи-Грицю-dysh }
-  - { title: "По дорозі жук, жук", category: *ua_folk_song, source: *B0D1973,
+  - { title: "По дорозі жук, жук", subtitle: *ua_folk_song,
+      category: *ua_folk_song, source: *B0D1973,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: По-дорозі-жук-жук-f9yf }
-  - { title: Ой під горою, category: *ua_folk_song, source: *B0D1973,
+  - { title: Ой під горою, subtitle: *ua_folk_song,
+      category: *ua_folk_song, source: *B0D1973,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Ой-під-горою-41tf }
-  - { title: Женчичок-бренчичок, category: *ua_folk_song, source: *B0D1973,
+  - { title: Женчичок-бренчичок, subtitle: *ua_folk_song,
+      category: *ua_folk_song, source: *B0D1973,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Женчичок-бренчичок-g0q2 }
-  - { title: "Ой дівчино, шумить гай", category: *ua_folk_song, source: *B0D1973,
+  - { title: "Ой дівчино, шумить гай", subtitle: *ua_folk_song,
+      category: *ua_folk_song, source: *B0D1973,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Ой-дівчино-шумить-гай-l76t }
-  - { title: Ти до мене не ходи, category: *ua_folk_song, source: *B0D1973,
+  - { title: Ти до мене не ходи, subtitle: *ua_folk_song,
+      category: *ua_folk_song, source: *B0D1973,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Ти-до-мене-не-ходи-qr71 }
-  - { title: Ой піду я до млина, category: *ua_folk_song, source: *B0D1973,
+  - { title: Ой піду я до млина, subtitle: *ua_folk_song,
+      category: *ua_folk_song, source: *B0D1973,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Ой-піду-я-до-млина-1kae }
-  - { title: Метелиця, category: *ua_folk_dance, source: *B0D1973,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
+  - { title: Метелиця, subtitle: *ua_folk_dance,
+      category: *ua_folk_dance, source: *B0D1973,
+      origin: ua, style: folk, genre: dance, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Метелиця-hdux }
   # B0DU1982
-  - { title: Ой лопнув обруч, category: *ua_folk_song, source: *B0DU1982,
+  - { title: Ой лопнув обруч, subtitle: *ua_folk_song,
+      category: *ua_folk_song, source: *B0DU1982,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Ой-лопнув-обруч-zo21 }
-  - { title: Козачок, category: *ua_folk_dance, source: *B0DU1982,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
+  - { title: Козачок, subtitle: *ua_folk_dance,
+      category: *ua_folk_dance, source: *B0DU1982,
+      origin: ua, style: folk, genre: dance, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Козачок-akqt }
-  - { title: Козачок, category: *ua_folk_dance, composer: Л. Ревуцький,
-      source: *B0DU1982,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
+  - { title: Козачок, composer: Л. Ревуцький,
+      category: *ua_author_dance, source: *B0DU1982,
+      origin: ua, style: folk, genre: dance, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Козачок-m6m8 }
   # B1AK1979
-  - { title: Танцювала риба з раком, category: *ua_folk_song, source: *B1AK1979,
+  - { title: Танцювала риба з раком, subtitle: *ua_folk_song,
+      category: *ua_folk_song, source: *B1AK1979,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Танцювала-риба-з-раком-7bt0 }
-  - { title: Лисичка, category: *ua_folk_song, composer: М. Лисенко,
-      source: *B1AK1979,
+  - { title: Лисичка, composer: М. Лисенко,
+      category: *ua_author_song, source: *B1AK1979,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Лисичка-8mwk }
-  - { title: "Ви музики, хлопці добрі", category: *ua_folk_song,
-      source: *B1AK1979,
+  - { title: "Ви музики, хлопці добрі", subtitle: *ua_folk_song,
+      category: *ua_folk_song, source: *B1AK1979,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Ви-музики-хлопці-добрі-tonl }
-  - { title: "Ой Василю, Василечку", category: *ua_folk_song,
-      composer: В. Верховинець, source: *B1AK1979,
+  - { title: "Ой Василю, Василечку", composer: В. Верховинець,
+      category: *ua_author_song, source: *B1AK1979,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Ой-Василю-Василечку-a0xs }
-  - { title: Їхав козак на війноньку, category: *ua_folk_song, source: *B1AK1979,
+  - { title: Їхав козак на війноньку, subtitle: *ua_folk_song,
+      category: *ua_folk_song, source: *B1AK1979,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Їхав-козак-на-війноньку-qxq9 }
 books:

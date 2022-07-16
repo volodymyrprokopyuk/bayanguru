@@ -46,7 +46,7 @@ puBass = \markup \larger \box Б % Бас (вибiрний)
 \score {
   \header {
     title = "{{ piece.title }}"
-    subtitle = "{{ piece.category }}"
+    subtitle = "{{ piece.subtitle  or '' }}"
     {% if piece.composer %}
     composer = "{{ piece.composer }}"
     {% endif %}
