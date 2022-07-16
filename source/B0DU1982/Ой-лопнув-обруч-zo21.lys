@@ -20,6 +20,6 @@
 \relative {
   {{ config() }}
   c=8-\stBass cM! g gM | c cM c cM | g gM! g gM | c cM c cM |
-  g=,8 gM! d dM | g gM g gM | d dM! d dM | g gM! g gM |
+  g=,8 gM! d' dM | g, gM g gM | d' dM! d dM | g, gM! g gM |
 }
 {% endmacro %}
