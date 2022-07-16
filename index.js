@@ -133,8 +133,8 @@ function markupScores(scores) {
   return tasks
 }
 
-async function engraveAndMarkup(index = "index.yaml") {
-  let { pieces, books } = load(await readFile(index))
+async function engraveAndMarkup() {
+  let { pieces, books } = load(await readFile(args.c))
   if (args.b) {
     books = args._.length && args._[0] === "all" ? books :
       books.filter(book => args._.some(arg => book.file.match(arg)))
@@ -149,7 +149,8 @@ async function engraveAndMarkup(index = "index.yaml") {
 }
 
 const argsConfig = {
-  boolean: ["b"], default: { i: "source", o: "score", f: "ps" }
+  boolean: ["b"],
+  default: { c: "catalog/ukrainian.yaml", i: "source", o: "score", f: "ps" }
 }
 const args = parseArgs(process.argv.slice(2), argsConfig)
 engraveAndMarkup()
