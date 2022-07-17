@@ -136,6 +136,10 @@ pieces:
       category: *ua_author_song, source: *B1AK1979,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Ой-Василю-Василечку-a0xs }
+  - { title: Галя по садочку ходила, subtitle: *ua_folk_song,
+      category: *ua_folk_song, source: *B1AK1979,
+      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
+      bass: stradella, level: elementary, file: Галя-по-садочку-ходила-79hk }
   - { title: Їхав козак на війноньку, subtitle: *ua_folk_song,
       category: *ua_folk_song, source: *B1AK1979,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
@@ -150,5 +154,5 @@ books:
       # B0DU1982
       "zo21", "oyhg", "akqt", "ry3w", "m6m8",
       # B1AK1979
-      "8mwk", "tonl", "a0xs",
+      "8mwk", "tonl", "a0xs", "79hk",
       "qxq9"] }
