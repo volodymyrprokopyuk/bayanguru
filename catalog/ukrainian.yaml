@@ -104,13 +104,21 @@ pieces:
       bass: stradella, level: elementary, file: Курочка-rrag }
   # B0DU1982
   - { title: Ой лопнув обруч, subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B0DU1982,
+      category: *ua_author_song, source: *B0DU1982,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Ой-лопнув-обруч-zo21 }
+  - { title: Веснянка, composer: В. Рибальченко,
+      category: *ua_folk_song, source: *B0DU1982,
+      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
+      bass: stradella, level: elementary, file: Веснянка-oyhg }
   - { title: Козачок, subtitle: *ua_folk_dance,
       category: *ua_folk_dance, source: *B0DU1982,
       origin: ua, style: folk, genre: dance, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Козачок-akqt }
+  - { title: Гуцульський танець, composer: К. Домінчен,
+      category: *ua_author_dance, source: *B0DU1982,
+      origin: ua, style: folk, genre: dance, form: melody, texture: homophony,
+      bass: stradella, level: elementary, file: Гуцульський-танець-ry3w }
   - { title: Козачок, composer: Л. Ревуцький,
       category: *ua_author_dance, source: *B0DU1982,
       origin: ua, style: folk, genre: dance, form: melody, texture: homophony,
@@ -140,7 +148,7 @@ books:
       "iso2", "xi84", "dysh", "f9yf", "41tf", "g0q2", "l76t", "qr71", "hdux",
       "jmy7", "n482", "rrag",
       # B0DU1982
-      "zo21", "akqt", "m6m8",
+      "zo21", "oyhg", "akqt", "ry3w", "m6m8",
       # B1AK1979
       "8mwk", "tonl", "a0xs",
       "qxq9"] }
