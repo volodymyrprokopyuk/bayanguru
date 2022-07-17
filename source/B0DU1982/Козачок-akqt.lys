@@ -7,7 +7,7 @@
   {{ config() }}
   \repeat volta 2 {
     g'='4\mf g'8( f) | e-. c-. c4 | g g'8( f) | e-. c-. c4 |
-    a='8 a d( b) | b-. g-. g4 | a8 a d( b) | b-. g-. g=' r |
+    a='8 a d( c) | b-. g-. g4 | a8 a d( c) | b-. g-. g=' r |
   }
 }
 {% endmacro %}
