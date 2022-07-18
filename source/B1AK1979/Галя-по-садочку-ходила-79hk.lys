@@ -17,7 +17,6 @@
 \key g \major
 \relative {
   {{ config() }}
-  % g,=,8-\stBass gM! b g,@M | c8 cM g gM | d' d7! g, gM! |
   \repeat unfold 2 {
     \alternative {
       { g,=,8-\stBass gM! b g,@M | }
