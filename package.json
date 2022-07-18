@@ -23,5 +23,8 @@
     "nunjucks": "^3.2.3",
     "svgo": "^2.8.0",
     "zx": "^7.0.3"
+  },
+  "scripts": {
+    "serve": "http-server -c-1"
   }
 }

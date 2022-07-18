@@ -155,4 +155,4 @@ const argsConfig = {
 const args = parseArgs(process.argv.slice(2), argsConfig)
 engraveAndMarkup()
 
-// ./node_modules/.bin/http-server -c-1
+// npm run serve

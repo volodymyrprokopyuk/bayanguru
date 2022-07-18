@@ -10,7 +10,7 @@
     bes='8-. bes-. bes( g) | a-. a-. a( f) | g-. g-. c,( e |
     \alternative {
       { f4) a | }
-      { f4) f \bar "|." }
+      { f4) f=' \bar "|." }
     }
   }
 }
