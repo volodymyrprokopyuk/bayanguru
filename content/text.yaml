@@ -1,0 +1,51 @@
+%YAML 1.2
+---
+contact:
+  issue: &issue https://github.com/volodymyrprokopyuk/bayan/issues
+  email: &email volodymyrprokopyuk@gmail.com
+en:
+  title: Sheet music library
+  # The reason to exist, why?
+  purpose:
+    key: Purpose
+    text: >
+      Promote and support the art of bayan music through free and open source
+      sheet music content of the highest quality
+  # The goal of the purpose, what?
+  vision:
+    key: Vision
+    text: >
+      Become the most complete and comprehensive sheet music library for bayan
+  # The path to the purpose, how?
+  mission:
+    key: Mission
+    text: >
+      Combine the community effort to sheet music production with the best music
+      engraving tools ((LilyPond)[https://lilypond.org/])
+  features:
+    key: Features
+    items:
+      - Free and open source sheet music content for bayan
+      - The highest quality engraving sheet music for Stradella system and free
+        bass
+      - The most complete and comprehensive bayan sheet music library
+      - Community effort to sheet music production (curated list of the most
+        wanted and verified pieces)
+      - Platform for top quality sheet music distribution on the web (HTML, SVG)
+        and for print (PDF, PS)
+      - Indexed database of individual sheet music pieces for sheet music
+        searching, visualization and on demand compilation of sheet music books
+  catalog:
+    key: Catalog
+    download:
+      key: Download
+  contact:
+    key: Contact
+    issue:
+      url: *issue
+      text: Submission of new content, reporting of defects
+    email:
+      address: *email
+      text: Proposals for improvements, constructive feedback
+ua:
+  title: Нотна бібліотека
