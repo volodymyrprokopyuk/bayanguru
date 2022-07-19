@@ -1,0 +1,26 @@
+{% macro rightHand(config) %}
+\tempo Allegretto
+\clef treble
+\key d \major
+\time 2/4
+\relative {
+  {{ config() }}
+  d'='8\(\f e fis g | a4 d4\) | b8\( b d b | a4 fis\) |
+  g='8\mf g( b g) | fis fis( a fis) | e( g fis e | d4) d |
+  g='8\mp g( b g) | fis fis( a fis) | e( g fis e | d4) d='8 r \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key d \major
+\relative {
+  {{ config() }}
+  d=8[(-\stBass dM!) dM dM] | fis[( d@M) dM8 dM] |
+  d8[( dM!) dM dM] | fis[( d@M) dM8 dM] |
+  g,=,8[( gM!) gM gM] | d'[( dM) dM dM] |
+  a8[( a7!) a7 a7] | d[( dM!) dM dM] |
+  g,=,8[( gM!) gM gM] | a[( d@M) dM8 dM] |
+  a8[( a7!) a7 a7] | d= dM! d,+dM r |
+}
+{% endmacro %}
