@@ -5,6 +5,8 @@ contact:
   email: &email volodymyrprokopyuk@gmail.com
 en:
   title: Sheet music library
+  home:
+    key: Home
   # The reason to exist, why?
   purpose:
     key: Purpose
@@ -37,8 +39,8 @@ en:
         searching, visualization and on demand compilation of sheet music books
   catalog:
     key: Catalog
-    download:
-      key: Download
+  download:
+    key: Download
   contact:
     key: Contact
     issue:

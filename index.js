@@ -3,8 +3,9 @@ import { readFile, writeFile } from "fs/promises"
 import parseArgs from "minimist"
 import { globby } from "globby"
 import { load } from "js-yaml"
-import nj from "nunjucks"
-const { render } = nj
+import { marked } from "marked"
+import njk from "nunjucks"
+const { render } = njk
 import { $ } from "zx"
 
 const chordNames = { M: "Б", m: "М", 7: "7", d: "У" }
@@ -123,13 +124,20 @@ async function sortPages(file) {
     pages.sort((a, b) => parsePage(a) - parsePage(b)) : pages
 }
 
-function markupScores(scores) {
+async function markupScores(scores) {
+  const env = njk.configure(".", { autoescape: false })
+  env.addFilter("md", marked.parseInline)
+  const { en: t, ua } = load(await readFile("content/text.yaml"))
   const tasks = scores.map(async score => {
     const file = `${args.o}/${score.file}`
     score.pages = await sortPages(file)
-    return writeFile(`${file}.html`, render("content/score.njk", { score }))
+    return writeFile(
+      `${file}.html`, env.render("content/score.njk", { score, t })
+    )
   })
-  tasks.push(writeFile("index.html", render("content/index.njk", { scores })))
+  tasks.push(
+    writeFile("index.html", env.render("content/index.njk", { scores, t }))
+  )
   return tasks
 }
 
@@ -139,12 +147,12 @@ async function engraveAndMarkup() {
     books = args._.length && args._[0] === "all" ? books :
       books.filter(book => args._.some(arg => book.file.match(arg)))
     await Promise.all(engraveBooks(books, pieces))
-    if (args.f.match("svg")) { await Promise.all(markupScores(books)) }
+    if (args.f.match("svg")) { await Promise.all(await markupScores(books)) }
   } else {
     pieces = args._.length && args._[0] === "all" ? pieces :
       pieces.filter(piece => args._.some(arg => piece.file.match(arg)))
     await Promise.all(engravePieces(pieces))
-    if (args.f.match("svg")) { await Promise.all(markupScores(pieces)) }
+    if (args.f.match("svg")) { await Promise.all(await markupScores(pieces)) }
   }
 }
 

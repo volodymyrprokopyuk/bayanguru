@@ -7,16 +7,25 @@
     <link href="/style/style.css" rel="stylesheet">
   </head>
   <body>
-    <header>
-      {% block header %}
-        <a href="/">Home</a>
-      {% endblock %}
-    </header>
-    <main>
-      {% block content %} {% endblock %}
-    </main>
-    <footer>
-      {% block footer %} {% endblock %}
-    </footer>
+    <div class="content">
+      <header>
+        Header
+      </header>
+      <nav>
+        <ul>
+          <li><a href="/">{{ t.home.key }}</a></li>
+          <li><a href="/">{{ t.purpose.key }}</a></li>
+          <li><a href="/">{{ t.features.key }}</a></li>
+          <li><a href="/">{{ t.catalog.key }}</a></li>
+          <li><a href="/">{{ t.contact.key }}</a></li>
+        </ul>
+      </nav>
+      <main>
+        {% block content %} {% endblock %}
+      </main>
+      <footer>
+        Footer
+      </footer>
+    </div>
   </body>
 </html>

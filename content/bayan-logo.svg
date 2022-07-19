@@ -1,47 +1,135 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" width="210.00mm" height="297.00mm" viewBox="0.0000 -0.0000 119.5016 169.0094">
-<style type="text/css">
-<![CDATA[
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.2"
+   width="41.636578mm"
+   height="19.274052mm"
+   viewBox="0 0 23.693513 10.968"
+   id="svg48"
+   sodipodi:docname="bayan-logo.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs52" />
+  <sodipodi:namedview
+     id="namedview50"
+     pagecolor="#ffffff"
+     bordercolor="#cccccc"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="1"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.0233293"
+     inkscape:cx="139.37425"
+     inkscape:cy="139.86848"
+     inkscape:window-width="1920"
+     inkscape:window-height="990"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg48" />
+  <style
+     type="text/css"
+     id="style2"><![CDATA[
 tspan { white-space: pre; }
-]]>
-</style>
-<g transform="translate(5.6906, 11.0453)">
-<path transform="scale(0.0060, -0.0060)" d="M264 -594c47 0 165 26 165 246c0 32 -2 64 -5 96c-5 -1 -44 -8 -89 -8c-193 0 -333 178 -333 372c0 178 133 306 251 440c-27 93 -49 170 -49 345c0 116 55 226 150 295c5 4 11 4 16 0c67 -81 132 -246 132 -359c0 -144 -87 -256 -183 -365c20 -69 39 -138 55 -208
-c2 0 7 1 15 1c154 0 254 -127 254 -259c0 -112 -73 -212 -180 -245c3 -36 5 -72 5 -108c0 -19 0 -37 -1 -56c-7 -120 -89 -226 -206 -226c-108 0 -195 87 -195 195c0 58 53 104 112 104c54 0 95 -48 95 -104c0 -52 -43 -95 -95 -95c-12 0 -24 4 -35 9c26 -41 70 -70 121 -70
-zM459 -205c71 24 117 92 117 166c0 92 -69 184 -179 193c1 -5 45 -212 62 -359zM71 31c0 -146 142 -251 267 -251c1 0 46 0 82 6c-7 63 -28 201 -64 367c-79 -9 -125 -62 -125 -121c0 -44 26 -92 82 -124c4 -4 7 -9 7 -14c0 -11 -9 -21 -20 -21c-14 0 -125 62 -125 186
-c0 88 57 173 158 196c-14 60 -30 119 -46 178c-108 -121 -216 -242 -216 -402zM411 1050c-99 -50 -161 -151 -161 -262c0 -59 11 -123 33 -200c82 97 149 198 149 325c0 35 0 69 -21 137z" fill="currentColor"/>
-</g>
-<g transform="rotate(-30.0000, 12.6723, 9.0816)">
-<g transform="translate(10.8798, 11.0453)">
-<text font-family="serif" font-weight="bold" font-size="5.5005" text-anchor="start" fill="currentColor">
-<tspan>Б</tspan>
-</text>
-</g>
-</g>
-<g transform="translate(15.8065, 11.7953)">
-<text font-family="serif" font-weight="bold" font-size="5.5005" text-anchor="start" fill="currentColor">
-<tspan>а</tspan>
-</text>
-</g>
-<g transform="translate(19.6843, 10.2953)">
-<text font-family="serif" font-weight="bold" font-size="5.5005" text-anchor="start" fill="currentColor">
-<tspan>я</tspan>
-</text>
-</g>
-<g transform="rotate(30.0000, 26.5978, 9.0816)">
-<g transform="translate(24.3444, 11.0453)">
-<text font-family="serif" font-weight="bold" font-size="5.5005" text-anchor="start" fill="currentColor">
-<tspan>Н</tspan>
-</text>
-</g>
-</g>
-<g transform="translate(30.0461, 165.0670)">
-<a xlink:href="https://lilypond.org/">
-<rect x="0.0000" y="-0.5280" width="59.4094" height="2.2001" fill="none" stroke="none" stroke-width="0.0"/>
-</a>
-</g>
-<g transform="translate(30.0461, 165.0670)">
-<text font-family="serif" font-size="2.2001" text-anchor="start" fill="currentColor">
-<tspan>Music engraving by LilyPond 2.23.11—www.lilypond.org</tspan>
-</text>
-</g>
+]]></style>
+  <g
+     transform="translate(-0.012,7.17)"
+     id="g6">
+    <path
+       transform="scale(0.006,-0.006)"
+       d="m 264,-594 c 47,0 165,26 165,246 0,32 -2,64 -5,96 -5,-1 -44,-8 -89,-8 -193,0 -333,178 -333,372 0,178 133,306 251,440 -27,93 -49,170 -49,345 0,116 55,226 150,295 5,4 11,4 16,0 67,-81 132,-246 132,-359 0,-144 -87,-256 -183,-365 20,-69 39,-138 55,-208 2,0 7,1 15,1 154,0 254,-127 254,-259 0,-112 -73,-212 -180,-245 3,-36 5,-72 5,-108 0,-19 0,-37 -1,-56 -7,-120 -89,-226 -206,-226 -108,0 -195,87 -195,195 0,58 53,104 112,104 54,0 95,-48 95,-104 0,-52 -43,-95 -95,-95 -12,0 -24,4 -35,9 26,-41 70,-70 121,-70 z m 195,389 c 71,24 117,92 117,166 0,92 -69,184 -179,193 1,-5 45,-212 62,-359 z M 71,31 c 0,-146 142,-251 267,-251 1,0 46,0 82,6 -7,63 -28,201 -64,367 -79,-9 -125,-62 -125,-121 0,-44 26,-92 82,-124 4,-4 7,-9 7,-14 0,-11 -9,-21 -20,-21 -14,0 -125,62 -125,186 0,88 57,173 158,196 -14,60 -30,119 -46,178 C 179,312 71,191 71,31 Z M 411,1050 C 312,1000 250,899 250,788 c 0,-59 11,-123 33,-200 82,97 149,198 149,325 0,35 0,69 -21,137 z"
+       fill="currentColor"
+       id="path4" />
+  </g>
+  <g
+     transform="rotate(-30,2.5895918,17.785146)"
+     id="g14">
+    <g
+       transform="translate(10.8798,11.0453)"
+       id="g12">
+      <text
+         font-family="serif"
+         font-weight="bold"
+         font-size="5.5005px"
+         text-anchor="start"
+         fill="currentColor"
+         id="text10"><tspan
+           id="tspan8">Б</tspan></text>
+    </g>
+  </g>
+  <g
+     transform="translate(10.1039,7.92)"
+     id="g20">
+    <text
+       font-family="serif"
+       font-weight="bold"
+       font-size="5.5005px"
+       text-anchor="start"
+       fill="currentColor"
+       id="text18"><tspan
+         id="tspan16">а</tspan></text>
+  </g>
+  <g
+     transform="translate(13.9817,6.42)"
+     id="g26">
+    <text
+       font-family="serif"
+       font-weight="bold"
+       font-size="5.5005px"
+       text-anchor="start"
+       fill="currentColor"
+       id="text24"><tspan
+         id="tspan22">я</tspan></text>
+  </g>
+  <g
+     transform="rotate(30,30.977908,-3.4972465)"
+     id="g34">
+    <g
+       transform="translate(24.3444,11.0453)"
+       id="g32">
+      <text
+         font-family="serif"
+         font-weight="bold"
+         font-size="5.5005px"
+         text-anchor="start"
+         fill="currentColor"
+         id="text30"><tspan
+           id="tspan28">Н</tspan></text>
+    </g>
+  </g>
+  <g
+     transform="translate(24.3435,161.1917)"
+     id="g40">
+    <a
+       xlink:href="https://lilypond.org/"
+       id="a38">
+      <rect
+         x="0"
+         y="-0.528"
+         width="59.409401"
+         height="2.2000999"
+         fill="none"
+         stroke="none"
+         stroke-width="0"
+         id="rect36" />
+    </a>
+  </g>
+  <g
+     transform="translate(24.3435,161.1917)"
+     id="g46">
+    <text
+       font-family="serif"
+       font-size="2.2001px"
+       text-anchor="start"
+       fill="currentColor"
+       id="text44"><tspan
+         id="tspan42">Music engraving by LilyPond 2.23.11—www.lilypond.org</tspan></text>
+  </g>
 </svg>

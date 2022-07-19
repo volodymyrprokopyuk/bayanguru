@@ -2,7 +2,7 @@
 
 {% block content %}
   {% for page in score.pages %}
-  <img src="/{{ page }}" alt="{{ score.title }}" title="Page {{ loop.index }}">
+    <img src="/{{ page }}" alt="{{ score.title }}" title="Page {{ loop.index }}">
   {% endfor %}
   <a href="/score/{{ score.file }}.pdf">Download PDF</a>
   <a href="/score/{{ score.file }}.ps">Download PS</a>

@@ -1,5 +1,25 @@
 @import "modern-normalize.min.css";
 
-h1 {
-  color: blue;
+/* Layout */
+
+header, nav, main, footer {
+  width: 80%;
+  margin: auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navigation */
+
+nav ul li {
+  display: inline;
+}
+
+/* Misc */
+
+.content, header, nav, main, footer {
+  border: thin solid black;
 }
