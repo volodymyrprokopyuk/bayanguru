@@ -146,12 +146,12 @@ async function engraveAndMarkup() {
   if (args.b) {
     books = args._.length && args._[0] === "all" ? books :
       books.filter(book => args._.some(arg => book.file.match(arg)))
-    await Promise.all(engraveBooks(books, pieces))
+    // await Promise.all(engraveBooks(books, pieces))
     if (args.f.match("svg")) { await Promise.all(await markupScores(books)) }
   } else {
     pieces = args._.length && args._[0] === "all" ? pieces :
       pieces.filter(piece => args._.some(arg => piece.file.match(arg)))
-    await Promise.all(engravePieces(pieces))
+    // await Promise.all(engravePieces(pieces))
     if (args.f.match("svg")) { await Promise.all(await markupScores(pieces)) }
   }
 }

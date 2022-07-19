@@ -9,22 +9,31 @@
   <body>
     <div class="content">
       <header>
-        Header
+        <a href="/">
+          <img src="/content/bayan-logo.svg" alt="Баян logo">
+        </a>
+        <h1>{{ t.title }}</h1>
       </header>
       <nav>
         <ul>
           <li><a href="/">{{ t.home.key }}</a></li>
-          <li><a href="/">{{ t.purpose.key }}</a></li>
-          <li><a href="/">{{ t.features.key }}</a></li>
-          <li><a href="/">{{ t.catalog.key }}</a></li>
-          <li><a href="/">{{ t.contact.key }}</a></li>
+          <li><a href="/#purpose">{{ t.purpose.key }}</a></li>
+          <li><a href="/#features">{{ t.features.key }}</a></li>
+          <li><a href="/#catalog">{{ t.catalog.key }}</a></li>
+          <li><a href="/#contact">{{ t.contact.key }}</a></li>
         </ul>
       </nav>
       <main>
         {% block content %} {% endblock %}
       </main>
       <footer>
-        Footer
+        <h1 id="contact">{{ t.contact.key }}</h1>
+        {% set issue = t.contact.issue.url %}
+        <p>{{ t.contact.issue.text }}<br>
+          <a href="{{ issue }}"> {{ issue }}</a></p>
+        {% set email = t.contact.email.address %}
+        <p>{{ t.contact.email.text }}<br>
+          <a href="mailto:{{ email }}">{{ email }}</a></p>
       </footer>
     </div>
   </body>

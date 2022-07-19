@@ -1,7 +1,19 @@
 {% extends "content/master.njk" %}
 
 {% block content %}
-  <h1>Scores</h1>
+  <h1 id="purpose">{{ t.purpose.key }}</h1>
+  <p>{{ t.purpose.text | md }}</p>
+  <p>{{ t.vision.text | md }}</p>
+  <p>{{ t.mission.text | md }}</p>
+
+  <h1 id="features">{{ t.features.key }}</h1>
+  <ul>
+    {% for feature in t.features.items %}
+      <li>{{ feature | md }}</li>
+    {% endfor %}
+  </ul>
+
+  <h1 id="catalog">{{ t.catalog.key }}</h1>
   <ul>
     {% for score in scores %}
       <li><a href="/score/{{ score.file }}.html">{{ score.title }}</a></li>

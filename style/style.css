@@ -3,13 +3,36 @@
 /* Layout */
 
 header, nav, main, footer {
-  width: 80%;
+  width: 90%;
   margin: auto;
 }
 
 .content {
   display: flex;
   flex-direction: column;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+header > * {
+  margin: auto;
+}
+
+header img {
+  margin: 2rem 0 0;
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+}
+
+.score > img {
+  margin: auto;
+  max-width: 100%;
 }
 
 /* Navigation */
@@ -20,6 +43,6 @@ nav ul li {
 
 /* Misc */
 
-.content, header, nav, main, footer {
-  border: thin solid black;
-}
+/* .content, header, nav, main, footer { */
+/*   border: thin solid black; */
+/* } */
