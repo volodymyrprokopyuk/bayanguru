@@ -1,0 +1,29 @@
+{% macro rightHand(config) %}
+\tempo Andante
+\clef treble
+\key g \major
+\time 2/4
+\relative {
+  {{ config() }}
+  a'='8\mf a( fis d) | g g g( b) | a a( fis d | g4 b) |
+  \repeat volta 2 {
+    d=''8 d( c8.) c16( | b8) b( a8. g16) | fis8( d fis a |
+    \alternative {
+      \volta 1 { g4) b | }
+      \volta 2 { g4 g='8 r \bar "|." }
+    }
+  }
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key g \major
+\relative {
+  {{ config() }}
+  c=8-\stBass a,@m! d8 dM! | g, gM b g,@M |
+  c8 a,@m! d8 dM! | b g,@M d8 g,@M |
+  g,=,8 gM! a d@7! | b8 g,@M! c8 a,@m! |
+  d8 dM! d d7! | g, gM! d' g,@M | g,=,8 gM! g,,+gM r |
+}
+{% endmacro %}

@@ -144,7 +144,7 @@ pieces:
       category: *ua_folk_song, source: *B1AK1979,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: По-дорозі-жук-жук-angm }
-  - { title: Пісня рака, subtitle: з дитячої опери \"Коза Дереза\",
+  - { title: Пісня рака, subtitle: 'з дитячої опери \"Коза-дереза\"',
       composer: М. Лисенко, category: *ua_author_song, source: *B1AK1979,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Пісня-рака-59gv }
@@ -156,6 +156,11 @@ pieces:
       category: *ua_folk_song, source: *B1AK1979,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Ой-за-гаєм-гаєм-c1z5 }
+  - { title: Пісня котика,
+      subtitle: 'з дитячої опери \"Лисичка, котик і півник\"',
+      composer: К. Стеценко, category: *ua_author_song, source: *B1AK1979,
+      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
+      bass: stradella, level: elementary, file: Пісня-котика-afgp }
   - { title: Їхав козак на війноньку, subtitle: *ua_folk_song,
       category: *ua_folk_song, source: *B1AK1979,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
@@ -170,5 +175,5 @@ books:
       # B0DU1982
       "zo21", "oyhg", "akqt", "ry3w", "m6m8",
       # B1AK1979
-      "8mwk", "tonl", "a0xs", "79hk", "angm", "59gv", "yn16", "c1z5",
+      "8mwk", "tonl", "a0xs", "79hk", "angm", "59gv", "yn16", "c1z5", "afgp",
       "qxq9"] }
