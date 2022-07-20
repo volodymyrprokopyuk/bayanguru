@@ -165,6 +165,10 @@ pieces:
       composer: М. Лисенко, category: *ua_author_song, source: *B1AK1979,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Пісня-вовчика-6kce }
+  - { title: Бандура, subtitle: *ua_folk_song,
+      category: *ua_folk_song, source: *B1AK1979,
+      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
+      bass: stradella, level: elementary, file: Бандура-d7eu }
   - { title: Їхав козак на війноньку, subtitle: *ua_folk_song,
       category: *ua_folk_song, source: *B1AK1979,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
@@ -180,5 +184,5 @@ books:
       "zo21", "oyhg", "akqt", "ry3w", "m6m8",
       # B1AK1979
       "8mwk", "tonl", "a0xs", "79hk", "angm", "59gv", "yn16", "c1z5", "afgp",
-      "6kce",
+      "6kce", "d7eu",
       "qxq9"] }
