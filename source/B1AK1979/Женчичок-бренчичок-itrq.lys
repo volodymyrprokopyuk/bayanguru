@@ -1,0 +1,43 @@
+{% macro rightHand(config) %}
+\tempo Allegretto
+\clef treble
+\key g \major
+\time 3/8
+\relative {
+  {{ config() }}
+  \repeat unfold 2 {
+    \alternative {
+      { d''=''8-.\mf d-. d-. | }
+      { d=''8-. d-. d-. | }
+    }
+    d16( c b a g8) | c16( d e4) | e8( d4) |
+  }
+  c=''16(\mp b a8) a-. | b16(\< a g8) g-. |
+  c16( b a8) a-. | b16( a g8) g-.\! |
+  <<
+    \relative {
+      c''=''8(\f b d | d4\>^"rit." d8)\! |
+      \mark \markup { \musicglyph #"scripts.ufermata" }
+    }
+    \\
+    \relative { g'='4 r8 | g4 r8 | }
+  >>
+  b='16(\mf^"a tempo" c b8) a-. | g-. g='-. r \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key g \major
+\relative {
+  {{ config() }}
+  g,=,( gM!) gM | b[( g,@M) gM8] |
+  c8[( g,@M!) gM8] | g( gM) gM |
+  g=,( gM!) gM | d'[( d7!) g,@M!] |
+  fis8[( d@7!) d78] | g,( gM!) gM |
+  a=,8[( d@7!) d78] | g( gM!) gM |
+  fis8[( d@7!) d78] | g( gM!) gM |
+  e,,+c@M!4 r8 | a,,+c@M!4 r8 |
+  d,+d7!4 d,+d78 | g,,+gM! g,,+gM r |
+}
+{% endmacro %}
