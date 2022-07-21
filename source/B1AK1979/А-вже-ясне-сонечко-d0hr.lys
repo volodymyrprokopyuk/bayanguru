@@ -1,0 +1,23 @@
+{% macro rightHand(config) %}
+\tempo Moderato
+\clef treble
+\key e \minor
+\time 2/4
+\relative {
+  {{ config() }}
+  e'='8\(\p b' a d | b4 a8 g\) | fis( a g4) | fis8( fis e4) |
+  e='8\( b' a d | b4 a8 g\) | fis( a g4) | fis8( fis e='4) \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key e \minor
+\relative {
+  {{ config() }}
+  e=8-\stBass em! e a,@m | e8 em e em |
+  a,8 am! b( e@m) | b8 b7! e( em!) |
+  e=8 em! fis( a,@m) | g,8( e@m) a8 b |
+  c8( a,@m!) b8( e@m) | b8( b7!) e( em!) |
+}
+{% endmacro %}
