@@ -10,7 +10,7 @@
   c='16( d e f g8-.) g-. | a16( g a8) g-. c-. |
   f,16( e f8) e16( d e8) | d16( c d8) c-. c-. |
   e='16(\p d e8) d16( c d8) | e16( d e8) f-. f-. |
-  e16(\p d e8) d16( c d8) | c-. c'-.\< c16( b c8)\! |
+  e16( d e8) d16( c d8) | c-. c'-.\< c16( b c8)\! |
   e=''16(\mf d e8) d16( c d8) | e16( d e8) f-. f-. |
   e16( d e8) d16( c d8) | c-. c-. c-. c=''-. \bar "|."
 }
