@@ -1,0 +1,29 @@
+{% macro rightHand(config) %}
+\tempo Allegro
+\clef treble
+\key c \major
+\time 2/4
+\relative {
+  {{ config() }}
+  c'='16(\f d e f g8-.) g-. | a16( g a8) g-. g-. |
+  f16( e f8) e16( d e8) | d16( c d8) c-. c-. |
+  c='16( d e f g8-.) g-. | a16( g a8) g-. c-. |
+  f,16( e f8) e16( d e8) | d16( c d8) c-. c-. |
+  e='16(\p d e8) d16( c d8) | e16( d e8) f-. f-. |
+  e16(\p d e8) d16( c d8) | c-. c'-.\< c16( b c8)\! |
+  e=''16(\mf d e8) d16( c d8) | e16( d e8) f-. f-. |
+  e16( d e8) d16( c d8) | c-. c-. c-. c=''-. \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key c \major
+\relative {
+  {{ config() }}
+  c=8-\stBass cM! c cM | f fM c cM | g g7! c cM! | g g7! c cM! |
+  c=8 cM! e c@M | f8 fM e c@M | f8 fM! g, c@M | g8 g7! c cM! |
+  c=8 cM! g gM | c cM f fM | c cM! g gM | c cM e c@M |
+  c=8 cM! g gM | c cM f fM | g, c@M! g8 g7! | c cM! c= cM |
+}
+{% endmacro %}
