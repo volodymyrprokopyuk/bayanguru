@@ -1,0 +1,32 @@
+{% macro rightHand(config) %}
+\tempo Moderato
+\clef treble
+\key bes \major
+\time 2/4
+\relative {
+  {{ config() }}
+  f'='8(\mf bes bes4) | bes8( d d4) | f8\( ees c a | bes d f,4\) |
+  f='8( bes bes4) | bes8( d d4) | f8\( ees c a | bes4.\) r8 |
+  \repeat volta 2 {
+    <a=' ees'>8 8 <bes d>8 16 <d f> | <c ees>8 8 <bes d>4 |
+    <a=' ees'>8 8 <bes d>8 16 <d f> | <c ees>8 8 <bes d>4 |
+    f='8( bes bes4) | bes8( d d4) | f8\( ees c a | bes='4.\) r8 |
+  }
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key bes \major
+\relative {
+  {{ config() }}
+  bes,=,8[-\stBass besM! besM besM] | bes[ besM besM besM] |
+  f8[ fM! fM fM] | bes[ besM besM besM] |
+  bes=,8[ besM! besM besM] | bes[ besM besM besM] |
+  f8[ fM! fM fM] | bes besM! besM r |
+  c,+f@7!4 bes,,+besM! | a,,+f@M! bes,,+besM |
+  c,+f@M!4 bes,,+besM | a,,+f@M! bes,,+besM |
+  bes=,8[ besM! besM besM] | bes[ besM besM besM] |
+  f8[ fM! fM fM] | bes=, besM! besM r |
+}
+{% endmacro %}
