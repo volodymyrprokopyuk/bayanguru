@@ -16,6 +16,7 @@ categories:
   - &ua_author_song Українська авторська пісня
   - &ua_folk_dance Український народний танець
   - &ua_author_dance Український авторський танець
+  - &ru_author_dance Російський авторський танець
 pieces:
   # B0D1973
   - { title: На вулиці скрипка грає, subtitle: *ua_folk_song,
@@ -156,6 +157,10 @@ pieces:
       category: *ua_folk_song, source: *B1AK1979,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Ой-за-гаєм-гаєм-c1z5 }
+  - { title: Полька, composer: А. Иванов,
+      category: *ru_author_dance, source: *B1AK1979,
+      origin: ru, style: folk, genre: dance, form: melody, texture: homophony,
+      bass: stradella, level: elementary, file: Полька-tx5o }
   - { title: Пісня котика,
       subtitle: 'з дитячої опери \"Лисичка, котик і півник\"',
       composer: К. Стеценко, category: *ua_author_song, source: *B1AK1979,
@@ -199,5 +204,5 @@ books:
       # B0DU1982
       "zo21", "oyhg", "akqt", "ry3w", "m6m8",
       # B1AK1979
-      "8mwk", "tonl", "a0xs", "79hk", "angm", "59gv", "yn16", "c1z5", "afgp",
-      "6kce", "d7eu", "d0hr", "itrq", "qxq9", "e78y", "z48n"] }
+      "8mwk", "tonl", "a0xs", "79hk", "angm", "59gv", "yn16", "c1z5", "tx5o",
+      "afgp", "6kce", "d7eu", "d0hr", "itrq", "qxq9", "e78y", "z48n"] }

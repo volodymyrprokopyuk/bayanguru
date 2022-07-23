@@ -1,0 +1,32 @@
+{% macro rightHand(config) %}
+\tempo Allegretto
+\clef treble
+\key c \major
+\time 2/4
+\relative {
+  {{ config() }}
+  c''=''16(\mf d e8-.) d16( e f8-.) | g8-. g-. e4-- |
+  f8-. f-. d4-- | e8-. e-. c4-- |
+  c=''16( d e8-.) d16( e f8-.) | g8-. g-. e4-- |
+  f8-. f16( e d8) e16( d | c8) e-. c r |
+  d=''4-- f-- | f8->( e-.) e16( f e8-.) |
+  e8->( d-.) d16( e d8-.) | d8->( c-.) c16( d c8-.) |
+  d=''4-- f-- | f8->( e-.) e16( f e8-.) |
+  e8->( d-.) d16( e d8-.) | c-. e-. c='' r \bar "|."
+
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key c \major
+\relative {
+  {{ config() }}
+  c=8-\stBass cM! g g7! | c cM! c cM |
+  g g7! g g7 | c cM! c cM |
+  c=8 cM! g g7! | c cM! c cM |
+  g g7! g g7 | c cM! c r |
+  \repeat unfold 3 { g g7! g g7 | c=8 cM! c cM | }
+  g=,8 g7! g g7 | c cM! c= r |
+}
+{% endmacro %}
