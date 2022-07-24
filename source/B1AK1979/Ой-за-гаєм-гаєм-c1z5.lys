@@ -17,10 +17,10 @@
 \relative {
   {{ config() }}
   d=8[(-\stBass dM!) dM dM] | fis[( d@M) dM8 dM] |
-  d8[( dM!) dM dM] | fis[( d@M) dM8 dM] |
+  g,8[( gM!) gM gM] | fis'[( d@M) dM8 dM] |
   g,=,8[( gM!) gM gM] | d'[( dM) dM dM] |
   a8[( a7!) a7 a7] | d[( dM!) dM dM] |
-  g,=,8[( gM!) gM gM] | a[( d@M) dM8 dM] |
+  g,=,8[( gM!) gM gM] | a[( d@M!) dM8 dM] |
   a8[( a7!) a7 a7] | d= dM! d,+dM r |
 }
 {% endmacro %}

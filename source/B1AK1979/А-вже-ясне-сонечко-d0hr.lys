@@ -5,8 +5,8 @@
 \time 2/4
 \relative {
   {{ config() }}
-  e'='8\(\p b' a d | b4 a8 g\) | fis( a g4) | fis8( fis e4) |
-  e='8\( b' a d | b4 a8 g\) | fis( a g4) | fis8( fis e='4) \bar "|."
+  e'='8\(\p b' a c | b4 a8 g\) | fis( a g4) | fis8( fis e4) |
+  e='8\( b' a c | b4 a8 g\) | fis( a g4) | fis8( fis e='4) \bar "|."
 }
 {% endmacro %}
 
