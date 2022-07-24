@@ -205,6 +205,10 @@ pieces:
       category: *ua_folk_song, source: *B1AK1985,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Веснянка-fh29 }
+  - { title: Танець дзвіночків, subtitle: *ua_folk_dance,
+      category: *ua_folk_dance, source: *B1AK1985,
+      origin: ua, style: folk, genre: dance, form: melody, texture: homophony,
+      bass: stradella, level: elementary, file: Танець-дзвіночків-eu0e }
 books:
   - { title: Українські народні пісні, subtitle: для баяна,
       file: Українські-народні-пісні-byup, pieces: [
@@ -218,4 +222,4 @@ books:
       "8mwk", "tonl", "a0xs", "79hk", "angm", "59gv", "yn16", "c1z5", "tx5o",
       "afgp", "6kce", "d7eu", "d0hr", "itrq", "qxq9", "e78y", "z48n", "5e6l",
       # B1AK1985
-      "fh29"] }
+      "fh29", "eu0e"] }

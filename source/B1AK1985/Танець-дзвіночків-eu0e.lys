@@ -1,0 +1,35 @@
+{% macro rightHand(config) %}
+\tempo Allegro
+\clef treble
+\key c \minor
+\time 2/4
+\relative {
+  {{ config() }}
+  \repeat volta 2 {
+    ees''=''8\(\mf d ees d | ees f g4\) | aes8( g f4) | g8( f ees4) |
+    ees=''8\(\f d ees d | ees f g4\) | aes8( g f4) | ees2 |
+  }
+  \repeat volta 2 {
+    c'='''4\(\p c,8\) c | c( d ees4) | f8( ees d4) | ees8( d c4) |
+    c'='''4\( c,8\) c | c( d ees4) | f8( ees d4) | c=''2 |
+  }
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key c \minor
+\relative {
+  {{ config() }}
+  \repeat unfold 2 {
+    \alternative {
+      { ees=4-\stBass eesM! | }
+      { ees=4 eesM! | }
+    }
+    ees eesM | bes bes7! | ees eesM! |
+  }
+  \repeat unfold 2 {
+    c=4 cm! | c cm | g g7! | c= cm! |
+  }
+}
+{% endmacro %}
