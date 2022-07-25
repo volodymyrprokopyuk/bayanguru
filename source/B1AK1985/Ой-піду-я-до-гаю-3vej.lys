@@ -1,0 +1,31 @@
+{% macro rightHand(config) %}
+\tempo Andante
+\clef treble
+\key d \minor
+\time 2/4
+\relative {
+  {{ config() }}
+  d''=''8(\mf f a) a | bes( a g4) | c,8( e g) g | a16( g f e d4) |
+  \repeat unfold 2 {
+    a='8( cis e cis) | d( e f d) | e\( g bes8. a16 | a16 g f e d4\) |
+  }
+  d=''8.( f16 a8) a | bes bes16( a g4->) |
+  f16( e d8) e16( d cis8) | d \acciaccatura e8 d16( cis d=''4->) \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key d \minor
+\relative {
+  {{ config() }}
+  d=8-\stBass dm! f d@m | g,8 a bes g,@m |
+  c8 cM! bes c@M | a8 a7! d dm! |
+  \repeat unfold 2 {
+    a=,8 aM! g a,@M | f'8 d@m! d8 dm |
+    g,8 gm! e' g,@m | a,8 a7! d dm! |
+  }
+  d=8 dm! f, d@m | g8 gm gm4-> |
+  a,,+d@m!8 r8 a,,+a7! r | d,+dm! a=, d,+dm!4-> |
+}
+{% endmacro %}
