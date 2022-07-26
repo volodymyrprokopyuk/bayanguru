@@ -1,0 +1,39 @@
+{% macro rightHand(config) %}
+\tempo Allegro
+\clef treble
+\key d \minor
+\time 2/4
+\relative {
+  {{ config() }}
+  d''=''8\mf f16( e d8-.) d-. | e r e4-> |
+  cis8-- cis16( b a b cis a | d8-.) r d4-> |
+  d=''8--\p f16( e d\< e f d | e8-.) e-.\! e4-> |
+  cis8-- cis16(\> b a b cis a\! | d8-.) r d4->\p |
+  a'=''8-.\f a16( g f8-.) f16( a | g8-.) g16( f e8.--) g16\( |
+  f=''16\< e d f e d cis e | d f a cis\) d4--\! |
+  a=''8\mf a16( g f g a f | g8) g16( f e8.) g16\( |
+  f=''16\> e d f e d cis e\! | d8\) r d=''4-> \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key d \minor
+\relative {
+  {{ config() }}
+  \repeat unfold 2 {
+    \alternative {
+      { d=8-\stBass dm! d dm | }
+      { d=8 dm! d dm | }
+    }
+    d g,@m! d8 g,@m | a8 a7! a a7 | d dm! d dm |
+  }
+  \repeat unfold 2 {
+    f,=, fM! f fM | g gm! g gm | a d@m! a8 a7! |
+    \alternative {
+      { d dm! d dm | }
+      { d dm! d=4-> | }
+    }
+  }
+}
+{% endmacro %}
