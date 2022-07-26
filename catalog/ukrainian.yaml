@@ -14,6 +14,9 @@ sources:
   - &B1AK1985
     title: Баян. 1 клас, І. Алексєєв, М. Корецький, Музична Україна, 1985
     dir: B1AK1985
+  - &B2AK1979
+    title: Баян. 2 клас, І. Алексєєв, М. Корецький, Музична Україна, 1979
+    dir: B2AK1979
 categories:
   - &ua_folk_song Українська народна пісня
   - &ua_author_song Українська авторська пісня
@@ -221,6 +224,11 @@ pieces:
       category: *ru_author_dance, source: *B1AK1985,
       origin: ua, style: folk, genre: dance, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Полька-lhc0 }
+  # B2AK1979
+  - { title: Ой лопнув обруч, subtitle: *ua_folk_song,
+      category: *ua_folk_song, source: *B2AK1979,
+      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
+      bass: stradella, level: elementary, file: Ой-лопнув-обруч-ihff }
 books:
   - { title: Українські народні пісні, subtitle: для баяна,
       file: Українські-народні-пісні-byup, pieces: [
@@ -234,4 +242,6 @@ books:
       "8mwk", "tonl", "a0xs", "79hk", "angm", "59gv", "yn16", "c1z5", "tx5o",
       "afgp", "6kce", "d7eu", "d0hr", "itrq", "qxq9", "e78y", "z48n", "5e6l",
       # B1AK1985
-      "fh29", "eu0e", "cagd", "3vej", "lhc0"] }
+      "fh29", "eu0e", "cagd", "3vej", "lhc0",
+      # B2AK1979
+      "ihff"] }

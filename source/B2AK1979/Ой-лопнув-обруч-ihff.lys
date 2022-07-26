@@ -1,0 +1,35 @@
+{% macro rightHand(config) %}
+\tempo Allegretto
+\clef treble
+\key d \major
+\time 2/4
+\relative {
+  {{ config() }}
+  <fis''='' a>4\f 8 <e g> | <d fis>8 8 4 |
+  <cis e>8 <d fis> <e g>4 | <d fis>4 4 |
+  <fis='' a>4 8 <e g> | <d fis>8 8 4 |
+  <cis e>8 <d fis> <e g>4 | <d fis>4 <ais e' fis>-> |
+  <d='' fis>4\mf 8 <cis e> | <b d>8 8 4 |
+  <ais cis>8 <ais e'> <ais d> <ais cis> |
+  b='16( ais b cis d cis d e) |
+  <d='' fis>4 8 <cis e> | <b d>8 8 4 |
+  <ais cis>8 <ais e'> <ais d> <ais cis> | b4 b=' \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key d \major
+\relative {
+  {{ config() }}
+  d=8-\stBass dM! a8 a7! | d dM! a d@M | e'8 a,@7! a,8 a7 | d dM! a d@M |
+  d=8 dM! a8 a7! | d dM! a d@M | e'8 a,@7! a,8 a7 | d4 a-> |
+  \repeat unfold 2 {
+    b=,8 bm! fis' fis7! | b, bm! fis' b,@m | cis8 fis@7! fis8 fis7 |
+    \alternative {
+      { b, bm! fis' b,@m | }
+      { b,=,4 bm! | }
+    }
+  }
+}
+{% endmacro %}
