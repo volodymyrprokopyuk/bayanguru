@@ -1,0 +1,49 @@
+{% macro rightHand(config) %}
+\tempo Andante
+\clef treble
+\key g \major
+\time 2/4
+\relative {
+  {{ config() }}
+  <g'=' b>8-.\f <b d>-. <g b>-. <b d>-. | <c e>( <b d>) <a c>-. <g b>-. |
+  <<
+    \relative { a'='8-. d-. d16( c b a | g='4) }
+    \\
+    \relative { fis'='8-. 8-. 4 | }
+  >>
+  g4 |
+  <g=' b>8-. <b d>-. <g b>-. <b d>-. | <c e>( <b d>) <a c>-. <g b>-. |
+  <<
+    \relative { a'='8-. d-. d16( c b a | g='4) }
+    \\
+    \relative { fis'='8-. 8-. 4 | }
+  >>
+  g8 r |
+  <e=' g>8-.\p <g b>-. <e g>-. <g b>-. | <a c>( <g b>) <fis a>-. <e g>-. |
+  <<
+    \relative { fis'='8-. b-. b16( a g fis | e4) }
+    \\
+    \relative { dis'='8-. 8-. 4 | }
+  >>
+  e4 |
+  <e=' g>8-. <g b>-. <e g>-. <g b>-. | <a c>( <g b> <fis a> <e g>) |
+  <<
+    \relative { fis'='8-. b-. b16( a g fis | e8) 8 }
+    \\
+    \relative { dis'='8-. 8-. 4 | }
+  >>
+  e='4 \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key g \major
+\relative {
+  {{ config() }}
+  g,=,8-\stBass gM! g gM | c cM d g,@M | d8 d7! a d@7 | g8-. c-. b-. a-. |
+  g=,8 gM! g gM | c cM d g,@M | d8 d7! d d7 | g,8-. a-. g-. fis-. |
+  e=,8 em! e em | a am b e@m | b8 b7! fis b,@7 | e8-. a-. g-. fis-. |
+  e=,8 em! e em | a( b c4) | b8 b7! b b7 | e,=, em! e,,+em4 |
+}
+{% endmacro %}
