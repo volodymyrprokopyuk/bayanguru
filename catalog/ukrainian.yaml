@@ -233,6 +233,10 @@ pieces:
       category: *ua_folk_song, source: *B2AK1979,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Корольок-an90 }
+  - { title: Сусідка, subtitle: *ua_folk_song,
+      category: *ua_folk_song, source: *B2AK1979,
+      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
+      bass: stradella, level: elementary, file: Сусідка-stil }
 books:
   - { title: Українські народні пісні, subtitle: для баяна,
       file: Українські-народні-пісні-byup, pieces: [
@@ -248,4 +252,4 @@ books:
       # B1AK1985
       "fh29", "eu0e", "cagd", "3vej", "lhc0",
       # B2AK1979
-      "ihff", "an90"] }
+      "ihff", "an90", "stil"] }
