@@ -23,7 +23,7 @@
 \relative {
   {{ config() }}
   d=8-\stBass dM! a8 a7! | d dM! a d@M | e'8 a,@7! a,8 a7 | d dM! a d@M |
-  d=8 dM! a8 a7! | d dM! a d@M | e'8 a,@7! a,8 a7 | d4 a-> |
+  d=8 dM! a8 a7! | d dM! a d@M | e'8 a,@7! a,8 a7 | d4 cis-> |
   \repeat unfold 2 {
     b=,8 bm! fis' fis7! | b, bm! fis' b,@m | cis8 fis@7! fis8 fis7 |
     \alternative {

@@ -1,0 +1,42 @@
+{% macro rightHand(config) %}
+\tempo Allegretto
+\clef treble
+\key e \minor
+\time 2/4
+\relative {
+  {{ config() }}
+  e'='4\mp g | b8-. b-. b16( a g fis) |
+  e8-. e-. g-. g-. | b8-. b-. b16( a g fis) |
+  g='8\< g a a\! | b b d16( c b a) |
+  b8( g fis dis | e)\> e e4\! |
+  r8 <b= e g>[\< r <d fis a>] | r <d g b>\! d'16( c b a) |
+  b8(\> g fis dis | e) e e\! r |
+  e'=''16( dis e fis g fis g a | b8) b,-. b'16( a g fis) |
+  e16( g, b e) g( b, e g) | b( b, dis fis b a g fis) |
+  g=''16(_\markup \lower #3 \italic "cresc." b, e g a d, fis a |
+  b16 d, g b d c b a) |
+  b=''16( b, e g fis b, dis fis | e8) e-. e4 |
+  r8\f <g,=' b e>[ r <c d fis>] | r <b d g> d'16(\> c b a)\! |
+  b=''16(\< g e g\! fis b, cis dis | e8)\> e <g,=' b e>4\! \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key e \minor
+\relative {
+  {{ config() }}
+  e=8-\stBass em! e em | dis b,@7! b8 b7 |
+  e8 em! e am |  dis b,@7! b8 b7 |
+  e=8( em!) fis( b,@7!) | g,8( e@m!) a8( am) |
+  b8 e@m! b8 g7! | e em! e em |
+  e=4 d | g, a8 am! |
+  b8 e@m! b8 g7! | e em! e r |
+  e,+em!8 r e,+em r | dis b,@7! b,@74-> |
+  e=8 em! e em | dis b,@7! b,@74-> |
+  e8 em! fis d@M! | g,8 gM! a am! |
+  b=,8 e@m! b8 b7! | e em! e em |
+  e=4-> d-> | g,-> a8 am! |
+  b=,8 e@m! b8 b7! | e em! e,+em4 |
+}
+{% endmacro %}
