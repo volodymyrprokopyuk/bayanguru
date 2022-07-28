@@ -22,6 +22,7 @@ categories:
   - &ua_author_song Українська авторська пісня
   - &ua_folk_dance Український народний танець
   - &ua_author_dance Український авторський танець
+  - &ru_author_song Російська авторська пісня
   - &ru_author_dance Російський авторський танець
 pieces:
   # B0D1973
@@ -237,6 +238,10 @@ pieces:
       category: *ua_folk_song, source: *B2AK1979,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Сусідка-stil }
+  - { title: Лирическая протяжная, composer: Н. Речменский,
+      category: *ru_author_song, source: *B2AK1979,
+      origin: ru, style: folk, genre: song, form: melody, texture: homophony,
+      bass: stradella, level: elementary, file: Лирическая-протяжная-923n }
 books:
   - { title: Українські народні пісні, subtitle: для баяна,
       file: Українські-народні-пісні-byup, pieces: [
@@ -252,4 +257,4 @@ books:
       # B1AK1985
       "fh29", "eu0e", "cagd", "3vej", "lhc0",
       # B2AK1979
-      "ihff", "an90", "stil"] }
+      "ihff", "an90", "stil", "923n"] }
