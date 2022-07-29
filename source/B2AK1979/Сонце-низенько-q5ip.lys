@@ -1,0 +1,46 @@
+{% macro rightHand(config) %}
+\tempo Andante
+\clef treble
+\key e \minor
+\time 3/8
+\relative {
+  {{ config() }}
+  \set subdivideBeams = ##t
+  e''=''8\p\( b b | b16 a c b a g\) |
+  fis='16\( g a8[ a] | a16 fis b a g fis\) |
+  g='16\( a b8[ b] | b16 a c b a g\) |
+  fis='16\( g a8[ a] | a16 fis b a g fis\) |
+  <e=' fis c'>8\mf <dis fis b>8.-> dis16( | fis8\> e4)\! |
+  <e=' fis c'>8\< <dis fis b>8.-> <a' b dis>16\! |
+  <a=' b fis'>8(\f\> <g b e>)\! r |
+  <<
+    \relative { e''=''4.~\mp | e | dis~ | dis | e~ | e | dis~ | dis='' | }
+    \\
+    \relative {
+      \set subdivideBeams = ##t
+      e''=''8\( b b | b16 a c b a g\) |
+      fis='16\( g a8[ a] | a16 fis b a g fis\) |
+      g='16\( a b8[ b] | b16 a c b a g\) |
+      fis='16\( g a8[ a] | a16 fis b a g fis\) |
+    }
+  >>
+  <e=' fis c'>8\mf <dis fis b>8.-> dis16( | fis8\> e4)\! |
+  <e=' fis c'>8\< <dis fis b>8.-> <a' b dis>16\! |
+  <a=' b fis'>8(\f\> <g=' b e>)\! r \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key e \minor
+\relative {
+  {{ config() }}
+  e=8-\stBass em! em | e em em | b b7! b7 | b b7 b7 |
+  e=8 em! em | e em em | b b7! b7 | b b7 b7 |
+  a=,8 b4 | e8 em! em | a, b4 | b,,+b7!8( e,+em!) r |
+  \repeat unfold 2 {
+    e=8 em! em | g,[ e@m em8] | b b7! b7 | b b7 b7 |
+  }
+  a=,8 b4 | e8 em! em | a, b=,4 | b,,+b7!8( e,+em!) r |
+}
+{% endmacro %}
