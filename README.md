@@ -26,7 +26,7 @@ scores:
     genre: [song, dance, piece, study] # mandatory (musical function)
     form: [melody, variations, study] # mandatory (musical structure)
     texture: [monophony, homophony, polyphony] # mandatory (number of voices)
-    bass: [stradella, free_bass] # mandaroty
+    bass: [stradella, pure_bass, free_bass] # mandaroty
     level: [elementary, intermediary, advanced, virtuoso] # mandatory
     file: Ой-піду-я-до-млина-1kae # shuf -ern 4 {a..z} {0..9} | tr -d '\n'
 books:
