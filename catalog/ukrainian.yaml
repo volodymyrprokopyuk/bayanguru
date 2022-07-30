@@ -24,6 +24,7 @@ categories:
   - &ua_author_dance Український авторський танець
   - &ru_author_song Російська авторська пісня
   - &ru_author_dance Російський авторський танець
+  - &hu_folk_dance Угорський народний танець
 pieces:
   # B0D1973
   - { title: На вулиці скрипка грає, subtitle: *ua_folk_song,
@@ -262,6 +263,10 @@ pieces:
       category: *ua_folk_song, source: *B2AK1979,
       origin: ua, style: folk, genre: song, form: melody, texture: polyphony,
       bass: pure_bass, level: elementary, file: Ой-під-горою-4u91 }
+  - { title: Чардаш, subtitle: *hu_folk_dance,
+      category: *hu_folk_dance, source: *B2AK1979,
+      origin: hu, style: folk, genre: dance, form: melody, texture: homophony,
+      bass: stradella, level: elementary, file: Чардаш-5qqn }
 books:
   - { title: Українські народні пісні, subtitle: для баяна,
       file: Українські-народні-пісні-byup, pieces: [
@@ -277,4 +282,5 @@ books:
       # B1AK1985
       "fh29", "eu0e", "cagd", "3vej", "lhc0",
       # B2AK1979
-      "ihff", "an90", "stil", "923n", "nizv", "zk1t", "dvki", "q5ip", "4u91"] }
+      "ihff", "an90", "stil", "923n", "nizv", "zk1t", "dvki", "q5ip", "4u91",
+      "5qqn"] }
