@@ -1,0 +1,31 @@
+{% macro rightHand(config) %}
+\tempo Allegretto
+\clef treble
+\key g \major
+\time 3/4
+\relative {
+  {{ config() }}
+  g'='4\mf g8\(\< a b c\! | d2 g4\) | e\( g e | d2\> b4\!\) |
+  c=''4\p( e d8 c) | b4( d c8 b) | c4( a fis | g2 b4) |
+  c=''4\f\( e d8 c | b4 d c8 b\) | c4( a fis | g4 g) r |
+  g='4\p g8\(\< a b c\! | d2 g4\) | <c, e>4\( g' <c, e> | <b d>2\) r4 |
+  <a=' c>4\f( e' d8 c) | <g b>4( d' c8 b) | c4\( a fis | g8 a b c d4\) |
+  <a=' c>4\p( e' d8 c) | <g b>4( d' c8 b) | c4\( a fis | g4\) <b,= g'>2 \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key g \major
+\relative {
+  {{ config() }}
+  R2. | g,=,8[(-\puBass fis g a] b) r | c( d e4) c | b( g) r |
+  a=,8( b c4) r | g8( a b4) r | d,=,8( e fis g a4) | g8( a b c d4) |
+  r4 c,+cM! r | d=8( c b4) d | c8( b c4 a | b4) g,@M! r4 |
+  g=, d'4.( c8 | b4) g,@M! r4 | c8 d e4 e8( fis | g4 d) g, |
+  \repeat unfold 3 { r4 d'=8( cis d4) | }
+  g,=,4 g8( a b c) |
+  \repeat unfold 3 { d=8( cis d4) r4 | }
+  g,=, gM!2 |
+}
+{% endmacro %}

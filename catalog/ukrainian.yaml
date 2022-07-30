@@ -252,12 +252,16 @@ pieces:
       bass: pure_bass, level: elementary, file: Щебетала-пташечка-zk1t }
   - { title: Гопак, subtitle: 'з опери \"Сорочинский ярмарок\"',
       composer: М. Мусоргский, category: *ru_author_dance, source: *B2AK1979,
-      origin: ru, style: folk, genre: dance, form: melody, texture: polyphony,
+      origin: ru, style: folk, genre: dance, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Гопак-dvki }
   - { title: Сонце низенько, subtitle: *ua_folk_song,
       category: *ua_folk_song, source: *B2AK1979,
       origin: ua, style: folk, genre: song, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Сонце-низенько-q5ip }
+  - { title: Ой під горою, subtitle: *ua_folk_song,
+      category: *ua_folk_song, source: *B2AK1979,
+      origin: ua, style: folk, genre: song, form: melody, texture: polyphony,
+      bass: pure_bass, level: elementary, file: Ой-під-горою-4u91 }
 books:
   - { title: Українські народні пісні, subtitle: для баяна,
       file: Українські-народні-пісні-byup, pieces: [
@@ -273,4 +277,4 @@ books:
       # B1AK1985
       "fh29", "eu0e", "cagd", "3vej", "lhc0",
       # B2AK1979
-      "ihff", "an90", "stil", "923n", "nizv", "zk1t", "dvki", "q5ip"] }
+      "ihff", "an90", "stil", "923n", "nizv", "zk1t", "dvki", "q5ip", "4u91"] }
