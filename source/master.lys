@@ -21,7 +21,7 @@ puBass = \markup \larger \box Б % Бас (вибiрний)
 }
 
 {% set url = "https://volodymyrprokopyuk.github.io/bayan" %}
-{% if args.b %}
+{% if pieces.length > 1 %}
 \header {
   title = "{{ book.title }}"
   subtitle = "{{ book.subtitle }}"
@@ -54,7 +54,7 @@ puBass = \markup \larger \box Б % Бас (вибiрний)
     arranger = "{{ piece.arranger }}"
     {% endif %}
   }
-  {% set source = args.i + "/" + piece.source.dir + "/" + piece.file + ".lys" %}
+  {% set source = "source/" + piece.source.dir + "/" + piece.file + ".lys" %}
   {% from source import rightHand, leftHand %}
   \new PianoStaff = bayan {
     <<
