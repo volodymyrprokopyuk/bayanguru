@@ -271,6 +271,10 @@ pieces:
       origin: hu, style: folk, genre: dance, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Чардаш-5qqn }
   # B2AK1987
+  - { title: Вийшли в поле косарі, subtitle: *ua_folk_song,
+      category: *ua_folk_song, source: *B2AK1987,
+      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
+      bass: stradella, level: elementary, file: Вийшли-в-поле-косарі-e3u3 }
 books:
   - { title: Українські народні пісні, subtitle: для баяна,
       file: Українські-народні-пісні-byup, pieces: [
@@ -289,4 +293,4 @@ books:
       "ihff", "an90", "stil", "923n", "nizv", "zk1t", "dvki", "q5ip", "4u91",
       "5qqn",
       # B2AK1987
-      ] }
+      "e3u3"] }
