@@ -25,9 +25,9 @@
   \repeat unfold 2 {
     g=,8.[-> gM!16 gM8 gM] | e=,-. g-. b4-. |
   }
-  a=,8-. b-. d-. e-. | fis-> d-. b-> d-. |
-  a=,8-. b-. d-. e-. | fis d@M! g,8 gM! |
-  a=,8-. b-. d-. e-. | fis-> d-. b-> d-. |
-  a=,8-. b-. d-. e-. | d dM! g,,+gM!4 |
+  a=,8-. b-. c-. e-. | fis-> d-. b-> d-. |
+  a=,8-. b-. c-. e-. | fis d@M! g,8 gM! |
+  a=,8-. b-. c-. e-. | fis-> d-. b-> d-. |
+  a=,8-. b-. c-. e-. | d dM! g,,+gM!4 |
 }
 {% endmacro %}

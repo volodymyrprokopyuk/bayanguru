@@ -17,6 +17,9 @@ sources:
   - &B2AK1979
     title: Баян. 2 клас, І. Алексєєв, М. Корецький, Музична Україна, 1979
     dir: B2AK1979
+  - &B2AK1987
+    title: Баян. 2 клас, І. Алексєєв, М. Корецький, Музична Україна, 1987
+    dir: B2AK1987
 categories:
   - &ua_folk_song Українська народна пісня
   - &ua_author_song Українська авторська пісня
@@ -267,6 +270,7 @@ pieces:
       category: *hu_folk_dance, source: *B2AK1979,
       origin: hu, style: folk, genre: dance, form: melody, texture: homophony,
       bass: stradella, level: elementary, file: Чардаш-5qqn }
+  # B2AK1987
 books:
   - { title: Українські народні пісні, subtitle: для баяна,
       file: Українські-народні-пісні-byup, pieces: [
@@ -283,4 +287,6 @@ books:
       "fh29", "eu0e", "cagd", "3vej", "lhc0",
       # B2AK1979
       "ihff", "an90", "stil", "923n", "nizv", "zk1t", "dvki", "q5ip", "4u91",
-      "5qqn"] }
+      "5qqn",
+      # B2AK1987
+      ] }

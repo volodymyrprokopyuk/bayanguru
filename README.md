@@ -36,3 +36,22 @@ books:
     pieces: ["1kae"]
 ```
 
+``` yaml
+source:
+  - { id: x, tit: x, aut: [x], pub: x, yr: x }
+map:
+  ua:
+    ufs: Українська народна пісня
+    ufd: Український народний танець
+piece:
+  - { id: x, tit: x, sub: x, com: x, arr: x, src: source.id,
+      org: ua, ru, hu,
+      sty: flk cls jaz pop,
+      gnr: sng dnc pie stu,
+      frm: mel var stu,
+      txt: mnp hmp plp,
+      bss: stb pub frb,
+      lvl: elm int adv vir }
+book:
+  - { id: x, tit: x, sub: x, pie: [x] }
+```

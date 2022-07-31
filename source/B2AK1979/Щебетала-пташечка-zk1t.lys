@@ -18,7 +18,7 @@
 \key g \minor
 \relative {
   {{ config() }}
-  g,=,4\(-\puBass d' a2\) | bes4\( d fis d\) |
+  g,=,4\(-\puBass d' c2\) | bes4\( d fis d\) |
   ees=2\( d4 bes\) | c\( d g,\) g |
   g=,8\( a bes g fis4 d8 d\) | g\( a bes4 a d\) |
   ees=2\( d4 bes\) | c8\( bes a4 bes2\) |
