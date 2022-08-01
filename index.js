@@ -32,13 +32,13 @@ import { engravePieces, engraveBooks } from "./lib/score.js"
 async function engrave() {
   if (args.b) {
     let { books, pieces } = await readBooks()
-    books = args._.length && args._[0] === "all" ? books :
-      books.filter(book => args._.some(arg => book.id === arg))
+    books = args._.length && args._[0] === "all" ?
+      Object.values(books) : args._.map(id => books[id])
     await Promise.all(engraveBooks(books, pieces, args.f))
   } else {
     let pieces = await readPieces()
-    pieces = args._.length && args._[0] === "all" ? pieces :
-      pieces.filter(piece => args._.some(arg => piece.id === arg))
+    pieces = args._.length && args._[0] === "all" ?
+      Object.values(pieces) : args._.map(id => pieces[id])
     await Promise.all(engravePieces(pieces, args.f))
   }
 }
