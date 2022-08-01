@@ -1,1 +1,1 @@
-score
+scores

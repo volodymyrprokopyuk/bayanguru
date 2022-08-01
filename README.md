@@ -39,7 +39,7 @@ books:
 ``` yaml
 source:
   - { id: x, tit: x, aut: [x], pub: x, yr: x }
-map:
+legend:
   ua:
     ufs: Українська народна пісня
     ufd: Український народний танець

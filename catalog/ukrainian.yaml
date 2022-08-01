@@ -1,301 +1,182 @@
 %YAML 1.2
 ---
-sources:
-  - &B0D1973
-    title: Баян. Підготовча група, О. Денисов, Музична Україна, 1973
-    dir: B0D1973
-  - &B0DU1982
-    title: >
-      Баян. Підготовча група, О. Денисов, В. Угринович, Музична Україна, 1982
-    dir: B0DU1982
-  - &B1AK1979
-    title: Баян. 1 клас, І. Алексєєв, М. Корецький, Музична Україна, 1979
-    dir: B1AK1979
-  - &B1AK1985
-    title: Баян. 1 клас, І. Алексєєв, М. Корецький, Музична Україна, 1985
-    dir: B1AK1985
-  - &B2AK1979
-    title: Баян. 2 клас, І. Алексєєв, М. Корецький, Музична Україна, 1979
-    dir: B2AK1979
-  - &B2AK1987
-    title: Баян. 2 клас, І. Алексєєв, М. Корецький, Музична Україна, 1987
-    dir: B2AK1987
-categories:
-  - &ua_folk_song Українська народна пісня
-  - &ua_author_song Українська авторська пісня
-  - &ua_folk_dance Український народний танець
-  - &ua_author_dance Український авторський танець
-  - &ru_author_song Російська авторська пісня
-  - &ru_author_dance Російський авторський танець
-  - &hu_folk_dance Угорський народний танець
 pieces:
   # B0D1973
-  - { title: На вулиці скрипка грає, subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B0D1973,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: На-вулиці-скрипка-грає-4ha8 }
-  - { title: Веселі гуси, subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B0D1973,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Веселі-гуси-7n13 }
-  - { title: За городом качки пливуть, subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B0D1973,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: За-городом-качки-пливуть-jnuj }
-  - { title: Казав мені батько, subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B0D1973,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Казав-мені-батько-1sxc }
-  - { title: Ой минула вже зима, subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B0D1973,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Ой-минула-вже-зима-hv2p }
-  - { title: А вже красне сонечко, subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B0D1973,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: А-вже-красне-сонечко-siv0 }
-  - { title: Дощик, subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B0D1973,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Дощик-kakw }
-  - { title: У сусіда хата біла, subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B0D1973,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: У-сусіда-хата-біла-6msd }
-  - { title: Дударик, subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B0D1973,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Дударик-iso2 }
-  - { title: Їхав козак за Дунай, subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B0D1973,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Їхав-козак-за-Дунай-xi84 }
-  - { title: "Ой не ходи, Грицю", subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B0D1973,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Ой-не-ходи-Грицю-dysh }
-  - { title: "По дорозі жук, жук", subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B0D1973,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: По-дорозі-жук-жук-f9yf }
-  - { title: Ой під горою, subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B0D1973,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Ой-під-горою-41tf }
-  - { title: Женчичок-бренчичок, subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B0D1973,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Женчичок-бренчичок-g0q2 }
-  - { title: "Ой дівчино, шумить гай", subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B0D1973,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Ой-дівчино-шумить-гай-l76t }
-  - { title: Ти до мене не ходи, subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B0D1973,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Ти-до-мене-не-ходи-qr71 }
-  - { title: Ой піду я до млина, subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B0D1973,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Ой-піду-я-до-млина-1kae }
-  - { title: Метелиця, subtitle: *ua_folk_dance,
-      category: *ua_folk_dance, source: *B0D1973,
-      origin: ua, style: folk, genre: dance, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Метелиця-hdux }
-  - { title: Полька, composer: А. Тихончук,
-      category: *ua_folk_dance, source: *B0D1973,
-      origin: ua, style: folk, genre: dance, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Полька-jmy7 }
-  - { title: Танець урожаю, composer: Т. Шутенко,
-      category: *ua_author_dance, source: *B0D1973,
-      origin: ua, style: folk, genre: dance, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Танець-урожаю-n482 }
-  - { title: Курочка, composer: М. Любарський,
-      category: *ua_author_song, source: *B0D1973,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Курочка-rrag }
+  - { id: 4ha8, tit: На вулиці скрипка грає, sub: uafs,
+      src: B0D1973,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: 7n13, tit: Веселі гуси, sub: uafs,
+      src: B0D1973,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: jnuj, tit: За городом качки пливуть, sub: uafs,
+      src: B0D1973,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: 1sxc, tit: Казав мені батько, sub: uafs,
+      src: B0D1973,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: hv2p, tit: Ой минула вже зима, sub: uafs,
+      src: B0D1973,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: siv0, tit: А вже красне сонечко, sub: uafs,
+      src: B0D1973,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: kakw, tit: Дощик, sub: uafs,
+      src: B0D1973,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: 6msd, tit: У сусіда хата біла, sub: uafs,
+      src: B0D1973,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: iso2, tit: Дударик, sub: uafs,
+      src: B0D1973,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: xi84, tit: Їхав козак за Дунай, sub: uafs,
+      src: B0D1973,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: dysh, tit: "Ой не ходи, Грицю", sub: uafs,
+      src: B0D1973,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: f9yf, tit: "По дорозі жук, жук", sub: uafs,
+      src: B0D1973,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: 41tf, tit: Ой під горою, sub: uafs,
+      src: B0D1973,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: g0q2, tit: Женчичок-бренчичок, sub: uafs,
+      src: B0D1973,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: l76t, tit: "Ой дівчино, шумить гай", sub: uafs,
+      src: B0D1973,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: qr71, tit: Ти до мене не ходи, sub: uafs,
+      src: B0D1973,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: 1kae, tit: Ой піду я до млина, sub: uafs,
+      src: B0D1973,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: hdux, tit: Метелиця, sub: uafd,
+      src: B0D1973,
+      org: ua, sty: flk, gnr: dnc, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: jmy7, tit: Полька,
+      com: А. Тихончук, src: B0D1973,
+      org: ua, sty: flk, gnr: dnc, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: n482, tit: Танець урожаю,
+      com: Т. Шутенко, src: B0D1973,
+      org: ua, sty: flk, gnr: dnc, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: rrag, tit: Курочка,
+      com: М. Любарський, src: B0D1973,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
   # B0DU1982
-  - { title: Ой лопнув обруч, subtitle: *ua_folk_song,
-      category: *ua_author_song, source: *B0DU1982,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Ой-лопнув-обруч-zo21 }
-  - { title: Веснянка, composer: В. Рибальченко,
-      category: *ua_folk_song, source: *B0DU1982,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Веснянка-oyhg }
-  - { title: Козачок, subtitle: *ua_folk_dance,
-      category: *ua_folk_dance, source: *B0DU1982,
-      origin: ua, style: folk, genre: dance, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Козачок-akqt }
-  - { title: Гуцульський танець, composer: К. Домінчен,
-      category: *ua_author_dance, source: *B0DU1982,
-      origin: ua, style: folk, genre: dance, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Гуцульський-танець-ry3w }
-  - { title: Козачок, composer: Л. Ревуцький,
-      category: *ua_author_dance, source: *B0DU1982,
-      origin: ua, style: folk, genre: dance, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Козачок-m6m8 }
+  - { id: zo21, tit: Ой лопнув обруч, sub: uafs,
+      src: B0DU1982,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: oyhg, tit: Веснянка,
+      com: В. Рибальченко, src: B0DU1982,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: akqt, tit: Козачок, sub: uafd,
+      src: B0DU1982,
+      org: ua, sty: flk, gnr: dnc, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: ry3w, tit: Гуцульський танець,
+      com: К. Домінчен, src: B0DU1982,
+      org: ua, sty: flk, gnr: dnc, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: m6m8, tit: Козачок,
+      com: Л. Ревуцький, src: B0DU1982,
+      org: ua, sty: flk, gnr: dnc, frm: mel, txt: hmp, bss: stb, lvl: elm }
   # B1AK1979
-  - { title: Лисичка, composer: М. Лисенко,
-      category: *ua_author_song, source: *B1AK1979,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Лисичка-8mwk }
-  - { title: "Ви музики, хлопці добрі", subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B1AK1979,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Ви-музики-хлопці-добрі-tonl }
-  - { title: "Ой Василю, Василечку", composer: В. Верховинець,
-      category: *ua_author_song, source: *B1AK1979,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Ой-Василю-Василечку-a0xs }
-  - { title: Галя по садочку ходила, subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B1AK1979,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Галя-по-садочку-ходила-79hk }
-  - { title: "По дорозі жук, жук", subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B1AK1979,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: По-дорозі-жук-жук-angm }
-  - { title: Пісня рака, subtitle: 'з дитячої опери \"Коза-дереза\"',
-      composer: М. Лисенко, category: *ua_author_song, source: *B1AK1979,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Пісня-рака-59gv }
-  - { title: "Ой джигуне, джигуне", subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B1AK1979,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Ой-джигуне-джигуне-yn16 }
-  - { title: "Ой за гаєм, гаєм", subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B1AK1979,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Ой-за-гаєм-гаєм-c1z5 }
-  - { title: Полька, composer: А. Иванов,
-      category: *ru_author_dance, source: *B1AK1979,
-      origin: ru, style: folk, genre: dance, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Полька-tx5o }
-  - { title: Пісня котика,
-      subtitle: 'з дитячої опери \"Лисичка, котик і півник\"',
-      composer: К. Стеценко, category: *ua_author_song, source: *B1AK1979,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Пісня-котика-afgp }
-  - { title: Пісня вовчика, subtitle: 'з дитячої опери \"Коза-дереза\"',
-      composer: М. Лисенко, category: *ua_author_song, source: *B1AK1979,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Пісня-вовчика-6kce }
-  - { title: Бандура, subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B1AK1979,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Бандура-d7eu }
-  - { title: А вже ясне сонечко, subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B1AK1979,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: А-вже-ясне-сонечко-d0hr }
-  - { title: Женчичок-бренчичок, subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B1AK1979,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Женчичок-бренчичок-itrq }
-  - { title: Їхав козак на війноньку, subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B1AK1979,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Їхав-козак-на-війноньку-qxq9 }
-  - { title: Кучерява Катерина, subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B1AK1979,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Кучерява-Катерина-e78y }
-  - { title: На вулиці скрипка грає, subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B1AK1979,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: На-вулиці-скрипка-грає-z48n }
-  - { title: Полька, category: *ua_folk_dance, source: *B1AK1979,
-      origin: ua, style: folk, genre: dance, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Полька-5e6l }
+  - { id: 8mwk, tit: Лисичка,
+      com: М. Лисенко, src: B1AK1979,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: tonl, tit: "Ви музики, хлопці добрі", sub: uafs,
+      src: B1AK1979,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: a0xs, tit: "Ой Василю, Василечку",
+      com: В. Верховинець, src: B1AK1979,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: 79hk, tit: Галя по садочку ходила, sub: uafs,
+      src: B1AK1979,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: angm, tit: "По дорозі жук, жук", sub: uafs,
+      src: B1AK1979,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: 59gv, tit: Пісня рака, sub: 'з дитячої опери \"Коза-дереза\"',
+      com: М. Лисенко, src: B1AK1979,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: yn16, tit: "Ой джигуне, джигуне", sub: uafs,
+      src: B1AK1979,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: c1z5, tit: "Ой за гаєм, гаєм", sub: uafs,
+      src: B1AK1979,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: afgp, tit: Пісня котика, sub: 'з дитячої опери \"Лисичка, котик і півник\"',
+      com: К. Стеценко, src: B1AK1979,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: 6kce, tit: Пісня вовчика, sub: 'з дитячої опери \"Коза-дереза\"',
+      com: М. Лисенко, src: B1AK1979,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: d7eu, tit: Бандура, sub: uafs,
+      src: B1AK1979,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: d0hr, tit: А вже ясне сонечко, sub: uafs,
+      src: B1AK1979,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: itrq, tit: Женчичок-бренчичок, sub: uafs,
+      src: B1AK1979,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: qxq9, tit: Їхав козак на війноньку, sub: uafs,
+      src: B1AK1979,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: e78y, tit: Кучерява Катерина, sub: uafs,
+      src: B1AK1979,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: z48n, tit: На вулиці скрипка грає, sub: uafs,
+      src: B1AK1979,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: 5e6l, tit: Полька, src: B1AK1979,
+      org: ua, sty: flk, gnr: dnc, frm: mel, txt: hmp, bss: stb, lvl: elm }
    # B1AK1985
-  - { title: Веснянка, subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B1AK1985,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Веснянка-fh29 }
-  - { title: Танець дзвіночків, subtitle: *ua_folk_dance,
-      category: *ua_folk_dance, source: *B1AK1985,
-      origin: ua, style: folk, genre: dance, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Танець-дзвіночків-eu0e }
-  - { title: Дощик, subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B1AK1985,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Дощик-cagd }
-  - { title: Ой піду я до гаю, composer: Д. Січинський,
-      category: *ua_author_song, source: *B1AK1985,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Ой-піду-я-до-гаю-3vej }
-  - { title: Полька, composer: М. Глинка,
-      category: *ru_author_dance, source: *B1AK1985,
-      origin: ua, style: folk, genre: dance, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Полька-lhc0 }
+  - { id: fh29, tit: Веснянка, sub: uafs,
+      src: B1AK1985,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: eu0e, tit: Танець дзвіночків, sub: uafd,
+      src: B1AK1985,
+      org: ua, sty: flk, gnr: dnc, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: cagd, tit: Дощик, sub: uafs,
+      src: B1AK1985,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: 3vej, tit: Ой піду я до гаю,
+      com: Д. Січинський, src: B1AK1985,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: lhc0, tit: Полька,
+      com: М. Глинка, src: B1AK1985,
+      org: ru, sty: flk, gnr: dnc, frm: mel, txt: hmp, bss: stb, lvl: elm }
   # B2AK1979
-  - { title: Ой лопнув обруч, subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B2AK1979,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Ой-лопнув-обруч-ihff }
-  - { title: Корольок, subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B2AK1979,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Корольок-an90 }
-  - { title: Сусідка, subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B2AK1979,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Сусідка-stil }
-  - { title: Лирическая протяжная, composer: Н. Речменский,
-      category: *ru_author_song, source: *B2AK1979,
-      origin: ru, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Лирическая-протяжная-923n }
-  - { title: "Чом, чом не прийшов", subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B2AK1979,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Чом-чом-не-прийшов-nizv }
-  - { title: Щебетала пташечка, composer: Н. Руднев,
-      category: *ru_author_song, source: *B2AK1979,
-      origin: ru, style: folk, genre: song, form: melody, texture: polyphony,
-      bass: pure_bass, level: elementary, file: Щебетала-пташечка-zk1t }
-  - { title: Гопак, subtitle: 'з опери \"Сорочинский ярмарок\"',
-      composer: М. Мусоргский, category: *ru_author_dance, source: *B2AK1979,
-      origin: ru, style: folk, genre: dance, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Гопак-dvki }
-  - { title: Сонце низенько, subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B2AK1979,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Сонце-низенько-q5ip }
-  - { title: Ой під горою, subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B2AK1979,
-      origin: ua, style: folk, genre: song, form: melody, texture: polyphony,
-      bass: pure_bass, level: elementary, file: Ой-під-горою-4u91 }
-  - { title: Чардаш, subtitle: *hu_folk_dance,
-      category: *hu_folk_dance, source: *B2AK1979,
-      origin: hu, style: folk, genre: dance, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Чардаш-5qqn }
+  - { id: ihff, tit: Ой лопнув обруч, sub: uafs,
+      src: B2AK1979,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: an90, tit: Корольок, sub: uafs,
+      src: B2AK1979,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: stil, tit: Сусідка, sub: uafs,
+      src: B2AK1979,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: nizv, tit: "Чом, чом не прийшов", sub: uafs,
+      src: B2AK1979,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: dvki, tit: Гопак, sub: 'з опери \"Сорочинский ярмарок\"',
+      com: М. Мусоргский, src: B2AK1979,
+      org: ru, sty: flk, gnr: dnc, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: q5ip, tit: Сонце низенько, sub: uafs,
+      src: B2AK1979,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: 4u91, tit: Ой під горою, sub: uafs,
+      src: B2AK1979,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: plp, bss: pub, lvl: elm }
+  - { id: 5qqn, tit: Чардаш, sub: hufd,
+      src: B2AK1979,
+      org: hu, sty: flk, gnr: dnc, frm: mel, txt: hmp, bss: stb, lvl: elm }
   # B2AK1987
-  - { title: Вийшли в поле косарі, subtitle: *ua_folk_song,
-      category: *ua_folk_song, source: *B2AK1987,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Вийшли-в-поле-косарі-e3u3 }
-  - { title: Пісня Карася, subtitle: 'з опери \"Запорожець за Дунаєм\"',
-      composer: С. Гулак-Артемовський,
-      category: *ua_author_song, source: *B2AK1987,
-      origin: ua, style: folk, genre: song, form: melody, texture: homophony,
-      bass: stradella, level: elementary, file: Пісня-Карася-ucue }
-books:
-  - { title: Українські народні пісні, subtitle: для баяна,
-      file: Українські-народні-пісні-byup, pieces: [
-      # B0D1973
-      "1kae", "4ha8", "7n13", "jnuj", "1sxc", "hv2p", "siv0", "kakw", "6msd",
-      "iso2", "xi84", "dysh", "f9yf", "41tf", "g0q2", "l76t", "qr71", "hdux",
-      "jmy7", "n482", "rrag",
-      # B0DU1982
-      "zo21", "oyhg", "akqt", "ry3w", "m6m8",
-      # B1AK1979
-      "8mwk", "tonl", "a0xs", "79hk", "angm", "59gv", "yn16", "c1z5", "tx5o",
-      "afgp", "6kce", "d7eu", "d0hr", "itrq", "qxq9", "e78y", "z48n", "5e6l",
-      # B1AK1985
-      "fh29", "eu0e", "cagd", "3vej", "lhc0",
-      # B2AK1979
-      "ihff", "an90", "stil", "923n", "nizv", "zk1t", "dvki", "q5ip", "4u91",
-      "5qqn",
-      # B2AK1987
-      "e3u3", "ucue"] }
+  - { id: e3u3, tit: Вийшли в поле косарі, sub: uafs,
+      src: B2AK1987,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: ucue, tit: Пісня Карася, sub: 'з опери \"Запорожець за Дунаєм\"',
+      com: С. Гулак-Артемовський, src: B2AK1987,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }

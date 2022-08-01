@@ -2,7 +2,7 @@
 
 stBass = \markup \larger \box Г % Готовий
 frBass = \markup \larger \box В % Вибiрний
-puBass = \markup \larger \box Б % Бас (вибiрний)
+puBass = \markup \larger \box Б % Чистий бас
 
 {% macro logo(scale = 1) %}
 \roman \bold {
@@ -23,8 +23,8 @@ puBass = \markup \larger \box Б % Бас (вибiрний)
 {% set url = "https://volodymyrprokopyuk.github.io/bayan" %}
 {% if pieces.length > 1 %}
 \header {
-  title = "{{ book.title }}"
-  subtitle = "{{ book.subtitle }}"
+  title = "{{ book.tit }}"
+  subtitle = "{{ book.sub }}"
   tagline = \markup { {{ logo(0.5) }} \with-url "{{ url }}" "{{ url }}" }
 }
 \markuplist \table-of-contents
@@ -42,19 +42,19 @@ puBass = \markup \larger \box Б % Бас (вибiрний)
 {% macro lhConfig() %} {% endmacro %}
 
 {% for piece in pieces %}
-\tocItem \markup "{{ piece.title }}"
+\tocItem \markup "{{ piece.tit }}"
 \score {
   \header {
-    title = "{{ piece.title }}"
-    subtitle = "{{ piece.subtitle | safe or '' }}"
+    title = "{{ piece.tit }}"
+    subtitle = "{{ piece.sub | safe or '' }}"
     {% if piece.composer %}
-    composer = "{{ piece.composer }}"
+    composer = "{{ piece.com }}"
     {% endif %}
     {% if piece.arranger %}
-    arranger = "{{ piece.arranger }}"
+    arranger = "{{ piece.arr }}"
     {% endif %}
   }
-  {% set source = "source/" + piece.source.dir + "/" + piece.file + ".lys" %}
+  {% set source = "source/" + piece.src + "/" + piece.file + ".lys" %}
   {% from source import rightHand, leftHand %}
   \new PianoStaff = bayan {
     <<

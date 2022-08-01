@@ -1,0 +1,21 @@
+%YAML 1.2
+---
+books:
+  - { id: byup, tit: Українські народні пісні, sub: для баяна,
+      pieces: [
+      # B0D1973
+      "1kae", "4ha8", "7n13", "jnuj", "1sxc", "hv2p", "siv0", "kakw", "6msd",
+      "iso2", "xi84", "dysh", "f9yf", "41tf", "g0q2", "l76t", "qr71", "hdux",
+      "jmy7", "n482", "rrag",
+      # B0DU1982
+      "zo21", "oyhg", "akqt", "ry3w", "m6m8",
+      # B1AK1979
+      "8mwk", "tonl", "a0xs", "79hk", "angm", "59gv", "yn16", "c1z5", "tx5o",
+      "afgp", "6kce", "d7eu", "d0hr", "itrq", "qxq9", "e78y", "z48n", "5e6l",
+      # B1AK1985
+      "fh29", "eu0e", "cagd", "3vej", "lhc0",
+      # B2AK1979
+      "ihff", "an90", "stil", "923n", "nizv", "zk1t", "dvki", "q5ip", "4u91",
+      "5qqn",
+      # B2AK1987
+      "e3u3", "ucue"] }

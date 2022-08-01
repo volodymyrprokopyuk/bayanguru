@@ -1,0 +1,18 @@
+%YAML 1.2
+---
+pieces:
+  # B1AK1979
+  - { id: tx5o, tit: Полька,
+      com: А. Иванов, src: B1AK1979,
+      org: ru, sty: flk, gnr: dnc, frm: mel, txt: hmp, bss: stb, lvl: elm }
+   # B1AK1985
+  - { id: lhc0, tit: Полька,
+      com: М. Глинка, src: B1AK1985,
+      org: ru, sty: flk, gnr: dnc, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  # B2AK1979
+  - { id: 923n, tit: Лирическая протяжная,
+      com: Н. Речменский, src: B2AK1979,
+      org: ru, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: zk1t, tit: Щебетала пташечка,
+      com: Н. Руднев, src: B2AK1979,
+      org: ru, sty: flk, gnr: sng, frm: mel, txt: plp, bss: pub, lvl: elm }
