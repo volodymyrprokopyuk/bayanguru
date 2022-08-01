@@ -180,3 +180,6 @@ pieces:
   - { id: ucue, tit: Пісня Карася, sub: 'з опери \"Запорожець за Дунаєм\"',
       com: С. Гулак-Артемовський, src: B2AK1987,
       org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: fngd, tit: Колискова,
+      com: Я. Степовий, src: B2AK1987,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }

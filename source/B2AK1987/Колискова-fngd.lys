@@ -1,0 +1,25 @@
+{% macro rightHand(config) %}
+\tempo Lento
+\clef treble
+\key g \minor
+\time 4/4
+\relative {
+  {{ config() }}
+  g'='4\p g(\< c) c8( d\! | bes4 a8\> bes g4) g\! |
+  g='4 g(\< c) c8( d\! | bes4 a8\> bes g4) g\! |
+  fis='4\( d\< g bes\! | a fis\> g g\)\! |
+  fis='4\( d\< g bes\! | a8 g fis\> a g4 g='\)\! \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key g \minor
+\relative {
+  {{ config() }}
+  g,=,4-\stBass gm!8 r ees'4 c@m8 r8 | d4 d7!8 r g,4 gm!8 r |
+  g=,4 gm!8 r ees'4 c@m8 r8 | d4 d7!8 r g,4 gm!8 r |
+  \repeat unfold 3 { d@7!4( d'=8) r g,@m!4( d8) r | }
+  d@7!4( d=8) r g,,+gm!4 r |
+}
+{% endmacro %}

@@ -47,10 +47,10 @@ puBass = \markup \larger \box Б % Чистий бас
   \header {
     title = "{{ piece.tit }}"
     subtitle = "{{ piece.sub | safe or '' }}"
-    {% if piece.composer %}
+    {% if piece.com %}
     composer = "{{ piece.com }}"
     {% endif %}
-    {% if piece.arranger %}
+    {% if piece.arr %}
     arranger = "{{ piece.arr }}"
     {% endif %}
   }
