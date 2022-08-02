@@ -25,13 +25,15 @@
   >>
   <<
     \new Voice = "voiceOne" \relative {
-      \voiceOne cis''=''4(\p fis,8 fis') | fis[( fis fis fis]) |
+      \voiceOne
+      cis''=''4(\p fis,8 fis') | fis[( fis fis fis]) |
       gis,='8[(\< <d' fis> <cis e> <b d>])\! | e4 <cis e> |
       g='8\(\< <cis e>\! d cis | e[\mf d cis b]\) | \after 2\! cis2\> |
       \after 8.\! dis,='4\< eis\> | fis='2\! |
     }
     \new Voice = "voiceTwo" \relative {
-      \voiceTwo cis''=''4 fis, | d'8[( cis b a]) |
+      \voiceTwo
+      cis''=''4 fis, | d'8[( cis b a]) |
       gis='4 r | cis8[( b a gis)] |
       g='4 b8 ais | fis[ b a gis] | cis[( a gis fis)] |
       r8 <gis,= bis>[ r <gis b>] | r <a cis>[ r <a= cis>] |

@@ -1,0 +1,39 @@
+{% macro rightHand(config) %}
+\tempo Moderato
+\clef treble
+\key a \minor
+\time 3/4
+\relative {
+  {{ config() }}
+  e''=''4\(\p d c | c b\< a\) | b\( b b | b gis e\)\! |
+  e='4\( gis b | d c b | a2.~\> | \after 8\! a4\) r r |
+  c=''4\( c c | c b c\) | d\( d\< d | d e f\)\! |
+  e=''4\( e e | e b\> c | a2.~ | \after 8\! a4\) r r |
+  <<
+    \new Voice = "voiceOne" \relative {
+      \voiceOne
+      c''=''4\( c c | c b c\) | d\( d\< d | d e f\)\! |
+      e=''4\( e e | e b\> c | a2.~ | \after 8\! a='4\)
+    }
+    \new Voice = "voiceTwo" \relative {
+      \voiceTwo
+      a'='2.~ | a2. | a2.~ | a2. | c2. | gis2. | a2.~ | a='4
+    }
+  >>
+  r r \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key a \minor
+\relative {
+  {{ config() }}
+  a,=,4 am! am | e' a,@m a,m | e e7! e7 | gis, e@7 e7 |
+  e'=4 e7! e7 | b e@7 e7 | a( am!) am | e'( a,@m) a,m |
+  a,=,4 am! am | e' a,@m a,m | d dm! dm | a d@m dm |
+  e'=4 a,@m! am | e e7! e7 | a,( am!) am | e'( a,@m) a,m |
+  a,=,4 am! am | g a,@m am | f d@m! dm | b d@m dm |
+  e=4 a,@m! am | e e7! e7 | a,=,( am!) am | a,,+am! r r |
+}
+{% endmacro %}
