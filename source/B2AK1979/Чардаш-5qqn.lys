@@ -7,7 +7,7 @@
   {{ config() }}
   \repeat volta 2 {
     fis'='4.\mf g8 | a4. fis8 | g4. a8 | bes2 |
-    a='4. bes8 | c4. a8 | g4. c8 | d2 |
+    a='4. bes8 | c4. a8 | bes4. c8 | d2 |
     cis=''4. d8 | e4. cis8 | d4. e8 | f2 |
     g=''4 f | e cis | d8-> r r4 | d=''8-> r r4 |
   }
@@ -42,7 +42,7 @@
   f=,8 f7! c' f,@7 | f,8 f7 a f,@7 |
   bes=,8 besM! f bes,@M | bes8 besM f bes,@M |
   c'=8 cm!4 cm8 | c cm4 cm8 |
-  d=8 g,@m!4 g,@m8 | g,8 gm! c cm |
+  d=8 g,@m!4 gm8 | g,8 gm! c cm |
   d=8 d7!4 d78 | d d74 d78 |
   g,=,8 gm!4 gm8 | d' d7! g,,+gm! r |
   d= d7! g,,+gm! r | c,+cm! r d,+d7! r | g,,+gm! r r4 |

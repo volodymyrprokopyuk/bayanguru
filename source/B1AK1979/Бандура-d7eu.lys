@@ -25,7 +25,7 @@
   {{ config() }}
   b,=,4-\stBass b7! b7 | b b7 b7 | e em! em | e em em |
   b=,4 b7! b7 | b b7 b7 | e( em!) em | e( em) em |
-  a,=,4 am! am | c a,@m a,@m4 | e em! em | g, e@m e@m |
+  a,=,4 am! am | c a,@m am4 | e em! em | g, e@m em |
   a=,4 am! am | b b7! b7 | e( em!) em | e,( fis gis=,) | e,+em!2. |
 }
 {% endmacro %}
