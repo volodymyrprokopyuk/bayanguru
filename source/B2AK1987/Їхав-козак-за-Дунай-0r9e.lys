@@ -1,0 +1,51 @@
+{% macro rightHand(config) %}
+\tempo Moderato
+\clef treble
+\key a \minor
+\time 2/4
+\relative {
+  {{ config() }}
+  a'='8\p a a a | a( c b a) | gis gis gis gis | gis( b a gis) |
+  a='8 a a a | a( c b a) | gis( b e gis, | a2) |
+  c=''8\mf c c c | c( e d c) | b b b b | b( d c b) |
+  a='8 a a\> a | a( c b a) | gis( b e gis,\! | a='2) |
+
+  a='8(\mf c16 b a8 c16 b) | a8( c b a) |
+  gis='8( b16 a gis8 b16 a) | gis8( b a gis) |
+  a='8( c16 b a8 c16 b) | a8( c b a) |
+  gis='8( b e gis,\! | a2) |
+  c=''8( e16 d c8 e16 d) | c8( e d c) |
+  b='8( d16 c b8 d16 c) | b8( d c b) |
+  a='8( c16 b a8 c16 b) | a8( c b a) |
+  gis='8 b e gis | a=''2 |
+
+  a,='16(\p e a c a e a c) | a( e a e' d c b a) |
+  gis='16( e gis b gis e gis b) | gis( e gis b e d c b) |
+  a='16( e a c a e a c) | a( e a e' d c b a) |
+  gis='16( e gis b e d c b) | a2 |
+  c=''16( g c e c g c e) | c( g c g' f e d c) |
+  b='16( g b d b g b d) | b( f b f' e d c b) |
+  a='16( e a c a e a c) | a( e a e' d c b a) |
+  gis='16( e gis b e d e gis | a=''2) \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key a \minor
+\relative {
+  {{ config() }}
+  a,=,4-\stBass am! | a am | e' eM! | e eM | a, am! | c a,@m | e4 eM! | a, am! |
+  c=4 cM! | c cM | g gM! | gis e@M! | a4 am! | c a,@m | e4 e7! | a, am! |
+
+  a=,4( am!) | c( a,@m) | e4( eM!) | d( e@M) |
+  c=4( a,@m!) | a4( am) | e'( e7!) | a,( am!) |
+  c=4( cM!) | e( c@M) | g,( gM!) | gis( e@M!) |
+  a=,4( am!) | c( a,@m) | e( e7!) | a,( am!) |
+
+  a=,4 am! | c a,@m | b e@7! | e e7 |
+  a,=,4 am! | c a,@m | e e7! a, am! |
+  c=4 cM! | e c@M | g, g7! | gis e@7! |
+  a=,4 am! | c a,@m | e e7! | a,=, am! |
+}
+{% endmacro %}

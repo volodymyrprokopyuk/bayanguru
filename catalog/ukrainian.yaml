@@ -189,3 +189,6 @@ pieces:
   - { id: 9k9u, tit: Горлиця, sub: uafs,
       src: B2AK1987,
       org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: 0r9e, tit: Їхав козак за Дунай, sub: uafs,
+      src: B2AK1987,
+      org: ua, sty: flk, gnr: sng, frm: var, txt: hmp, bss: stb, lvl: elm }
