@@ -29,7 +29,7 @@
 \key a \minor
 \relative {
   {{ config() }}
-  a,=,4 am! am | e' a,@m a,m | e e7! e7 | gis, e@7 e7 |
+  a,=,4-\stBass am! am | e' a,@m a,m | e e7! e7 | gis, e@7 e7 |
   e'=4 e7! e7 | b e@7 e7 | a( am!) am | e'( a,@m) a,m |
   a,=,4 am! am | e' a,@m a,m | d dm! dm | a d@m dm |
   e'=4 a,@m! am | e e7! e7 | a,( am!) am | e'( a,@m) a,m |

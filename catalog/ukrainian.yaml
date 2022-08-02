@@ -186,3 +186,6 @@ pieces:
   - { id: cpdc, tit: Ніч яка місячна, sub: uafs,
       src: B2AK1987,
       org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: 9k9u, tit: Горлиця, sub: uafs,
+      src: B2AK1987,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
