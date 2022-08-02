@@ -1,5 +1,7 @@
+#!/usr/bin/env node
+
 import parseArgs from "minimist"
-// import { readFile, writeFile } from "fs/promises"
+import { readFile, writeFile, copyFile, access } from "fs/promises"
 // import { globby } from "globby"
 // import { marked } from "marked"
 import { readPieces, readBooks } from "./lib/catalog.js"
@@ -29,6 +31,13 @@ import { engravePieces, engraveBooks } from "./lib/score.js"
 //   return tasks
 // }
 
+async function pieceInit(id) {
+  const { src, file } = (await readPieces())[id]
+  const path = `source/${src}/${file}.lys`
+  try { await access(path); console.log(`skipping ${path} already exists`) }
+  catch { await copyFile("source/piece.lys", path) }
+}
+
 async function engrave() {
   if (args.b) {
     let { books, pieces } = await readBooks()
@@ -45,6 +54,6 @@ async function engrave() {
 
 const argsConfig = { boolean: ["b"], default: { f: "ps" } }
 const args = parseArgs(process.argv.slice(2), argsConfig)
-engrave()
+if (args.i) { await pieceInit(args.i) } else { await engrave() }
 
 // npm run serve
