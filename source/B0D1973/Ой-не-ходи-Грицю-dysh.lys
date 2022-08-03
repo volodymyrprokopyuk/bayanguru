@@ -12,7 +12,7 @@
     a='4.\( b8 c4 a | e' c d8 c b a\) | gis4\( b e4. gis,8 |
     \alternative {
       \volta 1 { a2 b\) | }
-      \volta 2 { a2 a='4 r \bar "|." }
+      \volta 2 { a2^\repeatTie a='4 r \bar "|." }
     }
   }
 }

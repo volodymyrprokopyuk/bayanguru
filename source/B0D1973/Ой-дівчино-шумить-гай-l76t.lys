@@ -12,7 +12,7 @@
     g'=''2\( f4 | e2 d4 | c d e |
     \alternative {
       \volta 1 { f2.\) | }
-      \volta 2 { f=''4 r r \bar "|." }
+      \volta 2 { f=''4^\repeatTie r r \bar "|." }
     }
   }
 }

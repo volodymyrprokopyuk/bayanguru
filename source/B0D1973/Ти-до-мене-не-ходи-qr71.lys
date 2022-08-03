@@ -12,7 +12,7 @@
     a='16( b c b d c b a | b8-.) b-. b4 | e8-. e-. e16( d c b |
     \alternative {
       \volta 1 { a4) b | }
-      \volta 2 { a4( a'='') \bar "|." }
+      \volta 2 { a4^\repeatTie( a'='') \bar "|." }
     }
   }
 }

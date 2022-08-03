@@ -12,7 +12,7 @@
     fis='2\(\mp a4 | g2\> fis4\! | e2.~\p |
     \alternative {
       \volta 1 { \after 2 \! e2.\)\< | }
-      \volta 2 { e='2. \bar "|." }
+      \volta 2 { e='2.\repeatTie \bar "|." }
     }
   }
 }

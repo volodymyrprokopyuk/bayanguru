@@ -10,7 +10,7 @@
     d=''8 d( c8.) c16( | b8) b( a8. g16) | fis8( d fis a |
     \alternative {
       \volta 1 { g4) b | }
-      \volta 2 { g4 g='8 r \bar "|." }
+      \volta 2 { g4\repeatTie g='8 r \bar "|." }
     }
   }
 }

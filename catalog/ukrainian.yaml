@@ -58,7 +58,7 @@ pieces:
       org: ua, sty: flk, gnr: dnc, frm: mel, txt: hmp, bss: stb, lvl: elm }
   - { id: jmy7, tit: Полька,
       com: А. Тихончук, src: B0D1973,
-      org: ua, sty: flk, gnr: dnc, frm: mel, txt: hmp, bss: stb, lvl: elm }
+      org: ua, sty: flk, gnr: plk, frm: mel, txt: hmp, bss: stb, lvl: elm }
   - { id: n482, tit: Танець урожаю,
       com: Т. Шутенко, src: B0D1973,
       org: ua, sty: flk, gnr: dnc, frm: mel, txt: hmp, bss: stb, lvl: elm }
@@ -131,7 +131,7 @@ pieces:
       src: B1AK1979,
       org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
   - { id: 5e6l, tit: Полька, src: B1AK1979,
-      org: ua, sty: flk, gnr: dnc, frm: mel, txt: hmp, bss: stb, lvl: elm }
+      org: ua, sty: flk, gnr: plk, frm: mel, txt: hmp, bss: stb, lvl: elm }
    # B1AK1985
   - { id: fh29, tit: Веснянка, sub: uafs,
       src: B1AK1985,
@@ -147,7 +147,7 @@ pieces:
       org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
   - { id: lhc0, tit: Полька,
       com: М. Глинка, src: B1AK1985,
-      org: ru, sty: flk, gnr: dnc, frm: mel, txt: hmp, bss: stb, lvl: elm }
+      org: ru, sty: flk, gnr: plk, frm: mel, txt: hmp, bss: stb, lvl: elm }
   # B2AK1979
   - { id: ihff, tit: Ой лопнув обруч, sub: uafs,
       src: B2AK1979,
@@ -192,3 +192,6 @@ pieces:
   - { id: 0r9e, tit: Їхав козак за Дунай, sub: uafs,
       src: B2AK1987,
       org: ua, sty: flk, gnr: sng, frm: var, txt: hmp, bss: stb, lvl: elm }
+  - { id: w5ba, tit: Дивлюсь я на небо, sub: uafs,
+      src: B2AK1987,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
