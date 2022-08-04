@@ -1,0 +1,120 @@
+{% macro rightHand(config) %}
+\tempo Allegro
+\clef treble
+\key g \major
+\time 2/4
+\relative {
+  {{ config() }}
+  \repeat unfold 2 {
+    \alternative {
+      { g'='8-.\f a-. b-. c-. | }
+      { g='8-. a-. b-. c-. | }
+    }
+    d16( e d cis d8 g) |
+    g,='8-. a-. b-. c-. | d16( e d cis d=''8) r |
+  }
+
+  \repeat volta 2 {
+    fis=''8-.\mp a-. d,-. fis-. | g16( fis g a b8) g-. |
+    fis=''8-. a-. d,-. fis-. |
+    \alternative {
+      \volta 1 { g=''16( fis g a b=''8) r | }
+      \volta 2 { g=''16( a g fis g=''8) r | }
+    }
+  }
+
+  \repeat volta 2 {
+    g,='8\f g' e->( d16 c) | b( ais b d a gis a d) |
+    g,='8 g' e->( d16 c) |
+    \alternative {
+      { b='16( ais b d a='8) r | }
+      { b='16( c b a g='8) r | }
+    }
+  }
+
+  \repeat unfold 2 {
+    \alternative {
+      { b='16(\mf ais b d a gis a d) | }
+      { b='16( ais b d a gis a d) | }
+    }
+    b( ais b e) d8( c ) | b='16( ais b d a gis a d) |
+    \alternative {
+      { b='16( c b a g='8) r | }
+      { b='16( c b a g='8) r \bar "||" }
+    }
+  }
+
+  \repeat segno 2 {
+    \volta 1
+    g='8\f g' e->( d16 c) | b8-. d-. a-. d-. |
+    b='8-. d-. \acciaccatura { d8 } c16(_\dynCresc b c a) |
+    b='8-. d-. a-. d-. | b-. a-. g='4--\f |
+    \repeat unfold 2 {
+      \alternative {
+        { <g=' b>8.\mf <a c>16 \acciaccatura { e'8 } <b d>8( <ais cis>-.) | }
+        { <g=' b>8. <a c>16 \acciaccatura { e'8 } <b d>8( <ais cis>-.) | }
+      }
+      \acciaccatura { e'=''8 } <b d>8( <ais cis>-.) <b d> <gis e'> |
+      <a=' c>8-.\< <fis d'>-. <g b>-. <g c>-.\! |
+      \alternative {
+        { <g=' a>8\> \acciaccatura { b8 } <c, fis a>8 <b= g'>4--\! | }
+        { <g'=' a>8\> \acciaccatura { b8 } <c, fis a>8 <b= g'>4--\! \bar "||" }
+      }
+    }
+    \volta 2 \fine
+    \key g \minor
+    \repeat unfold 2 {
+      \alternative {
+        { <g'=' bes>4->\f <fis a> | }
+        { <g=' bes>4-> <fis a> | }
+      }
+      <g bes>8 8 <fis a>4-> |
+      <g=' bes>8 8 <fis a>8 8 |
+      \alternative {
+        { \acciaccatura { c'=''8 } bes16( a g fis g='4--) | }
+        {
+          \acciaccatura { c=''8 } bes16(\> a g fis g='4--)\! \bar "||"
+          \key g \major
+        }
+      }
+    }
+  }
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key g \major
+\relative {
+  {{ config() }}
+  g,,+gM!8-\stBass r g,,+gM r | g,,+gM r g,,+gM r |
+  g,,+gM!8 r g,,+gM r | g,,+gM g,,+gM g,,+gM r |
+  g,,+gM!8 r g,,+gM r | d,+d7! r g,,+gM! r |
+  g,,+gM!8 r g,,+gM r | d,+d7! d,+d7 g,,+gM! r |
+
+  d=8 dM! fis, d@M | g8 gM! b g,@M |
+  d=8 dM! fis, d@M | g8 gM! g gM | g gM! g,,+gM r |
+
+  \repeat unfold 2 { g=,8 gM! c cM | g gM! d' d7! }
+  d,+g,@M!8 d,+d7!8 g,,+gM! r |
+
+  g,=,8 gM! d' d7! | g, gM! c cM |
+  g=,8 gM! d' d7! | g, gM! b g,@M |
+  g=,8 gM! d' d7! | g, gM! c cM |
+  d=8 g,@M! d8 d7! | g,,+gM! d,+d7! g,,+gM! r |
+
+  g,=,8 gM! c cM | g gM! fis d@7! |
+  g=,8 gM! a d@7! | g8 gM! fis d@7! | g,,+gM!8 d,+d7! g,,+gM!4 |
+  g=,8 gM! g gM | g gM! g-. e-. |
+  a=,8-. d,-. g-. e-. | c' d g,@M![( g,8]) |
+  g=,8 gM! g gM | g gM! g,,+gM8 \noBeam e-. |
+  a=,8-. d,-. g-. e-. | c'-. d-. e,4-- |
+
+  \key g \minor
+  g=,4 d' | g,8 bes d@M![( d8]) |
+  g,=,16( a bes c) d@M!8[( d8]) | g,@m![( d8]) g,@m[( d8]) |
+  g,=,4 d' | g,8 bes d@M![( d8]) |
+  g,=,16( a bes c) d@M!8[( d8]) | g,,+gm! d,+d7! g,,+gm!4 |
+  \key g \major
+}
+{% endmacro %}

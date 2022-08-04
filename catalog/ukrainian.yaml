@@ -195,3 +195,6 @@ pieces:
   - { id: w5ba, tit: Дивлюсь я на небо, sub: uafs,
       src: B2AK1987,
       org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: zvpg, tit: Козачок, sub: uafd,
+      src: B2AK1987,
+      org: ua, sty: flk, gnr: dnc, frm: mel, txt: hmp, bss: stb, lvl: elm }
