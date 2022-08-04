@@ -6,13 +6,13 @@
 \relative {
   {{ config() }}
   d'='8(\mf g) g-. a-. | b8.( a16 b8 g) |
-  c=''8 c( e d) | b8.( a16 b8 g) |
+  c=''8 c( e c) | b8.( a16 b8 g) |
   c=''8-. c16( d e4) | b8-. b16( c d4) |
   c=''8( a fis d) | g b d4-- |
   c=''8-. c16( d e4) | b8-. b16( c d4) |
   c=''8( a fis d) | g-. b-. g-. r |
-  d='8-.\f \acciaccatura a' g16( fis g8) a-. | b8.( a16 b8 g) |
-  \acciaccatura d' c=''16( b c d e8) c-. | b8.( a16 b8 g) |
+  d='8-.\f \acciaccatura { a'8 } g16( fis g8) a-. | b8.( a16 b8 g) |
+  \acciaccatura { d'8 } c=''16( b c d e8) c-. | b8.( a16 b8 g) |
   c=''16( b c d e4) | b16( a b c d4) |
   c=''16( b a g fis8) d-. | g16( fis g b d4) |
   c=''16( b c d e dis e c) | b( ais b c d cis d b) |

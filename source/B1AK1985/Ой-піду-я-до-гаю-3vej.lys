@@ -10,7 +10,7 @@
     a='8( cis e cis) | d( e f d) | e\( g bes8. a16 | a16 g f e d4\) |
   }
   d=''8.( f16 a8) a | bes bes16( a g4->) |
-  f16( e d8) e16( d cis8) | d \acciaccatura e8 d16( cis d=''4->) \bar "|."
+  f16( e d8) e16( d cis8) | d \acciaccatura { e8 } d16( cis d=''4->) \bar "|."
 }
 {% endmacro %}
 
