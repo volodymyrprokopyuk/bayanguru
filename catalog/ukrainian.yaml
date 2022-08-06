@@ -198,3 +198,6 @@ pieces:
   - { id: zvpg, tit: Козачок, sub: uafd,
       src: B2AK1987,
       org: ua, sty: flk, gnr: dnc, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: zykv, tit: Зайчик, sub: uafs,
+      src: B2AK1987,
+      org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }

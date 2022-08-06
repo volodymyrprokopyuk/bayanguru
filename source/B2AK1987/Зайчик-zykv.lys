@@ -1,0 +1,77 @@
+{% macro r4Ma2() %}
+<< \relative { r4 aM! } \\ \relative { a,=,2 } >>
+{% endmacro %}
+
+{% macro rightHand(config) %}
+\tempo Allegretto
+\clef treble
+\key a \major
+\time 4/4
+\relative {
+  {{ config() }}
+  a'='8\mf a \acciaccatura { gis'8 } a4-> a,8 a \acciaccatura { gis'8 } a4-> |
+  a,='8[ a] cis[ d] e4. d8 | cis cis b4 a2 |
+  a='4\f( <a cis>8 <b d> <cis e>4. <b d>8) | <a cis>8 8 <gis b>4 a2 |
+  cis=''8(\p e) b-. b-. cis-. cis-. d( b) |
+  cis=''16(\< a cis e) b( gis b e) cis( a cis e) d8( b)\! |
+  cis=''8 <a cis> <gis b>4 a2 |
+  <e=' a cis>8\> 8 <d gis b>4 \after 2\! <cis e a>2 |
+  <<
+    \new Voice = "voiceOne" \relative {
+      \voiceOne
+      \acciaccatura { gis''=''8 } a2->(\f gis4. fis8) |
+    }
+    \new Voice = "voiceTwo" \relative {
+      \voiceTwo
+      r8 a'='8( cis e e4. d8) |
+    }
+  >>
+  <cis'='' e>8 8 <b d>4 <a cis>2 |
+  <<
+    \new Voice = "voiceOne" \relative {
+      \voiceOne
+      \acciaccatura { dis''=''8 } e4->\(\p cis8 dis e4. dis8 |
+      cis=''8 e b4 a2\) | \barFermata
+      \tempo Moderato
+      cis=''8[( e]) b[-. b]-. cis[-. cis]-. d[( b=']) |
+    }
+    \new Voice = "voiceTwo" \relative {
+      \voiceTwo
+      r8 e'='8( a fis gis2) | a4( gis a2) | a4( gis g fis=') |
+    }
+  >>
+  cis=''16(^"accel."-\dynCresc e, a e' b e, b' d cis e, a cis <fis, d'>8 b) |
+  cis=''16( e, a cis) b( d, e gis) a( e fis gis a^"rit." gis a b) |
+  \tempo Lento
+  <e,=' a cis>8--\f 8-- <d e gis b>4-> <cis=' e a>2-- \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key a \major
+\relative {
+  {{ config() }}
+  \set Timing.beamExceptions = #'()
+  \set Timing.baseMoment = #(ly:make-moment 1/4)
+  \set Timing.beatStructure = 1,1,1,1
+  r8 cis@M! r8 d@M! r8 a,@M! r8 d@M! |
+  \repeat unfold 2 {
+    a,=,8 aM! e' e7! a, aM! e' e7! |
+    a,=,8 aM! e' e7! {{ r4Ma2() }} |
+  }
+  \repeat unfold 2 {
+    a,=,8 aM! e' e7! a, aM! d dM! |
+  }
+  a=,8 aM! e' e7! {{ r4Ma2() }} |
+  e=8 a,@M! e8 e7! {{ r4Ma2() }} |
+  a,=,8[( aM!) aM aM] e'[( e7!) e7 e7] |
+  a,=,8 aM! e' e7! {{ r4Ma2() }} |
+  a,=,8[( aM!) aM d@M] e'8[( e7!) e7 e7] |
+  a,=,8 aM! e' e7! {{ r4Ma2() }} |
+  a,=,8 aM! e' e7! a, aM! d dM! |
+  a=,8 aM! e' e7! a, aM! b bm! |
+  a=,8 aM! e' e7! a, aM! a,,+aM r |
+  e'=8 a,@M! e8 e7! {{ r4Ma2() }} |
+}
+{% endmacro %}

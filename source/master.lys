@@ -4,6 +4,7 @@ stBass = \markup \larger \box Г % Готовий
 frBass = \markup \larger \box В % Вибiрний
 puBass = \markup \larger \box Б % Чистий бас
 dynCresc = \markup \lower #3 \italic "cresc."
+barFermata = \mark \markup \musicglyph #"scripts.ufermata"
 
 {% macro logo(scale = 1) %}
 \roman \bold {
