@@ -201,3 +201,6 @@ pieces:
   - { id: zykv, tit: Зайчик, sub: uafs,
       src: B2AK1987,
       org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+  - { id: di18, tit: Од Києва до Лубен, sub: uafs,
+      src: B2AK1987,
+      org: ua, sty: flk, gnr: sng, frm: var, txt: hmp, bss: stb, lvl: elm }

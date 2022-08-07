@@ -1,7 +1,3 @@
-{% macro r4Ma2() %}
-<< \relative { r4 aM! } \\ \relative { a,=,2 } >>
-{% endmacro %}
-
 {% macro rightHand(config) %}
 \tempo Allegretto
 \clef treble
@@ -45,6 +41,10 @@
   \tempo Lento
   <e,=' a cis>8--\f 8-- <d e gis b>4-> <cis=' e a>2-- \bar "|."
 }
+{% endmacro %}
+
+{% macro r4Ma2() %}
+<< \relative { r4 aM! } \\ \relative { a,=,2 } >>
 {% endmacro %}
 
 {% macro leftHand(config) %}
