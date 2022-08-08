@@ -1,0 +1,52 @@
+{% macro rightHand(config) %}
+\tempo Allegretto
+\clef treble
+\key c \major
+\time 2/4
+\relative {
+  {{ config() }}
+  g'='8-.\mf c-. \acciaccatura { d8 } c16( b c8) |
+  d=''8-. g,-. \acciaccatura { a8 } g16( fis g8) |
+  d'=''8-. g,-. f'-. g,-. | a'-. g-. g16( f e8) |
+  g,='8-. c-. \acciaccatura { d8 } c16( b c8) |
+  d=''8-. g,-. \acciaccatura { a8 } g16( fis g8) |
+  d'=''8-. g,-. f'-. g,-. | e'16( g, e' d c8) d16 c |
+  b='8[\p \acciaccatura { cis8 } d8 \acciaccatura { fis8 } g8
+  \acciaccatura { ais8 } b8] |
+  b=''8( a16 g fis8-.) e-. |
+  \repeat unfold 2 { e=''8-. d-. \acciaccatura { e8 } d16( cis d8) | }
+  b='8[ \acciaccatura { cis8 } d8 \acciaccatura { fis8 } g8
+  \acciaccatura { ais8 } b8] |
+  b=''8( a16 g fis8-.) e-. | e16( d cis d e d b' a |
+  g=''8) \acciaccatura { fis8 } g8  \acciaccatura { fis8 } g16(\< gis a ais\! |
+  \acciaccatura { c='''8 } b8-.) g,-. b'-. a-. |
+  a=''8-. g-. g16( f e8) | g-. g,-. g'-. f-. |
+  f=''8-. e-. e16( d c8) | b'-. g,-. b'-. a-. |
+  a=''8-. g-. g16( f e8) | cis16( d b' a g f e d |
+  c=''8) \acciaccatura { d8 } c16( b d=''4) \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key c \major
+\relative {
+  {{ config() }}
+  \repeat unfold 2 {
+    \alternative {
+      { c=8-\stBass cM! cM r | }
+      { c=8 cM! cM r | }
+    }
+    b g,@7! g78 r | g g7! g g7 | c cM! cM r |
+  }
+  \repeat unfold 2 {
+    \alternative {
+      { g=,8[ gM! gM gM] | }
+      { g=,8 gM! g gM | }
+    }
+    c a,@m! am8 r | d d7! d7 r | g, gM! gM r |
+  }
+  g=,8 g7! g7 r | c cM! cM r | d g,@7! g78 r | c cM! cM r |
+  d=8 g,@7! g,8 g7 | c cM! cM r | f, d@m! g8 gm! | c= cM! cM4 |
+}
+{% endmacro %}
