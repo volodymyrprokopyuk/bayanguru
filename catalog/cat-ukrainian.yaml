@@ -145,9 +145,6 @@ pieces:
   - { id: 3vej, tit: Ой піду я до гаю,
       com: Д. Січинський, src: B1AK1985,
       org: ua, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
-  - { id: lhc0, tit: Полька,
-      com: М. Глинка, src: B1AK1985,
-      org: ru, sty: flk, gnr: plk, frm: mel, txt: hmp, bss: stb, lvl: elm }
   # B2AK1979
   - { id: ihff, tit: Ой лопнув обруч, sub: uafs,
       src: B2AK1979,
@@ -170,9 +167,6 @@ pieces:
   - { id: 4u91, tit: Ой під горою, sub: uafs,
       src: B2AK1979,
       org: ua, sty: flk, gnr: sng, frm: mel, txt: plp, bss: pub, lvl: elm }
-  - { id: 5qqn, tit: Чардаш, sub: hufd,
-      src: B2AK1979,
-      org: hu, sty: flk, gnr: dnc, frm: mel, txt: hmp, bss: stb, lvl: elm }
   # B2AK1987
   - { id: e3u3, tit: Вийшли в поле косарі, sub: uafs,
       src: B2AK1987,

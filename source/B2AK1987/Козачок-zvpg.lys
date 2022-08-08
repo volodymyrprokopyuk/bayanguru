@@ -39,7 +39,7 @@
     }
     b( ais b e) d8( c ) | b='16( ais b d a gis a d) |
     \alternative {
-      { b='16( c b a g='8) r | }
+      { b='16( c b a g='4) | }
       { b='16( c b a g='8) r \bar "||" }
     }
   }
