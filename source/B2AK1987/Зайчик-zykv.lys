@@ -19,7 +19,7 @@
     }
     \new Voice = "voiceTwo" \relative {
       \voiceTwo
-      r8 a'='8( cis e e4. d8) |
+      r8 a'='8[( cis e] e4. d8) |
     }
   >>
   <cis'='' e>8 8 <b d>4 <a cis>2 |
@@ -33,7 +33,7 @@
     }
     \new Voice = "voiceTwo" \relative {
       \voiceTwo
-      r8 e'='8( a fis gis2) | a4( gis a2) | a4( gis g fis=') |
+      r8 e'='8[( a fis] gis2) | a4( gis a2) | a4( gis g fis=') |
     }
   >>
   cis=''16(^"accel."-\dynCresc e, a e' b e, b' d cis e, a cis <fis, d'>8 b) |
@@ -55,7 +55,7 @@
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1/4)
   \set Timing.beatStructure = 1,1,1,1
-  r8 cis@M! r8 d@M! r8 a,@M! r8 d@M! |
+  r8 a,@M! r8 d@M! r8 a,@M! r8 d@M! |
   \repeat unfold 2 {
     a,=,8 aM! e' e7! a, aM! e' e7! |
     a,=,8 aM! e' e7! {{ r4Ma2() }} |
