@@ -13,9 +13,9 @@
     d16( c b a g8) | c16( d e4) | e8( d4) |
   }
   c=''16(\mp b a8) a-. | b16(\< a g8) g-. |
-  c16( b a8) a-. | b16( a g8) g-.\! |
+  c16( b a8) a-. | b16( a g8) \after 8\! g-. |
   <<
-    \relative { c''=''8(\f b c | d4\>^"rit." c8)\! | \barFermata }
+    \relative { c''=''8(\f b c | d4\>^"rit." \after 8\! c8) | \barFermata }
     \\
     \relative { g'='4 r8 | g4 r8 | }
   >>

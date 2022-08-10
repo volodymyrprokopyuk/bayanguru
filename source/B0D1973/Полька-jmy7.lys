@@ -10,8 +10,8 @@
     e'='8-.\mf g-. c-. e-. | e-. d-. a4 | c8-. b-. b4 | d8-. c-. g4 |
     e='8-. g-. c-. e-. | e-. d-. a-. d-. | c-. b-. a-. b-. | c4. r8 \bar "||"
     \volta 2 \fine
-    e,='8\p e\( f e | a e c' e, | b' e, gis e | a\< e c e\)\! |
-    d='8 d\( e d | g d b' d, | d' c b a | g\< f e d='\)\! \bar "||"
+    e,='8\p e\( f e | a e c' e, | b' e, gis e | a\< e c \after 8\! e\) |
+    d='8 d\( e d | g d b' d, | d' c b a | g\< f e  \after 8\! d='\) \bar "||"
   }
 }
 {% endmacro %}

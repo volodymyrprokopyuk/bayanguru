@@ -8,10 +8,10 @@
   b=2\(\p b4 | b dis fis | e2 fis4 | g fis e\) |
   fis='2\( a4 | g2 fis4 | e2.~ | e2.\) |
   \repeat volta 2 {
-    c'=''2\(\mf\< d4\! | e d c | b2. | b4\> a g\)\! |
-    fis='2\(\mp a4 | g2\> fis4\! | e2.~\p |
+    c'=''2\(\mf\< \after 4\! d4 | e d c | b2. | b4\> a \after 4\! g\) |
+    fis='2\(\mp a4 | g2\> \after 4\! fis4 | e2.~\p |
     \alternative {
-      \volta 1 { \after 2 \! e2.\)\< | }
+      \volta 1 { \after 2\! e2.\)\< | }
       \volta 2 { e='2.\repeatTie \bar "|." }
     }
   }
