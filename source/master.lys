@@ -20,6 +20,11 @@ barFermata = \mark \markup \musicglyph #"scripts.ufermata"
 
 \paper {
   print-all-headers = ##t
+  tocTitleMarkup = \markup \column {
+    \fill-line { \null \huge \bold "Зміст" \null }
+    \hspace #4
+  }
+  tocItemMarkup = \tocItemWithDotsMarkup
 }
 
 {% set url = "https://volodymyrprokopyuk.github.io/bayan" %}
@@ -28,8 +33,9 @@ barFermata = \mark \markup \musicglyph #"scripts.ufermata"
   title = "{{ book.tit }}"
   subtitle = "{{ book.sub }}"
   tagline = \markup { {{ logo(0.5) }} \with-url "{{ url }}" "{{ url }}" }
+  copyright = \markup { {{ logo(0.5) }} \with-url "{{ url }}" "{{ url }}" }
 }
-\markuplist \table-of-contents
+\pageBreak
 {% else %}
 \header {
   tagline = \markup { {{ logo(0.5) }} \with-url "{{ url }}" "{{ url }}" }
@@ -66,3 +72,8 @@ barFermata = \mark \markup \musicglyph #"scripts.ufermata"
   }
 }
 {% endfor %}
+
+{% if pieces.length > 1 %}
+\pageBreak
+\markuplist \table-of-contents
+{% endif %}
