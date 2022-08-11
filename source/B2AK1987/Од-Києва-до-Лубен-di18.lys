@@ -10,7 +10,7 @@
   \repeat volta 2 {
     r8\mp <c=' d fis>[\< r <c e a>] | r <c d a'>[ r <d g>]
     \alternative {
-      \volta 1 { r8 <c=' e a>[ r <c d fis>] | r <c d a'> <b d g>4\! }
+      \volta 1 { r8 <c=' e a>[ r <c d fis>] | r <c d a'> \after 8.\! <b d g>4 }
       \volta 2 { r8 <c=' d fis>[ r <c e a>] | r <c d a'> <b d g> r | }
     }
   }
@@ -42,7 +42,7 @@
   <fis=' a>16 d <a' c>-> d, <g b>-> d g a |
   <g=' b>16 d <g b d>-> d <g b d> d <b' d> d, |
   <a'=' c>16 fis <c' e>-> fis,
-  << \relative { d''=''8.\> c16\! }\\ \relative { fis'='4 } >>
+  << \relative { d''=''8.\> \after 16\! c16 }\\ \relative { fis'='4 } >>
   <a=' c>16(\mf <b d> <a c> <g b> <fis a>8-.)\< <e g>-. |
   <<
     \relative { d'='8( e16 fis <b, g'>8-.) <d b'>-. | }
@@ -50,7 +50,7 @@
     \relative { c'='4 }
   >>
   <c=' a'>16( <d b'> <c a'> <b g'> <a fis'>8-.) <g e'>8-. |
-  <fis= d'>8( <g e'>16 <a fis'> <b= g'>4)\! \bar "|."
+  <fis= d'>8( <g e'>16 <a fis'> \after 8\! <b= g'>4) \bar "|."
 }
 {% endmacro %}
 

@@ -6,20 +6,22 @@
 \relative {
   {{ config() }}
   R2\p | R2 | fis'='4\( cis | cis'4. a8 |
-  b8[\< a gis fis]\! | gis e cis\) r |
+  b8[\< a gis \after 8\! fis] | gis e cis\) r |
   a'='4\p\( fis8 cis' | d4. cis8 |
-  b8[\< <gis fis'> <cis e> <b d>]\! |
-  <a cis>8 <b d> <cis e>\)\< g\! |
+  b8[\< <gis fis'> <cis e> \after 8\! <b d>] |
+  <a cis>8 <b d> <cis e>\)\< \after 8\! g |
   <<
-    \relative { <cis''='' e>4(\mf <b d>) | r8\< <b d>[( <a cis> <gis b>])\! }
+    \relative {
+      <cis''='' e>4(\mf <b d>) | r8\< <b d>[( <a cis> \after 8\! <gis b>])
+    }
     \\
     \relative { fis'='2 | eis4. r8 | }
   >>
   fis='8[( <a, d fis>\> gis' a]) |
-  \after 16.\! b8( fis^"rit." <fis b fis'>\fermata d'\fermata) |
+  \after 8\! b8( fis^"rit." <fis b fis'>\fermata d'\fermata) |
   cis8[(\pp a gis fis]) |
   <<
-    \relative { \after 8.\! dis'='4(\< eis\> | fis2)\! | }
+    \relative { \after 8.\! dis'='4(\< \after 4\! eis\> | fis2) | }
     \\
     \relative { r8 <gis= bis>[ r <gis b>] | }
   >>
@@ -27,9 +29,9 @@
     \new Voice = "voiceOne" \relative {
       \voiceOne
       cis''=''4(\p fis,8 fis') | fis[( fis fis fis]) |
-      gis,='8[(\< <d' fis> <cis e> <b d>])\! | e4 <cis e> |
-      g='8\(\< <cis e>\! d cis | e[\mf d cis b]\) | \after 2\! cis2\> |
-      \after 8.\! dis,='4\< eis\> | fis='2\! |
+      gis,='8[(\< <d' fis> <cis e> \after 8\! <b d>]) | e4 <cis e> |
+      g='8\(\< \after 16.\! <cis e> d cis | e[\mf d cis b]\) | \after 2\! cis2\> |
+      \after 8.\! dis,='4\< \after 4\! eis\> | fis='2 |
     }
     \new Voice = "voiceTwo" \relative {
       \voiceTwo
@@ -39,10 +41,10 @@
       r8 <gis,= bis>[ r <gis b>] | r <a cis>[ r <a= cis>] |
     }
   >>
-  r8\< \after 8.\! <a,= d fis>4 8 | r <gis bis dis fis>4 8 |
-  r8\> <gis= b d fis>4 8\! | r\p <a cis fis>4^"rit." <cis fis>8
+  r8\< <a,= d fis>4 \after 8\! 8 | r <gis bis dis fis>4 8 |
+  r8\> <gis= b d fis>4 \after 8\! 8 | r\p <a cis fis>4^"rit." <cis fis>8
   <<
-    \relative { a'='4\> cis\! | cis=''\pp }
+    \relative { a'='4\> \after 4\! cis | cis=''\pp }
     \\
     \relative { fis'='8 fis4 <fis a>8~ | <fis=' a>4 }
   >>

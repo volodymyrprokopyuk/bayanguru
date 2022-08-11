@@ -13,7 +13,7 @@
   a='8(\mf c16 b a8 c16 b) | a8( c b a) |
   gis='8( b16 a gis8 b16 a) | gis8( b a gis) |
   a='8( c16 b a8 c16 b) | a8( c b a) |
-  gis='8( b e gis,\! | a2) |
+  gis='8( b e \after 8\! gis, | a2) |
   c=''8( e16 d c8 e16 d) | c8( e d c) |
   b='8( d16 c b8 d16 c) | b8( d c b) |
   a='8( c16 b a8 c16 b) | a8( c b a) |

@@ -5,10 +5,10 @@
 \time 3/4
 \relative {
   {{ config() }}
-  g'='4\mf g8\(\< a b c\! | d2 g4\) | e\( g e | d2\> b4\!\) |
+  g'='4\mf g8\(\< a b \after 8\! c | d2 g4\) | e\( g e | d2\> \after 4\! b4\) |
   c=''4\p( e d8 c) | b4( d c8 b) | c4( a fis | g2 b4) |
   c=''4\f\( e d8 c | b4 d c8 b\) | c4( a fis | g4 g) r |
-  g='4\p g8\(\< a b c\! | d2 g4\) | <c, e>4\( g' <c, e> | <b d>2\) r4 |
+  g='4\p g8\(\< a b \after 8\! c | d2 g4\) | <c, e>4\( g' <c, e> | <b d>2\) r4 |
   <a=' c>4\f( e' d8 c) | <g b>4( d' c8 b) | c4\( a fis | g8 a b c d4\) |
   <a=' c>4\p( e' d8 c) | <g b>4( d' c8 b) | c4\( a fis | g4\) <b,= g'>2 \bar "|."
 }

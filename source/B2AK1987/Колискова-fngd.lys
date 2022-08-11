@@ -5,10 +5,10 @@
 \time 4/4
 \relative {
   {{ config() }}
-  g'='4\p g(\< c) c8( d\! | bes4 a8\> bes g4) g\! |
-  g='4 g(\< c) c8( d\! | bes4 a8\> bes g4) g\! |
-  fis='4\( d\< g bes\! | a fis\> g g\)\! |
-  fis='4\( d\< g bes\! | a8 g fis\> a g4 g='\)\! \bar "|."
+  g'='4\p g(\< c) c8( \after 8\! d | bes4 a8\> bes g4) \after 4\! g |
+  g='4 g(\< c) c8( \after 8\! d | bes4 a8\> bes g4) \after 4\! g |
+  fis='4\( d\< g \after 4\! bes | a fis\> g \after 4\! g\) |
+  fis='4\( d\< g \after 4\! bes | a8 g fis\> a g4 \after 8\! g='\) \bar "|."
 }
 {% endmacro %}
 

@@ -18,7 +18,8 @@
   b='8[ \acciaccatura { cis8 } d8 \acciaccatura { fis8 } g8
   \acciaccatura { ais8 } b8] |
   b=''8( a16 g fis8-.) e-. | e16( d cis d e d b' a |
-  g=''8) \acciaccatura { fis8 } g8  \acciaccatura { fis8 } g16(\< gis a ais\! |
+  g=''8) \acciaccatura { fis8 } g8
+  \acciaccatura { fis8 } g16(\< gis a \after 16\! ais |
   \acciaccatura { c='''8 } b8-.) g,-. b'-. a-. |
   a=''8-. g-. g16( f e8) | g-. g,-. g'-. f-. |
   f=''8-. e-. e16( d c8) | b'-. g,-. b'-. a-. |

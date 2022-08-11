@@ -55,10 +55,10 @@
         { <g=' b>8. <a c>16 \acciaccatura { e'8 } <b d>8( <ais cis>-.) | }
       }
       \acciaccatura { e'=''8 } <b d>8( <ais cis>-.) <b d> <gis e'> |
-      <a=' c>8-.\< <fis d'>-. <g b>-. <g c>-.\! |
+      <a=' c>8-.\< <fis d'>-. <g b>-. \after 8\! <g c>-. |
       \alternative {
-        { <g=' a>8\> \acciaccatura { b8 } <c, fis a>8 <b= g'>4--\! | }
-        { <g'=' a>8\> \acciaccatura { b8 } <c, fis a>8 <b= g'>4--\! \bar "||" }
+        { <g=' a>8\> \acciaccatura { b8 } <c, fis a>8 \after 4\! <b= g'>4-- | }
+        { <g'=' a>8\> \acciaccatura { b8 } <c, fis a>8 \after 4\! <b= g'>4-- \bar "||" }
       }
     }
     \volta 2 \fine
@@ -73,7 +73,7 @@
       \alternative {
         { \acciaccatura { c'=''8 } bes16( a g fis g='4--) | }
         {
-          \acciaccatura { c=''8 } bes16(\> a g fis g='4--)\! \bar "||"
+          \acciaccatura { c=''8 } bes16(\> a g fis \after 4\! g='4--) \bar "||"
           \key g \major
         }
       }

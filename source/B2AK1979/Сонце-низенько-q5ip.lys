@@ -10,9 +10,9 @@
   fis='16\( g a8[ a] | a16 fis b a g fis\) |
   g='16\( a b8[ b] | b16 a c b a g\) |
   fis='16\( g a8[ a] | a16 fis b a g fis\) |
-  <e=' fis c'>8\mf <dis fis b>8.-> dis16( | fis8\> e4)\! |
-  <e=' fis c'>8\< <dis fis b>8.-> <a' b dis>16\! |
-  <a=' b fis'>8(\f\> <g b e>)\! r |
+  <e=' fis c'>8\mf <dis fis b>8.-> dis16( | fis8\> \after 4\! e4) |
+  <e=' fis c'>8\< <dis fis b>8.-> \after 16\! <a' b dis>16 |
+  <a=' b fis'>8(\f\> \after 16.\! <g b e>) r |
   <<
     \relative { e''=''4.~\mp | e | dis~ | dis | e~ | e | dis~ | dis='' | }
     \\
@@ -24,9 +24,9 @@
       fis='16\( g a8[ a] | a16 fis b a g fis\) |
     }
   >>
-  <e=' fis c'>8\mf <dis fis b>8.-> dis16( | fis8\> e4)\! |
-  <e=' fis c'>8\< <dis fis b>8.-> <a' b dis>16\! |
-  <a=' b fis'>8(\f\> <g=' b e>)\! r \bar "|."
+  <e=' fis c'>8\mf <dis fis b>8.-> dis16( | fis8\> \after 4\! e4) |
+  <e=' fis c'>8\< <dis fis b>8.-> \after 16\! <a' b dis>16 |
+  <a=' b fis'>8(\f\> \after 16.\! <g=' b e>) r \bar "|."
 }
 {% endmacro %}
 

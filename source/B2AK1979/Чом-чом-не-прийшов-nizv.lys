@@ -7,17 +7,18 @@
   {{ config() }}
   e'='4\mp g | b8-. b-. b16( a g fis) |
   e8-. e-. g-. g-. | b8-. b-. b16( a g fis) |
-  g='8\< g a a\! | b b d16( c b a) |
-  b8( g fis dis | e)\> e e4\! |
-  r8 <b= e g>[\< r <d fis a>] | r <d g b>\! d'16( c b a) |
-  b8(\> g fis dis | e) e e\! r |
+  g='8\< g a \after 8\! a | b b d16( c b a) |
+  b8( g fis dis | e)\> e \after 4\! e4 |
+  r8 <b= e g>[\< r <d fis a>] | r \after 16.\! <d g b> d'16( c b a) |
+  b8(\> g fis dis | e) e \after 8\! e r |
   e'=''16( dis e fis g fis g a | b8) b,-. b'16( a g fis) |
   e16( g, b e) g( b, e g) | b( b, dis fis b a g fis) |
   g=''16(_\dynCresc b, e g a d, fis a |
   b16 d, g b d c b a) |
   b=''16( b, e g fis b, dis fis | e8) e-. e4 |
-  r8\f <g,=' b e>[ r <c d fis>] | r <b d g> d'16(\> c b a)\! |
-  b=''16(\< g e g\! fis b, cis dis | e8)\> e <g,=' b e>4\! \bar "|."
+  r8\f <g,=' b e>[ r <c d fis>] | r <b d g> d'16(\> c b \after 16\! a) |
+  b=''16(\< g e \after 32.\! g fis b, cis dis |
+  e=''8)\> e \after 8.\! <g,=' b e>4 \bar "|."
 }
 {% endmacro %}
 
