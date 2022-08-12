@@ -5,7 +5,7 @@
 \time 2/4
 \relative {
   {{ config() }}
-  \partial 4 c'='8-. d-. |
+  \partial 4 c'='8-.\p d-. |
   e='8-. c-. e-. f-. | g-. g-. c-. d-. | e-. c-. e-. f-. | g4 g8-. f-. |
   e=''8-. c-. d-. d-. | c-. c-. g-. f-. | e-. c-. d-. d-. | c='4 r \bar "|."
 }

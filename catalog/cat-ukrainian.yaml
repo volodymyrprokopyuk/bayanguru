@@ -17,10 +17,9 @@ pieces:
   - { id: j6sq, tit: Грибок, sub: 'із збірника \"Гусельки\"',
       src: B0D1973,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
-  #     p. 46
-  # - { id: fywu, tit: "Здрастуй, новий рік",
-  #     com: М. Дремлюга, src: B0D1973,
-  #     org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  - { id: fywu, tit: "Здрастуй, новий рік",
+      com: М. Дремлюга, src: B0D1973,
+      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: 1sxc, tit: Казав мені батько, sub: uafs,
       src: B0D1973,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
