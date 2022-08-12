@@ -10,12 +10,12 @@
   c=''4\( c c | c b c\) | d\( d\< d | d e \after 4\! f\) |
   e=''4\( e e | e b\> c | a2.~ | \after 8.\! a4\) r r |
   <<
-    \new Voice = "voiceOne" \relative {
+    \new Voice = voiceOne \relative {
       \voiceOne
       c''=''4\( c c | c b c\) | d\( d\< d | d e \after 4\! f\) |
       e=''4\( e e | e b\> c | a2.~ | \after 8.\! a='4\)
     }
-    \new Voice = "voiceTwo" \relative {
+    \new Voice = voiceTwo \relative {
       \voiceTwo
       a'='2.~ | a2. | a2.~ | a2. | c2. | gis2. | a2.~ | a='4
     }

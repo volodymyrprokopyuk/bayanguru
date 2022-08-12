@@ -12,12 +12,12 @@
     d=''4\(\mf b4. a8 | a4 d,4.\) <c' e>8 |
     <c='' e>4( <b d>4. <a c>8) | <a c>4 <g b> r8 b8 |
     <<
-      \new Voice = "voiceOne" \relative {
+      \new Voice = voiceOne \relative {
         \voiceOne
         b'='4(\< cis dis) | e( dis \after 4\! e) |
         <a,=' fis'>(\f <b g'>4. <a fis'>8) |
       }
-      \new Voice = "voiceTwo" \relative {
+      \new Voice = voiceTwo \relative {
         \voiceTwo
         b'='2 a4 | g2. | dis'2. |
       }

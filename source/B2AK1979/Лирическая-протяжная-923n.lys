@@ -26,14 +26,14 @@
     \relative { r8 <gis= bis>[ r <gis b>] | }
   >>
   <<
-    \new Voice = "voiceOne" \relative {
+    \new Voice = voiceOne \relative {
       \voiceOne
       cis''=''4(\p fis,8 fis') | fis[( fis fis fis]) |
       gis,='8[(\< <d' fis> <cis e> \after 8\! <b d>]) | e4 <cis e> |
       g='8\(\< \after 16.\! <cis e> d cis | e[\mf d cis b]\) | \after 2\! cis2\> |
       \after 8.\! dis,='4\< \after 4\! eis\> | fis='2 |
     }
-    \new Voice = "voiceTwo" \relative {
+    \new Voice = voiceTwo \relative {
       \voiceTwo
       cis''=''4 fis, | d'8[( cis b a]) |
       gis='4 r | cis8[( b a gis)] |

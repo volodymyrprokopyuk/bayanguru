@@ -19,12 +19,12 @@
   g'='8\mf <g b>8 8 8 | <fis a> <a c> <g b>8. a16 |
   g='8 <g b>8 8 8 | <fis a> <a c> <g=' b>4 |
   <<
-    \new Voice = "voiceOne" \relative {
+    \new Voice = voiceOne \relative {
       \voiceOne
       a'='8. g16 fis8 e | d e16 fis g8 b |
       a='16 b a g fis8 e | d e16 fis g='8
     }
-    \new Voice = "voiceTwo" \relative {
+    \new Voice = voiceTwo \relative {
       \voiceTwo
       c'='4~ c | c b | c~ c | c b=8
     }

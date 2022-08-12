@@ -13,25 +13,25 @@
   cis=''8 <a cis> <gis b>4 a2 |
   <e=' a cis>8\> 8 <d gis b>4 \after 2\! <cis e a>2 |
   <<
-    \new Voice = "voiceOne" \relative {
+    \new Voice = voiceOne \relative {
       \voiceOne
       \acciaccatura { gis''=''8 } a2->(\f gis4. fis8) |
     }
-    \new Voice = "voiceTwo" \relative {
+    \new Voice = voiceTwo \relative {
       \voiceTwo
       r8 a'='8[( cis e] e4. d8) |
     }
   >>
   <cis'='' e>8 8 <b d>4 <a cis>2 |
   <<
-    \new Voice = "voiceOne" \relative {
+    \new Voice = voiceOne \relative {
       \voiceOne
       \acciaccatura { dis''=''8 } e4->\(\p cis8 dis e4. dis8 |
       cis=''8 e b4 a2\) | \barFermata
       \tempo Moderato
       cis=''8[( e]) b[-. b]-. cis[-. cis]-. d[( b=']) |
     }
-    \new Voice = "voiceTwo" \relative {
+    \new Voice = voiceTwo \relative {
       \voiceTwo
       r8 e'='8[( a fis] gis2) | a4( gis a2) | a4( gis g fis=') |
     }
