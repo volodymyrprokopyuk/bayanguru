@@ -2,21 +2,37 @@
 ---
 pieces:
   # B1AK1979
+  #   p. 63
+  # - { id: b383, tit: При долинушке калинушка стоит, sub: rufs,
+  #     src: B1AK1979,
+  #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  #   p. 65
+  # - { id: vt18, tit: На горе-то калина, sub: rufs,
+  #     src: B1AK1979,
+  #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  #   p. 68
+  # - { id: 8fs0, tit: На улице дождь идет, sub: rufs,
+  #     src: B1AK1979,
+  #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  #   p. 68
+  # - { id: 0mdf, tit: Колыбельная, sub: rufs,
+  #     src: B1AK1979,
+  #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: tx5o, tit: Полька,
       com: А. Иванов, src: B1AK1979,
-      org: ru, sty: flk, gnr: dnc, frm: mel, txt: hmp, bss: stb, lvl: elm }
+      org: ru, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
    # B1AK1985
   - { id: lhc0, tit: Полька,
       com: М. Глинка, src: B1AK1985,
-      org: ru, sty: flk, gnr: dnc, frm: mel, txt: hmp, bss: stb, lvl: elm }
+      org: ru, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
   # B2AK1979
   - { id: 923n, tit: Лирическая протяжная,
       com: Н. Речменский, src: B2AK1979,
-      org: ru, sty: flk, gnr: sng, frm: mel, txt: hmp, bss: stb, lvl: elm }
+      org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: zk1t, tit: Щебетала пташечка,
       com: Н. Руднев, src: B2AK1979,
-      org: ru, sty: flk, gnr: sng, frm: mel, txt: plp, bss: pub, lvl: elm }
+      org: ru, sty: flk, gnr: sng, frm: mel, bss: pub, lvl: elm }
   # B2AK1987
   - { id: btcu, tit: Полька,
       com: М. Глинка, src: B2AK1987,
-      org: ru, sty: flk, gnr: dnc, frm: mel, txt: hmp, bss: stb, lvl: elm }
+      org: ru, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }

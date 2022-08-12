@@ -4,4 +4,4 @@ pieces:
   # B2AK1979
   - { id: 5qqn, tit: Чардаш, sub: hufd,
       src: B2AK1979,
-      org: hu, sty: flk, gnr: dnc, frm: mel, txt: hmp, bss: stb, lvl: elm }
+      org: hu, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
