@@ -14,10 +14,9 @@ pieces:
   - { id: jnuj, tit: За городом качки пливуть, sub: uafs,
       src: B0D1973,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
-  #     p. 45
-  # - { id: j6sq, tit: Грибок, sub: 'із збірника "Гусельки"',
-  #     src: B0D1973,
-  #     org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  - { id: j6sq, tit: Грибок, sub: 'із збірника \"Гусельки\"',
+      src: B0D1973,
+      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   #     p. 46
   # - { id: fywu, tit: "Здрастуй, новий рік",
   #     com: М. Дремлюга, src: B0D1973,
