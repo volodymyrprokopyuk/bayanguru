@@ -59,10 +59,9 @@ pieces:
   - { id: v610, tit: Осінь, sub: Дитяча пісенька,
       src: B0D1973,
       org: ua, sty: flk, gnr: pie, frm: mel, bss: stb, lvl: elm }
-  #     p. 89
-  # - { id: 62k0, tit: Зайчик скаче в полі, sub: Дитяча пісенька,
-  #     src: B0D1973,
-  #     org: ua, sty: flk, gnr: pie, frm: mel, bss: stb, lvl: elm }
+  - { id: 62k0, tit: Зайчик скаче в полі, sub: Дитяча пісенька,
+      src: B0D1973,
+      org: ua, sty: flk, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: qr71, tit: Ти до мене не ходи, sub: uafs,
       src: B0D1973,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }

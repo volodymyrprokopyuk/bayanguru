@@ -17,7 +17,7 @@
 \key d \minor
 \relative {
   {{ config() }}
-  d=8 r a,@M! r8 | d r dm! r | g, r gm! r | d' r dm! r |
+  d=8-\stBass r a,@M! r8 | d r dm! r | g, r gm! r | d' r dm! r |
   g,=,8 r gm! r | a r d@m! r8 | a r aM! r | d= r dm! r |
 }
 {% endmacro %}
