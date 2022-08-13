@@ -1,23 +1,40 @@
 %YAML 1.2
 ---
 pieces:
-  # B1AK1979
+  # B0D1973
+  #     p. 49
+  # - { id: drrh, tit: Первые шаги,
+  #     com: С. Майкапар, src: B0D1973,
+  #     org: ru, sty: flk, gnr: pie, frm: mel, bss: stb, lvl: elm }
+  #     p. 57
+  # - { id: bj88, tit: Санки,
+  #     com: М. Красев, src: B0D1973,
+  #     org: ru, sty: flk, gnr: pie, frm: mel, bss: stb, lvl: elm }
   #   p. 63
   # - { id: b383, tit: При долинушке калинушка стоит, sub: rufs,
-  #     src: B1AK1979,
+  #     src: B0D1973,
   #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   #   p. 65
   # - { id: vt18, tit: На горе-то калина, sub: rufs,
-  #     src: B1AK1979,
+  #     src: B0D1973,
   #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   #   p. 68
   # - { id: 8fs0, tit: На улице дождь идет, sub: rufs,
-  #     src: B1AK1979,
+  #     src: B0D1973,
   #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   #   p. 68
   # - { id: 0mdf, tit: Колыбельная, sub: rufs,
-  #     src: B1AK1979,
+  #     src: B0D1973,
   #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  #   p. 74
+  # - { id: bspm, tit: "Белолица, круглолица", sub: rufs,
+  #     src: B0D1973,
+  #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  #     p. 88
+  # - { id: kkks, tit: Елочка,
+  #     com: Л. Бекман, src: B0D1973,
+  #     org: ru, sty: flk, gnr: pie, frm: mel, bss: stb, lvl: elm }
+  # B1AK1979
   - { id: tx5o, tit: Полька,
       com: А. Иванов, src: B1AK1979,
       org: ru, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }

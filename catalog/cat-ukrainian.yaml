@@ -16,27 +16,19 @@ pieces:
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: j6sq, tit: Грибок, sub: 'із збірника \"Гусельки\"',
       src: B0D1973,
-      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ua, sty: flk, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: fywu, tit: "Здрастуй, новий рік",
       com: М. Дремлюга, src: B0D1973,
-      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ua, sty: flk, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: 1sxc, tit: Казав мені батько, sub: uafs,
       src: B0D1973,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: hv2p, tit: Ой минула вже зима, sub: uafs,
       src: B0D1973,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
-  #     p. 49
-  # - { id: drrh, tit: Перші кроки,
-  #     com: М. Дремлюга, src: B0D1973,
-  #     org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: siv0, tit: А вже красне сонечко, sub: uafs,
       src: B0D1973,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
-  #     p. 57
-  # - { id: bj88, tit: Санки,
-  #     com: М. Красев, src: B0D1973,
-  #     org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: kakw, tit: Дощик, sub: uafs,
       src: B0D1973,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
@@ -64,6 +56,14 @@ pieces:
   - { id: l76t, tit: "Ой дівчино, шумить гай", sub: uafs,
       src: B0D1973,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  #     p. 88
+  # - { id: v610, tit: Осінь, sub: Дитяча пісенька,
+  #     src: B0D1973,
+  #     org: ua, sty: flk, gnr: pie, frm: mel, bss: stb, lvl: elm }
+  #     p. 89
+  # - { id: 62k0, tit: Зайчик скаче в полі, sub: Дитяча пісенька,
+  #     src: B0D1973,
+  #     org: ua, sty: flk, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: qr71, tit: Ти до мене не ходи, sub: uafs,
       src: B0D1973,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
@@ -78,7 +78,7 @@ pieces:
       org: ua, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
   - { id: rrag, tit: Курочка,
       com: М. Любарський, src: B0D1973,
-      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ua, sty: flk, gnr: pie, frm: mel, bss: stb, lvl: elm }
   # B0DU1982
   - { id: zo21, tit: Ой лопнув обруч, sub: uafs,
       src: B0DU1982,

@@ -6,7 +6,7 @@
 \relative {
   {{ config() }}
   e'='8(\p b') b b | a4( b8 g) | a4\( b8 g | fis e b'4\) |
-  e,='8( b') b b | a4( b8 g) | a4\( b8 g | e\) e e4 |
+  e,='8( b') b b | a4( b8 g) | fis4\( g8 fis | e\) e e4 |
   e='8\(\mp <g b>8 8 8 | <fis a>4 <g b>8 g\) |
   <<
     \relative { fis'='4\( g8 fis | e\)\> e \after 4\! e4 | }
