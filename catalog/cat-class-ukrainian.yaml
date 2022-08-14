@@ -84,10 +84,9 @@ pieces:
   - { id: oyhg, tit: Веснянка,
       com: В. Рибальченко, src: B0DU1982,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
-  #   p.37
-  # - { id: v3cd, tit: Веселая песенка,
-  #     com: К. Мясков, src: B0DU1982,
-  #     org: ua, sty: flk, gnr: pie, frm: mel, bss: stb, lvl: elm }
+  - { id: v3cd, tit: Весела пісенька,
+      com: К. Мясков, src: B0DU1982,
+      org: ua, sty: flk, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: akqt, tit: Козачок, sub: uafd,
       src: B0DU1982,
       org: ua, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
