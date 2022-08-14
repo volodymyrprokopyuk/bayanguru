@@ -43,7 +43,7 @@ async function engrave() {
     let { books, pieces } = await readBooks()
     books = args._.length && args._[0] === "all" ?
       Object.values(books) : args._.map(id => books[id])
-    await Promise.all(engraveBooks(books, pieces, args.f))
+    await Promise.all(engraveBooks(books, pieces, args))
   } else {
     let pieces = await readPieces()
     pieces = args._.length && args._[0] === "all" ?

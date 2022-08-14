@@ -28,7 +28,7 @@ barFermata = \mark \markup \musicglyph #"scripts.ufermata"
 }
 
 {% set url = "https://volodymyrprokopyuk.github.io/bayan" %}
-{% if pieces.length > 1 %}
+{% if args.b %}
 \header {
   title = "{{ book.tit }}"
   subtitle = "{{ book.sub }}"
@@ -73,7 +73,7 @@ barFermata = \mark \markup \musicglyph #"scripts.ufermata"
 }
 {% endfor %}
 
-{% if pieces.length > 1 %}
+{% if args.b %}
 \pageBreak
 \markuplist \table-of-contents
 {% endif %}
