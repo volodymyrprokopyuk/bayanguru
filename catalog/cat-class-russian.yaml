@@ -30,10 +30,16 @@ pieces:
   # - { id: bspm, tit: "Белолица, круглолица", sub: rufs,
   #     src: B0D1973,
   #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
-  #     p. 88
+  #   p. 88
   # - { id: kkks, tit: Елочка,
   #     com: Л. Бекман, src: B0D1973,
   #     org: ru, sty: flk, gnr: pie, frm: mel, bss: stb, lvl: elm }
+  # B0DU1982
+  #   p. 87
+  # - { id: ye26, tit: Спят усталые игрушки,
+  #     com: А. Островский, src: B0DU1982,
+  #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+
   # B1AK1979
   - { id: tx5o, tit: Полька,
       com: А. Иванов, src: B1AK1979,

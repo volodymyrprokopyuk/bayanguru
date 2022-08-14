@@ -1,0 +1,8 @@
+%YAML 1.2
+---
+pieces:
+  # B0DU1982
+  #   p. 80
+  - { id: mhjw, tit: Молдавський народний танець,
+      src: B0DU1982,
+      org: md, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
