@@ -1,0 +1,31 @@
+{% macro rightHand(config) %}
+\tempo Allegretto
+\clef treble
+\key g \major
+\time 2/4
+\relative {
+  {{ config() }}
+  g'='8-.\mf b-. d-. c-. | b-. b-. a4 | b8-. g-. c4 |
+  c=''8-. d-. e-. c-. | b-. b-. a4 | g8-. g-. g4 |
+  \repeat volta 2 {
+    g'=''8-. g-. d-. c-. | b-. b-. a4 | b8-. g-. c4 |
+    c=''8-. d-. e-. c-. | b-. b-. a4 | g8-. g-. g='4 |
+  }
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key g \major
+\relative {
+  {{ config() }}
+  \repeat unfold 2 {
+    \alternative {
+      { g,=,8-\stBass gM! fis d@M |  }
+      { g=,8 gM! fis d@M | }
+    }
+    g8 gM d' dM | g, gM! c cM |
+    c=8 cM! a c@M | d8 g,@M d8 dM | g,=, gM! gM4 |
+  }
+}
+{% endmacro %}

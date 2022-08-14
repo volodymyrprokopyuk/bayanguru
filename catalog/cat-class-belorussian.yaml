@@ -2,7 +2,6 @@
 ---
 pieces:
   # B0D1973
-  #   p. 65
   - { id: bv2w, tit: Лявониха, sub: byfs,
       src: B0D1973,
       org: by, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
