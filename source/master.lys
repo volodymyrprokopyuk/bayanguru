@@ -50,7 +50,10 @@ barFermata = \mark \markup \musicglyph #"scripts.ufermata"
 {% macro lhConfig() %} {% endmacro %}
 
 {% for piece in pieces %}
-\tocItem \markup "{{ piece.tit }}"
+\tocItem \markup {
+  "{{ piece.tit }}"
+  {% if piece.com %}\italic "{{ piece.com  }}"{% endif %}
+}
 \score {
   \header {
     title = "{{ piece.tit }}"
