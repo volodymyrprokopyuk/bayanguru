@@ -100,17 +100,20 @@ pieces:
   # - { id: 993t, tit: Перша пісня,
   #     com: В. Кирейко, src: B0DU1982,
   #     org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
-
   # B1AK1979
   - { id: 8mwk, tit: Лисичка,
       com: М. Лисенко, src: B1AK1979,
-      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: tonl, tit: "Ви музики, хлопці добрі", sub: uafs,
       src: B1AK1979,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: a0xs, tit: "Ой Василю, Василечку",
       com: В. Верховинець, src: B1AK1979,
-      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+  #   p. 25
+  # - { id: 11a0, tit: Соловейко,
+  #     com: А. Філіпенко, src: B1AK1979,
+  #     org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: 79hk, tit: Галя по садочку ходила, sub: uafs,
       src: B1AK1979,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
@@ -119,13 +122,17 @@ pieces:
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: 59gv, tit: Пісня рака, sub: 'з дитячої опери \"Коза-дереза\"',
       com: М. Лисенко, src: B1AK1979,
-      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: yn16, tit: "Ой джигуне, джигуне", sub: uafs,
       src: B1AK1979,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: c1z5, tit: "Ой за гаєм, гаєм", sub: uafs,
       src: B1AK1979,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  - { id: tx5o, tit: Полька,
+      com: А. Иванов, src: B1AK1979,
+      org: ua, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
+
   - { id: afgp, tit: Пісня котика, sub: 'з дитячої опери \"Лисичка, котик і півник\"',
       com: К. Стеценко, src: B1AK1979,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
