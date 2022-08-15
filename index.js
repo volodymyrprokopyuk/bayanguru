@@ -32,7 +32,7 @@ import { engravePieces, engraveBooks } from "./lib/score.js"
 // }
 
 async function pieceInit(id) {
-  const { src, file } = (await readPieces())[id]
+  const { src, file } = (await readPieces(args))[id]
   const path = `source/${src}/${file}.lys`
   try { await access(path); console.log(`skipping ${path} already exists`) }
   catch { await copyFile("source/piece.lys", path) }
@@ -40,19 +40,19 @@ async function pieceInit(id) {
 
 async function engrave() {
   if (args.b) {
-    let { books, pieces } = await readBooks()
+    let { books, pieces } = await readBooks(args)
     books = args._.length && args._[0] === "all" ?
       Object.values(books) : args._.map(id => books[id])
     await Promise.all(engraveBooks(books, pieces, args))
   } else {
-    let pieces = await readPieces()
+    let pieces = await readPieces(args)
     pieces = args._.length && args._[0] === "all" ?
       Object.values(pieces) : args._.map(id => pieces[id])
-    await Promise.all(engravePieces(pieces, args.f))
+    await Promise.all(engravePieces(pieces, args))
   }
 }
 
-const argsConfig = { boolean: ["b"], default: { f: "ps" } }
+const argsConfig = { boolean: ["b"], default: { c: "", f: "ps" } }
 const args = parseArgs(process.argv.slice(2), argsConfig)
 if (args.i) { await pieceInit(args.i) } else { await engrave() }
 
