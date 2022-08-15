@@ -1,0 +1,23 @@
+{% macro rightHand(config) %}
+\tempo Allegretto
+\clef treble
+\key c \major
+\time 4/4
+\relative {
+  {{ config() }}
+  c''=''4\(\f e d c | d e c2\) | c4\( e d c | d e \after 2\! c2\)\> |
+  e=''2\(\mf f4 a | g2.\) f4\( | e e f d | c1\) |
+  e=''2\(\f f4 a | g2.\) f4\( | e e f^"rit." d | c=''1\fermata\) \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key c \major
+\relative {
+  {{ config() }}
+  c=4-\stBass cM! cM cM | g gM! c cM | a am! am am | g gM! c cM |
+  c=4 cM! f fM | e c@M! f4 fM | g, c@M! g4 gM | a am! am am |
+  c=4 cM! f fM | e c@M! f4 fM | g, c@M! g=,4 gM | c@M!1\fermata |
+}
+{% endmacro %}

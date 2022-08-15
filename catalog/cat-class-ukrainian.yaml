@@ -96,10 +96,9 @@ pieces:
   - { id: m6m8, tit: Козачок,
       com: Л. Ревуцький, src: B0DU1982,
       org: ua, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
-  #   p. 88
-  # - { id: 993t, tit: Перша пісня,
-  #     com: В. Кирейко, src: B0DU1982,
-  #     org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+  - { id: 993t, tit: Перша пісня,
+      com: В. Кирейко, src: B0DU1982,
+      org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   # B1AK1979
   - { id: 8mwk, tit: Лисичка,
       com: М. Лисенко, src: B1AK1979,
@@ -110,10 +109,9 @@ pieces:
   - { id: a0xs, tit: "Ой Василю, Василечку",
       com: В. Верховинець, src: B1AK1979,
       org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
-  #   p. 25
-  # - { id: 11a0, tit: Соловейко,
-  #     com: А. Філіпенко, src: B1AK1979,
-  #     org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+  - { id: 11a0, tit: Соловейко,
+      com: А. Філіпенко, src: B1AK1979,
+      org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: 79hk, tit: Галя по садочку ходила, sub: uafs,
       src: B1AK1979,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
