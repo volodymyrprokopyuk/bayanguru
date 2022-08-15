@@ -16,10 +16,10 @@ pieces:
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: j6sq, tit: Грибок, sub: 'із збірника \"Гусельки\"',
       src: B0D1973,
-      org: ua, sty: flk, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: fywu, tit: "Здрастуй, новий рік",
       com: М. Дремлюга, src: B0D1973,
-      org: ua, sty: flk, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: 1sxc, tit: Казав мені батько, sub: uafs,
       src: B0D1973,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
@@ -58,10 +58,10 @@ pieces:
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: v610, tit: Осінь, sub: Дитяча пісенька,
       src: B0D1973,
-      org: ua, sty: flk, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: 62k0, tit: Зайчик скаче в полі, sub: Дитяча пісенька,
       src: B0D1973,
-      org: ua, sty: flk, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: qr71, tit: Ти до мене не ходи, sub: uafs,
       src: B0D1973,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
@@ -73,10 +73,10 @@ pieces:
       org: ua, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elm }
   - { id: n482, tit: Танець урожаю,
       com: Т. Шутенко, src: B0D1973,
-      org: ua, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
+      org: ua, sty: msc, gnr: dnc, frm: mel, bss: stb, lvl: elm }
   - { id: rrag, tit: Курочка,
       com: М. Любарський, src: B0D1973,
-      org: ua, sty: flk, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   # B0DU1982
   - { id: zo21, tit: Ой лопнув обруч, sub: uafs,
       src: B0DU1982,
@@ -86,7 +86,7 @@ pieces:
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: v3cd, tit: Весела пісенька,
       com: К. Мясков, src: B0DU1982,
-      org: ua, sty: flk, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: akqt, tit: Козачок, sub: uafd,
       src: B0DU1982,
       org: ua, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
@@ -96,6 +96,10 @@ pieces:
   - { id: m6m8, tit: Козачок,
       com: Л. Ревуцький, src: B0DU1982,
       org: ua, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
+  #   p. 88
+  # - { id: 993t, tit: Перша пісня,
+  #     com: В. Кирейко, src: B0DU1982,
+  #     org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
 
   # B1AK1979
   - { id: 8mwk, tit: Лисичка,
