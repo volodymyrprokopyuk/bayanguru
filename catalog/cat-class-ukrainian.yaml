@@ -130,22 +130,30 @@ pieces:
   - { id: tx5o, tit: Полька,
       com: А. Иванов, src: B1AK1979,
       org: ua, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
-
   - { id: afgp, tit: Пісня котика, sub: 'з дитячої опери \"Лисичка, котик і півник\"',
       com: К. Стеценко, src: B1AK1979,
-      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: 6kce, tit: Пісня вовчика, sub: 'з дитячої опери \"Коза-дереза\"',
       com: М. Лисенко, src: B1AK1979,
-      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+    p. 47
+  - { id: x880, tit: Будемо космонавтами,
+      com: К. Мясков, src: B1AK1979,
+      org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: d7eu, tit: Бандура, sub: uafs,
       src: B1AK1979,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: d0hr, tit: А вже ясне сонечко, sub: uafs,
-      src: B1AK1979,
+      com: П. Козицький, src: B1AK1979,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: itrq, tit: Женчичок-бренчичок, sub: uafs,
       src: B1AK1979,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  #   p. 60
+  # - { id: blsa, tit: По малину в сад підем, sub: uafs,
+  #     com: А. Філіпенко, src: B1AK1979,
+  #     org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+
   - { id: qxq9, tit: Їхав козак на війноньку, sub: uafs,
       src: B1AK1979,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }

@@ -56,6 +56,10 @@ pieces:
   # - { id: e40b, tit: Песенка,
   #     com: Ю. Шишаков, src: B1AK1979,
   #     org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+  #   p. 55
+  # - { id: 58a8, tit: Звенит звонок веселый,
+  #     com: А. Долуханян, src: B1AK1979,
+  #     org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
 
   # B1AK1985
   - { id: lhc0, tit: Полька,
