@@ -26,3 +26,7 @@ books:
       pieces: [
       # B0D1973
       "bv2w"] }
+  - { id: mnvy, tit: Польські народні пісні і танці, sub: для баяна,
+      pieces: [
+      # B0D1973
+      "d2md"] }
