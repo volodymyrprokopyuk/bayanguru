@@ -153,7 +153,10 @@ pieces:
   # - { id: blsa, tit: По малину в сад підем, sub: uafs,
   #     com: А. Філіпенко, src: B1AK1979,
   #     org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
-
+  #   p. 69
+  # - { id: blsa, tit: Сьогодні у мами свято, sub: uafs,
+  #     com: А. Філіпенко, src: B1AK1979,
+  #     org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: qxq9, tit: Їхав козак на війноньку, sub: uafs,
       src: B1AK1979,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
@@ -163,8 +166,10 @@ pieces:
   - { id: z48n, tit: На вулиці скрипка грає, sub: uafs,
       src: B1AK1979,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
-  - { id: 5e6l, tit: Полька, src: B1AK1979,
+  - { id: 5e6l, tit: Полька,
+      src: B1AK1979,
       org: ua, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elm }
+
    # B1AK1985
   - { id: fh29, tit: Веснянка, sub: uafs,
       src: B1AK1985,

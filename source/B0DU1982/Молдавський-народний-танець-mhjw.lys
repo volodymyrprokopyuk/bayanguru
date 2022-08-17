@@ -1,0 +1,33 @@
+{% macro rightHand(config) %}
+\tempo Allegretto
+\clef treble
+\key g \major
+\time 2/4
+\relative {
+  {{ config() }}
+  \repeat volta 2 {
+    d''=''4\mf c8 b | d,16( g b d c8) b |
+    d,='16( g b d c8) b | d b a g |
+  }
+  \repeat volta 2 {
+    fis='16(\mp g a4) a8 | bes16( a g fis g a bes g) |
+    fis='16( g a4) a8 |
+    \alternative {
+      { bes16( a g fis g='8) r | }
+      { bes16( a g fis g='8) r \bar "|." }
+    }
+  }
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key g \major
+\relative {
+  {{ config() }}
+  g,=,8-\stBass gM! d' g,@M | g,8 gM d' g,@M |
+  g,=,8 gM! d' g,@M | g,8 gM d' g,@M |
+  \repeat unfold 2 { d=8 d7! d d7 | g, gm! g gm | }
+  g=,8 gm! g,,+gm r |
+}
+{% endmacro %}

@@ -2,9 +2,14 @@
 ---
 pieces:
   # B1AK1979
-  - { id: 1rua, tit: Конячка, sub: hufs,
-      src: B1AK1979,
-      org: hu, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  #   p. 23
+  # - { id: 1rua, tit: Конячка, sub: hufs,
+  #     src: B1AK1979,
+  #     org: hu, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  #   p. 69
+  # - { id: 1rua, tit: Віночок, sub: hufs,
+  #     src: B1AK1979,
+  #     org: hu, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
 
   # B2AK1979
   - { id: 5qqn, tit: Чардаш, sub: hufd,
