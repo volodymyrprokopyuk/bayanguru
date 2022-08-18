@@ -68,11 +68,20 @@ pieces:
   # - { id: f026, tit: Плясовая,
   #     com: Л. Бирнов, src: B1AK1979,
   #     org: ru, sty: msc, gnr: dnc, frm: mel, bss: stb, lvl: elm }
-
   # B1AK1985
-  - { id: lhc0, tit: Полька,
-      com: М. Глинка, src: B1AK1985,
-      org: ru, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
+  #   p. 31
+  # - { id: r9dx, tit: Родина, sub: rufs,
+  #     src: B1AK1985,
+  #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  #   p. 48
+  # - { id: r1gr, tit: Выйду ль я не реченьку, sub: rufs,
+  #     src: B1AK1985,
+  #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  #   p. 66
+  # - { id: 9hph, tit: "Ах, улица широкая", sub: rufs,
+  #     src: B1AK1985,
+  #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+
   # B2AK1979
   - { id: 923n, tit: Лирическая протяжная,
       com: Н. Речменский, src: B2AK1979,

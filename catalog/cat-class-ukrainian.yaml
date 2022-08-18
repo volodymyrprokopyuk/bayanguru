@@ -168,7 +168,6 @@ pieces:
   - { id: 5e6l, tit: Полька,
       src: B1AK1979,
       org: ua, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elm }
-
    # B1AK1985
   - { id: fh29, tit: Веснянка, sub: uafs,
       src: B1AK1985,
@@ -182,6 +181,10 @@ pieces:
   - { id: 3vej, tit: Ой піду я до гаю,
       com: Д. Січинський, src: B1AK1985,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+
+  - { id: lhc0, tit: Полька,
+      com: М. Глинка, src: B1AK1985,
+      org: ua, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elm }
   # B2AK1979
   - { id: ihff, tit: Ой лопнув обруч, sub: uafs,
       src: B2AK1979,
