@@ -1,7 +1,7 @@
 %YAML 1.2
 ---
 books:
-  - { id: byup, tit: Українські народні пісні і танці, sub: для баяна,
+  - { id: uaf1, tit: Українські народні пісні і танці, sub: для баяна,
       pieces: [
       # B0D1973
       "1kae", "4ha8", "7n13", "jnuj", "j6sq", "fywu", "1sxc", "hv2p", "siv0",
@@ -11,9 +11,9 @@ books:
       "zo21", "oyhg", "v3cd", "akqt", "ry3w", "m6m8", "993t",
       # B1AK1979
       "8mwk", "tonl", "a0xs", "11a0", "79hk", "angm", "59gv", "yn16", "c1z5",
-      "tx5o",
+      "tx5o", "afgp", "6kce", "x880", "d7eu", "d0hr", "itrq",
 
-      "afgp", "6kce", "d7eu", "d0hr", "itrq", "qxq9", "e78y", "z48n", "5e6l",
+      "qxq9", "e78y", "z48n", "5e6l",
       # B1AK1985
       "fh29", "eu0e", "cagd", "3vej", "lhc0",
       # B2AK1979
@@ -22,29 +22,29 @@ books:
       # B2AK1987
       "e3u3", "ucue", "fngd", "cpdc", "9k9u", "0r9e", "w5ba", "zvpg", "zykv",
       "di18", "btcu", "nev4"] }
-  # - { id: y15x, tit: Російські народні пісні і танці, sub: для баяна,
+  # - { id: ruf1, tit: Російські народні пісні і танці, sub: для баяна,
   #     pieces: [
   #     # SOURCE
   #     "anID"] }
-  - { id: qh37, tit: Угорські народні пісні і танці, sub: для баяна,
+  - { id: huf1, tit: Угорські народні пісні і танці, sub: для баяна,
       pieces: [
       # B1AK1979
       "1rua", "9htb",
       # B2AK1979
       "5qqn"] }
-  - { id: wtdz, tit: Молдавські народні пісні і танці, sub: для баяна,
+  - { id: mdf1, tit: Молдавські народні пісні і танці, sub: для баяна,
       pieces: [
       # B0DU1982
       "mhjw"] }
-  # - { id: ll5f, tit: Румунські народні пісні і танці, sub: для баяна,
+  # - { id: rof1, tit: Румунські народні пісні і танці, sub: для баяна,
   #     pieces: [
   #     # SOURCE
   #     "anID"] }
-  - { id: 7w1h, tit: Білоруські народні пісні і танці, sub: для баяна,
+  - { id: byf1, tit: Білоруські народні пісні і танці, sub: для баяна,
       pieces: [
       # B0D1973
       "bv2w"] }
-  - { id: mnvy, tit: Польські народні пісні і танці, sub: для баяна,
+  - { id: plf1, tit: Польські народні пісні і танці, sub: для баяна,
       pieces: [
       # B0D1973
       "d2md"] }
