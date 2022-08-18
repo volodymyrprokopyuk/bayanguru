@@ -1,0 +1,33 @@
+{% macro rightHand(config) %}
+\tempo Moderato
+\clef treble
+\key f \major
+\time 2/4
+\relative {
+  {{ config() }}
+  \partial 8 { c'='8\(\p }
+  f='8 f g g | a4 f8\) a\( | g d e g | f4.\) c8\(\mf |
+  a'='8 a bes bes | c4 a8\) c\( | c bes a g | f4.\) c'8 |
+  <e,=' g>4\mp 8 c' | <f, a>4 8 c' |
+  <<
+    \relative { c''=''8\(\> bes a \after 8\! g | f='4.\) }
+    \\
+    \relative { e'='2 | f='4. }
+  >>
+  r8 \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key f \major
+\relative {
+  {{ config() }}
+  \partial 8 { r8 } |
+  f=8-\stBass fM! c cM | f[( fM!) fM] r | bes, besM! c c7! |
+  f=8[( fM!) fM] r | f fM! bes, c@M | a8 f@M! f'8 fM |
+  g,=,8 c@7! c8 c7 | f[( fM!) fM] r |
+  c=8[( c7!) c7] r | f[( fM!) fM] r |
+  c=8[( c7!) c7 c7] | f=[( fM!) fM] r |
+}
+{% endmacro %}
