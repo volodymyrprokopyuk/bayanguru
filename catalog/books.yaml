@@ -22,10 +22,24 @@ books:
       # B2AK1987
       "e3u3", "ucue", "fngd", "cpdc", "9k9u", "0r9e", "w5ba", "zvpg", "zykv",
       "di18", "btcu", "nev4"] }
+  # - { id: y15x, tit: Російські народні пісні і танці, sub: для баяна,
+  #     pieces: [
+  #     # SOURCE
+  #     "anID"] }
+  - { id: qh37, tit: Угорські народні пісні і танці, sub: для баяна,
+      pieces: [
+      # B1AK1979
+      "1rua", "9htb",
+      # B2AK1979
+      "5qqn"] }
   - { id: wtdz, tit: Молдавські народні пісні і танці, sub: для баяна,
       pieces: [
       # B0DU1982
       "mhjw"] }
+  # - { id: ll5f, tit: Румунські народні пісні і танці, sub: для баяна,
+  #     pieces: [
+  #     # SOURCE
+  #     "anID"] }
   - { id: 7w1h, tit: Білоруські народні пісні і танці, sub: для баяна,
       pieces: [
       # B0D1973
