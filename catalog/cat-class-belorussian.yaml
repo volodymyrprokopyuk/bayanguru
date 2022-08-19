@@ -5,3 +5,9 @@ pieces:
   - { id: bv2w, tit: Лявониха, sub: byfs,
       src: B0D1973,
       org: by, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+
+  # B1AK1985
+  #   p. 80
+  # - { id: v99z, tit: Янка, sub: byfd,
+  #     src: B1AK1985,
+  #     org: by, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }

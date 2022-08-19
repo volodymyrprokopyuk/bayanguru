@@ -81,6 +81,14 @@ pieces:
   # - { id: 9hph, tit: "Ах, улица широкая", sub: rufs,
   #     src: B1AK1985,
   #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  #   p. 69
+  # - { id: erhk, tit: Рыбка,
+  #     com: М. Красев, src: B1AK1985,
+  #     org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+  #   p. 83
+  # - { id: bgnx, tit: Колыбельная,
+  #     com: И. Дунаевский, src: B1AK1985,
+  #     org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
 
   # B2AK1979
   - { id: 923n, tit: Лирическая протяжная,
