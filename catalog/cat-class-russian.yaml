@@ -89,8 +89,20 @@ pieces:
   # - { id: bgnx, tit: Колыбельная,
   #     com: И. Дунаевский, src: B1AK1985,
   #     org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
-
+  #   p. 88
+  # - { id: r9o6, tit: Катюша,
+  #     com: М. Блантер, src: B1AK1985,
+  #     org: ru, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
   # B2AK1979
+  #   p. 14
+  # - { id: jquj, tit: Ходила младешенька по борочку, sub: rufs
+  #     src: B2AK1979,
+  #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  #   p. 18
+  # - { id: soth, tit: Катенька, sub: rufs
+  #     src: B2AK1979,
+  #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+
   - { id: 923n, tit: Лирическая протяжная,
       com: Н. Речменский, src: B2AK1979,
       org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }

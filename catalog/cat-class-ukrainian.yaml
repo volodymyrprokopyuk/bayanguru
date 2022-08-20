@@ -176,20 +176,32 @@ pieces:
   - { id: cagd, tit: Дощик, sub: uafs,
       src: B1AK1985,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  #   p. 46
+  # - { id: iebw, tit: Святковий вальс,
+  #     com: А. Філіпенко, src: B1AK1985,
+  #     org: ua, sty: msc, gnr: vls, frm: mel, bss: stb, lvl: elm }
   - { id: 3vej, tit: Ой піду я до гаю,
       com: Д. Січинський, src: B1AK1985,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: lhc0, tit: Полька,
       com: М. Глинка, src: B1AK1985,
       org: ua, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elm }
-
   # B2AK1979
+  #   p. 7
+  # - { id: 05cc, tit: Курчатка,
+  #     com: А. Філіпенко, src: B2AK1979,
+  #     org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: ihff, tit: Ой лопнув обруч, sub: uafs,
       src: B2AK1979,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: an90, tit: Корольок, sub: uafs,
       src: B2AK1979,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  #   p. 12
+  # - { id: oz96, tit: Сумна пісенька,
+  #     com: К. Мясков, src: B2AK1979,
+  #     org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+
   - { id: stil, tit: Сусідка, sub: uafs,
       src: B2AK1979,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
