@@ -1,0 +1,17 @@
+{% macro rightHand(config) %}
+\tempo _
+\clef treble
+\key _
+\time _
+\relative {
+  {{ config() }}
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key _
+\relative {
+  {{ config() }}
+}
+{% endmacro %}
