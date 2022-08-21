@@ -102,13 +102,17 @@ pieces:
   # - { id: soth, tit: Катенька, sub: rufs
   #     src: B2AK1979,
   #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
-
+  #   p. 33
+  # - { id: 2n32, tit: Среди долины ровныя, sub: rufs
+  #     src: B2AK1979,
+  #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: 923n, tit: Лирическая протяжная,
       com: Н. Речменский, src: B2AK1979,
       org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: zk1t, tit: Щебетала пташечка,
       com: Н. Руднев, src: B2AK1979,
       org: ru, sty: flk, gnr: sng, frm: mel, bss: pub, lvl: elm }
+
   # B2AK1987
   - { id: btcu, tit: Полька,
       com: М. Глинка, src: B2AK1987,
