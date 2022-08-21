@@ -5,3 +5,8 @@ pieces:
   - { id: d2md, tit: Вісла, sub: plfs,
       src: B0D1973,
       org: pl, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  # B2AK1979
+  #   p. 25
+  # - { id: p1vc, tit: Зозуленька, sub: plfs,
+  #     src: B2AK1979,
+  #     org: pl, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }

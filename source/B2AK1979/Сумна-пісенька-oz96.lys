@@ -1,16 +1,37 @@
 {% macro rightHand(config) %}
-\tempo _
+\tempo Lento
 \clef treble
-\key _
-\time _
+\key g \minor
+\time 2/4
 \relative {
   {{ config() }}
+  \set Timing.beamExceptions = #'()
+  \set Timing.baseMoment = #(ly:make-moment 1/2)
+  \set Timing.beatStructure = #'(2)
+  \partial 8 { d'='8\(\mp } |
+  g='8 a bes c | d bes g\) g'\( |
+  ees=''8 c g\) g'( | d4.)\> \after 8\! d8\( |
+  c=''8 bes a c | bes a g bes\) |
+  a='8\(\< e fis \after 8\! g | fis4.\)\> \after 8\! d8\( |
+  g='8 a bes c | d bes g\) bes'\( |
+  a=''8 g f ees | d4.\) g8\( |
+  ees=''8 c a\) g'\( | d bes g bes\) |
+  a='8[( c)] fis,[(\> a]) | g4. \after 8\! bes8\( |
+
+  a='8\mf fis d c' | bes a g g' |
+  f=''8 c d ees | d4.\) d8\( |
+  cis=''8-\dynCresc b a g' | fis d a\) fis'\( |
+  e=''8[ b] cis[ a] | d4.\)\> \after 8\! d,8\( |
+  g='8\mp a bes c | d bes g\) g'\( |
+  ees=''8 c g\) g'( | d4.)\> \after 8\! d8\( |
+  c=''8 ees a, c | bes d g, bes\) |
+  a='8[( c]) fis,[(^"rit." a]) | g4-> <bes=' d g>-> \bar "|."
 }
 {% endmacro %}
 
 {% macro leftHand(config) %}
 \clef bass
-\key _
+\key g \minor
 \relative {
   {{ config() }}
 }
