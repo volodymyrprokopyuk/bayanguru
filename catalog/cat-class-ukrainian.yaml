@@ -259,12 +259,21 @@ pieces:
   - { id: w5ba, tit: Дивлюсь я на небо, sub: uafs,
       src: B2AK1987,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  #   p. 51
+  # - { id: plh0, tit: Танець ляльки,
+  #     com: І. Беркович, src: B2AK1987,
+  #     org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: zvpg, tit: Козачок, sub: uafd,
       src: B2AK1987,
       org: ua, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
+  #   p. 76
+  # - { id: mf7s, tit: Дитяча полька,
+  #     com: М. Глинка, src: B2AK1987,
+  #     org: ua, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elm }
   - { id: zykv, tit: Зайчик, sub: uafs,
       src: B2AK1987,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+
   - { id: di18, tit: Од Києва до Лубен, sub: uafs,
       src: B2AK1987,
       org: ua, sty: flk, gnr: sng, frm: var, bss: stb, lvl: elm }

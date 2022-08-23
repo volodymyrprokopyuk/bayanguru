@@ -88,7 +88,7 @@ pieces:
   #   p. 83
   # - { id: bgnx, tit: Колыбельная,
   #     com: И. Дунаевский, src: B1AK1985,
-  #     org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+  #     org: ru, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
   #   p. 88
   # - { id: r9o6, tit: Катюша,
   #     com: М. Блантер, src: B1AK1985,
@@ -132,8 +132,16 @@ pieces:
   # - { id: 1hva, tit: Как пойду я на быструю речку, sub: rufs
   #     src: B2AK1979,
   #     org: ru, sty: flk, gnr: sng, frm: var, bss: stb, lvl: elm }
-
   # B2AK1987
+  #   p. 23
+  # - { id: tsio, tit: Колыбельная,
+  #     com: Т. Хренников, src: B2AK1987,
+  #     org: ru, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  #   p. 43
+  # - { id: h4jo, tit: Подгорка, sub: rufd,
+  #     src: B2AK1987,
+  #     org: ru, sty: flk, gnr: dnc, frm: var, bss: stb, lvl: elm }
+
   - { id: btcu, tit: Полька,
       com: М. Глинка, src: B2AK1987,
       org: ru, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
