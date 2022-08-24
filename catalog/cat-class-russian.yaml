@@ -141,7 +141,7 @@ pieces:
   # - { id: h4jo, tit: Подгорка, sub: rufd,
   #     src: B2AK1987,
   #     org: ru, sty: flk, gnr: dnc, frm: var, bss: stb, lvl: elm }
-
-  - { id: btcu, tit: Полька,
-      com: М. Глинка, src: B2AK1987,
-      org: ru, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
+  #   p. 83
+  # - { id: tg2x, tit: Ходила младешенька по борочку, sub: rufd,
+  #     src: B2AK1987,
+  #     org: ru, sty: flk, gnr: sng, frm: var, bss: stb, lvl: elm }

@@ -235,7 +235,6 @@ pieces:
   # - { id: ggyp, tit: Танець сніжинок,
   #     com: К. Мясков, src: B2AK1979,
   #     org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
-
   # B2AK1987
   - { id: e3u3, tit: Вийшли в поле косарі, sub: uafs,
       src: B2AK1987,
@@ -272,10 +271,24 @@ pieces:
   - { id: zykv, tit: Зайчик, sub: uafs,
       src: B2AK1987,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
-
+  #   p. 80
+  # - { id: 26qx, tit: Казка,
+  #     com: І. Беркович, src: B2AK1987,
+  #     org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: di18, tit: Од Києва до Лубен, sub: uafs,
       src: B2AK1987,
       org: ua, sty: flk, gnr: sng, frm: var, bss: stb, lvl: elm }
+  - { id: btcu, tit: Полька,
+      com: М. Глинка, src: B2AK1987,
+      org: ua, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elm }
   - { id: nev4, tit: Вербовая дощечка, sub: uafs,
       src: B2AK1987,
       org: ua, sty: flk, gnr: sng, frm: var, bss: stb, lvl: elm }
+  #   p. 91
+  # - { id: foaz, tit: Зиммонька,
+  #     com: К. Мясков, src: B2AK1987,
+  #     org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+  #   p. 92
+  # - { id: foaz, tit: Прелюд,
+  #     com: К. Мясков, src: B2AK1987,
+  #     org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
