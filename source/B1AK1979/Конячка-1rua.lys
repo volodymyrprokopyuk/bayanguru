@@ -18,6 +18,6 @@
 \relative {
   {{ config() }}
   d=4 dm! | d dm | g, gm! | g,@m!2 |
-  d'=4 c | bes besM! | a g=, | d,+dm!2 |
+  f'=4 c | bes besM! | a g=, | d,+dm!2 |
 }
 {% endmacro %}
