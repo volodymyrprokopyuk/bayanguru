@@ -19,6 +19,15 @@ barFermata = \mark \markup \musicglyph #"scripts.ufermata"
 }
 {% endmacro %}
 
+{% macro meta(piece) %}
+\markup \center-column \string-lines "
+  {% if piece.sub %}{{ piece.sub | safe }}{% endif %}
+  id: {{ piece.id }}, org: {{ piece.org }},
+  sty: {{ piece.sty }}, gnr: {{ piece.gnr }}, frm: {{ piece.frm }},
+  bss: {{ piece.bss }}, lvl: {{ piece.lvl }}
+"
+{% endmacro %}
+
 \paper {
   print-all-headers = ##t
   tocTitleMarkup = \markup \column {
@@ -54,11 +63,16 @@ barFermata = \mark \markup \musicglyph #"scripts.ufermata"
 \tocItem \markup {
   "{{ piece.tit }}"
   {% if piece.com %}\italic "{{ piece.com  }}"{% endif %}
+  {% if piece.arr %}\italic "{{ piece.arr  }}"{% endif %}
 }
 \score {
   \header {
     title = "{{ piece.tit }}"
+    {% if args.m %}
+    subtitle = {{ meta(piece) }}
+    {% else %}
     subtitle = "{{ piece.sub | safe or '' }}"
+    {% endif %}
     {% if piece.com %}
     composer = "{{ piece.com }}"
     {% endif %}

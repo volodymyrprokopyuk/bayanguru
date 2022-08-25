@@ -204,10 +204,9 @@ pieces:
   - { id: n7lg, tit: На жовтневе свято,
       com: А. Штогаренко, src: B2AK1979,
       org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
-  #   p. 26
-  # - { id: ohmw, tit: Вальс,
-  #     com: М. Чайкін, src: B2AK1979,
-  #     org: ua, sty: msc, gnr: vls, frm: mel, bss: stb, lvl: elm }
+  - { id: ohmw, tit: Вальс,
+      com: М. Чайкін, src: B2AK1979,
+      org: ua, sty: msc, gnr: vls, frm: mel, bss: stb, lvl: elm }
   - { id: stil, tit: Сусідка, sub: uafs,
       src: B2AK1979,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
