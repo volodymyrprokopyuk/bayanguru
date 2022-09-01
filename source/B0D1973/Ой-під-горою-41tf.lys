@@ -18,7 +18,7 @@
 \key f \major
 \relative {
   {{ config() }}
-  f,=,4 fM! fM | a f@M fM | bes besM! besM | a f@M fM |
+  f,=,4-\stBass fM! fM | a f@M fM | bes besM! besM | a f@M fM |
   bes=, besM! besM | c f@M fM | c c7! c7 | f, fM! fM |
   g gm! gm | c f@M! fM | c c7! c7 | f, fM! fM |
 }
