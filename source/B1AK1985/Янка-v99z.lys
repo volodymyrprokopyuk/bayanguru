@@ -1,15 +1,15 @@
-{% macro rhPart1(firstNote) %}
-  {{ firstNote | safe }} g a8) a-. a-. | g16( a b8) b4-> |
+{% macro rhFrag1(a) %}
+  {{ a | safe }} g a8) a-. a-. | g16( a b8) b4-> |
   a='8-. cis-. e-. cis-. | d-. d16( e fis8-.) d-. |
   fis,='16( g a8) a-. a-. | g16( a b8) b4-> |
   a='8-. cis-. e-. cis-. | d-. fis-. d=''4-> |
 {% endmacro %}
 
-{% macro lhPart1(firstNote, lastNote) %}
-  {{ firstNote | safe }} dM! d dM | g, gM! gM gM |
+{% macro lhFrag1(a, b) %}
+  {{ a | safe }} dM! d dM | g, gM! gM gM |
   a=,8 a7! a a7 | d dM! dM dM |
   d=8 dM! d dM | g, gM! gM gM |
-  a=,8 a7! a a7 | d dM! {{ lastNote | safe }} |
+  a=,8 a7! a a7 | d dM! {{ b | safe }} |
 {% endmacro %}
 
 {% macro rightHand(config) %}
@@ -19,14 +19,14 @@
 \time 2/4
 \relative {
   {{ config() }}
-  {{ rhPart1("fis'='16(\\mf") }}
+  {{ rhFrag1("fis'='16(\\mf") }}
 
   e=''8-.\mp e-. d-. d-. | cis16( d e8) a, cis |
   b='16( cis d8) gis, b | a a16( cis e4) |
   e=''8-. e-. d-. d-. | cis16( d e8) a, cis |
   b='16( cis d8) gis, b | a-.\< r \after 4\! a='4-> |
 
-  {{ rhPart1("fis='16(\\f") }} \bar "|."
+  {{ rhFrag1("fis='16(\\f") }} \bar "|."
 }
 {% endmacro %}
 
@@ -35,13 +35,13 @@
 \key d \major
 \relative {
   {{ config() }}
-  {{ lhPart1("d=8-\\stBass", "dM4") }}
+  {{ lhFrag1("d=8-\\stBass", "dM4") }}
 
   a=,8 aM! e' e7! | a, aM! aM aM |
   gis=,8 e@7! e'8 e7 | a, aM! aM aM |
   a=,8 aM! e' e7! | a, aM! aM aM |
   gis=,8 e@7! e'8 e7 | a, g fis e |
 
-  {{ lhPart1("d'=8", "d,+dM4") }}
+  {{ lhFrag1("d'=8", "d,+dM4") }}
 }
 {% endmacro %}

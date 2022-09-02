@@ -1,5 +1,5 @@
-{% macro rhPart1(firstNote) %}
-  {{ firstNote | safe }} bes <f a>4-.) 4-. | <f d'>-. <f a>2-> |
+{% macro rhFrag1(a) %}
+  {{ a | safe }} bes <f a>4-.) 4-. | <f d'>-. <f a>2-> |
   <e=' g>8( a <e g>4-.) 4-. | <g e'>-. <e g>2-> |
   <d=' f>8( g <d f>2) | <bes e>8( f' <bes, e>2) |
   <a= cis>8( e' a g f e |
@@ -15,7 +15,7 @@
   \repeat segno 2 {
     \volta 1 { \segnoMark 1 }
     \repeat volta 2 {
-      {{ rhPart1("<f'=' a>8(\\mp") }}
+      {{ rhFrag1("<f'=' a>8(\\mp") }}
       \alternative {
         \volta 1 { d='8 e f g a4) | }
         \volta 2 { d,='2\repeatTie r4 | }
@@ -24,7 +24,7 @@
 
     c='8(\mf d c e f g | a2.) | bes8( a g4) a | c2. |
     c,='8( d c e f g | a2.) | bes8( a g4 e | \after 2.\! a2.\>) |
-    {{ rhPart1("<f=' a>8(\\p") }}
+    {{ rhFrag1("<f=' a>8(\\p") }}
     d='4) <d f d'>2 |
 
     \volta 2 \fine

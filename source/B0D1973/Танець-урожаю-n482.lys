@@ -1,3 +1,12 @@
+{% macro rhFrag1(a) %}
+  {{ a | safe }} c | e8-. g-. e4 | d8( g-.) g-. f-. | e-. d-. c4 |
+{% endmacro %}
+
+{% macro lhFrag1(a, b) %}
+  {{ a | safe }} r | c,+cM8 r c,+cM4 |
+  {{ b | safe }} g,@M! g8 gM | a-. b-. c=4 |
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Moderato
 \clef treble
@@ -5,14 +14,10 @@
 \time 2/4
 \relative {
   {{ config() }}
-  \repeat volta 2 {
-    g'='4\mf c | e8-. g-. c,4 | d8( g-.) g-. f-. | e-. d-. c4 |
-  }
+  \repeat volta 2 { {{ rhFrag1("g'='4\\mf") }} }
   e,='8(\p a-.) e-. a-. | gis4->( e8) r | b'( d-.) c-. b-. | c( d e4) |
   e=''8( a-.) e-. a-. | gis4->( e8) r | b'( d-.) c-. b-. | a4( a,8) r |
-  \repeat volta 2 {
-    g='4\mf c | e8-. g-. c,4 | d8( g-.) g-. f-. | e-. d-. c=''4 |
-  }
+  \repeat volta 2 { {{ rhFrag1("g='4\\mf") }} }
 }
 {% endmacro %}
 
@@ -21,9 +26,9 @@
 \key c \major
 \relative {
   {{ config() }}
-  c,+cM!4-\stBass r | c,+cM8 r c,+cM4 | b,=,8 g,@M! g8 gM | a-. b-. d4 |
+  {{ lhFrag1("c,+cM!4-\\stBass", "b,=,8") }}
   a=,8 am! a am | b e@7! e8 e7 | gis, e@7! e'8 e7 | a, am! e' a,@m |
   a,=,8 am! a am | b e@7! e8 e7 | gis, e@7! e'8 e7 | a, am! a r |
-  c,+cM!4 r | c,+cM8 r c,+cM4 | b=,8 g,@M! g8 gM | a-. b-. d=4 |
+  {{ lhFrag1("c,+cM!4", "b=,8") }}
 }
 {% endmacro %}

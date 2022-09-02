@@ -21,11 +21,11 @@
 \key a \minor
 \relative {
   {{ config() }}
-  a,=,4-\stBass r | \repeat unfold 3 { a r | }
-  \repeat unfold 3 { a=,8 r a r | } a r a4 |
+  <a,=, e'>4-\stBass r | \repeat unfold 3 { <a=, e'>4 r | }
+  \repeat unfold 3 { <a=, e'>8 r <a e'> r | } <a e'> r <a e'>4 |
   b=,8 e@7! e8 e7 | a, am! e' a,@m |
   b8 e@7! e8 e7 | a, am! e' a,@m |
-  b=,8 e@7! e8 e7 | a, am! e' a,@m |
+  gis,=,8 e@7! e'8 e7 | a, am! e' a,@m |
   b8 e@7! e8 e7 | a,=, d@m! a,@m!4 |
 }
 {% endmacro %}
