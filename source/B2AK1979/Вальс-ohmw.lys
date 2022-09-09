@@ -5,6 +5,13 @@
   <a= cis>8( e' a g f e |
 {% endmacro %}
 
+{% macro lhFrag1(a) %}
+  {{ a | safe }} dm | d( dm) dm |
+  cis=4( a,@M!) aM | cis( a,@M) aM |
+  d=4( dm!) dm | g,( gm) gm |
+  a=,( a7!) a7 |
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo "Tempo di valzer"
 \clef treble
@@ -36,10 +43,11 @@
       g='4\( e fis | g <fis a> <g b> | <fis a>2. | <fis d'>2.\) |
       <g=' e'>2. | <g a>2. | <fis d'>2.~ |
       \alternative {
-        \volta 1 { <fis d'>4 a b | }
-        \volta 2 { <fis=' d'>4\repeatTie a b \bar "||" \key d \minor }
+        \volta 1 { <fis=' d'>4 a g=' | }
+        \volta 2 { <fis=' d'>4\repeatTie a g=' \bar "||" }
       }
     }
+    \key d \minor
   }
 }
 {% endmacro %}
@@ -49,12 +57,20 @@
 \key d \minor
 \relative {
   {{ config() }}
-  d=4(-\stBass dm!) dm | d( dm) dm |
-  cis=4( a,@M!) aM | cis( a,@M) aM |
-  d=4( dm!) dm | g,( gm) gm |
-  a=,( a7!) a7 | d( dm!) dm |
+  {{ lhFrag1("d=4(-\\stBass dm!)") }}
+  d( dm!) dm |
   << \relative { r4 dm! } \\ \relative { d=2 } >> r4 |
 
-  g,=,4 c@7! c7 |
+  g,=,4 c@7! c7 | f fM! fM | c' c7! c7 | f, fM! fM |
+  g=,4 c@7! c7 | f fM! fM | g gm! gm | a a7! a7 |
+  {{ lhFrag1("d=4( dm!)") }}
+  d=4 dm!2 |
+
+  \key d \major
+  d=4 dM! dM | a d@M dM | a aM! aM | cis a,@M aM |
+  d=4 dM! dM | g, gM! gM | b b7! b7 | e em! em |
+  cis=4 a,@7! a7 | a a7 a7 | d dM! dM | b d@M dM |
+  g=,4 gM! gM | a a7! a7 | d dM! dM | d r r | d= r r |
+  \key d \minor
 }
 {% endmacro %}
