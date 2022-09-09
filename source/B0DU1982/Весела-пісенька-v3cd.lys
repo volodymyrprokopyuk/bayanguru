@@ -7,8 +7,8 @@
   {{ config() }}
   g'='2\(\mf d'2 | e4 d8 c b4\) r |
   g='2\( d'4 g | e4 d8 c b4\) r |
-  c=''4( c d d) | a( b8 c d4) r |
-  c=''4( c d d) | c( b8^"rit." a g='4) r \bar "|."
+  c=''4( c b b) | a( b8 c d4) r |
+  c=''4( c b b) | c( b8^"rit." a g='4) r \bar "|."
 }
 {% endmacro %}
 
