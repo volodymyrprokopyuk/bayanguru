@@ -216,10 +216,9 @@ pieces:
   - { id: dvki, tit: Гопак, sub: 'з опери \"Сорочинский ярмарок\"',
       com: М. Мусоргский, src: B2AK1979,
       org: ru, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
-  #   p. 64
-  # - { id: izth, tit: Прогулянка,
-  #     com: К. Мясков, src: B2AK1979,
-  #     org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+  - { id: izth, tit: Прогулянка,
+      com: К. Мясков, src: B2AK1979,
+      org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   #   p. 75
   # - { id: jkqt, tit: Романс,
   #     com: М. Чайкін, src: B2AK1979,
