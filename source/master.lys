@@ -10,7 +10,7 @@ barFermata = \mark \markup \musicglyph #"scripts.ufermata"
 {% set url = "https://volodymyrprokopyuk.github.io/bayan" %}
 
 {% macro logo(scale = 1) %}
-\roman \bold {
+\roman \bold \concat {
   \magnify #{{ 1.5 * scale }} \musicglyph "clefs.G"
   \magnify #{{ 2.5 * scale }} {
     \rotate #30 Б
@@ -31,6 +31,25 @@ barFermata = \mark \markup \musicglyph #"scripts.ufermata"
   \pageBreak
 {% endmacro %}
 
+{% macro pieceMeta(piece) %}
+\markup \center-column \string-lines "
+  {% if piece.sub %} {{ piece.sub | safe }} {% endif %}
+  id: {{ piece.id }}, org: {{ piece.org }},
+  sty: {{ piece.sty }}, gnr: {{ piece.gnr }}, frm: {{ piece.frm }},
+  bss: {{ piece.bss }}, lvl: {{ piece.lvl }}
+"
+{% endmacro %}
+
+{% macro pieceTitle(piece) %}
+  \header {
+    title = "{{ piece.tit }}"
+    {% if args.m %} subtitle = {{ pieceMeta(piece) }}
+    {% else %} subtitle = "{{ piece.sub | safe or '' }}" {% endif %}
+    {% if piece.com %} composer = "{{ piece.com }}" {% endif %}
+    {% if piece.arr %} arranger = "{{ piece.arr }}" {% endif %}
+  }
+{% endmacro %}
+
 {% macro pieceTagline() %}
   \header {
     tagline = \markup { {{ logo(0.5) }} \with-url "{{ url }}" "{{ url }}" }
@@ -45,23 +64,9 @@ barFermata = \mark \markup \musicglyph #"scripts.ufermata"
   }
 {% endmacro %}
 
-{% macro pieceMeta(piece) %}
-\markup \center-column \string-lines "
-  {% if piece.sub %} {{ piece.sub | safe }} {% endif %}
-  id: {{ piece.id }}, org: {{ piece.org }},
-  sty: {{ piece.sty }}, gnr: {{ piece.gnr }}, frm: {{ piece.frm }},
-  bss: {{ piece.bss }}, lvl: {{ piece.lvl }}
-"
-{% endmacro %}
-
-{% macro pieceTitle(piece) %}
-  \header {
-    title = "{{ piece.tit }}"
-    {% if args.m %} subtitle = {{ pieceMeta(piece) }}
-    {% elif piece.sub %} subtitle = "{{ piece.sub | safe }}" {% endif %}
-    {% if piece.com %} composer = "{{ piece.com }}" {% endif %}
-    {% if piece.arr %} arranger = "{{ piece.arr }}" {% endif %}
-  }
+{% macro bookToc() %}
+  \pageBreak
+  \markuplist \table-of-contents
 {% endmacro %}
 
 {% macro rhConfig() %}
@@ -70,11 +75,6 @@ barFermata = \mark \markup \musicglyph #"scripts.ufermata"
 {% endmacro %}
 
 {% macro lhConfig() %} {% endmacro %}
-
-{% macro bookToc() %}
-  \pageBreak
-  \markuplist \table-of-contents
-{% endmacro %}
 
 \paper {
   print-all-headers = ##t

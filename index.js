@@ -52,7 +52,7 @@ async function engrave() {
   }
 }
 
-const argsConfig = { boolean: ["b", "m"], default: { c: "", f: "ps" } }
+const argsConfig = { boolean: ["b", "m"], default: { c: "", f: "pdf" } }
 const args = parseArgs(process.argv.slice(2), argsConfig)
 if (args.i) { await pieceInit(args.i) } else { await engrave() }
 
