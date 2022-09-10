@@ -7,6 +7,8 @@ dynCresc = \markup \lower #3 \italic "cresc."
 artSimile = \markup \italic simile
 barFermata = \mark \markup \musicglyph #"scripts.ufermata"
 
+{% set url = "https://volodymyrprokopyuk.github.io/bayan" %}
+
 {% macro logo(scale = 1) %}
 \roman \bold {
   \magnify #{{ 1.5 * scale }} \musicglyph "clefs.G"
@@ -19,13 +21,59 @@ barFermata = \mark \markup \musicglyph #"scripts.ufermata"
 }
 {% endmacro %}
 
-{% macro meta(piece) %}
+{% macro bookTitle() %}
+  \header {
+    title = "{{ book.tit }}"
+    subtitle = "{{ book.sub }}"
+    copyright = \markup { {{ logo(0.5) }} \with-url "{{ url }}" "{{ url }}" }
+    tagline = \markup { {{ logo(0.5) }} \with-url "{{ url }}" "{{ url }}" }
+  }
+  \pageBreak
+{% endmacro %}
+
+{% macro pieceTagline() %}
+  \header {
+    tagline = \markup { {{ logo(0.5) }} \with-url "{{ url }}" "{{ url }}" }
+  }
+{% endmacro %}
+
+{% macro pieceTocItem(piece) %}
+  \tocItem \markup {
+    "{{ piece.tit }}"
+    {% if piece.com %} \italic "{{ piece.com  }}" {% endif %}
+    {% if piece.arr %} \italic "{{ piece.arr  }}" {% endif %}
+  }
+{% endmacro %}
+
+{% macro pieceMeta(piece) %}
 \markup \center-column \string-lines "
-  {% if piece.sub %}{{ piece.sub | safe }}{% endif %}
+  {% if piece.sub %} {{ piece.sub | safe }} {% endif %}
   id: {{ piece.id }}, org: {{ piece.org }},
   sty: {{ piece.sty }}, gnr: {{ piece.gnr }}, frm: {{ piece.frm }},
   bss: {{ piece.bss }}, lvl: {{ piece.lvl }}
 "
+{% endmacro %}
+
+{% macro pieceTitle(piece) %}
+  \header {
+    title = "{{ piece.tit }}"
+    {% if args.m %} subtitle = {{ pieceMeta(piece) }}
+    {% elif piece.sub %} subtitle = "{{ piece.sub | safe }}" {% endif %}
+    {% if piece.com %} composer = "{{ piece.com }}" {% endif %}
+    {% if piece.arr %} arranger = "{{ piece.arr }}" {% endif %}
+  }
+{% endmacro %}
+
+{% macro rhConfig() %}
+\override Score.BarNumber.break-visibility = ##(#f #f #f)
+\override DynamicLineSpanner.staff-padding = #3.0
+{% endmacro %}
+
+{% macro lhConfig() %} {% endmacro %}
+
+{% macro bookToc() %}
+  \pageBreak
+  \markuplist \table-of-contents
 {% endmacro %}
 
 \paper {
@@ -37,61 +85,22 @@ barFermata = \mark \markup \musicglyph #"scripts.ufermata"
   tocItemMarkup = \tocItemWithDotsMarkup
 }
 
-{% set url = "https://volodymyrprokopyuk.github.io/bayan" %}
-{% if args.b %}
-\header {
-  title = "{{ book.tit }}"
-  subtitle = "{{ book.sub }}"
-  copyright = \markup { {{ logo(0.5) }} \with-url "{{ url }}" "{{ url }}" }
-  tagline = \markup { {{ logo(0.5) }} \with-url "{{ url }}" "{{ url }}" }
-}
-\pageBreak
-{% else %}
-\header {
-  tagline = \markup { {{ logo(0.5) }} \with-url "{{ url }}" "{{ url }}" }
-}
-{% endif %}
-
-{% macro rhConfig() %}
-\override Score.BarNumber.break-visibility = ##(#f #f #f)
-\override DynamicLineSpanner.staff-padding = #3.0
-{% endmacro %}
-
-{% macro lhConfig() %} {% endmacro %}
+{% if args.b %} {{ bookTitle() }}
+{% else %} {{ pieceTagline() }} {% endif %}
 
 {% for piece in pieces %}
-\tocItem \markup {
-  "{{ piece.tit }}"
-  {% if piece.com %}\italic "{{ piece.com  }}"{% endif %}
-  {% if piece.arr %}\italic "{{ piece.arr  }}"{% endif %}
-}
-\score {
-  \header {
-    title = "{{ piece.tit }}"
-    {% if args.m %}
-    subtitle = {{ meta(piece) }}
-    {% else %}
-    subtitle = "{{ piece.sub | safe or '' }}"
-    {% endif %}
-    {% if piece.com %}
-    composer = "{{ piece.com }}"
-    {% endif %}
-    {% if piece.arr %}
-    arranger = "{{ piece.arr }}"
-    {% endif %}
+  {% if args.b %} {{ pieceTocItem(piece) }} {% endif %}
+  \score {
+    {{ pieceTitle(piece) }}
+    {% set source = "source/" + piece.src + "/" + piece.file + ".lys" %}
+    {% from source import rightHand, leftHand %}
+    \new PianoStaff = bayan {
+      <<
+        \new Staff = rightHand { {{ rightHand(rhConfig) }} }
+        \new Staff = leftHand { {{ leftHand(lhConfig) }} }
+      >>
+    }
   }
-  {% set source = "source/" + piece.src + "/" + piece.file + ".lys" %}
-  {% from source import rightHand, leftHand %}
-  \new PianoStaff = bayan {
-    <<
-      \new Staff = rightHand { {{ rightHand(rhConfig) }} }
-      \new Staff = leftHand { {{ leftHand(lhConfig) }} }
-    >>
-  }
-}
 {% endfor %}
 
-{% if args.b %}
-\pageBreak
-\markuplist \table-of-contents
-{% endif %}
+{% if args.b %} {{ bookToc() }} {% endif %}
