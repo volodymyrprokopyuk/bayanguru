@@ -1,3 +1,13 @@
+{% macro rhFrag1(a, b) %}
+  {{ a | safe }} c8-. e-. | d16( c b8-.) c-. e-. |
+  c8-. e-. c-. e-. | d16( c b8-.) {{ b | safe }} |
+{% endmacro %}
+
+{% macro lhFrag1(a, b) %}
+  {{ a | safe }} am! a am | e' e7! a, am! |
+  a=,8 am a am | e' e7! {{ b | safe }} |
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Allegretto
 \clef treble
@@ -5,10 +15,8 @@
 \time 2/4
 \relative {
   {{ config() }}
-  e''=''4\mf c8-. e-. | d16( c b8-.) c-. e-. |
-  c8-. e-. c-. e-. | d16( c b8-.) c4 |
-  e=''4 c8-. e-. | d16( c b8-.) c-. e-. |
-  c8-. e-. c-. e-. | d16( c b8-.) a='4 \bar "|."
+  {{ rhFrag1("e''=''4\\mf", "c4") }}
+  {{ rhFrag1("e=''4", "a='4") }} \bar "|."
 }
 {% endmacro %}
 
@@ -17,8 +25,7 @@
 \key a \minor
 \relative {
   {{ config() }}
-  a,=,8-\stBass am! a am |
-  \repeat unfold 3 { e' e7! a, am! | a am a am | }
-  e'=8 e7! a,,+am!4 |
+  {{ lhFrag1("a,=,8-\\stBass", "a, am!") }}
+  {{ lhFrag1("a=,8", "a,,+am!4") }}
 }
 {% endmacro %}

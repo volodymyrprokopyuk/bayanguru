@@ -18,7 +18,6 @@
 \relative {
   {{ config() }}
   a,=,8-\stBass am! a am | a am a am | a am! a am | a am a am |
-  % a=,8 am! a am | d dm d dm | e eM! e eM | a am! a=, am |
-  a=,8 am! a am | d dm d dm | e eM! e eM | a,=, am! a am |
+  a=,8 am! a am | d dm! d dm | e eM! e eM | a,=, am! a am |
 }
 {% endmacro %}
