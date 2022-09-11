@@ -1,15 +1,15 @@
 {% macro rhFrag1(a) %}
-  {{ a | safe }} g a8) a-. a-. | g16( a b8) b4-> |
+  {{ a }} g a8) a-. a-. | g16( a b8) b4-> |
   a='8-. cis-. e-. cis-. | d-. d16( e fis8-.) d-. |
   fis,='16( g a8) a-. a-. | g16( a b8) b4-> |
   a='8-. cis-. e-. cis-. | d-. fis-. d=''4-> |
 {% endmacro %}
 
 {% macro lhFrag1(a, b) %}
-  {{ a | safe }} dM! d dM | g, gM! gM gM |
+  {{ a }} dM! d dM | g, gM! gM gM |
   a=,8 a7! a a7 | d dM! dM dM |
   d=8 dM! d dM | g, gM! gM gM |
-  a=,8 a7! a a7 | d dM! {{ b | safe }} |
+  a=,8 a7! a a7 | d dM! {{ b }} |
 {% endmacro %}
 
 {% macro rightHand(config) %}

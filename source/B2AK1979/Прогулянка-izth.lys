@@ -1,11 +1,11 @@
 {% macro rhFrag1(a) %}
-  {{ a | safe }} d-. fis-. a4-- fis8 | b4-- fis8 a4.-- |
+  {{ a }} d-. fis-. a4-- fis8 | b4-- fis8 a4.-- |
   <g='' b>8-. 8-. <fis a>-. <e g>8-. 8-. <d fis>-. |
   <cis='' e>4-- <b d>8 <a a'>4.-- |
 {% endmacro %}
 
 {% macro lhFrag1(a) %}
-  {{ a | safe }} r r dM!4 r8 | b,@m!4 r8 d@M!4 r8 |
+  {{ a }} r r dM!4 r8 | b,@m!4 r8 d@M!4 r8 |
   e=8 r r em!4 r8 | a, r r aM!4 r8 |
 {% endmacro %}
 

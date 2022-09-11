@@ -1,10 +1,10 @@
 {% macro rhFrag1(a) %}
-  {{ a | safe }} c | e8-. g-. e4 | d8( g-.) g-. f-. | e-. d-. c4 |
+  {{ a }} c | e8-. g-. e4 | d8( g-.) g-. f-. | e-. d-. c4 |
 {% endmacro %}
 
 {% macro lhFrag1(a, b) %}
-  {{ a | safe }} r | c,+cM8 r c,+cM4 |
-  {{ b | safe }} g,@M! g8 gM | a-. b-. c=4 |
+  {{ a }} r | c,+cM8 r c,+cM4 |
+  {{ b }} g,@M! g8 gM | a-. b-. c=4 |
 {% endmacro %}
 
 {% macro rightHand(config) %}

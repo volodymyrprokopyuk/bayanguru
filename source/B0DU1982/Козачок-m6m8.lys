@@ -1,11 +1,11 @@
 {% macro rhFrag1(a, b) %}
-  {{ a | safe }} c8-. e-. | d16( c b8-.) c-. e-. |
-  c8-. e-. c-. e-. | d16( c b8-.) {{ b | safe }} |
+  {{ a }} c8-. e-. | d16( c b8-.) c-. e-. |
+  c8-. e-. c-. e-. | d16( c b8-.) {{ b }} |
 {% endmacro %}
 
 {% macro lhFrag1(a, b) %}
-  {{ a | safe }} am! a am | e' e7! a, am! |
-  a=,8 am a am | e' e7! {{ b | safe }} |
+  {{ a }} am! a am | e' e7! a, am! |
+  a=,8 am a am | e' e7! {{ b }} |
 {% endmacro %}
 
 {% macro rightHand(config) %}
