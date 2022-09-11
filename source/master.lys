@@ -43,7 +43,7 @@ barFermata = \mark \markup \musicglyph #"scripts.ufermata"
 {% macro pieceTitle(piece) %}
   \header {
     title = "{{ piece.tit }}"
-    subtitle = "{{ piece.sub | safe or '' }}"
+    subtitle = "{{ piece.sub or '' }}"
     {% if args.m %} meta = {{ pieceMeta(piece) }} {% endif %}
     {% if piece.com %} composer = "{{ piece.com }}" {% endif %}
     {% if piece.arr %} arranger = "{{ piece.arr }}" {% endif %}
@@ -112,7 +112,7 @@ barFermata = \mark \markup \musicglyph #"scripts.ufermata"
     \new PianoStaff = bayan {
       <<
         \new Staff = rightHand { {{ rightHand(rhConfig) }} }
-        \new Staff = leftHand { {{ leftHand(lhConfig) }} }
+        \new Staff = leftHand { {{ leftHand(lhConfig) | stradella }} }
       >>
     }
   }
