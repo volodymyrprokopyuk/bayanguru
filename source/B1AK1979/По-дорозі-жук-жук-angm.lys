@@ -1,3 +1,7 @@
+{% macro rhFrag1(a, b) %}
+  {{ a }} bes-. bes( g) | a-. a-. a( f) | g-. g-. c,( e | {{ b }} |
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Allegretto
 \clef treble
@@ -5,14 +9,9 @@
 \time 2/4
 \relative {
   {{ config() }}
-  c'='8\mf c( d e | f4) f4 | c8 c( d e | f4) a4 |
-  \repeat unfold 2 {
-    bes='8-. bes-. bes( g) | a-. a-. a( f) | g-. g-. c,( e |
-    \alternative {
-      { f4) a | }
-      { f4) f=' \bar "|." }
-    }
-  }
+  c'='8\f c( d e | f4) f4 | c8 c( d e | f4) a4 |
+  {{ rhFrag1("bes='8-.\\mf", "f4) a") }}
+  {{ rhFrag1("bes='8-.", "f4) f='") }} \bar "|."
 }
 {% endmacro %}
 
