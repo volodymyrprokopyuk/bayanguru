@@ -1,5 +1,5 @@
 {% macro rhFrag1(a, b) %}
-  {{ a }} bes-. bes( g) | a-. a-. a( f) | g-. g-. c,( e | {{ b }} |
+  {{ a }} bes-. bes( g) | a-. a-. a( f) | g-. g-. c,( e | f4) {{ b }} |
 {% endmacro %}
 
 {% macro rightHand(config) %}
@@ -10,8 +10,8 @@
 \relative {
   {{ config() }}
   c'='8\f c( d e | f4) f4 | c8 c( d e | f4) a4 |
-  {{ rhFrag1("bes='8-.\\mf", "f4) a") }}
-  {{ rhFrag1("bes='8-.", "f4) f='") }} \bar "|."
+  {{ rhFrag1("bes='8-.\\mf", "a") }}
+  {{ rhFrag1("bes='8-.", "f='") }} \bar "|."
 }
 {% endmacro %}
 

@@ -5,10 +5,10 @@
 \time 2/4
 \relative {
   {{ config() }}
-  d'='8(\mf b' a g) | a4-> e8( g) | fis4-- a-- | g2 |
-  d='8(\mf b' a g) | a a e8( g) | fis\< fis g \after 8\! a | b-- b-- b4-> |
-  c=''8[-. r a]-. r | b-. b( g-.) g-. | d( c' b a) | g( a b g) |
-  <g=' c>8[-. r <g a>-.] r | b-. b( g-.) g-. | d( c' b a) | g( b) g='-> r \bar "|."
+  d'='8[(\mf b' a g]) | a4-> e8( g) | fis4-- a-- | g2 |
+  d='8[( b' a g]) | a a e8( g) | fis[\< fis g \after 8\! a] | b-- b-- b4-> |
+  c=''8[-. r a]-. r | b-. b( g-.) g-. | d[( c' b a]) | g[( a b g]) |
+  <g=' c>8[-. r <g a>-.] r | b-. b( g-.) g-. | d[( c' b a]) | g( b) g='-> r \bar "|."
 }
 {% endmacro %}
 
