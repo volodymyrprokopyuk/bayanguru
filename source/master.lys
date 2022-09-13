@@ -31,6 +31,15 @@ barFermata = \mark \markup \musicglyph #"scripts.ufermata"
   \pageBreak
 {% endmacro %}
 
+{% macro bookTitleMarkup() %}
+  bookTitleMarkup = \markup \column {
+    \vspace #18
+    \fill-line { \fontsize #8 \bold \fromproperty #'header:title }
+    \vspace #2
+    \fill-line { \fontsize #4 \bold \fromproperty #'header:subtitle }
+  }
+{% endmacro %}
+
 {% macro pieceMeta(piece) %}
   \markup \line {
     \bold id: {{ piece.id }}, \bold org: {{ piece.org }},
@@ -50,29 +59,7 @@ barFermata = \mark \markup \musicglyph #"scripts.ufermata"
   }
 {% endmacro %}
 
-{% macro pieceTocItem(piece) %}
-  \tocItem \markup {
-    "{{ piece.tit }}"
-    {% if piece.com %} \italic "{{ piece.com }}" {% endif %}
-    {% if piece.arr %} \italic "{{ piece.arr }}" {% endif %}
-  }
-{% endmacro %}
-
-{% macro rhConfig() %}
-  \override Score.BarNumber.break-visibility = ##(#f #f #f)
-  \override DynamicLineSpanner.staff-padding = #3.0
-{% endmacro %}
-
-{% macro lhConfig() %} {% endmacro %}
-
-\paper {
-  print-all-headers = ##t
-  bookTitleMarkup = \markup \column {
-    \vspace #18
-    \fill-line { \fontsize #8 \bold \fromproperty #'header:title }
-    \vspace #2
-    \fill-line { \fontsize #4 \bold \fromproperty #'header:subtitle }
-  }
+{% macro pieceTitleMarkup() %}
   scoreTitleMarkup = \markup \column {
     \fill-line { \fontsize #5 \bold \fromproperty #'header:title }
     \vspace #0.2
@@ -85,6 +72,17 @@ barFermata = \mark \markup \musicglyph #"scripts.ufermata"
       }
     }
   }
+{% endmacro %}
+
+{% macro pieceTocItem(piece) %}
+  \tocItem \markup {
+    "{{ piece.tit }}"
+    {% if piece.com %} \italic "{{ piece.com }}" {% endif %}
+    {% if piece.arr %} \italic "{{ piece.arr }}" {% endif %}
+  }
+{% endmacro %}
+
+{% macro tocMarkup() %}
   tocTitleMarkup = \markup \column {
     \vspace #2
     \fill-line { \fontsize #4 \bold "Зміст" }
@@ -94,6 +92,22 @@ barFermata = \mark \markup \musicglyph #"scripts.ufermata"
     \fill-with-pattern #0.5 #RIGHT .
       \fromproperty #'toc:text \fromproperty #'toc:page
   }
+{% endmacro %}
+
+{% macro rhConfig() %}
+  \override Score.BarNumber.break-visibility = ##(#f #f #f)
+  \override DynamicLineSpanner.staff-padding = #3.0
+{% endmacro %}
+
+{% macro lhConfig() %} {% endmacro %}
+
+\paper {
+  print-all-headers = ##t
+  {% if args.b %}
+    {{ bookTitleMarkup() }}
+    {{ tocMarkup() }}
+  {% endif %}
+  {{ pieceTitleMarkup() }}
 }
 
 {% if args.b %} {{ bookTitle() }}
