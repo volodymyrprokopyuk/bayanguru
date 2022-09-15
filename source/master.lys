@@ -25,10 +25,9 @@ barFermata = \mark \markup \musicglyph #"scripts.ufermata"
   \header {
     title = "{{ book.tit }}"
     subtitle = "{{ book.sub }}"
-    copyright = \markup { {{ logo(0.5) }} \with-url "{{ url }}" "{{ url }}" }
     tagline = \markup { {{ logo(0.5) }} \with-url "{{ url }}" "{{ url }}" }
   }
-  \pageBreak
+  \pageBreak \markup \null \pageBreak
 {% endmacro %}
 
 {% macro bookTitleMarkup() %}
@@ -42,10 +41,10 @@ barFermata = \mark \markup \musicglyph #"scripts.ufermata"
 
 {% macro pieceMeta(piece) %}
   \markup \line {
-    \bold id: {{ piece.id }}, \bold org: {{ piece.org }},
-    \bold sty: {{ piece.sty }}, \bold gnr: {{ piece.gnr }},
-    \bold frm: {{ piece.frm }}, \bold bss: {{ piece.bss }},
-    \bold lvl: {{ piece.lvl }}
+    \caps id: {{ piece.id }}, \caps org: {{ piece.org }},
+    \caps sty: {{ piece.sty }}, \caps gnr: {{ piece.gnr }},
+    \caps frm: {{ piece.frm }}, \caps bss: {{ piece.bss }},
+    \caps lvl: {{ piece.lvl }}
   }
 {% endmacro %}
 
@@ -94,6 +93,47 @@ barFermata = \mark \markup \musicglyph #"scripts.ufermata"
   }
 {% endmacro %}
 
+{% macro bookHfMarkup() %}
+  oddHeaderMarkup = \markup { }
+  oddFooterMarkup = \markup {
+    \if \on-first-page
+      \fill-line { \null \fromproperty #'header:tagline \null }
+    \if \on-last-page
+      \fill-line { \null \fromproperty #'header:tagline \null }
+    \fill-line { \null \fromproperty #'page:page-number-string }
+  }
+  evenHeaderMarkup = \markup { }
+  evenFooterMarkup = \markup {
+    \if \on-page #2 \fill-line { \null }
+    \if \on-last-page
+      \fill-line { \null \fromproperty #'header:tagline \null }
+    \unless \on-page #2
+      \fill-line { \fromproperty #'page:page-number-string \null }
+  }
+{% endmacro %}
+
+{% macro pieceHfMarkup() %}
+  print-first-page-number = ##t
+  oddHeaderMarkup = \markup { }
+  oddFooterMarkup = \markup {
+    \if \on-last-page
+      \fill-line {
+        \null \fromproperty #'header:tagline
+        \fromproperty #'page:page-number-string
+      }
+    \fill-line { \null \fromproperty #'page:page-number-string }
+  }
+  evenHeaderMarkup = \markup { }
+  evenFooterMarkup = \markup {
+    \if \on-last-page
+      \fill-line {
+        \null \fromproperty #'header:tagline
+        \fromproperty #'page:page-number-string
+      }
+    \fill-line { \null \fromproperty #'page:page-number-string }
+  }
+{% endmacro %}
+
 {% macro rhConfig() %}
   \override Score.BarNumber.break-visibility = ##(#f #f #f)
   \override DynamicLineSpanner.staff-padding = #3.0
@@ -102,7 +142,13 @@ barFermata = \mark \markup \musicglyph #"scripts.ufermata"
 {% macro lhConfig() %} {% endmacro %}
 
 \paper {
-  print-all-headers = ##t
+  {% if args.b %} {{ bookHfMarkup() }}
+  {% else %} {{ pieceHfMarkup() }} {% endif %}
+  top-margin = 10
+  bottom-margin = 10
+  left-margin = 15
+  right-margin = 15
+  indent = 7
   {% if args.b %}
     {{ bookTitleMarkup() }}
     {{ tocMarkup() }}
