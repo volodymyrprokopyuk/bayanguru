@@ -144,8 +144,8 @@ barFermata = \mark \markup \musicglyph #"scripts.ufermata"
 \paper {
   {% if args.b %} {{ bookHfMarkup() }}
   {% else %} {{ pieceHfMarkup() }} {% endif %}
-  top-margin = 10
-  bottom-margin = 10
+  top-margin = 8
+  bottom-margin = 8
   left-margin = 15
   right-margin = 15
   indent = 7
