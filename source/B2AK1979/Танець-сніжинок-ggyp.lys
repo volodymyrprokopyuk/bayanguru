@@ -8,7 +8,8 @@
   c'='4-.\p e-.-\dynCresc fis-. | gis-. bes-. b |
   c=''4-. e-. fis-. | gis-.^"rit." bes-. b |
   \repeat volta 2 {
-    c='''8-.\mf^"a tempo" r a( bes b c) | <a a'>8-. r <a g'>-. r <a f'>-. r |
+    c='''8-.\mf^"a tempo" r a( bes b c) |
+    <a='' a'>8-. r <a g'>-. r <a f'>-. r |
     <bes='' e>2. | <bes d>2. |
     <bes='' c>8-. r
     <<
@@ -25,20 +26,33 @@
           \\
           \relative { bes''=''2 }
         >> |
-        <a='' c>8 r <a f'>2-> |
+        <a='' c>8 r <a='' f'>2-> |
       }
-      \volta 2 { <a='' f'>2.~ | <a f'>8 r <a d>\p r <a dis> r | }
+      \volta 2 { <a='' f'>2.~ | <a f'>8 r <a d>\p r <a='' dis> r | }
     }
   }
 
   \key a \minor
   \repeat volta 2 {
-    <a='' e'>8-. r r4  <a a'>4~ | <a a'>8 r <a e'>-. r <a dis>-. r |
+    <a='' e'>8-. r r4 <a a'>4~ | 8 r <a e'>-. r <a dis>-. r |
+    <a='' e'>8-. r r4 <a a'>4~ | 8 r <a d>-. r <a dis>-. r |
+    <c=''' e>2. | <aes g'>2. |
+    <<
+      \relative { e'''='''2.~ | e8 }
+      \\
+      \relative { c'''='''8 b,\rest a' b,\rest g' b,\rest | fis'='' }
+    >>
+    r8 <fis='' d'>8-. r <fis c'>-. r |
+    <f='' d'>8-. r r4 <f f'>4~ | 8 r <f d'>-. r <f c'>-. r |
+    <f='' d'>8-. r r4 <f f'>4~ | 8 r <f d'>-. r <f c'>-. r |
+    <aes='' bes>2. | <d, gis>2. |
     \alternative {
-      \volta 1 {  }
-      \volta 2 {  }
+      \volta 1 { <c='' a'>2.~ | 8 r <a' d>-. r <a='' dis>-. r | }
+      \volta 2 { <c,='' a'>2.~ | 8 r r4 r | }
     }
   }
+
+  \key f \major
 }
 {% endmacro %}
 
