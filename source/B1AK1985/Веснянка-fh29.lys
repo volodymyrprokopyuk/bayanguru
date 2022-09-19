@@ -16,6 +16,6 @@
 \relative {
   {{ config() }}
   c=4-\stBass cM! cM | f, fM fM | g g7! g7 | c cM! cM |
-  c=4 cM! cM | f, fM c@M | g4 c7! c7 | c= cM! cM |
+  c=4 cM! cM | f, fM! c@M | g4 c7! c7 | c= cM! cM |
 }
 {% endmacro %}

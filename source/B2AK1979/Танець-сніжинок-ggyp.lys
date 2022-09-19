@@ -1,0 +1,52 @@
+{% macro rightHand(config) %}
+\tempo Allegretto
+\clef treble
+\key f \major
+\time 3/4
+\relative {
+  {{ config() }}
+  c'='4-.\p e-.-\dynCresc fis-. | gis-. bes-. b |
+  c=''4-. e-. fis-. | gis-.^"rit." bes-. b |
+  \repeat volta 2 {
+    c='''8-.\mf^"a tempo" r a( bes b c) | <a a'>8-. r <a g'>-. r <a f'>-. r |
+    <bes='' e>2. | <bes d>2. |
+    <bes='' c>8-. r
+    <<
+      \relative { c'''='''8-. d-. c-. d-. }
+      \\
+      \relative { bes''=''2 }
+    >> |
+    <bes='' c>8 r <bes g'>2-> |
+    \alternative {
+      \volta 1 {
+        <a='' c>8-. r
+        <<
+          \relative { c'''='''8-. d-. c-. d-. }
+          \\
+          \relative { bes''=''2 }
+        >> |
+        <a='' c>8 r <a f'>2-> |
+      }
+      \volta 2 { <a='' f'>2.~ | <a f'>8 r <a d>\p r <a dis> r | }
+    }
+  }
+
+  \key a \minor
+  \repeat volta 2 {
+    <a='' e'>8-. r r4  <a a'>4~ | <a a'>8 r <a e'>-. r <a dis>-. r |
+    \alternative {
+      \volta 1 {  }
+      \volta 2 {  }
+    }
+  }
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key f \major
+\relative {
+  {{ config() }}
+  c@7!8-\stBass r8 r4 r | R2. | c@7!8 r8 r4 r | R2. |
+}
+{% endmacro %}
