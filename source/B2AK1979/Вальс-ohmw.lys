@@ -20,7 +20,7 @@
 \relative {
   {{ config() }}
   \repeat segno 2 {
-    \volta 1 { \segnoMark 1 }
+    \volta 1
     \repeat volta 2 {
       {{ rhFrag1("<f'=' a>8(\\mp") }}
       \alternative {

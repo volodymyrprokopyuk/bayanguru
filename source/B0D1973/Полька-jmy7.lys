@@ -6,7 +6,7 @@
 \relative {
   {{ config() }}
   \repeat segno 2 {
-    \volta 1 { \segnoMark 1 }
+    \volta 1
     e'='8-.\mf g-. c-. e-. | e-. d-. a4 | c8-. b-. b4 | d8-. c-. g4 |
     e='8-. g-. c-. e-. | e-. d-. a-. d-. | c-. b-. a-. b-. | c4. r8 \bar "||"
     \volta 2 \fine
