@@ -109,5 +109,23 @@
 \relative {
   {{ config() }}
   c@7!8-\stBass r8 r4 r | R2. | c@7!8 r8 r4 r | R2. |
+  f,=,8 r fM! r fM r | c' r f,@M r8 fM r |
+  g=,8 r gm! r gm r | f r g,@m r8 gm r |
+  e=,8 r c@7! r8 c7 r | c' r c7 r c7 r |
+  f,=,8 r fM! r fM r | f r fM r fM r |
+  f,,+fM!8 r d' r c r | f,=, r r4 r |
+
+  \key a \minor
+  a=,8 r am! r am r | gis r a,@m r8 am r |
+  g=,8 r a,@m! r8 am r | fis r a,@m r8 am r |
+  a=,8 r am! r am r | bes r bes7! r bes7 r |
+  a=,8 r am! r am r | d r dM! r dM r |
+  bes=,8 r besM! r besM r | a r bes,@M r8 besM r |
+  aes=,8 r bes,@M! r8 besM r | g r bes,@M r8 besM r |
+  bes=,8 r bes7! r bes7 r | e, r e7 r e7 r |
+  a,,+am!8 r c' r f, r | e,,+a@m!8 r8 r4 r |
+  a,,+am!8 r f r e r | a r r4 r |
+
+  \key f \major
 }
 {% endmacro %}
