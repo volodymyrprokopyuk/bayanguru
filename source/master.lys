@@ -3,9 +3,12 @@
 stBass = \markup \larger \box Г % Готовий
 frBass = \markup \larger \box В % Вибiрний
 puBass = \markup \larger \box Б % Чистий бас
+
 dynCresc = \markup \lower #3 \italic "cresc."
 artSimile = \markup \italic simile
 barFermata = \mark \markup \musicglyph #"scripts.ufermata"
+
+\defineBarLine "!!" #'("!!" "!!" "!!")
 
 {% set url = "https://volodymyrprokopyuk.github.io/bayan" %}
 
