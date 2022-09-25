@@ -10,7 +10,8 @@
 \time 3/4
 \relative {
   {{ config() }}
-  {{ rhFrag1("a'='8\\(\\mf") }} {{ rhFrag1("a='8\\(\\mf") }}
+  {{ rhFrag1("a'='8\\(\\mf") }}
+  {{ rhFrag1("a='8\\(\\mf") }}
   e='8\(\mp\< gis b4 gis | \after 8\! a8 c e4 c |
   b='8\mf e e2\) | b8\p( e e2) |
   e,='8\(\mf gis b4 gis | a8 c e4 c |
