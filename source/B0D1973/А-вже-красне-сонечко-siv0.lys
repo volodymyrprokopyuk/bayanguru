@@ -8,8 +8,8 @@
   \repeat volta 2 {
     a'='8\(\mp e' d f | e4 d8 c\) | b( d c4) |
     \alternative {
-      \volta 1 { b8( b a4) | }
-      \volta 2 { b8( b a='4) \bar "|." }
+      \volta 1 { b='8( b a='4) | }
+      \volta 2 { b='8( b a='4) \bar "|." }
     }
   }
 }
@@ -20,7 +20,7 @@
 \key c \major
 \relative {
   {{ config() }}
-  a,=,8-\stBass am! d dm | a[ am am am] | d dm! e a,@m |
-  e8 eM! a, am! | e'= eM! a,,+am!4 |
+  a,=,8-\stBass am! d dm | a[ am! am am] | d dm! e a,@m |
+  e=8 eM! a, am! | e'= eM! a,,+am!4 |
 }
 {% endmacro %}
