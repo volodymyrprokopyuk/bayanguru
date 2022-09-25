@@ -1,3 +1,13 @@
+{% macro rhFrag1(a) %}
+  {{ a }} g-.) g-. g-.] | fis[( a-.) a-. a-.] |
+  b='( a g fis | e4) e=' |
+{% endmacro %}
+
+{% macro lhFrag1(a, b) %}
+  {{ a }} em! e em | a, am a am |
+  b=,8 bM! b bM | {{ b }} |
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Allegretto
 \clef treble
@@ -6,10 +16,9 @@
 \relative {
   {{ config() }}
   d''=''4(\mf b-.) | d( b-.) |
-  d8-.[ d-. d-. e-.] | d4( b-.) |
-  \repeat unfold 2 {
-    e,='8[( g-.) g-. g-.] | fis[( a-.) a-. a-.] | b( a g fis | e4) e=' |
-  } \bar "|."
+  d=''8-.[ d-. d-. e-.] | d4( b-.) |
+  {{ rhFrag1("e,='8[(") }}
+  {{ rhFrag1("e='8[(") }} \bar "|."
 }
 {% endmacro %}
 
@@ -19,8 +28,8 @@
 \relative {
   {{ config() }}
   g,=,8[-\stBass gM! gM gM] | g[ gM gM gM] |
-  g[ gM! gM gM] | g[ gM gM gM] |
-  e'=8 em! e em | a, am a am | b bM! b bM | e em! e em |
-  e=8 em! e em | a, am a am | b bM! b bM | e=4 em! |
+  g=,8[ gM! gM gM] | g[ gM gM gM] |
+  {{ lhFrag1("e'=8", "e em! e= em") }}
+  {{ lhFrag1("e=8", "e=4 em!") }}
 }
 {% endmacro %}
