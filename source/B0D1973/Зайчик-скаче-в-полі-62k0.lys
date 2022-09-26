@@ -1,3 +1,8 @@
+{% macro rhFrag1() %}
+  g'=''8-. c,-. g'-. c,-. | a'4( g) |
+  c,=''8-. f-. e-. g-. | f=''2 |
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Allegretto
 \clef treble
@@ -5,10 +10,12 @@
 \time 2/4
 \relative {
   {{ config() }}
-  a'='8-.\mp bes-. c-. f-. | c4( a) | a8-. bes-. c-. f-. | c2 |
-  g'=''8-. c,-. g'-. c,-. | a'4( g) | c,8-. f-. e-. g-. | f2 |
-  f=''8-. d-. bes-. d-. | c4( f,) | f'8-. d-. bes-. d-. | c2 |
-  g'=''8-. c,-. g'-. c,-. | a'4( g) | c,8-. f-. e-. g-. | f=''2 \bar "|."
+  a'='8-.\mp bes-. c-. f-. | c4( a) |
+  a='8-. bes-. c-. f-. | c2 |
+  {{ rhFrag1() }}
+  f=''8-. d-. bes-. d-. | c4( f,) |
+  f'=''8-. d-. bes-. d-. | c2 |
+  {{ rhFrag1() }} \bar "|."
 }
 {% endmacro %}
 
