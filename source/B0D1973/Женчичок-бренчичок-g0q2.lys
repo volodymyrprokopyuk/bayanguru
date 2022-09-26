@@ -1,3 +1,13 @@
+{% macro rhFrag1(a) %}
+  {{ a }} c c | c8 bes a g f4\) |
+  bes='8( c d2) | d4( c=''2) |
+{% endmacro %}
+
+{% macro lhFrag1(a) %}
+  {{ a }} fM! fm | f fM fM |
+  f=4 bes,@M! besM | f fM fM |
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Moderato
 \clef treble
@@ -5,11 +15,12 @@
 \time 3/4
 \relative {
   {{ config() }}
-  c''=''4\(\p c c | c8 bes a g f4\) | bes8( c d2) | d4( c2) |
-  c=''4\( c c | c8 bes a g f4\) | bes8( c d2) | d4( c2) |
+  {{ rhFrag1("c''=''4\\(\\p") }}
+  {{ rhFrag1("c=''4\\(") }}
   bes='8( a g4-.) g-. | a8( g f4-.) f-. |
-  bes8( a g4-.) g-. | a8( g f2) |
-  bes='4\( a bes | c2 bes4\) | a8( bes a4-.) g-. | f4-. f='-. r \bar "|."
+  bes='8( a g4-.) g-. | a8( g f2) |
+  bes='4\( a bes | c2 bes4\) |
+  a='8( bes a4-.) g-. | f4-. f='-. r \bar "|."
 }
 {% endmacro %}
 
@@ -18,9 +29,10 @@
 \key f \major
 \relative {
   {{ config() }}
-  f=4-\stBass fM! fm | f fM fM | f bes,@M! besM | f fM fM |
-  f=4 fM! fm | f fM fM | f bes,@M! besM | f fM fM |
+  {{ lhFrag1("f=4-\\stBass") }}
+  {{ lhFrag1("f=4") }}
   \repeat unfold 2 { c=4 c7! c7 | f fM! fm }
-  d=4 bes,@M! besM | g,=, bes,@M besM | c c7! c7 | f,=, fM! r |
+  d=4 bes,@M! besM | g,=, bes,@M besM |
+  c=4 c7! c7 | f= fM! r |
 }
 {% endmacro %}
