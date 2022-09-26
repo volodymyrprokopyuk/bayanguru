@@ -68,7 +68,7 @@
 
   \key d \major
   d=4 dM! dM | a d@M dM | a aM! aM | cis a,@M aM |
-  d=4 dM! dM | g, gM! gM | b b7! b7 | e em! em |
+  d=4 dM! dM | g, gM gM | b b7! b7 | e em! em |
   cis=4 a,@7! a7 | a a7 a7 | d dM! dM | b d@M dM |
   g=,4 gM! gM | a a7! a7 | d dM! dM | d r r | d= r r |
   \key d \minor
