@@ -6,13 +6,15 @@
 \relative {
   {{ config() }}
   \repeat volta 2 {
-    b'='\(\mp a8 g | a b g\) g | b-. b-. a-. g-. | a-. b-. g4 |
+    b'='4\(\mp a8 g | a b g\) g |
+    b='8-. b-. a-. g-. | a-. b-. g='4 |
   }
   \repeat volta 2 {
-    g='4\( fis8 e | fis g e\) e | g-. g-. fis-. e-. |
+    g='4\( fis8 e | fis g e\) e |
+    g='8-. g-. fis-. e-. |
     \alternative {
-      \volta 1 { fis-. g-. e4 | }
-      \volta 2 { fis8-. g-. e='4 \bar "|." }
+      \volta 1 { fis='8-. g-. e='4 | }
+      \volta 2 { fis='8-. g-. e='4 \bar "|." }
     }
   }
 }
@@ -23,7 +25,9 @@
 \key g \major
 \relative {
   {{ config() }}
-  g,,+gM!4-\stBass r | c@m! g,@M!4 | g,@M! r4 | c@m! g,@M!4 |
-  e,+em!4 r | a,@m! e@m4 | e@m! r4 | a,@m! e@m4 | b,,+bM! e,+em! |
+  g,,+gM!4-\stBass r | c@m! g,@M!4 |
+  g,@M! r4 | c@m! g,@M!4 |
+  e,+em!4 r | a,@m! e@m4 |
+  e@m! r4 | a,@m! e@m4 | b,,+bM! e,+em! |
 }
 {% endmacro %}
