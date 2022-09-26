@@ -1,3 +1,8 @@
+{% macro lhFrag1(a) %}
+  c=8 cM! g gM c cM! a f@M |
+  g=,8 c@M! g8 gM c= cM! {{ a }} |
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Allegretto
 \clef treble
@@ -8,9 +13,12 @@
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1/4)
   \set Timing.beatStructure = 1,1,1,1
-  g''=''8-.\mf g-. g-. e-. f-. e-. d4 | g,='8-. g-. g-. e-. f-. e-. d4 |
-  c='8-. c-. d4 e8-. e-. f4 | g='8-. e-. f-. d-. c-. c-. c4 |
-  c'=''8-. c-. d4 e8-. e-. f4 | g=''8-. e-. f-. d-. c-. c-. c=''4 \bar "|."
+  g''=''8-.\mf g-. g-. e-. f-. e-. d4 |
+  g,='8-. g-. g-. e-. f-. e-. d4 |
+  c='8-. c-. d4 e8-. e-. f4 |
+  g='8-. e-. f-. d-. c-. c-. c4 |
+  c'=''8-. c-. d4 e8-. e-. f4 |
+  g=''8-. e-. f-. d-. c-. c-. c=''4 \bar "|."
 }
 {% endmacro %}
 
@@ -19,8 +27,9 @@
 \key c \major
 \relative {
   {{ config() }}
-  c=8-\stBass cM! a c@M d8 f@M! g,8 gM | c cM! a c@M d8 f@M! g,8 gM |
-  c=8 cM! g gM c cM! a f@M | g8 c@M! g8 gM c cM! cM4 |
-  c=8 cM! g gM c cM! a f@M | g8 c@M! g8 gM c= cM! c,+cM4 |
+  c=8-\stBass cM! a c@M d8 f@M! g,8 gM |
+  c=8 cM! a c@M d8 f@M! g,8 gM |
+  {{ lhFrag1("cM4") }}
+  {{ lhFrag1("c,+cM4") }}
 }
 {% endmacro %}
