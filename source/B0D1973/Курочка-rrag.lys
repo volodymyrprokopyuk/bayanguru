@@ -1,3 +1,20 @@
+{% macro rhFrag1(a) %}
+  {{ a }} e-. c-. e-. | d4( b8 d) | c-. b-. a='4 |
+{% endmacro %}
+
+{% macro rhFrag2(a) %}
+  e'=''8-. e-. e,4 | <dis a'>8-. <dis a'>-. 4 |
+  e'=''8-. e-. e,-. e-. | {{ a }} |
+{% endmacro %}
+
+{% macro lhFrag1(a) %}
+  {{ a }} r g r | f4 r | e8 r a=4 |
+{% endmacro %}
+
+{% macro lhFrag2(a) %}
+  r4 e= | f@M!8[-. fM8]-. fM4 | r4 e= | {{ a }}
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Moderato
 \clef treble
@@ -5,21 +22,10 @@
 \time 2/4
 \relative {
   {{ config() }}
-  \repeat unfold 2 {
-    \alternative {
-      { c''=''8-.\mp e-. c-. e-. | }
-      { c=''8-. e-. c-. e-. | }
-    }
-    d4( b8 d) | c-. b-. a4 |
-  }
-  \repeat unfold 2 {
-    e'=''8-. e-. e,4 | <dis a'>8-. <dis a'>-. 4 |
-    e'=''8-. e-. e,-. e-. |
-    \alternative {
-      { <f a>8-. <f a>-. 4 | }
-      { a='8-. a-. a4 \bar "|." }
-    }
-  }
+  {{ rhFrag1("c''=''8-.\\mp") }}
+  {{ rhFrag1("c=''8-.") }}
+  {{ rhFrag2("<f=' a>8-. <f=' a>-. 4") }}
+  {{ rhFrag2("a='8-. a-. a='4") }} \bar "|."
 }
 {% endmacro %}
 
@@ -28,16 +34,9 @@
 \key a \minor
 \relative {
   {{ config() }}
-  \repeat unfold 2 {
-    \alternative {
-      { a=8-\stBass r g r | }
-      { a=8 r g r | }
-    }
-    f=4 r | e8 r a4 |
-  }
-  \repeat unfold 3 {
-    r4 e= | f@M!8[-. fM8]-. fM4 |
-  }
-  r4 e= | f8-. d=-. a,,+am!4 |
+  {{ lhFrag1("a=8-\\stBass") }}
+  {{ lhFrag1("a=8") }}
+  {{ lhFrag2("f@M!8[-. fM8]-. fM4") }}
+  {{ lhFrag2("f8-. d=-. a,,+am!4") }}
 }
 {% endmacro %}
