@@ -1,3 +1,8 @@
+{% macro rhFrag1(a) %}
+  {{ a }} e-. c-. e-. | b16( d c b a b c d) |
+  e=''8-. e-. c-. e-. | b16( d c b a='4) |
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Allegretto
 \clef treble
@@ -5,14 +10,12 @@
 \time 2/4
 \relative {
   {{ config() }}
-  e''=''8-.\mp e-. c-. e-. | b16( d c b a b c d) |
-  e8-. e-. c-. e-. | b16( d c b a4) |
-  e'=''8-. e-. c-. e-. | b16( d c b a b c d) |
-  e8-. e-. c-. e-. | b16( d c b a4) |
+  {{ rhFrag1("e''=''8-.\\mp") }}
+  {{ rhFrag1("e'=''8-.") }}
   gis='4( e8-.) e-. | e'16( d c b a8-.) a-. |
-  gis4( e8-.) e-. | a16( b c d e4) |
+  gis='4( e8-.) e-. | a16( b c d e4) |
   e=''4( b8-.) d-. | c16( d c b a b c d |
-  e f e d c d c b | a8) a a='4 \bar "|."
+  e=''16 f e d c d c b | a8) a a='4 \bar "|."
 }
 {% endmacro %}
 
@@ -23,9 +26,8 @@
   {{ config() }}
   <a,=, e'>4-\stBass r | \repeat unfold 3 { <a=, e'>4 r | }
   \repeat unfold 3 { <a=, e'>8 r <a e'> r | } <a e'> r <a e'>4 |
-  b=,8 e@7! e8 e7 | a, am! e' a,@m |
-  b8 e@7! e8 e7 | a, am! e' a,@m |
+  \repeat unfold 2 { b=,8 e@7! e8 e7 | a, am! e' a,@m | }
   gis,=,8 e@7! e'8 e7 | a, am! e' a,@m |
-  b8 e@7! e8 e7 | a,=, d@m! a,@m!4 |
+  b=,8 e@7! e8 e7 | a,=, d@m! a,@m!4 |
 }
 {% endmacro %}
