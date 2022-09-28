@@ -1,3 +1,16 @@
+{% macro rhFrag1(a) %}
+  {{ a }} c4 | f2 a,4 | c2 bes8 a | bes='2.\) |
+{% endmacro %}
+
+{% macro rhFrag2() %}
+  g'=''2\( f4 | e2 d4 | c d e='' |
+{% endmacro %}
+
+{% macro lhFrag1(a) %}
+  {{ a }} fM! fM | f fM fM | c c7! c7 | c c7 c7 |
+  c=4 c7! c7 | c c7 c7 | c c7! c7 | f= fM! fM |
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Moderato
 \clef treble
@@ -6,12 +19,12 @@
 \relative {
   {{ config() }}
   \repeat volta 2 {
-    c''=''2\(\mp c4 | f2 a,4 | c2 bes8 a | bes2.\) |
-    g'=''2\( f4 | e2 d4 | c d e | f a, bes\) |
-    c=''2\( c4 | f2 a,4 | c2 bes8 a | bes2.\) |
-    g'=''2\( f4 | e2 d4 | c d e |
+    {{ rhFrag1("c''=''2\\(\\mp") }}
+    {{ rhFrag2() }} | f a, bes\) |
+    {{ rhFrag1("c=''2\\(") }}
+    {{ rhFrag2() }} |
     \alternative {
-      \volta 1 { f2.\) | }
+      \volta 1 { f=''2.\) | }
       \volta 2 { f=''4^\repeatTie r r \bar "|." }
     }
   }
@@ -23,9 +36,7 @@
 \key f \major
 \relative {
   {{ config() }}
-  f=4-\stBass fM! fM | f fM fM | c c7! c7 | c c7 c7 |
-  c=4 c7! c7 | c c7 c7 | c c7 c7 | f fM! fM |
-  f=4 fM! fM | f fM fM | c c7! c7 | c c7 c7 |
-  c=4 c7! c7 | c c7 c7 | c c7 c7 | f= fM! fM | f,+fM! r r |
+  {{ lhFrag1("f=4-\\stBass") }}
+  {{ lhFrag1("f=4") }} | f,+fM! r r |
 }
 {% endmacro %}
