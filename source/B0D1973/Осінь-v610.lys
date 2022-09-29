@@ -6,8 +6,10 @@
 \relative {
   {{ config() }}
   \repeat volta 2 {
-    d'='8\p\( d e e | f4 d8 d\) | g\( a bes d | a4 a\) |
-    c=''8\( bes a g | f4 d4\) | e8\( f g g | d='2\) |
+    d'='8\p\( d e e | f4 d8 d\) |
+    g='8\( a bes d | a4 a\) |
+    c=''8\( bes a g | f4 d4\) |
+    e='8\( f g g | d='2\) |
   }
 }
 {% endmacro %}
@@ -17,7 +19,9 @@
 \key d \minor
 \relative {
   {{ config() }}
-  d=8-\stBass r a,@M! r8 | d r dm! r | g, r gm! r | d' r dm! r |
-  g,=,8 r gm! r | a r d@m! r8 | a r aM! r | d= r dm! r |
+  d=8-\stBass r a,@M! r8 | d r dm! r |
+  g,=,8 r gm! r | d' r dm! r |
+  g,=,8 r gm! r | a r d@m! r8 |
+  a=,8 r aM! r | d= r dm! r |
 }
 {% endmacro %}
