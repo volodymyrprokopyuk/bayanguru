@@ -18,7 +18,7 @@
 \key g \major
 \relative {
   {{ config() }}
-  e=-\stBass em! a,@m e@m4 | e em! a,@m e@m4 |
+  e=4-\stBass em! a,@m e@m4 | e em! a,@m e@m4 |
   e=8[ em!] b bM! e[ em!] a, am |
   b=,8 e@m! b8 bM! e,+em!4 r4 |
   g=,8[ gM!] d' dM e[ em!] a, am |
