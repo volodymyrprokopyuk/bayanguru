@@ -1,3 +1,8 @@
+{% macro rhFrag1(a) %}
+  {{ a }} d-. c-. b-. | a-. b-. c4 |
+  b='8-. c-. d4 | a a=' |
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Allegretto
 \clef treble
@@ -8,8 +13,8 @@
   \repeat volta 2 {
     a'='8(\mf c e4) | e4 e | d8( e f4) | e8( d c4) |
   }
-  e=''8-. d-. c-. b-. | a-. b-. c4 | b8-. c-. d4 | a a=' |
-  e'=''8-. d-. c-. b-. | a-. b-. c4 | b8-. c-. d4 | a a=' \bar "|."
+  {{ rhFrag1("e=''8-.") }}
+  {{ rhFrag1("e'=''8-.") }} \bar "|."
 }
 {% endmacro %}
 
@@ -18,8 +23,11 @@
 \key a \minor
 \relative {
   {{ config() }}
-  a,=,8[-\stBass am! am am] | a[ am am am] | a[ d@m! dm8 dm] | a am! e' a,@m |
-  gis,=,8 e@M! e'8 eM | a, am! a am | e' eM! e eM | a, am! a am |
-  d dm! d dm | e a,@m! e8 a,@m | e8 e7! e e7 | a,=,4 am! |
+  a,=,8[-\stBass am! am am] | a[ am am am] |
+  a=,8[ d@m! dm8 dm] | a am! e' a,@m |
+  gis,=,8 e@M! e'8 eM | a, am! a am |
+  e'=8 eM! e eM | a, am! a am |
+  d=8 dm! d dm | e a,@m! e8 a,@m |
+  e=8 e7! e e7 | a,=,4 am! |
 }
 {% endmacro %}
