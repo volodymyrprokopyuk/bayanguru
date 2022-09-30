@@ -45,7 +45,7 @@
   >>
   <c=' a'>8 r a'='16( f e d) |
   c='8( b) f'16( d c b) a8( gis) a=16( b c d |
-  \partial 2. { e='8)\> r <d b'>-. r \after 8.\! <c=' a'>4 \bar "|." }
+  \partial 2. { e='8)\> r <d b'>-. r \after 8.\! <c=' a'>4 } \bar "|."
 }
 {% endmacro %}
 
@@ -64,6 +64,6 @@
   g@7!2 e@7!4 r |
   a,@m!8 r8 d@m! r8 a,@m! r8 r4 |
   r4 e,+e7!8 r f,+fM! r r4 | R1 |
-  \partial 2. { r4 e=8-. r a,,+am!4 | }
+  \partial 2. { r4 e=8-. r a,,+am!4 } |
 }
 {% endmacro %}
