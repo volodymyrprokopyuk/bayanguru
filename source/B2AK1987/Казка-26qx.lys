@@ -1,0 +1,33 @@
+{% macro rightHand(config) %}
+\tempo Moderato
+\clef treble
+\key b \minor
+\time 3/8
+\relative {
+  {{ config() }}
+  b'='8(\p fis) fis | a(\> \after 4\! fis4) |
+  b='8( fis) fis | a(\> \after 4\! fis4) |
+  d'=''8(\mp cis b) | b(\< \after 16.\! ais) ais |
+  b='8( a g) | g(\>^"rit." \after 4\! fis4) |
+  cis='8\(^"a tempo" d e | fis b, b\) |
+  e='8\(-\dynCresc fis g | a d,4\) |
+  a'='8\( b d | cis b a\) |
+  b='8\( cis d | e a, a\) |
+  fis='8\(\mf e d | a' e\) e |
+  d='8\( cis b | cis a b |
+  cis='8 d e\) | fis\(-\dynDim^"rit." cis cis |
+  cis'=''8 fis, fis' | fis4.\)\fermata |
+  b,='8(\p^"a tempo" fis) fis | a( fis4) |
+  b='8( fis) fis | a( fis4) |
+  d'=''8( cis b | cis a) a |
+  d=''8(-\dynDim^"rit." b e | fis b,) b='\fermata \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key b \minor
+\relative {
+  {{ config() }}
+}
+{% endmacro %}

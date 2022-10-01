@@ -265,10 +265,9 @@ pieces:
   - { id: zykv, tit: Зайчик, sub: uafs,
       src: B2AK1987,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
-  #   p. 80
-  # - { id: 26qx, tit: Казка,
-  #     com: І. Беркович, src: B2AK1987,
-  #     org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+  - { id: 26qx, tit: Казка,
+      com: І. Беркович, src: B2AK1987,
+      org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: di18, tit: Од Києва до Лубен, sub: uafs,
       src: B2AK1987,
       org: ua, sty: flk, gnr: sng, frm: var, bss: stb, lvl: elm }

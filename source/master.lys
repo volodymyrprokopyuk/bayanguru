@@ -5,6 +5,7 @@ frBass = \markup \larger \box В % Вибiрний
 puBass = \markup \larger \box Б % Чистий бас
 
 dynCresc = \markup \lower #3 \italic "cresc."
+dynDim = \markup \lower #3 \italic "dim."
 artSimile = \markup \italic simile
 barFermata = \mark \markup \musicglyph #"scripts.ufermata"
 
