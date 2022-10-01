@@ -259,10 +259,9 @@ pieces:
   - { id: zvpg, tit: Козачок, sub: uafd,
       src: B2AK1987,
       org: ua, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
-  #   p. 76
-  # - { id: mf7s, tit: Дитяча полька,
-  #     com: М. Глинка, src: B2AK1987,
-  #     org: ua, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elm }
+  - { id: mf7s, tit: Дитяча полька,
+      com: М. Глинка, src: B2AK1987,
+      org: ua, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elm }
   - { id: zykv, tit: Зайчик, sub: uafs,
       src: B2AK1987,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
