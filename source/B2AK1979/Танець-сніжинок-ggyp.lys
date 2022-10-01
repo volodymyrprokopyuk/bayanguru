@@ -15,7 +15,7 @@
   <<
     \relative { c'''='''8-. d-. c-. d-. }
     \\
-    \relative { bes''=''2 }
+    \relative { a''=''2 }
   >> |
   <a='' c>8 r <a='' f'>2-> |
 {% endmacro %}
@@ -125,8 +125,8 @@
   a=,8 r am! r am r | d r dM! r dM r |
   bes=,8 r besM! r besM r | a r bes,@M r8 besM r |
   aes=,8 r bes,@M! r8 besM r | g r bes,@M r8 besM r |
-  bes=,8 r bes7! r bes7 r | e, r e7 r e7 r |
-  a,,+am!8 r c' r f, r | e,,+a@m!8 r8 r4 r |
+  bes=,8 r bes7! r bes7 r | e, r e7! r e7 r |
+  a,,+am!8 r c' r f, r | e,,+a,@m!8 r8 r4 r |
   a,,+am!8 r f r e r | a r r4 r |
 
   \key f \major
