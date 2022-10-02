@@ -20,10 +20,10 @@
 \relative {
   {{ config() }}
   bes,=,8-\stBass besM! bes besM | bes besM bes besM |
-  ees=8 eesM! ees eesM | bes besM bes besM |
+  ees=8 eesM! ees eesM | bes besM! bes besM |
   f=,4( fis | g8) gm! e' c@7! |
   f,=,8 f7! f f7 | bes besM! bes besM |
-  ees=8 eesM! ees eesM | bes besM bes besM |
+  ees=8 eesM! ees eesM | bes besM! bes besM |
   f=,8 f7! f f7 | bes=, besM! bes,,+besM r |
 }
 {% endmacro %}
