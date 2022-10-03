@@ -17,12 +17,12 @@
   c=''8( e16 d c8 e16 d) | c8( e d c) |
   b='8( d16 c b8 d16 c) | b8( d c b) |
   a='8( c16 b a8 c16 b) | a8( c b a) |
-  gis='8 b e gis | a=''2 |
+  gis='8( b e gis | a=''2) |
 
   a,='16(\p e a c a e a c) | a( e a e' d c b a) |
   gis='16( e gis b gis e gis b) | gis( e gis b e d c b) |
   a='16( e a c a e a c) | a( e a e' d c b a) |
-  gis='16( e gis b e d c b) | a2 |
+  gis='16( e gis b e d c b | a2) |
   c=''16( g c e c g c e) | c( g c g' f e d c) |
   b='16( g b d b g b d) | b( f b f' e d c b) |
   a='16( e a c a e a c) | a( e a e' d c b a) |
