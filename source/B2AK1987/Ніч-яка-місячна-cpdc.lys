@@ -5,7 +5,7 @@
 \time 3/4
 \relative {
   {{ config() }}
-  e''=''4\(\p d c | c b\< a\) | b\( b b | b gis \after 4\! e\) |
+  e''=''4\(\p d c | c b\< a\) | b\( b \after 4\! b | b gis e\) |
   e='4\( gis b | d c b | a2.~\> | \after 4\! a4\) r r |
   c=''4\( c c | c b c\) | d\( d\< d | d e \after 4\! f\) |
   e=''4\( e e | e b\> c | a2.~ | \after 8.\! a4\) r r |
