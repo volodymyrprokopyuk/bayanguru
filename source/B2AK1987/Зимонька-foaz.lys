@@ -1,0 +1,36 @@
+{% macro rhFrag1(a) %}
+  {{ a }} d g a b4( g) | a8 a e fis g4( d=') |
+{% endmacro %}
+
+{% macro rhFrag2() %}
+  e='8[(->\< d]) e(-> \after 16.\! d)
+  f='8[(->\> e]) d-. \after 8\! d='-. |
+{% endmacro %}
+
+{% macro rightHand(config) %}
+\tempo Allegretto
+\clef treble
+\key g \major
+\time 4/4
+\relative {
+  {{ config() }}
+  <g''='' g'>8-.\mf r d'-. r <a a'>8[-. 8]-. d-. r |
+  g,=''16( a b c d8-.) d-. <a a'>8[-. 8]-. d-. r |
+  g,=''8\f r d-. d-. \acciaccatura { dis8 } e4(-> d8) r |
+  g,='8[-.\p g]-. d-. d-. \acciaccatura { dis8 } e4(-> d8) r |
+  {{ rhFrag1("d='8\\mp") }}
+  {{ rhFrag1("d='8") }}
+  {{ rhFrag2() }}
+  {{ rhFrag2() }}
+  b'='4-> g8 g a16( b a b) g8-. g-. |
+  b='4(-> g8)-. g-. a16( b a b g='4) \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key g \major
+\relative {
+  {{ config() }}
+}
+{% endmacro %}
