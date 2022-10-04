@@ -34,10 +34,10 @@
 
   \repeat unfold 2 {
     \alternative {
-      { b='16(\mf ais b d a gis a d) | }
-      { b='16( ais b d a gis a d) | }
+      { b='16(\mf ais b d) a( gis a d) | }
+      { b='16( ais b d) a( gis a d) | }
     }
-    b( ais b e) d8( c ) | b='16( ais b d a gis a d) |
+    b( ais b e) d8( c ) | b='16( ais b d) a( gis a d) |
     \alternative {
       { b='16( c b a g='4) | }
       { b='16( c b a g='8) r \bar "||" }
