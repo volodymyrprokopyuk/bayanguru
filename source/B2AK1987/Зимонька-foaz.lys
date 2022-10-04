@@ -32,5 +32,15 @@
 \key g \major
 \relative {
   {{ config() }}
+  g,@M!8[-.-\stBass gM8]-. gM-. gM-. d@7!8[-. d78]-. d7-. d7-. |
+  g,@M!8[-. gM8]-. gM-. gM-. d@7!8[-. d78]-. d7-. r |
+  \repeat unfold 2 { g,,+gM!8-> r r4 d,+d7!~ d,+d78 r | }
+  g,=,8( gM!4) gM8-. g[ gM!] e' g,@M |
+  a,=,8[ am!] d d7! g,( gM!4) gM8-. |
+  g=,8( fis' e d g,[) gM!] e' em! |
+  a,=,8[ am!] d d7! g,( gM!4) gM8-. |
+  \repeat unfold 2 { g=,8( gM!4) gM8-. d,+dm!4 a,,+d@7! | }
+  g=,8( gM!4) gM8-. d'[ d7!] g, gM! |
+  a=,8( a7!4) a78-. d=[ d7!] g,,+gM!4 |
 }
 {% endmacro %}
