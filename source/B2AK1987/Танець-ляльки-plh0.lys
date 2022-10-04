@@ -61,9 +61,9 @@
   \repeat unfold 2 { r4 b,,+b7!8 r e,+em! r r4 | }
 
   \repeat unfold 3 { R1 | }
-  g@7!2 e@7!4 r |
+  g,@7!2 e@7!4 r |
   a,@m!8 r8 d@m! r8 a,@m! r8 r4 |
-  r4 e,+e7!8 r f,+fM! r r4 | R1 |
+  r4 e,+e7!8 r f,,+fM! r r4 | R1 |
   \partial 2. { r4 e=8-. r a,,+am!4 } |
 }
 {% endmacro %}
