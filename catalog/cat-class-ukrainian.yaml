@@ -280,7 +280,6 @@ pieces:
   - { id: foaz, tit: Зимонька,
       com: К. Мясков, src: B2AK1987,
       org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
-  #   p. 92
-  # - { id: foaz, tit: Прелюд,
-  #     com: К. Мясков, src: B2AK1987,
-  #     org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+  - { id: f45r, tit: Прелюд,
+      com: К. Мясков, src: B2AK1987,
+      org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
