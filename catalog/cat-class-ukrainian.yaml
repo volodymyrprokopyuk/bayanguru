@@ -256,6 +256,9 @@ pieces:
   - { id: plh0, tit: Танець ляльки,
       com: І. Беркович, src: B2AK1987,
       org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+  - { id: i11j, tit: Бджілка,
+      com: К. Мясков, src: B2AK1987,
+      org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: zvpg, tit: Козачок, sub: uafd,
       src: B2AK1987,
       org: ua, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }

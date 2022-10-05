@@ -1,0 +1,38 @@
+{% macro rhFrag1(a) %}
+  {{ a }} ees d\< ees e f e \after 16\! ees |
+  d=''8-.) \acciaccatura { cis'8 } d\> \after 4\! d,=''4 |
+  d,='16( ees d\< ees e f e \after 16\! ees |
+  d='8-.) \acciaccatura { cis'8 } d\> \after 4\! d,='4 |
+{% endmacro %}
+
+{% macro rhFrag2() %}
+  e='8-. e( g)-.  g-. | d4-- d='-- |
+{% endmacro %}
+
+{% macro rightHand(config) %}
+\tempo Allegretto
+\clef treble
+\key g \major
+\time 2/4
+\relative {
+  {{ config() }}
+  {{ rhFrag1("d''=''16(\\p") }}
+  \repeat volta 2 {
+    b'='8\mp b a( g) | a4( e) | a8 a g fis | g4 d |
+    {{ rhFrag2() }} {{ rhFrag2() }}
+    \alternative {
+      \volta 1 { {{ rhFrag1("d'=''16(") }} }
+      \volta 2 { {{ rhFrag1("d'=''16(") }} }
+    }
+  }
+  a'='8 a e fis | g4 <g=' b d g>-> \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key g \major
+\relative {
+  {{ config() }}
+}
+{% endmacro %}
