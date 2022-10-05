@@ -8,28 +8,30 @@
   \after 2.\! b'='2.~(\p\< | b8\> c b c b \after 8\! fis') |
   \after 2.\! b,='2.~(\< | b8\> c b c b \after 8\! a') |
   g=''4.(-- fis8 e b) | e4.(-- d8 c g) |
-  c=''8(\< b a e fis \after 8\! c') |
   <<
-    \relative { \after 2.\! b'='2.\> }
+    \relative {
+      c''=''8(\< b a e fis \after 8\! c' |
+      \after 2.\! b='2.)\> |
+    }
     \\
-    \relative { r4 g'='4( fis) }
-  >> |
+    \relative { s2. | r4 g'='4( fis) | }
+  >>
   b='2.~(\mp | b8-\dynCresc c b c b fis') |
   b,='2.~ | b8 c( cis d f a) |
   <dis,='' fis>4.(--\< <e g>8 <f a> \after 8\! <e g>) |
   <<
-    \relative { c'''='''2(\> \after 4\! b4) }
+    \relative { c'''='''2(\> \after 4\! b4) | }
     \\
-    \relative { d''=''2. }
-  >> |
+    \relative { d''=''2. | }
+  >>
   <a,=' cis>4.(--\< <b d>8 <c ees> \after 8\! <cis e>) |
   <g'='' bes>2(\> \after 4\! <f a>4) |
   g=''8(-- f d b a f) | g'(-- fis e b g e) |
   <<
-    \relative { g'='2\< \after 4\! g4 }
+    \relative { g'='2\< \after 4\! g4 | }
     \\
-    \relative { r8 bes=8( c e) <a,= dis>4 }
-  >> |
+    \relative { r8 bes=8( c e) <a,= dis>4 | }
+  >>
   <b= e>8(^"rit" <cis fis> <d g> <fis b>) <g=' b e>4-- \bar "|."
 }
 {% endmacro %}
@@ -39,5 +41,15 @@
 \key e \minor
 \relative {
   {{ config() }}
+  e=4(-\stBass em!) em | dis( b,@7!) b7 |
+  e=4( em!) em | dis( b,@7!) b7 |
+  e=4( em!) em | c( cM!) cM |
+  a=,4( am!) am | dis( b,@7!) b7 |
+  e=4( em!) em | dis( b,@7!) b7 |
+  e=4( em!) em | g,( g7!) g7 |
+  c=4( cM!) cM | gis( e@7!) e7 |
+  a=,4( a7!) a7 | d( dm!) dm |
+  b=,4 (d@m!) dm | b( e@m!) em |
+  c=2( b4) | e=( em!) am |
 }
 {% endmacro %}
