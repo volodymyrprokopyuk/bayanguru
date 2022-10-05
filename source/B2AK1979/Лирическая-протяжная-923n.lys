@@ -42,11 +42,11 @@
     }
   >>
   r8\< <a,= d fis>4 \after 8\! 8 | r <gis bis dis fis>4 8 |
-  r8\> <gis= b d fis>4 \after 8\! 8 | r\p <a cis fis>4^"rit." <cis fis>8
+  r8\> <gis= b d fis>4 \after 8\! 8 | r\p <a cis fis>4^"rit."
   <<
-    \relative { a'='4\> \after 4\! cis | cis=''\pp }
+    \relative { s8 | a'='4\> \after 4\! cis | cis=''\pp }
     \\
-    \relative { fis'='8 fis4 <fis a>8~ | <fis=' a>4 }
+    \relative { <cis'=' fis(>8 | fis) fis4 <fis a>8~ | <fis=' a>4 }
   >>
   r4 \bar "|."
 }
