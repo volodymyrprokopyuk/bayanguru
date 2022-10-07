@@ -5,7 +5,7 @@
 
 {% macro lhFrag1(a, b) %}
   {{ a }} am! a am | e' e7! a, am! |
-  a=,8 am a am | e' e7! {{ b }} |
+  a=,8 am a am | e'= e7! {{ b }} |
 {% endmacro %}
 
 {% macro rightHand(config) %}
@@ -15,7 +15,7 @@
 \time 2/4
 \relative {
   {{ config() }}
-  {{ rhFrag1("e''=''4\\mf", "c4") }}
+  {{ rhFrag1("e''=''4\\mf", "c=''4") }}
   {{ rhFrag1("e=''4", "a='4") }} \bar "|."
 }
 {% endmacro %}
