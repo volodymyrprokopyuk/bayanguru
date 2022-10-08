@@ -1,3 +1,18 @@
+{% macro rhFrag1(a) %}
+  {{ a }} c c e | g g g e |
+  d=''4 d g f | e2 c='' |
+{% endmacro %}
+
+{% macro lhFrag1(a) %}
+  {{ a }} cM! cM cM | c cM cM cM |
+  g=,4 g7! g7 g7 | c= cM! cM cM |
+{% endmacro %}
+
+{% macro lhFrag2(a, b) %}
+  {{ a }} eM! eM eM | a, am! am am |
+  e'=4 e7! e7 e7 | a,=, am! {{ b }}
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Moderato
 \clef treble
@@ -5,15 +20,12 @@
 \time 4/4
 \relative {
   {{ config() }}
-  \repeat unfold 2 {
-    \alternative {
-      { c''=''4\f c c e | }
-      { c=''4 c c e | }
-    }
-    g g g e | d d g f | e2 c |
-  }
-  e=''4\(\mp d c b | a b c d\) | e\( d c b | a2 a'\) |
-  e=''4\( d c b | a b c2\) | e4\( d c b | a2\) a=' \bar "|."
+  {{ rhFrag1("c''=''4\\f") }}
+  {{ rhFrag1("c=''4") }}
+  e=''4\(\mp d c b | a b c d\) |
+  e=''4\( d c b | a2 a'\) |
+  e=''4\( d c b | a b c2\) |
+  e=''4\( d c b | a2\) a=' \bar "|."
 }
 {% endmacro %}
 
@@ -22,19 +34,9 @@
 \key a \minor
 \relative {
   {{ config() }}
-  \repeat unfold 2 {
-    \alternative {
-      { c=4-\stBass cM! cM cM | }
-      { c=4 cM! cM cM | }
-    }
-    c cM cM cM | g g7! g7 g7 | c cM! cM cM |
-  }
-  \repeat unfold 2 {
-    e eM! eM eM | a, am! am am | e' e7! e7 e7 |
-    \alternative {
-      { a, am! am am | }
-      { a=, am! am2 | }
-    }
-  }
+  {{ lhFrag1("c=4-\\stBass") }}
+  {{ lhFrag1("c=4") }}
+  {{ lhFrag2("e=4","am am") }}
+  {{ lhFrag2("e'=4", "am2") }}
 }
 {% endmacro %}
