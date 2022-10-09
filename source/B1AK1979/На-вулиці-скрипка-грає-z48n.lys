@@ -1,24 +1,24 @@
 {% macro rhFrag1(a, b) %}
   {{ a }} e f g a8-.) a-. | bes16( a bes8) a16( g a8) |
-  g4-- f16( e f8) | e16( d e8) d-. d-. |
+  g='4-- f16( e f8) | e16( d e8) d-. d-. |
   d='16( e f g a8-.) a-. | bes-. bes-. a16( g a8) |
-  a8[( f' e cis] | d-.) d-. {{ b }} |
+  a='8[( f' e cis] | d-.) d-. {{ b }} |
 {% endmacro %}
 
 {% macro rhFrag2(a) %}
   {{ a }} d16 c8-.) bes-. | a[-. a-. a-. a]-. |
-  g8[( a bes-.) bes]-. |
+  g='8[( a bes-.) bes]-. |
 {% endmacro %}
 
 {% macro lhFrag1(a, b) %}
   {{ a }} dm! f, d@m | g8 gm! f d@m |
-  e'8 a,@7! d8 dm! | a a7! d dm! |
+  e'=8 a,@7! d8 dm! | a a7! d dm! |
   d=8 dm! f, d@m | g8 gm! f d@m |
-  e'8 a,@7! a,8 a7 | d dm! {{ b }} |
+  e'=8 a,@7! a,8 a7 | d dm! {{ b }} |
 {% endmacro %}
 
 {% macro lhFrag2() %}
-  c=8 cM! e c@M | f,8 fM! c' f,@M | c8 cM! g c@M |
+  c=8 cM! e c@M | f,8 fM! c' f,@M | c8 cM! g=, c@M |
 {% endmacro %}
 
 {% macro rightHand(config) %}
@@ -41,8 +41,8 @@
 \relative {
   {{ config() }}
   {{ lhFrag1("d=8-\\stBass", "d= dm") }}
-  {{ lhFrag2() }} | f8 fM c' f,@M |
-  {{ lhFrag2() }} | f8 fM f fM |
+  {{ lhFrag2() }} | f8 fM! c' f,@M |
+  {{ lhFrag2() }} | f8 fM! f fM |
   {{ lhFrag1("d'=8", "d,+dm4") }}
 }
 {% endmacro %}
