@@ -24,7 +24,7 @@
   a=''8-. g-. g16( f e8) | g-. g,-. g'-. f-. |
   f=''8-. e-. e16( d c8) | b'-. g,-. b'-. a-. |
   a=''8-. g-. g16( f e8) | cis16( d b' a g f e d |
-  c=''8) \acciaccatura { d8 } c16( b d=''4) \bar "|."
+  c=''8) \acciaccatura { d8 } c16( b c=''4) \bar "|."
 }
 {% endmacro %}
 
@@ -48,6 +48,6 @@
     c a,@m! am8 r | d d7! d7 r | g, gM! gM r |
   }
   g=,8 g7! g7 r | c cM! cM r | d g,@7! g78 r | c cM! cM r |
-  d=8 g,@7! g,8 g7 | c cM! cM r | f, d@m! g8 gm! | c= cM! cM4 |
+  d=8 g,@7! g,8 g7 | c cM! cM r | f, d@m! g8 g7! | c= cM! cM4 |
 }
 {% endmacro %}
