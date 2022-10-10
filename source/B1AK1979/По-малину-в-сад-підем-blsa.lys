@@ -1,3 +1,13 @@
+{% macro rhFrag1(a) %}
+  {{ a }} a' a a | bes bes a4\) |
+  g='8( g f4) | e8( e d='4) |
+{% endmacro %}
+
+{% macro lhFrag1(a) %}
+  {{ a }} dm!-.) f( d@m-.) | g,8( gm!-.) d'( dm-.) |
+  cis=( a,@7!-.) d8( dm!-.) | a( a7!-.) d=( dm!-.) |
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Allegretto
 \clef treble
@@ -5,10 +15,12 @@
 \time 2/4
 \relative {
   {{ config() }}
-  d'='8\(\mf a' a a | bes bes a4\) | g8( g f4) | e8( e d4) |
-  d='8\(\f a' a a | bes bes a4\) | g8\( g f4 | e8 e d4\) |
-  e='4\(\mp e8 e | d e f4\) | e8\( f g e | f4 d\) |
-  a'='4\(\mf a8 g | f e d4\) | e8\(\p f g e | d4\) d=' \bar "|."
+  {{ rhFrag1("d'='8\\(\\mf") }}
+  {{ rhFrag1("d='8\\(\\f") }}
+  e='4\(\mp e8 e | d e f4\) |
+  e='8\( f g e | f4 d\) |
+  a'='4\(\mf a8 g | f e d4\) |
+  e='8\(\p f g e | d4\) d=' \bar "|."
 }
 {% endmacro %}
 
@@ -17,14 +29,8 @@
 \key d \minor
 \relative {
   {{ config() }}
-  \repeat unfold 2 {
-    \alternative {
-      { d=8(-\stBass dm!-.) f( d@m-.) | }
-      { d=8( dm!-.) f( d@m-.) | }
-    }
-    g,8( gm!-.) d'( dm-.) |
-    cis=( a,@7!-.) d8( dm!-.) | a( a7!-.) d( dm!-.) |
-  }
+  {{ lhFrag1("d=8(-\\stBass") }}
+  {{ lhFrag1("d=8(") }}
   a=,8( aM!-.) g( a,@M-.) | f'8( d@m!-.) d8( dm-.) |
   cis=8( a,@7!-.) a8( a7-.) | d( dm!-.) f( d@m-.) |
   cis=8( a,@7!-.) a8( a7-.) | d( dm!-.) f( d@m-.) |
