@@ -1,3 +1,8 @@
+{% macro lhFrag1(a, b) %}
+  {{ a }} cM! cM | f, fM! {{ b }} |
+  g=,4 g7! g7 | c= cM! cM |
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Allegretto
 \clef treble
@@ -5,8 +10,10 @@
 \time 3/4
 \relative {
   {{ config() }}
-  c'='8\mf e g4 c | b8 a a2 | f8 e d4 a' | a g2 |
-  c,='8 e g4 c | b8 a a4 g | f8 e d4 e | c c='2 \bar "|."
+  c'='8\mf e g4 c | b8 a a2 |
+  f='8 e d4 a' | a g2 |
+  c,='8 e g4 c | b8 a a4 g |
+  f='8 e d4 e | c c='2 \bar "|."
 }
 {% endmacro %}
 
@@ -15,7 +22,7 @@
 \key c \major
 \relative {
   {{ config() }}
-  c=4-\stBass cM! cM | f, fM fM | g g7! g7 | c cM! cM |
-  c=4 cM! cM | f, fM! c@M | g4 c7! c7 | c= cM! cM |
+  {{ lhFrag1("c=4-\\stBass", "fM") }}
+  {{ lhFrag1("c=4", "c@M") }}
 }
 {% endmacro %}
