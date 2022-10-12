@@ -6,13 +6,13 @@
 \relative {
   {{ config() }}
   <d''='' f>8.(\mf <c ees>16 <bes d>4) |
-  <d f>8.( <c ees>16 <bes d>4) |
-  <d f>8 8 8 <ees g> |
-  <d f>8.( <c ees>16 <bes d>4) |
+  <d='' f>8.( <c ees>16 <bes d>4) |
+  <d='' f>8 8 8 <ees g> |
+  <d='' f>8.( <c ees>16 <bes d>4) |
   g='8(\mp g16 a bes8 g) | c( c16 d ees8 c) |
-  d8.( c16 bes8 a | g4) g |
+  d=''8.( c16 bes8 a | g4) g |
   g='8.(\mf a16 bes8 g) | c8.( d16 ees8 c) |
-  <bes d>8. <a c>16 <g bes>8 <fis a> | g g g='4 \bar "|."
+  <bes=' d>8. <a c>16 <g bes>8 <fis a> | g g g='4 \bar "|."
 }
 {% endmacro %}
 
@@ -22,10 +22,10 @@
 \relative {
   {{ config() }}
   bes,=,8-\stBass besM! bes besM | bes besM bes besM |
-  bes8 besM! f f7! |  bes besM! bes besM |
+  bes=,8 besM! f f7! | bes besM! bes besM |
   g=,8[( gm!) gm gm] | c[( cm!) cm cm] |
-  d[( d7!) d7 d7] | g,[( gm!) gm gm] |
+  d=8[( d7!) d7 d7] | g,[( gm!) gm gm] |
   bes=,8 g,@m! g8 gm | ees' c@m! c8 cm |
-  d8 d7! d8 d7 | g,=, gm! g,,+gm4 |
+  d=8 d7! d8 d7 | g,=, gm! g,,+gm4 |
 }
 {% endmacro %}
