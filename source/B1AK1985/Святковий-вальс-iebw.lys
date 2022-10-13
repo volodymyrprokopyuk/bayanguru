@@ -1,3 +1,18 @@
+{% macro rhFrag1(a) %}
+  {{ a }} ees4 | <aes c>2.\) |
+  <g=' bes>2\( <f aes>4 | <ees=' g>2.\) |
+{% endmacro %}
+
+{% macro lhFrag1(a) %}
+  {{ a }} eesM! eesM | e c@7! c74 |
+  f,=,4 fm! fm |
+{% endmacro %}
+
+{% macro lhFrag2() %}
+  f,=,4 fm! fm | bes bes7! bes7 |
+  ees=4 eesM! eesM |
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Moderato
 \clef treble
@@ -8,13 +23,11 @@
   bes'='2\(\mf aes4 | g2 bes4 | aes2 g4 | f2.\) |
   aes='2\( g4 | f2.\) | g2\( f4 | ees2.\) |
   bes'='2\( c4 | bes2 g4 | aes2 g4 | f2.\) |
-  bes='2\( aes4 | g2 f4 | ees2.~ | ees2.\) |
+  bes='2\( aes4 | g2 f4 | ees2.~ | ees='2.\) |
 
-  ees='2\( ees4 | <aes c>2.\) |
-  <g=' bes>2\( <f aes>4 | <ees g>2.\) |
+  {{ rhFrag1("ees='2\\(") }}
   f='2\( g4 | aes2 f4 | bes2.~ | bes2.\) |
-  ees,='2\( ees4 | <aes c>2.\) |
-  <g=' bes>2\( <f aes>4 | <ees g>2.\) |
+  {{ rhFrag1("ees,='2\\(") }}
   aes='2\( c4 | g2 f4 | ees2.~ | ees='4\) r r \bar "|."
 
 }
@@ -25,22 +38,18 @@
 \key ees \major
 \relative {
   {{ config() }}
-  ees=4-\stBass eesM! eesM | e c@7! c74 |
-  f,=,4 fm! fm | aes f,@m! fm4 |
+  {{ lhFrag1("ees=4-\\stBass") }} | aes f,@m! fm4 |
   bes=,4 bes7! bes7 | d bes,@7! bes74 |
   ees=4 eesM! eesM | g, ees@M! eesM4 |
-  ees'=4 eesM! eesM | e c@7! c74 |
-  f,=,4 fm! fm | bes bes7! bes7 |
+  {{ lhFrag1("ees'=4") }} | bes bes7! bes7 |
   d=4 bes,@7! bes74 | bes bes7! bes7 |
-  ees=4 eesM! eesM | bes ees@M! eesM4 |
+  ees=4 eesM! eesM | bes=, ees@M! eesM4 |
 
   aes=,4( aesM!) aesM | f( aes,@M!) aesM4 |
   bes=,4( bes7!) bes7 | ees( eesM!) eesM |
-  f,=,4 fm! fm | bes bes7! bes7 |
-  ees=4 eesM! eesM | g, ees@M! eesM |
+  {{ lhFrag2() }} | g, ees@M! eesM |
   aes=,4( aesM!) aesM | f( aes,@M!) aesM4 |
   bes=,4( besm!) besm | c( cm!) cm |
-  f,=,4 fm! fm | bes bes7! bes7 |
-  ees=4 eesM! eesM | ees,+eesM! r r |
+  {{ lhFrag2() }} | ees,+eesM! r r |
 }
 {% endmacro %}
