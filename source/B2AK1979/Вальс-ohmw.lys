@@ -2,13 +2,13 @@
   {{ a }} bes <f a>4-.) 4-. | <f d'>-. <f a>2-> |
   <e=' g>8( a <e g>4-.) 4-. | <g e'>-. <e g>2-> |
   <d=' f>8( g <d f>2) | <bes e>8( f' <bes, e>2) |
-  <a= cis>8( e' a g f e |
+  <a= cis>8( e' a g f e=' |
 {% endmacro %}
 
 {% macro lhFrag1(a) %}
   {{ a }} dm | d( dm) dm |
   cis=4( a,@M!) aM | cis( a,@M) aM |
-  d=4( dm!) dm | g,( gm) gm |
+  d=4( dm!) dm | g,( gm!) gm |
   a=,( a7!) a7 |
 {% endmacro %}
 
@@ -24,23 +24,26 @@
     \repeat volta 2 {
       {{ rhFrag1("<f'=' a>8(\\mp") }}
       \alternative {
-        \volta 1 { d='8 e f g a4) | }
+        \volta 1 { d='8 e f g a='4) | }
         \volta 2 { d,='2\repeatTie r4 | }
       }
     }
 
-    c='8(\mf d c e f g | a2.) | bes8( a g4) a | c2. |
-    c,='8( d c e f g | a2.) | bes8( a g4 e | \after 2.\! a2.\>) |
-    {{ rhFrag1("<f=' a>8(\\p") }}
-    d='4) <d f d'>2 |
+    c='8(\mf d c e f g | a2.) |
+    bes='8( a g4) a | c2. |
+    c,='8( d c e f g | a2.) |
+    bes='8( a g4 e | \after 2.\! a2.\>) |
+    {{ rhFrag1("<f=' a>8(\\p") }} | d4) <d=' f d'>2 |
 
     \volta 2 \fine
     \key d \major
     \repeat volta 2 {
-      <fis=' a>2(\mf b4 | <fis a>2.) | <g a>4( b cis | <g a>2.) |
+      <fis=' a>2(\mf b4 | <fis a>2.) |
+      <g=' a>4( b cis | <g a>2.) |
       <fis=' d'>2( <fis cis'>4 | <g b>2.) |
       <dis=' b'>2( <dis a'>4 | <e g>2.) |
-      g='4\( e fis | g <fis a> <g b> | <fis a>2. | <fis d'>2.\) |
+      g='4\( e fis | g <fis a> <g b> |
+      <fis=' a>2. | <fis d'>2.\) |
       <g=' e'>2. | <g a>2. | <fis d'>2.~ |
       \alternative {
         \volta 1 { <fis=' d'>4 a g=' | }
@@ -57,20 +60,24 @@
 \key d \minor
 \relative {
   {{ config() }}
-  {{ lhFrag1("d=4(-\\stBass dm!)") }}
-  d( dm!) dm |
+  {{ lhFrag1("d=4(-\\stBass dm!)") }} | d=( dm!) dm |
   << \relative { r4 dm! } \\ \relative { d=2 } >> r4 |
 
-  g,=,4 c@7! c7 | f fM! fM | c' c7! c7 | f, fM! fM |
-  g=,4 c@7! c7 | f fM! fM | g gm! gm | a a7! a7 |
-  {{ lhFrag1("d=4( dm!)") }}
-  d=4 dm!2 |
+  g,=,4 c@7! c7 | f fM! fM |
+  c'=4 c7! c7 | f, fM! fM |
+  g=,4 c@7! c7 | f fM! fM |
+  g=,4 gm! gm | a a7! a7 |
+  {{ lhFrag1("d=4( dm!)") }} | d=4 dm!2 |
 
   \key d \major
-  d=4 dM! dM | a d@M dM | a aM! aM | cis a,@M aM |
-  d=4 dM! dM | g, gM gM | b b7! b7 | e em! em |
-  cis=4 a,@7! a7 | a a7 a7 | d dM! dM | b d@M dM |
-  g=,4 gM! gM | a a7! a7 | d dM! dM | d r r | d= r r |
+  d=4 dM! dM | a d@M dM |
+  a=,4 aM! aM | cis a,@M aM |
+  d=4 dM! dM | g, gM gM |
+  b=,4 b7! b7 | e em! em |
+  cis=4 a,@7! a7 | a a7 a7 |
+  d=4 dM! dM | b d@M dM |
+  g=,4 gM! gM | a a7! a7 |
+  d=4 dM! dM | d r r | d= r r |
   \key d \minor
 }
 {% endmacro %}
