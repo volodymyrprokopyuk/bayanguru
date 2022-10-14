@@ -22,7 +22,7 @@
   {{ rhFrag1("d='8") }}
   {{ rhFrag2() }}
   {{ rhFrag2() }}
-  b'='4-> g8 g a16( b a b) g8-. g-. |
+  b'='4(-> g8)-. g-. a16( b a b) g8-. g-. |
   b='4(-> g8)-. g-. a16( b a b g='4) \bar "|."
 }
 {% endmacro %}
