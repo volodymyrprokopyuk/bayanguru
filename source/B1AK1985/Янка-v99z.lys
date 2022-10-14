@@ -5,11 +5,21 @@
   a='8-. cis-. e-. cis-. | d-. fis-. d=''4-> |
 {% endmacro %}
 
+{% macro rhFrag2(a) %}
+  {{ a }} e-. d-. d-. | cis16( d e8) a, cis |
+  b='16( cis d8) gis, b=' |
+{% endmacro %}
+
 {% macro lhFrag1(a, b) %}
   {{ a }} dM! d dM | g, gM! gM gM |
   a=,8 a7! a a7 | d dM! dM dM |
   d=8 dM! d dM | g, gM! gM gM |
   a=,8 a7! a a7 | d dM! {{ b }} |
+{% endmacro %}
+
+{% macro lhFrag2() %}
+  a=,8 aM! e' e7! | a, aM! aM aM |
+  gis=,8 e@7! e'=8 e7 |
 {% endmacro %}
 
 {% macro rightHand(config) %}
@@ -21,10 +31,8 @@
   {{ config() }}
   {{ rhFrag1("fis'='16(\\mf") }}
 
-  e=''8-.\mp e-. d-. d-. | cis16( d e8) a, cis |
-  b='16( cis d8) gis, b | a a16( cis e4) |
-  e=''8-. e-. d-. d-. | cis16( d e8) a, cis |
-  b='16( cis d8) gis, b | a-.\< r \after 4\! a='4-> |
+  {{ rhFrag2("e=''8-.\\mp") }} | a a16( cis e4) |
+  {{ rhFrag2("e=''8-.") }} | a-.\< r \after 4\! a='4-> |
 
   {{ rhFrag1("fis='16(\\f") }} \bar "|."
 }
@@ -37,10 +45,8 @@
   {{ config() }}
   {{ lhFrag1("d=8-\\stBass", "dM4") }}
 
-  a=,8 aM! e' e7! | a, aM! aM aM |
-  gis=,8 e@7! e'8 e7 | a, aM! aM aM |
-  a=,8 aM! e' e7! | a, aM! aM aM |
-  gis=,8 e@7! e'8 e7 | a, g fis e |
+  {{ lhFrag2() }} | a, aM! aM aM |
+  {{ lhFrag2() }} | a, g fis e=, |
 
   {{ lhFrag1("d'=8", "d,+dM4") }}
 }
