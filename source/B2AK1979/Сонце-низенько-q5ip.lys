@@ -1,3 +1,20 @@
+{% macro rhFrag1() %}
+  <e=' fis c'>8\mf <dis fis b>8.-> dis16( |
+  fis='8\> \after 4\! e4) |
+  <e=' fis c'>8\< <dis fis b>8.-> \after 16\! <a' b dis>16 |
+  <a=' b fis'>8(\f\> \after 16.\! <g=' b e>) r |
+{% endmacro %}
+
+{% macro lhFrag1(a) %}
+  {{ a }} em! em | e em em |
+  b=,8 b7! b7 | b b7 b7 |
+{% endmacro %}
+
+{% macro lhFrag2() %}
+  a=,8 b4 | e8 em! em |
+  a,=,8 b=,4 | b,,+b7!8( e,+em!) r |
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Andante
 \clef treble
@@ -10,23 +27,23 @@
   fis='16\( g a8[ a] | a16 fis b a g fis\) |
   g='16\( a b8[ b] | b16 a c b a g\) |
   fis='16\( g a8[ a] | a16 fis b a g fis\) |
-  <e=' fis c'>8\mf <dis fis b>8.-> dis16( | fis8\> \after 4\! e4) |
-  <e=' fis c'>8\< <dis fis b>8.-> \after 16\! <a' b dis>16 |
-  <a=' b fis'>8(\f\> \after 16.\! <g b e>) r |
+  {{ rhFrag1() }}
+
   <<
-    \relative { e''=''4.~\mp | e | dis~ | dis | e~ | e | dis~ | dis='' | }
+    \relative {
+      e''=''4.~\mp | e | dis~ | dis |
+      e=''4.~ | e | dis~ | dis='' |
+    }
     \\
     \relative {
       \set subdivideBeams = ##t
       e''=''8\( b b | b16 a c b a g\) |
       fis='16\( g a8[ a] | a16 fis b a g fis\) |
       g='16\( a b8[ b] | b16 a c b a g\) |
-      fis='16\( g a8[ a] | a16 fis b a g fis\) |
+      fis='16\( g a8[ a] | a16 fis b a g fis='\) |
     }
   >>
-  <e=' fis c'>8\mf <dis fis b>8.-> dis16( | fis8\> \after 4\! e4) |
-  <e=' fis c'>8\< <dis fis b>8.-> \after 16\! <a' b dis>16 |
-  <a=' b fis'>8(\f\> \after 16.\! <g=' b e>) r \bar "|."
+  {{ rhFrag1() }} \bar "|."
 }
 {% endmacro %}
 
@@ -35,12 +52,13 @@
 \key e \minor
 \relative {
   {{ config() }}
-  e=8-\stBass em! em | e em em | b b7! b7 | b b7 b7 |
-  e=8 em! em | e em em | b b7! b7 | b b7 b7 |
-  a=,8 b4 | e8 em! em | a, b4 | b,,+b7!8( e,+em!) r |
+  {{ lhFrag1("e=8-\\stBass") }}
+  {{ lhFrag1("e=8") }}
+  {{ lhFrag2() }}
   \repeat unfold 2 {
-    e=8 em! em | g,[ e@m em8] | b b7! b7 | b b7 b7 |
+    e=8 em! em | g,[ e@m em8] |
+    b=,8 b7! b7 | b b7 b7 |
   }
-  a=,8 b4 | e8 em! em | a, b=,4 | b,,+b7!8( e,+em!) r |
+  {{ lhFrag2() }}
 }
 {% endmacro %}
