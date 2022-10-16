@@ -1,4 +1,4 @@
-\version "2.23.10"
+\version "2.23.14"
 
 stBass = \markup \larger \box Г % Готовий
 frBass = \markup \larger \box В % Вибiрний
