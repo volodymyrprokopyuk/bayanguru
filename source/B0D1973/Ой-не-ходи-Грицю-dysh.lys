@@ -18,6 +18,7 @@
   {{ rhFrag1("a='4.\\(", "b='\\)") }}
   \repeat volta 2 {
     c=''4.\( g8 c4 e | g2 f8 e d c\) |
+
     b='4\( d g f | e d c b\) |
     a='4.\( b8 c4 a | e' c d8 c b a\) |
     gis='4\( b e4. gis,8 |
@@ -36,7 +37,7 @@
   {{ config() }}
   {{ lhFrag1("a,=,4-\\stBass", "am am") }}
   {{ lhFrag1("a=,4", "g=, gM!") }}
-  c=4 cM! cM cM | e c@M cM4 cM |
+  c=4 cM! cM cM | e c@M! cM4 cM |
   g,=,4 gM! gM gM | e' eM! eM eM |
   a,=,4 am! am am | a am! d dm! |
   e=4 eM! eM eM | a, am! g gM! | a=, r am! r |
