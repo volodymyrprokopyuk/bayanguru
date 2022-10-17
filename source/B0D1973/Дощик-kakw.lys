@@ -4,7 +4,7 @@
 {% endmacro %}
 
 {% macro lhFrag1(a, b) %}
-  {{ a }} em! e em | a, am a am |
+  {{ a }} em! e em | a, am! a am |
   b=,8 bM! b bM | {{ b }} |
 {% endmacro %}
 
