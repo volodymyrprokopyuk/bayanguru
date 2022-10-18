@@ -1,3 +1,7 @@
+{% macro rhFrag1(a, b) %}
+  {{ a }} bes-. a16( bes c a | bes8-.) bes-. bes( {{ b }} |
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Allegro
 \clef treble
@@ -5,13 +9,14 @@
 \time 2/4
 \relative {
   {{ config() }}
-  f'='8-.\mf bes-. a16( bes c a | bes8-.) bes-. bes( d) |
-  f,='8-. bes-. a16( bes c a | bes8-.) bes-. bes( c) |
+  {{ rhFrag1("f'='8-.\\mf", "d)") }}
+  {{ rhFrag1("f,='8-.", "c)") }}
   d=''8.\( ees16 d8 c | bes a g4\) |
   c=''8.\( d16 c8 bes | a g f4\) |
   <<
     \relative {
-      d''=''8.\( ees16 d8 c | bes a g4\) | c=''8.( d16 c8 bes=') |
+      d''=''8.\( ees16 d8 c | bes a g4\) |
+      c=''8.( d16 c8 bes=') |
     }
   \\
     \relative { fis'='2~ | fis4 g | e='2 }
@@ -25,11 +30,12 @@
 \key bes \major
 \relative {
   {{ config() }}
-  bes,=,8-\stBass besM! f' f7! | bes, besM! bes besM |
-  bes8 besM! f' f7! | bes, besM! bes r |
+  bes,=,8-\stBass besM! f' f7! |
+  bes,=,8 besM! bes besM |
+  bes=,8 besM! f' f7! | bes, besM! bes r |
   d=8 d7! fis d@7 | g,8 gm! bes g,@m |
-  c8 c7! e c@7 | c8 c7! f ees |
+  c=8 c7! e c@7 | c8 c7! f ees |
   d=8 d7! a d@7 | d8 d7! g, gm! |
-  c c7! g c@7 | f'8 c f,,+fM! r |
+  c=8 c7! g c@7 | f'8 c= f,,+fM! r |
 }
 {% endmacro %}
