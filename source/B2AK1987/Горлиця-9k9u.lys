@@ -1,3 +1,8 @@
+{% macro rhFrag1() %}
+  c=''8-. c16( d e4) | b8-. b16( c d4) |
+  c=''8( a fis d=') |
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Allegretto
 \clef treble
@@ -7,12 +12,13 @@
   {{ config() }}
   d'='8(\mf g) g-. a-. | b8.( a16 b8 g) |
   c=''8 c( e c) | b8.( a16 b8 g) |
-  c=''8-. c16( d e4) | b8-. b16( c d4) |
-  c=''8( a fis d) | g b d4-- |
-  c=''8-. c16( d e4) | b8-. b16( c d4) |
-  c=''8( a fis d) | g-. b-. g-. r |
-  d='8-.\f \acciaccatura { a'8 } g16( fis g8) a-. | b8.( a16 b8 g) |
-  \acciaccatura { d'8 } c=''16( b c d e8) c-. | b8.( a16 b8 g) |
+  {{ rhFrag1() }} | g b d4-- |
+  {{ rhFrag1() }} | g-. b-. g='-. r |
+
+  d='8-.\f \acciaccatura { a'='8 } g16( fis g8) a-. |
+  b='8.( a16 b8 g) |
+  \acciaccatura { d'=''8 } c=''16( b c d e8) c-. |
+  b='8.( a16 b8 g) |
   c=''16( b c d e4) | b16( a b c d4) |
   c=''16( b a g fis8) d-. | g16( fis g b d4) |
   c=''16( b c d e dis e c) | b( ais b c d cis d b) |
@@ -25,11 +31,18 @@
 \key g \major
 \relative {
   {{ config() }}
-  g,=,8-\stBass gM! g gM | g gM g gM | c cM! c cM | g gM g gM |
-  c=8 cM! cM4 | g8 gM! gM4 | a8 d@7! d8 d7 | g, gM! b g,@M |
-  c=8 a,@m! am4 | d8 g,@M! gM4 | d8 d7! d d7 | g, gM! g,,+gM r |
-  g=,8 gM!4 gM8 | g gM4 gM8 | c cM!4 cM8 | g gM4 gM8 |
-  c=8 cM! cM4 | g8 gM gM4 | a8 d@7!4 d78 | g gM! gM4 |
-  c=8 a,@m! am4 | d8 g,@M! gM4 | d8 d7!4 d78 | g, d'= g,,+gM! r |
+  g,=,8-\stBass gM! g gM | g gM g gM |
+  c=8 cM! c cM | g gM! g gM |
+  c=8 cM! cM4 | g8 gM! gM4 |
+  a=,8 d@7! d8 d7 | g, gM! b g,@M |
+  c=8 a,@m! am4 | d8 g,@M! gM4 |
+  d=8 d7! d d7 | g, gM! g,,+gM r |
+
+  g=,8 gM!4 gM8 | g gM4 gM8 |
+  c=8 cM!4 cM8 | g gM!4 gM8 |
+  c=8 cM! cM4 | g8 gM! gM4 |
+  a=,8 d@7!4 d78 | g gM! gM4 |
+  c=8 a,@m! am4 | d8 g,@M! gM4 |
+  d=8 d7!4 d78 | g, d'= g,,+gM! r |
 }
 {% endmacro %}
