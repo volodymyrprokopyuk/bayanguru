@@ -8,28 +8,34 @@
   r4\p r r8 e'='8
   \repeat volta 2 {
     e='4\(\< g4. \after 8\! a8 | b4 ais4.\) b8 |
-    b='4\( fis4. g8 | fis4\> \after 4\! e\) r8\< \after 8\! d'8 |
+    b='4\( fis4. g8 |
+    fis='4\> \after 4\! e\) r8\< \after 8\! d'8 |
     d=''4\(\mf b4. a8 | a4 d,4.\) <c' e>8 |
     <c='' e>4( <b d>4. <a c>8) | <a c>4 <g b> r8 b8 |
     <<
       \new Voice = voiceOne \relative {
         \voiceOne
         b'='4(\< cis dis) | e( dis \after 4\! e) |
-        <a,=' fis'>(\f <b g'>4. <a fis'>8) |
+        <a,=' fis'>4(\f <b g'>4. <a=' fis'>8) |
       }
       \new Voice = voiceTwo \relative {
         \voiceTwo
-        b'='2 a4 | g2. | dis'2. |
+        b'='2 a4 | g2. | dis'=''2. |
       }
     >>
     <a=' fis'>4( <g e'>) r8 e'8 |
-    <c='' e>4( <b d>4. <a c>8) | <a c>4( <g b>4.) <a c>8\( |
+    <c='' e>4( <b d>4. <a c>8) |
+    <a=' c>4( <g b>4.) <a c>8\( |
     <g=' b>4 fis4.\> \after 8\! g8 |
     \alternative {
-      \volta 1 { e2\)\p r8 e8 | }
+      \volta 1 { e='2\)\p r8 e='8 | }
       \volta 2 {
-        e2.^\repeatTie\p |
-        << \relative { b'='4( cis dis) | } \\ \relative { b'='2. | }>>
+        e='2.^\repeatTie\p |
+        <<
+          \relative { b'='4( cis dis='') | }
+          \\
+          \relative { b'='2. | }
+        >>
         <g=' b e>2.~ | 2 r4 \bar "|."
       }
     }
@@ -43,10 +49,15 @@
 \relative {
   {{ config() }}
   e=4-\stBass em! em |
-  e=4 em! em | fis b,@7! b74 | b, b7! b7 | e em! em |
-  g,=,4 gM! gM | d' d7! d7 | fis d@7! d7 | g, gM! gM |
-  b=,4 b7! b7 | e em! em | b b7! b7 | c cM! cM |
-  a=,4 am! am | b e@m! em | b b7! b7 | e em! em |
-  e=4 em! em | b b7! b7 | e( b g | e'=2) r4 |
+  e=4 em! em | fis b,@7! b74 |
+  b,=,4 b7! b7 | e em! em |
+  g,=,4 gM! gM | d' d7! d7 |
+  fis=4 d@7! d7 | g, gM! gM |
+  b=,4 b7! b7 | e em! em |
+  b=,4 b7! b7 | c cM! cM |
+  a=,4 am! am | b e@m! em |
+  b=,4 b7! b7 | e em! em |
+  e=4 em! em | b b7! b7 |
+  e=4( b g | e'=2) r4 |
 }
 {% endmacro %}
