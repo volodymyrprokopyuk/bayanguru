@@ -5,19 +5,26 @@
 \time 3/4
 \relative {
   {{ config() }}
-  e''=''4\(\p d c | c b\< a\) | b\( b \after 4\! b | b gis e\) |
-  e='4\( gis b | d c b | a2.~\> | \after 4\! a4\) r r |
-  c=''4\( c c | c b c\) | d\( d\< d | d e \after 4\! f\) |
-  e=''4\( e e | e b\> c | a2.~ | \after 8.\! a4\) r r |
+  e''=''4\(\p d c | c b\< a\) |
+  b='4\( b \after 4\! b | b gis e\) |
+  e='4\( gis b | d c b |
+  a='2.~\> | \after 4\! a='4\) r r |
+  c=''4\( c c | c b c\) |
+  d=''4\( d\< d | d e \after 4\! f\) |
+  e=''4\( e e | e b\> c |
+  a='2.~ | \after 8.\! a='4\) r r |
   <<
     \new Voice = voiceOne \relative {
       \voiceOne
-      c''=''4\( c c | c b c\) | d\( d\< d | d e \after 4\! f\) |
-      e=''4\( e e | e b\> c | a2.~ | \after 8.\! a='4\)
+      c''=''4\( c c | c b c\) |
+      d=''4\( d\< d | d e \after 4\! f\) |
+      e=''4\( e e | e b\> c |
+      a='2.~ | \after 8.\! a='4\)
     }
     \new Voice = voiceTwo \relative {
       \voiceTwo
-      a'='2.~ | a2. | a2.~ | a2. | c2. | gis2. | a2.~ | a='4
+      a'='2.~ | a2. | a2.~ | a2. |
+      c=''2. | gis2. | a2.~ | a='4
     }
   >>
   r r \bar "|."
@@ -29,11 +36,17 @@
 \key a \minor
 \relative {
   {{ config() }}
-  a,=,4-\stBass am! am | e' a,@m a,m | e e7! e7 | gis, e@7 e7 |
-  e'=4 e7! e7 | b e@7 e7 | a( am!) am | e'( a,@m) a,m |
-  a,=,4 am! am | e' a,@m a,m | d dm! dm | a d@m dm |
-  e'=4 a,@m! am | e e7! e7 | a,( am!) am | e'( a,@m) a,m |
-  a,=,4 am! am | g a,@m am | f d@m! dm | b d@m dm |
-  e=4 a,@m! am | e e7! e7 | a,=,( am!) am | a,,+am! r r |
+  a,=,4-\stBass am! am | e' a,@m a,m |
+  e=4 e7! e7 | gis, e@7 e7 |
+  e'=4 e7! e7 | b e@7 e7 |
+  a=,4( am!) am | e'( a,@m) a,m |
+  a,=,4 am! am | e' a,@m a,m |
+  d=4 dm! dm | a d@m dm |
+  e'=4 a,@m! am | e e7! e7 |
+  a,=,4( am!) am | e'( a,@m) a,m |
+  a,=,4 am! am | g a,@m am |
+  f=,4 d@m! dm | b d@m dm |
+  e=4 a,@m! am | e e7! e7 |
+  a,=,4( am!) am | a,,+am! r r |
 }
 {% endmacro %}
