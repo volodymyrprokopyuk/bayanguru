@@ -10,6 +10,23 @@
   b='16( c b a='
 {% endmacro %}
 
+{% macro rhFrag3(a) %}
+  {{ a }} <a c>16 \acciaccatura { e'8 } <b d>8( <ais cis>-.) |
+  \acciaccatura { e'=''8 } <b d>8( <ais cis>-.) <b d> <gis e'> |
+  <a=' c>8-.\< <fis d'>-. <g b>-. \after 8\! <g c>-. |
+  <g=' a>8\> \acciaccatura { b8 } <c, fis a>8 \after 4\! <b= g'>4-- |
+{% endmacro %}
+
+{% macro rhFrag4(a) %}
+  {{ a }} <fis a> | <g bes>8 8 <fis a>4-> |
+  <g=' bes>8 8 <fis a>8 8 |
+{% endmacro %}
+
+{% macro lhFrag1(a) %}
+  {{ a }} d' | g,8 bes d@M![( d8]) |
+  g,=,16( a bes c) d@M!8[( d=8]) |
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Allegro
 \clef treble
@@ -48,35 +65,18 @@
     g='8\f g' e->( d16 c) | b8-. d-. a-. d-. |
     b='8-. d-. \acciaccatura { d8 } c16(_\dynCresc b c a) |
     b='8-. d-. a-. d-. | b-. a-. g='4--\f |
-    \repeat unfold 2 {
-      \alternative {
-        { <g=' b>8.\mf <a c>16 \acciaccatura { e'8 } <b d>8( <ais cis>-.) | }
-        { <g=' b>8. <a c>16 \acciaccatura { e'8 } <b d>8( <ais cis>-.) | }
-      }
-      \acciaccatura { e'=''8 } <b d>8( <ais cis>-.) <b d> <gis e'> |
-      <a=' c>8-.\< <fis d'>-. <g b>-. \after 8\! <g c>-. |
-      \alternative {
-        { <g=' a>8\> \acciaccatura { b8 } <c, fis a>8 \after 4\! <b= g'>4-- | }
-        { <g'=' a>8\> \acciaccatura { b8 } <c, fis a>8 \after 4\! <b= g'>4-- \bar "||" }
-      }
-    }
+
+    {{ rhFrag3("<g=' b>8.\\mf") }}
+    {{ rhFrag3("<g'=' b>8.") }} \bar "||"
+
     \volta 2 \fine
     \key g \minor
-    \repeat unfold 2 {
-      \alternative {
-        { <g'=' bes>4->\f <fis a> | }
-        { <g=' bes>4-> <fis a> | }
-      }
-      <g bes>8 8 <fis a>4-> |
-      <g=' bes>8 8 <fis a>8 8 |
-      \alternative {
-        { \acciaccatura { c'=''8 } bes16( a g fis g='4--) | }
-        {
-          \acciaccatura { c=''8 } bes16(\> a g fis \after 4\! g='4--) \bar "||"
-          \key g \major
-        }
-      }
-    }
+    {{ rhFrag4("<g'=' bes>4->\\f") }}
+    \acciaccatura { c'=''8 } bes16( a g fis g='4--) |
+    {{ rhFrag4("<g=' bes>4->") }}
+    \acciaccatura { c'=''8 }
+    bes='16(\> a g fis \after 4\! g='4--) \bar "||"
+    \keyChangeBeforeBar \key g \major
   }
 }
 {% endmacro %}
@@ -92,9 +92,9 @@
   g,,+gM!8 r g,,+gM r | d,+d7! d,+d7 g,,+gM! r |
 
   d=8 dM! fis, d@M | g8 gM! b g,@M |
-  d=8 dM! fis, d@M | g8 gM! g gM | g gM! g,,+gM r |
+  d=8 dM! fis, d@M | g8 gM! g gM | g=, gM! g,,+gM r |
 
-  \repeat unfold 2 { g=,8 gM! c cM | g gM! d' d7! }
+  \repeat unfold 2 { g=,8 gM! c cM | g gM! d' d7! | }
   d,+g,@M!8 d,+d7!8 g,,+gM! r |
 
   g,=,8 gM! d' d7! | g, gM! c cM |
@@ -103,17 +103,19 @@
   d=8 g,@M! d8 d7! | g,,+gM! d,+d7! g,,+gM! r |
 
   g,=,8 gM! c cM | g gM! fis d@7! |
-  g=,8 gM! a d@7! | g8 gM! fis d@7! | g,,+gM!8 d,+d7! g,,+gM!4 |
+  g=,8 gM! a d@7! | g8 gM! fis d@7! |
+  g,,+gM!8 d,+d7! g,,+gM!4 |
+
   g=,8 gM! g gM | g gM! g-. e-. |
-  a=,8-. d,-. g-. e-. | c' d g,@M![( g,8]) |
+  a=,8-. d,-. g-. e-. | c'-. d-. g,@M![( g,8]) |
   g=,8 gM! g gM | g gM! g,,+gM8 \noBeam e-. |
   a=,8-. d,-. g-. e-. | c'-. d-. g,=,4-- |
 
   \key g \minor
-  g=,4 d' | g,8 bes d@M![( d8]) |
-  g,=,16( a bes c) d@M!8[( d8]) | g,@m![( d8]) g,@m[( d8]) |
-  g,=,4 d' | g,8 bes d@M![( d8]) |
-  g,=,16( a bes c) d@M!8[( d8]) | g,,+gm! d,+d7! g,,+gm!4 |
+  {{ lhFrag1("g=,4") }}
+  g,@m![( d8]) g,@m[( d=8]) |
+  {{ lhFrag1("g,=,4") }}
+  g,,+gm! d,+d7! g,,+gm!4 |
   \key g \major
 }
 {% endmacro %}
