@@ -5,7 +5,7 @@
 \time 2/4
 \relative {
   {{ config() }}
-  \partial 8 { c'='8\(\p }
+  \partial 8 { c'='8\(\p } |
   f='8 f g g | a4 f8\) a\( |
   g='8 d e g | f4.\) c8\(\mf |
   a'='8 a bes bes | c4 a8\) c\( |
