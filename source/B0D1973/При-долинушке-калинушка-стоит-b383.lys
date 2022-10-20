@@ -1,0 +1,19 @@
+{% macro rightHand(config) %}
+\tempo Allegretto
+\clef treble
+\key c \major
+\time 2/4
+\relative {
+  {{ config() }}
+  \partial 4 { c''=''8-.\mp e-. } |
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key c \major
+\relative {
+  {{ config() }}
+  \partial 4 { r4 } |
+}
+{% endmacro %}
