@@ -1,0 +1,30 @@
+{% macro rhFrag1(a) %}
+  {{ a }} g' f e | d e c c\) |
+  d=''8\( f e c | d g
+{% endmacro %}
+
+{% macro rightHand(config) %}
+\tempo Lento
+\clef treble
+\key c \major
+\time 2/4
+\relative {
+  {{ config() }}
+  \repeat volta 2 {
+    {{ rhFrag1("c''=''8\\(\\p") }} g=''4\) |
+    {{ rhFrag1("c,=''8\\(") }} c,=''4\) |
+  }
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key c \major
+\relative {
+  {{ config() }}
+  e=8-\stBass c@M! c8 cM | g gM! c cM |
+  b=,8 g,@M! c8 cM | b g,@M! g8 gM |
+  e'=8 c@M! c8 cM | g gM! a am! |
+  d=8 dm! g, c@M! | g=,8 gM! c,+cM!4 |
+}
+{% endmacro %}

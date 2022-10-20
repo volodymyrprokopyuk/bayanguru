@@ -2,10 +2,9 @@
 ---
 pieces:
   # B0D1973
-  #   p. 49
-  # - { id: drrh, tit: Первые шаги,
-  #     com: С. Майкапар, src: B0D1973,
-  #     org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+  - { id: drrh, tit: Первые шаги,
+      com: С. Майкапар, src: B0D1973,
+      org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   #     p. 57
   # - { id: bj88, tit: Санки,
   #     com: М. Красев, src: B0D1973,
