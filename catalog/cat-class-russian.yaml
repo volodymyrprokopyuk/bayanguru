@@ -5,10 +5,9 @@ pieces:
   - { id: drrh, tit: Первые шаги,
       com: С. Майкапар, src: B0D1973,
       org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
-  #     p. 57
-  # - { id: bj88, tit: Санки,
-  #     com: М. Красев, src: B0D1973,
-  #     org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+  - { id: bj88, tit: Санки,
+      com: М. Красев, src: B0D1973,
+      org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   #   p. 63
   # - { id: b383, tit: При долинушке калинушка стоит, sub: rufs,
   #     src: B0D1973,
