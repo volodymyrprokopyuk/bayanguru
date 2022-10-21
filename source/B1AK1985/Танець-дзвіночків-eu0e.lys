@@ -16,7 +16,7 @@
 {% macro rightHand(config) %}
 \tempo Allegro
 \clef treble
-\key c \minor
+\key ees \major
 \time 2/4
 \relative {
   {{ config() }}
@@ -33,7 +33,7 @@
 
 {% macro leftHand(config) %}
 \clef bass
-\key c \minor
+\key ees \major
 \relative {
   {{ config() }}
   {{ lhFrag1("ees=4-\\stBass") }}
