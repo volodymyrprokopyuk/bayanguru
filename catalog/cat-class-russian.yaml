@@ -20,10 +20,9 @@ pieces:
   - { id: 0mdf, tit: Колыбельная, sub: rufs,
       src: B0D1973,
       org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
-  #   p. 74
-  # - { id: bspm, tit: "Белолица, круглолица", sub: rufs,
-  #     src: B0D1973,
-  #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  - { id: bspm, tit: "Белолица, круглолица", sub: rufs,
+      src: B0D1973,
+      org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   #   p. 88
   # - { id: kkks, tit: Елочка,
   #     com: Л. Бекман, src: B0D1973,
