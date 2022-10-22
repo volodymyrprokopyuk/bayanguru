@@ -27,10 +27,9 @@ pieces:
       com: Л. Бекман, src: B0D1973,
       org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   # B0DU1982
-  #   p. 87
-  # - { id: ye26, tit: Спят усталые игрушки,
-  #     com: А. Островский, src: B0DU1982,
-  #     org: ru, sty: jaz, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  - { id: ye26, tit: Спят усталые игрушки,
+      com: А. Островский, src: B0DU1982,
+      org: ru, sty: jaz, gnr: sng, frm: mel, bss: stb, lvl: elm }
   # B1AK1979
   #   p. 20
   # - { id: ebam, tit: Елочка,

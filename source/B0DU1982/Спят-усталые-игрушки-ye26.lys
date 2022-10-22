@@ -1,0 +1,34 @@
+{% macro rightHand(config) %}
+\tempo Andante
+\clef treble
+\key c \major
+\time 4/4
+\relative {
+  {{ config() }}
+  \set Timing.beamExceptions = #'()
+  \set Timing.baseMoment = #(ly:make-moment 1/4)
+  \set Timing.beatStructure = 1,1,1,1
+  \repeat volta 2 {
+    g'='4.\(\mp e8 g4. e8 | g4 g f e\) |
+    d='4( e g2) | d8( e d e g4) r |
+    g='4.\( d8 g4. d8 | g4 f e d\) |
+    c='4( e g2) | c,8( d e f g4) r |
+    g='4.\( g8 a4 g | c c a g\) |
+    c,='4\( c f g | a a g f\) |
+    e='4\( e f e | g2.\) r4 |
+    f='2\( d |
+    \alternative {
+      \volta 1 { c='2.\) r4 | }
+      \volta 2 { c='2.\repeatTie r4 \bar "|." }
+    }
+  }
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key c \major
+\relative {
+  {{ config() }}
+}
+{% endmacro %}
