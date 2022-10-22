@@ -1,0 +1,5 @@
+{% macro momentBeat(moment, beat) %}
+  \set Timing.beamExceptions = #'()
+  \set Timing.baseMoment = #(ly:make-moment {{ moment }})
+  \set Timing.beatStructure = {{ beat }}
+{% endmacro %}

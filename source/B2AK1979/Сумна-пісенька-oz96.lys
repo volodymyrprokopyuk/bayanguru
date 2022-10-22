@@ -1,3 +1,5 @@
+{% from "source/util.lys" import momentBeat %}
+
 {% macro rhFrag1(a) %}
   {{ a }} a bes c | d bes g\) g'\( |
   ees=''8 c g\) g'( | d4.)\> \after 8\! d=''8\( |
@@ -15,9 +17,7 @@
 \time 2/4
 \relative {
   {{ config() }}
-  \set Timing.beamExceptions = #'()
-  \set Timing.baseMoment = #(ly:make-moment 1/2)
-  \set Timing.beatStructure = #'(2)
+  {{ momentBeat("1/2", "#'(1)") }}
   \partial 8 { d'='8\(\mp } |
   {{ rhFrag1("g='8") }}
   c=''8 bes a c | bes a g bes\) |

@@ -1,5 +1,7 @@
+{% from "source/util.lys" import momentBeat %}
+
 {% macro lhFrag1() %}
-<< \relative { r4 aM! } \\ \relative { a,=,2 } >>
+  << \relative { r4 aM! } \\ \relative { a,=,2 } >>
 {% endmacro %}
 
 {% macro rightHand(config) %}
@@ -9,9 +11,7 @@
 \time 4/4
 \relative {
   {{ config() }}
-  \set Timing.beamExceptions = #'()
-  \set Timing.baseMoment = #(ly:make-moment 1/4)
-  \set Timing.beatStructure = 1,1,1,1
+  {{ momentBeat("1/4", "1,1,1,1") }}
   a'='8\mf a \acciaccatura { gis'8 } a4->
   a,='8 a \acciaccatura { gis'8 } a4-> |
   a,='8[ a] cis[ d] e4. d8 | cis cis b4 a2 |

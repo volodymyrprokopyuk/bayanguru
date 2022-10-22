@@ -4,8 +4,6 @@ stBass = \markup \larger \box Г % Готовий
 frBass = \markup \larger \box В % Вибiрний
 puBass = \markup \larger \box Б % Чистий бас
 
-\defineBarLine "!!" #'("!!" "!!" "!!")
-
 dynCresc = \markup \lower #3 \italic "cresc."
 dynDim = \markup \lower #3 \italic "dim."
 artSimile = \markup \italic simile
@@ -28,6 +26,8 @@ keyChangeBeforeBar = \once {
      custos))
   \override Staff.KeyCancellation.extra-spacing-width = #'(-1.5 . 0)
 }
+
+\defineBarLine "!!" #'("!!" "!!" "!!")
 
 {% set url = "https://volodymyrprokopyuk.github.io/bayan" %}
 

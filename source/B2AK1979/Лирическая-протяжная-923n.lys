@@ -1,3 +1,5 @@
+{% from "source/util.lys" import momentBeat %}
+
 {% macro rightHand(config) %}
 \tempo Lento
 \clef treble
@@ -5,9 +7,7 @@
 \time 2/4
 \relative {
   {{ config() }}
-  \set Timing.beamExceptions = #'()
-  \set Timing.baseMoment = #(ly:make-moment 1/2)
-  \set Timing.beatStructure = #'(1)
+  {{ momentBeat("1/2", "#'(1)") }}
   R2\p | R2 |
   fis'='4\( cis | cis'4. a8 |
   b='8\< a gis \after 8\! fis | gis[ e] cis\) r |
