@@ -1,0 +1,24 @@
+{% macro rightHand(config) %}
+\tempo Andante
+\clef treble
+\key c \major
+\time 2/4
+\relative {
+  {{ config() }}
+  g'='4(\mf e8) e-. | g4( e8) e-. |
+  g='8( f e d | c2) |
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key c \major
+\relative {
+  {{ config() }}
+  \set Timing.beamExceptions = #'()
+  \set Timing.baseMoment = #(ly:make-moment 1/2)
+  \set Timing.beatStructure = #'(1)
+  c=8-\stBass( cM!) cM cM | c( cM!) cM cM |
+  g=,8( gM!) gM gM | c( cM!) cM cM |
+}
+{% endmacro %}

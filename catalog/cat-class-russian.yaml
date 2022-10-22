@@ -31,10 +31,9 @@ pieces:
       com: А. Островский, src: B0DU1982,
       org: ru, sty: jaz, gnr: sng, frm: mel, bss: stb, lvl: elm }
   # B1AK1979
-  #   p. 20
-  # - { id: ebam, tit: Елочка,
-  #     com: М. Красев, src: B1AK1979,
-  #     org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+  - { id: ebam, tit: Елочка,
+      com: М. Красев, src: B1AK1979,
+      org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   #   p. 28
   # - { id: 6sx9, tit: Девицы-красавицы, sub: rufs,
   #     src: B1AK1979,
