@@ -30,5 +30,14 @@
 \key c \major
 \relative {
   {{ config() }}
+  c=4-\stBass cM! g c@M | c cM! g c@M |
+  \repeat unfold 2 { d'=4 dm! g, g7! | }
+  \repeat unfold 2 { d'=4 f@M! g, g7! | }
+  c=4 cM! g c@M | c cM! g g7! |
+  c=4 c7! c c7 | c c7! g c@7 |
+  f'=4 fM! f fM | d f@M! d f@M |
+  g,=,4 c@M! g c@M | a a7! a a7 |
+  d=4 dm! g, g7! | c cM! g=, c@M |
+  c,+cM!2. r4 |
 }
 {% endmacro %}
