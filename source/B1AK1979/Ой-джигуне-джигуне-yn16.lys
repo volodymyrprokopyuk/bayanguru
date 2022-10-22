@@ -4,7 +4,7 @@
 {% endmacro %}
 
 {% macro lhFrag1(a) %}
-  g,=,8( gm!) g gm | a( d@m) a8 d@m |
+  g,=,8( gm!) g gm | a( d@m!) a8 d@m |
   a=,8 a7! a a7 | d= dm! {{ a }} |
 {% endmacro %}
 
@@ -28,7 +28,7 @@
 \relative {
   {{ config() }}
   d=8-\stBass dm! d dm | d dm d dm |
-  d=8 g,@m! d8 g,@m | d8 dm d dm |
+  d=8 g,@m! d8 g,@m | d8 dm! d dm |
   {{ lhFrag1("d dm") }}
   {{ lhFrag1("d,+dm4") }}
 }
