@@ -31,8 +31,8 @@
 \key g \major
 \relative {
   {{ config() }}
-  g,=,(-\stBass gM!) gM | b[( g,@M) gM8] |
-  c=8[( g,@M!) gM8] | g( gM) gM |
+  g,=,(-\stBass gM!) gM | b[( g,@M!) gM8] |
+  c=8[( g,@M!) gM8] | g( gM!) gM |
   g=,( gM!) gM | d'[( d7!) g,@M!] |
   fis=8[( d@7!) d78] | g,( gM!) gM |
   a=,8[( d@7!) d78] | g( gM!) gM |
