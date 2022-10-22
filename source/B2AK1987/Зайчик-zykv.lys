@@ -9,6 +9,9 @@
 \time 4/4
 \relative {
   {{ config() }}
+  \set Timing.beamExceptions = #'()
+  \set Timing.baseMoment = #(ly:make-moment 1/4)
+  \set Timing.beatStructure = 1,1,1,1
   a'='8\mf a \acciaccatura { gis'8 } a4->
   a,='8 a \acciaccatura { gis'8 } a4-> |
   a,='8[ a] cis[ d] e4. d8 | cis cis b4 a2 |
@@ -59,9 +62,6 @@
 \key a \major
 \relative {
   {{ config() }}
-  \set Timing.beamExceptions = #'()
-  \set Timing.baseMoment = #(ly:make-moment 1/4)
-  \set Timing.beatStructure = 1,1,1,1
   r8 a,@M! r8 d@M! r8 a,@M! r8 d@M! |
   \repeat unfold 2 {
     a,=,8 aM! e' e7! a, aM! e' e7! |
