@@ -32,10 +32,10 @@
 \key bes \major
 \relative {
   {{ config() }}
-  {{ lhFrag1("bes,=,8[-\stBass") }} | bes[ besM besM besM] |
+  {{ lhFrag1("bes,=,8[-\stBass") }} | bes[ besM! besM besM] |
   {{ lhFrag1("bes=,8[") }} | bes besM! besM r |
-  c,+f@7!4 bes,,+besM! | a,,+f@M! bes,,+besM |
-  c,+f@M!4 bes,,+besM | a,,+f@M! bes,,+besM |
+  c,+f@7!4 bes,,+besM! | a,,+f@M! bes,,+besM! |
+  c,+f@M!4 bes,,+besM! | a,,+f@M! bes,,+besM! |
   {{ lhFrag1("bes=,8[") }} | bes=, besM! besM r |
 }
 {% endmacro %}
