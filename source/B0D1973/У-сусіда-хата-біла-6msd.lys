@@ -1,3 +1,5 @@
+{% from "source/util.lys" import momentBeat %}
+
 {% macro rightHand(config) %}
 \tempo Moderato
 \clef treble
@@ -5,6 +7,7 @@
 \time 4/4
 \relative {
   {{ config() }}
+  {{ momentBeat("1/4", "1,1,1,1") }}
   b'='8(\mf e b b c a b b) | b( g' fis e c a b4) |
   b='8-. b-. a( fis-.) g-. g-. a( fis-.) |
   g='8-. g-. fis-. dis-. e( fis g a) |
@@ -19,9 +22,9 @@
 \relative {
   {{ config() }}
   e=4-\stBass em! a,@m e@m4 | e em! a,@m e@m4 |
-  e=8[ em!] b bM! e[ em!] a, am |
+  e=8 em! b bM! e em! a, am |
   b=,8 e@m! b8 bM! e,+em!4 r4 |
-  g=,8[ gM!] d' dM e[ em!] a, am |
+  g=,8 gM! d' dM e em! a, am |
   b=,8 e@m! b8 bM! e= em! e,+em4 |
 }
 {% endmacro %}
