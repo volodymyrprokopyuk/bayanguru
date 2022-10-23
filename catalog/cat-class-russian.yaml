@@ -34,10 +34,9 @@ pieces:
   - { id: ebam, tit: Елочка,
       com: М. Красев, src: B1AK1979,
       org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
-  #   p. 28
-  # - { id: 6sx9, tit: Девицы-красавицы, sub: rufs,
-  #     src: B1AK1979,
-  #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  - { id: 6sx9, tit: Девицы-красавицы, sub: rufs,
+      src: B1AK1979,
+      org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   #   p. 38
   # - { id: dj8u, tit: "Я пойду ли, молоденька", sub: rufs,
   #     src: B1AK1979,
