@@ -3,3 +3,18 @@
   \set Timing.baseMoment = #(ly:make-moment {{ moment }})
   \set Timing.beatStructure = {{ beat }}
 {% endmacro %}
+
+{% macro halfSlur(half, dir, div = 0.5) %}
+  \once {
+    {% if dir == "Up" %} \slurUp {% else %} \slurDown {% endif %}
+    \once \override Slur.dash-definition =
+    {% if half == "Right" %}
+      {% set div = 1.0 - div %}
+      #'((0.0 {{ div }} 0.001 {{ 5.0 * div }})
+         ({{ div }} 1.0 1.0 1.0))
+    {% else %}
+      #'((0.0 {{ div }} 1.0 1.0)
+         ({{ div }} 1.0 0.001 {{ 1.0 / div }}))
+    {% endif %}
+  }
+{% endmacro %}
