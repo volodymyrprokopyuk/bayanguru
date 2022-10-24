@@ -11,7 +11,7 @@
     a='4\( c e c | b8 c b a gis4 e\) |
     \alternative {
       \volta 1 { a='4\( c b e | a,2 b='\) | }
-      \volta 2 { a='2 a'=''4 r \bar "|." }
+      \volta 2 { a='2( a'=''4) r \bar "|." }
     }
   }
 }
