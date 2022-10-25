@@ -1,3 +1,5 @@
+{% from "source/util.lys" import momentBeat %}
+
 {% macro rightHand(config) %}
 \tempo Allegretto
 \clef treble
@@ -32,8 +34,9 @@
 \key a \minor
 \relative {
   {{ config() }}
+  {{ momentBeat("1/2", "#'(1)") }}
   a,=,8[(-\stBass am!) am am] | a[( am) am am] |
-  e'=8[( e7!) e7 e7] | a,[( am!) am am] |
+  e'=8( e7!) e7 e7 | a,[( am!) am am] |
   a=,8[( am!) am am] | d[( dm!) dm dm] |
   e=8[( e7!) e7 e7] | e[( e7) e7 e7] |
   c=8[( cM!) cM cM] | c[( cM) cM cM] |

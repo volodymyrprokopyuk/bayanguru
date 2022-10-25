@@ -1,7 +1,7 @@
 {% macro momentBeat(moment, beat) %}
-  \set Timing.beamExceptions = #'()
-  \set Timing.baseMoment = #(ly:make-moment {{ moment }})
-  \set Timing.beatStructure = {{ beat }}
+  \set Staff.beamExceptions = #'()
+  \set Staff.baseMoment = #(ly:make-moment {{ moment }})
+  \set Staff.beatStructure = {{ beat }}
 {% endmacro %}
 
 {% macro halfSlur(half, dir, div = 0.5) %}
