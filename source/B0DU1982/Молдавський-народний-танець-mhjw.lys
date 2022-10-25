@@ -1,5 +1,5 @@
 {% macro lhFrag1(a) %}
-  {{ a }} gM! d' g,@M | g,8 gM d'= g,@M |
+  {{ a }} gM! d' g,@M | g,8 gM! d'= g,@M |
 {% endmacro %}
 
 {% macro rightHand(config) %}
