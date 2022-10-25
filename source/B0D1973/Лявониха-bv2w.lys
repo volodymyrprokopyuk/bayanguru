@@ -3,8 +3,8 @@
 {% endmacro %}
 
 {% macro lhFrag1(a) %}
-  {{ a }} gM! fis d@M | g8 gM d' dM | g, gM! c cM |
-  c=8 cM! a c@M | d8 g,@M d8 dM | g,=, gM! gM4 |
+  {{ a }} gM! fis d@M | g8 gM! d' dM | g, gM! c cM |
+  c=8 cM! a c@M | d8 g,@M! d8 dM | g,=, gM! gM4 |
 {% endmacro %}
 
 {% macro rightHand(config) %}
