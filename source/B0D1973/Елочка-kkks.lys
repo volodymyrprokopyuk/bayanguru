@@ -1,3 +1,5 @@
+{% from "source/util.lys" import shapedSlur %}
+
 {% macro rightHand(config) %}
 \tempo Lento
 \clef treble
@@ -13,10 +15,11 @@
     a='8 a g a |
     \alternative {
       \volta 1 {
-        f='4.\)
-        \once \slurUp \afterGrace f8( { \once \hideNotes f'8) } |
+        f='4.\) f8 {{ shapedSlur("fu") }} |
       }
-      \volta 2 { f,='4.\repeatTie r8 \bar "|." }
+      \volta 2 {
+        f='4. {{ shapedSlur("bd", bs = 2.5) }} r8 \bar "|."
+      }
     }
   }
 }
