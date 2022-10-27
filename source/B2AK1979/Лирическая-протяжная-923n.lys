@@ -75,10 +75,11 @@
 \key fis \minor
 \relative {
   {{ config() }}
+  {{ momentBeat("1/2", "#'(1)") }}
   fis,=,8(-\stBass fism!) fism fism |
   fis=,8( fism) fism fism |
   fis=,8( fism!) fism fism |
-  a=,8[( fis@m) fism8 fism] |
+  a=,8[( fis@m!) fism8 fism] |
   gis=,8[( b,@m!) bm8 bm] |
   cis=8( cism!) cism cism |
   fis,=,8( fism!) fism fism |
