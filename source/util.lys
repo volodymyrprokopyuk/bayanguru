@@ -1,20 +1,64 @@
+% momentBeat defines the duration of a base moment and the structure of beats
+% per mearuse
+% - moment defines the duration of a base moment
+%   - unit = note duration (e. g. 1/2, 1/4)
+% - beat defines the structure and the number of beats per measure
+%   - Unit = integer (e. g. 1,1,1,1, #'(1), 2,3)
 {% macro momentBeat(moment, beat) %}
   \set Staff.beamExceptions = #'()
   \set Staff.baseMoment = #(ly:make-moment {{ moment }})
   \set Staff.beatStructure = {{ beat }}
 {% endmacro %}
 
-{% macro halfSlur(half, dir, div = 0.5) %}
-  \once {
-    {% if dir == "Up" %} \slurUp {% else %} \slurDown {% endif %}
-    \once \override Slur.dash-definition =
-    {% if half == "Right" %}
-      {% set div = 1.0 - div %}
-      #'((0.0 {{ div }} 0.001 {{ 5.0 * div }})
-         ({{ div }} 1.0 1.0 1.0))
-    {% else %}
-      #'((0.0 {{ div }} 1.0 1.0)
-         ({{ div }} 1.0 0.001 {{ 1.0 / div }}))
-    {% endif %}
-  }
+% shapedSlur gives flexible controls over the shape of a slur attached to a
+% single note
+% - dir defines the direction of the slur
+%   - fu = forward up (north east), fd = forward down (south east)
+%     bu = backward up (north west), bd = backward down (south west)
+% - bs defines the horizontal base line position of a slur relative to the
+%   the staff center (3rd line)
+%   - Unit = staff units (distance between two adjacent staff lines)
+% - wd defines the width of a slur in terms of a multiplicative coefficient
+%   - Unit = coefficient k, k < 1 decreases width, k > 1 increases width
+% - ht defines the height of a slur
+%   - Unit = staff unit
+% - dt defines the height difference between the starting and ending points of
+%   a slur
+%   - Unit = staff unit
+{% macro shapedSlur(dir, bs = 2.0, wd = 1.0, ht = 1.0, dt = 1.0) %}
+  {% set ax = 0.5 * wd %}
+  {% set bx = 1.5 * wd %}
+  {% set cx = 2.5 * wd %}
+  {% set dx = 3.5 * wd %}
+  {% set ay, dy = bs %}
+  {% set by, cy = (bs + ht) %}
+  {% if dir == "fu" %} {# forward up slur #}
+    {% set dy = dy + dt %}
+  {% elif dir == "fd" %} {# forward down slur #}
+    {% set dy = dy + dt %}
+    {% set ay = -ay %}
+    {% set by = -by %}
+    {% set cy = -cy %}
+    {% set dy = -dy %}
+  {% elif dir == "bu" %} {# backward up slur #}
+    {% set ax = ax - 3.0 * wd %}
+    {% set bx = bx - 3.0 * wd %}
+    {% set cx = cx - 3.0 * wd %}
+    {% set dx = dx - 3.0 * wd %}
+    {%set ay = ay + dt %}
+  {% elif dir == "bd" %} {# backward down slur #}
+    {% set ax = ax - 3.0 * wd %}
+    {% set bx = bx - 3.0 * wd %}
+    {% set cx = cx - 3.0 * wd %}
+    {% set dx = dx - 3.0 * wd %}
+    {%set ay = ay + dt %}
+    {% set ay = -ay %}
+    {% set by = -by %}
+    {% set cy = -cy %}
+    {% set dy = -dy %}
+  {% endif %}
+  \tweak control-points
+    #'(({{ ax }} . {{ ay }}) ({{ bx }} . {{ by }})
+       ({{ cx }} . {{ cy }}) ({{ dx }} . {{ dy }}))
+    ( <>)
 {% endmacro %}
