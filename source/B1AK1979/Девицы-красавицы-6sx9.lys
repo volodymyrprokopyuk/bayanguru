@@ -1,11 +1,13 @@
+{% from "source/util.lys" import momentBeat %}
+
 {% macro rhFrag1(a) %}
   {{ a }} g-.) g-. g-. | fis( a) a4 |
   b='8 b( c a | g-.) g-. g='4 |
 {% endmacro %}
 
 {% macro lhFrag1(a) %}
-  {{ a }} gM!) gM gM] | d'[( dM!) dM dM] |
-  g,=,8 gM! d'= d7! |
+  {{ a }} gM!) gM gM | d'( dM!) dM dM |
+  g,=,8[ gM!] d'= d7! |
 {% endmacro %}
 
 {% macro rightHand(config) %}
@@ -27,9 +29,10 @@
 \key g \major
 \relative {
   {{ config() }}
-  {{ lhFrag1("g,=,8[(-\\stBass") }} | g,[ gM! gM gM] |
-  g=,8[( gM!) gM gM] | e'[( em!) em em] |
-  a,=,8[( am!) am am] | d[( dM!) dM dM] |
-  {{ lhFrag1("g,=,8[(") }} | g,=,8 gM! g,,+gM4 |
+  {{ momentBeat("1/2", "#'(1)") }}
+  {{ lhFrag1("g,=,8(-\\stBass") }} | g, gM! gM gM |
+  g=,8( gM!) gM gM | e'( em!) em em |
+  a,=,8( am!) am am | d( dM!) dM dM |
+  {{ lhFrag1("g,=,8(") }} | g,=,8 gM! g,,+gM4 |
 }
 {% endmacro %}
