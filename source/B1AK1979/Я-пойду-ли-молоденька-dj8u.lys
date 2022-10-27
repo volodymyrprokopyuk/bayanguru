@@ -1,4 +1,4 @@
-{% from "source/util.lys" import halfSlur %}
+{% from "source/util.lys" import shapedSlur %}
 
 {% macro rightHand(config) %}
 \tempo Andante
@@ -13,8 +13,12 @@
     d=''8\( d16 f e8 e | f16 e d8 c g\) |
     b='8\( b a16 g a8 |
     \alternative {
-      \volta 1 { g='4 {{ halfSlur("Right", "Up") }} g='\)( | }
-      \volta 2 { g='4 g=') \bar "|." }
+      \volta 1 { g='4 g='\) | }
+      \volta 2 {
+        g='4 g='
+        {{ shapedSlur("bu", wd = 2, ht = 1.4, dt = 1.4) }}
+        \bar "|."
+      }
     }
   }
 }
