@@ -15,10 +15,10 @@
     a='8 a g a |
     \alternative {
       \volta 1 {
-        f='4.\) f8 {{ shapedSlur("fu") }} |
+        f='4.\) f8 {{ shapedSlur("fu") }} ( <>) |
       }
       \volta 2 {
-        f='4. {{ shapedSlur("bd", bs = 2.5) }} r8 \bar "|."
+        f='4. {{ shapedSlur("bd", bs = 2.5) }} ( r8) \bar "|."
       }
     }
   }
