@@ -1,8 +1,8 @@
-% momentBeat defines the duration of a base moment and the structure of beats
+% momentBeat defines the duration of the base moment and the structure of beats
 % per mearuse
-% - moment defines the duration of a base moment
-%   - unit = note duration (e. g. 1/2, 1/4)
-% - beat defines the structure and the number of beats per measure
+% - moment defines the duration of the base moment
+%   - Unit = note duration (e. g. 1/2, 1/4)
+% - beat defines the number and the structure of beats per measure
 %   - Unit = integer (e. g. 1,1,1,1, #'(1), 2,3)
 {% macro momentBeat(moment, beat) %}
   \set Staff.beamExceptions = #'()
@@ -10,26 +10,29 @@
   \set Staff.beatStructure = {{ beat }}
 {% endmacro %}
 
-% shapedSlur gives flexible controls over the shape of a slur attached to a
-% single note
+% shapedSlur controls the shape of a slur placed immediately after the
+% shapedSlur macro
 % - dir defines the direction of the slur
 %   - fu = forward up (north east), fd = forward down (south east)
 %     bu = backward up (north west), bd = backward down (south west)
-% - bs defines the horizontal base line position of a slur relative to the
-%   the staff center (3rd line)
-%   - Unit = staff units (distance between two adjacent staff lines)
+% - bs defines the vertical base line position of a slur relative to the
+%   the staff center (3rd line of the staff)
+%   - Unit (absolute) = staff units (distance between two adjacent staff lines)
+% - sh defines the horizontal position of a slur relative to the note to which
+%   the slure is attached
+%   - Unit = staff units, positive shifts right, negative shifts left
 % - wd defines the width of a slur in terms of a multiplicative coefficient
 %   - Unit = coefficient k, k < 1 decreases width, k > 1 increases width
 % - ht defines the height of a slur
-%   - Unit = staff unit
-% - dt defines the height difference between the starting and ending points of
-%   a slur
-%   - Unit = staff unit
-{% macro shapedSlur(dir, bs = 2.0, wd = 1.0, ht = 1.0, dt = 1.0) %}
-  {% set ax = 0.5 * wd %}
-  {% set bx = 1.5 * wd %}
-  {% set cx = 2.5 * wd %}
-  {% set dx = 3.5 * wd %}
+%   - Unit (absolute) = staff unit
+% - dt defines the height difference (delta) between the starting and ending
+%   points of the slur
+%   - Unit (absolute) = staff unit
+{% macro shapedSlur(dir, bs = 2.0, sh = 0.5, wd = 1.0, ht = 1.0, dt = 1.0) %}
+  {% set ax = 0.0 * wd + sh %}
+  {% set bx = 1.0 * wd + sh %}
+  {% set cx = 2.0 * wd + sh %}
+  {% set dx = 3.0 * wd + sh %}
   {% set ay, dy = bs %}
   {% set by, cy = (bs + ht) %}
   {% if dir == "fu" %} {# forward up slur #}
@@ -60,5 +63,4 @@
   \tweak control-points
     #'(({{ ax }} . {{ ay }}) ({{ bx }} . {{ by }})
        ({{ cx }} . {{ cy }}) ({{ dx }} . {{ dy }}))
-    ( <>)
 {% endmacro %}
