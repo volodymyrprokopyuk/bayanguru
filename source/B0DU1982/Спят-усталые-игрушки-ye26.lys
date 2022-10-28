@@ -20,7 +20,7 @@
     \alternative {
       \volta 1 { c='2.\) r4 | }
       \volta 2 {
-        c='2. {{ shapedSlur("bd", bs = 4) }} r4 \bar "|."
+        c='2. {{ shapedSlur("bd", bs = 4) }} ( r4) \bar "|."
       }
     }
   }
