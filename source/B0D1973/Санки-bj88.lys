@@ -15,7 +15,7 @@
     \alternative {
       \volta 1 { g='4\) g8-. b='-. | }
       \volta 2 {
-        g='4 {{ shapedSlur("bu", ht = 1.5, dt = 1.5) }} r \bar "|."
+        g='4 {{ shapedSlur("bu", ht = 1.5, dt = 1.6) }} ( r) \bar "|."
       }
     }
   }
