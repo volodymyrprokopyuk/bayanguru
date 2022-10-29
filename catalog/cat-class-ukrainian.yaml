@@ -99,6 +99,10 @@ pieces:
   - { id: 993t, tit: Перша пісня,
       com: В. Кирейко, src: B0DU1982,
       org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+  #   p. 99
+  # - { id: v7hf, tit: Вальс,
+  #     com: К. Мясков, src: B0DU1982,
+  #     org: ua, sty: msc, gnr: vls, frm: mel, bss: stb, lvl: elm }
   # B1AK1979
   - { id: 8mwk, tit: Лисичка,
       com: М. Лисенко, src: B1AK1979,
@@ -118,6 +122,10 @@ pieces:
   - { id: angm, tit: "По дорозі жук, жук", sub: uafs,
       src: B1AK1979,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  #   p. 34
+  # - { id: qmvs, tit: Пісенька,
+  #     com: К. Мясков, src: B1AK1979,
+  #     org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: 59gv, tit: Пісня рака, sub: 'з дитячої опери \"Коза-дереза\"',
       com: М. Лисенко, src: B1AK1979,
       org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
@@ -185,6 +193,10 @@ pieces:
   - { id: lhc0, tit: Полька,
       com: М. Глинка, src: B1AK1985,
       org: ua, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elm }
+  #   p. 78
+  # - { id: lyc5%, tit: Прогулянка на автомобілі,
+  #     com: К. Мясков, src: B1AK1985,
+  #     org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   # B2AK1979
   - { id: 05cc, tit: Курчатка,
       com: А. Філіпенко, src: B2AK1979,
@@ -250,6 +262,10 @@ pieces:
   - { id: 0r9e, tit: Їхав козак за Дунай, sub: uafs,
       src: B2AK1987,
       org: ua, sty: flk, gnr: sng, frm: var, bss: stb, lvl: elm }
+  #   p. 32
+  # - { id: v8ec, tit: Ведмідь,
+  #     com: К. Мясков, src: B2AK1987,
+  #     org: ua, sty: msc, gnr: pie, frm: mel, bss: pub, lvl: elm }
   - { id: w5ba, tit: Дивлюсь я на небо, sub: uafs,
       src: B2AK1987,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
