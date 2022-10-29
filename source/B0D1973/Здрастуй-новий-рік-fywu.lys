@@ -27,6 +27,7 @@
 \key c \major
 \relative {
   {{ config() }}
+  {{ momentBeat("1/4", "1,1,1,1") }}
   c=8-\stBass cM! a c@M d8 f@M! g,8 gM |
   c=8 cM! a c@M d8 f@M! g,8 gM |
   {{ lhFrag1("cM4") }}
