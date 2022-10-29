@@ -1,3 +1,5 @@
+{% from "source/util.lys" import momentBeat %}
+
 {% macro rhFrag1(a, b) %}
   {{ a }} bes-. bes( g) | a-. a-. a( f) |
   g='8-. g-. c,( e | f4) {{ b }} |
@@ -22,11 +24,12 @@
 \key f \major
 \relative {
   {{ config() }}
+  {{ momentBeat("1/2", "#'(1)") }}
   c=4-\stBass c7! | f, fM! |
   c'=4 c7! | f, fM! |
-  e'=8[ c@7! c78 c7] | f,[ fM! fM fM] |
-  c'=8[ cM! cM cM] | f, fM! fM4 |
-  g=,8[ gm! gm gm] | c[ f@M! fM8 fM] |
-  c=8[ c7! c7 c7] | f,=, fM! f,,+fM4 |
+  e'=8[ c@7! c78 c7] | f, fM! fM fM |
+  c'=8 cM! cM cM | f, fM! fM4 |
+  g=,8 gm! gm gm | c[ f@M! fM8 fM] |
+  c=8 c7! c7 c7 | f,=, fM! f,,+fM4 |
 }
 {% endmacro %}
