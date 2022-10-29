@@ -1,3 +1,5 @@
+{% from "source/util.lys" import shapedSlur %}
+
 {% macro rightHand(config) %}
 \tempo Andante
 \clef treble
@@ -12,7 +14,9 @@
     fis='8( d fis a |
     \alternative {
       \volta 1 { g='4) b | }
-      \volta 2 { g='4\repeatTie g='8 r \bar "|." }
+      \volta 2 {
+        g='4 {{ shapedSlur("bd") }} ( g='8) r \bar "|."
+      }
     }
   }
 }
