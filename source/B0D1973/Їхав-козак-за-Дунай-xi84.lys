@@ -1,3 +1,5 @@
+{% from "source/util.lys" import shapedSlur %}
+
 {% macro rhFrag1() %}
   a='8\( a a a | a c b a | gis b e gis,=' |
 {% endmacro %}
@@ -23,7 +25,9 @@
     {{ rhFrag1() }}
     \alternative {
       \volta 1 { a='4 b='\) | }
-      \volta 2 { a='4^\repeatTie r \bar "|." }
+      \volta 2 {
+        a='4 {{ shapedSlur("bu", ht = 1.4, dt = 1.5) }} ( r) \bar "|."
+      }
     }
   }
 }
