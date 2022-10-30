@@ -99,10 +99,9 @@ pieces:
   - { id: 993t, tit: Перша пісня,
       com: В. Кирейко, src: B0DU1982,
       org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
-  #   p. 99
-  # - { id: v7hf, tit: Вальс,
-  #     com: К. Мясков, src: B0DU1982,
-  #     org: ua, sty: msc, gnr: vls, frm: mel, bss: stb, lvl: elm }
+  - { id: v7hf, tit: Вальс,
+      com: К. Мясков, src: B0DU1982,
+      org: ua, sty: msc, gnr: vls, frm: mel, bss: stb, lvl: elm }
   # B1AK1979
   - { id: 8mwk, tit: Лисичка,
       com: М. Лисенко, src: B1AK1979,
