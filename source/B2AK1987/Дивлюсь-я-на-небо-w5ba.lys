@@ -1,3 +1,5 @@
+{% from "source/util.lys" import shapedSlur %}
+
 {% macro rightHand(config) %}
 \tempo Lento
 \clef treble
@@ -28,9 +30,11 @@
     <a=' c>4( <g b>4.) <a c>8\( |
     <g=' b>4 fis4.\> \after 8\! g8 |
     \alternative {
-      \volta 1 { e='2\)\p r8 e='8 | }
+      \volta 1 {
+        e='2\)\p r8 e='8 {{ shapedSlur("bu", sh = 6) }} ( |
+      }
       \volta 2 {
-        e='2.^\repeatTie\p |
+        e='2.)\p |
         <<
           \relative { b'='4( cis dis='') | }
           \\
