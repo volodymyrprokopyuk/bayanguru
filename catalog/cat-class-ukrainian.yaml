@@ -191,10 +191,9 @@ pieces:
   - { id: lhc0, tit: Полька,
       com: М. Глинка, src: B1AK1985,
       org: ua, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elm }
-  #   p. 78
-  # - { id: lyc5%, tit: Прогулянка на автомобілі,
-  #     com: К. Мясков, src: B1AK1985,
-  #     org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+  - { id: lyc5, tit: Прогулянка на автомобілі,
+      com: К. Мясков, src: B1AK1985,
+      org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   # B2AK1979
   - { id: 05cc, tit: Курчатка,
       com: А. Філіпенко, src: B2AK1979,
