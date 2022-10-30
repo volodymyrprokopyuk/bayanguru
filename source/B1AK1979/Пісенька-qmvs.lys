@@ -1,0 +1,44 @@
+{% macro rhFrag1(a) %}
+  {{ a }} d bes bes | c( f,) bes='4-> |
+{% endmacro %}
+
+{% macro rhFrag2(a) %}
+  ees=''8 ees ees ees | d( bes) bes r |
+  c=''8 c g( a) | bes d {{ a }} |
+{% endmacro %}
+
+{% macro lhFrag1(a) %}
+  {{ a }} cm! f, f7! | bes besM! f=, bes,@M |
+{% endmacro %}
+
+{% macro rightHand(config) %}
+\tempo Allegretto
+\clef treble
+\key bes \major
+\time 2/4
+\relative {
+  {{ config() }}
+  {{ rhFrag1("d''=''8\\mf") }}
+  {{ rhFrag1("d=''8") }}
+  {{ rhFrag2("bes r") }}
+  {{ rhFrag2("bes4->") }} \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key bes \major
+\relative {
+  {{ config() }}
+  bes,=,8-\stBass besM! f bes,@M |
+  f=,8 f7! bes besM! |
+  bes=,8 besM! f bes,@M |
+  a=,8 f@7! bes8 besM! |
+  {{ lhFrag1("c=8") }}
+  c'=8 cM! f, f7! |
+  bes=,8 besM! f bes,@M |
+  {{ lhFrag1("c'=8") }}
+  c'=8 cm! f, f7! |
+  bes=,8 besM! bes,,+besM4-> |
+}
+{% endmacro %}

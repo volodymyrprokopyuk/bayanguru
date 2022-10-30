@@ -121,10 +121,9 @@ pieces:
   - { id: angm, tit: "По дорозі жук, жук", sub: uafs,
       src: B1AK1979,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
-  #   p. 34
-  # - { id: qmvs, tit: Пісенька,
-  #     com: К. Мясков, src: B1AK1979,
-  #     org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+  - { id: qmvs, tit: Пісенька,
+      com: К. Мясков, src: B1AK1979,
+      org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: 59gv, tit: Пісня рака, sub: 'з дитячої опери \"Коза-дереза\"',
       com: М. Лисенко, src: B1AK1979,
       org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
