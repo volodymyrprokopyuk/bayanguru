@@ -1,3 +1,5 @@
+{% from "source/util.lys" import shapedSlur %}
+
 {% macro rhFrag1(a) %}
   {{ a }} bes <f a>4-.) 4-. | <f d'>-. <f a>2-> |
   <e=' g>8( a <e g>4-.) 4-. | <g e'>-. <e g>2-> |
@@ -25,7 +27,9 @@
       {{ rhFrag1("<f'=' a>8(\\mp") }}
       \alternative {
         \volta 1 { d='8 e f g a='4) | }
-        \volta 2 { d,='2\repeatTie r4 | }
+        \volta 2 {
+          d,='2 {{ shapedSlur("bd", bs = 3.5) }} ( r4) |
+        }
       }
     }
 
@@ -72,7 +76,7 @@
   \key d \major
   d=4 dM! dM | a d@M dM |
   a=,4 aM! aM | cis a,@M aM |
-  d=4 dM! dM | g, gM gM |
+  d=4 dM! dM | g, gM! gM |
   b=,4 b7! b7 | e em! em |
   cis=4 a,@7! a7 | a a7 a7 |
   d=4 dM! dM | b d@M dM |
