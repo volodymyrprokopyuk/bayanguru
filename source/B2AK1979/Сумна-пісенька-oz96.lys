@@ -25,15 +25,15 @@
   g='8 a bes c | d bes g\) bes'\( |
   a=''8 g f ees | d4.\) g8\( |
   ees=''8 c a\) g'\( | d bes g bes\) |
-  a='8[( c)] fis,[(\> a]) | g4. \after 8\! bes='8\( |
+  a='8[( c)] fis,(\> a) | g4. \after 8\! bes='8\( |
 
   a='8\mf fis d c' | bes a g g' |
   f=''8 c d ees | d4.\) d8\( |
   cis=''8-\dynCresc b a g' | fis d a\) fis'\( |
-  e=''8[ b] cis[ a] | d4.\)\> \after 8\! d,8\( |
+  e=''8[ b] cis a | d4.\)\> \after 8\! d,8\( |
   {{ rhFrag1("g='8\\mp") }}
   c=''8 ees a, c | bes d g, bes\) |
-  a='8[( c]) fis,[(^"rit." a]) | g4-> <bes=' d g>-> \bar "|."
+  a='8[( c]) fis,(^"rit." a) | g4-> <bes=' d g>-> \bar "|."
 }
 {% endmacro %}
 
@@ -42,6 +42,7 @@
 \key g \minor
 \relative {
   {{ config() }}
+  {{ momentBeat("1/2", "#'(1)") }}
   \partial 8 { r8 } |
   {{ lhFrag1("g,=,4-\\stBass") }}
   a=,4) c@m!8 r8 | g4 gm!8 r |
