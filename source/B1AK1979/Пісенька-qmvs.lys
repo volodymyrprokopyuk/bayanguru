@@ -20,8 +20,8 @@
   {{ config() }}
   {{ rhFrag1("d''=''8\\mf") }}
   {{ rhFrag1("d=''8") }}
-  {{ rhFrag2("bes r") }}
-  {{ rhFrag2("bes4->") }} \bar "|."
+  {{ rhFrag2("bes=' r") }}
+  {{ rhFrag2("bes='4->") }} \bar "|."
 }
 {% endmacro %}
 
