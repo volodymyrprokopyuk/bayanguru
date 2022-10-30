@@ -62,6 +62,7 @@
 \key a \major
 \relative {
   {{ config() }}
+  {{ momentBeat("1/4", "1,1,1,1") }}
   r8 a,@M! r8 d@M! r8 a,@M! r8 d@M! |
   \repeat unfold 2 {
     a,=,8 aM! e' e7! a, aM! e' e7! |
