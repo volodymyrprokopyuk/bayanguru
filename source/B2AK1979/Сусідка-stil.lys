@@ -35,15 +35,16 @@
 \relative {
   {{ config() }}
   {{ momentBeat("1/2", "#'(1)") }}
-  a,=,8[(-\stBass am!) am am] | a[( am) am am] |
-  e'=8( e7!) e7 e7 | a,[( am!) am am] |
-  a=,8[( am!) am am] | d[( dm!) dm dm] |
-  e=8[( e7!) e7 e7] | e[( e7) e7 e7] |
-  c=8[( cM!) cM cM] | c[( cM) cM cM] |
-  g=,8[( gM!) gM gM] | gis[( e@7!) e78 e7] |
-  a=,8[( am!) am am] | d[( dm!) dm dm] |
-  e=8[( e7!) e7 e7] | g,=,[( g7!) g7 g7] |
+  a,=,8(-\stBass am!) am am | a( am) am am |
+  e'=8( e7!) e7 e7 | a,( am!) am am |
+  a=,8( am!) am am | d( dm!) dm dm |
+  e=8( e7!) e7 e7 | e( e7) e7 e7 |
+  c=8( cM!) cM cM | c( cM) cM cM |
+  g=,8( gM!) gM gM | gis[( e@7!) e78 e7] |
+  a=,8( am!) am am | d( dm!) dm dm |
+  e=8( e7!) e7 e7 | g,=,( g7!) g7 g7 |
 
+  {{ momentBeat("1/4", "1,1") }}
   c=8 cM! c cM | c cM c cM |
   \repeat unfold 2 {
     g=,8 gM! g gM | g gM g gM |
