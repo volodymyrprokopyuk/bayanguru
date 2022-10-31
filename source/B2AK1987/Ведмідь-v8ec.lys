@@ -1,3 +1,13 @@
+{% macro rhFrag1() %}
+  f=4-> ees8-. d-. | ees4-- c-- |
+  bes=,8-. g-. bes-. d=-. |
+{% endmacro %}
+
+{% macro rhFrag2() %}
+  \acciaccatura { g'=16 a b } c='4->\< \after 4\! g-- |
+  <>\> \after 2\! <c,= fis bes>2 |
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Lento
 \clef bass
@@ -6,6 +16,28 @@
 \relative {
   {{ config() }}
   \acciaccatura { g=16 a b } c='4->\mp bes8-- aes-- |
+  g=4-> c,-- | d8->\< ees-- f-- \after 8\! aes-- |
+  <>\> \after 2\! <fis= g>2-> |
+  {{ rhFrag1() }}
+  \acciaccatura { b=,8 } c=8\< r \after 4\! r4 |
+  \acciaccatura { g'=16 a b } c='4-> bes8-- aes-- |
+  <<
+    \new Voice = voiceOne \relative {
+      \voiceOne
+      g=2~ | g4 c | g8-. c-. b-. bes=-. |
+    }
+    \new Voice = voiceTwo \relative {
+      \voiceTwo
+      ees=8-. d-. ees-. c-. | d-. ees-. f-. aes-. |
+      \acciaccatura { fis=8 } g=2 |
+    }
+  >>
+  {{ rhFrag1() }}
+  \acciaccatura { b=,8 } c=2 |
+  {{ rhFrag2() }}
+  {{ rhFrag2() }}
+  \acciaccatura { g'=16 a b } c='4->-\dynDim g-- |
+  R2 | c='4-> r \bar "|."
 }
 {% endmacro %}
 
@@ -14,6 +46,14 @@
 \key c \minor
 \relative {
   {{ config() }}
-  c,+cm!4 g,=,4-\puBass |
+  \grace { s16 s s } c,+cm!4 g,=,4-\puBass |
+  \repeat unfold 6 { c=4-> g | }
+  c=8-> g-. a-. b-. | c,+cm!4 g=,4 |
+  \repeat unfold 4 { c=4-> g | }
+  c=8-> bes aes g |
+  \repeat unfold 2 { c=4-> g | }
+  \repeat unfold 2 { c=4-> g | aes-> ees'= }
+  \repeat unfold 2 { c=4-> g | }
+  c=4-> r |
 }
 {% endmacro %}
