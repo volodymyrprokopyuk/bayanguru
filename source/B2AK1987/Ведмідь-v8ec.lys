@@ -1,0 +1,19 @@
+{% macro rightHand(config) %}
+\tempo Lento
+\clef bass
+\key c \minor
+\time 2/4
+\relative {
+  {{ config() }}
+  \acciaccatura { g=16 a b } c='4->\mp bes8-- aes-- |
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key c \minor
+\relative {
+  {{ config() }}
+  c,+cm!4 g,=,4-\puBass |
+}
+{% endmacro %}

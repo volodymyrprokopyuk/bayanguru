@@ -259,10 +259,9 @@ pieces:
   - { id: 0r9e, tit: Їхав козак за Дунай, sub: uafs,
       src: B2AK1987,
       org: ua, sty: flk, gnr: sng, frm: var, bss: stb, lvl: elm }
-  #   p. 32
-  # - { id: v8ec, tit: Ведмідь,
-  #     com: К. Мясков, src: B2AK1987,
-  #     org: ua, sty: msc, gnr: pie, frm: mel, bss: pub, lvl: elm }
+  - { id: v8ec, tit: Ведмідь,
+      com: К. Мясков, src: B2AK1987,
+      org: ua, sty: msc, gnr: pie, frm: mel, bss: pub, lvl: elm }
   - { id: w5ba, tit: Дивлюсь я на небо, sub: uafs,
       src: B2AK1987,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
