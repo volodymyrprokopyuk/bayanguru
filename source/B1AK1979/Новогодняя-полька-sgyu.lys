@@ -8,6 +8,11 @@
   e=''8-. cis-. cis=''4-- |
 {% endmacro %}
 
+{% macro lhFrag1(a) %}
+  {{ a }} aM! e' a,@M | cis8 a,@M! e8 a,@M |
+  a,=,8 aM! e'= a,@M |
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Allegretto
 \clef treble
@@ -38,5 +43,13 @@
 \key a \major
 \relative {
   {{ config() }}
+  {{ lhFrag1("a,=,8-\\stBass") }} | b8 e@7! e8 e7 |
+  gis,=,8 e@7! e'8 e7 | b8 e@7! e8 e7 |
+  d=8 e@M! e8 e7! | cis8 a,@M! e8 a,@M |
+  {{ lhFrag1("a,=,8") }} | d8 dM! a aM! |
+  d=8 b,@7! b74 | e8 a,@M! aM4 |
+  e=8 e7! e74 | a,8 aM! aM4 |
+  dis=8 b,@7! b74 | e8 a,@M! aM4 |
+  e,+eM!4 e,+e7! | a,,+aM! a,=,-> |
 }
 {% endmacro %}
