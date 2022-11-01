@@ -46,10 +46,9 @@ pieces:
   - { id: 58a8, tit: Звенит звонок веселый,
       com: А. Долуханян, src: B1AK1979,
       org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
-  #   p. 63
-  # - { id: sgyu, tit: Новогодняя полька,
-  #     com: А. Александров, src: B1AK1979,
-  #     org: ru, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elm }
+  - { id: sgyu, tit: Новогодняя полька,
+      com: А. Александров, src: B1AK1979,
+      org: ru, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elm }
   #   p. 72
   # - { id: f026, tit: Плясовая,
   #     com: Л. Бирнов, src: B1AK1979,

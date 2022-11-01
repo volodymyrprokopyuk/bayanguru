@@ -1,0 +1,42 @@
+{% macro rhFrag1(a) %}
+  {{ a }} b a8) cis16( b \after 8\! a8) |
+  e'=''8-.\> e-. \after 4\! e=''4-- |
+{% endmacro %}
+
+{% macro rhFrag2(a) %}
+  {{ a }} gis fis8) a16( gis fis8) |
+  e=''8-. cis-. cis=''4-- |
+{% endmacro %}
+
+{% macro rightHand(config) %}
+\tempo Allegretto
+\clef treble
+\key a \major
+\time 2/4
+\relative {
+  {{ config() }}
+  {{ rhFrag1("cis''=''16(\\mf\\<") }}
+  cis=''16(\< b a8) cis16( b \after 8\! a8) |
+  d=''8-.\> d-. \after 4\! d4-- |
+  d=''16(\mf\< cis b8) d16( cis \after 8\! b8) |
+  gis'=''8-.\f gis-. gis4-- |
+  fis=''8-._\dynDim fis-. fis4-- |
+  e=''8-. e-. e4-- |
+  {{ rhFrag1("cis=''16(\\<") }}
+  cis=''16(_\dynCresc b a8) cis16( b a8) |
+  fis'=''8-. fis-. e4-- |
+  {{ rhFrag2("a=''16(\\f") }}
+  fis=''8-._\dynDim b,-. b4-- |
+  e=''8-. cis-. cis4-- |
+  {{ rhFrag2("a'=''16(\\f") }}
+  fis=''8-. b,-. b( cis) | a='4 r \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key a \major
+\relative {
+  {{ config() }}
+}
+{% endmacro %}
