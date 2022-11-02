@@ -16,7 +16,7 @@
     \\
     \relative { s2. | r4 g'='4( fis) | }
   >>
-  b='2.~(\mp | b8-\dynCresc c b c b fis') |
+  b='2.~(\mp | b8_\dynCresc c b c b fis') |
   b,='2.~ | b8 c( cis d f a) |
   <dis,='' fis>4.(--\< <e g>8 <f a> \after 8\! <e g>) |
   <<

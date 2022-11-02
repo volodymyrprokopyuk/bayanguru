@@ -15,7 +15,7 @@
   d'=''8(\mp cis b) | b(\< \after 16.\! ais) ais |
   b='8( a g) | g(\>^"rit." \after 4\! fis4) |
   cis='8\(^"a tempo" d e | fis b, b\) |
-  e='8\(-\dynCresc fis g | a d,4\) |
+  e='8\(_\dynCresc fis g | a d,4\) |
   a'='8\( b d | cis b a\) |
   b='8\( cis d | e a, a\) |
   fis='8\(\mf e d | a' e\) e |

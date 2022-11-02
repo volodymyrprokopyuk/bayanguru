@@ -48,7 +48,7 @@
       a='4( gis g fis=') |
     }
   >>
-  cis=''16(^"accel."-\dynCresc e, a e' b e, b' d
+  cis=''16(^"accel."_\dynCresc e, a e' b e, b' d
   cis=''16 e, a cis <fis, d'>8 b) |
   cis=''16( e, a cis) b( d, e gis)
   a='16( e fis gis a^"rit." gis a b) |
