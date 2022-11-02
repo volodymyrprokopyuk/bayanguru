@@ -47,6 +47,6 @@
   {{ lhFrag1("g,=,8") }} | g,8 d' g,=,4 |
 
   {{ lhFrag2("d'=8") }} | d8 dM! fis d@M |
-  {{ lhFrag2("d=8") }} | d8 dM! d,+dM4 |
+  {{ lhFrag2("d=8") }} | d=8 dM! d,+dM4 |
 }
 {% endmacro %}
