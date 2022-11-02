@@ -1,5 +1,15 @@
 {% from "source/util.lys" import momentBeat %}
 
+{% macro lhFrag1(a) %}
+  {{ a }} gM! d' g,@M | g,8 gM! d' g,@M |
+  a=,8 d@7! d=8 d7 |
+{% endmacro %}
+
+{% macro lhFrag2(a) %}
+  {{ a }} dM! dis b,@7! | e8 em! g, e@m |
+  a=,8 a7! cis= a,@7 |
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Allegretto
 \clef treble
@@ -18,6 +28,7 @@
       \relative { b=2 | b= }
     >>
     <c,=' a'>8 8 <d b'> <c a'> | <b g'>8 8 4 \bar "||"
+
     \volta 2 \fine
     fis'='4 a | g8( fis e4) |
     e='8( g fis e | fis) fis d4 |
@@ -32,5 +43,10 @@
 \key g \major
 \relative {
   {{ config() }}
+  {{ lhFrag1("g,=,8-\\stBass") }} | g,8 gM! d' g,@M |
+  {{ lhFrag1("g,=,8") }} | g,8 d' g,=,4 |
+
+  {{ lhFrag2("d'=8") }} | d8 dM! fis d@M |
+  {{ lhFrag2("d=8") }} | d8 dM! d,+dM4 |
 }
 {% endmacro %}
