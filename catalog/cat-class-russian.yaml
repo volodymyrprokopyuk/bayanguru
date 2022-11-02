@@ -49,10 +49,9 @@ pieces:
   - { id: sgyu, tit: Новогодняя полька,
       com: А. Александров, src: B1AK1979,
       org: ru, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elm }
-  #   p. 72
-  # - { id: f026, tit: Плясовая,
-  #     com: Л. Бирнов, src: B1AK1979,
-  #     org: ru, sty: msc, gnr: dnc, frm: mel, bss: stb, lvl: elm }
+  - { id: f026, tit: Плясовая,
+      com: Л. Бирнов, src: B1AK1979,
+      org: ru, sty: msc, gnr: dnc, frm: mel, bss: stb, lvl: elm }
   # B1AK1985
   #   p. 31
   # - { id: r9dx, tit: Родина, sub: rufs,

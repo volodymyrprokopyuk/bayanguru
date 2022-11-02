@@ -1,0 +1,36 @@
+{% from "source/util.lys" import momentBeat %}
+
+{% macro rightHand(config) %}
+\tempo Allegretto
+\clef treble
+\key g \major
+\time 2/4
+\relative {
+  {{ config() }}
+  \repeat segno 2 {
+    \volta 1
+    d'='8(\mf g) g-. g-. | d( g) g 4 |
+    a='8-. a( b a | g-.) g-. g='4 |
+    {{ momentBeat("1/2", "#'(1)") }}
+    <<
+      \relative { d'='8( g) g-. g-. | d( g) g='4 | }
+      \\
+      \relative { b=2 | b= }
+    >>
+    <c,=' a'>8 8 <d b'> <c a'> | <b g'>8 8 4 \bar "||"
+    \volta 2 \fine
+    fis'='4 a | g8( fis e4) |
+    e='8( g fis e | fis) fis d4 |
+    fis='8[ fis]( a) a( | g fis d4) |
+    e='8( g fis e | d) d d='4 \bar "||"
+  }
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key g \major
+\relative {
+  {{ config() }}
+}
+{% endmacro %}
