@@ -56,13 +56,9 @@ pieces:
   - { id: r9dx, tit: Родина, sub: rufs,
       src: B1AK1985,
       org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
-  - { id: r1gr, tit: Выйду ль я не реченьку, sub: rufs,
+  - { id: r1gr, tit: Выйду ль я на реченьку, sub: rufs,
       src: B1AK1985,
       org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
-  #   p. 66
-  # - { id: 9hph, tit: "Ах, улица широкая", sub: rufs,
-  #     src: B1AK1985,
-  #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   #   p. 69
   # - { id: erhk, tit: Рыбка,
   #     com: М. Красев, src: B1AK1985,
