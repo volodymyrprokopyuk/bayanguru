@@ -21,7 +21,11 @@
 \relative {
   {{ config() }}
   \partial 4 { r4 } |
-  e=4( eM!) eM-. | dis( e@M) eM-. |
-  cis=4_\artSimile cism! cism |
+  e=4( eM!) eM-. | dis( e@M) eM4-. |
+  cis=4_\artSimile cism! cism | b e@M! r4 |
+  a=,4 aM! aM | gis e@M! eM4 |
+  fis=,4 b,@7! b74 | e@M!( e'4) r |
+  a,=,4 aM! aM | gis e@M! eM |
+  fis=,4 b,@7! b74 | e@M!( e'=8) r
 }
 {% endmacro %}
