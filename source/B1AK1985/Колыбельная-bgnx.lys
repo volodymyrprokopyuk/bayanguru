@@ -1,0 +1,49 @@
+{% macro rhFrag1() %}
+  e,='4 c' e,2 | d4 b' d,2 |
+  e='4 a e fis | g2 g=' |
+{% endmacro %}
+
+{% macro lhFrag1(a, b) %}
+  {{ a }} am! a am | d g,@M! e4 {{ b }} |
+  a,=,4 am! d= d7! |
+{% endmacro %}
+
+{% macro rightHand(config) %}
+\tempo Moderato
+\clef treble
+\key g \major
+\time 4/4
+\relative {
+  {{ config() }}
+  R1\p
+  \repeat volta 2 {
+    b'='4. a8 g4 d | e g d2 |
+    b'='4. a8 g4 b | d b d2 |
+    {{ rhFrag1() }}
+    e'=''4 e d b | a8( b a4) e e |
+    e'=''4 e d8( c b4) | a2 a |
+    e='4 c' e,2 | d4 b' d,2 |
+    e='4 fis g a | b2 d=''\fermata |
+    {{ rhFrag1() }}
+  }
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key g \major
+\relative {
+  {{ config() }}
+  g,=,4-\stBass gM! g gM |
+  g=,4 gM! g gM | g c@M! g4 gM |
+  g=,4 gM! g gM | b bm! e eM! |
+  {{ lhFrag1("a,=,4", "eM!") }}
+  g,=,4 c@M! g4 gM | c cM! e e7! |
+  \repeat unfold 2 { a,=,4 am! a e@7! | }
+  a=,4 d@m! a am |
+  {{ lhFrag1("a=,4", "eM!") }}
+  g, gM! e@7!2\fermata |
+  {{ lhFrag1("a=,4", "e7!") }}
+  g, c@M! g=,4 gM! |
+}
+{% endmacro %}
