@@ -1,3 +1,14 @@
+{% macro rhFrag1() %}
+  r8 d'=''4 b8 | cis4. a8 |
+  gis='8 cis, a' gis | fis='2 |
+{% endmacro %}
+
+{% macro lhFrag1(a) %}
+  b=,8 bm! b bm |
+  fis=,8 fism! cis' fis@m |
+  cis=8 {{ a }}! cis= {{ a }} |
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Andante
 \clef treble
@@ -11,8 +22,12 @@
   b='8 b a gis | fis2 |
   cis'=''4 fis | e fis8 e |
   d=''8 d cis b | cis4 fis, |
-  r8 d'=''4 b8 | cis4. a8 |
-  gis='8 cis, a' gis | fis2 |
+  {{ rhFrag1() }}
+  <a=' cis>4 <d fis> |
+  <cis='' e>4 <d fis>8 <cis e> |
+  <b=' d>8 8 <a cis> <gis b> |
+  <a=' cis>4 fis |
+  {{ rhFrag1() }} \bar "|."
 }
 {% endmacro %}
 
@@ -21,5 +36,23 @@
 \key fis \minor
 \relative {
   {{ config() }}
+  fis,=,8-\stBass fism! fis fism |
+  \repeat unfold 2 { fis=,8 fism fis fism | }
+  cis'=8 cisM! gis cis@7! |
+  cis=8 cis7! cis cis7 |
+  gis=,8 cis@7! cis8 cis7 |
+  gis=,8 cis@7! cis8 cisM! |
+  fis,=,8 fism! fis fism |
+  cis'=8 fis@m! cis8 fis@m |
+  a=,8 aM! ais fis@7! |
+  b=,8 bm! fis b,@m |
+  fis=,8 fism! fis fism |
+  {{ lhFrag1("cisM") }}
+  fis,=,8 fism! cis' fis@m |
+  \repeat unfold 2 { a=,8 aM! d dM! | }
+  b=,8 bm! fis b,@m |
+  fis=,8 fism! fis fism |
+  {{ lhFrag1("cis7") }}
+  fis,,+fism!2 |
 }
 {% endmacro %}
