@@ -1,0 +1,52 @@
+{% from "source/util.lys" import shapedSlur %}
+
+{% macro rightHand(config) %}
+\tempo Moderato
+\clef treble
+\key a \minor
+\time 6/8
+\relative {
+  {{ config() }}
+  <<
+    \new Voice = voiceOne \relative {
+      \voiceOne
+      \partial 8 { e'='8\(\p } |
+      <c=' a'>4 8 <e c'> <d b'> <c a'> |
+      b'='4 gis8 e4\) e8 |
+      <c=' a'>4\( 8 g' a b |
+      <e,=' g c>4.~ 8\)
+    }
+    \new Voice = voiceTwo \relative {
+      \voiceTwo
+      \partial 8 { s8 } |
+      s2. | d'='4.~ d4. | s4. f='4. | s2
+    }
+  >>
+  r8 g'='8\(
+  \repeat volta 2 {
+    <c='' e>4\mf 8 <e g> <d f> <c e> |
+    <b=' d>4 <a dis>8 <gis e'>4\) b8\( |
+    <a=' c>8 <d, b'> <c a'> <e e'>4 <d e gis>8 |
+    \alternative {
+      \volta 1 {
+        <c=' e a>4.~\> \after 8\! 8\) r\<
+        {{ shapedSlur("fu", sh = 3.5, wd = 1.2, ht = 1.4, dt = 1.5) }} (
+        \after 8\! g'=') |
+      }
+      \volta 2 {
+        <c,=' e a>4.~\> 8
+        {{ shapedSlur("bu", wd = 2.7, ht = 1.4, dt = 1.5) }} ( r)\! r \bar "|."
+      }
+    }
+  }
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key a \minor
+\relative {
+  {{ config() }}
+  \partial 8 { r8 } |
+}
+{% endmacro %}
