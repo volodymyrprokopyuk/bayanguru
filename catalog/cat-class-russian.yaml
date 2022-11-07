@@ -84,16 +84,15 @@ pieces:
   - { id: zk1t, tit: Щебетала пташечка,
       com: Н. Руднев, src: B2AK1979,
       org: ru, sty: flk, gnr: sng, frm: mel, bss: pub, lvl: elm }
-  #   p. 68
-  # - { id: nvek, tit: Романс Антониды, sub: 'из оперы "Иван Сусанин"',
-  #     com: М. Глинка, src: B2AK1979,
-  #     org: ru, sty: msc, gnr: rmc, frm: mel, bss: stb, lvl: elm }
+  - { id: nvek, tit: Романс Антониды, sub: 'из оперы \"Иван Сусанин\"',
+      com: М. Глинка, src: B2AK1979,
+      org: ru, sty: msc, gnr: rmc, frm: mel, bss: stb, lvl: elm }
   #   p. 70
   # - { id: eq9y, tit: Грушица, sub: rufs,
   #     src: B2AK1979,
   #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   #   p. 71
-  # - { id: xzce, tit: Каватина Людмилы, sub: 'из оперы "Руслан и Людмила"',
+  # - { id: xzce, tit: Каватина Людмилы, sub: 'из оперы \"Руслан и Людмила\"',
   #     com: М. Глинка, src: B2AK1979,
   #     org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   #   p. 79
