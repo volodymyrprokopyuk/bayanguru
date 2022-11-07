@@ -28,7 +28,7 @@
 % - dt defines the height difference (delta) between the starting and ending
 %   points of the slur
 %   - Unit (absolute) = staff unit
-{% macro shapedSlur(dir, bs = 2.0, sh = 0.5, wd = 1.0, ht = 1.0, dt = 1.0) %}
+{% macro shapedSlur(dir, bs = 2.0, sh = 0.5, wd = 1.0, ht = 1.0, dt = 0.0) %}
   {% set ax = 0.0 * wd + sh %}
   {% set bx = 1.0 * wd + sh %}
   {% set cx = 2.0 * wd + sh %}

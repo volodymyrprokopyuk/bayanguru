@@ -30,12 +30,12 @@
     \alternative {
       \volta 1 {
         <c=' e a>4.~\> \after 8\! 8\) r\<
-        {{ shapedSlur("fu", sh = 3.5, wd = 1.2, ht = 1.4, dt = 1.5) }} (
+        {{ shapedSlur("fu", sh = 3) }} (
         \after 16..\! g'=') |
       }
       \volta 2 {
         <c,=' e a>4.~\> 8
-        {{ shapedSlur("bu", wd = 2.7, ht = 1.4, dt = 1.5) }} ( r)\! r \bar "|."
+        {{ shapedSlur("bu", wd = 3.3, ht = 1.8) }} ( r)\! r \bar "|."
       }
     }
   }
