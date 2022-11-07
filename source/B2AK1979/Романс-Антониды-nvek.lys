@@ -11,7 +11,28 @@
   r4\p r d''=''8\( d | ees4. ees8 d c |
   d=''4 g,8 g\) d'\( d | ees4. d8 c f |
   d=''2\) g8\( f | ees4. ees8 d c |
-  d=''4 g,8 g\) bes a |
+  d=''4 g,8 g\) \once \phrasingSlurUp bes\( a |
+  <<
+    \relative { g'='8 a bes b c cis='' | }
+    \\
+    \relative { g'='4. g8 g g=' | }
+  >>
+  <fis=' d'>2\) <bes d>8 8 |
+  <a=' c>2 <g bes>8 8 |
+  <fis=' a>2 <bes d>8 8 |
+  <a=' c>2 <g bes>8 8 |
+  <<
+    \relative {
+      r4\< \after 2\! d''=''2~ | d\> \after 4\! bes='4 |
+    }
+    \\
+    \relative { <fis'=' a>2. | f='2 r4 | }
+  >>
+
+  d'=''2-> d4 | ges8\( f ees d ees ges |
+  f=''4 bes,\) d8\( ees |
+  <d='' f>2\< \after 4\! <c fis>4 |
+  <bes=' g'>2\)\> bes8 \after 8\! c |
 }
 {% endmacro %}
 
