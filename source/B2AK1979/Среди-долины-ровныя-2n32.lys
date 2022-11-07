@@ -48,5 +48,13 @@
 \relative {
   {{ config() }}
   \partial 8 { r8 } |
+  a,=,8(-\stBass am!) am a am am |
+  e'=8( e7!) e7 e e7 e7 |
+  a,=,8_\artSimile am! am g g7! g7 |
+  c=8 cM! cM cM r r |
+  c=8 cM! cM c cM cM |
+  g=,8 gM! f e' e7! e7 |
+  a,=,8 am! am gis[ e@7! e78] |
+  \repeat unfold 2 { a=,8 am! am am r r | }
 }
 {% endmacro %}
