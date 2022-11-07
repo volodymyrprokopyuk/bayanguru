@@ -1,0 +1,65 @@
+{% macro lhFrag1() %}
+  e=4 em! em | g, e@m em |
+  a=,4 a7! a7 |
+{% endmacro %}
+
+{% macro lhFrag2() %}
+  e=4 em! em | fis fis7! fis7 |
+  b,=,4 bm! bm |
+{% endmacro %}
+
+{% macro rightHand(config) %}
+\tempo "Tempo di valzer"
+\clef treble
+\key b \minor
+\time 3/4
+\relative {
+  {{ config() }}
+  <b= d>2\(\p <cis e>4 | <d fis>2 <b' d>4 |
+  <a=' cis>2 <g b>4 | <fis a>2.\) |
+  <a=' cis>2\( <g b>4 | <cis, e>2 <e g>4 |
+  <g=' b>2 <fis a>4 | 2.\) |
+  <<
+    \relative {
+      <e'=' g>2\( <fis a>4 | <g b>2 <b d>4 |
+      <a=' cis>2 <g b>4 | fis='2.\) |
+    }
+    \\
+    \relative {
+      s2. | s2. | s2. | d'='4( cis b=) |
+    }
+  >>
+  <cis=' e>2\( <e g>4 | <d fis>2 <cis e>4 |
+  <b= b'>2.~ | 2.\) |
+  <<
+    \new Voice = voiceOne \relative {
+      \voiceOne
+      b'='2.\( | b2 d4 | e2. |
+      d=''4 \acciaccatura { cis16 d } cis4 b='\) |
+    }
+    \new Voice = voiceTwo \relative {
+      \voiceTwo
+      <e'=' g>2\( <fis a>4 | g2 b4 |
+      <a=' cis>2 <g b>4 | fis='2.\) |
+    }
+  >>
+  <cis=' e b'>2\( <e g b>4 | <d fis>2 <cis e fis>4 |
+  <b= b'>2.~ | 2.\) \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key b \minor
+\relative {
+  {{ config() }}
+  b,=,4-\stBass bm! bm | b bm bm |
+  e=4 em! a,@7! | d dM! dM |
+  a=,4 aM! aM | a aM aM |
+  d=4 dM! dM | d dM dM |
+  {{ lhFrag1() }} | b=, cis d |
+  {{ lhFrag2() }} | b=, bm bm |
+  {{ lhFrag1() }} | d= dM! dM |
+  {{ lhFrag2() }} | b,@m!2 r4 |
+}
+{% endmacro %}
