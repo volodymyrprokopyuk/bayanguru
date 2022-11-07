@@ -17,6 +17,7 @@
     \\
     \relative { g'='4. g8 g g=' | }
   >>
+
   <fis=' d'>2\) <bes d>8 8 |
   <a=' c>2 <g bes>8 8 |
   <fis=' a>2 <bes d>8 8 |
@@ -29,10 +30,18 @@
     \relative { <fis'=' a>2. | f='2 r4 | }
   >>
 
-  d'=''2-> d4 | ges8\( f ees d ees ges |
+  f'=''2-> f4 | ges8\( f ees d ees ges |
   f=''4 bes,\) d8\( ees |
   <d='' f>2\< \after 4\! <c fis>4 |
-  <bes=' g'>2\)\> bes8 \after 8\! c |
+  <bes=' g'>2\)\> bes8\( \after 8\! c |
+  d=''2 f8 ees | d2.\) |
+  <bes=' g'>4->( <d f> <g, ees'>->)
+  a='4^"rall." d8( c bes a) |
+  g='16\( bes'\fermata a g
+  \tuplet 3/2 { f8 ees d }
+  \tuplet 3/2 { c bes a } |
+  d=''2\)\> \after 4\! fis,4 |
+  g=' r r \bar "|."
 }
 {% endmacro %}
 
@@ -41,5 +50,32 @@
 \key g \minor
 \relative {
   {{ config() }}
+  {{ momentBeat("1/4", "1,1,1") }}
+  g,=,4( gm!) r | g( c@m!) r |
+  g=,4( gm!) r | c( cm!) f,,+fM! |
+  bes,,+besM!2 g,,+g7!4 | c( cm!) c |
+  bes=,4( g,@m!) g | ees' g, ees' |
+
+  \repeat unfold 2 {
+    d=8( d7!) d7 d7 g,@m![ gm8] |
+  }
+  d=8_\artSimile d7! d7 d7 g,@m![ gm8] |
+  d=8 d7! d7 d7 g,@m![ gm8] |
+  d=8 d7! d7 d7 d7 d7 |
+  \repeat unfold 2 {
+    bes=,8 besM! besM besM besM besM |
+  }
+
+  bes=,8 ees@m! eesm8 eesm eesm eesm |
+  bes=,8 besM! besM besM besM besM |
+  bes=,8 besM! besM besM a d@7! |
+  g=,8 gm! gm gm g gm! |
+  d'=8 dM! dM dM c cm! |
+  d=8 dM! dM dM d dM! |
+  g,=,8( gm!) bes( besM!) c( cm!) |
+  d=4( dM!) d,+d7! |
+  ees,+eesM!4 bes,,+besM! c,+cm! |
+  d,+g,@m!2 d,+d7!4 |
+  g,,+gm!4 r r |
 }
 {% endmacro %}
