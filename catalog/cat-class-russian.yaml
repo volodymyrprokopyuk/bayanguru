@@ -90,10 +90,9 @@ pieces:
   - { id: eq9y, tit: Грушица, sub: rufs,
       src: B2AK1979,
       org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
-  #   p. 71
-  # - { id: xzce, tit: Каватина Людмилы, sub: 'из оперы \"Руслан и Людмила\"',
-  #     com: М. Глинка, src: B2AK1979,
-  #     org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+  - { id: xzce, tit: Каватина Людмилы, sub: 'из оперы \"Руслан и Людмила\"',
+      com: М. Глинка, src: B2AK1979,
+      org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   #   p. 79
   # - { id: e1d4, tit: Меланхолический вальс,
   #     com: А. Даргомыжский, src: B2AK1979,
