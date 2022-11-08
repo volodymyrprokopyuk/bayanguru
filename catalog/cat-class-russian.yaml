@@ -93,10 +93,9 @@ pieces:
   - { id: xzce, tit: Каватина Людмилы, sub: 'из оперы \"Руслан и Людмила\"',
       com: М. Глинка, src: B2AK1979,
       org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
-  #   p. 79
-  # - { id: e1d4, tit: Меланхолический вальс,
-  #     com: А. Даргомыжский, src: B2AK1979,
-  #     org: ru, sty: msc, gnr: vls, frm: mel, bss: stb, lvl: elm }
+  - { id: e1d4, tit: Меланхолический вальс,
+      com: А. Даргомыжский, src: B2AK1979,
+      org: ru, sty: msc, gnr: vls, frm: mel, bss: stb, lvl: elm }
   #   p. 83
   # - { id: 1hva, tit: Как пойду я на быструю речку, sub: rufs,
   #     src: B2AK1979,

@@ -1,0 +1,32 @@
+{% macro rightHand(config) %}
+\tempo Moderato
+\clef treble
+\key g \minor
+\time 3/8
+\relative {
+  {{ config() }}
+  <g'=' bes d g>8\mf 8 8 | 4 d'8\(\p \bar "||"
+  \repeat segno 2 {
+    \volta 1
+    ees=''8. d16 cis d | bes'8.\) bes16\( a g |
+    g=''8. fis16 g gis | a8.\) fis16\( d ees |
+    d=''8. cis16 d ees | d8.\) c16\( bes a |
+    c=''8. bes16 a bes | g8.\) g16 bes d |
+    \volta 2 \fine
+    \bar "||"
+  }
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key g \minor
+\relative {
+  {{ config() }}
+  g,=,8-\stBass d' bes | g4 r8 |
+  g=,8( gm!) gm | g( gm) gm |
+  a=,8[_\artSimile d@7! d78] | fis[ d@7! d78] |
+  d'=8 d7! d7 | fis,[ d@7! d78] |
+  g=,8( gm!) gm | g( gm) gm |
+}
+{% endmacro %}
