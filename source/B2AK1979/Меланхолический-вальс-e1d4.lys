@@ -1,4 +1,4 @@
-{% from "source/util.lys" import dynStaffPadding %}
+{% from "source/util.lys" import dynStaffPadding, shapedSlur %}
 
 {% macro rhFrag1() %}
   g='8.\)
@@ -41,8 +41,16 @@
     g='8\)\> r \after 8\! r | r r
 
     \volta 2 \fine \bar "!!"
-    g='8\mf |
-    \bar "||"
+    g='8\(\mf | g8. f16 e f | d'8. c16 g a |
+    c=''8. bes16 a g | f4\) f8\( |
+    ges='8. f16 e f | g8. a16 bes c |
+    cis=''4. | d8\) r d\( |
+    ees8. d16 cis d | bes'8. a16 e fis |
+    a=''8. g16 fis a | g4\) g,8 |
+    <g=' cis g'>8\f 16 16 8 |
+    <bes=' cis bes'> <a cis a'> <g cis g'> |
+    <a=' d fis>8 <fis a d>8\> 8 |
+    \after 4\! 4-{{ shapedSlur("fu", sh = 6) }} ( d'=''8)\p \bar "||"
   }
 }
 {% endmacro %}
