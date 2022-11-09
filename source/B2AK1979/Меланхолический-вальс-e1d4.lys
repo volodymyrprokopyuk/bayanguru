@@ -1,6 +1,7 @@
 {% from "source/util.lys" import dynStaffPadding, shapedSlur %}
 
 {% macro rhFrag1() %}
+  \autoLineBreaksOff
   g='8.\)
   \shape #'((0 . 0) (0 . 1) (0 . 4.5) (0 . 0)) PhrasingSlur
   g='16\( bes d |
@@ -14,6 +15,7 @@
     \\
     \relative { <aes'=' d>4 8 | <g=' c>4 r8 | }
   >>
+  \autoLineBreaksOn
   c=''8.\) c16\( d ees='' |
 {% endmacro %}
 
