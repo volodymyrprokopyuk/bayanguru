@@ -1,7 +1,15 @@
+% hSpace explicitly adds horizontal extra space before a note or chord
+% - sh defines the shift amount of horizontal space
+%   - Unit = staff units
+{% macro hSpace(sh = 2.5) %}
+  \tweak extra-spacing-width #'(-{{ sh }} . 0)
+{% endmacro %}
+
 % dynStaffPadding adds padding to dynamics relative to the Staff within a
 % \relative
 % - bs = defines the vertical base line between the Staff and dynamics
-{% macro dynStaffPadding(bs) %}
+%   - Unit = staff units
+{% macro dynStaffPadding(bs = 3.0) %}
   \override DynamicLineSpanner.staff-padding = #{{ bs }}
 {% endmacro %}
 
