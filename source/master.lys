@@ -158,6 +158,7 @@ keyChangeBeforeBar = \once {
 
 {% macro rhConfig() %}
   \override Score.BarNumber.break-visibility = ##(#f #f #f)
+  \override DynamicLineSpanner.staff-padding = #3
 {% endmacro %}
 
 {% macro lhConfig() %} {% endmacro %}
