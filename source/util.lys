@@ -1,3 +1,10 @@
+% dynStaffPadding adds padding to dynamics relative to the Staff within a
+% \relative
+% - bs = defines the vertical base line between the Staff and dynamics
+{% macro dynStaffPadding(bs) %}
+  \override DynamicLineSpanner.staff-padding = #{{ bs }}
+{% endmacro %}
+
 % momentBeat defines the duration of the base moment and the structure of beats
 % per mearuse
 % - moment defines the duration of the base moment
