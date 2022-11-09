@@ -2,12 +2,12 @@
 
 {% macro rhFrag1() %}
   g='8.\)
-  % \shape #'((0 . 0) (0 . 1) (0 . 4.5) (0 . 0)) PhrasingSlur
+  \shape #'((0 . 0) (0 . 1) (0 . 4.5) (0 . 0)) PhrasingSlur
   g='16\( bes d |
   <g,=' d' g>4\< 16 \after 16\! 16 |
   <<
     \relative {
-      {{ dynStaffPadding(3) }}
+      {{ dynStaffPadding() }}
       aes''=''4\f g16 f |
       f=''8. ees16\> d \after 16\! ees='' |
     }
@@ -15,6 +15,18 @@
     \relative { <aes'=' d>4 8 | <g=' c>4 r8 | }
   >>
   c=''8.\) c16\( d ees='' |
+{% endmacro %}
+
+{% macro lhFrag1() %}
+  g=,8( gm!) gm |
+  bes=,8[ g,@m! gm8] | b[ g,@7! g78] |
+  c=8 cm! cm | c cm cm |
+  d=8[ g,@m! gm8] | d= d7! d7 |
+{% endmacro %}
+
+{% macro lhFrag2() %}
+  a=,8[ f,@7! f78] | a[ f,@7 f78] |
+  bes=,8 besM! besM | bes=, besM besM |
 {% endmacro %}
 
 {% macro rightHand(config) %}
@@ -64,6 +76,14 @@
   g=,8( gm!) gm | g( gm) gm |
   a=,8[_\artSimile d@7! d78] | fis[ d@7! d78] |
   d'=8 d7! d7 | fis,[ d@7! d78] |
+  g=,8( gm!) gm |
+  {{ lhFrag1() }} | g,[ gm! d@7!] |
+  {{ lhFrag1() }} | g, d' bes | g=, r r |
+
+  {{ lhFrag2() }}
+  {{ lhFrag2() }}
+  d=8 d7! d7 | fis,[ d@7! d78] |
   g=,8( gm!) gm | g( gm) gm |
+  ees'=4. | ees4. | d8 a' fis | d=4 r8 |
 }
 {% endmacro %}
