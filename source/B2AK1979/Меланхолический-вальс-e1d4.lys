@@ -1,3 +1,22 @@
+{% from "source/util.lys" import dynStaffPadding %}
+
+{% macro rhFrag1() %}
+  g='8.\)
+  % \shape #'((0 . 0) (0 . 1) (0 . 4.5) (0 . 0)) PhrasingSlur
+  g='16\( bes d |
+  <g,=' d' g>4\< 16 \after 16\! 16 |
+  <<
+    \relative {
+      {{ dynStaffPadding(3) }}
+      aes''=''4\f g16 f |
+      f=''8. ees16\> d \after 16\! ees='' |
+    }
+    \\
+    \relative { <aes'=' d>4 8 | <g=' c>4 r8 | }
+  >>
+  c=''8.\) c16\( d ees='' |
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Moderato
 \clef treble
@@ -11,8 +30,18 @@
     ees=''8. d16 cis d | bes'8.\) bes16\( a g |
     g=''8. fis16 g gis | a8.\) fis16\( d ees |
     d=''8. cis16 d ees | d8.\) c16\( bes a |
-    c=''8. bes16 a bes | g8.\) g16 bes d |
-    \volta 2 \fine
+    c=''8. bes16 a bes |
+    {{ rhFrag1() }}
+    ees=''8. d16 bes g |
+    bes='8. a16 e fis | g8.\) d16\( bes' a |
+    {{ rhFrag1() }}
+    \set subdivideBeams = ##t
+    d=''16 d' c bes a g | fis ees d c bes a |
+    \set subdivideBeams = ##f
+    g='8\)\> r \after 8\! r | r r
+
+    \volta 2 \fine \bar "!!"
+    g='8\mf |
     \bar "||"
   }
 }
