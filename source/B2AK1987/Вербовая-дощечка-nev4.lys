@@ -1,3 +1,5 @@
+{% from "source/util.lys" import dynStaffPadding %}
+
 {% macro rightHand(config) %}
 \tempo Moderato
 \clef treble
@@ -30,6 +32,7 @@
   <<
     \new Voice = voiceOne \relative {
       \voiceOne
+      {{ dynStaffPadding() }}
       e''=''8[(\< b') b b] | a4( b8 \after 8\! g) |
       fis=''4(\> g8 fis | e8) e \after 4\! e=''4 |
     }
