@@ -104,10 +104,6 @@ pieces:
   # - { id: tsio, tit: Колыбельная,
   #     com: Т. Хренников, src: B2AK1987,
   #     org: ru, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
-  #   p. 43
-  # - { id: h4jo, tit: Подгорка, sub: rufd,
-  #     src: B2AK1987,
-  #     org: ru, sty: flk, gnr: dnc, frm: var, bss: stb, lvl: elm }
   #   p. 83
   # - { id: tg2x, tit: Ходила младешенька по борочку, sub: rufd,
   #     src: B2AK1987,
