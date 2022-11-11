@@ -1,3 +1,12 @@
+{% macro lhFrag1(a) %}
+  {{ a }} am! c a,@m | e4 e7! gis,=, e@7 |
+{% endmacro %}
+
+{% macro lhFrag2(a) %}
+  {{ a }} a7! cis a,@7 |
+  \repeat unfold 2 { d=4 dm! f d@m | }
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Lento
 \clef treble
@@ -12,6 +21,12 @@
   cis='4. d8 e4 g\< | f8 g \after 2.\! a2. |
   a='4.\< \after 8\! a8 c4 b |
   \after 2.\! gis='2.\> r4 |
+  a='4.\mp bes8 a4 g | f a2. |
+  a='4. a8 c4\< \after 4\! b |
+  d=''2.\fermata\mf r4 |
+  e=''4. e8 f4 e | d a2 b4 |
+  e,='4. a8\> a gis fis \after 8\! gis |
+  a='1\pp \bar "|."
 }
 {% endmacro %}
 
@@ -20,5 +35,11 @@
 \key a \minor
 \relative {
   {{ config() }}
+  {{ lhFrag1("a,=,4-\\stBass") }}
+  {{ lhFrag1("a=,4") }}
+  {{ lhFrag2("a=,4") }} | e4( e7!) e( e7) |
+  {{ lhFrag2("a,=,4") }} | e4( e7!2\fermata) e74 |
+  a,=,4 a7! cis a,@7 | d4 dm! f d@m |
+  e=4 a,@m! e4 e7! | a,=,( am!) am2 |
 }
 {% endmacro %}
