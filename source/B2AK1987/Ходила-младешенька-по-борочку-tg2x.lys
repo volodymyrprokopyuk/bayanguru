@@ -1,3 +1,9 @@
+{% macro rhFrag1() %}
+  \afterGrace 1/4
+    \fixed c' { <g,= a, c e>4^\markup \center-align \smaller "Б+М" }
+    { \fixed c { \once \hide Stem <\parenthesize a,=, \parenthesize c>4 } }
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Moderato
 \clef treble
@@ -6,6 +12,15 @@
 \relative {
   {{ config() }}
   R2\mp | \repeat unfold 3 { R2 } |
+  <e'=' a c>8\< 8 <d a' d> <d f a d> |
+  <e=' a c e>4  \after 4\!
+  <<
+    \relative { a'='8 b }
+    \\
+    \relative { f'='4 }
+  >>
+  <e=' a c>8\> 8 <d e b'>4 |
+  \after 4.\! <c=' e a>4. r8 |
 }
 {% endmacro %}
 
@@ -15,5 +30,14 @@
 \relative {
   {{ config() }}
   c@M!8[-\stBass cM8 cM cM] |
+  g,@M!4 a,@m!8[ g,@7!8] |
+  c@M!8[ cM8] {{ rhFrag1() }} |
+  d@m!4 e@M! |
+  a=8[ g f d] | e4 d | e gis, |
+  <<
+    \relative { r8 am!4 r8 }
+    \\
+    \relative { a,=,4~ a8 r8 }
+  >>
 }
 {% endmacro %}
