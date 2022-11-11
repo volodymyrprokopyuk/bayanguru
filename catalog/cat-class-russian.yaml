@@ -100,10 +100,9 @@ pieces:
       src: B2AK1979,
       org: ru, sty: flk, gnr: sng, frm: var, bss: stb, lvl: elm }
   # B2AK1987
-  #   p. 23
-  # - { id: tsio, tit: Колыбельная,
-  #     com: Т. Хренников, src: B2AK1987,
-  #     org: ru, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  - { id: tsio, tit: Колыбельная,
+      com: Т. Хренников, src: B2AK1987,
+      org: ru, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
   #   p. 83
   # - { id: tg2x, tit: Ходила младешенька по борочку, sub: rufd,
   #     src: B2AK1987,

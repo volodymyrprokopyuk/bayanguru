@@ -1,0 +1,24 @@
+{% macro rightHand(config) %}
+\tempo Lento
+\clef treble
+\key a \minor
+\time 4/4
+\relative {
+  {{ config() }}
+  e'='4.\p f8 e4.\< \after 8\! a,8 |
+  c='4 \after 2.\! b2.\> |
+  e='4. f8 e4. a,8 |
+  \after 4..\! c='2\< \after 2\! b2\> |
+  cis='4. d8 e4 g\< | f8 g \after 2.\! a2. |
+  a='4.\< \after 8\! a8 c4 b |
+  \after 2.\! gis='2.\> r4 |
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key a \minor
+\relative {
+  {{ config() }}
+}
+{% endmacro %}
