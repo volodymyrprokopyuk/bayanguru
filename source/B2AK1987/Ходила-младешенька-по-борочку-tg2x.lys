@@ -4,6 +4,14 @@
     { \fixed c { \once \hide Stem <\parenthesize a,=, \parenthesize c>4 } }
 {% endmacro %}
 
+{% macro rhFrag2() %}
+  <<
+    \relative { a'='8 b }
+    \\
+    \relative { f'='4 }
+  >>
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Moderato
 \clef treble
@@ -14,13 +22,27 @@
   R2\mp | \repeat unfold 3 { R2 } |
   <e'=' a c>8\< 8 <d a' d> <d f a d> |
   <e=' a c e>4  \after 4\!
-  <<
-    \relative { a'='8 b }
-    \\
-    \relative { f'='4 }
-  >>
+  {{ rhFrag2() }}
   <e=' a c>8\> 8 <d e b'>4 |
   \after 4.\! <c=' e a>4. r8 |
+
+  \tempo Allegretto
+  <g'=' e'>8\mp 8 8 8 |
+  <g=' b d>4 <g a c>8 <g b d> |
+  <g=' c e>8 8 <g c e g>4-> |
+  <g=' b d>4 <gis b e> |
+  <a=' c>8 8 <a d>8 8 | <a e'>4 a8 b |
+  <a=' c>8 8 <gis b>4 | \after 2\! a2\< |
+  <a=' c>8 8 <a d>8 <f a d> |
+  <e=' a e'>4 {{ rhFrag2() }} |
+  <<
+    \relative {
+      <e'=' a c>8\> <f a c>
+      \after 4\! <gis=' b>4 | a='2 |
+    }
+    \\
+    \relative { s4 e'='8 d | c='2 | }
+  >>
 }
 {% endmacro %}
 
