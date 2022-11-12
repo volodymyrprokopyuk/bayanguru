@@ -12,6 +12,11 @@
   >>
 {% endmacro %}
 
+{% macro lhFrag1(a, b) %}
+  {{ a }} am! b d@m! | c8 a,@m! d8 dm! |
+  e=8 a,@m! e8 {{ b }} |
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Moderato
 \clef treble
@@ -43,6 +48,15 @@
     \\
     \relative { s4 e'='8 d | c='2 | }
   >>
+
+  e'=''16\mf g, c e e g, c e |
+  d=''16 g, b d c g d' g, |
+  e'=''16 g, c e g g, c e |
+  d=''16 g, b d e d c b |
+  c=''16 e, a c d f, a d |
+  e=''16 e, a c a f b f |
+  c'=''16 e, a c b e, gis b |
+  a='16\< e fis gis a gis a \after 16\! b=' |
 }
 {% endmacro %}
 
@@ -61,5 +75,15 @@
     \\
     \relative { a,=,4~ a8 r8 }
   >>
+
+  c=8[ cM! cM cM] | g[ gM! gM gM] |
+  c=8[ cM! cM cM] | g gM! e' e7! |
+  {{ lhFrag1("a,=,8", "eM!") }} | a[ g f e] |
+  a=8[ g f d] | c8 a,@m! d8 dm! |
+  c=4 b | << \relative { r4 am!4 } \\ \relative { a,=,2 }>> |
+
+  c=8 cM!4 cM8 | g gM!4 gM8 |
+  c=8 cM! e c@M | g,8 gM! gis e@7! |
+  {{ lhFrag1("a=,8", "e7!") }} | a,=, am!4 am8 |
 }
 {% endmacro %}
