@@ -1,0 +1,16 @@
+%YAML 1.2
+---
+pieces:
+  # BTBC1936
+  # p. 29
+  # - { id: q6xh, tit: Одинокая гармонь,
+  #     com: Б. Мокроусов, src: BTBC1936,
+  #     org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+  # p. 41
+  # - { id: 87ko, tit: Яблочко, sub: rufd,
+  #     arr: Н. Чайкин, src: BTBC1936,
+  #     org: ru, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
+  # p. 43
+  # - { id: p7el, tit: Варяг, sub: rufs,
+  #     arr: Н. Чайкин, src: BTBC1936,
+  #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
