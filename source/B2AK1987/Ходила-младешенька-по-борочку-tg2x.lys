@@ -1,3 +1,5 @@
+{% from "source/util.lys" import twoVoices %}
+
 {% macro rhFrag1() %}
   \afterGrace 1/4
     \fixed c' { <g,= a, c e>4^\markup \center-align \smaller "Б+М" }
@@ -5,11 +7,7 @@
 {% endmacro %}
 
 {% macro rhFrag2() %}
-  <<
-    \relative { a'='8 b }
-    \\
-    \relative { f'='4 }
-  >>
+  {{ twoVoices("a'='8 b", "f'='4") }}
 {% endmacro %}
 
 {% macro rhFrag3() %}
@@ -69,17 +67,12 @@
   <g'=' c e>16\f 16 8-> 16 16 8-> |
   <f=' g d'>4 <f a c>8 <f b d> |
   <e=' c' e>8 8 <g c g'>4 |
-  <<
-    \relative { d''=''4 e | }
-    \\
-    \relative { <g'=' b>8 <f a> <e=' gis b>4 | }
-  >> |
+  {{ twoVoices("d''=''4 e", "<g'=' b>8 <f a> <e=' gis b>4") }} |
   <e=' a c>16 16 8-> <d g d'>8 8 |
   <e=' g e'>4-> <f a>8 <f a b> |
   {{ rhFrag3() }}
   <c=' e c'>8 8 <d f a d>8 8 |
-  <e=' a e'>4^"rit."_\dynDim
-  {{ rhFrag2() }} |
+  <e=' a e'>4^"rit."_\dynDim {{ rhFrag2() }} |
   <c=' fis c'>8 8 <d gis b>4 |
   <c=' e a>2 \bar "|."
 }
@@ -95,17 +88,13 @@
   c@M!8[ cM8] {{ rhFrag1() }} |
   d@m!4 e@M! |
   a=8[ g f d] | e4 d | e gis, |
-  <<
-    \relative { r8 am!4 r8 }
-    \\
-    \relative { a,=,4~ a8 r8 }
-  >>
+  {{ twoVoices("r8 am!4 r8", "a,=,4~ a8 r8") }}
 
   c=8[ cM! cM cM] | g[ gM! gM gM] |
   c=8[ cM! cM cM] | g gM! e' e7! |
   {{ lhFrag1("a,=,8", "eM!") }} | a[ g f e] |
   a=8[ g f d] | c8 a,@m! d8 dm! |
-  c=4 b | << \relative { r4 am!4 } \\ \relative { a,=,2 } >> |
+  c=4 b | {{ twoVoices("r4 am!4", "a,=,2") }} |
 
   c=8 cM!4 cM8 | g gM!4 gM8 |
   c=8 cM! e c@M | g,8 gM! gis e@7! |
@@ -119,8 +108,8 @@
   a,=,8 am! b g,@7! | c8 cM! d dm! |
   e=8 a,@m! e8 e7! e[ d c b] |
   a=,8 am! b d@m! |
-  c=8 a,@m! << \relative { d=4 } \\ \relative { d=8 dm! } >> |
-  dis=4 << \relative { e=4 } \\ \relative { e=8 e7! } >> |
+  c=8 a,@m! {{ twoVoices("d=4", "d=8 dm!") }} |
+  dis=4 {{ twoVoices("e=4", "e=8 e7!") }} |
   a=,8 e a,,+am!4 |
 }
 {% endmacro %}
