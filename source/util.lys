@@ -79,3 +79,7 @@
     #'(({{ ax }} . {{ ay }}) ({{ bx }} . {{ by }})
        ({{ cx }} . {{ cy }}) ({{ dx }} . {{ dy }}))
 {% endmacro %}
+
+{% macro twoVoices(a, b) %}
+  << \relative { {{ a }} } \\ \relative { {{ b }} } >>
+{% endmacro %}
