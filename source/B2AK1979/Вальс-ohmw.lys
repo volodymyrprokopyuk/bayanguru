@@ -1,4 +1,4 @@
-{% from "source/util.lys" import hSpace, shapedSlur %}
+{% from "source/util.lys" import hSpace, shapedSlur, v2 %}
 
 {% macro rhFrag1(a) %}
   {{ a }} bes <f a>4-.) 4-. | <f d'>-. <f a>2-> |
@@ -66,7 +66,7 @@
 \relative {
   {{ config() }}
   {{ lhFrag1("d=4(-\\stBass dm!)") }} | d=( dm!) dm |
-  << \relative { r4 dm! } \\ \relative { d=2 } >> r4 |
+  {{ v2("r4 dm!", "d=2") }} r4 |
 
   g,=,4 c@7! c7 | f fM! fM |
   c'=4 c7! c7 | f, fM! fM |
