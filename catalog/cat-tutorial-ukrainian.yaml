@@ -14,3 +14,7 @@ pieces:
   # - { id: a3ew, tit: Ой піду я понад лугом, sub: uafs,
   #     arr: М. Чайкін, src: BTBC1936,
   #     org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  # p. 45
+  # - { id: isd6, tit: Гопак, sub: uafd,
+  #     arr: М. Чайкін, src: BTBC1936,
+  #     org: ua, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
