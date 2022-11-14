@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import parseArgs from "minimist"
-import { readFile, writeFile, copyFile, access } from "fs/promises"
+import { mkdir, readFile, writeFile, copyFile, access } from "fs/promises"
 // import { globby } from "globby"
 // import { marked } from "marked"
 import { readPieces, readBooks } from "./lib/catalog.js"
@@ -33,6 +33,7 @@ import { engravePieces, engraveBooks } from "./lib/score.js"
 
 async function pieceInit(id) {
   const { src, file } = (await readPieces(args))[id]
+  await mkdir(`source/${src}`, { recursive: true })
   const path = `source/${src}/${file}.lys`
   try { await access(path); console.log(`skipping ${path} already exists`) }
   catch { await copyFile("source/piece.lys", path) }
