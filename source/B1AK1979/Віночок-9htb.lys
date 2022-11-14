@@ -1,3 +1,5 @@
+{% from "source/util.lys" import v2 %}
+
 {% macro rightHand(config) %}
 \tempo Allegretto
 \clef treble
@@ -24,6 +26,6 @@
   c=8 cM! c cM | d g,@7! g,8 g7 |
   c=8 cM! g c@M | c8 cM! g c@M |
   a=,4 b | c f, | fis g |
-  << \relative { r4 cM! } \\ \relative { c=2 } >>
+  {{ v2("r4 cM!", "c=2") }} |
 }
 {% endmacro %}

@@ -23,9 +23,11 @@
     a='8-. a( b a | g-.) g-. g='4 |
     {{ momentBeat("1/2", "#'(1)") }}
     <<
-      \relative { d'='8( g) g-. g-. | d( g) g='4 | }
+      \relative {
+        d'='8( g) g-. g-. | d( g) g='4 |
+      }
       \\
-      \relative { b=2 | b= }
+      \relative { b=2 | b= | }
     >>
     <c,=' a'>8 8 <d b'> <c a'> | <b g'>8 8 4 \bar "||"
 

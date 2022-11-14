@@ -1,3 +1,5 @@
+{% from "source/util.lys" import v2 %}
+
 {% macro rightHand(config) %}
 \tempo Allegretto
 \clef treble
@@ -15,7 +17,7 @@
   e='2\)\< | \after 2\! <e e'>2 |
   <a=' c>4\(\f <g b>8 <fis a> | <g b>4\> \after 4\! g\) |
   <fis=' a>4\(\mf <e g>8 <dis fis> | <e g>4\> \after 4\! e\) |
-  e='4\(\mp << \relative { e''=''8 c } \\ \relative { e'='4 } >> |
+  e='4\(\mp {{ v2("e''=''8 c", "e'='4") }} |
   <g=' b>8 <fis a> <e g> <dis fis> |
   <>\> \after 2\! e='2\) | e='4 r \bar "|."
 }

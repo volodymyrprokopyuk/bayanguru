@@ -1,4 +1,4 @@
-{% from "source/util.lys" import dynStaffPadding %}
+{% from "source/util.lys" import dynStaffPadding, v2 %}
 
 {% macro rightHand(config) %}
 \tempo Moderato
@@ -46,11 +46,7 @@
   a=''16( c, e a) b( g e b) |
   a='16( c, e a) b( b, e g) |
   fis='16( a, c e)
-  <<
-    \relative { b'='4 | }
-    \\
-    \relative { b'='16 a g fis=' | }
-  >>
+  {{ v2("b'='4", "b'='16 a g fis='") }} |
 
   <<
     \new Voice = voiceOne \relative {
@@ -83,7 +79,7 @@
   e=8 em! d e@m | c8 a,@m! b8 e@m |
   a=,8 am! b b7! | e em! b e@m |
   e=4 d | c b | d b |
-  << \relative { r4 em! | } \\ \relative { e=2 | } >>
+  {{ v2("r4 em!", "e=2") }} |
 
   e,=,8(-\puBass b') b b | a4( b8 g) |
   a=,4( b8 g | fis e b'4) |

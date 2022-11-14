@@ -80,6 +80,6 @@
        ({{ cx }} . {{ cy }}) ({{ dx }} . {{ dy }}))
 {% endmacro %}
 
-{% macro twoVoices(a, b) %}
+{% macro v2(a, b) %}
   << \relative { {{ a }} } \\ \relative { {{ b }} } >>
 {% endmacro %}
