@@ -1,6 +1,7 @@
 %YAML 1.2
 ---
 pieces:
+  # Class
   # B0D1973
   - { id: d2md, tit: Вісла, sub: plfs,
       src: B0D1973,

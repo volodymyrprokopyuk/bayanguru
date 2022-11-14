@@ -1,6 +1,7 @@
 %YAML 1.2
 ---
 pieces:
+  # Class
   # B1AK1979
   - { id: 1rua, tit: Конячка, sub: hufs,
       src: B1AK1979,

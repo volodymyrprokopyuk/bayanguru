@@ -1,6 +1,7 @@
 %YAML 1.2
 ---
 books:
+  # Class
   - { id: ua01, tit: Українські народні пісні і танці, sub: для баяна,
       pieces: [
       # B0D1973
@@ -22,6 +23,7 @@ books:
       "e3u3", "ucue", "fngd", "cpdc", "9k9u", "0r9e", "v8ec", "w5ba", "plh0",
       "i11j", "zvpg", "mf7s", "zykv", "26qx", "di18", "btcu", "nev4", "foaz",
       "f45r"] }
+  # Class
   - { id: ru01, tit: Російські народні пісні і танці, sub: для баяна,
       pieces: [
       # B0D1973
@@ -39,12 +41,14 @@ books:
       "tsio", "tg2x"] }
   - { id: hu01, tit: Угорські народні пісні і танці, sub: для баяна,
       pieces: [
+      # Class
       # B1AK1979
       "1rua", "9htb",
       # B2AK1979
       "5qqn"] }
   - { id: md01, tit: Молдавські народні пісні і танці, sub: для баяна,
       pieces: [
+      # Class
       # B0DU1982
       "mhjw"] }
   # - { id: ro01, tit: Румунські народні пісні і танці, sub: для баяна,
@@ -53,11 +57,13 @@ books:
   #     "anID"] }
   - { id: by01, tit: Білоруські народні пісні і танці, sub: для баяна,
       pieces: [
+      # Class
       # B0D1973
       "bv2w",
       # B1AK1985
       "v99z"] }
   - { id: pl01, tit: Польські народні пісні і танці, sub: для баяна,
       pieces: [
+      # Class
       # B0D1973
       "d2md", "p1vc"] }

@@ -1,6 +1,7 @@
 %YAML 1.2
 ---
 pieces:
+  # Class
   # B0D1973
   - { id: bv2w, tit: Лявониха, sub: byfs,
       src: B0D1973,
