@@ -1,4 +1,4 @@
-{% from "source/util.lys" import dynStaffPadding, v2 %}
+{% from "source/util.lys" import dynPadding, v2 %}
 
 {% macro rightHand(config) %}
 \tempo Moderato
@@ -32,7 +32,7 @@
   <<
     \new Voice = voiceOne \relative {
       \voiceOne
-      {{ dynStaffPadding() }}
+      {{ dynPadding() }}
       e''=''8[(\< b') b b] | a4( b8 \after 8\! g) |
       fis=''4(\> g8 fis | e8) e \after 4\! e=''4 |
     }

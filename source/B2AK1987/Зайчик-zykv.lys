@@ -1,4 +1,4 @@
-{% from "source/util.lys" import dynStaffPadding, momentBeat, v2 %}
+{% from "source/util.lys" import dynPadding, momentBeat, v2 %}
 
 {% macro lhFrag1() %}
   {{ v2("r4 aM!", "a,=,2") }} |
@@ -25,7 +25,7 @@
   <<
     \new Voice = voiceOne \relative {
       \voiceOne
-      {{ dynStaffPadding(4) }}
+      {{ dynPadding(4) }}
       \acciaccatura { gis''=''8 } a2->(\f gis4. fis=''8) |
     }
     \new Voice = voiceTwo \relative {
@@ -37,7 +37,7 @@
   <<
     \new Voice = voiceOne \relative {
       \voiceOne
-      {{ dynStaffPadding(4) }}
+      {{ dynPadding(4) }}
       \acciaccatura { dis''=''8 }
       e=''4->\(\p cis8 dis e4. dis8 |
       cis=''8 e b4 a2\) | \barFermata

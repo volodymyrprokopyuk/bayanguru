@@ -5,11 +5,10 @@
   \tweak extra-spacing-width #'(-{{ sh }} . 0)
 {% endmacro %}
 
-% dynStaffPadding adds padding to dynamics relative to the Staff within a
-% \relative
+% dynPadding adds padding to dynamics relative to the Staff within a \relative
 % - bs = defines the vertical base line between the Staff and dynamics
 %   - Unit = staff units
-{% macro dynStaffPadding(bs = 3.0) %}
+{% macro dynPadding(bs = 3.0) %}
   \override DynamicLineSpanner.staff-padding = #{{ bs }}
 {% endmacro %}
 

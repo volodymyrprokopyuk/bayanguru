@@ -1,4 +1,4 @@
-{% from "source/util.lys" import dynStaffPadding, momentBeat %}
+{% from "source/util.lys" import dynPadding, momentBeat %}
 
 {% macro rightHand(config) %}
 \tempo Lento
@@ -8,7 +8,7 @@
 \relative {
   {{ config() }}
   {{ momentBeat("1/2", "#'(1)") }}
-  {{ dynStaffPadding(4) }}
+  {{ dynPadding(4) }}
   R2\p | R2 |
   fis'='4\( cis | cis'4. a8 |
   b='8\< a gis \after 8\! fis | gis[ e] cis\) r |
@@ -17,7 +17,7 @@
   <a=' cis>8[ <b d>] <cis e>\)\< \after 8\! g |
   <<
     \relative {
-      {{ dynStaffPadding(4) }}
+      {{ dynPadding(4) }}
       <cis''='' e>4(\mf <b d>) |
       r8\< <b=' d>( <a cis> \after 8\! <gis=' b>)
     }
@@ -37,7 +37,7 @@
   <<
     \new Voice = voiceOne \relative {
       \voiceOne
-      {{ dynStaffPadding(4) }}
+      {{ dynPadding(4) }}
       cis''=''4(\p fis,8 fis') |
       fis=''8[( fis] fis fis) |
       gis,='8(\< <d' fis> <cis e> \after 8\! <b d>) |
@@ -56,14 +56,14 @@
       r8 <a= cis>8[ r <a= cis>] |
     }
   >>
-  {{ dynStaffPadding(6) }}
+  {{ dynPadding(6) }}
   r8\< <a,= d fis>4 \after 8\! 8 |
   r8 <gis= bis dis fis>4 8 |
   r8\> <gis= b d fis>4 \after 8\! 8 |
   r8\p <a= cis fis>4^"rit."
   <<
     \relative {
-      {{ dynStaffPadding(6) }}
+      {{ dynPadding(6) }}
       s8 | a'='4\> \after 4\! cis | cis=''\pp
     }
     \\
