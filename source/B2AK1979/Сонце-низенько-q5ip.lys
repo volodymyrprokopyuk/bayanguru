@@ -28,14 +28,14 @@
   g='16\( a b8[ b] | b16 a c b a g\) |
   fis='16\( g a8[ a] | a16 fis b a g fis\) |
   {{ rhFrag1() }}
-
   <<
-    \relative {
+    \new Voice = voiceOne \relative {
+      \voiceOne
       e''=''4.~\mp | e | dis~ | dis |
       e=''4.~ | e | dis~ | dis='' |
     }
-    \\
-    \relative {
+    \new Voice = voiceTwo \relative {
+      \voiceTwo
       \set subdivideBeams = ##t
       e''=''8\( b b | b16 a c b a g\) |
       fis='16\( g a8[ a] | a16 fis b a g fis\) |
