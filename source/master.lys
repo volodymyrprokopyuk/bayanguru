@@ -76,7 +76,7 @@ keyChangeBeforeBar = \once {
     subtitle = "{{ piece.sub or '' }}"
     {% if args.m %} meta = {{ pieceMeta(piece) }} {% endif %}
     {% if piece.com %} composer = "{{ piece.com }}" {% endif %}
-    {% if piece.arr %} arranger = "{{ piece.arr }}" {% endif %}
+    {% if piece.arr %} arranger = "Обр. {{ piece.arr }}" {% endif %}
   }
 {% endmacro %}
 
@@ -99,7 +99,7 @@ keyChangeBeforeBar = \once {
   \tocItem \markup {
     "{{ piece.tit }}"
     {% if piece.com %} \italic "{{ piece.com }}" {% endif %}
-    {% if piece.arr %} \italic "{{ piece.arr }}" {% endif %}
+    {% if piece.arr %} \italic "Обр. {{ piece.arr }}" {% endif %}
   }
 {% endmacro %}
 

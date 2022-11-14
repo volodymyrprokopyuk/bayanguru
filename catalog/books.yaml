@@ -50,7 +50,10 @@ books:
       pieces: [
       # Class
       # B0DU1982
-      "mhjw"] }
+      "mhjw",
+      # Tutorial
+      # BTBC1936
+      "epyc"] }
   # - { id: ro01, tit: Румунські народні пісні і танці, sub: для баяна,
   #     pieces: [
   #     # SOURCE

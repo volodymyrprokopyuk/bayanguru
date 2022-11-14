@@ -1,0 +1,40 @@
+{% macro rightHand(config) %}
+\tempo Moderato
+\clef treble
+\key d \minor
+\time 2/4
+\relative {
+  {{ config() }}
+  \repeat segno 2 {
+    \partial 8. { a'='16(\mp \acciaccatura { c=''8 } bes16 a) } |
+    \repeat volta 2 {
+      a='4(\< d8. \after 16\! e16 | f4~ f16) f( e f |
+      g=''8) f e d | \after 8.\! <g, cis>4~\>
+      16\< a( \acciaccatura { c=''8 } bes16 \after 16\! a) |
+      a='4( cis8. d16 | e4~ e16) f e d |
+      cis=''16\< b a \after 16\! b cis d e f |
+      \alternative {
+        \volta 1 {
+          \after 8.\! <f,=' d'>4~\>
+          16 a( \acciaccatura { c=''8 } bes16 a) |
+        }
+        \volta 2 { <f=' d'>4 <f=' a d>8 r | }
+      }
+    }
+  }
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key d \minor
+\relative {
+  {{ config() }}
+  \partial 8. { r8. } |
+  d=8-\stBass dm! f, d@m | d'8 dm! d dm |
+  d=8 dm d dm | a aM! a aM |
+  \repeat unfold 2 { a=,8 a7! e' a,@7 | }
+  a,=,8 a7! a a7 | d dm! dm r |
+  d=8 dm! d= r |
+}
+{% endmacro %}

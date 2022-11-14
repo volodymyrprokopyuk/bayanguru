@@ -8,7 +8,6 @@ pieces:
       org: md, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
   # Tutorial
   # BTBC1936
-  # p. 49
-  # - { id: epyc, tit: Молдовеняска, sub: mdfd,
-  #     arr: М. Чайкін, src: BTBC1936,
-  #     org: md, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
+  - { id: epyc, tit: Молдовеняска, sub: mdfd,
+      arr: М. Чайкін, src: BTBC1936,
+      org: md, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
