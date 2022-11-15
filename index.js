@@ -6,6 +6,7 @@ import { mkdir, readFile, writeFile, copyFile, access } from "fs/promises"
 // import { marked } from "marked"
 import { readPieces, readBooks } from "./lib/catalog.js"
 import { engravePieces, engraveBooks } from "./lib/score.js"
+import { chalk } from "zx"
 
 // async function sortPages(file) {
 //   const parsePage = page => parseInt(page.match(/-(\d+)\.svg$/)[1])
@@ -42,11 +43,19 @@ async function pieceInit(id) {
 async function engrave() {
   if (args.b) {
     let { books, pieces } = await readBooks(args)
+    console.log(
+      chalk.blue("Catalog:"),
+      chalk.yellow.bold(`${Object.values(pieces).length} pieces`)
+    )
     books = args._.length && args._[0] === "all" ?
       Object.values(books) : args._.map(id => books[id])
     await Promise.all(engraveBooks(books, pieces, args))
   } else {
     let pieces = await readPieces(args)
+    console.log(
+      chalk.blue("Catalog:"),
+      chalk.yellow.bold(`${Object.values(pieces).length} pieces`)
+    )
     pieces = args._.length && args._[0] === "all" ?
       Object.values(pieces) : args._.map(id => pieces[id])
     await Promise.all(engravePieces(pieces, args))
