@@ -12,7 +12,6 @@ pieces:
       org: by, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
   # Tutorial
   # BTBC1936
-  # p. 55
-  # - { id: 8ec9, tit: Перепілонька, sub: byfs,
-  #     arr: М. Чайкін, src: BTBC1936,
-  #     org: by, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  - { id: 8ec9, tit: Перепілонька, sub: byfs,
+      arr: М. Чайкін, src: BTBC1936,
+      org: by, sty: flk, gnr: sng, frm: plp, bss: stb, lvl: elm }
