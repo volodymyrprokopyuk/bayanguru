@@ -74,7 +74,7 @@ keyChangeBeforeBar = \once {
   \header {
     title = "{{ piece.tit }}"
     subtitle = "{{ piece.sub or '' }}"
-    {% if args.m %} meta = {{ pieceMeta(piece) }} {% endif %}
+    {% if not args.nometa %} meta = {{ pieceMeta(piece) }} {% endif %}
     {% if piece.com %} composer = "{{ piece.com }}" {% endif %}
     {% if piece.arr %} arranger = "Обр. {{ piece.arr }}" {% endif %}
   }
