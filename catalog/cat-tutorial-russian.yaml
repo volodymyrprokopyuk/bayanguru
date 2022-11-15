@@ -22,3 +22,7 @@ pieces:
   # - { id: qt7k, tit: Есть на Волге утес, sub: rufs,
   #     src: BTBC1936,
   #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  # p. 54
+  # - { id: oz1w, tit: При долине куст калины,
+  #     com: А. Новиков, src: BTBC1936,
+  #     org: ru, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
