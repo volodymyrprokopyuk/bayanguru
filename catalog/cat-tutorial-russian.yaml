@@ -26,3 +26,23 @@ pieces:
   # - { id: oz1w, tit: При долине куст калины,
   #     com: А. Новиков, src: BTBC1936,
   #     org: ru, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  # p. 55
+  # - { id: p26a, tit: Барыня, sub: rufd,
+  #     arr: Н. Чайкин, src: BTBC1936,
+  #     org: ru, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
+  # p. 58
+  # - { id: frcu, tit: "Ах ты, ноченька", sub: rufs,
+  #     arr: Н. Чайкин, src: BTBC1936,
+  #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  # p. 60
+  # - { id: hjff, tit: Костры горят далекие,
+  #     com: Б. Мокроусов, src: BTBC1936,
+  #     org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+  # p. 60
+  # - { id: 7nax, tit: Ермак, sub: rufs,
+  #     arr: Н. Чайкин, src: BTBC1936,
+  #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  # p. 61
+  # - { id: 74jq, tit: Уральская рябинушка,
+  #     com: Е. Родыгин, src: BTBC1936,
+  #     org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
