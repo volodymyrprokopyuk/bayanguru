@@ -1,6 +1,6 @@
 %YAML 1.2
 ---
-pieces:
+pieces: []
   # BTBC1936
   # p. 29
   # - { id: q6xh, tit: Одинокая гармонь,
@@ -45,4 +45,8 @@ pieces:
   # p. 61
   # - { id: 74jq, tit: Уральская рябинушка,
   #     com: Е. Родыгин, src: BTBC1936,
+  #     org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+  # p. 63
+  # - { id: 7s64, tit: Жди солдата,
+  #     com: Б. Мокроусов, arr: Н. Чайкин, src: BTBC1936,
   #     org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
