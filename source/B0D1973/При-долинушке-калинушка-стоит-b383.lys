@@ -1,9 +1,9 @@
-{% macro rhFrag1() %}
-  f8-. d-. e-. c-. | d( c d e | c4)
+{% macro rhFrag1(a) %}
+  {{ a }} d-. e-. c-. | d( c d e | c4) %
 {% endmacro %}
 
 {% macro lhFrag1(a) %}
-  {{ a }} c@M!4 | d,+dm! g,,+gM! | c,+cM!
+  {{ a }} c@M!4 | d,+dm! g,,+gM! | c,+cM! %
 {% endmacro %}
 
 {% macro rightHand(config) %}
@@ -14,9 +14,9 @@
 \relative {
   {{ config() }}
   \partial 4 { c''=''8-.\mp e-. } |
-  {{ rhFrag1() }} c,='8-. e-. |
-  {{ rhFrag1() }} g''=''8-. e-. |
-  {{ rhFrag1() }} g='8-. e-. |
+  {{ rhFrag1("f=''8-.") }} c,='8-. e-. |
+  {{ rhFrag1("f='8-.") }} g''=''8-. e-. |
+  {{ rhFrag1("f=''8-.") }} g='8-. e-. |
   f='8-. d-. e-. c-. | d( c b d | c='4) \bar "|."
 }
 {% endmacro %}

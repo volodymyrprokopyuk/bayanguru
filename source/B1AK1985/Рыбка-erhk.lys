@@ -26,6 +26,6 @@
   a=,4 aM! aM | gis e@M! eM4 |
   fis=,4 b,@7! b74 | e@M!( e'4) r |
   a,=,4 aM! aM | gis e@M! eM |
-  fis=,4 b,@7! b74 | e@M!( e'=8) r
+  fis=,4 b,@7! b74 | e@M!( e'=8) r %
 }
 {% endmacro %}

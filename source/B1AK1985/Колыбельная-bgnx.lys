@@ -42,8 +42,8 @@
   \repeat unfold 2 { a,=,4 am! a e@7! | }
   a=,4 d@m! a am |
   {{ lhFrag1("a=,4", "eM!") }}
-  g, gM! e@7!2\fermata |
+  g,=, gM! e@7!2\fermata |
   {{ lhFrag1("a=,4", "e7!") }}
-  g, c@M! g=,4 gM! |
+  g,=, c@M! g=,4 gM! |
 }
 {% endmacro %}

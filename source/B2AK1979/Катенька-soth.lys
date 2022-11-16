@@ -71,6 +71,6 @@
   {{ lhFrag2() }}
   bes=,8 besM! bes besM |
   {{ lhFrag2() }}
-  bes=,4 besM!8
+  bes=,4 besM!8 %
 }
 {% endmacro %}
