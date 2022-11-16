@@ -2,8 +2,8 @@
 
 {% macro rhFrag1() %}
   \autoLineBreaksOff
-  g='8.\)
-  \shape #'((0 . 0) (0 . 1) (0 . 4.5) (0 . 0)) PhrasingSlur
+  g='8.\) %
+  \shape #'((0 . 0) (0 . 1) (0 . 4.5) (0 . 0)) PhrasingSlur %
   g='16\( bes d |
   <g,=' d' g>4\< 16 \after 16\! 16 |
   <<
@@ -52,14 +52,14 @@
     \set subdivideBeams = ##t
     d=''16 d' c bes a g | fis ees d c bes a |
     \set subdivideBeams = ##f
-    g='8\)\> r \after 8\! r | r r
+    g='8\)\> r \after 8\! r | r r %
 
     \volta 2 \fine \bar "!!"
     g='8\(\mf | g8. f16 e f | d'8. c16 g a |
     c=''8. bes16 a g | f4\) f8\( |
     ges='8. f16 e f | g8. a16 bes c |
     cis=''4. | d8\) r d\( |
-    ees8. d16 cis d | bes'8. a16 e fis |
+    ees=''8. d16 cis d | bes'8. a16 e fis |
     a=''8. g16 fis a | g4\) g,8 |
     <g=' cis g'>8\f 16 16 8 |
     <bes=' cis bes'> <a cis a'> <g cis g'> |
