@@ -19,8 +19,8 @@
     bes='16( a g fis g a bes g) |
     fis='16( g a4) a8 |
     \alternative {
-      \volta 1 { bes16( a g fis g='8) r | }
-      \volta 2 { bes16( a g fis g='8) r \bar "|." }
+      \volta 1 { bes='16( a g fis g='8) r | }
+      \volta 2 { bes='16( a g fis g='8) r \bar "|." }
     }
   }
 }
