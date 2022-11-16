@@ -64,11 +64,11 @@
   <<
     \relative {
       {{ dynPadding(6) }}
-      s8 | a'='4\> \after 4\! cis | cis=''\pp
+      s8 | a'='4\> \after 4\! cis | cis=''\pp %
     }
     \\
     \relative {
-      <cis'=' fis(>8 | fis) fis4 <fis a>8~ | <fis=' a>4
+      <cis'=' fis(>8 | fis) fis4 <fis a>8~ | <fis=' a>4 %
     }
   >>
   r4 \bar "|."
