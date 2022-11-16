@@ -13,7 +13,7 @@
 {% macro rhFrag3() %}
   <<
     \relative {
-      <e'=' a c>8\> <f a c>
+      <e'=' a c>8\> <f a c> %
       \after 4\! <gis=' b>4 | a='2 |
     }
     \\
@@ -35,7 +35,7 @@
   {{ config() }}
   R2\mp | \repeat unfold 3 { R2 } |
   <e'=' a c>8\< 8 <d a' d> <d f a d> |
-  <e=' a c e>4  \after 4\!
+  <e=' a c e>4  \after 4\! %
   {{ rhFrag2() }}
   <e=' a c>8\> 8 <d e b'>4 |
   \after 4.\! <c=' e a>4. r8 |
@@ -62,7 +62,7 @@
   <a=' c>16( e <a c>8) <b d>16( g <b d>8) |
   e=''16( c g e d f a b) |
   e,='16( a b c) b( e, fis gis |
-  a='4) <b,= f' g>->
+  a='4) <b,= f' g>-> |
 
   <g'=' c e>16\f 16 8-> 16 16 8-> |
   <f=' g d'>4 <f a c>8 <f b d> |
