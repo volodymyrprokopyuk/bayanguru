@@ -22,7 +22,7 @@
     c=''8-. c-. g4 | c8-. c-. g4 | c8 c( b a | gis4 e) |
     {{ rhFrag1("a='16(") }}
     \alternative {
-      \volta 1 { a4) b=' | }
+      \volta 1 { a='4) b=' | }
       \volta 2 {
         {{ hSpace() }} a4
         {{ shapedSlur("bu") }} ( a'='') \bar "|."
