@@ -15,7 +15,7 @@
       \repeat unfold 2 { b='4 a8 a | }
       <a=' b>8 <a c> <gis b>4 | a4 a |
       \repeat unfold 2 { b='4 a8 a | }
-      <gis=' b>8 <a c> <gis b>4 | a='2\fermata
+      <gis=' b>8 <a c> <gis b>4 | a='2\fermata %
     }
     \new Voice = voiceTwo \relative {
       \voiceTwo
@@ -26,7 +26,7 @@
       f='2 | e4. e8 |
       dis='4 f8( e) | f'( e) c( e,) |
       f='4. e8 | dis2 |
-      d='4 f8( e) | f( e) a,=4\fermata
+      d='4 f8( e) | f( e) a,=4\fermata %
     }
   >> \bar "|."
 }
