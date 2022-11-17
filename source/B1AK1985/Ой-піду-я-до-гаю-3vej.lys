@@ -21,7 +21,7 @@
   {{ rhFrag1() }}
   d=''8.( f16 a8) a | bes bes16( a g4->) |
   f=''16( e d8) e16( d cis8) |
-  d=''8 \acciaccatura { e8 } d16( cis d=''4->) \bar "|."
+  d=''8 \acciaccatura { e=''8 } d16( cis d=''4->) \bar "|."
 }
 {% endmacro %}
 

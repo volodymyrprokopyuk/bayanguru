@@ -1,12 +1,12 @@
 {% macro rhFrag1(a) %}
-  {{ a }} c-. \acciaccatura { d8 } c16( b c8) |
-  d=''8-. g,-. \acciaccatura { a8 } g16( fis g8) |
+  {{ a }} c-. \acciaccatura { d=''8 } c16( b c8) |
+  d=''8-. g,-. \acciaccatura { a='8 } g16( fis g8) |
   d'=''8-. g,-. f'-. g,='-. |
 {% endmacro %}
 
 {% macro rhFrag2(a) %}
-  {{ a }} \acciaccatura { cis=''8 } d8
-  \acciaccatura { fis=''8 } g8
+  {{ a }} \acciaccatura { cis=''8 } d8 %
+  \acciaccatura { fis=''8 } g8 %
   \acciaccatura { ais=''8 } b8] |
   b=''8( a16 g fis8-.) e=''-. |
 {% endmacro %}
@@ -35,18 +35,19 @@
 
   {{ rhFrag2("b='8[\\p") }}
   \repeat unfold 2 {
-    e=''8-. d-. \acciaccatura { e8 } d16( cis d=''8) |
+    e=''8-. d-. \acciaccatura { e=''8 } d16( cis d=''8) |
   }
   {{ rhFrag2("b='8[") }}
   e=''16( d cis d e d b' a |
-  g=''8) \acciaccatura { fis8 } g8
-  \acciaccatura { fis=''8 } g16(\< gis a \after 16\! ais='' |
+  g=''8) \acciaccatura { fis=''8 } g8 %
+  \acciaccatura { fis=''8 }
+  g=''16(\< gis a \after 16\! ais='' |
 
   \acciaccatura { c='''8 } b8-.) g,-. b'-. a-. |
   a=''8-. g-. g16( f e8) | g-. g,-. g'-. f-. |
   f=''8-. e-. e16( d c8) | b'-. g,-. b'-. a-. |
   a=''8-. g-. g16( f e8) | cis16( d b' a g f e d |
-  c=''8) \acciaccatura { d8 } c16( b c=''4) \bar "|."
+  c=''8) \acciaccatura { d=''8 } c16( b c=''4) \bar "|."
 }
 {% endmacro %}
 

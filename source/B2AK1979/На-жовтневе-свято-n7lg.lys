@@ -15,7 +15,8 @@
     <b= d g>8-. 8-. <b d fis>-. <d fis b>-. |
     <e=' a>4 <dis=' a'> |
 
-    b'='8-.\f \acciaccatura { cis8 } d-. a-. \acciaccatura { gis8 } a-. |
+    b'='8-.\f \acciaccatura { cis=''8 } d-. a-. %
+    \acciaccatura { gis='8 } a-. |
     b='16( cis d b a8-.) fis-. | g-. g-. fis-. a-. |
     e='4 d16(\< e fis \after 16\! a) |
     b='16(\f cis d b) a( a' gis a) |

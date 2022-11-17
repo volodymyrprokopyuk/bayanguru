@@ -3,7 +3,7 @@
 {% endmacro %}
 
 {% macro rhFrag2() %}
-  e='8[(->\< d]) e(-> \after 16.\! d)
+  e='8[(->\< d]) e(-> \after 16.\! d) %
   f='8[(->\> e]) d-. \after 8\! d='-. |
 {% endmacro %}
 
@@ -16,8 +16,8 @@
   {{ config() }}
   <g''='' g'>8-.\mf r d'-. r <a a'>8[-. 8]-. d-. r |
   g,=''16( a b c d8-.) d-. <a a'>8[-. 8]-. d-. r |
-  g,=''8\f r d-. d-. \acciaccatura { dis8 } e4(-> d8) r |
-  g,='8[-.\p g]-. d-. d-. \acciaccatura { dis8 } e4(-> d8) r |
+  g,=''8\f r d-. d-. \acciaccatura { dis=''8 } e4(-> d8) r |
+  g,='8[-.\p g]-. d-. d-. \acciaccatura { dis='8 } e4(-> d8) r |
   {{ rhFrag1("d='8\\mp") }}
   {{ rhFrag1("d='8") }}
   {{ rhFrag2() }}

@@ -31,11 +31,11 @@
     \new Voice = voiceOne \relative {
       \voiceOne
       a'='8. g16 fis8 e | d e16 fis g8 b |
-      a='16 b a g fis8 e | d e16 fis g='8
+      a='16 b a g fis8 e | d e16 fis g='8 %
     }
     \new Voice = voiceTwo \relative {
       \voiceTwo
-      c'='4~ c | c b | c~ c | c b=8
+      c'='4~ c | c b | c~ c | c b=8 %
     }
   >>
   r8 |
@@ -44,18 +44,18 @@
   g='16(\mp d e fis) fis( fis g b) | a( gis a c b c b a) |
   g='16( fis g a) b( ais b g) | a( b c a <g b>4) |
   a='16(\mf b a g) fis( g fis e) | d( dis e fis g fis g b) |
-  a='16( b a g) fis( g fis e) | d8( e16 fis g='4)
+  a='16( b a g) fis( g fis e) | d8( e16 fis g='4) |
 
   \tempo Allegro
   g='16\f d <g b>-> d <g b> d <g b> d |
   <fis=' a>16 d <a' c>-> d, <g b>-> d g a |
   <g=' b>16 d <g b d>-> d <g b d> d <b' d> d, |
-  <a'=' c>16 fis <c' e>-> fis,
+  <a'=' c>16 fis <c' e>-> fis, %
   <<
     \relative { d''=''8.\> \after 16\! c=''16 }
     \\
     \relative { fis'='4 }
-  >>
+  >> |
   <a=' c>16(\mf <b d> <a c> <g b> <fis a>8-.)\< <e g>-. |
   <<
     \relative { d'='8( e16 fis <b, g'>8-.) <d=' b'>-. | }
@@ -81,7 +81,7 @@
   g=,8-\stBass gM! d' g,@M | d8 dM! g, gM |
   g=,8 gM! d' g,@M | d8 d7! g, gM! |
   a=,8 am! c a,@m | d8 d7! g, gM! |
-  d'=8 d7! a d@7 | d=8 d7! g,,+gM! r
+  d'=8 d7! a d@7 | d=8 d7! g,,+gM! r |
 
   g,=,8 gM! b g,@M | fis8 d@7! g8 gM! |
   g=,8 gM! d' g,@M | fis,8 d@7! g8 gM! |

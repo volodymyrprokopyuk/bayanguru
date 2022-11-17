@@ -14,7 +14,7 @@
   {{ a }} <a c>16 \acciaccatura { e'=''8 } <b d>8( <ais cis>-.) |
   \acciaccatura { e'=''8 } <b d>8( <ais cis>-.) <b d> <gis e'> |
   <a=' c>8-.\< <fis d'>-. <g b>-. \after 8\! <g c>-. |
-  <g=' a>8\> \acciaccatura { b8 } <c, fis a>8 \after 4\! <b= g'>4-- |
+  <g=' a>8\> \acciaccatura { b='8 } <c, fis a>8 \after 4\! <b= g'>4-- |
 {% endmacro %}
 
 {% macro rhFrag4(a) %}
@@ -63,7 +63,7 @@
   \repeat segno 2 {
     \volta 1
     g='8\f g' e->( d16 c) | b8-. d-. a-. d-. |
-    b='8-. d-. \acciaccatura { d8 } c16(_\dynCresc b c a) |
+    b='8-. d-. \acciaccatura { d=''8 } c16(_\dynCresc b c a) |
     b='8-. d-. a-. d-. | b-. a-. g='4--\f |
 
     {{ rhFrag3("<g=' b>8.\\mf") }}
