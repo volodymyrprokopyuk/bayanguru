@@ -4,9 +4,13 @@ stBass = \markup \larger \box Г % Готовий
 frBass = \markup \larger \box В % Вибiрний
 puBass = \markup \larger \box Б % Чистий бас
 
+artSimile = \markup \italic simile
 dynCresc = \markup \lower #3 \italic "cresc."
 dynDim = \markup \lower #3 \italic "dim."
-artSimile = \markup \italic simile
+tempRit = "rit."
+tempRall = "rall."
+tempATempo = "a tempo"
+tempAccel = "accel."
 barFermata = \mark \markup \musicglyph #"scripts.ufermata"
 keyChangeBeforeBar = \once {
   \override Score.BreakAlignment.break-align-orders =

@@ -36,7 +36,7 @@
 \relative {
   {{ config() }}
   c'='4-.\p e-._\dynCresc fis-. | gis-. bes-. b |
-  c=''4-. e-. fis-. | gis-.^"rit." bes-. b='' |
+  c=''4-. e-. fis-. | gis-.^\tempRit bes-. b='' |
   \repeat segno 2 {
     \volta 1
     \repeat volta 2 {

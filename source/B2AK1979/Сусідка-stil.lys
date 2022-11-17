@@ -14,7 +14,7 @@
   <g=' c e>4\mf 4 | <c e g>4. <g c e>8 |
   <g=' b d>4 g'8( f | e4 d) |
   <a=' c>4. 8 | d8( c b a |
-  <gis=' b e>2) | \after 4.\! <g=' b f'>2^"rit."\< |
+  <gis=' b e>2) | \after 4.\! <g=' b f'>2^\tempRit\< |
 
   \repeat volta 2 {
     <g=' c e>4^"a tempo"\f 4 | <g c f> <g c e> |

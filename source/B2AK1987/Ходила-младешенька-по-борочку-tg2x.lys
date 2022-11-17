@@ -72,7 +72,7 @@
   <e=' g e'>4-> <f a>8 <f a b> |
   {{ rhFrag3() }}
   <c=' e c'>8 8 <d f a d>8 8 |
-  <e=' a e'>4^"rit."_\dynDim {{ rhFrag2() }} |
+  <e=' a e'>4^\tempRit_\dynDim {{ rhFrag2() }} |
   <c=' fis c'>8 8 <d gis b>4 |
   <c=' e a>2 \bar "|."
 }

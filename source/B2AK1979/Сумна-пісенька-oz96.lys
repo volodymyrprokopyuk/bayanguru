@@ -33,7 +33,7 @@
   e=''8[ b] cis a | d4.\)\> \after 8\! d,8\( |
   {{ rhFrag1("g='8\\mp") }}
   c=''8 ees a, c | bes d g, bes\) |
-  a='8[( c]) fis,(^"rit." a) | g4-> <bes=' d g>-> \bar "|."
+  a='8[( c]) fis,(^\tempRit a) | g4-> <bes=' d g>-> \bar "|."
 }
 {% endmacro %}
 

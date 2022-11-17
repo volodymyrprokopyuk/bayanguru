@@ -17,7 +17,7 @@
   <<
     \relative {
       c''=''8(\f b c |
-      d=''4\>^"rit." \after 8\! c=''8) |
+      d=''4\>^\tempRit \after 8\! c=''8) |
       \barFermata
     }
     \\
