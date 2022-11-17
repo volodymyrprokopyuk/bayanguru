@@ -1,11 +1,11 @@
 {% macro rhFrag1(a, b, c) %}
   {{ a }} d e f g8-.) g-. | a16( g a8) g-. {{ b }} |
-   {{ c }} e f8) e16( d e8) | d16( c d8) c-. c='-. |
+  {{ c }} e f8) e16( d e8) | d16( c d8) c-. c='-. |
 {% endmacro %}
 
 {% macro rhFrag2(a) %}
   {{ a }} d e8) d16( c d8) | e16( d e8) f-. f-. |
-  e16( d e8) d16( c d8) |
+  | e16( d e8) d16( c d8) |
 {% endmacro %}
 
 {% macro rightHand(config) %}

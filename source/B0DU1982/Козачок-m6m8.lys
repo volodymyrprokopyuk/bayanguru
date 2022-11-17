@@ -1,6 +1,6 @@
 {% macro rhFrag1(a, b) %}
   {{ a }} c8-. e-. | d16( c b8-.) c-. e-. |
-  c8-. e-. c-. e-. | d16( c b8-.) {{ b }} |
+  c=''8-. e-. c-. e-. | d16( c b8-.) {{ b }} |
 {% endmacro %}
 
 {% macro lhFrag1(a, b) %}

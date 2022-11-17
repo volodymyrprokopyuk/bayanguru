@@ -19,12 +19,12 @@
       c''=''4\( c c | c b c\) |
       d=''4\( d\< d | d e \after 4\! f\) |
       e=''4\( e e | e b\> c |
-      a='2.~ | \after 8.\! a='4\)
+      a='2.~ | \after 8.\! a='4\) %
     }
     \new Voice = voiceTwo \relative {
       \voiceTwo
       a'='2.~ | a2. | a2.~ | a2. |
-      c=''2. | gis2. | a2.~ | a='4
+      c=''2. | gis2. | a2.~ | a='4 %
     }
   >>
   r r \bar "|."

@@ -3,7 +3,7 @@
   <c='' e>( <b d>) <a c>-. <g b>-. |
   <<
     \relative {
-      a'='8-. d-. d16( c b a | g='4)
+      a'='8-. d-. d16( c b a | g='4) %
     }
     \\
     \relative { fis'='8-. 8-. 4 | }
@@ -24,17 +24,17 @@
   <a=' c>( <g b>) <fis a>-. <e g>-. |
   <<
     \relative {
-      fis'='8-. b-. b16( a g fis | e='4)
+      fis'='8-. b-. b16( a g fis | e='4) %
     }
     \\
     \relative { dis'='8-. 8-. 4 | }
   >>
-  e4 |
+  e='4 |
   <e=' g>8-. <g b>-. <e g>-. <g b>-. |
   <a=' c>( <g b> <fis a> <e g>) |
   <<
     \relative {
-      fis'='8-. b-. b16( a g fis | e='8) 8
+      fis'='8-. b-. b16( a g fis | e='8) 8 %
     }
     \\
     \relative { dis'='8-. 8-. 4 | }

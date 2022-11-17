@@ -23,7 +23,7 @@
   {{ config() }}
   \repeat volta 2 {
     {{ rhFrag1("g'='4\\mf") }}
-    {{ rhFrag1("g") }}
+    {{ rhFrag1("g='") }}
     {{ rhFrag2("g='4") }}
     {{ rhFrag2("g=' r") }}
   }

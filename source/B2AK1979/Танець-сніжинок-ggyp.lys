@@ -1,7 +1,7 @@
 {% macro rhFrag1(a) %}
   <a='' a'>8-. r <a g'>-. r <a f'>-. r |
   <bes='' e>2. | <bes d>2. |
-  <bes='' c>8-. r
+  <bes='' c>8-. r %
   <<
     \relative { c'''='''8-. d-. c-. d-. }
     \\
@@ -11,7 +11,7 @@
 {% endmacro %}
 
 {% macro rhFrag2() %}
-  <a='' c>8-. r
+  <a='' c>8-. r %
   <<
     \relative { c'''='''8-. d-. c-. d-. }
     \\
@@ -45,9 +45,9 @@
       \alternative {
         \volta 1 { {{ rhFrag2() }} }
         \volta 2 {
-          <a='' f'>2.~ | <a f'>8 r
+          <a='' f'>2.~ | <a f'>8 r %
           \volta 2 \fine \bar "!!"
-          <a d>\p r <a='' dis> r |
+          <a='' d>\p r <a='' dis> r |
         }
       }
     }
@@ -80,8 +80,9 @@
         \volta 1 { {{ rhFrag2() }} }
         \volta 2 {
           <a='' f'>2.~ |
-          <a='' f'>8 r
-          \ottava #1 aes'='''-.\pp r <des,=''' des'>-. r |
+          <a='' f'>8 r %
+          \ottava #1
+          aes'='''-.\pp r <des,=''' des'>-. r |
         }
       }
     }

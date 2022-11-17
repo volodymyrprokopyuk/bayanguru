@@ -13,7 +13,7 @@
   <e,=' g>4\mp 8 c' | <f, a>4 8 c' |
   <<
     \relative {
-      c''=''8\(\> bes a \after 8\! g | f='4.\)
+      c''=''8\(\> bes a \after 8\! g | f='4.\) %
     }
     \\
     \relative { e'='2 | f='4. }

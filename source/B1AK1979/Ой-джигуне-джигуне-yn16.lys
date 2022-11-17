@@ -29,7 +29,7 @@
   {{ config() }}
   d=8-\stBass dm! d dm | d dm d dm |
   d=8 g,@m! d8 g,@m | d8 dm! d dm |
-  {{ lhFrag1("d dm") }}
+  {{ lhFrag1("d= dm") }}
   {{ lhFrag1("d,+dm4") }}
 }
 {% endmacro %}

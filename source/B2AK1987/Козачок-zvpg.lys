@@ -7,11 +7,11 @@
   {{ a }} ais b d) a( gis a d) |
   b='16( ais b e) d8( c ) |
   b='16( ais b d) a( gis a d) |
-  b='16( c b a='
+  b='16( c b a=' %
 {% endmacro %}
 
 {% macro rhFrag3(a) %}
-  {{ a }} <a c>16 \acciaccatura { e'8 } <b d>8( <ais cis>-.) |
+  {{ a }} <a c>16 \acciaccatura { e'=''8 } <b d>8( <ais cis>-.) |
   \acciaccatura { e'=''8 } <b d>8( <ais cis>-.) <b d> <gis e'> |
   <a=' c>8-.\< <fis d'>-. <g b>-. \after 8\! <g c>-. |
   <g=' a>8\> \acciaccatura { b8 } <c, fis a>8 \after 4\! <b= g'>4-- |

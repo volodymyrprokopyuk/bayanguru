@@ -17,7 +17,8 @@
   <<
     \relative {
       c''=''8(\f b c |
-      d=''4\>^"rit." \after 8\! c=''8) | \barFermata
+      d=''4\>^"rit." \after 8\! c=''8) |
+      \barFermata
     }
     \\
     \relative { g'='4 r8 | g='4 r8 | }

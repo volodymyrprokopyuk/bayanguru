@@ -12,13 +12,13 @@
 \relative {
   {{ config() }}
   {{ momentBeat("1/4", "1,1,1,1") }}
-  a'='8\mf a \acciaccatura { gis'8 } a4->
-  a,='8 a \acciaccatura { gis'8 } a4-> |
+  a'='8\mf a \acciaccatura { gis'=''8 } a4-> %
+  a,='8 a \acciaccatura { gis'=''8 } a4-> |
   a,='8[ a] cis[ d] e4. d8 | cis cis b4 a2 |
   a='4\f( <a cis>8 <b d> <cis e>4. <b d>8) |
   <a=' cis>8 8 <gis b>4 a2 |
   cis=''8(\p e) b-. b-. cis-. cis-. d( b) |
-  cis=''16(\< a cis e) b( gis b e)
+  cis=''16(\< a cis e) b( gis b e) %
   cis=''16( a cis e) d8( \after 8\! b) |
   cis=''8 <a cis> <gis b>4 a2 |
   <e=' a cis>8\> 8 <d gis b>4 \after 2\! <cis=' e a>2 |
@@ -40,7 +40,8 @@
       {{ dynPadding(4) }}
       \acciaccatura { dis''=''8 }
       e=''4->\(\p cis8 dis e4. dis8 |
-      cis=''8 e b4 a2\) | \barFermata
+      cis=''8 e b4 a2\) |
+      \barFermata
       \tempo Moderato
       cis=''8[( e]) b[-. b]-. cis[-. cis]-. d[( b=']) |
     }
@@ -50,9 +51,9 @@
       a='4( gis g fis=') |
     }
   >>
-  cis=''16(^"accel."_\dynCresc e, a e' b e, b' d
+  cis=''16(^"accel."_\dynCresc e, a e' b e, b' d %
   cis=''16 e, a cis <fis, d'>8 b) |
-  cis=''16( e, a cis) b( d, e gis)
+  cis=''16( e, a cis) b( d, e gis) %
   a='16( e fis gis a^"rit." gis a b) |
   \tempo Lento
   <e,=' a cis>8--\f 8-- <d e gis b>4-> <cis=' e a>2-- \bar "|."
