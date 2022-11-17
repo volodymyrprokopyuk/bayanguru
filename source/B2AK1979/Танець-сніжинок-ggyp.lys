@@ -40,7 +40,7 @@
   \repeat segno 2 {
     \volta 1
     \repeat volta 2 {
-      c='''8-.\mf^"a tempo" r a( bes b c) |
+      c='''8-.\mf^\tempATempo r a( bes b c) |
       {{ rhFrag1() }}
       \alternative {
         \volta 1 { {{ rhFrag2() }} }

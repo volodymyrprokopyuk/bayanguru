@@ -14,7 +14,7 @@
   b='8( fis) fis | a(\> \after 4\! fis4) |
   d'=''8(\mp cis b) | b(\< \after 16.\! ais) ais |
   b='8( a g) | g(\>^\tempRit \after 4\! fis4) |
-  cis='8\(^"a tempo" d e | fis b, b\) |
+  cis='8\(^\tempATempo d e | fis b, b\) |
   e='8\(_\dynCresc fis g | a d,4\) |
   a'='8\( b d | cis b a\) |
   b='8\( cis d | e a, a\) |
@@ -22,7 +22,7 @@
   d='8\( cis b | cis a b |
   cis='8 d e\) | fis\(_\dynDim^\tempRit cis cis |
   cis'=''8 fis, fis' | fis4.\)\fermata |
-  b,='8(\p^"a tempo" fis) fis | a( fis4) |
+  b,='8(\p^\tempATempo fis) fis | a( fis4) |
   b='8( fis) fis | a( fis4) |
   d'=''8( cis b | cis a) a |
   d=''8(_\dynDim^\tempRit b e | fis b,) b='\fermata \bar "|."

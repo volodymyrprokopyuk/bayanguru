@@ -23,7 +23,7 @@
     \\
     \relative { g'='4 r8 | g='4 r8 | }
   >>
-  b='16(\mf^"a tempo" c b8) a-. | g-. g='-. r \bar "|."
+  b='16(\mf^\tempATempo c b8) a-. | g-. g='-. r \bar "|."
 }
 {% endmacro %}
 
