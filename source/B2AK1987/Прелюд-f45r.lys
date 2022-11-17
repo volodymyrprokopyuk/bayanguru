@@ -32,7 +32,7 @@
     \\
     \relative { r8 bes=8( c e) <a,= dis>4 | }
   >>
-  <b= e>8(^"rit" <cis fis> <d g> <fis b>) <g=' b e>4-- \bar "|."
+  <b= e>8(^\tempRit <cis fis> <d g> <fis b>) <g=' b e>4-- \bar "|."
 }
 {% endmacro %}
 
