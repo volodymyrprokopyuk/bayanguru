@@ -44,3 +44,14 @@ legend:
     int: середній
     adv: складний
     vir: віртуозний
+    # arrangment type (aty)
+    arr: Обр. # обробка
+    ipr: Пер. # переклад
+    hrm: Гарм. # гармонізація
+    # misc
+    toc: Зміст
+  en:
+    # arrangment type (aty)
+    arr: Arr. # arrangment
+    ipr: Interp. # interpratation
+    hrm: Harm. # harmonization

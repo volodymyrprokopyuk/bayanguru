@@ -74,9 +74,15 @@ keyChangeBeforeBar = \once {
   \header {
     title = "{{ piece.tit }}"
     subtitle = "{{ piece.sub or '' }}"
-    {% if not args.nometa %} meta = {{ pieceMeta(piece) }} {% endif %}
-    {% if piece.com %} composer = "{{ piece.com }}" {% endif %}
-    {% if piece.arr %} arranger = "Обр. {{ piece.arr }}" {% endif %}
+    {% if not args.nometa %}
+      meta = {{ pieceMeta(piece) }}
+    {% endif %}
+    {% if piece.com %}
+      composer = "{{ piece.com }}"
+    {% endif %}
+    {% if piece.arr %}
+      arranger = "{{ piece.aty }} {{ piece.arr }}"
+    {% endif %}
   }
 {% endmacro %}
 
@@ -98,8 +104,12 @@ keyChangeBeforeBar = \once {
 {% macro pieceTocItem(piece) %}
   \tocItem \markup {
     "{{ piece.tit }}"
-    {% if piece.com %} \italic "{{ piece.com }}" {% endif %}
-    {% if piece.arr %} \italic "Обр. {{ piece.arr }}" {% endif %}
+    {% if piece.com %}
+      \italic "{{ piece.com }}"
+    {% endif %}
+    {% if piece.arr %}
+      \italic "{{ piece.aty }} {{ piece.arr }}"
+    {% endif %}
   }
 {% endmacro %}
 

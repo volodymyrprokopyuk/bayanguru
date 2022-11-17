@@ -9,5 +9,5 @@ pieces:
   # Tutorial
   # BTBC1936
   - { id: epyc, tit: Молдовеняска, sub: mdfd,
-      arr: М. Чайкін, src: BTBC1936,
+      arr: М. Чайкін, aty: ipr, src: BTBC1936,
       org: md, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
