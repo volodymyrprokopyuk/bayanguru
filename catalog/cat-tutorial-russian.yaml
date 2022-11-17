@@ -62,3 +62,11 @@ pieces: []
   # - { id: sqwg, tit: Уваровские частушки,
   #     src: BTBC1936,
   #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  # p. 68
+  # - { id: 9lu3, tit: Волжские припевки,
+  #     com: Ю. Щекотов, src: BTBC1936,
+  #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  # p. 70
+  # - { id: ecde, tit: Мчатся гуси вереницей, sub: rufs,
+  #     arr: Н. Чайкин, aty: hrm, src: BTBC1936,
+  #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
