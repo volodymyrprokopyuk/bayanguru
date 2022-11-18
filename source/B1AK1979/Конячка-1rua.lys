@@ -8,7 +8,7 @@
   \repeat volta 2 {
     d''=''8\(\mf cis d e | f e d4\) |
     d=''8\( cis bes g | bes a g4\) |
-    a='8( f-.) e( c-.) | <d f>8-. 8-. 4-- |
+    a='8( f)-. e( c)-. | <d f>8-. 8-. 4-- |
     a'='8 f e c | d d d='4 |
   }
 }
