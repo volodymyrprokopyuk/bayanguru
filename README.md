@@ -1,7 +1,7 @@
 # Sheet music for bayan engraved with LilyPond
 
-Quality engraving system for bayan sheet music with support for Stradella bass
-and free bass for web (HTML) and print (PDF)
+Engraving system for high quality bayan sheet music in PDF with support for
+Stradella bass and free bass
 
 ## Catalog
 
