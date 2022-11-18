@@ -1,7 +1,7 @@
 {% from "source/util.lys" import hSpace, shapedSlur %}
 
 {% macro rhFrag1(a, b) %}
-  {{ a }} b c b d c b a | b8-.) b-. b4 |
+  {{ a }} b c b d c b a | b8)-. b-. b4 |
   e=''8-. e-. e16( d c b |
 {% endmacro %}
 

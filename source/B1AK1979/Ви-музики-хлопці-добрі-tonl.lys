@@ -36,7 +36,7 @@
   {{ config() }}
   {{ lhFrag1("c=4-\\stBass") }}
   {{ lhFrag1("c=4") }}
-  {{ lhFrag2("e=4","am am") }}
+  {{ lhFrag2("e=4", "am am") }}
   {{ lhFrag2("e'=4", "am2") }}
 }
 {% endmacro %}

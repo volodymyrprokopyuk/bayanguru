@@ -15,7 +15,7 @@
 \time 2/4
 \relative {
   {{ config() }}
-  a'='8\mf\( a a a | a c b a |
+  a'='8\(\mf a a a | a c b a |
   gis='8 gis gis gis | gis b a gis\) |
   {{ rhFrag1() }} | a4 b='\) |
 

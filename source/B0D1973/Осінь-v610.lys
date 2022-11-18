@@ -6,7 +6,7 @@
 \relative {
   {{ config() }}
   \repeat volta 2 {
-    d'='8\p\( d e e | f4 d8 d\) |
+    d'='8\(\p d e e | f4 d8 d\) |
     g='8\( a bes d | a4 a\) |
     c=''8\( bes a g | f4 d4\) |
     e='8\( f g g | d='2\) |

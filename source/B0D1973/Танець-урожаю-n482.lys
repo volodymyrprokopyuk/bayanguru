@@ -1,10 +1,10 @@
 {% macro rhFrag1(a) %}
   {{ a }} c | e8-. g-. e4 |
-  d=''8( g-.) g-. f-. | e-. d-. c=''4 |
+  d=''8( g)-. g-. f-. | e-. d-. c=''4 |
 {% endmacro %}
 
 {% macro rhFrag2(a) %}
-  {{ a }} a-.) e-. a-. | gis4->( e8) r | b'( d-.) c-. b-. |
+  {{ a }} a)-. e-. a-. | gis4(-> e8) r | b'( d)-. c-. b-. |
 {% endmacro %}
 
 {% macro lhFrag1(a, b) %}

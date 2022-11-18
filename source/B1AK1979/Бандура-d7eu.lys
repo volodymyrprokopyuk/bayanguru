@@ -18,7 +18,7 @@
     e='2.~\p |
     \alternative {
       \volta 1 {
-        \after 2\! e='2.\)\<-{{ shapedSlur("bd", bs = 3, sh = 13) }} ( |
+        \after 2\! e='2.\)\< -{{ shapedSlur("bd", bs = 3, sh = 13) }} ( |
       }
       \volta 2 { e='2.) \bar "|." }
     }

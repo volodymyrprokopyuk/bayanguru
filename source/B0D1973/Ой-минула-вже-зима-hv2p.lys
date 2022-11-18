@@ -22,7 +22,7 @@
   {{ rhFrag1("g'='8-.\\mf") }}
   {{ rhFrag1("g'='8-.") }}
   {{ rhFrag2("d='-.") }}
-  {{ rhFrag2("d='-.^\"rit.\"") }} \bar "|."
+  {{ rhFrag2("d='-.^\\tempRit") }} \bar "|."
 }
 {% endmacro %}
 

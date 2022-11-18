@@ -12,9 +12,9 @@
   {{ config() }}
   {{ rhFrag1("e''=''8-.\\mp") }}
   {{ rhFrag1("e'=''8-.") }}
-  gis='4( e8-.) e-. | e'16( d c b a8-.) a-. |
-  gis='4( e8-.) e-. | a16( b c d e4) |
-  e=''4( b8-.) d-. | c16( d c b a b c d |
+  gis='4( e8)-. e-. | e'16( d c b a8)-. a-. |
+  gis='4( e8)-. e-. | a16( b c d e4) |
+  e=''4( b8)-. d-. | c16( d c b a b c d |
   e=''16 f e d c d c b | a8) a a='4 \bar "|."
 }
 {% endmacro %}

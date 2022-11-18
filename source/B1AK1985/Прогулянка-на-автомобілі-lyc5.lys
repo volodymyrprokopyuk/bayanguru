@@ -13,10 +13,10 @@
 \relative {
   {{ config() }}
   {{ rhFrag1("d'='8-.\\mf\\<") }}
-  ees='8--( d-.) d-. d-. |
-  e='8--( d-.) d-. d-. |
-  f='8--( d-.) d-. d-. |
-  \acciaccatura { gis='8 } a8--( d,-.) d4-> |
+  ees='8(-- d)-. d-. d-. |
+  e='8(-- d)-. d-. d-. |
+  f='8(-- d)-. d-. d-. |
+  \acciaccatura { gis='8 } a8(-- d,)-. d4-> |
 
   {{ rhFrag1("d='8-.\\<") }}
   <fis=' b>8->\f 8-> 4-> |

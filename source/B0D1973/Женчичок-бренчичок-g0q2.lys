@@ -17,10 +17,10 @@
   {{ config() }}
   {{ rhFrag1("c''=''4\\(\\p") }}
   {{ rhFrag1("c=''4\\(") }}
-  bes='8( a g4-.) g-. | a8( g f4-.) f-. |
-  bes='8( a g4-.) g-. | a8( g f2) |
+  bes='8( a g4)-. g-. | a8( g f4)-. f-. |
+  bes='8( a g4)-. g-. | a8( g f2) |
   bes='4\( a bes | c2 bes4\) |
-  a='8( bes a4-.) g-. | f4-. f='-. r \bar "|."
+  a='8( bes a4)-. g-. | f4-. f='-. r \bar "|."
 }
 {% endmacro %}
 

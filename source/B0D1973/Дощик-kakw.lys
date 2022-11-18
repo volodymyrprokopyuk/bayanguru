@@ -1,7 +1,7 @@
 {% from "source/util.lys" import momentBeat %}
 
 {% macro rhFrag1(a) %}
-  {{ a }} g-.) g-. g-. | fis( a-.) a-. a-. |
+  {{ a }} g)-. g-. g-. | fis( a)-. a-. a-. |
   b='( a g fis | e4) e=' |
 {% endmacro %}
 
@@ -18,8 +18,8 @@
 \relative {
   {{ config() }}
   {{ momentBeat("1/2", "#'(1)") }}
-  d''=''4(\mf b-.) | d( b-.) |
-  d=''8-. d-. d-. e-. | d4( b-.) |
+  d''=''4(\mf b)-. | d( b)-. |
+  d=''8-. d-. d-. e-. | d4( b)-. |
   {{ rhFrag1("e,='8(") }}
   {{ rhFrag1("e='8(") }} \bar "|."
 }
