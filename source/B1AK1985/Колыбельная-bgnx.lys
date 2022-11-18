@@ -23,7 +23,7 @@
     e'=''4 e d b | a8( b a4) e e |
     e'=''4 e d8( c b4) | a2 a |
     e='4 c' e,2 | d4 b' d,2 |
-    e='4 fis g a | b2 d=''\fermata |
+    e='4 fis g a | b2 d='' \fermata |
     {{ rhFrag1() }}
   }
 }
@@ -42,7 +42,7 @@
   \repeat unfold 2 { a,=,4 am! a e@7! | }
   a=,4 d@m! a am |
   {{ lhFrag1("a=,4", "eM!") }}
-  g,=, gM! e@7!2\fermata |
+  g,=, gM! e@7!2-\fermata |
   {{ lhFrag1("a=,4", "e7!") }}
   g,=, c@M! g=,4 gM! |
 }

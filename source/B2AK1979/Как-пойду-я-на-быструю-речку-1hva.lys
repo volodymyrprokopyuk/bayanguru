@@ -14,7 +14,7 @@
 \relative {
   {{ config() }}
   {{ momentBeat("1/4", "1,1,1,1") }}
-  \partial 4 { e'='8\p\( g } |
+  \partial 4 { e'='8\(\p g } |
   <g=' b>4 <fis a>8 <e g> <e a> <e fis> <dis b'> <fis a> |
   <e=' g>4 e2\) g8\( <g b> |
   <b=' d>4 <a c>8 <g b> <fis a>4 <b d>8 <c e> |
@@ -31,7 +31,7 @@
       }
       \volta 2 {
         \after 2.\! {{ hSpace() }} %
-        <e=' e'>2.\>-{{ shapedSlur("bd", bs = 3) }} ( %
+        <e=' e'>2.\> -{{ shapedSlur("bd", bs = 3) }} ( %
         e='16)\< fis g \after 16\! a=' |
       }
     }

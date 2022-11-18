@@ -1,8 +1,8 @@
 {% from "source/util.lys" import momentBeat %}
 
 {% macro rhFrag1(a) %}
-  {{ a }} g-.) g-. g-. | fis( a) a4 |
-  b='8 b( c a | g-.) g-. g='4 |
+  {{ a }} g)-. g-. g-. | fis( a) a4 |
+  b='8 b( c a | g)-. g-. g='4 |
 {% endmacro %}
 
 {% macro lhFrag1(a) %}

@@ -20,7 +20,7 @@
   \repeat segno 2 {
     \volta 1
     d'='8(\mf g) g-. g-. | d( g) g 4 |
-    a='8-. a( b a | g-.) g-. g='4 |
+    a='8-. a( b a | g)-. g-. g='4 |
     {{ momentBeat("1/2", "#'(1)") }}
     <<
       \relative {

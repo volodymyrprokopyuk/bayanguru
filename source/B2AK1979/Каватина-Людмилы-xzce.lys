@@ -1,5 +1,5 @@
 {% macro rhFrag1() %}
-  d=''4->( g8-.) b,-. | c4-> d8-. e-. |
+  d=''4(-> g8)-. b,-. | c4-> d8-. e-. |
   d=''8 a16( b d c b a=' |
 {% endmacro %}
 
@@ -24,8 +24,8 @@
   fis=''8 a4 b,8~ | b g'4 e8~ |
   e=''8 b4 cis8 | d4 b8-.\mp c-. |
   {{ rhFrag1() }} | b8 g) b-. c-. |
-  d=''4->( g8-.) b,-. |
-  c=''8 c'~( c16_\dynCresc b a g |
+  d=''4(-> g8)-. b,-. |
+  c=''8 c'(~ c16_\dynCresc b a g |
   fis=''16 e d c b c a b | g='4) r \bar "|."
 }
 {% endmacro %}

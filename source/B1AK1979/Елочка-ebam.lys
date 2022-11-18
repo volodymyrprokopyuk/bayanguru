@@ -26,7 +26,7 @@
 \relative {
   {{ config() }}
   {{ momentBeat("1/2", "#'(1)") }}
-  c=8-\stBass( cM!) cM cM | c( cM) cM cM |
+  c=8(-\stBass cM!) cM cM | c( cM) cM cM |
   g=,8( gM!) gM gM | c( cM!) cM cM |
   f,=,8( fM!) fM fM | c'( cM!) cM cM |
   g=,8( gM!) gM gM | c( cM!) cM cM |

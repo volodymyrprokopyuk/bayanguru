@@ -38,13 +38,13 @@
   a='8-. g'-. f-. ees-. | d-. f-. bes,-. d-. |
   c=''8-. ees-. g,-. a-. | bes4 r8 bes='8-. |
 
-  g='16(\mf bes ees g f8[-.) ees]-. |
+  g='16(\mf bes ees g f8[)-. ees]-. |
   bes'=''8-. d,-. f-. bes,-. |
-  g='16( bes ees g f8[-.) ees]-. |
+  g='16( bes ees g f8[)-. ees]-. |
   bes'=''4 r8 bes,-. |
-  a='16(\< c ees g f8[-.) \after 8\! ees]-. |
+  a='16(\< c ees g f8[)-. \after 8\! ees]-. |
   d=''8-. f-. bes,-. d-. |
-  a='16( c ees g f8[-.) a,]-. |
+  a='16( c ees g f8[)-. a,]-. |
   bes='4\> r8 \after 8\! bes='-. |
 
   {{ rhFrag1("f=''-.") }}

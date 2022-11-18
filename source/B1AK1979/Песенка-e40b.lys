@@ -12,7 +12,7 @@
 \relative {
   {{ config() }}
   {{ momentBeat("1/2", "#'(1)") }}
-  {{ rhFrag1("e''=''8\\p(") }}
+  {{ rhFrag1("e''=''8(\\p") }}
   a='8(\< c e \after 8\! a | g\> e \after 4\! e4) |
   fis=''8( d d fis | e2) |
   {{ rhFrag1("e=''8(") }}
@@ -20,7 +20,7 @@
   a'=''4.( g8 | a2) | g4.( f8 | g2) |
   a,='8( d f a | e c c4) |
   c=''8(^\tempRit e, e b' | a2) |
-  <f'='' a c>4.( <b, d g>8 | <c='' e a>2)\fermata \bar "|."
+  <f'='' a c>4.( <b, d g>8 | <c='' e a>2) \fermata \bar "|."
 }
 {% endmacro %}
 
@@ -35,6 +35,6 @@
   g,=,4 g7! | c cM! | d dM! | a am! |
   e'=4 a,@7! | d dm! | g, g7! | c cM! |
   d=4 dm! | e a,@m! | e e7! | a, am! |
-  d=4-- dm!-- | a,,+am!2\fermata |
+  d=4-- dm!-- | a,,+am!2 \fermata |
 }
 {% endmacro %}

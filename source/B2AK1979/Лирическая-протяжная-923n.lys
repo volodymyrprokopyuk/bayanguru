@@ -12,7 +12,7 @@
   R2\p | R2 |
   fis'='4\( cis | cis'4. a8 |
   b='8\< a gis \after 8\! fis | gis[ e] cis\) r |
-  a'='4\p\( fis8 cis' | d4. cis8 |
+  a'='4\(\p fis8 cis' | d4. cis8 |
   b='8\< <gis fis'> <cis e> \after 8\! <b d> |
   <a=' cis>8[ <b d>] <cis e>\)\< \after 8\! g |
   <<
@@ -25,7 +25,8 @@
     \relative { fis'='2 | eis4. r8 | }
   >>
   fis='8( <a, d fis>\> gis' a) |
-  \after 8\! b='8[( fis]^\tempRit <fis b fis'>\fermata d'=''\fermata) |
+  \after 8\! b='8[( fis]^\tempRit %
+  <fis=' b fis'> \fermata d'='' \fermata) |
   cis=''8(\pp a gis fis) |
   <<
     \relative {
@@ -68,7 +69,7 @@
     }
     \\
     \relative {
-      <cis'=' fis(>8 | fis) fis4 <fis a>8~ | <fis=' a>4 %
+      <cis'=' fis( >8 | fis) fis4 <fis a>8~ | <fis=' a>4 %
     }
   >>
   r4 \bar "|."
@@ -94,7 +95,7 @@
   b=,8( bm!) bm bm |
   cis=8( cis7!) cis7 cis7 |
   d=8( cis b a |
-  gis=,8) b,@m! bm4\fermata |
+  gis=,8) b,@m! bm4 \fermata |
   cis=8[( fis@m!) fism8 fism] |
   r gis=,8[ r cis] |
   fis,=,8( fism!) fism fism |

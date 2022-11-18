@@ -35,9 +35,9 @@
   <d='' f>2\< \after 4\! <c fis>4 |
   <bes=' g'>2\)\> bes8\( \after 8\! c |
   d=''2 f8 ees | d2.\) |
-  <bes=' g'>4->( <d f> <g, ees'>->) |
+  <bes=' g'>4(-> <d f> <g, ees'>)-> |
   a='4^\tempRall d8( c bes a) |
-  g='16\( bes'\fermata a g %
+  g='16\( bes' \fermata a g %
   \tuplet 3/2 { f=''8 ees d } %
   \tuplet 3/2 { c=''8 bes a } |
   d=''2\)\> \after 4\! fis,4 |
