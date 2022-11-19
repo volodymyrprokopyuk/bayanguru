@@ -5,7 +5,7 @@
 \time 4/4
 \relative {
   {{ config() }}
-  \partial 4 { a'='4\mf } |
+  \partial 4 { a'='4\mf | }
   fis='4 a fis a( | g4. fis8 e4) fis( |
   g='4 b) b a8( gis | a2.) a4 |
   d=''4 d fis,( a | cis4. b8 a4) g( |
@@ -20,7 +20,7 @@
 \key d \major
 \relative {
   {{ config() }}
-  \partial 4 { r4 } |
+  \partial 4 { r4 | }
   d=4 dM! a d@M |
   \repeat unfold 2 { e'=4 a,@7! a,4 a7 | }
   d=4 dM! a d@M | b4 d@M! a4 d@M |

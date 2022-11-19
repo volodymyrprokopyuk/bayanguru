@@ -5,7 +5,7 @@
 \time 4/4
 \relative {
   {{ config() }}
-  \partial 2 { e''=''4\mf e } |
+  \partial 2 { e''=''4\mf e | }
   c=''4.( a8) b4.( a8) | g4( e) e'8( g fis e) |
   d=''4.( b8) c4( b8 a | b4) dis='' %
   \repeat volta 2 {
@@ -21,7 +21,7 @@
 \key e \minor
 \relative {
   {{ config() }}
-  \partial 2 { e=4-\stBass em! } |
+  \partial 2 { e=4-\stBass em! | }
   a,=,4 am! b b7! | e em! c cM! |
   g=,4 gM! d' d7! | g,,+gM!4 fis,,+b,@7! e em! |
   a,=,4 am! b b7! | e em! a, am! |

@@ -7,7 +7,7 @@
 \time 2/4
 \relative {
   {{ config() }}
-  \partial 4 { g'='8-.\mf b-. } |
+  \partial 4 { g'='8-.\mf b-. | }
   \repeat volta 2 {
     d=''8-. d-. b-. e-. | d4 g,8-. b-. |
     d=''8-. d-. b-. e-. | d4 c8\( b |
@@ -28,7 +28,7 @@
 \key g \major
 \relative {
   {{ config() }}
-  \partial 4 { r4 } |
+  \partial 4 { r4 | }
   g,,+gM!4-\stBass e=4 | g,,+gM! r |
   g,,+gM!4 e=4 | g,,+gM! r |
   d=4 dM! | e,+em! r |

@@ -6,7 +6,7 @@
 {% macro lhFrag1(a) %}
   b=,8 bm! b bm |
   fis=,8 fism! cis' fis@m |
-  cis=8 {{ a }}! cis= {{ a }} |
+  cis=8 {{ a }}! cis= {{ a }} | %
 {% endmacro %}
 
 {% macro rightHand(config) %}

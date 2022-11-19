@@ -10,7 +10,7 @@
   <<
     \new Voice = voiceOne \relative {
       \voiceOne
-      \partial 8 { e'='8\(\p } |
+      \partial 8 { e'='8\(\p | }
       <c=' a'>4 8 <e c'> <d b'> <c a'> |
       b'='4 gis8 e4\) e8 |
       <c=' a'>4\( 8 g' a b |
@@ -18,7 +18,7 @@
     }
     \new Voice = voiceTwo \relative {
       \voiceTwo
-      \partial 8 { s8 } |
+      \partial 8 { s8 | }
       s2. | d'='4.~ d4. | s4. f='4. | s2 %
     }
   >>
@@ -47,7 +47,7 @@
 \key a \minor
 \relative {
   {{ config() }}
-  \partial 8 { r8 } |
+  \partial 8 { r8 | }
   a,=,8(-\stBass am!) am a am am |
   e'=8( e7!) e7 e e7 e7 |
   a,=,8_\artSimile am! am g g7! g7 |

@@ -39,7 +39,7 @@
   a='4^\tempRall d8( c bes a) |
   g='16\( bes' \fermata a g %
   \tuplet 3/2 { f=''8 ees d } %
-  \tuplet 3/2 { c=''8 bes a } |
+  \tuplet 3/2 { c=''8 bes a } | %
   d=''2\)\> \after 4\! fis,4 |
   g=' r r \bar "|."
 }

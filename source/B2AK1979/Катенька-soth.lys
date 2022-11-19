@@ -3,13 +3,13 @@
 {% macro rhFrag1(a) %}
   g='8-.\mp\< bes-. ees-. \after 8\! g-. |
   f=''8-. d-. bes-. aes-. |
-  g='8-. bes-. ees-. g-. | f4 r8 {{ a }} |
+  g='8-. bes-. ees-. g-. | f4 r8 {{ a }} | %
 {% endmacro %}
 
 {% macro rhFrag2(a, b) %}
   {{ a }} <a ees' f> <a ees' g> <a ees' f> |
   <bes=' d g>8 <bes d f> <bes d g> <bes d f> |
-  <a=' ees' g>8\< <a ees' f> <a ees' g> \after 8\! {{ b }} |
+  <a=' ees' g>8\< <a ees' f> <a ees' g> \after 8\! {{ b }} | %
 {% endmacro %}
 
 {% macro lhFrag1(a) %}
@@ -33,7 +33,7 @@
 \relative {
   {{ config() }}
   {{ momentBeat("1/2", "#'(1)") }}
-  \partial 8 { bes'='8-. } |
+  \partial 8 { bes'='8-. | }
   {{ rhFrag1("bes,='-.") }}
   a='8-. g'-. f-. ees-. | d-. f-. bes,-. d-. |
   c=''8-. ees-. g,-. a-. | bes4 r8 bes='8-. |
@@ -60,7 +60,7 @@
 \key ees \major
 \relative {
   {{ config() }}
-  \partial 8 { r8 } |
+  \partial 8 { r8 | }
   {{ lhFrag1("ees=8-\\stBass") }}
   {{ lhFrag2() }}
   bes=,8 besM! besM r |

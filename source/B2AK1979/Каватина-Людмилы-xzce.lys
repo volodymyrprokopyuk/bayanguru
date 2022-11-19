@@ -15,7 +15,7 @@
 \time 2/4
 \relative {
   {{ config() }}
-  \partial 4 { b'='8-.\mf c-. } |
+  \partial 4 { b'='8-.\mf c-. | }
   {{ rhFrag1() }} | b8 g) b-.\mp c-. |
   {{ rhFrag1() }} | b4) g8(\p a |
   b='4) fis'8( g | fis4) e8( d |
@@ -35,7 +35,7 @@
 \key g \major
 \relative {
   {{ config() }}
-  \partial 4 { r4 } |
+  \partial 4 { r4 | }
   {{ lhFrag1("g,=,8-\\stBass") }} g gM |
   {{ lhFrag1("g=,8") }} r4 |
   dis'=8 b,@7! b8 b7 | e em! g, e@m |

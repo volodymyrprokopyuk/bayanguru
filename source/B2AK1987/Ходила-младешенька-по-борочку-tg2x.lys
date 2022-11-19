@@ -7,7 +7,7 @@
 {% endmacro %}
 
 {% macro rhFrag2() %}
-  {{ v2("a'='8 b", "f'='4") }} |
+  {{ v2("a'='8 b", "f'='4") }} | %
 {% endmacro %}
 
 {% macro rhFrag3() %}
@@ -23,7 +23,7 @@
 
 {% macro lhFrag1(a, b) %}
   {{ a }} am! b d@m! | c8 a,@m! d8 dm! |
-  e=8 a,@m! e8 {{ b }} |
+  e=8 a,@m! e8 {{ b }} | %
 {% endmacro %}
 
 {% macro rightHand(config) %}
@@ -33,7 +33,7 @@
 \time 2/4
 \relative {
   {{ config() }}
-  R2\mp | \repeat unfold 3 { R2 } |
+  R2\mp | \repeat unfold 3 { R2 | }
   <e'=' a c>8\< 8 <d a' d> <d f a d> |
   <e=' a c e>4  \after 4\! %
   {{ rhFrag2() }}
@@ -48,7 +48,7 @@
   <a=' c>8 8 <a d>8 8 | <a e'>4 a8 b |
   <a=' c>8 8 <gis b>4 | \after 2\! a2\< |
   <a=' c>8 8 <a d>8 <f a d> |
-  <e=' a e'>4 {{ rhFrag2() }} |
+  <e=' a e'>4 {{ rhFrag2() }}
   {{ rhFrag3() }}
 
   e'=''16\mf g, c e e g, c e |
@@ -67,12 +67,12 @@
   <g'=' c e>16\f 16 8-> 16 16 8-> |
   <f=' g d'>4 <f a c>8 <f b d> |
   <e=' c' e>8 8 <g c g'>4 |
-  {{ v2("d''=''4 e", "<g'=' b>8 <f a> <e=' gis b>4") }} |
+  {{ v2("d''=''4 e", "<g'=' b>8 <f a> <e=' gis b>4") }}
   <e=' a c>16 16 8-> <d g d'>8 8 |
   <e=' g e'>4-> <f a>8 <f a b> |
   {{ rhFrag3() }}
   <c=' e c'>8 8 <d f a d>8 8 |
-  <e=' a e'>4^\tempRit_\dynDim {{ rhFrag2() }} |
+  <e=' a e'>4^\tempRit_\dynDim {{ rhFrag2() }}
   <c=' fis c'>8 8 <d gis b>4 |
   <c=' e a>2 \bar "|."
 }
@@ -85,20 +85,20 @@
   {{ config() }}
   c@M!8[-\stBass cM8 cM cM] |
   g,@M!4 a,@m!8[ g,@7!8] |
-  c@M!8[ cM8] {{ rhFrag1() }} |
+  c@M!8[ cM8] {{ rhFrag1() }}
   d@m!4 e@M! |
   a=8[ g f d] | e4 d | e gis, |
-  {{ v2("r8 am!4 r8", "a,=,4~ a8 r8") }} |
+  {{ v2("r8 am!4 r8", "a,=,4~ a8 r8") }}
 
   c=8[ cM! cM cM] | g[ gM! gM gM] |
   c=8[ cM! cM cM] | g gM! e' e7! |
   {{ lhFrag1("a,=,8", "eM!") }} | a[ g f e] |
   a=8[ g f d] | c8 a,@m! d8 dm! |
-  c=4 b | {{ v2("r4 am!4", "a,=,2") }} |
+  c=4 b | {{ v2("r4 am!4", "a,=,2") }}
 
   c=8 cM!4 cM8 | g gM!4 gM8 |
   c=8 cM! e c@M | g,8 gM! gis e@7! |
-  {{ lhFrag1("a=,8", "e7!") }} |
+  {{ lhFrag1("a=,8", "e7!") }}
   a,=, am!4 am8 |
   a=,8 am! g g7! | c cM! d dm! |
   e=8 a,@m! e8 e7! | a,=, am! g,,+g7!4 |
@@ -108,8 +108,8 @@
   a,=,8 am! b g,@7! | c8 cM! d dm! |
   e=8 a,@m! e8 e7! e[ d c b] |
   a=,8 am! b d@m! |
-  c=8 a,@m! {{ v2("d=4", "d=8 dm!") }} |
-  dis=4 {{ v2("e=4", "e=8 e7!") }} |
+  c=8 a,@m! {{ v2("d=4", "d=8 dm!") }}
+  dis=4 {{ v2("e=4", "e=8 e7!") }}
   a=,8 e a,,+am!4 |
 }
 {% endmacro %}

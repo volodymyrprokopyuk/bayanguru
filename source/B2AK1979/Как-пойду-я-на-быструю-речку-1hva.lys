@@ -14,7 +14,7 @@
 \relative {
   {{ config() }}
   {{ momentBeat("1/4", "1,1,1,1") }}
-  \partial 4 { e'='8\(\p g } |
+  \partial 4 { e'='8\(\p g | }
   <g=' b>4 <fis a>8 <e g> <e a> <e fis> <dis b'> <fis a> |
   <e=' g>4 e2\) g8\( <g b> |
   <b=' d>4 <a c>8 <g b> <fis a>4 <b d>8 <c e> |
@@ -65,9 +65,9 @@
 \relative {
   {{ config() }}
   {{ momentBeat("1/4", "1,1,1,1") }}
-  \partial 4 { r4 } |
+  \partial 4 { r4 | }
   e=8-\stBass em! em4 c8 a,@m! b8 bM! |
-  \repeat unfold 2 { e=8 em! em em } |
+  \repeat unfold 2 { e=8 em! em em }
   d=8 g,@M! gM4 d8 dM! dM dM |
   g,=,8 gM! gM gM gM4 b8 b7! |
   {{ lhFrag1("em4") }}
