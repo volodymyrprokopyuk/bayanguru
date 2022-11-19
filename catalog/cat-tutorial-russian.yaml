@@ -74,3 +74,7 @@ pieces: []
   # - { id: vmd4, tit: Цвети наш край,
   #     com: С. Туликов, src: BTBC1936,
   #     org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+  # p. 75
+  # - { id: s31k, tit: "Где же вы теперь, друзья-однополчане",
+  #     com: В. Соловьев-Седой, src: BTBC1936,
+  #     org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
