@@ -18,10 +18,6 @@ pieces: []
   # - { id: isd6, tit: Гопак, sub: uafd,
   #     arr: М. Чайкін, src: BTBC1936,
   #     org: ua, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
-  # p. 86
-  # - { id: 1czf, tit: Карело-финская полька,
-  #     src: BTBC1936,
-  #     org: ua, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
   # p. 89
   # - { id: vf9h, tit: Козачок, sub: uafd,
   #     src: BTBC1936,

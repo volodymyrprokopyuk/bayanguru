@@ -3,7 +3,7 @@
 {% endmacro %}
 
 {% macro rhFrag2(a) %}
-  r4 g='4\( a | g2 f'4 | a,2 b4 | {{ a }} |
+  r4 g='4\( a | g2 f'4 | a,2 b4 | {{ a }} | %
 {% endmacro %}
 
 {% macro lhFrag1(a) %}

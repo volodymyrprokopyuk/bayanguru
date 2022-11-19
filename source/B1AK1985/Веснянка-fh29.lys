@@ -1,5 +1,5 @@
 {% macro lhFrag1(a, b) %}
-  {{ a }} cM! cM | f, fM! {{ b }} |
+  {{ a }} cM! cM | f, fM! {{ b }} | %
   g=,4 g7! g7 | c= cM! cM |
 {% endmacro %}
 

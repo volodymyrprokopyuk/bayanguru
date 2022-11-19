@@ -4,7 +4,7 @@
 
 {% macro rhFrag2(a) %}
   e'=''8-. e-. e,4 | <dis a'>8-. <dis a'>-. 4 |
-  e'=''8-. e-. e,-. e-. | {{ a }} |
+  e'=''8-. e-. e,-. e-. | {{ a }} | %
 {% endmacro %}
 
 {% macro lhFrag1(a) %}
@@ -12,7 +12,7 @@
 {% endmacro %}
 
 {% macro lhFrag2(a) %}
-  r4 e= | f@M!8[-. fM8]-. fM4 | r4 e= | {{ a }}
+  r4 e= | f@M!8[-. fM8]-. fM4 | r4 e= | {{ a }} | %
 {% endmacro %}
 
 {% macro rightHand(config) %}

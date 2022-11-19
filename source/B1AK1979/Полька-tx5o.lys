@@ -5,12 +5,12 @@
 
 {% macro lhFrag1(a, b) %}
   {{ a }} cM! g g7! | c cM! c cM |
-  g=,8 g7! g g7 | c cM! {{ b }} |
+  g=,8 g7! g g7 | c cM! {{ b }} | %
 {% endmacro %}
 
 {% macro lhFrag2(a) %}
   g=,8 g7! g g7 | c cM! c cM |
-  g=,8 g7! g g7 | c cM! {{ a }} |
+  g=,8 g7! g g7 | c cM! {{ a }} | %
 {% endmacro %}
 
 {% macro rightHand(config) %}

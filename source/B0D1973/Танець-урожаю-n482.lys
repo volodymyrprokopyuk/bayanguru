@@ -4,7 +4,8 @@
 {% endmacro %}
 
 {% macro rhFrag2(a) %}
-  {{ a }} a)-. e-. a-. | gis4(-> e8) r | b'( d)-. c-. b-. |
+  {{ a }} a)-. e-. a-. | gis4(-> e8) r |
+  | b'( d)-. c-. b-. |
 {% endmacro %}
 
 {% macro lhFrag1(a, b) %}
@@ -14,7 +15,7 @@
 
 {% macro lhFrag2(a, b) %}
   {{ a }} am! a am | b e@7! e8 e7 |
-  gis,=,8 e@7! e'8 e7 | a,=, am! {{ b }} |
+  gis,=,8 e@7! e'8 e7 | a,=, am! {{ b }} | %
 {% endmacro %}
 
 {% macro rightHand(config) %}

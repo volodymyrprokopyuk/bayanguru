@@ -5,7 +5,7 @@
 \time 2/4
 \relative {
   {{ config() }}
-  \partial 8 { c'='8\(\p } |
+  \partial 8 { c'='8\(\p | }
   f='8 f g g | a4 f8\) a\( |
   g='8 d e g | f4.\) c8\(\mf |
   a'='8 a bes bes | c4 a8\) c\( |
@@ -16,7 +16,7 @@
       c''=''8\(\> bes a \after 8\! g | f='4.\) %
     }
     \\
-    \relative { e'='2 | f='4. }
+    \relative { e'='2 | f='4. } %
   >>
   r8 \bar "|."
 }
@@ -27,7 +27,7 @@
 \key f \major
 \relative {
   {{ config() }}
-  \partial 8 { r8 } |
+  \partial 8 { r8 | }
   f=8-\stBass fM! c cM | f[( fM!) fM] r |
   bes,=,8 besM! c c7! | f[( fM!) fM] r |
   f=8 fM! bes, c@M | a8 f@M! f'8 fM |

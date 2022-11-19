@@ -2,7 +2,7 @@
 
 {% macro rhFrag1(a, b) %}
   {{ a }} g( b g) | fis fis( a fis) |
-  e='8( g fis e | d4) {{ b }} |
+  e='8( g fis e | d4) {{ b }} | %
 {% endmacro %}
 
 {% macro rightHand(config) %}

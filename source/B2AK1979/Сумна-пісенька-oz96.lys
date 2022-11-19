@@ -18,7 +18,7 @@
 \relative {
   {{ config() }}
   {{ momentBeat("1/2", "#'(1)") }}
-  \partial 8 { d'='8\(\mp } |
+  \partial 8 { d'='8\(\mp | }
   {{ rhFrag1("g='8") }}
   c=''8 bes a c | bes a g bes\) |
   a='8\(\< e fis \after 8\! g | fis4.\)\> \after 8\! d8\( |
@@ -43,7 +43,7 @@
 \relative {
   {{ config() }}
   {{ momentBeat("1/2", "#'(1)") }}
-  \partial 8 { r8 } |
+  \partial 8 { r8 | }
   {{ lhFrag1("g,=,4-\\stBass") }}
   a=,4) c@m!8 r8 | g4 gm!8 r |
   cis=4 a,@7!8 r8 | d( c bes) a( |

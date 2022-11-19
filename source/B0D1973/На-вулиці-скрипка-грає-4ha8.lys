@@ -3,7 +3,8 @@
 {% endmacro %}
 
 {% macro lhFrag1(a) %}
-  d=8 dm! a am | e' eM! a, am! | e'= eM! {{ a }} |
+  d=8 dm! a am | e' eM! a, am! |
+  e'= eM! {{ a }} | %
 {% endmacro %}
 
 {% macro rightHand(config) %}

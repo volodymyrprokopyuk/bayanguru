@@ -24,11 +24,11 @@
     {{ rhFrag1("c''=''2\\(\\mp") }}
     {{ rhFrag2() }} | f a, bes\) |
     {{ rhFrag1("c=''2\\(") }}
-    {{ rhFrag2() }} |
+    {{ rhFrag2() }}
     \alternative {
       \volta 1 { f=''2.\) | }
       \volta 2 {
-        {{ hSpace() }} f=''4
+        {{ hSpace() }} f=''4 %
         {{ shapedSlur("bu", bs = 3) }} ( r) r \bar "|."
       }
     }
