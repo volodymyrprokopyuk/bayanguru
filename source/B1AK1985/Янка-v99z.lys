@@ -14,7 +14,7 @@
   {{ a }} dM! d dM | g, gM! gM gM |
   a=,8 a7! a a7 | d dM! dM dM |
   d=8 dM! d dM | g, gM! gM gM |
-  a=,8 a7! a a7 | d dM! {{ b }} |
+  a=,8 a7! a a7 | d dM! {{ b }} | %
 {% endmacro %}
 
 {% macro lhFrag2() %}
