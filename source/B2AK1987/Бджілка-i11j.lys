@@ -28,10 +28,12 @@
     {{ rhFrag2() }}
     \alternative {
       \volta 1 { {{ rhFrag1("d'=''16(") }} }
-      \volta 2 { {{ rhFrag1("d'=''16(") }} }
+      \volta 2 {
+        {{ rhFrag1("d'=''16(") }}
+        a'='8 a e fis | g4 <g=' b d g>-> \bar "|."
+      }
     }
   }
-  a'='8 a e fis | g4 <g=' b d g>-> \bar "|."
 }
 {% endmacro %}
 
