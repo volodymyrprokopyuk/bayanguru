@@ -21,11 +21,11 @@
   fis='8\(\mf e d | a' e\) e |
   d='8\( cis b | cis a b |
   cis='8 d e\) | fis\(_\dynDim^\tempRit cis cis |
-  cis'=''8 fis, fis' | fis4.\)\fermata |
+  cis'=''8 fis, fis' | fis4.\) \fermata |
   b,='8(\p^\tempATempo fis) fis | a( fis4) |
   b='8( fis) fis | a( fis4) |
   d'=''8( cis b | cis a) a |
-  d=''8(_\dynDim^\tempRit b e | fis b,) b='\fermata \bar "|."
+  d=''8(_\dynDim^\tempRit b e | fis b,) b=' \fermata \bar "|."
 }
 {% endmacro %}
 
@@ -44,9 +44,9 @@
   b,,+e@m!4 r8 | a,,+aM!4 r8 |
   a,,+d@M!4 r8 | a,,+aM!4 r8 |
   g,,+e@m!4 r8 | fis,,+fis7!4.~ |
-  fis,,+fis7!4.~ | fis,,+fis7!4.\fermata |
+  fis,,+fis74.~ | fis,,+fis74. \fermata |
   {{ lhFrag1("b,,+bm!") }}
   b,,+bm!4 r8 | a,,+aM!4 r8 |
-  g,,+gM!4 r8 | b,,+bm!4 r8\fermata |
+  g,,+gM!4 r8 | b,,+bm!4 r8 \fermata |
 }
 {% endmacro %}

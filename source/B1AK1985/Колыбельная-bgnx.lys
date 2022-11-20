@@ -15,7 +15,7 @@
 \time 4/4
 \relative {
   {{ config() }}
-  R1\p
+  R1\p |
   \repeat volta 2 {
     b'='4. a8 g4 d | e g d2 |
     b'='4. a8 g4 b | d b d2 |

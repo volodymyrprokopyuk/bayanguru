@@ -11,8 +11,8 @@
 {% endmacro %}
 
 {% macro rhFrag3(a) %}
-  {{ a }} <a c>16 \acciaccatura { e'=''8 } <b d>8( <ais cis>-.) |
-  \acciaccatura { e'=''8 } <b d>8( <ais cis>-.) <b d> <gis e'> |
+  {{ a }} <a c>16 \acciaccatura { e'=''8 } <b d>8( <ais cis>)-. |
+  \acciaccatura { e'=''8 } <b d>8( <ais cis>)-. <b d> <gis e'> |
   <a=' c>8-.\< <fis d'>-. <g b>-. \after 8\! <g c>-. |
   <g=' a>8\> \acciaccatura { b='8 } <c, fis a>8 \after 4\! <b= g'>4-- |
 {% endmacro %}
@@ -48,9 +48,9 @@
   }
 
   \repeat volta 2 {
-    g,='8\f g' e->( d16 c) |
+    g,='8\f g' e(-> d16 c) |
     b='16( ais b d a gis a d) |
-    g,='8 g' e->( d16 c) |
+    g,='8 g' e(-> d16 c) |
     \alternative {
       \volta 1 { b='16( ais b d a='8) r | }
       \volta 2 { b='16( c b a g='8) r | }
@@ -62,7 +62,7 @@
 
   \repeat segno 2 {
     \volta 1
-    g='8\f g' e->( d16 c) | b8-. d-. a-. d-. |
+    g='8\f g' e(-> d16 c) | b8-. d-. a-. d-. |
     b='8-. d-. \acciaccatura { d=''8 } c16(_\dynCresc b c a) |
     b='8-. d-. a-. d-. | b-. a-. g='4--\f |
 
@@ -72,10 +72,10 @@
     \volta 2 \fine
     \key g \minor
     {{ rhFrag4("<g'=' bes>4->\\f") }}
-    \acciaccatura { c'=''8 } bes16( a g fis g='4--) |
+    \acciaccatura { c'=''8 } bes16( a g fis g='4)-- |
     {{ rhFrag4("<g=' bes>4->") }}
-    \acciaccatura { c'=''8 }
-    bes='16(\> a g fis \after 4\! g='4--) \bar "||"
+    \acciaccatura { c'=''8 } %
+    bes='16(\> a g fis \after 4\! g='4)-- \bar "||"
     \keyChangeBeforeBar \key g \major
   }
 }

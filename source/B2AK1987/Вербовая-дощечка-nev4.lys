@@ -17,11 +17,11 @@
       fis'='4\( g8 fis | e\)\> e \after 4\! e='4 |
     }
     \\
-    \relative { d'='2\( | e8\) e e='4 }
+    \relative { d'='2\( | e8\) e e='4 | }
   >>
 
   r8\mp <b=' e g b>8[ r8 8] |
-  r8 <c='' e fis a>8[ r <b e g>]
+  r8 <c='' e fis a>8[ r <b e g>] |
   r8 <a=' c e fis>8[ r <b e g>] |
   r8 <g=' e'>8 <fis a b dis>4 |
   <e=' b' e>4\< <e b' d> |
@@ -46,7 +46,7 @@
   a=''16( c, e a) b( g e b) |
   a='16( c, e a) b( b, e g) |
   fis='16( a, c e) %
-  {{ v2("b'='4", "b'='16 a g fis='") }} |
+  {{ v2("b'='4", "b'='16 a g fis='") }}
 
   <<
     \new Voice = voiceOne \relative {
@@ -55,7 +55,7 @@
       d=''4 dis | e8\)\> e \after 4\! e4 |
       e=''8\(\< b' b b | a4 b8 \after 8\! g\) |
       fis=''4\(\> g8 fis |
-      e=''8-- e-- \after 4\! e=''4--\) \bar "|."
+      e=''8-- e-- \after 4\! e=''4\)-- \bar "|."
     }
     \new Voice = voiceTwo \relative {
       \voiceTwo
@@ -79,7 +79,7 @@
   e=8 em! d e@m | c8 a,@m! b8 e@m |
   a=,8 am! b b7! | e em! b e@m |
   e=4 d | c b | d b |
-  {{ v2("r4 em!", "e=2") }} |
+  {{ v2("r4 em!", "e=2") }}
 
   e,=,8(-\puBass b') b b | a4( b8 g) |
   a=,4( b8 g | fis e b'4) |
@@ -94,6 +94,6 @@
   e,=,8\(-\puBass b' b b | a4 b8 g\) |
   a=,4\( b8 a | g fis e4\) |
   g=,4( gis | a2) |
-  b=,4.( d8 | c--) a-- <e=, b'>4-- |
+  b=,4.( d8 | c)-- a-- <e=, b'>4-- |
 }
 {% endmacro %}

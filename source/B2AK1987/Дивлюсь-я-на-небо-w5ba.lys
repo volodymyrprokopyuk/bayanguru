@@ -7,7 +7,7 @@
 \time 3/4
 \relative {
   {{ config() }}
-  r4\p r r8 e'='8
+  r4\p r r8 e'='8 |
   \repeat volta 2 {
     e='4\(\< g4. \after 8\! a8 | b4 ais4.\) b8 |
     b='4\( fis4. g8 |

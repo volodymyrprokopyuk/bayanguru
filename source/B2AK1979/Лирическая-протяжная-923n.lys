@@ -19,7 +19,7 @@
     \relative {
       {{ dynPadding(4) }}
       <cis''='' e>4(\mf <b d>) |
-      r8\< <b=' d>( <a cis> \after 8\! <gis=' b>)
+      r8\< <b=' d>( <a cis> \after 8\! <gis=' b>) |
     }
     \\
     \relative { fis'='2 | eis4. r8 | }
@@ -61,7 +61,7 @@
   r8\< <a,= d fis>4 \after 8\! 8 |
   r8 <gis= bis dis fis>4 8 |
   r8\> <gis= b d fis>4 \after 8\! 8 |
-  r8\p <a= cis fis>4^\tempRit
+  r8\p <a= cis fis>4^\tempRit %
   <<
     \relative {
       {{ dynPadding(6) }}

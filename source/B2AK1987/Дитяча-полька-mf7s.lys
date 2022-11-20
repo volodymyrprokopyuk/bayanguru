@@ -5,7 +5,7 @@
 {% endmacro %}
 
 {% macro rhFrag2(a) %}
-  {{ a }} c' c, b bes g e8->) |
+  {{ a }} c' c, b bes g e8)-> |
   g='16 g c,8-. g'16 g c,8-. |
   a'='8-. f16( g a bes c d='') |
 {% endmacro %}

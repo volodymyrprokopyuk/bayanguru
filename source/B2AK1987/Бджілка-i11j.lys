@@ -1,8 +1,8 @@
 {% macro rhFrag1(a) %}
   {{ a }} ees d\< ees e f e \after 16\! ees |
-  d=''8-.) \acciaccatura { cis'='''8 } d\> \after 4\! d,=''4 |
+  d=''8)-. \acciaccatura { cis'='''8 } d\> \after 4\! d,=''4 |
   d,='16( ees d\< ees e f e \after 16\! ees |
-  d='8-.) \acciaccatura { cis'=''8 } d\> \after 8..\! d,='4 |
+  d='8)-. \acciaccatura { cis'=''8 } d\> \after 8..\! d,='4 |
 {% endmacro %}
 
 {% macro rhFrag2() %}

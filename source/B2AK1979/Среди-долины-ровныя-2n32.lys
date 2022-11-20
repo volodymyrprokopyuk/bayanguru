@@ -22,7 +22,7 @@
       s2. | d'='4.~ d4. | s4. f='4. | s2 %
     }
   >>
-  r8 g'='8\(
+  r8 g'='8\( |
   \repeat volta 2 {
     <c='' e>4\mf 8 <e g> <d f> <c e> |
     <b=' d>4 <a dis>8 <gis e'>4\) b8\( |
@@ -35,7 +35,7 @@
       }
       \volta 2 {
         {{ hSpace() }} <c,=' e a>4.~\> 8
-        {{ shapedSlur("bu", wd = 3.3, ht = 1.8) }} ( r)\! r \bar "|."
+        {{ shapedSlur("bu", wd = 3.3, ht = 1.8) }} ( r) \! r \bar "|."
       }
     }
   }
