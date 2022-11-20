@@ -26,9 +26,9 @@
   <a='' cis>8-. 8-. <gis b>-. <fis a>-. <cis gis'>-. <a fis'>-. |
   gis'=''8-. cis-. cis,-. fis4 r8 |
   {{ rhFrag2("<g='' b>8-.\\mf") }}
-  <cis='' e>8( a-.) a-. a-. a-. a-. | a-. a-. a-. a-. a-. a-. |
+  <cis='' e>8( a)-. a-. a-. a-. a-. | a-. a-. a-. a-. a-. a-. |
   {{ rhFrag2("<g=' b>8-.") }}
-  <cis=' e>8-. a-. a-. a-. a'-. a-. | a( a'-.) a-. a-. a,-. a-. |
+  <cis=' e>8-. a-. a-. a-. a'-. a-. | a( a')-. a-. a-. a,-. a-. |
   {{ rhFrag1("a='8-.\\p") }}
   a='8-. d-. fis-. a4-- fis8 | b4-- fis8 a4.-- |
   d='''8-. b-. g-. e-. d-. b-. |

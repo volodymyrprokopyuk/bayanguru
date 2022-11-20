@@ -23,7 +23,7 @@
 \relative {
   {{ config() }}
   \set subdivideBeams = ##t
-  e''=''8\p\( b b | b16 a c b a g\) |
+  e''=''8\(\p b b | b16 a c b a g\) |
   fis='16\( g a8[ a] | a16 fis b a g fis\) |
   g='16\( a b8[ b] | b16 a c b a g\) |
   fis='16\( g a8[ a] | a16 fis b a g fis\) |

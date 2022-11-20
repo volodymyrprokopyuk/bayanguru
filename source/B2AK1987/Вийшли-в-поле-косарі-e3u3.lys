@@ -1,5 +1,6 @@
 {% macro rhFrag1(a, b) %}
-  {{ a }} bes-. a16( bes c a | bes8-.) bes-. bes( {{ b }} |
+  {{ a }} bes-. a16( bes c a |
+  bes='8)-. bes-. bes( {{ b }} | %
 {% endmacro %}
 
 {% macro rightHand(config) %}
@@ -19,7 +20,7 @@
       c=''8.( d16 c8 bes=') |
     }
   \\
-    \relative { fis'='2~ | fis4 g | e='2 }
+    \relative { fis'='2~ | fis4 g | e='2 | }
   >>
   <f=' a>8 <e g> f=' r \bar "|."
 }

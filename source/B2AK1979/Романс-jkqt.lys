@@ -27,7 +27,7 @@
   {{ rhFrag1("g='8)\\mf c(") }}
   g='8(\< c d c) e4( a,) | a8( d e d) \after 2\! f2 |
   g=''8( e b a) f'( d a g) |
-  d'=''4.( a8\> \after 4.\! c=''2\fermata) \bar "|."
+  d'=''4.( a8\> \after 4.\! c=''2) \fermata \bar "|."
 }
 {% endmacro %}
 
@@ -36,9 +36,9 @@
 \key c \major
 \relative {
   {{ config() }}
-  {{ lhFrag1("c=8-\\stBass") }} |
+  {{ lhFrag1("c=8-\\stBass") }}
   d=8 r g,@7! r8 c r cM! r |
-  {{ lhFrag1("c=8") }} |
+  {{ lhFrag1("c=8") }}
   d=8 r dm! r e r e7! r |
 
   a,=,8 r am! r g r e@m! r8 |
@@ -49,11 +49,11 @@
   f=,8 r d@m! r8 d' r dm! r8 |
   g,,+g7!4~ g,,+g78 r r2 | R1 |
 
-  {{ lhFrag1("c=8") }} |
+  {{ lhFrag1("c=8") }}
   d=8 r g,@7! r8 c r cM! r |
   c=8 r cM! r f, r fM! r |
   d'=8 r dm! r b r d@m! r8 |
   g=,8 r a,@m!4 g8 r g7!4 |
-  c=8 r f,@M! r8 c@M! r8 c= r\fermata |
+  c=8 r f,@M! r8 c@M! r8 c= r \fermata |
 }
 {% endmacro %}

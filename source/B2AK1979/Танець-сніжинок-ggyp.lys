@@ -3,20 +3,20 @@
   <bes='' e>2. | <bes d>2. |
   <bes='' c>8-. r %
   <<
-    \relative { c'''='''8-. d-. c-. d-. }
+    \relative { c'''='''8-. d-. c-. d-. | }
     \\
-    \relative { bes''=''2 }
-  >> |
+    \relative { bes''=''2 | }
+  >>
   <bes='' c>8 r <bes='' g'>2-> |
 {% endmacro %}
 
 {% macro rhFrag2() %}
   <a='' c>8-. r %
   <<
-    \relative { c'''='''8-. d-. c-. d-. }
+    \relative { c'''='''8-. d-. c-. d-. | }
     \\
-    \relative { a''=''2 }
-  >> |
+    \relative { a''=''2 | }
+  >>
   <a='' c>8 r <a='' f'>2-> |
 {% endmacro %}
 
@@ -58,9 +58,11 @@
       <a='' e'>8-. r r4 <a a'>4~ | 8 r <a d>-. r <a dis>-. r |
       <c=''' e>2. | <aes g'>2. |
       <<
-        \relative { e'''='''2.~ | e8 }
+        \relative { e'''='''2.~ | e8 } %
         \\
-        \relative { c'''='''8 b,\rest a' b,\rest g' b,\rest | fis'='' }
+        \relative {
+          c'''='''8 b, \rest a' b, \rest g' b, \rest | fis'='' %
+        }
       >>
       r8 <fis='' d'>8-. r <fis c'>-. r |
       <f='' d'>8-. r r4 <f f'>4~ | 8 r <f d'>-. r <f c'>-. r |
@@ -74,7 +76,7 @@
 
     \key f \major
     \repeat volta 2 {
-      c'='''8-> r a-.( bes-. b-. c-.) |
+      c'='''8-> r a(-. bes-. b-. c)-. |
       {{ rhFrag1() }}
       \alternative {
         \volta 1 { {{ rhFrag2() }} }

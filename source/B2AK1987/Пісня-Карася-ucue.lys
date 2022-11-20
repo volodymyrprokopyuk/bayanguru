@@ -12,14 +12,14 @@
 \relative {
   {{ config() }}
   bes'='8-.\mf 8-. 8-. 8-. |
-  bes='16( a bes c d8-.) bes-. |
+  bes='16( a bes c d8)-. bes-. |
   ees=''8-. g,-. g16( f g a |
-  bes='16 a bes c d8-.) bes-. |
+  bes='16 a bes c d8)-. bes-. |
   c=''8 c a a | g16( a bes a c bes a g) |
-  f='16( g a bes c8-.) cis-. |
+  f='16( g a bes c8)-. cis-. |
   d=''8-. bes-. bes16( a bes8) |
   ees=''8 g,16\( f g f g a |
-  bes='16 a bes c d8-.\) bes-. |
+  bes='16 a bes c d8\)-. bes-. |
   a='16\( bes c d ees f g a |
   bes=''8\) bes16( a bes=''8) r \bar "|."
 }
