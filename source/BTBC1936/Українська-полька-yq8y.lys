@@ -33,6 +33,7 @@
   {{ config() }}
   {{ lhFrag1("a,=,8-\\stBass") }}
   {{ lhFrag1("a=,8") }}
+
   b=,8 g,@7! g8 g7 | c cM! c cM |
   b=,8 g,@7! g8 g7 | c cM! cM4 |
   b=,8 g,@7! g8 g7 | c cM! c cM |
