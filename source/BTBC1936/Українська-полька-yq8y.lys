@@ -1,0 +1,30 @@
+{% macro rightHand(config) %}
+\tempo Allegretto
+\clef treble
+\key a \minor
+\time 2/4
+\relative {
+  {{ config() }}
+  \repeat segno 2 {
+    \volta 1
+    e'='8(\mf c') c c | c( b) b a |
+    a='8( gis) gis b | b( a) a4 |
+    e='8( c') c c | c( bes) bes a |
+    gis='8( b) e gis, | a a a='4 \fine \bar "||"
+
+    \volta 2
+    g='4\(\f fis8 f | e g c a\) |
+    g='4\( fis8 f | e g c4\) |
+    g='4\( fis8 f | e g c a\) |
+    d=''8\( c b a | gis\> b \after 4\! e,='4\) \bar "|."
+  }
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key a \minor
+\relative {
+  {{ config() }}
+}
+{% endmacro %}

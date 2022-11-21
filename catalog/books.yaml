@@ -23,6 +23,11 @@ books:
       "e3u3", "ucue", "fngd", "cpdc", "9k9u", "0r9e", "v8ec", "w5ba", "plh0",
       "i11j", "zvpg", "mf7s", "zykv", "26qx", "di18", "btcu", "nev4", "foaz",
       "f45r"] }
+  # Tutorial
+  - { id: ua02, tit: Українські народні пісні і танці, sub: для баяна,
+      pieces: [
+      # BTBC1936
+      "yq8y"] }
   # Class
   - { id: ru01, tit: Російські народні пісні і танці, sub: для баяна,
       pieces: [
