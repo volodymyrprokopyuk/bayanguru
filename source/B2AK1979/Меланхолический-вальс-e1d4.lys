@@ -52,9 +52,9 @@
     \set subdivideBeams = ##t
     d=''16 d' c bes a g | fis ees d c bes a |
     \set subdivideBeams = ##f
-    g='8\)\> r \after 8\! r | r r %
+    g='8\)\> r \after 8\! r | r r \fine \bar "!!"
 
-    \volta 2 \fine \bar "!!"
+    \volta 2
     g='8\(\mf | g8. f16 e f | d'8. c16 g a |
     c=''8. bes16 a g | f4\) f8\( |
     ges='8. f16 e f | g8. a16 bes c |

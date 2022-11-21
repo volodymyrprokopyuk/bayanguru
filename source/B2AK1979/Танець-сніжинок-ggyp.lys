@@ -45,8 +45,8 @@
       \alternative {
         \volta 1 { {{ rhFrag2() }} }
         \volta 2 {
-          <a='' f'>2.~ | <a f'>8 r %
-          \volta 2 \fine \bar "!!"
+          <a='' f'>2.~ | <a f'>8 r \fine \bar "!!"
+          \volta 2
           <a='' d>\p r <a='' dis> r |
         }
       }

@@ -38,9 +38,9 @@
     bes='8( a g4) a | c2. |
     c,='8( d c e f g | a2.) |
     bes='8( a g4 e | \after 2.\! a2.)\> |
-    {{ rhFrag1("<f=' a>8(\\p") }} | d4) <d=' f d'>2 |
+    {{ rhFrag1("<f=' a>8(\\p") }} | d4) <d=' f d'>2 \fine |
 
-    \volta 2 \fine
+    \volta 2
     \key d \major
     \repeat volta 2 {
       <fis=' a>2(\mf b4 | <fis a>2.) |

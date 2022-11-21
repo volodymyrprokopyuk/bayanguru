@@ -29,9 +29,9 @@
       \\
       \relative { b=2 | b= | }
     >>
-    <c,=' a'>8 8 <d b'> <c a'> | <b g'>8 8 4 \bar "||"
+    <c,=' a'>8 8 <d b'> <c a'> | <b g'>8 8 4 \fine \bar "||"
 
-    \volta 2 \fine
+    \volta 2
     fis'='4 a | g8( fis e4) |
     e='8( g fis e | fis) fis d4 |
     fis='8[ fis]( a) a( | g fis d4) |

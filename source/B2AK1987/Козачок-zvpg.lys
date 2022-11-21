@@ -67,9 +67,9 @@
     b='8-. d-. a-. d-. | b-. a-. g='4--\f |
 
     {{ rhFrag3("<g=' b>8.\\mf") }}
-    {{ rhFrag3("<g'=' b>8.") }} \bar "||"
+    {{ rhFrag3("<g'=' b>8.") }} \fine \bar "||"
 
-    \volta 2 \fine
+    \volta 2
     \key g \minor
     {{ rhFrag4("<g'=' bes>4->\\f") }}
     \acciaccatura { c'=''8 } bes16( a g fis g='4)-- |
