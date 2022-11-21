@@ -1,0 +1,25 @@
+{% macro rightHand(config) %}
+\tempo Allegretto
+\clef treble
+\key f \major
+\time 2/4
+\relative {
+  {{ config() }}
+  a'='8(->\f c) c c | a(-> c) c c |
+  f=''4-> c-> | d8( c bes a) |
+  \repeat unfold 2 { g='8(-> bes) bes bes | }
+  g='4-> c-> | a8( f) f='4 \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key f \major
+\relative {
+  {{ config() }}
+  f,,+fM!4-\stBass r |
+  \repeat unfold 3 { f,,+fM!4 r | }
+  \repeat unfold 3 { c,+cM!4 r | }
+  f,,+fM!4 r |
+}
+{% endmacro %}

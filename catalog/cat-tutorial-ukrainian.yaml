@@ -5,10 +5,9 @@ pieces:
   - { id: yq8y, tit: Українська полька,
       com: М. Чайкін, src: BTBC1936,
       org: ua, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elm }
-  # p. 33
-  # - { id: cckj, tit: За городом качки пливуть, sub: uafs,
-  #     arr: М. Чайкін, aty: ipr, src: BTBC1936,
-  #     org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  - { id: cckj, tit: За городом качки пливуть, sub: uafs,
+      arr: М. Чайкін, aty: ipr, src: BTBC1936,
+      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   # p. 37
   # - { id: a3ew, tit: Ой піду я понад лугом, sub: uafs,
   #     arr: М. Чайкін, src: BTBC1936,
