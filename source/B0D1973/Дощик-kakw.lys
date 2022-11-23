@@ -2,7 +2,7 @@
 
 {% macro rhFrag1(a) %}
   {{ a }} g)-. g-. g-. | fis( a)-. a-. a-. |
-  b='( a g fis | e4) e=' |
+  b='8( a g fis | e4) e=' |
 {% endmacro %}
 
 {% macro lhFrag1(a, b) %}

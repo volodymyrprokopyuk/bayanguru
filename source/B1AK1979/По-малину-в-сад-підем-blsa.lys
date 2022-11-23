@@ -5,7 +5,7 @@
 
 {% macro lhFrag1(a) %}
   {{ a }} dm!)-. f( d@m)-. | g,8( gm!)-. d'( dm)-. |
-  cis=( a,@7!)-. d8( dm!)-. | a( a7!)-. d=( dm!)-. |
+  cis=8( a,@7!)-. d8( dm!)-. | a( a7!)-. d=( dm!)-. |
 {% endmacro %}
 
 {% macro rightHand(config) %}

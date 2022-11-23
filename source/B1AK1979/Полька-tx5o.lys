@@ -37,7 +37,7 @@
   {{ config() }}
   {{ lhFrag1("c=8-\\stBass", "c= cM") }}
   {{ lhFrag1("c=8", "c= r") }}
-  {{ lhFrag2("c= cM") }}
-  {{ lhFrag2("c= r") }}
+  {{ lhFrag2("c=8 cM") }}
+  {{ lhFrag2("c=8 r") }}
 }
 {% endmacro %}

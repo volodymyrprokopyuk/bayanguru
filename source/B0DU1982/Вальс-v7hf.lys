@@ -48,7 +48,7 @@
   {{ lhFrag2() }}
 
   c,+cM!4 r r | {{ lhFrag3("gis=,4") }}
-  e'= a,@m! am | {{ lhFrag3("gis,=,4") }}
+  e'=4 a,@m! am | {{ lhFrag3("gis,=,4") }}
   a=,4 r r | f' fM! fM | f fm! fm |
   \repeat unfold 2 { e=4 c@M! cM4 | }
   f=4 fM! fM | g, g7! g7 | c cM! cM | c= r r |

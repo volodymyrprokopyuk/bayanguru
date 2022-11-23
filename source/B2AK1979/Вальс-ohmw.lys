@@ -11,7 +11,7 @@
   {{ a }} dm | d( dm) dm |
   cis=4( a,@M!) aM | cis( a,@M) aM |
   d=4( dm!) dm | g,( gm!) gm |
-  a=,( a7!) a7 |
+  a=,4( a7!) a7 |
 {% endmacro %}
 
 {% macro rightHand(config) %}

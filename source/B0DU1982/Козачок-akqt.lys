@@ -23,9 +23,9 @@
   {{ config() }}
   \repeat volta 2 {
     {{ rhFrag1("g'='4\\mf") }}
-    {{ rhFrag1("g='") }}
+    {{ rhFrag1("g='4") }}
     {{ rhFrag2("g='4") }}
-    {{ rhFrag2("g=' r") }}
+    {{ rhFrag2("g='8 r") }}
   }
 }
 {% endmacro %}
@@ -37,7 +37,7 @@
   {{ config() }}
   {{ lhFrag1("g,=,8-\\stBass") }}
   {{ lhFrag1("g,=,8") }}
-  {{ lhFrag2("b=, g,@M") }}
+  {{ lhFrag2("b=,8 g,@M") }}
   {{ lhFrag2("g,,+gM r") }}
 }
 {% endmacro %}

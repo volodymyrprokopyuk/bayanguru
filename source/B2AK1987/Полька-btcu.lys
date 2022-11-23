@@ -18,7 +18,7 @@
 
 {% macro lhFrag2() %}
   c=8 a,@m! am8 r | d d7! d7 r |
-  g,=, gM! gM r |
+  g,=,8 gM! gM r |
 {% endmacro %}
 
 {% macro rightHand(config) %}
