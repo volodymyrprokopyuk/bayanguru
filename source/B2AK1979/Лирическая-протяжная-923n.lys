@@ -26,7 +26,7 @@
   >>
   fis='8( <a, d fis>\> gis' a) |
   \after 8\! b='8[( fis]^\tempRit %
-  <fis=' b fis'> \fermata d'='' \fermata) |
+  <fis=' b fis'>8 \fermata d'='' \fermata) |
   cis=''8(\pp a gis fis) |
   <<
     \relative {

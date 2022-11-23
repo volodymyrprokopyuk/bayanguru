@@ -1,6 +1,6 @@
 {% macro rhFrag1(a) %}
   {{ a }} <b d>-. <g b>-. <b d>-. |
-  <c='' e>( <b d>) <a c>-. <g b>-. |
+  <c='' e>8( <b d>) <a c>-. <g b>-. |
   <<
     \relative {
       a'='8-. d-. d16( c b a | g='4) %
@@ -21,7 +21,7 @@
   {{ rhFrag1("<g=' b>8-.") }} g8 r |
 
   <e=' g>8-.\p <g b>-. <e g>-. <g b>-. |
-  <a=' c>( <g b>) <fis a>-. <e g>-. |
+  <a=' c>8( <g b>) <fis a>-. <e g>-. |
   <<
     \relative {
       fis'='8-. b-. b16( a g fis | e='4) %
@@ -31,7 +31,7 @@
   >>
   e='4 |
   <e=' g>8-. <g b>-. <e g>-. <g b>-. |
-  <a=' c>( <g b> <fis a> <e g>) |
+  <a=' c>8( <g b> <fis a> <e g>) |
   <<
     \relative {
       fis'='8-. b-. b16( a g fis | e='8) 8 %

@@ -24,7 +24,7 @@
       \volta 2 {
         a='16 g fis a g='8 r |
         <g=' a ees'>8\f r <fis a d> r |
-        <bes=' d g> r r4 \bar "|."
+        <bes=' d g>8 r r4 \bar "|."
       }
     }
   }

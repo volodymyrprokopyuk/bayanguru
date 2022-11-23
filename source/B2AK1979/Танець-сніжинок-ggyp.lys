@@ -47,7 +47,7 @@
         \volta 2 {
           <a='' f'>2.~ | <a f'>8 r \fine \bar "!!"
           \volta 2
-          <a='' d>\p r <a='' dis> r |
+          <a='' d>8\p r <a='' dis> r |
         }
       }
     }

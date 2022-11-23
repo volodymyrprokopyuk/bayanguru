@@ -62,7 +62,7 @@
     ees=''8. d16 cis d | bes'8. a16 e fis |
     a=''8. g16 fis a | g4\) g,8 |
     <g=' cis g'>8\f 16 16 8 |
-    <bes=' cis bes'> <a cis a'> <g cis g'> |
+    <bes=' cis bes'>8 <a cis a'> <g cis g'> |
     <a=' d fis>8 <fis a d>8\> 8 |
     \after 4\! 4-{{ shapedSlur("fu", sh = 6) }} ( d'=''8)\p \bar "||"
   }
