@@ -9,7 +9,7 @@
   f='8-. e-. d-. c-. | g'4 g |
   \repeat volta 2 {
     f='8-. a-. a-. f-. | e-. g-. g-. e-. |
-    d='-. e-. f-. d-. | c4 c=' |
+    d='8-. e-. f-. d-. | c4 c=' |
   }
 }
 {% endmacro %}
@@ -22,6 +22,6 @@
   f=8-\stBass r fM! r | c4 cM! |
   f=8 r fM! r | c4 cM! |
   f=8 r fM! r | c r cM! r |
-  g=, r gM! r | c=4 cM! |
+  g=,8 r gM! r | c=4 cM! |
 }
 {% endmacro %}

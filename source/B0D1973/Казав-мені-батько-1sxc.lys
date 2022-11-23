@@ -12,8 +12,8 @@
   {{ config() }}
   c'='8-.\mf c-. e-. f-. | g4 g |
   a='8-. a-. a-. a-. | g4 g4 |
-  {{ rhFrag1("g'='") }}
-  {{ rhFrag1("c='") }} \bar "|."
+  {{ rhFrag1("g'='4") }}
+  {{ rhFrag1("c='4") }} \bar "|."
 }
 {% endmacro %}
 

@@ -4,7 +4,7 @@
 
 {% macro lhFrag1(a) %}
   d=8 dm! a am | e' eM! a, am! |
-  e'= eM! {{ a }} | %
+  e'=8 eM! {{ a }} | %
 {% endmacro %}
 
 {% macro rightHand(config) %}

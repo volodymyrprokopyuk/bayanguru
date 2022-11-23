@@ -34,7 +34,7 @@
   {{ config() }}
   {{ momentBeat("1/2", "#'(1)") }}
   \partial 8 { bes'='8-. | }
-  {{ rhFrag1("bes,='-.") }}
+  {{ rhFrag1("bes,='8-.") }}
   a='8-. g'-. f-. ees-. | d-. f-. bes,-. d-. |
   c=''8-. ees-. g,-. a-. | bes4 r8 bes='8-. |
 
@@ -47,7 +47,7 @@
   a='16( c ees g f8[)-. a,]-. |
   bes='4\> r8 \after 8\! bes='-. |
 
-  {{ rhFrag1("f=''-.") }}
+  {{ rhFrag1("f=''8-.") }}
   {{ rhFrag2("<a,=' ees' g>8", "<a=' ees' f>") }}
   bes='4 r8 f'-. |
   {{ rhFrag2("<a,=' ees' g>8\\mf", "<a=' ees' a>") }}
