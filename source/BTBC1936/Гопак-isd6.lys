@@ -1,0 +1,40 @@
+{% macro rhFrag1(a, b) %}
+  {{ a }} a8. g16 | fis8 e fis d |
+  a=8 d fis a | g16 fis g e {{ b }} | %
+{% endmacro %}
+
+{% macro lhFrag1(a) %}
+  {{ a }} gM! gM4-> | d'8 dM! g,,+gM!4-> |
+  g,=,8 gM! g gM | d'=8 dM! g,,+gM!4 |
+{% endmacro %}
+
+{% macro rightHand(config) %}
+\tempo Allegro
+\clef treble
+\key d \major
+\time 2/4
+\relative {
+  {{ config() }}
+  {{ rhFrag1("<fis'=' d'>4->\\f", "fis8 d='") }}
+  {{ rhFrag1("d'=''8 d", "d='4") }}
+  g='8 g <g b>4-> | <fis a>8 <fis c'> <g b>4-> |
+  <g=' b>8 <g b d>4-> b8 | c16 d c a g4 |
+  d='8 g <d g b>4-> | a'8 c <g b>4-> |
+  <g=' b>8 d'4-> b8 | c b16 a g='4 \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key d \major
+\relative {
+  {{ config() }}
+  d,+dM!4->-\stBass d,+dM4 |
+  \repeat unfold 3 {
+    a,=,8 a7! d dM! | d dM! d dM |
+  }
+  a=,8 a7! d,+dM!4 |
+  {{ lhFrag1("g=,8") }}
+  {{ lhFrag1("g,=,8") }}
+}
+{% endmacro %}
