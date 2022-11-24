@@ -1,3 +1,5 @@
+{% from "source/util.lys" import v2 %}
+
 {% macro rhFrag1(a) %}
   {{ a }} <d fis d'>8.-> c'16( |
   b=''8) <d,='' g>8 4 |
@@ -10,7 +12,7 @@
 
 {% macro rhFrag3(a, b) %}
   {{ a }} fis16 g8) g |
-  fis=''16( a g fis {{ b }} |
+  fis=''16( a g fis {{ b }} | %
 {% endmacro %}
 
 {% macro rightHand(config) %}
@@ -28,7 +30,8 @@
     }
 
     \repeat volta 2 {
-      a='16 b cis d e fis g e | fis g a8(-> a) fis |
+      a='16 b cis d e fis g e |
+      fis=''16 g a8(-> a) fis |
       g=''16 fis e d cis a b cis |
       \alternative {
         \volta 1 { d=''16 cis d e fis8 d='' | }
@@ -38,8 +41,8 @@
 
     r8\p <fis,=' a d>8 r8 8 | r <g b d> r8 8 |
     r8\< <fis=' a d>8 r8 \after 8\! 8 | r <g b d> r8 8 |
-    r8 <a=' cis e a> r8 8 | r <a d fis a> r8 8 |
-    r8\< <a=' cis e a> r8 \after 8\! 8 |
+    r8 <a=' cis e a>8 r8 8 | r <a d fis a> r8 8 |
+    r8\< <a=' cis e a>8 r8 \after 8\! 8 |
     r4 <d='' fis a d>4-> |
 
     {{ rhFrag2("d'='''16\\f") }}
@@ -66,5 +69,27 @@
 \key g \major
 \relative {
   {{ config() }}
+  d=8-\stBass r dM!4-> | g,8 gM! gM4 |
+  d'=8 dM! dM4-> | g,=,8 gM! gM4 |
+
+  cis=8 a,@7! a8 a7 | d dM! a d@M |
+  e'=8 a,@7! a,8 a7 | d dM! a d@M |
+  d=8 dM! dm r |
+
+  \repeat unfold 2 { d=4 c | b g=, | }
+  a=,4 g | fis8[ e fis g] |
+  a=,4 a | d= dM!-> |
+
+  \repeat unfold 2 {
+    d=8 dM! d dM | g, gM! g=, gM |
+  }
+  a=,8 aM! a aM | d dM! d dM |
+  {{ v2("r4 aM!", "a,=,2") }}
+  {{ v2("r4 dM!", "d=2") }}
+
+  g,@M!8[ gM8 gM gM] | d@M![ dM8 g,@M! gM8] |
+  g,@M!8[ gM8 gM gM] | d@M![ dM8] g,@M!4 |
+  e=8 em! e em | b b7! e em! |
+  e=8 em! e em | b=, b7! e@m!4 |
 }
 {% endmacro %}
