@@ -1,3 +1,9 @@
+{% macro lhFrag1() %}
+  e=4 em! em | e em! em |
+  a,=,4 am! am | d d7! d7 | g, gM! gM |
+  c=4 cM! cM | fis, a,@m! am4 | b=, b7! b7 |
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Lento
 \clef treble
@@ -26,5 +32,12 @@
 \key e \minor
 \relative {
   {{ config() }}
+  \partial 2 { r4 r | }
+  e=4 em! em | b b7! b7 |
+  \repeat unfold 3 { e=4 em! em | }
+  b=,4 b7! b7 |
+  {{ lhFrag1() }}
+  {{ lhFrag1() }}
+  e=4 em! em | e,+em!4 %
 }
 {% endmacro %}
