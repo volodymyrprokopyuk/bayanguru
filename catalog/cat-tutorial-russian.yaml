@@ -1,11 +1,10 @@
 %YAML 1.2
 ---
-pieces: []
+pieces:
   # BTBC1936
-  # p. 29
-  # - { id: q6xh, tit: Одинокая гармонь,
-  #     com: Б. Мокроусов, src: BTBC1936,
-  #     org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+  - { id: q6xh, tit: Одинокая гармонь,
+      com: Б. Мокроусов, src: BTBC1936,
+      org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   # p. 41
   # - { id: 87ko, tit: Яблочко, sub: rufd,
   #     arr: Н. Чайкин, src: BTBC1936,
