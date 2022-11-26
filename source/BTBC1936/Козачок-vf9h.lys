@@ -74,7 +74,7 @@
 
   cis=8 a,@7! a8 a7 | d dM! a d@M |
   e'=8 a,@7! a,8 a7 | d dM! a d@M |
-  d=8 dM! dm r |
+  d=8 dM! dM r |
 
   \repeat unfold 2 { d=4 c | b g=, | }
   a=,4 g | fis8[ e fis g] |
