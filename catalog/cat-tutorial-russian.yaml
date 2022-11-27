@@ -8,10 +8,9 @@ pieces:
   - { id: 87ko, tit: Яблочко, sub: rufd,
       arr: Н. Чайкин, src: BTBC1936,
       org: ru, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
-  # p. 43
-  # - { id: p7el, tit: Варяг, sub: rufs,
-  #     arr: Н. Чайкин, aty: ipr, src: BTBC1936,
-  #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  - { id: p7el, tit: Варяг, sub: rufs,
+      arr: Н. Чайкин, aty: ipr, src: BTBC1936,
+      org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   # p. 47
   # - { id: 6u3l, tit: Ленинские горы,
   #     com: Ю. Милютин, src: BTBC1936,
