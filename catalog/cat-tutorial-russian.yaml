@@ -11,10 +11,9 @@ pieces:
   - { id: p7el, tit: Варяг, sub: rufs,
       arr: Н. Чайкин, aty: ipr, src: BTBC1936,
       org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
-  # p. 47
-  # - { id: 6u3l, tit: Ленинские горы,
-  #     com: Ю. Милютин, src: BTBC1936,
-  #     org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+  - { id: 6u3l, tit: Ленинские горы,
+      com: Ю. Милютин, src: BTBC1936,
+      org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   # p. 51
   # - { id: qt7k, tit: Есть на Волге утес, sub: rufs,
   #     src: BTBC1936,
