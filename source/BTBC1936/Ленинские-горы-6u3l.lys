@@ -1,3 +1,5 @@
+{% from "source/util.lys" import hSpace, shapedSlur %}
+
 {% macro rhFrag1(a) %}
   {{ a }} fis16 g a8 g |
   fis='8 e d) r r d( fis a |
@@ -11,17 +13,33 @@
 \time 4/4
 \relative {
   {{ config() }}
-  r2\p r8 d'='8(\< g \after 8\! b |
+  r2\p r8 d'='8(\< g \after 16.\! b |
   \repeat volta 2 {
     e=''4\mp d) %
     {{ rhFrag1("g,='8(") }}
     d=''8( c16 b a g e g a8) d,[(\< g \after 8\! b] |
     <c='' e>4\mf <b d>) %
     {{ rhFrag1("g='8(") }}
-    g='2~ g8
+    g='2~ g8 <d g>[( <g b> <g b d>] |
+    <b g'>4. <b fis'>8 e) b( d e |
+    <d='' fis>8 <c e> b4) r8 c( d b |
+    <g=' e'>4. <g d'>8 c) g( d' c |
+    b='2) r8 e,( e' d) |
+    a='4.( b8 c b16 c d8 c |
+    b='4 <b d>4~ 8) d,[( g b] |
+    <c='' e>4 <c d>) r8 a[( c b] |
     \alternative {
-      \volta 1 { }
-      \volta 2 { }
+      \volta 1 {
+        g='2~ g8) d[\<
+        {{ shapedSlur("fu", bs = 2.5, sh = 1,
+           wd = 2.8, ht = 1.7, dt = 0.5) }} ( %
+        g) \after 16.\! b='] |
+      }
+      \volta 2 {
+        {{ hSpace() }}
+        <g=' b g'>2~ %
+        {{ shapedSlur("bu", bs = 3.5) }} ( 4) r \bar "|."
+      }
     }
   }
 }
