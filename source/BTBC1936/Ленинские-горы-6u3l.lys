@@ -26,7 +26,7 @@
     <c='' e>4\mf <b d>) %
     {{ rhFrag1("g='8(") }}
     g='2~ g8 <d g>[( <g b> <g b d>] |
-    <b g'>4. <b fis'>8 e) b( d e |
+    <b=' g'>4. <b fis'>8 e) b( d e |
     <d='' fis>8 <c e> b4) r8 c( d b |
     <g=' e'>4. <g d'>8 c) g( d' c |
     b='2) r8 e,( e' d) |
@@ -35,10 +35,9 @@
     <c='' e>4 <c d>) r8 a[( c b] |
     \alternative {
       \volta 1 {
-        g='2~ g8) d[\<
-        {{ shapedSlur("fu", bs = 2.5, sh = 1,
-           wd = 2.8, ht = 1.7, dt = 0.5) }} ( %
-        g) \after 16.\! b='] |
+        g='2~ g8) d[\< %
+        {{ shapedSlur("fu", bs = 2.5, sh = 1, wd = 2, ht = 1.7, dt = 0.5) }} ( %
+        g='8) \after 16.\! b='] |
       }
       \volta 2 {
         {{ hSpace() }}
