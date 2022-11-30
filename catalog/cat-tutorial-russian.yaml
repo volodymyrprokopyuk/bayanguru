@@ -14,10 +14,9 @@ pieces:
   - { id: 6u3l, tit: Ленинские горы,
       com: Ю. Милютин, src: BTBC1936,
       org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
-  # p. 51
-  # - { id: qt7k, tit: Есть на Волге утес, sub: rufs,
-  #     src: BTBC1936,
-  #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  - { id: qt7k, tit: Есть на Волге утес, sub: rufs,
+      src: BTBC1936,
+      org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   # p. 54
   # - { id: oz1w, tit: При долине куст калины,
   #     com: А. Новиков, src: BTBC1936,
