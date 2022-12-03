@@ -1,3 +1,12 @@
+{% macro rhFrag1() %}
+  b='16 c b a g4~ | g8 a16 b=' %
+{% endmacro %}
+
+{% macro rhFrag2(a, b, c) %}
+  {{ a }} g16( fis) g8 g'16( fis |
+  g=''8) {{ b }} e f e d {{ c }} | %
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Allegro
 \clef treble
@@ -10,8 +19,19 @@
   \acciaccatura { fis=''8 } g8-> d16( e f e d c) |
   b='8 g16( fis g8) g'16( fis |
   g=''8) d16\( e f e d c |
-  b='16 c b a g4~ | g8 a16 b c8\) d16\( c |
-  b='16 c b a g4~ | g8 a16 b <e,=' c'>8\) r |
+  {{ rhFrag1() }} c8\) d16\( c |
+  {{ rhFrag1() }} <e,=' c'>8\) r |
+
+  \repeat volta 2 {
+    {{ rhFrag2("b'='8", "d16(", "c)") }}
+    {{ rhFrag2("b='8", "d16\\(", "c") }}
+    {{ rhFrag1() }} c8\) d16\( c |
+    {{ rhFrag1() }} <e,=' c'>8\) r |
+    \alternative {
+      \volta 1 { }
+      \volta 2 { }
+    }
+  }
 }
 {% endmacro %}
 
@@ -25,5 +45,11 @@
   b=,8 g,@7! c8 cM! | g g7! r g7 |
   d'=8 g,@7! c8 cM! | g g7! r g7 |
   d'=8 g,@7! c=8 r |
+
+  \repeat unfold 2 {
+    d=8 g,@7! g,8 g7 | d' g,@7! c8 cM! |
+  }
+  g=,8 g7! b g,@7 | d8 g,@7! c8 cM! |
+  g=,8 g7! b g,@7 | d8 g,@7! c8 r |
 }
 {% endmacro %}
