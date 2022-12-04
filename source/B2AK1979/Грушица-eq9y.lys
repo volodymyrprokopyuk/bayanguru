@@ -21,8 +21,8 @@
   <g=' b>2 <fis a>4 | 2.\) |
   <<
     \relative {
-      <e'=' g>2\( <fis a>4 | <g b>2 <b d>4 |
-      <a=' cis>2 <g b>4 | fis='2.\) |
+      <e'=' g>2\( <fis a>4 | <g b>2 \stemDown <b d>4 |
+      <a=' cis>2 \stemNeutral <g b>4 | fis='2.\) |
     }
     \\
     \relative {

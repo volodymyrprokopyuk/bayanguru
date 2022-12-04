@@ -69,6 +69,7 @@
     }
     \\
     \relative {
+      \once \stemUp
       <cis'=' fis( >8 | fis) fis4 <fis a>8~ | <fis=' a>4 %
     }
   >>
