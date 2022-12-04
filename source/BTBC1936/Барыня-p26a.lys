@@ -7,6 +7,34 @@
   g=''8) {{ b }} e f e d {{ c }} | %
 {% endmacro %}
 
+{% macro lhFrag1(a) %}
+  {{ a }} g,@7! r8 g7 | g, g7! c cM! |
+  d=8 g,@7! r8 g7 | g,=, g7! c,+cM!4-> |
+{% endmacro %}
+
+{% macro rhFrag3(a) %}
+  {{ a }} \acciaccatura { fis'=''8 } g4-> %
+  <<
+    \relative {
+      \once \stemDown g''=''8~-> | g=''2 |
+    }
+    \\
+    \relative {
+      s8 | fis''=''8 f <g, e'>( c='') |
+    }
+  >>
+  g,='8 \acciaccatura { fis'=''8 } g4-> %
+  <<
+    \relative {
+      \once \stemDown g''=''8~-> | g=''2 |
+    }
+    \\
+    \relative {
+      s8 | fis''=''8 f <g,=' c e>4^\accent |
+    }
+  >>
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Allegro
 \clef treble
@@ -32,6 +60,9 @@
       \volta 2 { }
     }
   }
+
+  {{ rhFrag3("g='8") }}
+  {{ rhFrag3("g,='8") }}
 }
 {% endmacro %}
 
@@ -51,5 +82,8 @@
   }
   g=,8 g7! b g,@7 | d8 g,@7! c8 cM! |
   g=,8 g7! b g,@7 | d8 g,@7! c8 r |
+
+  {{ lhFrag1("d=8") }}
+  {{ lhFrag1("d'=8") }}
 }
 {% endmacro %}
