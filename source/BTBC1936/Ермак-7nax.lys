@@ -32,5 +32,10 @@
   \partial 8 { r8 | }
   e=4-\stBass em! | c cM! | g,,+gM!4 b,,+b7! |
   e=4 em! | c a,@m! | b,,+b7!8 b,,+b7 r4 |
+  g=,8[ gM!] gM gM d@M![ g,@M!8] |
+  d,+dM!4 d,+dM \fermata r |
+  c=8 cM! cM e | a, am! b b7! |
+  e=8 e,+em!~ e,+em4 \fermata r |
+  e=8 e,+em!~ e,+em4 \fermata r8 %
 }
 {% endmacro %}
