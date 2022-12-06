@@ -97,8 +97,8 @@
       \volta 2 {
         <<
           \relative {
-            \tuplet 3/2 { b'='16(-> c b } g8~ g) g'-> |
-            g=''16 f e d c=''4 |
+            \tuplet 3/2 { b'='16(-> c b } g8~ g) g'~(-> |
+            g=''16 f e d) c=''4 |
           }
           \\
           \relative { f'='4.-> g8~-> | g4 c='' | }
