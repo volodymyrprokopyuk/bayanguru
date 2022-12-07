@@ -1,0 +1,35 @@
+{% macro rhFrag1() %}
+  <d=' f>2 4 | 4 g a | <a c>2. | <g bes>2 <f a>4 |
+  <e=' g>2 e4 | <f a>2 <e g>4 | d='2.~ |
+{% endmacro %}
+
+{% macro rightHand(config) %}
+\tempo Lento
+\clef treble
+\key d \minor
+\time 3/4
+\relative {
+  {{ config() }}
+  d'='2\mp d4 | f2 d4 | g2. | d2 e4 |
+  f='2 e4 | a2 g4 | d2.~ | d4 r r |
+  d='2 a'4 | a2 f4 | g2. | d2 e4 |
+  f='4 e f | a2 g4 | f2.~ | f2. |
+  <a=' c>2 4 | 4 bes a | g2. | d2 d4 |
+  <c=' e>2 <d f>4 | <e g> <d f> <e g> |
+  \once \tieUp <f=' a~ >2.( | <e a>2) r4 |
+  {{ rhFrag1() }} | d2. |
+  d='2 <bes' d>4 | 4 <a c> <bes d> |
+  <a=' c>2. | <g bes>2 4 | 2 <a c>4 |
+  <bes=' d>4 <a c> <g bes> |
+  \once \tieUp <f='( a~ >2. | <e a>2.) |
+  {{ rhFrag1() }} | d4 r r \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key d \minor
+\relative {
+  {{ config() }}
+}
+{% endmacro %}
