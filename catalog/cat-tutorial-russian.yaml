@@ -38,10 +38,9 @@ pieces:
   - { id: 7s64, tit: Жди солдата,
       com: Б. Мокроусов, arr: Н. Чайкин, aty: ipr, src: BTBC1936,
       org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
-  # p. 66
-  # - { id: blt6, tit: Родина, sub: rufs,
-  #     arr: Н. Чайкин, aty: hrm, src: BTBC1936,
-  #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  - { id: blt6, tit: Родина, sub: rufs,
+      arr: Н. Чайкин, aty: hrm, src: BTBC1936,
+      org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   # p. 66
   # - { id: l1zm, tit: Лирическая,
   #     com: Н. Поликарпов, src: BTBC1936,

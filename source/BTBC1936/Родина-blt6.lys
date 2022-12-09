@@ -1,0 +1,39 @@
+{% macro rightHand(config) %}
+\tempo Lento
+\clef treble
+\key d \minor
+\time 2/4
+\relative {
+  {{ config() }}
+  \partial 4 { a=8\mf d | }
+  f='4 a,8 f' | e4 a,8 e' |
+  d='4 a4~ | a a8 d |
+  f='4 a,8 f' | e4 a,8 e' |
+  d='2~ | d4 d8 c |
+  f='4 <f a>8 <g bes> | <a c>4 8 <f a> |
+  <d=' d'>8 <a' c> <bes, d g>4~ |
+  4 <d=' d'>8 <g bes> | <f a>4 <d f>8 <f a> |
+  <e=' g>4 <f a>8 <e g> | <d=' d'>2~ | 4 \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key d \minor
+\relative {
+  {{ config() }}
+  \partial 4 { r4 | }
+  d,+dm!4-.-\stBass d,+dm-. |
+  a,,+a7!4-. a,,+a7-. |
+  d,+dm!4_\artSimile d,+dm |
+  \repeat unfold 2 { d,+dm!4 d,+dm | }
+  a,,+a7!4-. a,,+a7-. |
+  d,+dm!4 d,+dm | d,+dm! c,+d7! |
+  \repeat unfold 2 { f,,+fM!4 f,,+fM | }
+  bes,,+besM!4 bes,,+g,@m! |
+  bes,,+g,@m!4 e,+g,@m! |
+  f,,+d@m!4 f,,+dm |
+  g,,+gm!4 a,,+a7! |
+  d,+dm!4 d,+dm | d,+dm! %
+}
+{% endmacro %}
