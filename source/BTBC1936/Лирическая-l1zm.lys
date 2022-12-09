@@ -1,0 +1,25 @@
+{% from "source/util.lys" import momentBeat, v2 %}
+
+{% macro rightHand(config) %}
+\tempo Lento
+\clef treble
+\key d \major
+\time 3/4
+\relative {
+  {{ config() }}
+  {{ momentBeat("1/4", "1,1,1") }}
+  \partial 4 { <d'=' fis>8\mf <e g> | }
+  <fis=' a>4. <a cis>8 8 <g b> |
+  {{ v2("b'='16 cis b8", "g'='4.") }}
+  <fis=' a>8 8 <e g> |
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key d \major
+\relative {
+  {{ config() }}
+  \partial 4 { r4 | }
+}
+{% endmacro %}
