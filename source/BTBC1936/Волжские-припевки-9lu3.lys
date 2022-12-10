@@ -1,0 +1,35 @@
+{% from "source/util.lys" import v2 %}
+
+{% macro rightHand(config) %}
+\tempo Moderato
+\clef treble
+\key d \major
+\time 2/4
+\relative {
+  {{ config() }}
+  \partial 4. { d'='8[(\mp fis a]) | }
+  <fis=' a d>4 <fis a cis> |
+  <g=' b e>4 <g b d> |
+  <e=' g b>2~ | 8 e[( g b]) |
+  <cis,=' g' cis>4 <cis g' b> |
+  <d=' fis b>4 <d fis a> |
+  <b= dis fis>2~ | 8 b[( dis fis )] |
+  <dis=' fis b>4 <dis fis a> |
+  <b= e a>4 <b e g> |
+  <e=' g b>2~ | 8 b[( e fis]) |
+  <b,= e g>4 <g b e> |
+  <cis=' g' b>4 <cis g' a> |
+  <fis,= a d>2~ | 8 d'[( fis a)] |
+
+  {{ v2("<d''='' fis>4 <cis e>4 | 4 <b=' d> |", "fis'='2 | g=' |") }}
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key d \major
+\relative {
+  {{ config() }}
+  \partial 4. { r8 r4 | }
+}
+{% endmacro %}
