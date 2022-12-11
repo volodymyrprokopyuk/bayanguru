@@ -19,9 +19,18 @@
   <e=' g b>2~ | 8 b[( e fis]) |
   <b,= e g>4 <g b e> |
   <cis=' g' b>4 <cis g' a> |
-  <fis,= a d>2~ | 8 d'[( fis a)] |
+  <fis,= a d>2~ | 8 d'[( fis a]) |
 
   {{ v2("<d''='' fis>4 <cis e>4 | 4 <b=' d> |", "fis'='2 | g=' |") }}
+  <e=' g b>2~ | 8 e[( g b]) |
+  {{ v2("<cis''='' e>4 <b d> | <b d> <a cis>8( <g=' b>) |", "e'='2 | f=' |") }}
+  <fis=' a>2~ | 8 b,[( dis fis]) |
+  <c=' a' c>4 <b g' b> |
+  <b= g' b>4 <b fis' a> |
+  {{ v2("<fis'=' a>8 <e g>4.~ | 8", "b=2~ | b=8") }} b=8[( e fis]) |
+  <b,= e g>4 <g b e> |
+  <cis=' g' b>4 <cis fis a> |
+  <d=' d'>2~ | 8 \bar "|."
 }
 {% endmacro %}
 
@@ -31,5 +40,22 @@
 \relative {
   {{ config() }}
   \partial 4. { r8 r4 | }
+  d=8-\stBass dM! r fis, | g gM! r gM |
+  e'=8 em! b e@m | e8 r r4 |
+  a,=,8 a7! r a7 | d dM! r dM |
+  b=,8 b7! dis b,@7! | d8 r r4 |
+  b=,8 b7! r b7 | e em! r em |
+  e=8 em! b e@m | e8 r r4 |
+  e=8 em! r em | a, a7! r a7 |
+  d=8 dM! a d@M | d8 r r4 |
+
+  d=8 dM! r fis, | g e@m! r8 em |
+  e'=8 em! b e@m | e8 r r4 |
+  e=8 em! r em | g, g7! r g7 |
+  d'=8 dM! a d@M | b,,+b7!8 r r4 |
+  fis=,8 d@7! r8 d7 | b b7! r dis |
+  e=8 em! b e@m | e8 r r4 |
+  e=8 em! r em | a, a7! r a7 |
+  d=8 dM! g,=, gM! | d,+dM! %
 }
 {% endmacro %}
