@@ -1,0 +1,65 @@
+{% from "source/util.lys" import v2 %}
+
+{% macro rhFrag1(a) %}
+  {{ a }} <g bes> <f aes>4 <ees g>8 <d f> |
+  <ees=' g>8 <f aes> <ees g>4 <d f>8 <c=' ees> |
+{% endmacro %}
+
+{% macro rhFrag2() %}
+  <d=' f>8 <ees g> <d f>4 %
+  {{ v2("g'='4", "ees'='8 d='") }}
+{% endmacro %}
+
+{% macro rightHand(config) %}
+\tempo Largo
+\clef treble
+\key ees \major
+\time 3/4
+\relative {
+  {{ config() }}
+  \partial 4 { bes=4\mf | }
+  \repeat volta 2 {
+    ees='2 c4 | f2 bes,4 |
+    ees='8( f) g4 f8( ees) | f2 bes,4 |
+    ees='8( f) g4 f8( ees) | f4 bes f |
+    g='4 f ees | bes2 c4 | f2 c4 | g'2 c,4 |
+    f='8( g) aes4 g8( f) | g2 c,4 |
+    f='8( g) aes4 g8( f) | bes4 ees, aes |
+    g='4 bes, f' | ees2 g='4\f |
+
+    <ees=' g c>2 g4 | <ees g c>2 <g bes>4 |
+    <f=' aes>8 <g bes> <aes c>4 <g bes>8 <f aes> |
+    <ees=' g>4( c) <g' bes>4 |
+    {{ rhFrag1("<f=' aes>8") }}
+    {{ rhFrag2() }}
+    <c=' c'>2 <g' bes>4 |
+    <<
+      \new Voice = voiceOne \relative {
+        \voiceOne
+        \repeat unfold 2 { c''=''8 c8 c2 | }
+      }
+      \new Voice = voiceTwo \relative {
+        \voiceTwo
+        {{ rhFrag1("<f'=' aes>8") }}
+      }
+    >>
+    {{ rhFrag2() }}
+    \alternative {
+      \volta 1 { <c=' c'>4 <bes bes'>8 r bes=4 | }
+      \volta 2 {
+        <c=' c'>2.~ | 2.~ | 8 r r4 <d f g>4 |
+        <c=' ees g c>4 c='-> r \bar "|."
+      }
+    }
+  }
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key ees \major
+\relative {
+  {{ config() }}
+  \partial 4 { r4 | }
+}
+{% endmacro %}
