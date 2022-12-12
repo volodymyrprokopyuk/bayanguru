@@ -15,6 +15,14 @@
   <f=' a>8 8 8 <d f> <e g>4 %
   {{ v2("a'='8 g", "e'='4") }}
   <d=' d'>2.~ 8 r |
+  <bes'=' d f>4 4 <c e> <bes d> |
+  <a=' c>8 <a d> <a c e>2 <a c>4 |
+  <bes=' d>4 4 4 <a c>8 <g bes> |
+  <f=' a>8 <g bes> <f a c>2. |
+  g='4 <f a> <d bes' d> <a' c>8 <g bes> |
+  <f=' a>4 <e g>8 8 <f a>4 <d d'> |
+  <a'=' c>8 <g bes> <f a> <e g> <f a>4 <e a e'> |
+  <d=' d'>1 \bar "|."
 }
 {% endmacro %}
 
@@ -23,5 +31,22 @@
 \key d \minor
 \relative {
   {{ config() }}
+  d=8-\stBass dm! r dm d dm r dm |
+  d=8 dm! r dm d dm r dm |
+  c=8 f,@M! r8 fM c c7! r c7 |
+  \repeat unfold 2 {
+    f,=,8 fM! r fM f fM r fM |
+  }
+  bes=,8 besM! r besM g gm! r gm |
+  a=,8 d@m! r8 dm a a7! r d7 |
+  d=8 dm! r dm d dm r dm |
+  bes=,8 besM! r besM c c7! r c7 |
+  f,=,8 fM! r fM a f,@M! r8 fM |
+  g=,8 gm! r gm c c7! r c7 |
+  f,=,8 fM! r fM f fM r fM |
+  g=,8 gm! r gm e' g,@m! r8 gm |
+  f,=,8 d@m! r8 a,@M! d'8 dm! r dm |
+  g,=,8 gm! r gm a d@m! r8 a,@7! |
+  d=8 dm! r dm d= dm r dm |
 }
 {% endmacro %}
