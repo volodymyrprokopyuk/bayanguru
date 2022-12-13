@@ -68,12 +68,31 @@
   bes,=,8_\artSimile besM! besM besM f' bes,@7! |
   ees=8 eesM! eesM eesM c ees@M! |
   f=8[ bes,@M! besM8 besM] d bes,@M! |
-  c=8( ees@M!) f8[( bes,@M!)] f8( f7!) |
+  c=8( ees@M!) f8[( bes,@M!]) f8( f7!) |
   bes,=,8 besM! besM besM g c@7! |
   f=,8 fm! fm fm r fm |
   f=,8[ c@7! c78 c7] r c7 |
   f=,8 fm! fm fm g g7! |
   c=8 cM! cM cM r c@7! |
   f,=,8 fm! fm fm aes bes,@M! |
+  g=,8( gm!) c[( cm!]) f,( fm!) |
+  bes=,8[ ees@M! eesM8 eesM] bes bes7! |
+  ees=8 eesM! eesM eesM d g,@7! |
+
+  c=8 cm! cm cm d g,@7! |
+  \repeat unfold 2 {
+    c=8 cm! cm cm ees c@m! |
+    f,=,8 fm! fm fm f=, fm! |
+  }
+  g=,8( f,@m!) c@m!8[ cm8] g( c@m!) |
+  g=,8( c@m!) g,@M!8[ gM8] g( gM!) |
+  c=8 cm! cm cm ees c@m! |
+  f,=,8( c@7!) f,@m!8[ fm8] r fm |
+  g=,8( f,@m!) c8[( cm!]) r cm |
+  g=,8( c@m!) g,@7!8[ g78] g( g7!) |
+  c,+cm!4 d'= r |
+  c=8-- cm! cm cm aes-- f,@m! |
+  g=,8[-- c@m! cm8 cm] f-- fm! |
+  g,,+c@m!4 r4 g,,+g7! c,+cm!4 c'=4-> r |
 }
 {% endmacro %}
