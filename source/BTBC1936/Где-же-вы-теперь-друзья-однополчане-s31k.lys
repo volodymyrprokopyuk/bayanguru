@@ -1,0 +1,67 @@
+{% from "source/util.lys" import v2 %}
+
+{% macro rhFrag1(a) %}
+  {{ a }} g d' c) e,(\< g c e) d( gis, b \after 16\! f') |
+  e=''8\mf b16( c a8)\> a16( b g a fis \after 16\! b=') |
+{% endmacro %}
+
+{% macro rightHand(config) %}
+\tempo Moderato
+\clef treble
+\key e \minor
+\time 3/4
+\relative {
+  {{ config() }}
+  {{ rhFrag1("e'='16(\\p") }}
+  \time 2/4
+  \repeat volta 2 {
+    b='8.(\p e,16) e8( fis) |
+    e='8( b a' g) | fis2( b,2) |
+    b'='8.( e,16 fis8 e) |
+    <a=' c>8( <g c> <fis a> d) |
+    <g=' b>2~ | 4 r |
+    e='8( g d' c) | d4.( f,8 |
+    e='8) e( d' b | c4 a) |
+    b='8. b16 b8( g) | a( g fis e=') |
+    <<
+      \relative {
+        b'='2 | r8 <a=' c>4 <g=' b>8 |
+      }
+      \\
+      \relative {
+        <dis'=' fis>4 <e g> | <dis fis>8 dis='4. |
+      }
+    >>
+    <fis=' a>8. d16 d8( e | d) d <a' c>\< \after 8\! <fis a> |
+    <g=' b>4~( 16 a g fis) |
+    {{ v2("e'='2", "c'='4( d8 c=')") }}
+    <fis=' a>8. d16 d8( e | d) d=' %
+    <<
+      \new Voice = voiceOne \relative {
+        \voiceOne
+        c''=''8( b16 a) | b2 | b2 | e,8( g d' c |
+        d=''4.) f,8( | e) e( d' b=') |
+      }
+      \new Voice = voiceTwo \relative {
+        \voiceTwo
+        a'='8 d, | dis[ b( g' fis] | f[) d( a' g]) |
+        s2 | r8 gis='8[ d f='] | s2 |
+      }
+    >>
+    <a'=' c>4 a | <g b> <e g> | <f a>4 <e fis> |
+    <dis=' g>8. b'16 <dis, g>8( fis) | e='2 |
+    \time 3/4
+    {{ rhFrag1("e='16(") }}
+  }
+  e,='4\p e'='' \fermata r \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key e \minor
+\relative {
+  {{ config() }}
+  c=4-\stBass cM! b | c a,@m! b4 |
+}
+{% endmacro %}
