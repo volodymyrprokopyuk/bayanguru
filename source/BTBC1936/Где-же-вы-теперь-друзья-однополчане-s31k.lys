@@ -2,7 +2,11 @@
 
 {% macro rhFrag1(a) %}
   {{ a }} g d' c) e,(\< g c e) d( gis, b \after 16\! f') |
-  e=''8\mf b16( c a8)\> a16( b g a fis \after 16\! b=') |
+  e=''8\mf b16( c a8)\> a16( b g a fis \after 32.\! b=') |
+{% endmacro %}
+
+{% macro lhFrag1(a) %}
+  {{ a }} cM! b | c a,@m! b=,4 |
 {% endmacro %}
 
 {% macro rightHand(config) %}
@@ -25,7 +29,7 @@
     b='8. b16 b8( g) | a( g fis e=') |
     <<
       \relative {
-        b'='2 | r8 <a=' c>4 <g=' b>8 |
+        b'='2 | r8 <a=' c>4( <g=' b>8) |
       }
       \\
       \relative {
@@ -53,7 +57,7 @@
     \time 3/4
     {{ rhFrag1("e='16(") }}
   }
-  e,='4\p e'='' \fermata r \bar "|."
+  e,='4(\p e'='') \fermata r \bar "|."
 }
 {% endmacro %}
 
@@ -62,6 +66,16 @@
 \key e \minor
 \relative {
   {{ config() }}
-  c=4-\stBass cM! b | c a,@m! b4 |
+  {{ lhFrag1("c=4-\\stBass") }}
+  e=4 em! | g, e@m! | a4 am! | b b7! |
+  e=4 em! | a, d@7! | g4 gM! | g d'8 b |
+  c=4 c7! | e e7! | gis, e@7! | a4 am! |
+  e'=4 em! | f, fis,@7! | b4 c@M! | b b7! |
+  fis=,4 d@7! | d'4 d7! | g, gM! | c cM! |
+  fis,=,4 d@7! | d'4 d7! | b bM! | g gM! |
+  c=4 cM! | e e7! | gis, e@7! | a4 am! |
+  e'=4 em! | f, fis,@7! | b4 b7! | e em! |
+  {{ lhFrag1("c=4") }}
+  e=4 em! \fermata r |
 }
 {% endmacro %}
