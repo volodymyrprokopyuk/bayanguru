@@ -59,7 +59,6 @@ pieces:
   - { id: s31k, tit: "Где же вы теперь, друзья-однополчане",
       com: В. Соловьев-Седой, src: BTBC1936,
       org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
-  # p. 86
-  # - { id: 1czf, tit: Карело-финская полька,
-  #     src: BTBC1936,
-  #     org: ru, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
+  - { id: 1czf, tit: Карело-финская полька,
+      src: BTBC1936,
+      org: ru, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elm }
