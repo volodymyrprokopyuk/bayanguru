@@ -62,3 +62,16 @@ pieces:
   - { id: 1czf, tit: Карело-финская полька,
       src: BTBC1936,
       org: ru, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elm }
+  # BTB1978
+  # p. 37
+  # - { id: lknz, tit: "Ах ты, зимушка-зима", sub: rufs,
+  #     src: BTB1978,
+  #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  # p. 55
+  # - { id: od7f, tit: Ивушка,
+  #     com: Г. Пономаренко, src: BTB1978,
+  #     org: ru, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  # p. 57
+  # - { id: 2al1, tit: Песня о тревожной молодисти,
+  #     com: А. Пахмутова, src: BTB1978,
+  #     org: ru, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
