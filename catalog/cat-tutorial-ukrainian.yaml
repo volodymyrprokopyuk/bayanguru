@@ -21,8 +21,8 @@ pieces:
   # p. 41
   # - { id: vwad, tit: "Чорнії брови, карії очі", sub: uafs,
   #     src: BTB1978,
-  #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  #     org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   # p. 53
   # - { id: brku, tit: Стоїть гора високая, sub: uafs,
   #     src: BTB1978,
-  #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  #     org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }

@@ -75,3 +75,11 @@ pieces:
   # - { id: 2al1, tit: Песня о тревожной молодисти,
   #     com: А. Пахмутова, src: BTB1978,
   #     org: ru, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  # p. 64
+  # - { id: 5rl3, tit: Барыня, sub: rufd,
+  #     src: BTB1978,
+  #     org: ru, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
+  # p. 68
+  # - { id: jh3h, tit: Елечки-метелочки, sub: Сибирские народыне припевки,
+  #     src: BTB1978,
+  #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }

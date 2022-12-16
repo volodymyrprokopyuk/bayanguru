@@ -263,7 +263,7 @@ pieces:
       com: К. Мясков, src: B2AK1987,
       org: ua, sty: msc, gnr: pie, frm: mel, bss: pub, lvl: elm }
   - { id: w5ba, tit: Дивлюсь я на небо, sub: uafs,
-      src: B2AK1987,
+      arr: А. Иванов, src: B2AK1987,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: plh0, tit: Танець ляльки,
       com: І. Беркович, src: B2AK1987,
