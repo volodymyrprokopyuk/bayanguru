@@ -50,7 +50,9 @@ books:
       # BTBC1936
       "q6xh", "87ko", "p7el", "6u3l", "qt7k", "oz1w", "p26a", "frcu", "hjff",
       "7nax", "74jq", "7s64", "blt6", "l1zm", "sqwg", "9lu3", "ecde", "vmd4",
-      "s31k", "1czf"] }
+      "s31k", "1czf",
+      # BTB1978
+      "lknz"] }
   - { id: hu01, tit: Угорські народні пісні і танці, sub: для баяна,
       pieces: [
       # Class
