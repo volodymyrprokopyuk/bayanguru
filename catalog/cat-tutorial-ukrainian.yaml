@@ -26,3 +26,7 @@ pieces:
   # - { id: brku, tit: Стоїть гора високая, sub: uafs,
   #     src: BTB1978,
   #     org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  # p. 72
+  # - { id: tzb9, tit: Черемшина,
+  #     com: В. Михайлюк, src: BTB1978,
+  #     org: ua, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
