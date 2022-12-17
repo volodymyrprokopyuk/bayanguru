@@ -69,10 +69,9 @@ pieces:
   - { id: od7f, tit: Ивушка,
       com: Г. Пономаренко, src: BTB1978,
       org: ru, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
-  # p. 57
-  # - { id: 2al1, tit: Песня о тревожной молодисти,
-  #     com: А. Пахмутова, src: BTB1978,
-  #     org: ru, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  - { id: 2al1, tit: Песня о тревожной молодисти,
+      com: А. Пахмутова, src: BTB1978,
+      org: ru, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
   # p. 64
   # - { id: 5rl3, tit: Барыня, sub: rufd,
   #     src: BTB1978,
