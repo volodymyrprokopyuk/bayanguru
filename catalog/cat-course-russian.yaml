@@ -1,0 +1,16 @@
+%YAML 1.2
+---
+pieces: []
+  # TYCBB1970
+  # p. 55
+  # - { id: tft1, tit: Желтый лист, sub: rufs,
+  #     src: TYCBB1970,
+  #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  # p. 55
+  # - { id: pd1z, tit: Соловьем залетным, sub: rufs,
+  #     src: TYCBB1970,
+  #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  # p. 55
+  # - { id: 63wa, tit: Соловьем залетным, sub: rufs,
+  #     src: TYCBB1970,
+  #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
