@@ -41,7 +41,7 @@
         \time 9/8
         {{ hSpace() }}
         <fis'=' a>2.~ 4 %
-        {{ shapedSlur("bd", bs = 2.5, wd = 3.5) }} ( b,8)\( |
+        {{ shapedSlur("bd", bs = 2.5, wd = 6) }} ( b,8)\( |
         {{ rhFrag1() }} b2.~ | b4.\) %
         \ottava #1
         <e='' c'>4 <g='' b>8(\> 4.~ | \after 8\! 8) %
