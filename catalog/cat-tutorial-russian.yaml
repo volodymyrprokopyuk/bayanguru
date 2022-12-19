@@ -78,8 +78,7 @@ pieces:
   - { id: jh3h, tit: Елечки-метелочки, sub: Сибирские народные припевки,
       src: BTB1978,
       org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
-  # p. 74
-  # - { id: gm8m, tit: "С чего начинается родина?",
-  #     com: В. Баснер, src: BTB1978,
-  #     org: ru, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  - { id: gm8m, tit: "С чего начинается родина?",
+      com: В. Баснер, src: BTB1978,
+      org: ru, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
   # TODO p. 90
