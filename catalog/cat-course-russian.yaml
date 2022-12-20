@@ -29,5 +29,5 @@ pieces: []
   #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   # p. 17
   # - { id: 36ot, tit: Сама садик я садила, sub: rufsvar,
-  #     src: TYBCB21971,
+  #     arr: А. Иванов, src: TYBCB21971,
   #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
