@@ -1,16 +1,26 @@
 %YAML 1.2
 ---
 pieces: []
-  # TYBCB1970
+  # TYBCB11970
   # p. 70
   # - { id: 6nv7, tit: Місяцю ясний,
-  #     com: С. Гулак-Артемовський, arr: А. Басурманов, aty: ipr, src: TYBCB1970,
+  #     com: С. Гулак-Артемовський, arr: А. Басурманов, aty: ipr,
+  #     src: TYBCB11970,
   #     org: ua, sty: msc, gnr: rmc, frm: mel, bss: stb, lvl: elm }
   # p. 102
   # - { id: bklv, tit: Дощик, sub: uafs,
-  #     arr: Л. Захарова, aty: ipr, src: TYBCB1970,
+  #     arr: Л. Захарова, aty: ipr, src: TYBCB11970,
   #     org: ua, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
   # p. 103
   # - { id: d099, tit: Гречаники, sub: uafs,
-  #     arr: А. Басурманов, aty: ipr, src: TYBCB1970,
+  #     arr: А. Басурманов, aty: ipr, src: TYBCB11970,
   #     org: ua, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  # TYBCB21971
+  # p. 12
+  # - { id: 6hjt, tit: "Чом, чом не прийшов", sub: uafs,
+  #     src: TYBCB21971,
+  #     org: ua, sty: flk, gnr: sng, frm: var, bss: stb, lvl: elm }
+  # p. 15
+  # - { id: h940, tit: "Віють вітри, віють буйні", sub: uafs,
+  #     src: TYBCB21971,
+  #     org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
