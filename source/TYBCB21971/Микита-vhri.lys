@@ -1,0 +1,22 @@
+{% macro rightHand(config) %}
+\tempo Allegretto
+\clef treble
+\key g \major
+\time 2/4
+\relative {
+  {{ config() }}
+  <g'=' b>16 <a c> <b d>4 8 |
+  <c='' e>8 <b d> <a c> <g b> |
+  <fis=' a>16 <g b> <a c>4 8 |
+  <b=' d>8 <a c> <g b> <d a'> |
+  \repeat unfold 2 { g='8 b d,='4-> | }
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key g \major
+\relative {
+  {{ config() }}
+}
+{% endmacro %}
