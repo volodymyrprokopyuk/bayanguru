@@ -31,3 +31,7 @@ pieces: []
   # - { id: 36ot, tit: Сама садик я садила, sub: rufsvar,
   #     arr: А. Иванов, src: TYBCB21971,
   #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  # p. 18
+  # - { id: ej2i, tit: Вот мчится тройка почтовая, sub: rufs,
+  #     arr: Л. Захарова, aty: ipr, src: TYBCB21971,
+  #     org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }

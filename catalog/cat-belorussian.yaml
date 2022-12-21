@@ -15,3 +15,9 @@ pieces:
   - { id: 8ec9, tit: Перепілонька, sub: byfs,
       arr: М. Чайкін, src: BTBC1936,
       org: by, sty: flk, gnr: sng, frm: plp, bss: stb, lvl: elm }
+  # Tutorial
+  # TYBCB21971
+  # p. 24
+  # - { id: vhri, tit: Микита, sub: byfd,
+  #     src: TYBCB21971,
+  #     org: by, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
