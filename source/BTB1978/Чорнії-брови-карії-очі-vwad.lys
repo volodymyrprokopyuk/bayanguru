@@ -1,0 +1,44 @@
+{% macro rhFrag1(a) %}
+  {{ a }} gis a\< | e'2 \after 4\! cis4 |
+  bes='4 a g | g2\> \after 4\! f4\) |
+  e='4\(\< g \after 4\! bes | a2 g4 |
+  g='4 f e\> | \after 2.\! d='2.\) |
+{% endmacro %}
+
+{% macro lhFrag1(a) %}
+  {{ a }} a,@7! a74 | a,4 a7! a7 |
+  e'=4 a,@7! a74 | d4 dm! dm |
+  g,=,4 gm! gm | a4 d@m! dm |
+  a=,4 a7! a7 |
+{% endmacro %}
+
+{% macro rightHand(config) %}
+\tempo Moderato
+\clef treble
+\key d \minor
+\time 3/4
+\relative {
+  {{ config() }}
+  d'='4\(\p f a\< | d2 \after 4\! d4 |
+  cis=''4 b cis | d2 a4\) |
+  f'=''4\( e d | c2 bes4 |
+  bes='4 a g\> | \after 2.\! a2.\) |
+  {{ rhFrag1("a='4\\(\\mf") }}
+  {{ rhFrag1("a'='4\\(\\mf") }} \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key d \minor
+\relative {
+  {{ config() }}
+  d=4(-\stBass dm!) dm | f,( d@m!) dm4 |
+  e'=4_\artSimile a,@7! a74 |
+  \repeat unfold 2 { d=4 dm! dm | }
+  e=4 c@7! c74 | c c7! c7 |
+  f,=,4 fM! fM |
+  {{ lhFrag1("e'=4") }} | d=4 dm! dm |
+  {{ lhFrag1("e=4") }} | d,+dm!2. |
+}
+{% endmacro %}
