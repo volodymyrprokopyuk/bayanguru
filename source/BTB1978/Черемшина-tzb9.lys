@@ -1,0 +1,48 @@
+{% from "source/util.lys" import momentBeat %}
+
+{% macro rightHand(config) %}
+\tempo Moderato
+\clef treble
+\key e \minor
+\time 4/4
+\relative {
+  {{ config() }}
+  {{ momentBeat("1/4", "1,1,1,1") }}
+  R1\p |
+  \repeat volta 2 {
+    e'='8 e e\< e <e g>8 8 <g b> \after 8\! d' |
+    <<
+      \new Voice = voiceOne \relative {
+        \voiceOne
+        \repeat unfold 2 {
+          d''=''8\> c~ \after 4\! c=''4 %
+        }
+        <fis,=' a d>8\< 8 8 \after 16.\! d' d c b a |
+        \repeat unfold 2 {
+          c=''8\> b~ \after 4\! b='4 %
+        }
+      }
+      \new Voice = voiceTwo \relative {
+        \voiceTwo
+        <e'=' a>8 8~ 2. |
+        s4 s d='4 d | <d g>8 8~ 2. |
+      }
+    >>
+    \alternative {
+      \volta 1 { }
+      \volta 2 { }
+    }
+  }
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key e \minor
+\relative {
+  {{ config() }}
+  e=4-\stBass em! em em |
+  e=4 em! em em | a,4 am! am am |
+  d=4 d7! d7 d7 | g,4 gM! gM gM |
+}
+{% endmacro %}
