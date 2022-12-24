@@ -1,4 +1,4 @@
-{% from "source/util.lys" import momentBeat, v2 %}
+{% from "source/util.lys" import momentBeat, v2, dynPadding %}
 
 {% macro rightHand(config) %}
 \tempo Moderato
@@ -8,12 +8,14 @@
 \relative {
   {{ config() }}
   {{ momentBeat("1/4", "1,1,1,1") }}
+  {{ dynPadding() }}
   R1\p |
   \repeat volta 2 {
     e'='8 e e\< e <e g>8 8 <g b> \after 8\! d' |
     <<
       \new Voice = voiceOne \relative {
         \voiceOne
+        {{ dynPadding() }}
         \repeat unfold 2 {
           d''=''8\> c~ \after 4\! c=''4 %
         }
@@ -51,9 +53,19 @@
     <e=' g c>8 <e g b>4. |
     <b= dis a'>4. g'8 <dis fis>4 <b b'> |
     \alternative {
-      \volta 1 { \after 1\! <g= b e>1\> | }
+      \volta 1 { \after 2..\! <g= b e>1\> | }
       \volta 2 {
-        {{ v2("r2\\> \\after 2\\! <g'=' b e>2", "e'='1") }}
+        <<
+          \new Voice = voiceOne \relative {
+            \voiceOne
+            {{ dynPadding(4) }}
+            r2\> \after 4.\! <g'=' b e>2 |
+          }
+          \new Voice = voiceTwo \relative {
+            \voiceTwo
+            e'='1 |
+          }
+        >>
         \bar "|."
       }
     }
