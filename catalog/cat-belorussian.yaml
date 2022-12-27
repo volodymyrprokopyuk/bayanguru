@@ -16,7 +16,7 @@ pieces:
       arr: М. Чайкін, src: BTBC1936,
       org: by, sty: flk, gnr: sng, frm: plp, bss: stb, lvl: elm }
   # Tutorial
-  # TYBCB21971
+  # TYBC2B1971
   - { id: vhri, tit: Микита, sub: byfd,
-      src: TYBCB21971,
+      src: TYBC2B1971,
       org: by, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
