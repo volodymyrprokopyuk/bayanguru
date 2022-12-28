@@ -5,4 +5,9 @@ pieces: []
   # p. 53
   # - { id: yai7, tit: Етюд,
   #     com: К. Мясков, src: SB2NU1977,
-  #     org: ua, sty: msc, gnr: stu, frm: crd, bss: pub, lvl: elm }
+  #     org: ua, sty: stu, gnr: stu, frm: crd, bss: pub, lvl: int }
+  # SB4NU1978
+  # p. 53
+  # - { id: k402, tit: Етюд,
+  #     com: В. Иванов, src: SB4NU1978,
+  #     org: ru, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: int }
