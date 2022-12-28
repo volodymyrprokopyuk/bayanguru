@@ -1,0 +1,38 @@
+{% macro rhFrag1(a, b, c, d) %}
+  \tuplet 3/2 { {{ a }} 8-. 8-. } %
+  <c=' d fis>8-.-> r %
+  \tuplet 3/2 { <c=' ees g>8-. {{ b }} 8-. 8-. } %
+  <c=' d fis>8-.-> r |
+  \tuplet 3/2 { <bes= d a'>8-. {{ c }} 8-. 8-. } %
+  <bes= d g>8-.-> r %
+  \tuplet 3/2 { <bes= d a'>8-. {{ d }} 8-. 8-. } %
+  <bes= d g>8-.-> r |
+{% endmacro %}
+
+{% macro rightHand(config) %}
+\tempo "Allegro moderato"
+\clef treble
+\key g \minor
+\time 4/4
+\relative {
+  {{ config() }}
+  {{ rhFrag1("<c'=' ees g>8-.\\mf", "\\p", "\\f", "\\p") }}
+  {{ rhFrag1("<c=' ees g>8-.\\p", "", "\\mp", "") }}
+  \tuplet 3/2 { <b= f' aes>8-.\mf 8-. 8-. } %
+  <b= f' g>8-.-> r %
+  \tuplet 3/2 { <f'=' g ees'>8-. 8-. 8-. } %
+  <f=' g d'>8-.-> r |
+  \tuplet 3/2 { <c=' ees aes>8-.\p 8-. 8-. } %
+  <c=' ees g>8-.-> r %
+  \tuplet 3/2 { <ees=' g d'>8-. 8-. 8-. } %
+  <ees=' g c>8 r |
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key g \minor
+\relative {
+  {{ config() }}
+}
+{% endmacro %}

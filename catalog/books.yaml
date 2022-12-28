@@ -91,3 +91,7 @@ books:
       # Class
       # B0D1973
       "d2md", "p1vc"] }
+  - { id: st01, tit: Етюди, sub: для баяна,
+      pieces: [
+      # SB2NU1977
+      "yai7"] }

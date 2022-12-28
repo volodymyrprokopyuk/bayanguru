@@ -1,11 +1,10 @@
 %YAML 1.2
 ---
-pieces: []
+pieces:
   # SB2NU1977
-  # p. 53
-  # - { id: yai7, tit: Етюд,
-  #     com: К. Мясков, src: SB2NU1977,
-  #     org: ua, sty: stu, gnr: stu, frm: crd, bss: pub, lvl: int }
+  - { id: yai7, tit: Етюд,
+      com: К. Мясков, src: SB2NU1977,
+      org: ua, sty: stu, gnr: stu, frm: crd, bss: pub, lvl: int }
   # SB4NU1978
   # p. 53
   # - { id: k402, tit: Етюд,
