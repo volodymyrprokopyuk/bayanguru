@@ -1,4 +1,4 @@
-{% from "source/util.lys" import shapedSlur %}
+{% from "util.lys" import shapedSlur %}
 
 {% macro rightHand(config) %}
 \tempo Lento

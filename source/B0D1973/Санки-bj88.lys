@@ -1,4 +1,4 @@
-{% from "source/util.lys" import hSpace, shapedSlur %}
+{% from "util.lys" import hSpace, shapedSlur %}
 
 {% macro rightHand(config) %}
 \tempo Moderato

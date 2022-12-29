@@ -1,4 +1,4 @@
-{% from "source/util.lys" import momentBeat %}
+{% from "util.lys" import momentBeat %}
 
 {% macro rhFrag1() %}
   c='''8 \tuplet 3/2 { g=''16( aes g) } f8 ees |

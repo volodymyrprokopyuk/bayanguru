@@ -1,4 +1,4 @@
-{% from "source/util.lys" import momentBeat %}
+{% from "util.lys" import momentBeat %}
 
 {% macro rhFrag1() %}
   a'='4( c8 a | g4 e8) e-. |

@@ -1,4 +1,4 @@
-{% from "source/util.lys" import hSpace, shapedSlur, v2 %}
+{% from "util.lys" import hSpace, shapedSlur, v2 %}
 
 {% macro rhFrag1(a) %}
   {{ a }} bes <f a>4)-. 4-. | <f d'>-. <f a>2-> |

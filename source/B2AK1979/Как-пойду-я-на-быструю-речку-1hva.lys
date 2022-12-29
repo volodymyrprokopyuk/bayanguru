@@ -1,4 +1,4 @@
-{% from "source/util.lys" import momentBeat, hSpace, shapedSlur %}
+{% from "util.lys" import momentBeat, hSpace, shapedSlur %}
 
 {% macro lhFrag1(a) %}
   e=8 em! em em b b7! b7 b7 |

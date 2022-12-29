@@ -1,4 +1,4 @@
-{% from "source/util.lys" import momentBeat %}
+{% from "util.lys" import momentBeat %}
 
 {% macro lhFrag1(a) %}
   c=8 cM! g gM c cM! a f@M |

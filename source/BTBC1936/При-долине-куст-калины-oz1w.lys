@@ -1,4 +1,4 @@
-{% from "source/util.lys" import momentBeat, v2 %}
+{% from "util.lys" import momentBeat, v2 %}
 
 {% macro rightHand(config) %}
 \tempo Moderato
