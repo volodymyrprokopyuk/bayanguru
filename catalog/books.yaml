@@ -91,9 +91,7 @@ books:
       # Class
       # B0D1973
       "d2md", "p1vc"] }
-  # - { id: stdy, tit: Вибрані етюди, sub: для баяна,
-  #     pieces:
-  #       - { sec: Акорди,
-  #           pieces: [
-  #           # SB2NU1977
-  #           "yai7"] } }
+  - { id: stdy, tit: Вибрані етюди, sub: для баяна,
+      pieces: [
+      # SB2NU1977
+      "yai7"] }
