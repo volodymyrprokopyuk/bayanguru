@@ -13,4 +13,13 @@ pieces:
   # p. 63
   # - { id: 6u7s, tit: Етюд,
   #     com: К. Мясков, src: SB4NU1978,
-  #     org: ua, sty: stu, gnr: stu, frm: crd, bss: pub, lvl: int }
+  #     org: ua, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: int }
+  # p. 64
+  # - { id: cj29, tit: Етюд,
+  #     com: М. Їжакевич, src: SB4NU1978,
+  #     org: ua, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: int }
+  # SB5NU1980
+  # p. 94
+  # - { id: pnrg, tit: Етюд,
+  #     com: А. Холминов, src: SB5NU1980,
+  #     org: ru, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: int }
