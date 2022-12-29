@@ -1,0 +1,79 @@
+{% from "util.lys" import
+   prelude, logo, paperLayout, pieceTitleMarkup, pieceScore %}
+
+{{ prelude() }}
+
+{% macro bookHfMarkup() %}
+  oddHeaderMarkup = \markup { }
+  oddFooterMarkup = \markup {
+    \if \on-first-page
+      \fill-line { \null \fromproperty #'header:tagline \null }
+    \if \on-last-page
+      \fill-line { \null \fromproperty #'header:tagline \null }
+    \fill-line { \null \fromproperty #'page:page-number-string }
+  }
+  evenHeaderMarkup = \markup { }
+  evenFooterMarkup = \markup {
+    \if \on-page #2 \fill-line { \null }
+    \if \on-last-page
+      \fill-line { \null \fromproperty #'header:tagline \null }
+    \unless \on-page #2
+      \fill-line { \fromproperty #'page:page-number-string \null }
+  }
+{% endmacro %}
+
+{% macro bookTitleMarkup() %}
+  bookTitleMarkup = \markup \column {
+    \vspace #18
+    \fill-line { \fontsize #8 \bold \fromproperty #'header:title }
+    \vspace #2
+    \fill-line { \fontsize #4 \bold \fromproperty #'header:subtitle }
+  }
+{% endmacro %}
+
+{% macro tocMarkup() %}
+  tocTitleMarkup = \markup \column {
+    \vspace #2
+    \fill-line { \fontsize #4 \bold "Зміст" }
+    \vspace #1
+  }
+  tocItemMarkup = \markup \column {
+    \fill-with-pattern #0.5 #RIGHT .
+      \fromproperty #'toc:text \fromproperty #'toc:page
+  }
+{% endmacro %}
+
+{% macro pieceTocItem(piece) %}
+  \tocItem \markup {
+    "{{ piece.tit }}"
+    {% if piece.com %}
+      \italic "{{ piece.com }}"
+    {% endif %}
+    {% if piece.arr %}
+      \italic "{{ piece.aty }} {{ piece.arr }}"
+    {% endif %}
+    \caps id: {{ piece.id }}
+  }
+{% endmacro %}
+
+\paper {
+  {{ paperLayout() }}
+  {{ bookHfMarkup() }}
+  {{ bookTitleMarkup() }}
+  {{ tocMarkup() }}
+  {{ pieceTitleMarkup() }}
+}
+
+\header {
+  title = "{{ book.tit }}"
+  subtitle = "{{ book.sub }}"
+  tagline = \markup { {{ logo(0.5) }} \with-url \rootUrl \rootUrl }
+}
+\pageBreak \markup \null \pageBreak
+
+{% for piece in pieces %}
+  {{ pieceTocItem(piece) }}
+  {{ pieceScore(piece) }}
+{% endfor %}
+\pageBreak
+\markuplist \table-of-contents

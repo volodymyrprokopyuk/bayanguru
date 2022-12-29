@@ -1,3 +1,126 @@
+% === Template util ===
+
+{% macro logo(scale = 1) %}
+  \roman \bold \concat {
+    \magnify #{{ 1.5 * scale }} \musicglyph "clefs.G"
+    \magnify #{{ 2.5 * scale }} {
+      \rotate #30 Б
+      \lower #{{ 0.75 * scale }} а
+      \raise #{{ 0.75 * scale }} я
+      \rotate #-30 Н
+    }
+  }
+{% endmacro %}
+
+{% macro prelude() %}
+  \version "2.24.0"
+  rootUrl = "https://volodymyrprokopyuk.github.io/bayan"
+  stBass = \markup \larger \box Г % Готовий бас
+  frBass = \markup \larger \box В % Вибiрна система
+  puBass = \markup \larger \box Б % Чистий бас
+  artSimile = \markup \italic simile
+  dynCresc = \markup \lower #3 \italic "cresc."
+  dynDim = \markup \lower #3 \italic "dim."
+  tempRit = "rit."
+  tempRall = "rall."
+  tempATempo = "a tempo"
+  tempAccel = "accel."
+  barFermata = \mark \markup \musicglyph #"scripts.ufermata"
+  keyChangeBeforeBar = \once {
+    \override Score.BreakAlignment.break-align-orders =
+    #(make-vector 3 '(
+       left-edge
+       staff-ellipsis
+       cue-end-clef
+       ambitus
+       breathing-sign
+       signum-repetitionis
+       clef
+       cue-clef
+       key-cancellation
+       key-signature
+       staff-bar
+       time-signature
+       custos))
+    \override Staff.KeyCancellation.extra-spacing-width = #'(-1.5 . 0)
+  }
+  \defineBarLine "!!" #'("!!" "!!" "!!")
+{% endmacro %}
+
+{% macro paperLayout() %}
+  top-margin = 8
+  bottom-margin = 8
+  left-margin = 15
+  right-margin = 15
+  indent = 7
+{% endmacro %}
+
+{% macro rhConfig() %}
+  \override Score.BarNumber.break-visibility = ##(#f #f #f)
+  \override DynamicLineSpanner.staff-padding = #3
+{% endmacro %}
+
+{% macro lhConfig() %}
+{% endmacro %}
+
+% === Piece util ===
+
+{% macro pieceMeta(piece) %}
+  \markup \line {
+    \caps id: {{ piece.id }}, \caps org: {{ piece.org }},
+    \caps sty: {{ piece.sty }}, \caps gnr: {{ piece.gnr }},
+    \caps frm: {{ piece.frm }}, \caps bss: {{ piece.bss }},
+    \caps lvl: {{ piece.lvl }}
+  }
+{% endmacro %}
+
+{% macro pieceTitle(piece) %}
+  \header {
+    title = "{{ piece.tit }}"
+    subtitle = "{{ piece.sub or '' }}"
+    {% if not args.nometa %}
+      meta = {{ pieceMeta(piece) }}
+    {% endif %}
+    {% if piece.com %}
+      composer = "{{ piece.com }}"
+    {% endif %}
+    {% if piece.arr %}
+      arranger = "{{ piece.aty }} {{ piece.arr }}"
+    {% endif %}
+  }
+{% endmacro %}
+
+{% macro pieceTitleMarkup() %}
+  scoreTitleMarkup = \markup \column {
+    \fill-line { \fontsize #5 \bold \fromproperty #'header:title }
+    \vspace #0.2
+    \fill-line { \fontsize #2 \fromproperty #'header:subtitle }
+    \fill-line { \abs-fontsize #10 \fromproperty #'header:meta }
+    \vspace #0.2
+    \fill-line {
+      \fontsize #1 \italic {
+        \fromproperty #'header:arranger \fromproperty #'header:composer
+      }
+    }
+  }
+{% endmacro %}
+
+{% macro pieceScore(piece) %}
+  \score {
+    {{ pieceTitle(piece) }}
+    {% set source = piece.src + "/" + piece.file + ".lys" %}
+    {% from source import rightHand, leftHand %}
+    \new PianoStaff = bayan {
+      <<
+        \new Staff = rightHand { {{ rightHand(rhConfig) }} }
+        \new Staff = leftHand { {{ leftHand(lhConfig) | stradella }} }
+      >>
+    }
+  }
+{% endmacro %}
+
+% === Score util ===
+
 % hSpace explicitly adds horizontal extra space before a note or chord
 % - sh defines the shift amount of horizontal space
 %   - Unit = staff units

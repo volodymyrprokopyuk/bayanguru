@@ -37,7 +37,7 @@ async function pieceInit(id) {
   await mkdir(`source/${src}`, { recursive: true })
   const path = `source/${src}/${file}.lys`
   try { await access(path); console.log(`skipping ${path} already exists`) }
-  catch { await copyFile("source/piece.lys", path) }
+  catch { await copyFile("source/template/piece-init.lys", path) }
 }
 
 async function engrave() {
