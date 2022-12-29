@@ -35,6 +35,4 @@
   tagline = \markup { {{ logo(0.5) }} \with-url \rootUrl \rootUrl }
 }
 
-{% for piece in pieces %}
-  {{ pieceScore(piece) }}
-{% endfor %}
+{{ pieceScore(piece) }}
