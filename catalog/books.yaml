@@ -2,7 +2,7 @@
 ---
 books:
   # Class
-  - { id: ua01, tit: Українські народні пісні і танці, sub: для баяна,
+  - { id: uacl, tit: Українські народні пісні і танці, sub: для баяна,
       pieces: [
       # B0D1973
       "1kae", "4ha8", "7n13", "jnuj", "j6sq", "fywu", "1sxc", "hv2p", "siv0",
@@ -24,14 +24,14 @@ books:
       "i11j", "zvpg", "mf7s", "zykv", "26qx", "di18", "btcu", "nev4", "foaz",
       "f45r"] }
   # Tutorial
-  - { id: ua02, tit: Українські народні пісні і танці, sub: для баяна,
+  - { id: uatu, tit: Українські народні пісні і танці, sub: для баяна,
       pieces: [
       # BTBC1936
       "yq8y", "cckj", "a3ew", "isd6", "vf9h",
       # BTB1978
       "vwad", "brku", "tzb9", "ndwb"] }
   # Class
-  - { id: ru01, tit: Російські народні пісні і танці, sub: для баяна,
+  - { id: rucl, tit: Російські народні пісні і танці, sub: для баяна,
       pieces: [
       # B0D1973
       "drrh", "bj88", "b383", "vt18", "8fs0", "0mdf", "bspm", "kkks",
@@ -47,7 +47,7 @@ books:
       # B2AK1987
       "tsio", "tg2x"] }
   # Tutorial
-  - { id: ru02, tit: Російські народні пісні і танці, sub: для баяна,
+  - { id: rutu, tit: Російські народні пісні і танці, sub: для баяна,
       pieces: [
       # BTBC1936
       "q6xh", "87ko", "p7el", "6u3l", "qt7k", "oz1w", "p26a", "frcu", "hjff",
@@ -55,14 +55,14 @@ books:
       "s31k", "1czf",
       # BTB1978
       "lknz", "od7f", "2al1", "5rl3", "jh3h", "gm8m"] }
-  - { id: hu01, tit: Угорські народні пісні і танці, sub: для баяна,
+  - { id: hual, tit: Угорські народні пісні і танці, sub: для баяна,
       pieces: [
       # Class
       # B1AK1979
       "1rua", "9htb",
       # B2AK1979
       "5qqn"] }
-  - { id: md01, tit: Молдавські народні пісні і танці, sub: для баяна,
+  - { id: mdal, tit: Молдавські народні пісні і танці, sub: для баяна,
       pieces: [
       # Class
       # B0DU1982
@@ -70,11 +70,11 @@ books:
       # Tutorial
       # BTBC1936
       "epyc"] }
-  # - { id: ro01, tit: Румунські народні пісні і танці, sub: для баяна,
+  # - { id: roal, tit: Румунські народні пісні і танці, sub: для баяна,
   #     pieces: [
   #     # SOURCE
   #     "anID"] }
-  - { id: by01, tit: Білоруські народні пісні і танці, sub: для баяна,
+  - { id: byal, tit: Білоруські народні пісні і танці, sub: для баяна,
       pieces: [
       # Class
       # B0D1973
@@ -86,12 +86,12 @@ books:
       "8ec9",
       # TYBCB21971
       "vhri"] }
-  - { id: pl01, tit: Польські народні пісні і танці, sub: для баяна,
+  - { id: plal, tit: Польські народні пісні і танці, sub: для баяна,
       pieces: [
       # Class
       # B0D1973
       "d2md", "p1vc"] }
-  - { id: st01, tit: Етюди, sub: для баяна,
+  - { id: stdy, tit: Вибрані етюди, sub: для баяна,
       pieces: [
       # SB2NU1977
       "yai7"] }

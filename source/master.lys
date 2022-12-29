@@ -1,4 +1,4 @@
-\version "2.23.81"
+\version "2.24.0"
 
 stBass = \markup \larger \box Г % Готовий
 frBass = \markup \larger \box В % Вибiрний
@@ -114,6 +114,7 @@ keyChangeBeforeBar = \once {
     {% if piece.arr %}
       \italic "{{ piece.aty }} {{ piece.arr }}"
     {% endif %}
+    \caps id: {{ piece.id }}
   }
 {% endmacro %}
 
