@@ -40,7 +40,7 @@
     fis,=,4 fis7! fis7 | cis'= fis,@7! fis74 |
   }
   \repeat unfold 2 { b=,4 bm! bm | }
-  b=,4( bm!) cis | d g,@m! dis4 |
+  b=,4( bm!) cis | d b,@m! dis4 |
   e=4 em! em | g, e@m! em4 |
   fis=,4 b,@m! e@m!4 | fis b,@m! fis,@7!4 |
   \repeat unfold 2 { b=,4 bm! bm | b,@m! r4 r | }
