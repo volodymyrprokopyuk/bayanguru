@@ -103,8 +103,33 @@
   {{ config() }}
   r4 \tuplet 3/2 { r8 d,=,(-\puBass a') } %
   r4 \tuplet 3/2 { r8 d,=,( a') } | %
-  {{ lhFrag1("g=,", "d'", "g,", "d'=") }}
-  {{ lhFrag1("d,=,", "a'", "d,", "a'=,") }}
-  {{ lhFrag1("g=,", "d'", "g,", "d'=") }}
+  {{ lhFrag1("g=,8", "d'", "g,", "d'=") }}
+  {{ lhFrag1("d,=,8", "a'", "d,", "a'=,") }}
+  {{ lhFrag1("g=,8", "d'", "g,", "d'=") }}
+  {{ lhFrag1("d,=,8", "g", "d", "g=,") }}
+  {{ lhFrag1("g=,8", "c", "g", "c=") }}
+  {{ lhFrag1("f,=,8", "c'", "a", "c=") }}
+  \repeat unfold 2 {
+    \tuplet 3/2 { r4 a=,8( } d,=,4)
+  }
+
+  {{ lhFrag1("d=,8", "a'", "d,", "a'=,") }}
+  {{ lhFrag1("g=,8", "d'", "g,", "d'=") }}
+  {{ lhFrag1("f,=,8", "c'", "f,", "c'=") }}
+  {{ lhFrag1("f,=,8", "bes", "f", "bes=,") }}
+  {{ lhFrag1("f=,8", "bes", "ees,", "bes'=,") }}
+  {{ lhFrag1("g=,8", "d'", "g,", "c=") }}
+  {{ lhFrag1("g=,8", "c", "g", "c=") }}
+  {{ lhFrag1("g=,8", "c", "bes", "a=,") }}
+
+  {{ lhFrag1("d,=,8", "a'", "d,", "a'=,") }}
+  {{ lhFrag1("g=,8", "d'", "g,", "d'=") }}
+  {{ lhFrag1("f,=,8", "d'", "g,", "c=") }}
+  r2 r4 \tuplet 3/2 { r8 d,=,( g=,) }
+  {{ lhFrag1("d=,8", "g", "g", "c=") }}
+  \repeat unfold 4 { \tuplet 3/2 { r8 d,=, d } }
+  g=,4~ \tuplet 3/2 { g8 d4 } g4 d |
+  \tuplet 3/2 { g=,8 d4 } g4 %
+  \tuplet 3/2 { g=,8-- g-- d=,-- } g,,+gm!4 |
 }
 {% endmacro %}
