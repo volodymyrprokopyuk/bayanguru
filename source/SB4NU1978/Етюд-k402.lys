@@ -1,3 +1,9 @@
+{% macro rhFrag1() %}
+  \repeat unfold 2 {
+    <ais,=' cis fis>16 g' <ais, cis fis> cis'='''-> %
+  } | %
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Moderato
 \clef treble
@@ -10,22 +16,34 @@
     \repeat volta 2 {
       <e''='' g b>16\mf c' <e, g b>_\artLegato g'-> %
       <e,='' g b>16 c' <e, g b> g'='''-> |
-      \repeat unfold 2 { <e,='' fis a>16 b' <e, fis a > fis'='''-> } | %
-      \repeat unfold 2 { <b,,=' fis' a>16 b' <b, fis' a > fis''='''-> } | %
-      \repeat unfold 2 { <b,,=' e g>16 a' <b, e g> e'='''-> } | %
-      \repeat unfold 2 { <c,='' e g>16 a' <c, e g> e'='''-> } | %
-      \repeat unfold 2 { <c,='' e fis>16 g' <c, e fis> c'='''-> } | %
+      \repeat unfold 2 {
+        <e,='' fis a>16 b' <e, fis a > fis'='''-> %
+      } | %
+      \repeat unfold 2 {
+        <b,,=' fis' a>16 b' <b, fis' a > fis''='''-> %
+      } | %
+      \repeat unfold 2 {
+        <b,,=' e g>16 a' <b, e g> e'='''-> %
+      } | %
+      \repeat unfold 2 {
+        <c,='' e g>16 a' <c, e g> e'='''-> %
+      } | %
+      \repeat unfold 2 {
+        <c,='' e fis>16 g' <c, e fis> c'='''-> %
+      } | %
       \alternative {
         \volta 1 {
-          \repeat unfold 2 { <g,=' c e>16 fis' <g, c e> g'=''-> } | %
-          <fis,=' b dis>16^\tempRit b' <g, cis e> b' %
-          <gis,=' cisis eis>16 b' <a, dis fis> c'=''' |
+          \repeat unfold 2 {
+            <g,=' c e>16 fis' <g, c e> g'=''-> %
+          } | %
+          <fis,=' b dis>16^\tempRit b' <g, cis e> b'-> %
+          <gis,=' cisis eis>16 b' <a, dis fis> c'='''-> |
         }
         \volta 2 {
           <g,=' c e>16 fis' <g, c e> g'-> %
           <fis,=' b dis>16 e' <fis, b dis> fis'-> |
           <g,=' b e>16^\tempRit fis' %
-          <b,=' e g>16 b' <g='' b e>4-- \fine |
+          <b,=' e g>16 b'-> <g='' b e>4-- \fine |
         }
       }
     }
@@ -33,13 +51,36 @@
     \volta 2
     \repeat volta 2 {
       <g,=' b d>16\f^\tempATempo e' <g, b d> b'-> %
-      <g,=' b d>16 e' <g, b d> b'-> |
+      <g,=' b d>16 e' <g, b d> b'=''-> |
+      \repeat unfold 2 {
+        <g,=' cis e>16 fis' <g, cis e> a'=''-> %
+      } | %
+      \repeat unfold 2 {
+        <g,=' c ees>16 f' <g, c ees> a'=''-> %
+      } | %
+      \repeat unfold 2 {
+        <g,=' b d>16 e' <g, b d> g'=''-> %
+      } | %
+      \repeat unfold 2 {
+        <g,=' b cis>16 d' <g, b cis> g'=''-> %
+      } | %
+      \repeat unfold 2 {
+        <b,=' d fis>16 g' <b, d fis> d'='''-> %
+      } | %
       \alternative {
-        \volta 1 { }
-        \volta 2 { }
+        \volta 1 {
+          {{ rhFrag1() }}
+          <b,=' d fis>16 g' <b, d fis> b'-> %
+          <c,='' d fis>16 g' <c, d fis> a'=''-> |
+        }
+        \volta 2 {
+          {{ rhFrag1() }}
+          <b,=' d fis>16^\tempRit g' <b, d fis> b'-> %
+          <b,=' dis fis>16\> g' %
+          <b,=' dis fis>16 \after 16\! b'=''-> \bar "||"
+        }
       }
     }
-    % \repeat unfold 2 { <> ' <> '-> } | %
   }
 }
 {% endmacro %}
@@ -49,5 +90,16 @@
 \key e \minor
 \relative {
   {{ config() }}
+  e=8-\stBass r em! r | e r a,@m! r8 |
+  dis=8 r b,@7! r8 | e r em! r |
+  c=8 r cM! r | a r am! r |
+  ais=,8. r16 ais8. r16 | b2 |
+  ais=,8. r16 b8. r16 | e=8 r e,+em!4-- |
+
+  g,=,8 r gM! r | g r a,@M! r8 |
+  g=,8 r c@m! r8 | g r gM! r |
+  e'=8 r em! r | fis r b,@m! r8 |
+  fis=8 r fis7! r | b,8. r16 a8. r16 |
+  fis'=8 r fis7! r | b,=, r b7! r |
 }
 {% endmacro %}
