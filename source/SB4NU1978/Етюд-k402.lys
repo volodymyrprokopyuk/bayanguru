@@ -1,0 +1,53 @@
+{% macro rightHand(config) %}
+\tempo Moderato
+\clef treble
+\key e \minor
+\time 2/4
+\relative {
+  {{ config() }}
+  \repeat segno 2 {
+    \volta 1
+    \repeat volta 2 {
+      <e''='' g b>16\mf c' <e, g b>_\artLegato g'-> %
+      <e,='' g b>16 c' <e, g b> g'='''-> |
+      \repeat unfold 2 { <e,='' fis a>16 b' <e, fis a > fis'='''-> } | %
+      \repeat unfold 2 { <b,,=' fis' a>16 b' <b, fis' a > fis''='''-> } | %
+      \repeat unfold 2 { <b,,=' e g>16 a' <b, e g> e'='''-> } | %
+      \repeat unfold 2 { <c,='' e g>16 a' <c, e g> e'='''-> } | %
+      \repeat unfold 2 { <c,='' e fis>16 g' <c, e fis> c'='''-> } | %
+      \alternative {
+        \volta 1 {
+          \repeat unfold 2 { <g,=' c e>16 fis' <g, c e> g'=''-> } | %
+          <fis,=' b dis>16^\tempRit b' <g, cis e> b' %
+          <gis,=' cisis eis>16 b' <a, dis fis> c'=''' |
+        }
+        \volta 2 {
+          <g,=' c e>16 fis' <g, c e> g'-> %
+          <fis,=' b dis>16 e' <fis, b dis> fis'-> |
+          <g,=' b e>16^\tempRit fis' %
+          <b,=' e g>16 b' <g='' b e>4-- \fine |
+        }
+      }
+    }
+
+    \volta 2
+    \repeat volta 2 {
+      <g,=' b d>16\f^\tempATempo e' <g, b d> b'-> %
+      <g,=' b d>16 e' <g, b d> b'-> |
+      \alternative {
+        \volta 1 { }
+        \volta 2 { }
+      }
+    }
+    % \repeat unfold 2 { <> ' <> '-> } | %
+  }
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key e \minor
+\relative {
+  {{ config() }}
+}
+{% endmacro %}

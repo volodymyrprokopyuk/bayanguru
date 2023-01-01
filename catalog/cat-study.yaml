@@ -6,10 +6,9 @@ pieces:
       com: К. Мясков, src: SB2NU1977,
       org: ua, sty: stu, gnr: stu, frm: crd, bss: pub, lvl: int }
   # SB4NU1978
-  # p. 53
-  # - { id: k402, tit: Етюд,
-  #     com: В. Иванов, src: SB4NU1978,
-  #     org: ru, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: int }
+  - { id: k402, tit: Етюд,
+      com: В. Иванов, src: SB4NU1978,
+      org: ru, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: int }
   # p. 63
   # - { id: 6u7s, tit: Етюд,
   #     com: К. Мясков, src: SB4NU1978,
