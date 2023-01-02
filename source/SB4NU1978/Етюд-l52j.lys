@@ -1,0 +1,22 @@
+{% macro rightHand(config) %}
+\tempo "Lento. Rubato"
+\clef treble
+\key f \major
+\time 3/4
+\relative {
+  {{ config() }}
+  r8\p <c'=' f a>8--\< \after 16.\! <d f bes>-- %
+  <c=' f a>8--\> <b d f gis>-- \after 8\! <c f a>-- |
+  r8 <bes= d e g>8\<_\artSimile \after 16.\! <bes d e a> %
+  <bes= d e g>8\> <bes d e fis> \after 8\! <bes d e g> |
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key f \major
+\relative {
+  {{ config() }}
+  f,=,2.-\puBass | c'2. |
+}
+{% endmacro %}
