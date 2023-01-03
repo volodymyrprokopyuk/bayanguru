@@ -6,9 +6,29 @@
 \relative {
   {{ config() }}
   r8\p <c'=' f a>8--\< \after 16.\! <d f bes>-- %
-  <c=' f a>8--\> <b d f gis>-- \after 8\! <c f a>-- |
+  <c=' f a>8--\> <b d f gis>-- \after 16.\! <c f a>-- |
   r8 <bes= d e g>8\<_\artSimile \after 16.\! <bes d e a> %
-  <bes= d e g>8\> <bes d e fis> \after 8\! <bes d e g> |
+  <bes= d e g>8\> <bes d e fis> \after 16.\! <bes d e g> |
+  r8 <g= d' e g>8\< \after 16.\! <g d' e a> %
+  <g= d' e g>8\> <g d' e fis> \after 16.\! <g d' e g> |
+  r8 <g= bes cis e>8\< \after 16.\! <g bes cis f> %
+  <g= bes cis e>8\> <g bes cis dis> \after 16.\! <g bes cis e> |
+  r8 <a= d f>8\< 8 <a d e g>8 8 <a d f a> |
+  \after 16.\! <a= d f a>8 <c f a e'>8\>\mf 8 %
+  <c=' f a d> <c f aes d> \after 16.\! <c f aes c> |
+  r8 <c=' e g>8\< 8 <c e g a> %
+  <b= f' a b>8 \after 16.\! <b f' g b> |
+  r8 <c=' e g c>8\> <d e bes' c> %
+  <c=' e a c>8 <bes e g c> \after 16.\! <c e a c> |
+  r8\p <a= c f a>8\< <bes d f bes> %
+  \after 16.\! <a= c f a>8 <d f bes d>\> \after 16.\! <c f a c> |
+  r8 <bes= d e g>8\< <c e a> %
+  \after 16.\!<bes= d e g>8 <d e g c>\> \after 16.\! <d e g bes> |
+  r8 <g,= d' e g>8\< <a d e a> %
+  \after 16.\! <g= d' e g>8 <f' g d' f>\> \after 16.\! <e g d' e> |
+
+  % r8 <>8\< <> %
+  % \after 16.\! <>8 <>\> \after 16.\! <> |
 }
 {% endmacro %}
 
