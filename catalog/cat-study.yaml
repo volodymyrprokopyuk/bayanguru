@@ -1,19 +1,20 @@
 %YAML 1.2
 ---
 pieces:
+  # Chords
   # SB2NU1977
-  - { id: yai7, tit: Етюд,
+  - { id: yai7, tit: Етюд G minor,
       com: К. Мясков, src: SB2NU1977,
       org: ua, sty: stu, gnr: stu, frm: crd, bss: pub, lvl: int }
   # SB4NU1978
-  - { id: k402, tit: Етюд,
+  - { id: k402, tit: Етюд E minor,
       com: В. Иванов, src: SB4NU1978,
       org: ru, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: int }
-  - { id: l52j, tit: Етюд,
+  - { id: l52j, tit: Етюд F major,
       com: А. Холминов, src: SB4NU1978,
       org: ru, sty: stu, gnr: stu, frm: crd, bss: pub, lvl: int }
   # p. 63
-  # - { id: 6u7s, tit: Етюд,
+  # - { id: 6u7s, tit: Етюд C minor,
   #     com: К. Мясков, src: SB4NU1978,
   #     org: ua, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: int }
   # p. 64
