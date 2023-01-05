@@ -1,6 +1,10 @@
 %YAML 1.2
 ---
 pieces:
+  # Scale
+  # Arpeggio
+  # Wrist movement
+  # Pepetition
   # Chords
   # SB2NU1977
   - { id: yai7, tit: Етюд G minor,
@@ -29,3 +33,7 @@ pieces:
   # - { id: 6zcy, tit: Етюд,
   #     com: О. Денисов, src: SB5NU1980,
   #     org: ua, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: int }
+  # Polyphony
+  # Ornamentation
+  # Articulation
+  # Left hand
