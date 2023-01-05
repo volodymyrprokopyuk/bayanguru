@@ -1,0 +1,97 @@
+{% macro rhFrag1(a) %}
+  \tuplet 3/2 { {{ a }} 8 8 } %
+  \tuplet 3/2 { <c=' ees aes>8 8 \after 16\! 8 } %
+  \tuplet 3/2 { <c=' ees bes'>8\> 8 8 } %
+  \tuplet 3/2 { <c=' ees aes>8 8 \after 16\! 8 } | %
+  \tuplet 3/2 { <c=' ees g>8\< 8 8 } %
+  \tuplet 3/2 { <g'=' c es>8 8 \after 16\! <ees g c> } %
+  \tuplet 3/2 { <c=' ees bes'>8\> 8 8 } %
+  \tuplet 3/2 { <c=' ees aes>8 8 \after 16\! 8 } | %
+{% endmacro %}
+
+{% macro rhFrag2(a, b, c) %}
+  \tuplet 3/2 { {{ a }} 8 8{{ b }} } %
+  \tuplet 3/2 { <a=' des f>8 8 8 } %
+  \tuplet 3/2 { <aes=' des f>8 8 8 } %
+  \tuplet 3/2 { <g=' des' f>8 8 {{ c }} 8 } | %
+{% endmacro %}
+
+{% macro rhFrag3(a, b) %}
+  \tuplet 3/2 { {{ a }} 8 8 } %
+  \tuplet 3/2 { <b= f' aes>8 8 8 } %
+  \tuplet 3/2 { <b= f' bes>8 8 8 } %
+  \tuplet 3/2 { <b= f' b>8 8 {{ b }} 8 } | %
+{% endmacro %}
+
+{% macro rightHand(config) %}
+\tempo "Allegro moderato"
+\clef treble
+\key c \minor
+\time 4/4
+\relative {
+  {{ config() }}
+  \repeat volta 2 {
+    {{ rhFrag1("<c'=' ees g>8\\mp\\<") }}
+    \tuplet 3/2 { <b= f' g>8\< 8 8 } %
+    \tuplet 3/2 { <b= f' aes>8 8 8 } %
+    \tuplet 3/2 { <b= f' bes>8 8 8 } %
+    \tuplet 3/2 { <b= f' b>8 8 8 } | %
+    {{ rhFrag3("<b= f' g>8\\<", "") }}
+    \tuplet 3/2 { <d=' aes' cis>8 8 8 } %
+    \tuplet 3/2 { <d=' aes' d>8 8 \after 16\! 8 } %
+    \tuplet 3/2 { <aes'=' d g>8\f\> 8 8 } %
+    \tuplet 3/2 { <aes=' d f>8 8 \after 16\! <g d' f> } | %
+    {{ rhFrag1("<c,=' ees g>8\\<") }}
+    \codaMark 1 \bar "||"
+
+    \tuplet 3/2 { <c=' ges' aes>8\< 8 8 } %
+    \tuplet 3/2 { <c=' ges' bes>8 8 8 } %
+    \tuplet 3/2 { <des=' f bes>8 8 8 } %
+    \tuplet 3/2 { <des=' f b>8 8 8 } | %
+    \tuplet 3/2 { <e=' bes' c>8 8 <e bes' cis> } %
+    \tuplet 3/2 { <e=' bes' d>8 <e bes' ees> \after 16\! <bes' c e> } %
+    \tuplet 3/2 { <aes=' c f>8\> 8 8 } %
+    \tuplet 3/2 { <aes=' c f>8 8 \after 16\! 8 } | %
+    {{ rhFrag2("<bes=' des f>8\\mf\\>", "", "\\after 16\\!") }}
+    \tuplet 3/2 { <g=' aes c>8\< 8 8 } %
+    \tuplet 3/2 { <f=' aes c>8 8 8 } %
+    \tuplet 3/2 { <e=' aes c>8 8 8 } %
+    \tuplet 3/2 { <ees=' aes c>8 8 \after 16\! 8 } | %
+    \tuplet 3/2 { <bes= des f>8\> 8 8 } %
+    \tuplet 3/2 { <a= des f>8 8 8 } %
+    \tuplet 3/2 { <aes= des f>8 8 8 } %
+    \tuplet 3/2 { <g= des' f>8 8 \after 16\! 8 } | %
+    \tuplet 3/2 { <g= aes c>8\p\< 8 8 } %
+    \tuplet 3/2 { <aes= c ees>8 8 8 } %
+    \tuplet 3/2 { <c=' ees f>8 8 8 } %
+    \tuplet 3/2 { <ees=' f aes>8 8 \after 16\! 8 } | %
+    {{ rhFrag2("<bes'=' des f>8\\mp", "_\\dynCresc", "") }}
+    \tuplet 3/2 { <c='' ees g>8 8 8 } %
+    \tuplet 3/2 { <b=' ees g>8 8 8 } %
+    \tuplet 3/2 { <bes=' ees g>8 8 8 } %
+    \tuplet 3/2 { <a=' ees' g>8 8 8 } | %
+    \tuplet 3/2 { <a=' d f>8 8 8 } %
+    \tuplet 3/2 { <a=' d g>8 8 8 } %
+    \tuplet 3/2 { <d='' f a>8 8 8 } %
+    \tuplet 3/2 { <d='' f bes>8 8 <d f b> } | %
+    \tuplet 3/2 { <e='' g c>8->\f \clef bass <e,,= g c>8-- 8-- } %
+    \tuplet 3/2 { <f= aes des>8--\> 8-- 8-- } %
+    \tuplet 3/2 { <fis= c' d>8-- 8-- 8-- } %
+    \tuplet 3/2 { <fis= c' ees>8-- <fis c' f>-- \after 16\! <fis c' fis>-- } | %
+    \clef treble
+    \codaMark 1
+  }
+  {{ rhFrag3("<b= f' g>8\\<", "\\after 16\\!") }}
+  \tuplet 3/2 { <ees=' g c>8->\mf <c'='' ees b>-- <c ees aes>-- } %
+  \tuplet 3/2 { <d='' fis a>8-- <d fis bes>-- <d fis b>-- } %
+  <ees='' g c>2 \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key c \minor
+\relative {
+  {{ config() }}
+}
+{% endmacro %}

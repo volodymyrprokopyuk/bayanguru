@@ -13,10 +13,9 @@ pieces:
   - { id: l52j, tit: Етюд F major,
       com: А. Холминов, src: SB4NU1978,
       org: ru, sty: stu, gnr: stu, frm: crd, bss: pub, lvl: int }
-  # p. 63
-  # - { id: 6u7s, tit: Етюд C minor,
-  #     com: К. Мясков, src: SB4NU1978,
-  #     org: ua, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: int }
+  - { id: 6u7s, tit: Етюд C minor,
+      com: К. Мясков, src: SB4NU1978,
+      org: ua, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: int }
   # p. 64
   # - { id: cj29, tit: Етюд,
   #     com: М. Їжакевич, src: SB4NU1978,
