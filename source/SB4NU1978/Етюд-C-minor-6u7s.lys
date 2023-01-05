@@ -1,3 +1,5 @@
+{% from "util.lys" import dynPadding %}
+
 {% macro rhFrag1(a) %}
   \tuplet 3/2 { {{ a }} 8 8 } %
   \tuplet 3/2 { <c=' ees aes>8 8 \after 16\! 8 } %
@@ -23,6 +25,11 @@
   \tuplet 3/2 { <b= f' b>8 8 {{ b }} 8 } | %
 {% endmacro %}
 
+{% macro lhFrag1(a) %}
+  {{ a }} aes,@M! c4 aes,@M! |
+  c=4 cm! c=4 aes,@M! |
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo "Allegro moderato"
 \clef treble
@@ -30,12 +37,9 @@
 \time 4/4
 \relative {
   {{ config() }}
+  {{ dynPadding(4) }}
   \repeat volta 2 {
     {{ rhFrag1("<c'=' ees g>8\\mp\\<") }}
-    \tuplet 3/2 { <b= f' g>8\< 8 8 } %
-    \tuplet 3/2 { <b= f' aes>8 8 8 } %
-    \tuplet 3/2 { <b= f' bes>8 8 8 } %
-    \tuplet 3/2 { <b= f' b>8 8 8 } | %
     {{ rhFrag3("<b= f' g>8\\<", "") }}
     \tuplet 3/2 { <d=' aes' cis>8 8 8 } %
     \tuplet 3/2 { <d=' aes' d>8 8 \after 16\! 8 } %
@@ -66,23 +70,23 @@
     \tuplet 3/2 { <c=' ees f>8 8 8 } %
     \tuplet 3/2 { <ees=' f aes>8 8 \after 16\! 8 } | %
     {{ rhFrag2("<bes'=' des f>8\\mp", "_\\dynCresc", "") }}
-    \tuplet 3/2 { <c='' ees g>8 8 8 } %
-    \tuplet 3/2 { <b=' ees g>8 8 8 } %
-    \tuplet 3/2 { <bes=' ees g>8 8 8 } %
-    \tuplet 3/2 { <a=' ees' g>8 8 8 } | %
+    \tuplet 3/2 { <c='' e g>8 8 8 } %
+    \tuplet 3/2 { <b=' e g>8 8 8 } %
+    \tuplet 3/2 { <bes=' e g>8 8 8 } %
+    \tuplet 3/2 { <a=' e' g>8 8 8 } | %
     \tuplet 3/2 { <a=' d f>8 8 8 } %
     \tuplet 3/2 { <a=' d g>8 8 8 } %
     \tuplet 3/2 { <d='' f a>8 8 8 } %
     \tuplet 3/2 { <d='' f bes>8 8 <d f b> } | %
     \tuplet 3/2 { <e='' g c>8->\f \clef bass <e,,= g c>8-- 8-- } %
     \tuplet 3/2 { <f= aes des>8--\> 8-- 8-- } %
-    \tuplet 3/2 { <fis= c' d>8-- 8-- 8-- } %
+    \tuplet 3/2 { <fis= c' d>8--^\tempRit 8-- 8-- } %
     \tuplet 3/2 { <fis= c' ees>8-- <fis c' f>-- \after 16\! <fis c' fis>-- } | %
     \clef treble
     \codaMark 1
   }
   {{ rhFrag3("<b= f' g>8\\<", "\\after 16\\!") }}
-  \tuplet 3/2 { <ees=' g c>8->\mf <c'='' ees b>-- <c ees aes>-- } %
+  \tuplet 3/2 { <ees=' g c>8->\mf^\tempRit <c'='' ees g>-- <c ees aes>-- } %
   \tuplet 3/2 { <d='' fis a>8-- <d fis bes>-- <d fis b>-- } %
   <ees='' g c>2 \bar "|."
 }
@@ -93,5 +97,21 @@
 \key c \minor
 \relative {
   {{ config() }}
+  {{ lhFrag1("c=4-\\stBass") }}
+  d=4 g,@7! des4 g,@7 |
+  b=,4 g,@7! g g7 |
+  {{ lhFrag1("c=4") }}
+  aes=,4 aes7! des desM! |
+  ges,=,4 c@7! f4 fm! |
+  bes=,4 besm! ees, ees7! |
+  aes=,4 aesM! f aes,@M |
+  bes=,4 besm! ees, ees7! |
+  aes=,4 aesM! c aes,@M |
+  bes=,4 besm! ees, ees7! |
+  c'=4 cM! cis a,@7! |
+  d=4 dm! g, g7! |
+  c=4-> b-- a-- aes-- |
+  d=4-- des-- aes-- g-- |
+  c=4-> d@M! c@m!4 c=4 |
 }
 {% endmacro %}
