@@ -1,0 +1,46 @@
+{% macro rhFrag1(a, b) %}
+  {{ a }} <cis e ais> <dis fis b> %
+  <e=' gis cis>4 <fis ais dis>8 |
+  <dis=' fis b>8 <cis e ais> <dis fis b> %
+  <e=' gis cis>4 <fis ais dis>8 |
+  <dis=' fis b>8 {{ b }} <cis e ais> <dis fis b> %
+  <dis=' fis b>8 <e gis cis> <fis ais dis> |
+  <fis=' ais dis>8 <gis b e> <ais cis fis> %
+  <b=' dis gis>8 <cis e ais> <dis='' fis b> |
+{% endmacro %}
+
+{% macro rightHand(config) %}
+\tempo Allegro
+\clef treble
+\key b \major
+\time 6/8
+\relative {
+  {{ config() }}
+  {{ rhFrag1("<dis'=' fis b>8\\f", "_\\dynCresc") }}
+  <e='' gis cis>8 <dis fis b> <e gis cis> %
+  <cis='' e ais>8 <b dis gis> <cis e ais> |
+  <dis='' gis b>8_\dynDim <cis fisis ais> <dis gis b> %
+  <b=' dis gis>8 <ais cis fisis> <b dis gis> |
+  <b=' dis gis>8 <ais cis fis> <gis b eis> %
+  <gis=' b eis>8 <ais cis fis> <b dis gis> |
+  <ais=' cis fis>2. |
+  {{ rhFrag1("<dis,=' fis b>8\\mf", "") }}
+  <e='' gis cis>8 <gis b e> <fis ais dis> %
+  <e='' gis cis>8 <dis fis b> <e gis cis> |
+  <dis='' fis b>8 <fis ais dis> <e gis cis> %
+  <dis='' fis b>8 <cis e ais> <dis fis b> |
+  <cis='' e ais>8 <b dis gis> <ais cis fis> %
+  <gis=' b e>8 <fis ais dis> <e gis cis> |
+  <dis=' fis b>8 8 8 4 r8 |
+
+  <b'=' dis>8\p\< 8 8 8 8 \after 8\! 8 |
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key b \major
+\relative {
+  {{ config() }}
+}
+{% endmacro %}
