@@ -9,6 +9,16 @@
   <b=' dis gis>8 <cis e ais> <dis='' fis b> |
 {% endmacro %}
 
+{% macro rhFrag2() %}
+  <e='' gis cis>8 <dis fis b> <e gis cis> %
+  <cis='' e ais>8 <b dis gis> <cis='' e ais> |
+{% endmacro %}
+
+{% macro rhFrag3(a) %}
+  {{ a }} <ais cis fisis> <b dis gis> %
+  <cis=' fisis ais>4 <dis=' fisis b>8 |
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Allegro
 \clef treble
@@ -17,8 +27,7 @@
 \relative {
   {{ config() }}
   {{ rhFrag1("<dis'=' fis b>8\\f", "_\\dynCresc") }}
-  <e='' gis cis>8 <dis fis b> <e gis cis> %
-  <cis='' e ais>8 <b dis gis> <cis e ais> |
+  {{ rhFrag2() }}
   <dis='' gis b>8_\dynDim <cis fisis ais> <dis gis b> %
   <b=' dis gis>8 <ais cis fisis> <b dis gis> |
   <b=' dis gis>8 <ais cis fis> <gis b eis> %
@@ -34,6 +43,34 @@
   <dis=' fis b>8 8 8 4 r8 |
 
   <b'=' dis>8\p\< 8 8 8 8 \after 8\! 8 |
+  <b=' dis>8\> <ais cis dis> <gis b dis> %
+  <fisis=' ais dis>8 <eis gis dis'> \after 8\! <fisis ais dis> |
+  <gis=' b dis>8\< <fisis ais dis> \after 8\! <gis b dis> %
+  <ais=' cis dis>8\> <gis b dis> \after 8\! <ais cis dis> |
+  <b=' dis>8\< 8 8 8 8 \after 8\! 8 |
+  <b=' dis>8 <gis cis e> <gis dis' fis> %
+  <gis=' e' gis>8 <gis fis e> <gis b dis> |
+  <fis=' ais cis>8 <fis b dis> <fis cis' e> %
+  <fis=' dis' fis>8 <fis b dis> <fis ais cis> |
+  <e=' gis b>8 <e ais cis> <e b' dis> %
+  <e=' cis' e>8 <e ais cis> <e gis b> |
+  <fisis=' ais>8 <dis gis b> <dis ais' cis> %
+  <dis=' ais' cis>8 <dis gis b> <dis fisis ais> |
+  gis='8 <dis b' dis>8 8 8 8 8 |
+  <dis=' ais' cis>8 <dis gis b> <dis ais' cis> %
+  <dis=' gis b>8 <dis fisis ais> <dis gis b> |
+  <dis=' fis ais>8 <fis ais dis> <ais dis fis> %
+  <dis='' fis ais>8 <ais dis fis> <dis fis ais> |
+  <cisis,=' eis ais>8 <eis ais cisis> <gis cisis eis> %
+  <cisis='' eis ais>8 <ais cisis eis> <cisis eis ais> |
+  <fis,=' ais dis>4. r8 <cis e fis ais>4 \fermata |
+
+  {{ rhFrag1("<dis=' fis b>8\\f", "_\\dynCresc") }}
+  {{ rhFrag2() }}
+  <ais=' cis fis>8_\dynDim <gis b e> <fis ais dis> %
+  <e=' gis cis>8 <dis fis b> <cis e ais> |
+  {{ rhFrag3("<b= dis gis>8\\mf") }}
+  {{ rhFrag3("<b= dis gis>8") }}
 }
 {% endmacro %}
 
