@@ -19,6 +19,12 @@
   <cis=' fisis ais>4 <dis=' fisis b>8 |
 {% endmacro %}
 
+{% macro lhFrag1(a) %}
+  {{ a }} r bM!] r fis@M! r8 |
+  b=,8[ r bM!] r fis@M! r8 |
+  \repeat unfold 2 { b=,8 r r bM! r r | }
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Allegro
 \clef treble
@@ -49,7 +55,7 @@
   <ais=' cis dis>8\> <gis b dis> \after 8\! <ais cis dis> |
   <b=' dis>8\< 8 8 8 8 \after 8\! 8 |
   <b=' dis>8 <gis cis e> <gis dis' fis> %
-  <gis=' e' gis>8 <gis fis e> <gis b dis> |
+  <gis=' e' gis>8 <gis cis e> <gis b dis> |
   <fis=' ais cis>8 <fis b dis> <fis cis' e> %
   <fis=' dis' fis>8 <fis b dis> <fis ais cis> |
   <e=' gis b>8 <e ais cis> <e b' dis> %
@@ -71,6 +77,26 @@
   <e=' gis cis>8 <dis fis b> <cis e ais> |
   {{ rhFrag3("<b= dis gis>8\\mf") }}
   {{ rhFrag3("<b= dis gis>8") }}
+  <b= dis gis>8 <ais cis fisis> <b dis gis> %
+  <b= dis gis>8 <ais cis fisis> <b dis gis> |
+  <cis=' e ais>8_\dynCresc <b e gis> <cis e ais> %
+  <dis=' fis b>8 <cis fis ais> <dis fis b> |
+  <e=' fis cis'>8 <dis fis b> <e fis cis'> %
+  <fis=' b dis>8 <e b' cis> <fis b dis> |
+  <gis=' b e>8 <gis b dis> <gis b e> %
+  <b=' dis fis>8 <fis b dis> <b dis fis> |
+  <b=' e gis>8 <gis' b e> <fis ais dis> %
+  <e='' gis cis>8\> <dis fis b> <cis e ais> |
+  <b=' dis gis>8 <ais cis fis> <gis b e> %
+  <fis=' ais dis>8 <e gis cis> <dis fis b> |
+  <cis=' e ais>8^\tempRit <b dis gis> \after 16\! <ais cis fis> %
+  \clef bass
+  <gis= b e>8 <fis ais dis> <e gis cis> |
+  <dis= fis b>8 <fis b dis>\< %
+  \clef treble
+  <b= dis fis>8 <dis fis b>-> %
+  <fis=' b dis>8-> \after 8\! <b dis fis>-> |
+  <dis='' fis b>4->\f r8 r4. \bar "|."
 }
 {% endmacro %}
 
@@ -79,5 +105,41 @@
 \key b \major
 \relative {
   {{ config() }}
+  {{ lhFrag1("b,=,8[-\\stBass") }}
+  fis=,8 r r fisM! r r |
+  gis=,8 r r gism! r r |
+  cis=8 r r cis7! r r |
+  fis=8 gis fis e dis cis |
+  {{ lhFrag1("b=,8[") }}
+  e,=,8 r r cis@m! r8 r |
+  fis=,8 r r b,@M! r8 r |
+  fis=,8 r r fis7! r r |
+  b=,8 r r bM!4 r8 |
+
+  gis=,8 r r gism! r r |
+  \repeat unfold 2 { gis=,8 r r dis@M! r8 r | }
+  gis=,8 r r gism! r r |
+  gis=,8 r r cis@m! r8 r |
+  fis=,8 r r b,@M! r8 r |
+  e=,8 r r ais r r |
+  dis=8[ r dis] dis[ r dis] |
+  gis,=,8 r r gism! r r |
+  ais=,8 r r b r r |
+  ais=,8 r r dis@m! r8 r |
+  ais=,8 r r aisM! r r |
+  dis=8 e dis cis( fis,4) \fermata |
+
+  {{ lhFrag1("b=,8[") }}
+  \repeat unfold 2 { fis=,8 r r fisM! r r | }
+  \repeat unfold 2 { gis=,8[ r gism!] r dis' r | }
+  gis,=,8 r r gism! r r |
+  fis=,8[ r fisM!] b[ r bM!] |
+  ais=,8[ r fis@M!] a8[ r b,@M!] |
+  gis=,8[ r e@M!] fis8[ r b,@M!] |
+  e=,8 r r eM! r r |
+  fis=,8 r r b,@M! r8 r |
+  fis=,8[ r fis] fis[ r fis] |
+  gis=,4 gis8 gis[-> gis-> gis]-> |
+  gis=,4-> r8 r4. |
 }
 {% endmacro %}
