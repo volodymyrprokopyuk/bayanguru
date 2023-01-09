@@ -139,7 +139,7 @@
   e=,8 r r eM! r r |
   fis=,8 r r b,@M! r8 r |
   fis=,8[ r fis] fis[ r fis] |
-  gis=,4 gis8 gis[-> gis-> gis]-> |
-  gis=,4-> r8 r4. |
+  b=,4 b8 b[-> b-> b]-> |
+  b=,4-> r8 r4. |
 }
 {% endmacro %}
