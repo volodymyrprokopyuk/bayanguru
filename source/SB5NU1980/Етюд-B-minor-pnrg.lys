@@ -1,0 +1,30 @@
+{% macro rhFrag1(a, b) %}
+  {{ a }} <cis fis ais> {{ b }} <d fis b> %
+  <b=' d fis>8 <b cis eis> <b d fis> |
+  <fis=' b d>8 <fis ais cis> <fis b d> %
+  <d=' fis b>8 <cis fis ais> <d fis b> |
+  <g=' b e>8 <fis b dis> <g b e> %
+  <fis=' ais cis>8 <fis gisis bis> <fis ais cis> |
+  <fis=' b d>8 <fis ais cis> <fis b d> %
+  <d=' fis b>8 <cis fis ais> <d=' fis b> |
+{% endmacro %}
+
+{% macro rightHand(config) %}
+\tempo Moderato
+\clef treble
+\key b \minor
+\time 6/8
+\relative {
+  {{ config() }}
+  {{ rhFrag1("<d''='' fis b>8\\mf", "_\\artStaccato") }}
+  {{ rhFrag1("<d'='' fis b>8", "") }}
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key b \minor
+\relative {
+  {{ config() }}
+}
+{% endmacro %}

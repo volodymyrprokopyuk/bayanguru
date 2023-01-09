@@ -20,6 +20,7 @@
   puBass = \markup \larger \box Б % Чистий бас
   artSimile = \markup \italic simile
   artLegato = \markup \italic legato
+  artStaccato = \markup \italic staccato
   dynCresc = \markup \lower #3 \italic "cresc."
   dynDim = \markup \lower #3 \italic "dim."
   tempRit = "rit."
