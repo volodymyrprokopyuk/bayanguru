@@ -2,6 +2,28 @@
 ---
 pieces:
   # Scale
+  # SB1NU1979
+  # p. 11
+  # - { id: d3fi, tit: Етюд A minor,
+  #     com: А. Салин, src: SB1NU1979,
+  #     org: ru, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
+  # p. 11
+  # - { id: wtuk, tit: Етюд C major,
+  #     com: Л. Шітте, src: SB1NU1979,
+  #     org: dk, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
+  # p. 14
+  # - { id: vz59, tit: Етюд G major,
+  #     com: К. Черні, src: SB1NU1979,
+  #     org: at, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
+  # p. 15
+  # - { id: ryca, tit: Етюд G major,
+  #     com: К. Черні, src: SB1NU1979,
+  #     org: at, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
+  # SB2NU1977
+  # p. 4
+  # - { id: mp9o, tit: Етюд C major,
+  #     com: М. Різоль, src: SB2NU1977,
+  #     org: ua, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
   # Arpeggio
   # Wrist movement
   # Pepetition
