@@ -31,9 +31,16 @@
 
 {% macro rhFrag5() %}
   <b=' cis g'>8 <b cis fis> <b cis g'> %
-  <gis=' b e>8 <g b dis> <g b e> |
+  <g=' b e>8 <g b dis> <g b e> |
   <ais=' cis fis>8 <ais cis eis> <ais cis fis> %
   <fis=' ais cis>8 <fis ais bis> <fis=' ais cis> |
+{% endmacro %}
+
+{% macro lhFrag1(a) %}
+  {{ a }} r r d,+b,@m r8 r |
+  fis,,+b,@m!8 r8 r b,,+bm r r |
+  e,+em!8 r r fis,,+fM! r r |
+  b,,+bm!8 r r r4. |
 {% endmacro %}
 
 {% macro rightHand(config) %}
@@ -58,7 +65,7 @@
   <cis=' fis ais>8 8 8 <ais cis fis>8 8 8 |
   <b= fis' gis>8 8 8 <c fis a>8 8 8 |
   <cis=' fis ais>8 8 8 8 8 8 |
-  <b= dis ais'>8 8 8 <cis eis ais>8 8 8 |
+  <b= dis ais'>8 8 8 <cis eis ais>8 8 <b eis ais> |
   <ais= fis'>8 8 <gis b fis'> <fis ais fis'> %
   <gis= b>8[\(_\dynCresc <ais cis>] |
   <b= d>8 <cis e> <d fis> <e gis> <fis ais> <gis b> |
@@ -81,5 +88,7 @@
 \key b \minor
 \relative {
   {{ config() }}
+  {{ lhFrag1("b,,+bm!8-\\stBass") }}
+  {{ lhFrag1("b,,+bm!8") }}
 }
 {% endmacro %}
