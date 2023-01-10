@@ -9,6 +9,33 @@
   <d=' fis b>8 <cis fis ais> <d=' fis b> |
 {% endmacro %}
 
+{% macro rhFrag2() %}
+  <gis=' d' f>8 <gis d' e> <gis d' f> %
+  <a=' d fis>8 <a d eis> <a=' d fis> |
+{% endmacro %}
+
+{% macro rhFrag3() %}
+  <g=' a cis>8 <g a bis> <g a cis> %
+  <cis,=' g' a>8 <d g b> <e g cis> |
+  <fis=' a d>8 <fis a cis> <fis a d> %
+  <g=' bes e>8 <g bes dis> <g=' bes e> |
+  {{ rhFrag2() }}
+{% endmacro %}
+
+{% macro rhFrag4(a) %}
+  {{ a }} <c e gis> <c e a> %
+  <c='' d fis>8 <c d eis> <c d fis> |
+  <b=' d g>8 <b d fis> <b d g> %
+  <g=' b d>8 <g b cis> <g=' b d> |
+{% endmacro %}
+
+{% macro rhFrag5() %}
+  <b=' cis g'>8 <b cis fis> <b cis g'> %
+  <gis=' b e>8 <g b dis> <g b e> |
+  <ais=' cis fis>8 <ais cis eis> <ais cis fis> %
+  <fis=' ais cis>8 <fis ais bis> <fis=' ais cis> |
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Moderato
 \clef treble
@@ -18,6 +45,34 @@
   {{ config() }}
   {{ rhFrag1("<d''='' fis b>8\\mf", "_\\artStaccato") }}
   {{ rhFrag1("<d'='' fis b>8", "") }}
+  {{ rhFrag3() }}
+  {{ rhFrag2() }}
+  {{ rhFrag3() }}
+  <b=' cis g'>8 <a cis fis> <g cis e> %
+  <fis=' a d>8 <fis a cis> <fis a d> |
+  {{ rhFrag4("<c'='' e a>8") }}
+  {{ rhFrag4("<c='' e a>8") }}
+  {{ rhFrag5() }}
+  {{ rhFrag5() }}
+  <eis=' b' d>8 8 8 <cis eis b'>8 8 8 |
+  <cis=' fis ais>8 8 8 <ais cis fis>8 8 8 |
+  <b= fis' gis>8 8 8 <c fis a>8 8 8 |
+  <cis=' fis ais>8 8 8 8 8 8 |
+  <b= dis ais'>8 8 8 <cis eis ais>8 8 8 |
+  <ais= fis'>8 8 <gis b fis'> <fis ais fis'> %
+  <gis= b>8[\(_\dynCresc <ais cis>] |
+  <b= d>8 <cis e> <d fis> <e gis> <fis ais> <gis b> |
+  <ais=' cis>8 <b d> <cis e> <d fis>^\tempRit %
+  <b=' e gis>8 <cis fis ais>\) |
+  {{ rhFrag1("<d='' fis b>8\\mf^\\tempATempo", "") }}
+  <d'='' fis b>8 <cis fis ais> <d fis b> %
+  <b=' d fis>8 <b cis eis> <b d fis> |
+  <fis=' b d>8 <fis ais cis> <fis b d> %
+  <d=' fis b>8 <cis fis ais> <d fis b> |
+  <g=' b e>8 <fis b dis> <g b e> %
+  <fis=' ais cis>8 <e gis> <e fis ais> |
+  <d=' fis b>8 <fis b d> <b d fis> %
+  <d='' fis b>8 r r \bar "|."
 }
 {% endmacro %}
 
