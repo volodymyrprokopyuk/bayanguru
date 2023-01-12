@@ -1,3 +1,22 @@
+{% from "util.lys" import v2 %}
+
+{% macro rhFrag1(a) %}
+  {{ a }} <c f a> <a c f> |
+  <bes= d>4 <bes d f> <bes d g> |
+  <c=' f a>4-> <a c f> <c=' f a> |
+{% endmacro %}
+
+{% macro rhFrag2(a) %}
+  {{ a }} <g c e> <c e g> |
+  <g=' b d>4 4 4 |
+{% endmacro %}
+
+{% macro rhFrag3(a) %}
+  {{ rhFrag2("<c='' e g>4\\ff") }}
+  {{ rhFrag2("<c='' e g>4") }}
+  <f=' a d>4 {{ a }} 4 4 |
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo "Con moto, energico"
 \clef treble
@@ -7,7 +26,23 @@
   {{ config() }}
   \repeat segno 2 {
     \volta 1
-    <f'=' a c>4->\f <c f a> <a c f> |
+    {{ rhFrag1("<f'=' a c>4->\\f") }}
+    <c=' e g>4-> <g c e> <c e g> |
+    <a= c f>4-> <a c>\> \after 4\! <a c d> |
+    <a= c e>4\mf 4 4 |
+    {{ v2("<d'=' f>4( <c e> <b= d>)", "gis=2.") }}
+    <a= c e a>4\< <a c e> \after 4\! a-> |
+    {{ rhFrag1("<f'=' a c>4->\\f") }}
+    <e=' gis b>4-> <b e gis> <e gis b> |
+    <e=' a c>4-> <c e a> <e a c> |
+    <fis=' a>4\< <fis a c> \after 4\! <fis a d> |
+    <g=' b e>4 <e g b> <g b e> |
+    <b=' f' g>4 <g b e> <b f' g> |
+    {{ rhFrag3("\\sf") }}
+    a='4\mf <e a c> <f a d> |
+    <a=' c e>4_\dynCresc 4 4 |
+    <gis=' b e>4 4 4 |
+    {{ rhFrag3("_\\dynCresc") }}
   }
 }
 {% endmacro %}
