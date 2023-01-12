@@ -49,10 +49,9 @@ pieces:
   - { id: pnrg, tit: Етюд B minor,
       com: А. Холминов, src: SB5NU1980,
       org: ru, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: int }
-  # p. 96
-  # - { id: 978q, tit: Етюд F major,
-  #     com: М. Черемухин, src: SB5NU1980,
-  #     org: ru, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: elm }
+  - { id: 978q, tit: Етюд F major,
+      com: М. Черемухин, src: SB5NU1980,
+      org: ru, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: elm }
   # p. 99
   # - { id: 6zcy, tit: Етюд Aes major,
   #     com: О. Денисов, src: SB5NU1980,
