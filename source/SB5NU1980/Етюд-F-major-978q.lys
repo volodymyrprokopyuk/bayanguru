@@ -40,6 +40,28 @@
   <b= e gis>4 r r | r4 4 4 |
 {% endmacro %}
 
+{% macro lhFrag1() %}
+  \repeat unfold 2 {
+    c=8 r cM! r cM r |
+    g=,8 r gM! r gM r |
+  }
+  d'=8 r dm! r dm r |
+{% endmacro %}
+
+{% macro lhFrag2(a, b) %}
+  {{ a }} r fM! r fM r |
+  bes=,8 r besM! r besM r |
+  f=,8 r fM! r fM r |
+  c'=8 r {{ b }}! r {{ b }} r |
+  f,=,8 r fM! r fM r |
+  e'=8 r a,@m! r8 am r |
+  e=8 r e7! r e7 r | a,2(-> g4) |
+  f=,8 r fM! r fM r |
+  bes=,8 r besM! r besM r |
+  f=,8 r fM! r fM r |
+  e'=8 r eM! r eM r |
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo "Con moto, energico"
 \clef treble
@@ -66,7 +88,7 @@
     <e=' a c>4_\dynCresc <c e a> <e bes' c> |
     <c=' e g>4 <f a c> <c f a> |
     <g'=' bes c>4 <g bes d> <g bes e> |
-    <a=' c f>4 <f a c> f='-> \fine |
+    <a=' c f>4 <f a c> f='-> \fine \bar "||"
 
     \volta 2
     \key c \major
@@ -92,6 +114,33 @@
 \key f \major
 \relative {
   {{ config() }}
-  f,=,8-\stBass r fM! r fM r |
+  {{ lhFrag2("f,=,8-\\stBass", "c7") }}
+  a,=,8 r am! r am r |
+  e'=8 r a,@m! r8 am r |
+  e=8 r em! r em r |
+  d=8 r g,@7! r8 g7 r |
+  {{ lhFrag1() }}
+  a=,8 r am! r d r |
+  a=,8 r am! r am r |
+  e'=8 r eM! r eM r |
+  {{ lhFrag1() }}
+  f,=,8 r fM! r fM r |
+  e'=4 e d | d c c |
+  {{ lhFrag2("f,=,8", "cM") }}
+  a,=,8 r am! r g r |
+  c@7!8 r8 f r fM! r8 |
+  c'=8 r c7! r c7 r |
+  f,=,8 r fM! r f4-> |
+
+  \key c \major
+  c'=2.~-\puBass | c4 e( f | g2.~ | g2) r4 |
+  c,=2.\( | b | a | g\) |
+  c=2.~ | c4 e( f | g2.~ | g2) r4 |
+  c,=2.\( | b | a4 a a | e'2.\) |
+  \repeat unfold 2 { r4 e=4 e | e2. }
+  \repeat unfold 5 { r4 e=4 e | }
+  \repeat unfold 2 { e=2. | r4 e e | }
+  e=2.~ | e4 e e | e=2. |
+  \key f \major
 }
 {% endmacro %}
