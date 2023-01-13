@@ -53,7 +53,7 @@
     <e=' a c>4-> <c e a> <e a c> |
     <fis=' a>4\< <fis a c> \after 4\! <fis a d> |
     <g=' b e>4 <e g b> <g b e> |
-    <b=' f' g>4 <g b e> <b f' g> |
+    <b=' f' g>4 <g b d> <b f' g> |
     {{ rhFrag3("\\sf") }}
     a='4\mf <e a c> <f a d> |
     <a=' c e>4_\dynCresc 4 4 |
@@ -65,8 +65,8 @@
     {{ rhFrag4("<f=' a c>4->\\mp", "\\<") }}
     <e=' a c>4_\dynCresc <c e a> <e bes' c> |
     <c=' e g>4 <f a c> <c f a> |
-    <g'=' bes c> <g bes d> <g bes e> |
-    <a c f>4 <f a c> f-> \fine |
+    <g'=' bes c>4 <g bes d> <g bes e> |
+    <a=' c f>4 <f a c> f='-> \fine |
 
     \volta 2
     \key c \major
