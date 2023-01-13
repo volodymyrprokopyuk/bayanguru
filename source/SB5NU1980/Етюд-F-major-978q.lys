@@ -17,6 +17,29 @@
   <f=' a d>4 {{ a }} 4 4 |
 {% endmacro %}
 
+{% macro rhFrag4(a, b) %}
+  {{ rhFrag1(a) }}
+  <c=' e g>4-> <g c e> <c e g> |
+  <a= c f>4-> <a c> {{ b }} \after 4\! <a c d> |
+  <a= c e>4\mf 4 4 |
+  {{ v2("<d'=' f>4( <c e> <b= d>)", "gis=2.") }}
+  <a= c e a>4\< <a c e> \after 4\! a-> |
+  {{ rhFrag1("<f'=' a c>4->\\f") }}
+  <e=' gis b>4-> <b e gis> <e=' gis b> |
+{% endmacro %}
+
+{% macro rhFrag5() %}
+  r4\f <c=' e g>4 4 | 2 r4 |
+  r4 <b= e g>4 4 | 4 <g b e> <f b d> |
+  r4\mp <e= g c>4 4 | r4 <d'=' f g>4_\dynCresc 4 |
+{% endmacro %}
+
+{% macro rhFrag6(a) %}
+  {{ a }} r r |
+  r4 <b= e g>4_\dynCresc 4 |
+  <b= e gis>4 r r | r4 4 4 |
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo "Con moto, energico"
 \clef treble
@@ -26,14 +49,7 @@
   {{ config() }}
   \repeat segno 2 {
     \volta 1
-    {{ rhFrag1("<f'=' a c>4->\\f") }}
-    <c=' e g>4-> <g c e> <c e g> |
-    <a= c f>4-> <a c>\> \after 4\! <a c d> |
-    <a= c e>4\mf 4 4 |
-    {{ v2("<d'=' f>4( <c e> <b= d>)", "gis=2.") }}
-    <a= c e a>4\< <a c e> \after 4\! a-> |
-    {{ rhFrag1("<f'=' a c>4->\\f") }}
-    <e=' gis b>4-> <b e gis> <e gis b> |
+    {{ rhFrag4("<f'=' a c>4->\\f", "\\>") }}
     <e=' a c>4-> <c e a> <e a c> |
     <fis=' a>4\< <fis a c> \after 4\! <fis a d> |
     <g=' b e>4 <e g b> <g b e> |
@@ -43,6 +59,30 @@
     <a=' c e>4_\dynCresc 4 4 |
     <gis=' b e>4 4 4 |
     {{ rhFrag3("_\\dynCresc") }}
+    <a=' c dis>4 4 4 |
+    <a=' c e>4\f 4 <gis b e>_\dynDim |
+    <gis=' b e>4 <g bes e>4 4 |
+    {{ rhFrag4("<f=' a c>4->\\mp", "\\<") }}
+    <e=' a c>4_\dynCresc <c e a> <e bes' c> |
+    <c=' e g>4 <f a c> <c f a> |
+    <g'=' bes c> <g bes d> <g bes e> |
+    <a c f>4 <f a c> f-> \fine |
+
+    \volta 2
+    \key c \major
+    \repeat volta 2 {
+      {{ rhFrag5() }}
+      r4 <c=' f g>4 4 | r4 <b d g>4 4 |
+      {{ rhFrag5() }}
+      <c=' e a>4^\tempRit 4 4 | <b= e gis>2.\mf |
+    }
+    {{ rhFrag6("<b= e g>4\\p^\\tempATempo") }}
+    <c=' e a>4\mf r r | <b e g>_\dynDim r r |
+    <a= e' fis>4 r r | <g b e> r r |
+    {{ rhFrag6("<b= e g>4\\p") }}
+    <c=' e a>2 r4 | r4 4 4 |
+    <c=' g' bes c>2.~\sf | 4 c'='' c \bar "||"
+    \keyChangeBeforeBar \key f \major
   }
 }
 {% endmacro %}
