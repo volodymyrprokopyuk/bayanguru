@@ -52,10 +52,9 @@ pieces:
   - { id: 978q, tit: Етюд F major,
       com: М. Черемухин, src: SB5NU1980,
       org: ru, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: elm }
-  # p. 99
-  # - { id: 6zcy, tit: Етюд Aes major,
-  #     com: О. Денисов, src: SB5NU1980,
-  #     org: ua, sty: stu, gnr: stu, frm: crd, bss: pub, lvl: int }
+  - { id: 6zcy, tit: Етюд Aes major,
+      com: О. Денисов, src: SB5NU1980,
+      org: ua, sty: stu, gnr: stu, frm: crd, bss: pub, lvl: int }
   # Polyphony
   # Ornamentation
   # Articulation
