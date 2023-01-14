@@ -82,7 +82,7 @@
     <gis=' b e>4 4 4 |
     {{ rhFrag3("_\\dynCresc") }}
     <a=' c dis>4 4 4 |
-    <a=' c e>4\f 4 <gis b e>_\dynDim |
+    <a=' c e>4\f 4_\dynDim <gis b e> |
     <gis=' b e>4 <g bes e>4 4 |
     {{ rhFrag4("<f=' a c>4->\\mp", "\\<") }}
     <e=' a c>4_\dynCresc <c e a> <e bes' c> |
