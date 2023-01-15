@@ -56,7 +56,7 @@
     <g=' des' ees>4 \after 8\! ees8(\p |
     \tempo "Tempo I"
     {{ rhFrag1("") }}
-    {{ v2("f''=''4( <c='' ees>8)", "<aes'=' c>4 s8") }}
+    {{ v2("<c''='' f>4( <c='' ees>8)", "aes'='4.") }}
     <des=' ees g>8 8 <ees g bes> %
     {{ v2("<f'=' des'>4( <ees=' c'>8)", "g'='4.") }}
     <c=' ees aes>8 <c ees g> <c ees f> %
