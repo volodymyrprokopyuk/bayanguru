@@ -1,4 +1,4 @@
-{% from "util.lys" import shapedSlur, v2 %}
+{% from "util.lys" import hSpace, shapedSlur, v2 %}
 
 {% macro rhFrag1(a) %}
   <aes,= des f>8) 8 8 <bes des g>8 {{ a }} 8 8 |
@@ -35,6 +35,7 @@
       }
     }
   }
+
   \tempo Agitato
   \repeat volta 2 {
     <bes,=' des ges>8) 8 <aes c f> %
@@ -50,12 +51,12 @@
     <f=' aes d>8 8 <ees aes c> %
     <d=' aes' bes>8 <ees aes c> <f aes d> |
     <g=' bes ees>8 8 <bes ees g> %
-    <aes=' des ees>8 8 <des f aes> |
+    <aes=' des f>8 8 <des f aes> |
     <bes=' des g>8\> 8^\tempRit <aes=' des f bes> %
     <g=' des' ees>4 \after 8\! ees8(\p |
     \tempo "Tempo I"
     {{ rhFrag1("") }}
-    {{ v2("f''=''4( <c='' ees>8)", "<aes'=' c>4.") }}
+    {{ v2("f''=''4( <c='' ees>8)", "<aes'=' c>4 s8") }}
     <des=' ees g>8 8 <ees g bes> %
     {{ v2("<f'=' des'>4( <ees=' c'>8)", "g'='4.") }}
     <c=' ees aes>8 <c ees g> <c ees f> %
@@ -104,5 +105,22 @@
 \relative {
   {{ config() }}
   \partial 8 { r8 | }
+  bes,=,4.\(-\puBass ees | aes ees8 ees4\) |
+  bes'=4.\( ees,8 ees4 | aes,4. ees'4\) r8 |
+  bes=,4.\( ees | aes f8 f4\) |
+  bes=4.\( ees,4. | aes,4.~ aes4\) r8 |
+  {{ hSpace() }}
+  aes=,4.~ aes4 {{ shapedSlur("bu", wd = 3.7) }} ( r8) |
+
+  ees'=4.\( aes, | ees' aes, |
+  des=4. aes | \once \tieDown des~ des,+desM!4\) r8 |
+  f=4.\( bes, | f' bes, | ees bes | ees~ ees4\) r8 |
+  bes=,4.\( ees | aes ees8 ees4\) |
+  bes'=4.( ees,8 ees4 | aes4. ees4) r8 |
+  bes=,4.\( c | f\) bes,8 bes4\( | ees2. |
+  aes,=,4.~ aes4\) r8 |
+  bes=,2.\(~ | bes~ | bes |
+  ees=4.~ ees4\) \fermata r8 |
+  ees=2.\( | aes,4.~ aes4\) %
 }
 {% endmacro %}
