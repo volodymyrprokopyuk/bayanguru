@@ -27,6 +27,7 @@
   tempRall = "rall."
   tempATempo = "a tempo"
   tempAccel = "accel."
+  tempSost = "sost."
   barFermata = \mark \markup \musicglyph #"scripts.ufermata"
   keyChangeBeforeBar = \once {
     \override Score.BreakAlignment.break-align-orders =

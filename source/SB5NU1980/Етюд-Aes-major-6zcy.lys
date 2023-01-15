@@ -52,11 +52,48 @@
     <g=' bes ees>8 8 <bes ees g> %
     <aes=' des ees>8 8 <des f aes> |
     <bes=' des g>8\> 8^\tempRit <aes=' des f bes> %
-    <g=' des' ees>4 \after 8\! ees8\p |
+    <g=' des' ees>4 \after 8\! ees8(\p |
+    \tempo "Tempo I"
+    {{ rhFrag1("") }}
+    {{ v2("f''=''4( <c='' ees>8)", "<aes'=' c>4.") }}
+    <des=' ees g>8 8 <ees g bes> %
+    {{ v2("<f'=' des'>4( <ees=' c'>8)", "g'='4.") }}
+    <c=' ees aes>8 <c ees g> <c ees f> %
+    <aes= c ees>4 ees'8( |
+    <aes,= des f>8) 8\< 8 <bes e g>8^\tempSost 8 8 |
+    <c=' f aes>8 8 \after 16\! <f aes c> %
+    {{ v2("<d''='' g>4(\\f <d='' f>8)", "aes'='4.") }}
     \alternative {
-      \volta 1 { }
-      \volta 2 { }
+      \volta 1 {
+        <aes=' c f>8 8 <aes c ees> %
+        <ees=' g c>8 8 <des g bes> |
+        <c=' ees aes>8\> <ees aes c> <aes c ees> %
+        <c='' ees aes>4 %
+        \after 8\! aes'=''8\p -{{ shapedSlur("fu", bs = 4) }} ( <>)|
+      }
+      \volta 2 {
+        <aes,=' des fes>8^\tempAccel 8 <des fes aes> %
+        <fes,=' aes des>8 8 <aes des fes> |
+      }
     }
+    <des,=' fes aes>8\> 8 <fes aes des> %
+    <aes,= des fes>8 8 \after 8\! <des fes aes> |
+    <aes= d f>8\mf 8(^\tempRit bes') <aes, d g>8 8( f') |
+    <aes,= c f>8\> <aes c ees> <c ees aes> %
+    <ees=' aes c>4 \fermata \after 16\! ees8(\p |
+    \tempo Lento
+    <aes,= des f>8) 8( bes') <bes, des g>8 8( c') |
+    <<
+      \new Voice = voiceOne \relative {
+        \voiceOne
+        aes'='4.~ aes4 %
+      }
+      \new Voice = voiceTwo \relative {
+        \voiceTwo
+        <c'=' ees>8( <bes des> <b d> <c=' ees>4) %
+      }
+    >>
+    \bar "|."
   }
 }
 {% endmacro %}
