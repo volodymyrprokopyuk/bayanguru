@@ -3,10 +3,9 @@
 pieces:
   # Scale
   # SB1NU1979
-  # p. 11
-  # - { id: d3fi, tit: Етюд A minor,
-  #     com: А. Салин, src: SB1NU1979,
-  #     org: ru, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
+  - { id: d3fi, tit: Етюд A minor,
+      com: А. Салин, src: SB1NU1979,
+      org: ru, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
   # p. 11
   # - { id: wtuk, tit: Етюд C major,
   #     com: Л. Шітте, src: SB1NU1979,
