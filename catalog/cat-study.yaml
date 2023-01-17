@@ -3,12 +3,28 @@
 pieces:
   # Scale
   # SB1NU1979
+  # p. 5
+  # - { id: gnt0, tit: Етюд C major,
+  #     com: Л. Шітте, src: SB1NU1979,
+  #     org: dk, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
+  # p. 8
+  # - { id: jxnz, tit: Етюд C major,
+  #     com: Г. Беренс, src: SB1NU1979,
+  #     org: se, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
+  # p. 8
+  # - { id: e4vv, tit: Етюд C major,
+  #     com: Г. Беренс, src: SB1NU1979,
+  #     org: se, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
   - { id: d3fi, tit: Етюд A minor,
       com: А. Салин, src: SB1NU1979,
       org: ru, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
   - { id: wtuk, tit: Етюд C major,
       com: Л. Шітте, src: SB1NU1979,
       org: dk, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
+  # p. 13
+  # - { id: b3nl, tit: Етюд C major,
+  #     com: К. Гурлітт, src: SB1NU1979,
+  #     org: de, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
   - { id: vz59, tit: Етюд G major,
       com: К. Черні, src: SB1NU1979,
       org: at, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
@@ -25,6 +41,15 @@ pieces:
   # Wrist movement
   # Pepetition
   # Chords
+  # SB1NU1979
+  # p. 41
+  # - { id: w7sj, tit: Етюд C major,
+  #     com: К. Черні, src: SB1NU1979,
+  #     org: at, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: elm }
+  # p. 44
+  # - { id: 0c06, tit: Етюд C major,
+  #     com: К. Черні, src: SB1NU1979,
+  #     org: at, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: elm }
   # SB2NU1977
   - { id: yai7, tit: Етюд G minor,
       com: К. Мясков, src: SB2NU1977,
