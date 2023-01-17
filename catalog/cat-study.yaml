@@ -36,6 +36,10 @@ pieces:
   # - { id: mp9o, tit: Етюд C major,
   #     com: М. Різоль, src: SB2NU1977,
   #     org: ua, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
+  # p. 7
+  # - { id: x2ii, tit: Етюд A major,
+  #     com: А. Нечипоренко, src: SB2NU1977,
+  #     org: ua, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
   # Arpeggio
   # Wrist movement
   # Pepetition
