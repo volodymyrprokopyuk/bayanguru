@@ -6,10 +6,9 @@ pieces:
   - { id: gnt0, tit: Етюд C major,
       com: Л. Шітте, src: SB1NU1979,
       org: dk, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
-  # p. 8
-  # - { id: jxnz, tit: Етюд C major,
-  #     com: Г. Беренс, src: SB1NU1979,
-  #     org: se, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
+  - { id: jxnz, tit: Етюд C major,
+      com: Г. Беренс, src: SB1NU1979,
+      org: se, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
   # p. 8
   # - { id: e4vv, tit: Етюд C major,
   #     com: Г. Беренс, src: SB1NU1979,
