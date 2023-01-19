@@ -24,10 +24,9 @@ pieces:
   - { id: vz59, tit: Етюд G major,
       com: К. Черні, src: SB1NU1979,
       org: at, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
-  # p. 15
-  # - { id: ryca, tit: Етюд G major,
-  #     com: К. Черні, src: SB1NU1979,
-  #     org: at, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
+  - { id: ryca, tit: Етюд G major,
+      com: К. Черні, src: SB1NU1979,
+      org: at, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
   # SB2NU1977
   # p. 4
   # - { id: mp9o, tit: Етюд C major,
