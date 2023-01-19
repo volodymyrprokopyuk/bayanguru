@@ -18,10 +18,9 @@ pieces:
   - { id: wtuk, tit: Етюд C major,
       com: Л. Шітте, src: SB1NU1979,
       org: dk, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
-  # p. 13
-  # - { id: b3nl, tit: Етюд C major,
-  #     com: К. Гурлітт, src: SB1NU1979,
-  #     org: de, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
+  - { id: b3nl, tit: Етюд C major,
+      com: К. Гурлітт, src: SB1NU1979,
+      org: de, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
   - { id: vz59, tit: Етюд G major,
       com: К. Черні, src: SB1NU1979,
       org: at, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
