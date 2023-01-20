@@ -31,10 +31,9 @@ pieces:
   - { id: mp9o, tit: Етюд C major,
       com: М. Різоль, src: SB2NU1977,
       org: ua, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
-  # p. 7
-  # - { id: x2ii, tit: Етюд A major,
-  #     com: А. Нечипоренко, src: SB2NU1977,
-  #     org: ua, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
+  - { id: x2ii, tit: Етюд A major,
+      com: А. Нечипоренко, src: SB2NU1977,
+      org: ua, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
   # SB3NU1979
   # p. 6
   # - { id: ey1v, tit: Етюд C major,

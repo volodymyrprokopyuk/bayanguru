@@ -1,0 +1,35 @@
+{% macro rightHand(config) %}
+\tempo Allegro
+\clef treble
+\key a \major
+\time 3/4
+\relative {
+  {{ config() }}
+  a'='16(\p b cis d e8)-. a,16( b cis d e8)-. |
+  gis,='16(\mp a b cis d8)-. gis,16( a b cis d8)-. |
+  cis=''16(\mp b a gis fis8)-. fis16( gis a b cis8)-. |
+  b='16(\> a gis fis \after 8\! e8)-. %
+  e='16(\< fis gis a b \after 16\! cis) |
+  a='16(\mp b cis d e8)-. a,16( b cis d e8)-. |
+  b='16(\mf cis d e fis8)-. b,16( cis d e fis8)-. |
+  e=''16(\< fis gis a b8)-. %
+  b,='16( cis d e fis \after 16\! gis |
+  a=''8)-.\f r r4 r |
+  cis,=''16(\p b a gis fis8)-. fis16( gis a b cis a) |
+  b='16(\mp a gis fis eis8)-. eis16( fis gis a b) r |
+  a='16(\mf gis fis eis fis8)-. d16( e fis gis a fis) |
+  gis='16( fis e d e8)-. cis16( d e fis gis) r |
+  fis='16( e d cis b8)-. b16( cis d e fis d) |
+  e='16(_\dynCresc d cis b a8)-. a16( b cis d e cis) |
+  d='16( cis b ais b8)-. b16( cis d e fis gis |
+  a='8)-.\f r r4 r |
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key a \major
+\relative {
+  {{ config() }}
+}
+{% endmacro %}
