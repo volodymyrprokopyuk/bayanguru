@@ -36,19 +36,16 @@ pieces:
   # - { id: x2ii, tit: Етюд A major,
   #     com: А. Нечипоренко, src: SB2NU1977,
   #     org: ua, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
+  # SB3NU1979
+  # p. 6
+  # - { id: ey1v, tit: Етюд C major,
+  #     com: Г. Беренс, src: SB3NU1979,
+  #     org: se, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
   # Arpeggio
   # Wrist movement
   # Pepetition
+
   # Chords
-  # SB1NU1979
-  # p. 41
-  # - { id: w7sj, tit: Етюд C major,
-  #     com: К. Черні, src: SB1NU1979,
-  #     org: at, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: elm }
-  # p. 44
-  # - { id: 0c06, tit: Етюд C major,
-  #     com: К. Черні, src: SB1NU1979,
-  #     org: at, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: elm }
   # SB2NU1977
   - { id: yai7, tit: Етюд G minor,
       com: К. Мясков, src: SB2NU1977,
