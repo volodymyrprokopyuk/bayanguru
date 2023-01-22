@@ -38,10 +38,9 @@ pieces:
   - { id: ey1v, tit: Етюд C major,
       com: Г. Беренс, src: SB3NU1979,
       org: se, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
-  # p. 8
-  # - { id: yc2l, tit: Етюд D minor,
-  #     com: А. Нечипоренко, src: SB3NU1979,
-  #     org: ua, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
+  - { id: yc2l, tit: Етюд D minor,
+      com: А. Нечипоренко, src: SB3NU1979,
+      org: ua, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
   # p. 10
   # - { id: t0ai, tit: Етюд A major,
   #     com: С. Чапкій, src: SB3NU1979,

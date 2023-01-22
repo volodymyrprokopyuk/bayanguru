@@ -1,0 +1,36 @@
+{% macro rhFrag1(a) %}
+  {{ a }} e d c bes a) | e'( d c bes a g) |
+{% endmacro %}
+
+{% macro rhFrag2(a) %}
+  {{ a }} g f e d cis | d e f g gis a\) |
+{% endmacro %}
+
+{% macro rightHand(config) %}
+\tempo Allegro
+\clef treble
+\key d \minor
+\time 3/8
+\relative {
+  {{ config() }}
+  {{ rhFrag1("f''=''16(\\mf") }}
+  {{ rhFrag2("a='16\\(") }}
+  {{ rhFrag1("f'=''16(") }}
+  a='16\(\< gis a bes b cis |
+  d=''16 e f g gis \after 16\! a\) |
+  {{ rhFrag1("f'='''16(\\f") }}
+  {{ rhFrag2("a=''16\\(") }}
+  {{ rhFrag1("f'='''16(") }}
+  a=''16\(\>^\tempRit g f e d cis |
+  d=''16 cis c b bes \after 16\! a\) |
+  {{ rhFrag1("f'=''16(\\p^\\tempATempo") }}
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key d \minor
+\relative {
+  {{ config() }}
+}
+{% endmacro %}
