@@ -15,6 +15,16 @@
   d=''16 e f g gis \after 16\! a=''\) |
 {% endmacro %}
 
+{% macro lhFrag1(a) %}
+  {{ a }} dm!4 | g,8 gm!4 |
+  a=,8 a7!4 | d=8 dm!4 |
+{% endmacro %}
+
+{% macro lhFrag2(a) %}
+  {{ a }} fM! r | bes besM! r |
+  c=8 c7! r | f, fM! r |
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Allegro
 \clef treble
@@ -31,6 +41,7 @@
   {{ rhFrag1("f'='''16(") }}
   a=''16\(\>^\tempRit g f e d cis |
   d=''16 cis c b bes \after 16\! a\) |
+
   {{ rhFrag1("f'=''16(\\p^\\tempATempo") }}
   {{ rhFrag3("c=''16\\(") }}
   {{ rhFrag1("f=''16(") }}
@@ -39,8 +50,9 @@
   {{ rhFrag1("f='''16(\\f") }}
   {{ rhFrag3("c='''16\\(") }}
   {{ rhFrag1("f='''16(") }}
-  c='''16\(^\tempRit bes a g f e |
-  f=''16\> e f g a \after 16\! g\) |
+  c='''16\(\>^\tempRit bes a g f e |
+  f=''16 e f g a \after 16\! g\) |
+
   {{ rhFrag1("f=''16(\\p^\\tempATempo") }}
   {{ rhFrag2("a='16\\(") }}
   {{ rhFrag1("f'=''16(") }}
@@ -58,5 +70,22 @@
 \key d \minor
 \relative {
   {{ config() }}
+  {{ lhFrag1("d=8-\\stBass") }}
+  {{ lhFrag1("d=8") }}
+  {{ lhFrag1("d=8") }}
+  d=8 dm!4 | g,8 gm!4 |
+  a=,8 a7!4 | d=4( c=8) |
+
+  {{ lhFrag2("f,=,8") }}
+  {{ lhFrag2("f=,8") }}
+  {{ lhFrag2("f=,8") }}
+  f=,8 fM! r | bes besM! r |
+  c=8 c7! r | f4( e=8) |
+
+  {{ lhFrag1("d=8") }}
+  {{ lhFrag1("d=8") }}
+  {{ lhFrag1("d=8") }}
+  d=8 dm!4 | g,8 gm!4 |
+  a=,8 a7!4 | d=8 d,+dm! r |
 }
 {% endmacro %}
