@@ -41,10 +41,9 @@ pieces:
   - { id: yc2l, tit: Етюд D minor,
       com: А. Нечипоренко, src: SB3NU1979,
       org: ua, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
-  # p. 10
-  # - { id: t0ai, tit: Етюд A major,
-  #     com: С. Чапкій, src: SB3NU1979,
-  #     org: ua, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
+  - { id: t0ai, tit: Етюд A major,
+      com: С. Чапкій, src: SB3NU1979,
+      org: ua, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
   # SB4NU1978
   # p. 4
   # - { id: 4uih, tit: Етюд G minor,

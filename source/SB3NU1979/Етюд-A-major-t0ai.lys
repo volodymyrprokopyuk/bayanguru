@@ -1,0 +1,50 @@
+{% macro rhFrag1(a) %}
+  {{ a }} b cis d e fis gis a |
+  | b16 cis d cis b a gis fis\) |
+{% endmacro %}
+
+{% macro rhFrag2() %}
+  e='16\(-> fis gis fis e d cis b |
+  a=16-> b cis b a-> b cis b=\) |
+{% endmacro %}
+
+{% macro lhFrag1(a) %}
+  {{ a }} r aM! r | a r b,@m! r8 |
+  gis=,8 r e@7! r8 | a=, r aM! r |
+{% endmacro %}
+
+{% macro rightHand(config) %}
+\tempo Allegretto
+\clef treble
+\key a \major
+\time 2/4
+\relative {
+  {{ config() }}
+  {{ rhFrag1("a=16\\(->\\f") }}
+  {{ rhFrag2() }}
+  {{ rhFrag1("a=16\\(->") }}
+  e='16\(-> fis gis fis e d cis b |
+  a=16 b cis d dis e fis gis\) |
+  a='16\(-> b cis b a b cis a |
+  b='16 cis d cis b a gis fis\) |
+  {{ rhFrag2() }}
+  a=16\(-> b cis b a-> b cis a |
+  b=16-> cis d cis b a gis fis\) |
+  e=16\(-> fis gis fis e fis gis e |
+  a=8\)-> r <a= cis e a> r |
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key a \major
+\relative {
+  {{ config() }}
+  {{ lhFrag1("a,=,8-\\stBass") }}
+  a=,8 r aM! r | d r b,@m! r8 |
+  e=8 r e7! r | a,,+aM! r r4 |
+  {{ lhFrag1("a,=,8") }}
+  a=,8 r aM! r | d,+b,@m! r8 r4 |
+  e=,8 r r e( | a)-> r a-> r |
+}
+{% endmacro %}
