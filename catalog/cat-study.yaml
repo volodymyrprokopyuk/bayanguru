@@ -45,10 +45,9 @@ pieces:
       com: С. Чапкій, src: SB3NU1979,
       org: ua, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
   # SB4NU1978
-  # p. 4
-  # - { id: 4uih, tit: Етюд G minor,
-  #     com: В. Логачов, src: SB4NU1978,
-  #     org: ru, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
+  - { id: 4uih, tit: Етюд G minor,
+      com: В. Логачов, src: SB4NU1978,
+      org: ru, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
   # p. 6
   # - { id: j5us, tit: Етюд G major,
   #     com: Є. Юцевич, src: SB4NU1978,
