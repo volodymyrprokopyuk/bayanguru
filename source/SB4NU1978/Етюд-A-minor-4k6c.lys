@@ -1,0 +1,29 @@
+{% macro rightHand(config) %}
+\tempo "Allegro moderator, dramatico"
+\clef treble
+\key a \minor
+\time 4/4
+\relative {
+  {{ config() }}
+  a=16(\mf gis a b c8) r a16( gis a b c8) r |
+  a=16(\< gis a b c d dis e \after 8\! f8) r r4 |
+  \repeat unfold 2 { b,=16( ais b c d8) r }
+  b=16(\< ais b c d cis d dis e dis %
+  e='16 f fis eis fis \after 16\! gis) |
+  a='16(\f gis a b c8) r a16( gis a b c8) r |
+  a='16(\< gis a b c d e f \after 2\! g2) |
+  fis=''16(\p g fis eis fis8) r f16( g f e f8) r |
+  e=''16( f e dis e8) r c16( d c b c8) r |
+  d=''16\( e d c b c b a b c b a g a g f |
+  e='16\< dis e f g a g \after 16\! f %
+  e='16\> f e d c d c \after 16\! b\) |
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key a \minor
+\relative {
+  {{ config() }}
+}
+{% endmacro %}

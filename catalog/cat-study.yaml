@@ -51,10 +51,9 @@ pieces:
   - { id: j5us, tit: Етюд G major,
       com: Є. Юцевич, src: SB4NU1978,
       org: ua, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
-  # p. 8
-  # - { id: 4k6c, tit: Етюд A minor,
-  #     com: К. Мясков, src: SB4NU1978,
-  #     org: ua, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
+  - { id: 4k6c, tit: Етюд A minor,
+      com: К. Мясков, src: SB4NU1978,
+      org: ua, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
   # SB5NU1980
   # p. 4
   # - { id: hwwc, tit: Етюд F major,
