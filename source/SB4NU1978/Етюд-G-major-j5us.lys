@@ -1,3 +1,5 @@
+{% from "util.lys" import v2 %}
+
 {% macro rhFrag1(a) %}
   {{ a }} a b c d e fis g %
   a='16 b c d e fis g \after 16\! a='' |
@@ -6,6 +8,12 @@
 {% macro rhFrag2() %}
   b=''16\> a g fis e d c b %
   a='16 g fis e d c b \after 16\! a= |
+{% endmacro %}
+
+{% macro lhFrag1(a) %}
+  {{ a }} r gM!4( c@M!8) r8 fis4( |
+  e=,8) r em!4( a,@m!8) r8 d'=4 |
+  b=,8 r g,@M!4( c@M!8) r8 %
 {% endmacro %}
 
 {% macro rightHand(config) %}
@@ -60,10 +68,25 @@
 \key g \major
 \relative {
   {{ config() }}
-  g,=,8-\stBass r gM!4( c@M!8) r8 fis4( |
-  e=,8) r em!4( a,@m!8) r8 d'4 |
-  g,=,8 r g,@M!4( c@M!8) r8 a4( |
+  {{ lhFrag1("g,=,8-\\stBass") }} a4( |
   d=8) r g,@M!4( d@M!8) r8 d4 |
   e=8 r em! r a,,+am! r b,,+d@M! r8 |
+  \repeat unfold 3 { c,+cM!8 r a,,+am! r }
+  e,+em!8 r r4 |
+  \repeat unfold 2 { c,+a,@m!8 r8 b,,+d@M! r8 }
+  c,+a,@m!8 r8 b=, r a,,+am! r g r |
+  fis,,+b,@7!8 r8 g,,+e@m! r8 dis,+b,@7! r8 e,+em! r |
+  b,,+b7!8 r c,+cM! r d,+g,@M! r8 r4 |
+  \repeat unfold 3 { ees,+c@m!8 r8 d,+d7! r }
+  \repeat unfold 3 { d,+d7!8 r r4 }
+  {{ lhFrag1("g=,8") }} a r |
+  \repeat unfold 3 { d,+b,@m!8 r8 c,+cM! r }
+  d,+b,@m!8 r8 e,+em! r |
+  \repeat unfold 3 { fis,,+a,@m!8 r8 g,,+e@m! r8 }
+  a,,+am!8 r b,,+g,@M! r8 |
+  \repeat unfold 2 { c,+cM!8 r b,,+d@M! r8 }
+  e,+em!8 r d,+g,@M! r8 %
+  {{ v2("d7!2~ d78 r", "d=8 r r4 r") }}
+  d,+d7!8 r g,,+gM! r g=,-. r |
 }
 {% endmacro %}
