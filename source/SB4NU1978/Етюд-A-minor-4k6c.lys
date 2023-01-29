@@ -1,3 +1,13 @@
+{% macro rhFrag1() %}
+  a=16(\mf gis a b c8) r a16( gis a b c8) r |
+  a=16(\< gis a b c d dis e \after 8\! f8) r r4 |
+  \repeat unfold 2 { b,=16( ais b c d='8) r }
+{% endmacro %}
+
+{% macro rhFrag2(a, b, c) %}
+  {{ a }} gis {{ b }} a b c b c d e dis e f fis eis fis gis {{ c }} | %
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo "Allegro moderator, dramatico"
 \clef treble
@@ -5,9 +15,7 @@
 \time 4/4
 \relative {
   {{ config() }}
-  a=16(\mf gis a b c8) r a16( gis a b c8) r |
-  a=16(\< gis a b c d dis e \after 8\! f8) r r4 |
-  \repeat unfold 2 { b,=16( ais b c d8) r }
+  {{ rhFrag1() }}
   b=16(\< ais b c d cis d dis e dis %
   e='16 f fis eis fis \after 16\! gis) |
   a='16(\f gis a b c8) r a16( gis a b c8) r |
@@ -17,6 +25,22 @@
   d=''16\( e d c b c b a b c b a g a g f |
   e='16\< dis e f g a g \after 16\! f %
   e='16\> f e d c d c \after 16\! b\) |
+
+  {{ rhFrag1() }}
+  b=16(\< ais b c d dis e fis \after 2\! gis2) |
+  a='16(\f gis a b cis8) r d16( cis d e f8) r |
+  g,='16( fis g a b8) r c16( b c d e8) r |
+  f=''16\( g f e %
+  \repeat unfold 2 { d=''16 e d c }
+  \repeat unfold 2 { b='16 c b a }
+  g='16 a g f e f e d c d c b\) |
+  a=16( gis a b c8) r_\dynDim r2 |
+  a=16( gis a b c8) r r2 |
+  {{ rhFrag2("a=16(\\pp", "_\\dynCresc", ")") }}
+  {{ rhFrag2("a='16(", "", ")") }}
+  \ottava #1
+  {{ rhFrag2("a=''16(", "", "") }}
+  a='''8)-. r r4 r2 \bar "|."
 }
 {% endmacro %}
 
