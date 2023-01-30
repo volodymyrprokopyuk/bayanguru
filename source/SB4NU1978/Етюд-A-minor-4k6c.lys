@@ -10,7 +10,7 @@
 
 {% macro lhFrag1(a, b) %}
   {{ a }} r r {{ b }} a,,+am! r r e |
-  a,,+am!8 r r4 r8 a=,[d,+dm! a] |
+  a,,+am!8 r r4 r8 a=,[ d,+dm! a] |
   d,+dm!8 r r a=, d,+dm! r r a |
   d,+dm!8 r r4 %
 {% endmacro %}
@@ -47,7 +47,7 @@
   {{ rhFrag2("a='16(", "", ")") }}
   \ottava #1
   {{ rhFrag2("a=''16(", "", "") }}
-  a='''8)-.\f r r4 r2 \bar "|."
+  a='''8)-.\f \ottava #0 r r4 r2 \bar "|."
 }
 {% endmacro %}
 
@@ -59,18 +59,22 @@
   {{ lhFrag1("a,,+am!8-\\stBass", "e,=,") }}
   b,,+e@7!8 r8 e,,+e7! r |
   a,,+am!8 r r e=, a,,+am! r r e |
-  a,,+am!8 r r4 r8 cis'=[e a,,+a7!] |
+  a,,+am!8 r r4 r8 cis'=[ e a,,+a7!] |
   d,+dM!8 r r a,=,-- d,+dm! r r b-- |
   c,+a,@m!8 r8 r8 b=,-- a,,+am!8 r r g-- |
   fis,,+d@M!8 r8 r4 d,+dm!8 r r4 |
   gis,,+e@7!8 r8 d,+dm!8 r b,,+e@7! r8 r4 |
 
-  {{ lhFrag1("a,,+am!8", "e=,") }} r8 e=, c' b |
-  cis,+a,@7!8 r8 r e,+a,@7! d,+dm!8 r r c,+d@m! |
+  {{ lhFrag1("a,,+am!8", "e=,") }} r8 e=,( c' b) |
+  cis,+a,@7!8 r8 r e,,+a,@7! d,+dm!8 r r c,+d@m! |
   b,,+g,@7!8 r8 r g,,+g7! c,+cM! r r g,,+c@M! |
   d,+dm!8 r r e,=, f,,+d@m! r8 r4 |
   a,,+d@m!8 r8 r4 gis,,+e@7!8 r8 r4 |
   a,,+am!8 r r a,@m!( g,@M!2) |
   r4 r8 g,@M!( f,@M!2) |
+  a,,+am!8 r r4 b,,+e@7!8 r8 r4 |
+  a,,+am!8 r d,+dm! r b,,+e@7!8 r8 r4 |
+  a,,+am!8 r d,+dM! r b,,+e@7!8 r8 e,,+e7! r |
+  a,,+am!8 r e=, r a,,+am!8 r r4 |
 }
 {% endmacro %}
