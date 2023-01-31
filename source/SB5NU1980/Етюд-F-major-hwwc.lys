@@ -1,0 +1,36 @@
+{% macro rightHand(config) %}
+\tempo Allegro
+\clef treble
+\key f \major
+\time 2/4
+\relative {
+  {{ config() }}
+  \repeat volta 2 {
+    c'='16\mf d_\artLegato c d %
+    \repeat unfold 3 { c='16 d c d }
+    c='16 d e f g c, d e |
+    f='16 e f g a g a bes |
+    \repeat unfold 4 { c=''16 d c d }
+    c=''16 d e f g c, d e |
+    f=''16\> c f a \after 8\! f=''8-. r |
+
+    \key c \major
+    e'='''16\f d c b a g f e |
+    d=''16 e f g a d e f |
+    d='''16 c b a g f e d |
+    c=''16 d e f g c d e |
+    c='''16-> b a g f e d c |
+    a'=''16-> g f e d c b a |
+    d=''16-> c b a g f e d |
+    c='16->\> d e f fis g c \after 16\! d |
+  }
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key f \major
+\relative {
+  {{ config() }}
+}
+{% endmacro %}
