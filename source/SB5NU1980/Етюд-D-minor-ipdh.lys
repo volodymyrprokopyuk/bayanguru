@@ -1,0 +1,41 @@
+{% macro rhFrag1(a, b) %}
+  {{ a }} a' {{ b }} g f e d | c bes a g f e |
+  d='16\> c bes a g a | bes c d e f \after 16\! g |
+  a='16\< b cis b cis d | cis d e d e \after 16\! f |
+  d=''16 cis d e f g | a gis g e cis bes |
+  a='16 a' g f e d | c\> ees d c bes \after 16\! a |
+  bes='16\< fis g a bes c | d e f g a \after 16\! bes |
+  a=''16\> f d a g f | e d cis b cis \after 16\! f |
+  d='16\< a' f d' a \after 16\! f' | d=''4 r8 |
+{% endmacro %}
+
+{% macro rightHand(config) %}
+\tempo Allegro
+\clef treble
+\key d \minor
+\time 3/8
+\relative {
+  {{ config() }}
+  {{ rhFrag1("a'='16\\mf", "_\\artLegato") }}
+
+  c=''16\f\> f e d c bes | a g f e d \after 16\! c |
+  g''=''16\> f e d c bes  a g f e d \after 16\! c |
+  bes''=''16\> a g f e d | c bes a g f \after 16\! e |
+  f='16\< g a bes b c | d c b c d \after 16\! e |
+  f=''16\> ees c a g \after 16\! f |
+  e='16\< f g a bes c | d a bes c d \after 16\! e |
+  f=''16 g a bes c d | c d c a g f |
+  e=''16\> d c bes a \after 16\! g |
+  f='16\< c' a f' c \after 16\! a' | f=''8 r r |
+
+  {{ rhFrag1("a,='16\\mf", "") }} \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key d \minor
+\relative {
+  {{ config() }}
+}
+{% endmacro %}

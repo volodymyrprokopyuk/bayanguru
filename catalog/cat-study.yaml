@@ -58,10 +58,9 @@ pieces:
   - { id: hwwc, tit: Етюд F major,
       com: О. Денисов, src: SB5NU1980,
       org: ua, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
-  # p. 8
-  # - { id: ipdh, tit: Етюд D minor,
-  #     com: С. Титов, src: SB5NU1980,
-  #     org: ru, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
+  - { id: ipdh, tit: Етюд D minor,
+      com: С. Титов, src: SB5NU1980,
+      org: ru, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
   # p. 10
   # - { id: h3xy, tit: Етюд A minor,
   #     com: А. Нечипоренко, src: SB5NU1980,
