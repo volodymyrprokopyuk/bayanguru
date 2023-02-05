@@ -65,7 +65,20 @@ pieces:
   # - { id: h3xy, tit: Етюд A minor,
   #     com: А. Нечипоренко, src: SB5NU1980,
   #     org: ua, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
+
   # Arpeggio
+  # p. 16
+  # - { id: 9h35, tit: Етюд G major,
+  #     com: Г. Беренс, src: SB1NU1979,
+  #     org: se, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elm }
+  # p. 19
+  # - { id: h8lm, tit: Етюд C major,
+  #     com: [К. Черні, Г. Гермер], src: SB1NU1979,
+  #     org: at, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elm }
+  # p. 19
+  # - { id: 09ok, tit: Етюд G major,
+  #     com: С. Аксюк, src: SB1NU1979,
+  #     org: ru, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elm }
   # Wrist movement
   # Pepetition
 
