@@ -32,6 +32,20 @@
   gis=''32 a b c d e fis gis=''' %
 {% endmacro %}
 
+{% macro lhFrag1(a) %}
+  {{ a }} am! f d@m! | e'8 eM! a,=, e@M |
+{% endmacro %}
+
+{% macro lhFrag2(a) %}
+  e'=8 eM! a, am! | b e@7! c8 a,@m! |
+  {{ a }} e8 a,@m! | e8 e7! a,=, am! |
+{% endmacro %}
+
+{% macro lhFrag3(a) %}
+  e'=8 d c r | e d c a |
+  f'=8 d@m! e8 a,@m! | f8 e a,=, {{ a }} | %
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Allegro
 \clef treble
@@ -75,5 +89,20 @@
 \key a \minor
 \relative {
   {{ config() }}
+  {{ lhFrag1("a,=,8-\\stBass") }}
+  {{ lhFrag1("a=,8") }}
+  {{ lhFrag1("a=,8") }}
+  a=,8 am! d dm! | e eM! a,=, am! |
+
+  {{ lhFrag2("d=8 dm!") }}
+  {{ lhFrag2("f=8 d@m!") }}
+
+  {{ lhFrag3("r") }}
+  {{ lhFrag3("am!") }}
+
+  {{ lhFrag1("a=,8") }}
+  {{ lhFrag1("a=,8") }}
+  {{ lhFrag1("a=,8") }}
+  a=,8 am! f d@m! | e'8 e7! a,=, a,,+am! |
 }
 {% endmacro %}
