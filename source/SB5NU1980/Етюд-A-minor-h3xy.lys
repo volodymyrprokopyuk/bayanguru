@@ -6,14 +6,21 @@
   {{ a }} a b a gis e fis gis a\< b c d dis e fis \after 32\! gis |
 {% endmacro %}
 
-{% macro rightHand(config) %}
-\tempo Allegro
-\clef treble
-\key a \minor
-\time 2/4
-\relative {
-  {{ config() }}
-  {{ rhFrag1("a''=''32\\mp", "_\\artLegato") }}
+{% macro rhFrag3(a) %}
+  {{ a }} a b a gis e fis gis a b c d dis e g fis |
+{% endmacro %}
+
+{% macro rhFrag4(a) %}
+  {{ a }} gis b e gis, b e gis %
+  a,=32\< c e a c, e a c |
+  e,='32 gis b e gis, b e gis %
+  a,='32 c e a c, e a \after 32\! c |
+  b=''32\mf a f d b a f d %
+  e='32 a c e a, c e a |
+  b,='32 d f a e\> gis b e=''' %
+{% endmacro %}
+
+{% macro rhFrag5() %}
   {{ rhFrag2("gis='32") }}
   {{ rhFrag1("a=''32\\mf", "") }}
   gis='32 a b c d e fis gis %
@@ -22,7 +29,44 @@
   {{ rhFrag1("a='''32\\f", "") }}
   {{ rhFrag2("gis=''32") }}
   {{ rhFrag1("a='''32", "") }}
-  gis=''32 a b c d e fis gis a='''8 \ottava #0 r |
+  gis=''32 a b c d e fis gis=''' %
+{% endmacro %}
+
+{% macro rightHand(config) %}
+\tempo Allegro
+\clef treble
+\key a \minor
+\time 2/4
+\relative {
+  {{ config() }}
+  {{ rhFrag1("a''=''32\\mp", "_\\artLegato") }}
+  {{ rhFrag5() }} a='''8 \ottava #0 r |
+
+  {{ rhFrag3("gis,,,=32\\p") }}
+  f='32 e d c b c e d %
+  c='32 b a b c d dis e |
+  g='32 fis f e d e f g %
+  a='32 b c d dis e g fis |
+  f=''32 e d c b c e d %
+  c=''32 b a b c d e fis |
+  \ottava #1
+  {{ rhFrag3("gis=''32\\mf") }}
+  f='''32 e d c b c e d %
+  c='''32 b a gis g fis f e |
+  \ottava #0
+  d=''32 c b a b c d e %
+  c=''32 b a b c d dis e |
+  g=''32 fis f e dis e fis gis %
+  a=''32 b c e a='''8 |
+
+  {{ rhFrag4("e,,,=32\\p") }}
+  a,=''32 e c a a e c \after 32\! a |
+  {{ rhFrag4("e=32\\p") }}
+  a,=''32 b c e \after 8\! a='''8\p |
+
+  {{ rhFrag1("a,=''32\\f", "") }}
+  {{ rhFrag5() }}
+  a='''8 <a,='' c e a> \ottava #0 \bar "|."
 }
 {% endmacro %}
 
