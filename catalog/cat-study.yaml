@@ -96,6 +96,10 @@ pieces:
   # - { id: m1je, tit: Етюд D minor,
   #     com: Г. Гембера, src: SB3NU1979,
   #     org: ua, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elm }
+  # p. 20
+  # - { id: x745, tit: Етюд A minor,
+  #     com: К. Мясков, src: SB3NU1979,
+  #     org: ua, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elm }
 
   # Wrist movement
   # Pepetition
