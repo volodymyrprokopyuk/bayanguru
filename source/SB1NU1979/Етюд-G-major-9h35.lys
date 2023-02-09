@@ -1,0 +1,27 @@
+{% macro rightHand(config) %}
+\tempo Moderato
+\clef treble
+\key g \major
+\time 3/4
+\relative {
+  {{ config() }}
+  \repeat volta 2 {
+    d''=''8(\f g fis g b g | d4) d-. d-. |
+    d=''8( a' gis a c a | d,4) d-. d-. |
+    d=''8( g fis g b g | d4) d-. d-. |
+    d=''8( e fis g a fis | g4) g=''-. r |
+  }
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key g \major
+\relative {
+  {{ config() }}
+  g,=,4( gM!)-. gM-. | g( gM!)-. gM-. |
+  fis=,4_\artSimile d@7! d7 | fis d@7! d7 |
+  \repeat unfold 2 { g=,4 gM! gM }
+  d'=4 d7! d7 | g,,+gM! g,,+gM! r |
+}
+{% endmacro %}
