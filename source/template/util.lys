@@ -72,7 +72,7 @@
   \markup \line {
     \caps id: {{ piece.id }}, \caps org: {{ piece.org }},
     \caps sty: {{ piece.sty }}, \caps gnr: {{ piece.gnr }},
-    \caps frm: {{ piece.frm }}, \caps bss: {{ piece.bss }},
+    \caps frm: {{ piece.frm.join(" ") }}, \caps bss: {{ piece.bss }},
     \caps lvl: {{ piece.lvl }}
   }
 {% endmacro %}
