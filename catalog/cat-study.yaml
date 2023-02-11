@@ -73,10 +73,9 @@ pieces:
   - { id: h8lm, tit: Етюд C major,
       com: [К. Черні, Г. Гермер], src: SB1NU1979,
       org: at, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elm }
-  # p. 19
-  # - { id: 09ok, tit: Етюд G major,
-  #     com: С. Аксюк, src: SB1NU1979,
-  #     org: ru, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elm }
+  - { id: 09ok, tit: Етюд G minor,
+      com: С. Аксюк, src: SB1NU1979,
+      org: ru, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elm }
   # p. 22
   # - { id: ktnb, tit: Етюд A minor,
   #     com: К. Мясков, src: SB1NU1979,
