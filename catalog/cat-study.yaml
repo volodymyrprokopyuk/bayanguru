@@ -76,10 +76,9 @@ pieces:
   - { id: 09ok, tit: Етюд G minor,
       com: С. Аксюк, src: SB1NU1979,
       org: ru, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elm }
-  # p. 22
-  # - { id: ktnb, tit: Етюд A minor,
-  #     com: К. Мясков, src: SB1NU1979,
-  #     org: ua, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elm }
+  - { id: ktnb, tit: Етюд A minor,
+      com: К. Мясков, src: SB1NU1979,
+      org: ua, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elm }
   # p. 23
   # - { id: ri7i, tit: Етюд F major,
   #     com: Л. Шітте, src: SB1NU1979,
