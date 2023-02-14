@@ -83,10 +83,9 @@ pieces:
       com: Л. Шітте, src: SB1NU1979,
       org: dk, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elm }
   # SB2NU1977
-  # p. 10
-  # - { id: ucyp, tit: Етюд C major,
-  #     com: В. Белов, src: SB2NU1977,
-  #     org: ru, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elm }
+  - { id: ucyp, tit: Етюд C major,
+      com: В. Белов, src: SB2NU1977,
+      org: ru, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elm }
   # SB3NU1979
   # p. 19
   # - { id: m1je, tit: Етюд D minor,
