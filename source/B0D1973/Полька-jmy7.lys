@@ -30,8 +30,8 @@
 \key c \major
 \relative {
   {{ config() }}
-  {{ lhFrag1("c=8-.-\\stBass", "c= cM") }}
-  {{ lhFrag1("c=8-.", "c,+cM8 r") }}
+  {{ lhFrag1("c=8-\\stBass", "c= cM") }}
+  {{ lhFrag1("c=8", "c,+cM8 r") }}
   e=8 eM! gis, e@M | a8 am! e' a,@m |
   gis,=,8 e@M! e'8 eM | a, am! g a,@m |
   fis=,8 d@M! d'8 dM | g, gM! g=, gM |
