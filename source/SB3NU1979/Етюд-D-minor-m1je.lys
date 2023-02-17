@@ -6,6 +6,10 @@
   {{ a }} a, a' a, bes' a, c' a, a' a, ees'' a,,=') |
 {% endmacro %}
 
+{% macro lhFrag1() %}
+  c=8 cM! r e c@M r8 | f fM! r %
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Allegro
 \clef treble
@@ -42,5 +46,20 @@
 \key d \minor
 \relative {
   {{ config() }}
+  d=8 dm! dm f[ d@m dm8] |
+  e=8[ g,@m! gm8] g, gm gm |
+  c=8 c7! c7 e[ c@7 c78] |
+  f=8 fM! fM f fM fM |
+  fis=8[ d@M! dM8] a,[ d@M dM8] |
+  g=,8 gm! gm g gm gm |
+  f'=8[ d@m! dm8] a, aM! aM |
+  d=16( a bes a bes a d=8) dm! r |
+
+  {{ lhFrag1() }} r4. |
+  {{ lhFrag1() }} f fM! r |
+  fis=8[ d@7! d78] a,[ d@7 d78] |
+  g=,8 gm! gm gis[ e@7! e78] |
+  a=,8[ d@m! dm8] a a7! a7 |
+  d=8 r r d= r r |
 }
 {% endmacro %}
