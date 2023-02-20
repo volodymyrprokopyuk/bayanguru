@@ -90,10 +90,9 @@ pieces:
   - { id: m1je, tit: Етюд D minor,
       com: Г. Гембера, src: SB3NU1979,
       org: ua, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elm }
-  # p. 20
-  # - { id: x745, tit: Етюд A minor,
-  #     com: К. Мясков, src: SB3NU1979,
-  #     org: ua, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elm }
+  - { id: x745, tit: Етюд A minor,
+      com: К. Мясков, src: SB3NU1979,
+      org: ua, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elm }
   # SB4NU1978
   # p. 17
   # - { id: qt8h, tit: Етюд C minor,
