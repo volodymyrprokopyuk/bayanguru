@@ -1,31 +1,22 @@
 {
   "name": "bayan",
   "version": "0.1.0",
-  "description": "Music scores for bayan engraved with LilyPond",
+  "description": "Sheet music for bayan engraved with LilyPond",
   "main": "index.js",
-  "type": "module",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/volodymyrprokopyuk/bayan.git"
-  },
   "keywords": [
-    "music",
-    "bayan",
-    "score",
-    "lilypond"
+    "music", "sheet-music", "pdf", "bayan", "stradella-bass"
   ],
   "author": "Volodymyr Prokopyuk",
   "license": "MIT",
   "homepage": "https://volodymyrprokopyuk.github.io/bayan",
-  "dependencies": {
-    "http-server": "^14.1.1",
-    "js-yaml": "^4.1.0",
-    "marked": "^4.0.18",
-    "nunjucks": "^3.2.3",
-    "svgo": "^2.8.0",
-    "zx": "^7.0.3"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/volodymyrprokopyuk/bayan.git"
   },
-  "scripts": {
-    "serve": "http-server -c-1"
+  "type": "module",
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "nunjucks": "^3.2.3",
+    "zx": "^7.0.3"
   }
 }
