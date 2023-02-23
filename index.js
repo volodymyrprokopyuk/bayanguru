@@ -5,20 +5,25 @@ import parseArgs from "minimist"
 import { readPieces, readBooks } from "./lib/catalog.js"
 import { initPieces, engravePieces, engraveBooks } from "./lib/score.js"
 
-const argsConfig = {
-  boolean: ["i", "b", "nometa", "lint", "relax", "dry"],
-  alias: { c: "catalog", i: "init", b: "book", j: "jobs" },
-  default: { c: "", j: cpus().length }
+function configure() {
+  const argsConfig = {
+    boolean: ["i", "b", "nometa", "lint", "relax", "dry"],
+    alias: { c: "catalog", i: "init", b: "book", j: "jobs" },
+    default: { c: "", j: cpus().length }
+  }
+  return parseArgs(process.argv.slice(2), argsConfig)
 }
 
-const args = parseArgs(process.argv.slice(2), argsConfig)
-
-if (args.i) { await initPieces(args) }
-else if (args.b) {
-  const books = await readBooks(args)
-  await engraveBooks(books, args)
-}
-else {
+async function dispatch(args) {
+  if (args.i) {
+    return await initPieces(args)
+  }
+  if (args.b) {
+    const books = await readBooks(args)
+    return await engraveBooks(books, args)
+  }
   const pieces = await readPieces(args)
-  await engravePieces(pieces, args)
+  return await engravePieces(pieces, args)
 }
+
+await dispatch(configure())

@@ -71,7 +71,7 @@
 }
 \pageBreak \markup \null \pageBreak
 
-{% for piece in pieces %}
+{% for piece in book.pieces %}
   {{ pieceTocItem(piece) }}
   {{ pieceScore(piece) }}
 {% endfor %}
