@@ -3,6 +3,28 @@
 Engraving system for high quality bayan sheet music in PDF with support for
 Stradella bass and free bass
 
+## Sheet music library
+
+- **Purpose** (the reason to exist, why?). Promote and support the art of bayan
+  music through free and open source sheet music content of the highest quality
+- **Vision** (the goal of the purpose, what?). Become the most complete and
+  comprehensive sheet music library for bayan
+- **Mission** (the path to the purpose, how?). Combine the community effort to
+  sheet music production with the best music engraving tools
+  ([LilyPond](https://lilypond.org/))
+- **Features**
+    - **Free and open source** sheet music content for bayan
+    - **The highest quality** engraving sheet music for Stradella system and
+      free bass
+    - **The most complete and comprehensive** bayan sheet music library
+    - **Community effort** to sheet music production (curated list of verified
+      and the most wanted pieces)
+      - Platform for top quality sheet music **distribution on the web** (HTML)
+      and **for print** (PDF)
+    - **Indexed database** of individual sheet music pieces for sheet music
+      browsing, searching and visualization
+    - **Built-in linter** to ensure source code quality and consistency
+
 ## Catalog
 
 ``` bash
