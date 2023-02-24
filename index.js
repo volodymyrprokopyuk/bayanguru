@@ -2,8 +2,8 @@
 
 import { cpus } from "os"
 import parseArgs from "minimist"
-import { readPieces, readBooks } from "./lib/catalog.js"
-import { initPieces, engravePieces, engraveBooks } from "./lib/score.js"
+import { readPieces, readBooks } from "./module/catalog.js"
+import { initPieces, engravePieces, engraveBooks } from "./module/score.js"
 
 function configure() {
   const argsConfig = {
