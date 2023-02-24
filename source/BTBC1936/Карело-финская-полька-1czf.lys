@@ -141,14 +141,16 @@
   g=,8 g7! b g,@7 | c8 cm! ees c@m |
   c=8 g c= r |
 
+  \key f \minor
   \repeat unfold 2 { f,=,8 fm! c' f,@m | }
   f,=,8 fm! aes f,@m |
   \repeat unfold 3 { g=,8 c@M! c8 cM | }
   g=,8 c@7! c8 c7 | f, fm! aes f,@m |
   \repeat unfold 2 { f=,8 fm! c' f,@m | }
   f,=,8 fm! a f,@7! | bes8 besm! bes r |
-  bes=,8 besm! d bes,@m | f,8 fm! aes f,@m |
+  bes=,8 besm! des bes,@m | f,8 fm! aes f,@m |
   c=8 c7! c c7 |
   \repeat unfold 2 { f,=,8 c' f,=, r | }
+  \keyChangeBeforeBar \key c \minor
 }
 {% endmacro %}
