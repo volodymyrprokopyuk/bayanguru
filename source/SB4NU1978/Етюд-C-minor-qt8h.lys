@@ -1,3 +1,12 @@
+{% from "util.lys" import hSpace, shapedSlur %}
+
+{% macro rhFrag1() %}
+  c,=''16 aes' f aes c, aes' f aes %
+  aes,='16 f' c f aes, f' c f\) |
+  g,='16\( ees' c ees g, ees' c ees %
+  f,='16 d' b d f, d' b d='' |
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Moderato
 \clef treble
@@ -18,16 +27,39 @@
       f,='16 c' aes c f, c' aes c\) |
       f,='16\( des' aes des f, des' aes des %
       bes='16 g' e g bes, g' e g |
-      c,=''16 aes' f aes c, aes' f aes %
-      aes,='16 f' c f aes, f' c f\) |
-      g,='16\( ees' c ees g, ees' c ees
-      f,='16 d' b d f, d' b d |
+      {{ rhFrag1() }}
       \alternative {
         \volta 1 {
           c=''16 ees, g c g c ees g, c8\) r g='4 |
         }
         \volta 2 {
           c=''16( g ees' c g' c, ees g c='''8) r r4 |
+        }
+      }
+    }
+
+    \codaMark 1
+    \repeat volta 2 {
+      bes,='16\(\mf g' ees g bes, g' ees g %
+      bes,='16 g' ees g bes, g' ees g |
+      bes,='16 aes' f aes bes, aes' f aes %
+      bes,='16 aes' f aes bes, aes' f aes\) |
+      bes,='16\( bes' aes bes bes, bes' aes bes %
+      bes,='16_\dynCresc aes' f aes bes, aes' f aes |
+      bes,='16 g' ees g bes, g' ees g %
+      b,='16 g' f g b, g' f g\) |
+      c,=''16\(\f c' e, c' c, c' e, c' %
+      c,=''16 bes' g bes c, bes' g bes |
+      {{ rhFrag1() }}
+      \alternative {
+        \volta 1 {
+          ees,='16 c' g c ees, c' g c ees,4\) bes'='\sf |
+        }
+        \volta 2 {
+          \once \slurUp
+          {{ hSpace() }}
+          ees,='16\>( c' g c ees, c' g c %
+          \after 4\! ees,='4) g='\sf \bar "||"
         }
       }
     }
