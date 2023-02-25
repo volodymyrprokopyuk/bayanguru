@@ -94,10 +94,9 @@ pieces:
       com: К. Мясков, src: SB3NU1979,
       org: ua, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elm }
   # SB4NU1978
-  # p. 17
-  # - { id: qt8h, tit: Етюд C minor,
-  #     com: В. Хведченя, src: SB4NU1978,
-  #     org: ua, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elm }
+  - { id: qt8h, tit: Етюд C minor,
+      com: В. Хведченя, src: SB4NU1978,
+      org: ua, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elm }
   # p. 19
   # - { id: djop, tit: Етюд F major,
   #     com: К. Черні, src: SB4NU1978,

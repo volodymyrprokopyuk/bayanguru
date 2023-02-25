@@ -1,0 +1,44 @@
+{% macro rightHand(config) %}
+\tempo Moderato
+\clef treble
+\key c \minor
+\time 4/4
+\relative {
+  {{ config() }}
+  \repeat segno 2 {
+    \volta 1
+    \repeat volta 2 {
+      g'='16\(\p ees' c ees g, ees' c ees %
+      g,='16\< ees' c ees g, ees' c ees |
+      f,='16 d' b d f, d' b d %
+      f,='16 d' b d f, d' \after 16\! b d\) |
+      c,='16\( c' g c c, c' g c %
+      c,='16 c' g c c, c' g c |
+      ees,='16 c' aes c ees, c' aes c %
+      f,='16 c' aes c f, c' aes c\) |
+      f,='16\( des' aes des f, des' aes des %
+      bes='16 g' e g bes, g' e g |
+      c,=''16 aes' f aes c, aes' f aes %
+      aes,='16 f' c f aes, f' c f\) |
+      g,='16\( ees' c ees g, ees' c ees
+      f,='16 d' b d f, d' b d |
+      \alternative {
+        \volta 1 {
+          c=''16 ees, g c g c ees g, c8\) r g='4 |
+        }
+        \volta 2 {
+          c=''16( g ees' c g' c, ees g c='''8) r r4 |
+        }
+      }
+    }
+  }
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key c \minor
+\relative {
+  {{ config() }}
+}
+{% endmacro %}
