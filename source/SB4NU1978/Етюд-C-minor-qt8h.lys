@@ -15,7 +15,7 @@
 \relative {
   {{ config() }}
   \repeat segno 2 {
-    \volta 1
+    % \volta 1
     \repeat volta 2 {
       g'='16\(\p ees' c ees g, ees' c ees %
       g,='16\< ees' c ees g, ees' c ees |
@@ -38,7 +38,7 @@
       }
     }
 
-    \codaMark 1
+    \codaMark 1 % \volta 2
     \repeat volta 2 {
       bes,='16\(\mf g' ees g bes, g' ees g %
       bes,='16 g' ees g bes, g' ees g |
@@ -56,13 +56,18 @@
           ees,='16 c' g c ees, c' g c ees,4\) bes'='\sf |
         }
         \volta 2 {
-          \once \slurUp
           {{ hSpace() }}
-          ees,='16\>( c' g c ees, c' g c %
-          \after 4\! ees,='4) g='\sf \bar "||"
+          ees,='16\> {{ shapedSlur("bu", bs = 4, sh = 18, wd = 7, ht = 2) }} ( %
+          c'=''16 g c ees, c' g c \after 4\! ees,4) g='\sf \bar "||"
         }
       }
     }
+
+    \sectionLabel "Coda"
+    r16 a,=16( ces des f) ces( des f aes) %
+    des,( f aes ces aes f des) |
+    r16 aes=16( g fis) r ees'( d des) %
+    r16 aes'='16( g f <ees=' c'>4) \bar "|."
   }
 }
 {% endmacro %}
