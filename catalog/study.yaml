@@ -97,10 +97,9 @@ pieces:
   - { id: qt8h, tit: Етюд C minor,
       com: В. Хведченя, src: SB4NU1978,
       org: ua, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elm }
-  # p. 19
-  # - { id: djop, tit: Етюд F major,
-  #     com: К. Черні, src: SB4NU1978,
-  #     org: at, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elm }
+  - { id: djop, tit: Етюд F major,
+      com: К. Черні, src: SB4NU1978,
+      org: at, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elm }
   # p. 21
   # - { id: z04b, tit: Етюд Bes major,
   #     com: К. Черні, src: SB4NU1978,
