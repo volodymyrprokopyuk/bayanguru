@@ -65,5 +65,20 @@
 \relative {
   {{ config() }}
   \partial 16 { r16 | }
+  f,=,8-\stBass fM! e' c@M! | f,8 fM! g c@7! |
+  a=,8 f,@M! f8 fM! | dis' c@d! e8 c@M! |
+  bes=,8 c@M! g8 c@7! | a8 f,@M! bes8 g,@m! |
+  c=8 f,@M! c8 c7! | f, fM! f-> r16 %
+
+  \partial 16 { r16 | }
+  e'=8 c@M! d8 g,@7! | b8 g,@7! c8 cM! |
+  e=8 c@M! f,8 fM! | g,,+c@M![ g,,+g7!8] c,+cM! r8 |
+
+  bes=,8-- c@M! a8-- f,@M! | g8-- c@7! f8-- fM! |
+  a=,8-- ad! bes-- g,@m! | c8-- f,@M! c8-- c7! |
+  f,,+fM!8 r f,,+fM! c,+c7! | f,,+fM!8 r f,,+fM! c,+cM! |
+  \repeat unfold 4 { f,,+fM!8 c,+cM! }
+  \repeat unfold 2 { f,,+fM!8 c,+c7! }
+  f,,+fM!8 f, f=,-> r16 %
 }
 {% endmacro %}
