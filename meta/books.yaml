@@ -94,16 +94,18 @@ books:
   - { id: stdy, tit: Вибрані етюди, sub: для баяна,
       pieces: [
       # Scale
-      # SB1NU1979
-      "gnt0", "jxnz", "e4vv", "d3fi", "wtuk", "b3nl", "vz59", "ryca",
-      # SB2NU1977
-      "mp9o", "x2ii",
-      # SB3NU1979
-      "ey1v", "yc2l", "t0ai",
-      # SB4NU1978
-      "4uih", "j5us", "4k6c",
-      # SB5NU1980
-      "hwwc", "ipdh", "h3xy",
+      { sec: Scale movements, pieces: [
+        # SB1NU1979
+        "gnt0", "jxnz", "e4vv", "d3fi", "wtuk", "b3nl", "vz59", "ryca",
+        # SB2NU1977
+        "mp9o", "x2ii",
+        # SB3NU1979
+        "ey1v", "yc2l", "t0ai",
+        # SB4NU1978
+        "4uih", "j5us", "4k6c",
+        # SB5NU1980
+        "hwwc", "ipdh", "h3xy",
+      ] },
 
       # Arpeggio
       # SB1NU1979

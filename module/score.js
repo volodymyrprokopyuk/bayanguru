@@ -119,8 +119,12 @@ export async function engravePieces(pieces, args) {
 
 async function lintBook(book) {
   let conforms = true
-  for (const piece of book.pieces) {
-    if (!await lint(piece)) { conforms = false }
+  for (const bpiece of book.pieces) {
+    if (bpiece.sec) {
+      for (const spiece of bpiece.pieces) {
+        if (!await lint(spiece)) { confroms = false }
+      }
+    } else if (!await lint(bpiece)) { conforms = false }
   }
   return conforms
 }

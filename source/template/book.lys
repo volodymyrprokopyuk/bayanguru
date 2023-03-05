@@ -71,9 +71,17 @@
 }
 \pageBreak \markup \null \pageBreak
 
-{% for piece in book.pieces %}
-  {{ pieceTocItem(piece) }}
-  {{ pieceScore(piece) }}
+{% for bpiece in book.pieces %}
+  {% if bpiece.sec %}
+    \markup { {{ bpiece.sec }} }
+    {% for spiece in bpiece.pieces %}
+      {{ pieceTocItem(spiece) }}
+      {{ pieceScore(spiece) }}
+    {% endfor %}
+  {% else %}
+    {{ pieceTocItem(bpiece) }}
+    {{ pieceScore(bpiece) }}
+  {% endif %}
 {% endfor %}
 \pageBreak
 \markuplist \table-of-contents

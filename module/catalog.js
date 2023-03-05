@@ -39,20 +39,40 @@ function addPieceMeta(piece) {
   }
 }
 
-function addBookPieces(book, cpieces) {
-  const bpieces = []
-  for (const pieceId of book.pieces) {
-    if (cpieces.has(pieceId)) {
-      bpieces.push(cpieces.get(pieceId))
+function addSectionPieces(section, cpieces) {
+  const spieces = []
+  for (const spiece of section.pieces) {
+    if (cpieces.has(spiece)) {
+      spieces.push(cpieces.get(spiece))
     } else {
-      throw new Error(`Piece ${pieceId} is not in catalog`)
+      throw new Error(`Piece ${spiece} is not in catalog`)
     }
   }
-  console.log(
-    chalk.blue(`Book ${book.id}:`),
-    chalk.yellow.bold(`${bpieces.length} pieces`)
-  )
+  section.pieces = spieces
+}
+
+function addBookPieces(book, cpieces) {
+  const bpieces = []
+  for (const bpiece of book.pieces) {
+    if (bpiece.sec) {
+      addSectionPieces(bpiece, cpieces)
+      bpieces.push(bpiece)
+    } else if (cpieces.has(bpiece)) {
+      bpieces.push(cpieces.get(bpiece))
+    } else {
+      throw new Error(`Piece ${bpiece} is not in catalog`)
+    }
+  }
   book.pieces = bpieces
+}
+
+function countBookPieces(book) {
+  let pieceCount = 0
+  for (const piece of book.pieces) {
+    if (piece.sec) { pieceCount += piece.pieces.length }
+    else { ++pieceCount }
+  }
+  return pieceCount
 }
 
 export async function readPieces(args, all = false) {
@@ -88,6 +108,10 @@ export async function readBooks(args) {
       addScoreFile(book)
       addBookPieces(book, cpieces)
       books.push(book)
+      console.log(
+        chalk.blue(`Book ${book.id}:`),
+        chalk.yellow.bold(`${countBookPieces(book)} pieces`)
+      )
     }
   }
   return books
