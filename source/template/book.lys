@@ -61,10 +61,12 @@
 {% endmacro %}
 
 {% macro sectionTitleMarkup(sec) %}
+  \pageBreak
   \markup \column {
     \fill-line { \fontsize #5 \bold \caps "{{ sec }}" }
     \vspace #1
   }
+  \tocSection "tocSec{{ loop.index }}" \markup { {{ sec }} }
 {% endmacro %}
 
 \paper {
@@ -85,7 +87,6 @@
 {% for bpiece in book.pieces %}
   {% if bpiece.sec %}
     {{ sectionTitleMarkup(bpiece.sec) }}
-    \tocSection "tocSec{{ loop.index }}" \markup { {{ bpiece.sec }} }
     {% for spiece in bpiece.pieces %}
       {{ pieceTocItem(spiece) }}
       {{ pieceScore(spiece) }}
