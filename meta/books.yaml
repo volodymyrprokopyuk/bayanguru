@@ -94,7 +94,7 @@ books:
   - { id: stdy, tit: Вибрані етюди, sub: для баяна,
       pieces: [
       # Scale
-      { sec: Scale movements, pieces: [
+      { sec: Гамоподібні рухи, pieces: [
         # SB1NU1979
         "gnt0", "jxnz", "e4vv", "d3fi", "wtuk", "b3nl", "vz59", "ryca",
         # SB2NU1977
@@ -106,21 +106,23 @@ books:
         # SB5NU1980
         "hwwc", "ipdh", "h3xy",
       ] },
-
       # Arpeggio
-      # SB1NU1979
-      "9h35", "h8lm", "09ok", "ktnb", "ri7i",
-      # SB2NU1977
-      "ucyp",
-      # SB3NU1979
-      "m1je", "x745",
-      # SB4NU1978
-      "qt8h", "djop",
-
+      { sec: Арпеджіо, pieces: [
+        # SB1NU1979
+        "9h35", "h8lm", "09ok", "ktnb", "ri7i",
+        # SB2NU1977
+        "ucyp",
+        # SB3NU1979
+        "m1je", "x745",
+        # SB4NU1978
+        "qt8h", "djop",
+      ] },
       # Chords
-      # SB2NU1977
-      "yai7",
-      # SB4NU1978
-      "k402", "l52j", "6u7s", "cj29",
-      # SB5NU1980
-      "pnrg", "978q", "6zcy"] }
+      { sec: Акорди, pieces: [
+        # SB2NU1977
+        "yai7",
+        # SB4NU1978
+        "k402", "l52j", "6u7s", "cj29",
+        # SB5NU1980
+        "pnrg", "978q", "6zcy"
+      ] } ] }

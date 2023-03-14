@@ -48,6 +48,9 @@
     \override Staff.KeyCancellation.extra-spacing-width = #'(-1.5 . 0)
   }
   \defineBarLine "!!" #'("!!" "!!" "!!")
+  tocSection =
+  #(define-music-function (label text) (symbol-list-or-symbol? markup?)
+     (add-toc-item! 'tocSectionMarkup text label))
 {% endmacro %}
 
 {% macro paperLayout() %}
@@ -95,9 +98,9 @@
 
 {% macro pieceTitleMarkup() %}
   scoreTitleMarkup = \markup \column {
-    \fill-line { \fontsize #5 \bold \fromproperty #'header:title }
+    \fill-line { \fontsize #4 \bold \fromproperty #'header:title }
     \vspace #0.2
-    \fill-line { \fontsize #2 \fromproperty #'header:subtitle }
+    \fill-line { \fontsize #1.5 \fromproperty #'header:subtitle }
     \fill-line { \abs-fontsize #10 \fromproperty #'header:meta }
     \vspace #0.2
     \fill-line {

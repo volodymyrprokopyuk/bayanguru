@@ -37,6 +37,10 @@
     \fill-line { \fontsize #4 \bold "Зміст" }
     \vspace #1
   }
+  tocSectionMarkup = \markup \column {
+    \fill-with-pattern #0.5 #RIGHT .
+      \fontsize #1 \caps \fromproperty #'toc:text \fromproperty #'toc:page
+  }
   tocItemMarkup = \markup \column {
     \fill-with-pattern #0.5 #RIGHT .
       \fromproperty #'toc:text \fromproperty #'toc:page
@@ -53,6 +57,13 @@
       \italic "{{ piece.aty }} {{ piece.arr }}"
     {% endif %}
     \caps id: {{ piece.id }}
+  }
+{% endmacro %}
+
+{% macro sectionTitleMarkup(sec) %}
+  \markup \column {
+    \fill-line { \fontsize #5 \bold \caps "{{ sec }}" }
+    \vspace #1
   }
 {% endmacro %}
 
@@ -73,7 +84,8 @@
 
 {% for bpiece in book.pieces %}
   {% if bpiece.sec %}
-    \markup { {{ bpiece.sec }} }
+    {{ sectionTitleMarkup(bpiece.sec) }}
+    \tocSection "tocSec{{ loop.index }}" \markup { {{ bpiece.sec }} }
     {% for spiece in bpiece.pieces %}
       {{ pieceTocItem(spiece) }}
       {{ pieceScore(spiece) }}
