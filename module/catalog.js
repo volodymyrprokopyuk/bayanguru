@@ -2,6 +2,7 @@ import { globbyStream } from "globby"
 import { readFile } from "fs/promises"
 import { load } from "js-yaml"
 import chalk from "chalk"
+import { $ } from "zx"
 
 const meta = {
   // Piece subtitle (sub)
@@ -115,4 +116,15 @@ export async function readBooks(args) {
     }
   }
   return books
+}
+
+export async function selectPieces(args) {
+  const pieces = await readPieces(args)
+  return pieces.filter(piece => args._.includes(piece.id))
+}
+
+export async function playPieces(pieces, args) {
+  for (const piece of pieces) {
+    await $`zathura scores/${piece.file}.pdf`
+  }
 }
