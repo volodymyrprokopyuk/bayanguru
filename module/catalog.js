@@ -124,7 +124,19 @@ export async function selectPieces(args) {
 }
 
 export async function playPieces(pieces, args) {
-  for (const piece of pieces) {
-    await $`zathura scores/${piece.file}.pdf`
+  function* playIndex() {
+    let i = 0, len = pieces.length, played = new Set()
+    while (args.cycle ? true : i < len) {
+      if (args.random) {
+        if (played.size === len) { played.clear() }
+        let ri = Math.floor(Math.random() * len)
+        while (played.has(ri)) { ri = Math.floor(Math.random() * len) }
+        played.add(ri)
+        yield (++i, ri)
+      } else { yield i++ % len }
+    }
+  }
+  for (const i of playIndex()) {
+    await $`zathura scores/${pieces[i].file}.pdf`
   }
 }

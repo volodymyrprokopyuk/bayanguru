@@ -9,7 +9,10 @@ import { initPieces, engravePieces, engraveBooks } from "./module/score.js"
 
 function configure() {
   const argsConfig = {
-    boolean: ["i", "b", "p", "nometa", "lint", "relax", "dry"],
+    boolean: [
+      "i", "b", "nometa", "lint", "relax", "dry",
+      "p", "cycle", "random"
+    ],
     alias: { i: "init", c: "catalog", b: "book", j: "jobs", p: "play" },
     default: { c: "", j: cpus().length }
   }
