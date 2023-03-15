@@ -5,7 +5,7 @@
 
 {% macro lhFrag1(a) %}
   {{ a }} fM! fm | f fM fM |
-  f=4 bes,@M! besM | f fM fM |
+  f=4 bes,@M! besM | f fM! fM |
 {% endmacro %}
 
 {% macro rightHand(config) %}
