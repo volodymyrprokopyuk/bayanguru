@@ -119,8 +119,27 @@ export async function readBooks(args) {
 }
 
 export async function selectPieces(args) {
+  const match = (tag) => (piece) => {
+    if (!args[tag]) { return true }
+    const matchers = args[tag].split(",").map(query => label => {
+      const neg = query.startsWith("^")
+      const re = new RegExp(neg ? query.slice(1) : query, "i")
+      return neg ? !re.test(label) : re.test(label)
+    })
+    const labels = [].concat(piece[tag])
+    return matchers.some(match => labels.some(match))
+  }
+  const tags = ["org", "sty", "gnr", "frm", "bss", "lvl", "tit", "com", "arr"]
+  const matchers = tags.map(match)
   const pieces = await readPieces(args)
-  return pieces.filter(piece => args._.includes(piece.id))
+  const selected = pieces.filter(piece =>
+    matchers.every(match => match(piece))
+  )
+  console.log(
+    chalk.blue("Selected:"),
+    chalk.yellow.bold(`${selected.length} pieces`)
+  )
+  return selected
 }
 
 export async function playPieces(pieces, args) {

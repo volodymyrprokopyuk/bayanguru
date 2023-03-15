@@ -14,7 +14,11 @@ function configure() {
       "p", "cycle", "random"
     ],
     alias: { i: "init", c: "catalog", b: "book", j: "jobs", p: "play" },
-    default: { c: "", j: cpus().length }
+    default: {
+      c: "", j: cpus().length,
+      org: "", sty: "", gnr: "", frm: "", bss: "", lvl: "",
+      tit: "", com: "", arr: ""
+    }
   }
   return parseArgs(process.argv.slice(2), argsConfig)
 }
