@@ -28,9 +28,9 @@
 \relative {
   {{ config() }}
   \partial 8 { r8 | }
-  f=8-\stBass fM! c cM | f[( fM!) fM] r |
+  f=8-\stBass fM! c cM! | f[( fM!) fM] r |
   bes,=,8 besM! c c7! | f[( fM!) fM] r |
-  f=8 fM! bes, c@M | a8 f@M! f'8 fM |
+  f=8 fM! bes, c@M! | a8 f@M! f'8 fM |
   g,=,8 c@7! c8 c7 | f[( fM!) fM] r |
   c=8[( c7!) c7] r | f[( fM!) fM] r |
   c=8[( c7!) c7 c7] | f=[( fM!) fM] r |

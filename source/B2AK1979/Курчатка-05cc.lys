@@ -31,7 +31,7 @@
 \relative {
   {{ config() }}
   a,=,8-\stBass a7! b a,@7 | cis8 a,@7! a8 a7 |
-  \repeat unfold 2 { d=8 dM! d dM | g, gM! d' dM | }
+  \repeat unfold 2 { d=8 dM! d dM | g, gM! d' dM! | }
   cis=8 a,@7! a8 a7 | d dM! d dM |
   e=8 a,@7! a,8 a7 | d dM! d dM |
   d=8 dM! d,+dM4-> |
