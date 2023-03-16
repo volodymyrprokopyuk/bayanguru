@@ -61,5 +61,25 @@
 \key bes \major
 \relative {
   {{ config() }}
+  bes,=,8-\stBass besM! f' bes,@M |
+  bes,=,8 besM! f' bes,@M |
+  \repeat unfold 2 { a,=,8 f@7! f'=8 f7 | }
+  bes,=,8 besM! f' bes,@M |
+  c=8 c7! g c@7 | f'8 fM! f fM |
+  ees=8 f@M! ees8 f@M | d8 dd! d dd |
+  g,=,8 g7! d' g,@7 | c8 cm! ees c@m |
+  ees=8 c@m! ees8 c@m | f8 bes,@M! d8 bes,@M |
+  f=8 f7! c f@7 |
+  \repeat unfold 2 {
+    bes,,+besM!8-- r r4 | a=,8 f@7! f'=8 f7 |
+  }
+  bes,,+besM!8-- r g, g7! | c,+cm!-- r a a7! |
+  d=8 dm! ees c@m! | f8 bes,@M! f8 f7! |
+  bes,,+besM!8-- f f@7![ f8] |
+  \repeat unfold 3 {
+    bes,@M!8[ f=8] f@7![ f=8] |
+  }
+  bes,@M!8 r8 bes,,+besM! r |
+  bes,=,4 r \fermata |
 }
 {% endmacro %}
