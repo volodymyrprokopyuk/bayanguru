@@ -100,10 +100,9 @@ pieces:
   - { id: djop, tit: Етюд F major,
       com: К. Черні, src: SB4NU1978,
       org: at, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elm }
-  # p. 21
-  # - { id: z04b, tit: Етюд Bes major,
-  #     com: К. Черні, src: SB4NU1978,
-  #     org: at, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elm }
+  - { id: z04b, tit: Етюд Bes major,
+      com: К. Черні, src: SB4NU1978,
+      org: at, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elm }
   # SB5NU1980
   # p. 21
   # - { id: 4s1u, tit: Етюд A minor,

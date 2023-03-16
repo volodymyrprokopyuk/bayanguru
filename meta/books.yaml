@@ -104,8 +104,7 @@ books:
         # SB4NU1978
         "4uih", "j5us", "4k6c",
         # SB5NU1980
-        "hwwc", "ipdh", "h3xy",
-      ] },
+        "hwwc", "ipdh", "h3xy"] },
       # Arpeggio
       { sec: Арпеджіо, pieces: [
         # SB1NU1979
@@ -115,8 +114,7 @@ books:
         # SB3NU1979
         "m1je", "x745",
         # SB4NU1978
-        "qt8h", "djop",
-      ] },
+        "qt8h", "djop", "z04b"] },
       # Chords
       { sec: Акорди, pieces: [
         # SB2NU1977
@@ -124,5 +122,4 @@ books:
         # SB4NU1978
         "k402", "l52j", "6u7s", "cj29",
         # SB5NU1980
-        "pnrg", "978q", "6zcy"
-      ] } ] }
+        "pnrg", "978q", "6zcy"] } ] }

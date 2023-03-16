@@ -1,0 +1,63 @@
+{% macro rhFrag1(a) %}
+  {{ a }} bes a bes f d' cis d %
+  f,='32 bes a bes f d' cis \after 32\! d |
+  f,='32 c' b c f, f' e f %
+  f,='32\> c' b c f, f' e \after 32\! f='' |
+{% endmacro %}
+
+{% macro rhFrag2() %}
+  d=''32-> f e f f,-> f' e f %
+  c=''32-> f e f f,-> f' e f='' |
+{% endmacro %}
+
+{% macro rightHand(config) %}
+\tempo Allegro
+\clef treble
+\key bes \major
+\time 2/4
+\relative {
+  {{ config() }}
+  f'='32\p bes_\artLegato a bes d bes a bes %
+  f='32_\dynCresc bes a bes d bes a bes |
+  \repeat unfold 2 { f='32 bes a bes d bes a bes }
+  f='32_\dynDim c' b c ees c b c %
+  \repeat unfold 3 { f,='32 c' b c ees c b c }
+  \repeat unfold 2 { f,='32 bes a bes d bes a bes }
+  g='32_\dynCresc bes a bes ees bes a bes %
+  g='32 bes a bes ees bes a bes |
+  \repeat unfold 4 { a='32 c b c f c b c }
+  b='32\f f' e f aes f e f %
+  b,='32 f' e f aes f e f |
+  b,='32 f' e f g f e f %
+  b,='32_\dynDim f' e f g f e f |
+  \repeat unfold 2 { c=''32 ees d ees g ees d ees }
+  \repeat unfold 2 { g,='32 c b c e c b c }
+  f,='32\p bes a bes d bes a bes %
+  f='32 bes a bes d bes a bes |
+  \repeat unfold 2 { f='32 a gis a c a gis a }
+  {{ rhFrag1("f='32\\<") }}
+  {{ rhFrag1("f,='32\\<") }}
+  f,='32 bes a bes f d' cis d %
+  g,='32_\dynCresc b ais b g g' fis g |
+  g,='32 c b c g ees' d ees %
+  a,='32 cis bis cis a bes gis bes |
+  a='32 f' e f g f e f %
+  c=''32_\dynDim ees d ees f ees d ees |
+  f,='32 d' cis d e d cis d %
+  f,='32 c' b c d c b c |
+  bes='32->\mf f' e_\dynCresc f f,-> f' e f %
+  c=''32-> f e f f,-> f' e f |
+  {{ rhFrag2() }}
+  bes,='32-> f' e f f,-> f' e f %
+  c=''32-> f e f f,-> f' e f |
+  {{ rhFrag2() }}
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key bes \major
+\relative {
+  {{ config() }}
+}
+{% endmacro %}
