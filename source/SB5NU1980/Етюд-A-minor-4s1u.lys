@@ -21,6 +21,31 @@
   c=''16 {{ a }} e, a c b e, gis {{ b }} b=' |
 {% endmacro %}
 
+{% macro lhFrag1(a) %}
+  {{ a }} am! d,+dm! r | a=,8 am! d,+dm! r |
+  a=,8 am! e' eM! | a,,+am! r r4 |
+{% endmacro %}
+
+{% macro lhFrag2() %}
+  g,,+gM!8 r c,+cM! r |
+  \repeat unfold 2 { f,,+fm!4(-> c,+cM!8)-. r | }
+{% endmacro %}
+
+{% macro lhFrag3() %}
+  b,,+bM!8 r e,+em! r |
+  \repeat unfold 2 { a,,+am!4(-> e,+em!8)-. r | }
+{% endmacro %}
+
+{% macro lhFrag4() %}
+  fis,,+b,@7!8 r8 g,,+e@m! r8 |
+  a,,+am!8 b,,+b7! e,+em! r |
+{% endmacro %}
+
+{% macro lhFrag5() %}
+  \repeat unfold 2 { e=8 eM! a,,+am! r | }
+  d=8 c b4 | e8[ d c b=,] |
+{% endmacro %}
+
 {% macro rightHand(config) %}
 \tempo Allegro
 \clef treble
@@ -46,9 +71,9 @@
   a=''16-> c, e a g b, e g |
   a=''16-> e c e g e b e |
   fis=''16 e dis fis e b e g |
-  b=''16 c b c b gis fis e |
+  b=''16 c b c b g fis e |
   fis=''16 e dis fis e b, e g |
-  b='16_\dynDim c b c b gis fis e |
+  b='16_\dynDim c b c b g fis e |
   fis='16 e dis fis e b e g |
   b='16 b cis dis e b e g |
   b=''16 b cis dis e b g fis |
@@ -68,5 +93,27 @@
 \key a \minor
 \relative {
   {{ config() }}
+  {{ lhFrag1("a,=,8-\\stBass") }}
+  {{ lhFrag1("a,=,8") }}
+  {{ lhFrag5() }}
+  {{ lhFrag1("a=,8") }}
+  {{ lhFrag2() }}
+  d,+dM!8 r f,,+fm! r |
+  {{ lhFrag2() }}
+  d,+dM!8 g,,+g7! c,+cM! r |
+  {{ lhFrag3() }}
+  fis,,+fisM!8 r a,,+am! r |
+  {{ lhFrag3() }}
+  b,,+bM!8 r e,+em! r |
+  {{ lhFrag4() }}
+  {{ lhFrag4() }}
+  \repeat unfold 2 { b,,+b7!8 r e,+em! r | }
+  R2 | R2 |
+
+  {{ lhFrag1("a,=,8") }}
+  {{ lhFrag1("a,=,8") }}
+  {{ lhFrag5() }}
+  a=,8 am! d,+dm! r | a=,8 am! d,+dm! r |
+  a=,8 am! e' eM! | a, e' a,,+am! r |
 }
 {% endmacro %}
