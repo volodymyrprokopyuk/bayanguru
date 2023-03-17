@@ -23,8 +23,8 @@
   f='32_\dynDim c' b c ees c b c %
   \repeat unfold 3 { f,='32 c' b c ees c b c }
   \repeat unfold 2 { f,='32 bes a bes d bes a bes }
-  g='32_\dynCresc bes a bes ees bes a bes %
-  g='32 bes a bes ees bes a bes |
+  g='32_\dynCresc bes a bes e bes a bes %
+  g='32 bes a bes e bes a bes |
   \repeat unfold 4 { a='32 c b c f c b c }
   b='32\f f' e f aes f e f %
   b,='32 f' e f aes f e f |
