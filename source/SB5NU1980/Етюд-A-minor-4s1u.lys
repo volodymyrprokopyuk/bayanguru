@@ -1,0 +1,72 @@
+{% macro rhFrag1(a, b) %}
+  {{ a }} e f a, d f |
+  e=''16 {{ b }} a, c e d f, a d |
+  c=''16 e, a c b e, gis b |
+  a='16 e fis gis=' %
+{% endmacro %}
+
+{% macro rhFrag2() %}
+  \repeat unfold 2 { f=''16-> aes, c f e g, c e='' | }
+{% endmacro %}
+
+{% macro rhFrag3(a) %}
+  \repeat unfold 2 { b='16 e, gis b c e, a c='' | }
+  d=''16 f, a d dis f, a dis |
+  e=''16 {{ a }} e, fis gis a b c d='' |
+{% endmacro %}
+
+{% macro rhFrag4(a, b) %}
+  e=''16 a, c e f a, d f |
+  e=''16 a, c e d f, a d |
+  c=''16 {{ a }} e, a c b e, gis {{ b }} b=' |
+{% endmacro %}
+
+{% macro rightHand(config) %}
+\tempo Allegro
+\clef treble
+\key a \minor
+\time 2/4
+\relative {
+  {{ config() }}
+  {{ rhFrag1("e''=''16\\mf a, c_\\artLegato", "") }} a b c d |
+  {{ rhFrag1("e=''16 a, c", "_\\dynCresc") }} a gis a ais |
+  {{ rhFrag3("\\f") }}
+  {{ rhFrag4("\\>", "\\after 16\\!") }}
+  a='16\< e fis gis a b c \after 16\! cis |
+  d=''16\p g, b d e g, c e |
+  {{ rhFrag2() }}
+  d=''16 fis, a d c f, aes c |
+  b='16 g b d e g, c e |
+  {{ rhFrag2() }}
+  d=''16 c b d c d e f |
+  fis=''16_\dynCresc b, dis fis g b, e g |
+  \repeat unfold 2 { a=''16-> c, e a g b, e g='' | }
+  fis=''16 ais, cis fis e a, c e |
+  dis=''16 b dis fis g b, e g |
+  a=''16-> c, e a g b, e g |
+  a=''16-> e c e g e b e |
+  fis=''16 e dis fis e b e g |
+  b=''16 c b c b gis fis e |
+  fis=''16 e dis fis e b, e g |
+  b='16_\dynDim c b c b gis fis e |
+  fis='16 e dis fis e b e g |
+  b='16 b cis dis e b e g |
+  b=''16 b cis dis e b g fis |
+  e=''16 e, g b e fis, a c |
+  e=''16^\tempRit g, ais cis e gis, b d='' |
+
+  {{ rhFrag1("e=''16\\mf^\\tempATempo a, c", "") }} a b c d |
+  {{ rhFrag1("e=''16 a, c", "") }} a gis a ais |
+  {{ rhFrag3("") }}
+  {{ rhFrag4("", "") }}
+  a='16 b c e a=''8 r \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand(config) %}
+\clef bass
+\key a \minor
+\relative {
+  {{ config() }}
+}
+{% endmacro %}
