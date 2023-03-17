@@ -82,7 +82,7 @@ function nunjucks() {
 
 async function lilypond(score, file) {
   process.env.PATH = `${process.env.HOME}/.lilypond/bin:${process.env.PATH}`
-  const lilypond = $`lilypond -f pdf -o ${file} -`
+  const lilypond = $`lilypond -dbackend=cairo -f pdf -o ${file} -`
   lilypond.stdin.write(score)
   lilypond.stdin.end()
   return await lilypond
