@@ -1,5 +1,5 @@
 {% from "util.lys" import
-   prelude, logo, paperLayout, pieceTitleMarkup, pieceScore %}
+   prelude, logo, scoreConfig, paperLayout, pieceTitleMarkup, pieceScore %}
 
 {{ prelude() }}
 
@@ -68,6 +68,12 @@
   }
   \tocSection "tocSec{{ loop.index }}" \markup { {{ sec }} }
 {% endmacro %}
+
+\layout {
+  \context {
+    {{ scoreConfig() }}
+  }
+}
 
 \paper {
   {{ paperLayout() }}

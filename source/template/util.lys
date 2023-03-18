@@ -13,7 +13,7 @@
 {% endmacro %}
 
 {% macro prelude() %}
-  \version "2.24.0"
+  \version "2.25.2"
   rootUrl = "https://volodymyrprokopyuk.github.io/bayan"
   stBass = \markup \larger \box Г % Готовий бас
   frBass = \markup \larger \box В % Вибiрна система
@@ -53,6 +53,12 @@
      (add-toc-item! 'tocSectionMarkup text label))
 {% endmacro %}
 
+{% macro scoreConfig() %}
+  \Score
+  \omit BarNumber
+  \override DynamicLineSpanner.staff-padding = #3
+{% endmacro %}
+
 {% macro paperLayout() %}
   top-margin = 8
   bottom-margin = 8
@@ -62,8 +68,6 @@
 {% endmacro %}
 
 {% macro rhConfig() %}
-  \override Score.BarNumber.break-visibility = ##(#f #f #f)
-  \override DynamicLineSpanner.staff-padding = #3
 {% endmacro %}
 
 {% macro lhConfig() %}

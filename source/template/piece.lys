@@ -1,5 +1,5 @@
 {% from "util.lys" import
-   prelude, logo, paperLayout, pieceTitleMarkup, pieceScore %}
+   prelude, logo, scoreConfig, paperLayout, pieceTitleMarkup, pieceScore %}
 
 {{ prelude() }}
 
@@ -24,6 +24,12 @@
     \fill-line { \null \fromproperty #'page:page-number-string }
   }
 {% endmacro %}
+
+\layout {
+  \context {
+    {{ scoreConfig() }}
+  }
+}
 
 \paper {
   {{ paperLayout() }}
