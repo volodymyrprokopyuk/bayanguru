@@ -25,6 +25,12 @@ Stradella bass and free bass
       browsing, searching and visualization
     - **Built-in linter** to ensure source code quality and consistency
 
+## Dependencies
+
+- [Node.js](https://nodejs.org/)
+- [LilyPond](https://lilypond.org/)
+- [pdfcpu](https://pdfcpu.io/)
+
 ## Catalog
 
 ``` bash

@@ -1,5 +1,5 @@
 import { copyFile } from "fs/promises"
-import { mkdirp, pathExists } from "fs-extra"
+import { mkdirp, pathExists, remove } from "fs-extra"
 import chalk from "chalk"
 import { $ } from "zx"
 import njk from "nunjucks"
@@ -80,8 +80,16 @@ function nunjucks() {
   return env
 }
 
-async function lilypond(score, file) {
+async function lilypond(score, file, args) {
   process.env.PATH = `${process.env.HOME}/.lilypond/bin:${process.env.PATH}`
+  if (args.optimize) {
+    const lilypond = $`lilypond -dbackend=cairo -f pdf -o ${file}_ -`
+    lilypond.stdin.write(score)
+    lilypond.stdin.end()
+    await lilypond
+    await $`pdfcpu optimize ${file}_.pdf ${file}.pdf`
+    return await remove(`${file}_.pdf`)
+  }
   const lilypond = $`lilypond -dbackend=cairo -f pdf -o ${file} -`
   lilypond.stdin.write(score)
   lilypond.stdin.end()
@@ -109,7 +117,7 @@ async function engravePiece(piece, args) {
   }
   if (args.dry) { return }
   const score = template.render("piece.lys", { piece, args })
-  return await lilypond(score, `scores/${piece.file}`)
+  return await lilypond(score, `scores/${piece.file}`, args)
 }
 
 export async function engravePieces(pieces, args) {
@@ -138,7 +146,7 @@ async function engraveBook(book, args) {
   }
   if (args.dry) { return }
   const score = template.render("book.lys", { book, args })
-  return await lilypond(score, `scores/${book.file}`)
+  return await lilypond(score, `scores/${book.file}`, args)
 }
 
 export async function engraveBooks(books, args) {
