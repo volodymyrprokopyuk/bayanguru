@@ -138,6 +138,15 @@ pieces:
   # - { id: 6yq2, tit: Етюд Bes major,
   #     com: Т. Федин, src: SB1NU1979,
   #     org: ru, sty: stu, gnr: stu, frm: wrs, bss: stb, lvl: elm }
+  # SB2NU1977
+  # p. 12
+  # - { id: rnk5, tit: Етюд Bes major,
+  #     com: К. Черні, src: SB2NU1977,
+  #     org: at, sty: stu, gnr: stu, frm: wrs, bss: stb, lvl: elm }
+  # p. 15
+  # - { id: 5071, tit: Етюд C major,
+  #     com: А. Гедике, src: SB2NU1977,
+  #     org: ru, sty: stu, gnr: stu, frm: wrs, bss: stb, lvl: elm }
 
 
   # Pepetition
