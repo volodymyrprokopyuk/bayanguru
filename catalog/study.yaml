@@ -30,10 +30,9 @@ pieces:
   - { id: 0adx, tit: Етюд G major,
       com: К. Черні, src: SB1NU1979,
       org: at, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
-  # p. 30
-  # - { id: sdnn, tit: Етюд C major,
-  #     com: К. Черні, src: SB1NU1979,
-  #     org: at, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
+  - { id: sdnn, tit: Етюд C major,
+      com: К. Черні, src: SB1NU1979,
+      org: at, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
   # p. 32
   # - { id: 5ul1, tit: Етюд C major,
   #     com: К. Черні, src: SB1NU1979,
