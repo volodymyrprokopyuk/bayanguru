@@ -1,8 +1,12 @@
 {% from "util.lys" import momentBeat %}
 
 {% macro lhFrag1(a) %}
-  c=8 cM! g gM c cM! a f@M |
-  g=,8 c@M! g8 gM c= cM! {{ a }} | %
+  {{ a }} cM! a c@M d8 f@M! g,=,8 gM! |
+{% endmacro %}
+
+{% macro lhFrag2(a) %}
+  c=8 cM! g gM! c cM! a f@M! |
+  g=,8 c@M! g8 gM! c= cM! {{ a }} | %
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -26,9 +30,9 @@
 \key c \major
 \relative {
   {{ momentBeat("1/4", "1,1,1,1") }}
-  c=8-\stBass cM! a c@M d8 f@M! g,8 gM |
-  c=8 cM! a c@M d8 f@M! g,8 gM |
-  {{ lhFrag1("cM4") }}
-  {{ lhFrag1("c,+cM4") }}
+  {{ lhFrag1("c=8-\\stBass") }}
+  {{ lhFrag1("c=8") }}
+  {{ lhFrag2("cM4") }}
+  {{ lhFrag2("c,+cM4") }}
 }
 {% endmacro %}
