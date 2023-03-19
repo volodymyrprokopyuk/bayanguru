@@ -10,13 +10,12 @@
   f=,8 fM! fM fM |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Moderato
 \clef treble
 \key bes \major
 \time 2/4
 \relative {
-  {{ config() }}
   {{ rhFrag1("f'='8(\\mf") }} | bes d f,4\) |
   {{ rhFrag1("f='8(") }} | bes4.\) r8 |
   \repeat volta 2 {
@@ -29,11 +28,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key bes \major
 \relative {
-  {{ config() }}
   {{ momentBeat("1/2", "#'(1)") }}
   {{ lhFrag1("bes,=,8-\\stBass") }} | bes besM! besM besM |
   {{ lhFrag1("bes=,8") }} | bes[ besM!] besM r |

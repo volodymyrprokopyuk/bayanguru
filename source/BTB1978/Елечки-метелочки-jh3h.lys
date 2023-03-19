@@ -18,24 +18,22 @@
   b=,8 b7! e em! | b b7! {{ b }} | %
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Moderato
 \clef treble
 \key e \minor
 \time 2/4
 \relative {
-  {{ config() }}
   {{ rhFrag1("<g'=' b>4\\mf", "<g=' b>16 e g b") }} \bar "||"
   {{ rhFrag1("<g=' b>4", "<g=' b>16 e <g b>8") }} \bar "||"
   {{ rhFrag1("<g=' b>8 16 e16", "<g=' b>16 e <g b>8") }} \bar "|."
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key e \minor
 \relative {
-  {{ config() }}
   {{ lhFrag1("e=8-\\stBass em! b b7! | e", "e= em!") }}
   {{ lhFrag1("e=8 em! b b7! | e", "e= em!") }}
   {{ lhFrag1("e=8 em! a, am! | e'", "e,+em!4") }}

@@ -1,10 +1,9 @@
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Lento
 \clef treble
 \key c \major
 \time 3/4
 \relative {
-  {{ config() }}
   g=4\p c e | a2 g4 | g2. | b,2. |
   g=4 b d | f2 e4 | c2.~ | c2. |
   g=4 c e | <a c>2 <g b>4 | <f a>2. | <d f>2. |
@@ -25,11 +24,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key c \major
 \relative {
-  {{ config() }}
   c=4-\stBass cM! cM | g c@M cM4 |
   \repeat unfold 2 {
     d'=4 g,@7! g74 | g,=, g7 g7 |

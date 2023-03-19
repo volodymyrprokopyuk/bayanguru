@@ -3,13 +3,12 @@
   a='8\> c \after 2\! a2\) | a8(\p c a='2) |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Moderato
 \clef treble
 \key a \minor
 \time 3/4
 \relative {
-  {{ config() }}
   {{ rhFrag1("a'='8\\(\\mf") }}
   {{ rhFrag1("a='8\\(\\mf") }}
   e='8\(\mp\< gis b4 gis | \after 8\! a8 c e4 c |
@@ -19,11 +18,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key a \minor
 \relative {
-  {{ config() }}
   a,=,4(-\stBass am!)-. am-. | d( dm!)-. dm-. |
   a=,2 am!4-. | f@M!2 fM4-. |
   a=,4( am!)-. am-. | d( dm!)-. dm-. |

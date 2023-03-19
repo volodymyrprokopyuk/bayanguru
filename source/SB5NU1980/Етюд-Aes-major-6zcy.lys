@@ -5,13 +5,12 @@
   <c=' ees aes>8 8 <ees aes c> %
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo "Moderato espressivo"
 \clef treble
 \key aes \major
 \time 6/8
 \relative {
-  {{ config() }}
   \partial 8 { ees'='8(\p | }
   \repeat volta 2 {
     {{ rhFrag1("") }}
@@ -99,11 +98,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key aes \major
 \relative {
-  {{ config() }}
   \partial 8 { r8 | }
   bes,=,4.\(-\puBass ees | aes ees8 ees4\) |
   bes'=4.\( ees,8 ees4 | aes,4. ees'4\) r8 |

@@ -1,12 +1,11 @@
 {% from "util.lys" import momentBeat %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Allegretto
 \clef treble
 \key g \minor
 \time 2/4
 \relative {
-  {{ config() }}
   <d''='' f>8.(\mf <c ees>16 <bes d>4) |
   <d='' f>8.( <c ees>16 <bes d>4) |
   <d='' f>8 8 8 <ees g> |
@@ -18,11 +17,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key g \minor
 \relative {
-  {{ config() }}
   bes,=,8-\stBass besM! bes besM | bes besM bes besM |
   bes=,8 besM! f f7! | bes besM! bes besM |
   {{ momentBeat("1/2", "#'(1)") }}

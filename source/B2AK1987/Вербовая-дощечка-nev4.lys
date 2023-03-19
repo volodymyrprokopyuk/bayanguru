@@ -1,12 +1,11 @@
 {% from "util.lys" import dynPadding, v2 %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Moderato
 \clef treble
 \key e \minor
 \time 2/4
 \relative {
-  {{ config() }}
   e'='8(\p b') b b | a4( b8 g) |
   a='4\( b8 g | fis e b'4\) |
   e,='8( b') b b | a4( b8 g) |
@@ -68,11 +67,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key e \minor
 \relative {
-  {{ config() }}
   e=8-\stBass em! g, e@m |
   \repeat unfold 2 { a=,8 am! g e@m | }
   a=,8 am! b b7! |

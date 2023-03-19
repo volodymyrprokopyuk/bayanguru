@@ -9,13 +9,12 @@
   cis=8 {{ a }}! cis= {{ a }} | %
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Andante
 \clef treble
 \key fis \minor
 \time 2/4
 \relative {
-  {{ config() }}
   fis'='4.\mf gis8 | a4. fis8 |
   a='8 a gis fis | gis4 cis,8 r |
   gis'='4. a8 | b4. gis8 |
@@ -31,11 +30,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key fis \minor
 \relative {
-  {{ config() }}
   fis,=,8-\stBass fism! fis fism |
   \repeat unfold 2 { fis=,8 fism fis fism | }
   cis'=8 cisM! gis cis@7! |

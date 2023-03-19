@@ -8,13 +8,12 @@
   >>
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Allegro
 \clef treble
 \key a \minor
 \time 4/4
 \relative {
-  {{ config() }}
   \partial 4 { f''=''16(\p e c a) | }
   \repeat volta 2 {
     r8 c=''8-. f,-. b-. a( e) f='16( e c a) |
@@ -59,11 +58,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key a \minor
 \relative {
-  {{ config() }}
   \partial 4 { r4 | }
   a,@m!8-\stBass r8 d@m! r8 a,@m! r8 r4 |
   r4 e,+e7!8 r a,,+am! r r4 |

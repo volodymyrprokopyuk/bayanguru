@@ -1,10 +1,9 @@
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Allegretto
 \clef treble
 \key d \major
 \time 4/4
 \relative {
-  {{ config() }}
   \partial 4 { a'='4\mf | }
   fis='4 a fis a( | g4. fis8 e4) fis( |
   g='4 b) b a8( gis | a2.) a4 |
@@ -15,11 +14,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key d \major
 \relative {
-  {{ config() }}
   \partial 4 { r4 | }
   d=4 dM! a d@M |
   \repeat unfold 2 { e'=4 a,@7! a,4 a7 | }

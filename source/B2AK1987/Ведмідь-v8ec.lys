@@ -8,13 +8,12 @@
   <>\> \after 2\! <c,= fis bes>2 |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Lento
 \clef bass
 \key c \minor
 \time 2/4
 \relative {
-  {{ config() }}
   \acciaccatura { g=16 a b } c='4->\mp bes8-- aes-- |
   g=4-> c,-- | d8->\< ees-- f-- \after 8\! aes-- |
   <>\> \after 2\! <fis= g>2-> |
@@ -41,11 +40,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key c \minor
 \relative {
-  {{ config() }}
   \grace { s16 s s } c,+cm!4 g,=,4-\puBass |
   \repeat unfold 6 { c=4-> g | }
   c=8-> g-. a-. b-. | c,+cm!4 g=,4 |

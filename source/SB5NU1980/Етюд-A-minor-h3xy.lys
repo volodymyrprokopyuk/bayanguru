@@ -46,13 +46,12 @@
   f'=8 d@m! e8 a,@m! | f8 e a,=, {{ a }} | %
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Allegro
 \clef treble
 \key a \minor
 \time 2/4
 \relative {
-  {{ config() }}
   {{ rhFrag1("a''=''32\\mp", "_\\artLegato") }}
   {{ rhFrag5() }} a='''8 \ottava #0 r |
 
@@ -84,11 +83,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key a \minor
 \relative {
-  {{ config() }}
   {{ lhFrag1("a,=,8-\\stBass") }}
   {{ lhFrag1("a=,8") }}
   {{ lhFrag1("a=,8") }}

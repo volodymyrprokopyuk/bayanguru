@@ -7,13 +7,12 @@
   f='8[(->\> e]) d-. \after 8\! d='-. |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Allegretto
 \clef treble
 \key g \major
 \time 4/4
 \relative {
-  {{ config() }}
   <g''='' g'>8-.\mf r d'-. r <a a'>8[-. 8]-. d-. r |
   g,=''16( a b c d8)-. d-. <a a'>8[-. 8]-. d-. r |
   g,=''8\f r d-. d-. \acciaccatura { dis=''8 } e4(-> d8) r |
@@ -27,11 +26,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key g \major
 \relative {
-  {{ config() }}
   g,@M!8[-.-\stBass gM8]-. gM-. gM-. d@7!8[-. d78]-. d7-. d7-. |
   g,@M!8[-. gM8]-. gM-. gM-. d@7!8[-. d78]-. d7-. r |
   \repeat unfold 2 { g,,+gM!8-> r r4 d,+d7!~ d,+d78 r | }

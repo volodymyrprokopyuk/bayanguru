@@ -2,13 +2,12 @@
   a,@m!4( e@M! | a,@m!8[ d@m!8] {{ a }}) |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Lento
 \clef treble
 \key a \minor
 \time 2/4
 \relative {
-  {{ config() }}
   \repeat volta 2 {
     e'='8\(\p e a a | c a b4\) |
     c=''8\( a gis e | a a a='4\) |
@@ -18,11 +17,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key a \minor
 \relative {
-  {{ config() }}
   a,=,8-\stBass r am! r | a,@m!4( e@M!) |
   {{ lhFrag1("a,@m!4") }}
   \repeat unfold 2 {

@@ -6,13 +6,12 @@
   b=,8 e@m! {{ a }} a8 am! b=, b7! |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Moderato
 \clef treble
 \key e \minor
 \time 4/4
 \relative {
-  {{ config() }}
   {{ momentBeat("1/4", "1,1,1,1") }}
   \partial 4 { e'='8\(\p g | }
   <g=' b>4 <fis a>8 <e g> <e a> <e fis> <dis b'> <fis a> |
@@ -59,11 +58,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key e \minor
 \relative {
-  {{ config() }}
   {{ momentBeat("1/4", "1,1,1,1") }}
   \partial 4 { r4 | }
   e=8-\stBass em! em4 c8 a,@m! b8 bM! |

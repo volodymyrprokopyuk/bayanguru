@@ -13,13 +13,12 @@
   bes=,4 bes7! | ees= eesM! |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Allegro
 \clef treble
 \key ees \major
 \time 2/4
 \relative {
-  {{ config() }}
   \repeat volta 2 {
     {{ rhFrag1("ees''=''8\\(\\mf") }} | g8( f ees4) |
     {{ rhFrag1("ees=''8\\(\\f") }} | ees=''2 |
@@ -31,11 +30,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key ees \major
 \relative {
-  {{ config() }}
   {{ lhFrag1("ees=4-\\stBass") }}
   {{ lhFrag1("ees=4") }}
   \repeat unfold 2 {

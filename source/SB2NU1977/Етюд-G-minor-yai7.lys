@@ -14,13 +14,12 @@
   r4 \tuplet 3/2 { r8 {{ c }}( {{ d }}) } | %
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo "Allegro moderato"
 \clef treble
 \key g \minor
 \time 4/4
 \relative {
-  {{ config() }}
   {{ rhFrag1("<c'=' ees g>8-.\\mf", "\\p", "\\f", "\\p") }}
   {{ rhFrag1("<c=' ees g>8-.\\p", "", "\\mp", "") }}
   \tuplet 3/2 { <b= f' aes>8-.\mf 8-. 8-. } %
@@ -96,11 +95,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key g \minor
 \relative {
-  {{ config() }}
   r4 \tuplet 3/2 { r8 d,=,(-\puBass a') } %
   r4 \tuplet 3/2 { r8 d,=,( a') } | %
   {{ lhFrag1("g=,8", "d'", "g,", "d'=") }}

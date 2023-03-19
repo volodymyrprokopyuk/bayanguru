@@ -3,13 +3,12 @@
   e=''8-. e-. c-. e-. | b16( d c b a='4) |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Allegretto
 \clef treble
 \key a \minor
 \time 2/4
 \relative {
-  {{ config() }}
   {{ rhFrag1("e''=''8-.\\mp") }}
   {{ rhFrag1("e'=''8-.") }}
   gis='4( e8)-. e-. | e'16( d c b a8)-. a-. |
@@ -19,11 +18,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key a \minor
 \relative {
-  {{ config() }}
   <a,=, e'>4-\stBass r |
   \repeat unfold 3 { <a=, e'>4 r | }
   \repeat unfold 3 { <a=, e'>8 r <a e'> r | }

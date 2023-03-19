@@ -7,13 +7,12 @@
   a=,8 d@m! a8 a7! | d= dm! {{ a }} | %
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Moderato
 \clef treble
 \key d \minor
 \time 2/4
 \relative {
-  {{ config() }}
   d''=''4\mf d | a8 c4 a8 |
   bes='8 g d'4 | a8 f4 f8 |
   {{ rhFrag1() }}
@@ -21,11 +20,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key d \minor
 \relative {
-  {{ config() }}
   d=8-\stBass dm! d dm | d dM! d d7! |
   g,=,8 gm! g gm | d' dm! d dm |
   {{ lhFrag1("r dm") }}

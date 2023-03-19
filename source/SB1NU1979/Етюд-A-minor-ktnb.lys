@@ -10,13 +10,12 @@
   e@7!8 r8 r4 a,@m!8 r8 r4 |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Andante
 \clef treble
 \key a \minor
 \time 4/4
 \relative {
-  {{ config() }}
   {{ rhFrag1("r16\\mp\\< e'='16(") }}
   r16\< e='16( f e a e f e) %
   r16 b'='16( c b g' b, c \after 16\! b) |
@@ -30,11 +29,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key a \minor
 \relative {
-  {{ config() }}
   {{ lhFrag1("a,@m!8-\\stBass") }}
   a,@m!8 r8 r4 e@m!8 r8 r4 |
   b,@7!8 r8 r4 e@7!8 r8 r4 |

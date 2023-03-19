@@ -5,13 +5,12 @@
   b'='4.~ b8 a g fis dis b | c'=''4 b='8 %
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Lento
 \clef treble
 \key e \minor
 \time 9/8
 \relative {
-  {{ config() }}
   \partial 8 { b=8\(\p | }
   \repeat volta 2 {
     {{ rhFrag1() }} b4.~ b4\) b,8\( |
@@ -53,11 +52,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key e \minor
 \relative {
-  {{ config() }}
   \partial 8 { r8 | }
   e=4-\stBass em!8 b4 e@m8 b4 bM!8 |
   e=4 em!8 g,4 e@m8 b4 e@m8 |

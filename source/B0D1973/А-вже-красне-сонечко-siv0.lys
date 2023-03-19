@@ -1,10 +1,9 @@
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Lento
 \clef treble
 \key a \minor
 \time 2/4
 \relative {
-  {{ config() }}
   \repeat volta 2 {
     a'='8\(\mp e' d f | e4 d8 c\) | b( d c4) |
     \alternative {
@@ -15,11 +14,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key c \major
 \relative {
-  {{ config() }}
   a,=,8-\stBass am! d dm | a[ am! am am] | d dm! e a,@m |
   e=8 eM! a, am! | e'= eM! a,,+am!4 |
 }

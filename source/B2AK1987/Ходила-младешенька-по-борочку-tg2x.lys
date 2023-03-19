@@ -26,13 +26,12 @@
   e=8 a,@m! e8 {{ b }} | %
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Moderato
 \clef treble
 \key c \major
 \time 2/4
 \relative {
-  {{ config() }}
   R2\mp | \repeat unfold 3 { R2 | }
   <e'=' a c>8\< 8 <d a' d> <d f a d> |
   <e=' a c e>4  \after 4\! %
@@ -78,11 +77,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key c \major
 \relative {
-  {{ config() }}
   c@M!8[-\stBass cM8 cM cM] |
   g,@M!4 a,@m!8[ g,@7!8] |
   c@M!8[ cM8] {{ rhFrag1() }}

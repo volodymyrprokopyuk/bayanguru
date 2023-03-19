@@ -25,13 +25,12 @@
   \repeat unfold 2 { b=,8 r r bM! r r | }
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Allegro
 \clef treble
 \key b \major
 \time 6/8
 \relative {
-  {{ config() }}
   {{ rhFrag1("<dis'=' fis b>8\\f", "_\\dynCresc") }}
   {{ rhFrag2() }}
   <dis='' gis b>8_\dynDim <cis fisis ais> <dis gis b> %
@@ -100,11 +99,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key b \major
 \relative {
-  {{ config() }}
   {{ lhFrag1("b,=,8[-\\stBass") }}
   fis=,8 r r fisM! r r |
   gis=,8 r r gism! r r |

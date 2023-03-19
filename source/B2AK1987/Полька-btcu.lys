@@ -21,13 +21,12 @@
   g,=,8 gM! gM r |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Allegretto
 \clef treble
 \key c \major
 \time 2/4
 \relative {
-  {{ config() }}
   {{ rhFrag1("g'='8-.\\mf") }}
   a'=''8-. g-. g16( f e8) |
   {{ rhFrag1("g,='8-.") }}
@@ -51,11 +50,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key c \major
 \relative {
-  {{ config() }}
   {{ lhFrag1("c=8-\\stBass") }}
   {{ lhFrag1("c=8") }}
 

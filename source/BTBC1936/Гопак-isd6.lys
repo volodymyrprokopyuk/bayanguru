@@ -8,13 +8,12 @@
   g,=,8 gM! g gM | d'=8 dM! g,,+gM!4 |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Allegro
 \clef treble
 \key d \major
 \time 2/4
 \relative {
-  {{ config() }}
   {{ rhFrag1("<fis'=' d'>4->\\f", "fis8 d='") }}
   {{ rhFrag1("d'=''8 d", "d='4") }}
   g='8 g <g b>4-> | <fis a>8 <fis c'> <g b>4-> |
@@ -24,11 +23,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key d \major
 \relative {
-  {{ config() }}
   d,+dM!4->-\stBass d,+dM4 |
   \repeat unfold 3 {
     a,=,8 a7! d dM! | d dM! d dM |

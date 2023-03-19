@@ -25,13 +25,12 @@
   \set subdivideBeams = ##f
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Moderato
 \clef treble
 \key c \minor
 \time 2/4
 \relative {
-  {{ config() }}
   {{ momentBeat("1/8", "2,2") }}
   \partial 8 { \tuplet 3/2 { g''=''16(\mf a b) } | }
   \repeat segno 2 {
@@ -113,11 +112,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key c \minor
 \relative {
-  {{ config() }}
   \partial 8 { r8 | }
   c=8-\stBass cm! g c@m | b8 g,@7! g8 g7 |
   d'=8 g,@7! g,8 g7 |

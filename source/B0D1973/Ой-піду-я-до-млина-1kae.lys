@@ -3,13 +3,12 @@
   b='8-. c-. d4 | a a=' |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Allegretto
 \clef treble
 \key a \minor
 \time 2/4
 \relative {
-  {{ config() }}
   \repeat volta 2 {
     a'='8(\mf c e4) | e4 e | d8( e f4) | e8( d c4) |
   }
@@ -18,11 +17,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key a \minor
 \relative {
-  {{ config() }}
   a,=,8[-\stBass am! am am] | a[ am am am] |
   a=,8[ d@m! dm8 dm] | a am! e' a,@m |
   gis,=,8 e@M! e'8 eM | a, am! a am |

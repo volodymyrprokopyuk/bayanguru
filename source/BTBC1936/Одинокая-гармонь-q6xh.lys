@@ -4,13 +4,12 @@
   c=4 cM! cM | fis, a,@m! am4 | b=, b7! b7 |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Lento
 \clef treble
 \key e \minor
 \time 3/4
 \relative {
-  {{ config() }}
   \partial 2 { e'='4\(\p\< g | }
   b='4 g \after 4\! e | dis fis a |
   c=''4 b2~\> | \after 8.\! b4\) e,\( fis |
@@ -27,11 +26,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key e \minor
 \relative {
-  {{ config() }}
   \partial 2 { r4 r | }
   e=4 em! em | b b7! b7 |
   \repeat unfold 3 { e=4 em! em | }

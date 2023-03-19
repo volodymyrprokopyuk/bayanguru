@@ -3,13 +3,12 @@
   g,=,8 g7! g g7 | c cM! {{ b }} | %
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Moderato
 \clef treble
 \key c \major
 \time 2/4
 \relative {
-  {{ config() }}
   \repeat segno 2 {
     \volta 1
     e'='8-.\mf g-. c-. e-. | e-. d-. a4 |
@@ -25,11 +24,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key c \major
 \relative {
-  {{ config() }}
   {{ lhFrag1("c=8-\\stBass", "c= cM") }}
   {{ lhFrag1("c=8", "c,+cM8 r") }}
   e=8 eM! gis, e@M | a8 am! e' a,@m |

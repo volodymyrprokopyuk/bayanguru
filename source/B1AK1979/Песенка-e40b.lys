@@ -4,13 +4,12 @@
   {{ a }} c e4 | c2) | c8( a c4 | a='2) |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Andante
 \clef treble
 \key a \minor
 \time 2/4
 \relative {
-  {{ config() }}
   {{ momentBeat("1/2", "#'(1)") }}
   {{ rhFrag1("e''=''8(\\p") }}
   a='8(\< c e \after 8\! a | g\> e \after 4\! e4) |
@@ -24,11 +23,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key a \minor
 \relative {
-  {{ config() }}
   a,=,4 am! | e' e7! | a, am! | d dM! |
   a=,4 am! | e' em! | b gm! | e em! |
   a,=,4 am! | e' e7! | e a,@m! | d dM! |

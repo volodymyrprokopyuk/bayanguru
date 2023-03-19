@@ -14,13 +14,12 @@
   e=8 r r em!4 r8 | a,=, r r aM!4 r8 |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Allegretto
 \clef treble
 \key d \major
 \time 6/8
 \relative {
-  {{ config() }}
   {{ rhFrag1("a'='8-.\\mp") }}
   a='8-. d-. fis-. a4-- fis8 | b4-- fis8 a4.-- |
   <a='' cis>8-. 8-. <gis b>-. <fis a>-. <cis gis'>-. <a fis'>-. |
@@ -36,11 +35,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key d \major
 \relative {
-  {{ config() }}
   {{ lhFrag1("d=8-\\stBass") }}
   d=8 r r dM!4 r8 | b,@m!4 r8 d@M!4 r8 |
   fis,=,8 r r fism! r r |

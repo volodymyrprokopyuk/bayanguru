@@ -10,13 +10,12 @@
   c,+cM!4 r r | f,,+d@m! r r |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Allegretto
 \clef treble
 \key c \major
 \time 3/4
 \relative {
-  {{ config() }}
   {{ rhFrag1("c''=''4(\\mf") }} a4)-. b-. c-. |
   d=''4 d8( c b a | g4)-. e'-. d-. |
   {{ rhFrag1("c=''4(") }} a4) f'8( e d c |
@@ -24,11 +23,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key c \major
 \relative {
-  {{ config() }}
   {{ lhFrag1("c,+cM!4-\\stBass") }}
   fis,,+d@M! r r | g,,+gM! r r |
   {{ lhFrag1("c,+cM!4") }}

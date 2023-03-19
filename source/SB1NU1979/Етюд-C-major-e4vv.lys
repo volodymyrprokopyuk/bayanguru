@@ -3,13 +3,12 @@
   d@7!8 r8 r | g,@M! r8 r |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Allegro
 \clef treble
 \key c \major
 \time 3/8
 \relative {
-  {{ config() }}
   \repeat segno 2 {
     \volta 1
     r8\p e''=''16( f g8)-. | r f16( e d8)-. |
@@ -27,11 +26,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key c \major
 \relative {
-  {{ config() }}
   c@M!8-\stBass r8 r | g,@7! r8 r |
   c@M!8 r8 r | g,@M! r8 r |
   c@M!8 r8 r | g,@7! r8 r |

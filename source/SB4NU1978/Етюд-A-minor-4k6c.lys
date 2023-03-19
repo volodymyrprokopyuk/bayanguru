@@ -15,13 +15,12 @@
   d,+dm!8 r r4 %
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo "Allegro moderator, dramatico"
 \clef treble
 \key a \minor
 \time 4/4
 \relative {
-  {{ config() }}
   {{ rhFrag1() }}
   b=16(\< ais b c d cis d dis e dis %
   e='16 f fis eis fis \after 16\! gis) |
@@ -51,11 +50,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key a \minor
 \relative {
-  {{ config() }}
   {{ lhFrag1("a,,+am!8-\\stBass", "e,=,") }}
   b,,+e@7!8 r8 e,,+e7! r |
   a,,+am!8 r r e=, a,,+am! r r e |

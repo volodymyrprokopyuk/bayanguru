@@ -1,10 +1,9 @@
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Moderato
 \clef treble
 \key f \major
 \time 2/4
 \relative {
-  {{ config() }}
   f'='8\f f a4 | g16( f e d c4) |
   f='8 f( a) a | g16( f e d c4) |
   f='8\mf f( g a | bes) bes( d4) |
@@ -14,11 +13,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key f \major
 \relative {
-  {{ config() }}
   f=8-\stBass fM! f fM | c cM! c cM |
   f=8 fM! f fM | c cM! c cM |
   f=8 fM! f fM | bes, besM! bes besM |

@@ -18,13 +18,12 @@
   cis=8 fis@7! fis=8 fis7 |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Allegretto
 \clef treble
 \key d \major
 \time 2/4
 \relative {
-  {{ config() }}
   {{ rhFrag1("<fis''='' a>4\\f") }} | <d fis>4 4 |
   {{ rhFrag1("<fis='' a>4") }} | <d fis>4 <ais=' e' fis>-> |
   {{ rhFrag2("<d='' fis>4\\mf") }}
@@ -33,11 +32,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key d \major
 \relative {
-  {{ config() }}
   {{ lhFrag1("d=8-\\stBass") }} | d dM! a d@M |
   {{ lhFrag1("d=8") }} | d4 cis=-> |
   {{ lhFrag2("b=,8") }} | b, bm! fis' b,@m |

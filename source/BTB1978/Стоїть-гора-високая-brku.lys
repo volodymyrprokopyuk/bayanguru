@@ -1,10 +1,9 @@
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Lento
 \clef treble
 \key b \minor
 \time 3/4
 \relative {
-  {{ config() }}
   b=4(\p <b d> <d fis>)\< |
   \after 4.\! <d=' b'>2 ais'4 |
   <e=' cis'>2( <cis ais'>4)\> |
@@ -30,11 +29,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key b \minor
 \relative {
-  {{ config() }}
   b,=,4 bm! bm | d( b,@m!) r4 |
   \repeat unfold 2 {
     fis,=,4 fis7! fis7 | cis'= fis,@7! fis74 |

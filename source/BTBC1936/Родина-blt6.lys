@@ -1,10 +1,9 @@
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Lento
 \clef treble
 \key d \minor
 \time 2/4
 \relative {
-  {{ config() }}
   \partial 4 { a=8\mf d | }
   f='4 a,8 f' | e4 a,8 e' |
   d='4 a4~ | a a8 d |
@@ -17,11 +16,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key d \minor
 \relative {
-  {{ config() }}
   \partial 4 { r4 | }
   d,+dm!4-.-\stBass d,+dm-. |
   a,,+a7!4-. a,,+a7-. |

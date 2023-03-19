@@ -1,17 +1,15 @@
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo _
 \clef treble
 \key _
 \time _
 \relative {
-  {{ config() }}
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key _
 \relative {
-  {{ config() }}
 }
 {% endmacro %}

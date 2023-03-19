@@ -3,23 +3,21 @@
   fis='8( a g4) | fis8( fis e='4) |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Moderato
 \clef treble
 \key e \minor
 \time 2/4
 \relative {
-  {{ config() }}
   {{ rhFrag1("e'='8\\(\\p") }}
   {{ rhFrag1("e='8\\(") }} \bar "|."
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key e \minor
 \relative {
-  {{ config() }}
   e=8-\stBass em! e a,@m | e8 em! e em |
   a,=,8 am! b( e@m) | b8( b7!) e( em!) |
   e=8 em! fis( a,@m) | g,8( e@m!) a8 b |

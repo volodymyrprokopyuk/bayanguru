@@ -6,13 +6,12 @@
   <bes=' d>8 8 <a c> <g bes> <a c> <f a> r <f a> |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Allegretto
 \clef treble
 \key f \major
 \time 4/4
 \relative {
-  {{ config() }}
   {{ momentBeat("1/4", "1,1,1,1") }}
   \partial 8 { c'='8\mf | }
   {{ rhFrag1() }}
@@ -25,11 +24,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key f \major
 \relative {
-  {{ config() }}
   {{ momentBeat("1/4", "1,1,1,1") }}
   \partial 8 { r8 | }
   f,=,8-\stBass fM! c' f,@M a8 f,@M! c8 f,@M |

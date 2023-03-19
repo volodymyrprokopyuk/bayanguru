@@ -1,12 +1,11 @@
 {% from "util.lys" import hSpace, shapedSlur, v2 %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Lento
 \clef treble
 \key e \minor
 \time 3/4
 \relative {
-  {{ config() }}
   r4\p r r8 e'='8 |
   \repeat volta 2 {
     e='4\(\< g4. \after 8\! a8 | b4 ais4.\) b8 |
@@ -53,11 +52,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key e \minor
 \relative {
-  {{ config() }}
   e=4-\stBass em! em |
   e=4 em! em | fis b,@7! b74 |
   b,=,4 b7! b7 | e em! em |

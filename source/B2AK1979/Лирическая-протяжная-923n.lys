@@ -1,12 +1,11 @@
 {% from "util.lys" import dynPadding, momentBeat %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Lento
 \clef treble
 \key fis \minor
 \time 2/4
 \relative {
-  {{ config() }}
   {{ momentBeat("1/2", "#'(1)") }}
   {{ dynPadding(4) }}
   R2\p | R2 |
@@ -77,11 +76,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key fis \minor
 \relative {
-  {{ config() }}
   {{ momentBeat("1/2", "#'(1)") }}
   fis,=,8(-\stBass fism!) fism fism |
   fis=,8( fism) fism fism |

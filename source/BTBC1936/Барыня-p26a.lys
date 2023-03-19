@@ -58,13 +58,12 @@
   d=8 g,@7! r8 g7 | g,=, g7! c,+cM!4-> |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Allegro
 \clef treble
 \key c \major
 \time 2/4
 \relative {
-  {{ config() }}
   \acciaccatura { fis''=''8 } g4->\f %
   \acciaccatura { fis=''8 } g4-> |
   \acciaccatura { fis=''8 } g8-> d16( e f e d c) |
@@ -110,11 +109,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key c \major
 \relative {
-  {{ config() }}
   \grace { s8 } g,=,8-\stBass g7! r g7 |
   g=,8 g7! c cM! | g g7! r g7 |
   b=,8 g,@7! c8 cM! | g g7! r g7 |

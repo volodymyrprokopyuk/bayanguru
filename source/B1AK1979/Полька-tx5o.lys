@@ -13,13 +13,12 @@
   g=,8 g7! g g7 | c cM! {{ a }} | %
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Allegretto
 \clef treble
 \key c \major
 \time 2/4
 \relative {
-  {{ config() }}
   c''=''16(\mf d e8)-. d16( e f8)-. | g8-. g-. e4-- |
   f=''8-. f-. d4-- | e8-. e-. c4-- |
   c=''16( d e8)-. d16( e f8)-. | g8-. g-. e4-- |
@@ -30,11 +29,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key c \major
 \relative {
-  {{ config() }}
   {{ lhFrag1("c=8-\\stBass", "c= cM") }}
   {{ lhFrag1("c=8", "c= r") }}
   {{ lhFrag2("c=8 cM") }}

@@ -4,13 +4,12 @@
   {{ v2("r4 aM!", "a,=,2") }} | %
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Allegretto
 \clef treble
 \key a \major
 \time 4/4
 \relative {
-  {{ config() }}
   {{ momentBeat("1/4", "1,1,1,1") }}
   a'='8\mf a \acciaccatura { gis'=''8 } a4-> %
   a,='8 a \acciaccatura { gis'=''8 } a4-> |
@@ -60,11 +59,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key a \major
 \relative {
-  {{ config() }}
   {{ momentBeat("1/4", "1,1,1,1") }}
   r8 a,@M! r8 d@M! r8 a,@M! r8 d@M! |
   \repeat unfold 2 {

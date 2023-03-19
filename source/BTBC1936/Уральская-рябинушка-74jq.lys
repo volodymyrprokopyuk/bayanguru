@@ -10,13 +10,12 @@
   d=4 dm! dm |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Lento
 \clef treble
 \key d \minor
 \time 3/4
 \relative {
-  {{ config() }}
   d'='2\mp d4 | f2 d4 | g2. | d2 e4 |
   f='2 e4 | a2 g4 | d2.~ | d4 r r |
   d='2 a'4 | a2 f4 | g2. | d2 e4 |
@@ -33,11 +32,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key d \minor
 \relative {
-  {{ config() }}
   d=4-\stBass dm! dm | c d@m! dm4 |
   bes=,4 g,@m! gm4 | g gm! gm |
   a=,4 g,@m! gm4 | a a7! a7 |

@@ -10,13 +10,12 @@
   c=8 cM! r e c@M r8 | f fM! r %
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Allegro
 \clef treble
 \key d \minor
 \time 6/8
 \relative {
-  {{ config() }}
   a''=''16(\mf a, g' a, f' a, e' a, d a f' a,) |
   bes'=''16( bes, a' bes, g' bes, f' bes, e bes g' bes,) |
   g'=''16( g, e' g, d' g, c g d' g, bes g) |
@@ -41,11 +40,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key d \minor
 \relative {
-  {{ config() }}
   d=8 dm! dm f[ d@m dm8] |
   e=8[ g,@m! gm8] g, gm gm |
   c=8 c7! c7 e[ c@7 c78] |

@@ -32,13 +32,12 @@
   e=8 r e7! r |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Allegretto
 \clef treble
 \key a \major
 \time 2/4
 \relative {
-  {{ config() }}
   {{ rhFrag1("a=16\\(->\\f") }}
   {{ rhFrag2("e='16\\(->") }}
   {{ rhFrag1("a=16\\(->") }}
@@ -81,11 +80,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key a \major
 \relative {
-  {{ config() }}
   {{ lhFrag1("a,=,8-\\stBass") }}
   {{ lhFrag3() }} | a,,+aM! r r4 |
   {{ lhFrag1("a,=,8") }}

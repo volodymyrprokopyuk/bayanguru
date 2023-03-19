@@ -2,13 +2,12 @@
   {{ a }} g' d g e g f g e g f g e g d g='') |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Presto
 \clef treble
 \key c \major
 \time 4/4
 \relative {
-  {{ config() }}
   {{ rhFrag1("c''=''16(\\mf") }}
   {{ rhFrag1("c,=''16(") }}
   e=''16( c g' c, f c e c d g, f' g, e' g, d' g,) |
@@ -16,11 +15,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key c \major
 \relative {
-  {{ config() }}
   c,+cM!8-\stBass r r4 r g,,+g7!8 r |
   c,+cM!8 r r4 r g,,+g7!8 r |
   c,+cM!8 r r4 g,,+g7!8 r r4 |

@@ -1,10 +1,9 @@
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo "Tempo di marcia"
 \clef treble
 \key d \major
 \time 2/4
 \relative {
-  {{ config() }}
   \repeat volta 2 {
     d'='8-.\mf e-. d-. d-. | fis-. g-. a4-. |
     b='8-. a-. g-. b-. | <d, fis a>4-- <c e a>-- |
@@ -32,11 +31,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key d \major
 \relative {
-  {{ config() }}
   d=8-\stBass dM! d dM | a d@M! fis8 d@M |
   g=,8 gM! g gM | d' dM! d,+dM4 |
   d=8 dM! b bm! | d dM! fis, d@M |

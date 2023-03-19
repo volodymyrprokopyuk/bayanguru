@@ -28,13 +28,12 @@
   f,,+fM!8 r d' r c r | f,=, r r4 r |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Allegretto
 \clef treble
 \key f \major
 \time 3/4
 \relative {
-  {{ config() }}
   c'='4-.\p e-._\dynCresc fis-. | gis-. bes-. b |
   c=''4-. e-. fis-. | gis-.^\tempRit bes-. b='' |
   \repeat segno 2 {
@@ -113,11 +112,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key f \major
 \relative {
-  {{ config() }}
   c@7!8-\stBass r8 r4 r | R2. | c@7!8 r8 r4 r | R2. |
   {{ lhFrag1("f,=,8") }}
 

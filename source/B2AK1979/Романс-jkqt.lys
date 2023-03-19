@@ -8,13 +8,12 @@
   f,=,8 r fM!4 e'8 r c@M!4 |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Moderato
 \clef treble
 \key c \major
 \time 4/4
 \relative {
-  {{ config() }}
   {{ rhFrag1("g'='8(\\mf c") }}
   {{ rhFrag1("g='8( c") }}
 
@@ -31,11 +30,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key c \major
 \relative {
-  {{ config() }}
   {{ lhFrag1("c=8-\\stBass") }}
   d=8 r g,@7! r8 c r cM! r |
   {{ lhFrag1("c=8") }}

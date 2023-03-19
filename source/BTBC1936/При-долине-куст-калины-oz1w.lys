@@ -1,12 +1,11 @@
 {% from "util.lys" import momentBeat, v2 %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Moderato
 \clef treble
 \key d \minor
 \time 3/4
 \relative {
-  {{ config() }}
   {{ momentBeat("1/4", "1,1,1") }}
   \partial 4 { <d'=' f>8\p <e g> | }
   <f=' a>4 d <g bes>8 <e g> |
@@ -25,11 +24,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key d \minor
 \relative {
-  {{ config() }}
   \partial 4 { r4 | }
   d=4-\stBass dm! g, | d' dm! r |
   f,=,4 fM! c' | f, fM! r |

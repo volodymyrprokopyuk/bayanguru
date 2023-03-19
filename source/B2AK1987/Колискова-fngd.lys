@@ -3,13 +3,12 @@
   bes='4 a8\> bes g4) \after 4\! g=' |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Lento
 \clef treble
 \key g \minor
 \time 4/4
 \relative {
-  {{ config() }}
   {{ rhFrag1("g'='4\\p") }}
   {{ rhFrag1("g='4") }}
   fis='4\( d\< g \after 4\! bes |
@@ -19,11 +18,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key g \minor
 \relative {
-  {{ config() }}
   g,=,4-\stBass gm!8 r ees'4 c@m!8 r8 |
   d=4 d7!8 r g,4 gm!8 r |
   g=,4 gm!8 r ees'4 c@m!8 r8 |

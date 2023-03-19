@@ -1,12 +1,11 @@
 {% from "util.lys" import dynPadding %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo "Lento. Rubato"
 \clef treble
 \key f \major
 \time 3/4
 \relative {
-  {{ config() }}
   {{ dynPadding(4) }}
   r8\p <c'=' f a>8--\< \after 16.\! <d f bes>-- %
   <c=' f a>8--\> <b d f gis>-- \after 16.\! <c f a>-- |
@@ -55,11 +54,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key f \major
 \relative {
-  {{ config() }}
   f,=,2.-\puBass | c' | bes | a | d~ | d |
   g,=,2. | c | f,2 f4 | c'2 c4 | bes2 bes4 |
   a=,2 a4 | d2 g,4 | c2 f,4 | bes2 g4 |

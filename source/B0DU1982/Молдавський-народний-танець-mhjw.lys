@@ -2,13 +2,12 @@
   {{ a }} gM! d' g,@M | g,8 gM! d'= g,@M |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Allegretto
 \clef treble
 \key g \major
 \time 2/4
 \relative {
-  {{ config() }}
   \repeat volta 2 {
     d''=''4\mf c8 b |
     \repeat unfold 2 { d,='16( g b d c8) b | }
@@ -26,11 +25,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key g \major
 \relative {
-  {{ config() }}
   {{ lhFrag1("g,=,8-\\stBass") }}
   {{ lhFrag1("g,=,8") }}
   \repeat unfold 2 { d=8 d7! d d7 | g, gm! g=, gm | }

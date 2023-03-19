@@ -10,13 +10,12 @@
   c=''32-> f e f f,-> f' e f='' |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Allegro
 \clef treble
 \key bes \major
 \time 2/4
 \relative {
-  {{ config() }}
   f'='32\p bes_\artLegato a bes d bes a bes %
   f='32_\dynCresc bes a bes d bes a bes |
   \repeat unfold 2 { f='32 bes a bes d bes a bes }
@@ -56,11 +55,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key bes \major
 \relative {
-  {{ config() }}
   bes,=,8-\stBass besM! f' bes,@M |
   bes,=,8 besM! f' bes,@M |
   \repeat unfold 2 { a,=,8 f@7! f'=8 f7 | }

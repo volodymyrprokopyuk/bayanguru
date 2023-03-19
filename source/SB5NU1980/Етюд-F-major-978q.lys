@@ -62,13 +62,12 @@
   e'=8 r eM! r eM r |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo "Con moto, energico"
 \clef treble
 \key f \major
 \time 3/4
 \relative {
-  {{ config() }}
   \repeat segno 2 {
     \volta 1
     {{ rhFrag4("<f'=' a c>4->\\f", "\\>") }}
@@ -109,11 +108,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key f \major
 \relative {
-  {{ config() }}
   {{ lhFrag2("f,=,8-\\stBass", "c7") }}
   a,=,8 r am! r am r |
   e'=8 r a,@m! r8 am r |

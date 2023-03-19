@@ -8,13 +8,12 @@
   fis'=8 d@M! d8 d7! | g,=, gM! %
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Allegro
 \clef treble
 \key g \major
 \time 2/4
 \relative {
-  {{ config() }}
   \partial 4 { b'='8-.\mf c-. | }
   {{ rhFrag1() }} | b8 g) b-.\mp c-. |
   {{ rhFrag1() }} | b4) g8(\p a |
@@ -30,11 +29,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key g \major
 \relative {
-  {{ config() }}
   \partial 4 { r4 | }
   {{ lhFrag1("g,=,8-\\stBass") }} g gM |
   {{ lhFrag1("g=,8") }} r4 |

@@ -4,13 +4,12 @@
   bes=,8 besM! bes besM |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Allegretto
 \clef treble
 \key bes \major
 \time 2/4
 \relative {
-  {{ config() }}
   bes'='8-.\mf 8-. 8-. 8-. |
   bes='16( a bes c d8)-. bes-. |
   ees=''8-. g,-. g16( f g a |
@@ -25,11 +24,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key bes \major
 \relative {
-  {{ config() }}
   bes,=,8-\stBass besM! bes besM |
   {{ lhFrag1() }}
   f=,4( fis | g8) gm! e' c@7! |

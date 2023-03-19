@@ -1,10 +1,9 @@
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Allegro
 \clef treble
 \key c \major
 \time 3/4
 \relative {
-  {{ config() }}
   g''=''4\f g g | g8( f e d c b |
   c=''4) c c | d d e8( f |
   g=''4) g g | g8( f e d c b |
@@ -18,11 +17,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key c \major
 \relative {
-  {{ config() }}
   c=4-\stBass cM! cM | d g,@7! g74 |
   e=4 c@M! cM4 | b g,@M! gM4 |
   c=4 cM! cM | d g,@7! g74 |

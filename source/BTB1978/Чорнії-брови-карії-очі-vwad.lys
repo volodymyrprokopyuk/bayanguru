@@ -12,13 +12,12 @@
   a=,4 a7! a7 |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Moderato
 \clef treble
 \key d \minor
 \time 3/4
 \relative {
-  {{ config() }}
   d'='4\(\p f a\< | d2 \after 4\! d4 |
   cis=''4 b cis | d2 a4\) |
   f'=''4\( e d | c2 bes4 |
@@ -28,11 +27,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key d \minor
 \relative {
-  {{ config() }}
   d=4(-\stBass dm!) dm | f,( d@m!) dm4 |
   e'=4_\artSimile a,@7! a74 |
   \repeat unfold 2 { d=4 dm! dm | }

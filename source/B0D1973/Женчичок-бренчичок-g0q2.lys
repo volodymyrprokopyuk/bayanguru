@@ -8,13 +8,12 @@
   f=4 bes,@M! besM | f fM! fM |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Moderato
 \clef treble
 \key f \major
 \time 3/4
 \relative {
-  {{ config() }}
   {{ rhFrag1("c''=''4\\(\\p") }}
   {{ rhFrag1("c=''4\\(") }}
   bes='8( a g4)-. g-. | a8( g f4)-. f-. |
@@ -24,11 +23,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key f \major
 \relative {
-  {{ config() }}
   {{ lhFrag1("f=4-\\stBass") }}
   {{ lhFrag1("f=4") }}
   \repeat unfold 2 { c=4 c7! c7 | f fM! fm }

@@ -1,10 +1,9 @@
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Andante
 \clef treble
 \key c \major
 \time 2/4
 \relative {
-  {{ config() }}
   <c''='' e>8\mf 8 8 8 | <b d>4 <a c>8( <b d>) |
   <c='' e>8 8 <e g>4 | <b d>( <gis e'>) |
   <a=' c>8 8 <a d>8 8 | <c e>4 a8( b) |
@@ -16,11 +15,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key c \major
 \relative {
-  {{ config() }}
   c=8-\stBass cM! c cM | g g7! g g7 |
   c=8 cM! c cM | g gM! e' e7! |
   a,=,8 am! f d@m! | e'8 a,@m! d8 dm! |

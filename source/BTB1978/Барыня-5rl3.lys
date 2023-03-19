@@ -2,13 +2,12 @@
   b='16 d g,8~ g a | b16 g a b=' %
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Moderato
 \clef treble
 \key g \major
 \time 2/4
 \relative {
-  {{ config() }}
   \acciaccatura { fis''=''8 } g=''4\f %
   \acciaccatura { fis=''8 } g=''4 |
   \acciaccatura { fis=''8 } g=''8 d16 f e8 c |
@@ -46,11 +45,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key g \major
 \relative {
-  {{ config() }}
   g,=,8-\stBass gM! b g,@M | g8 gM! c cM! |
   g=,8 gM! b g,@M | g8 gM! c cM! |
   g=,8 gM! b g,@M | d8 g,@M! c8 cM! |

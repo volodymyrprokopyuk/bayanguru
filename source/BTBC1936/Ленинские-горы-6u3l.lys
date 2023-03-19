@@ -11,13 +11,12 @@
   \repeat unfold 2 { a=,8 d@7!4 d78 d= d74 d78 | }
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Lento
 \clef treble
 \key g \major
 \time 4/4
 \relative {
-  {{ config() }}
   r2\p r8 d'='8(\< g \after 16.\! b |
   \repeat volta 2 {
     e=''4\mp d) %
@@ -49,11 +48,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key g \major
 \relative {
-  {{ config() }}
   g,=,8-\stBass gM!4 gM8 g gM4 gM8 |
   {{ lhFrag1() }}
   b=,8 g,@M!4 a,@m!8 d,+d7!8 r r4 |

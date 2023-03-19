@@ -1,12 +1,11 @@
 {% from "util.lys" import hSpace, momentBeat, shapedSlur %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Andante
 \clef treble
 \key c \major
 \time 4/4
 \relative {
-  {{ config() }}
   {{ momentBeat("1/4", "1,1,1,1") }}
   \repeat volta 2 {
     g'='4.\(\mp e8 g4. e8 | g4 g f e\) |
@@ -28,11 +27,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key c \major
 \relative {
-  {{ config() }}
   c=4-\stBass cM! g c@M | c cM! g c@M |
   \repeat unfold 2 { d'=4 dm! g, g7! | }
   \repeat unfold 2 { d'=4 f@M! g, g7! | }

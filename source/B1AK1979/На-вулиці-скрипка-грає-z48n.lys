@@ -21,13 +21,12 @@
   c=8 cM! e c@M | f,8 fM! c' f,@M | c8 cM! g=, c@M |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Allegretto
 \clef treble
 \key d \minor
 \time 2/4
 \relative {
-  {{ config() }}
   {{ rhFrag1("d'='16(\\mf", "d=''4") }}
   {{ rhFrag2("c=''8.(\\p") }} | a[-. a-. a-. a]-. |
   {{ rhFrag2("c=''8.(") }} | a-. a-. a4 |
@@ -35,11 +34,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key d \minor
 \relative {
-  {{ config() }}
   {{ lhFrag1("d=8-\\stBass", "d= dm") }}
   {{ lhFrag2() }} | f8 fM! c' f,@M |
   {{ lhFrag2() }} | f8 fM! f fM |

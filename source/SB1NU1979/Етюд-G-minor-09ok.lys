@@ -5,13 +5,12 @@
   bes='8 d c bes | g' a, bes c='' |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Moderato
 \clef treble
 \key g \minor
 \time 4/8
 \relative {
-  {{ config() }}
   {{ momentBeat("1/2", "#'(1)") }}
   g'='8\mp bes a g | d' d, e fis |
   {{ rhFrag1() }}
@@ -22,11 +21,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key g \minor
 \relative {
-  {{ config() }}
   {{ momentBeat("1/2", "#'(1)") }}
   g,=,8[-\stBass gm!] bes g,@m | d8 d7! d7 d7 |
   bes=,8 g,@m! g8 gm | a[ f,@7! f78 f7] |

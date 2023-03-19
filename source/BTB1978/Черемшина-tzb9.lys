@@ -1,12 +1,11 @@
 {% from "util.lys" import momentBeat, v2, dynPadding %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Moderato
 \clef treble
 \key e \minor
 \time 4/4
 \relative {
-  {{ config() }}
   {{ momentBeat("1/4", "1,1,1,1") }}
   {{ dynPadding() }}
   R1\p |
@@ -73,11 +72,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key e \minor
 \relative {
-  {{ config() }}
   e=4-\stBass em! em em |
   e=4 em! em em | a,4 am! am am |
   d=4 d7! d7 d7 | g,4 gM! gM gM |

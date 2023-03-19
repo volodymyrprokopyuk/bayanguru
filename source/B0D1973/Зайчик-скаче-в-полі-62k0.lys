@@ -3,13 +3,12 @@
   c,=''8-. f-. e-. g-. | f=''2 |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Allegretto
 \clef treble
 \key f \major
 \time 2/4
 \relative {
-  {{ config() }}
   a'='8-.\mp bes-. c-. f-. | c4( a) |
   a='8-. bes-. c-. f-. | c2 |
   {{ rhFrag1() }}
@@ -19,11 +18,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key f \major
 \relative {
-  {{ config() }}
   f=8[-\stBass fM! fM fM] | f@M![ fM8 fM fM] |
   f=8[ fM! fM fM] | f@M![ fM8 fM fM] |
   e=8 c@M! c8 cM | f, fM! g gm! |

@@ -15,13 +15,12 @@
   r4 e= | f@M!8[-. fM8]-. fM4 | r4 e= | {{ a }} | %
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Moderato
 \clef treble
 \key a \minor
 \time 2/4
 \relative {
-  {{ config() }}
   {{ rhFrag1("c''=''8-.\\mp") }}
   {{ rhFrag1("c=''8-.") }}
   {{ rhFrag2("<f=' a>8-. <f=' a>-. 4") }}
@@ -29,11 +28,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key a \minor
 \relative {
-  {{ config() }}
   {{ lhFrag1("a=8-\\stBass") }}
   {{ lhFrag1("a=8") }}
   {{ lhFrag2("f@M!8[-. fM8]-. fM4") }}

@@ -5,13 +5,12 @@
   e='8( g fis e | d4) {{ b }} | %
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Allegretto
 \clef treble
 \key d \major
 \time 2/4
 \relative {
-  {{ config() }}
   d'='8\(\f e fis g | a4 d4\) |
   b='8\( b d b | a4 fis\) |
   {{ rhFrag1("g='8\\mf", "d='") }}
@@ -19,11 +18,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key d \major
 \relative {
-  {{ config() }}
   {{ momentBeat("1/2", "#'(1)") }}
   d=8(-\stBass dM!) dM dM | fis[( d@M!) dM8 dM] |
   g,=,8( gM!) gM gM | fis'[( d@M!) dM8 dM] |

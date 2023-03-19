@@ -9,13 +9,12 @@
   {{ a }} am! a am | a d@m! a8 d@m | gis8 e@M! e'=8 eM |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Allegretto
 \clef treble
 \key a \minor
 \time 2/4
 \relative {
-  {{ config() }}
   {{ rhFrag1("a'='16(\\mf") }} | a4) a=' |
   {{ rhFrag1("a='16(") }} | a4) b=' |
   \repeat volta 2 {
@@ -32,11 +31,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key a \minor
 \relative {
-  {{ config() }}
   {{ lhFrag1("a,=,8-\\stBass") }} | a, am! e' a,@m |
   {{ lhFrag1("a,=,8") }} | a,,+am!4 g,,+gM! |
   c=8 cM! cM4 | c8 cM cM4 |

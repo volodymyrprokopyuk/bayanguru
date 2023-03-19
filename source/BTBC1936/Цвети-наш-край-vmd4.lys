@@ -10,13 +10,12 @@
   {{ v2("g'='4", "ees'='8 d='") }}
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Largo
 \clef treble
 \key ees \major
 \time 3/4
 \relative {
-  {{ config() }}
   \partial 4 { bes=4\mf | }
   \repeat volta 2 {
     ees='2 c4 | f2 bes,4 |
@@ -55,11 +54,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key ees \major
 \relative {
-  {{ config() }}
   \partial 4 { r4 | }
   {{ momentBeat("1/4", "2,1") }}
   ees=8(-\stBass eesM!) eesM eesM bes( ees@M!) |

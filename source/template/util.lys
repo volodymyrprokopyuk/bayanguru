@@ -67,12 +67,6 @@
   indent = 7
 {% endmacro %}
 
-{% macro rhConfig() %}
-{% endmacro %}
-
-{% macro lhConfig() %}
-{% endmacro %}
-
 % === Piece util ===
 
 {% macro pieceMeta(piece) %}
@@ -122,8 +116,8 @@
     {% from source import rightHand, leftHand %}
     \new PianoStaff = bayan {
       <<
-        \new Staff = rightHand { {{ rightHand(rhConfig) }} }
-        \new Staff = leftHand { {{ leftHand(lhConfig) | stradella }} }
+        \new Staff = rightHand { {{ rightHand() }} }
+        \new Staff = leftHand { {{ leftHand() | stradella }} }
       >>
     }
   }

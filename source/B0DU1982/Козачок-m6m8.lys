@@ -8,23 +8,21 @@
   a=,8 am! a am | e'= e7! {{ b }} | %
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Allegretto
 \clef treble
 \key a \minor
 \time 2/4
 \relative {
-  {{ config() }}
   {{ rhFrag1("e''=''4\\mf", "c=''4") }}
   {{ rhFrag1("e=''4", "a='4") }} \bar "|."
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key a \minor
 \relative {
-  {{ config() }}
   {{ lhFrag1("a,=,8-\\stBass", "a, am!") }}
   {{ lhFrag1("a=,8", "a,,+am!4") }}
 }

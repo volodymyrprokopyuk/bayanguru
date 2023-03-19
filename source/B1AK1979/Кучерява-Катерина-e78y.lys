@@ -8,13 +8,12 @@
   | e16( d e8) d16( c d8) |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Allegro
 \clef treble
 \key c \major
 \time 2/4
 \relative {
-  {{ config() }}
   {{ rhFrag1("c'='16(\\f", "g='-.", "f='16(") }}
   {{ rhFrag1("c='16(", "c=''-.", "f,='16(") }}
   {{ rhFrag2("e='16(\\p") }}
@@ -24,11 +23,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key c \major
 \relative {
-  {{ config() }}
   c=8-\stBass cM! c cM | f fM! c cM |
   g=,8 g7! c cM! | g g7! c cM! |
   c=8 cM! e c@M | f8 fM! e c@M |

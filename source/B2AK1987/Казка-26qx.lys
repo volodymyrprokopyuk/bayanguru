@@ -3,13 +3,12 @@
   r8 b,,+bm! r | r cis,+a,@M! r8 |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Moderato
 \clef treble
 \key b \minor
 \time 3/8
 \relative {
-  {{ config() }}
   b'='8(\p fis) fis | a(\> \after 4\! fis4) |
   b='8( fis) fis | a(\> \after 4\! fis4) |
   d'=''8(\mp cis b) | b(\< \after 16.\! ais) ais |
@@ -29,11 +28,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key b \minor
 \relative {
-  {{ config() }}
   {{ lhFrag1("b,,+bm!-\\stBass") }}
   r8 d,+b,@m! r8 | r cis,+fis@7! r8 |
   r8 b,,+bm! r | r ais,,+fis@7! r8 |

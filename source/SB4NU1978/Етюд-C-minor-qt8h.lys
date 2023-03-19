@@ -7,13 +7,12 @@
   f,='16 d' b d f, d' b d='' |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Moderato
 \clef treble
 \key c \minor
 \time 4/4
 \relative {
-  {{ config() }}
   \repeat segno 2 {
     \repeat volta 2 {
       g'='16\(\p ees' c ees g, ees' c ees %
@@ -76,11 +75,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key c \minor
 \relative {
-  {{ config() }}
   c=8-\stBass r cm! r c r cm r |
   d=8 r g,@7! r8 d r g,@7 r8 |
   ees=8 r c@m! r8 ees r c@m r8 |

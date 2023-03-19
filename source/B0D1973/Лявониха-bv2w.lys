@@ -7,13 +7,12 @@
   c=8 cM! a c@M | d8 g,@M! d8 dM | g,=, gM! gM4 |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Allegretto
 \clef treble
 \key g \major
 \time 2/4
 \relative {
-  {{ config() }}
   g'='8-.\mf b-. d-. c-. | b-. b-. a4 | b8-. g-. c4 |
   {{ rhFrag1() }}
   \repeat volta 2 {
@@ -23,11 +22,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key g \major
 \relative {
-  {{ config() }}
   {{ lhFrag1("g,=,8-\\stBass") }}
   {{ lhFrag1("g=,8") }}
 }

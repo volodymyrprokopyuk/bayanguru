@@ -1,10 +1,9 @@
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Lento
 \clef treble
 \key g \minor
 \time 4/4
 \relative {
-  {{ config() }}
   g'='8\(\p a bes g fis4 d8 d\) |
   g='8\( a bes4 a d\) |
   c=''8\( c bes a bes4 g8 g |
@@ -17,11 +16,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key g \minor
 \relative {
-  {{ config() }}
   g,=,4\(-\puBass d' c2\) | bes4\( d fis d\) |
   ees=2\( d4 bes\) | c\( d g,\) g |
   g=,8\( a bes g fis4 d8 d\) | g\( a bes4 a d\) |

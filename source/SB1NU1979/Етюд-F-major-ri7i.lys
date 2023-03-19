@@ -10,13 +10,12 @@
   c=4 c7! c7 |
 {% endmacro %}
 
-{% macro rightHand(config) %}
+{% macro rightHand() %}
 \tempo Moderato
 \clef treble
 \key f \major
 \time 3/4
 \relative {
-  {{ config() }}
   {{ rhFrag1("a'='8(\\f") }}
   d'=''8( a f g a bes | c4) c c |
   bes='4( a g | a2 f4) |
@@ -26,11 +25,10 @@
 }
 {% endmacro %}
 
-{% macro leftHand(config) %}
+{% macro leftHand() %}
 \clef bass
 \key f \major
 \relative {
-  {{ config() }}
   {{ lhFrag1("f,=,4-\\stBass") }}
   f,=,4 fM! fM |
   {{ lhFrag1("f=,4") }} f,,+fM!2. |
