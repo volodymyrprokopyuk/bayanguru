@@ -121,6 +121,7 @@ export async function readBooks(args) {
 export async function selectPieces(args) {
   const match = (tag) => (piece) => {
     if (!args[tag]) { return true }
+    if (!piece[tag]) { return false }
     const matchers = args[tag].split(",").map(query => label => {
       const neg = query.startsWith("^")
       const re = new RegExp(neg ? query.slice(1) : query, "i")
