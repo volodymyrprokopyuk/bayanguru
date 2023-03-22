@@ -146,7 +146,7 @@ async function engraveBook(book, args) {
   }
   if (args.dry) { return }
   const score = template.render("book.lys", { book, args })
-  return await lilypond(score, `scores/${book.file}`, args)
+  return await lilypond(score, `books/${book.file}`, args)
 }
 
 export async function engraveBooks(books, args) {
