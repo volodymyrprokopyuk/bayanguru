@@ -4,22 +4,22 @@ pieces:
   # B0D1973
   - { id: 1kae, tit: Ой піду я до млина, sub: uafs,
       src: B0D1973,
-      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: 4ha8, tit: На вулиці скрипка грає, sub: uafs,
       src: B0D1973,
-      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: 7n13, tit: Веселі гуси, sub: uafs,
       src: B0D1973,
-      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ua, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
   - { id: jnuj, tit: За городом качки пливуть, sub: uafs,
       src: B0D1973,
-      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ua, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
   - { id: j6sq, tit: Грибок, sub: 'із збірника \"Гусельки\"',
       src: B0D1973,
-      org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: ua, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
   - { id: fywu, tit: "Здрастуй, новий рік",
       com: М. Дремлюга, src: B0D1973,
-      org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: ela }
   - { id: 1sxc, tit: Казав мені батько, sub: uafs,
       src: B0D1973,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }

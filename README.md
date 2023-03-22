@@ -48,6 +48,7 @@ meta:
   msc: різне
   # Genre (gnr)
   sng: пісня
+  chd: дитяча пісня
   dnc: танець
   pie: п'єса
   vls: вальс
