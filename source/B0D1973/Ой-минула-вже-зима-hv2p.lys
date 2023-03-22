@@ -9,7 +9,7 @@
 {% endmacro %}
 
 {% macro lhFrag1() %}
-  f,=,8 fM! fM4 | g8 c@M! cM4 | g8 c@M! g=,8 gM |
+  f,=,8 fM! fM4 | g8 c@M! cM4 | g8 c@M! g=,8 gM! |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -29,9 +29,10 @@
 \clef bass
 \key c \major
 \relative {
-  c@M!8[-\stBass cM8] g,@M[ gM8] | c@M! r8 r4 |
-  c@M!8[ cM8] g,@M[ gM8] | c@M![ cM8] cM4 |
-  c=8 cM! g gM | c cM! g gM | c cM! g gM | c cM! cM4 |
+  c@M!8[-\stBass cM8] g,@M![ gM8] | c@M! r8 r4 |
+  c@M!8[ cM8] g,@M![ gM8] | c@M![ cM8] cM4 |
+  \repeat unfold 3 { c=8 cM! g gM! | }
+  c=8 cM! cM4 |
   {{ lhFrag1() }} | c=8 cM! cM4 |
   {{ lhFrag1() }} | c=8 f,@M! c@M!4 |
 }

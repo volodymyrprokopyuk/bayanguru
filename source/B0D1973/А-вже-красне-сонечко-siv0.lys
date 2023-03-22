@@ -18,7 +18,8 @@
 \clef bass
 \key c \major
 \relative {
-  a,=,8-\stBass am! d dm | a[ am! am am] | d dm! e a,@m |
+  a,=,8-\stBass am! d dm! |
+  a=,8[ am! am am] | d dm! e a,@m! |
   e=8 eM! a, am! | e'= eM! a,,+am!4 |
 }
 {% endmacro %}

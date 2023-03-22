@@ -22,16 +22,16 @@ pieces:
       org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: ela }
   - { id: 1sxc, tit: Казав мені батько, sub: uafs,
       src: B0D1973,
-      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: hv2p, tit: Ой минула вже зима, sub: uafs,
       src: B0D1973,
-      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ua, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
   - { id: siv0, tit: А вже красне сонечко, sub: uafs,
       src: B0D1973,
-      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: kakw, tit: Дощик, sub: uafs,
       src: B0D1973,
-      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: 6msd, tit: У сусіда хата біла, sub: uafs,
       src: B0D1973,
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
