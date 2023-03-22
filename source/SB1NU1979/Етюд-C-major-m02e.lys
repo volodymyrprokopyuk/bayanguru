@@ -1,0 +1,24 @@
+{% macro rhFrag1(a, b) %}
+  {{ a }} d16 e f g a {{ b }} b |
+  c='''8)-. g-. e-. c-. |
+{% endmacro %}
+
+{% macro rightHand() %}
+\tempo Presto
+\clef treble
+\key c \major
+\time 2/4
+\relative {
+  {{ rhFrag1("c''=''8(\\mf\\<", "\\after 16\\!") }}
+  d=''8( g)-. e( g)-. | d-. d-. d4-- |
+  {{ rhFrag1("c=''8(", "") }}
+  d=''8-. d-. d( g)-. | c,-. c-. c=''4-- |
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\clef bass
+\key c \major
+\relative {
+}
+{% endmacro %}
