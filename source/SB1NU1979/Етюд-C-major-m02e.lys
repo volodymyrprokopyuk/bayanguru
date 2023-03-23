@@ -1,6 +1,19 @@
 {% macro rhFrag1(a, b) %}
   {{ a }} d16 e f g a {{ b }} b |
-  c='''8)-. g-. e-. c-. |
+  c='''8)-. g-. e-. c=''-. |
+{% endmacro %}
+
+{% macro rhFrag2(a) %}
+  {{ a }} g fis g e g fis g='' |
+{% endmacro %}
+
+{% macro rhFrag3() %}
+  d=''8-. d-. d( g)-. | c,-. c-. c=''4-- |
+{% endmacro %}
+
+{% macro lhFrag1() %}
+  c,+cM!4 r | R2 | g,,+gM!4-. g,,+gM-. | %
+  c,+cM!8-. c,+cM-. c,+cM4-- |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -12,7 +25,14 @@
   {{ rhFrag1("c''=''8(\\mf\\<", "\\after 16\\!") }}
   d=''8( g)-. e( g)-. | d-. d-. d4-- |
   {{ rhFrag1("c=''8(", "") }}
-  d=''8-. d-. d( g)-. | c,-. c-. c=''4-- |
+  {{ rhFrag3() }}
+
+  {{ rhFrag2("d=''16(\\p") }}
+  {{ rhFrag2("d=''16_\\dynCresc") }}
+  {{ rhFrag2("d=''16") }}
+  d=''8)-. d-. d4-- |
+  {{ rhFrag1("c=''8(\\mf\\<", "\\after 16\\!") }}
+  {{ rhFrag3() }} \bar "|."
 }
 {% endmacro %}
 
@@ -20,5 +40,12 @@
 \clef bass
 \key c \major
 \relative {
+  c,+cM!4-\stBass r | R2 | g,,+gM!4-. g,,+c@M!-. |
+  g,,+gM!8-. g,,+gM-. g,,+gM4-- |
+  {{ lhFrag1() }}
+
+  \repeat unfold 3 { g,@M!4 c@M!4 }
+  g,@M!8[-. gM8]-. gM4-- |
+  {{ lhFrag1() }}
 }
 {% endmacro %}
