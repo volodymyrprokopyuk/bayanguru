@@ -30,7 +30,7 @@
   {{ lhFrag1("f=4-\\stBass") }}
   {{ lhFrag1("f=4") }}
   \repeat unfold 2 { c=4 c7! c7 | f fM! fm }
-  d=4 bes,@M! besM | g,=, bes,@M besM |
+  d=4 bes,@M! besM | g,=, bes,@M! besM |
   c=4 c7! c7 | f= fM! r |
 }
 {% endmacro %}

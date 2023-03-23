@@ -34,37 +34,37 @@ pieces:
       org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: 6msd, tit: У сусіда хата біла, sub: uafs,
       src: B0D1973,
-      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: iso2, tit: Дударик, sub: uafs,
       src: B0D1973,
-      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: xi84, tit: Їхав козак за Дунай, sub: uafs,
       src: B0D1973,
-      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: dysh, tit: "Ой не ходи, Грицю", sub: uafs,
       src: B0D1973,
-      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: f9yf, tit: "По дорозі жук, жук", sub: uafs,
       src: B0D1973,
-      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ua, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
   - { id: 41tf, tit: Ой під горою, sub: uafs,
       src: B0D1973,
-      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: g0q2, tit: Женчичок-бренчичок, sub: uafs,
       src: B0D1973,
-      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: l76t, tit: "Ой дівчино, шумить гай", sub: uafs,
       src: B0D1973,
-      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: v610, tit: Осінь, sub: Дитяча пісенька,
       src: B0D1973,
-      org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: ua, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
   - { id: 62k0, tit: Зайчик скаче в полі, sub: Дитяча пісенька,
       src: B0D1973,
-      org: ua, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: ua, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
   - { id: qr71, tit: Ти до мене не ходи, sub: uafs,
       src: B0D1973,
-      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: hdux, tit: Метелиця, sub: uafd,
       src: B0D1973,
       org: ua, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
