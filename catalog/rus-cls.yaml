@@ -4,105 +4,105 @@ pieces:
   # B0D1973
   - { id: drrh, tit: Первые шаги,
       com: С. Майкапар, src: B0D1973,
-      org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: bj88, tit: Санки,
       com: М. Красев, src: B0D1973,
-      org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: b383, tit: При долинушке калинушка стоит, sub: rufs,
       src: B0D1973,
-      org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: vt18, tit: На горе-то калина, sub: rufs,
       src: B0D1973,
-      org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: 8fs0, tit: На улице дождь идет, sub: rufs,
       src: B0D1973,
-      org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: 0mdf, tit: Колыбельная, sub: rufs,
       src: B0D1973,
-      org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: bspm, tit: "Белолица, круглолица", sub: rufs,
       src: B0D1973,
-      org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: kkks, tit: Елочка,
       com: Л. Бекман, src: B0D1973,
-      org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   # B0DU1982
   - { id: ye26, tit: Спят усталые игрушки,
       com: А. Островский, src: B0DU1982,
-      org: ru, sty: jaz, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: jaz, gnr: sng, frm: mel, bss: stb, lvl: elm }
   # B1AK1979
   - { id: ebam, tit: Елочка,
       com: М. Красев, src: B1AK1979,
-      org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: 6sx9, tit: Девицы-красавицы, sub: rufs,
       src: B1AK1979,
-      org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: dj8u, tit: "Я пойду ли, молоденька", sub: rufs,
       src: B1AK1979,
-      org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: e40b, tit: Песенка,
       com: Ю. Шишаков, src: B1AK1979,
-      org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: 58a8, tit: Звенит звонок веселый,
       com: А. Долуханян, src: B1AK1979,
-      org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: sgyu, tit: Новогодняя полька,
       com: А. Александров, src: B1AK1979,
-      org: ru, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elm }
   - { id: f026, tit: Плясовая,
       com: Л. Бирнов, src: B1AK1979,
-      org: ru, sty: msc, gnr: dnc, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: dnc, frm: mel, bss: stb, lvl: elm }
   # B1AK1985
   - { id: r9dx, tit: Родина, sub: rufs,
       src: B1AK1985,
-      org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: r1gr, tit: Выйду ль я на реченьку, sub: rufs,
       src: B1AK1985,
-      org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: erhk, tit: Рыбка,
       com: М. Красев, src: B1AK1985,
-      org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: bgnx, tit: Колыбельная,
       com: И. Дунаевский, src: B1AK1985,
-      org: ru, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: r9o6, tit: Катюша,
       com: М. Блантер, src: B1AK1985,
-      org: ru, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
   # B2AK1979
   - { id: jquj, tit: Ходила младешенька по борочку, sub: rufs,
       src: B2AK1979,
-      org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: soth, tit: Катенька, sub: rufs,
       src: B2AK1979,
-      org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: 2n32, tit: Среди долины ровныя, sub: rufs,
       src: B2AK1979,
-      org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: 923n, tit: Лирическая протяжная,
       com: Н. Речменский, src: B2AK1979,
-      org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: zk1t, tit: Щебетала пташечка,
       com: Н. Руднев, src: B2AK1979,
-      org: ru, sty: flk, gnr: sng, frm: mel, bss: pub, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: pub, lvl: elm }
   - { id: nvek, tit: Романс Антониды, sub: 'из оперы \"Иван Сусанин\"',
       com: М. Глинка, src: B2AK1979,
-      org: ru, sty: msc, gnr: rmc, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: rmc, frm: mel, bss: stb, lvl: elm }
   - { id: eq9y, tit: Грушица, sub: rufs,
       src: B2AK1979,
-      org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: xzce, tit: Каватина Людмилы, sub: 'из оперы \"Руслан и Людмила\"',
       com: М. Глинка, src: B2AK1979,
-      org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: e1d4, tit: Меланхолический вальс,
       com: А. Даргомыжский, src: B2AK1979,
-      org: ru, sty: msc, gnr: vls, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: vls, frm: mel, bss: stb, lvl: elm }
   - { id: 1hva, tit: Как пойду я на быструю речку, sub: rufs,
       src: B2AK1979,
-      org: ru, sty: flk, gnr: sng, frm: var, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: var, bss: stb, lvl: elm }
   # B2AK1987
   - { id: tsio, tit: Колыбельная,
       com: Т. Хренников, src: B2AK1987,
-      org: ru, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: tg2x, tit: Ходила младешенька по борочку, sub: rufs,
       src: B2AK1987,
-      org: ru, sty: flk, gnr: sng, frm: var, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: var, bss: stb, lvl: elm }

@@ -6,21 +6,21 @@ pieces: []
   # - { id: 6nv7, tit: Місяцю ясний,
   #     com: С. Гулак-Артемовський, arr: А. Басурманов, aty: ipr,
   #     src: TYBC1B1970,
-  #     org: ua, sty: msc, gnr: rmc, frm: mel, bss: stb, lvl: elm }
+  #     org: ukr, sty: msc, gnr: rmc, frm: mel, bss: stb, lvl: elm }
   # p. 102
   # - { id: bklv, tit: Дощик, sub: uafs,
   #     arr: Л. Захарова, aty: ipr, src: TYBC1B1970,
-  #     org: ua, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  #     org: ukr, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
   # p. 103
   # - { id: d099, tit: Гречаники, sub: uafs,
   #     arr: А. Басурманов, aty: ipr, src: TYBC1B1970,
-  #     org: ua, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  #     org: ukr, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
   # TYBC2B1971
   # p. 12
   # - { id: 6hjt, tit: "Чом, чом не прийшов", sub: uafs,
   #     src: TYBC2B1971,
-  #     org: ua, sty: flk, gnr: sng, frm: var, bss: stb, lvl: elm }
+  #     org: ukr, sty: flk, gnr: sng, frm: var, bss: stb, lvl: elm }
   # p. 15
   # - { id: h940, tit: "Віють вітри, віють буйні", sub: uafs,
   #     src: TYBC2B1971,
-  #     org: ua, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+  #     org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }

@@ -4,81 +4,81 @@ pieces:
   # BTBC1936
   - { id: q6xh, tit: Одинокая гармонь,
       com: Б. Мокроусов, src: BTBC1936,
-      org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: 87ko, tit: Яблочко, sub: rufd,
       arr: Н. Чайкин, src: BTBC1936,
-      org: ru, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
   - { id: p7el, tit: Варяг, sub: rufs,
       arr: Н. Чайкин, aty: ipr, src: BTBC1936,
-      org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: 6u3l, tit: Ленинские горы,
       com: Ю. Милютин, src: BTBC1936,
-      org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: qt7k, tit: Есть на Волге утес, sub: rufs,
       src: BTBC1936,
-      org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: oz1w, tit: При долине куст калины,
       com: А. Новиков, src: BTBC1936,
-      org: ru, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: p26a, tit: Барыня, sub: rufd,
       arr: Н. Чайкин, src: BTBC1936,
-      org: ru, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
   - { id: frcu, tit: "Ах ты, ноченька", sub: rufs,
       arr: Н. Чайкин, src: BTBC1936,
-      org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: hjff, tit: Костры горят далекие,
       com: Б. Мокроусов, src: BTBC1936,
-      org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: 7nax, tit: Ермак, sub: rufs,
       arr: Н. Чайкин, aty: ipr, src: BTBC1936,
-      org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: 74jq, tit: Уральская рябинушка,
       com: Е. Родыгин, src: BTBC1936,
-      org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: 7s64, tit: Жди солдата,
       com: Б. Мокроусов, arr: Н. Чайкин, aty: ipr, src: BTBC1936,
-      org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: blt6, tit: Родина, sub: rufs,
       arr: Н. Чайкин, aty: hrm, src: BTBC1936,
-      org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: l1zm, tit: Лирическая,
       com: Н. Поликарпов, src: BTBC1936,
-      org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: sqwg, tit: Уваровские частушки,
       src: BTBC1936,
-      org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: 9lu3, tit: Волжские припевки,
       com: Ю. Щекотов, src: BTBC1936,
-      org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: ecde, tit: Мчатся гуси вереницей, sub: rufs,
       arr: Н. Чайкин, aty: hrm, src: BTBC1936,
-      org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: vmd4, tit: "Цвети, наш край",
       com: С. Туликов, src: BTBC1936,
-      org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: s31k, tit: "Где же вы теперь, друзья-однополчане",
       com: В. Соловьев-Седой, src: BTBC1936,
-      org: ru, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: 1czf, tit: Карело-финская полька,
       src: BTBC1936,
-      org: ru, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elm }
   # BTB1978
   - { id: lknz, tit: "Ах ты, зимушка-зима", sub: rufs,
       src: BTB1978,
-      org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: od7f, tit: Ивушка,
       com: Г. Пономаренко, src: BTB1978,
-      org: ru, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: 2al1, tit: Песня о тревожной молодисти,
       com: А. Пахмутова, src: BTB1978,
-      org: ru, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: 5rl3, tit: Барыня, sub: rufd,
       src: BTB1978,
-      org: ru, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
   - { id: jh3h, tit: Елечки-метелочки, sub: Сибирские народные припевки,
       src: BTB1978,
-      org: ru, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: gm8m, tit: "С чего начинается родина?",
       com: В. Баснер, src: BTB1978,
-      org: ru, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
   # TODO p. 90
