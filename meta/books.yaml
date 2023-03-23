@@ -91,7 +91,7 @@ books:
       # Class
       # B0D1973
       "d2md", "p1vc"] }
-  - { id: stdy, tit: Вибрані етюди, sub: для баяна,
+  - { id: stcl, tit: Вибрані етюди, sub: для баяна,
       pieces: [
       # Scale
       { sec: Гамоподібні рухи, pieces: [
