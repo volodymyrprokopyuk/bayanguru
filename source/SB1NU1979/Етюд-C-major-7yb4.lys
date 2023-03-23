@@ -1,0 +1,47 @@
+{% from "util.lys" import hSpace, shapedSlur %}
+
+{% macro lhFrag1(a) %}
+  {{ a }} r g,,+c@M! r8 | c= cM! c,+cM r |
+{% endmacro %}
+
+{% macro rightHand() %}
+\tempo Moderato
+\clef treble
+\key c \major
+\time 2/4
+\relative {
+  \partial 4 { r16 g'='16\(\mf a b | }
+  \repeat volta 2 {
+    c=''16\< b c d e c e \after 16\! f |
+    g=''8\) g g16\mf g,\(\< a b |
+    c=''16 g c d e c e \after 16\! f |
+    g=''8\) g g16_\dynDim e( g a |
+    f=''16) d( f g e) c( e g |
+    d=''16) b( d e c) a( c e |
+    d=''16) a( b e d c b a |
+    \alternative {
+      \volta 1 {
+        g='8) g' g16 g, a b {{ shapedSlur("fu", sh = 4) }} ( |
+      }
+      \volta 2 {
+        {{ hSpace() }}
+
+        g='8)\mf g' c,='' r \bar "|."
+      }
+    }
+  }
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\clef bass
+\key c \major
+\relative {
+  \partial 4 { r4 | }
+  {{ lhFrag1("c,+cM!8-\\stBass") }}
+  {{ lhFrag1("c,+cM!8") }}
+  b,,+g,@M!8 r8 c,+cM! r | b,,+e@7! r8 a,,+am! r |
+  f,,+d@m!8 r8 fis,,+d@M! r8 | g gM! g,,+gM r |
+  g=,8 gM! c,+cM! r |
+}
+{% endmacro %}

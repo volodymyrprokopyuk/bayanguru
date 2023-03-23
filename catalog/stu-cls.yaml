@@ -125,10 +125,9 @@ pieces:
   - { id: m02e, tit: Етюд C major,
       com: Й. Ванхаль, src: SB1NU1979,
       org: cze, sty: stu, gnr: stu, frm: wrs, bss: stb, lvl: elm }
-  # p. 31
-  # - { id: 7yb4, tit: Етюд C major,
-  #     com: В. Белов, src: SB1NU1979,
-  #     org: rus, sty: stu, gnr: stu, frm: wrs, bss: stb, lvl: elm }
+  - { id: 7yb4, tit: Етюд C major,
+      com: В. Белов, src: SB1NU1979,
+      org: rus, sty: stu, gnr: stu, frm: wrs, bss: stb, lvl: elm }
   # p. 32
   # - { id: 6yq2, tit: Етюд Bes major,
   #     com: Т. Федин, src: SB1NU1979,
