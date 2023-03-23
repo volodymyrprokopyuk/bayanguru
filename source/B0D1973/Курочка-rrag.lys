@@ -11,8 +11,8 @@
   {{ a }} r g r | f4 r | e8 r a=4 |
 {% endmacro %}
 
-{% macro lhFrag2(a) %}
-  r4 e= | f@M!8[-. fM8]-. fM4 | r4 e= | {{ a }} | %
+{% macro lhFrag2(a, b) %}
+  {{ a }} e= | f@M!8[-. fM8]-. fM4 | r4 e= | {{ b }} | %
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -32,9 +32,9 @@
 \clef bass
 \key a \minor
 \relative {
-  {{ lhFrag1("a=8-\\stBass") }}
+  {{ lhFrag1("a=8-\\puBass") }}
   {{ lhFrag1("a=8") }}
-  {{ lhFrag2("f@M!8[-. fM8]-. fM4") }}
-  {{ lhFrag2("f=8-. d-. a,,+am!4") }}
+  {{ lhFrag2("r4-\\stBass", "f@M!8[-. fM8]-. fM4") }}
+  {{ lhFrag2("r4", "f=8-. d-. a,,+am!4") }}
 }
 {% endmacro %}

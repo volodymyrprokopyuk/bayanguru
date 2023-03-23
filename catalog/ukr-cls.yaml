@@ -67,16 +67,16 @@ pieces:
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: hdux, tit: Метелиця, sub: uafd,
       src: B0D1973,
-      org: ukr, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: ela }
   - { id: jmy7, tit: Полька,
       com: А. Тихончук, src: B0D1973,
-      org: ukr, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: ela }
   - { id: n482, tit: Танець урожаю,
       com: Т. Шутенко, src: B0D1973,
-      org: ukr, sty: msc, gnr: dnc, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: msc, gnr: dnc, frm: mel, bss: stb, lvl: ela }
   - { id: rrag, tit: Курочка,
       com: М. Любарський, src: B0D1973,
-      org: ukr, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: msc, gnr: chd, frm: mel, bss: [pub, stb], lvl: ela }
   # B0DU1982
   - { id: zo21, tit: Ой лопнув обруч, sub: uafs,
       src: B0DU1982,
