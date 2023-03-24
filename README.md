@@ -23,6 +23,8 @@ Stradella bass and free bass
       and **for print** (PDF)
     - **Indexed database** of individual sheet music pieces for sheet music
       browsing, searching and visualization
+    - **Flexible query langauge** that allows dynamic construction of
+      fine-grained playlists for sheet music reading
     - **Built-in linter** to ensure source code quality and consistency
 
 ## Dependencies
@@ -34,7 +36,7 @@ Stradella bass and free bass
 ## Catalog
 
 ``` bash
-shuf -ern 4 {a..z} {0..9} | tr -d '\n' # picece / book random ID
+shuf -ern 4 {a..z} {0..9} | tr -d '\n' # generate picece/book random ID
 ```
 
 ## Meta
@@ -49,11 +51,14 @@ meta:
   # Genre (gnr)
   sng: пісня
   chd: дитяча пісня
+  ves: веснянка
   dnc: танець
-  pie: п'єса
   vls: вальс
   plk: полька
   mzr: мазурка
+  koz: козачок
+  gop: гопак
+  pie: п'єса
   rmc: романс
   stu: етюд
   # Form (frm)
@@ -67,16 +72,16 @@ meta:
   crd: аккорди
   orn: мелізми
   art: артикуляція
-  lhn: ліва рука
+  lhd: ліва рука
   # Bass (bss)
-  stb: готовий аккорд
-  pub: чистий бас
-  frb: вибірна система
+  stb: готовий аккорд # standard (Stradella) bass
+  pub: чистий бас # pure bass
+  frb: вибірна система # free bass
   # Level (lvl)
-  elm: простий
-  int: середній
-  adv: складний
-  vir: віртуозний
+  elm: простий # elementary
+  int: середній # intermediate
+  adv: складний # advanced
+  vir: віртуозний # virtuoso
   # Arrangment type (aty)
   arr: Обр. # обробка, arrangment
   ipr: Пер. # переклад, interpratation

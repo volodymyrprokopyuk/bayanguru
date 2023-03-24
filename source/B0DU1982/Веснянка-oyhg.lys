@@ -16,6 +16,6 @@
 \key g \major
 \relative {
   g,=,8-\stBass gM! g gM | g gM! g gM | g gM! g gM |
-  g=,8 gM! c cM | g gM! d' dM | g, gM! g=, gM |
+  g=,8 gM! c cM! | g gM! d' dM! | g, gM! g=, gM |
 }
 {% endmacro %}

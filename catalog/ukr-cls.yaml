@@ -80,25 +80,25 @@ pieces:
   # B0DU1982
   - { id: zo21, tit: Ой лопнув обруч, sub: uafs,
       src: B0DU1982,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: oyhg, tit: Веснянка,
       com: В. Рибальченко, src: B0DU1982,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: ves, frm: mel, bss: stb, lvl: ela }
   - { id: v3cd, tit: Весела пісенька,
       com: К. Мясков, src: B0DU1982,
-      org: ukr, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: ela }
   - { id: akqt, tit: Козачок, sub: uafd,
       src: B0DU1982,
-      org: ukr, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: koz, frm: mel, bss: stb, lvl: ela }
   - { id: ry3w, tit: Гуцульський танець,
       com: К. Домінчен, src: B0DU1982,
-      org: ukr, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: ela }
   - { id: m6m8, tit: Козачок,
       com: Л. Ревуцький, src: B0DU1982,
-      org: ukr, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: koz, frm: mel, bss: stb, lvl: ela }
   - { id: 993t, tit: Перша пісня,
       com: В. Кирейко, src: B0DU1982,
-      org: ukr, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: ela }
   - { id: v7hf, tit: Вальс,
       com: К. Мясков, src: B0DU1982,
       org: ukr, sty: msc, gnr: vls, frm: mel, bss: stb, lvl: elm }

@@ -1,5 +1,5 @@
 {% macro lhFrag1() %}
-  c=4 cM! f fM | e c@M! f4 fM | g, c@M! g=,4 gM |
+  c=4 cM! f fM! | e c@M! f4 fM! | g, c@M! g=,4 gM! |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -20,8 +20,8 @@
 \clef bass
 \key c \major
 \relative {
-  c=4-\stBass cM! cM cM | g gM! c cM |
-  a=,4 am! am am | g gM! c cM |
+  c=4-\stBass cM! cM cM | g gM! c cM! |
+  a=,4 am! am am | g gM! c cM! |
   {{ lhFrag1() }} | a am! am am |
   {{ lhFrag1() }} | c@M!1-\fermata |
 }
