@@ -17,8 +17,8 @@
         f='4.\) f8 {{ shapedSlur("fu") }} ( <>) |
       }
       \volta 2 {
-        {{ hSpace() }} f='4. %
-        {{ shapedSlur("bd", bs = 2.5) }} ( r8) \bar "|."
+        {{ hSpace() }}
+        f='4. {{ shapedSlur("bd", bs = 2.5) }} ( r8) \bar "|."
       }
     }
   }

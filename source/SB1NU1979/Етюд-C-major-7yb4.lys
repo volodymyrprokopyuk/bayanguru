@@ -21,12 +21,13 @@
     d=''16) a( b e d c b a |
     \alternative {
       \volta 1 {
-        g='8) g' g16 g, a b {{ shapedSlur("fu", sh = 4) }} ( |
+        g='8) g' g16 g, %
+        {{ shapedSlur("fu", bs = 0, wd = 2.2, ht = 2.8, dt = 2) }} ( %
+        a='16 b <>) |
       }
       \volta 2 {
         {{ hSpace() }}
-
-        g='8)\mf g' c,='' r \bar "|."
+        g='8\mf {{ shapedSlur("bu") }} ( g') c,='' r \bar "|."
       }
     }
   }

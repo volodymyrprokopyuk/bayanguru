@@ -23,8 +23,8 @@
     \alternative {
       \volta 1 { a='4) b=' | }
       \volta 2 {
-        {{ hSpace() }} a4
-        {{ shapedSlur("bu") }} ( a'='') \bar "|."
+        {{ hSpace() }}
+        a='4 {{ shapedSlur("bu") }} ( a'='') \bar "|."
       }
     }
   }

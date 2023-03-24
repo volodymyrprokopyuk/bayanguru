@@ -40,8 +40,7 @@
       }
       \volta 2 {
         {{ hSpace() }}
-        <g=' b g'>2~ %
-        {{ shapedSlur("bu", bs = 3.5) }} ( 4) r \bar "|."
+        <g=' b g'>2~ {{ shapedSlur("bu", bs = 3.5) }} ( 4) r \bar "|."
       }
     }
   }

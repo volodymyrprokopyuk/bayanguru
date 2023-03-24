@@ -1,4 +1,4 @@
-{% from "util.lys" import hSpace, shapedSlur, v2 %}
+{% from "util.lys" import v2, hSpace, shapedSlur %}
 
 {% macro rightHand() %}
 \tempo Lento
@@ -36,7 +36,8 @@
         e='2)\p r8 e='8 {{ shapedSlur("bu", sh = 8) }} ( |
       }
       \volta 2 {
-        {{ hSpace() }} e='2.)\p |
+        {{ hSpace() }}
+        e='2.)\p |
         <<
           \relative {
             b'='4( cis dis='' |
