@@ -1,4 +1,4 @@
-{% from "util.lys" import dynPadding, v2 %}
+{% from "util.lys" import v2, dynPadding %}
 
 {% macro rightHand() %}
 \tempo Moderato

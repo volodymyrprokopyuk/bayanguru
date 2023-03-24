@@ -1,4 +1,4 @@
-{% from "util.lys" import dynPadding, momentBeat %}
+{% from "util.lys" import momentBeat, dynPadding %}
 
 {% macro rightHand() %}
 \tempo Lento

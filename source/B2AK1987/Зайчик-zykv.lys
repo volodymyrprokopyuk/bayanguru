@@ -1,4 +1,4 @@
-{% from "util.lys" import dynPadding, momentBeat, v2 %}
+{% from "util.lys" import momentBeat, v2, dynPadding %}
 
 {% macro lhFrag1() %}
   {{ v2("r4 aM!", "a,=,2") }} | %
