@@ -25,9 +25,9 @@
   c=8(-\stBass cM!) cM cM | c( cM) cM cM |
   f,=,8( fM!) fM fM | c'( cM!) cM cM |
   {{ momentBeat("1/4", "1,1,1,1") }}
-  c=8 cM! g gM | c cM! f, fM |
-  c'=8 cM! g gM | c cM! g gM |
-  c=8 cM! g gM | c8 cM! f, fM |
+  c=8 cM! g gM! | c cM! f, fM! |
+  c'=8 cM! g gM! | c cM! g gM! |
+  c=8 cM! g gM! | c8 cM! f, fM! |
   g=,8 c@M! g8 g7! | c= cM! c,+cM4 |
 }
 {% endmacro %}

@@ -4,7 +4,7 @@
 {% endmacro %}
 
 {% macro lhFrag1(a, b) %}
-  {{ a }} fM! bes besM | a f,@M! f8 fM |
+  {{ a }} fM! bes besM! | a f,@M! f8 fM |
   bes=,8 besM! {{ b }} c7! f,=, fM! |
 {% endmacro %}
 
@@ -27,12 +27,12 @@
 \clef bass
 \key f \major
 \relative {
-  {{ lhFrag1("f,=,8-\\stBass", "f fM | c'") }}
-  {{ lhFrag1("f=,8", "c f,@M | c8") }}
+  {{ lhFrag1("f,=,8-\\stBass", "f fM! | c'") }}
+  {{ lhFrag1("f=,8", "c f,@M! | c8") }}
   \repeat unfold 2 {
     c'=8 c7! e c@7 | f,8 fM! a f,@M |
   }
-  f=,8 fM! bes besM | a f,@M! f8 fM |
+  f=,8 fM! bes besM! | a f,@M! f8 fM |
   c'=8 c7! e c@7 | f,8 fM! f=, r |
 }
 {% endmacro %}

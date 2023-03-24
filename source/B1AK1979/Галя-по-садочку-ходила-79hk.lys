@@ -3,7 +3,7 @@
 {% endmacro %}
 
 {% macro lhFrag1(a) %}
-  {{ a }} gM! b g,@M | c8 cM! g gM | d' d7! g,=, gM! |
+  {{ a }} gM! b g,@M | c8 cM! g gM! | d' d7! g,=, gM! |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -25,7 +25,7 @@
 \relative {
   {{ lhFrag1("g,=,8-\\stBass") }}
   {{ lhFrag1("g=,8") }}
-  d'=8 dM! g, gM | c cM! g gM | d' d7! g, gM! |
-  d'=8 dM! g, gM | c cM! d g,@M | d8 d7! g,=, gM! |
+  d'=8 dM! g, gM! | c cM! g gM! | d' d7! g, gM! |
+  d'=8 dM! g, gM! | c cM! d g,@M! | d8 d7! g,=, gM! |
 }
 {% endmacro %}

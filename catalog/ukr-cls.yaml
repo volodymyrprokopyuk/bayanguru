@@ -101,23 +101,23 @@ pieces:
       org: ukr, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: ela }
   - { id: v7hf, tit: Вальс,
       com: К. Мясков, src: B0DU1982,
-      org: ukr, sty: msc, gnr: vls, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: msc, gnr: vls, frm: mel, bss: stb, lvl: ela }
   # B1AK1979
   - { id: 8mwk, tit: Лисичка,
       com: М. Лисенко, src: B1AK1979,
-      org: ukr, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
   - { id: tonl, tit: "Ви музики, хлопці добрі", sub: uafs,
       src: B1AK1979,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: a0xs, tit: "Ой Василю, Василечку",
       com: В. Верховинець, src: B1AK1979,
-      org: ukr, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: 11a0, tit: Соловейко,
       com: А. Філіпенко, src: B1AK1979,
-      org: ukr, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
   - { id: 79hk, tit: Галя по садочку ходила, sub: uafs,
       src: B1AK1979,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: angm, tit: "По дорозі жук, жук", sub: uafs,
       src: B1AK1979,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
