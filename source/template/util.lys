@@ -16,8 +16,8 @@
   \version "2.25.2"
   rootUrl = "https://volodymyrprokopyuk.github.io/bayan"
   stBass = \markup \larger \box Г % Готовий бас
-  frBass = \markup \larger \box В % Вибiрна система
   puBass = \markup \larger \box Б % Чистий бас
+  frBass = \markup \larger \box В % Вибiрна система
   artSimile = \markup \italic simile
   artLegato = \markup \italic legato
   artStaccato = \markup \italic staccato
@@ -126,50 +126,32 @@
 
 % === Score util ===
 
-% hSpace explicitly adds horizontal extra space before a note or chord
-% - sh defines the shift amount of horizontal space
-%   - Unit = staff units
-{% macro hSpace(sh = 2.5) %}
-  \tweak extra-spacing-width #'(-{{ sh }} . 0)
-{% endmacro %}
-
-% dynPadding adds padding to dynamics relative to the Staff within a \relative
-% - bs = defines the vertical base line between the Staff and dynamics
-%   - Unit = staff units
-{% macro dynPadding(bs = 3.0) %}
-  \override DynamicLineSpanner.staff-padding = #{{ bs }}
-{% endmacro %}
-
-% momentBeat defines the duration of the base moment and the structure of beats
-% per mearuse
-% - moment defines the duration of the base moment
-%   - Unit = note duration (e. g. 1/2, 1/4)
-% - beat defines the number and the structure of beats per measure
-%   - Unit = integer (e. g. 1,1,1,1, #'(1), 2,3)
+% momentBeat defines the duration of a base moment and the structure of beats
+% in a mearuse
 {% macro momentBeat(moment, beat) %}
   \set Staff.beamExceptions = #'()
   \set Staff.baseMoment = #(ly:make-moment {{ moment }})
   \set Staff.beatStructure = {{ beat }}
 {% endmacro %}
 
+% v2 provides a shortcut for two voices
+{% macro v2(a, b) %}
+  << \relative { {{ a }} } \\ \relative { {{ b }} } >>
+{% endmacro %}
+
+% dynPadding adds a vertical padding to dynamics within a \relative
+{% macro dynPadding(bs = 3.0) %}
+  \override DynamicLineSpanner.staff-padding = #{{ bs }}
+{% endmacro %}
+
+% hSpace adds an horizontal extra space before a note or a chord
+%   \volta 2 { hSpace() ... }
+{% macro hSpace(sh = 2.5) %}
+  \tweak extra-spacing-width #'(-{{ sh }} . 0)
+{% endmacro %}
+
 % shapedSlur controls the shape of a slur placed immediately after the
 % shapedSlur macro
-% - dir defines the direction of the slur
-%   - fu = forward up (north east), fd = forward down (south east)
-%     bu = backward up (north west), bd = backward down (south west)
-% - bs defines the vertical base line position of a slur relative to the
-%   the staff center (3rd line of the staff)
-%   - Unit (absolute) = staff units (distance between two adjacent staff lines)
-% - sh defines the horizontal position of a slur relative to the note to which
-%   the slure is attached
-%   - Unit = staff units, positive shifts right, negative shifts left
-% - wd defines the width of a slur in terms of a multiplicative coefficient
-%   - Unit = coefficient k, k < 1 decreases width, k > 1 increases width
-% - ht defines the height of a slur
-%   - Unit (absolute) = staff unit
-% - dt defines the height difference (delta) between the starting and ending
-%   points of the slur
-%   - Unit (absolute) = staff unit
 {% macro shapedSlur(dir, bs = 2.0, sh = 0.5, wd = 1.0, ht = 1.0, dt = 0.0) %}
   {% set ax = 0.0 * wd + sh %}
   {% set bx = 1.0 * wd + sh %}
@@ -205,8 +187,4 @@
   \tweak control-points
     #'(({{ ax }} . {{ ay }}) ({{ bx }} . {{ by }})
        ({{ cx }} . {{ cy }}) ({{ dx }} . {{ dy }}))
-{% endmacro %}
-
-{% macro v2(a, b) %}
-  << \relative { {{ a }} } \\ \relative { {{ b }} } >>
 {% endmacro %}

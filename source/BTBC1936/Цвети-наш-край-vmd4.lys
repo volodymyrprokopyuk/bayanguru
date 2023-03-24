@@ -58,8 +58,8 @@
 \clef bass
 \key ees \major
 \relative {
-  \partial 4 { r4 | }
   {{ momentBeat("1/4", "2,1") }}
+  \partial 4 { r4 | }
   ees=8(-\stBass eesM!) eesM eesM bes( ees@M!) |
   ees=8[( aes,@M!) aesM8 aesM] f( bes,@7!) |
   ees=8( eesM!) c8[( ees@M!]) f8( f7!) |
