@@ -33,8 +33,9 @@
         \after 16..\! g'=') |
       }
       \volta 2 {
-        {{ hSpace() }} <c,=' e a>4.~\> 8
-        {{ shapedSlur("bu", wd = 3.3, ht = 1.8) }} ( r) \! r \bar "|."
+        {{ hSpace() }}
+        <c,=' e a>4.~\> 8 %
+        {{ shapedSlur("bu", wd = 3.5, ht = 1.8) }} ( r) \! r \bar "|."
       }
     }
   }

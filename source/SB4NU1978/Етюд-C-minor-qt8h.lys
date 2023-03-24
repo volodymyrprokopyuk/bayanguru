@@ -57,7 +57,8 @@
               }
               \volta 2 {
                 {{ hSpace() }}
-                ees,='16\> {{ shapedSlur("bu", bs = 4, sh = 18, wd = 7, ht = 2) }} ( %
+                ees,='16\> %
+                {{ shapedSlur("bu", bs = 4, sh = 18, wd = 7, ht = 2) }} ( %
                 c'=''16 g c ees, c' g c \after 4\! ees,4) g='\sf \bar "||"
               }
             }

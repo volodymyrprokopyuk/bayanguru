@@ -1,4 +1,4 @@
-{% from "util.lys" import hSpace, shapedSlur, v2 %}
+{% from "util.lys" import v2, hSpace, shapedSlur %}
 
 {% macro rhFrag1(a) %}
   <aes,= des f>8) 8 8 <bes des g>8 {{ a }} 8 8 |
@@ -69,7 +69,7 @@
         <ees=' g c>8 8 <des g bes> |
         <c=' ees aes>8\> <ees aes c> <aes c ees> %
         <c='' ees aes>4 %
-        \after 8\! aes'=''8\p -{{ shapedSlur("fu", bs = 4) }} ( <>)|
+        \after 8\! aes'=''8\p -{{ shapedSlur("fu", bs = 4) }} ( <>) |
       }
       \volta 2 {
         <aes,=' des fes>8^\tempAccel 8 <des fes aes> %

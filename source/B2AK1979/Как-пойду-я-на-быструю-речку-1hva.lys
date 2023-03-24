@@ -29,7 +29,8 @@
         \after 16.\! <a=' b>) |
       }
       \volta 2 {
-        \after 2.\! {{ hSpace() }} %
+        \after 2.\! %
+        {{ hSpace() }}
         <e=' e'>2.\> -{{ shapedSlur("bd", bs = 3) }} ( %
         e='16)\< fis g \after 16\! a=' |
       }

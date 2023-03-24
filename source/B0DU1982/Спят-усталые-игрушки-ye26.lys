@@ -1,4 +1,4 @@
-{% from "util.lys" import hSpace, momentBeat, shapedSlur %}
+{% from "util.lys" import momentBeat, hSpace, shapedSlur %}
 
 {% macro rightHand() %}
 \tempo Andante
@@ -19,8 +19,8 @@
     \alternative {
       \volta 1 { c='2.\) r4 | }
       \volta 2 {
-        {{ hSpace() }} c='2.
-        {{ shapedSlur("bd", bs = 4) }} ( r4) \bar "|."
+        {{ hSpace() }}
+        c='2. {{ shapedSlur("bd", bs = 4) }} ( r4) \bar "|."
       }
     }
   }
