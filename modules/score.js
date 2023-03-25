@@ -98,11 +98,14 @@ async function lilypond(score, file, args) {
 
 export async function initPieces(args) {
   const pieces = await readPieces(args)
+  if (pieces.length === 0) {
+    throw new Error(`${args._.join(", ")} is not in catalog`)
+  }
   for (const { src, file } of pieces) {
     await mkdirp(`source/${src}`)
     const path = `source/${src}/${file}.lys`
     if (await pathExists(path)) {
-      return console.log(chalk.yellow(`Skipping ${path} already exists`))
+      return console.log(chalk.yellow(`Skipping: ${path} already exists`))
     }
     await copyFile("source/template/piece-init.lys", path)
   }

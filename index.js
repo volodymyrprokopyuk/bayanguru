@@ -2,6 +2,7 @@
 
 import { cpus } from "os"
 import parseArgs from "minimist"
+import chalk from "chalk"
 import {
   readBooks, selectPieces, playPieces
 } from "./modules/catalog.js"
@@ -49,4 +50,8 @@ async function dispatch(args) {
   return await engravePieces(pieces, args)
 }
 
-await dispatch(configure())
+try { await dispatch(configure()) }
+catch (error) {
+  console.error(chalk.red(error))
+  process.exit(1)
+}
