@@ -141,6 +141,23 @@ pieces:
   # - { id: 5071, tit: Етюд C major,
   #     com: А. Гедике, src: SB2NU1977,
   #     org: rus, sty: stu, gnr: stu, frm: wrs, bss: stb, lvl: elm }
+  # SB3NU1979
+  # p. 23
+  # - { id: ckjo, tit: Етюд F major,
+  #     com: Г. Беренс, src: SB3NU1979,
+  #     org: swe, sty: stu, gnr: stu, frm: wrs, bss: stb, lvl: elm }
+  # p. 24
+  # - { id: ov1p, tit: Етюд E minor,
+  #     com: К. Черні, src: SB3NU1979,
+  #     org: aut, sty: stu, gnr: stu, frm: [wrs, lhd], bss: [stb, pub], lvl: elm }
+  # p. 26
+  # - { id: 9zx1, tit: Етюд C major,
+  #     com: А. Лемуан, src: SB3NU1979,
+  #     org: fra, sty: stu, gnr: stu, frm: [wrs, lhd], bss: [stb, pub], lvl: elm }
+  # p. 28
+  # - { id: a7ra, tit: Етюд F major,
+  #     com: A. Гедике, src: SB3NU1979,
+  #     org: rus, sty: stu, gnr: stu, frm: wrs, bss: stb, lvl: elm }
 
 
   # Pepetition
