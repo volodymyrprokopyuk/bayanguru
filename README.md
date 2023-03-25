@@ -43,12 +43,12 @@ shuf -ern 4 {a..z} {0..9} | tr -d '\n' # generate picece/book random ID
 
 ``` yaml
 meta:
-  # Style (sty)
+  # Style (sty) mandatory
   flk: фолькльор
   cls: класика
   jaz: джаз
   msc: різне
-  # Genre (gnr)
+  # Genre (gnr) mandatory
   sng: пісня
   chd: дитяча пісня
   ves: веснянка
@@ -61,7 +61,7 @@ meta:
   pie: п'єса
   rmc: романс
   stu: етюд
-  # Form (frm)
+  # Form (frm) mandatory
   mel: мелодія
   var: варіації
   plp: поліфонія
@@ -73,16 +73,16 @@ meta:
   orn: мелізми
   art: артикуляція
   lhd: ліва рука
-  # Bass (bss)
+  # Bass (bss) mandatory
   stb: готовий аккорд # standard (Stradella) bass
   pub: чистий бас # pure bass
   frb: вибірна система # free bass
-  # Level (lvl)
+  # Level (lvl) mandatory
   elm: простий # elementary
   int: середній # intermediate
   adv: складний # advanced
   vir: віртуозний # virtuoso
-  # Arrangment type (aty)
+  # Arrangment type (aty) optional
   arr: Обр. # обробка, arrangment
   ipr: Пер. # переклад, interpratation
   hrm: Гарм. # гармонізація, harmonization

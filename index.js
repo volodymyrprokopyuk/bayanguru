@@ -3,14 +3,16 @@
 import { cpus } from "os"
 import parseArgs from "minimist"
 import {
-  readPieces, readBooks, selectPieces, playPieces
+  readBooks, selectPieces, playPieces
 } from "./modules/catalog.js"
-import { initPieces, engravePieces, engraveBooks } from "./modules/score.js"
+import {
+  initPieces, engravePieces, engraveBooks
+} from "./modules/score.js"
 
 function configure() {
   const argsConfig = {
     boolean: [
-      "i", "b", "nometa", "lint", "relax", "dry", "optimize",
+      "i", "b", "dynbook", "nometa", "lint", "relax", "dry", "optimize",
       "p", "cycle", "random"
     ],
     alias: { i: "init", c: "catalog", b: "book", j: "jobs", p: "play" },
@@ -31,11 +33,19 @@ async function dispatch(args) {
     const books = await readBooks(args)
     return await engraveBooks(books, args)
   }
+  if (args.dynbook) {
+    const pieces = await selectPieces(args)
+    const book = {
+      id: "selc", tit: "Вибрані твори", sub: "для баяна",
+      file: "Вибрані-твори-selc", pieces
+    }
+    return await engraveBooks([book], args)
+  }
   if (args.p) {
     const pieces = await selectPieces(args)
     return await playPieces(pieces, args)
   }
-  const pieces = await readPieces(args)
+  const pieces = await selectPieces(args)
   return await engravePieces(pieces, args)
 }
 
