@@ -120,19 +120,19 @@ pieces:
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: angm, tit: "По дорозі жук, жук", sub: uafs,
       src: B1AK1979,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
   - { id: qmvs, tit: Пісенька,
       com: К. Мясков, src: B1AK1979,
-      org: ukr, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: ela }
   - { id: 59gv, tit: Пісня рака, sub: 'з дитячої опери \"Коза-дереза\"',
       com: М. Лисенко, src: B1AK1979,
-      org: ukr, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
   - { id: yn16, tit: "Ой джигуне, джигуне", sub: uafs,
       src: B1AK1979,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: c1z5, tit: "Ой за гаєм, гаєм", sub: uafs,
       src: B1AK1979,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: tx5o, tit: Полька,
       com: А. Иванов, src: B1AK1979,
       org: ukr, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }

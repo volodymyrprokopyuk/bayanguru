@@ -20,7 +20,8 @@
 \key bes \major
 \relative {
   bes,=,8-\stBass besM! bes besM |
-  \repeat unfold 2 { bes=,8 besM bes besM | }
+  bes=,8 besM bes besM | bes besM! bes besM |
+  % \repeat unfold 2 { bes=,8 besM bes besM | }
   f'=8 fM! f fM |
   bes,=,8 besM! bes besM | ees eesM! ees eesM |
   f=8 fM! f fM | bes, besM! bes besM |
