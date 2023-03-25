@@ -1,0 +1,17 @@
+{% macro rightHand() %}
+\tempo Allegretto
+\clef treble
+\key bes \major
+\time 2/4
+\relative {
+  f'='16\(\mf d f g f d f d' |
+  c=''16 bes a g f ees d c\) |
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\clef bass
+\key bes \major
+\relative {
+}
+{% endmacro %}

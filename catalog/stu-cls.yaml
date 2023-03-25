@@ -128,10 +128,9 @@ pieces:
   - { id: 7yb4, tit: Етюд C major,
       com: В. Белов, src: SB1NU1979,
       org: rus, sty: stu, gnr: stu, frm: wrs, bss: stb, lvl: elm }
-  # p. 32
-  # - { id: 6yq2, tit: Етюд Bes major,
-  #     com: Т. Федин, src: SB1NU1979,
-  #     org: rus, sty: stu, gnr: stu, frm: wrs, bss: stb, lvl: elm }
+  - { id: 6yq2, tit: Етюд Bes major,
+      com: Т. Федин, src: SB1NU1979,
+      org: rus, sty: stu, gnr: stu, frm: wrs, bss: stb, lvl: elm }
   # SB2NU1977
   # p. 12
   # - { id: rnk5, tit: Етюд Bes major,
