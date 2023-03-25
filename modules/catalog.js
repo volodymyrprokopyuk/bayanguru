@@ -79,7 +79,7 @@ function countBookPieces(book) {
 export async function readPieces(args, all = false) {
   const pieces = []
   let pieceCount = 0
-  const glob = `catalog/*${args.c.split(",").join("*")}*.yaml`
+  const glob = `catalog/*${args.c}*.yaml`
   for await (const catalog of globbyStream(glob)) {
     const { pieces: cpieces } = load(await readFile(catalog))
     for (const piece of cpieces) {
