@@ -153,16 +153,16 @@ pieces:
       org: ukr, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
   - { id: itrq, tit: Женчичок-бренчичок, sub: uafs,
       src: B1AK1979,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: blsa, tit: По малину в сад підем,
       com: А. Філіпенко, src: B1AK1979,
-      org: ukr, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: pie, frm: mel, bss: stb, lvl: ela }
   - { id: 75xh, tit: Сьогодні у мами свято,
       com: А. Філіпенко, src: B1AK1979,
-      org: ukr, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: ela }
   - { id: qxq9, tit: Їхав козак на війноньку, sub: uafs,
       src: B1AK1979,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: e78y, tit: Кучерява Катерина, sub: uafs,
       src: B1AK1979,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
