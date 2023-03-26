@@ -1,3 +1,10 @@
+{% from "util.lys" import momentBeat %}
+
+{% macro rhFrag1() %}
+  d=''8-. d16( ees f8) r |
+  d'='''8-.\pp d16( ees f='''8) r |
+{% endmacro %}
+
 {% macro rightHand() %}
 \tempo Allegretto
 \clef treble
@@ -12,6 +19,18 @@
     c=''16( d e f g a bes g) |
     f=''16( a c f f,=''8) r |
   }
+
+  \repeat volta 2 {
+    c'='''4.(\p a8 | f4. ees8) |
+    {{ rhFrag1() }}
+    ees='''4.(\p c8) | ees[( c a ees]) |
+    {{ rhFrag1() }}
+    bes,=''4.(\p f8 | d'[ c bes a]) |
+    c='''8[(\< bes a \after 8\! g] |
+    fis=''8 g ees c) | f4 f, | f'(~ f16 ees c a) |
+    bes='8-.\> f16( d' bes8)-. f16( \after 16\! d' |
+    bes='16 d f d bes='8) r |
+  }
 }
 {% endmacro %}
 
@@ -19,5 +38,13 @@
 \clef bass
 \key bes \major
 \relative {
+  {{ momentBeat("1/2", "#'(1)") }}
+  bes,=,8(-\stBass besM!)-. besM-. besM-. |
+  bes=,8( besM!)-. besM-. besM-. |
+  bes=,8[_\artSimile ees@M! eesM8 eesM] |
+  bes=,8 besM! besM besM |
+  a,,+f,@M!8[-. a,,+fM8-. a,,+fM]-. r |
+  bes,,+besM!8-. bes,,+besM-. bes,,+besM-. r |
+  c,+c7!8-. c,+c7-. c,+c7-. r | f=, fM! fM r |
 }
 {% endmacro %}
