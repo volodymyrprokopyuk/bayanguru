@@ -8,6 +8,10 @@
   | e16( d e8) d16( c d8) |
 {% endmacro %}
 
+{% macro lhFrag1() %}
+  c=8 cM! g gM! | c cM! f= fM! |
+{% endmacro %}
+
 {% macro rightHand() %}
 \tempo Allegro
 \clef treble
@@ -27,13 +31,16 @@
 \clef bass
 \key c \major
 \relative {
-  c=8-\stBass cM! c cM | f fM! c cM |
-  g=,8 g7! c cM! | g g7! c cM! |
-  c=8 cM! e c@M | f8 fM! e c@M |
-  f=8 fM! g, c@M | g8 g7! c cM! |
-  c=8 cM! g gM | c cM! f fM |
-  c=8 cM! g gM | c cM! e c@M |
-  c=8 cM! g gM | c cM! f fM |
+  c=8-\stBass cM! c cM | f fM! c cM! |
+  \repeat unfold 2 { g=,8 g7! c cM! | }
+  % g=,8 g7! c cM! | g g7! c cM! |
+  c=8 cM! e c@M | f8 fM! e c@M! |
+  f=8 fM! g, c@M! | g8 g7! c cM! |
+  % c=8 cM! g gM! | c cM! f fM! |
+  {{ lhFrag1() }}
+  c=8 cM! g gM! | c cM! e c@M |
+  % c=8 cM! g gM | c cM! f fM |
+  {{ lhFrag1() }}
   g,=,8 c@M! g8 g7! | c cM! c= cM |
 }
 {% endmacro %}
