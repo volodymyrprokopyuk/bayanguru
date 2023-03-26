@@ -1,0 +1,23 @@
+{% macro rightHand() %}
+\tempo Allegretto
+\clef treble
+\key bes \major
+\time 2/4
+\relative {
+  \repeat volta 2 {
+    bes'='4.(\p d8) | f4.( bes8) |
+    a=''16( bes c bes a8)-. g-. |
+    f=''4( d8)-. f-. | ees-. ees-. ees16( g f ees |
+    d=''8)-. d-. d16( f ees d) |
+    c=''16( d e f g a bes g) |
+    f=''16( a c f f,=''8) r |
+  }
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\clef bass
+\key bes \major
+\relative {
+}
+{% endmacro %}

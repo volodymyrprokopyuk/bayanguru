@@ -118,7 +118,9 @@ books:
         "qt8h", "djop", "z04b", "4s1u"] },
       { sec: Повороти кисті, pieces: [
         # SB1NU1979
-        "xkj4", "m02e", "7yb4", "6yq2"] },
+        "xkj4", "m02e", "7yb4", "6yq2",
+        # SB2NU1977
+        "rnk5"] },
       # Chords
       { sec: Акорди, pieces: [
         # SB2NU1977

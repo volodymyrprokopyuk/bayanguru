@@ -132,10 +132,9 @@ pieces:
       com: Т. Федин, src: SB1NU1979,
       org: rus, sty: stu, gnr: stu, frm: wrs, bss: stb, lvl: elm }
   # SB2NU1977
-  # p. 12
-  # - { id: rnk5, tit: Етюд Bes major,
-  #     com: К. Черні, src: SB2NU1977,
-  #     org: aut, sty: stu, gnr: stu, frm: wrs, bss: stb, lvl: elm }
+  - { id: rnk5, tit: Етюд Bes major,
+      com: К. Черні, src: SB2NU1977,
+      org: aut, sty: stu, gnr: stu, frm: wrs, bss: stb, lvl: elm }
   # p. 15
   # - { id: 5071, tit: Етюд C major,
   #     com: А. Гедике, src: SB2NU1977,
