@@ -28,7 +28,7 @@ pieces:
       org: ukr, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
   - { id: siv0, tit: А вже красне сонечко, sub: uafs,
       src: B0D1973,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
   - { id: kakw, tit: Дощик, sub: uafs,
       src: B0D1973,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
@@ -135,22 +135,22 @@ pieces:
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: tx5o, tit: Полька,
       com: А. Иванов, src: B1AK1979,
-      org: ukr, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: ela }
   - { id: afgp, tit: Пісня котика, sub: 'з дитячої опери \"Лисичка, котик і півник\"',
       com: К. Стеценко, src: B1AK1979,
-      org: ukr, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
   - { id: 6kce, tit: Пісня вовчика, sub: 'з дитячої опери \"Коза-дереза\"',
       com: М. Лисенко, src: B1AK1979,
-      org: ukr, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
   - { id: x880, tit: Будемо космонавтами,
       com: К. Мясков, src: B1AK1979,
-      org: ukr, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: ela }
   - { id: d7eu, tit: Бандура, sub: uafs,
       src: B1AK1979,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: d0hr, tit: А вже ясне сонечко, sub: uafs,
       com: П. Козицький, src: B1AK1979,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
   - { id: itrq, tit: Женчичок-бренчичок, sub: uafs,
       src: B1AK1979,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
