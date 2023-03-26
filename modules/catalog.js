@@ -157,6 +157,14 @@ export async function playPieces(pieces, args) {
     }
   }
   for (const i of playIndex()) {
-    await $`zathura scores/${pieces[i].file}.pdf`
+    const { id, tit, file, com, arr, aty } = pieces[i]
+    if (args.dry) {
+      const summary = [chalk.green(id), chalk.yellow(tit)]
+      if (com) { summary.push(chalk.cyan(com)) }
+      if (arr) { summary.push(aty, arr) }
+      console.log(summary.join(" "))
+      continue
+    }
+    await $`zathura scores/${file}.pdf`
   }
 }
