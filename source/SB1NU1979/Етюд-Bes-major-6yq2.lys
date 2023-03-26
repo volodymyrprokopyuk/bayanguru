@@ -1,11 +1,34 @@
+{% from "util.lys" import hSpace, shapedSlur %}
+
+{% macro lhFrag1() %}
+  f,,+fM!8 r a,,+f@7! r8 |
+{% endmacro %}
+
 {% macro rightHand() %}
 \tempo Allegretto
 \clef treble
 \key bes \major
 \time 2/4
 \relative {
-  f'='16\(\mf d f g f d f d' |
-  c=''16 bes a g f ees d c\) |
+  \repeat volta 2 {
+    f'='16\(\mf d f g f d f d' |
+    c=''16 bes a g f ees d c\) |
+    ees='16\( c ees f ees d ees bes' |
+    a='16 g f ees d c d ees\) |
+    f='16\( d f g f d f f' |
+    ees=''16 d c bes a g fis g\) |
+    c=''16\( bes a g f ees d c |
+    \alternative {
+      \volta 1 {
+        d='16 f c f bes, c d ees='\) |
+      }
+      \volta 2 {
+        {{ hSpace() }}
+        d='16 {{ shapedSlur("bd", bs = 4.5, sh = 9, wd = 4) }} ( %
+        f='16 c f bes,=8) r \bar "|."
+      }
+    }
+  }
 }
 {% endmacro %}
 
@@ -13,5 +36,15 @@
 \clef bass
 \key bes \major
 \relative {
+  bes,=,8.-\stBass besM!16 besM8 r |
+  {{ lhFrag1() }}
+  c=8. cm!16 cm8 r |
+  {{ lhFrag1() }}
+  bes=,8. besM!16 besM8 r |
+  c,+cm!8 r ees,+c@m! r8 |
+  {{ lhFrag1() }}
+  \repeat unfold 2 {
+    bes,,+besM!8[ a,,+f@7!] bes,,+besM!8 r |
+  }
 }
 {% endmacro %}
