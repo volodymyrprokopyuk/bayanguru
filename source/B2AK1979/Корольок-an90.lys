@@ -46,11 +46,11 @@
 \clef bass
 \key g \major
 \relative {
-  g,=,8-\stBass gM! g gM | c cM! d g,@M |
+  g,=,8-\stBass gM! g gM | c cM! d g,@M! |
   d=8 d7! a d@7 | g8-. c-. b-. a=,-. |
-  g=,8 gM! g gM | c cM! d g,@M |
+  g=,8 gM! g gM | c cM! d g,@M! |
   d=8 d7! d d7 | g,8-. a-. g-. fis=,-. |
-  e=,8 em! e em | a am! b e@m |
+  e=,8 em! e em | a am! b e@m! |
   b=,8 b7! fis b,@7 | e8-. a-. g-. fis=,-. |
   e=,8 em! e em | a( b c4) |
   b=,8 b7! b b7 | e,=, em! e,,+em4 |
