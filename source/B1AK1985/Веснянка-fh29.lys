@@ -21,6 +21,6 @@
 \key c \major
 \relative {
   {{ lhFrag1("c=4-\\stBass", "fM") }}
-  {{ lhFrag1("c=4", "c@M") }}
+  {{ lhFrag1("c=4", "c@M!") }}
 }
 {% endmacro %}

@@ -168,32 +168,32 @@ pieces:
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: z48n, tit: На вулиці скрипка грає, sub: uafs,
       src: B1AK1979,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: 5e6l, tit: Полька,
       src: B1AK1979,
-      org: ukr, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: ela }
    # B1AK1985
   - { id: fh29, tit: Веснянка, sub: uafs,
       src: B1AK1985,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: ves, frm: mel, bss: stb, lvl: ela }
   - { id: eu0e, tit: Танець дзвіночків, sub: uafd,
       src: B1AK1985,
-      org: ukr, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: ela }
   - { id: cagd, tit: Дощик, sub: uafs,
       src: B1AK1985,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: iebw, tit: Святковий вальс,
       com: А. Філіпенко, src: B1AK1985,
-      org: ukr, sty: msc, gnr: vls, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: msc, gnr: vls, frm: mel, bss: stb, lvl: ela }
   - { id: 3vej, tit: Ой піду я до гаю,
       com: Д. Січинський, src: B1AK1985,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: lhc0, tit: Полька,
       com: М. Глинка, src: B1AK1985,
-      org: ukr, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: ela }
   - { id: lyc5, tit: Прогулянка на автомобілі,
       com: К. Мясков, src: B1AK1985,
-      org: ukr, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: ela }
   # B2AK1979
   - { id: 05cc, tit: Курчатка,
       com: А. Філіпенко, src: B2AK1979,

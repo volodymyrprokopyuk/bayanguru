@@ -11,7 +11,7 @@
 {% endmacro %}
 
 {% macro lhFrag1(a, b) %}
-  {{ a }} dm! f, d@m | g8 gm! f d@m |
+  {{ a }} dm! f, d@m | g8 gm! f d@m! |
   e'=8 a,@7! d8 dm! | a a7! d dm! |
   d=8 dm! f, d@m | g8 gm! f d@m |
   e'=8 a,@7! a,8 a7 | d dm! {{ b }} | %
