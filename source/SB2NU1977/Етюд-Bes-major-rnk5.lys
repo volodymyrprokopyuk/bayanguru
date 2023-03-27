@@ -5,6 +5,11 @@
   d'='''8-.\pp d16( ees f='''8) r |
 {% endmacro %}
 
+{% macro lhFrag1() %}
+  a=,8[ f,@M! fM8 fM] | a8[ f,@M fM8 fM] |
+  bes=,8 besM! besM besM | bes=, besM besM besM |
+{% endmacro %}
+
 {% macro rightHand() %}
 \tempo Allegretto
 \clef treble
@@ -45,6 +50,14 @@
   bes=,8 besM! besM besM |
   a,,+f,@M!8[-. a,,+fM8-. a,,+fM]-. r |
   bes,,+besM!8-. bes,,+besM-. bes,,+besM-. r |
-  c,+c7!8-. c,+c7-. c,+c7-. r | f=, fM! fM r |
+  c,+c7!8-. c,+c7-. c,+c7-. r | f=,( fM!)-. fM-. r |
+
+  {{ lhFrag1() }}
+  {{ lhFrag1() }}
+  d=8[ bes,@M! besM8 besM] | d[ bes,@M besM8 besM] |
+  ees=8 eesM! eesM eesM | ees[ c@m! cm8 cm] |
+  f,=,8[ bes,@M! besM8 besM] | f f7! f7 f7 |
+  bes=,8[-. besM!]-. bes-. besM-. |
+  bes=,8(-. besM!)-. besM-. r |
 }
 {% endmacro %}
