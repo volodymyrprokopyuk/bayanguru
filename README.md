@@ -50,7 +50,7 @@ meta:
   msc: різне
   # Genre (gnr) mandatory
   sng: пісня
-  chd: дитяча пісня
+  chd: дитяча пісня/п'єса
   ves: веснянка
   dnc: танець
   vls: вальс

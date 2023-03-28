@@ -206,10 +206,10 @@ pieces:
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: oz96, tit: Сумна пісенька,
       com: К. Мясков, src: B2AK1979,
-      org: ukr, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elb }
+      org: ukr, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: elb }
   - { id: zieh, tit: Жартівлива пісенька,
       com: К. Мясков, src: B2AK1979,
-      org: ukr, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: elb }
   - { id: n7lg, tit: На жовтневе свято,
       com: А. Штогаренко, src: B2AK1979,
       org: ukr, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
