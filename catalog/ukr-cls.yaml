@@ -76,7 +76,7 @@ pieces:
       org: ukr, sty: msc, gnr: dnc, frm: mel, bss: stb, lvl: ela }
   - { id: rrag, tit: Курочка,
       com: М. Любарський, src: B0D1973,
-      org: ukr, sty: msc, gnr: chd, frm: mel, bss: [pub, stb], lvl: ela }
+      org: ukr, sty: msc, gnr: chd, frm: mel, bss: [stb, pub], lvl: ela }
   # B0DU1982
   - { id: zo21, tit: Ой лопнув обруч, sub: uafs,
       src: B0DU1982,
@@ -218,13 +218,13 @@ pieces:
       org: ukr, sty: msc, gnr: vls, frm: mel, bss: stb, lvl: elb }
   - { id: stil, tit: Сусідка, sub: uafs,
       src: B2AK1979,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: nizv, tit: "Чом, чом не прийшов", sub: uafs,
       src: B2AK1979,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: sng, frm: var, bss: stb, lvl: elb }
   - { id: dvki, tit: Гопак, sub: 'з опери \"Сорочинский ярмарок\"',
       com: М. Мусоргский, src: B2AK1979,
-      org: rus, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: gop, frm: mel, bss: [stb, pub], lvl: elb }
   - { id: izth, tit: Прогулянка,
       com: К. Мясков, src: B2AK1979,
       org: ukr, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }

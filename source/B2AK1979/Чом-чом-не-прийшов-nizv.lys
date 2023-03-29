@@ -32,8 +32,8 @@
 \key e \minor
 \relative {
   e=8-\stBass em! e em | dis b,@7! b8 b7 |
-  e=8 em! e am |  dis b,@7! b8 b7 |
-  e=8( em!) fis( b,@7!) | g,8( e@m!) a8( am) |
+  e=8 em! e em |  dis b,@7! b8 b7 |
+  e=8( em!) fis( b,@7!) | g,8( e@m!) a8( am!) |
   b=,8 e@m! b8 g7! | e em! e em |
   e=4 d | g, a8 am! |
   b=,8 e@m! b8 g7! | e em! e= r |

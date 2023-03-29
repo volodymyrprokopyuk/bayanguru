@@ -11,9 +11,9 @@
   <e=' c'>8. b'16( a8) g=' |
 {% endmacro %}
 
-{% macro lhFrag1() %}
-  a=,8-. b-. c-. e-. | fis-> d-. b-> d-. |
-  a=,8-. b-. c-. e-. |
+{% macro lhFrag1(a) %}
+  {{ a }} b-. c-. e-. | fis-> d-. b-> d-. |
+  a=,8-. b-. c-. e=-. |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -40,7 +40,7 @@
   \repeat unfold 2 {
     g=,8.[-> gM!16 gM8 gM] | e-. g-. b=,4-. |
   }
-  {{ lhFrag1() }} | fis d@M! g,8 gM! |
-  {{ lhFrag1() }} | d= dM! g,,+gM!4 |
+  {{ lhFrag1("a=,8-.-\\puBass") }} | fis d@M! g,8 gM! |
+  {{ lhFrag1("a=,8-.") }} | d= dM! g,,+gM!4 |
 }
 {% endmacro %}
