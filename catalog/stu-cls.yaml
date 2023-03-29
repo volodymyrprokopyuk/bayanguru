@@ -142,10 +142,9 @@ pieces:
   - { id: ckjo, tit: Етюд F major,
       com: Г. Беренс, src: SB3NU1979,
       org: swe, sty: stu, gnr: stu, frm: wrs, bss: stb, lvl: elm }
-  # p. 24
-  # - { id: ov1p, tit: Етюд E minor,
-  #     com: К. Черні, src: SB3NU1979,
-  #     org: aut, sty: stu, gnr: stu, frm: [wrs, lhd], bss: [stb, pub], lvl: elm }
+  - { id: ov1p, tit: Етюд E minor,
+      com: К. Черні, src: SB3NU1979,
+      org: aut, sty: stu, gnr: stu, frm: [wrs, lhd], bss: [stb, pub], lvl: elm }
   # p. 26
   # - { id: 9zx1, tit: Етюд C major,
   #     com: А. Лемуан, src: SB3NU1979,
