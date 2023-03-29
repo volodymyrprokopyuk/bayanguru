@@ -6,10 +6,10 @@ pieces:
       com: Б. Мокроусов, src: BTBC1936,
       org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: 87ko, tit: Яблочко, sub: rufd,
-      arr: Н. Чайкин, src: BTBC1936,
+      arr: М. Чайкін, src: BTBC1936,
       org: rus, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
   - { id: p7el, tit: Варяг, sub: rufs,
-      arr: Н. Чайкин, aty: ipr, src: BTBC1936,
+      arr: М. Чайкін, aty: ipr, src: BTBC1936,
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: 6u3l, tit: Ленинские горы,
       com: Ю. Милютин, src: BTBC1936,
@@ -21,25 +21,25 @@ pieces:
       com: А. Новиков, src: BTBC1936,
       org: rus, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: p26a, tit: Барыня, sub: rufd,
-      arr: Н. Чайкин, src: BTBC1936,
+      arr: М. Чайкін, src: BTBC1936,
       org: rus, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
   - { id: frcu, tit: "Ах ты, ноченька", sub: rufs,
-      arr: Н. Чайкин, src: BTBC1936,
+      arr: М. Чайкін, src: BTBC1936,
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: hjff, tit: Костры горят далекие,
       com: Б. Мокроусов, src: BTBC1936,
       org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: 7nax, tit: Ермак, sub: rufs,
-      arr: Н. Чайкин, aty: ipr, src: BTBC1936,
+      arr: М. Чайкін, aty: ipr, src: BTBC1936,
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: 74jq, tit: Уральская рябинушка,
       com: Е. Родыгин, src: BTBC1936,
       org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: 7s64, tit: Жди солдата,
-      com: Б. Мокроусов, arr: Н. Чайкин, aty: ipr, src: BTBC1936,
+      com: Б. Мокроусов, arr: М. Чайкін, aty: ipr, src: BTBC1936,
       org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
   - { id: blt6, tit: Родина, sub: rufs,
-      arr: Н. Чайкин, aty: hrm, src: BTBC1936,
+      arr: М. Чайкін, aty: hrm, src: BTBC1936,
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: l1zm, tit: Лирическая,
       com: Н. Поликарпов, src: BTBC1936,
@@ -51,7 +51,7 @@ pieces:
       com: Ю. Щекотов, src: BTBC1936,
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: ecde, tit: Мчатся гуси вереницей, sub: rufs,
-      arr: Н. Чайкин, aty: hrm, src: BTBC1936,
+      arr: М. Чайкін, aty: hrm, src: BTBC1936,
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   - { id: vmd4, tit: "Цвети, наш край",
       com: С. Туликов, src: BTBC1936,

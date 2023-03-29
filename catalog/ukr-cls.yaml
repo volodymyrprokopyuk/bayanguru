@@ -212,10 +212,10 @@ pieces:
       org: ukr, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: elb }
   - { id: n7lg, tit: На жовтневе свято,
       com: А. Штогаренко, src: B2AK1979,
-      org: ukr, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: msc, gnr: pie, frm: var, bss: stb, lvl: elb }
   - { id: ohmw, tit: Вальс,
       com: М. Чайкін, src: B2AK1979,
-      org: ukr, sty: msc, gnr: vls, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: msc, gnr: vls, frm: mel, bss: stb, lvl: elb }
   - { id: stil, tit: Сусідка, sub: uafs,
       src: B2AK1979,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }

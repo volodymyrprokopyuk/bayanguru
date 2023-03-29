@@ -42,8 +42,8 @@
   \repeat unfold 3 { d'=8 d16 d d8 d16 d | }
   cis=8 c b=,4 |
 
-  g=,8 gM! fis d@M | g8 gM! fis d@M |
-  e'=8 em! e fis,@m | r8 e@m![ d,+dM!8] r |
+  \repeat unfold 2 { g=,8 gM! fis d@M! | }
+  e'=8 em! e fis,@m! | r8 e@m![ d,+dM!8] r |
   r8 g,,+gM![ d,+dM!] r | r g,,+gM![ fis,,+d@M!] r8 |
   r8 g,@M![ r8 b,@7!] | e@M!8[ a,@7!8] d@M!8 r8 |
   e@M!8[ a,@7!8] d@M!8 r8 | r8 g,@M![ r8 b,@7!] |
