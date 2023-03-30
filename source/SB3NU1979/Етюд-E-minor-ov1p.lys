@@ -52,5 +52,14 @@
   {{ lhFrag1() }} g,[ r e@m!] r8 |
   a=,8[-. r am!]-. r b[-. r b7!]-. r |
   e=8[-. r em!]-. r e=-. r r4 |
+
+  g,=,16^\artNonLegato a b c d c b a g a b c d e fis g |
+  d,=,16 e fis g a g fis e d fis a d d,=,8-. r |
+  \repeat unfold 2 { d=,16 e fis g a g fis e }
+  d=,16 fis a c d c b a g b d g g,=,8-. r |
+  fis=,8[ r b,@7!] r8 fis[ r b,@7] r8 |
+  g=,8[ r e@m!] r8 g[ r e@m] r8 |
+  a=,8[ r am!] r b[ r b7!] r |
+  e=8[ r em!] r e=-. r r4 |
 }
 {% endmacro %}
