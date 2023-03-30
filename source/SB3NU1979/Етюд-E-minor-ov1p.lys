@@ -51,6 +51,6 @@
   a=,8[-. r ais]-. r b=,-. r r4 |
   {{ lhFrag1() }} g,[ r e@m!] r8 |
   a=,8[-. r am!]-. r b[-. r b7!]-. r |
-  e=8[-. r em!]-. r e-. r r4 |
+  e=8[-. r em!]-. r e=-. r r4 |
 }
 {% endmacro %}
