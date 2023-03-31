@@ -11,6 +11,18 @@
   fis='8[( g a b c d] | e[ f fis g a g='']) |
 {% endmacro %}
 
+{% macro rhFrag3(a) %}
+  {{ a }} | 2. | <a c d>2.~ | 2. |
+  b='8[( c d e fis g]) | gis,[( a b c d e='']) |
+{% endmacro %}
+
+{% macro lhFrag1() %}
+  b=,4 r g,@7!8 r8 | g4 r g7!8 r |
+  \repeat unfold 3 {
+    c=4 r cM!8 r | g=,4 r c@M!8 r8 |
+  }
+{% endmacro %}
+
 {% macro rightHand() %}
 \tempo "Tempo di valzer"
 \clef treble
@@ -22,9 +34,9 @@
     \volta 1
     {{ rhFrag2("fis''=''8(\\mp") }}
     {{ rhFrag1("fis=''8(") }}
-    ais='8( g g' d b)-. r | cis( d b' g d)-. r |
+    ais='8( b g' d b)-. r | cis( d b' g d)-. r |
     gis=''8[\( a e' d c b] | a[ g fis g a fis] |
-    a=''8[ g fis g fis g] | a[ g fis g fis g=''\)] |
+    a=''8[ g fis g fis g] | a[ g fis g fis g='']\) |
     {{ rhFrag2("fis=''8(") }}
     {{ rhFrag1("fis=''8(") }}
     gis='8[\( a f' e d c] | ais[ b g' f d b] |
@@ -32,7 +44,12 @@
 
     \volta 2
     \key g \major
-    <b,=' d>2.~\mf | 2. |
+    {{ rhFrag3("<b,=' d>2.~\\mf") }}
+    g,='8[( a b c cis d]) | e[( d cis d e d]) |
+    {{ rhFrag3("<b=' d>2.~") }}
+    r8 cis,='8[( d e f fis] | g) r g[\( a b c] |
+    d=''8[ e f fis a g] |
+    fis=''8[\> g a^\tempRall g fis \after 8\! g='']\) \bar "||"
     \keyChangeBeforeBar \key c \major
   }
 }
@@ -42,5 +59,17 @@
 \clef bass
 \key c \major
 \relative {
+  c=4-\stBass r cM!8-. r | g4 r c@M!8-. r8 |
+  c=4_\artSimile r cM!8 r | g4 r c@M!8 r8 |
+  {{ lhFrag1() }}
+  \repeat unfold 2 { d'=4 r g,@M!8 r8 | }
+  \repeat unfold 2 { d=4 r d7!8 r | }
+  g,,+gM!8 r r4 r | R2. |
+  \repeat unfold 2 {
+    c=4 r cM!8 r | g4 r c@M!8 r8 |
+  }
+  {{ lhFrag1() }}
+  f,,+d@m!4 r r | g,,+g7! r r |
+  \repeat unfold 2 { c,+cM! r r | }
 }
 {% endmacro %}
