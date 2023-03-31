@@ -1,0 +1,46 @@
+{% from "util.lys" import momentBeat %}
+
+{% macro rhFrag1(a) %}
+  {{ a }} g e' c g)-. r | dis( e c' g e)-. r |
+  b='8( c g' e c)-. r | fis,( g e' c g=')-. r |
+{% endmacro %}
+
+{% macro rhFrag2(a) %}
+  {{ rhFrag1(a) }}
+  fis='8( g f' d g,)-. r | fis( g d' b g)-. r |
+  fis='8[( g a b c d] | e[ f fis g a g='']) |
+{% endmacro %}
+
+{% macro rightHand() %}
+\tempo "Tempo di valzer"
+\clef treble
+\key c \major
+\time 3/4
+\relative {
+  {{ momentBeat("1/4", "#'(2 1)") }}
+  \repeat segno 2 {
+    \volta 1
+    {{ rhFrag2("fis''=''8(\\mp") }}
+    {{ rhFrag1("fis=''8(") }}
+    ais='8( g g' d b)-. r | cis( d b' g d)-. r |
+    gis=''8[\( a e' d c b] | a[ g fis g a fis] |
+    a=''8[ g fis g fis g] | a[ g fis g fis g=''\)] |
+    {{ rhFrag2("fis=''8(") }}
+    {{ rhFrag1("fis=''8(") }}
+    gis='8[\( a f' e d c] | ais[ b g' f d b] |
+    d=''8[ c b c e g] | c='''4\) r r \fine \bar "||"
+
+    \volta 2
+    \key g \major
+    <b,=' d>2.~\mf | 2. |
+    \keyChangeBeforeBar \key c \major
+  }
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\clef bass
+\key c \major
+\relative {
+}
+{% endmacro %}
