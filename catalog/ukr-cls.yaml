@@ -236,10 +236,10 @@ pieces:
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: 4u91, tit: Ой під горою, sub: uafs,
       src: B2AK1979,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: pub, lvl: elm }
+      org: ukr, sty: flk, gnr: sng, frm: mel, bss: pub, lvl: elb }
   - { id: ggyp, tit: Танець сніжинок,
       com: К. Мясков, src: B2AK1979,
-      org: ukr, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elc }
   # B2AK1987
   - { id: e3u3, tit: Вийшли в поле косарі, sub: uafs,
       src: B2AK1987,
