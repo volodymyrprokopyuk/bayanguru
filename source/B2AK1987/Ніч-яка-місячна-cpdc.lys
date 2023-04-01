@@ -45,6 +45,6 @@
   a,=,4 am! am | g a,@m am |
   f=,4 d@m! dm | b d@m dm |
   e=4 a,@m! am | e e7! e7 |
-  a,=,4( am!) am | a,,+am! r r |
+  a,=,4( am!) am | a,,+am r r |
 }
 {% endmacro %}

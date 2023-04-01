@@ -252,16 +252,16 @@ pieces:
       org: ukr, sty: flk, gnr: lul, frm: mel, bss: stb, lvl: ela }
   - { id: cpdc, tit: Ніч яка місячна, sub: uafs,
       src: B2AK1987,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: 9k9u, tit: Горлиця, sub: uafs,
       src: B2AK1987,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: 0r9e, tit: Їхав козак за Дунай, sub: uafs,
       src: B2AK1987,
-      org: ukr, sty: flk, gnr: sng, frm: var, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: sng, frm: var, bss: stb, lvl: elb }
   - { id: v8ec, tit: Ведмідь,
       com: К. Мясков, src: B2AK1987,
-      org: ukr, sty: msc, gnr: pie, frm: mel, bss: pub, lvl: elm }
+      org: ukr, sty: msc, gnr: chd, frm: mel, bss: pub, lvl: ela }
   - { id: w5ba, tit: Дивлюсь я на небо, sub: uafs,
       arr: А. Иванов, src: B2AK1987,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
