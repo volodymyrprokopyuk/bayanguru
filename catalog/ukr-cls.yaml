@@ -243,13 +243,13 @@ pieces:
   # B2AK1987
   - { id: e3u3, tit: Вийшли в поле косарі, sub: uafs,
       src: B2AK1987,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: ucue, tit: Пісня Карася, sub: 'з опери \"Запорожець за Дунаєм\"',
       com: С. Гулак-Артемовський, src: B2AK1987,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: fngd, tit: Колискова,
       com: Я. Степовий, src: B2AK1987,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: lul, frm: mel, bss: stb, lvl: ela }
   - { id: cpdc, tit: Ніч яка місячна, sub: uafs,
       src: B2AK1987,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }

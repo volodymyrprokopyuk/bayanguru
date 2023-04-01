@@ -51,6 +51,7 @@ meta:
   # Genre (gnr) mandatory
   sng: пісня
   chd: дитяча пісня/п'єса
+  lul: колискова
   ves: веснянка
   dnc: танець
   vls: вальс
