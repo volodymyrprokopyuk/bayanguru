@@ -3,18 +3,41 @@
   f='16\( e d c d c d e | f g a bes c8\) a16[\( f='] |
 {% endmacro %}
 
+{% macro rhFrag2(a) %}
+  {{ rhFrag1(a) }}
+  g='16 c b c a c b c | g e f g a g f e\) |
+  f='16\( d e f g f e d | e f d e c='8\) r |
+{% endmacro %}
+
+{% macro rhFrag3(a) %}
+  {{ a }} d c b c b c d | e d e f g f e d=''\) |
+{% endmacro %}
+
 {% macro rightHand() %}
 \tempo Allegro
 \clef treble
 \key f \major
 \time 2/4
 \relative {
-  {{ rhFrag1("f'='16\\(\\f") }}
-  g='16 c b c a c b c | g e f g a g f e\) |
-  f='16\( d e f g f e d | e f d e c='8\) r |
+  {{ rhFrag2("f'='16\\(\\f") }}
   {{ rhFrag1("f='16\\(") }}
   d'=''16 a b a c a b a | f' e d c d c b a\) |
   e'=''16\( d c b c b a g | c e d e c=''8\) r |
+
+  bes='16\(\p a g f g f g a | bes a bes c d c bes a\) |
+  bes='16\( a g f g f g a | bes a g f\) e8(-> c=') |
+  a'='16\(_\dynCresc g f e f e f g | a g a bes c bes a g\) |
+  a='16\( g f e f e f g | a bes c d ees8\) c16\( a=' |
+  {{ rhFrag3("e'=''16\\f") }}
+  {{ rhFrag3("e=''16\\(") }}
+  f=''16\( e d c d c b a | e' d c b c b a gis\) |
+  a='16( b c d e d c b | a='8) r r4 |
+
+  {{ rhFrag2("f='16\\(\\f") }}
+  f='16\( e d c d c d e | f e f g a f g a\) |
+  bes='16\( a g f g f g a | bes a bes c d\) g,\( a bes |
+  c=''16 b c d e c d e | f e f g a f g a |
+  bes=''16 a g f e f d e | f a g a f=''8\) r \bar "|."
 }
 {% endmacro %}
 
