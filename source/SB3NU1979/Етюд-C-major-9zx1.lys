@@ -23,6 +23,11 @@
   }
 {% endmacro %}
 
+{% macro lhFrag2() %}
+  g=,8-\puBass r d'( cis d c | b d c b a g |
+  fis=,8) r a( gis a g | fis a g fis e d=, |
+{% endmacro %}
+
 {% macro rightHand() %}
 \tempo "Tempo di valzer"
 \clef treble
@@ -71,5 +76,14 @@
   {{ lhFrag1() }}
   f,,+d@m!4 r r | g,,+g7! r r |
   \repeat unfold 2 { c,+cM! r r | }
+
+  \key g \major
+  {{ lhFrag2() }}
+  g=,4)-\stBass r r | c,+a,@m! r4 r |
+  d,+g,@M! r4 r | d,+d7! r r |
+  {{ lhFrag2() }}
+  g,,+gM!4)-\stBass r r | c,+a,@m! r4 r |
+  d,+d7!4 r r | g,,+gM!8 r r4 r | R2. | R2. |
+  \keyChangeBeforeBar \key c \major
 }
 {% endmacro %}
