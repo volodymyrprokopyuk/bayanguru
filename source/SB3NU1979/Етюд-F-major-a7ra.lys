@@ -13,6 +13,15 @@
   {{ a }} d c b c b c d | e d e f g f e d=''\) |
 {% endmacro %}
 
+{% macro lhFrag1(a) %}
+  {{ a }} f,+bes,@M!8[ f,+besM8] | f,+fM!4 r |
+{% endmacro %}
+
+{% macro lhFrag2() %}
+  e,+c@M!8 r8 f,+fM! r | e,+c@M! r8 r4 |
+  d,+f@M!8 r8 g,,+gM! r | c= g,@7! c,+cM!8 r |
+{% endmacro %}
+
 {% macro rightHand() %}
 \tempo Allegro
 \clef treble
@@ -45,5 +54,32 @@
 \clef bass
 \key f \major
 \relative {
+  {{ lhFrag1("f,+fM!4-\\stBass") }}
+  {{ lhFrag1("f,+fM!4") }}
+  {{ lhFrag2() }}
+  {{ lhFrag1("f,+fM!4") }}
+  {{ lhFrag1("f,+fM!4") }}
+  f,+d@m!4 e,+a,@m!4 | d,+dm! r8 f,+d@m! |
+  g,,+c@M!4 g=,8 g7! | c,+cM![ c,+f@M!] c,+cM!8 r8 |
+
+  \repeat unfold 2 {
+    c@M!4 c@7!8[ c78] | c@M!4 r4 |
+  }
+  f,+f7!4 f,+f78 f,+f7 | f,+f74 r |
+  f,+f7!4 f,+f78 f,+f7 | f,+f74~ f,+f78 r |
+  \repeat unfold 2 {
+    e,+c@M!4 r8 f,+fM! | e,+c@M!4 d,+g,@7!4 |
+  }
+  e,+a,@m!4 r4 | e,+e7! r |
+  a,,+am!8 r r e'= | a,=, r r4 |
+
+  {{ lhFrag1("f,+fM!4") }}
+  {{ lhFrag1("f,+fM!4") }}
+  {{ lhFrag2() }}
+  {{ lhFrag1("f,+fM!4") }}
+  f,+bes,@M!4 f,+f7!8 f,+f7 | bes,,+besM!4 r |
+  bes,,+c@M!4 bes,,+c@M!8[ bes,,+cM8] |
+  a,,+f@M!4 r4 | g,,+gm!8 r c,+c7!4 |
+  f,+fM!8 f,+bes,@M! f,+fM!8 r8 |
 }
 {% endmacro %}
