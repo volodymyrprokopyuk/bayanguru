@@ -151,6 +151,11 @@ pieces:
   - { id: a7ra, tit: Етюд F major,
       com: A. Гедике, src: SB3NU1979,
       org: rus, sty: stu, gnr: stu, frm: wrs, bss: stb, lvl: elm }
+  # SB4NU1978
+  # p. 23
+  # - { id: 8yil, tit: Етюд F minor,
+  #     com: А. Нечипоренко, src: SB4NU1978,
+  #     org: ukr, sty: stu, gnr: stu, frm: [wrs, arp], bss: stb, lvl: elm }
 
   # Pepetition
 
