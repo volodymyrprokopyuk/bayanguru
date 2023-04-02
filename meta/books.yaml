@@ -122,7 +122,9 @@ books:
         # SB2NU1977
         "rnk5", "5071",
         # SB3NU1979
-        "ckjo", "ov1p", "9zx1", "a7ra"] },
+        "ckjo", "ov1p", "9zx1", "a7ra",
+        # SB4NU1978
+        "8yil"] },
       # Chords
       { sec: Акорди, pieces: [
         # SB2NU1977

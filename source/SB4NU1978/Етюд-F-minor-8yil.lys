@@ -1,0 +1,26 @@
+{% macro rightHand() %}
+\tempo Moderato
+\clef treble
+\key f \minor
+\time 2/4
+\relative {
+  r4 r8 c'='16\f c |
+  aes'='8-> c,16 c g'8-> c,16 c |
+  f='8\< f f f16\( \after 16\! g |
+  aes='8 g16 aes bes\> aes g f |
+  e='8 \after 16.\! c c\) c16 c |
+  aes'='8-> c,16 c g'8-> c,16 c |
+  f='8 f f g16\(\< aes |
+  g='8 f16 \after 16\! ees d8 g16 g, |
+  c='8 c c'\) c16\( des |
+  c=''8 bes16 aes g8 aes16 bes |
+  c=''8 c c\)
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\clef bass
+\key f \minor
+\relative {
+}
+{% endmacro %}
