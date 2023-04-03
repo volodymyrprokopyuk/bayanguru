@@ -1,3 +1,8 @@
+{% macro rhFrag1(a) %}
+  aes'=''16(-> f)-. c-. aes-. g'(-> e)-. c-. g-. |
+  f'=''16(-> c)-. aes-. f='-.  aes-. c-. f-. {{ a }} | %
+{% endmacro %}
+
 {% macro rightHand() %}
 \tempo Moderato
 \clef treble
@@ -14,7 +19,18 @@
   g='8 f16 \after 16\! ees d8 g16 g, |
   c='8 c c'\) c16\( des |
   c=''8 bes16 aes g8 aes16 bes |
-  c=''8 c c\)
+  c=''8 c c\)\< f16\( ges |
+  f=''8 ees16 des c8 f16 \after 16\! ees |
+  des=''8 bes bes\) ees16\( des |
+  c=''8 bes16 aes g8 c16 e, |
+  f='8 f f\) f16\( des |
+  c='8 bes16 aes g8 c16 e |
+  f='8\) c' f c16\mf c='' |
+
+  {{ rhFrag1("g=''16-.") }}
+  aes=''16(-> c,)-. f-. aes-. bes(-> aes)-. g-. f-. |
+  e=''16(-> c)-. b-. c-. des-. c-. b-. c=''-. |
+  {{ rhFrag1("aes=''16-.") }}
 }
 {% endmacro %}
 
