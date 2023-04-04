@@ -261,13 +261,13 @@ pieces:
       org: ukr, sty: flk, gnr: sng, frm: var, bss: stb, lvl: elb }
   - { id: v8ec, tit: Ведмідь,
       com: К. Мясков, src: B2AK1987,
-      org: ukr, sty: msc, gnr: chd, frm: mel, bss: pub, lvl: ela }
+      org: ukr, sty: msc, gnr: chd, frm: mel, bss: pub, lvl: elb }
   - { id: w5ba, tit: Дивлюсь я на небо, sub: uafs,
       arr: А. Иванов, src: B2AK1987,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: plh0, tit: Танець ляльки,
       com: І. Беркович, src: B2AK1987,
-      org: ukr, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: elb }
   - { id: i11j, tit: Бджілка,
       com: К. Мясков, src: B2AK1987,
       org: ukr, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
