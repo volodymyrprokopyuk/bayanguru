@@ -270,13 +270,13 @@ pieces:
       org: ukr, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: elb }
   - { id: i11j, tit: Бджілка,
       com: К. Мясков, src: B2AK1987,
-      org: ukr, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: elb }
   - { id: zvpg, tit: Козачок, sub: uafd,
       src: B2AK1987,
-      org: ukr, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: koz, frm: mel, bss: stb, lvl: elb }
   - { id: mf7s, tit: Дитяча полька,
       com: М. Глинка, src: B2AK1987,
-      org: ukr, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: [plk, chd], frm: mel, bss: stb, lvl: elb }
   - { id: zykv, tit: Зайчик, sub: uafs,
       src: B2AK1987,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
