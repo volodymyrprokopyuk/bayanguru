@@ -26,6 +26,10 @@
   c='8 bes16 aes g8 c16 e=' |
 {% endmacro %}
 
+{% macro lhFrag1(a) %}
+  {{ a }} r c,+cM! r | f,,+fm!8 r f,,+fm r |
+{% endmacro %}
+
 {% macro rightHand() %}
 \tempo Moderato
 \clef treble
@@ -59,5 +63,19 @@
 \clef bass
 \key f \minor
 \relative {
+  R2 | {{ lhFrag1("f,,+fm!8-\\stBass") }}
+  aes,,+f,@m!8 r8 bes,,+besm! r |
+  c,+cM! r c,+cM r |
+  {{ lhFrag1("f,,+fm!8") }}
+  g,,+c@m!8 r8 g,,+gM! r |
+  c,+cM! r c,+c7! r |
+  f,,+fm!8 r c,+c7! r |
+  f,,+fm!8 r a,,+f,@7! r8 |
+  bes,,+besm!8 r f,,+f7! r |
+  bes,,+besm!8 r g,,+bes,@m! r8 |
+  aes,,+f,@m!8 r8 c,+c7! r |
+  f,,+fm!8 r bes,,+besm! r |
+  c,+f,@m!8 r8 c,+c7! r |
+  f,,+fm!8 r f,,+fm r |
 }
 {% endmacro %}
