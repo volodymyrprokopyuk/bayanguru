@@ -41,4 +41,4 @@
   tagline = \markup { {{ logo(0.5) }} \with-url \rootUrl \rootUrl }
 }
 
-{{ pieceScore(piece) }}
+{{ pieceScore(piece, args) }}

@@ -80,7 +80,7 @@
   }
 {% endmacro %}
 
-{% macro pieceTitle(piece) %}
+{% macro pieceTitle(piece, args) %}
   \header {
     title = "{{ piece.tit }}"
     subtitle = "{{ piece.sub or '' }}"
@@ -111,9 +111,9 @@
   }
 {% endmacro %}
 
-{% macro pieceScore(piece) %}
+{% macro pieceScore(piece, args) %}
   \score {
-    {{ pieceTitle(piece) }}
+    {{ pieceTitle(piece, args) }}
     {% set source = piece.src + "/" + piece.file + ".lys" %}
     {% from source import rightHand, leftHand %}
     \new PianoStaff = bayan {

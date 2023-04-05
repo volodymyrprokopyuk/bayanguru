@@ -95,11 +95,11 @@
     {{ sectionTitleMarkup(bpiece.sec) }}
     {% for spiece in bpiece.pieces %}
       {{ pieceTocItem(spiece) }}
-      {{ pieceScore(spiece) }}
+      {{ pieceScore(spiece, args) }}
     {% endfor %}
   {% else %}
     {{ pieceTocItem(bpiece) }}
-    {{ pieceScore(bpiece) }}
+    {{ pieceScore(bpiece, args) }}
   {% endif %}
 {% endfor %}
 \pageBreak

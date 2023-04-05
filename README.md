@@ -33,10 +33,49 @@ Stradella bass and free bass
 - [LilyPond](https://lilypond.org/)
 - [pdfcpu](https://pdfcpu.io/)
 
-## Catalog
+## CLI
+
+Specifications and options
+```bash
+<catalog spec> = glob
+<piece spec> = pid1 pid2 ... | --frombook bid1 bid2 ... | all
+<piece select> = --org re1,re2 --sty --gnr --frm --bss --lvl --tit --com --arr
+<book spec> = bid1 bid2 ... | all
+<engrave opts> = --nometa --lint --relax --dry --optimize
+<play opts> = --cycle --random
+<tobook spec> = --bid --btit --bsub
+```
+
+Initialize pieces
+
+```bash
+./index.js -c <catalog spec> -i <piece spec>
+```
+
+Engrave pieces
+
+```bash
+./index.js -c <catalog spec> <piece spec> <piece select> <engrave opts> -j
+```
+
+Play pieces
+
+```bash
+./index.js -c <catalog spec> -p <piece spec> <piece select> <play opts> --dry
+```
+
+Engrave books
+
+```bash
+./index.js -c <catalog spec> -b <book spec> <engrave opts> -j
+./index.js -c <catalog spec> -p <piece spec> <piece select> <engrave opts> \
+  --tobook <tobook spec> -j
+```
+
+Generate picece/book random ID
 
 ``` bash
-shuf -ern 4 {a..z} {0..9} | tr -d '\n' # generate picece/book random ID
+shuf -ern 4 {a..z} {0..9} | tr -d '\n'
 ```
 
 ## Meta

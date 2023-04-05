@@ -17,7 +17,7 @@ function configure() {
       "p", "cycle", "random",
       "tobook", "frombook"
     ],
-    alias: { i: "init", c: "catalog", b: "book", j: "jobs", p: "play" },
+    alias: { c: "catalog", i: "init", b: "book", p: "play", j: "jobs" },
     default: {
       c: "", j: cpus().length,
       bid: "selc", btit: "Вибрані твори", bsub: "для баяна",
