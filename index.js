@@ -13,12 +13,13 @@ import {
 function configure() {
   const argsConfig = {
     boolean: [
-      "i", "b", "dynbook", "nometa", "lint", "relax", "dry", "optimize",
+      "i", "b", "tobook", "nometa", "lint", "relax", "dry", "optimize",
       "p", "cycle", "random"
     ],
     alias: { i: "init", c: "catalog", b: "book", j: "jobs", p: "play" },
     default: {
       c: "", j: cpus().length,
+      bid: "selc", btit: "Вибрані твори", bsub: "для баяна",
       org: "", sty: "", gnr: "", frm: "", bss: "", lvl: "",
       tit: "", com: "", arr: ""
     }
@@ -34,11 +35,11 @@ async function dispatch(args) {
     const books = await readBooks(args)
     return await engraveBooks(books, args)
   }
-  if (args.dynbook) {
+  if (args.tobook) {
     const pieces = await selectPieces(args)
     const book = {
-      id: "selc", tit: "Вибрані твори", sub: "для баяна",
-      file: "Вибрані-твори-selc", pieces
+      id: args.bid, tit: args.btit, sub: args.bsub,
+      file: `${args.btit.replace(/ /g, "-")}-${args.bid}`, pieces
     }
     return await engraveBooks([book], args)
   }
