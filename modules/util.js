@@ -1,3 +1,5 @@
+import chalk from "chalk"
+
 export function reFromParts(flags, ...parts) {
   const re = parts.map(part => part.source).join("")
   return flags ? new RegExp(re, flags) : new RegExp(re)
@@ -15,7 +17,10 @@ export function asyncParallel(jobs, limit) {
     function parallel() {
       while (index < jobs.length && running < limit) {
         const job = jobs[index++]
-        job().then(done, error => { throw new Error(error) })
+        job().then(done, error => {
+          console.log(chalk.red(error))
+          process.exit(1)
+        })
         ++running
       }
     }
