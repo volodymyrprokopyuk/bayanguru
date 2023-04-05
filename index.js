@@ -13,8 +13,9 @@ import {
 function configure() {
   const argsConfig = {
     boolean: [
-      "i", "b", "tobook", "nometa", "lint", "relax", "dry", "optimize",
-      "p", "cycle", "random"
+      "i", "b", "nometa", "lint", "relax", "dry", "optimize",
+      "p", "cycle", "random",
+      "tobook", "frombook"
     ],
     alias: { i: "init", c: "catalog", b: "book", j: "jobs", p: "play" },
     default: {

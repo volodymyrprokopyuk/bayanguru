@@ -98,6 +98,31 @@ export async function readPieces(args, all = false) {
   return pieces
 }
 
+async function readPiecesFromBook(args) {
+  function addBookPiece(bpiece) {
+    if (cpieces.has(bpiece)) {
+      bpieces.push(cpieces.get(bpiece))
+    } else {
+      throw new Error(`Piece ${bpiece} is not in catalog`)
+    }
+  }
+  const pieces = await readPieces(args, true)
+  const cpieces = new Map()
+  pieces.forEach(piece => cpieces.set(piece.id, piece))
+  let { books } = load(await readFile("meta/books.yaml"))
+  const bpieces = []
+  for (const book of books) {
+    if (args._.includes("all") || args._.includes(book.id)) {
+      for (const bpiece of book.pieces) {
+        if (bpiece.sec) {
+          for (const spiece of bpiece.pieces) { addBookPiece(spiece) }
+        } else { addBookPiece(bpiece) }
+      }
+    }
+  }
+  return bpieces
+}
+
 export async function readBooks(args) {
   const pieces = await readPieces(args, true)
   const cpieces = new Map()
@@ -132,7 +157,9 @@ export async function selectPieces(args) {
   }
   const tags = ["org", "sty", "gnr", "frm", "bss", "lvl", "tit", "com", "arr"]
   const matchers = tags.map(match)
-  const pieces = await readPieces(args)
+  const pieces = args.frombook ?
+        await readPiecesFromBook(args) :
+        await readPieces(args)
   const selected = pieces.filter(piece =>
     matchers.every(match => match(piece))
   )
