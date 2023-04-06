@@ -39,7 +39,7 @@ Specifications and options
 ```bash
 <catalog spec> = glob
 <piece spec> = pid1 pid2 ... | --frombook bid1 bid2 ... | all
-<piece select> = --org re1,re2 --sty --gnr --frm --bss --lvl --tit --com --arr
+<piece select> = --org re1,^re2 --sty --gnr --frm --bss --lvl --tit --com --arr
 <book spec> = bid1 bid2 ... | all
 <engrave opts> = --nometa --lint --relax --dry --optimize
 <play opts> = --cycle --random
