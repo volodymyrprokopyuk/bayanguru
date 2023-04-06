@@ -5,18 +5,17 @@ pieces:
   # B0D1973
   - { id: bv2w, tit: Лявониха, sub: byfs,
       src: B0D1973,
-      org: blr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: blr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   # B1AK1985
   - { id: v99z, tit: Янка, sub: byfd,
       src: B1AK1985,
-      org: blr, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
+      org: blr, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: ela }
   # Tutorial
   # BTBC1936
   - { id: 8ec9, tit: Перепілонька, sub: byfs,
       arr: М. Чайкін, src: BTBC1936,
-      org: blr, sty: flk, gnr: sng, frm: plp, bss: stb, lvl: elm }
-  # Tutorial
+      org: blr, sty: flk, gnr: sng, frm: plp, bss: stb, lvl: elb }
   # TYBC2B1971
   - { id: vhri, tit: Микита, sub: byfd,
       src: TYBC2B1971,
-      org: blr, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
+      org: blr, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: ela }

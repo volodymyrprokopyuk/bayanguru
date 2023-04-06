@@ -24,8 +24,8 @@
   g,=,8-\stBass gM! g gM | g gM! a b |
   d=8 d7! fis d@7 | d8 dM! e, fis |
   \repeat unfold 2 { g=,8 gM! g=, d@7! | }
-  g=,8 gM! d' d7! | g, gM! g,,+gM!4 |
+  g=,8 gM! d' d7! | g, gM! g,,+gM4 |
   \repeat unfold 2 { g=,8 gM! d'= dM! | }
-  g,=,8 gM! d' d7! | g,=, gM! g,,+gM!4 |
+  g,=,8 gM! d' d7! | g,=, gM! g,,+gM4 |
 }
 {% endmacro %}
