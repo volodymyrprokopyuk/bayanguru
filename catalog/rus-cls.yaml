@@ -10,19 +10,19 @@ pieces:
       org: rus, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: ela }
   - { id: b383, tit: При долинушке калинушка стоит, sub: rufs,
       src: B0D1973,
-      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: vt18, tit: На горе-то калина, sub: rufs,
       src: B0D1973,
-      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: 8fs0, tit: На улице дождь идет, sub: rufs,
       src: B0D1973,
-      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: 0mdf, tit: Колыбельная, sub: rufs,
       src: B0D1973,
-      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: lul, frm: mel, bss: stb, lvl: ela }
   - { id: bspm, tit: "Белолица, круглолица", sub: rufs,
       src: B0D1973,
-      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: kkks, tit: Елочка,
       com: Л. Бекман, src: B0D1973,
       org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }

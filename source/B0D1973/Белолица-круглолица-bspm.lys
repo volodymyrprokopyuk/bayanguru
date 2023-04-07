@@ -21,7 +21,7 @@
 \key c \major
 \relative {
   c=4-\stBass cM! c cM | b g,@M! g gM |
-  c=4 cM! e c@M | g, gM! e' eM |
+  c=4 cM! e c@M | g, gM! e' eM! |
   a,=,4 am! a am | e' eM! e eM |
   a,=,4 am! e' eM! | a, am! g gM! |
   a=,4 am! a=, r |
