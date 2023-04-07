@@ -48,7 +48,7 @@
   f=,8 f7! c' f,@7 | f,8 f7! a f,@7 |
   \repeat unfold 2 { bes=,8 besM! f bes,@M | }
   c'=8 cm!4 cm8 | c cm4 cm8 |
-  d=8 g,@m!4 gm8 | g,8 gm! c cm |
+  d=8 g,@m!4 gm8 | g,8 gm! c cm! |
   d=8 d7!4 d78 | d d74 d78 |
   g,=,8 gm!4 gm8 | d' d7! g,,+gm! r |
   d=8 d7! g,,+gm! r | c,+cm! r d,+d7! r |
