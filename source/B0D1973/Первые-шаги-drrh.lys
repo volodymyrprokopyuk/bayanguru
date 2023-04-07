@@ -20,8 +20,8 @@
 \clef bass
 \key c \major
 \relative {
-  e=8-\stBass c@M! c8 cM | g gM! c cM |
-  b=,8 g,@M! c8 cM | b g,@M! g8 gM |
+  e=8-\stBass c@M! c8 cM | g gM! c cM! |
+  b=,8 g,@M! c8 cM! | b g,@M! g8 gM |
   e'=8 c@M! c8 cM | g gM! a am! |
   d=8 dm! g, c@M! | g=,8 gM! c,+cM!4 |
 }
