@@ -59,9 +59,9 @@
   a,=,8 a7! a a7 | d dm! dm r |
   d=8 dm! d= r |
 
-  f,=,8 fM! bes besM | f fM! f fM |
+  f,=,8 fM! bes besM! | f fM! f fM |
   c'=8 cM! c cM | c cM! c r |
-  f,=,8 fM! bes besM | f fM! a f,@M |
+  f,=,8 fM! bes besM! | f fM! a f,@M |
   c=8 cM! c cM | f,@M! r8 f,=,4 |
 
   \repeat unfold 2 { f=,8 fM! f fM | }
