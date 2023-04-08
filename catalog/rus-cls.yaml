@@ -42,7 +42,7 @@ pieces:
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: e40b, tit: Песенка,
       com: Ю. Шишаков, src: B1AK1979,
-      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: ela }
   - { id: 58a8, tit: Звенит звонок веселый,
       com: А. Долуханян, src: B1AK1979,
       org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
