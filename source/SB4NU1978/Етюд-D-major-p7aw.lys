@@ -1,0 +1,47 @@
+{% macro rhFrag1(a) %}
+  {{ a }} cis16 d e d cis d) a( d cis d e d cis d) |
+  a='16( e' dis e fis e dis e) a8( g16 fis e d cis b=') |
+{% endmacro %}
+
+{% macro rhFrag2(a) %}
+  {{ rhFrag1(a) }}
+  \repeat unfold 2 {  a='16( d cis d e d cis d) }
+  cis=''16( e d cis b d cis b=' %
+{% endmacro %}
+
+{% macro rhFrag3(a) %}
+  cis=''8-. a'-. a,-. e'-. d-. {{ a }} gis16( a b a gis a |
+  e=''8)-. gis16( a b a gis a fis8)-. d'-. d,-. fis=''-. |
+{% endmacro %}
+
+{% macro rightHand() %}
+\tempo "Allegro moderato"
+\clef treble
+\key d \major
+\time 4/4
+\relative {
+  {{ rhFrag2("d''=''8(\\mf") }} a b cis d e fis g e='') |
+  {{ rhFrag2("d=''8(") }} a8) a16( b cis d e fis='') |
+
+  g=''8 g16( fis g b a g) fis( g fis e fis a g fis) |
+  e=''16( fis e dis e g fis e d8)-. a-. fis'-. d-. |
+  g=''8 g16( fis g b a g) fis( g fis e fis a g fis |
+  e=''8)-. a-. b,-. e-. %
+  a,='16(\< b cis d e fis g \after 16\! e='') |
+
+  {{ rhFrag1("d=''8(\\f") }}
+  a='16( d cis d e d cis d) b( e dis e fis e dis e) |
+  {{ rhFrag3("\\mf") }}
+  {{ rhFrag3("\\f") }}
+  e=''8-. a-. a,-. e'-. d-. a'( fis d |
+  a='8) fis'( d a fis) d'( a fis |
+  d='8) fis( d a d,=4) r \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\clef bass
+\key d \major
+\relative {
+}
+{% endmacro %}
