@@ -167,6 +167,10 @@ pieces:
   # - { id: ua3l, tit: Етюд A minor,
   #     com: Т. Лак, src: SB5NU1980,
   #     org: fra, sty: stu, gnr: stu, frm: wrs, bss: stb, lvl: elm }
+  # p. 42
+  # - { id: m8an, tit: Етюд F major,
+  #     com: М. Магиденко, src: SB5NU1980,
+  #     org: rus, sty: stu, gnr: stu, frm: wrs, bss: stb, lvl: elm }
 
   # Pepetition
 
