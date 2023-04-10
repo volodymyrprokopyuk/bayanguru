@@ -1,0 +1,36 @@
+{% macro t2(a, b, c) %}
+  \tuplet 3/2 { {{ a }} } \tuplet 3/2 { {{ b }} } {{ c }}
+{% endmacro %}
+
+{% macro t3(a, b, c) %}
+  \tuplet 3/2 { {{ a }} } \tuplet 3/2 { {{ b }} }
+  \tuplet 3/2 { {{ c }} }
+{% endmacro %}
+
+{% macro rightHand() %}
+\tempo Allegro
+\clef treble
+\key g \major
+\time 6/8
+\relative {
+  \set subdivideBeams = ##t
+  {{ t2("b'='16(\\p c b", "a b a", "g8)-.") }}
+  {{ t2("d'=''16( e d", "c d c", "b8)-.") }} | %
+  {{ t3("b'=''16(\\> c b", "a b a", "g a g") }}
+  {{ t3("fis=''16 g fis", "e fis e", "d e \\after 32.\\! d") }} | %
+  {{ t2("c=''16 d c", "b c b", "a8)-.") }}
+  {{ t2("fis'=''16( g fis", "e fis e", "d8)-.") }} | %
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\clef bass
+\key g \major
+\relative {
+  g,=,8-\stBass gM! gM d'[ g,@M gM8] |
+  g,=,8 gM! gM d'[ g,@M gM8] |
+  \repeat unfold 2 {
+    fis,=,8[ d@7! d78] d' d7 d7 |
+  }
+}
+{% endmacro %}

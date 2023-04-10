@@ -158,10 +158,9 @@ pieces:
   - { id: p7aw, tit: Етюд D major,
       com: А. Лешгорн, src: SB4NU1978,
       org: deu, sty: stu, gnr: stu, frm: wrs, bss: stb, lvl: elm }
-  # p. 27
-  # - { id: 8sl6, tit: Етюд G major,
-  #     com: Т. Лак, src: SB4NU1978,
-  #     org: fra, sty: stu, gnr: stu, frm: wrs, bss: stb, lvl: elm }
+  - { id: 8sl6, tit: Етюд G major,
+      com: Т. Лак, src: SB4NU1978,
+      org: fra, sty: stu, gnr: stu, frm: wrs, bss: stb, lvl: elm }
   # SB5NU1980
   # p. 29
   # - { id: ua3l, tit: Етюд A minor,

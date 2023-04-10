@@ -4,8 +4,8 @@ import { reFromParts } from "./util.js"
 
 const reOctaveCheck = reFromParts(
   "mg",
-  // Line beginning ..., \command [x] { ... }, r/lhFragN("...")
-  /(^ +|\\\w+ (?:\S+ )?\{ |[rl]hFrag\d+\(")/,
+  // Line beginning ..., \command [x] { ... }, r/lhFragN("..."), tN("...")
+  /(^ +|\\\w+ (?:\S+ )?\{ |[rl]hFrag\d+\("|t\d\(")/,
   // First note or chord
   /(<?[a-g](?:is|es){0,2}[,']*)(.)(.*)/
 )
