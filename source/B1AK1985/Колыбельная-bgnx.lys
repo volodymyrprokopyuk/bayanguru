@@ -33,12 +33,12 @@
 \key g \major
 \relative {
   g,=,4-\stBass gM! g gM |
-  g=,4 gM! g gM | g c@M! g4 gM |
+  g=,4 gM! g gM | g c@M! g4 gM! |
   g=,4 gM! g gM | b bm! e eM! |
   {{ lhFrag1("a,=,4", "eM!") }}
-  g,=,4 c@M! g4 gM | c cM! e e7! |
+  g,=,4 c@M! g4 gM! | c cM! e e7! |
   \repeat unfold 2 { a,=,4 am! a e@7! | }
-  a=,4 d@m! a am |
+  a=,4 d@m! a am! |
   {{ lhFrag1("a=,4", "eM!") }}
   g,=,4 gM! e@7!2-\fermata |
   {{ lhFrag1("a=,4", "e7!") }}

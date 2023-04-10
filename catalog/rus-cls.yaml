@@ -61,26 +61,26 @@ pieces:
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: erhk, tit: Рыбка,
       com: М. Красев, src: B1AK1985,
-      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: ela }
   - { id: bgnx, tit: Колыбельная,
       com: И. Дунаевский, src: B1AK1985,
-      org: rus, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: lul, frm: mel, bss: stb, lvl: ela }
   - { id: r9o6, tit: Катюша,
       com: М. Блантер, src: B1AK1985,
-      org: rus, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: mil, frm: mel, bss: stb, lvl: ela }
   # B2AK1979
   - { id: jquj, tit: Ходила младешенька по борочку, sub: rufs,
       src: B2AK1979,
-      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: soth, tit: Катенька, sub: rufs,
       src: B2AK1979,
-      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: 2n32, tit: Среди долины ровныя, sub: rufs,
       src: B2AK1979,
-      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: 923n, tit: Лирическая протяжная,
       com: Н. Речменский, src: B2AK1979,
-      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: pie, frm: plp, bss: stb, lvl: elb }
   - { id: zk1t, tit: Щебетала пташечка,
       com: Н. Руднев, src: B2AK1979,
       org: rus, sty: flk, gnr: sng, frm: mel, bss: pub, lvl: elm }
