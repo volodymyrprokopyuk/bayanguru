@@ -4,19 +4,19 @@ pieces:
   # BTBC1936
   - { id: yq8y, tit: Українська полька,
       com: М. Чайкін, src: BTBC1936,
-      org: ukr, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: ela }
   - { id: cckj, tit: За городом качки пливуть, sub: uafs,
       arr: М. Чайкін, aty: ipr, src: BTBC1936,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
   - { id: a3ew, tit: Ой піду я понад лугом, sub: uafs,
       arr: М. Чайкін, src: BTBC1936,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: isd6, tit: Гопак, sub: uafd,
       arr: М. Чайкін, src: BTBC1936,
-      org: ukr, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: gop, frm: mel, bss: stb, lvl: ela }
   - { id: vf9h, tit: Козачок, sub: uafd,
       src: BTBC1936,
-      org: ukr, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: koz, frm: mel, bss: [stb, pub], lvl: elb }
   # BTB1978
   - { id: vwad, tit: "Чорнії брови, карії очі", sub: uafs,
       src: BTB1978,

@@ -74,13 +74,15 @@
   e'=8 a,@7! a,8 a7 | d dM! a d@M |
   d=8 dM! dM r |
 
-  \repeat unfold 2 { d=4 c | b g=, | }
+  d=4-\puBass c | b g | d' c | b g |
   a=,4 g | fis8[ e fis g] |
   a=,4 a | d= dM!-> |
 
-  \repeat unfold 2 {
-    d=8 dM! d dM | g, gM! g=, gM |
-  }
+  % \repeat unfold 2 {
+  %   d=8 dM! d dM | g, gM! g=, gM |
+  % }
+  d=8-\stBass dM! d dM | g, gM! g gM |
+  d'=8 dM! d dM | g, gM! g gM |
   a=,8 aM! a aM | d dM! d dM |
   {{ v2("r4 aM!", "a,=,2") }}
   {{ v2("r4 dM!", "d=2") }}
