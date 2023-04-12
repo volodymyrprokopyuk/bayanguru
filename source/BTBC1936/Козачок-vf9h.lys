@@ -78,9 +78,6 @@
   a=,4 g | fis8[ e fis g] |
   a=,4 a | d= dM!-> |
 
-  % \repeat unfold 2 {
-  %   d=8 dM! d dM | g, gM! g=, gM |
-  % }
   d=8-\stBass dM! d dM | g, gM! g gM |
   d'=8 dM! d dM | g, gM! g gM |
   a=,8 aM! a aM | d dM! d dM |
