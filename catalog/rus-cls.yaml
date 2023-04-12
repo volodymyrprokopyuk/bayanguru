@@ -92,17 +92,17 @@ pieces:
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: xzce, tit: Каватина Людмилы, sub: 'из оперы \"Руслан и Людмила\"',
       com: М. Глинка, src: B2AK1979,
-      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elb }
   - { id: e1d4, tit: Меланхолический вальс,
       com: А. Даргомыжский, src: B2AK1979,
-      org: rus, sty: msc, gnr: vls, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: vls, frm: mel, bss: stb, lvl: elb }
   - { id: 1hva, tit: Как пойду я на быструю речку, sub: rufs,
       src: B2AK1979,
-      org: rus, sty: flk, gnr: sng, frm: var, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: var, bss: stb, lvl: elb }
   # B2AK1987
   - { id: tsio, tit: Колыбельная,
       com: Т. Хренников, src: B2AK1987,
-      org: rus, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: lul, frm: mel, bss: stb, lvl: ela }
   - { id: tg2x, tit: Ходила младешенька по борочку, sub: rufs,
       src: B2AK1987,
-      org: rus, sty: flk, gnr: sng, frm: var, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: var, bss: stb, lvl: elb }
