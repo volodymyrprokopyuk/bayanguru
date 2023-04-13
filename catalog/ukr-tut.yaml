@@ -20,13 +20,13 @@ pieces:
   # BTB1978
   - { id: vwad, tit: "Чорнії брови, карії очі", sub: uafs,
       src: BTB1978,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: rmc, frm: mel, bss: stb, lvl: ela }
   - { id: brku, tit: Стоїть гора високая, sub: uafs,
       src: BTB1978,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: tzb9, tit: Черемшина,
       com: В. Михайлюк, src: BTB1978,
-      org: ukr, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: ukr, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: ndwb, tit: Реве та стогне Дніпр широкий,
-      src: BTB1978,
-      org: ukr, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      com: Д. Крижанівський, src: BTB1978,
+      org: ukr, sty: msc, gnr: sng, frm: plp, bss: pub, lvl: elb }
