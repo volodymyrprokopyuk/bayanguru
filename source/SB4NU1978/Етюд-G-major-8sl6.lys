@@ -25,6 +25,18 @@
   {{ t3(b, "fis g fis", "e fis e") }}
 {% endmacro %}
 
+{% macro lhFrag1(a) %}
+  {{ a }} gM! gM d'[ g,@M gM8] |
+  g,=,8 gM! gM d'[ g,@M gM8] |
+  \repeat unfold 2 {
+    fis,=,8[ d@7! d78] d' d7 d7 |
+  }
+  b=,8[( g,@M!) gM8] gis[( e@7!) e78] |
+  a=,8( am!) am c[( a,@m) am8] |
+  d=8[( g,@M!) gM8] e( em!) em |
+  a,=,8( a7!) a7 %
+{% endmacro %}
+
 {% macro rightHand() %}
 \tempo Allegro
 \clef treble
@@ -36,6 +48,32 @@
   d=''8 <a cis>^\tempRit <a=' c>) |
   {{ rhFrag1("b='16(\\p^\\tempATempo c b", "g=''16(\\f\\> a g") }}
   \after 8\! d=''8)-. r r |
+
+  {{ t2("d=''16(\\p\\< a d", "fis d fis", "a8)-.") }}
+  {{ t2("g=''16( d g", "b g b", "\\after 8\\! d8)-.") }} | %
+  {{ t3("e='''16(\\> fis e", "d e d", "c d c") }}
+  {{ t2("b=''16 c b", "a b a", "\\after 8\\! g8)-.") }} | %
+  {{ t2("b,='16( fis b", "dis b dis", "fis8)-.") }}
+  {{ t2("e=''16( b e", "g e g", "b8)-.") }} | %
+  {{ t3("c='''16( d c", "b c b", "a b a") }}
+  {{ t2("g=''16 a g", "fis g fis", "e8)-.") }} | %
+  {{ t2("g,='16( d g", "b g b", "d8)-.") }}
+  {{ t2("c=''16( g c", "e c e", "g8)-.") }} | %
+  {{ t2("e,='16( b e", "gis e gis", "b8)-.") }}
+  {{ t2("a='16( e a", "c a c", "e8)-.") }} | %
+  {{ t3("g=''16( a g", "fis g fis", "e fis e") }}
+  {{ t2("d=''16 e d", "c d c", "b8)-.") }} | %
+  {{ t3("c'='''16(\\< d c", "b c b", "a b a") }}
+  {{ t2("g=''16 a g", "fis g fis", "\\after 8\\! e8)-.") }} | %
+  {{ t3("g=''16( a g", "fis g fis", "e fis e") }}
+  {{ t2("d=''16 e d", "c d c", "b8)-.") }} | %
+  {{ t3("c=''16(\\> d c", "b c b", "a b a") }}
+  \after 4\! g='4.)
+  {{ t2("b,=16(\\p c b", "a b a", "g8)-.") }}
+  {{ t2("d'='16( e d", "c d c", "b8)-.") }} | %
+  {{ t3("g'='16(\\< d g", "b g b", "d b d") }}
+  {{ t3("g=''16 d g", "b g b", "d b \\after 32.\\! d") }} | %
+  g='''8) r r <d,,=' g b> r r | <d,= b' g'='>2. \bar "|."
 }
 {% endmacro %}
 
@@ -43,10 +81,20 @@
 \clef bass
 \key g \major
 \relative {
-  g,=,8-\stBass gM! gM d'[ g,@M gM8] |
-  g,=,8 gM! gM d'[ g,@M gM8] |
-  \repeat unfold 2 {
-    fis,=,8[ d@7! d78] d' d7 d7 |
-  }
+  {{ lhFrag1("g,=,8-\\stBass") }} d,+dM!( e' fis) |
+  {{ lhFrag1("g,=,8") }} d,+dM! d( cis |
+
+  c=8) d@M! r8 b g,@M! r8 |
+  fis=,8[( d@M!) dM8] g( gM!) gM |
+  a=,8 b,@M! r8 g e@m! r8 |
+  dis'=8[( b,@7!) b78] e( em!) em |
+  fis,=,8 g,@M! r8 e' c@M! r8 |
+  d=8 e@M! r8 c a,@m! r8 |
+  cis=8[( a,@7!) a78] d[( g,@M!) gM8] |
+  dis=8[( b,@7!) b78] e( em!) em |
+  a,=,8( a7!) a7 d[( g,@M!) gM8] |
+  d=8 d7! d7 g,,+gM! d g,=, |
+  r4. b=,8 a g | e' d b g d' b |
+  g=,8 r r g,@M! r8 r g=,2. |
 }
 {% endmacro %}
