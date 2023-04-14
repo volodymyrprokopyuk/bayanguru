@@ -4,22 +4,22 @@ pieces:
   # BTBC1936
   - { id: q6xh, tit: Одинокая гармонь,
       com: Б. Мокроусов, src: BTBC1936,
-      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: ela }
   - { id: 87ko, tit: Яблочко, sub: rufd,
       arr: М. Чайкін, src: BTBC1936,
-      org: rus, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: ela }
   - { id: p7el, tit: Варяг, sub: rufs,
       arr: М. Чайкін, aty: ipr, src: BTBC1936,
-      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: 6u3l, tit: Ленинские горы,
       com: Ю. Милютин, src: BTBC1936,
-      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elb }
   - { id: qt7k, tit: Есть на Волге утес, sub: rufs,
       src: BTBC1936,
-      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: oz1w, tit: При долине куст калины,
       com: А. Новиков, src: BTBC1936,
-      org: rus, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: p26a, tit: Барыня, sub: rufd,
       arr: М. Чайкін, src: BTBC1936,
       org: rus, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
