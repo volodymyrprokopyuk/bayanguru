@@ -1,0 +1,28 @@
+{% macro t3(a, b, c, d) %}
+  \tuplet 3/2 { {{ a }} } \tuplet 3/2 { {{ b }} }
+  \tuplet 3/2 { {{ c }} } {{ d }} | %
+{% endmacro %}
+
+{% macro t4(a, b, c, d) %}
+  \tuplet 3/2 { {{ a }} } \tuplet 3/2 { {{ b }} }
+  \tuplet 3/2 { {{ c }} } \tuplet 3/2 { {{ d }} } | %
+{% endmacro %}
+
+{% macro rightHand() %}
+\tempo Vivace
+\clef treble
+\key a \minor
+\time 4/4
+\relative {
+  {{ t4("e''=''8(\\p\\< f e", "d e d", "c d c", "b c b") }}
+  {{ t3("a='8 b a", "g a \\after 16.\\! g",
+     "f\\sf\\> g f", "\\after 8\\! e) r") }}
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\clef bass
+\key a \minor
+\relative {
+}
+{% endmacro %}
