@@ -4,7 +4,7 @@ pieces:
   # BTBC1936
   - { id: q6xh, tit: Одинокая гармонь,
       com: Б. Мокроусов, src: BTBC1936,
-      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: ela }
+      org: rus, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: 87ko, tit: Яблочко, sub: rufd,
       arr: М. Чайкін, src: BTBC1936,
       org: rus, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: ela }
@@ -28,25 +28,25 @@ pieces:
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: hjff, tit: Костры горят далекие,
       com: Б. Мокроусов, src: BTBC1936,
-      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: 7nax, tit: Ермак, sub: rufs,
       arr: М. Чайкін, aty: ipr, src: BTBC1936,
-      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: 74jq, tit: Уральская рябинушка,
       com: Е. Родыгин, src: BTBC1936,
-      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: 7s64, tit: Жди солдата,
       com: Б. Мокроусов, arr: М. Чайкін, aty: ipr, src: BTBC1936,
-      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: mil, frm: mel, bss: stb, lvl: elb }
   - { id: blt6, tit: Родина, sub: rufs,
       arr: М. Чайкін, aty: hrm, src: BTBC1936,
-      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: l1zm, tit: Лирическая,
       com: Н. Поликарпов, src: BTBC1936,
-      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elb }
   - { id: sqwg, tit: Уваровские частушки,
       src: BTBC1936,
-      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: 9lu3, tit: Волжские припевки,
       com: Ю. Щекотов, src: BTBC1936,
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
