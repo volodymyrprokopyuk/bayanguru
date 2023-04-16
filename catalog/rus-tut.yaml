@@ -46,13 +46,13 @@ pieces:
       org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elb }
   - { id: sqwg, tit: Уваровские частушки,
       src: BTBC1936,
-      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
+      org: rus, sty: flk, gnr: pry, frm: mel, bss: stb, lvl: elb }
   - { id: 9lu3, tit: Волжские припевки,
       com: Ю. Щекотов, src: BTBC1936,
-      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: pry, frm: mel, bss: stb, lvl: elb }
   - { id: ecde, tit: Мчатся гуси вереницей, sub: rufs,
       arr: М. Чайкін, aty: hrm, src: BTBC1936,
-      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: vmd4, tit: "Цвети, наш край",
       com: С. Туликов, src: BTBC1936,
       org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
