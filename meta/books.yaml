@@ -126,7 +126,9 @@ books:
         # SB4NU1978
         "8yil", "p7aw", "8sl6",
         # SB5NU1980
-        "ua3l"] },
+        "ua3l"] } ] }
+  - { id: scl2, tit: Вибрані етюди, sub: для баяна,
+      pieces: [
       # Chords
       { sec: Акорди, pieces: [
         # SB2NU1977
@@ -134,4 +136,6 @@ books:
         # SB4NU1978
         "k402", "l52j", "6u7s", "cj29",
         # SB5NU1980
-        "pnrg", "978q", "6zcy"] } ] }
+        "pnrg", "978q", "6zcy"] },
+      { sec: Поліфонія, pieces: [] },
+      { sec: Ліва рука, pieces: [] } ] }

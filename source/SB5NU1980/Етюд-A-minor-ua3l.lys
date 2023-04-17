@@ -43,7 +43,7 @@
   {{ t3("g=''8 a g", "e fis e", "fis g fis", "b,='8\\) r") }} | %
   {{ t4("b'=''8\\(\\mf c b", "g a g",
      "a_\\dynCresc b a", "fis g fis") }} | %
-  {{ t4("g=''8a g", "fis g fis", "e g b", "e b g=''\\)") }} | %
+  {{ t4("g=''8 a g", "fis g fis", "e g b", "e b g=''\\)") }} | %
 
   {{ t4("e=''8(\\f f e", "d e d", "c e g", "c g e)") }} | %
   {{ t4("c=''8( d c", "b c b", "a c_\\dynDim e", "a e c='')") }} | %

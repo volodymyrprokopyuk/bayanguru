@@ -133,7 +133,7 @@ async function lintBook(book) {
   for (const bpiece of book.pieces) {
     if (bpiece.sec) {
       for (const spiece of bpiece.pieces) {
-        if (!await lint(spiece)) { confroms = false }
+        if (!await lint(spiece)) { conforms = false }
       }
     } else if (!await lint(bpiece)) { conforms = false }
   }
