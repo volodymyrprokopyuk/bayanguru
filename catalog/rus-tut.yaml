@@ -55,30 +55,30 @@ pieces:
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: vmd4, tit: "Цвети, наш край",
       com: С. Туликов, src: BTBC1936,
-      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elb }
   - { id: s31k, tit: "Где же вы теперь, друзья-однополчане",
       com: В. Соловьев-Седой, src: BTBC1936,
-      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: mil, frm: mel, bss: stb, lvl: elb }
   - { id: 1czf, tit: Карело-финская полька,
       src: BTBC1936,
-      org: rus, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elb }
   # BTB1978
   - { id: lknz, tit: "Ах ты, зимушка-зима", sub: rufs,
       src: BTB1978,
-      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: od7f, tit: Ивушка,
       com: Г. Пономаренко, src: BTB1978,
-      org: rus, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: ela }
   - { id: 2al1, tit: Песня о тревожной молодисти,
       com: А. Пахмутова, src: BTB1978,
-      org: rus, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: 5rl3, tit: Барыня, sub: rufd,
       src: BTB1978,
-      org: rus, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elb }
   - { id: jh3h, tit: Елечки-метелочки, sub: Сибирские народные припевки,
       src: BTB1978,
-      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: flk, gnr: pry, frm: mel, bss: stb, lvl: ela }
   - { id: gm8m, tit: "С чего начинается родина?",
       com: В. Баснер, src: BTB1978,
-      org: rus, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elm }
+      org: rus, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elb }
   # TODO p. 90
