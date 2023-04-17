@@ -11,17 +11,17 @@
 {% macro rhFrag1(a) %}
   {{ t4(a, "d e d", "c d c", "b c b") }} | %
   {{ t3("a='8 b a", "g a \\after 16.\\! g",
-     "f\\sf\\> g f", "\\after 8\\! e) r") }} | %
+     "f\\sf\\> g f", "\\after 8\\! e='\\) r") }} | %
 {% endmacro %}
 
 {% macro rhFrag2() %}
-  {{ t4("e='8(\\< gis b", "d c b", "a c e", "a g \\after 8\\! f") }} | %
-  {{ t4("e=''8 gis b", "d\\> c b", "a c b", "a g \\after 8\\! f)") }} | %
+  {{ t4("e='8\\(\\< gis b", "d c b", "a c e", "a g \\after 8\\! f") }} | %
+  {{ t4("e=''8 gis b", "d\\> c b", "a c b", "a g \\after 8\\! f=''\\)") }} | %
 {% endmacro %}
 
 {% macro rhFrag3() %}
-  {{ t4("e='8(_\\dynCresc gis b", "d c b", "a c e", "a g f") }} | %
-  {{ t3("e=''8 gis b", "d c b", "a c e", "a='''8)\\f r") }} | %
+  {{ t4("e='8\\(_\\dynCresc gis b", "d c b", "a c e", "a g f") }} | %
+  {{ t3("e=''8 gis b", "d c b", "a c e", "a='''8\\)\\f r") }} | %
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -30,10 +30,41 @@
 \key a \minor
 \time 4/4
 \relative {
-  {{ rhFrag1("e''=''8(\\p\\< f e") }}
+  {{ rhFrag1("e''=''8\\(\\p\\< f e") }}
   {{ rhFrag2() }}
-  {{ rhFrag1("e=''8(\\p\\< f e") }}
+  {{ rhFrag1("e=''8\\(\\p\\< f e") }}
   {{ rhFrag3() }}
+
+  {{ t4("g,=''8\\(\\p a g", "e f e", "f g f", "d e d") }} | %
+  {{ t3("e=''8 f e", "c d c", "d e d", "g,='8\\) r") }} | %
+  {{ t4("g'=''8\\(\\p a g", "e f e", "f g f", "d e d") }} | %
+  {{ t4("e=''8 f e", "d e d", "c e g", "c='''\\) g\\( a") }} | %
+  {{ t4("b=''8\\mf c b", "g a g", "a b a", "fis g fis") }} | %
+  {{ t3("g=''8 a g", "e fis e", "fis g fis", "b,='8\\) r") }} | %
+  {{ t4("b'=''8\\(\\mf c b", "g a g",
+     "a_\\dynCresc b a", "fis g fis") }} | %
+  {{ t4("g=''8a g", "fis g fis", "e g b", "e b g=''\\)") }} | %
+
+  {{ t4("e=''8(\\f f e", "d e d", "c e g", "c g e)") }} | %
+  {{ t4("c=''8( d c", "b c b", "a c_\\dynDim e", "a e c='')") }} | %
+  {{ t4("a='8( bes a", "g a g", "f a c", "f c a)") }} | %
+  {{ t4("f='8( g f", "e f e", "d f a", "d a f=')") }} | %
+
+  {{ t4("d='8\\(\\p e d", "b c b", "e f e", "c d c") }} | %
+  {{ t4("f='8 g f", "d e d", "g_\\dynCresc a g", "e f e='\\)") }} | %
+  {{ t4("a='8\\( b a", "f g f", "b c b", "g a g") }} | %
+  {{ t4("c=''8 d c", "a b a", "d e d", "b c b='\\)") }} | %
+
+  {{ t4("e=''8(\\f\\< dis e", "gis b \\after 16.\\! e",
+     "d\\> c b", "a g \\after 16.\\! f") }} | %
+  {{ t4("e=''8)\\< dis( e", "gis b \\after 16.\\! e",
+     "d\\> c b", "a g \\after 16.\\! f=''") }} | %
+  {{ t4("e=''8) b'( a", "g f_\\dynDim e", "d c b", "a g f") }} | %
+  {{ t4("e='8) f( fis", "g gis a", "ais b c", "cis d dis='')") }} | %
+
+  {{ rhFrag1("e=''8\\(\\p\\< f e") }}
+  {{ rhFrag2() }}
+  {{ rhFrag1("e=''8\\(\\p\\< f e") }}
 }
 {% endmacro %}
 
