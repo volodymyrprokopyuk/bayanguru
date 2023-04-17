@@ -110,11 +110,11 @@ meta:
   scl: гами
   arp: арпеджіо
   wrs: повороти кисті
-  rep: репетиція
+  lhn: ліва рука
   crd: аккорди
+  rep: репетиції
   orn: мелізми
   art: артикуляція
-  lhd: ліва рука
   # Bass (bss) mandatory
   stb: готовий аккорд # standard (Stradella) bass
   pub: чистий бас # pure bass
