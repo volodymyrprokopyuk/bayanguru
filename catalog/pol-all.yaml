@@ -10,3 +10,8 @@ pieces:
   - { id: p1vc, tit: Зозуленька, sub: plfs,
       src: B2AK1979,
       org: pol, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
+  # BTBC1936
+  # p. 50
+  # - { id: isnd, tit: Краков'як, sub: plfd,
+  #     arr: М. Чайкін, src: BTBC1936,
+  #     org: pol, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: ela }
