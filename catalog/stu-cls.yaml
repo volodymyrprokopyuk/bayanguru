@@ -165,12 +165,9 @@ pieces:
   - { id: ua3l, tit: Етюд A minor,
       com: Т. Лак, src: SB5NU1980,
       org: fra, sty: stu, gnr: stu, frm: wrs, bss: stb, lvl: elm }
-  # p. 42
-  # - { id: m8an, tit: Етюд F major,
-  #     com: М. Магиденко, src: SB5NU1980,
-  #     org: rus, sty: stu, gnr: stu, frm: wrs, bss: stb, lvl: elm }
-
-  # Pepetition
+  - { id: m8an, tit: Етюд F major,
+      com: М. Магиденко, src: SB5NU1980,
+      org: rus, sty: stu, gnr: stu, frm: wrs, bss: stb, lvl: elm }
 
   # Chords
   # SB2NU1977
@@ -200,7 +197,9 @@ pieces:
   - { id: 6zcy, tit: Етюд Aes major,
       com: О. Денисов, src: SB5NU1980,
       org: ukr, sty: stu, gnr: stu, frm: crd, bss: pub, lvl: int }
+
   # Polyphony
+  # Left hand
+  # Pepetition
   # Ornamentation
   # Articulation
-  # Left hand
