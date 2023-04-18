@@ -30,7 +30,10 @@
 
 {% macro lhFrag1(a) %}
   {{ a }} r am!] r e'[ r a,@m] r8 |
-  c=8[ r a,@m!] r8 dis4( e8) r |
+  c=8[ r a,@m!] r8 dis4( e=8) r |
+{% endmacro %}
+
+{% macro lhFrag2() %}
   \repeat unfold 2 { e@7!8[ r8 e=] r a,@m! r8 r4 | }
 {% endmacro %}
 
@@ -51,8 +54,7 @@
   {{ t4("e=''8 f e", "d e d", "c e g", "c='''\\) g\\( a") }}
   {{ t4("b=''8\\mf c b", "g a g", "a b a", "fis g fis") }}
   {{ t3("g=''8 a g", "e fis e", "fis g fis", "b,='8\\) r") }}
-  {{ t4("b'=''8\\(\\mf c b", "g a g",
-     "a_\\dynCresc b a", "fis g fis") }}
+  {{ t4("b'=''8\\( c b", "g a g", "a_\\dynCresc b a", "fis g fis") }}
   {{ t4("g=''8 a g", "fis g fis", "e g b", "e b g=''\\)") }}
 
   {{ t4("e=''8(\\f f e", "d e d", "c e g", "c g e)") }}
@@ -90,7 +92,9 @@
 \key a \minor
 \relative {
   {{ lhFrag1("a,=,8[-\\stBass") }}
+  {{ lhFrag2() }}
   {{ lhFrag1("a,=,8[") }}
+  {{ lhFrag2() }}
 
   c=8[ r cM!] r b[ r g,@M!] r8 |
   a=,8[ r am!] r g[ r gM!] r |
@@ -106,6 +110,20 @@
   r4 c@7!4(-> f,@M!8) r8 r4 |
   r4 a,@7!4(-> d@m!8) r8 r4 |
 
-  r4 d=8 r r4 e8 r |
+  r4 d=8 r r4 e8 r | r4 f,8 r r4 g8 r |
+  r4 a=,8 r r4 b8 r | r4 c8 r r4 d=8 r |
+
+  e,+e7!8 r r4 d@m!2( | e@M!8)-. r8 r4 d@m!2( |
+  e@M!8)-. r8 r4 f,,+d@m!8[ r8 d,+dm] r |
+  e,+em!8[ r d] r c[ r b=,] r |
+
+  {{ lhFrag1("a=,8[") }}
+  {{ lhFrag2() }}
+  {{ lhFrag1("a,=,8[") }}
+  e@7!8[ r8 e=] r a,@m! r8 r4 |
+  a,@7!8[ r8 a,=,] r d@m! r8 r4 |
+  \repeat unfold 2 { e@7!8[ r8 e'=] r a,@m! r8 r4 | }
+  r4 e@7!8 r8 a,@m! r8 r4 |
+  e,+eM!4 r e,+eM r | a,,+am! r r2 |
 }
 {% endmacro %}

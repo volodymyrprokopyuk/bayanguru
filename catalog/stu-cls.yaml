@@ -144,10 +144,10 @@ pieces:
       org: swe, sty: stu, gnr: stu, frm: wrs, bss: stb, lvl: elm }
   - { id: ov1p, tit: Етюд E minor,
       com: К. Черні, src: SB3NU1979,
-      org: aut, sty: stu, gnr: stu, frm: [wrs, lhd], bss: [stb, pub], lvl: elm }
+      org: aut, sty: stu, gnr: stu, frm: [wrs, lhn], bss: [stb, pub], lvl: elm }
   - { id: 9zx1, tit: Етюд C major,
       com: А. Лемуан, src: SB3NU1979,
-      org: fra, sty: stu, gnr: stu, frm: [wrs, lhd], bss: [stb, pub], lvl: elm }
+      org: fra, sty: stu, gnr: stu, frm: [wrs, lhn], bss: [stb, pub], lvl: elm }
   - { id: a7ra, tit: Етюд F major,
       com: A. Гедике, src: SB3NU1979,
       org: rus, sty: stu, gnr: stu, frm: wrs, bss: stb, lvl: elm }
