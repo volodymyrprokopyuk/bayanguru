@@ -16,8 +16,8 @@
 {% endmacro %}
 
 {% macro lhFrag1(a) %}
-  {{ a }} r fM! r c@7!] r8 | f[ r fM! r c@7!] r8 |
-  d=8[ r dM! r e] r | a,=,[ r am!] r r4 |
+  {{ a }} r fM! r c@7!] r8 | f[ r fM! r a,@7!] r8 |
+  d=8[ r dm! r e] r | a,=,[ r am!] r r4 |
 {% endmacro %}
 
 {% macro lhFrag2() %}
@@ -84,5 +84,9 @@
   {{ lhFrag2() }}
 
   {{ lhFrag1("f=8[") }}
+  bes=,8[ r besM!] r r4 | g8[ r gm!] r r4 |
+  c=8[ r cM! r f@M!] r8 | c,+c7!8-> r r4 r |
+  \repeat unfold 2 { f=8[ r fM!] r r4 | }
+  r4 r bes,=,8 r | f'= r r4 r |
 }
 {% endmacro %}
