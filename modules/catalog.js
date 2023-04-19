@@ -29,7 +29,7 @@ const meta = {
 }
 
 function addScoreFile(score) {
-  const title = score.tit.replace(/[,!?]/g, "").replace(/ /g, "-")
+  const title = score.tit.replace(/[',!?]/g, "").replace(/ /g, "-")
   score.file = `${title}-${score.id}`
 }
 

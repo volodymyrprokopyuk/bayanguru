@@ -1,0 +1,36 @@
+{% from "util.lys" import hSpace, shapedSlur %}
+
+{% macro rhFrag1() %}
+  fis='8)-. a-. c-. e-. | d b4 b8 |
+  d=''8( e16 d c8)-. a='-. |
+{% endmacro %}
+
+{% macro rightHand() %}
+\tempo Allegretto
+\clef treble
+\key g \major
+\time 2/4
+\relative {
+  \partial 8 { \tuplet 3/2 { g'='16(\mf a g } | }
+  \repeat volta 2 {
+    {{ rhFrag1() }} | g b4 g8( |
+    {{ rhFrag1() }}
+    \alternative {
+      \volta 1 {
+        g='8 b g %
+        \tuplet 3/2 {
+          g='16[ {{ shapedSlur("fd", bs = 2.5, wd = 2) }} ( a g='] %
+        } <>) |
+      }
+      \volta 2 { g='8 b g=' r | }
+    }
+  }
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\clef bass
+\key g \major
+\relative {
+}
+{% endmacro %}

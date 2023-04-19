@@ -89,4 +89,7 @@ pieces:
   - { id: gm8m, tit: "С чего начинается родина?",
       com: В. Баснер, src: BTB1978,
       org: rus, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elb }
-  # TODO p. 90
+  # p. 91
+  # - { id: 5h39, tit: А где мне взять такую песню,
+  #     com: Г. Пономаренко, src: BTB1978,
+  #     org: rus, sty: msc, gnr: sng, frm: plp, bss: stb, lvl: elc }

@@ -90,7 +90,10 @@ books:
       pieces: [
       # Class
       # B0D1973
-      "d2md", "p1vc"] }
+      "d2md", "p1vc",
+      # Tutorial
+      # BTBC1936
+      "isnd"] }
   - { id: scl1, tit: Вибрані етюди, sub: для баяна,
       pieces: [
       # Scale
