@@ -61,5 +61,12 @@
 \clef bass
 \key f \major
 \relative {
+  f=8[-\stBass r fM! r c@7!] r8 | f[ r fM! r c@7!] r8 |
+  d=8[ r dM! r e] r | a,[ r am!] r r4 |
+  \repeat unfold 2 { c=8[ r cM! r g,@7!] r8 | }
+  c=8[ r cM! r f@M!] r8 | c,+c7!8-> r r4 r |
+  c=8[ r cM!] r r4 | a,,+a7!8-> r r4 r |
+
+  d=8[ r dm!] r r4 | d,+dm!8 r r4 r |
 }
 {% endmacro %}
