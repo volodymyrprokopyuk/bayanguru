@@ -15,6 +15,16 @@
   c=''16(->\> bes a g a g f e f e d \after 16\! c=') |
 {% endmacro %}
 
+{% macro lhFrag1(a) %}
+  {{ a }} r fM! r c@7!] r8 | f[ r fM! r c@7!] r8 |
+  d=8[ r dM! r e] r | a,=,[ r am!] r r4 |
+{% endmacro %}
+
+{% macro lhFrag2() %}
+  \repeat unfold 2 { c=8[ r cM! r g,@7!] r8 | }
+  c=8[ r cM! r f@M!] r8 | c,+c7!8-> r r4 r |
+{% endmacro %}
+
 {% macro rightHand() %}
 \tempo Allegretto
 \clef treble
@@ -38,7 +48,7 @@
   f=''16( g f g f d ees d bes c bes g) |
   f='16( g f g f d ees f g a bes c) |
   d=''16( ees d ees d bes c bes g a g ees) |
-  d='16( e d e d bes c bes \clef bass g a g ees) |
+  d='16( ees d ees d bes c bes \clef bass g a g ees) |
   e=16( c d e f g a bes  \clef treble c d e f) |
   e='16( c d e f^\tempRit g a bes a g a bes=') |
 
@@ -49,10 +59,10 @@
   {{ rhFrag1("c'=''16(\\p") }}
   g=''16(\mf a g a g d' c bes a g f e) |
   f=''16( g f g f bes a g f d e f) |
-  c=''16(\< d c d c d c d c d c \after 16\! d) |
-  c=''16(->\> d c d c d c d c d e \after 16\! a) |
+  c=''16(\< d c d c d \after 16\! c d c d c d) |
+  c=''16(-> d c d c\> d c d c d e \after 16\! a) |
   f=''16(\p g f g f c d c a bes a g) |
-  f='16(\> g f g f c d c a bes a \after 16\! g |
+  f='16( g f g f\> c d c a bes a \after 16\! g |
   f=8) r r4 <f bes d>8\pp r | <a= c f> r r4 r \bar "|."
 }
 {% endmacro %}
@@ -61,12 +71,18 @@
 \clef bass
 \key f \major
 \relative {
-  f=8[-\stBass r fM! r c@7!] r8 | f[ r fM! r c@7!] r8 |
-  d=8[ r dM! r e] r | a,[ r am!] r r4 |
-  \repeat unfold 2 { c=8[ r cM! r g,@7!] r8 | }
-  c=8[ r cM! r f@M!] r8 | c,+c7!8-> r r4 r |
+  {{ lhFrag1("f=8[-\\stBass") }}
+  {{ lhFrag2() }}
   c=8[ r cM!] r r4 | a,,+a7!8-> r r4 r |
 
   d=8[ r dm!] r r4 | d,+dm!8 r r4 r |
+  bes=,8[ r besM!] r r4 | bes,,+besM!8 r r4 r |
+  g=,8[ r gm!] r r4 | d'8[ r g,@m!] r8 r4 |
+  \repeat unfold 2 { c=8 r r4 r | }
+
+  {{ lhFrag1("f=8[") }}
+  {{ lhFrag2() }}
+
+  {{ lhFrag1("f=8[") }}
 }
 {% endmacro %}
