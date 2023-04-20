@@ -156,7 +156,7 @@ pieces:
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: blsa, tit: По малину в сад підем,
       com: А. Філіпенко, src: B1AK1979,
-      org: ukr, sty: flk, gnr: pie, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
   - { id: 75xh, tit: Сьогодні у мами свято,
       com: А. Філіпенко, src: B1AK1979,
       org: ukr, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: ela }
@@ -218,7 +218,7 @@ pieces:
       org: ukr, sty: msc, gnr: vls, frm: mel, bss: stb, lvl: elb }
   - { id: stil, tit: Сусідка, sub: uafs,
       src: B2AK1979,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
+      org: ukr, sty: flk, gnr: sng, frm: crd, bss: stb, lvl: elb }
   - { id: nizv, tit: "Чом, чом не прийшов", sub: uafs,
       src: B2AK1979,
       org: ukr, sty: flk, gnr: sng, frm: var, bss: stb, lvl: elb }
@@ -239,14 +239,14 @@ pieces:
       org: ukr, sty: flk, gnr: sng, frm: plp, bss: pub, lvl: elb }
   - { id: ggyp, tit: Танець сніжинок,
       com: К. Мясков, src: B2AK1979,
-      org: ukr, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elc }
+      org: ukr, sty: msc, gnr: pie, frm: crd, bss: stb, lvl: elc }
   # B2AK1987
   - { id: e3u3, tit: Вийшли в поле косарі, sub: uafs,
       src: B2AK1987,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: ucue, tit: Пісня Карася, sub: 'з опери \"Запорожець за Дунаєм\"',
       com: С. Гулак-Артемовський, src: B2AK1987,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
+      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: fngd, tit: Колискова,
       com: Я. Степовий, src: B2AK1987,
       org: ukr, sty: flk, gnr: lul, frm: mel, bss: stb, lvl: ela }
@@ -267,7 +267,7 @@ pieces:
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: plh0, tit: Танець ляльки,
       com: І. Беркович, src: B2AK1987,
-      org: ukr, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: elb }
+      org: ukr, sty: msc, gnr: chd, frm: crd, bss: stb, lvl: elb }
   - { id: i11j, tit: Бджілка,
       com: К. Мясков, src: B2AK1987,
       org: ukr, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: elb }
@@ -276,22 +276,22 @@ pieces:
       org: ukr, sty: flk, gnr: koz, frm: mel, bss: stb, lvl: elb }
   - { id: mf7s, tit: Дитяча полька,
       com: М. Глинка, src: B2AK1987,
-      org: ukr, sty: flk, gnr: [plk, chd], frm: mel, bss: stb, lvl: elb }
+      org: ukr, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elb }
   - { id: zykv, tit: Зайчик, sub: uafs,
       src: B2AK1987,
-      org: ukr, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: elb }
+      org: ukr, sty: flk, gnr: chd, frm: [var, plp], bss: stb, lvl: elc }
   - { id: 26qx, tit: Казка,
       com: І. Беркович, src: B2AK1987,
       org: ukr, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: elb }
   - { id: di18, tit: Од Києва до Лубен, sub: uafs,
       src: B2AK1987,
-      org: ukr, sty: flk, gnr: sng, frm: var, bss: [stb, pub], lvl: elb }
+      org: ukr, sty: flk, gnr: sng, frm: var, bss: [stb, pub], lvl: elc }
   - { id: btcu, tit: Полька,
       com: М. Глинка, src: B2AK1987,
       org: ukr, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elb }
   - { id: nev4, tit: Вербовая дощечка, sub: uafs,
       src: B2AK1987,
-      org: ukr, sty: flk, gnr: sng, frm: [var, plp], bss: [stb, pub], lvl: elb }
+      org: ukr, sty: flk, gnr: sng, frm: [var, crd, plp], bss: [stb, pub], lvl: elc }
   - { id: foaz, tit: Зимонька,
       com: К. Мясков, src: B2AK1987,
       org: ukr, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: elb }

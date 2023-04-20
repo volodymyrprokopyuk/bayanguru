@@ -74,13 +74,13 @@ pieces:
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: soth, tit: Катенька, sub: rufs,
       src: B2AK1979,
-      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
+      org: rus, sty: flk, gnr: sng, frm: crd, bss: stb, lvl: elb }
   - { id: 2n32, tit: Среди долины ровныя, sub: rufs,
       src: B2AK1979,
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: 923n, tit: Лирическая протяжная,
       com: Н. Речменский, src: B2AK1979,
-      org: rus, sty: msc, gnr: pie, frm: plp, bss: stb, lvl: elb }
+      org: rus, sty: msc, gnr: pie, frm: plp, bss: stb, lvl: elc }
   - { id: zk1t, tit: Щебетала пташечка,
       com: Н. Руднев, src: B2AK1979,
       org: rus, sty: flk, gnr: sng, frm: plp, bss: pub, lvl: elb }
@@ -105,4 +105,4 @@ pieces:
       org: rus, sty: msc, gnr: lul, frm: mel, bss: stb, lvl: ela }
   - { id: tg2x, tit: Ходила младешенька по борочку, sub: rufs,
       src: B2AK1987,
-      org: rus, sty: flk, gnr: sng, frm: var, bss: stb, lvl: elb }
+      org: rus, sty: flk, gnr: sng, frm: [var, crd], bss: stb, lvl: elc }
