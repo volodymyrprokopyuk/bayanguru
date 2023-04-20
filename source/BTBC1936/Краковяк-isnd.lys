@@ -5,6 +5,10 @@
   d=''8( e16 d c8)-. a='-. |
 {% endmacro %}
 
+{% macro rhFrag2(a) %}
+  {{ a }} e16 g8.( e16 | d8)-. b4 b='8 |
+{% endmacro %}
+
 {% macro rightHand() %}
 \tempo Allegretto
 \clef treble
@@ -25,6 +29,17 @@
       \volta 2 { g='8 b g=' r | }
     }
   }
+
+  \repeat volta 2 {
+    {{ rhFrag2("c=''8.\\f") }}
+    d=''8( e16 d c8)-. a-. | g b r g |
+    {{ rhFrag2("c=''8.") }}
+    d=''8( e16 d) c b c a |
+    \alternative {
+      \volta 1 { g='8 b g=' r | }
+      \volta 2 { g='8 b g=' \bar "|." }
+    }
+  }
 }
 {% endmacro %}
 
@@ -32,5 +47,17 @@
 \clef bass
 \key g \major
 \relative {
+  \partial 8 { r8 | }
+  d=8-\stBass d7! d d7 | g, gM! b g,@M |
+  a=,8 d@7! d8 d7 | g, gM! b g,@M |
+  d=8 d7! d d7 | g, gM! b g,@M |
+  d=8 d7! d8 d7 | g, gM! g=, r |
+  g=,8 gM! g,,+gM r |
+
+  c=8 cM! e c@M | g,8 gM! b g,@M |
+  a=,8 d@7! d8 d7 | g, gM! b g,@M |
+  c=8 cM! c cM | g gM! b g,@M |
+  a=,8 d@7! d8 d7 | g, gM! g,,+gM r |
+  g=,8 gM! g,,+gM %
 }
 {% endmacro %}
