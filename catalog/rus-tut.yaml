@@ -53,7 +53,7 @@ pieces:
   # p. 69
   # - { id: wkmw, tit: Не сама машина ходит, sub: Алтайские частушки,
   #     src: BTBC1936,
-  #     org: rus, sty: flk, gnr: pry, frm: mel, bss: stb, lvl: elb }
+  #     org: rus, sty: flk, gnr: pry, frm: mel, bss: stb, lvl: elc }
   - { id: ecde, tit: Мчатся гуси вереницей, sub: rufs,
       arr: М. Чайкін, aty: hrm, src: BTBC1936,
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
@@ -93,3 +93,11 @@ pieces:
   # - { id: 5h39, tit: А где мне взять такую песню,
   #     com: Г. Пономаренко, src: BTB1978,
   #     org: rus, sty: msc, gnr: sng, frm: plp, bss: stb, lvl: elc }
+  # p. 92
+  # - { id: 8wgj, tit: Я встретил вас, sub: Старинный романс,
+  #     arr: М. Рожков, src: BTB1978,
+  #     org: rus, sty: msc, gnr: rmc, frm: var, bss: stb, lvl: elc }
+  # p. 94
+  # - { id: dizc, tit: Клен ты мой опавший,
+  #     src: BTB1978,
+  #     org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elc }
