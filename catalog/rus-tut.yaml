@@ -76,10 +76,9 @@ pieces:
   - { id: 2al1, tit: Песня о тревожной молодисти,
       com: А. Пахмутова, src: BTB1978,
       org: rus, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elb }
-  # p. 59
-  # - { id: 8pvl, tit: Уральская плясовая,
-  #     src: BTB1978,
-  #     org: rus, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: ela }
+  - { id: 8pvl, tit: Уральская плясовая,
+      src: BTB1978,
+      org: rus, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: ela }
   - { id: 5rl3, tit: Барыня, sub: rufd,
       src: BTB1978,
       org: rus, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elb }
