@@ -83,28 +83,28 @@ shuf -ern 4 {a..z} {0..9} | tr -d '\n'
 ``` yaml
 meta:
   # Style (sty) mandatory
+  msc: різне (default)
   flk: фолькльор
   cls: класика
   jaz: джаз
-  msc: різне
   # Genre (gnr) mandatory
-  sng: пісня
+  pie: п'єса (default)
+  rmc: романс
+  sng: пісня (group)
   chd: дитяча пісня/п'єса
   lul: колискова
   ves: веснянка
   mil: військова
   pry: припевки, частушки
-  dnc: танець
+  dnc: танець (group)
   vls: вальс
   plk: полька
   mzr: мазурка
   koz: козачок
   gop: гопак
-  pie: п'єса
-  rmc: романс
-  stu: етюд
+  stu: етюд (group)
   # Form (frm) mandatory
-  mel: мелодія
+  mel: мелодія (default)
   var: варіації
   scl: гами
   arp: арпеджіо
@@ -125,7 +125,7 @@ meta:
   adv: складний # advanced
   vir: віртуозний # virtuoso
   # Arrangment type (aty) optional
-  arr: Обр. # обробка, arrangment
+  arr: Обр. # обробка, arrangment (default)
   ipr: Пер. # переклад, interpratation
   hrm: Гарм. # гармонізація, harmonization
 ```
