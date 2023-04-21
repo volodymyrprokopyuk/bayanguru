@@ -46,8 +46,7 @@
   a=,4) c@m!8 r8 | g4 gm!8 r |
   cis=4 a,@7!8 r8 | d( c bes) a( |
   g=,4) gm!8 r | bes4 g,@m!8 r8 |
-  \once \slurDown
-  f=,4( g8 a | bes,,+besM!4) b,,+g,@7!8 r8 |
+  f=,4_( g8 a | bes,,+besM!4) b,,+g,@7!8 r8 |
   c=4 cm!8 r | g4 gm!8 r |
   c,+cm!8 r d,+d7! r | g=,4 gm!8 r |
 

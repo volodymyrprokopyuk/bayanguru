@@ -1,8 +1,7 @@
 {% from "util.lys" import hSpace, shapedSlur %}
 
 {% macro rhFrag1() %}
-  \once \tieUp
-  b'='4.~ b8 a g fis dis b | c'=''4 b='8 %
+  b'='4.^~ b8 a g fis dis b | c'=''4 b='8 %
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -20,15 +19,13 @@
     <dis=' b'>4 <fis a>8 4\) b,8\( |
     <fis'=' a>8 8 8 8 <cis e> <dis fis> |
     <e=' g>4.~ 4\) %
-    \once \phrasingSlurDown
     b=8\( | b'8 a g fis dis b |
     c'=''4 b8 b4\) e,8\( |
     <b'=' d>8 8 8 8 <fis a> <gis b> |
-    <a=' c>4.~ 4\) e8\( |
+    <a=' c>4.~ 4\) e8_\( |
     <c'='' e>8 c a g fis8. fis16 |
     b='4 g8 b,4\) %
-    \once \phrasingSlurDown
-    b=8\( |
+    b=8_\( |
     <a'=' c>4 16 16 8 <g b>8. <e g>16 |
     \alternative {
       \volta 1 {

@@ -77,7 +77,7 @@ const reNoteComponents = reFromParts(
   // duration
   /(\d{0,2}\.{0,2}[\[\]]?)?/,
   // slur
-  /(\\{0,2}[\(\)~]){0,2}/,
+  /([_^]?\\{0,2}[\(\)~]){0,2}/,
   // articulation
   /(-[-.>]){0,2}/,
   // dynamic
