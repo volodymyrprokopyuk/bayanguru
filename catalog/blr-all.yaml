@@ -3,7 +3,7 @@
 pieces:
   # Class
   # B0D1973
-  - { id: bv2w, tit: Лявониха, sub: byfs,
+  - { id: bv2w, tit: Лявоніха, sub: byfs,
       src: B0D1973,
       org: blr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   # B1AK1985
@@ -15,6 +15,12 @@ pieces:
   - { id: 8ec9, tit: Перепілонька, sub: byfs,
       arr: М. Чайкін, src: BTBC1936,
       org: blr, sty: flk, gnr: sng, frm: plp, bss: stb, lvl: elb }
+  # BTB1989
+  # p. 58
+  # - { id: 2q9x, tit: Крижaчок, sub: byfd,
+  #     arr: А. Стоянов, src: BTB1989,
+  #     org: blr, sty: flk, gnr: dnc, frm: var, bss: stb, lvl: elb }
+  # Course
   # TYBC2B1971
   - { id: vhri, tit: Микита, sub: byfd,
       src: TYBC2B1971,

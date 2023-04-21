@@ -103,3 +103,8 @@ pieces:
   # - { id: lz9e, tit: Цыганская венгерка,
   #     arr: А. Кисиленко, src: BTB1978,
   #     org: rus, sty: msc, gnr: gyp, frm: [var, crd], bss: stb, lvl: elc }
+  # BTB1989
+  # p. 68
+  # - { id: q7i3, tit: Деревенская полька,
+  #     com: В. Ефимов, src: BTB1989,
+  #     org: rus, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elb }
