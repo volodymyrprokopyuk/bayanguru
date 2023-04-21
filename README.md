@@ -103,6 +103,8 @@ meta:
   mzr: мазурка
   koz: козачок
   gop: гопак
+  tng: танго
+  mrc: марш
   stu: етюд (group)
   # Form (frm) mandatory
   mel: мелодія (default)

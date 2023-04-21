@@ -34,7 +34,7 @@
     <<
       \new Voice = voiceOne \relative {
         \voiceOne
-        \autoBeamOff <d'=' d'>4~ 8 <f a>8 %
+        \autoBeamOff <d'='_~ d'^~>4 8 <f a>8 %
         \autoBeamOn 8[ 8] | 8[ <e g>] %
       }
       \new Voice = voiceTwo \relative {
@@ -48,7 +48,7 @@
     <f='' c' e>8 <g c e> <a c e> | <c e>[ <bes='' d>] %
     \ottava #0
     <f='' a>4~ 8 8[ 8 <e g>] | <g bes>[ <f a>] %
-    {{ v2("<d''='' d'>4~ 8", "r8 <f''='' a>8 8") }}
+    {{ v2("<d''=''_~ d'^~>4 8", "r8 <f''='' a>8 8") }}
     <d='' f a>8 <c='' f a>8 8 |
     \alternative {
       \volta 1 { }
