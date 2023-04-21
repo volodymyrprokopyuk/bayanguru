@@ -1,0 +1,42 @@
+{% macro rightHand() %}
+\tempo Allegretto
+\clef treble
+\key f \major
+\time 4/4
+\relative {
+  r8 c''=''8(\mf c[ g] bes16 a g8 f d |
+  c='8) r r4 r8 <g' c e>-. 8-. <f bes d>-. |
+  \repeat unfold 2 {
+    <e=' g c>8 <g c e>[-. 8-. <f=' bes d>]-. %
+  }
+  \time 3/4
+  <e=' g c>8[ <f bes d>] <e g c>( bes' a g) |
+  \time 2/4
+  \repeat volta 2 {
+    r8 <a,= c f>8[ r <bes d g>] |
+    \time 4/4
+    r8 <a= c f>8[ r <bes d g>] %
+    <<
+      \new Voice = voiceOne \relative {
+        \voiceOne
+        r8 c''=''8 c[ g] |
+      }
+      \new Voice = voiceTwo \relative {
+        \voiceTwo
+        r4 d'='4 |
+      }
+    >>
+    \alternative {
+      \volta 1 { }
+      \volta 2 { }
+    }
+  }
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\clef bass
+\key f \major
+\relative {
+}
+{% endmacro %}

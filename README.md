@@ -90,6 +90,7 @@ meta:
   # Genre (gnr) mandatory
   pie: п'єса (default)
   rmc: романс
+  gyp: циганська
   sng: пісня (group)
   chd: дитяча пісня/п'єса
   lul: колискова
