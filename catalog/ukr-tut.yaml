@@ -15,7 +15,7 @@ pieces:
       arr: М. Чайкін, src: BTBC1936,
       org: ukr, sty: flk, gnr: gop, frm: mel, bss: stb, lvl: ela }
   - { id: vf9h, tit: Козачок, sub: uafd,
-      src: BTBC1936,
+      arr: М. Різоль, src: BTBC1936,
       org: ukr, sty: flk, gnr: koz, frm: mel, bss: [stb, pub], lvl: elb }
   # BTB1978
   - { id: vwad, tit: "Чорнії брови, карії очі", sub: uafs,
