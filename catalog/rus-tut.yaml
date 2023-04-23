@@ -19,10 +19,10 @@ pieces:
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: oz1w, tit: При долине куст калины,
       com: А. Новиков, arr: Н. Речменский, aty: ipr, src: BTBC1936,
-      org: rus, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elb }
+      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: p26a, tit: Барыня, sub: rufd,
       arr: М. Чайкін, src: BTBC1936,
-      org: rus, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elb }
+      org: rus, sty: flk, gnr: dnc, frm: var, bss: stb, lvl: elb }
   - { id: frcu, tit: "Ах ты, ноченька", sub: rufs,
       arr: М. Чайкін, src: BTBC1936,
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
@@ -46,10 +46,10 @@ pieces:
       org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elb }
   - { id: sqwg, tit: Уваровские частушки,
       arr: С. Аксюк, src: BTBC1936,
-      org: rus, sty: flk, gnr: pry, frm: mel, bss: stb, lvl: elb }
+      org: rus, sty: flk, gnr: pry, frm: var, bss: stb, lvl: elb }
   - { id: 9lu3, tit: Волжские припевки,
       com: Ю. Щекотов, arr: А. Басурманов, aty: ipr, src: BTBC1936,
-      org: rus, sty: flk, gnr: pry, frm: mel, bss: stb, lvl: elb }
+      org: rus, sty: flk, gnr: pry, frm: crd, bss: stb, lvl: elb }
   - { id: wkmw, tit: Не сама машина ходит, sub: Алтайские частушки,
       arr: Н. Кутузов, src: BTBC1936,
       org: rus, sty: flk, gnr: pry, frm: crd, bss: stb, lvl: elc }
@@ -64,7 +64,7 @@ pieces:
       org: rus, sty: msc, gnr: mil, frm: mel, bss: stb, lvl: elb }
   - { id: 1czf, tit: Карело-финская полька,
       arr: Б. Тихонов, src: BTBC1936,
-      org: rus, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elb }
+      org: rus, sty: flk, gnr: plk, frm: var, bss: stb, lvl: elb }
   # BTB1978
   - { id: lknz, tit: "Ах ты, зимушка-зима", sub: rufs,
       arr: Л. Захарова, aty: ipr, src: BTB1978,
@@ -80,7 +80,7 @@ pieces:
       org: rus, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: ela }
   - { id: 5rl3, tit: Барыня, sub: rufd,
       arr: Л. Захарова, aty: ipr, src: BTB1978,
-      org: rus, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elb }
+      org: rus, sty: flk, gnr: dnc, frm: var, bss: stb, lvl: elb }
   - { id: jh3h, tit: Елечки-метелочки, sub: Сибирские народные припевки,
       arr: Л. Захарова, aty: ipr, src: BTB1978,
       org: rus, sty: flk, gnr: pry, frm: mel, bss: stb, lvl: ela }
