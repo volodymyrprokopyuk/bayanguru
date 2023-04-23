@@ -67,29 +67,29 @@ pieces:
       org: rus, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elb }
   # BTB1978
   - { id: lknz, tit: "Ах ты, зимушка-зима", sub: rufs,
-      src: BTB1978,
+      arr: Л. Захарова, aty: ipr, src: BTB1978,
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: od7f, tit: Ивушка,
-      com: Г. Пономаренко, src: BTB1978,
+      com: Г. Пономаренко, arr: Л. Захарова, aty: ipr, src: BTB1978,
       org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: ela }
   - { id: 2al1, tit: Песня о тревожной молодисти,
-      com: А. Пахмутова, src: BTB1978,
+      com: А. Пахмутова, arr: М. Чайкін, aty: ipr, src: BTB1978,
       org: rus, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: 8pvl, tit: Уральская плясовая,
-      src: BTB1978,
+      arr: Л. Захарова, aty: ipr, src: BTB1978,
       org: rus, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: ela }
   - { id: 5rl3, tit: Барыня, sub: rufd,
-      src: BTB1978,
+      arr: Л. Захарова, aty: ipr, src: BTB1978,
       org: rus, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elb }
   - { id: jh3h, tit: Елечки-метелочки, sub: Сибирские народные припевки,
-      src: BTB1978,
+      arr: Л. Захарова, aty: ipr, src: BTB1978,
       org: rus, sty: flk, gnr: pry, frm: mel, bss: stb, lvl: ela }
   - { id: gm8m, tit: "С чего начинается родина?",
-      com: В. Баснер, src: BTB1978,
+      com: В. Баснер, arr: А. Басурманов, aty: ipr, src: BTB1978,
       org: rus, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elb }
   # p. 91
   # - { id: 5h39, tit: А где мне взять такую песню,
-  #     com: Г. Пономаренко, src: BTB1978,
+  #     com: Г. Пономаренко, arr: Л. Захарова, aty: ipr, src: BTB1978,
   #     org: rus, sty: msc, gnr: sng, frm: plp, bss: stb, lvl: elc }
   # p. 92
   # - { id: 8wgj, tit: Я встретил вас, sub: Старинный романс,
@@ -97,7 +97,7 @@ pieces:
   #     org: rus, sty: msc, gnr: rmc, frm: var, bss: stb, lvl: elc }
   # p. 94
   # - { id: dizc, tit: Клен ты мой опавший,
-  #     src: BTB1978,
+  #     arr: А. Басурманов, aty: ipr, src: BTB1978,
   #     org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elc }
   # p. 98
   # - { id: lz9e, tit: Цыганская венгерка,
@@ -110,11 +110,11 @@ pieces:
   #     org: rus, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elb }
   # p. 69
   # - { id: up9h, tit: Над окошком месяц,
-  #     com: Е. Попов, src: BTB1989,
+  #     com: Е. Попов, arr: А. Кисиленко, aty: ipr, src: BTB1989,
   #     org: rus, sty: msc, gnr: sng, frm: crd, bss: stb, lvl: elb }
   # p. 70
   # - { id: 6ocj, tit: Дождь идет,
-  #     src: BTB1989,
+  #     arr: А. Басурманов, aty: ipr, src: BTB1989,
   #     org: rus, sty: msc, gnr: tng, frm: crd, bss: stb, lvl: elc }
   # p. 72
   # - { id: nlmb, tit: Прощание славянки,

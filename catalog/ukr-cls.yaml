@@ -146,7 +146,7 @@ pieces:
       com: К. Мясков, src: B1AK1979,
       org: ukr, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: ela }
   - { id: d7eu, tit: Бандура, sub: uafs,
-      src: B1AK1979,
+      arr: И. Гладков, aty: ipr, src: B1AK1979,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: d0hr, tit: А вже ясне сонечко, sub: uafs,
       com: П. Козицький, src: B1AK1979,
@@ -217,7 +217,7 @@ pieces:
       com: М. Чайкін, src: B2AK1979,
       org: ukr, sty: msc, gnr: vls, frm: mel, bss: stb, lvl: elb }
   - { id: stil, tit: Сусідка, sub: uafs,
-      src: B2AK1979,
+      arr: М. Чайкін, src: B2AK1979,
       org: ukr, sty: flk, gnr: sng, frm: crd, bss: stb, lvl: elb }
   - { id: nizv, tit: "Чом, чом не прийшов", sub: uafs,
       src: B2AK1979,
@@ -232,7 +232,7 @@ pieces:
       com: М. Чайкін, src: B2AK1979,
       org: ukr, sty: msc, gnr: rmc, frm: mel, bss: stb, lvl: elb }
   - { id: q5ip, tit: Сонце низенько, sub: uafs,
-      src: B2AK1979,
+      arr: А. Иванов, src: B2AK1979,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: 4u91, tit: Ой під горою, sub: uafs,
       src: B2AK1979,
