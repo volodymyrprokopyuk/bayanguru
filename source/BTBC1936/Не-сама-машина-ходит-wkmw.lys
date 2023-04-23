@@ -1,4 +1,4 @@
-{% from "util.lys" import v2 %}
+{% from "util.lys" import momentBeat, v2 %}
 
 {% macro rightHand() %}
 \tempo Allegretto
@@ -34,12 +34,12 @@
     <<
       \new Voice = voiceOne \relative {
         \voiceOne
-        \autoBeamOff <d'='_~ d'^~>4 8 <f a>8 %
-        \autoBeamOn 8[ 8] | 8[ <e g>] %
+        \autoBeamOff <d'='_~ d'^~> 4 8 <f a>8 %
+        \autoBeamOn 8[ 8] | 8[ <e=' g>] %
       }
       \new Voice = voiceTwo \relative {
         \voiceTwo
-        \autoBeamOff r8 <f'=' a>8 8 d \autoBeamOn c4 | b %
+        \autoBeamOff r8 <f'=' a>8 8 d \autoBeamOn c4 | b= %
       }
     >>
     <c=' c'>16( d' e f g a bes c) <d, f c'>8 <d f g> |
@@ -48,11 +48,38 @@
     <f='' c' e>8 <g c e> <a c e> | <c e>[ <bes='' d>] %
     \ottava #0
     <f='' a>4~ 8 8[ 8 <e g>] | <g bes>[ <f a>] %
-    {{ v2("<d''=''_~ d'^~>4 8", "r8 <f''='' a>8 8") }}
+    {{ v2("<d''=''_~ d'^~> 4 8", "r8 <f''='' a>8 8") }}
     <d='' f a>8 <c='' f a>8 8 |
     \alternative {
-      \volta 1 { }
-      \volta 2 { }
+      \volta 1 {
+        \time 3/4
+        <<
+          \new Voice = voiceOne \relative {
+            \voiceOne
+            <f''='' a>8 <e g> c16 d, e f g a bes d |
+            <e,=' g c>8 <f g bes>16 d' c8 bes a g=' |
+          }
+          \new Voice = voiceTwo \relative {
+            \voiceTwo
+            b'='4 c8 r r <d, f> | s4 <e=' g>8 r r4 |
+          }
+        >>
+      }
+      \volta 2 {
+        \time 4/4
+        <<
+          \new Voice = voiceOne \relative {
+            \voiceOne
+            <f''='' a>8[ <e g>] c'8 r r bes16 d c8 bes16 d=''' |
+          }
+          \new Voice = voiceTwo \relative {
+            \voiceTwo
+            b'='4 c16 d e f g a <f g>8 <e g> <f='' g> |
+          }
+        >>
+        <e='' g c>8 r r4 \acciaccatura { g=''16 a bes } %
+        c='''8-> r r4 \bar "|."
+      }
     }
   }
 }
@@ -62,5 +89,12 @@
 \clef bass
 \key f \major
 \relative {
+  R1 | c,+cM!8-\stBass r r4 r2 | c4 cM! c cM |
+  \time 3/4 c=8[ g] c,+cM! r r4 |
+  \time 2/4 f'=4-. c-.
+  \time 4/4
+  {{ momentBeat("1/4", "1,1,1,1") }}
+  f=4-. c-. f8 fM! g, gm! |
+  c=8 cM! f fM! c f,@M f8 fM |
 }
 {% endmacro %}
