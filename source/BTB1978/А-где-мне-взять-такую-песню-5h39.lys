@@ -1,0 +1,43 @@
+{% macro rightHand() %}
+\tempo Adagio
+\clef treble
+\key a \minor
+\time 2/4
+\relative {
+  <<
+    \new Voice = voiceOne \relative {
+      \voiceOne
+      b'='8 \rest \stemDown a='8[\(\mp c e] | \stemUp e4. d8 |
+      e=''4 d8 e | <b d>4 <a c>\) |
+      b='8 \rest \stemDown d=''8[ %
+      \slashedGrace { \stemUp c=''16_( d } %
+      \stemDown c8) a] | \stemUp c4. b8 | e,4 b' |
+      \slashedGrace { a='16_( b } <c,='_~ a')^~> 2 |
+      \time 4/4
+      <c=' a'>8 e'[ d c] b8.[ a16 gis8 a='] |
+    }
+    \new Voice = voiceTwo \relative {
+      \voiceTwo
+      s2 | <f'=' b>2~ | 2 | <e g> |
+      s2 | <d=' f>2 | <d e> | s2 |
+      s8 e='4.~ e='2 |
+    }
+  >>
+
+  % <<
+  %   \new Voice = voiceOne \relative {
+  %     \voiceOne
+  %   }
+  %   \new Voice = voiceTwo \relative {
+  %     \voiceTwo
+  %   }
+  % >>
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\clef bass
+\key a \minor
+\relative {
+}
+{% endmacro %}
