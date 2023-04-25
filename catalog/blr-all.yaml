@@ -16,10 +16,9 @@ pieces:
       arr: М. Чайкін, src: BTBC1936,
       org: blr, sty: flk, gnr: sng, frm: plp, bss: stb, lvl: elb }
   # BTB1989
-  # p. 58
-  # - { id: 2q9x, tit: Крижaчок, sub: byfd,
-  #     arr: А. Стоянов, src: BTB1989,
-  #     org: blr, sty: flk, gnr: dnc, frm: var, bss: stb, lvl: elb }
+  - { id: 2q9x, tit: Крижaчок, sub: byfd,
+      arr: А. Стоянов, src: BTB1989,
+      org: blr, sty: flk, gnr: dnc, frm: var, bss: stb, lvl: elb }
   # Course
   # TYBC2B1971
   - { id: vhri, tit: Микита, sub: byfd,
