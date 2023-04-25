@@ -1,5 +1,9 @@
 {% from "util.lys" import momentBeat, v2 %}
 
+{% macro lhFrag1() %}
+  bes,=,8 besM! f' fM! c f,@M f8 e= |
+{% endmacro %}
+
 {% macro rightHand() %}
 \tempo Allegretto
 \clef treble
@@ -96,5 +100,15 @@
   {{ momentBeat("1/4", "1,1,1,1") }}
   f=4-. c-. f8 fM! g, gm! |
   c=8 cM! f fM! c f,@M f8 fM |
+  {{ lhFrag1() }}
+  a,=,4 d8 dm! a d@m d8 f,@M! |
+  g,=,8 e@m! c8 cM! cM r c g |
+  c=8 cM! f fM! f fM f fM |
+  {{ lhFrag1() }}
+  a,=,4 d8 dm! d dm d f,@M! |
+  g,=,8 e@m! c8 cM! g g,,+bes,@M! |
+  c,+cM!8 g,,+bes,@M! c,+cM!8 r r4 |
+  g=,8 e@m! c8 cM! cM g,,+bes,@M! c,+cM!8 g,,+bes,@M! |
+  c,+cM!8 r r4 c,+cM8-> r r4 |
 }
 {% endmacro %}
