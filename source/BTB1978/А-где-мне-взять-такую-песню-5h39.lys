@@ -1,3 +1,5 @@
+{% from "util.lys" import v2 %}
+
 {% macro rightHand() %}
 \tempo Adagio
 \clef treble
@@ -7,8 +9,8 @@
   <<
     \new Voice = voiceOne \relative {
       \voiceOne
-      b'='8 \rest \stemDown a='8[\(\mp c e] | \stemUp e4. d8 |
-      e=''4 d8 e | <b d>4 <a c>\) |
+      b'='8 \rest\mp \stemDown a='8[\( c e] |
+      \stemUp e=''4. d8 | e4 d8 e | <b d>4 <a c>\) |
       b='8 \rest \stemDown d=''8[ %
       \slashedGrace { \stemUp c=''16_( d } %
       \stemDown c8) a] | \stemUp c4. b8 | e,4 b' |
@@ -23,6 +25,50 @@
       s8 e='4.~ e='2 |
     }
   >>
+
+  \repeat volta 2 {
+    <<
+      \new Voice = voiceOne \relative {
+        \voiceOne
+        c''=''2 b~ | b8 d[ d  d] %
+        \slashedGrace { c=''16_( d } c8) b a b |
+        <a=' c>8 a,[ c e] b[ a] b' a |
+        e='8 e'[ d c] b8.[ a16 gis8 a] |
+        e'=''4~ e8 d16 e d8 d,[( f a] |
+        \once \stemDown b='8) <d f>8[ 8 8] e d c d | e=''2 s2 |
+      }
+      \new Voice = voiceTwo \relative {
+        \voiceTwo
+        <d'=' f>1~ | 8 <e gis>8[ 8 8] e2~ | e8 s8 s2. |
+        s8 c'=''8 b a <c, e>2 | <f a>2~ 8 s4. | s8 g4. f2 |
+        c'=''8 e, g c e gis, g' f='' |
+      }
+    >>
+    e''=''8\mp <g, d' g>8[ 8 8] <a cis a'>8. <a cis g'>16 8 <a cis a'> |
+    <a='_~ e' g( >2 \after 2\! <a d f)>\< |
+    r8\mf <g=' d' g>8[ 8 8] <b g'>8. <f' a>16 <e g>8 <d f> |
+    \time 2/4
+    <d='' f>8 <c e> r c | b4 d | f4. e8 | e8. g16 f4 |
+    \acciaccatura { e=''16 f } e4 r8 <a,=' c> |
+    <<
+      \new Voice = voiceOne \relative {
+        \voiceOne
+        b'='4 d | f4. e8 | gis,4 b=' |
+      }
+      \new Voice = voiceTwo \relative {
+        \voiceTwo
+        <f'='( a~ >2 | <e) a> | d=' |
+      }
+    >>
+    \slashedGrace { a='16( b } <c,=' a') >2~ |
+    \alternative {
+      \volta 1 {
+        <c=' a'>8 %
+        {{ v2("e''=''8[ d c] b8.[ a16 gis8 a='] |", "e'='4.~ | e2 |") }}
+      }
+      \volta 2 { }
+    }
+  }
 
   % <<
   %   \new Voice = voiceOne \relative {
