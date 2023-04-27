@@ -1,0 +1,32 @@
+{% macro rhFrag1() %}
+  b='8 d4 d8 | d c4 fis,8 | b4. b8 |
+  ais='8 g' fis e='' |
+{% endmacro %}
+
+{% macro rightHand() %}
+\tempo Adagio
+\clef treble
+\key e \minor
+\time 2/4
+\relative {
+  R2\p | r4 r8 b'='8 | b4 g' | fis4. e8 | d4. c8 |
+  {{ rhFrag1() }} dis4. dis8 |
+  e=''4 d | c4. e8 | d4. c8 |
+  {{ rhFrag1() }} dis4. \after 8\! <a=' b dis>8\< |
+
+  \after 8.\! <gis=' b e>4\< \after 4\! <d' gis b>\> \fermata |
+  <c='' e a>4. <c e g>8 |
+  <c='' d fis>8 <c d g>16 <c d fis> <c d e>8 <c d fis> |
+  <b=' d a'>4 <b d g>8. 16 |
+  <a=' c fis>8 <a c e> <e a c> fis |
+  <g=' b>4. 8 | <fis ais cis>4 <a b dis> |
+  <g=' b e>4. b='8 |
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\clef bass
+\key e \minor
+\relative {
+}
+{% endmacro %}

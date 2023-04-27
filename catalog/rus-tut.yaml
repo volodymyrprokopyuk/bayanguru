@@ -89,11 +89,10 @@ pieces:
       org: rus, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: 5h39, tit: А где мне взять такую песню,
       com: Г. Пономаренко, arr: Л. Захарова, aty: ipr, src: BTB1978,
-      org: rus, sty: msc, gnr: sng, frm: plp, bss: stb, lvl: elc }
-  # p. 92
-  # - { id: 8wgj, tit: Я встретил вас, sub: Старинный романс,
-  #     arr: М. Рожков, src: BTB1978,
-  #     org: rus, sty: msc, gnr: rmc, frm: var, bss: stb, lvl: elc }
+      org: rus, sty: msc, gnr: sng, frm: [crd, plp], bss: stb, lvl: elc }
+  - { id: 8wgj, tit: Я встретил вас, sub: Старинный романс,
+      arr: М. Рожков, src: BTB1978,
+      org: rus, sty: msc, gnr: rmc, frm: [var, crd], bss: stb, lvl: elc }
   # p. 94
   # - { id: dizc, tit: Клен ты мой опавший,
   #     arr: А. Басурманов, aty: ipr, src: BTB1978,
