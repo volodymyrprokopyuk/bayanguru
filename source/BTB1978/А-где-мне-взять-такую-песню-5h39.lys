@@ -1,5 +1,10 @@
 {% from "util.lys" import v2 %}
 
+{% macro lhFrag1() %}
+  d=4 dm!8 dm | e4 a,@m!8[ am8] |
+  e=4 e7!8 e7 | a,=,4 am!8 am |
+{% endmacro %}
+
 {% macro rightHand() %}
 \tempo Adagio
 \clef treble
@@ -75,15 +80,6 @@
       }
     }
   }
-
-  % <<
-  %   \new Voice = voiceOne \relative {
-  %     \voiceOne
-  %   }
-  %   \new Voice = voiceTwo \relative {
-  %     \voiceTwo
-  %   }
-  % >>
 }
 {% endmacro %}
 
@@ -91,5 +87,25 @@
 \clef bass
 \key a \minor
 \relative {
+  R2 | d=4-\stBass dm!8 dm | g,4 g7!8 g7 |
+  c=4 cM!8 cM | a4 am!8 am | d4 dm!8 dm |
+  e=4 e7!8 e7 | a,4 am!8 am | a,,+am!8 r r4 r2 |
+
+  d=4 dm!8 dm f,4 d@m8[ dm8] |
+  e'=4 e7!8 e7 b4 e@78[ e78] |
+  a=,4 am!8 am e'4 a,@m8[ am8] |
+  a,=,4 am!8 am a4 am8 am |
+  d=4 dm!8 dm f,4 d@m8[ dm8] |
+  g=,4 g7!8 g7 b4 g,@78 g78 |
+  c=4 cM!8 cM b4 e@7!8 e78 |
+  bes=,2 a4 a7!8 a7 |
+  d=4 dm!8 dm d4 dm!8 c |
+  b=,4 g,@7!8[ g78] g4 a8 b |
+  c=4 cM!8 r |
+  {{ lhFrag1() }}
+  {{ lhFrag1() }}
+  a,,+am!8 r r4 r2 | a4 am!8 am |
+  f=,4 d@m!8[ dm8] | e'4 a,@m! | e4 e7! |
+  a,,+am!2 | a,=,2~ | a=,8 r r4 |
 }
 {% endmacro %}
