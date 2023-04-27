@@ -63,10 +63,16 @@
     \slashedGrace { a='16( b } <c,=' a') >2~ |
     \alternative {
       \volta 1 {
+        \time 4/4
         <c=' a'>8 %
-        {{ v2("e''=''8[ d c] b8.[ a16 gis8 a='] |", "e'='4.~ | e2 |") }}
+        {{ v2("e''=''8[ d c] b8.[ a16 gis8 a='] |", "e'='4.~ e='2 |") }}
       }
-      \volta 2 { }
+      \volta 2 {
+        \time 2/4
+        <c=' a'>8 \repeatTie e[ c <a c>] | b4( d | f4. e8) |
+        gis,=4 b | \acciaccatura { a=16 b } a2~ |
+        <a= c e a>2~ | 8 r r4 \bar "|."
+      }
     }
   }
 
