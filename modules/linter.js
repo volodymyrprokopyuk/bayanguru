@@ -126,10 +126,10 @@ function lintDurationAfterBoundChord(content, logs) {
   logs.push(chalk.yellow("* Missing explicit duration after bound chord"))
   let conforms = true
   for (const [_, chord, note] of content.matchAll(
-    /(@[Mm7d]\S*) ([a-gsrR]\S*)/g)
+    /(@[Mm7d]\S* (?:\| )?)([a-gsrR]\S*)/g)
   ) {
     if (!/\d+/.test(note)) {
-      logs.push(`${chord} ${chalk.red(note)}`)
+      logs.push(`${chord}${chalk.red(note)}`)
       conforms = false
     }
   }

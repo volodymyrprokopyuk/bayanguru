@@ -1,5 +1,5 @@
 {% macro lhFrag1(a) %}
-  a,@m!4( e@M! | a,@m!8[ d@m!8] {{ a }}) |
+  a,@m!4( e@M!4 | a,@m!8[ d@m!8] {{ a }}) |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -21,7 +21,7 @@
 \clef bass
 \key a \minor
 \relative {
-  a,=,8-\stBass r am! r | a,@m!4( e@M!) |
+  a,=,8-\stBass r am! r | a,@m!4( e@M!4) |
   {{ lhFrag1("a,@m!4") }}
   \repeat unfold 2 {
     a,@m!8[( d@m!8] a,@m!4) |

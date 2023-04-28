@@ -3,7 +3,7 @@
 {% endmacro %}
 
 {% macro lhFrag1(a) %}
-  {{ a }} c@M!4 | d,+dm! g,,+gM! | c,+cM! %
+  {{ a }} c@M!4 | d,+dm!4 g,,+gM! | c,+cM! %
 {% endmacro %}
 
 {% macro rightHand() %}

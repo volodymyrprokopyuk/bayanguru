@@ -29,10 +29,10 @@
 \relative {
   a,=,4 am! | e' e7! | a, am! | d dM! |
   a=,4 am! | e' em! | b gm! | e em! |
-  a,=,4 am! | e' e7! | e a,@m! | d dM! |
+  a,=,4 am! | e' e7! | e a,@m! | d4 dM! |
   g,=,4 g7! | c cM! | d dM! | a am! |
-  e'=4 a,@7! | d dm! | g, g7! | c cM! |
-  d=4 dm! | e a,@m! | e e7! | a, am! |
+  e'=4 a,@7! | d4 dm! | g, g7! | c cM! |
+  d=4 dm! | e a,@m! | e4 e7! | a, am! |
   d=4-- dm!-- | a,,+am!2 \fermata |
 }
 {% endmacro %}
