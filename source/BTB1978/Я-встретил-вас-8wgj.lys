@@ -9,6 +9,26 @@
   a='16 g fis g fis' e b g | fis g' fis e dis cis dis e='' |
 {% endmacro %}
 
+{% macro rhFrag3() %}
+  <c='' d fis>8 <c d g>16 <c d fis> <c d e>8 <c='' d fis> |
+{% endmacro %}
+
+{% macro lhFrag1() %}
+  a,=,4 am! | d d7! | g, gM! | a am! | b=, e@m! |
+{% endmacro %}
+
+{% macro lhFrag2(a) %}
+  {{ lhFrag1() }}
+  fis=,4 fis7! | b bM! | e= e7! {{ a }} | %
+{% endmacro %}
+
+{% macro lhFrag3() %}
+  a,=,8 am! am am | d d7! d7 d7 |
+  g,=,8 gM! gM gM | a am! am am |
+  b=,8 e@m! em8 em | fis fis7!4 fis78 |
+  b=,8 bM! bM bM | e= e7! e7 e7 |
+{% endmacro %}
+
 {% macro rightHand() %}
 \tempo Adagio
 \clef treble
@@ -22,7 +42,7 @@
 
   \after 8.\! <gis=' b e>4\< \after 4\! <d' gis b>\> \fermata |
   <c='' e a>4. <c e g>8 |
-  <c='' d fis>8 <c d g>16 <c d fis> <c d e>8 <c d fis> |
+  {{ rhFrag3() }}
   <b=' d a'>4 <b d g>8. 16 |
   <a=' c fis>8 <a c e> <e a c> fis |
   <g=' b>4. 8 | <fis ais cis>4 <a b dis> |
@@ -34,6 +54,13 @@
   b=''16 a gis f e d c b |
   {{ rhFrag2() }}
   fis=''16 a, ais b c\< cis d \after 16\! dis='' |
+
+  <gis,=' b e>4\f <d' gis b> | <c e a>4. <c e g>8 |
+  {{ rhFrag3() }}
+  <b=' d a'>4\< \after 8\! <b d g>8 r16 \fermata 16\p |
+  <a=' c fis>8 <a c e> <e a c> fis | <g b>4. 8 |
+  <fis=' ais cis>4^\tempRit <a b dis> |
+  <g=' b e>2 | <g'='' b e>4 \fermata r4 \bar "|."
 }
 {% endmacro %}
 
@@ -41,5 +68,19 @@
 \clef bass
 \key e \minor
 \relative {
+  e=4-\stBass em! \repeat unfold 2 { e=4 em | }
+  {{ lhFrag2("") }}
+  {{ lhFrag2("\\fermata") }}
+
+  {{ lhFrag1() }} fis=,4 b | e= em! |
+
+  e=8 em! em em |
+  {{ lhFrag3() }}
+  {{ lhFrag3() }}
+
+  a,=,8 am! am am | d d7! d7 d7 |
+  g,=,8 gM! gM r \fermata | a am! am am |
+  b=,8 e@m! em8 em | fis fis7! b b7! |
+  e=8 em! em em | e@m4-\fermata r4 |
 }
 {% endmacro %}
