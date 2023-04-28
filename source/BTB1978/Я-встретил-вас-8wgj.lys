@@ -3,6 +3,12 @@
   ais='8 g' fis e='' |
 {% endmacro %}
 
+{% macro rhFrag2() %}
+  c=''16 gis a b c b c e | d a' fis e d c a ais |
+  b='16 fis g a b ais b d | d c b c fis e c a |
+  a='16 g fis g fis' e b g | fis g' fis e dis cis dis e='' |
+{% endmacro %}
+
 {% macro rightHand() %}
 \tempo Adagio
 \clef treble
@@ -21,6 +27,13 @@
   <a=' c fis>8 <a c e> <e a c> fis |
   <g=' b>4. 8 | <fis ais cis>4 <a b dis> |
   <g=' b e>4. b='8 |
+
+  b='16 b' a g fis e ais, b |
+  {{ rhFrag2() }}
+  fis=''16 b, cis dis e fis g a |
+  b=''16 a gis f e d c b |
+  {{ rhFrag2() }}
+  fis=''16 a, ais b c\< cis d \after 16\! dis='' |
 }
 {% endmacro %}
 
