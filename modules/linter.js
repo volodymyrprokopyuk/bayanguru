@@ -121,10 +121,26 @@ function lintNoteComponentOrder(content, logs) {
   return conforms
 }
 
+// Disable: c@M!__c8 insert two consecutive spaces
+function lintDurationAfterBoundChord(content, logs) {
+  logs.push(chalk.yellow("* Missing explicit duration after bound chord"))
+  let conforms = true
+  for (const [_, chord, note] of content.matchAll(
+    /(@[Mm7d]\S*) ([a-gsrR]\S*)/g)
+  ) {
+    if (!/\d+/.test(note)) {
+      logs.push(`${chord} ${chalk.red(note)}`)
+      conforms = false
+    }
+  }
+  return conforms
+}
+
 const linters = [
   lintFirstNoteOctaveCheck,
   lintEndLineBarCheck,
-  lintNoteComponentOrder
+  lintNoteComponentOrder,
+  lintDurationAfterBoundChord
 ]
 
 export async function lint(piece) {
