@@ -24,7 +24,7 @@
 
 {% macro bookTitleMarkup() %}
   bookTitleMarkup = \markup \column {
-    \vspace #18
+    \vspace #8
     \fill-line { \fontsize #8 \bold \fromproperty #'header:title }
     \vspace #2
     \fill-line { \fontsize #4 \bold \fromproperty #'header:subtitle }

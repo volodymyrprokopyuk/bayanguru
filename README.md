@@ -38,7 +38,7 @@ Stradella bass and free bass
 Specifications and options
 ```bash
 <catalog spec> = glob
-<piece spec> = pid1 pid2 ... | --frombook bid1 bid2 ... | all
+<piece spec> = pid1 pid2 ... | --frbk bid1 bid2 ... | all
 <piece select> = --org re1,^re2 --sty --gnr --frm --bss --lvl --tit --com --arr
 <book spec> = bid1 bid2 ... | all
 <engrave opts> = --nometa --lint --relax --dry --optimize
@@ -69,7 +69,7 @@ Engrave books
 ```bash
 ./index.js -c <catalog spec> -b <book spec> <engrave opts> -j
 ./index.js -c <catalog spec> -p <piece spec> <piece select> <engrave opts> \
-  --tobook <tobook spec> -j
+  --tobk <tobook spec> -j
 ```
 
 Generate picece/book random ID

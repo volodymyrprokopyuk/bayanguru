@@ -157,7 +157,7 @@ export async function selectPieces(args) {
   }
   const tags = ["org", "sty", "gnr", "frm", "bss", "lvl", "tit", "com", "arr"]
   const matchers = tags.map(match)
-  const pieces = args.frombook ?
+  const pieces = args.frbk ?
         await readPiecesFromBook(args) :
         await readPieces(args)
   const selected = pieces.filter(piece =>

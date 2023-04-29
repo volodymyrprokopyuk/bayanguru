@@ -15,7 +15,7 @@ function configure() {
     boolean: [
       "i", "b", "nometa", "lint", "relax", "dry", "optimize",
       "p", "cycle", "random",
-      "tobook", "frombook"
+      "tobk", "frbk"
     ],
     alias: { c: "catalog", i: "init", b: "book", p: "play", j: "jobs" },
     default: {
@@ -36,7 +36,7 @@ async function dispatch(args) {
     const books = await readBooks(args)
     return await engraveBooks(books, args)
   }
-  if (args.tobook) {
+  if (args.tobk) {
     const pieces = await selectPieces(args)
     const book = {
       id: args.bid, tit: args.btit, sub: args.bsub,
