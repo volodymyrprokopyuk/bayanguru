@@ -38,7 +38,7 @@
   {{ lhFrag1("a,=,4", "eM!") }}
   g,=,4 c@M! g4 gM! | c cM! e e7! |
   \repeat unfold 2 { a,=,4 am! a e@7! | }
-  a=,4 d@m! a am! |
+  a=,4 d@m! a4 am! |
   {{ lhFrag1("a=,4", "eM!") }}
   g,=,4 gM! e@7!2-\fermata |
   {{ lhFrag1("a=,4", "e7!") }}

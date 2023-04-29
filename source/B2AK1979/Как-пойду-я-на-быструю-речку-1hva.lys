@@ -79,6 +79,6 @@
   g,=,8 gM! gM gM fis a,@m! b8 b7! |
   {{ lhFrag1("em8 em") }}
   e=8 em! g, e@m! em4 fis8 b,@7! |
-  e'=8 em! a,@m![ am8] e@m!4 r |
+  e'=8 em! a,@m![ am8] e@m!4 r4 |
 }
 {% endmacro %}

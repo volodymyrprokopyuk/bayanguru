@@ -32,8 +32,8 @@
   d=4-\stBass dm! g, | d' dm! r |
   f,=,4 fM! c' | f, fM! r |
   bes=,8 a g4 c | f, fM! g |
-  a=,4 d@m! a | bes besM! a |
+  a=,4 d@m! a4 | bes besM! a |
   g=,4 gm! c | f, fM! g |
-  a=,4 d@m! a,@M! | d= dm! %
+  a=,4 d@m! a,@M!4 | d=4 dm! %
 }
 {% endmacro %}
