@@ -88,7 +88,7 @@
       meta = {{ pieceMeta(piece) }}
     {% endif %}
     {% if piece.com %}
-      composer = "{{ piece.com | join("–") }}"
+      composer = "{{ piece.com }}"
     {% endif %}
     {% if piece.arr %}
       arranger = "{{ piece.aty }} {{ piece.arr }}"

@@ -80,7 +80,7 @@ pieces:
       com: Г. Беренс, src: SB1NU1979,
       org: swe, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elm }
   - { id: h8lm, tit: Етюд C major,
-      com: [К. Черні, Г. Гермер], src: SB1NU1979,
+      com: К. Черні–Г. Гермер, src: SB1NU1979,
       org: aut, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elm }
   - { id: 09ok, tit: Етюд G minor,
       com: С. Аксюк, src: SB1NU1979,

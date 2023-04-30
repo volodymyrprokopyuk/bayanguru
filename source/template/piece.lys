@@ -38,6 +38,17 @@
 }
 
 \header {
+  pdftitle = "{{ piece.tit }}"
+  {% if piece.com and piece.arr %}
+    pdfauthor = "{{ piece.com }} {{ piece.aty }} {{ piece.arr }}"
+  {% elif piece.com %}
+    pdfauthor = "{{ piece.com }}"
+  {% elif piece.arr %}
+    pdfauthor = "{{ piece.aty }} {{ piece.arr }}"
+  {% endif %}
+  {% if piece.sub %}
+    pdfsubject = "{{ piece.sub }}"
+  {% endif %}
   tagline = \markup { {{ logo(0.5) }} \with-url \rootUrl \rootUrl }
 }
 
