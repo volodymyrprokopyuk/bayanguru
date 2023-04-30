@@ -128,7 +128,7 @@ function lintDurationAfterBoundChord(content, logs) {
   for (const [_, chord, note] of content.matchAll(
     /(@[Mm7d]\S* (?:\| )?)([a-gsrR]\S*)/g)
   ) {
-    if (!/\d+/.test(note)) {
+    if (!/[123468]+/.test(note)) {
       logs.push(`${chord}${chalk.red(note)}`)
       conforms = false
     }
