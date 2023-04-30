@@ -86,6 +86,7 @@
 \header {
   title = "{{ book.tit }}"
   subtitle = "{{ book.sub }}"
+  pdftitle = "{{ book.tit }} {{ book.sub }}"
   tagline = \markup { {{ logo(0.5) }} \with-url \rootUrl \rootUrl }
 }
 \pageBreak \markup \null \pageBreak
