@@ -1,0 +1,57 @@
+{% from "util.lys" import v2 %}
+
+{% macro rightHand() %}
+\tempo Moderato
+\clef treble
+\key b \minor
+\time 4/4
+\relative {
+  <<
+    \new Voice = voiceOne \relative {
+      \voiceOne
+      s2\p cis'''='''4 b | b cis8 b fis'4 e |
+      s2 <f,='' b>4 <e='' ais> |
+    }
+    \new Voice = voiceTwo \relative {
+      \voiceTwo
+      <b'=' d fis>2 <d fis> | <e g> <g b> |
+      b,='4 \rest <b=' d fis>8 8 cis=''2 |
+    }
+  >>
+  \after 2.\! <d''='' fis b>2.\> \fermata r4 |
+
+  <b='~ d_~ fis ~>2(\mp 8 d cis b | g4 e2.) |
+  {{ v2("fis'='4.( fis8 gis4 ais | cis2 b='2) |",
+     "e'='2 f4 e | <d=' fis>1 |") }}
+  <fis=' b d>2(~ 8 d' cis b | g4 e <a cis> <g b>) |
+  r4 <d=' fis>8\< 8 <e gis>4. \after 8\! <fis ais>8 |
+  <d='~ fis_~ cis' ^(>2\> \after 2\! <d=' fis b)> |
+
+  \repeat volta 2 {
+    <b'='~ d_~ fis ~>2(\mf 8 d cis b | g4~ <g b e>2.) |
+    <g=' b e>2(~ 8 cis b a |
+    <fis=' a d>2\> \after 2\! <fis ais cis>) |
+    {{ v2("<fis'=' b_~ d ~>2 <b d>8 d cis b |", "s2 fis'=' |") }}
+    \alternative {
+      \volta 1 {
+        g='4 e <a cis> <g b> |
+        r4 <d=' fis>8\< 8 <e gis>4. \after 8\! <fis ais>8 |
+        {{ v2("cis''=''4\\> \\after 2\\! b2 b4 \\rest |",
+           "<d'=' fis>2. s4 |") }}
+      }
+      \volta 2 {
+        {{ v2("g''=''4( e=''2.)", "<b'=' cis>1") }}
+        r4\f^\tempRit <b=' d fis>8 8 <cis eis gis>4 <e fis ais> |
+        <d='' fis cis'>2 <d='' fis b> \fermata \bar "|."
+      }
+    }
+  }
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\clef bass
+\key b \minor
+\relative {
+}
+{% endmacro %}
