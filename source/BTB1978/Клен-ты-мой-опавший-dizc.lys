@@ -1,5 +1,10 @@
 {% from "util.lys" import v2 %}
 
+{% macro lhFrag1(a) %}
+  {{ a }} bm!4 bm8 d4 b,@m |
+  e=8 em!4 em8 g,=,4 e@m |
+{% endmacro %}
+
 {% macro rightHand() %}
 \tempo Moderato
 \clef treble
@@ -53,5 +58,25 @@
 \clef bass
 \key b \minor
 \relative {
+  {{ lhFrag1("b,=,8-\\stBass") }}
+  fis=,4 b,@m! cis,+cis7!4 fis,,+fis7! |
+  b=,8 bm!4 bm8 bm4 \fermata r |
+
+  {{ lhFrag1("b=,8") }}
+  fis=,8 fis7!4 fis78 cis,+cis7!4 fis,,+fis7! |
+  b=,8 bm!4 bm8 d4 b,@m |
+  {{ lhFrag1("b=,8") }}
+  fis=,8 b,@m!4 bm8 fis4 fis7! |
+  b=,8 bm!4 bm8 d=4 b,@m |
+
+  {{ lhFrag1("b=,8") }}
+  a=,8 a7!4 a78 a4 a7 |
+  d=8 dM!4 dM8 fis,4 fis7! |
+  {{ lhFrag1("b=,8") }}
+  fis=,8 b,@m!4 bm8 fis4 fis7! |
+  b=,8 bm!4 bm8 b4 bm |
+  e=8 em!4 em8 e4 em |
+  fis,=,4 b,@m! cis,+cis7!4 fis,,+fis7! |
+  b=,8 bm!4 bm8 b,,+bm2 \fermata |
 }
 {% endmacro %}
