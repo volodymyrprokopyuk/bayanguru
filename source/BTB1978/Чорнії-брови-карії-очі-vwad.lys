@@ -8,7 +8,7 @@
 {% macro lhFrag1(a) %}
   {{ a }} a,@7! a74 | a,4 a7! a7 |
   e'=4 a,@7! a74 | d4 dm! dm |
-  g,=,4 gm! gm | a4 d@m! dm |
+  g,=,4 gm! gm | a4 d@m! dm4 |
   a=,4 a7! a7 |
 {% endmacro %}
 

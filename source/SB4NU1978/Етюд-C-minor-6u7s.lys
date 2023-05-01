@@ -105,7 +105,7 @@
 \relative {
   {{ lhFrag1("c=4-\\stBass") }}
   d=4 g,@7! des4 g,@7 |
-  b=,4 g,@7! g g7 |
+  b=,4 g,@7! g4 g7 |
   {{ lhFrag1("c=4") }}
 
   aes=,4 aes7! des desM! |

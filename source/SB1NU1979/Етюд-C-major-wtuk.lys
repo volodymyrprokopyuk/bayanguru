@@ -7,7 +7,7 @@
 {% macro lhFrag1(a) %}
   {{ a }} r r | g,,+g7! r r |
   c,+cM!4 r r | g,,+g7! r r |
-  c,+cM!4 r r | f,,+d@m! r r |
+  c,+cM!4 r r | f,,+d@m! r4 r |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -28,7 +28,7 @@
 \key c \major
 \relative {
   {{ lhFrag1("c,+cM!4-\\stBass") }}
-  fis,,+d@M! r r | g,,+gM! r r |
+  fis,,+d@M! r4 r | g,,+gM! r r |
   {{ lhFrag1("c,+cM!4") }}
   g,,+g7! r r | c,+cM!4 r r |
 }

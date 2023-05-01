@@ -9,7 +9,7 @@
 
 {% macro lhFrag1(a) %}
   {{ a }} dm | d( dm) dm |
-  cis=4( a,@M!) aM | cis( a,@M) aM |
+  cis=4( a,@M!) aM4 | cis( a,@M) aM4 |
   d=4( dm!) dm | g,( gm!) gm |
   a=,4( a7!) a7 |
 {% endmacro %}
@@ -66,19 +66,19 @@
   {{ lhFrag1("d=4(-\\stBass dm!)") }} | d=( dm!) dm |
   {{ v2("r4 dm!", "d=2") }} r4 |
 
-  g,=,4 c@7! c7 | f fM! fM |
+  g,=,4 c@7! c74 | f fM! fM |
   c'=4 c7! c7 | f, fM! fM |
-  g=,4 c@7! c7 | f fM! fM |
+  g=,4 c@7! c74 | f fM! fM |
   g=,4 gm! gm | a a7! a7 |
   {{ lhFrag1("d=4( dm!)") }} | d=4 dm!2 |
 
   \key d \major
-  d=4 dM! dM | a d@M dM |
-  a=,4 aM! aM | cis a,@M aM |
+  d=4 dM! dM | a d@M dM4 |
+  a=,4 aM! aM | cis a,@M aM4 |
   d=4 dM! dM | g, gM! gM |
   b=,4 b7! b7 | e em! em |
-  cis=4 a,@7! a7 | a a7 a7 |
-  d=4 dM! dM | b d@M dM |
+  cis=4 a,@7! a74 | a a7 a7 |
+  d=4 dM! dM | b d@M dM4 |
   g=,4 gM! gM | a a7! a7 |
   d=4 dM! dM | d r r | d= r r |
   \key d \minor

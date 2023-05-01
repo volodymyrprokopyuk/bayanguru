@@ -60,7 +60,7 @@
 
   \repeat unfold 2 { b=,4 g,@7! g74 | }
   \repeat unfold 2 { c=4 cM! cM | }
-  \repeat unfold 2 { cis=4 a,@7! a7 | }
+  \repeat unfold 2 { cis=4 a,@7! a74 | }
   \repeat unfold 2 { d=4 dm! dm | }
   \repeat unfold 2 { b=,4 g,@7! g74 | }
   \repeat unfold 2 { c=4 cM! cM | }

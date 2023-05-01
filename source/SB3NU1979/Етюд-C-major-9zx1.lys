@@ -74,7 +74,7 @@
     c=4 r cM!8 r | g4 r c@M!8 r8 |
   }
   {{ lhFrag1() }}
-  f,,+d@m!4 r r | g,,+g7! r r |
+  f,,+d@m!4 r4 r | g,,+g7! r r |
   \repeat unfold 2 { c,+cM! r r | }
 
   \key g \major

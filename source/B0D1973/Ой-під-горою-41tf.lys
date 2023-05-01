@@ -19,11 +19,11 @@
 \clef bass
 \key f \major
 \relative {
-  f,=,4-\stBass fM! fM | a f@M! fM |
-  bes=,4 besM! besM | a f@M! fM |
-  bes=,4 besM! besM | c f@M! fM |
+  f,=,4-\stBass fM! fM | a f@M! fM4 |
+  bes=,4 besM! besM | a f@M! fM4 |
+  bes=,4 besM! besM | c f@M! fM4 |
   c=4 c7! c7 | f, fM! fM |
-  g=,4 gm! gm | c f@M! fM |
+  g=,4 gm! gm | c f@M! fM4 |
   c=4 c7! c7 | f,=, fM! fM |
 }
 {% endmacro %}

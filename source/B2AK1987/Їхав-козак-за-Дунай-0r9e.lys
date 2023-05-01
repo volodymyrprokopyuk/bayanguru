@@ -48,12 +48,12 @@
 
   a=,4( am!) | c( a,@m) | e4( eM!) | d( e@M) |
   c=4( a,@m!) | a4( am) | e'( e7!) | a,( am!) |
-  c=4( cM!) | e( c@M) | g,( gM!) | gis( e@M!) |
-  a=,4( am!) | c( a,@m) | e( e7!) | a,=,( am!) |
+  c=4( cM!) | e( c@M) | g,4( gM!) | gis( e@M!) |
+  a=,4( am!) | c( a,@m) | e4( e7!) | a,=,( am!) |
 
-  a=,4 am! | c a,@m | b e@7! | e e7 |
-  a,=,4 am! | c a,@m | e e7! a, am! |
-  c=4 cM! | e c@M | g, g7! | gis e@7! |
-  a=,4 am! | c a,@m | e e7! | a,=, am! |
+  a=,4 am! | c a,@m | b4 e@7! | e4 e7 |
+  a,=,4 am! | c a,@m | e4 e7! a, am! |
+  c=4 cM! | e c@M | g,4 g7! | gis e@7! |
+  a=,4 am! | c a,@m | e4 e7! | a,=, am! |
 }
 {% endmacro %}

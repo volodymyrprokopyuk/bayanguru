@@ -15,7 +15,7 @@
 {% endmacro %}
 
 {% macro lhFrag3(a) %}
-  {{ a }} e@7! e7 | e' e7 e7 | a,=, am! am |
+  {{ a }} e@7! e74 | e' e7 e7 | a,=, am! am |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -42,11 +42,11 @@
 \relative {
   R2. | {{ lhFrag1("c=4-\\stBass") }}
   {{ lhFrag2() }}
-  g=,4 c@M! cM | {{ lhFrag1("c=4") }}
+  g=,4 c@M! cM4 | {{ lhFrag1("c=4") }}
   {{ lhFrag2() }}
 
   c,+cM!4 r r | {{ lhFrag3("gis=,4") }}
-  e'=4 a,@m! am | {{ lhFrag3("gis,=,4") }}
+  e'=4 a,@m! am4 | {{ lhFrag3("gis,=,4") }}
   a=,4 r r | f' fM! fM | f fm! fm |
   \repeat unfold 2 { e=4 c@M! cM4 | }
   f=4 fM! fM | g, g7! g7 | c cM! cM | c= r r |
