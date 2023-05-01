@@ -1,0 +1,38 @@
+{% macro rightHand() %}
+\tempo Largo
+\clef treble
+\key d \minor
+\time 4/4
+\relative {
+  \partial 2 { r8 a=8( d e | }
+  \acciaccatura { d='16 e } d4 %
+  \acciaccatura { cis='8 } <g e'>4) r8 a( e' f |
+  \acciaccatura { e='16 f } e4 %
+  \acciaccatura { d='8 } <a f'>4) r8 a( f' g |
+  \acciaccatura { f='16 g } f4 %
+  \acciaccatura { e='8 } <bes g'>4) r8 c( g' a |
+  \acciaccatura { g='16 a } g4 %
+  \acciaccatura { f='8 } <c a'>4) r8 d( a' bes |
+  \acciaccatura { a='16 bes } a4 %
+  \acciaccatura { bes,=8 } g'4) r8 bes,( g' a |
+  \acciaccatura { g='16 a } g4 %
+  \acciaccatura { a,=8 } f'4) r8 a,( f' g |
+  \acciaccatura { f='16 g } f8 g, cis e g a, b cis |
+  d='2) <f=' a d> |
+
+  \tempo Larghetto
+  r8
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\clef bass
+\key d \minor
+\relative {
+  \partial 2 { d=4-\stBass dm! | }
+  a=,4 a7! cis a,@7 | d4 dm! d dm |
+  c=4 c7! e c@7 | f,4 fM! fis d@7! |
+  g=,4 gm! e' g,@m | a,4 d@m! f4 d@m |
+  a=,4 a7! cis a,@7! | d4 c d=2 |
+}
+{% endmacro %}

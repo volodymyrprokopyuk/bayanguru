@@ -96,10 +96,9 @@ pieces:
   - { id: dizc, tit: Клен ты мой опавший,
       arr: А. Басурманов, aty: ipr, src: BTB1978,
       org: rus, sty: flk, gnr: sng, frm: crd, bss: stb, lvl: elc }
-  # p. 98
-  # - { id: lz9e, tit: Цыганская венгерка,
-  #     arr: А. Кисиленко, src: BTB1978,
-  #     org: rus, sty: msc, gnr: gyp, frm: [var, crd], bss: stb, lvl: elc }
+  - { id: lz9e, tit: Цыганская венгерка,
+      arr: А. Кисиленко, src: BTB1978,
+      org: rus, sty: msc, gnr: gyp, frm: [var, crd], bss: stb, lvl: elc }
   # BTB1989
   # p. 68
   # - { id: q7i3, tit: Деревенская полька,
