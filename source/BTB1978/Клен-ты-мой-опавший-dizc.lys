@@ -5,6 +5,11 @@
   e=8 em!4 em8 g,=,4 e@m |
 {% endmacro %}
 
+{% macro lhFrag2() %}
+  b=,8 bm!4 bm8 d4 b,@m |
+  e=8( em!4) em8 g,=,8( e@m4) em8 |
+{% endmacro %}
+
 {% macro rightHand() %}
 \tempo Moderato
 \clef treble
@@ -30,7 +35,7 @@
      "e'='2 f4 e | <d=' fis>1 |") }}
   <fis=' b d>2(~ 8 d' cis b | g4 e <a cis> <g b>) |
   r4 <d=' fis>8\< 8 <e gis>4. \after 8\! <fis ais>8 |
-  <d='~ fis_~ cis' ^(>2\> \after 2\! <d=' fis b)> |
+  <d='~ fis_~ cis' ^(>2\> \after 4.\! <d=' fis b)> |
 
   \repeat volta 2 {
     <b'='~ d_~ fis ~>2(\mf 8 d cis b | g4~ <g b e>2.) |
@@ -65,14 +70,14 @@
   {{ lhFrag1("b=,8") }}
   fis=,8 fis7!4 fis78 cis,+cis7!4 fis,,+fis7! |
   b=,8 bm!4 bm8 d4 b,@m |
-  {{ lhFrag1("b=,8") }}
+  {{ lhFrag2("b=,8") }}
   fis=,8 b,@m!4 bm8 fis4 fis7! |
   b=,8 bm!4 bm8 d=4 b,@m |
 
   {{ lhFrag1("b=,8") }}
   a=,8 a7!4 a78 a4 a7 |
   d=8 dM!4 dM8 fis,4 fis7! |
-  {{ lhFrag1("b=,8") }}
+  {{ lhFrag2() }}
   fis=,8 b,@m!4 bm8 fis4 fis7! |
   b=,8 bm!4 bm8 b4 bm |
   e=8 em!4 em8 e4 em |
