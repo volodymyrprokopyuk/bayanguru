@@ -1,3 +1,18 @@
+{% from "util.lys" import momentBeat, v2 %}
+
+{% macro t1(a, b, c, d) %}
+  r8
+  <<
+    \new Voice = voiceOne \relative {
+      \voiceOne
+      {{ momentBeat("1/8", "1,1,1,1,1,1,1,1") }}
+      \set subdivideBeams = ##t
+      {{ a }}[~ \tuplet 3/2 { {{ b }} } {{ c }}] %
+    }
+    \new Voice = voiceTwo \relative { \voiceTwo {{ d }} }
+  >>
+{% endmacro %}
+
 {% macro rightHand() %}
 \tempo Largo
 \clef treble
@@ -21,7 +36,18 @@
   d='2) <f=' a d> |
 
   \tempo Larghetto
-  r8
+  r8 <bes'='' d>8 8 8 \acciaccatura { <a='' c>16 d } <a c>4.-> <g bes>8 |
+  r8 <a='' c>8 8 8 \acciaccatura { <g='' bes>16 c } <g bes>4.-> <f a>8 |
+  r8 <g='' bes>8 8 8 \acciaccatura { <f='' a>16 bes } <f a>4.-> <e g>8 |
+  r8 <f='' a>8 8 8 \acciaccatura { <e='' g>16 a } <e g>4.-> <d f>8 |
+  r8 <bes=' g'>8[ 8 \tuplet 3/2 { <a=' f'>16( g' f }] <g, e'>4.) f'16 g |
+  r8 <a,=' f'>8[ 8 \tuplet 3/2 { <g=' e'>16( f' e }] <f, d'>4.) e'16 f |
+  r8 <gis,=' e'>8[ 8 \tuplet 3/2 { <gis=' d'>16( e' d }] <g, cis>4.) d'16 e |
+  <f,=' d'>2 <c' a'>8 <a fis'> <c ees> <fis,=' d'> |
+
+  \tempo Lento
+  {{ t1("d''=''8", "d=''16( e d)", "cis16 d=''", "bes'='4.") }}
+  <c'='' e>4.-> <bes d>8 |
 }
 {% endmacro %}
 
@@ -34,5 +60,10 @@
   c=4 c7! e c@7 | f,4 fM! fis d@7! |
   g=,4 gm! e' g,@m | a,4 d@m! f4 d@m |
   a=,4 a7! cis a,@7! | d4 c d=2 |
+
+  g,=,4 gm! bes g,@m | d4 em! f, d@m |
+  a=,4 a7! cis a,@7 | d4 em! f, d@m |
+  g=,4 gm! bes g,@m | d4 em! f, d@m |
+  e'=4 e7! a, a7! | d dm! fis,=, d@7! |
 }
 {% endmacro %}
