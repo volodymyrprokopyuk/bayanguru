@@ -187,8 +187,8 @@ export async function playPieces(pieces, args) {
     const { id, tit, file, com, arr, aty, lvl } = pieces[i]
     if (args.dry) {
       const summary = [chalk.green(id), chalk.yellow(tit)]
-      if (com) { summary.push(chalk.magenta(com)) }
-      if (arr) { summary.push(chalk.cyan(aty), chalk.cyan(arr)) }
+      if (com) { summary.push(chalk.cyan(com)) }
+      if (arr) { summary.push(chalk.magenta(aty), chalk.magenta(arr)) }
       summary.push(lvl)
       console.log(summary.join(" "))
       continue
