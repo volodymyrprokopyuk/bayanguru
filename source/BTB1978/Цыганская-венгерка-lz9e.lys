@@ -48,6 +48,37 @@
   \tempo Lento
   {{ t1("d''=''8", "d=''16( e d)", "cis16 d=''", "bes'='4.") }}
   <c'='' e>4.-> <bes d>8 |
+  {{ t1("c''=''8", "c=''16( d c)", "b16 c=''", "a'='4.") }}
+  {{ v2("<bes'=' d>4.-> <a=' c>8", "fis'='2") }} | %
+  {{ t1("bes'='8", "bes='16( c bes)", "a16 bes='", "g'='4.") }}
+  {{ v2("c''=''4.-> bes8", "e'='2") }} | %
+  {{ t1("a'='8", "a='16( bes a)", "gis16 a='", "f'='4.") }}
+  {{ v2("bes'='4.-> a8", "<c'=' fis>2") }} | %
+  {{ t1("g'='8", "g='16( a g)", "fis16 g='", "bes=4.") }}
+  {{ v2("a'='4.-> g8", "cis'='2") }} | %
+  {{ t1("<d'=' f>8", "<d=' f>16( g f)", "e16 f='", "a=4.") }}
+  {{ v2("g'='4.-> f8", "<bes= d>2") }} | %
+  {{ t1("e'='8", "e='16( f e)", "dis16 e='", "gis=4.") }}
+  <g,= cis f>4. cis8 |
+  {{ momentBeat("1/2", "1,1") }}
+  <f,= a e'>4. <f a d>8 8 e' f fis=' |
+
+  \tempo "Poco a poco stringendo"
+  <<
+    \new Voice = voiceOne \relative {
+      \voiceOne
+      g'='2 gis | a2. b8 \rest <a, d f a> |
+      gis'='2 g | f2. b8 \rest <f,= a d f> |
+    }
+    \new Voice = voiceTwo \relative {
+      \voiceTwo
+      r4 <g= b d>8 8 r4 <gis d' e>8 8 |
+      r4 <a= d f>4 4 s4 |
+      r4 <gis= d' e>8 8 r4 <g cis e>8 8 |
+      r4 <f= a d>4 4 s4 |
+    }
+  >>
+  r4 <g,= bes d>2.->~ | 4 <f a d>2.->~ | 4 %
 }
 {% endmacro %}
 
@@ -65,5 +96,11 @@
   a=,4 a7! cis a,@7 | d4 em! f, d@m |
   g=,4 gm! bes g,@m | d4 em! f, d@m |
   e'=4 e7! a, a7! | d dm! fis,=, d@7! |
+
+  \repeat unfold 2 {
+    g=,4 gm! c c7! | f, fM! d'= d7! |
+  }
+  g,=,4 gm! a a7! | d dm! bes besM! |
+  e=4 e7! a, a7! | d dm! d c= |
 }
 {% endmacro %}
