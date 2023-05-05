@@ -24,7 +24,7 @@
   {{ a }} r fM! r fM r | c' r f,@M! r8 fM r |
   g=,8 r gm! r gm r | f r g,@m! r8 gm r |
   e=,8 r c@7! r8 c7 r | c' r c7! r c7 r |
-  f,=,8 r fM! r fM r | f r fM r fM r |
+  f,=,8 r fM! r fM r | f r fM! r fM r |
   f,,+fM!8 r d' r c r | f,=, r r4 r |
 {% endmacro %}
 
