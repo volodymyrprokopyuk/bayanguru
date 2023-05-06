@@ -35,6 +35,6 @@
   b=,8 g,@7! g8 g7 | c cM! c cM |
   b=,8 g,@7! g8 g7 | c cM! cM4 |
   b=,8 g,@7! g8 g7 | c cM! c cM |
-  b=,8 d@m! r8 d@m | e=8 e7! r e@7 |
+  b=,8 d@m! r8 d@m | e=8 e7! r e7 |
 }
 {% endmacro %}
