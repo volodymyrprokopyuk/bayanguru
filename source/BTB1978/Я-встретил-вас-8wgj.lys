@@ -81,6 +81,6 @@
   a,=,8 am! am am | d d7! d7 d7 |
   g,=,8 gM! gM r \fermata | a am! am am |
   b=,8 e@m! em8 em | fis fis7! b b7! |
-  e=8 em! em em | e@m4-\fermata r4 |
+  e=8 em! em em | e@m!4-\fermata r4 |
 }
 {% endmacro %}

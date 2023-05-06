@@ -63,6 +63,6 @@
   \repeat unfold 4 {
     g,=,8 gM! d' dM! | g, gM! c= cM! |
   }
-  g=,8 gM! d' d7! | g,=, gM! g,,+gM!4 |
+  g=,8 gM! d' d7! | g,=, gM! g,,+gM4 |
 }
 {% endmacro %}
