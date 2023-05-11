@@ -98,7 +98,7 @@ pieces:
       org: rus, sty: msc, gnr: vls, frm: mel, bss: stb, lvl: elb }
   - { id: 1hva, tit: Как пойду я на быструю речку, sub: rufs,
       src: B2AK1979,
-      org: rus, sty: flk, gnr: sng, frm: var, bss: stb, lvl: elb }
+      org: rus, sty: flk, gnr: sng, frm: var, bss: stb, lvl: elc }
   # B2AK1987
   - { id: tsio, tit: Колыбельная,
       com: Т. Хренников, arr: А. Кирюхин, aty: ipr, src: B2AK1987,
