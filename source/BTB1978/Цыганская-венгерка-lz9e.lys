@@ -107,6 +107,14 @@
   <f=' a e'>4 <f a d>4 4 r8 8 |
   <e=' g d'>4 <e g cis> <e g b> <e g cis> |
   <f=' a e'>4 <f=' a d>4 4 r |
+
+  r8 g='8 bes d {{ v2("e''=''2", "r4 <g'=' bes>") }} | %
+  r8 a='8 d f {{ v2("a''=''2", "r4 <a'=' d f>") }} | %
+  r8 g,='8 cis e {{ v2("g''=''2", "r4 <g'=' cis e>") }} | %
+  r8 f,='8 a d {{ v2("f''=''2", "r4 <f'=' a d>") }} | %
+  r8 g,='8 bes f' {{ v2("e''=''2", "r4 <g'=' bes>") }} | %
+  r8 f,='8 a e' {{ v2("d''=''2", "r4 <f'=' a>") }} | %
+  r8 gis,='8 b d cis a b cis | d2 <f,=' a d> |
 }
 {% endmacro %}
 
@@ -151,5 +159,10 @@
   a=,4 a7! b cis | d dm! f, d@m |
   g=,4 gm! bes g,@m | a4 d@m! f4 d@m |
   a=,4 a7! cis a,@7 | d4 dm! d= dm |
+
+  g,=,4 gm! bes g,@m | a4 d@m! f4 d@m |
+  e'=4 a,@7! cis4 a,@7 | a4 d@m! d4 dm |
+  g,=,4 gm! bes g,@m | a4 d@m! f4 d@m |
+  e'=4 e7! a, a7! | d= dm! d,+dm2 |
 }
 {% endmacro %}
