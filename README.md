@@ -33,6 +33,10 @@ Stradella bass and free bass
 - [LilyPond](https://lilypond.org/)
 - [pdfcpu](https://pdfcpu.io/)
 
+```zsh
+yay -S ghostscript gsfonts fontforge t1utils texlive-langcyrillic pdfcpu
+```
+
 ## CLI
 
 Specifications and options
