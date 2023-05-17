@@ -5,28 +5,28 @@ pieces:
   # SB1NU1979
   - { id: gnt0, tit: Етюд C major,
       com: Л. Шітте, src: SB1NU1979,
-      org: dnk, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
+      org: dnk, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: ela }
   - { id: jxnz, tit: Етюд C major,
       com: Г. Беренс, src: SB1NU1979,
-      org: swe, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
+      org: swe, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: ela }
   - { id: e4vv, tit: Етюд C major,
       com: Г. Беренс, src: SB1NU1979,
-      org: swe, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
+      org: swe, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: ela }
   - { id: d3fi, tit: Етюд A minor,
       com: А. Салин, src: SB1NU1979,
-      org: rus, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
+      org: rus, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: ela }
   - { id: wtuk, tit: Етюд C major,
       com: Л. Шітте, src: SB1NU1979,
-      org: dnk, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
+      org: dnk, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: ela }
   - { id: b3nl, tit: Етюд C major,
       com: К. Гурлітт, src: SB1NU1979,
-      org: de, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
+      org: deu, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: ela }
   - { id: vz59, tit: Етюд G major,
       com: К. Черні, src: SB1NU1979,
-      org: aut, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
+      org: aut, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: ela }
   - { id: ryca, tit: Етюд G major,
       com: К. Черні, src: SB1NU1979,
-      org: aut, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
+      org: aut, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: ela }
   - { id: 0adx, tit: Етюд G major,
       com: К. Черні, src: SB1NU1979,
       org: aut, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elm }
