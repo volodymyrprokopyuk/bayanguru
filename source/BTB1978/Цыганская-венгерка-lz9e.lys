@@ -115,6 +115,13 @@
   r8 g,='8 bes f' {{ v2("e''=''2", "r4 <g'=' bes>") }} | %
   r8 f,='8 a e' {{ v2("d''=''2", "r4 <f'=' a>") }} | %
   r8 gis,='8 b d cis a b cis | d2 <f,=' a d> |
+
+  c'=''4 bes~ bes8 a bes c | bes4 <d, f a>4 4 r |
+  a'='4 g~ g8 fis g a | g4 <a, d f>4 4 r |
+  \acciaccatura { dis='16 e } f='4 e~ e8 dis e f |
+  e='4 <f, a d>4 4 r |
+  \acciaccatura { c'='16 cis } d='4 cis b cis |
+  d='2 <f,= a d>4 r |
 }
 {% endmacro %}
 
@@ -164,5 +171,14 @@
   e'=4 a,@7! cis4 a,@7 | a4 d@m! d4 dm |
   g,=,4 gm! bes g,@m | a4 d@m! f4 d@m |
   e'=4 e7! a, a7! | d= dm! d,+dm2 |
+
+  fis,=,4 g,@m! g4 gis | a d@m! f4 d@m |
+  e'=4 a,@7! a,4 cis | d dm! a d@m |
+  g=,4 gm! bes gis | a d@m! f4 d@m |
+  e'=4 a,@7! a,4 a7 | d= dm! d,+dm r |
+
+  \tempo Allegro
+
+  \tempo Presto
 }
 {% endmacro %}
