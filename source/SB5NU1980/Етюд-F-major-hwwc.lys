@@ -112,7 +112,7 @@
   r4 bes,,+c@M! | a,,+am!4 g,,+c@7! |
 
   \key f \major
-  {{ lhFrag1("f,=,8-\\stBass") }} | f, fM!4 fM8 |
+  {{ lhFrag1("f,=,8") }} | f, fM!4 fM8 |
   {{ lhFrag1("f=,8") }} | f,[ fM! fM] r |
   {{ lhFrag3() }} | f, fM!4 fM8 |
   {{ lhFrag3() }} | f,,+fM!4 r |
