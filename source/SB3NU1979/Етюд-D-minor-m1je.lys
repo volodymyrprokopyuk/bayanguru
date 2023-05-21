@@ -54,7 +54,7 @@
   d=16( a bes a bes a d=8) dm! r |
 
   {{ lhFrag1() }} r4. |
-  {{ lhFrag1() }} f fM! r |
+  {{ lhFrag1() }} f fM r |
   fis=8[ d@7! d78] a,[ d@7 d78] |
   g=,8 gm! gm gis[ e@7! e78] |
   a=,8[ d@m! dm8] a a7! a7 |
