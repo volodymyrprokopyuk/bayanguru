@@ -13,6 +13,10 @@
   >>
 {% endmacro %}
 
+{% macro t2(a, b) %}
+  r4 \tuplet 3/2 { {{ a }} } {{ b }} r |
+{% endmacro %}
+
 {% macro rightHand() %}
 \tempo Largo
 \clef treble
@@ -122,6 +126,49 @@
   e='4 <f, a d>4 4 r |
   \acciaccatura { c'='16 cis } d='4 cis b cis |
   d='2 <f,= a d>4 r |
+
+  \tempo Allegro
+  <g= g'>2-> <bes bes'>-> | <a a'>-> <d d'>-> |
+  <cis=' cis'>2-> <e e'>-> | <d d'> <e e'>4 <fis fis'> |
+  <g=' g'>2-> <bes bes'>-> | <a a'>-> <d d'>~-> |
+  <d='' d'>4 <cis cis'> <b b'> <cis cis'> |
+  <d='' d'>2 <d='' f a d>4 r |
+
+  \repeat unfold 2 { <d='' g c>4(-> bes'='') }
+  \repeat unfold 2 { <d,='' f bes>4(-> a'='') }
+  \repeat unfold 2 { <cis,='' e a>4(-> g'='') }
+  \repeat unfold 2 { <a,=' d g>4(-> f'='') }
+  \repeat unfold 2 { <g,=' bes f'>4(-> e'='') }
+  \repeat unfold 2 { <f,=' a e'>4(-> d'='') }
+  <e,=' g d'>4 cis' b cis | d2 <f,=' a d> |
+
+  \tempo Presto
+  c'=''4 bes <d, g c>(-> bes') |
+  bes='4 a <d, f bes>(-> a') |
+  a='4 g <cis, e a>(-> g') |
+  g='4 f <a, d g>(-> f') |
+  f='4 e <g, bes f'>(-> e') |
+  e='4 d <f, a e'>(-> d') |
+  d='4 cis <e, g b>(-> cis') |
+  d='4 r <f,= a d> r |
+
+  {{ t2("g=8( bes d", "e4)") }} | %
+  {{ t2("f,=8( a d", "f4)") }} | %
+  {{ t2("g,=8( cis e", "g4)") }} | %
+  {{ t2("a,=8( d f", "a4)") }} | %
+  {{ t2("bes,=8( d e", "g4)") }} | %
+  {{ t2("f,=8( a d", "f4)") }} | %
+  r4 a,=4 b cis | d r <f,= a d> r |
+
+  <g= cis f>4-> e' dis e | <a, d g>-> f' e f |
+  <bes,= e a>4-> g' fis g | <c, f bes>-> a' gis a^~ |
+  <bes,= d a'>4\sf g' f e | d des c b |
+  bes=4 a b cis | d r <f,= a d> r |
+
+  <g= g'>2-> <gis gis'>-> | <a a'>-> <bes bes'>-> |
+  <b= b'>2-> <cis cis'>-> | <d d'>-> <des des'>-> |
+  <c=' c'>2-> <b b'>-> | <bes bes'>-> <a a'>-> |
+  <b= b'>2-> <cis cis'>-> | <d d'>-> <d=' f a d>4-> r \bar "|."
 }
 {% endmacro %}
 
@@ -177,8 +224,9 @@
   g=,4 gm! bes gis | a d@m! f4 d@m |
   e'=4 a,@7! a,4 a7 | d= dm! d,+dm r |
 
-  \tempo Allegro
-
-  \tempo Presto
+  g,=,4 gm! e' g,@m | f,4 d@m! a4 d@m |
+  a=,4 aM! g a,@M | f4 d@m! g4 a |
+  bes=,4 g,@m! e4 g,@m | f,4 d@m! a4 d@m |
+  a=,4 a7! cis a,@7 | d=4 dm! d,+dm r |
 }
 {% endmacro %}
