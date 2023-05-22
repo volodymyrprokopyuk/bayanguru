@@ -228,5 +228,30 @@
   a=,4 aM! g a,@M | f4 d@m! g4 a |
   bes=,4 g,@m! e4 g,@m | f,4 d@m! a4 d@m |
   a=,4 a7! cis a,@7 | d=4 dm! d,+dm r |
+
+  g,=,4 gm! g gm | d' dm! d dm |
+  a=,4 a7! a a7 | d dm! d dm |
+  g,=,4 gm! g gm | d' dm! d dm |
+  a=,4 a7! a a7 | d= dm! d,+dm2 |
+
+  r2 e,+g,@m!2 | r2 a,,+d@m! |
+  r2 g,,+a,@M!2 | r2 f,,+d@m! |
+  r2 e,+g,@m!2 | r2 a,,+d@m! |
+  r2 a,,+a7!2 | d=4 r d,+dm! r |
+
+  g,=,4 gm! bes g,@m | a4 d@m! d4 dm |
+  e=4 a,@7! cis4 a,@7 | d4 dm! f, d@m |
+  g=,4 gm! e' g,@m | a,4 d@m! d4 dm |
+  a=,4-> aM! g-> a,@M | f=,4-> d@m! d,+dm4 r |
+
+  a=,4 a7! cis a,@7 | d4 dm! a d@m |
+  c=4 c7! e c@7 | f,4 fM! c' f,@M |
+  g=,4 gm! bes g,@m | a4 d@m! f4 d@m |
+  a=,4 a7! cis a,@7 | d=4 dm! d,+dm r |
+
+  g,=,4 gm! bes besM! | f d@m! g4 gm! |
+  e'=4 g,@M! a,4 a7! | f d@m! fis4 d@M! |
+  g=,4 gm! e' g,@M! | a,4 d@m! f4 d@m |
+  e'=4 e7! a, a7! | d=4 dm! d,+dm r |
 }
 {% endmacro %}
