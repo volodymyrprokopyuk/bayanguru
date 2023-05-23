@@ -106,10 +106,9 @@ pieces:
   - { id: up9h, tit: Над окошком месяц,
       com: Е. Попов, arr: А. Кисиленко, aty: ipr, src: BTB1989,
       org: rus, sty: msc, gnr: sng, frm: crd, bss: stb, lvl: elb }
-  # p. 70
-  # - { id: 6ocj, tit: Дождь идет,
-  #     arr: А. Басурманов, aty: ipr, src: BTB1989,
-  #     org: rus, sty: msc, gnr: tng, frm: crd, bss: stb, lvl: elc }
+  - { id: 6ocj, tit: Дождь идет, sub: Танго,
+      arr: А. Басурманов, aty: ipr, src: BTB1989,
+      org: fra, sty: msc, gnr: tng, frm: crd, bss: stb, lvl: elc }
   # p. 72
   # - { id: nlmb, tit: Прощание славянки,
   #     com: В. Агапкин, src: BTB1989,

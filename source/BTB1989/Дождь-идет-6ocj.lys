@@ -1,0 +1,29 @@
+{% from "util.lys" import v2 %}
+
+{% macro rightHand() %}
+\tempo Moderato
+\clef treble
+\key c \minor
+\time 2/4
+\relative {
+  r8\mf <c''='' aes'>8[ <bes g'> <aes f'>] |
+  <c,=' ees>16 <ees g>8 <g c>16 <ees ees'>4 |
+  {{ v2("\\acciaccatura { cis''=''8 } d=''16 a8 bes16 b8 g=' |",
+     "fis'='4 f=' |") }}
+  <ees=' g c>4 <b' f' g>-> | <c='' ees g c>-> r |
+
+  \repeat volta 2 {
+    \alternative {
+      \volta 1 { }
+      \volta 2 { }
+    }
+  }
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\clef bass
+\key c \minor
+\relative {
+}
+{% endmacro %}
