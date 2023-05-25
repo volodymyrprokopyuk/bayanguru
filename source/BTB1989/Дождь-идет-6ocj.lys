@@ -1,4 +1,4 @@
-{% from "util.lys" import v2 %}
+{% from "util.lys" import momentBeat, v2 %}
 
 {% macro rightHand() %}
 \tempo Moderato
@@ -13,9 +13,19 @@
   <ees=' g c>4 <b' f' g>-> | <c='' ees g c>-> r |
 
   \repeat volta 2 {
+    <ees,=' g>8.\mp <ees c'>16 <g ees'>8 <ees' g> |
+    {{ v2("f''=''2 |", "<aes'=' c>16 8 16 <aes d>8 <aes=' c> |") }}
+    <b,= f' g>8. <d b'>16 <f d'>8 <b f'> |
+    {{ v2("ees''=''2 |", "<g'=' c>16 8 16 <aes c>8 <g=' c> |") }}
+    <f=' aes ees'>8. <f aes d>16 <f aes f'>8 <f aes ees'> |
     \alternative {
-      \volta 1 { }
-      \volta 2 { }
+      \volta 1 {
+        {{ momentBeat("1/8", "1,1,1,1") }}
+        <b,= f' g>4 <f' b ees> |
+        c'=''32\< b c d ees d ees f g aes g f ees f ees \after 32\! d |
+        c=''32\> d c bes aes bes aes g f aes g f ees f ees \after 32\! d=' |
+      }
+      \volta 2 { <fis=' a d>4 <fis=' a c> | }
     }
   }
 }

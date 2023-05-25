@@ -69,7 +69,7 @@ pieces:
       org: ukr, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elb }
   - { id: ipdh, tit: Етюд D minor,
       com: С. Титов, src: SB5NU1980,
-      org: rus, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elb }
+      org: rus, sty: stu, gnr: stu, frm: [scl, wrs], bss: stb, lvl: elb }
   - { id: h3xy, tit: Етюд A minor,
       com: А. Нечипоренко, src: SB5NU1980,
       org: ukr, sty: stu, gnr: stu, frm: [scl, arp], bss: stb, lvl: elb }
@@ -87,7 +87,7 @@ pieces:
       org: rus, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: ela }
   - { id: ktnb, tit: Етюд A minor,
       com: К. Мясков, src: SB1NU1979,
-      org: ukr, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: ela }
+      org: ukr, sty: stu, gnr: stu, frm: [arp, wrs], bss: stb, lvl: ela }
   - { id: ri7i, tit: Етюд F major,
       com: Л. Шітте, src: SB1NU1979,
       org: dnk, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: ela }
@@ -98,24 +98,24 @@ pieces:
   # SB3NU1979
   - { id: m1je, tit: Етюд D minor,
       com: Г. Гембера, src: SB3NU1979,
-      org: ukr, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elb }
+      org: ukr, sty: stu, gnr: stu, frm: [arp, wrs], bss: stb, lvl: elb }
   - { id: x745, tit: Етюд A minor,
       com: К. Мясков, src: SB3NU1979,
-      org: ukr, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elm }
+      org: ukr, sty: stu, gnr: stu, frm: [arp, wrs], bss: stb, lvl: elb }
   # SB4NU1978
   - { id: qt8h, tit: Етюд C minor,
       com: В. Хведченя, src: SB4NU1978,
-      org: ukr, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elm }
+      org: ukr, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elb }
   - { id: djop, tit: Етюд F major,
       com: К. Черні, src: SB4NU1978,
-      org: aut, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elm }
+      org: aut, sty: stu, gnr: stu, frm: [arp, wst], bss: stb, lvl: elb }
   - { id: z04b, tit: Етюд Bes major,
       com: К. Черні, src: SB4NU1978,
-      org: aut, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elm }
+      org: aut, sty: stu, gnr: stu, frm: [arp, wst], bss: stb, lvl: elb }
   # SB5NU1980
   - { id: 4s1u, tit: Етюд A minor,
       com: А. Холминов, src: SB5NU1980,
-      org: rus, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elm }
+      org: rus, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elb }
 
   # Wrist movement
   # SB1NU1979
