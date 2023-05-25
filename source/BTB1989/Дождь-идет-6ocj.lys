@@ -1,5 +1,14 @@
 {% from "util.lys" import momentBeat, v2 %}
 
+{% macro rhFrag1(a) %}
+  {{ a }} ees~ | ees8 b \rest \stemDown ees16 d c g \stemUp |
+  bes='8. a16 aes='4~ | aes8 %
+{% endmacro %}
+
+{% macro rhFrag2() %}
+  \repeat unfold 2 { r16 <g'=' c>16[ r <g=' c>] } | <g=' c>8 s4. |
+{% endmacro %}
+
 {% macro rightHand() %}
 \tempo Moderato
 \clef treble
@@ -28,6 +37,28 @@
       \volta 2 { <fis=' a d>4 <fis=' a c> | }
     }
   }
+
+  {{ momentBeat("1/4", "1,1") }}
+  g'=''32\< g, b d g b, d g b d, g b d g, b \after 32\! d |
+  g='''8 r g,,16\mf g fis g |
+  <<
+    \new Voice = voiceOne \relative {
+      \voiceOne
+      {{ rhFrag1("ees''=''4") }} b \rest f16 f e f |
+      d'=''4 d~ | d8 b \rest d16 b g f |
+      ees='2~ | ees8 b' \rest g16 g fis g |
+      {{ rhFrag1("ees'=''4") }}
+    }
+    \new Voice = voiceTwo \relative {
+      \voiceTwo
+      {{ rhFrag2() }}
+      <c,=' f>8 r r16 <c f>16[ r <c f>] | <c=' f>8 s4. |
+      \repeat unfold 2 { r16 <f=' b>16[ r <f b>] } | <f=' b>8 s4. |
+      r16 <g,= c>8 16 r <g c>[ r <g c>] | <g c>8 s4. |
+      {{ rhFrag2() }}
+      <c,=' f>8 r r16 <c f>16[ r <c f>] | <c=' f>8 %
+    }
+  >>
 }
 {% endmacro %}
 
