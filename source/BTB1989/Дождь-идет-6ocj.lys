@@ -9,6 +9,18 @@
   \repeat unfold 2 { r16 <g'=' c>16[ r <g=' c>] } | <g=' c>8 s4. |
 {% endmacro %}
 
+{% macro rhFrag3() %}
+  {{ momentBeat("1/8", "1,1,1,1") }}
+  g'=''32\< g, b d g b, d g b d, g b d g, b \after 32\! d |
+  {{ momentBeat("1/4", "1,1") }}
+  g='''8 r g,,16\mf g fis g=' |
+{% endmacro %}
+
+{% macro rhFrag4() %}
+  <g=' c ees>16 <c ees g>8 <ees g c>16 <ees aes ees'>4 |
+  \acciaccatura { cis'='''8 } <fis,='' d'>16 a8 bes=''16 %
+{% endmacro %}
+
 {% macro rightHand() %}
 \tempo Moderato
 \clef treble
@@ -38,9 +50,7 @@
     }
   }
 
-  {{ momentBeat("1/4", "1,1") }}
-  g'=''32\< g, b d g b, d g b d, g b d g, b \after 32\! d |
-  g='''8 r g,,16\mf g fis g |
+  {{ rhFrag3() }}
   <<
     \new Voice = voiceOne \relative {
       \voiceOne
@@ -59,6 +69,32 @@
       <c,=' f>8 r r16 <c f>16[ r <c f>] | <c=' f>8 %
     }
   >>
+
+  <c='' aes'>8\f <bes g'> <aes f'> |
+  {{ rhFrag4() }}
+  {{ v2("b''=''8 g | c='''2~ | c8 s4.\\mf |",
+     "f''=''4 | <ees g>16 8 16 <d aes'>8 8 | <ees g>8 c c8. b='16") }}
+  <d,,=' bes'>8. <bes' d>16 <d f>4~ |
+  <d='' f>8 <f aes>8 16 <ees g>8 <d fis>16 |
+  <ees='' g>4 <g, ees'>~ | 8 <ees' g>8 16 <f aes>8 <ees g>16 |
+  <aes,=' c f>4 <f c' d> | <fis a ees'> <fis a c=''> |
+
+  {{ rhFrag3() }}
+  <<
+    \new Voice = voiceOne \relative {
+      \voiceOne
+      {{ rhFrag1("ees''=''4") }}
+    }
+    \new Voice = voiceTwo \relative {
+      \voiceTwo
+      {{ rhFrag2() }}
+      <c,=' f>8 r r16 <c f>16[ r <c f>] | <c=' f>8 %
+    }
+  >>
+  <c='' aes'>8\f <bes g'> <aes f'> |
+  {{ rhFrag4() }}
+  {{ v2("b''=''8 g |", "f''=''4 |") }}
+  <ees,='' g c>4 <b f' g>\mp | <c='' ees g c> r \bar "|."
 }
 {% endmacro %}
 
@@ -66,5 +102,18 @@
 \clef bass
 \key c \minor
 \relative {
+  f,=,4-\stBass fm! | g8 c@m! aes8 aesM! |
+  a=,8 d@7! g8 gM! | c,+cm!4 g,,+g7!-> | c,+cm!-> r |
+
+  <<
+    \new Voice = voiceOne \relative {
+      \voiceOne
+      cm!8 cm cm cm | fm! fm fm fm |
+    }
+    \new Voice = voiceTwo \relative {
+      \voiceTwo
+      c=4 c | f, f |
+    }
+  >>
 }
 {% endmacro %}
