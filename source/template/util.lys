@@ -1,7 +1,7 @@
 % === Template util ===
 
 {% macro logo(scale = 1) %}
-  \roman \bold \concat {
+  \serif \bold \concat {
     \magnify #{{ 1.5 * scale }} \musicglyph "clefs.G"
     \magnify #{{ 2.5 * scale }} {
       \rotate #30 Б
@@ -13,7 +13,7 @@
 {% endmacro %}
 
 {% macro prelude() %}
-  \version "2.25.4"
+  \version "2.25.5"
   rootUrl = "https://volodymyrprokopyuk.github.io/bayan"
   stBass = \markup \larger \box Г % Готовий бас
   puBass = \markup \larger \box Б % Чистий бас

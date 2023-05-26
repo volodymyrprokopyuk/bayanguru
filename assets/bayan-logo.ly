@@ -1,9 +1,9 @@
-\version "2.23.10"
+\version "2.25.5"
 
 % lilypond -f svg -o content content/bayan-logo.ly
 
 \markup {
-  \roman \bold {
+  \serif \bold {
     \magnify #1.5 \musicglyph "clefs.G"
     \magnify #2.5 {
       \rotate #30 Б
@@ -16,4 +16,4 @@
 
 % lilypond -f svg -o content/favicon content/bayan-logo.ly
 
-% \markup { \roman \bold \magnify #1.5 \rotate #30 Б }
+% \markup { \serif \bold \magnify #1.5 \rotate #30 Б }
