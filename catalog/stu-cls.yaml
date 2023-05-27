@@ -27,15 +27,6 @@ pieces:
   - { id: ryca, tit: Етюд G major,
       com: К. Черні, src: SB1NU1979,
       org: aut, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: ela }
-  - { id: 0adx, tit: Етюд G major,
-      com: К. Черні, src: SB1NU1979,
-      org: aut, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: ela }
-  - { id: sdnn, tit: Етюд C major,
-      com: К. Черні, src: SB1NU1979,
-      org: aut, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: ela }
-  - { id: 5ul1, tit: Етюд C major,
-      com: К. Черні, src: SB1NU1979,
-      org: aut, sty: stu, gnr: stu, frm: [scl, arp], bss: stb, lvl: ela }
   # SB2NU1977
   - { id: mp9o, tit: Етюд C major,
       com: М. Різоль, src: SB2NU1977,
@@ -122,12 +113,21 @@ pieces:
   - { id: xkj4, tit: Етюд G major,
       com: Д. Левидова, src: SB1NU1979,
       org: rus, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: ela }
+  - { id: 0adx, tit: Етюд G major,
+      com: К. Черні, src: SB1NU1979,
+      org: aut, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: ela }
+  - { id: sdnn, tit: Етюд C major,
+      com: К. Черні, src: SB1NU1979,
+      org: aut, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: ela }
   - { id: m02e, tit: Етюд C major,
       com: Й. Ванхаль, src: SB1NU1979,
       org: cze, sty: stu, gnr: stu, frm: [scl, arp, wrs], bss: stb, lvl: ela }
   - { id: 7yb4, tit: Етюд C major,
       com: В. Белов, src: SB1NU1979,
       org: rus, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: ela }
+  - { id: 5ul1, tit: Етюд C major,
+      com: К. Черні, src: SB1NU1979,
+      org: aut, sty: stu, gnr: stu, frm: [scl, arp], bss: stb, lvl: ela }
   - { id: 6yq2, tit: Етюд Bes major,
       com: Т. Федин, src: SB1NU1979,
       org: rus, sty: stu, gnr: stu, frm: [scl, wrs], bss: stb, lvl: ela }
@@ -144,10 +144,10 @@ pieces:
       org: swe, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elb }
   - { id: ov1p, tit: Етюд E minor,
       com: К. Черні, src: SB3NU1979,
-      org: aut, sty: stu, gnr: stu, frm: [wrs, lhn], bss: [stb, pub], lvl: elm }
+      org: aut, sty: stu, gnr: stu, frm: [scp, arp, lhn], bss: [stb, pub], lvl: elb }
   - { id: 9zx1, tit: Етюд C major,
       com: А. Лемуан, src: SB3NU1979,
-      org: fra, sty: stu, gnr: stu, frm: [wrs, lhn], bss: [stb, pub], lvl: elm }
+      org: fra, sty: stu, gnr: stu, frm: [arp, wrs, lhn], bss: [stb, pub], lvl: elb }
   - { id: a7ra, tit: Етюд F major,
       com: A. Гедике, src: SB3NU1979,
       org: rus, sty: stu, gnr: stu, frm: wrs, bss: stb, lvl: elm }

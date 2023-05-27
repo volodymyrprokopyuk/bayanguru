@@ -104,8 +104,7 @@ books:
       # Scale
       { sec: Гамоподібні рухи, pieces: [
         # SB1NU1979
-        "gnt0", "jxnz", "e4vv", "d3fi", "wtuk", "b3nl", "vz59", "ryca", "0adx",
-        "sdnn", "5ul1",
+        "gnt0", "jxnz", "e4vv", "d3fi", "wtuk", "b3nl", "vz59", "ryca",
         # SB2NU1977
         "mp9o", "x2ii",
         # SB3NU1979
@@ -126,7 +125,7 @@ books:
         "qt8h", "djop", "z04b", "4s1u"] },
       { sec: Повороти кисті, pieces: [
         # SB1NU1979
-        "xkj4", "m02e", "7yb4", "6yq2",
+        "xkj4", "0adx", "sdnn", "m02e", "7yb4", "5ul1", "6yq2",
         # SB2NU1977
         "rnk5", "5071",
         # SB3NU1979
