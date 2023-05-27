@@ -109,11 +109,45 @@
     \new Voice = voiceOne \relative {
       \voiceOne
       cm!8 cm cm cm | fm! fm fm fm |
+      g7!8 g7 g7 g7 | cm! cm cm cm |
+      fm!8 fm f,@m[ fm8] | g7!8 g7 g7 g7 |
     }
     \new Voice = voiceTwo \relative {
       \voiceTwo
-      c=4 c | f, f |
+      c=4 c | f, f | g g | c c | f, d' | g, g=, |
     }
   >>
+  c,+cm!4 r | R2 |
+  {{ v2("d@7!8[ d78] d7 d7 |", "a,=,4 d= |") }}
+  g,,+g7!4 r | R2 |
+
+  c=8 cm! g c@m | c8 cm! cm cm |
+  f,=,8 fm! c' f,@m | f,8 fm! fm fm |
+  g=,8 g7! g g7 | g g7! g7 g7 |
+  c=8 cm! aes c@m | g=,8 r r4 |
+  c=8 cm! g c@m | c8 cm! cm cm |
+  f,=,8 fm! f fm | d,+f,@m!8 r8 r4 |
+
+  g=,8 c@m! aes8 aesM! | a d@7! g8 g7! |
+  c=8 cm! f, fm! | c'= r r4 |
+  <<
+    \new Voice = voiceOne \relative {
+      \voiceOne
+      \repeat unfold 2 { besM!8 besM besM besM | }
+      \repeat unfold 2 { eesM!8 eesM ees@M[ eesM8] | }
+      f,@m!8[ fm8] f,@m8[ fm8] | d@7![ d78] d7 d7 |
+    }
+    \new Voice = voiceTwo \relative {
+      \voiceTwo
+      bes,=,4 bes | bes bes | ees bes | ees bes |
+      d=4 aes a d= |
+    }
+  >>
+
+  g,,+g7!4 r | R2 |
+  c=8 cm! g c@m | c8 cm! cm cm |
+  f,=,8 fm! c' f,@m | f,8 r r4 |
+  g=,8 c@m! aes8 aesM! | a d@7! g=,8 g7! |
+  c,+cm!4 g,,+g7! | c,+cm! r |
 }
 {% endmacro %}
