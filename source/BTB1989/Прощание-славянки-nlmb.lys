@@ -1,0 +1,60 @@
+{% from "util.lys" import v2 %}
+
+{% macro rightHand() %}
+\tempo "Tempo di marcia"
+\clef treble
+\key f \minor
+\time 4/4
+\relative {
+  \acciaccatura { c''=''16 d e } f=''2\ff des | c bes4. g8 |
+  {{ v2("aes'='4( c) g( c='') |", "<c'=' f>4 r <c=' e> r |") }}
+  <aes,= c f>4 r \acciaccatura { des'=''8 } <aes c>4.(\mf des=''8 ) |
+  \repeat volta 2 {
+    <<
+      \new Voice = voiceOne \relative {
+        \voiceOne
+        <aes'=' c>2 aes4. g8 | <aes,= c f>2 e'4 f |
+        g='2.( e4 | c) b' \rest c4.( des8) | c2 b4 c |
+        g'=''2( aes4 g) | f1~ f4 r <des f>4. <c='' e>8 |
+      }
+      \new Voice = voiceTwo \relative {
+        \voiceTwo
+        s2 <c'=' f>2 | s2 <aes c> | <bes~ c>1 |
+        bes=4 s4 <e g>2 | <e bes'> g | <bes c>2 2 |
+        <aes=' c>4 8 8 4 4 | 4 s4 s2 |
+      }
+    >>
+    <bes=' g'>2 <des f>4 <bes des> |
+    <f=' bes>2 <bes des>4( <f f'>) | <aes c>2.( <f aes>4) |
+    <<
+      \new Voice = voiceOne \relative {
+        \voiceOne
+        <c'=' f>2( c'4. des8 | c4) b \rest e,4. g8 |
+        <c,=' e c'>4 b' \rest g4. aes='8 |
+      }
+      \new Voice = voiceTwo \relative {
+        \voiceTwo
+        s2 <f'=' aes>2 | <e g>4 s4 c2 | s2 <bes= e> |
+      }
+    >>
+    \alternative {
+      \volta 1 {
+        <aes,= c f>4 8 8 4 4 | 4 r %
+        \acciaccatura { des'=''8 } <aes c>4.( des=''8) |
+      }
+      \volta 2 { <aes,= c f>4 8 8 4 4 | 4 r r2 | }
+    }
+  }
+
+  \repeat volta 2 {
+
+  }
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\clef bass
+\key f \minor
+\relative {
+}
+{% endmacro %}

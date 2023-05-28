@@ -78,7 +78,7 @@
   {{ lhFrag2() }}
   {{ lhFrag1("f,+fM!4") }}
   f,+bes,@M!4 f,+f7!8 f,+f7 | bes,,+besM!4 r |
-  bes,,+c@M!4 bes,,+c@M!8[ bes,,+cM8] |
+  bes,,+c@M!4 bes,,+c@M8[ bes,,+cM8] |
   a,,+f@M!4 r4 | g,,+gm!8 r c,+c7!4 |
   f,+fM!8 f,+bes,@M! f,+fM!8 r8 |
 }
