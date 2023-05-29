@@ -157,27 +157,27 @@ pieces:
       org: ukr, sty: stu, gnr: stu, frm: [arp, wrs], bss: stb, lvl: elb }
   - { id: p7aw, tit: Етюд D major,
       com: А. Лешгорн, src: SB4NU1978,
-      org: deu, sty: stu, gnr: stu, frm: wrs, bss: stb, lvl: elm }
+      org: deu, sty: stu, gnr: stu, frm: [scl, arp, wrs], bss: stb, lvl: elb }
   - { id: 8sl6, tit: Етюд G major,
       com: Т. Лак, src: SB4NU1978,
-      org: fra, sty: stu, gnr: stu, frm: wrs, bss: stb, lvl: elm }
+      org: fra, sty: stu, gnr: stu, frm: [scl, arp, wrs], bss: stb, lvl: elb }
   # SB5NU1980
   - { id: ua3l, tit: Етюд A minor,
       com: Т. Лак, src: SB5NU1980,
-      org: fra, sty: stu, gnr: stu, frm: wrs, bss: stb, lvl: elm }
+      org: fra, sty: stu, gnr: stu, frm: [arp, wrs], bss: stb, lvl: elb }
   - { id: m8an, tit: Етюд F major,
       com: М. Магиденко, src: SB5NU1980,
-      org: rus, sty: stu, gnr: stu, frm: wrs, bss: stb, lvl: elm }
+      org: rus, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elb }
 
   # Chords
   # SB2NU1977
   - { id: yai7, tit: Етюд G minor,
       com: К. Мясков, src: SB2NU1977,
-      org: ukr, sty: stu, gnr: stu, frm: crd, bss: pub, lvl: int }
+      org: ukr, sty: stu, gnr: stu, frm: crd, bss: pub, lvl: elc }
   # SB4NU1978
   - { id: k402, tit: Етюд E minor,
       com: В. Иванов, src: SB4NU1978,
-      org: rus, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: int }
+      org: rus, sty: stu, gnr: stu, frm: [crd, wrs], bss: stb, lvl: elc }
   - { id: l52j, tit: Етюд F major,
       com: А. Холминов, src: SB4NU1978,
       org: rus, sty: stu, gnr: stu, frm: crd, bss: pub, lvl: int }

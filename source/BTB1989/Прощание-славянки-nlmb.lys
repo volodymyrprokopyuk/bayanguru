@@ -15,7 +15,7 @@
         \voiceOne
         <aes'=' c>2 aes4. g8 | <aes,= c f>2 e'4 f |
         g='2.( e4 | c) b' \rest c4.( des8) | c2 b4 c |
-        g'=''2( aes4 g) | f1~ f4 r <des f>4. <c='' e>8 |
+        g'=''2( aes4 g) | f1~ f4 b, \rest \stemDown <des f>4. <c='' e>8 |
       }
       \new Voice = voiceTwo \relative {
         \voiceTwo
@@ -47,7 +47,58 @@
   }
 
   \repeat volta 2 {
+    r4 <aes'=' c f>8 8 4 4 | 4 4 4 4 |
+    \repeat unfold 2 {
+      r4 <bes=' c e>8 8 4 4 | 4 4 4 4 |
+    }
+    \repeat unfold 2 {
+      r4 <aes=' c f>8 8 4 4 | 4 4 4 4 |
+    }
+    r4 <bes=' des f>8 8 4 4 | 4 4 4 4 |
+    r4 <bes=' c e>4 r <bes c e> | r <bes c e>4 4 4 |
+    \alternative {
+      \volta 1 { r4 <aes=' c f>8 8 4 4 | 4 r r2 | }
+      \volta 2 {
+        <aes=' c f>4 r <g bes c e>2 |
+        <aes=' c f>4 8 8 4 r \bar "||"
+      }
+    }
+  }
 
+  \acciaccatura { ees='16 f g } aes='2->\ff ees-> |
+  c='2-> aes-> | <bes= des ees>4 f'8 ees d ees f g |
+  <c,=' ees aes>4 r <e=' g bes c>2->\mf |
+  \repeat volta 2 {
+    <c'='' f aes>2\pp <aes c f> | <f aes c> <c f aes> |
+    <bes= c e g>1~ | 4 r c'=''2 |
+    <bes=' c g'>2 {{ v2("e''=''4.( c8) |", "<bes'=' c>2 |") }}
+    <bes=' c g'>2 {{ v2("aes''=''4.( g8) |", "<bes'=' c>2 |") }}
+    <aes=' c f>1~ | 4 c( \acciaccatura { ees=''8 } des4 c) |
+    <des,=' f bes>2( <bes' des g>) | r4 bes4( c bes) |
+    <c,=' f aes>2( <aes' c f>) | r4 aes4( %
+    \acciaccatura { c=''8 } bes4 aes) |
+    <c,=' g'>2 <e bes' des> | <c e c'> <bes c e> |
+    <<
+      \new Voice = voiceOne \relative {
+        \voiceOne
+        f'='1( | f'4)\< ees des \after 4\! c='' |
+      }
+      \new Voice = voiceTwo \relative {
+        \voiceTwo
+        r4 f=4( aes c | f) f f f=' |
+      }
+    >>
+    <des=' f bes>2(\f <bes' des g>) |
+    r4 bes='4( \acciaccatura { des=''8 } c4 bes) |
+    <c,=' f aes>2( <aes' c f>) | r4 aes4( bes aes) |
+    <bes,= e g>2 <e bes' des> | <c e c'> <bes c e> |
+    \alternative {
+      \volta 1 { <aes= c f>4 8 8 4 4 | 4 r c'=''2-> | }
+      \volta 2 {
+        <aes,= c f>4 r <g' bes c e>2-> |
+        <aes=' c f>4 8 8 4 r \bar "|."
+      }
+    }
   }
 }
 {% endmacro %}
@@ -56,5 +107,7 @@
 \clef bass
 \key f \minor
 \relative {
+  \grace { s16 s s } f=2 des | c bes |
+  c,+f,@m!4 r4 c,+c7!2 | f,,+fm!4 r r2 |
 }
 {% endmacro %}
