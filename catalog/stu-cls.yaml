@@ -141,10 +141,9 @@ pieces:
   - { id: vupt, tit: Етюд D major,
       com: Г. Вольфарт, src: SB2NU1977,
       org: deu, sty: stu, gnr: stu, frm: [scl, arp, wrs], bss: stb, lvl: elb }
-  # p. 19
-  # - { id: zvjv, tit: Етюд G major,
-  #     com: А. Лешгорн, src: SB2NU1977,
-  #     org: deu, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elb }
+  - { id: zvjv, tit: Етюд G major,
+      com: А. Лешгорн, src: SB2NU1977,
+      org: deu, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elb }
   # SB3NU1979
   - { id: ckjo, tit: Етюд F major,
       com: Г. Беренс, src: SB3NU1979,

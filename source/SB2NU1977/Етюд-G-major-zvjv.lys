@@ -1,0 +1,25 @@
+{% macro rightHand() %}
+\tempo "Allegro vivace"
+\clef treble
+\key g \major
+\time 2/4
+\relative {
+  \repeat volta 2 {
+    d''=''16(\f e fis g) d( e fis g) |
+    d=''16( e fis g a g fis g) |
+    d=''16( fis g a) d,( fis g a) |
+    d,=''16( fis g a b a gis a) |
+    d,=''16(\< e fis g a b c \after 16\! d |
+    e='''16\> d c b a g fis e) |
+    e=''16( d c b) d( d c a) |
+    g='4( \after 8\! g'=''8) r |
+  }
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\clef bass
+\key g \major
+\relative {
+}
+{% endmacro %}
