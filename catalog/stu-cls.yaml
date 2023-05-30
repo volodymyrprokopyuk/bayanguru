@@ -180,7 +180,7 @@ pieces:
       org: rus, sty: stu, gnr: stu, frm: [crd, wrs], bss: stb, lvl: elc }
   - { id: l52j, tit: Етюд F major,
       com: А. Холминов, src: SB4NU1978,
-      org: rus, sty: stu, gnr: stu, frm: crd, bss: pub, lvl: int }
+      org: rus, sty: stu, gnr: stu, frm: crd, bss: pub, lvl: elc }
   - { id: 6u7s, tit: Етюд C minor,
       com: К. Мясков, src: SB4NU1978,
       org: ukr, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: int }
