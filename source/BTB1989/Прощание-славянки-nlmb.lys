@@ -42,7 +42,7 @@
         <aes,= c f>4 8 8 4 4 | 4 r %
         \acciaccatura { des'=''8 } <aes c>4.( des=''8) |
       }
-      \volta 2 { <aes,= c f>4 8 8 4 4 | 4 r r2 | }
+      \volta 2 { <aes,= c f>4 8 8 4 4 | 4 r r2\f | }
     }
   }
 
@@ -127,5 +127,20 @@
 
   aes=,2-> ees'-> | c-> aes-> |
   ees'=4 des c bes | aes r c,+c7!2 |
+  \repeat unfold 2 { f=,4 fm! c' f,@m | }
+  \repeat unfold 2 { g=,4 c@7! c4 c7 | }
+  c=4 c7! g c@7 | e'4 c@7! c4 c7 |
+  f,=,4 fm! c' aes | f,,+fm! r r2 |
+  bes=,4 besm! des bes,@m | bes4 besm! bes besm |
+  \repeat unfold 2 { c=4 f,@m! f,4 fm | }
+  e'=4 c@7! c4 c7 | g4 c@7! c4 c7 |
+  f,=,4 fm! c' f,@m | f,4 f g a |
+  bes=,4( besm!8) besm des4 f, |
+  bes=,4( besm!) des( bes,@m) |
+  c=4( f,@m!8[) fm8] f,4 aes |
+  c=4( f,@m!) f,4( fm) |
+  c'=4 c7! c c7 | g c@7! c4 c7 |
+  f,=,4 fm! c' aes | f,,+fm! r r2 |
+  f,,+fm!4 r c,+c7!2 | f,,+fm!4 r f,,+fm4 r |
 }
 {% endmacro %}
