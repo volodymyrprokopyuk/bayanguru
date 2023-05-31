@@ -11,6 +11,14 @@
   g='4( \after 8\! g'=''8) r |
 {% endmacro %}
 
+{% macro lhFrag1(a) %}
+  {{ a }} r8 gM r | g,@M!2-- |
+  d@7!8 r8 d7 r | d@7!2-- |
+  g,,+gM!4 r | c,+a,@m! r4 |
+  {{ v2("g,@M!4 d7!4 |", "d=2 |") }}
+  g,,+gM!4~ g,,+gM8 r |
+{% endmacro %}
+
 {% macro rightHand() %}
 \tempo "Allegro vivace"
 \clef treble
@@ -39,15 +47,12 @@
 \clef bass
 \key g \major
 \relative {
-  g,@M!8-\stBass r8 gM r | g,@M!2-- |
-  d@7!8 r8 d7 r | d@7!2-- |
-  g,,+gM!4 r | c,+a,@m! r4 |
-  {{ v2("g,@M!4 d7! |", "d=2 |") }}
-  g,,+gM!4~ g,,+gM8 r |
+  {{ lhFrag1("g,@M!8-\\stBass") }}
 
   dis,+b,@M!8 r8 dis,+bM r | e,+em!4 r |
   cis,+a,@M!8 r8 cis,+aM r | d,+dM!4 r |
   fis,,+d@M!4 r4 | g,,+e@m! r4 |
   a,,+d@M!4 a,,+aM!4 | d,+dM!8 r d,+d7!4 |
+  {{ lhFrag1("g,@M!8") }}
 }
 {% endmacro %}

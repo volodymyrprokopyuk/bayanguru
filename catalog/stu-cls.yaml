@@ -197,7 +197,7 @@ pieces:
       org: rus, sty: stu, gnr: stu, frm: crd, bss: pub, lvl: elc }
   - { id: 6u7s, tit: Етюд C minor,
       com: К. Мясков, src: SB4NU1978,
-      org: ukr, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: int }
+      org: ukr, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: elc }
   - { id: cj29, tit: Етюд B major,
       com: М. Їжакевич, src: SB4NU1978,
       org: ukr, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: int }
@@ -207,7 +207,7 @@ pieces:
       org: rus, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: int }
   - { id: 978q, tit: Етюд F major,
       com: М. Черемухин, src: SB5NU1980,
-      org: rus, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: elm }
+      org: rus, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: elb }
   - { id: 6zcy, tit: Етюд Aes major,
       com: О. Денисов, src: SB5NU1980,
       org: ukr, sty: stu, gnr: stu, frm: crd, bss: pub, lvl: int }
