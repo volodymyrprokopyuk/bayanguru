@@ -144,10 +144,9 @@ pieces:
   - { id: zvjv, tit: Етюд G major,
       com: А. Лешгорн, src: SB2NU1977,
       org: deu, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elb }
-  # p. 20
-  # - { id: pheu, tit: Етюд F major,
-  #     com: К. Черні, src: SB2NU1977,
-  #     org: aut, sty: stu, gnr: stu, frm: [arp, wrs], bss: stb, lvl: elb }
+  - { id: pheu, tit: Етюд F major,
+      com: К. Черні, src: SB2NU1977,
+      org: aut, sty: stu, gnr: stu, frm: [arp, wrs], bss: stb, lvl: elb }
   # p. 23
   # - { id: vdul, tit: Етюд G major,
   #     com: К. Мясков, src: SB2NU1977,
@@ -200,7 +199,7 @@ pieces:
       org: ukr, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: elc }
   - { id: cj29, tit: Етюд B major,
       com: М. Їжакевич, src: SB4NU1978,
-      org: ukr, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: int }
+      org: ukr, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: elc }
   # SB5NU1980
   - { id: pnrg, tit: Етюд B minor,
       com: А. Холминов, src: SB5NU1980,

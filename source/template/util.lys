@@ -22,6 +22,7 @@
   artLegato = \markup \italic legato
   artNonLegato = \markup \italic "non legato"
   artStaccato = \markup \italic staccato
+  artDolce = \markup \italic dolce
   dynCresc = \markup \lower #3 \italic "cresc."
   dynDim = \markup \lower #3 \italic "dim."
   tempRit = "rit."
