@@ -147,10 +147,9 @@ pieces:
   - { id: pheu, tit: Етюд F major,
       com: К. Черні, src: SB2NU1977,
       org: aut, sty: stu, gnr: stu, frm: [arp, wrs], bss: stb, lvl: elb }
-  # p. 23
-  # - { id: vdul, tit: Етюд G major,
-  #     com: К. Мясков, src: SB2NU1977,
-  #     org: ukr, sty: stu, gnr: stu, frm: [scl, wrs], bss: stb, lvl: elb }
+  - { id: vdul, tit: Етюд G major,
+      com: К. Мясков, src: SB2NU1977,
+      org: ukr, sty: stu, gnr: stu, frm: [scl, wrs], bss: stb, lvl: elb }
   # SB3NU1979
   - { id: ckjo, tit: Етюд F major,
       com: Г. Беренс, src: SB3NU1979,

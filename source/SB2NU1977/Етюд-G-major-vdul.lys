@@ -1,0 +1,72 @@
+{% from "util.lys" import v2 %}
+
+{% macro rhFrag1(a) %}
+  {{ a }} c cis d e \after 8\! d) |
+  <<
+    \new Voice = voiceOne \relative {
+      \voiceOne
+      b''=''2.-- | b2~-- b8 b | a=''2. |
+    }
+    \new Voice = voiceTwo \relative {
+      \voiceTwo
+      r8 cis''=''8( d dis e d) |
+      r8 c=''8( d dis e b') | r8 ais,( b c cis d='') |
+    }
+  >>
+{% endmacro %}
+
+{% macro rightHand() %}
+\tempo "Andante grazioso"
+\clef treble
+\key g \major
+\time 3/4
+\relative {
+  {{ rhFrag1("b'='8(\\p\\<") }}
+  \after 2.\! g=''2.\> |
+
+  g,='8(\< a ais b c \after 8\! b) |
+  <<
+    \new Voice = voiceOne \relative {
+      \voiceOne
+      g''=''2. | g2~ g8 g | fis2~ fis8 fis='' |
+    }
+    \new Voice = voiceTwo \relative {
+      \voiceTwo
+      r8 fis'='8( b a ais b) |
+      r8 ais='8( b cis dis g) | r8 g,( a ais b f'='') |
+    }
+  >>
+  \after 2.\! e=''2.\> |
+
+  dis,='8(\< e gis a b \after 8\! c) |
+  e=''8[( fis,])-. fis[-. fis]-. fis-. fis-. |
+  cis='8(\< d fis g ais \after 8\! b) |
+  d=''8[( e,])-. e[-. e]-. e-. e-. |
+  dis='(\<_\dynCresc e gis a b \after 8\! c) |
+  gis='8( a b c dis e) | b( c dis e fis g) |
+  b=''8(\mf^\tempRit a fis d c  a=') |
+
+  {{ rhFrag1("b='8(\\p\\<^\\tempATempo") }}
+  <<
+    \new Voice = voiceOne \relative {
+      \voiceOne
+      g''=''2._\dynDim | d | g,=' |
+    }
+    \new Voice = voiceTwo \relative {
+      \voiceTwo
+      r8 fis'='( g a ais b) |
+      r8 dis,='( e f fis b) | r8 fis,=( g a ais b=) |
+    }
+  >>
+  d,='8(\mp ees fis g a bes) | c( d ees fis g a) |
+  {{ v2("b''=''2.~ | b=''\\pp \\bar \"|.\"",
+     "r8 cis''=''8(^\\tempRall d dis e d) | g=''2. |") }}
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\clef bass
+\key g \major
+\relative {
+}
+{% endmacro %}
