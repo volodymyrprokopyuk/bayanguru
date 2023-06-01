@@ -163,6 +163,14 @@ pieces:
   - { id: a7ra, tit: Етюд F major,
       com: A. Гедике, src: SB3NU1979,
       org: rus, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elb }
+  # p. 33
+  # - { id: uco7, tit: Етюд A minor,
+  #     com: В. Саєвський, src: SB3NU1979,
+  #     org: ukr, sty: stu, gnr: stu, frm: [in3, wrs], bss: stb, lvl: elb }
+  # p. 34
+  # - { id: zbvy, tit: Етюд D minor,
+  #     com: К. Мясков, src: SB3NU1979,
+  #     org: ukr, sty: stu, gnr: stu, frm: [scl, wrs], bss: stb, lvl: elb }
   # SB4NU1978
   - { id: 8yil, tit: Етюд F minor,
       com: А. Нечипоренко, src: SB4NU1978,

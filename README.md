@@ -122,6 +122,7 @@ meta:
   rep: репетиції
   orn: мелізми
   art: артикуляція
+  in3: терції
   # Bass (bss) mandatory
   stb: готовий аккорд # standard (Stradella) bass
   pub: чистий бас # pure bass
