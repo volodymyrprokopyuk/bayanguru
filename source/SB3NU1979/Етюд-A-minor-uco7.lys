@@ -1,0 +1,33 @@
+{% from "util.lys" import v2 %}
+
+{% macro rightHand() %}
+\tempo "Andante cantabile"
+\clef treble
+\key a \minor
+\time 4/4
+\relative {
+  \partial 8 { <d''='' f>8(\p | }
+  <c='' e>8 <b d> <a c> <gis b> <a c> <gis b> <a c>) <d f>( |
+  <c='' e>8 <b d> <a c> <gis b> <a c>4.) <d f>8( |
+  <c='' e>8 <b d> <a c> <gis b> <a c> <gis b> <a c>) <c e>( |
+  <e='' g>8\< <d f> <c e> <b d> \after 4.\! <c e>4.) <e g>8(\mp |
+  <e='' g>8\< <c e> <d f> <e g> <f a> <d f> <e g> \after 8\! <f a> |
+  <g='' b>8 <f a> <e g> <d f> <c e>4.) %
+  {{ v2("\\stemDown <e''='' g>8(\\mp | <d='' f>8 <c e> \\stemUp d=''4)",
+     "s8 | s4 b'='8 a='") }}
+  <c='' e>8( <b d> <a c>) <d f> |
+  <c='' e>8(\> <b d> <a c> <gis b> \after 4.\! a4.) a='8( |
+
+  \repeat volta 2 {
+    <gis=' b>8)\mp %
+  }
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\clef bass
+\key a \minor
+\relative {
+  \partial 8 { r8 | }
+}
+{% endmacro %}

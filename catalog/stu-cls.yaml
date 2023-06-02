@@ -163,10 +163,9 @@ pieces:
   - { id: a7ra, tit: Етюд F major,
       com: A. Гедике, src: SB3NU1979,
       org: rus, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elb }
-  # p. 33
-  # - { id: uco7, tit: Етюд A minor,
-  #     com: В. Саєвський, src: SB3NU1979,
-  #     org: ukr, sty: stu, gnr: stu, frm: [in3, wrs], bss: stb, lvl: elb }
+  - { id: uco7, tit: Етюд A minor,
+      com: В. Саєвський, src: SB3NU1979,
+      org: ukr, sty: stu, gnr: stu, frm: [in3, wrs], bss: stb, lvl: elb }
   # p. 34
   # - { id: zbvy, tit: Етюд D minor,
   #     com: К. Мясков, src: SB3NU1979,
@@ -210,13 +209,13 @@ pieces:
   # SB5NU1980
   - { id: pnrg, tit: Етюд B minor,
       com: А. Холминов, src: SB5NU1980,
-      org: rus, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: int }
+      org: rus, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: elc }
   - { id: 978q, tit: Етюд F major,
       com: М. Черемухин, src: SB5NU1980,
       org: rus, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: elb }
   - { id: 6zcy, tit: Етюд Aes major,
       com: О. Денисов, src: SB5NU1980,
-      org: ukr, sty: stu, gnr: stu, frm: crd, bss: pub, lvl: int }
+      org: ukr, sty: stu, gnr: stu, frm: crd, bss: pub, lvl: elc }
 
   # Polyphony
   # Left hand
