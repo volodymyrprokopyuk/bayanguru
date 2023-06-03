@@ -1,0 +1,46 @@
+{% macro rightHand() %}
+\tempo Andante
+\clef treble
+\key d \minor
+\time 4/4
+\relative {
+  <<
+    \new Voice = voiceOne \relative {
+      \voiceOne
+      f''=''1\mp | e | ees | d | bes | a | a | a |
+
+      f'=''1\p | e | fis_\dynCresc | g | gis | a | b | cis\f |
+
+      f='''1\p | e | ees | d | bes | a | f2 e | a,1^\tempRit |
+      a='1_\dynDim | a2 f'=''\pp \fermata \bar "|."
+    }
+    \new Voice = voiceTwo \relative {
+      \voiceTwo
+      \repeat unfold 2 { r8 a'='8-. bes-. a-. c( bes) bes-. a-. | }
+      r8 a='8_\artSimile bes a c( bes) bes a |
+      r8 g='8 a g bes( a) a g | r e f e g( f) f e |
+      \repeat unfold 2 { r8 d='8 e d f( e) e d | }
+      r8\< f='8 f \after 16.\! e g(\> f) f \after 8\! e=' |
+
+      \repeat unfold 2 { r8 a='8 bes a c( bes) bes a | }
+      r8 c=''8 d c ees( d) d c |
+      \repeat unfold 2 { r8 bes='8 c bes d( c) c bes | }
+      \repeat unfold 2 { r8 d=''8 e d f( e) e d | }
+      r8 e=''8 f e g( f) f e='' |
+
+      \repeat unfold 3 { r8 a=''8 bes a c( bes) bes a | }
+      r8 g=''8 a g bes( a) a g | r f f e g( f) f e |
+      r8 e=''8 e d f( e) e d | c( bes) bes e, bes'( a) a cis, |
+      \repeat unfold 2 { e='8( cis) cis d r d( f e) | }
+      e='8( cis) cis d <d=' a'>2 |
+    }
+  >>
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\clef bass
+\key d \minor
+\relative {
+}
+{% endmacro %}

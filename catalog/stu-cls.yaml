@@ -166,10 +166,9 @@ pieces:
   - { id: uco7, tit: Етюд A minor,
       com: В. Саєвський, src: SB3NU1979,
       org: ukr, sty: stu, gnr: stu, frm: [in3, wrs], bss: stb, lvl: elb }
-  # p. 34
-  # - { id: zbvy, tit: Етюд D minor,
-  #     com: К. Мясков, src: SB3NU1979,
-  #     org: ukr, sty: stu, gnr: stu, frm: [scl, wrs], bss: stb, lvl: elb }
+  - { id: zbvy, tit: Етюд D minor,
+      com: К. Мясков, src: SB3NU1979,
+      org: ukr, sty: stu, gnr: stu, frm: [scl, wrs], bss: stb, lvl: elb }
   # SB4NU1978
   - { id: 8yil, tit: Етюд F minor,
       com: А. Нечипоренко, src: SB4NU1978,
@@ -192,30 +191,30 @@ pieces:
   # SB2NU1977
   - { id: yai7, tit: Етюд G minor,
       com: К. Мясков, src: SB2NU1977,
-      org: ukr, sty: stu, gnr: stu, frm: crd, bss: pub, lvl: elc }
+      org: ukr, sty: stu, gnr: stu, frm: cr5, bss: pub, lvl: elc }
   # SB4NU1978
   - { id: k402, tit: Етюд E minor,
       com: В. Иванов, src: SB4NU1978,
-      org: rus, sty: stu, gnr: stu, frm: [crd, wrs], bss: stb, lvl: elc }
+      org: rus, sty: stu, gnr: stu, frm: [cr5, wrs], bss: stb, lvl: elc }
   - { id: l52j, tit: Етюд F major,
       com: А. Холминов, src: SB4NU1978,
-      org: rus, sty: stu, gnr: stu, frm: crd, bss: pub, lvl: elc }
+      org: rus, sty: stu, gnr: stu, frm: cr7, bss: pub, lvl: ina }
   - { id: 6u7s, tit: Етюд C minor,
       com: К. Мясков, src: SB4NU1978,
-      org: ukr, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: elc }
+      org: ukr, sty: stu, gnr: stu, frm: cr5, bss: stb, lvl: elc }
   - { id: cj29, tit: Етюд B major,
       com: М. Їжакевич, src: SB4NU1978,
-      org: ukr, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: elc }
+      org: ukr, sty: stu, gnr: stu, frm: cr5, bss: stb, lvl: ina }
   # SB5NU1980
   - { id: pnrg, tit: Етюд B minor,
       com: А. Холминов, src: SB5NU1980,
-      org: rus, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: elc }
+      org: rus, sty: stu, gnr: stu, frm: cr5, bss: stb, lvl: ina }
   - { id: 978q, tit: Етюд F major,
       com: М. Черемухин, src: SB5NU1980,
-      org: rus, sty: stu, gnr: stu, frm: crd, bss: stb, lvl: elb }
+      org: rus, sty: stu, gnr: stu, frm: cr5, bss: stb, lvl: elc }
   - { id: 6zcy, tit: Етюд Aes major,
       com: О. Денисов, src: SB5NU1980,
-      org: ukr, sty: stu, gnr: stu, frm: crd, bss: pub, lvl: elc }
+      org: ukr, sty: stu, gnr: stu, frm: cr5, bss: pub, lvl: elc }
 
   # Polyphony
   # Left hand
