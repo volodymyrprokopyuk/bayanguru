@@ -1,3 +1,15 @@
+{% macro lhFrag1(a) %}
+  {{ a }} r dm! r a r d@m r8 | cis r a,@7! r8 a=, r a7 r |
+{% endmacro %}
+
+{% macro lhFrag2() %}
+  g=,8 r g7! r d' r g,@7 r8 | a r a7! r cis= r a,@7 r8 |
+{% endmacro %}
+
+{% macro lhFrag3() %}
+  fis=,8 r d@7! r8 d' r d7 r | g, r gm! r d'= r g,@m r8 |
+{% endmacro %}
+
 {% macro rightHand() %}
 \tempo Andante
 \clef treble
@@ -42,5 +54,20 @@
 \clef bass
 \key d \minor
 \relative {
+  {{ lhFrag1("d=8-\\stBass") }}
+  {{ lhFrag3() }}
+  cis=8 r a,@7! r8 a r a7 r | d r dm! r a r d@m r8 |
+  {{ lhFrag2() }}
+
+  {{ lhFrag1("d=8") }}
+  d=8 r d7! r a r d@7 r8 | g r gm! r e' r g,@m r8 |
+  bes=,8 r bes7! r f r bes,@7 r8 | d' r dm! r a r d@m r8 |
+  {{ lhFrag2() }}
+
+  {{ lhFrag1("d=8") }}
+  {{ lhFrag3() }}
+  a=,8 r a7! r cis r a,@7 r8 | d r dm! r a r d@m r8 |
+  g=,8 r gm! r a r a7! r | d r dm! r g,@m!4 r4 |
+  d=8 r dm! r g,@M!4 r4 | d=8 r dm! r d,+dm2 \fermata |
 }
 {% endmacro %}
