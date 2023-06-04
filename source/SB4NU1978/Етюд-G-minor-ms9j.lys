@@ -1,5 +1,16 @@
 {% macro rhFrag1(a) %}
-  {{ a }} <d f>16 <c ees> <d f> | <ees g>4.\)
+  {{ a }} <d f>16 <c ees> <d f> | <ees g>4.\) |
+{% endmacro %}
+
+{% macro rhFrag2(a) %}
+  {{ a }} <a c>16 <g bes> <a c> |
+  <bes=' d>8. <a c>16 <g bes> <a c> |
+  <bes=' d>8. <a c>16 <g bes> <bes d> | <a c>4.\) |
+  <a=' c>8.\( <g bes>16 <fis a> <g bes> |
+  <a=' c>8. <g bes>16 <fis a> <g bes> |
+  <a=' c>8. <c ees>16 <bes d> <a c> | <g bes>4.\) |
+  <g=' bes>8.\( <f a>16 <ees g> <f a> |
+  <g=' bes>8. <f a>16 <ees g> <f=' a> |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -8,24 +19,39 @@
 \key g \minor
 \time 3/8
 \relative {
-  <bes'=' d>8.\(\p <a c>16 <g bes> <a c> |
-  <bes=' d>8. <a c>16 <g bes> <a c> |
-  <bes=' d>8. <a c>16 <g bes> <bes d> | <a c>4.\) |
-  <a=' c>8.\( <g bes>16 <fis a> <g bes> |
-  <a=' c>8. <g bes>16 <fis a> <g bes> |
-  <a=' c>8. <c ees>16 <bes d> <a c> | <g bes>4.\) |
-  <g=' bes>8.\( <f a>16 <ees g> <f a> |
-  <g=' bes>8. <f a>16 <ees g> <f a> |
+  {{ rhFrag2("<bes'=' d>8.\\(\\p") }}
   <g=' bes>8. <g ees'>16 <bes g'> <ees bes'> | <bes f>4.\) |
-  <f'='' aes>8._\dynCresc\( <ees g>16 <d f> <ees g> |
+  <f'='' aes>8.\(_\dynCresc <ees g>16 <d f> <ees g> |
   <f='' aes>8. <ees g>16 <d f> <ees g> |
   <f='' aes>8. <ees g>16 <d f> <f aes> | <ees g>4.\) |
   {{ rhFrag1("<ees='' g>8.\\(\\mf") }}
   {{ rhFrag1("<ees,=' g>8.\\(\\p") }}
   <ees=' g>16\( <d f> <c ees> <d f> <ees g> <f a> |
-  <g=' bes>16 <a c> <bes d> <c ees> <d f>^\tempRit <c ees>\)
+  <g=' bes>16 <a c> <bes d> <c ees> <d f>^\tempRit <c ees>\) |
   <bes=' d>8.\( <c ees>16\> <bes d> <a c> |
   \after 4\! <g=' g'>4.\) |
+
+  <<
+    \new Voice = voiceOne \relative {
+      \voiceOne
+      \stemDown
+      <ees''='' g>8.\(\p <d f>16_\dynCresc <c ees> <d f> |
+      <ees='' g>8. <d f>16 <c ees> <ees g> |
+      <d='' f>8. <c ees>16 <bes d> <c ees> |
+      \stemUp <d='' f>4.\) |
+    }
+    \new Voice = voiceOne \relative {
+      \voiceTwo
+      s4. | s4. | s4. | r8. aes'='16( g f=') |
+    }
+  >>
+  <c='' ees>8.\(_\dynDim <bes d>16 <a c> <bes d> |
+  <c='' ees>8. <bes d>16 <a c> <bes d> |
+  <c='' ees>8. <bes d>16 <a c> <g ees'> | <fis=' d'>4\) r8 |
+
+  {{ rhFrag2("<bes=' d>8.\\(\\p") }}
+  <g=' bes>16 <f a> <ees g> <f a> <g bes> <a c> |
+  <bes=' d>16 <c ees> <d f> <ees g> <f a> <g bes>\) |
 }
 {% endmacro %}
 
