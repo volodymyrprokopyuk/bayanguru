@@ -116,13 +116,18 @@ meta:
   scl: гами
   arp: арпеджіо
   wrs: повороти кисті
-  crd: аккорди
+  crd: акорди
+  in3: терції
+  in8: октави
+  cr5: тризвуки
+  cr7: септакорди
   plp: поліфонія
   lhn: ліва рука
   rep: репетиції
   orn: мелізми
   art: артикуляція
-  in3: терції
+  leg: легато
+  sta: стаккато
   # Bass (bss) mandatory
   stb: готовий аккорд # standard (Stradella) bass
   pub: чистий бас # pure bass

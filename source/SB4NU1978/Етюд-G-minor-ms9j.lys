@@ -1,0 +1,37 @@
+{% macro rhFrag1(a) %}
+  {{ a }} <d f>16 <c ees> <d f> | <ees g>4.\)
+{% endmacro %}
+
+{% macro rightHand() %}
+\tempo "Andante cantabile"
+\clef treble
+\key g \minor
+\time 3/8
+\relative {
+  <bes'=' d>8.\(\p <a c>16 <g bes> <a c> |
+  <bes=' d>8. <a c>16 <g bes> <a c> |
+  <bes=' d>8. <a c>16 <g bes> <bes d> | <a c>4.\) |
+  <a=' c>8.\( <g bes>16 <fis a> <g bes> |
+  <a=' c>8. <g bes>16 <fis a> <g bes> |
+  <a=' c>8. <c ees>16 <bes d> <a c> | <g bes>4.\) |
+  <g=' bes>8.\( <f a>16 <ees g> <f a> |
+  <g=' bes>8. <f a>16 <ees g> <f a> |
+  <g=' bes>8. <g ees'>16 <bes g'> <ees bes'> | <bes f>4.\) |
+  <f'='' aes>8._\dynCresc\( <ees g>16 <d f> <ees g> |
+  <f='' aes>8. <ees g>16 <d f> <ees g> |
+  <f='' aes>8. <ees g>16 <d f> <f aes> | <ees g>4.\) |
+  {{ rhFrag1("<ees='' g>8.\\(\\mf") }}
+  {{ rhFrag1("<ees,=' g>8.\\(\\p") }}
+  <ees=' g>16\( <d f> <c ees> <d f> <ees g> <f a> |
+  <g=' bes>16 <a c> <bes d> <c ees> <d f>^\tempRit <c ees>\)
+  <bes=' d>8.\( <c ees>16\> <bes d> <a c> |
+  \after 4\! <g=' g'>4.\) |
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\clef bass
+\key g \minor
+\relative {
+}
+{% endmacro %}
