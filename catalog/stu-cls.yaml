@@ -189,14 +189,17 @@ pieces:
   - { id: m8an, tit: Етюд F major,
       com: М. Магиденко, src: SB5NU1980,
       org: rus, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elb }
-  # p. 84
-  # - { id: 31pw, tit: Етюд C major,
-  #     com: О. Денисов, src: SB5NU1980,
-  #     org: ukr, sty: stu, gnr: stu, frm: [in3, sta], bss: stb, lvl: elb }
+  - { id: 31pw, tit: Етюд C major,
+      com: О. Денисов, src: SB5NU1980,
+      org: ukr, sty: stu, gnr: stu, frm: [in3, sta], bss: stb, lvl: elb }
   # p. 86
   # - { id: "1004", tit: Етюд C major,
   #     com: С. Чапкій, src: SB5NU1980,
   #     org: ukr, sty: stu, gnr: stu, frm: [in6, leg, sta], bss: stb, lvl: elb }
+  # p. 90
+  # - { id: slsw, tit: Етюд Fis major,
+  #     com: П. Куликов, src: SB5NU1980,
+  #     org: rus, sty: stu, gnr: stu, frm: [in3, leg], bss: stb, lvl: elb }
 
   # Chords
   # SB2NU1977

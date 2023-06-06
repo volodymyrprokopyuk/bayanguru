@@ -1,0 +1,34 @@
+{% macro t2(a, b, c, d, e, f) %}
+  \tuplet 3/2 { {{ a }} {{ b }} {{ c }} }
+  \tuplet 3/2 { {{ d }} {{ e }} {{ f }} } | %
+{% endmacro %}
+
+{% macro rhFrag1(a, b) %}
+  {{ t2(a, b, "<e g>", "<a c>8 <g b> <f a>") }}
+  {{ t2("<e='' g>8", "<dis fis>", "<e g>", "<c e>", "<b dis>", "<c e>") }}
+  {{ t2("<d='' f>8", "<cis e>", "<d f>", "<f a>", "<e g>", "<d f>") }}
+  {{ t2("<c='' e>8", "<d f>", "<c e>", "<g d'>", "<c e>", "<d='' f>") }}
+{% endmacro %}
+
+{% macro rightHand() %}
+\tempo "Allegro con fuoco"
+\clef treble
+\key c \major
+\time 2/4
+\relative {
+  {{ rhFrag1("<e''='' g>8\\mp", "<dis fis>_\\artStaccato") }}
+  {{ t2("<e='' g>8", "<dis fis>", "<e g>", "<a c>", "<g b>", "<f a>") }}
+  {{ t2("<e='' g>8", "<dis fis>", "<e g>", "<g bes>", "<f a>", "<e g>") }}
+  {{ t2("<fis='' a>8\\<", "<eis gis>", "<fis a>", "<e c'>", "<d b'>", "\\after 8\\! <c a'>") }}
+  {{ t2("<b=' g'>8\\>", "<g b>", "<a c>", "<b d>", "<c e>", "\\after 8\\! <d='' f>") }}
+
+  {{ rhFrag1("<e='' g>8\\mp", "<dis fis>") }}
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\clef bass
+\key c \major
+\relative {
+}
+{% endmacro %}
