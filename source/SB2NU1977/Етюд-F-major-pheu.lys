@@ -1,5 +1,5 @@
 {% macro rhFrag1(a) %}
-  {{ a }} g bes d e g bes g e c bes g |
+  {{ a }} g bes c e g bes g e c bes g |
   f='16 a c f a f' c='''4.) |
 {% endmacro %}
 
@@ -35,7 +35,7 @@
 \clef bass
 \key f \major
 \relative {
-  f,=,8-\stBass fM! fM \repeat unfold 3 { f=,8 fM fM } | %
+  f,=,8-\stBass fM! fM f fM fM | f fM! fM f fM fM |
   c'=8 c7! c7 c c7 c7 | f, fM! fM c' c7! c7 |
   f,=,8 fM! fM f fM fM | c' cM! cM c cM cM |
   g=,8[ c@M! cM8] g g7! g7 | c= cM! cM cM r r |
