@@ -10,6 +10,13 @@
   {{ t2("<c='' e>8", "<d f>", "<c e>", "<g d'>", "<c e>", "<d='' f>") }}
 {% endmacro %}
 
+{% macro rhFrag2() %}
+  {{ t2("<a=' c>8(", "<gis b>)-.", "<a c>", "<c e>", "<b dis>", "<c e>") }}
+  {{ t2("<a=' c>8(", "<gis b>)-.", "<a c>", "<fis a>(", "<eis gis>)-.", "<fis a>") }}
+  {{ t2("<g=' b>8(", "<fis ais>)-.", "<g b>", "<b d>", "<ais cis>", "<a c>") }}
+  {{ t2("<b=' d>8(", "<ais cis>)-.", "<b d>", "<d f>", "<c e>", "<b=' d>") }}
+{% endmacro %}
+
 {% macro rightHand() %}
 \tempo "Allegro con fuoco"
 \clef treble
@@ -23,6 +30,19 @@
   {{ t2("<b=' g'>8\\>", "<g b>", "<a c>", "<b d>", "<c e>", "\\after 8\\! <d='' f>") }}
 
   {{ rhFrag1("<e='' g>8\\mp", "<dis fis>") }}
+  {{ t2("<e='' g>8_\\dynCresc", "<dis fis>", "<e g>", "<g bes>", "<f a>", "<e g>") }}
+  {{ t2("<d='' f>8", "<cis e>", "<d f>", "<f, d'>", "<e c'>", "<f d'>") }}
+  {{ t2("<g=' e'>8", "<fis dis'>", "<g e'>", "<f d'>", "<e cis'>", "<f d'>") }}
+  \tuplet 3/2 { <e=' c'>8\mf g <g e'> } <e=' c'>4 |
+
+  {{ t2("<b'=' d>8(", "<ais cis>)-.", "<b d>", "<gis b>(", "<fisis ais>)-.", "<gis b>") }}
+  {{ rhFrag2() }}
+  {{ t2("<a=' c>8(", "<gis b>)-.", "<a c>", "<c e>", "<b dis>", "<c e>") }}
+  {{ t2("<cis='' e>8(", "<bis dis>)-.", "<cis e>", "<e g>", "<d fis>", "<cis e>") }}
+  {{ t2("<d='' fis>8(\\>", "<cis eis>)-.", "\\after 8\\! <d fis>", "<c e>\\p", "<b dis>", "<c e>") }}
+  {{ t2("<b=' d>8", "<ais cis>", "<b d>", "<g b>", "<fis a>", "<g b>") }}
+  {{ rhFrag2() }}
+  {{ t2("<c='' e>8_\\dynCresc", "<b dis>", "<c e>", "<e c'>", "<d b'>", "<c a'>") }}
 }
 {% endmacro %}
 

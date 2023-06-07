@@ -86,14 +86,14 @@ shuf -ern 4 {a..z} {0..9} | tr -d '\n'
 
 ``` yaml
 meta:
-  id: [a-z0-9]{4} unique ID
-  org: 3-letter country code of piece or compositor
-  # Style (sty) mandatory group of genres
+  id: [a-z0-9]{4} mandatory unique ID
+  org: mandatory single 3-letter country code of a piece or a compositor
+  # Style (sty) mandatory single group of genres
   msc: різне (default)
   flk: фолькльор
   cls: класика
   jaz: джаз
-  # Genre (gnr) mandatory specification of style
+  # Genre (gnr) mandatory single specification of a style
   pie: п'єса (default)
   rmc: романс
   gyp: циганська
@@ -112,7 +112,7 @@ meta:
   tng: танго
   mrc: марш
   stu: етюд (group)
-  # Form (frm) mandatory (right hand)
+  # Form (frm) mandatory multiple (right hand)
   mel: мелодія (default)
   var: варіації
   scl: гами
@@ -130,16 +130,16 @@ meta:
   art: артикуляція
   leg: легато
   sta: стаккато
-  # Bass (bss) mandatory (left hand)
+  # Bass (bss) mandatory multiple (left hand)
   stb: готовий аккорд # standard (Stradella) bass
   pub: чистий бас # pure bass
   frb: вибірна система # free bass
-  # Level (lvl) mandatory
+  # Level (lvl) mandatory single difficulty
   el[a-c]: простий # elementary
-  in[a-c] середній # intermediate
-  ad[a-c] складний # advanced
-  vi[a-c] віртуозний # virtuoso
-  # Arrangment type (aty) optional
+  in[a-c]: середній # intermediate
+  ad[a-c]: складний # advanced
+  vi[a-c]: віртуозний # virtuoso
+  # Arrangment type (aty) optional single
   arr: Обр. # обробка, arrangment (default)
   ipr: Пер. # переклад, interpratation
   hrm: Гарм. # гармонізація, harmonization
