@@ -63,10 +63,10 @@ pieces:
       com: М. Красев, src: B1AK1985,
       org: rus, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: ela }
   - { id: bgnx, tit: Колыбельная,
-      com: И. Дунаевский, arr: А. Басурманов, aty: ipr, src: B1AK1985,
+      com: И. Дунаевский, arr: А. Басурманов, art: ipr, src: B1AK1985,
       org: rus, sty: msc, gnr: lul, frm: mel, bss: stb, lvl: ela }
   - { id: r9o6, tit: Катюша,
-      arr: М. Чайкін, aty: ipr, com: М. Блантер, src: B1AK1985,
+      arr: М. Чайкін, art: ipr, com: М. Блантер, src: B1AK1985,
       org: rus, sty: msc, gnr: mil, frm: mel, bss: stb, lvl: ela }
   # B2AK1979
   - { id: jquj, tit: Ходила младешенька по борочку, sub: rufs,
@@ -101,7 +101,7 @@ pieces:
       org: rus, sty: flk, gnr: sng, frm: var, bss: stb, lvl: elc }
   # B2AK1987
   - { id: tsio, tit: Колыбельная,
-      com: Т. Хренников, arr: А. Кирюхин, aty: ipr, src: B2AK1987,
+      com: Т. Хренников, arr: А. Кирюхин, art: ipr, src: B2AK1987,
       org: rus, sty: msc, gnr: lul, frm: mel, bss: stb, lvl: ela }
   - { id: tg2x, tit: Ходила младешенька по борочку, sub: rufs,
       src: B2AK1987,

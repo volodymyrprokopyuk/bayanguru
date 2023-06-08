@@ -6,7 +6,7 @@ pieces:
       com: М. Чайкін, src: BTBC1936,
       org: ukr, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: ela }
   - { id: cckj, tit: За городом качки пливуть, sub: uafs,
-      arr: М. Чайкін, aty: ipr, src: BTBC1936,
+      arr: М. Чайкін, art: ipr, src: BTBC1936,
       org: ukr, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
   - { id: a3ew, tit: Ой піду я понад лугом, sub: uafs,
       arr: М. Чайкін, src: BTBC1936,
@@ -25,8 +25,8 @@ pieces:
       src: BTB1978,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: tzb9, tit: Черемшина,
-      com: В. Михайлюк, arr: А. Басурманов, aty: ipr, src: BTB1978,
+      com: В. Михайлюк, arr: А. Басурманов, art: ipr, src: BTB1978,
       org: ukr, sty: msc, gnr: sng, frm: crd, bss: stb, lvl: elb }
   - { id: ndwb, tit: Реве та стогне Дніпр широкий,
-      com: Д. Крижанівський, arr: А. Басурманов, aty: ipr, src: BTB1978,
+      com: Д. Крижанівський, arr: А. Басурманов, art: ipr, src: BTB1978,
       org: ukr, sty: msc, gnr: sng, frm: crd, bss: pub, lvl: elb }

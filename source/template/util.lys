@@ -92,7 +92,7 @@
       composer = "{{ piece.com }}"
     {% endif %}
     {% if piece.arr %}
-      arranger = "{{ piece.aty }} {{ piece.arr }}"
+      arranger = "{{ piece.art }} {{ piece.arr }}"
     {% endif %}
   }
 {% endmacro %}

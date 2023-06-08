@@ -146,7 +146,7 @@ pieces:
       com: К. Мясков, src: B1AK1979,
       org: ukr, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: ela }
   - { id: d7eu, tit: Бандура, sub: uafs,
-      arr: И. Гладков, aty: ipr, src: B1AK1979,
+      arr: И. Гладков, art: ipr, src: B1AK1979,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: d0hr, tit: А вже ясне сонечко, sub: uafs,
       com: П. Козицький, src: B1AK1979,

@@ -40,11 +40,11 @@
 \header {
   pdftitle = "{{ piece.tit }}"
   {% if piece.com and piece.arr %}
-    pdfauthor = "{{ piece.com }} {{ piece.aty }} {{ piece.arr }}"
+    pdfauthor = "{{ piece.com }} {{ piece.art }} {{ piece.arr }}"
   {% elif piece.com %}
     pdfauthor = "{{ piece.com }}"
   {% elif piece.arr %}
-    pdfauthor = "{{ piece.aty }} {{ piece.arr }}"
+    pdfauthor = "{{ piece.art }} {{ piece.arr }}"
   {% endif %}
   {% if piece.sub %}
     pdfsubject = "{{ piece.sub }}"

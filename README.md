@@ -86,61 +86,70 @@ shuf -ern 4 {a..z} {0..9} | tr -d '\n'
 
 ``` yaml
 meta:
-  id: [a-z0-9]{4} mandatory unique ID
-  org: mandatory single 3-letter country code of a piece or a compositor
-  # Style (sty) mandatory single group of genres
-  msc: різне (default)
-  flk: фолькльор
-  cls: класика
-  jaz: джаз
-  # Genre (gnr) mandatory single specification of a style
-  pie: п'єса (default)
-  rmc: романс
-  gyp: циганська
-  sng: пісня (group)
-  chd: дитяча пісня/п'єса
-  lul: колискова
-  ves: веснянка
-  mil: військова
-  pry: припевки, частушки
-  dnc: танець (group)
-  vls: вальс
-  plk: полька
-  mzr: мазурка
-  koz: козачок
-  gop: гопак
-  tng: танго
-  mrc: марш
-  stu: етюд (group)
-  # Form (frm) mandatory multiple (right hand)
-  mel: мелодія (default)
-  var: варіації
-  scl: гами
-  arp: арпеджіо
-  wrs: повороти кисті
-  crd: акорди
-  in3: терції
-  in8: октави
-  cr5: тризвуки
-  cr7: септакорди
-  plp: поліфонія
-  lhn: ліва рука
-  rep: репетиції
-  orn: мелізми
-  art: артикуляція
-  leg: легато
-  sta: стаккато
-  # Bass (bss) mandatory multiple (left hand)
-  stb: готовий аккорд # standard (Stradella) bass
-  pub: чистий бас # pure bass
-  frb: вибірна система # free bass
-  # Level (lvl) mandatory single difficulty
-  el[a-c]: простий # elementary
-  in[a-c]: середній # intermediate
-  ad[a-c]: складний # advanced
-  vi[a-c]: віртуозний # virtuoso
-  # Arrangment type (aty) optional single
-  arr: Обр. # обробка, arrangment (default)
-  ipr: Пер. # переклад, interpratation
-  hrm: Гарм. # гармонізація, harmonization
+  # ** Piece identification
+  id: [mandatory, single] piece ID [a-z0-9]{4}
+  org: [mandatory, single] piece or composer country [a-z]{3}
+  com: [optional, single] piece composer
+  arr: [optional, single] piece arranger
+  art: [optional, single] arrangment type
+    arr: Обр. = обробка = arrangment (default)
+    ipr: Пер. = переклад = interpretation
+    hrm: Гарм. = гармонізація = harmonization
+  # ** Piece classification
+  sty: [mandatory, single] style = group of genres
+    msc: різне (default)
+    flk: фолькльор
+    cls: класика
+    jaz: джаз
+  gnr: [mandatory, single] gengre = specification of a style
+    pie: п'єса (default)
+    sng: пісня (group)
+      chd: дитяча пісня, п'єса
+      lul: колискова
+      ves: веснянка
+      mil: військова
+      pry: припевки, частушки
+      rmc: романс
+    dnc: танець (group)
+      plk: полька
+      mzr: мазурка
+      koz: козачок
+      gop: гопак
+      vls: вальс
+      tng: танго
+      mrc: марш
+      gyp: циганська
+    stu: етюд
+  # ** Piece qualification
+  frm: [mandatory, multiple] right hand
+    mel: мелодія (default)
+    var: варіації
+    plp: поліфонія
+    scl: гами
+    arp: арпеджіо
+    wrs: повороти кисті
+    int: інтервали
+      in3: терції
+      in4: кварти
+      in5: квінти
+      in6: сексти
+      in8: октави
+    crd: акорди
+      cr5: тризвуки
+      cr7: септакорди
+    lhn: ліва рука
+    rep: репетиції
+    orn: мелізми
+    art: артикуляція
+      leg: легато
+      sta: стаккато
+  bss: [mandatory, multiple] left hand
+    stb: готовий аккорд = standard (Stradella) bass
+    pub: чистий бас = pure bass
+    frb: вибірна система = free bass
+  lvl: [mandatory, single] piece difficulty
+    el[a-c]: простий a, b, c = elementary
+    in[a-c]: середній a, b, c = intermediate
+    ad[a-c]: складний a, b, c = advanced
+    vi[a-c]: віртуозний a, b, c = virtuoso
 ```

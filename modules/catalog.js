@@ -22,7 +22,7 @@ const meta = {
   byfd: "Білоруський народний танець",
   plfs: "Польська народна пісня",
   plfd: "Польський народний танець",
-  // Piece arrangment type (aty)
+  // Piece arrangment type (art)
   arr: "Обр.", // обробка, arrangment (default)
   ipr: "Пер.", // переклад, interpratation
   hrm: "Гарм." // гармонізація, harmonization
@@ -36,7 +36,7 @@ function addScoreFile(score) {
 function addPieceMeta(piece) {
   if (piece.sub in meta) { piece.sub = meta[piece.sub] }
   if (piece.arr) {
-    piece.aty = piece.aty ? meta[piece.aty] : meta.arr
+    piece.art = piece.art ? meta[piece.art] : meta.arr
   }
 }
 
@@ -184,11 +184,11 @@ export async function playPieces(pieces, args) {
     }
   }
   for (const i of playIndex()) {
-    const { id, tit, file, com, arr, aty, lvl } = pieces[i]
+    const { id, tit, file, com, arr, art, lvl } = pieces[i]
     if (args.dry) {
       const summary = [chalk.green(id), chalk.yellow(tit)]
       if (com) { summary.push(chalk.cyan(com)) }
-      if (arr) { summary.push(chalk.magenta(aty), chalk.magenta(arr)) }
+      if (arr) { summary.push(chalk.magenta(art), chalk.magenta(arr)) }
       summary.push(lvl)
       console.log(summary.join(" "))
       continue

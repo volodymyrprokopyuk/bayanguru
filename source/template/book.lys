@@ -54,7 +54,7 @@
       \italic "{{ piece.com }}"
     {% endif %}
     {% if piece.arr %}
-      \italic "{{ piece.aty }} {{ piece.arr }}"
+      \italic "{{ piece.art }} {{ piece.arr }}"
     {% endif %}
     \caps id: {{ piece.id }}
   }

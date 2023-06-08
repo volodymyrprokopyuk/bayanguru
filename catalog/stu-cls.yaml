@@ -231,7 +231,18 @@ pieces:
       org: ukr, sty: stu, gnr: stu, frm: cr5, bss: pub, lvl: elc }
 
   # Polyphony
+
   # Left hand
+  # SB1NU1979
+  # p. 36
+  # - { id: 7smk, tit: Етюд G major,
+  #     com: К. Гурлітт, src: SB1NU1979,
+  #     org: deu, sty: stu, gnr: stu, frm: [cr5, lhn], bss: [pub, scl], lvl: ela }
+  # p. 36
+  # - { id: zvmc, tit: Етюд E minor,
+  #     com: О. Гедике, src: SB1NU1979,
+  #     org: rus, sty: stu, gnr: stu, frm: [scl, lhn], bss: [stb, pub, scl], lvl: ela }
+
   # Pepetition
   # Ornamentation
   # Articulation

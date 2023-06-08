@@ -33,5 +33,5 @@ pieces: []
   #     org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   # p. 18
   # - { id: ej2i, tit: Вот мчится тройка почтовая, sub: rufs,
-  #     arr: Л. Захарова, aty: ipr, src: TYBC2B1971,
+  #     arr: Л. Захарова, art: ipr, src: TYBC2B1971,
   #     org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
