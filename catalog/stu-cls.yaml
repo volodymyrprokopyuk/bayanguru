@@ -242,6 +242,15 @@ pieces:
   # - { id: zvmc, tit: Етюд E minor,
   #     com: О. Гедике, src: SB1NU1979,
   #     org: rus, sty: stu, gnr: stu, frm: [scl, lhn], bss: [stb, pub, scl], lvl: ela }
+  # SB4NU1978
+  # p. 32
+  # - { id: l4sv, tit: Етюд A major,
+  #     com: М. Чайкін, src: SB4NU1978,
+  #     org: ukr, sty: stu, gnr: stu, frm: [scl, lhn], bss: [stb, jmp, leg], lvl: elb }
+  # p. 34
+  # - { id: 8sz0, tit: Етюд D major,
+  #     com: К. Черні, src: SB4NU1978,
+  #     org: aut, sty: stu, gnr: stu, frm: [scl, lhn], bss: [pub, scl, leg], lvl: elb }
 
   # Pepetition
   # Ornamentation

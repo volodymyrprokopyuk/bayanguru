@@ -43,6 +43,24 @@
   {{ t2("<b=' d>8", "<ais cis>", "<b d>", "<g b>", "<fis a>", "<g b>") }}
   {{ rhFrag2() }}
   {{ t2("<c='' e>8_\\dynCresc", "<b dis>", "<c e>", "<e c'>", "<d b'>", "<c a'>") }}
+  {{ t2("<b=' d>8", "<ais cis>", "<b d>", "<d b'>", "<c a'>", "<b g'>") }}
+  {{ t2("<a=' fis'>8", "<g e'>", "<fis d'>", "<e c'>", "<d b'>", "<c a'>") }}
+  {{ t2("<b= g'>8(\\sf", "fis')-.\\p", "g", "<g b>", "<fis ais>", "<g b>") }}
+  {{ t2("<a=' c>8_\\dynCresc", "<gis b>", "<a c>", "<bes des>", "<a c>", "<bes des>") }}
+  {{ t2("<b=' d>8", "<ais cis>", "<b d>", "<c ees>", "<b d>", "<c ees>") }}
+  {{ t2("<cis='' e>8", "<c ees>", "<cis e>", "<d f>", "<cis e>", "<d='' f>") }}
+
+  {{ rhFrag1("<e='' g>8\\f", "<dis fis>") }}
+  {{ t2("<e='' g>8", "<dis fis>", "<e g>", "<g bes>", "<f a>", "<e g>") }}
+  {{ t2("<f='' a>8", "<e gis>", "<f a>", "<a f'>", "<g e'>", "<f d'>") }}
+  {{ t2("<e='' g>8", "<dis fis>", "<e g>", "<g e'>", "<f d'>", "<e c'>") }}
+  {{ t2("<d='' b'>8", "<c a'>", "<b g'>", "<a f'>", "<g e'>", "<f d'>") }}
+  {{ t2("<e=' c'>8", "<g e'>", "<f d'>", "<e c'>_\\dynDim", "<d b'>", "<c a'>") }}
+  {{ t2("<b= g'>8", "<c a'>", "<b g'>", "<a f'>", "<g e'>", "<f d'>") }}
+  \clef bass
+  {{ t2("<e= c'>8", "<g e'>", "<f d'>", "<e c'>", "<d b'>", "<c a'>") }}
+  <b=, g'>4 \clef treble <b'= f' g>( |
+  <c=' e c'>4)\p <c g' e'> <g= e' c'> r \bar "|."
 }
 {% endmacro %}
 
