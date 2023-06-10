@@ -125,6 +125,9 @@ meta:
     mel: мелодія (default) = melody
     var: варіації = variation
     pph: поліфонія = polyphony
+    prh: поліритмія = polyrithm
+      tu3: тріолі = triplet
+    syn: синкопа = syncopation
     scl: гами = scale
     arp: арпеджіо = arpegio
     wrs: повороти кисті = wrist movements
@@ -138,9 +141,6 @@ meta:
     crd: акорди = chords
       cr5: тризвуки = triads
       cr7: септакорди = seventh chords
-    prh: поліритмія = polyrithm
-      tu3: тріолі = triplet
-    syn: синкопа = syncopation
     rep: репетиції = repetition
     orn: мелізми = ornamentation
     art: артикуляція = articulation

@@ -3,6 +3,16 @@
   \tuplet 3/2 { {{ d }} {{ e }} {{ f }} } | %
 {% endmacro %}
 
+{% macro t3(a, b, c, d) %}
+  \tuplet 3/2 { {{ a }}[ r8 {{ b }}] } %
+  \tuplet 3/2 { {{ c }}[ r8 {{ d }}] } | %
+{% endmacro %}
+
+{% macro t4(a, b) %}
+  \tuplet 3/2 { {{ a }} r8 r } %
+  \tuplet 3/2 { {{ b }} r8 r } | %
+{% endmacro %}
+
 {% macro rhFrag1(a, b) %}
   {{ t2(a, b, "<e g>", "<a c>8 <g b> <f a>") }}
   {{ t2("<e='' g>8", "<dis fis>", "<e g>", "<c e>", "<b dis>", "<c e>") }}
@@ -15,6 +25,13 @@
   {{ t2("<a=' c>8(", "<gis b>)-.", "<a c>", "<fis a>(", "<eis gis>)-.", "<fis a>") }}
   {{ t2("<g=' b>8(", "<fis ais>)-.", "<g b>", "<b d>", "<ais cis>", "<a c>") }}
   {{ t2("<b=' d>8(", "<ais cis>)-.", "<b d>", "<d f>", "<c e>", "<b=' d>") }}
+{% endmacro %}
+
+{% macro lhFrag1(a) %}
+  {{ t3(a, "cM!", "f", "fM!") }}
+  {{ t3("c=8", "cM!", "g", "c@M") }}
+  {{ t3("d'=8", "dm!", "g,", "g7!") }}
+  {{ t3("c=8", "cM!", "g=,", "g7!") }}
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -40,6 +57,7 @@
   {{ t2("<a=' c>8(", "<gis b>)-.", "<a c>", "<c e>", "<b dis>", "<c e>") }}
   {{ t2("<cis='' e>8(", "<bis dis>)-.", "<cis e>", "<e g>", "<d fis>", "<cis e>") }}
   {{ t2("<d='' fis>8(\\>", "<cis eis>)-.", "\\after 8\\! <d fis>", "<c e>\\p", "<b dis>", "<c e>") }}
+
   {{ t2("<b=' d>8(", "<ais cis>)-.", "<b d>", "<g b>(", "<fis ais>)-.", "<g b>") }}
   {{ rhFrag2() }}
   {{ t2("<c='' e>8_\\dynCresc", "<b dis>", "<c e>", "<e c'>", "<d b'>", "<c a'>") }}
@@ -68,5 +86,28 @@
 \clef bass
 \key c \major
 \relative {
+  \override TupletBracket.bracket-visibility = ##f
+  \override TupletNumber.stencil = ##f
+  {{ lhFrag1("c=8-\\stBass") }}
+  {{ t3("c=8", "cM!", "f", "fM!") }}
+  {{ t3("c=8", "cM!", "a", "a7!") }}
+  {{ t3("d=8", "d7!", "d", "d7") }}
+  \tuplet 3/2 { g,,+gM!8 r r } %
+  \tuplet 3/2 { f=8 e d= } | %
+
+  {{ lhFrag1("c=8") }}
+  {{ t3("c=8", "cM!", "a", "a7!") }}
+  {{ t3("d=8", "dm!", "f", "d@m") }}
+  {{ t3("g,=,8", "c@M!", "g8", "g7!") }}
+  \tuplet 3/2 { c=8[ r g] } c=4 |
+
+  {{ t4("g,,+gM!8", "e,,+eM!") }}
+  {{ t4("a,,+am!8", "c,+a,@m!") }}
+  {{ t4("d,+a,@m!8", "d,+d7!8") }}
+  {{ t4("g,,+gM!8", "d,+d7!") }}
+  {{ t4("g,,+gM!8", "e,,+eM!") }}
+  {{ t4("a,,+am!8", "g,,+a,@m!") }}
+  {{ t4("fis,,+fis7!8", "fis,,+fis7") }}
+  {{ t4("b,,+bm!8", "d,+d7!") }}
 }
 {% endmacro %}
