@@ -80,10 +80,10 @@ pieces:
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: 923n, tit: Лирическая протяжная,
       com: Н. Речменский, src: B2AK1979,
-      org: rus, sty: msc, gnr: pie, frm: plp, bss: stb, lvl: elc }
+      org: rus, sty: msc, gnr: pie, frm: pph, bss: stb, lvl: elc }
   - { id: zk1t, tit: Щебетала пташечка,
       com: Н. Руднев, src: B2AK1979,
-      org: rus, sty: flk, gnr: sng, frm: plp, bss: pub, lvl: elb }
+      org: rus, sty: flk, gnr: sng, frm: pph, bss: pub, lvl: elb }
   - { id: nvek, tit: Романс Антониды, sub: 'из оперы \"Иван Сусанин\"',
       com: М. Глинка, src: B2AK1979,
       org: rus, sty: msc, gnr: rmc, frm: mel, bss: stb, lvl: elb }

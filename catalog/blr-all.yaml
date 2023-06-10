@@ -14,7 +14,7 @@ pieces:
   # BTBC1936
   - { id: 8ec9, tit: Перепілонька, sub: byfs,
       arr: М. Чайкін, src: BTBC1936,
-      org: blr, sty: flk, gnr: sng, frm: plp, bss: stb, lvl: elb }
+      org: blr, sty: flk, gnr: sng, frm: pph, bss: stb, lvl: elb }
   # BTB1989
   - { id: 2q9x, tit: Крижaчок, sub: byfd,
       arr: А. Стоянов, src: BTB1989,

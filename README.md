@@ -87,8 +87,8 @@ shuf -ern 4 {a..z} {0..9} | tr -d '\n'
 ``` yaml
 meta:
   # ** Piece identification
-  id: [mandatory, single] piece ID [a-z0-9]{4}
-  org: [mandatory, single] piece or composer country [a-z]{3}
+  id: [mandatory, single] [a-z0-9]{4} piece ID
+  org: [mandatory, single] [a-z]{3} piece or composer country
   com: [optional, single] piece composer
   arr: [optional, single] piece arranger
   art: [optional, single] arrangment type
@@ -97,58 +97,59 @@ meta:
     hrm: Гарм. = гармонізація = harmonization
   # ** Piece classification
   sty: [mandatory, single] style = group of genres
-    msc: різне (default)
-    flk: фолькльор
-    cls: класика
-    jaz: джаз
+    msc: різне (default) = miscellaneous
+    flk: фолькльор = folk
+    cls: класика = classical
+    jaz: джаз = jazz
   gnr: [mandatory, single] gengre = specification of a style
-    pie: п'єса (default)
-    sng: пісня (group)
-      chd: дитяча пісня, п'єса
-      lul: колискова
+    pie: п'єса (default) = piece
+    sng: пісня (group) = song
+      chd: дитяча пісня, п'єса = child
+      lul: колискова = lullaby
       ves: веснянка
-      mil: військова
       pry: припевки, частушки
-      rmc: романс
-    dnc: танець (group)
-      plk: полька
-      mzr: мазурка
+      rmc: романс = romance
+      mil: військова = military
+    dnc: танець (group) = dance
+      plk: полька = polka
+      mzr: мазурка = mazurka
       koz: козачок
       gop: гопак
-      vls: вальс
-      tng: танго
-      mrc: марш
-      gyp: циганська
-    stu: етюд
+      vls: вальс = valse
+      tng: танго = tango
+      mrc: марш = march
+      gyp: циганська = gypsy
+    stu: етюд = study
   # ** Piece qualification
   frm: [mandatory, multiple] right hand
-    mel: мелодія (default)
-    var: варіації
-    plp: поліфонія
-    scl: гами
-    arp: арпеджіо
-    wrs: повороти кисті
-    jmp: скачки
-    int: інтервали
-      in3: терції
-      in4: кварти
-      in5: квінти
-      in6: сексти
-      in8: октави
-    crd: акорди
-      cr5: тризвуки
-      cr7: септакорди
-    syn: синкопа
-    lhn: ліва рука
-    rep: репетиції
-    orn: мелізми
-    art: артикуляція
-      leg: легато
-      sta: стаккато
+    mel: мелодія (default) = melody
+    var: варіації = variation
+    pph: поліфонія = polyphony
+    scl: гами = scale
+    arp: арпеджіо = arpegio
+    wrs: повороти кисті = wrist movements
+    jmp: скачки = jumps
+    int: інтервали = inverval
+      in3: терції = thirds
+      in4: кварти = forths
+      in5: квінти = fifths
+      in6: сексти = sixths
+      in8: октави = eights
+    crd: акорди = chords
+      cr5: тризвуки = triads
+      cr7: септакорди = seventh chords
+    prh: поліритмія = polyrithm
+      tu3: тріолі = triplet
+    syn: синкопа = syncopation
+    rep: репетиції = repetition
+    orn: мелізми = ornamentation
+    art: артикуляція = articulation
+      leg: легато = legato
+      sta: стаккато = staccato
   bss: [mandatory, multiple] left hand
     stb: готовий аккорд = standard (Stradella) bass
     pub: чистий бас = pure bass
-    frb: вибірна система = free bass
+    frb: виборна система = free bass
   lvl: [mandatory, single] piece difficulty
     el[a-c]: простий a, b, c = elementary
     in[a-c]: середній a, b, c = intermediate

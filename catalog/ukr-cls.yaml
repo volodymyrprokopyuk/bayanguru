@@ -236,7 +236,7 @@ pieces:
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: 4u91, tit: Ой під горою, sub: uafs,
       src: B2AK1979,
-      org: ukr, sty: flk, gnr: sng, frm: plp, bss: pub, lvl: elb }
+      org: ukr, sty: flk, gnr: sng, frm: pph, bss: pub, lvl: elb }
   - { id: ggyp, tit: Танець сніжинок,
       com: К. Мясков, src: B2AK1979,
       org: ukr, sty: msc, gnr: pie, frm: crd, bss: stb, lvl: elc }
@@ -279,7 +279,7 @@ pieces:
       org: ukr, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elb }
   - { id: zykv, tit: Зайчик, sub: uafs,
       src: B2AK1987,
-      org: ukr, sty: flk, gnr: chd, frm: [var, plp], bss: stb, lvl: elc }
+      org: ukr, sty: flk, gnr: chd, frm: [var, pph], bss: stb, lvl: elc }
   - { id: 26qx, tit: Казка,
       com: І. Беркович, src: B2AK1987,
       org: ukr, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: elb }
@@ -291,7 +291,7 @@ pieces:
       org: ukr, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elb }
   - { id: nev4, tit: Вербовая дощечка, sub: uafs,
       src: B2AK1987,
-      org: ukr, sty: flk, gnr: sng, frm: [var, crd, plp], bss: [stb, pub], lvl: elc }
+      org: ukr, sty: flk, gnr: sng, frm: [var, crd, pph], bss: [stb, pub], lvl: elc }
   - { id: foaz, tit: Зимонька,
       com: К. Мясков, src: B2AK1987,
       org: ukr, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: elb }

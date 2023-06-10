@@ -137,7 +137,7 @@ pieces:
       org: aut, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: ela }
   - { id: "5071", tit: Етюд C major,
       com: А. Гедике, src: SB2NU1977,
-      org: rus, sty: stu, gnr: stu, frm: [arp, plp], bss: pub, lvl: ela }
+      org: rus, sty: stu, gnr: stu, frm: [arp, pph], bss: pub, lvl: ela }
   - { id: vupt, tit: Етюд D major,
       com: Г. Вольфарт, src: SB2NU1977,
       org: deu, sty: stu, gnr: stu, frm: [scl, arp, wrs], bss: stb, lvl: elb }
@@ -156,10 +156,10 @@ pieces:
       org: swe, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elb }
   - { id: ov1p, tit: Етюд E minor,
       com: К. Черні, src: SB3NU1979,
-      org: aut, sty: stu, gnr: stu, frm: [scp, arp, lhn], bss: [stb, pub], lvl: elb }
+      org: aut, sty: stu, gnr: stu, frm: [scp, arp], bss: [stb, pub], lvl: elb }
   - { id: 9zx1, tit: Етюд C major,
       com: А. Лемуан, src: SB3NU1979,
-      org: fra, sty: stu, gnr: stu, frm: [arp, wrs, lhn], bss: [stb, pub], lvl: elb }
+      org: fra, sty: stu, gnr: stu, frm: [arp, wrs], bss: [stb, pub], lvl: elb }
   - { id: a7ra, tit: Етюд F major,
       com: A. Гедике, src: SB3NU1979,
       org: rus, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elb }
@@ -231,26 +231,35 @@ pieces:
       org: ukr, sty: stu, gnr: stu, frm: cr5, bss: pub, lvl: elc }
 
   # Polyphony
+  # SB3NU1979
+  # p. 59
+  # - { id: jq25, tit: Етюд E minor,
+  #     com: А. Зубарев, src: SB3NU1979,
+  #     org: rus, sty: stu, gnr: stu, frm: [scl, leg], bss: stb, lvl: elb }
+  # p. 61
+  # - { id: 2zg8, tit: Етюд C minor,
+  #     com: Г. Тишкевич, src: SB3NU1979,
+  #     org: blr, sty: stu, gnr: stu, frm: [pph, tu3], bss: stb, lvl: elb }
 
   # Left hand
   # SB1NU1979
   # p. 36
   # - { id: 7smk, tit: Етюд G major,
   #     com: К. Гурлітт, src: SB1NU1979,
-  #     org: deu, sty: stu, gnr: stu, frm: [cr5, lhn], bss: [pub, scl], lvl: ela }
+  #     org: deu, sty: stu, gnr: stu, frm: [cr5], bss: [pub, scl], lvl: ela }
   # p. 36
   # - { id: zvmc, tit: Етюд E minor,
   #     com: О. Гедике, src: SB1NU1979,
-  #     org: rus, sty: stu, gnr: stu, frm: [scl, lhn], bss: [stb, pub, scl], lvl: ela }
+  #     org: rus, sty: stu, gnr: stu, frm: [scl], bss: [stb, pub, scl], lvl: ela }
   # SB4NU1978
   # p. 32
   # - { id: l4sv, tit: Етюд A major,
   #     com: М. Чайкін, src: SB4NU1978,
-  #     org: ukr, sty: stu, gnr: stu, frm: [scl, lhn], bss: [stb, jmp, leg], lvl: elb }
+  #     org: ukr, sty: stu, gnr: stu, frm: [scl], bss: [stb, jmp, leg], lvl: elb }
   # p. 34
   # - { id: 8sz0, tit: Етюд D major,
   #     com: К. Черні, src: SB4NU1978,
-  #     org: aut, sty: stu, gnr: stu, frm: [scl, lhn], bss: [pub, scl, leg], lvl: elb }
+  #     org: aut, sty: stu, gnr: stu, frm: [scl], bss: [pub, scl, leg], lvl: elb }
 
   # Pepetition
   # Ornamentation
