@@ -1,0 +1,17 @@
+{% macro rightHand() %}
+\tempo "Allegro moderato"
+\clef treble
+\key c \major
+\time 2/4
+\relative {
+  <g''='' e'>16(\p <e c'>16)_\artStaccato 16( <c g'>16) 16( <g e'>) <e c'> <g d'> |
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\clef bass
+\key c \major
+\relative {
+  c=8-\stBass r r4 |
+}
+{% endmacro %}
