@@ -193,6 +193,6 @@ export async function playPieces(pieces, args) {
       console.log(summary.join(" "))
       continue
     }
-    await $`zathura scores/${file}.pdf`
+    await $`xdg-open scores/${file}.pdf`
   }
 }

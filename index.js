@@ -25,7 +25,9 @@ function configure() {
       tit: "", com: "", arr: ""
     }
   }
-  return parseArgs(process.argv.slice(2), argsConfig)
+  const args = parseArgs(process.argv.slice(2), argsConfig)
+  args._ = args._.map(a => String(a))
+  return args
 }
 
 async function dispatch(args) {
