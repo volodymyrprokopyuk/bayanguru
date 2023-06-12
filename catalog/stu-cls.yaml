@@ -249,10 +249,10 @@ pieces:
   # - { id: 2m7b, tit: Етюд Cis minor,
   #     com: С. Титов, src: SB5NU1980,
   #     org: rus, sty: stu, gnr: stu, frm: [pph, arp, wrs, leg], bss: stb, lvl: elc }
-  # p. 106
-  # - { id: c9dk, tit: Етюд C major,
-  #     com: К. Черні, src: SB5NU1980,
-  #     org: aut, sty: stu, gnr: stu, frm: [pph, scl, wrs, leg], bss: stb, lvl: elc }
+  # p. 113
+  # - { id: n7j0, tit: Етюд B minor,
+  #     com: М. Черемухин, src: SB5NU1980,
+  #     org: rus, sty: stu, gnr: stu, frm: [pph, scl, wrs, leg], bss: stb, lvl: elc }
 
   # Left hand
   # SB1NU1979
