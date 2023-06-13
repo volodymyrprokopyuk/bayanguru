@@ -1,10 +1,25 @@
+{% macro rhFrag1(a, b = "") %}
+  {{ a }} <e c'>16) {{ b }} 16( <c g'>16) 16( <g e'>) <e c'> <g d'> |
+{% endmacro %}
+
+{% macro rhFrag2(a) %}
+  {{ a }} <g d'>) <c e> g' <b, g'> <d a'> <g b> <f d'> |
+{% endmacro %}
+
 {% macro rightHand() %}
 \tempo "Allegro moderato"
 \clef treble
 \key c \major
 \time 2/4
 \relative {
-  <g''='' e'>16(\p <e c'>16)_\artStaccato 16( <c g'>16) 16( <g e'>) <e c'> <g d'> |
+  {{ rhFrag1("<g''='' e'>16(\\p", "_\\artStaccato") }}
+  {{ rhFrag1("<g=' e'>16(") }}
+  {{ rhFrag2("<e= c'>16(") }}
+  <e=' c'>16( <g d'> <e c'> <g d'> <e c'> <g d'>) <e' c'> <g d'> |
+  {{ rhFrag1("<g='' e'>16(") }}
+  <g=' e'>16( <e c'>16) 16( <c g'>) <e, c'>( <g d'>) <c e> g' |
+  {{ rhFrag2("<e=' c'>16(") }}
+  <e='' c'>16( <g d'> <e c'> <g d'> <e='' c'>8) r |
 }
 {% endmacro %}
 
