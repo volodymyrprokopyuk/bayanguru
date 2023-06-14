@@ -1,9 +1,17 @@
 {% macro rhFrag1(a, b = "") %}
-  {{ a }} <e c'>16) {{ b }} 16( <c g'>16) 16( <g e'>) <e c'> <g d'> |
+  {{ a }} <e c'>16) 16( {{ b }} <c g'>16) 16( {{ b }} <g e'>) <e c'>-. <g d'>-. |
 {% endmacro %}
 
 {% macro rhFrag2(a) %}
-  {{ a }} <g d'>) <c e> g' <b, g'> <d a'> <g b> <f d'> |
+  {{ a }} <g d'>) <c e>-. g'-. <b, g'>-. <d a'>-. <g b>-. <f d'>-. |
+{% endmacro %}
+
+{% macro rhFrag3(a) %}
+  {{ a }} <g d'> <e c'> <g d'> <e c'> <g d'>) <e' c'>-. <g='' d'>-. |
+{% endmacro %}
+
+{% macro rhFrag4(a, b = "") %}
+  {{ a }} <e c'>16) 16( {{ b }} <c g'>) <e, c'>( {{ b }} <g d'>) <c e>-. g'='-. |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -12,14 +20,24 @@
 \key c \major
 \time 2/4
 \relative {
-  {{ rhFrag1("<g''='' e'>16(\\p", "_\\artStaccato") }}
+  {{ rhFrag1("<g''='' e'>16(\\p") }}
   {{ rhFrag1("<g=' e'>16(") }}
   {{ rhFrag2("<e= c'>16(") }}
-  <e=' c'>16( <g d'> <e c'> <g d'> <e c'> <g d'>) <e' c'> <g d'> |
+  {{ rhFrag3("<e=' c'>16(") }}
   {{ rhFrag1("<g='' e'>16(") }}
-  <g=' e'>16( <e c'>16) 16( <c g'>) <e, c'>( <g d'>) <c e> g' |
+  {{ rhFrag4("<g=' e'>16(") }}
   {{ rhFrag2("<e=' c'>16(") }}
   <e='' c'>16( <g d'> <e c'> <g d'> <e='' c'>8) r |
+
+  {{ rhFrag1("<g='' e'>16(->\\mf", "->") }}
+  {{ rhFrag1("<g=' e'>16(->", "->") }}
+  {{ rhFrag2("<e= c'>16(\\p") }}
+  {{ rhFrag3("<e=' c'>16(_\\dynCresc") }}
+  {{ rhFrag1("<g='' e'>16(->", "->") }}
+  {{ rhFrag4("<g=' e'>16(->", "->") }}
+  {{ rhFrag2("<e=' c'>16(") }}
+  <e='' c'>16(\>^\tempRit <g d'> <e c'> <g d'> \after 16\! <e='' c'>) %
+  <gis='' c>16-.\f <a f'>-. <gis e'>-. |
 }
 {% endmacro %}
 
