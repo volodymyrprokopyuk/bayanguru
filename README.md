@@ -101,6 +101,7 @@ meta:
     flk: фолькльор = folk
     cls: класика = classical
     jaz: джаз = jazz
+    aut: авторська п'єса = author piece
   gnr: [mandatory, single] gengre = specification of a style
     pie: п'єса (default) = piece
     sng: пісня (group) = song
@@ -121,32 +122,41 @@ meta:
       gyp: циганська = gypsy
     stu: етюд = study
   # ** Piece qualification
-  frm: [mandatory, multiple] right hand
+  ton: [mandatory, multiple] тональність = tonality
+    [a-g][ie]j: дієз/бемоль мажор = sharp/flat major
+    [a-g][ie]i: дієз/бемоль мінор = sharp/flat minor
+  frm: [mandatory, multiple] права рука = right hand
     mel: мелодія (default) = melody
     var: варіації = variation
-    pph: поліфонія = polyphony
     prh: поліритмія = polyrithm
       tu3: тріолі = triplet
-    syn: синкопа = syncopation
-    scl: гами = scale
+      tu5: квінтолі = quintuplet
+      dot: пунктирний ритм = dotted rhythm
+      syn: синкопа = syncopation
+    orn: мелізми = ornamentation
+      rep: репетиції = repetition
+      acc: форшлаги = acciaccatura
+      mor: морденти = mordents
+      tri: трелі = trills
+    pph: поліфонія = polyphony
+      vo2: двоголосся
+      vo3: триголосся
+    scl: гами = scales
     arp: арпеджіо = arpegio
-    wrs: повороти кисті = wrist movements
-    jmp: скачки = jumps
-    int: інтервали = inverval
+    int: інтервали = invervals
       in3: терції = thirds
       in4: кварти = forths
       in5: квінти = fifths
       in6: сексти = sixths
-      in8: октави = eights
+      in8: октави = eighths
     crd: акорди = chords
       cr5: тризвуки = triads
       cr7: септакорди = seventh chords
-    rep: репетиції = repetition
-    orn: мелізми = ornamentation
-    art: артикуляція = articulation
-      leg: легато = legato
-      sta: стаккато = staccato
-  bss: [mandatory, multiple] left hand
+    wrs: повороти кисті = wrist movements
+      fi1: перший палець = first finger
+      fi5: п'ятий палець = fifth finger
+      jmp: скачки = jumps
+  bss: [mandatory, multiple] ліва рука = left hand
     stb: готовий аккорд = standard (Stradella) bass
     pub: чистий бас = pure bass
     frb: виборна система = free bass

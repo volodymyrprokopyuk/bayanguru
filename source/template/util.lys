@@ -75,6 +75,7 @@
   \markup \line {
     \caps id: {{ piece.id }}, \caps org: {{ piece.org }},
     \caps sty: {{ piece.sty }}, \caps gnr: {{ piece.gnr }},
+    \caps ton: {{ piece.ton | join(" ") }},
     \caps frm: {{ piece.frm | join(" ") }},
     \caps bss: {{ piece.bss | join(" ") }},
     \caps lvl: {{ piece.lvl }}
