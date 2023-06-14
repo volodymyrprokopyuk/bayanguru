@@ -123,8 +123,8 @@ meta:
     stu: етюд = study
   # ** Piece qualification
   ton: [mandatory, multiple] тональність = tonality
-    [a-g][ie]j: дієз/бемоль мажор = sharp/flat major
-    [a-g][ie]i: дієз/бемоль мінор = sharp/flat minor
+    [a-g](is|es)j: дієз/бемоль мажор = sharp/flat major
+    [a-g](is|es)i: дієз/бемоль мінор = sharp/flat minor
   frm: [mandatory, multiple] права рука = right hand
     mel: мелодія (default) = melody
     var: варіації = variation
