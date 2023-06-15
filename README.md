@@ -142,7 +142,7 @@ meta:
       vo2: двоголосся
       vo3: триголосся
     scl: гами = scales
-    arp: арпеджіо = arpegio
+    arp: арпеджіо = arpeggio
     int: інтервали = invervals
       in3: терції = thirds
       in4: кварти = forths
