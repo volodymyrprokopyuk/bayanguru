@@ -8,7 +8,7 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegretto
+\tempo "Con moto"
 \clef treble
 \key a \minor
 \time 2/4

@@ -4,13 +4,13 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegretto
+\tempo "Con moto"
 \clef treble
 \key a \minor
 \time 2/4
 \relative {
   \repeat volta 2 {
-    a'='8(\mf c e4) | e4 e | d8( e f4) | e8( d c4) |
+    a'='8(\mf c e4) | e4 e | d8( e f4) | e8( d c=''4) |
   }
   {{ rhFrag1("e=''8-.") }}
   {{ rhFrag1("e'=''8-.") }} \bar "|."
