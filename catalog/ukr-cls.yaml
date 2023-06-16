@@ -31,16 +31,16 @@ pieces:
       org: ukr, sty: flk, gnr: chd, ton: ai, frm: mel, bss: stb, lvl: ela }
   - { id: kakw, tit: Дощик, sub: uafs,
       src: B0D1973,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: sng, ton: ei, frm: [mel, rep], bss: stb, lvl: ela }
   - { id: 6msd, tit: У сусіда хата біла, sub: uafs,
       src: B0D1973,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: sng, ton: ei, frm: mel, bss: stb, lvl: ela }
   - { id: iso2, tit: Дударик, sub: uafs,
       src: B0D1973,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: sng, ton: [gj, ei], frm: mel, bss: stb, lvl: ela }
   - { id: xi84, tit: Їхав козак за Дунай, sub: uafs,
       src: B0D1973,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: sng, ton: [ai, cj], frm: [mel, rep], bss: stb, lvl: ela }
   - { id: dysh, tit: "Ой не ходи, Грицю", sub: uafs,
       src: B0D1973,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }

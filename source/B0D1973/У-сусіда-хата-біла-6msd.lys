@@ -1,5 +1,10 @@
 {% from "util.lys" import momentBeat %}
 
+{% macro rhFrag1() %}
+  b='8-. b-. a( fis)-. g-. g-. a( fis)-. |
+  g='8-. g-. fis-. dis='-. %
+{% endmacro %}
+
 {% macro rightHand() %}
 \tempo Moderato
 \clef treble
@@ -8,10 +13,8 @@
 \relative {
   {{ momentBeat("1/4", "1,1,1,1") }}
   b'='8(\mf e b b c a b b) | b( g' fis e c a b4) |
-  b='8-. b-. a( fis)-. g-. g-. a( fis)-. |
-  g='8-. g-. fis-. dis-. e( fis g a) |
-  b='8-. b-. a( fis)-. g-. g-. a( fis)-. |
-  g='8-. g-. fis-. dis-. e-. e-. e='4 \bar "|."
+  {{ rhFrag1() }} e( fis g a) |
+  {{ rhFrag1() }} e-. e-. e='4 \bar "|."
 }
 {% endmacro %}
 

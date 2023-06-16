@@ -5,13 +5,17 @@
   b='8( a g fis | e4) e=' |
 {% endmacro %}
 
-{% macro lhFrag1(a, b) %}
+{% macro lhFrag1(a) %}
+  {{ a }} gM! gM gM | g=, gM gM gM |
+{% endmacro %}
+
+{% macro lhFrag2(a, b) %}
   {{ a }} em! e em | a, am! a am |
   b=,8 bM! b bM | {{ b }} | %
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegretto
+\tempo Vivace
 \clef treble
 \key g \major
 \time 2/4
@@ -29,10 +33,10 @@
 \key g \major
 \relative {
   {{ momentBeat("1/2", "#'(1)") }}
-  g,=,8-\stBass gM! gM gM | g gM gM gM |
-  g=,8 gM! gM gM | g gM gM gM |
+  {{ lhFrag1("g,=,8-\\stBass") }}
+  {{ lhFrag1("g=,8") }}
   {{ momentBeat("1/4", "1,1,1,1") }}
-  {{ lhFrag1("e'=8", "e em! e= em") }}
-  {{ lhFrag1("e=8", "e=4 em!") }}
+  {{ lhFrag2("e'=8", "e em! e= em") }}
+  {{ lhFrag2("e=8", "e=4 em!") }}
 }
 {% endmacro %}

@@ -17,7 +17,7 @@
   rootUrl = "https://volodymyrprokopyuk.github.io/bayan"
   stBass = \markup \larger \box Г % Готовий бас
   puBass = \markup \larger \box Б % Чистий бас
-  frBass = \markup \larger \box В % Вибiрна система
+  frBass = \markup \larger \box В % Виборна система
   artSimile = \markup \italic simile
   artLegato = \markup \italic legato
   artNonLegato = \markup \italic "non legato"
