@@ -21,6 +21,15 @@
   <b= gis'>16-.-> <gis e'>-. <e' c'>-. <d=' b'>-. |
 {% endmacro %}
 
+{% macro rhFrag6() %}
+  <c=' a'>16( <e b'> <c a'> <e b'> <c a'> <e b'>) <e c'>-. <a e'>-. |
+  <c='' a'>16( <e b'>) <e c'>( <a e'>) <a e'>( d) <a f'>-. e'='''-. |
+{% endmacro %}
+
+{% macro rhFrag7() %}
+  <c=' a'>16( <e b'>) <e c'>( <a e'>) <c a'>16( <e b'>) <e c'>-. <a='' e'>-. |
+{% endmacro %}
+
 {% macro rightHand() %}
 \tempo "Allegro moderato"
 \clef treble
@@ -43,17 +52,45 @@
   {{ rhFrag1("<g='' e'>16(->", "->") }}
   {{ rhFrag4("<g=' e'>16(->", "->") }}
   {{ rhFrag2("<e=' c'>16(") }}
-  <e='' c'>16(\>^\tempRit <g d'> <e c'> <g d'> \after 16\! <e='' c'>) %
+  <e='' c'>16(\>^\tempRit <g d'> <e c'> <g d'> \after 16\! <e c'>) %
   <gis='' c>16[-.\f <a f'>-. <gis='' e'>]-. |
 
   {{ rhFrag5("<f='' d'>16(->^\\tempATempo") }}
-  <c=' a'>16( <e b'> <c a'> <e b'> <c a'> <e b'>) <e c'>-. <a e'>-. |
-  <c='' a'>16( <e b'>) <e c'>( <a e'>) <a e'>( d) <a f'>-. e'-. |
+  {{ rhFrag6() }}
   {{ rhFrag5("<f,='' d'>16(->") }}
-  <c=' a'>16( <e b'>) <e c'>( <a e'>) <c a'>16( <e b'>) <e c'>-. <a e'>-. |
+  {{ rhFrag7() }}
   <a='' c e a>16 \arpeggio <c e a>16 \arpeggio %
   <c=''' e a>16 \arpeggio 16 \arpeggio 16 \arpeggio %
   <gis='' e'>16[-.\p <a f'>-. <gis='' e'>]-. |
+
+  {{ rhFrag5("<f='' d'>16(->") }}
+  {{ rhFrag6() }}
+  {{ rhFrag5("<f,='' d'>16(->") }}
+  {{ rhFrag7() }}
+  \ottava #1
+  <a='' c e a>16 \arpeggio <c e a>16 \arpeggio %
+  <c=''' e a>16 \arpeggio 16 \arpeggio %
+  <d=''' f b>16^\tempRit \arpeggio <d f g>16 \arpeggio %
+  <d=''' f g>16 \arpeggio 16 \arpeggio |
+
+  {{ rhFrag1("<g=''' e'>16(^\\tempATempo") }}
+  \ottava #0
+  {{ rhFrag1("<g='' e'>16(") }}
+  {{ rhFrag2("<e=' c'>16(") }}
+  <e='' c'>16( <g d'> <e c'> <g d'> <e c'> <g d'>) <e c'>-. <g d'>-. |
+  {{ rhFrag1("<g='' e'>16(") }}
+  {{ rhFrag1("<g=' e'>16(_\\dynCresc") }}
+  {{ rhFrag2("<e= c'>16(") }}
+  <e=' c'>16( <g d'>) <e' c'>-. <g d'>-. <e='' c'>8 r |
+
+  {{ rhFrag1("<g='' e'>16(->\\ff", "->") }}
+  {{ rhFrag1("<g=' e'>16(->", "->") }}
+  {{ rhFrag2("<e= c'>16(") }}
+  {{ rhFrag3("<e=' c'>16(") }}
+  {{ rhFrag1("<g='' e'>16(->", "->") }}
+  {{ rhFrag4("<g=' e'>16(->", "->") }}
+  {{ rhFrag2("<e=' c'>16(") }}
+  <e='' c'>16(-> <g e'>) <f b>(-> <g d'>) <e='' c'>4->\sf \bar "|."
 }
 {% endmacro %}
 
