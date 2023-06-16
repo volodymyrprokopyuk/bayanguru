@@ -13,22 +13,22 @@ pieces:
       org: ukr, sty: flk, gnr: chd, ton: cj, frm: mel, bss: stb, lvl: ela }
   - { id: jnuj, tit: За городом качки пливуть, sub: uafs,
       src: B0D1973,
-      org: ukr, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: chd, ton: cj, frm: [mel, rep], bss: stb, lvl: ela }
   - { id: j6sq, tit: Грибок, sub: 'із збірника \"Гусельки\"',
       src: B0D1973,
-      org: ukr, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: chd, ton: cj, frm: mel, bss: stb, lvl: ela }
   - { id: fywu, tit: "Здрастуй, новий рік",
       com: М. Дремлюга, src: B0D1973,
-      org: ukr, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: aut, gnr: chd, ton: cj, frm: [mel, jmp], bss: stb, lvl: ela }
   - { id: 1sxc, tit: Казав мені батько, sub: uafs,
       src: B0D1973,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: sng, ton: cj, frm: mel, bss: stb, lvl: ela }
   - { id: hv2p, tit: Ой минула вже зима, sub: uafs,
       src: B0D1973,
-      org: ukr, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: chd, ton: cj, frm: mel, bss: stb, lvl: ela }
   - { id: siv0, tit: А вже красне сонечко, sub: uafs,
-      src: B0D1973,
-      org: ukr, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
+      com: П. Козицький, src: B0D1973,
+      org: ukr, sty: flk, gnr: chd, ton: ai, frm: mel, bss: stb, lvl: ela }
   - { id: kakw, tit: Дощик, sub: uafs,
       src: B0D1973,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
