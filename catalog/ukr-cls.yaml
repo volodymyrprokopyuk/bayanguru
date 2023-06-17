@@ -298,3 +298,16 @@ pieces:
   - { id: f45r, tit: Прелюд,
       com: К. Мясков, src: B2AK1987,
       org: ukr, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elb }
+  # FBB3BZ1982
+  # p. 8
+  # - { id: ltfu, tit: Поліфонічна п'єса,
+  #     com: Ю. Щуровський, src: FBB3BZ1982,
+  #     org: ukr, sty: aut, gnr: pie, ton: di, frm: vo2, bss: frb, lvl: ela }
+  # p. 11
+  # - { id: z16r, tit: Ой на горі та й женці жнуть, sub: uafs,
+  #     arr: И. Шестириков, src: FBB3BZ1982,
+  #     org: ukr, sty: flk, gnr: sng, ton: di, frm: vo2, bss: frb, lvl: ela }
+  # p. 12
+  # - { id: jclp, tit: "Віє вітер, віє буйний", sub: uafs,
+  #     arr: И. Шестириков, src: FBB3BZ1982,
+  #     org: ukr, sty: flk, gnr: sng, ton: di, frm: vo2, bss: frb, lvl: ela }
