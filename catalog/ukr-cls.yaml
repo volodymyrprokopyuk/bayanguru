@@ -40,13 +40,13 @@ pieces:
       org: ukr, sty: flk, gnr: sng, ton: [gj, ei], frm: mel, bss: stb, lvl: ela }
   - { id: xi84, tit: Їхав козак за Дунай, sub: uafs,
       src: B0D1973,
-      org: ukr, sty: flk, gnr: sng, ton: [ai, cj], frm: [mel, rep], bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: sng, ton: ai, frm: [mel, rep], bss: stb, lvl: ela }
   - { id: dysh, tit: "Ой не ходи, Грицю", sub: uafs,
       src: B0D1973,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: sng, ton: ai, frm: mel, bss: stb, lvl: ela }
   - { id: f9yf, tit: "По дорозі жук, жук", sub: uafs,
       src: B0D1973,
-      org: ukr, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: chd, ton: fj, frm: [mel, rep], bss: stb, lvl: ela }
   - { id: 41tf, tit: Ой під горою, sub: uafs,
       src: B0D1973,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }

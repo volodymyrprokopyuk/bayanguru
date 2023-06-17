@@ -12,7 +12,7 @@
   \repeat volta 2 {
     c'='8-.\mf c-. d-. e-. | f4 f |
     c='8-. c-. d-. e-. | f4 a |
-    {{ rhFrag1() }} | f-. a-. c=''4 |
+    {{ rhFrag1() }} | f-. a-. c4 |
     {{ rhFrag1() }} | f4 f=' |
   }
 }
