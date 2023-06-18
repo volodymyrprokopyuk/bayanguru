@@ -49,16 +49,16 @@ pieces:
       org: ukr, sty: flk, gnr: chd, ton: fj, frm: [mel, rep], bss: stb, lvl: ela }
   - { id: 41tf, tit: Ой під горою, sub: uafs,
       src: B0D1973,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: sng, ton: fj, frm: mel, bss: stb, lvl: ela }
   - { id: g0q2, tit: Женчичок-бренчичок, sub: uafs,
       src: B0D1973,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: sng, ton: fj, frm: mel, bss: stb, lvl: ela }
   - { id: l76t, tit: "Ой дівчино, шумить гай", sub: uafs,
       src: B0D1973,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: sng, ton: fj, frm: mel, bss: stb, lvl: ela }
   - { id: v610, tit: Осінь, sub: Дитяча пісенька,
       src: B0D1973,
-      org: ukr, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: chd, ton: di, frm: mel, bss: stb, lvl: ela }
   - { id: 62k0, tit: Зайчик скаче в полі, sub: Дитяча пісенька,
       src: B0D1973,
       org: ukr, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }

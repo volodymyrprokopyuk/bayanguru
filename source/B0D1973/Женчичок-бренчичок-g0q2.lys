@@ -5,7 +5,7 @@
 
 {% macro lhFrag1(a) %}
   {{ a }} fM! fm | f fM fM |
-  f=4 bes,@M! besM4 | f fM! fM |
+  f=4 bes,@M! besM4 | f= fM! fM |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -29,8 +29,8 @@
 \relative {
   {{ lhFrag1("f=4-\\stBass") }}
   {{ lhFrag1("f=4") }}
-  \repeat unfold 2 { c=4 c7! c7 | f fM! fm }
-  d=4 bes,@M! besM4 | g,=, bes,@M! besM4 |
+  \repeat unfold 2 { c=4 c7! c7 | f= fM! fm }
+  d=4 bes,@M! besM4 | g, bes,@M! besM4 |
   c=4 c7! c7 | f= fM! r |
 }
 {% endmacro %}
