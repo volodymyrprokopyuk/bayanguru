@@ -1,0 +1,40 @@
+{% from "util.lys" import hSpace, shapedSlur %}
+
+{% macro rightHand() %}
+\tempo "Moderato tranquillo"
+\clef treble
+\key fis \major
+\time 2/4
+\relative {
+  \partial 8 { <fis'=' ais>16\(\mf <gis b> | }
+  \repeat volta 2 {
+    <ais=' cis>16 <b dis> <ais cis>8~ 16 <b dis> <ais cis> <gis b> |
+    <fis=' ais>16 <eis gis> <fis ais> <gis b> <fis ais>8\) <eis gis>16\( <dis fis> |
+    <eis=' gis>16 <dis fis> <eis gis>8~ 16 <fis ais> <eis gis> <dis fis> |
+    <eis=' gis>16 <dis fis> <cis eis> <dis fis> <cis eis>8\) <b dis>16\(\> <ais cis> |
+    <b= dis>4~ 16 <cis eis> <dis fis> \after 16\! <cis eis> |
+    <b= dis>16 <cis eis> <b dis> <ais cis> <b dis>8 <ais cis>16 <gis b> |
+    <ais= cis>16\p <b dis> <ais cis>8~ 16 <b dis> <ais cis> <gis b> |
+    \alternative {
+      \volta 1 {
+        <ais= cis>16 <gis b> <fis ais>8~ 8\) <fis' ais>16\mf %
+        {{ shapedSlur("fu", bs = 4, wd = 1.5) }} ( <gis=' b>) |
+      }
+      \volta 2 {
+        {{ hSpace() }}
+        <ais,= cis>16 <gis b> <fis ais>8~ %
+        {{ shapedSlur("bd", bs = 6, sh = 4, wd = 4, ht = 2) }} ( 8) %
+        <gis= b>16\p <ais= cis> |
+      }
+    }
+  }
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\clef bass
+\key fis \major
+\relative {
+  \partial 8 { r8 | }
+}
+{% endmacro %}
