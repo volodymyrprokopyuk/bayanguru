@@ -10,6 +10,11 @@ pieces:
   - { id: v99z, tit: Янка, sub: byfd,
       arr: М. Чайкін, src: B1AK1985,
       org: blr, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: ela }
+  # FBB3BZ1982
+  # p. 26
+  # - { id: wnc5, tit: Прилетіли гуси, sub: byfs,
+  #     arr: А. Зубарев, src: FBB3BZ1982,
+  #     org: blr, sty: flk, gnr: sng, ton: ai, frm: vo2, bss: frb, lvl: ela }
   # Tutorial
   # BTBC1936
   - { id: 8ec9, tit: Перепілонька, sub: byfs,

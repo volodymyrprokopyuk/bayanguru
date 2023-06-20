@@ -61,10 +61,10 @@ pieces:
       org: ukr, sty: flk, gnr: chd, ton: di, frm: mel, bss: stb, lvl: ela }
   - { id: 62k0, tit: Зайчик скаче в полі, sub: Дитяча пісенька,
       src: B0D1973,
-      org: ukr, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: chd, ton: fj, frm: mel, bss: stb, lvl: ela }
   - { id: qr71, tit: Ти до мене не ходи, sub: uafs,
       src: B0D1973,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: sng, ton: ai, frm: mel, bss: stb, lvl: ela }
   - { id: hdux, tit: Метелиця, sub: uafd,
       src: B0D1973,
       org: ukr, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: ela }

@@ -2,7 +2,7 @@
 
 {% macro rhFrag1(a, b) %}
   {{ a }} b c b d c b a | b8)-. b-. b4 |
-  e=''8-. e-. e16( d c b |
+  e=''8-. e-. e16( d c b=' |
 {% endmacro %}
 
 {% macro lhFrag1(a) %}
@@ -15,8 +15,8 @@
 \key a \minor
 \time 2/4
 \relative {
-  {{ rhFrag1("a'='16(\\mf") }} | a4) a=' |
-  {{ rhFrag1("a='16(") }} | a4) b=' |
+  {{ rhFrag1("a'='16(\\mf") }} | a4) a |
+  {{ rhFrag1("a='16(") }} | a4) b |
   \repeat volta 2 {
     c=''8-. c-. g4 | c8-. c-. g4 | c8 c( b a | gis4 e) |
     {{ rhFrag1("a='16(") }}

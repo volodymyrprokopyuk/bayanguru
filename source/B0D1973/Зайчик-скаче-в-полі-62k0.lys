@@ -3,8 +3,13 @@
   c,=''8-. f-. e-. g-. | f=''2 |
 {% endmacro %}
 
+{% macro lhFrag1(a) %}
+  e=8 c@M! c8 cM | f, fM! g gm! |
+  c=8 f@M! c8 {{ a }} | %
+{% endmacro %}
+
 {% macro rightHand() %}
-\tempo Allegretto
+\tempo "Con moto"
 \clef treble
 \key f \major
 \time 2/4
@@ -24,12 +29,10 @@
 \relative {
   f=8[-\stBass fM! fM fM] | f@M![ fM8 fM fM] |
   f=8[ fM! fM fM] | f@M![ fM8 fM fM] |
-  e=8 c@M! c8 cM | f, fM! g gm! |
-  c=8 f@M! c8 cM! | f[ fM! fM fM] |
+  {{ lhFrag1("cM!") }} | f[ fM! fM fM] |
   \repeat unfold 2 {
     bes,@M![ besM8 besM besM] | f@M![ fM8 fM fM] |
   }
-  e=8 c@M! c8 cM | f, fM! g gm! |
-  c=8 f@M! c8 c7! | f,=,4 fM! |
+  {{ lhFrag1("c7!") }} | f,=,4 fM! |
 }
 {% endmacro %}
