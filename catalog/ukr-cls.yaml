@@ -67,16 +67,16 @@ pieces:
       org: ukr, sty: flk, gnr: sng, ton: ai, frm: mel, bss: stb, lvl: ela }
   - { id: hdux, tit: Метелиця, sub: uafd,
       src: B0D1973,
-      org: ukr, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: dnc, ton: ai, frm: mel, bss: [stb, pub], lvl: ela }
   - { id: jmy7, tit: Полька,
       com: А. Тихончук, src: B0D1973,
-      org: ukr, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: plk, ton: cj, frm: mel, bss: stb, lvl: ela }
   - { id: n482, tit: Танець урожаю,
       com: Т. Шутенко, src: B0D1973,
-      org: ukr, sty: msc, gnr: dnc, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: aut, gnr: dnc, ton: [cj, ai], frm: mel, bss: stb, lvl: ela }
   - { id: rrag, tit: Курочка,
       com: М. Любарський, src: B0D1973,
-      org: ukr, sty: msc, gnr: chd, frm: mel, bss: [stb, pub], lvl: ela }
+      org: ukr, sty: aut, gnr: chd, ton: ai, frm: [mel, jmp], bss: [stb, pub], lvl: ela }
   # B0DU1982
   - { id: zo21, tit: Ой лопнув обруч, sub: uafs,
       src: B0DU1982,
@@ -315,3 +315,15 @@ pieces:
   # - { id: ekrs, tit: Аркан,
   #     arr: Л. Колодуб, src: FBB3BZ1982,
   #     org: ukr, sty: flk, gnr: dnc, ton: ei, frm: vo2, bss: frb, lvl: ela }
+  # p. 27
+  # - { id: nr36, tit: Колискова,
+  #     com: В. Власов, src: FBB3BZ1982,
+  #     org: ukr, sty: aut, gnr: lul, ton: ai, frm: vo2, bss: frb, lvl: ela }
+  # p. 29
+  # - { id: yeld, tit: Сумна пісенька,
+  #     com: К. Мясков, src: FBB3BZ1982,
+  #     org: ukr, sty: aut, gnr: chd, ton: gi, frm: vo2, bss: frb, lvl: ela }
+  # p. 36
+  # - { id: onbv, tit: Пісня,
+  #     com: І. Яшкевич, src: FBB3BZ1982,
+  #     org: ukr, sty: flk, gnr: sng, ton: gi, frm: [vo2, cr5], bss: frb, lvl: ela }

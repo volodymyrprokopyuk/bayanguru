@@ -25,7 +25,7 @@
 \time 2/4
 \relative {
   \repeat volta 2 { {{ rhFrag1("g'='4\\mf") }} }
-  {{ rhFrag2("e,='8(\\p") }} | c( d e=''4) |
+  {{ rhFrag2("e,='8(\\p") }} | c( d e4) |
   {{ rhFrag2("e=''8(") }} | a4( a,='8) r |
   \repeat volta 2 { {{ rhFrag1("g='4\\mf") }} }
 }
