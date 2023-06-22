@@ -95,13 +95,13 @@ pieces:
       org: ukr, sty: flk, gnr: dnc, ton: ai, frm: [mel, rep], bss: stb, lvl: ela }
   - { id: m6m8, tit: Козачок,
       com: Л. Ревуцький, src: B0DU1982,
-      org: ukr, sty: flk, gnr: koz, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: koz, ton: ai, frm: mel, bss: stb, lvl: ela }
   - { id: 993t, tit: Перша пісня,
       com: В. Кирейко, src: B0DU1982,
-      org: ukr, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: aut, gnr: pie, ton: cj, frm: mel, bss: stb, lvl: ela }
   - { id: v7hf, tit: Вальс,
       com: К. Мясков, src: B0DU1982,
-      org: ukr, sty: msc, gnr: vls, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: aut, gnr: vls, ton: cj, frm: mel, bss: stb, lvl: ela }
   # B1AK1979
   - { id: 8mwk, tit: Лисичка,
       com: М. Лисенко, src: B1AK1979,

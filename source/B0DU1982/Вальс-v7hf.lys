@@ -7,19 +7,19 @@
 {% endmacro %}
 
 {% macro lhFrag1(a) %}
-  {{ a }} cM! cM | g c@M cM4 | d'= g,@7! g74 |
+  {{ a }} cM! cM | g c@M! cM4 | d'= g,@7! g74 |
 {% endmacro %}
 
 {% macro lhFrag2() %}
-  g,=,4 g7! g7 | b g,@7 g74 | g g7! g7 | c= cM! cM |
+  g,=,4 g7! g7 | b g,@7! g74 | g g7! g7 | c= cM! cM |
 {% endmacro %}
 
 {% macro lhFrag3(a) %}
-  {{ a }} e@7! e74 | e' e7 e7 | a,=, am! am |
+  {{ a }} e@7! e74 | e' e7! e7 | a,=, am! am |
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegretto
+\tempo "Con moto"
 \clef treble
 \key c \major
 \time 3/4

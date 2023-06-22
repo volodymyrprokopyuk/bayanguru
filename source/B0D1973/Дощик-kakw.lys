@@ -15,7 +15,7 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Vivace
+\tempo Allegretto
 \clef treble
 \key g \major
 \time 2/4
