@@ -2,16 +2,16 @@
 ---
 pieces:
   # B0D1973
-  - { id: 1kae, tit: Ой піду я до млина, sub: uafs,
+  - { id: 1kae, tit: Ой піду я до млина, sub: ukrfs,
       src: B0D1973,
       org: ukr, sty: flk, gnr: sng, ton: ai, frm: mel, bss: stb, lvl: ela }
-  - { id: 4ha8, tit: На вулиці скрипка грає, sub: uafs,
+  - { id: 4ha8, tit: На вулиці скрипка грає, sub: ukrfs,
       src: B0D1973,
       org: ukr, sty: flk, gnr: sng, ton: ai, frm: [mel, rep], bss: stb, lvl: ela }
-  - { id: 7n13, tit: Веселі гуси, sub: uafs,
+  - { id: 7n13, tit: Веселі гуси, sub: ukrfs,
       src: B0D1973,
       org: ukr, sty: flk, gnr: chd, ton: cj, frm: mel, bss: stb, lvl: ela }
-  - { id: jnuj, tit: За городом качки пливуть, sub: uafs,
+  - { id: jnuj, tit: За городом качки пливуть, sub: ukrfs,
       src: B0D1973,
       org: ukr, sty: flk, gnr: chd, ton: cj, frm: [mel, rep], bss: stb, lvl: ela }
   - { id: j6sq, tit: Грибок, sub: 'із збірника \"Гусельки\"',
@@ -20,40 +20,40 @@ pieces:
   - { id: fywu, tit: "Здрастуй, новий рік",
       com: М. Дремлюга, src: B0D1973,
       org: ukr, sty: aut, gnr: chd, ton: cj, frm: [mel, jmp], bss: stb, lvl: ela }
-  - { id: 1sxc, tit: Казав мені батько, sub: uafs,
+  - { id: 1sxc, tit: Казав мені батько, sub: ukrfs,
       src: B0D1973,
       org: ukr, sty: flk, gnr: sng, ton: cj, frm: mel, bss: stb, lvl: ela }
-  - { id: hv2p, tit: Ой минула вже зима, sub: uafs,
+  - { id: hv2p, tit: Ой минула вже зима, sub: ukrfs,
       src: B0D1973,
       org: ukr, sty: flk, gnr: chd, ton: cj, frm: mel, bss: stb, lvl: ela }
-  - { id: siv0, tit: А вже красне сонечко, sub: uafs,
+  - { id: siv0, tit: А вже красне сонечко, sub: ukrfs,
       com: П. Козицький, src: B0D1973,
       org: ukr, sty: flk, gnr: chd, ton: ai, frm: mel, bss: stb, lvl: ela }
-  - { id: kakw, tit: Дощик, sub: uafs,
+  - { id: kakw, tit: Дощик, sub: ukrfs,
       src: B0D1973,
       org: ukr, sty: flk, gnr: sng, ton: ei, frm: [mel, rep], bss: stb, lvl: ela }
-  - { id: 6msd, tit: У сусіда хата біла, sub: uafs,
+  - { id: 6msd, tit: У сусіда хата біла, sub: ukrfs,
       src: B0D1973,
       org: ukr, sty: flk, gnr: sng, ton: ei, frm: mel, bss: stb, lvl: ela }
-  - { id: iso2, tit: Дударик, sub: uafs,
+  - { id: iso2, tit: Дударик, sub: ukrfs,
       src: B0D1973,
       org: ukr, sty: flk, gnr: sng, ton: [gj, ei], frm: mel, bss: stb, lvl: ela }
-  - { id: xi84, tit: Їхав козак за Дунай, sub: uafs,
+  - { id: xi84, tit: Їхав козак за Дунай, sub: ukrfs,
       src: B0D1973,
       org: ukr, sty: flk, gnr: sng, ton: ai, frm: [mel, rep], bss: stb, lvl: ela }
-  - { id: dysh, tit: "Ой не ходи, Грицю", sub: uafs,
+  - { id: dysh, tit: "Ой не ходи, Грицю", sub: ukrfs,
       src: B0D1973,
       org: ukr, sty: flk, gnr: sng, ton: ai, frm: mel, bss: stb, lvl: ela }
-  - { id: f9yf, tit: "По дорозі жук, жук", sub: uafs,
+  - { id: f9yf, tit: "По дорозі жук, жук", sub: ukrfs,
       src: B0D1973,
       org: ukr, sty: flk, gnr: chd, ton: fj, frm: [mel, rep], bss: stb, lvl: ela }
-  - { id: 41tf, tit: Ой під горою, sub: uafs,
+  - { id: 41tf, tit: Ой під горою, sub: ukrfs,
       src: B0D1973,
       org: ukr, sty: flk, gnr: sng, ton: fj, frm: mel, bss: stb, lvl: ela }
-  - { id: g0q2, tit: Женчичок-бренчичок, sub: uafs,
+  - { id: g0q2, tit: Женчичок-бренчичок, sub: ukrfs,
       src: B0D1973,
       org: ukr, sty: flk, gnr: sng, ton: fj, frm: mel, bss: stb, lvl: ela }
-  - { id: l76t, tit: "Ой дівчино, шумить гай", sub: uafs,
+  - { id: l76t, tit: "Ой дівчино, шумить гай", sub: ukrfs,
       src: B0D1973,
       org: ukr, sty: flk, gnr: sng, ton: fj, frm: mel, bss: stb, lvl: ela }
   - { id: v610, tit: Осінь, sub: Дитяча пісенька,
@@ -62,10 +62,10 @@ pieces:
   - { id: 62k0, tit: Зайчик скаче в полі, sub: Дитяча пісенька,
       src: B0D1973,
       org: ukr, sty: flk, gnr: chd, ton: fj, frm: mel, bss: stb, lvl: ela }
-  - { id: qr71, tit: Ти до мене не ходи, sub: uafs,
+  - { id: qr71, tit: Ти до мене не ходи, sub: ukrfs,
       src: B0D1973,
       org: ukr, sty: flk, gnr: sng, ton: ai, frm: mel, bss: stb, lvl: ela }
-  - { id: hdux, tit: Метелиця, sub: uafd,
+  - { id: hdux, tit: Метелиця, sub: ukrfd,
       src: B0D1973,
       org: ukr, sty: flk, gnr: dnc, ton: ai, frm: mel, bss: [stb, pub], lvl: ela }
   - { id: jmy7, tit: Полька,
@@ -78,7 +78,7 @@ pieces:
       com: М. Любарський, src: B0D1973,
       org: ukr, sty: aut, gnr: chd, ton: ai, frm: [mel, jmp], bss: [stb, pub], lvl: ela }
   # B0DU1982
-  - { id: zo21, tit: Ой лопнув обруч, sub: uafs,
+  - { id: zo21, tit: Ой лопнув обруч, sub: ukrfs,
       src: B0DU1982,
       org: ukr, sty: flk, gnr: sng, ton: cj, frm: mel, bss: stb, lvl: ela }
   - { id: oyhg, tit: Веснянка,
@@ -87,7 +87,7 @@ pieces:
   - { id: v3cd, tit: Весела пісенька,
       com: К. Мясков, src: B0DU1982,
       org: ukr, sty: aut, gnr: chd, ton: gj, frm: mel, bss: stb, lvl: ela }
-  - { id: akqt, tit: Козачок, sub: uafd,
+  - { id: akqt, tit: Козачок, sub: ukrfd,
       src: B0DU1982,
       org: ukr, sty: flk, gnr: koz, ton: cj, frm: mel, bss: stb, lvl: ela }
   - { id: ry3w, tit: Гуцульський танець,
@@ -106,7 +106,7 @@ pieces:
   - { id: 8mwk, tit: Лисичка,
       com: М. Лисенко, src: B1AK1979,
       org: ukr, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
-  - { id: tonl, tit: "Ви музики, хлопці добрі", sub: uafs,
+  - { id: tonl, tit: "Ви музики, хлопці добрі", sub: ukrfs,
       src: B1AK1979,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: a0xs, tit: "Ой Василю, Василечку",
@@ -115,10 +115,10 @@ pieces:
   - { id: 11a0, tit: Соловейко,
       com: А. Філіпенко, src: B1AK1979,
       org: ukr, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
-  - { id: 79hk, tit: Галя по садочку ходила, sub: uafs,
+  - { id: 79hk, tit: Галя по садочку ходила, sub: ukrfs,
       src: B1AK1979,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
-  - { id: angm, tit: "По дорозі жук, жук", sub: uafs,
+  - { id: angm, tit: "По дорозі жук, жук", sub: ukrfs,
       src: B1AK1979,
       org: ukr, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
   - { id: qmvs, tit: Пісенька,
@@ -127,10 +127,10 @@ pieces:
   - { id: 59gv, tit: Пісня рака, sub: 'з дитячої опери \"Коза-дереза\"',
       com: М. Лисенко, src: B1AK1979,
       org: ukr, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
-  - { id: yn16, tit: "Ой джигуне, джигуне", sub: uafs,
+  - { id: yn16, tit: "Ой джигуне, джигуне", sub: ukrfs,
       src: B1AK1979,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
-  - { id: c1z5, tit: "Ой за гаєм, гаєм", sub: uafs,
+  - { id: c1z5, tit: "Ой за гаєм, гаєм", sub: ukrfs,
       src: B1AK1979,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: tx5o, tit: Полька,
@@ -145,13 +145,13 @@ pieces:
   - { id: x880, tit: Будемо космонавтами,
       com: К. Мясков, src: B1AK1979,
       org: ukr, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: ela }
-  - { id: d7eu, tit: Бандура, sub: uafs,
+  - { id: d7eu, tit: Бандура, sub: ukrfs,
       arr: И. Гладков, art: ipr, src: B1AK1979,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
-  - { id: d0hr, tit: А вже ясне сонечко, sub: uafs,
+  - { id: d0hr, tit: А вже ясне сонечко, sub: ukrfs,
       com: П. Козицький, src: B1AK1979,
       org: ukr, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
-  - { id: itrq, tit: Женчичок-бренчичок, sub: uafs,
+  - { id: itrq, tit: Женчичок-бренчичок, sub: ukrfs,
       src: B1AK1979,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: blsa, tit: По малину в сад підем,
@@ -160,26 +160,26 @@ pieces:
   - { id: 75xh, tit: Сьогодні у мами свято,
       com: А. Філіпенко, src: B1AK1979,
       org: ukr, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: ela }
-  - { id: qxq9, tit: Їхав козак на війноньку, sub: uafs,
+  - { id: qxq9, tit: Їхав козак на війноньку, sub: ukrfs,
       src: B1AK1979,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
-  - { id: e78y, tit: Кучерява Катерина, sub: uafs,
+  - { id: e78y, tit: Кучерява Катерина, sub: ukrfs,
       src: B1AK1979,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
-  - { id: z48n, tit: На вулиці скрипка грає, sub: uafs,
+  - { id: z48n, tit: На вулиці скрипка грає, sub: ukrfs,
       src: B1AK1979,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: 5e6l, tit: Полька,
       src: B1AK1979,
       org: ukr, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: ela }
    # B1AK1985
-  - { id: fh29, tit: Веснянка, sub: uafs,
+  - { id: fh29, tit: Веснянка, sub: ukrfs,
       src: B1AK1985,
       org: ukr, sty: flk, gnr: ves, frm: mel, bss: stb, lvl: ela }
-  - { id: eu0e, tit: Танець дзвіночків, sub: uafd,
+  - { id: eu0e, tit: Танець дзвіночків, sub: ukrfd,
       src: B1AK1985,
       org: ukr, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: ela }
-  - { id: cagd, tit: Дощик, sub: uafs,
+  - { id: cagd, tit: Дощик, sub: ukrfs,
       src: B1AK1985,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: iebw, tit: Святковий вальс,
@@ -198,10 +198,10 @@ pieces:
   - { id: 05cc, tit: Курчатка,
       com: А. Філіпенко, src: B2AK1979,
       org: ukr, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: ela }
-  - { id: ihff, tit: Ой лопнув обруч, sub: uafs,
+  - { id: ihff, tit: Ой лопнув обруч, sub: ukrfs,
       src: B2AK1979,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
-  - { id: an90, tit: Корольок, sub: uafs,
+  - { id: an90, tit: Корольок, sub: ukrfs,
       src: B2AK1979,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: oz96, tit: Сумна пісенька,
@@ -216,10 +216,10 @@ pieces:
   - { id: ohmw, tit: Вальс,
       com: М. Чайкін, src: B2AK1979,
       org: ukr, sty: msc, gnr: vls, frm: mel, bss: stb, lvl: elb }
-  - { id: stil, tit: Сусідка, sub: uafs,
+  - { id: stil, tit: Сусідка, sub: ukrfs,
       arr: М. Чайкін, src: B2AK1979,
       org: ukr, sty: flk, gnr: sng, frm: crd, bss: stb, lvl: elb }
-  - { id: nizv, tit: "Чом, чом не прийшов", sub: uafs,
+  - { id: nizv, tit: "Чом, чом не прийшов", sub: ukrfs,
       src: B2AK1979,
       org: ukr, sty: flk, gnr: sng, frm: var, bss: stb, lvl: elb }
   - { id: dvki, tit: Гопак, sub: 'з опери \"Сорочинский ярмарок\"',
@@ -231,17 +231,17 @@ pieces:
   - { id: jkqt, tit: Романс,
       com: М. Чайкін, src: B2AK1979,
       org: ukr, sty: msc, gnr: rmc, frm: mel, bss: stb, lvl: elb }
-  - { id: q5ip, tit: Сонце низенько, sub: uafs,
+  - { id: q5ip, tit: Сонце низенько, sub: ukrfs,
       arr: А. Иванов, src: B2AK1979,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
-  - { id: 4u91, tit: Ой під горою, sub: uafs,
+  - { id: 4u91, tit: Ой під горою, sub: ukrfs,
       src: B2AK1979,
       org: ukr, sty: flk, gnr: sng, frm: pph, bss: pub, lvl: elb }
   - { id: ggyp, tit: Танець сніжинок,
       com: К. Мясков, src: B2AK1979,
       org: ukr, sty: msc, gnr: pie, frm: crd, bss: stb, lvl: elc }
   # B2AK1987
-  - { id: e3u3, tit: Вийшли в поле косарі, sub: uafs,
+  - { id: e3u3, tit: Вийшли в поле косарі, sub: ukrfs,
       src: B2AK1987,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: ucue, tit: Пісня Карася, sub: 'з опери \"Запорожець за Дунаєм\"',
@@ -250,19 +250,19 @@ pieces:
   - { id: fngd, tit: Колискова,
       com: Я. Степовий, src: B2AK1987,
       org: ukr, sty: flk, gnr: lul, frm: mel, bss: stb, lvl: ela }
-  - { id: cpdc, tit: Ніч яка місячна, sub: uafs,
+  - { id: cpdc, tit: Ніч яка місячна, sub: ukrfs,
       src: B2AK1987,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
-  - { id: 9k9u, tit: Горлиця, sub: uafs,
+  - { id: 9k9u, tit: Горлиця, sub: ukrfs,
       src: B2AK1987,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
-  - { id: 0r9e, tit: Їхав козак за Дунай, sub: uafs,
+  - { id: 0r9e, tit: Їхав козак за Дунай, sub: ukrfs,
       src: B2AK1987,
       org: ukr, sty: flk, gnr: sng, frm: var, bss: stb, lvl: elb }
   - { id: v8ec, tit: Ведмідь,
       com: К. Мясков, src: B2AK1987,
       org: ukr, sty: msc, gnr: chd, frm: mel, bss: pub, lvl: elb }
-  - { id: w5ba, tit: Дивлюсь я на небо, sub: uafs,
+  - { id: w5ba, tit: Дивлюсь я на небо, sub: ukrfs,
       arr: А. Иванов, src: B2AK1987,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: plh0, tit: Танець ляльки,
@@ -271,25 +271,25 @@ pieces:
   - { id: i11j, tit: Бджілка,
       com: К. Мясков, src: B2AK1987,
       org: ukr, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: elb }
-  - { id: zvpg, tit: Козачок, sub: uafd,
+  - { id: zvpg, tit: Козачок, sub: ukrfd,
       src: B2AK1987,
       org: ukr, sty: flk, gnr: koz, frm: mel, bss: stb, lvl: elb }
   - { id: mf7s, tit: Дитяча полька,
       com: М. Глинка, src: B2AK1987,
       org: ukr, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elb }
-  - { id: zykv, tit: Зайчик, sub: uafs,
+  - { id: zykv, tit: Зайчик, sub: ukrfs,
       src: B2AK1987,
       org: ukr, sty: flk, gnr: chd, frm: [var, pph], bss: stb, lvl: elc }
   - { id: 26qx, tit: Казка,
       com: І. Беркович, src: B2AK1987,
       org: ukr, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: elb }
-  - { id: di18, tit: Од Києва до Лубен, sub: uafs,
+  - { id: di18, tit: Од Києва до Лубен, sub: ukrfs,
       src: B2AK1987,
       org: ukr, sty: flk, gnr: sng, frm: var, bss: [stb, pub], lvl: elc }
   - { id: btcu, tit: Полька,
       com: М. Глинка, src: B2AK1987,
       org: ukr, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elb }
-  - { id: nev4, tit: Вербовая дощечка, sub: uafs,
+  - { id: nev4, tit: Вербовая дощечка, sub: ukrfs,
       src: B2AK1987,
       org: ukr, sty: flk, gnr: sng, frm: [var, crd, pph], bss: [stb, pub], lvl: elc }
   - { id: foaz, tit: Зимонька,
@@ -304,11 +304,11 @@ pieces:
   #     com: Ю. Щуровський, src: FBB3BZ1982,
   #     org: ukr, sty: aut, gnr: pie, ton: di, frm: vo2, bss: frb, lvl: ela }
   # p. 11
-  # - { id: z16r, tit: Ой на горі та й женці жнуть, sub: uafs,
+  # - { id: z16r, tit: Ой на горі та й женці жнуть, sub: ukrfs,
   #     arr: И. Шестириков, src: FBB3BZ1982,
   #     org: ukr, sty: flk, gnr: sng, ton: di, frm: vo2, bss: frb, lvl: ela }
   # p. 12
-  # - { id: jclp, tit: "Віє вітер, віє буйний", sub: uafs,
+  # - { id: jclp, tit: "Віє вітер, віє буйний", sub: ukrfs,
   #     arr: И. Шестириков, src: FBB3BZ1982,
   #     org: ukr, sty: flk, gnr: sng, ton: di, frm: vo2, bss: frb, lvl: ela }
   # p. 15
@@ -328,7 +328,7 @@ pieces:
   #     com: І. Яшкевич, src: FBB3BZ1982,
   #     org: ukr, sty: flk, gnr: sng, ton: gi, frm: [vo2, cr5], bss: frb, lvl: ela }
   # p. 40
-  # - { id: s2hf, tit: Ой зав'ю вінки, sub: uafs,
+  # - { id: s2hf, tit: Ой зав'ю вінки, sub: ukrfs,
   #     arr: А. Должиков, src: FBB3BZ1982,
   #     org: ukr, sty: flk, gnr: sng, ton: fisi, frm: vo2, bss: frb, lvl: ela }
   # p. 65

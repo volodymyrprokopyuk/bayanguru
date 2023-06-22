@@ -8,19 +8,19 @@ pieces:
   - { id: bj88, tit: Санки,
       com: М. Красев, src: B0D1973,
       org: rus, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: ela }
-  - { id: b383, tit: При долинушке калинушка стоит, sub: rufs,
+  - { id: b383, tit: При долинушке калинушка стоит, sub: rusfs,
       src: B0D1973,
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
-  - { id: vt18, tit: На горе-то калина, sub: rufs,
+  - { id: vt18, tit: На горе-то калина, sub: rusfs,
       src: B0D1973,
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
-  - { id: 8fs0, tit: На улице дождь идет, sub: rufs,
+  - { id: 8fs0, tit: На улице дождь идет, sub: rusfs,
       src: B0D1973,
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
-  - { id: 0mdf, tit: Колыбельная, sub: rufs,
+  - { id: 0mdf, tit: Колыбельная, sub: rusfs,
       src: B0D1973,
       org: rus, sty: flk, gnr: lul, frm: mel, bss: stb, lvl: ela }
-  - { id: bspm, tit: "Белолица, круглолица", sub: rufs,
+  - { id: bspm, tit: "Белолица, круглолица", sub: rusfs,
       src: B0D1973,
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: kkks, tit: Елочка,
@@ -34,10 +34,10 @@ pieces:
   - { id: ebam, tit: Елочка,
       com: М. Красев, src: B1AK1979,
       org: rus, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: ela }
-  - { id: 6sx9, tit: Девицы-красавицы, sub: rufs,
+  - { id: 6sx9, tit: Девицы-красавицы, sub: rusfs,
       src: B1AK1979,
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
-  - { id: dj8u, tit: "Я пойду ли, молоденька", sub: rufs,
+  - { id: dj8u, tit: "Я пойду ли, молоденька", sub: rusfs,
       src: B1AK1979,
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: e40b, tit: Песенка,
@@ -53,10 +53,10 @@ pieces:
       com: Л. Бирнов, src: B1AK1979,
       org: rus, sty: msc, gnr: dnc, frm: mel, bss: stb, lvl: ela }
   # B1AK1985
-  - { id: r9dx, tit: Родина, sub: rufs,
+  - { id: r9dx, tit: Родина, sub: rusfs,
       src: B1AK1985,
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
-  - { id: r1gr, tit: Выйду ль я на реченьку, sub: rufs,
+  - { id: r1gr, tit: Выйду ль я на реченьку, sub: rusfs,
       src: B1AK1985,
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: erhk, tit: Рыбка,
@@ -69,13 +69,13 @@ pieces:
       arr: М. Чайкін, art: ipr, com: М. Блантер, src: B1AK1985,
       org: rus, sty: msc, gnr: mil, frm: mel, bss: stb, lvl: ela }
   # B2AK1979
-  - { id: jquj, tit: Ходила младешенька по борочку, sub: rufs,
+  - { id: jquj, tit: Ходила младешенька по борочку, sub: rusfs,
       src: B2AK1979,
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
-  - { id: soth, tit: Катенька, sub: rufs,
+  - { id: soth, tit: Катенька, sub: rusfs,
       arr: А. Иванов, src: B2AK1979,
       org: rus, sty: flk, gnr: sng, frm: crd, bss: stb, lvl: elb }
-  - { id: 2n32, tit: Среди долины ровныя, sub: rufs,
+  - { id: 2n32, tit: Среди долины ровныя, sub: rusfs,
       src: B2AK1979,
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: 923n, tit: Лирическая протяжная,
@@ -87,7 +87,7 @@ pieces:
   - { id: nvek, tit: Романс Антониды, sub: 'из оперы \"Иван Сусанин\"',
       com: М. Глинка, src: B2AK1979,
       org: rus, sty: msc, gnr: rmc, frm: mel, bss: stb, lvl: elb }
-  - { id: eq9y, tit: Грушица, sub: rufs,
+  - { id: eq9y, tit: Грушица, sub: rusfs,
       src: B2AK1979,
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: xzce, tit: Каватина Людмилы, sub: 'из оперы \"Руслан и Людмила\"',
@@ -96,14 +96,14 @@ pieces:
   - { id: e1d4, tit: Меланхолический вальс,
       com: А. Даргомыжский, src: B2AK1979,
       org: rus, sty: msc, gnr: vls, frm: mel, bss: stb, lvl: elb }
-  - { id: 1hva, tit: Как пойду я на быструю речку, sub: rufs,
+  - { id: 1hva, tit: Как пойду я на быструю речку, sub: rusfs,
       src: B2AK1979,
       org: rus, sty: flk, gnr: sng, frm: var, bss: stb, lvl: elc }
   # B2AK1987
   - { id: tsio, tit: Колыбельная,
       com: Т. Хренников, arr: А. Кирюхин, art: ipr, src: B2AK1987,
       org: rus, sty: msc, gnr: lul, frm: mel, bss: stb, lvl: ela }
-  - { id: tg2x, tit: Ходила младешенька по борочку, sub: rufs,
+  - { id: tg2x, tit: Ходила младешенька по борочку, sub: rusfs,
       src: B2AK1987,
       org: rus, sty: flk, gnr: sng, frm: [var, crd], bss: stb, lvl: elc }
   # FBB3BZ1982
@@ -112,6 +112,6 @@ pieces:
   #     com: М. Глинка, src: FBB3BZ1982,
   #     org: rus, sty: aut, gnr: pie, ton: di, frm: vo2, bss: frb, lvl: ela }
   # p. 25
-  # - { id: w7lt, tit: Ничто в поле не колышется, sub: rufs,
+  # - { id: w7lt, tit: Ничто в поле не колышется, sub: rusfs,
   #     arr: А. Зубарев, src: FBB3BZ1982,
   #     org: rus, sty: flk, gnr: sng, ton: ei, frm: vo2, bss: frb, lvl: ela }

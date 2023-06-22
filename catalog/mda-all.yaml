@@ -8,6 +8,6 @@ pieces:
       org: mda, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: ela }
   # Tutorial
   # BTBC1936
-  - { id: epyc, tit: Молдовеняска, sub: mdfd,
+  - { id: epyc, tit: Молдовеняска, sub: mdafd,
       arr: М. Чайкін, art: ipr, src: BTBC1936,
       org: mda, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elb }

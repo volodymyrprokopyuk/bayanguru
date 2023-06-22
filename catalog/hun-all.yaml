@@ -3,13 +3,13 @@
 pieces:
   # Class
   # B1AK1979
-  - { id: 1rua, tit: Конячка, sub: hufs,
+  - { id: 1rua, tit: Конячка, sub: hunfs,
       src: B1AK1979,
       org: hun, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
-  - { id: 9htb, tit: Віночок, sub: hufs,
+  - { id: 9htb, tit: Віночок, sub: hunfs,
       src: B1AK1979,
       org: hun, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   # B2AK1979
-  - { id: 5qqn, tit: Чардаш, sub: hufd,
+  - { id: 5qqn, tit: Чардаш, sub: hunfd,
       src: B2AK1979,
       org: hun, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elb }

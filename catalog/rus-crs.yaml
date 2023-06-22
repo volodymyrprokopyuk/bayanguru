@@ -3,35 +3,35 @@
 pieces: []
   # TYBC1B1970
   # p. 55
-  # - { id: tft1, tit: Желтый лист, sub: rufs,
+  # - { id: tft1, tit: Желтый лист, sub: rusfs,
   #     src: TYBC1B1970,
   #     org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   # p. 55
-  # - { id: pd1z, tit: Соловьем залетным, sub: rufs,
+  # - { id: pd1z, tit: Соловьем залетным, sub: rusfs,
   #     src: TYBC1B1970,
   #     org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   # p. 55
-  # - { id: 63wa, tit: "Белолица, круглолица", sub: rufs,
+  # - { id: 63wa, tit: "Белолица, круглолица", sub: rusfs,
   #     src: TYBC1B1970,
   #     org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   # TYBC2B1971
   # p. 9
-  # - { id: 9t5o, tit: "Калина, малина", sub: rufs,
+  # - { id: 9t5o, tit: "Калина, малина", sub: rusfs,
   #     src: TYBC2B1971,
   #     org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   # p. 13
-  # - { id: um6w, tit: "Как ходил, гулял Ванюша", sub: rufs,
+  # - { id: um6w, tit: "Как ходил, гулял Ванюша", sub: rusfs,
   #     arr: В. Горохов, src: TYBC2B1971,
   #     org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   # p. 17
-  # - { id: b2lc, tit: Сама садик я садила, sub: rufs,
+  # - { id: b2lc, tit: Сама садик я садила, sub: rusfs,
   #     src: TYBC2B1971,
   #     org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   # p. 17
-  # - { id: 36ot, tit: Сама садик я садила, sub: rufsvar,
+  # - { id: 36ot, tit: Сама садик я садила, sub: rusfsvar,
   #     arr: А. Иванов, src: TYBC2B1971,
   #     org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
   # p. 18
-  # - { id: ej2i, tit: Вот мчится тройка почтовая, sub: rufs,
+  # - { id: ej2i, tit: Вот мчится тройка почтовая, sub: rusfs,
   #     arr: Л. Захарова, art: ipr, src: TYBC2B1971,
   #     org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }

@@ -5,23 +5,23 @@ pieces:
   - { id: yq8y, tit: Українська полька,
       com: М. Чайкін, src: BTBC1936,
       org: ukr, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: ela }
-  - { id: cckj, tit: За городом качки пливуть, sub: uafs,
+  - { id: cckj, tit: За городом качки пливуть, sub: ukrfs,
       arr: М. Чайкін, art: ipr, src: BTBC1936,
       org: ukr, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
-  - { id: a3ew, tit: Ой піду я понад лугом, sub: uafs,
+  - { id: a3ew, tit: Ой піду я понад лугом, sub: ukrfs,
       arr: М. Чайкін, src: BTBC1936,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
-  - { id: isd6, tit: Гопак, sub: uafd,
+  - { id: isd6, tit: Гопак, sub: ukrfd,
       arr: М. Чайкін, src: BTBC1936,
       org: ukr, sty: flk, gnr: gop, frm: mel, bss: stb, lvl: ela }
-  - { id: vf9h, tit: Козачок, sub: uafd,
+  - { id: vf9h, tit: Козачок, sub: ukrfd,
       arr: М. Різоль, src: BTBC1936,
       org: ukr, sty: flk, gnr: koz, frm: [var, crd], bss: [stb, pub], lvl: elb }
   # BTB1978
-  - { id: vwad, tit: "Чорнії брови, карії очі", sub: uafs,
+  - { id: vwad, tit: "Чорнії брови, карії очі", sub: ukrfs,
       src: BTB1978,
       org: ukr, sty: flk, gnr: rmc, frm: mel, bss: stb, lvl: ela }
-  - { id: brku, tit: Стоїть гора високая, sub: uafs,
+  - { id: brku, tit: Стоїть гора високая, sub: ukrfs,
       src: BTB1978,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: tzb9, tit: Черемшина,

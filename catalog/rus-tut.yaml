@@ -5,31 +5,31 @@ pieces:
   - { id: q6xh, tit: Одинокая гармонь,
       com: Б. Мокроусов, arr: А. Басурманов, art: ipr, src: BTBC1936,
       org: rus, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: ela }
-  - { id: 87ko, tit: Яблочко, sub: rufd,
+  - { id: 87ko, tit: Яблочко, sub: rusfd,
       arr: М. Чайкін, src: BTBC1936,
       org: rus, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: ela }
-  - { id: p7el, tit: Варяг, sub: rufs,
+  - { id: p7el, tit: Варяг, sub: rusfs,
       arr: М. Чайкін, art: ipr, src: BTBC1936,
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: 6u3l, tit: Ленинские горы,
       com: Ю. Милютин, arr: А. Басурманов, art: ipr, src: BTBC1936,
       org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elb }
-  - { id: qt7k, tit: Есть на Волге утес, sub: rufs,
+  - { id: qt7k, tit: Есть на Волге утес, sub: rusfs,
       arr: А. Холминов, src: BTBC1936,
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: oz1w, tit: При долине куст калины,
       com: А. Новиков, arr: Н. Речменский, art: ipr, src: BTBC1936,
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
-  - { id: p26a, tit: Барыня, sub: rufd,
+  - { id: p26a, tit: Барыня, sub: rusfd,
       arr: М. Чайкін, src: BTBC1936,
       org: rus, sty: flk, gnr: dnc, frm: var, bss: stb, lvl: elb }
-  - { id: frcu, tit: "Ах ты, ноченька", sub: rufs,
+  - { id: frcu, tit: "Ах ты, ноченька", sub: rusfs,
       arr: М. Чайкін, src: BTBC1936,
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: hjff, tit: Костры горят далекие,
       com: Б. Мокроусов, arr: А. Басурманов, art: ipr, src: BTBC1936,
       org: rus, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elb }
-  - { id: 7nax, tit: Ермак, sub: rufs,
+  - { id: 7nax, tit: Ермак, sub: rusfs,
       arr: М. Чайкін, art: ipr, src: BTBC1936,
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: 74jq, tit: Уральская рябинушка,
@@ -38,7 +38,7 @@ pieces:
   - { id: 7s64, tit: Жди солдата,
       com: Б. Мокроусов, arr: М. Чайкін, art: ipr, src: BTBC1936,
       org: rus, sty: msc, gnr: mil, frm: mel, bss: stb, lvl: elb }
-  - { id: blt6, tit: Родина, sub: rufs,
+  - { id: blt6, tit: Родина, sub: rusfs,
       com: В. Смыслов, arr: М. Чайкін, art: hrm, src: BTBC1936,
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: l1zm, tit: Лирическая,
@@ -53,7 +53,7 @@ pieces:
   - { id: wkmw, tit: Не сама машина ходит, sub: Алтайские частушки,
       arr: Н. Кутузов, src: BTBC1936,
       org: rus, sty: flk, gnr: pry, frm: crd, bss: stb, lvl: elc }
-  - { id: ecde, tit: Мчатся гуси вереницей, sub: rufs,
+  - { id: ecde, tit: Мчатся гуси вереницей, sub: rusfs,
       com: У. Жук, arr: М. Чайкін, art: hrm, src: BTBC1936,
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
   - { id: vmd4, tit: "Цвети, наш край",
@@ -66,7 +66,7 @@ pieces:
       arr: Б. Тихонов, src: BTBC1936,
       org: rus, sty: flk, gnr: plk, frm: var, bss: stb, lvl: elb }
   # BTB1978
-  - { id: lknz, tit: "Ах ты, зимушка-зима", sub: rufs,
+  - { id: lknz, tit: "Ах ты, зимушка-зима", sub: rusfs,
       arr: Л. Захарова, art: ipr, src: BTB1978,
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
   - { id: od7f, tit: Ивушка,
@@ -78,7 +78,7 @@ pieces:
   - { id: 8pvl, tit: Уральская плясовая,
       arr: Л. Захарова, art: ipr, src: BTB1978,
       org: rus, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: ela }
-  - { id: 5rl3, tit: Барыня, sub: rufd,
+  - { id: 5rl3, tit: Барыня, sub: rusfd,
       arr: Л. Захарова, art: ipr, src: BTB1978,
       org: rus, sty: flk, gnr: dnc, frm: var, bss: stb, lvl: elb }
   - { id: jh3h, tit: Елечки-метелочки, sub: Сибирские народные припевки,
