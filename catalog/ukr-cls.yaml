@@ -327,3 +327,11 @@ pieces:
   # - { id: onbv, tit: Пісня,
   #     com: І. Яшкевич, src: FBB3BZ1982,
   #     org: ukr, sty: flk, gnr: sng, ton: gi, frm: [vo2, cr5], bss: frb, lvl: ela }
+  # p. 40
+  # - { id: s2hf, tit: Ой зав'ю вінки, sub: uafs,
+  #     arr: А. Должиков, src: FBB3BZ1982,
+  #     org: ukr, sty: flk, gnr: sng, ton: fisi, frm: vo2, bss: frb, lvl: ela }
+  # p. 65
+  # - { id: x6ez, tit: Козачок,
+  #     arr: М. Різоль, src: FBB3BZ1982,
+  #     org: ukr, sty: flk, gnr: koz, ton: dj, frm: vo2, bss: frb, lvl: ela }

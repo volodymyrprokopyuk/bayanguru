@@ -155,7 +155,9 @@ export async function selectPieces(args) {
     const labels = [].concat(piece[tag])
     return matchers.some(match => labels.some(match))
   }
-  const tags = ["org", "sty", "gnr", "frm", "bss", "lvl", "tit", "com", "arr"]
+  const tags = [
+    "org", "sty", "gnr", "ton", "frm", "bss", "lvl", "tit", "com", "arr"
+  ]
   const matchers = tags.map(match)
   const pieces = args.frbk ?
         await readPiecesFromBook(args) :

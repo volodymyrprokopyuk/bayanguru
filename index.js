@@ -21,7 +21,7 @@ function configure() {
     default: {
       c: "", j: cpus().length,
       bid: "selc", btit: "Вибрані твори", bsub: "для баяна",
-      org: "", sty: "", gnr: "", frm: "", bss: "", lvl: "",
+      org: "", sty: "", gnr: "", ton: "", frm: "", bss: "", lvl: "",
       tit: "", com: "", arr: ""
     }
   }
