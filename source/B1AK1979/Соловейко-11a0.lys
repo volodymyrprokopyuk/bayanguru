@@ -8,7 +8,7 @@
 
 {% macro lhFrag1(a) %}
   {{ a }} gM!) gM gM] | a[( d@7!) d78 d7] |
-  d=8 d7! g, gM! |
+  d=8 d7! g,=, gM! |
 {% endmacro %}
 
 {% macro rightHand() %}

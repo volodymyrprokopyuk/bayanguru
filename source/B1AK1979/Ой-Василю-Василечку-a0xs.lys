@@ -9,7 +9,7 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegretto
+\tempo Allegro
 \clef treble
 \key f \major
 \time 2/4
@@ -30,7 +30,7 @@
   {{ lhFrag1("f,=,8-\\stBass", "f fM! | c'") }}
   {{ lhFrag1("f=,8", "c f,@M! | c8") }}
   \repeat unfold 2 {
-    c'=8 c7! e c@7 | f,8 fM! a f,@M |
+    c'=8 c7! e c@7 | f,8 fM! a=, f,@M |
   }
   f=,8 fM! bes besM! | a f,@M! f8 fM |
   c'=8 c7! e c@7 | f,8 fM! f=, r |

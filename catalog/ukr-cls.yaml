@@ -105,16 +105,16 @@ pieces:
   # B1AK1979
   - { id: 8mwk, tit: Лисичка,
       com: М. Лисенко, src: B1AK1979,
-      org: ukr, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: chd, ton: cj, frm: [mel, rep], bss: stb, lvl: ela }
   - { id: tonl, tit: "Ви музики, хлопці добрі", sub: ukrfs,
       src: B1AK1979,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: sng, ton: [cj, ai], frm: [mel, rep], bss: stb, lvl: ela }
   - { id: a0xs, tit: "Ой Василю, Василечку",
       com: В. Верховинець, src: B1AK1979,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: sng, ton: fj, frm: [mel, rep], bss: stb, lvl: ela }
   - { id: 11a0, tit: Соловейко,
       com: А. Філіпенко, src: B1AK1979,
-      org: ukr, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: chd, ton: gj, frm: mel, bss: stb, lvl: ela }
   - { id: 79hk, tit: Галя по садочку ходила, sub: ukrfs,
       src: B1AK1979,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
