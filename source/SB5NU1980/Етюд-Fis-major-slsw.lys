@@ -1,6 +1,16 @@
 {% from "util.lys" import hSpace, shapedSlur %}
 
-{% macro rhFrag1(a, b) %}
+{% macro rhFrag1(a) %}
+  {{ a }} <b dis> <ais cis>8~ 16 <b dis> <ais cis> <gis b> |
+  | <fis ais>16 <eis gis> <fis ais> <gis b> <fis ais>8\) <eis gis>16\( <dis fis> |
+  | <eis gis>16 <dis fis> <eis gis>8~ 16 <fis ais> <eis gis> <dis fis> |
+  | <eis gis>16 <dis fis> <cis eis> <dis fis> <cis eis>8\) <b dis>16\(\> <ais cis> |
+  | <b dis>4~ 16 <cis eis> <dis fis> \after 16\! <cis eis> |
+  | <b dis>16 <cis eis> <b dis> <ais cis> <b dis>8 <ais cis>16 <gis b> |
+  | <ais cis>16\p <b dis> <ais cis>8~ 16 <b dis> <ais cis> <gis b> |
+{% endmacro %}
+
+{% macro rhFrag2(a, b) %}
   <b= dis>16 <cis eis> <b dis>8~ 16 <cis eis> <dis fis> <cis eis> |
   <dis=' fis>16 {{ a }} <eis gis> <fis ais> <gis b> <fis ais>8\) <eis gis>16\( <dis fis> |
   <eis=' gis>16 <fis ais> <eis gis>8~ 16 {{ b }} <fis ais> <gis b> <fis=' ais> |
@@ -14,13 +24,7 @@
 \relative {
   \partial 8 { <fis'=' ais>16\(\mf <gis b> | }
   \repeat volta 2 {
-    <ais=' cis>16 <b dis> <ais cis>8~ 16 <b dis> <ais cis> <gis b> |
-    <fis=' ais>16 <eis gis> <fis ais> <gis b> <fis ais>8\) <eis gis>16\( <dis fis> |
-    <eis=' gis>16 <dis fis> <eis gis>8~ 16 <fis ais> <eis gis> <dis fis> |
-    <eis=' gis>16 <dis fis> <cis eis> <dis fis> <cis eis>8\) <b dis>16\(\> <ais cis> |
-    <b= dis>4~ 16 <cis eis> <dis fis> \after 16\! <cis eis> |
-    <b= dis>16 <cis eis> <b dis> <ais cis> <b dis>8 <ais cis>16 <gis b> |
-    <ais= cis>16\p <b dis> <ais cis>8~ 16 <b dis> <ais cis> <gis b> |
+    {{ rhFrag1("<ais=' cis>16") }}
     \alternative {
       \volta 1 {
         <ais= cis>16 <gis b> <fis ais>8~ 8\) <fis' ais>16\mf %
@@ -35,7 +39,7 @@
     }
   }
 
-  {{ rhFrag1("", "\\<") }}
+  {{ rhFrag2("", "\\<") }}
   <eis=' gis>16 <dis fis> <cis eis> <dis fis> %
   <eis=' gis>16 <fis ais> <gis b> \after 16\! <ais cis>\) |
   <b=' dis>4~\(\mf 16 <ais cis> <b dis> <ais cis> |
@@ -43,7 +47,7 @@
   <fis=' ais>16\< <gis b> <fis ais>8~ 16 <gis b> <fis ais> <eis gis> |
   <fis=' ais>16 <eis gis> \after 8\! <dis fis>8~ 8\) <gis, b>16\(\mp <ais= cis> |
 
-  {{ rhFrag1("_\\dynCresc", "") }}
+  {{ rhFrag2("_\\dynCresc", "") }}
   <eis=' gis>16 <dis fis> <eis gis> <fis ais> <gis b> <ais cis> <b dis> <cis eis>\) |
   <dis='' fis>4~\( 16 <eis gis> <fis ais> <eis gis> |
   <dis='' fis>16_\dynDim <eis gis> <dis fis> <cis eis> %
@@ -60,8 +64,16 @@
   <eis=' gis>16 <fis ais> <eis gis> <fis ais> %
   <eis=' gis>16\< <dis fis> <eis gis> <fis ais> |
   <gis=' b>16 <ais cis> <b dis> <cis eis> %
-  <dis='' fis>16 \after 16\! <eis gis>\) <fis ais>\mf <gis='' b> |
+  <dis='' fis>16 \after 16\! <eis gis>\) <fis ais>\(\mf <gis='' b> |
 
+  {{ rhFrag1("<ais='' cis>16") }}
+  <ais=' cis>16 <gis b> <fis ais>8~ 4\) |
+  <b,= dis>4~\( 16\< <cis eis> <dis fis> <eis gis> |
+  <dis=' fis>16 <eis gis> \after 16\! <dis fis> <cis eis> %
+  <b= dis>8\> <ais cis>16 \after 16\! <gis b> |
+  <ais= cis>4~ 16 <b dis> <ais cis> <b dis> |
+  <ais= cis>16 <gis b> <fis ais>8~ 4\) |
+  <fis= ais>2 | r4 <fis= ais cis> \fermata \bar "|."
 }
 {% endmacro %}
 
