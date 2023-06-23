@@ -1,19 +1,26 @@
-{% from "util.lys" import hSpace, shapedSlur %}
+{% from "util.lys" import v2, hSpace, shapedSlur %}
 
 {% macro rhFrag1(a) %}
   {{ a }} <b dis> <ais cis>8~ 16 <b dis> <ais cis> <gis b> |
   | <fis ais>16 <eis gis> <fis ais> <gis b> <fis ais>8\) <eis gis>16\( <dis fis> |
   | <eis gis>16 <dis fis> <eis gis>8~ 16 <fis ais> <eis gis> <dis fis> |
-  | <eis gis>16 <dis fis> <cis eis> <dis fis> <cis eis>8\) <b dis>16\(\> <ais cis> |
-  | <b dis>4~ 16 <cis eis> <dis fis> \after 16\! <cis eis> |
+  | <eis gis>16 <dis fis> <cis eis> <dis fis> <cis eis>8\) <b dis>16\( <ais cis> |
+  | <b dis>4~ 16 <cis eis> <dis fis> <cis eis> |
   | <b dis>16 <cis eis> <b dis> <ais cis> <b dis>8 <ais cis>16 <gis b> |
-  | <ais cis>16\p <b dis> <ais cis>8~ 16 <b dis> <ais cis> <gis b> |
+  | <ais cis>16\> <b dis> <ais cis>8~ 16 <b dis> <ais cis> \after 16\! <gis b> |
 {% endmacro %}
 
 {% macro rhFrag2(a, b) %}
   <b= dis>16 <cis eis> <b dis>8~ 16 <cis eis> <dis fis> <cis eis> |
   <dis=' fis>16 {{ a }} <eis gis> <fis ais> <gis b> <fis ais>8\) <eis gis>16\( <dis fis> |
   <eis=' gis>16 <fis ais> <eis gis>8~ 16 {{ b }} <fis ais> <gis b> <fis=' ais> |
+{% endmacro %}
+
+{% macro lhFrag1(a) %}
+  {{ a }} fisM! fisM cis' | fis, fisM! fisM fis |
+  cis'=8 cisM! cisM gis | cis cisM! cisM cis |
+  \repeat unfold 2 { gis=,8 gism! gism cis= | }
+  fis,=,8 fisM! fisM cis' |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -27,7 +34,7 @@
     {{ rhFrag1("<ais=' cis>16") }}
     \alternative {
       \volta 1 {
-        <ais= cis>16 <gis b> <fis ais>8~ 8\) <fis' ais>16\mf %
+        <ais= cis>16\p <gis b> <fis ais>8~ 8\) <fis' ais>16\mf %
         {{ shapedSlur("fu", bs = 4, wd = 1.5) }} ( <gis=' b>) |
       }
       \volta 2 {
@@ -67,7 +74,7 @@
   <dis='' fis>16 \after 16\! <eis gis>\) <fis ais>\(\mf <gis='' b> |
 
   {{ rhFrag1("<ais='' cis>16") }}
-  <ais=' cis>16 <gis b> <fis ais>8~ 4\) |
+  <ais=' cis>16 <gis b> <fis ais>8~\p 4\) |
   <b,= dis>4~\( 16\< <cis eis> <dis fis> <eis gis> |
   <dis=' fis>16 <eis gis> \after 16\! <dis fis> <cis eis> %
   <b= dis>8\> <ais cis>16 \after 16\! <gis b> |
@@ -82,5 +89,28 @@
 \key fis \major
 \relative {
   \partial 8 { r8 | }
+  {{ lhFrag1("fis,=,8-\\stBass") }}
+  \repeat unfold 2 { fis,=, fisM! fisM r | }
+
+  \repeat unfold 2 { cis'=8 gis,@m! gism8 gis | }
+  \repeat unfold 2 { cis=8 cisM! cisM gis | }
+  cis=8 gis,@m! gism8 eis, | gis gism! gism ais |
+  dis=8 dism! dism ais | dis= dism! dism r |
+
+  \repeat unfold 2 { cis=8 gis,@m! gism8 gis | }
+  cis=8 cisM! cisM gis | cis cisM! cisM eis, |
+  {{ v2("r8 dis@m![ dism8] r | r dis@m![ dism8] r |",
+     "bis,=,4. eis,8 | bis'4. eis,=,8 |") }}
+  \repeat unfold 2 { ais=,8 aism! aism eis=, | }
+
+  \repeat unfold 5 { ais=,8 aism! aism eis=, | }
+  ais=,8 aism! aism ais |
+  bis=,8 gis,@7! gis78 gis | cis cis7! cis7 cis= |
+
+  {{ lhFrag1("fis,=,8") }}
+  fis,=,8 fisM! fisM cis' |
+  \repeat unfold 2 { gis=,8 gism! gism cis= | }
+  \repeat unfold 2 { fis,=,8 fisM! fisM cis'= | }
+  fis,=,8 fisM! fisM cis'=( | fis,=,2) \fermata |
 }
 {% endmacro %}
