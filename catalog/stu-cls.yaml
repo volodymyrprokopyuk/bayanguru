@@ -230,10 +230,9 @@ pieces:
 
   # Polyphony
   # SB3NU1979
-  # p. 59
-  # - { id: jq25, tit: Етюд E minor,
-  #     com: А. Зубарев, src: SB3NU1979,
-  #     org: rus, sty: stu, gnr: stu, frm: [scl, leg], bss: stb, lvl: elb }
+  - { id: jq25, tit: Етюд E minor,
+      com: А. Зубарев, src: SB3NU1979,
+      org: rus, sty: stu, gnr: stu, frm: [scl, leg], bss: stb, lvl: elb }
   # p. 61
   # - { id: 2zg8, tit: Етюд C minor,
   #     com: Г. Тишкевич, src: SB3NU1979,
@@ -272,7 +271,3 @@ pieces:
   # - { id: 8sz0, tit: Етюд D major,
   #     com: К. Черні, src: SB4NU1978,
   #     org: aut, sty: stu, gnr: stu, frm: [scl], bss: [pub, scl, leg], lvl: elb }
-
-  # Pepetition
-  # Ornamentation
-  # Articulation

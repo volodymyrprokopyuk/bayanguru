@@ -1,0 +1,50 @@
+{% macro rhFrag1(a) %}
+  {{ a }} e, e'8 d c b) | a4( e d'8 c b a=') |
+{% endmacro %}
+
+{% macro lhFrag1(a, b, c) %}
+  {{ a }} em! em em g[-- e@m em8 em] |
+  a=,8-- am! am am {{ b }} a,@m am8 am] |
+  b=,8-- b7! b7 b7 dis[-- b,@7 b78 b7] |
+  e,=,8-- em! em em b'-- {{ c }} | %
+{% endmacro %}
+
+{% macro lhFrag2() %}
+  g=,8[-- e@m! em8 em] gis[-- e@7! e78 e7] |
+  a=,8[ am!] g a,@m fis8 d@7! d'=8 d7 |
+{% endmacro %}
+
+{% macro rightHand() %}
+\tempo Moderato
+\clef treble
+\key e \minor
+\time 4/4
+\relative {
+  b'='4(\p e, e'8 d c b) | c4( a~ a8 g fis e) |
+  fis='4( b, b'8 a g fis) | g( a b2)\> \after 4\! r4 |
+  {{ rhFrag1("b='4(\\mp") }}
+  g='4( e c'8 b a g=') | fis4.( e8 dis='4.)\> \after 8\! r8 |
+
+  e='8(\mf b a b e d c b) | c( b a4~ a8 g fis e) |
+  fis=8( g a4~ a8 c b a) |
+  g=8( a b4) r8 fis'8--\>^\tempRit g-- \after 8\! a-- |
+  {{ rhFrag1("b='4(\\p^\\tempATempo") }}
+  g='4( e a8 g fis e) | dis4.(^\tempRit e8) e='2-- \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\clef bass
+\key e \minor
+\relative {
+  {{ lhFrag1("e,=,8---\\stBass", "fis[--", "b7! b7 b7") }}
+  {{ lhFrag2() }}
+  c=8-- cM! cM cM a-- am! am am |
+  ais=,8[-- fis@7! fis78 fis7] b=,-- b7! b7 b7 |
+
+  {{ lhFrag1("e,=,8--", "c[--", "r8 r4") }}
+  {{ lhFrag2() }}
+  c=8-- cM! cM cM fis,[-- a,@m! am8 am] |
+  b=,8-- b7! b7 b7 e,+em!2-- |
+}
+{% endmacro %}

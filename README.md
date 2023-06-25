@@ -34,7 +34,8 @@ Stradella bass and free bass
 - [pdfcpu](https://pdfcpu.io/)
 
 ```zsh
-yay -S ghostscript gsfonts fontforge t1utils texlive-langcyrillic pdfcpu
+yay -S ghostscript gsfonts fontforge t1utils pdfcpu \
+  texlive-metapost texlive-langcyrillic
 ```
 
 ## CLI

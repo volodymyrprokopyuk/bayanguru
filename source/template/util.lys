@@ -13,11 +13,11 @@
 {% endmacro %}
 
 {% macro prelude() %}
-  \version "2.25.5"
+  \version "2.25.6"
   rootUrl = "https://volodymyrprokopyuk.github.io/bayan"
-  stBass = \markup \larger \box Г % Готовий бас
-  puBass = \markup \larger \box Б % Чистий бас
-  frBass = \markup \larger \box В % Виборна система
+  stBass = \markup \larger \box Г % Готовий бас = standard (Stradella) bass
+  puBass = \markup \larger \box Б % Чистий бас = pure bass
+  frBass = \markup \larger \box В % Виборна система = free bass
   artSimile = \markup \italic simile
   artLegato = \markup \italic legato
   artNonLegato = \markup \italic "non legato"

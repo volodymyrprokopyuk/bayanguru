@@ -102,7 +102,7 @@ books:
   - { id: scl1, tit: Вибрані етюди, sub: для баяна,
       pieces: [
       # Scale
-      { sec: Гамоподібні рухи, pieces: [
+      { sec: Гами, pieces: [
         # SB1NU1979
         "gnt0", "jxnz", "e4vv", "d3fi", "wtuk", "b3nl", "vz59", "ryca",
         # SB2NU1977
@@ -144,5 +144,7 @@ books:
         "k402", "l52j", "6u7s", "cj29",
         # SB5NU1980
         "pnrg", "978q", "6zcy"] },
-      { sec: Поліфонія, pieces: [] },
+      { sec: Поліфонія, pieces: [
+        # SB3NU1979
+        "jq25"] },
       { sec: Ліва рука, pieces: [] } ] }

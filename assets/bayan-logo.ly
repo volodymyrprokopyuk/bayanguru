@@ -1,4 +1,4 @@
-\version "2.25.5"
+\version "2.25.6"
 
 % lilypond -f svg -o content content/bayan-logo.ly
 
