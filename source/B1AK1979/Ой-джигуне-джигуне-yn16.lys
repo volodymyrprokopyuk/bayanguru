@@ -14,8 +14,7 @@
 \key d \minor
 \time 2/4
 \relative {
-  d'='8\mf e f g | a a a4 |
-  c=''8( bes a g | a4) a |
+  d'='8\mf e f g | a a a4 | c8( bes a g | a4) a |
   {{ rhFrag1("d'=''4->") }}
   {{ rhFrag1("d='4") }} \bar "|."
 }

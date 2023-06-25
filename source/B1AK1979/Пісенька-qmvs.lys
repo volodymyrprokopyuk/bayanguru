@@ -28,15 +28,11 @@
 \clef bass
 \key bes \major
 \relative {
-  bes,=,8-\stBass besM! f bes,@M |
-  f=,8 f7! bes besM! |
-  bes=,8 besM! f bes,@M |
-  a=,8 f@7! bes8 besM! |
+  bes,=,8-\stBass besM! f bes,@M | f8 f7! bes besM! |
+  bes=,8 besM! f bes,@M | a8 f@7! bes8 besM! |
   {{ lhFrag1("c=8") }}
-  c'=8 cM! f, f7! |
-  bes=,8 besM! f bes,@M |
+  c'=8 cM! f, f7! | bes besM! f bes,@M |
   {{ lhFrag1("c'=8") }}
-  c'=8 cm! f, f7! |
-  bes=,8 besM! bes,,+besM4-> |
+  c'=8 cm! f, f7! | bes=, besM! bes,,+besM4-> |
 }
 {% endmacro %}
