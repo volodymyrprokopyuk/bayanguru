@@ -19,13 +19,14 @@ Stradella bass and free bass
     - **The most complete and comprehensive** bayan sheet music library
     - **Community effort** to sheet music production (curated list of verified
       and the most wanted pieces)
-      - Platform for top quality sheet music **distribution on the web** (HTML)
+    - Platform for top quality sheet music **distribution on the web** (HTML)
       and **for print** (PDF)
     - **Indexed database** of individual sheet music pieces for sheet music
       browsing, searching and visualization
     - **Flexible query langauge** that allows dynamic construction of
       fine-grained playlists for sheet music reading
     - **Built-in linter** to ensure source code quality and consistency
+    - **Clean codebase** for easy maintenance and flexible extension
 
 ## Dependencies
 

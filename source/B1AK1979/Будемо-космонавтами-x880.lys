@@ -1,5 +1,5 @@
 {% macro rightHand() %}
-\tempo Allegretto
+\tempo Allegro
 \clef treble
 \key g \major
 \time 2/4

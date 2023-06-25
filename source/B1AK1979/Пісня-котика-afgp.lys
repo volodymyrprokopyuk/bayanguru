@@ -1,7 +1,7 @@
 {% from "util.lys" import hSpace, shapedSlur %}
 
 {% macro rightHand() %}
-\tempo Andante
+\tempo Andantino
 \clef treble
 \key g \major
 \time 2/4
@@ -12,7 +12,7 @@
     d=''8 d( c8.) c16( | b8) b( a8. g16) |
     fis='8( d fis a |
     \alternative {
-      \volta 1 { g='4) b | }
+      \volta 1 { g='4) b=' | }
       \volta 2 {
         {{ hSpace() }}
         g='4 {{ shapedSlur("bd") }} ( g='8) r \bar "|."

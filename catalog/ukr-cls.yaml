@@ -135,16 +135,16 @@ pieces:
       org: ukr, sty: flk, gnr: sng, ton: dj, frm: [mel, rep], bss: stb, lvl: ela }
   - { id: tx5o, tit: Полька,
       com: А. Иванов, src: B1AK1979,
-      org: ukr, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: plk, ton: cj, frm: mel, bss: stb, lvl: ela }
   - { id: afgp, tit: Пісня котика, sub: 'з дитячої опери \"Лисичка, котик і півник\"',
       com: К. Стеценко, src: B1AK1979,
-      org: ukr, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: chd, ton: gj, frm: mel, bss: stb, lvl: ela }
   - { id: 6kce, tit: Пісня вовчика, sub: 'з дитячої опери \"Коза-дереза\"',
       com: М. Лисенко, src: B1AK1979,
-      org: ukr, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: chd, ton: fj, frm: [mel, jmp], bss: stb, lvl: ela }
   - { id: x880, tit: Будемо космонавтами,
       com: К. Мясков, src: B1AK1979,
-      org: ukr, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: aut, gnr: chd, ton: gj, frm: mel, bss: stb, lvl: ela }
   - { id: d7eu, tit: Бандура, sub: ukrfs,
       arr: И. Гладков, art: ipr, src: B1AK1979,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
