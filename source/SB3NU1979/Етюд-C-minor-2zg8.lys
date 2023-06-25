@@ -1,0 +1,45 @@
+{% macro t2(a, b) %}
+  \tuplet 3/2 { {{ a }} } \tuplet 3/2 { {{ b }} } | %
+{% endmacro %}
+
+{% macro rhFrag1(a) %}
+  {{ t2(a, "b ees bes") }}
+  {{ t2("aes='8 ees' c", "g ees' c") }}
+{% endmacro %}
+
+{% macro rightHand() %}
+\tempo "Moderato cantabile"
+\clef treble
+\key c \minor
+\time 2/4
+\relative {
+  <<
+    \new Voice = voiceOne \relative {
+      \voiceOne
+      {{ rhFrag1("g'='8\\mf ees'_\\aLeg c") }}
+      {{ t2("f,='8 c' aes", "ees c' aes") }}
+      {{ t2("g='8 g' ees", "d ees c") }}
+      {{ t2("ees,='8 c' g", "fis c' g") }}
+      {{ t2("f='8 c' aes", "ees c' g") }}
+      {{ t2("d='8 b' g", "fis <g b> f") }}
+      {{ t2("ees='8 g c", "ees c g") }}
+
+      {{ rhFrag1("g='8 ees' c") }}
+      {{ t2("", "") }}
+    }
+    \new Voice = voiceTwo \relative {
+      \voiceTwo
+      g'='2 | aes4 g | f ees | g2 | ees | f4 ees | d2 | ees |
+
+      g='2 | aes4 g |
+    }
+  >>
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\clef bass
+\key c \minor
+\relative {
+}
+{% endmacro %}
