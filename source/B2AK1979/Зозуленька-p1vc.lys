@@ -62,7 +62,7 @@
 \key f \major
 \relative {
   c=4(-\stBass c7!)-. c7-. | f,( fM!)-. fM-. |
-  c'=4_\artSimile c7! c7 | f, fM! fM |
+  c'=4_\aSim c7! c7 | f, fM! fM |
   \repeat unfold 2 { c'=4 c7! c7 | f, fM! fM | }
   {{ lhFrag1("f=,4") }} | c c7 c7 |
   {{ lhFrag1("f,=,4") }} | f,=, fM! r |

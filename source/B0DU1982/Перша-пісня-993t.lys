@@ -11,7 +11,7 @@
   c''=''4\(\f e d c | d e c2\) |
   c=''4\( e d c | d e \after 2\! c2\)\> |
   e=''2\(\mf f4 a | g2.\) f4\( | e e f d | c1\) |
-  e=''2\(\f f4 a | g2.\) f4\( | e e f^\tempRit d |
+  e=''2\(\f f4 a | g2.\) f4\( | e e f^\tRit d |
   c=''1\) \fermata \bar "|."
 }
 {% endmacro %}

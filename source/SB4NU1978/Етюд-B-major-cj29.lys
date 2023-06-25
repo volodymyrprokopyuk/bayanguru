@@ -31,9 +31,9 @@
 \key b \major
 \time 6/8
 \relative {
-  {{ rhFrag1("<dis'=' fis b>8\\f", "_\\dynCresc") }}
+  {{ rhFrag1("<dis'=' fis b>8\\f", "_\\dCre") }}
   {{ rhFrag2() }}
-  <dis='' gis b>8_\dynDim <cis fisis ais> <dis gis b> %
+  <dis='' gis b>8_\dDim <cis fisis ais> <dis gis b> %
   <b=' dis gis>8 <ais cis fisis> <b dis gis> |
   <b=' dis gis>8 <ais cis fis> <gis b eis> %
   <gis=' b eis>8 <ais cis fis> <b dis gis> |
@@ -70,15 +70,15 @@
   <cisis='' eis ais>8 <ais cisis eis> <cisis eis ais> |
   <fis,=' ais dis>4. r8 <cis e fis ais>4 \fermata |
 
-  {{ rhFrag1("<dis=' fis b>8\\f", "_\\dynCresc") }}
+  {{ rhFrag1("<dis=' fis b>8\\f", "_\\dCre") }}
   {{ rhFrag2() }}
-  <ais=' cis fis>8_\dynDim <gis b e> <fis ais dis> %
+  <ais=' cis fis>8_\dDim <gis b e> <fis ais dis> %
   <e=' gis cis>8 <dis fis b> <cis e ais> |
   {{ rhFrag3("<b= dis gis>8\\mf") }}
   {{ rhFrag3("<b= dis gis>8") }}
   <b= dis gis>8 <ais cis fisis> <b dis gis> %
   <b= dis gis>8 <ais cis fisis> <b dis gis> |
-  <cis=' e ais>8_\dynCresc <b e gis> <cis e ais> %
+  <cis=' e ais>8_\dCre <b e gis> <cis e ais> %
   <dis=' fis b>8 <cis fis ais> <dis fis b> |
   <e=' fis cis'>8 <dis fis b> <e fis cis'> %
   <fis=' b dis>8 <e b' cis> <fis b dis> |
@@ -88,7 +88,7 @@
   <e='' gis cis>8\> <dis fis b> <cis e ais> |
   <b=' dis gis>8 <ais cis fis> <gis b e> %
   <fis=' ais dis>8 <e gis cis> <dis fis b> |
-  <cis=' e ais>8^\tempRit <b dis gis> \after 16\! <ais cis fis> %
+  <cis=' e ais>8^\tRit <b dis gis> \after 16\! <ais cis fis> %
   \clef bass
   <gis= b e>8 <fis ais dis> <e gis cis> |
   <dis= fis b>8 <fis b dis>\< %

@@ -54,10 +54,10 @@
   <fis=' ais>16\< <gis b> <fis ais>8~ 16 <gis b> <fis ais> <eis gis> |
   <fis=' ais>16 <eis gis> \after 8\! <dis fis>8~ 8\) <gis, b>16\(\mp <ais= cis> |
 
-  {{ rhFrag2("_\\dynCresc", "") }}
+  {{ rhFrag2("_\\dCre", "") }}
   <eis=' gis>16 <dis fis> <eis gis> <fis ais> <gis b> <ais cis> <b dis> <cis eis>\) |
   <dis='' fis>4~\( 16 <eis gis> <fis ais> <eis gis> |
-  <dis='' fis>16_\dynDim <eis gis> <dis fis> <cis eis> %
+  <dis='' fis>16_\dDim <eis gis> <dis fis> <cis eis> %
   <dis='' fis>8\) <cis eis>16\( <bis dis> |
   <cis='' eis>16 <dis fis> <cis eis>8~ 16 <dis fis> <cis eis> <bis dis> |
   <cis='' eis>16 <bis dis> <ais cis>8~ 8\) <ais, cis>16\(\p <bis= dis> |

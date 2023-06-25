@@ -20,7 +20,7 @@
     e='4 d16(\< e fis \after 16\! a) |
     b='16(\f cis d b) a( a' gis a) |
     b,='16( cis d b) a( gis a d,) |
-    g='16(\mp a g_\dynCresc g) fis( g fis dis) |
+    g='16(\mp a g_\dCre g) fis( g fis dis) |
     \alternative {
       \volta 1 { e='16( fis e cis) d='8\f r | }
       \volta 2 { e='16( fis e cis) d8 d16 d=' | }

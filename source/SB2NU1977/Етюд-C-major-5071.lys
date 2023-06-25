@@ -14,14 +14,14 @@
 
   r8\mf g'='8\( bes a bes g d g |
   c,='8 g' a bes a f c4\) |
-  r8 e='8\(_\dynCresc c' b c a e a |
+  r8 e='8\(_\dCre c' b c a e a |
   d,='8 a' b c b g d4\) |
   r8 b'='8\( c d g, c d e |
   f=''8 a, e' d c b a g\) |
 
   r8 e'=''8\( fis g c, fis g a |
   g=''8 fis e dis g e b g\) |
-  r8 bes='8(_\dynDim g' f g e cis a) |
+  r8 bes='8(_\dDim g' f g e cis a) |
   r8 a='8( f' e f d b g) |
   r8 g='8\( e' d e a, b c |
   d,='8 f c' b <e,=' c'>2\) \bar "|."

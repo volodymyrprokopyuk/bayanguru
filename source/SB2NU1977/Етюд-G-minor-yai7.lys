@@ -30,7 +30,7 @@
   <c=' ees g>8-.-> r %
   \tuplet 3/2 { <ees=' g d'>8-. 8-. 8-. } %
   <ees=' g c>8-.-> r |
-  \tuplet 3/2 { <ees=' g bes>8-._\dynCresc 8-. 8-. } %
+  \tuplet 3/2 { <ees=' g bes>8-._\dCre 8-. 8-. } %
   <ees=' g a>8-.-> r %
   \tuplet 3/2 { <g=' c f>8-. 8-. 8-. } %
   <g=' c ees>8-.-> r |
@@ -42,7 +42,7 @@
   {{ rhFrag1("<c=' ees g>8-.\\p", "", "", "") }}
   \tuplet 3/2 { <a= ees' g>8-.\mp 8-. 8-. } %
   <a= ees' f>8-.-> r %
-  \tuplet 3/2 { <a= ees' g>8-._\dynCresc 8-. 8-. } %
+  \tuplet 3/2 { <a= ees' g>8-._\dCre 8-. 8-. } %
   <a= ees' f>8-.-> r |
   \tuplet 3/2 { <f'=' bes ees>8-. 8-. 8-. } %
   <f=' bes d>8-.-> r %
@@ -52,20 +52,20 @@
   <aes=' bes f'>8-.-> r %
   \tuplet 3/2 { <g=' bes f'>8-. 8-. 8-. } %
   <g=' bes ees>8-.-> r |
-  \tuplet 3/2 { <f=' b ees>8-._\dynDim 8-. 8-. } %
+  \tuplet 3/2 { <f=' b ees>8-._\dDim 8-. 8-. } %
   <f=' b d>8-.-> r %
   \tuplet 3/2 { <ees=' g d'>8-. 8-. 8-. } %
   <ees=' g c>8-.-> r |
-  \tuplet 3/2 { <c=' ees bes'>8-._\dynCresc 8-. 8-. } %
+  \tuplet 3/2 { <c=' ees bes'>8-._\dCre 8-. 8-. } %
   <c=' ees a>8-.-> r %
   \tuplet 3/2 { <ees=' g d'>8-. 8-. 8-. } %
   <ees=' g c>8-.-> r |
   \tuplet 3/2 { <g=' c f>8-. 8-. 8-. } %
   <g=' c ees>8-.-> r %
-  \tuplet 3/2 { <fis=' c' ees>8-.^\tempRit 8-. 8-. } %
+  \tuplet 3/2 { <fis=' c' ees>8-.^\tRit 8-. 8-. } %
   <fis=' c' d>8-.-> r |
 
-  \tuplet 3/2 { <c'='' ees g>8-.\pp^\tempATempo 8-. 8-. } %
+  \tuplet 3/2 { <c'='' ees g>8-.\pp^\tATem 8-. 8-. } %
   <c='' d fis>8-.-> r %
   \tuplet 3/2 { <c='' ees g>8-. 8-. 8-. } %
   <c='' d fis>8-.-> r |
@@ -81,12 +81,12 @@
   \tuplet 3/2 { <c=' fis a>8-. 8-. 8-. } %
   \tuplet 3/2 { <bes= d a'>8-.\> 8-. \after 16.\! 8-. } %
   <bes= d g>8-.-> r |
-  \tuplet 3/2 { <aes= b g'>8-.\mf 8-._\dynDim 8-. } %
+  \tuplet 3/2 { <aes= b g'>8-.\mf 8-._\dDim 8-. } %
   <aes= b f'>8-.-> r %
   \tuplet 3/2 { <g= c f>8-. 8-. 8-. } %
   <g= c ees>8-.-> r |
   <g= bes d>4-.-> <a c f>-.-> <g bes d>-.-> <c ees aes>-.-> |
-  \tuplet 3/2 { r8 <bes= d g>-._\dynCresc <bes d a'>-. } %
+  \tuplet 3/2 { r8 <bes= d g>-._\dCre <bes d a'>-. } %
   \tuplet 3/2 { <bes= d g>8-. <d g bes>-. <d g c>-. } %
   \tuplet 3/2 { <d=' g bes>8-. <g bes d>-. <g bes ees>-. } %
   \tuplet 3/2 { <g=' bes d>8-. <bes d g>-. <bes d a'>-. } | %

@@ -74,7 +74,7 @@
 \relative {
   g,=,8-\stBass d' bes | g4 r8 |
   g=,8( gm!) gm | g( gm) gm |
-  a=,8[_\artSimile d@7! d78] | fis[ d@7! d78] |
+  a=,8[_\aSim d@7! d78] | fis[ d@7! d78] |
   d'=8 d7! d7 | fis,[ d@7! d78] |
   g=,8( gm!) gm |
   {{ lhFrag1() }} | g,[ gm! d@7!] |

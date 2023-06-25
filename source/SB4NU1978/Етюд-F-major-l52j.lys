@@ -9,7 +9,7 @@
   {{ dynPadding(4) }}
   r8\p <c'=' f a>8--\< \after 16.\! <d f bes>-- %
   <c=' f a>8--\> <b d f gis>-- \after 16.\! <c f a>-- |
-  r8 <bes= d e g>8\<_\artSimile \after 16.\! <bes d e a> %
+  r8 <bes= d e g>8\<_\aSim \after 16.\! <bes d e a> %
   <bes= d e g>8\> <bes d e fis> \after 16.\! <bes d e g> |
   r8 <g= d' e g>8\< \after 16.\! <g d' e a> %
   <g= d' e g>8\> <g d' e fis> \after 16.\! <g d' e g> |
@@ -39,7 +39,7 @@
   r8 <a= c f>8\< 8 %
   \after 16.\! <gis= b d f>8 <g bes d f>\> \after 16.\! <bes c e> |
   r8 <a= c f>8\< 8 <c f a>8 8 \after 16.\! <f a c> |
-  r8 <ees=' f a c>8_\dynCresc <ees f a d> %
+  r8 <ees=' f a c>8_\dCre <ees f a d> %
   <ees=' f a c>8 <ees f a b> <ees f a c> |
   r8 <d=' f gis b>8 <d f gis c> %
   <d=' f gis b>8 <d f gis ais> <d f gis b> |
@@ -48,7 +48,7 @@
   r8 <c=' f a>8 <d f bes> %
   <c=' f a>8 <b d f gis> <c f a> |
   <ees=' a c f>2.->\f | <d gis b f'>2.-> |
-  <des=' g bes f'>2.~-> | 8 <des f g>[->^\tempRit <des f g bes>-> %
+  <des=' g bes f'>2.~-> | 8 <des f g>[->^\tRit <des f g bes>-> %
   <f=' g bes des>8-> <f g bes f'>-> <g des' f g>]-> |
   <a=' c f a>2.\f \fermata \bar "|."
 }
@@ -64,7 +64,7 @@
   c=2 c4 | f,2. |
   \repeat unfold 4 { f=,2 f8 f | }
   r8 f=,8-> c'-> a-> ees'-> c-> |
-  r8 f,=,8_\artSimile b gis d' b |
+  r8 f,=,8_\aSim b gis d' b |
   r8 f=,8 bes g des' bes |
   f=,2-> des'8-> bes=,-> |
   f,,+fM!2. \fermata |

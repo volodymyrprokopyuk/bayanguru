@@ -32,7 +32,7 @@
 \key c \major
 \relative {
   c=8(-\stBass cM!)-. cM-. | c( cM!)-. cM-. |
-  c=8[_\artSimile f@M! fM8] |
+  c=8[_\aSim f@M! fM8] |
   \repeat unfold 3 { c=8 cM! cM | }
   g=,8 g7! g7 | c= cM! cM |
 

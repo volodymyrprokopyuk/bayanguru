@@ -35,7 +35,7 @@
   \acciaccatura { b=,8 } c=2 |
   {{ rhFrag2() }}
   {{ rhFrag2() }}
-  \acciaccatura { g'=16 a b } c='4->_\dynDim g-- |
+  \acciaccatura { g'=16 a b } c='4->_\dDim g-- |
   R2 | c='4-> r \bar "|."
 }
 {% endmacro %}

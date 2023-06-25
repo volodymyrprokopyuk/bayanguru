@@ -24,13 +24,13 @@
   d=''8-.\> d-. \after 4\! d4-- |
   d=''16(\mf\< cis b8) d16( cis \after 8\! b8) |
   gis'=''8-.\f gis-. gis4-- |
-  fis=''8-._\dynDim fis-. fis4-- |
+  fis=''8-._\dDim fis-. fis4-- |
   e=''8-. e-. e4-- |
   {{ rhFrag1("cis=''16(\\<") }}
-  cis=''16(_\dynCresc b a8) cis16( b a8) |
+  cis=''16(_\dCre b a8) cis16( b a8) |
   fis'=''8-. fis-. e4-- |
   {{ rhFrag2("a=''16(\\f") }}
-  fis=''8-._\dynDim b,-. b4-- |
+  fis=''8-._\dDim b,-. b4-- |
   e=''8-. cis-. cis4-- |
   {{ rhFrag2("a'=''16(\\f") }}
   fis=''8-. b,-. b( cis) | a='4 r \bar "|."

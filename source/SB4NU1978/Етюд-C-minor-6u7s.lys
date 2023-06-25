@@ -69,7 +69,7 @@
         \tuplet 3/2 { <aes= c ees>8 8 8 } %
         \tuplet 3/2 { <c=' ees f>8 8 8 } %
         \tuplet 3/2 { <ees=' f aes>8 8 \after 16\! 8 } | %
-        {{ rhFrag2("<bes'=' des f>8\\mp", "_\\dynCresc", "") }}
+        {{ rhFrag2("<bes'=' des f>8\\mp", "_\\dCre", "") }}
         \tuplet 3/2 { <c='' e g>8 8 8 } %
         \tuplet 3/2 { <b=' e g>8 8 8 } %
         \tuplet 3/2 { <bes=' e g>8 8 8 } %
@@ -80,7 +80,7 @@
         \tuplet 3/2 { <d='' f bes>8 8 <d f b> } | %
         \tuplet 3/2 { <e='' g c>8->\f \clef bass <e,,= g c>8-- 8-- } %
         \tuplet 3/2 { <f= aes des>8--\> 8-- 8-- } %
-        \tuplet 3/2 { <fis= c' d>8--^\tempRit 8-- 8-- } %
+        \tuplet 3/2 { <fis= c' d>8--^\tRit 8-- 8-- } %
         \tuplet 3/2 {
           <fis= c' ees>8-- <fis c' f>-- \after 16\! <fis c' fis>-- %
         } \bar "||"
@@ -92,7 +92,7 @@
 
   {{ rhFrag3("<b= f' g>8\\<", "\\after 16\\!") }}
   \tuplet 3/2 {
-    <ees=' g c>8->\mf^\tempRit <c'='' ees g>-- <c ees aes>-- %
+    <ees=' g c>8->\mf^\tRit <c'='' ees g>-- <c ees aes>-- %
   }
   \tuplet 3/2 { <d='' fis a>8-- <d fis bes>-- <d fis b>-- } %
   <ees='' g c>2 \bar "|."

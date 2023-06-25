@@ -13,7 +13,7 @@
     \acciaccatura { d'=''8 } c8\( b c d e f | g2.\) |
     g=''4\( fis8 g fis g | a4. g8 fis e\) |
     d=''4\( cis8 d cis d | e4. d8 c b\) |
-    b='8(_\dynCresc a gis a e'4) | d8( c b c a'4) |
+    b='8(_\dCre a gis a e'4) | d8( c b c a'4) |
     g=''8\( fis e d e fis |
     \alternative {
       \volta 1 { g=''4\)\f r\> \after 8.\! r | }
@@ -31,7 +31,7 @@
     a,=''4\(\mf gis8 a gis a | e'4.\) a,8\( bes a |
     gis=''8\< a b cis d \after 8\! e | f2\)\f r4 |
     f='''8\( g f e d c | b a g f e d\) |
-    e=''8( g fis g c4) | r8 e,(_\dynDim dis e g4) |
+    e=''8( g fis g c4) | r8 e,(_\dDim dis e g4) |
     f=''8\( g f e d c | b a b g a b\) |
     c=''8\( e g c g e |
     \alternative {

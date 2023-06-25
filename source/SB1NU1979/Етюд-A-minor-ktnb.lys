@@ -25,7 +25,7 @@
   r16 a='16(\< bes a e' a, bes a) %
   r16 a='16( b a d a b \after 16\! a) |
   e='16\mf e f( e) e e f( e) %
-  a='16( b c^\tempRit e a=''8) r \bar "|."
+  a='16( b c^\tRit e a=''8) r \bar "|."
 }
 {% endmacro %}
 

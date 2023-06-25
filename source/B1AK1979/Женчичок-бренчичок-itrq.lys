@@ -16,13 +16,13 @@
   <<
     \relative {
       c''=''8(\f b c |
-      d=''4\>^\tempRit \after 8\! c=''8) |
+      d=''4\>^\tRit \after 8\! c=''8) |
       \barFermata
     }
     \\
     \relative { g'='4 r8 | g='4 r8 | }
   >>
-  b='16(\mf^\tempATempo c b8) a-. | g-. g='-. r \bar "|."
+  b='16(\mf^\tATem c b8) a-. | g-. g='-. r \bar "|."
 }
 {% endmacro %}
 

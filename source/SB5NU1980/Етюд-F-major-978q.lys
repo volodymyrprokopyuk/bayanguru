@@ -31,12 +31,12 @@
 {% macro rhFrag5() %}
   r4\f <c=' e g>4 4 | 2 r4 |
   r4 <b= e g>4 4 | 4 <g b e> <f b d> |
-  r4\mp <e= g c>4 4 | r4 <d'=' f g>4_\dynCresc 4 |
+  r4\mp <e= g c>4 4 | r4 <d'=' f g>4_\dCre 4 |
 {% endmacro %}
 
 {% macro rhFrag6(a) %}
   {{ a }} r r |
-  r4 <b= e g>4_\dynCresc 4 |
+  r4 <b= e g>4_\dCre 4 |
   <b= e gis>4 r r | r4 4 4 |
 {% endmacro %}
 
@@ -77,14 +77,14 @@
     <b=' f' g>4 <g b d> <b f' g> |
     {{ rhFrag3("\\sf") }}
     a='4\mf <e a c> <f a d> |
-    <a=' c e>4_\dynCresc 4 4 |
+    <a=' c e>4_\dCre 4 4 |
     <gis=' b e>4 4 4 |
-    {{ rhFrag3("_\\dynCresc") }}
+    {{ rhFrag3("_\\dCre") }}
     <a=' c dis>4 4 4 |
-    <a=' c e>4\f 4_\dynDim <gis b e> |
+    <a=' c e>4\f 4_\dDim <gis b e> |
     <gis=' b e>4 <g bes e>4 4 |
     {{ rhFrag4("<f=' a c>4->\\mp", "\\<") }}
-    <e=' a c>4_\dynCresc <c e a> <e bes' c> |
+    <e=' a c>4_\dCre <c e a> <e bes' c> |
     <c=' e g>4 <f a c> <c f a> |
     <g'=' bes c>4 <g bes d> <g bes e> |
     <a=' c f>4 <f a c> f='-> \fine \bar "||"
@@ -95,10 +95,10 @@
       {{ rhFrag5() }}
       r4 <c=' f g>4 4 | r4 <b d g>4 4 |
       {{ rhFrag5() }}
-      <c=' e a>4^\tempRit 4 4 | <b= e gis>2.\mf |
+      <c=' e a>4^\tRit 4 4 | <b= e gis>2.\mf |
     }
-    {{ rhFrag6("<b= e g>4\\p^\\tempATempo") }}
-    <c=' e a>4\mf r r | <b e g>_\dynDim r r |
+    {{ rhFrag6("<b= e g>4\\p^\\tATem") }}
+    <c=' e a>4\mf r r | <b e g>_\dDim r r |
     <a= e' fis>4 r r | <g b e> r r |
     {{ rhFrag6("<b= e g>4\\p") }}
     <c=' e a>2 r4 | r4 4 4 |

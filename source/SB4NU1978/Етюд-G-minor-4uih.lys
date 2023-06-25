@@ -13,14 +13,14 @@
 \key g \minor
 \time 4/4
 \relative {
-  \partial 4 { bes'='16\mf a_\artLegato bes c | }
+  \partial 4 { bes'='16\mf a_\aLeg bes c | }
   {{ rhFrag1("d=''16", "", "c=''") }}
   {{ rhFrag1("d=''16", "", "d=''") }}
   ees=''16 f ees d c d c bes a bes a g a bes c d |
   ees=''16 f ees d c d c bes a gis a bes c d ees e |
   {{ rhFrag2("ees=''16") }}
   f=''16 g f ees d ees d c bes a bes c cis d ees e |
-  f=''16_\dynDim g f ees d ees e f ees f ees d c cis d ees |
+  f=''16_\dDim g f ees d ees e f ees f ees d c cis d ees |
   d=''16 ees d c bes c cis d c d c bes a bes c cis |
   {{ rhFrag1("d=''16\\mf", "", "c=''") }}
   d=''16 ees d c bes c bes a bes a bes c d c d ees |
@@ -30,7 +30,7 @@
   {{ rhFrag2("f=''16") }}
   ees=''16 f ees d c bes c ees d ees d c bes a bes d |
   c=''16 d c bes a g a c bes\> c bes a g a bes \after 16\! c |
-  {{ rhFrag1("d=''16\\p", "_\\dynCresc", "c=''") }}
+  {{ rhFrag1("d=''16\\p", "_\\dCre", "c=''") }}
   d=''16 c bes a bes c bes a g fis g a bes a bes c |
   d=''16 ees d c bes a bes d ees f ees d c bes c ees |
   f=''16 g f ees d c d f fis g fis e fis d e fis |

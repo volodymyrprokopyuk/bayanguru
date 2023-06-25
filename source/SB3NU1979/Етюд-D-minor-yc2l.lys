@@ -38,10 +38,10 @@
   {{ rhFrag1("f'='''16(\\f") }}
   {{ rhFrag2("a=''16\\(") }}
   {{ rhFrag1("f'='''16(") }}
-  a=''16\(\>^\tempRit g f e d cis |
+  a=''16\(\>^\tRit g f e d cis |
   d=''16 cis c b bes \after 16\! a\) |
 
-  {{ rhFrag1("f'=''16(\\p^\\tempATempo") }}
+  {{ rhFrag1("f'=''16(\\p^\\tATem") }}
   {{ rhFrag3("c=''16\\(") }}
   {{ rhFrag1("f=''16(") }}
   c=''16\(\< b c cis d e |
@@ -49,10 +49,10 @@
   {{ rhFrag1("f='''16(\\f") }}
   {{ rhFrag3("c='''16\\(") }}
   {{ rhFrag1("f='''16(") }}
-  c='''16\(\>^\tempRit bes a g f e |
+  c='''16\(\>^\tRit bes a g f e |
   f=''16 e f g a \after 16\! g\) |
 
-  {{ rhFrag1("f=''16(\\p^\\tempATempo") }}
+  {{ rhFrag1("f=''16(\\p^\\tATem") }}
   {{ rhFrag2("a='16\\(") }}
   {{ rhFrag1("f'=''16(") }}
   {{ rhFrag4("a='16\\(\\<") }}

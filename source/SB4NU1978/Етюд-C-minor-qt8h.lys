@@ -45,7 +45,7 @@
             bes,='16 aes' f aes bes, aes' f aes %
             bes,='16 aes' f aes bes, aes' f aes\) |
             bes,='16\( bes' aes bes bes, bes' aes bes %
-            bes,='16_\dynCresc aes' f aes bes, aes' f aes |
+            bes,='16_\dCre aes' f aes bes, aes' f aes |
             bes,='16 g' ees g bes, g' ees g %
             b,='16 g' f g b, g' f g\) |
             c,=''16\(\f c' e, c' c, c' e, c' %

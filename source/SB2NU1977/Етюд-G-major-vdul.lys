@@ -48,15 +48,15 @@
   e=''8[( fis,])-. fis[-. fis]-. fis-. fis-. |
   cis='8(\< d fis g ais \after 8\! b) |
   d=''8[( e,])-. e[-. e]-. e-. e-. |
-  dis='8(_\dynCresc e gis a b c) |
+  dis='8(_\dCre e gis a b c) |
   gis='8( a b c dis e) | b( c dis e fis g) |
-  b=''8(\mf^\tempRit a fis d c  a=') |
+  b=''8(\mf^\tRit a fis d c  a=') |
 
-  {{ rhFrag1("b='8(\\p\\<^\\tempATempo") }}
+  {{ rhFrag1("b='8(\\p\\<^\\tATem") }}
   <<
     \new Voice = voiceOne \relative {
       \voiceOne
-      g''=''2._\dynDim | d | g,=' |
+      g''=''2._\dDim | d | g,=' |
     }
     \new Voice = voiceTwo \relative {
       \voiceTwo
@@ -66,7 +66,7 @@
   >>
   d,='8(\mp ees fis g a bes) | c( d ees fis g a) |
   {{ v2("b''=''2.~ | b=''\\pp \\bar \"|.\"",
-     "r8 cis''=''8( d^\\tempRall dis e d) | g=''2. |") }}
+     "r8 cis''=''8( d^\\tRal dis e d) | g=''2. |") }}
 }
 {% endmacro %}
 

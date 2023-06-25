@@ -6,7 +6,7 @@
 \relative {
   \repeat volta 2 {
     \partial 16 { c''=''16\p | }
-    f=''32->_\artLegato c b c d c b c %
+    f=''32->_\aLeg c b c d c b c %
     g'=''32-> c, b c d c b c |
     a'=''32-> c, b c d c b c %
     bes'=''32-> c, b c d c b c |
@@ -14,7 +14,7 @@
     a'=''32-> c, b c d c b \after 32\! c |
     fis=''32->\> c b c d c b c %
     g'=''32-> c, b c d c b \after 32\! c |
-    f=''32_\dynCresc e dis e a g fis g %
+    f=''32_\dCre e dis e a g fis g %
     d'='''32 c b c f e dis e |
     g='''32 f e f d c bes a %
     g=''32\mf\> f e d c bes a g |
@@ -35,7 +35,7 @@
     e,=''32\> g fis g d g fis g %
     e=''32 c b c d c b \after 32\! c |
 
-    g'=''32->\p c,_\dynCresc b c d c b c %
+    g'=''32->\p c,_\dCre b c d c b c %
     c'='''32-> c, b c d c b c |
     bes'=''32-> c, b c d c b c %
     a'=''32-> c, b c d c b c |
@@ -47,7 +47,7 @@
     a'=''32 c, b c g' c, b c |
     f=''32 c b c d c b c %
     a='32 c b c g c b c |
-    f,='32_\dynCresc c' b c <g e'> c b c %
+    f,='32_\dCre c' b c <g e'> c b c %
     <a=' f'>32 c b c <g e'> c b c |
     <a=' f'>32 c b c <e g> c b c %
     <f='' a>32 c b c <e g> c b c |

@@ -62,7 +62,7 @@
   \repeat segno 2 {
     \volta 1
     g='8\f g' e(-> d16 c) | b8-. d-. a-. d-. |
-    b='8-. d-. \acciaccatura { d=''8 } c16(_\dynCresc b c a) |
+    b='8-. d-. \acciaccatura { d=''8 } c16(_\dCre b c a) |
     b='8-. d-. a-. d-. | b-. a-. g='4--\f |
 
     {{ rhFrag3("<g=' b>8.\\mf") }}

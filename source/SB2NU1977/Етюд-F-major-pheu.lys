@@ -10,11 +10,11 @@
 \time 6/8
 \relative {
   \repeat volta 2 {
-    a'='16(\p c_\artDolce f a c a' f4 c8) |
+    a'='16(\p c_\aDol f a c a' f4 c8) |
     a,='16( c f a c a' f4 c8) |
     c,=''16( e g c \ottava #1 e c' bes4 g8) |
     c=''''16( a f c a f \ottava #0 bes g e c bes g) |
-    a='16( c f a c a' f4_\dynCresc c8) |
+    a='16( c f a c a' f4_\dCre c8) |
     c,=''16( e g c \ottava #1 e c' g4 e8) \ottava #0 |
     e='''16( c g e c e f d b g f d |
     c='16 e g c g e c='8) r r |
@@ -22,7 +22,7 @@
 
   \repeat volta 2 {
     {{ rhFrag1("e='16(\\p") }}
-    {{ rhFrag1("e,,='16(_\\dynCresc") }}
+    {{ rhFrag1("e,,='16(_\\dCre") }}
     f,,='16(\mf a c f a c f8)-. f-. f-. |
     f,,='16( bes d f bes d f8)-.\< f-. \after 8\! f-. |
     f='''16(\f c a f c' a bes g e c bes g |

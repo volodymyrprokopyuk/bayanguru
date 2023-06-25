@@ -65,7 +65,7 @@
 \key b \minor
 \time 6/8
 \relative {
-  {{ rhFrag1("<d''='' fis b>8\\mf", "_\\artStaccato") }}
+  {{ rhFrag1("<d''='' fis b>8\\mf", "_\\aSta") }}
   {{ rhFrag1("<d'='' fis b>8", "") }}
   {{ rhFrag3() }}
   {{ rhFrag2() }}
@@ -82,11 +82,11 @@
   <cis=' fis ais>8 8 8 8 8 8 |
   <b= dis ais'>8 8 8 <cis eis ais>8 8 <b eis ais> |
   <ais= fis'>8 8 <gis b fis'> <fis ais fis'> %
-  <gis= b>8[\(_\dynCresc <ais cis>] |
+  <gis= b>8[\(_\dCre <ais cis>] |
   <b= d>8 <cis e> <d fis> <e gis> <fis ais> <gis b> |
-  <ais=' cis>8 <b d> <cis e> <d fis>^\tempRit %
+  <ais=' cis>8 <b d> <cis e> <d fis>^\tRit %
   <b=' e gis>8 <cis fis ais>\) |
-  {{ rhFrag1("<d='' fis b>8\\mf^\\tempATempo", "") }}
+  {{ rhFrag1("<d='' fis b>8\\mf^\\tATem", "") }}
   <d'='' fis b>8 <cis fis ais> <d fis b> %
   <b=' d fis>8 <b cis eis> <b d fis> |
   <fis=' b d>8 <fis ais cis> <fis b d> %

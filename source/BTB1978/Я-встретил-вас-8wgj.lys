@@ -59,7 +59,7 @@
   {{ rhFrag3() }}
   <b=' d a'>4\< \after 8\! <b d g>8 r16 \fermata 16\p |
   <a=' c fis>8 <a c e> <e a c> fis | <g b>4. 8 |
-  <fis=' ais cis>4^\tempRit <a b dis> |
+  <fis=' ais cis>4^\tRit <a b dis> |
   <g=' b e>2 | <g'='' b e>4 \fermata r4 \bar "|."
 }
 {% endmacro %}

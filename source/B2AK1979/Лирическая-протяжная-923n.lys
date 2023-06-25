@@ -24,7 +24,7 @@
     \relative { fis'='2 | eis4. r8 | }
   >>
   fis='8( <a, d fis>\> gis' a) |
-  \after 8\! b='8[( fis]^\tempRit %
+  \after 8\! b='8[( fis]^\tRit %
   <fis=' b fis'>8 \fermata d'='' \fermata) |
   cis=''8(\pp a gis fis) |
   <<
@@ -60,7 +60,7 @@
   r8\< <a,= d fis>4 \after 8\! 8 |
   r8 <gis= bis dis fis>4 8 |
   r8\> <gis= b d fis>4 \after 8\! 8 |
-  r8\p <a= cis fis>4^\tempRit %
+  r8\p <a= cis fis>4^\tRit %
   <<
     \relative {
       {{ dynPadding(6) }}

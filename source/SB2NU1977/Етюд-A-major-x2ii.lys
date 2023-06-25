@@ -24,7 +24,7 @@
   a='16(\mf gis fis eis fis8)-. d16( e fis gis a fis) |
   gis='16( fis e d e8)-. cis16( d e fis gis) r |
   fis='16( e d cis b8)-. b16( cis d e fis d) |
-  e='16(_\dynCresc d cis b a8)-. a16( b cis d e cis) |
+  e='16(_\dCre d cis b a8)-. a16( b cis d e cis) |
   d='16( cis b ais b8)-. b16( cis d e fis gis |
   a='8)-.\f r r4 r |
 
@@ -39,7 +39,7 @@
 \relative {
   a,=,8-.-\stBass r aM!-. r aM-. r |
   e@M!8-. r8 eM-. r e'-. r |
-  fis=8_\artSimile r fism! r fism r |
+  fis=8_\aSim r fism! r fism r |
   gis=8 r e@M! r8 e r |
   a,=,8 r aM! r aM r |
   d@M!8 r8 dM r b r |

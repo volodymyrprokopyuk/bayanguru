@@ -13,7 +13,7 @@
   \repeat segno 2 {
     \volta 1
     \repeat volta 2 {
-      <e''='' g b>16\mf c' <e, g b>_\artLegato g'-> %
+      <e''='' g b>16\mf c' <e, g b>_\aLeg g'-> %
       <e,='' g b>16 c' <e, g b> g'='''-> |
       \repeat unfold 2 {
         <e,='' fis a>16 b' <e, fis a > fis'='''-> %
@@ -35,13 +35,13 @@
           \repeat unfold 2 {
             <g,=' c e>16 fis' <g, c e> g'=''-> %
           } | %
-          <fis,=' b dis>16^\tempRit b' <g, cis e> b'-> %
+          <fis,=' b dis>16^\tRit b' <g, cis e> b'-> %
           <gis,=' cisis eis>16 b' <a, dis fis> c'='''-> |
         }
         \volta 2 {
           <g,=' c e>16 fis' <g, c e> g'-> %
           <fis,=' b dis>16 e' <fis, b dis> fis'-> |
-          <g,=' b e>16^\tempRit fis' %
+          <g,=' b e>16^\tRit fis' %
           <b,=' e g>16 b'-> <g='' b e>4-- \fine |
         }
       }
@@ -49,7 +49,7 @@
 
     \volta 2
     \repeat volta 2 {
-      <g,=' b d>16\f^\tempATempo e' <g, b d> b'-> %
+      <g,=' b d>16\f^\tATem e' <g, b d> b'-> %
       <g,=' b d>16 e' <g, b d> b'=''-> |
       \repeat unfold 2 {
         <g,=' cis e>16 fis' <g, cis e> a'=''-> %
@@ -74,7 +74,7 @@
         }
         \volta 2 {
           {{ rhFrag1() }}
-          <b,=' d fis>16^\tempRit g' <b, d fis> b'-> %
+          <b,=' d fis>16^\tRit g' <b, d fis> b'-> %
           <b,=' dis fis>16\> g' %
           <b,=' dis fis>16 \after 16\! b'=''-> \bar "||"
         }

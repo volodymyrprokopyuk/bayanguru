@@ -21,7 +21,7 @@
 \relative {
   g,=,4(-\stBass gM!)-. gM-. gM-. |
   a=,4( d@7!)-. d74-. d7-. |
-  fis=,4_\artSimile d@7! d74 d7 |
+  fis=,4_\aSim d@7! d74 d7 |
   g=,4 gM! gM gM |
   b=,4 g,@M! gM4 gM |
   c=4 a,@m! am4 am |

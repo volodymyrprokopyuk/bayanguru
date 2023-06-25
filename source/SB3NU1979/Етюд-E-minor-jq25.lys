@@ -27,9 +27,9 @@
 
   e='8(\mf b a b e d c b) | c( b a4~ a8 g fis e) |
   fis=8( g a4~ a8 c b a) |
-  g=8( a b4) r8 fis'8--\>^\tempRit g-- \after 8\! a-- |
-  {{ rhFrag1("b='4(\\p^\\tempATempo") }}
-  g='4( e a8 g fis e) | dis4.(^\tempRit e8) e='2-- \bar "|."
+  g=8( a b4) r8 fis'8--\>^\tRit g-- \after 8\! a-- |
+  {{ rhFrag1("b='4(\\p^\\tATem") }}
+  g='4( e a8 g fis e) | dis4.(^\tRit e8) e='2-- \bar "|."
 }
 {% endmacro %}
 

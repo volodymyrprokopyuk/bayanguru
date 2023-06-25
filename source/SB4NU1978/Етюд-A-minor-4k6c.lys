@@ -40,9 +40,9 @@
   \repeat unfold 2 { d=''16 e d c }
   \repeat unfold 2 { b='16 c b a }
   g='16 a g f e f e d c d c b\) |
-  a=16( gis a b c8) r_\dynDim r2 |
+  a=16( gis a b c8) r_\dDim r2 |
   a=16( gis a b c8) r r2 |
-  {{ rhFrag2("a=16(\\pp", "_\\dynCresc", ")") }}
+  {{ rhFrag2("a=16(\\pp", "_\\dCre", ")") }}
   {{ rhFrag2("a='16(", "", ")") }}
   \ottava #1
   {{ rhFrag2("a=''16(", "", "") }}

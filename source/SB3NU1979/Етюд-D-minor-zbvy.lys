@@ -21,15 +21,15 @@
       \voiceOne
       f''=''1\mp | e | ees | d | bes | a | a | a |
 
-      f'=''1\p | e | fis_\dynCresc | g | gis | a | b | cis\f |
+      f'=''1\p | e | fis_\dCre | g | gis | a | b | cis\f |
 
-      f='''1\p | e | ees | d | bes | a | f2 e | a,1^\tempRit |
-      a='1_\dynDim | a2 f'=''\pp \fermata \bar "|."
+      f='''1\p | e | ees | d | bes | a | f2 e | a,1^\tRit |
+      a='1_\dDim | a2 f'=''\pp \fermata \bar "|."
     }
     \new Voice = voiceTwo \relative {
       \voiceTwo
       \repeat unfold 2 { r8 a'='8-. bes-. a-. c( bes) bes-. a-. | }
-      r8 a='8_\artSimile bes a c( bes) bes a |
+      r8 a='8_\aSim bes a c( bes) bes a |
       r8 g='8 a g bes( a) a g | r e f e g( f) f e |
       \repeat unfold 2 { r8 d='8 e d f( e) e d | }
       r8\< f='8 f \after 16.\! e g(\> f) f \after 8\! e=' |

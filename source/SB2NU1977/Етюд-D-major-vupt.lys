@@ -5,7 +5,7 @@
 \time 3/8
 \relative {
   \repeat volta 2 {
-    a=16\mf d_\artLegato fis e d cis | b e g fis e d |
+    a=16\mf d_\aLeg fis e d cis | b e g fis e d |
     cis='16 e a g fis e | d\< fis a d fis \after 16\! a |
     d='''16\mf cis b a g fis | e d cis b a g |
     fis='16\> e d cis b \after 16\! cis | d='8 r r |

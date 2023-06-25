@@ -28,7 +28,7 @@
   {{ rhFrag3() }}
 
   {{ rhFrag2("d=''16(\\p") }}
-  {{ rhFrag2("d=''16_\\dynCresc") }}
+  {{ rhFrag2("d=''16_\\dCre") }}
   {{ rhFrag2("d=''16") }}
   d=''8)-. d-. d4-- |
   {{ rhFrag1("c=''8(\\mf\\<", "\\after 16\\!") }}

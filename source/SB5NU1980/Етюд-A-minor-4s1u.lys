@@ -52,8 +52,8 @@
 \key a \minor
 \time 2/4
 \relative {
-  {{ rhFrag1("e''=''16\\mf a, c_\\artLegato", "") }} a b c d |
-  {{ rhFrag1("e=''16 a, c", "_\\dynCresc") }} a gis a ais |
+  {{ rhFrag1("e''=''16\\mf a, c_\\aLeg", "") }} a b c d |
+  {{ rhFrag1("e=''16 a, c", "_\\dCre") }} a gis a ais |
   {{ rhFrag3("\\f") }}
   {{ rhFrag4("\\>", "\\after 16\\!") }}
   a='16\< e fis gis a b c \after 16\! cis |
@@ -63,7 +63,7 @@
   b='16 g b d e g, c e |
   {{ rhFrag2() }}
   d=''16 c b d c d e f |
-  fis=''16_\dynCresc b, dis fis g b, e g |
+  fis=''16_\dCre b, dis fis g b, e g |
   \repeat unfold 2 { a=''16-> c, e a g b, e g='' | }
   fis=''16 ais, cis fis e a, c e |
   dis=''16 b dis fis g b, e g |
@@ -72,14 +72,14 @@
   fis=''16 e dis fis e b e g |
   b=''16 c b c b g fis e |
   fis=''16 e dis fis e b, e g |
-  b='16_\dynDim c b c b g fis e |
+  b='16_\dDim c b c b g fis e |
   fis='16 e dis fis e b e g |
   b='16 b cis dis e b e g |
   b=''16 b cis dis e b g fis |
   e=''16 e, g b e fis, a c |
-  e=''16^\tempRit g, ais cis e gis, b d='' |
+  e=''16^\tRit g, ais cis e gis, b d='' |
 
-  {{ rhFrag1("e=''16\\mf^\\tempATempo a, c", "") }} a b c d |
+  {{ rhFrag1("e=''16\\mf^\\tATem a, c", "") }} a b c d |
   {{ rhFrag1("e=''16 a, c", "") }} a gis a ais |
   {{ rhFrag3("") }}
   {{ rhFrag4("", "") }}

@@ -42,17 +42,17 @@
     }
   }
 
-  e=''16(-> f e f e\>^\tempRit f e f g fis g \after 16\! gis) |
-  a=''16(\p^\tempATempo bes a bes a f g f d e d bes) |
+  e=''16(-> f e f e\>^\tRit f e f g fis g \after 16\! gis) |
+  a=''16(\p^\tATem bes a bes a f g f d e d bes) |
   a='16( bes a bes a f g a bes c d e) |
   f=''16( g f g f d ees d bes c bes g) |
   f='16( g f g f d ees f g a bes c) |
   d=''16( ees d ees d bes c bes g a g ees) |
   d='16( ees d ees d bes c bes \clef bass g a g ees) |
   e=16( c d e f g a bes  \clef treble c d e f) |
-  e='16( c d e f^\tempRit g a bes a g a bes=') |
+  e='16( c d e f^\tRit g a bes a g a bes=') |
 
-  {{ rhFrag1("c=''16(\\p^\\tempATempo") }}
+  {{ rhFrag1("c=''16(\\p^\\tATem") }}
   {{ rhFrag2() }}
   {{ rhFrag3() }}
 

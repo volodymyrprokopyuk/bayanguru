@@ -18,18 +18,18 @@
   stBass = \markup \larger \box Г % Готовий бас = standard (Stradella) bass
   puBass = \markup \larger \box Б % Чистий бас = pure bass
   frBass = \markup \larger \box В % Виборна система = free bass
-  artSimile = \markup \italic simile
-  artLegato = \markup \italic legato
-  artNonLegato = \markup \italic "non legato"
-  artStaccato = \markup \italic staccato
-  artDolce = \markup \italic dolce
-  dynCresc = \markup \lower #3 \italic "cresc."
-  dynDim = \markup \lower #3 \italic "dim."
-  tempRit = "rit."
-  tempRall = "rall."
-  tempATempo = "a tempo"
-  tempAccel = "accel."
-  tempSost = "sost."
+  aSim = \markup \italic simile
+  aLeg = \markup \italic legato
+  aNLeg = \markup \italic "non legato"
+  aSta = \markup \italic staccato
+  aDol = \markup \italic dolce
+  dCre = \markup \lower #3 \italic "cresc."
+  dDim = \markup \lower #3 \italic "dim."
+  tRit = "rit."
+  tRal = "rall."
+  tATem = "a tempo"
+  tAcc = "accel."
+  tSos = "sost."
   barFermata = \mark \markup \musicglyph #"scripts.ufermata"
   keyChangeBeforeBar = \once {
     \override Score.BreakAlignment.break-align-orders =

@@ -54,7 +54,7 @@
     {{ rhFrag3("<b=' d>2.~") }}
     r8 cis,='8[( d e f fis] | g) r g[\( a b c] |
     d=''8[ e f fis a g] |
-    fis=''8[\> g a^\tempRall g fis \after 8\! g='']\) \bar "||"
+    fis=''8[\> g a^\tRal g fis \after 8\! g='']\) \bar "||"
     \keyChangeBeforeBar \key c \major
   }
 }
@@ -65,7 +65,7 @@
 \key c \major
 \relative {
   c=4-\stBass r cM!8-. r | g4 r c@M!8-. r8 |
-  c=4_\artSimile r cM!8 r | g4 r c@M!8 r8 |
+  c=4_\aSim r cM!8 r | g4 r c@M!8 r8 |
   {{ lhFrag1() }}
   \repeat unfold 2 { d'=4 r g,@M!8 r8 | }
   \repeat unfold 2 { d=4 r d7!8 r | }

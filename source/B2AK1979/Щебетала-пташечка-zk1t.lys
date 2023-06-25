@@ -11,7 +11,7 @@
 
   r4\mf d'=''2\( a4 | bes g fis d'\) |
   c=''8\( c bes a bes4 g8 g | a g fis4 g2\) |
-  r4\p <ees='( g~ >4^\tempRit <d) g>2 |
+  r4\p <ees='( g~ >4^\tRit <d) g>2 |
   r4\> <c='( d~ >4 \after 4.\! <bes=) d>2 \bar "|."
 }
 {% endmacro %}

@@ -28,7 +28,7 @@
 \key d \minor
 \time 3/8
 \relative {
-  {{ rhFrag1("a'='16\\mf", "_\\artLegato") }}
+  {{ rhFrag1("a'='16\\mf", "_\\aLeg") }}
 
   c=''16\f\> f e d c bes | a g f e d \after 16\! c |
   g''=''16\> f e d c bes  a g f e d \after 16\! c |

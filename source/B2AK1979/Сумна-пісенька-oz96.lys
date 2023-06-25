@@ -28,11 +28,11 @@
 
   a='8\mf fis d c' | bes a g g' |
   f=''8 c d ees | d4.\) d8\( |
-  cis=''8_\dynCresc b a g' | fis d a\) fis'\( |
+  cis=''8_\dCre b a g' | fis d a\) fis'\( |
   e=''8[ b] cis a | d4.\)\> \after 8\! d,8\( |
   {{ rhFrag1("g='8\\mp") }}
   c=''8 ees a, c | bes d g, bes\) |
-  a='8[( c]) fis,(^\tempRit a) | g4-> <bes=' d g>-> \bar "|."
+  a='8[( c]) fis,(^\tRit a) | g4-> <bes=' d g>-> \bar "|."
 }
 {% endmacro %}
 

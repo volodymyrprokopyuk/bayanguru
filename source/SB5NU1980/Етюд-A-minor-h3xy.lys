@@ -52,7 +52,7 @@
 \key a \minor
 \time 2/4
 \relative {
-  {{ rhFrag1("a''=''32\\mp", "_\\artLegato") }}
+  {{ rhFrag1("a''=''32\\mp", "_\\aLeg") }}
   {{ rhFrag5() }} a='''8 \ottava #0 r |
 
   {{ rhFrag3("gis,,,=32\\p") }}

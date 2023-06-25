@@ -24,7 +24,7 @@
   e=''8 b4 cis8 | d4 b8-.\mp c-. |
   {{ rhFrag1() }} | b8 g) b-. c-. |
   d=''4(-> g8)-. b,-. |
-  c=''8 c'(~ c16_\dynCresc b a g |
+  c=''8 c'(~ c16_\dCre b a g |
   fis=''16 e d c b c a b | g='4) r \bar "|."
 }
 {% endmacro %}

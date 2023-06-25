@@ -47,7 +47,7 @@
 \time 2/4
 \relative {
   \repeat volta 2 {
-    {{ rhFrag3("c'='16\\mf", "_\\artLegato") }}
+    {{ rhFrag3("c'='16\\mf", "_\\aLeg") }}
   }
 
   \key c \major
@@ -63,14 +63,14 @@
   e='16 f g a b cis d e |
   \repeat unfold 7 { d=''16 e d e }
   d=''16 c b a |
-  g='16\p a_\dynCresc g a %
+  g='16\p a_\dCre g a %
   \repeat unfold 6 { g='16 a g a }
   g='16 f e d |
   {{ rhFrag2("c='16") }}
   {{ rhFrag2("c=''16\\f") }}
   c='''16\f d c bes a g f e |
   d=''16 c bes a g f e d |
-  c='16_\dynDim d c d %
+  c='16_\dDim d c d %
   \repeat unfold 3 { c='16 d c d } \bar "||"
 
   \key f \major

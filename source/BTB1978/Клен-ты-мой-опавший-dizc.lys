@@ -51,7 +51,7 @@
       }
       \volta 2 {
         {{ v2("g''=''4( e=''2.)", "<b'=' cis>1") }}
-        r4\f^\tempRit <b=' d fis>8 8 <cis eis gis>4 <e fis ais> |
+        r4\f^\tRit <b=' d fis>8 8 <cis eis gis>4 <e fis ais> |
         <d='' fis cis'>2 <d='' fis b> \fermata \bar "|."
       }
     }

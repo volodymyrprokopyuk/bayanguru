@@ -56,7 +56,7 @@
   r4 r8 <fis=' a cis fis>8 |
   r4 r8 <fis=' b d fis>8 |
   R2 | r4 <a=' cis e a>8 r |
-  r4\p r8_\dynCresc <fis=' a cis fis>8 |
+  r4\p r8_\dCre <fis=' a cis fis>8 |
   r4 r8 <fis=' b d fis>8 |
   r4 r8 <b=' d e gis>8 |
   r4 r8 <cis='' e a cis>8 |
@@ -73,7 +73,7 @@
   e=''16\(-> fis gis fis e d cis b |
   a='16 b cis b a8\) r |
   {{ rhFrag1("a='16\\(->\\p") }}
-  {{ rhFrag2("e=''16\\(->_\\dynCresc") }}
+  {{ rhFrag2("e=''16\\(->_\\dCre") }}
   {{ rhFrag3("a='16\\(->") }}
   e='16\(-> fis gis fis e d cis b |
   a=8\)\f r <a= cis e a> r \bar "|."

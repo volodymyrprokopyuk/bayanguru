@@ -15,7 +15,7 @@
     c=''16\< b c d e c e \after 16\! f |
     g=''8\) g g16\mf g,\(\< a b |
     c=''16 g c d e c e \after 16\! f |
-    g=''8\) g g16_\dynDim e( g a |
+    g=''8\) g g16_\dDim e( g a |
     f=''16) d( f g e) c( e g |
     d=''16) b( d e c) a( c e |
     d=''16) a( b e d c b a |

@@ -35,7 +35,7 @@
 
   bes='16\(\p a g f g f g a | bes a bes c d c bes a\) |
   bes='16\( a g f g f g a | bes a g f\) e8(-> c=') |
-  a'='16\(_\dynCresc g f e f e f g | a g a bes c bes a g\) |
+  a'='16\(_\dCre g f e f e f g | a g a bes c bes a g\) |
   a='16\( g f e f e f g | a bes c d ees8\) c16\( a=' |
   {{ rhFrag3("e'=''16\\f") }}
   {{ rhFrag3("e=''16\\(") }}

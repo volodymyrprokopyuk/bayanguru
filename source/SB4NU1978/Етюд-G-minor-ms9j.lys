@@ -17,7 +17,7 @@
 
 {% macro rhFrag3() %}
   <ees=' g>16\( <d f> <c ees> <d f> <ees g> <f a> |
-  <g=' bes>16 <a c> <bes d> <c ees> <d f>^\tempRit <c ees> |
+  <g=' bes>16 <a c> <bes d> <c ees> <d f>^\tRit <c ees> |
   <bes=' d>8. <c ees>16\> <bes d> <a=' c> |
 {% endmacro %}
 
@@ -37,7 +37,7 @@
 \relative {
   {{ rhFrag2("<bes'=' d>8.\\(\\p") }}
   <g=' bes>8. <g ees'>16 <bes g'> <ees bes'> | <bes f'>4.\) |
-  <f'='' aes>8.\(_\dynCresc <ees g>16 <d f> <ees g> |
+  <f'='' aes>8.\(_\dCre <ees g>16 <d f> <ees g> |
   <f='' aes>8. <ees g>16 <d f> <ees g> |
   <f='' aes>8. <ees g>16 <d f> <f aes> | <ees g>4.\) |
   {{ rhFrag1("<ees='' g>8.\\(\\mf") }}
@@ -48,7 +48,7 @@
     \new Voice = voiceOne \relative {
       \voiceOne
       \stemDown
-      <ees''='' g>8.\(\p <d f>16_\dynCresc <c ees> <d f> |
+      <ees''='' g>8.\(\p <d f>16_\dCre <c ees> <d f> |
       <ees='' g>8. <d f>16 <c ees> <ees g> |
       <d='' f>8. <c ees>16 <bes d> <c ees> |
       \stemUp <d='' f>4.\) |
@@ -58,7 +58,7 @@
       s4. | s4. | s4. | r8. aes'='16( g f=') |
     }
   >>
-  <c='' ees>8.\(_\dynDim <bes d>16 <a c> <bes d> |
+  <c='' ees>8.\(_\dDim <bes d>16 <a c> <bes d> |
   <c='' ees>8. <bes d>16 <a c> <bes d> |
   <c='' ees>8. <bes d>16 <a c> <g ees'> | <fis=' d'>4\) r8 |
 
@@ -81,7 +81,7 @@
 \key g \minor
 \relative {
   g,=,8( gm!)-. gm-. | fis'[( g,@m!)-. gm8]-. |
-  f=8[_\artSimile g,@m! e8] |
+  f=8[_\aSim g,@m! e8] |
   {{ lhFrag1() }}
   d=8[ bes,@M! besM8] |
   d=8[ f,@m! fm8] | c[ f,@m! fm8] |

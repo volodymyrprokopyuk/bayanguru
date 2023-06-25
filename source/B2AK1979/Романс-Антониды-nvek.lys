@@ -35,7 +35,7 @@
   <bes=' g'>2\)\> bes8\( \after 8\! c |
   d=''2 f8 ees | d2.\) |
   <bes=' g'>4(-> <d f> <g, ees'>)-> |
-  a='4^\tempRall d8( c bes a) |
+  a='4^\tRal d8( c bes a) |
   g='16\( bes' \fermata a g %
   \tuplet 3/2 { f=''8 ees d } %
   \tuplet 3/2 { c=''8 bes a } | %
@@ -57,7 +57,7 @@
   \repeat unfold 2 {
     d=8( d7!) d7 d7 g,@m![ gm8] |
   }
-  d=8_\artSimile d7! d7 d7 g,@m![ gm8] |
+  d=8_\aSim d7! d7 d7 g,@m![ gm8] |
   d=8 d7! d7 d7 g,@m![ gm8] |
   d=8 d7! d7 d7 d7 d7 |
   \repeat unfold 2 {
