@@ -14,13 +14,14 @@
   c=''16(\mp b a8) a-. | b16(\< a g8) g-. |
   c=''16( b a8) a-. | b16( a g8) \after 8\! g-. |
   <<
-    \relative {
-      c''=''8(\f b c |
-      d=''4\>^\tRit \after 8\! c=''8) |
-      \barFermata
+    \new Voice = voiceOne \relative {
+      \voiceOne
+      c''=''8(\f b c | d4\>^\tRit \after 8\! c=''8) | \barFermata %
     }
-    \\
-    \relative { g'='4 r8 | g='4 r8 | }
+    \new Voice = voiceTwo \relative {
+      \voiceTwo
+      g'='4 r8 | g='4 r8 |
+    }
   >>
   b='16(\mf^\tATem c b8) a-. | g-. g='-. r \bar "|."
 }

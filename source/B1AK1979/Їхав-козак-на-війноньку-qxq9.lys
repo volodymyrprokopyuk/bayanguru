@@ -6,19 +6,14 @@
 \key g \major
 \time 2/4
 \relative {
-  e'='4\(\p e8 fis | g4 fis8 e |
-  fis='4 b | e,\) d |
-  g='4\(\mp g8 a | b4 a8 g |
-  a='4 d | b2\) |
-  c=''4\(\mf b8 a | b4 g\) |
-  a='4\( g8 fis | g4 e\) |
-  e='4\( e'8 c | b a g fis |
-  e='2\)\< | \after 2\! <e e'>2 |
+  e'='4\(\p e8 fis | g4 fis8 e | fis4 b | e,\) d |
+  g='4\(\mp g8 a | b4 a8 g | a4 d | b2\) |
+  c=''4\(\mf b8 a | b4 g\) | a\( g8 fis | g4 e\) |
+  e='4\( e'8 c | b a g fis | e2\)\< | \after 2\! <e e'>2 |
   <a=' c>4\(\f <g b>8 <fis a> | <g b>4\> \after 4\! g\) |
   <fis=' a>4\(\mf <e g>8 <dis fis> | <e g>4\> \after 4\! e\) |
-  e='4\(\mp {{ v2("e''=''8 c", "e'='4") }}
-  <g=' b>8 <fis a> <e g> <dis fis> |
-  <>\> \after 2\! e='2\) | e='4 r \bar "|."
+  e='4\(\mp {{ v2("e''=''8 c='' |", "e'='4 |") }}
+  <g=' b>8 <fis a> <e g> <dis fis> | \after 2\! e2\)\> | e='4 r \bar "|."
 }
 {% endmacro %}
 
@@ -32,8 +27,7 @@
   fis=8 d@7! d8 d7 | g, g,M!-. gis8( e@7!)-. |
   a=,8( am!)-. fis( a,@m) | g8( e@m!) e'8( em) |
   fis=8( b,@7!) dis8( b,@7) | e8( em!) g,( e@m) |
-  a=,8 am! fis a,@m | b8 b7! dis b,@7 |
-  e=4 d | c b |
+  a=,8 am! fis a,@m | b8 b7! dis b,@7 | e4 d | c b |
   a=,8( am!)-. d( d7!)-. | g,( gM!)-. b( g,@M)-. |
   a=,8( am!) b( b7!) | e( em!) g,( e@m) |
   a=,8 am! fis a,@m | b8 b7! dis b,@7 |

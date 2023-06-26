@@ -147,22 +147,22 @@ pieces:
       org: ukr, sty: aut, gnr: chd, ton: gj, frm: mel, bss: stb, lvl: ela }
   - { id: d7eu, tit: Бандура, sub: ukrfs,
       arr: И. Гладков, art: ipr, src: B1AK1979,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: sng, ton: ei, frm: mel, bss: stb, lvl: ela }
   - { id: d0hr, tit: А вже ясне сонечко, sub: ukrfs,
       com: П. Козицький, src: B1AK1979,
-      org: ukr, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: chd, ton: ei, frm: mel, bss: stb, lvl: ela }
   - { id: itrq, tit: Женчичок-бренчичок, sub: ukrfs,
       src: B1AK1979,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: sng, ton: gj, frm: mel, bss: stb, lvl: ela }
   - { id: blsa, tit: По малину в сад підем,
       com: А. Філіпенко, src: B1AK1979,
-      org: ukr, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: chd, ton: di, frm: mel, bss: stb, lvl: ela }
   - { id: 75xh, tit: Сьогодні у мами свято,
       com: А. Філіпенко, src: B1AK1979,
-      org: ukr, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: aut, gnr: chd, ton: fj, frm: mel, bss: stb, lvl: ela }
   - { id: qxq9, tit: Їхав козак на війноньку, sub: ukrfs,
       src: B1AK1979,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
+      org: ukr, sty: flk, gnr: sng, ton: ei, frm: [mel, in3], bss: stb, lvl: elb }
   - { id: e78y, tit: Кучерява Катерина, sub: ukrfs,
       src: B1AK1979,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
