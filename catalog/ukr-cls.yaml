@@ -165,13 +165,13 @@ pieces:
       org: ukr, sty: flk, gnr: sng, ton: ei, frm: [mel, in3], bss: stb, lvl: elb }
   - { id: e78y, tit: Кучерява Катерина, sub: ukrfs,
       src: B1AK1979,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: sng, ton: cj, frm: mel, bss: stb, lvl: ela }
   - { id: z48n, tit: На вулиці скрипка грає, sub: ukrfs,
       src: B1AK1979,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: sng, ton: di, frm: mel, bss: stb, lvl: ela }
   - { id: 5e6l, tit: Полька,
       src: B1AK1979,
-      org: ukr, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: plk, ton: besj, frm: [mel, in3], bss: stb, lvl: ela }
    # B1AK1985
   - { id: fh29, tit: Веснянка, sub: ukrfs,
       src: B1AK1985,
