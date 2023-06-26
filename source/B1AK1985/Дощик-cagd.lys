@@ -1,7 +1,7 @@
 {% from "util.lys" import momentBeat %}
 
 {% macro rightHand() %}
-\tempo Allegretto
+\tempo "Con moto"
 \clef treble
 \key g \minor
 \time 2/4

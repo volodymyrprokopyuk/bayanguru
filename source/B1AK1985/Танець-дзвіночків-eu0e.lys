@@ -1,16 +1,13 @@
 {% macro rhFrag1(a) %}
-  {{ a }} d ees d | ees f g4\) |
-  aes=''8( g f4) |
+  {{ a }} d ees d | ees f g4\) | aes8( g f=''4) |
 {% endmacro %}
 
 {% macro rhFrag2(a) %}
-  {{ a }} c,8\) c | c( d ees4) |
-  f=''8( ees d4) |
+  {{ a }} c,8\) c | c( d ees4) | f8( ees d=''4) |
 {% endmacro %}
 
 {% macro lhFrag1(a) %}
-  {{ a }} eesM! | ees eesM |
-  bes=,4 bes7! | ees= eesM! |
+  {{ a }} eesM! | ees eesM | bes bes7! | ees= eesM! |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -23,6 +20,7 @@
     {{ rhFrag1("ees''=''8\\(\\mf") }} | g8( f ees4) |
     {{ rhFrag1("ees=''8\\(\\f") }} | ees=''2 |
   }
+
   \repeat volta 2 {
     {{ rhFrag2("c'='''4\\(\\p") }} | ees8( d c4) |
     {{ rhFrag2("c'='''4\\(") }} | c=''2 |
@@ -36,8 +34,7 @@
 \relative {
   {{ lhFrag1("ees=4-\\stBass") }}
   {{ lhFrag1("ees=4") }}
-  \repeat unfold 2 {
-    c=4 cm! | c cm | g g7! | c= cm! |
-  }
+
+  \repeat unfold 2 { c=4 cm! | c cm | g g7! | c= cm! | }
 }
 {% endmacro %}

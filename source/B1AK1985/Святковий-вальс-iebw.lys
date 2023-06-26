@@ -4,13 +4,11 @@
 {% endmacro %}
 
 {% macro lhFrag1(a) %}
-  {{ a }} eesM! eesM | e c@7! c74 |
-  f,=,4 fm! fm |
+  {{ a }} eesM! eesM | e c@7! c74 | f,=, fm! fm |
 {% endmacro %}
 
 {% macro lhFrag2() %}
-  f,=,4 fm! fm | bes bes7! bes7 |
-  ees=4 eesM! eesM |
+  f,=,4 fm! fm | bes bes7! bes7 | ees= eesM! eesM |
 {% endmacro %}
 
 {% macro rightHand() %}
