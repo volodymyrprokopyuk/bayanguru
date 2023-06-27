@@ -22,18 +22,45 @@
       {{ t2("ees,='8 c' g", "fis c' g") }}
       {{ t2("f='8 c' aes", "ees c' g") }}
       {{ t2("d='8 b' g", "fis <g b> f") }}
-      {{ t2("ees='8 g c", "ees c g") }}
+      {{ t2("ees='8 g c", "ees c g='") }}
 
       {{ rhFrag1("g='8 ees' c") }}
-      {{ t2("", "") }}
+      {{ t2("bes='8 f' ees", "d c bes") }}
+      {{ t2("g='8 bes ees", "g ees bes") }}
+      {{ t2("ees,='8 c' aes", "c, f ees") }}
+      {{ t2("aes,=8 d c", "c f ees") }}
+      {{ t2("ees='8 c' g", "d b' g") }}
+      \tuplet 3/2 { c,='8 ees g } c=''4
+
+      b='4 b | c c | d d | ees 2 | f4 f | g g | a a | b=''2 |
+
+      c='''4 c | bes bes | aes aes | g2 | fis4 fis | f ees | c=''2 |
     }
     \new Voice = voiceTwo \relative {
       \voiceTwo
-      g'='2 | aes4 g | f ees | g2 | ees | f4 ees | d2 | ees |
+      g'='2 | aes4 g | f ees | g2 | ees | f4 ees | d2 | ees=' |
 
-      g='2 | aes4 g |
+      g='2 | aes4 g | bes aes | g2 | ees4 c | aes c | ees d | c='2 |
+
+      {{ t2("b'='8 f g", "b f g") }}
+      {{ t2("c=''8 ees, g", "c ees, g") }}
+      {{ t2("d'=''8 f, g", "d' f, g") }}
+      {{ t2("ees'=''8 ees, c'", "aes c g") }}
+      {{ t2("f'=''8_\\dCre g, aes", "f' a, bes") }}
+      {{ t2("g'=''8 a, bes", "g' b, c") }}
+      {{ t2("a'=''8 b, c", "a' cis, d") }}
+      {{ t2("b'=''8 d, g", "fis g f=''") }}
+
+      {{ t2("c'='''8\\f c, ees", "c' c, ees") }}
+      {{ t2("bes'=''8 bes, ees", "bes' bes, ees") }}
+      {{ t2("aes=''8 aes, c", "aes' aes, c") }}
+      {{ t2("g'=''8 g, ees'", "d ees c") }}
+      {{ t2("fis=''8 fis, c'", "fis_\\dDim fis, c'") }}
+      {{ t2("f=''8 aes, g", "ees' fis, f") }}
+      {{ t2("c'=''8 c, ees^\\tRit", "d f aes='") }}
     }
   >>
+  \after 2\! <ees'=' c'>2\> \fermata \bar "|."
 }
 {% endmacro %}
 
@@ -41,5 +68,16 @@
 \clef bass
 \key c \minor
 \relative {
+  c=4-\stBass cm! | c cm | c f@m! | c4 cm! |
+  c=4 cm! | c cm | g gM! | c= cm! |
+
+  c=4 cm! | c cm | d bes,@7! | ees4 eesM! |
+  aes,=,4 aesM! | f fm! | g,,+c@m! g,,+g7!4 | c'= cm! |
+
+  d=4 g,@7! | ees4 c@m! | b4 g,@7! | c4 cm! |
+  d=4 bes,@7! | ees4 eesM! | d d7! | g,=, g7! |
+
+  aes=,4 aesM! | g ees@M! | f4 fm! | ees' c@m! |
+  aes,=,4 aesM! | g g7! | c= f@m! | c,+cm!2 \fermata |
 }
 {% endmacro %}
