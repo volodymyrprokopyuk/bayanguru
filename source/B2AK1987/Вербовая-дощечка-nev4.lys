@@ -13,7 +13,7 @@
   e='8\(\mp <g b>8 8 8 | <fis a>4 <g b>8 g\) |
   <<
     \relative {
-      fis'='4\( g8 fis | e\)\> e \after 4\! e='4 |
+      fis'='4\( g8 fis | e\)\> e \af 4\! e='4 |
     }
     \\
     \relative { d'='2\( | e8\) e e='4 | }
@@ -24,16 +24,16 @@
   r8 <a=' c e fis>8[ r <b e g>] |
   r8 <g=' e'>8 <fis a b dis>4 |
   <e=' b' e>4\< <e b' d> |
-  <e=' a c>4 \after 4\! <e b' d> |
+  <e=' a c>4 \af 4\! <e b' d> |
   <e=' a c>4\> <dis a' b dis>4 |
-  \after 2\! <e=' g b e>2 |
+  \af 2\! <e=' g b e>2 |
 
   <<
     \new Voice = voiceOne \relative {
       \voiceOne
       {{ dynPadding() }}
-      e''=''8[(\< b') b b] | a4( b8 \after 8\! g) |
-      fis=''4(\> g8 fis | e8) e \after 4\! e=''4 |
+      e''=''8[(\< b') b b] | a4( b8 \af 8\! g) |
+      fis=''4(\> g8 fis | e8) e \af 4\! e=''4 |
     }
     \new Voice = voiceTwo \relative {
       \voiceTwo
@@ -50,11 +50,11 @@
   <<
     \new Voice = voiceOne \relative {
       \voiceOne
-      b'='2\(\< | c4 \after 4\! cis |
-      d=''4 dis | e8\)\> e \after 4\! e4 |
-      e=''8\(\< b' b b | a4 b8 \after 8\! g\) |
+      b'='2\(\< | c4 \af 4\! cis |
+      d=''4 dis | e8\)\> e \af 4\! e4 |
+      e=''8\(\< b' b b | a4 b8 \af 8\! g\) |
       fis=''4\(\> g8 fis |
-      e=''8-- e-- \after 4\! e=''4\)-- \bar "|."
+      e=''8-- e-- \af 4\! e=''4\)-- \bar "|."
     }
     \new Voice = voiceTwo \relative {
       \voiceTwo

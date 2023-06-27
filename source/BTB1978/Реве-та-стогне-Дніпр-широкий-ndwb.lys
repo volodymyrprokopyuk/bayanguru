@@ -1,7 +1,7 @@
 {% macro rhFrag1() %}
   <f=' a>2 <e g>4 |
   <d=' f>2\> <g,= cis e>4 |
-  \after 2.\! <f= a d>2. |
+  \af 2.\! <f= a d>2. |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -11,13 +11,13 @@
 \time 3/4
 \relative {
   d'='4\p\< <d f> <f a> |
-  \after 4.\! <f=' d'>2 <f a>4 |
+  \af 4.\! <f=' d'>2 <f a>4 |
   <e=' g>2 <d f>4 |
-  <d=' f>2.\> | \after 2.\! <cis e>2. |
-  <e=' g>4\< <f a> \after 4\! <g bes> |
+  <d=' f>2.\> | \af 2.\! <cis e>2. |
+  <e=' g>4\< <f a> \af 4\! <g bes> |
   {{ rhFrag1() }}
   \repeat volta 2 {
-    <f'=' a>4\< \after 4\! <f a d> <a cis e>\mf |
+    <f'=' a>4\< \af 4\! <f a d> <a cis e>\mf |
     <f=' d' f>2 <e c' e>4 |
     <d=' bes' d>2 <f a>4 |
     <ees=' a c>2 <d bes'>8 <c a'> |

@@ -8,16 +8,16 @@
 \relative {
   r4\p r r8 e'='8 |
   \repeat volta 2 {
-    e='4\(\< g4. \after 8\! a8 | b4 ais4.\) b8 |
+    e='4\(\< g4. \af 8\! a8 | b4 ais4.\) b8 |
     b='4\( fis4. g8 |
-    fis='4\> \after 4\! e\) r8\< \after 8\! d'8 |
+    fis='4\> \af 4\! e\) r8\< \after 8\! d'8 |
     d=''4\(\mf b4. a8 | a4 d,4.\) <c' e>8 |
     <c='' e>4( <b d>4. <a c>8 |
-    <a=' c>4\> \after 8.\! <g b>) r8 b |
+    <a=' c>4\> \af 8.\! <g b>) r8 b |
     <<
       \new Voice = voiceOne \relative {
         \voiceOne
-        b'='4(\< cis dis) | e( dis \after 4\! e) |
+        b'='4(\< cis dis) | e( dis \af 4\! e) |
         <a,=' fis'>4(\f <b g'>4. <a=' fis'>8 |
         <a=' fis'>4 <g e'>) %
       }
@@ -29,7 +29,7 @@
     r8 e=''8 |
     <c='' e>4( <b d>4. <a c>8 |
     <a=' c>4 <g b>4.) <a c>8 |
-    <g=' b>4^( fis4.\> \after 8\! g8 |
+    <g=' b>4^( fis4.\> \af 8\! g8 |
     \alternative {
       \volta 1 {
         e='2)\p r8 e='8 {{ shapedSlur("bu", sh = 8) }} ( |
@@ -40,7 +40,7 @@
         <<
           \relative {
             b'='4( cis dis='' |
-            <g,=' b e>2.~\> | \after 2\! 2) %
+            <g,=' b e>2.~\> | \af 2\! 2) %
           }
           \\
           \relative { b'='2. | s2. | s2 } %

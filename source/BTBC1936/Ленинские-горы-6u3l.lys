@@ -17,11 +17,11 @@
 \key g \major
 \time 4/4
 \relative {
-  r2\p r8 d'='8(\< g \after 16.\! b |
+  r2\p r8 d'='8(\< g \af 16.\! b |
   \repeat volta 2 {
     e=''4\mp d) %
     {{ rhFrag1("g,='8(") }}
-    d=''8( c16 b a g e g a8) d,[(\< g \after 8\! b] |
+    d=''8( c16 b a g e g a8) d,[(\< g \af 8\! b] |
     <c='' e>4\mf <b d>) %
     {{ rhFrag1("g='8(") }}
     g='2~ g8 <d g>[( <g b> <g b d>] |
@@ -36,7 +36,7 @@
       \volta 1 {
         g='2~ g8) d[\< %
         {{ shapedSlur("fu", bs = 2.5, sh = 1, wd = 2, ht = 1.7, dt = 0.5) }} ( %
-        g='8) \after 16.\! b='] |
+        g='8) \af 16.\! b='] |
       }
       \volta 2 {
         {{ hSpace() }}

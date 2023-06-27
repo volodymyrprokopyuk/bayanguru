@@ -20,7 +20,7 @@
     g='4\(\f fis8 f | e g c a\) |
     g='4\( fis8 f | e g c4\) |
     g='4\( fis8 f | e g c a\) |
-    d=''8\( c b a | gis\> b \after 4\! e,='4\) \bar "|."
+    d=''8\( c b a | gis\> b \af 4\! e,='4\) \bar "|."
   }
 }
 {% endmacro %}

@@ -1,5 +1,5 @@
 {% macro rhFrag1() %}
-  <cis=' e a>4 4\< a'8. \after 32.\! <g=' a>16 |
+  <cis=' e a>4 4\< a'8. \af 32.\! <g=' a>16 |
 {% endmacro %}
 
 {% macro rhFrag2() %}

@@ -11,18 +11,18 @@
 \time 3/4
 \relative {
   \partial 2 { e'='4\(\p\< g | }
-  b='4 g \after 4\! e | dis fis a |
-  c=''4 b2~\> | \after 8.\! b4\) e,\( fis |
+  b='4 g \af 4\! e | dis fis a |
+  c=''4 b2~\> | \af 8.\! b4\) e,\( fis |
   g='4 e c | b dis fis | g2.~\> |
-  \after 8.\! g='4\) a\( b | c\< c \after 4\! g |
+  \af 8.\! g='4\) a\( b | c\< c \after 4\! g |
   fis='4 fis a | b b2~\> |
-  \after 8.\! b='4\) e,\( g |
+  \af 8.\! b='4\) e,\( g |
   a='4 a g | fis e fis | g2.~\> |
-  \after 8.\! g='4\) a\( b |
-  c=''4\< c \after 4\! b | d\mf d c |
-  b='4 b2~\> | \after 8.\! b4\) e,\( b' |
-  a='4\< a \after 4\! g | fis e dis |
-  e='2.~\> | \after 4\! e='4\)\p \bar "|."
+  \af 8.\! g='4\) a\( b |
+  c=''4\< c \af 4\! b | d\mf d c |
+  b='4 b2~\> | \af 8.\! b4\) e,\( b' |
+  a='4\< a \af 4\! g | fis e dis |
+  e='2.~\> | \af 4\! e='4\)\p \bar "|."
 }
 {% endmacro %}
 

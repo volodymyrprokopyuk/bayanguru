@@ -1,5 +1,5 @@
 {% macro rhFrag1(a, b) %}
-    \acciaccatura { {{ a }} d e } %
+    \acc { {{ a }} d e } %
     {{ b }} c-. d-. bes-. | c=''8 a g f |
     g='16 a bes g a f g e=' |
 {% endmacro %}
@@ -17,17 +17,17 @@
 \time 2/4
 \relative {
   \repeat segno 2 {
-    \partial 8. { a'='16(\mp \acciaccatura { c=''8 } bes16 a) | }
+    \partial 8. { a'='16(\mp \acc { c=''8 } bes16 a) | }
     \repeat volta 2 {
-      a='4(\< d8. \after 16\! e16 | f4~ f16) f( e f |
-      g=''8) f e d | \after 8.\! <g, cis>4~\> %
-      16\< a( \acciaccatura { c=''8 } bes16 \after 16\! a) |
+      a='4(\< d8. \af 16\! e16 | f4~ f16) f( e f |
+      g=''8) f e d | \af 8.\! <g, cis>4~\> %
+      16\< a( \acc { c=''8 } bes16 \af 16\! a) |
       a='4( cis8. d16 | e4~ e16) f e d |
-      cis=''16\< b a \after 16\! b cis d e f |
+      cis=''16\< b a \af 16\! b cis d e f |
       \alternative {
         \volta 1 {
-          \after 8.\! <f,=' d'>4~\> %
-          16 a( \acciaccatura { c=''8 } bes16 a) |
+          \af 8.\! <f,=' d'>4~\> %
+          16 a( \acc { c=''8 } bes16 a) |
         }
         \volta 2 { <f=' d'>4 <f=' a d>8 r | }
       }

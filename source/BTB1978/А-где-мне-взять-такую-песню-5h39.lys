@@ -50,11 +50,11 @@
       }
     >>
     e''=''8\mp <g, d' g>8[ 8 8] <a cis a'>8. <a cis g'>16 8 <a cis a'> |
-    <a='_~ e' g( >2 \after 2\! <a d f)>\< |
+    <a='_~ e' g( >2 \af 2\! <a d f)>\< |
     r8\mf <g=' d' g>8[ 8 8] <b g'>8. <f' a>16 <e g>8 <d f> |
     \time 2/4
     <d='' f>8 <c e> r c | b4 d | f4. e8 | e8. g16 f4 |
-    \acciaccatura { e=''16 f } e4 r8 <a,=' c> |
+    \acc { e=''16 f } e4 r8 <a,=' c> |
     <<
       \new Voice = voiceOne \relative {
         \voiceOne
@@ -75,7 +75,7 @@
       \volta 2 {
         \time 2/4
         <c=' a'>8 \repeatTie e[ c <a c>] | b4( d | f4. e8) |
-        gis,=4 b | \acciaccatura { a=16 b } a2~ |
+        gis,=4 b | \acc { a=16 b } a2~ |
         <a= c e a>2~ | 8 r r4 \bar "|."
       }
     }

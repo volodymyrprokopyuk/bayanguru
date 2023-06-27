@@ -13,7 +13,7 @@
   <<
     \new Voice = voiceOne \relative {
       \voiceOne
-      c''=''8\(\> bes a \after 8\! g | f='4.\) %
+      c''=''8\(\> bes a \af 8\! g | f='4.\) %
     }
     \new Voice = voiceTwo \relative {
       \voiceTwo

@@ -12,7 +12,7 @@
   a''=''16(\f bes c a g bes a g) |
   f=''16( g a f d e f d) |
   g=''16( a g f e f e d) |
-  c=''16(\> d e d c bes a \after 16\! g) |
+  c=''16(\> d e d c bes a \af 16\! g) |
   \repeat volta 2 {
     c=''8(\mf a) g16( bes a g) |
     f='16( a d,8) d4 |

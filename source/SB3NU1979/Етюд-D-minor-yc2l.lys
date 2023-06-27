@@ -12,7 +12,7 @@
 
 {% macro rhFrag4(a) %}
   {{ a }} gis a bes b cis |
-  d=''16 e f g gis \after 16\! a=''\) |
+  d=''16 e f g gis \af 16\! a=''\) |
 {% endmacro %}
 
 {% macro lhFrag1(a) %}
@@ -39,18 +39,18 @@
   {{ rhFrag2("a=''16\\(") }}
   {{ rhFrag1("f'='''16(") }}
   a=''16\(\>^\tRit g f e d cis |
-  d=''16 cis c b bes \after 16\! a\) |
+  d=''16 cis c b bes \af 16\! a\) |
 
   {{ rhFrag1("f'=''16(\\p^\\tATem") }}
   {{ rhFrag3("c=''16\\(") }}
   {{ rhFrag1("f=''16(") }}
   c=''16\(\< b c cis d e |
-  f=''16 g a bes b \after 16\! c\) |
+  f=''16 g a bes b \af 16\! c\) |
   {{ rhFrag1("f='''16(\\f") }}
   {{ rhFrag3("c='''16\\(") }}
   {{ rhFrag1("f='''16(") }}
   c='''16\(\>^\tRit bes a g f e |
-  f=''16 e f g a \after 16\! g\) |
+  f=''16 e f g a \af 16\! g\) |
 
   {{ rhFrag1("f=''16(\\p^\\tATem") }}
   {{ rhFrag2("a='16\\(") }}

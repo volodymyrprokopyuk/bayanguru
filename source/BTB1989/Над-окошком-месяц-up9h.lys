@@ -26,7 +26,7 @@
     <c=' f bes>2. | <c f a> | <gis d' e>2 <d' f>4 |
     <a= cis g'>2 <cis e>4 | <d f a>2. |
     \alternative {
-      \volta 1 { d='4.\< e8 f[ \after 8\! g='] | }
+      \volta 1 { d='4.\< e8 f[ \af 8\! g='] | }
       \volta 2 { d='2. \bar "|." }
     }
   }

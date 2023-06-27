@@ -11,14 +11,14 @@
 
 {% macro rhFrag3() %}
   {{ momentBeat("1/8", "1,1,1,1") }}
-  g'=''32\< g, b d g b, d g b d, g b d g, b \after 32\! d |
+  g'=''32\< g, b d g b, d g b d, g b d g, b \af 32\! d |
   {{ momentBeat("1/4", "1,1") }}
   g='''8 r g,,16\mf g fis g=' |
 {% endmacro %}
 
 {% macro rhFrag4() %}
   <g=' c ees>16 <c ees g>8 <ees g c>16 <ees aes ees'>4 |
-  \acciaccatura { cis'='''8 } <fis,='' d'>16 a8 bes=''16 %
+  \acc { cis'='''8 } <fis,='' d'>16 a8 bes=''16 %
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -29,7 +29,7 @@
 \relative {
   r8\mf <c''='' aes'>8[ <bes g'> <aes f'>] |
   <c,=' ees>16 <ees g>8 <g c>16 <ees ees'>4 |
-  {{ v2("\\acciaccatura { cis''=''8 } d=''16 a8 bes16 b8 g=' |",
+  {{ v2("\\acc { cis''=''8 } d=''16 a8 bes16 b8 g=' |",
      "fis'='4 f=' |") }}
   <ees=' g c>4 <b' f' g>-> | <c='' ees g c>-> r |
 
@@ -43,8 +43,8 @@
       \volta 1 {
         {{ momentBeat("1/8", "1,1,1,1") }}
         <b,= f' g>4 <f' b ees> |
-        c'=''32\< b c d ees d ees f g aes g f ees f ees \after 32\! d |
-        c=''32\> d c bes aes bes aes g f aes g f ees f ees \after 32\! d=' |
+        c'=''32\< b c d ees d ees f g aes g f ees f ees \af 32\! d |
+        c=''32\> d c bes aes bes aes g f aes g f ees f ees \af 32\! d=' |
       }
       \volta 2 { <fis=' a d>4 <fis=' a c> | }
     }

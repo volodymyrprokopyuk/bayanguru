@@ -1,7 +1,7 @@
 {% from "util.lys" import v2 %}
 
 {% macro rhFrag1(a) %}
-  {{ a }} c cis d e \after 8\! d) |
+  {{ a }} c cis d e \af 8\! d) |
   <<
     \new Voice = voiceOne \relative {
       \voiceOne
@@ -28,9 +28,9 @@
 \time 3/4
 \relative {
   {{ rhFrag1("b'='8(\\p\\<") }}
-  \after 2.\! g=''2.\> |
+  \af 2.\! g=''2.\> |
 
-  g,='8(\< a ais b c \after 8\! b) |
+  g,='8(\< a ais b c \af 8\! b) |
   <<
     \new Voice = voiceOne \relative {
       \voiceOne
@@ -42,11 +42,11 @@
       r8 ais='8( b cis dis g) | r8 g,( a ais b fis'='') |
     }
   >>
-  \after 2.\! e=''2.\> |
+  \af 2.\! e=''2.\> |
 
-  dis,='8(\< e gis a b \after 8\! c) |
+  dis,='8(\< e gis a b \af 8\! c) |
   e=''8[( fis,])-. fis[-. fis]-. fis-. fis-. |
-  cis='8(\< d fis g ais \after 8\! b) |
+  cis='8(\< d fis g ais \af 8\! b) |
   d=''8[( e,])-. e[-. e]-. e-. e-. |
   dis='8(_\dCre e gis a b c) |
   gis='8( a b c dis e) | b( c dis e fis g) |

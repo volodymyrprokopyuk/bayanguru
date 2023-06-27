@@ -31,6 +31,8 @@
   tAcc = "accel."
   tSos = "sost."
   barFermata = \mark \markup \musicglyph #"scripts.ufermata"
+  acc = \acciaccatura \etc
+  af = \after \etc
   keyChangeBeforeBar = \once {
     \override Score.BreakAlignment.break-align-orders =
     #(make-vector 3 '(

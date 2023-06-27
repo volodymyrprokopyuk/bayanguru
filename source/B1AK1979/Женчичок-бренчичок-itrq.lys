@@ -12,11 +12,11 @@
   {{ rhFrag1("d''=''8-.\\mf") }}
   {{ rhFrag1("d=''8-.") }}
   c=''16(\mp b a8) a-. | b16(\< a g8) g-. |
-  c=''16( b a8) a-. | b16( a g8) \after 8\! g-. |
+  c=''16( b a8) a-. | b16( a g8) \af 8\! g-. |
   <<
     \new Voice = voiceOne \relative {
       \voiceOne
-      c''=''8(\f b c | d4\>^\tRit \after 8\! c=''8) | \barFermata %
+      c''=''8(\f b c | d4\>^\tRit \af 8\! c=''8) | \barFermata %
     }
     \new Voice = voiceTwo \relative {
       \voiceTwo

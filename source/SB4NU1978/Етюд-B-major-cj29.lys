@@ -47,12 +47,12 @@
   <gis=' b e>8 <fis ais dis> <e gis cis> |
   <dis=' fis b>8 8 8 4 r8 |
 
-  <b'=' dis>8\p\< 8 8 8 8 \after 8\! 8 |
+  <b'=' dis>8\p\< 8 8 8 8 \af 8\! 8 |
   <b=' dis>8\> <ais cis dis> <gis b dis> %
-  <fisis=' ais dis>8 <eis gis dis'> \after 8\! <fisis ais dis> |
-  <gis=' b dis>8\< <fisis ais dis> \after 8\! <gis b dis> %
-  <ais=' cis dis>8\> <gis b dis> \after 8\! <ais cis dis> |
-  <b=' dis>8\< 8 8 8 8 \after 8\! 8 |
+  <fisis=' ais dis>8 <eis gis dis'> \af 8\! <fisis ais dis> |
+  <gis=' b dis>8\< <fisis ais dis> \af 8\! <gis b dis> %
+  <ais=' cis dis>8\> <gis b dis> \af 8\! <ais cis dis> |
+  <b=' dis>8\< 8 8 8 8 \af 8\! 8 |
   <b=' dis>8 <gis cis e> <gis dis' fis> %
   <gis=' e' gis>8 <gis cis e> <gis b dis> |
   <fis=' ais cis>8 <fis b dis> <fis cis' e> %
@@ -88,13 +88,13 @@
   <e='' gis cis>8\> <dis fis b> <cis e ais> |
   <b=' dis gis>8 <ais cis fis> <gis b e> %
   <fis=' ais dis>8 <e gis cis> <dis fis b> |
-  <cis=' e ais>8^\tRit <b dis gis> \after 16\! <ais cis fis> %
+  <cis=' e ais>8^\tRit <b dis gis> \af 16\! <ais cis fis> %
   \clef bass
   <gis= b e>8 <fis ais dis> <e gis cis> |
   <dis= fis b>8 <fis b dis>\< %
   \clef treble
   <b= dis fis>8 <dis fis b>-> %
-  <fis=' b dis>8-> \after 8\! <b dis fis>-> |
+  <fis=' b dis>8-> \af 8\! <b dis fis>-> |
   <dis='' fis b>4->\f r8 r4. \bar "|."
 }
 {% endmacro %}

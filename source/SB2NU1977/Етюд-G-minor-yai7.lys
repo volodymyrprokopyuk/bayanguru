@@ -77,9 +77,9 @@
   <a=' b f'>8-.-> r %
   \tuplet 3/2 { <g=' c f>8-. 8-. 8-. } %
   <g=' c ees>8-.-> r |
-  \tuplet 3/2 { <ees=' fis bes>8-.\< 8-. \after 16.\! 8-. } %
+  \tuplet 3/2 { <ees=' fis bes>8-.\< 8-. \af 16.\! 8-. } %
   \tuplet 3/2 { <c=' fis a>8-. 8-. 8-. } %
-  \tuplet 3/2 { <bes= d a'>8-.\> 8-. \after 16.\! 8-. } %
+  \tuplet 3/2 { <bes= d a'>8-.\> 8-. \af 16.\! 8-. } %
   <bes= d g>8-.-> r |
   \tuplet 3/2 { <aes= b g'>8-.\mf 8-._\dDim 8-. } %
   <aes= b f'>8-.-> r %

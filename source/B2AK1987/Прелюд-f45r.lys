@@ -4,30 +4,30 @@
 \key e \minor
 \time 3/4
 \relative {
-  \after 2.\! b'='2.~(\p\< | b8\> c b c b \after 8\! fis') |
-  \after 2.\! b,='2.~(\< | b8\> c b c b \after 8\! a') |
+  \af 2.\! b'='2.~(\p\< | b8\> c b c b \after 8\! fis') |
+  \af 2.\! b,='2.~(\< | b8\> c b c b \after 8\! a') |
   g=''4.(-- fis8 e b) | e4.(-- d8 c g) |
   <<
     \relative {
-      c''=''8(\< b a e fis \after 8\! c' |
-      \after 2.\! b='2.)\> |
+      c''=''8(\< b a e fis \af 8\! c' |
+      \af 2.\! b='2.)\> |
     }
     \\
     \relative { s2. | r4 g'='4( fis) | }
   >>
   b='2.~(\mp | b8_\dCre c b c b fis') |
   b,='2.~ | b8 c( cis d f a) |
-  <dis,='' fis>4.(--\< <e g>8 <f a> \after 8\! <e g>) |
+  <dis,='' fis>4.(--\< <e g>8 <f a> \af 8\! <e g>) |
   <<
-    \relative { c'''='''2(\> \after 4\! b4) | }
+    \relative { c'''='''2(\> \af 4\! b4) | }
     \\
     \relative { d''=''2. | }
   >>
-  <a,=' cis>4.(--\< <b d>8 <c ees> \after 8\! <cis e>) |
-  <g'='' bes>2(\> \after 4\! <f a>4) |
+  <a,=' cis>4.(--\< <b d>8 <c ees> \af 8\! <cis e>) |
+  <g'='' bes>2(\> \af 4\! <f a>4) |
   g=''8(-- f d b a f) | g'(-- fis e b g e) |
   <<
-    \relative { g'='2\< \after 4\! g4 | }
+    \relative { g'='2\< \af 4\! g4 | }
     \\
     \relative { r8 bes=8( c e) <a,= dis>4 | }
   >>

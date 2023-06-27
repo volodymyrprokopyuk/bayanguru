@@ -42,7 +42,7 @@
   <f='' aes>8. <ees g>16 <d f> <f aes> | <ees g>4.\) |
   {{ rhFrag1("<ees='' g>8.\\(\\mf") }}
   {{ rhFrag1("<ees,=' g>8.\\(\\p") }}
-  {{ rhFrag3() }} \after 4.\! <g=' g'>4.\) |
+  {{ rhFrag3() }} \af 4.\! <g=' g'>4.\) |
 
   <<
     \new Voice = voiceOne \relative {
@@ -72,7 +72,7 @@
   {{ rhFrag1("<ees='' g>8.\\(") }}
   {{ rhFrag1("<ees,=' g>8.\\(") }}
   {{ rhFrag3() }}
-  \after 4.\! {{ v2("<g'=' g'>4.", "r8 <d'=' bes'>4") }} <>\) \bar "|."
+  \af 4.\! {{ v2("<g'=' g'>4.", "r8 <d'=' bes'>4") }} <>\) \bar "|."
 }
 {% endmacro %}
 

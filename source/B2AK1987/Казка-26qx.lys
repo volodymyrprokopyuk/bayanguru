@@ -9,10 +9,10 @@
 \key b \minor
 \time 3/8
 \relative {
-  b'='8(\p fis) fis | a(\> \after 4\! fis4) |
-  b='8( fis) fis | a(\> \after 4\! fis4) |
-  d'=''8(\mp cis b) | b(\< \after 16.\! ais) ais |
-  b='8( a g) | g(\>^\tRit \after 4\! fis4) |
+  b'='8(\p fis) fis | a(\> \af 4\! fis4) |
+  b='8( fis) fis | a(\> \af 4\! fis4) |
+  d'=''8(\mp cis b) | b(\< \af 16.\! ais) ais |
+  b='8( a g) | g(\>^\tRit \af 4\! fis4) |
   cis='8\(^\tATem d e | fis b, b\) |
   e='8\(_\dCre fis g | a d,4\) |
   a'='8\( b d | cis b a\) |

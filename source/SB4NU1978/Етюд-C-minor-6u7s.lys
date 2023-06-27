@@ -2,13 +2,13 @@
 
 {% macro rhFrag1(a) %}
   \tuplet 3/2 { {{ a }} 8 8 } %
-  \tuplet 3/2 { <c=' ees aes>8 8 \after 16\! 8 } %
+  \tuplet 3/2 { <c=' ees aes>8 8 \af 16\! 8 } %
   \tuplet 3/2 { <c=' ees bes'>8\> 8 8 } %
-  \tuplet 3/2 { <c=' ees aes>8 8 \after 16\! 8 } | %
+  \tuplet 3/2 { <c=' ees aes>8 8 \af 16\! 8 } | %
   \tuplet 3/2 { <c=' ees g>8\< 8 8 } %
-  \tuplet 3/2 { <g'=' c es>8 8 \after 16\! <ees g c> } %
+  \tuplet 3/2 { <g'=' c es>8 8 \af 16\! <ees g c> } %
   \tuplet 3/2 { <c=' ees bes'>8\> 8 8 } %
-  \tuplet 3/2 { <c=' ees aes>8 8 \after 16\! 8 } | %
+  \tuplet 3/2 { <c=' ees aes>8 8 \af 16\! 8 } | %
 {% endmacro %}
 
 {% macro rhFrag2(a, b, c) %}
@@ -41,9 +41,9 @@
     {{ rhFrag1("<c'=' ees g>8\\mp\\<") }}
     {{ rhFrag3("<b= f' g>8\\<", "") }}
     \tuplet 3/2 { <d=' aes' cis>8 8 8 } %
-    \tuplet 3/2 { <d=' aes' d>8 8 \after 16\! 8 } %
+    \tuplet 3/2 { <d=' aes' d>8 8 \af 16\! 8 } %
     \tuplet 3/2 { <aes'=' d g>8\f\> 8 8 } %
-    \tuplet 3/2 { <aes=' d f>8 8 \after 16\! <g d' f> } | %
+    \tuplet 3/2 { <aes=' d f>8 8 \af 16\! <g d' f> } | %
     {{ rhFrag1("<c,=' ees g>8\\<") }}
 
     \alternative {
@@ -53,22 +53,22 @@
         \tuplet 3/2 { <des=' f bes>8 8 8 } %
         \tuplet 3/2 { <des=' f b>8 8 8 } | %
         \tuplet 3/2 { <e=' bes' c>8 8 <e bes' cis> } %
-        \tuplet 3/2 { <e=' bes' d>8 <e bes' ees> \after 16\! <bes' c e> } %
+        \tuplet 3/2 { <e=' bes' d>8 <e bes' ees> \af 16\! <bes' c e> } %
         \tuplet 3/2 { <aes=' c f>8\> 8 8 } %
-        \tuplet 3/2 { <aes=' c f>8 8 \after 16\! 8 } | %
-        {{ rhFrag2("<bes=' des f>8\\mf\\>", "", "\\after 16\\!") }}
+        \tuplet 3/2 { <aes=' c f>8 8 \af 16\! 8 } | %
+        {{ rhFrag2("<bes=' des f>8\\mf\\>", "", "\\af 16\\!") }}
         \tuplet 3/2 { <g=' aes c>8\< 8 8 } %
         \tuplet 3/2 { <f=' aes c>8 8 8 } %
         \tuplet 3/2 { <e=' aes c>8 8 8 } %
-        \tuplet 3/2 { <ees=' aes c>8 8 \after 16\! 8 } | %
+        \tuplet 3/2 { <ees=' aes c>8 8 \af 16\! 8 } | %
         \tuplet 3/2 { <bes= des f>8\> 8 8 } %
         \tuplet 3/2 { <a= des f>8 8 8 } %
         \tuplet 3/2 { <aes= des f>8 8 8 } %
-        \tuplet 3/2 { <g= des' f>8 8 \after 16\! 8 } | %
+        \tuplet 3/2 { <g= des' f>8 8 \af 16\! 8 } | %
         \tuplet 3/2 { <g= aes c>8\p\< 8 8 } %
         \tuplet 3/2 { <aes= c ees>8 8 8 } %
         \tuplet 3/2 { <c=' ees f>8 8 8 } %
-        \tuplet 3/2 { <ees=' f aes>8 8 \after 16\! 8 } | %
+        \tuplet 3/2 { <ees=' f aes>8 8 \af 16\! 8 } | %
         {{ rhFrag2("<bes'=' des f>8\\mp", "_\\dCre", "") }}
         \tuplet 3/2 { <c='' e g>8 8 8 } %
         \tuplet 3/2 { <b=' e g>8 8 8 } %
@@ -82,7 +82,7 @@
         \tuplet 3/2 { <f= aes des>8--\> 8-- 8-- } %
         \tuplet 3/2 { <fis= c' d>8--^\tRit 8-- 8-- } %
         \tuplet 3/2 {
-          <fis= c' ees>8-- <fis c' f>-- \after 16\! <fis c' fis>-- %
+          <fis= c' ees>8-- <fis c' f>-- \af 16\! <fis c' fis>-- %
         } \bar "||"
         \clef treble
       }
@@ -90,7 +90,7 @@
     }
   }
 
-  {{ rhFrag3("<b= f' g>8\\<", "\\after 16\\!") }}
+  {{ rhFrag3("<b= f' g>8\\<", "\\af 16\\!") }}
   \tuplet 3/2 {
     <ees=' g c>8->\mf^\tRit <c'='' ees g>-- <c ees aes>-- %
   }

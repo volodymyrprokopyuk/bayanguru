@@ -1,6 +1,6 @@
 {% macro rhFrag1(a) %}
-  {{ a }} b a8) cis16( b \after 8\! a8) |
-  e'=''8-.\> e-. \after 4\! e=''4-- |
+  {{ a }} b a8) cis16( b \af 8\! a8) |
+  e'=''8-.\> e-. \af 4\! e=''4-- |
 {% endmacro %}
 
 {% macro rhFrag2(a) %}
@@ -20,9 +20,9 @@
 \time 2/4
 \relative {
   {{ rhFrag1("cis''=''16(\\mf\\<") }}
-  cis=''16(\< b a8) cis16( b \after 8\! a8) |
-  d=''8-.\> d-. \after 4\! d4-- |
-  d=''16(\mf\< cis b8) d16( cis \after 8\! b8) |
+  cis=''16(\< b a8) cis16( b \af 8\! a8) |
+  d=''8-.\> d-. \af 4\! d4-- |
+  d=''16(\mf\< cis b8) d16( cis \af 8\! b8) |
   gis'=''8-.\f gis-. gis4-- |
   fis=''8-._\dDim fis-. fis4-- |
   e=''8-. e-. e4-- |

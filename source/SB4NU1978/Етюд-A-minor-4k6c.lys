@@ -1,6 +1,6 @@
 {% macro rhFrag1() %}
   a=16(\mf gis a b c8) r a16( gis a b c8) r |
-  a=16(\< gis a b c d dis e \after 8\! f8) r r4 |
+  a=16(\< gis a b c d dis e \af 8\! f8) r r4 |
   \repeat unfold 2 { b,=16( ais b c d='8) r }
 {% endmacro %}
 
@@ -23,17 +23,17 @@
 \relative {
   {{ rhFrag1() }}
   b=16(\< ais b c d cis d dis e dis %
-  e='16 f fis eis fis \after 16\! gis) |
+  e='16 f fis eis fis \af 16\! gis) |
   a='16(\f gis a b c8) r a16( gis a b c8) r |
-  a='16(\< gis a b c d e f \after 2\! g2) |
+  a='16(\< gis a b c d e f \af 2\! g2) |
   fis=''16(\p g fis eis fis8) r f16( g f e f8) r |
   e=''16( f e dis e8) r c16( d c b c8) r |
   d=''16\( e d c b c b a b c b a g a g f |
-  e='16\< dis e f g a g \after 16\! f %
-  e='16\> f e d c d c \after 16\! b\) |
+  e='16\< dis e f g a g \af 16\! f %
+  e='16\> f e d c d c \af 16\! b\) |
 
   {{ rhFrag1() }}
-  b=16(\< ais b c d dis e fis \after 2\! gis2) |
+  b=16(\< ais b c d dis e fis \af 2\! gis2) |
   a='16(\f gis a b cis8) r d16( cis d e f8) r |
   g,='16( fis g a b8) r c16( b c d e8) r |
   f=''16\( g f e %

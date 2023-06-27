@@ -2,7 +2,7 @@
 
 {% macro rhFrag1(a) %}
   {{ a }} a bes c | d bes g\) g'\( |
-  ees=''8 c g\) g'( | d4.)\> \after 8\! d=''8\( |
+  ees=''8 c g\) g'( | d4.)\> \af 8\! d=''8\( |
 {% endmacro %}
 
 {% macro lhFrag1(a) %}
@@ -20,16 +20,16 @@
   \partial 8 { d'='8\(\mp | }
   {{ rhFrag1("g='8") }}
   c=''8 bes a c | bes a g bes\) |
-  a='8\(\< e fis \after 8\! g | fis4.\)\> \after 8\! d8\( |
+  a='8\(\< e fis \af 8\! g | fis4.\)\> \after 8\! d8\( |
   g='8 a bes c | d bes g\) bes'\( |
   a=''8 g f ees | d4.\) g8\( |
   ees=''8 c a\) g'\( | d bes g bes\) |
-  a='8[( c]) fis,(\> a) | g4. \after 8\! bes='8\( |
+  a='8[( c]) fis,(\> a) | g4. \af 8\! bes='8\( |
 
   a='8\mf fis d c' | bes a g g' |
   f=''8 c d ees | d4.\) d8\( |
   cis=''8_\dCre b a g' | fis d a\) fis'\( |
-  e=''8[ b] cis a | d4.\)\> \after 8\! d,8\( |
+  e=''8[ b] cis a | d4.\)\> \af 8\! d,8\( |
   {{ rhFrag1("g='8\\mp") }}
   c=''8 ees a, c | bes d g, bes\) |
   a='8[( c]) fis,(^\tRit a) | g4-> <bes=' d g>-> \bar "|."

@@ -4,12 +4,12 @@
 \key d \major
 \time 2/4
 \relative {
-  r8\mp \acciaccatura { b''=''8 } a8 r \acciaccatura { b=''8 } a8 |
-  r8 \acciaccatura { b=''8 } a8 \acciaccatura { gis=''8 } a4 |
+  r8\mp \acc { b''=''8 } a8 r \acciaccatura { b=''8 } a8 |
+  r8 \acc { b=''8 } a8 \acciaccatura { gis=''8 } a4 |
   \repeat volta 2 {
-    \acciaccatura { cis,=''8 } <fis, d'>8\mf 8 <fis a>8 8 |
+    \acc { cis,=''8 } <fis, d'>8\mf 8 <fis a>8 8 |
     <g=' b>8 8 <fis a>4 |
-    \acciaccatura { cis'=''8 } <fis, d'>8 8 <fis a>8 8 |
+    \acc { cis'=''8 } <fis, d'>8 8 <fis a>8 8 |
     <g=' b>16( ais <g b>8) <fis a>4 |
     <g=' a>8\mp 8 <g b> <g cis> |
     <fis=' d'>4 <fis a d> |
@@ -17,7 +17,7 @@
     \alternative {
       \volta 1 { <fis=' d'>4 <fis=' a d> | }
       \volta 2 {
-        <fis=' d'>4 \acciaccatura { cis'=''8 } <fis,=' a d>4-> \bar "|."
+        <fis=' d'>4 \acc { cis'=''8 } <fis,=' a d>4-> \bar "|."
       }
     }
   }

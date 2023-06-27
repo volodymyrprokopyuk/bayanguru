@@ -1,7 +1,7 @@
 {% from "util.lys" import momentBeat, shapedSlur %}
 
 {% macro rhFrag1(a) %}
-  g='8-.\mp\< bes-. ees-. \after 8\! g-. |
+  g='8-.\mp\< bes-. ees-. \af 8\! g-. |
   f=''8-. d-. bes-. aes-. |
   g='8-. bes-. ees-. g-. | f4 r8 {{ a }} | %
 {% endmacro %}
@@ -9,7 +9,7 @@
 {% macro rhFrag2(a, b) %}
   {{ a }} <a ees' f> <a ees' g> <a ees' f> |
   <bes=' d g>8 <bes d f> <bes d g> <bes d f> |
-  <a=' ees' g>8\< <a ees' f> <a ees' g> \after 8\! {{ b }} | %
+  <a=' ees' g>8\< <a ees' f> <a ees' g> \af 8\! {{ b }} | %
 {% endmacro %}
 
 {% macro lhFrag1(a) %}
@@ -41,10 +41,10 @@
   bes'=''8-. d,-. f-. bes,-. |
   g='16( bes ees g f8[)-. ees]-. |
   bes'=''4 r8 bes,-. |
-  a='16(\< c ees g f8[)-. \after 8\! ees]-. |
+  a='16(\< c ees g f8[)-. \af 8\! ees]-. |
   d=''8-. f-. bes,-. d-. |
   a='16( c ees g f8[)-. a,]-. |
-  bes='4\> r8 \after 8\! bes='-. |
+  bes='4\> r8 \af 8\! bes='-. |
 
   {{ rhFrag1("f=''8-.") }}
   {{ rhFrag2("<a,=' ees' g>8", "<a=' ees' f>") }}

@@ -29,14 +29,14 @@
   g=''16 a g f ees f ees d c bes c d ees d ees e |
   {{ rhFrag2("f=''16") }}
   ees=''16 f ees d c bes c ees d ees d c bes a bes d |
-  c=''16 d c bes a g a c bes\> c bes a g a bes \after 16\! c |
+  c=''16 d c bes a g a c bes\> c bes a g a bes \af 16\! c |
   {{ rhFrag1("d=''16\\p", "_\\dCre", "c=''") }}
   d=''16 c bes a bes c bes a g fis g a bes a bes c |
   d=''16 ees d c bes a bes d ees f ees d c bes c ees |
   f=''16 g f ees d c d f fis g fis e fis d e fis |
   \repeat unfold 4 { g=''16 a g fis }
   g=''16\f a bes c d c bes a g a bes c d c bes a |
-  g=''8 f16 ees d c bes a g8\> f16 ees d c bes \after 16\! a |
+  g=''8 f16 ees d c bes a g8\> f16 ees d c bes \af 16\! a |
   g=4\p r8. <bes' ees g>16\f <bes=' d g>4 \bar "|."
 }
 {% endmacro %}

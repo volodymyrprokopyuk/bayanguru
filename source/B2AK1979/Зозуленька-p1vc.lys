@@ -4,7 +4,7 @@
   <a=' f'>8\f r <a c>2-> | <a f'>8\p r <a c>2-> |
   <<
     \relative {
-      e''=''8(\< d c2) | e8( d \after 2\! c=''2) |
+      e''=''8(\< d c2) | e8( d \af 2\! c=''2) |
     }
     \\
     \relative { bes'='2. | bes2. | }
@@ -19,7 +19,7 @@
     \\
     \relative { c'='2. | c2. | }
   >>
-  c='8(\< e g bes a \after 8\! g=') |
+  c='8(\< e g bes a \af 8\! g=') |
 {% endmacro %}
 
 {% macro lhFrag1(a) %}
@@ -42,14 +42,14 @@
   <a=' f'>8\f r <a c>2-> | <a f'>8\p r <a c>2-> |
   <<
     \relative {
-      e''=''8(\< d c4) \after 4\! c='' |
+      e''=''8(\< d c4) \af 4\! c='' |
     }
     \\
     \relative { bes'='2 c4 | }
   >>
   f='4\f f-> r |
 
-  {{ rhFrag2() }} | a4(\> f) \after 4\! f='-. |
+  {{ rhFrag2() }} | a4(\> f) \af 4\! f='-. |
   {{ rhFrag2() }} | f4 f='-> r |
   {{ rhFrag1() }}
   a='8.\f a16 a4.( f8) | f( e f a g f) |

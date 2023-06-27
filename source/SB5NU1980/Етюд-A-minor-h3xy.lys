@@ -2,7 +2,7 @@
   {{ a }} b c {{ b }} b a g f e d e f e d c b a |
 {% endmacro %}
 
-{% macro rhFrag2(a, b = "\\<", c = "\\after 32\\!") %}
+{% macro rhFrag2(a, b = "\\<", c = "\\af 32\\!") %}
   {{ a }} a b a gis e fis gis a {{ b }} b c d dis e fis {{ c }} gis |
 {% endmacro %}
 
@@ -14,7 +14,7 @@
   {{ a }} gis b e gis, b e gis %
   a,=32\< c e a c, e a c |
   e,='32 gis b e gis, b e gis %
-  a,='32 c e a c, e a \after 32\! c |
+  a,='32 c e a c, e a \af 32\! c |
   b=''32\mf a f d b a f d %
   e='32 a c e a, c e a |
   b,='32 d f a e\> gis b e=''' %
@@ -25,7 +25,7 @@
   {{ rhFrag1("a=''32\\mf", "") }}
   gis='32 a b c d e fis gis %
   \ottava #1
-  a=''32\< b c d dis e fis \after 32\! gis |
+  a=''32\< b c d dis e fis \af 32\! gis |
   {{ rhFrag1("a='''32\\f", "") }}
   {{ rhFrag2("gis=''32", "", "") }}
   {{ rhFrag1("a='''32", "") }}
@@ -73,9 +73,9 @@
   a=''32 b c e a='''8 |
 
   {{ rhFrag4("e,,,=32\\p") }}
-  a,=''32 e c a a e c \after 32\! a |
+  a,=''32 e c a a e c \af 32\! a |
   {{ rhFrag4("e=32\\p") }}
-  a,=''32 b c e \after 8\! a='''8\p |
+  a,=''32 b c e \af 8\! a='''8\p |
 
   {{ rhFrag1("a,=''32\\mp", "") }}
   {{ rhFrag5() }}

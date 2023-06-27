@@ -31,7 +31,7 @@
   {{ rhFrag1("fis'='16(\\mf") }}
 
   {{ rhFrag2("e=''8-.\\mp") }} | a a16( cis e4) |
-  {{ rhFrag2("e=''8-.") }} | a-.\< r \after 4\! a='4-> |
+  {{ rhFrag2("e=''8-.") }} | a-.\< r \af 4\! a='4-> |
 
   {{ rhFrag1("fis='16(\\f") }} \bar "|."
 }

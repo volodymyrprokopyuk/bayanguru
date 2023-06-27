@@ -1,6 +1,6 @@
 {% macro rhFrag1(a) %}
-  {{ a }} g(\< c) c8( \after 8\! d |
-  bes='4 a8\> bes g4) \after 4\! g=' |
+  {{ a }} g(\< c) c8( \af 8\! d |
+  bes='4 a8\> bes g4) \af 4\! g=' |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -11,10 +11,10 @@
 \relative {
   {{ rhFrag1("g'='4\\p") }}
   {{ rhFrag1("g='4") }}
-  fis='4\( d\< g \after 4\! bes |
-  a='4 fis\> g \after 4\! g\) |
-  fis='4\( d\< g \after 4\! bes |
-  a='8 g fis\> a g4 \after 8\! g='\) \bar "|."
+  fis='4\( d\< g \af 4\! bes |
+  a='4 fis\> g \af 4\! g\) |
+  fis='4\( d\< g \af 4\! bes |
+  a='8 g fis\> a g4 \af 8\! g='\) \bar "|."
 }
 {% endmacro %}
 

@@ -32,7 +32,7 @@
       r8 a='8_\aSim bes a c( bes) bes a |
       r8 g='8 a g bes( a) a g | r e f e g( f) f e |
       \repeat unfold 2 { r8 d='8 e d f( e) e d | }
-      r8\< f='8 f \after 16.\! e g(\> f) f \after 8\! e=' |
+      r8\< f='8 f \af 16.\! e g(\> f) f \after 8\! e=' |
 
       \repeat unfold 2 { r8 a='8 bes a c( bes) bes a | }
       r8 c=''8 d c ees( d) d c |

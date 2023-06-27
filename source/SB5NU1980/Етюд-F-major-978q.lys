@@ -20,10 +20,10 @@
 {% macro rhFrag4(a, b) %}
   {{ rhFrag1(a) }}
   <c=' e g>4-> <g c e> <c e g> |
-  <a= c f>4-> <a c> {{ b }} \after 4\! <a c d> |
+  <a= c f>4-> <a c> {{ b }} \af 4\! <a c d> |
   <a= c e>4\mf 4 4 |
   {{ v2("<d'=' f>4( <c e> <b= d>)", "gis=2.") }}
-  <a= c e a>4\< <a c e> \after 4\! a-> |
+  <a= c e a>4\< <a c e> \af 4\! a-> |
   {{ rhFrag1("<f'=' a c>4->\\f") }}
   <e=' gis b>4-> <b e gis> <e=' gis b> |
 {% endmacro %}
@@ -72,7 +72,7 @@
     \volta 1
     {{ rhFrag4("<f'=' a c>4->\\f", "\\>") }}
     <e=' a c>4-> <c e a> <e a c> |
-    <fis=' a>4\< <fis a c> \after 4\! <fis a d> |
+    <fis=' a>4\< <fis a c> \af 4\! <fis a d> |
     <g=' b e>4 <e g b> <g b e> |
     <b=' f' g>4 <g b d> <b f' g> |
     {{ rhFrag3("\\sf") }}

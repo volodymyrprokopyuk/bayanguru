@@ -8,7 +8,7 @@
   g=4 b d | f2 e4 | c2.~ | c2. |
   g=4 c e | <a c>2 <g b>4 | <f a>2. | <d f>2. |
   d='4 f a | <a c>2 <g b>4 | <e g>2. |
-  r8 g='8\< a b c \after 16.\! d='' |
+  r8 g='8\< a b c \af 16.\! d='' |
   \repeat volta 2 {
     <c='' e>2 <b d>4 | 2 <a c>4 | 2 <f a>4 | 2. |
     <b=' d>2 <a c>4 | <g b>2 <f a>4 | 2 <e g>4 | 2. |
@@ -16,7 +16,7 @@
     b,=4 d f | <f a>2 <e g>4 |
     \alternative {
       \volta 1 {
-        <e=' g>2. | r8 g='8\< a b c \after 16.\! d='' |
+        <e=' g>2. | r8 g='8\< a b c \af 16.\! d='' |
       }
       \volta 2 { <e,=' g c>2.~ | 2 r4 \bar "|." }
     }

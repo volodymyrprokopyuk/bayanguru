@@ -12,9 +12,9 @@
 \relative {
   \partial 4 { r16 g'='16\(\mf a b | }
   \repeat volta 2 {
-    c=''16\< b c d e c e \after 16\! f |
+    c=''16\< b c d e c e \af 16\! f |
     g=''8\) g g16\mf g,\(\< a b |
-    c=''16 g c d e c e \after 16\! f |
+    c=''16 g c d e c e \af 16\! f |
     g=''8\) g g16_\dDim e( g a |
     f=''16) d( f g e) c( e g |
     d=''16) b( d e c) a( c e |

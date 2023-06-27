@@ -2,7 +2,7 @@
   {{ a }} d c d c f e d c g a bes) |
   a='16( bes a bes a d c bes a g f e) |
   f='16( g f g f e f g gis e fis gis) |
-  a='16( gis a b c\< b c d e d e \after 16\! f='') |
+  a='16( gis a b c\< b c d e d e \af 16\! f='') |
 {% endmacro %}
 
 {% macro rhFrag2() %}
@@ -11,8 +11,8 @@
 {% endmacro %}
 
 {% macro rhFrag3() %}
-  c=''16(\< d c d c d c d c d c \after 16\! d) |
-  c=''16(->\> bes a g a g f e f e d \after 16\! c=') |
+  c=''16(\< d c d c d c d c d c \af 16\! d) |
+  c=''16(->\> bes a g a g f e f e d \af 16\! c=') |
 {% endmacro %}
 
 {% macro lhFrag1(a) %}
@@ -37,12 +37,12 @@
     \alternative {
       \volta 1 { {{ rhFrag3() }} }
       \volta 2 {
-        c'=''16(\< d c d c d c d e f e \after 16\! f='') |
+        c'=''16(\< d c d c d c d e f e \af 16\! f='') |
       }
     }
   }
 
-  e=''16(-> f e f e\>^\tRit f e f g fis g \after 16\! gis) |
+  e=''16(-> f e f e\>^\tRit f e f g fis g \af 16\! gis) |
   a=''16(\p^\tATem bes a bes a f g f d e d bes) |
   a='16( bes a bes a f g a bes c d e) |
   f=''16( g f g f d ees d bes c bes g) |
@@ -59,10 +59,10 @@
   {{ rhFrag1("c'=''16(\\p") }}
   g=''16(\mf a g a g d' c bes a g f e) |
   f=''16( g f g f bes a g f d e f) |
-  c=''16(\< d c d c d \after 16\! c d c d c d) |
-  c=''16(-> d c d c\> d c d c d e \after 16\! a) |
+  c=''16(\< d c d c d \af 16\! c d c d c d) |
+  c=''16(-> d c d c\> d c d c d e \af 16\! a) |
   f=''16(\p g f g f c d c a bes a g) |
-  f='16( g f g f\> c d c a bes a \after 16\! g |
+  f='16( g f g f\> c d c a bes a \af 16\! g |
   f=8) r r4 <f bes d>8\pp r | <a= c f> r r4 r \bar "|."
 }
 {% endmacro %}

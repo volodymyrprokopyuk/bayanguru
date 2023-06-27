@@ -23,7 +23,7 @@
   <a=' c>2 <g bes>8 8 |
   <<
     \relative {
-      r4\< \after 2\! d''=''2~ | d\> \after 4\! bes='4 |
+      r4\< \af 2\! d''=''2~ | d\> \after 4\! bes='4 |
     }
     \\
     \relative { <fis'=' a>2. | f='2 r4 | }
@@ -31,15 +31,15 @@
 
   f'=''2-> f4 | ges8\( f ees d ees ges |
   f=''4 bes,\) d8\( ees |
-  <d='' f>2\< \after 4\! <c fis>4 |
-  <bes=' g'>2\)\> bes8\( \after 8\! c |
+  <d='' f>2\< \af 4\! <c fis>4 |
+  <bes=' g'>2\)\> bes8\( \af 8\! c |
   d=''2 f8 ees | d2.\) |
   <bes=' g'>4(-> <d f> <g, ees'>)-> |
   a='4^\tRal d8( c bes a) |
   g='16\( bes' \fermata a g %
   \tuplet 3/2 { f=''8 ees d } %
   \tuplet 3/2 { c=''8 bes a } | %
-  d=''2\)\> \after 4\! fis,4 |
+  d=''2\)\> \af 4\! fis,4 |
   g='4 r r \bar "|."
 }
 {% endmacro %}

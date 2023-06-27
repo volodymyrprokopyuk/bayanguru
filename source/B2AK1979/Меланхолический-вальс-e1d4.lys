@@ -5,12 +5,12 @@
   g='8.\) %
   \shape #'((0 . 0) (0 . 1) (0 . 4.5) (0 . 0)) PhrasingSlur %
   g='16\( bes d |
-  <g,=' d' g>4\< 16 \after 16\! 16 |
+  <g,=' d' g>4\< 16 \af 16\! 16 |
   <<
     \relative {
       {{ dynPadding() }}
       aes''=''4\f g16 f |
-      f=''8. ees16\> d \after 16\! ees='' |
+      f=''8. ees16\> d \af 16\! ees='' |
     }
     \\
     \relative { <aes'=' d>4 8 | <g=' c>4 r8 | }
@@ -51,7 +51,7 @@
     \set subdivideBeams = ##t
     d=''16 d' c bes a g | fis ees d c bes a |
     \set subdivideBeams = ##f
-    g='8\)\> r \after 8\! r | r r \fine \bar "!!"
+    g='8\)\> r \af 8\! r | r r \fine \bar "!!"
 
     \volta 2
     g='8\(\mf | g8. f16 e f | d'8. c16 g a |
@@ -63,7 +63,7 @@
     <g=' cis g'>8\f 16 16 8 |
     <bes=' cis bes'>8 <a cis a'> <g cis g'> |
     <a=' d fis>8 <fis a d>8\> 8 |
-    \after 4\! 4-{{ shapedSlur("fu", sh = 6) }} ( d'=''8)\p \bar "||"
+    \af 4\! 4-{{ shapedSlur("fu", sh = 6) }} ( d'=''8)\p \bar "||"
   }
 }
 {% endmacro %}

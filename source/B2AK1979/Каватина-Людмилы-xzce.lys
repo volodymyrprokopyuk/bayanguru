@@ -19,7 +19,7 @@
   {{ rhFrag1() }} | b4) g8(\p a |
   b='4) fis'8( g | fis4) e8( d |
   cis=''8 a') b,(\< cis |
-  d=''16 e d cis d fis e \after 16\! g) |
+  d=''16 e d cis d fis e \af 16\! g) |
   fis=''8 a4 b,8~ | b g'4 e8~ |
   e=''8 b4 cis8 | d4 b8-.\mp c-. |
   {{ rhFrag1() }} | b8 g) b-. c-. |

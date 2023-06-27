@@ -1,8 +1,8 @@
 {% from "util.lys" import v2 %}
 
 {% macro rhFrag1(a) %}
-  {{ a }} g d' c) e,(\< g c e) d( gis, b \after 16\! f') |
-  e=''8\mf b16( c a8)\> a16( b g a fis \after 32.\! b=') |
+  {{ a }} g d' c) e,(\< g c e) d( gis, b \af 16\! f') |
+  e=''8\mf b16( c a8)\> a16( b g a fis \af 32.\! b=') |
 {% endmacro %}
 
 {% macro lhFrag1(a) %}
@@ -35,7 +35,7 @@
         <dis'=' fis>4 <e g> | <dis fis>8 dis='4. |
       }
     >>
-    <fis=' a>8. d16 d8( e | d) d <a' c>\< \after 8\! <fis a> |
+    <fis=' a>8. d16 d8( e | d) d <a' c>\< \af 8\! <fis a> |
     <g=' b>4~( 16 a g fis) |
     {{ v2("e'='2", "c'='4( d8 c=')") }}
     <fis=' a>8. d16 d8( e | d) d=' %

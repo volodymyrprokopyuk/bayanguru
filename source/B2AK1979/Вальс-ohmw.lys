@@ -36,7 +36,7 @@
     c='8(\mf d c e f g | a2.) |
     bes='8( a g4) a | c2. |
     c,='8( d c e f g | a2.) |
-    bes='8( a g4 e | \after 2.\! a2.)\> |
+    bes='8( a g4 e | \af 2.\! a2.)\> |
     {{ rhFrag1("<f=' a>8(\\p") }} | d4) <d=' f d'>2 \fine |
 
     \volta 2

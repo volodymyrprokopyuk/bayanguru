@@ -76,7 +76,7 @@
           {{ rhFrag1() }}
           <b,=' d fis>16^\tRit g' <b, d fis> b'-> %
           <b,=' dis fis>16\> g' %
-          <b,=' dis fis>16 \after 16\! b'=''-> \bar "||"
+          <b,=' dis fis>16 \af 16\! b'=''-> \bar "||"
         }
       }
     }

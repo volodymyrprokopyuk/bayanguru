@@ -40,7 +40,7 @@
         {{ shapedSlur("bd", bs = 2.5, wd = 6.3, ht = 2) }} ( b,8)\( |
         {{ rhFrag1() }} b2.~ | b4.\) %
         \ottava #1
-        <e='' c'>4 <g='' b>8(\> 4.~ | \after 8\! 8) %
+        <e='' c'>4 <g='' b>8(\> 4.~ | \af 8\! 8) %
         \ottava #0
         r r r4. r4 \bar "|."
       }

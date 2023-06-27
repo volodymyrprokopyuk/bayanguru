@@ -14,7 +14,7 @@
     \alternative {
       \volta 1 {
         r8 <c=' e a>8[ r <c d fis>] |
-        r8 <c=' d a'>8 \after 8.\! <b= d g>4 |
+        r8 <c=' d a'>8 \af 8.\! <b= d g>4 |
       }
       \volta 2 {
         r8 <c=' d fis>8[ r <c e a>] |
@@ -51,7 +51,7 @@
   <g=' b>16 d <g b d>-> d <g b d> d <b' d> d, |
   <a'=' c>16 fis <c' e>-> fis, %
   <<
-    \relative { d''=''8.\> \after 16\! c=''16 | }
+    \relative { d''=''8.\> \af 16\! c=''16 | }
     \\
     \relative { fis'='4 | }
   >>
@@ -62,7 +62,7 @@
     \relative { c'='4  } %
   >>
   <c=' a'>16( <d b'> <c a'> <b g'> <a fis'>8)-. <g e'>8-. |
-  <fis= d'>8( <g e'>16 <a fis'> \after 8\! <b= g'>4) \bar "|."
+  <fis= d'>8( <g e'>16 <a fis'> \af 8\! <b= g'>4) \bar "|."
 }
 {% endmacro %}
 

@@ -18,9 +18,9 @@
 
     \volta 2
     e,='8\p e\( f e | a e c' e, |
-    b'='8 e, gis e | a\< e c \after 8\! e\) |
+    b'='8 e, gis e | a\< e c \af 8\! e\) |
     d='8 d\( e d | g d b' d, |
-    d'=''8 c b a | g\< f e  \after 8\! d='\) \bar "||"
+    d'=''8 c b a | g\< f e  \af 8\! d='\) \bar "||"
   }
 }
 {% endmacro %}

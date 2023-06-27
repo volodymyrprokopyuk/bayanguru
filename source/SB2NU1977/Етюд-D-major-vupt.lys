@@ -6,16 +6,16 @@
 \relative {
   \repeat volta 2 {
     a=16\mf d_\aLeg fis e d cis | b e g fis e d |
-    cis='16 e a g fis e | d\< fis a d fis \after 16\! a |
+    cis='16 e a g fis e | d\< fis a d fis \af 16\! a |
     d='''16\mf cis b a g fis | e d cis b a g |
-    fis='16\> e d cis b \after 16\! cis | d='8 r r |
+    fis='16\> e d cis b \af 16\! cis | d='8 r r |
   }
 
   \repeat volta 2 {
     a=16(\p b cis d e fis) | d( e fis g a b) |
-    a='16( b cis d e fis | d8)-.\< fis-. \after 8\! a-. |
+    a='16( b cis d e fis | d8)-.\< fis-. \af 8\! a-. |
     b=''16(\mf d cis b a g | fis a g fis e d) |
-    cis=''16(\> e d cis b \after 16\! a | d=''8) r r |
+    cis=''16(\> e d cis b \af 16\! a | d=''8) r r |
   }
 }
 {% endmacro %}

@@ -7,7 +7,7 @@
   | <eis gis>16 <dis fis> <cis eis> <dis fis> <cis eis>8\) <b dis>16\( <ais cis> |
   | <b dis>4~ 16 <cis eis> <dis fis> <cis eis> |
   | <b dis>16 <cis eis> <b dis> <ais cis> <b dis>8 <ais cis>16 <gis b> |
-  | <ais cis>16\> <b dis> <ais cis>8~ 16 <b dis> <ais cis> \after 16\! <gis b> |
+  | <ais cis>16\> <b dis> <ais cis>8~ 16 <b dis> <ais cis> \af 16\! <gis b> |
 {% endmacro %}
 
 {% macro rhFrag2(a, b) %}
@@ -48,11 +48,11 @@
 
   {{ rhFrag2("", "\\<") }}
   <eis=' gis>16 <dis fis> <cis eis> <dis fis> %
-  <eis=' gis>16 <fis ais> <gis b> \after 16\! <ais cis>\) |
+  <eis=' gis>16 <fis ais> <gis b> \af 16\! <ais cis>\) |
   <b=' dis>4~\(\mf 16 <ais cis> <b dis> <ais cis> |
   <gis=' b>16 <ais cis> <gis b> <fis ais> <gis b>8\) <fis ais>16\( <eis gis> |
   <fis=' ais>16\< <gis b> <fis ais>8~ 16 <gis b> <fis ais> <eis gis> |
-  <fis=' ais>16 <eis gis> \after 8\! <dis fis>8~ 8\) <gis, b>16\(\mp <ais= cis> |
+  <fis=' ais>16 <eis gis> \af 8\! <dis fis>8~ 8\) <gis, b>16\(\mp <ais= cis> |
 
   {{ rhFrag2("_\\dCre", "") }}
   <eis=' gis>16 <dis fis> <eis gis> <fis ais> <gis b> <ais cis> <b dis> <cis eis>\) |
@@ -63,21 +63,21 @@
   <cis='' eis>16 <bis dis> <ais cis>8~ 8\) <ais, cis>16\(\p <bis= dis> |
 
   <cis=' eis>16 <dis fis> <cis eis> <dis fis> <cis eis> <bis dis> <ais cis> <bis dis> |
-  <cis=' eis>16\< <dis fis> <eis gis> \after 32.\! <fis ais> %
-  <eis=' gis>16\> <dis fis> <cis eis> \after 16\! <dis fis> |
+  <cis=' eis>16\< <dis fis> <eis gis> \af 32.\! <fis ais> %
+  <eis=' gis>16\> <dis fis> <cis eis> \af 16\! <dis fis> |
   <cis=' eis>16\p <bis dis> <ais cis>8~ 4~ | 4~ 8~\) 16\( <bis dis> |
   \repeat unfold 3 { <cis=' eis>16 <bis= dis> } <cis eis> <dis fis> |
   \repeat unfold 3 { <eis=' gis>16 <dis=' fis> } <eis gis> <fis ais> |
   <eis=' gis>16 <fis ais> <eis gis> <fis ais> %
   <eis=' gis>16\< <dis fis> <eis gis> <fis ais> |
   <gis=' b>16 <ais cis> <b dis> <cis eis> %
-  <dis='' fis>16 \after 16\! <eis gis>\) <fis ais>\(\mf <gis='' b> |
+  <dis='' fis>16 \af 16\! <eis gis>\) <fis ais>\(\mf <gis='' b> |
 
   {{ rhFrag1("<ais='' cis>16") }}
   <ais=' cis>16 <gis b> <fis ais>8~\p 4\) |
   <b,= dis>4~\( 16\< <cis eis> <dis fis> <eis gis> |
-  <dis=' fis>16 <eis gis> \after 16\! <dis fis> <cis eis> %
-  <b= dis>8\> <ais cis>16 \after 16\! <gis b> |
+  <dis=' fis>16 <eis gis> \af 16\! <dis fis> <cis eis> %
+  <b= dis>8\> <ais cis>16 \af 16\! <gis b> |
   <ais= cis>4~ 16 <b dis> <ais cis> <b dis> |
   <ais= cis>16 <gis b> <fis ais>8~ 4\) |
   <fis= ais>2 | r4 <fis= ais cis> \fermata \bar "|."

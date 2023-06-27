@@ -15,10 +15,10 @@
   a='16( bes c bes a g | f='4) r8 |
 
   a='8\(\p bes16 a gis a | cis8 d16 cis b cis |
-  d=''8\< e16 d cis \after 16\! d | f=''4\)\mf r8 |
+  d=''8\< e16 d cis \af 16\! d | f=''4\)\mf r8 |
   f,='8\(\p g16 f e f | a8 bes16 a gis a |
   bes='8\< c16 bes a bes |
-  f'=''8\)->^\tRit e-> \after 8\! d-> |
+  f'=''8\)->^\tRit e-> \af 8\! d-> |
   c=''16->\f^\tATem c'16( bes a g f |
   e=''16 d c bes a g) |
   f='8-. a-. c-. | f=''4 r8 \bar "|."

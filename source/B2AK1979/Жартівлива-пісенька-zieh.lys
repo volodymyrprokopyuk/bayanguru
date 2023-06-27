@@ -1,7 +1,7 @@
 {% from "util.lys" import momentBeat %}
 
 {% macro rhFrag1() %}
-  f='8\< g a \after 8\! bes <a c>4 a8 f |
+  f='8\< g a \af 8\! bes <a c>4 a8 f |
   <bes=' d>8.-> 16 <a c>8 <g bes> <a c>4 a8 f |
   <bes=' d>8 8 <a c> <g bes> <a c> <f a> r <f a> |
 {% endmacro %}

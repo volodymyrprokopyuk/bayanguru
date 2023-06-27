@@ -14,9 +14,9 @@
   {{ rhFrag1() }} | g b d4-- |
   {{ rhFrag1() }} | g-. b-. g='-. r |
 
-  d='8-.\f \acciaccatura { a'='8 } g16( fis g8) a-. |
+  d='8-.\f \acc { a'='8 } g16( fis g8) a-. |
   b='8.( a16 b8 g) |
-  \acciaccatura { d'=''8 } c=''16( b c d e8) c-. |
+  \acc { d'=''8 } c=''16( b c d e8) c-. |
   b='8.( a16 b8 g) |
   c=''16( b c d e4) | b16( a b c d4) |
   c=''16( b a g fis8) d-. | g16( fis g b d4) |

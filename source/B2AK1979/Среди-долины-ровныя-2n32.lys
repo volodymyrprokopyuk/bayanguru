@@ -28,9 +28,9 @@
     <a=' c>8 <d, b'> <c a'> <e e'>4 <d e gis>8 |
     \alternative {
       \volta 1 {
-        <c=' e a>4.~\> \after 8\! 8\) r\< %
+        <c=' e a>4.~\> \af 8\! 8\) r\< %
         {{ shapedSlur("fu", sh = 3) }} ( %
-        \after 16..\! g'=') |
+        \af 16..\! g'=') |
       }
       \volta 2 {
         {{ hSpace() }}

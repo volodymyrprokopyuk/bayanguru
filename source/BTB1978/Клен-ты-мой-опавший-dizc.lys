@@ -28,25 +28,25 @@
       b,='4 \rest <b=' d fis>8 8 cis=''2 |
     }
   >>
-  \after 2.\! <d''='' fis b>2.\> \fermata r4 |
+  \af 2.\! <d''='' fis b>2.\> \fermata r4 |
 
   <b='~ d_~ fis ~>2(\mp 8 d cis b | g4 e2.) |
   {{ v2("fis'='4.( fis8 gis4 ais | cis2 b='2) |",
      "e'='2 f4 e | <d=' fis>1 |") }}
   <fis=' b d>2(~ 8 d' cis b | g4 e <a cis> <g b>) |
-  r4 <d=' fis>8\< 8 <e gis>4. \after 8\! <fis ais>8 |
-  <d='~ fis_~ cis' ^(>2\> \after 4.\! <d=' fis b)> |
+  r4 <d=' fis>8\< 8 <e gis>4. \af 8\! <fis ais>8 |
+  <d='~ fis_~ cis' ^(>2\> \af 4.\! <d=' fis b)> |
 
   \repeat volta 2 {
     <b'='~ d_~ fis ~>2(\mf 8 d cis b | g4~ <g b e>2.) |
     <g=' b e>2(~ 8 cis b a |
-    <fis=' a d>2\> \after 2\! <fis ais cis>) |
+    <fis=' a d>2\> \af 2\! <fis ais cis>) |
     {{ v2("<fis'=' b_~ d ~>2 <b d>8 d cis b |", "s2 fis'=' |") }}
     \alternative {
       \volta 1 {
         g='4 e <a cis> <g b> |
-        r4 <d=' fis>8\< 8 <e gis>4. \after 8\! <fis ais>8 |
-        {{ v2("cis''=''4\\> \\after 2\\! b2 b4 \\rest |",
+        r4 <d=' fis>8\< 8 <e gis>4. \af 8\! <fis ais>8 |
+        {{ v2("cis''=''4\\> \\af 2\\! b2 b4 \\rest |",
            "<d'=' fis>2. s4 |") }}
       }
       \volta 2 {

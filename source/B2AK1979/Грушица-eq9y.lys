@@ -34,7 +34,7 @@
     \new Voice = voiceOne \relative {
       \voiceOne
       b'='2.\( | b2 d4 | e2. |
-      d=''4 \acciaccatura { cis=''16 d } cis4 b='\) |
+      d=''4 \acc { cis=''16 d } cis4 b='\) |
     }
     \new Voice = voiceTwo \relative {
       \voiceTwo

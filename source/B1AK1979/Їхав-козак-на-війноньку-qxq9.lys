@@ -9,11 +9,11 @@
   e'='4\(\p e8 fis | g4 fis8 e | fis4 b | e,\) d |
   g='4\(\mp g8 a | b4 a8 g | a4 d | b2\) |
   c=''4\(\mf b8 a | b4 g\) | a\( g8 fis | g4 e\) |
-  e='4\( e'8 c | b a g fis | e2\)\< | \after 2\! <e e'>2 |
-  <a=' c>4\(\f <g b>8 <fis a> | <g b>4\> \after 4\! g\) |
-  <fis=' a>4\(\mf <e g>8 <dis fis> | <e g>4\> \after 4\! e\) |
+  e='4\( e'8 c | b a g fis | e2\)\< | \af 2\! <e e'>2 |
+  <a=' c>4\(\f <g b>8 <fis a> | <g b>4\> \af 4\! g\) |
+  <fis=' a>4\(\mf <e g>8 <dis fis> | <e g>4\> \af 4\! e\) |
   e='4\(\mp {{ v2("e''=''8 c='' |", "e'='4 |") }}
-  <g=' b>8 <fis a> <e g> <dis fis> | \after 2\! e2\)\> | e='4 r \bar "|."
+  <g=' b>8 <fis a> <e g> <dis fis> | \af 2\! e2\)\> | e='4 r \bar "|."
 }
 {% endmacro %}
 

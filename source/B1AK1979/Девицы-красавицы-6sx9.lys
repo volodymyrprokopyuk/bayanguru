@@ -17,8 +17,8 @@
 \time 2/4
 \relative {
   {{ rhFrag1("d'='8(\\mf") }}
-  d'=''8(\< b) b g | g( e) \after 4\! e4 |
-  c'=''8(\> b) a g | fis( e \after 4\! d4) |
+  d'=''8(\< b) b g | g( e) \af 4\! e4 |
+  c'=''8(\> b) a g | fis( e \af 4\! d4) |
   {{ rhFrag1("d='8(\\p") }} \bar "|."
 }
 {% endmacro %}

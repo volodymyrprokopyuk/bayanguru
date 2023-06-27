@@ -1,8 +1,8 @@
 {% macro rhFrag1() %}
   <e=' fis c'>8\mf <dis fis b>8.-> dis16( |
-  fis='8\> \after 4\! e4) |
-  <e=' fis c'>8\< <dis fis b>8.-> \after 16\! <a' b dis>16 |
-  <a=' b fis'>8(\f\> \after 16.\! <g=' b e>) r |
+  fis='8\> \af 4\! e4) |
+  <e=' fis c'>8\< <dis fis b>8.-> \af 16\! <a' b dis>16 |
+  <a=' b fis'>8(\f\> \af 16.\! <g=' b e>) r |
 {% endmacro %}
 
 {% macro lhFrag1(a) %}

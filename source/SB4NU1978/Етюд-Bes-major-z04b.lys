@@ -1,8 +1,8 @@
 {% macro rhFrag1(a) %}
   {{ a }} bes a bes f d' cis d %
-  f,='32 bes a bes f d' cis \after 32\! d |
+  f,='32 bes a bes f d' cis \af 32\! d |
   f,='32 c' b c f, f' e f %
-  f,='32\> c' b c f, f' e \after 32\! f='' |
+  f,='32\> c' b c f, f' e \af 32\! f='' |
 {% endmacro %}
 
 {% macro rhFrag2() %}

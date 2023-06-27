@@ -1,7 +1,7 @@
 {% from "util.lys" import v2 %}
 
 {% macro rhFrag1() %}
-  \afterGrace 1/4
+  \afGrace 1/4
     \fixed c' { <g,= a, c e>4^\markup \center-align \smaller "Б+М" }
     { \fixed c { \once \hide Stem <\parenthesize a,=, \parenthesize c>4 } }
 {% endmacro %}
@@ -14,7 +14,7 @@
   <<
     \relative {
       <e'=' a c>8\> <f a c> %
-      \after 4\! <gis=' b>4 | a='2 |
+      \af 4\! <gis=' b>4 | a='2 |
     }
     \\
     \relative { s4 e'='8 d | c='2 | }
@@ -34,10 +34,10 @@
 \relative {
   R2\mp | \repeat unfold 3 { R2 | }
   <e'=' a c>8\< 8 <d a' d> <d f a d> |
-  <e=' a c e>4  \after 4\! %
+  <e=' a c e>4  \af 4\! %
   {{ rhFrag2() }}
   <e=' a c>8\> 8 <d e b'>4 |
-  \after 4.\! <c=' e a>4. r8 |
+  \af 4.\! <c=' e a>4. r8 |
 
   \tempo Allegretto
   <g'=' e'>8\mp 8 8 8 |
@@ -45,7 +45,7 @@
   <g=' c e>8 8 <g c e g>4-> |
   <g=' b d>4 <gis b e> |
   <a=' c>8 8 <a d>8 8 | <a e'>4 a8 b |
-  <a=' c>8 8 <gis b>4 | \after 2\! a2\< |
+  <a=' c>8 8 <gis b>4 | \af 2\! a2\< |
   <a=' c>8 8 <a d>8 <f a d> |
   <e=' a e'>4 {{ rhFrag2() }}
   {{ rhFrag3() }}
@@ -57,7 +57,7 @@
   c=''16 e, a c d f, a d |
   e=''16 e, a c a f b f |
   c'=''16 e, a c b e, gis b |
-  a='16\< e fis gis a gis a \after 16\! b |
+  a='16\< e fis gis a gis a \af 16\! b |
   <a=' c>16( e <a c>8) <b d>16( g <b d>8) |
   e=''16( c g e d f a b) |
   e,='16( a b c) b( e, fis gis |

@@ -24,26 +24,26 @@
 \time 4/4
 \relative {
   \partial 2 { r8 a=8( d e | }
-  \acciaccatura { d='16 e } d4 %
-  \acciaccatura { cis='8 } <g e'>4) r8 a( e' f |
-  \acciaccatura { e='16 f } e4 %
-  \acciaccatura { d='8 } <a f'>4) r8 a( f' g |
-  \acciaccatura { f='16 g } f4 %
-  \acciaccatura { e='8 } <bes g'>4) r8 c( g' a |
-  \acciaccatura { g='16 a } g4 %
-  \acciaccatura { f='8 } <c a'>4) r8 d( a' bes |
-  \acciaccatura { a='16 bes } a4 %
-  \acciaccatura { bes,=8 } g'4) r8 bes,( g' a |
-  \acciaccatura { g='16 a } g4 %
-  \acciaccatura { a,=8 } f'4) r8 a,( f' g |
-  \acciaccatura { f='16 g } f8 g, cis e g a, b cis |
+  \acc { d='16 e } d4 %
+  \acc { cis='8 } <g e'>4) r8 a( e' f |
+  \acc { e='16 f } e4 %
+  \acc { d='8 } <a f'>4) r8 a( f' g |
+  \acc { f='16 g } f4 %
+  \acc { e='8 } <bes g'>4) r8 c( g' a |
+  \acc { g='16 a } g4 %
+  \acc { f='8 } <c a'>4) r8 d( a' bes |
+  \acc { a='16 bes } a4 %
+  \acc { bes,=8 } g'4) r8 bes,( g' a |
+  \acc { g='16 a } g4 %
+  \acc { a,=8 } f'4) r8 a,( f' g |
+  \acc { f='16 g } f8 g, cis e g a, b cis |
   d='2) <f=' a d> |
 
   \tempo Larghetto
-  r8 <bes'='' d>8 8 8 \acciaccatura { <a='' c>16 d } <a c>4.-> <g bes>8 |
-  r8 <a='' c>8 8 8 \acciaccatura { <g='' bes>16 c } <g bes>4.-> <f a>8 |
-  r8 <g='' bes>8 8 8 \acciaccatura { <f='' a>16 bes } <f a>4.-> <e g>8 |
-  r8 <f='' a>8 8 8 \acciaccatura { <e='' g>16 a } <e g>4.-> <d f>8 |
+  r8 <bes'='' d>8 8 8 \acc { <a='' c>16 d } <a c>4.-> <g bes>8 |
+  r8 <a='' c>8 8 8 \acc { <g='' bes>16 c } <g bes>4.-> <f a>8 |
+  r8 <g='' bes>8 8 8 \acc { <f='' a>16 bes } <f a>4.-> <e g>8 |
+  r8 <f='' a>8 8 8 \acc { <e='' g>16 a } <e g>4.-> <d f>8 |
   r8 <bes=' g'>8[ 8 \tuplet 3/2 { <a=' f'>16( g' f }] <g, e'>4.) f'16 g |
   r8 <a,=' f'>8[ 8 \tuplet 3/2 { <g=' e'>16( f' e }] <f, d'>4.) e'16 f |
   r8 <gis,=' e'>8[ 8 \tuplet 3/2 { <gis=' d'>16( e' d }] <g, cis>4.) d'16 e |
@@ -122,9 +122,9 @@
 
   c'=''4 bes~ bes8 a bes c | bes4 <d, f a>4 4 r |
   a'='4 g~ g8 fis g a | g4 <a, d f>4 4 r |
-  \acciaccatura { dis='16 e } f='4 e~ e8 dis e f |
+  \acc { dis='16 e } f='4 e~ e8 dis e f |
   e='4 <f, a d>4 4 r |
-  \acciaccatura { c'='16 cis } d='4 cis b cis |
+  \acc { c'='16 cis } d='4 cis b cis |
   d='2 <f,= a d>4 r |
 
   \tempo Allegro

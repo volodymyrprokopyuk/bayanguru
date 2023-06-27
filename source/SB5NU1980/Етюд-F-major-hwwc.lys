@@ -15,7 +15,7 @@
   f='16 e f g a g a bes |
   \repeat unfold 4 { c=''16 d c d }
   c=''16 d e f g c, d e |
-  f=''16\> c f a \after 8\! f=''8-. r |
+  f=''16\> c f a \af 8\! f=''8-. r |
 {% endmacro %}
 
 {% macro rhFrag4(a) %}
@@ -56,7 +56,7 @@
   c='''16-> b a g f e d c |
   a'=''16-> g f e d c b a |
   d=''16-> c b a g f e d |
-  c='16->\> d e f fis g c \after 16\! d |
+  c='16->\> d e f fis g c \af 16\! d |
   {{ rhFrag1("e=''16\\p") }}
   cis='16 d e f g cis d e |
   f=''16 e d c b a g f |
@@ -77,12 +77,12 @@
   {{ rhFrag3("c='16\\p", "") }}
   {{ rhFrag4("g=''16->\\mf") }}
   {{ rhFrag4("g=''16") }}
-  e=''16\< f g a bes c d \after 16\! e |
+  e=''16\< f g a bes c d \af 16\! e |
   f='''16-> e d c bes a g f |
   g=''16 f e d c\> bes a g |
-  f='16 e d c bes a g \after 16\! f |
+  f='16 e d c bes a g \af 16\! f |
   e=16\p\< f g a bes c d e |
-  f='16 g a bes c d e \after 16\! f |
+  f='16 g a bes c d e \af 16\! f |
   g=''4\mf r | <g,,= bes e> r |
   <f= a f'>4 r | R2 \bar "|."
 }

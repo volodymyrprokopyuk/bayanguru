@@ -45,8 +45,8 @@
   {{ rhFrag1("<e''='' g>8\\mp", "<dis fis>_\\aSta") }}
   {{ t2("<e='' g>8", "<dis fis>", "<e g>", "<a c>", "<g b>", "<f a>") }}
   {{ t2("<e='' g>8", "<dis fis>", "<e g>", "<g bes>", "<f a>", "<e g>") }}
-  {{ t2("<fis='' a>8\\<", "<eis gis>", "<fis a>", "<e c'>", "<d b'>", "\\after 8\\! <c a'>") }}
-  {{ t2("<b=' g'>8\\>", "<g b>", "<a c>", "<b d>", "<c e>", "\\after 8\\! <d='' f>") }}
+  {{ t2("<fis='' a>8\\<", "<eis gis>", "<fis a>", "<e c'>", "<d b'>", "\\af 8\\! <c a'>") }}
+  {{ t2("<b=' g'>8\\>", "<g b>", "<a c>", "<b d>", "<c e>", "\\af 8\\! <d='' f>") }}
 
   {{ rhFrag1("<e='' g>8\\mp", "<dis fis>") }}
   {{ t2("<e='' g>8_\\dCre", "<dis fis>", "<e g>", "<g bes>", "<f a>", "<e g>") }}
@@ -58,7 +58,7 @@
   {{ rhFrag2() }}
   {{ t2("<a=' c>8(", "<gis b>)-.", "<a c>", "<c e>", "<b dis>", "<c e>") }}
   {{ t2("<cis='' e>8(", "<bis dis>)-.", "<cis e>", "<e g>", "<d fis>", "<cis e>") }}
-  {{ t2("<d='' fis>8(\\>", "<cis eis>)-.", "\\after 8\\! <d fis>", "<c e>\\p", "<b dis>", "<c e>") }}
+  {{ t2("<d='' fis>8(\\>", "<cis eis>)-.", "\\af 8\\! <d fis>", "<c e>\\p", "<b dis>", "<c e>") }}
 
   {{ t2("<b=' d>8(", "<ais cis>)-.", "<b d>", "<g b>(", "<fis ais>)-.", "<g b>") }}
   {{ rhFrag2() }}

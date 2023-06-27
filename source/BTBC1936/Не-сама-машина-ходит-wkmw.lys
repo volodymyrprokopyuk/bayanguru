@@ -81,7 +81,7 @@
             b'='4 c16 d e f g a <f g>8 <e g> <f='' g> |
           }
         >>
-        <e='' g c>8 r r4 \acciaccatura { g=''16 a bes } %
+        <e='' g c>8 r r4 \acc { g=''16 a bes } %
         c='''8-> r r4 \bar "|."
       }
     }

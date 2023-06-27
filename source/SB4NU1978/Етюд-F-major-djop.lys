@@ -11,16 +11,16 @@
     a'=''32-> c, b c d c b c %
     bes'=''32-> c, b c d c b c |
     c'='''32->\< c, b c d c b c %
-    a'=''32-> c, b c d c b \after 32\! c |
+    a'=''32-> c, b c d c b \af 32\! c |
     fis=''32->\> c b c d c b c %
-    g'=''32-> c, b c d c b \after 32\! c |
+    g'=''32-> c, b c d c b \af 32\! c |
     f=''32_\dCre e dis e a g fis g %
     d'='''32 c b c f e dis e |
     g='''32 f e f d c bes a %
     g=''32\mf\> f e d c bes a g |
-    f='32 e d c bes a g \after 32\! f %
+    f='32 e d c bes a g \af 32\! f %
     e=32\< f g a bes c d e |
-    f='32 g a bes c d e \after 32\! f %
+    f='32 g a bes c d e \af 32\! f %
     f,='8->\f r16 %
   }
 
@@ -31,9 +31,9 @@
     g='32-> f' e f g f e f %
     g,='32-> e' dis e f e dis e |
     c=''32\< g' fis g a g fis g %
-    b=''32 a gis a d c b \after 32\! c |
+    b=''32 a gis a d c b \af 32\! c |
     e,=''32\> g fis g d g fis g %
-    e=''32 c b c d c b \after 32\! c |
+    e=''32 c b c d c b \af 32\! c |
 
     g'=''32->\p c,_\dCre b c d c b c %
     c'='''32-> c, b c d c b c |
@@ -42,7 +42,7 @@
     fis=''32 c ees fis a c e fis %
     g,=''32 a bes c d a bes g |
     c='''32\f\> bes a g f e d c %
-    bes='32 a g f e bes' g \after 32\! e |
+    bes='32 a g f e bes' g \af 32\! e |
     f='32\p c' b c d c b c %
     a'=''32 c, b c g' c, b c |
     f=''32 c b c d c b c %

@@ -6,9 +6,9 @@
 \key f \minor
 \time 4/4
 \relative {
-  \acciaccatura { c''=''16 d e } f=''2\ff des | c bes4. g8 |
+  \acc { c''=''16 d e } f=''2\ff des | c bes4. g8 |
   {{ v2("aes'='4( c) g( c='') |", "<c'=' f>4 r <c=' e> r |") }}
-  <aes,= c f>4 r \acciaccatura { des'=''8 } <aes c>4.(\mf des=''8 ) |
+  <aes,= c f>4 r \acc { des'=''8 } <aes c>4.(\mf des=''8 ) |
   \repeat volta 2 {
     <<
       \new Voice = voiceOne \relative {
@@ -40,7 +40,7 @@
     \alternative {
       \volta 1 {
         <aes,= c f>4 8 8 4 4 | 4 r %
-        \acciaccatura { des'=''8 } <aes c>4.( des=''8) |
+        \acc { des'=''8 } <aes c>4.( des=''8) |
       }
       \volta 2 { <aes,= c f>4 8 8 4 4 | 4 r r2\f | }
     }
@@ -65,7 +65,7 @@
     }
   }
 
-  \acciaccatura { ees='16 f g } aes='2->\ff ees-> |
+  \acc { ees='16 f g } aes='2->\ff ees-> |
   c='2-> aes-> | <bes= des ees>4 f'8 ees d ees f g |
   <c,=' ees aes>4 r <e=' g bes c>2->\mf |
   \repeat volta 2 {
@@ -73,15 +73,15 @@
     <bes= c e g>1~ | 4 r c'=''2 |
     <bes=' c g'>2 {{ v2("e''=''4.( c8) |", "<bes'=' c>2 |") }}
     <bes=' c g'>2 {{ v2("aes''=''4.( g8) |", "<bes'=' c>2 |") }}
-    <aes=' c f>1~ | 4 c( \acciaccatura { ees=''8 } des4 c) |
+    <aes=' c f>1~ | 4 c( \acc { ees=''8 } des4 c) |
     <des,=' f bes>2( <bes' des g>) | r4 bes4( c bes) |
     <c,=' f aes>2( <aes' c f>) | r4 aes4( %
-    \acciaccatura { c=''8 } bes4 aes) |
+    \acc { c=''8 } bes4 aes) |
     <c,=' g'>2 <e bes' des> | <c e c'> <bes c e> |
     <<
       \new Voice = voiceOne \relative {
         \voiceOne
-        f'='1( | f'4)\< ees des \after 4\! c='' |
+        f'='1( | f'4)\< ees des \af 4\! c='' |
       }
       \new Voice = voiceTwo \relative {
         \voiceTwo
@@ -89,7 +89,7 @@
       }
     >>
     <des=' f bes>2(\f <bes' des g>) |
-    r4 bes='4( \acciaccatura { des=''8 } c4 bes) |
+    r4 bes='4( \acc { des=''8 } c4 bes) |
     <c,=' f aes>2( <aes' c f>) | r4 aes4( bes aes) |
     <bes,= e g>2 <e bes' des> | <c e c'> <bes c e> |
     \alternative {

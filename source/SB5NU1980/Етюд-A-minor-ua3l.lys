@@ -14,13 +14,13 @@
 
 {% macro rhFrag1(a) %}
   {{ t4(a, "d e d", "c d c", "b c b") }} | %
-  {{ t3("a='8 b a", "g a \\after 16.\\! g",
-     "f\\sf\\> g f", "\\after 8\\! e='\\) r") }} | %
+  {{ t3("a='8 b a", "g a \\af 16.\\! g",
+     "f\\sf\\> g f", "\\af 8\\! e='\\) r") }} | %
 {% endmacro %}
 
 {% macro rhFrag2() %}
-  {{ t4("e='8\\(\\< gis b", "d c b", "a c e", "a g \\after 8\\! f") }} | %
-  {{ t4("e=''8 gis b", "d\\> c b", "a c b", "a g \\after 8\\! f=''\\)") }} | %
+  {{ t4("e='8\\(\\< gis b", "d c b", "a c e", "a g \\af 8\\! f") }} | %
+  {{ t4("e=''8 gis b", "d\\> c b", "a c b", "a g \\af 8\\! f=''\\)") }} | %
 {% endmacro %}
 
 {% macro rhFrag3() %}
@@ -67,10 +67,10 @@
   {{ t4("a='8\\( b a", "f g f", "b c b", "g a g") }}
   {{ t4("c=''8 d c", "a b a", "d e d", "b c b='\\)") }}
 
-  {{ t4("e=''8(\\f\\< dis e", "gis b \\after 16.\\! e",
-     "d\\> c b", "a g \\after 16.\\! f") }}
-  {{ t4("e=''8)\\< dis( e", "gis b \\after 16.\\! e",
-     "d\\> c b", "a g \\after 16.\\! f=''") }}
+  {{ t4("e=''8(\\f\\< dis e", "gis b \\af 16.\\! e",
+     "d\\> c b", "a g \\af 16.\\! f") }}
+  {{ t4("e=''8)\\< dis( e", "gis b \\af 16.\\! e",
+     "d\\> c b", "a g \\af 16.\\! f=''") }}
   {{ t4("e=''8) b'( a", "g f_\\dDim e", "d c b", "a g f") }}
   {{ t4("e='8) f( fis", "g gis a", "ais b c", "cis d dis='')") }}
 

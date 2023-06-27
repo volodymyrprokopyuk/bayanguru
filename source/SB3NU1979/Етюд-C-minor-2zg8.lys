@@ -60,7 +60,7 @@
       {{ t2("c'=''8 c, ees^\\tRit", "d f aes='") }}
     }
   >>
-  \after 2\! <ees'=' c'>2\> \fermata \bar "|."
+  \af 2\! <ees'=' c'>2\> \fermata \bar "|."
 }
 {% endmacro %}
 

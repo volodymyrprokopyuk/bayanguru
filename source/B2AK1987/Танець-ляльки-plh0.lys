@@ -41,7 +41,7 @@
   r8 <c='' d f a>-. <b d f gis>-. <a d f a>-. %
   <gis=' d' f b>8 r b,=16( d f a) |
   b='8(\> <f' a>) <b, d g>-. <a d f>-. %
-  <g=' b e>8(-> <f b d>) g'=''16( f d \after 16\! b) |
+  <g=' b e>8(-> <f b d>) g'=''16( f d \af 16\! b) |
   r8 <b=' f'>-.^\tRit <b e>-. <b d>-. %
   <b=' e>4 f'=''16(\p^\tATem e c a) |
   r8 c=''8-. f,-. b-. a( e) f='16( e c a) |
@@ -54,7 +54,7 @@
   >>
   <c=' a'>8 r a'='16( f e d) |
   c='8( b) f'16( d c b) a8( gis) a=16( b c d |
-  e='8)\> r <d b'>-. r \after 8.\! <c=' a'>4 \bar "|."
+  e='8)\> r <d b'>-. r \af 8.\! <c=' a'>4 \bar "|."
 }
 {% endmacro %}
 

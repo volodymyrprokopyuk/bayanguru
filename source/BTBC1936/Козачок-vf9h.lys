@@ -39,9 +39,9 @@
     }
 
     r8\p <fis,=' a d>8 r8 8 | r <g b d> r8 8 |
-    r8\< <fis=' a d>8 r8 \after 8\! 8 | r <g b d> r8 8 |
+    r8\< <fis=' a d>8 r8 \af 8\! 8 | r <g b d> r8 8 |
     r8 <a=' cis e a>8 r8 8 | r <a d fis a> r8 8 |
-    r8\< <a=' cis e a>8 r8 \after 8\! 8 |
+    r8\< <a=' cis e a>8 r8 \af 8\! 8 |
     r4 <d='' fis a d>4-> |
 
     {{ rhFrag2("d'='''16\\f") }}

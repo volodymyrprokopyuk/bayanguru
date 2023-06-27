@@ -10,16 +10,16 @@
 
 {% macro rhFrag3(a) %}
   {{ a }} c,16 c g'8-> c,16 c |
-  f='8\< f f f16\( \after 16\! g |
+  f='8\< f f f16\( \af 16\! g |
   aes='8 g16 aes bes\> aes g f |
-  e='8 \after 16.\! c c\) c16 c |
+  e='8 \af 16.\! c c\) c16 c |
   aes'='8-> c,16 c g'8-> c,16 c |
   f='8 f f g16\(\< aes |
-  g='8 f16 \after 16\! ees d8 g16 g, |
+  g='8 f16 \af 16\! ees d8 g16 g, |
   c='8 c c'\) c16\( des |
   c=''8 bes16 aes g8 aes16 bes |
   c=''8 c c\)\< f16\( ges |
-  f=''8 ees16 des c8 f16 \after 16\! ees |
+  f=''8 ees16 des c8 f16 \af 16\! ees |
   des=''8 bes bes\) ees16\( des |
   c=''8 bes16 aes g8 c16 e, |
   f='8 f f\) f16\( des |
@@ -72,7 +72,7 @@
   {{ rhFrag2() }} f'(-> des)-. bes-. g-. |
   c=''16(-> aes)-. f-. c-. e'(-> c)-. bes-. g-. |
   f'=''16(->\> f,)-.^\tRit aes-. c-. %
-  \after 8\! f8 c,16\f c=' |
+  \af 8\! f8 c,16\f c=' |
 
   {{ rhFrag3("aes'='8->^\\tATem") }}
   f='8\) <g bes c e>-.-> <f=' aes c f>-.-> r \bar "|."

@@ -1,5 +1,5 @@
 {% macro rhFrag1(a) %}
-  {{ a }} e-. d-. e-. | d-. e-. d-. \after 8\! e-. |
+  {{ a }} e-. d-. e-. | d-. e-. d-. \af 8\! e-. |
   d='8-. e-. d-. g-. | fis-. g-. fis-. e='-. |
 {% endmacro %}
 
@@ -11,7 +11,7 @@
 \relative {
   {{ rhFrag1("d'='8-.\\mf\\<") }}
   ees='8(-- d)-. d-. d-. | e(-- d)-. d-. d-. |
-  f='8(-- d)-. d-. d-. | \acciaccatura { gis='8 } a8(-- d,)-. d='4-> |
+  f='8(-- d)-. d-. d-. | \acc { gis='8 } a8(-- d,)-. d='4-> |
 
   {{ rhFrag1("d='8-.\\<") }}
   <fis=' b>8->\f 8-> 4-> | <fis b>8-> 8-> <fis a>4-> |

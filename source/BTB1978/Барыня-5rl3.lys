@@ -8,9 +8,9 @@
 \key g \major
 \time 2/4
 \relative {
-  \acciaccatura { fis''=''8 } g=''4\f %
-  \acciaccatura { fis=''8 } g=''4 |
-  \acciaccatura { fis=''8 } g=''8 d16 f e8 c |
+  \acc { fis''=''8 } g=''4\f %
+  \acc { fis=''8 } g=''4 |
+  \acc { fis=''8 } g=''8 d16 f e8 c |
   b='8 g g g'16 fis | g8 d e c |
   b='8 g4 a8 | b g c a |
   b='8 g4 a8 | b g c=''4 \bar "||"

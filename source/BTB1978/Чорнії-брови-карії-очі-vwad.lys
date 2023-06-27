@@ -1,8 +1,8 @@
 {% macro rhFrag1(a) %}
-  {{ a }} gis a\< | e'2 \after 4\! cis4 |
-  bes='4 a g | g2\> \after 4\! f4\) |
-  e='4\(\< g \after 4\! bes | a2 g4 |
-  g='4 f e\> | \after 2.\! d='2.\) |
+  {{ a }} gis a\< | e'2 \af 4\! cis4 |
+  bes='4 a g | g2\> \af 4\! f4\) |
+  e='4\(\< g \af 4\! bes | a2 g4 |
+  g='4 f e\> | \af 2.\! d='2.\) |
 {% endmacro %}
 
 {% macro lhFrag1(a) %}
@@ -18,10 +18,10 @@
 \key d \minor
 \time 3/4
 \relative {
-  d'='4\(\p f a\< | d2 \after 4\! d4 |
+  d'='4\(\p f a\< | d2 \af 4\! d4 |
   cis=''4 b cis | d2 a4\) |
   f'=''4\( e d | c2 bes4 |
-  bes='4 a g\> | \after 2.\! a2.\) |
+  bes='4 a g\> | \af 2.\! a2.\) |
   {{ rhFrag1("a='4\\(\\mf") }}
   {{ rhFrag1("a'='4\\(\\mf") }} \bar "|."
 }

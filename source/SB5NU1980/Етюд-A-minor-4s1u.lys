@@ -55,8 +55,8 @@
   {{ rhFrag1("e''=''16\\mf a, c_\\aLeg", "") }} a b c d |
   {{ rhFrag1("e=''16 a, c", "_\\dCre") }} a gis a ais |
   {{ rhFrag3("\\f") }}
-  {{ rhFrag4("\\>", "\\after 16\\!") }}
-  a='16\< e fis gis a b c \after 16\! cis |
+  {{ rhFrag4("\\>", "\\af 16\\!") }}
+  a='16\< e fis gis a b c \af 16\! cis |
   d=''16\p g, b d e g, c e |
   {{ rhFrag2() }}
   d=''16 fis, a d c f, aes c |
