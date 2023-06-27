@@ -48,7 +48,7 @@
     \alternative {
       \volta 1 {
         e='16\> b cis dis e fis g b %
-        \af 4\! e4 b16\< c b \after 32.\! a=' |
+        \af 4\! e4 b16\< c b \af 32.\! a=' |
       }
       \volta 2 {
         e='16\> b cis dis e fis g b %

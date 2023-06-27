@@ -23,7 +23,7 @@
   <a=' c>2 <g bes>8 8 |
   <<
     \relative {
-      r4\< \af 2\! d''=''2~ | d\> \after 4\! bes='4 |
+      r4\< \af 2\! d''=''2~ | d\> \af 4\! bes='4 |
     }
     \\
     \relative { <fis'=' a>2. | f='2 r4 | }

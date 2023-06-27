@@ -1,6 +1,6 @@
 {% macro rhFrag1(a) %}
   {{ a }} b c d] e) r | a,[(\< b c d] \af 8\! e) r |
-  d=''8(\< e f g a \af 8\! f | \after 2.\! e2.)\> |
+  d=''8(\< e f g a \af 8\! f | \af 2.\! e2.)\> |
   f=''8[(->\mf\> e d c] \af 8\! b) r |
   e=''8[(->\mf\> d c b] \af 8\! a=') r |
 {% endmacro %}

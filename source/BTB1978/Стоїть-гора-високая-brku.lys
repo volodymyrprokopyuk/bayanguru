@@ -11,7 +11,7 @@
   \af 4.\! <e=' cis'>2( <cis ais'>4) |
   <ais= fis'>2 <ais cis>4 |
   <b= e>2 <b d>4\> |
-  \af 4.\! b=2 \after 8.\! fis'4\< |
+  \af 4.\! b=2 \af 8.\! fis'4\< |
   \repeat volta 2 {
     <fis=' d'>2(\f <e cis'>4) |
     <d=' b'>2 <b fis'>4 |
@@ -19,7 +19,7 @@
     <d=' fis>2( <cis e>4) | <b d>2( <ais cis>4)\> |
     \alternative {
       \volta 1 {
-        b=2.~ | \af 2\! b2 \after 8..\! fis'='4\< |
+        b=2.~ | \af 2\! b2 \af 8..\! fis'='4\< |
       }
       \volta 2 {
         b,=2.~\> | \af 2\! b=2 r4 \bar "|."

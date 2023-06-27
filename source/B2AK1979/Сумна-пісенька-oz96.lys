@@ -20,7 +20,7 @@
   \partial 8 { d'='8\(\mp | }
   {{ rhFrag1("g='8") }}
   c=''8 bes a c | bes a g bes\) |
-  a='8\(\< e fis \af 8\! g | fis4.\)\> \after 8\! d8\( |
+  a='8\(\< e fis \af 8\! g | fis4.\)\> \af 8\! d8\( |
   g='8 a bes c | d bes g\) bes'\( |
   a=''8 g f ees | d4.\) g8\( |
   ees=''8 c a\) g'\( | d bes g bes\) |

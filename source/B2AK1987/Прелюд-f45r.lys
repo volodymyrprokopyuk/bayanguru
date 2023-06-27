@@ -4,8 +4,8 @@
 \key e \minor
 \time 3/4
 \relative {
-  \af 2.\! b'='2.~(\p\< | b8\> c b c b \after 8\! fis') |
-  \af 2.\! b,='2.~(\< | b8\> c b c b \after 8\! a') |
+  \af 2.\! b'='2.~(\p\< | b8\> c b c b \af 8\! fis') |
+  \af 2.\! b,='2.~(\< | b8\> c b c b \af 8\! a') |
   g=''4.(-- fis8 e b) | e4.(-- d8 c g) |
   <<
     \relative {

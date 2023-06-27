@@ -12,7 +12,7 @@
 \relative {
   {{ momentBeat("1/2", "#'(1)") }}
   {{ rhFrag1("e''=''8(\\p") }}
-  a='8(\< c e \af 8\! a | g\> e \after 4\! e4) |
+  a='8(\< c e \af 8\! a | g\> e \af 4\! e4) |
   fis=''8( d d fis | e2) |
   {{ rhFrag1("e=''8(") }}
   a='8( d f a | e c c4) | c8( a a c | a2) |

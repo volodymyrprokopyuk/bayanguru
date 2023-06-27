@@ -4,8 +4,8 @@
 \key d \major
 \time 2/4
 \relative {
-  r8\mp \acc { b''=''8 } a8 r \acciaccatura { b=''8 } a8 |
-  r8 \acc { b=''8 } a8 \acciaccatura { gis=''8 } a4 |
+  r8\mp \acc { b''=''8 } a8 r \acc { b=''8 } a8 |
+  r8 \acc { b=''8 } a8 \acc { gis=''8 } a4 |
   \repeat volta 2 {
     \acc { cis,=''8 } <fis, d'>8\mf 8 <fis a>8 8 |
     <g=' b>8 8 <fis a>4 |

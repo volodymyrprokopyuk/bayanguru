@@ -10,7 +10,7 @@
   \repeat volta 2 {
     e='4\(\< g4. \af 8\! a8 | b4 ais4.\) b8 |
     b='4\( fis4. g8 |
-    fis='4\> \af 4\! e\) r8\< \after 8\! d'8 |
+    fis='4\> \af 4\! e\) r8\< \af 8\! d'8 |
     d=''4\(\mf b4. a8 | a4 d,4.\) <c' e>8 |
     <c='' e>4( <b d>4. <a c>8 |
     <a=' c>4\> \af 8.\! <g b>) r8 b |

@@ -29,7 +29,7 @@
   cis=''8(\pp a gis fis) |
   <<
     \relative {
-      \af 8.\! dis'='4(\< \after 4\! eis\> | fis='2) |
+      \af 8.\! dis'='4(\< \af 4\! eis\> | fis='2) |
     }
     \\
     \relative { r8 <gis= bis>[ r <gis b>] | }
@@ -44,7 +44,7 @@
       e=''4 <cis e> |
       g='8[\(\< \af 16.\! <cis e>] d cis |
       e=''8[\mf d] cis b\) | \af 2\! cis2\> |
-      \af 8.\! dis,='4\< \after 4\! eis\> | fis='2 |
+      \af 8.\! dis,='4\< \af 4\! eis\> | fis='2 |
     }
     \new Voice = voiceTwo \relative {
       \voiceTwo
