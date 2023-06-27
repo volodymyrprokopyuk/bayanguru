@@ -193,17 +193,17 @@ pieces:
       org: ukr, sty: aut, gnr: plk, ton: di, frm: mel, bss: stb, lvl: ela }
   - { id: lyc5, tit: Прогулянка на автомобілі,
       com: К. Мясков, src: B1AK1985,
-      org: ukr, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: aut, gnr: chd, ton: gj, frm: mel, bss: stb, lvl: ela }
   # B2AK1979
   - { id: 05cc, tit: Курчатка,
       com: А. Філіпенко, src: B2AK1979,
-      org: ukr, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: aut, gnr: chd, ton: dj, frm: [mel, in3], bss: stb, lvl: ela }
   - { id: ihff, tit: Ой лопнув обруч, sub: ukrfs,
       src: B2AK1979,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
+      org: ukr, sty: flk, gnr: sng, ton: [dj, bi], frm: [mel, in3], bss: stb, lvl: elb }
   - { id: an90, tit: Корольок, sub: ukrfs,
       src: B2AK1979,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
+      org: ukr, sty: flk, gnr: sng, ton: [gj, ei], frm: [mel, in3], bss: stb, lvl: elb }
   - { id: oz96, tit: Сумна пісенька,
       com: К. Мясков, src: B2AK1979,
       org: ukr, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: elb }

@@ -1,27 +1,21 @@
 {% macro rhFrag1(a) %}
-  {{ a }} e-. d-. e-. |
-  d='8-. e-. d-. \after 8\! e-. |
-  d='8-. e-. d-. g-. |
-  fis='8-. g-. fis-. e='-. |
+  {{ a }} e-. d-. e-. | d-. e-. d-. \after 8\! e-. |
+  d='8-. e-. d-. g-. | fis-. g-. fis-. e='-. |
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegro
+\tempo Presto
 \clef treble
 \key g \major
 \time 2/4
 \relative {
   {{ rhFrag1("d'='8-.\\mf\\<") }}
-  ees='8(-- d)-. d-. d-. |
-  e='8(-- d)-. d-. d-. |
-  f='8(-- d)-. d-. d-. |
-  \acciaccatura { gis='8 } a8(-- d,)-. d4-> |
+  ees='8(-- d)-. d-. d-. | e(-- d)-. d-. d-. |
+  f='8(-- d)-. d-. d-. | \acciaccatura { gis='8 } a8(-- d,)-. d='4-> |
 
   {{ rhFrag1("d='8-.\\<") }}
-  <fis=' b>8->\f 8-> 4-> |
-  <fis=' b>8-> 8-> <fis a>4-> |
-  d='8-. e-. d-. <g b>-. |
-  <d=' g>8-> 8-> 8-> r \bar "|."
+  <fis=' b>8->\f 8-> 4-> | <fis b>8-> 8-> <fis a>4-> |
+  d='8-. e-. d-. <g b>-. | <d=' g>8-> 8-> 8-> r \bar "|."
 }
 {% endmacro %}
 
@@ -29,17 +23,13 @@
 \clef bass
 \key g \major
 \relative {
-  g,@M!8-.-\stBass r8 b,@m!-. r8 |
-  e@m!8-. r8 b,@m!-. r8 |
-  g,@M!_\aSim r8 d= r |
-  g,@M! r8 d= r |
+  g,@M!8-.-\stBass r8 b,@m!-. r8 | e@m!-. r8 b,@m!-. r8 |
+  g,@M!_\aSim r8 d= r | g,@M! r8 d r |
   \repeat unfold 3 { d@7!8 r8 d= r | }
   d@7!8 r8 d=4-> |
 
-  g,@M!8 r8 b,@m! r8 |
-  e@m!8 r8 b,@m! r8 |
+  g,@M!8 r8 b,@m! r8 | e@m!8 r8 b,@m! r8 |
   \repeat unfold 2 { g,@M! r8 d= r | }
-  R2 | R2 | d@7!8 r8 d= r |
-  g,,+gM!8-> g,,+gM-> g,,+gM-> r |
+  R2 | R2 | d@7!8 r8 d= r | g,,+gM!8-> g,,+gM-> g,,+gM-> r |
 }
 {% endmacro %}

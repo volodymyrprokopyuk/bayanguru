@@ -1,5 +1,5 @@
 {% macro rightHand() %}
-\tempo Allegretto
+\tempo Allegro
 \clef treble
 \key d \major
 \time 2/4
@@ -15,7 +15,7 @@
     <fis=' d'>4 <fis a d> |
     <g=' a>8 8 <g b> <g cis> |
     \alternative {
-      \volta 1 { <fis=' d'>4 <fis a d> | }
+      \volta 1 { <fis=' d'>4 <fis=' a d> | }
       \volta 2 {
         <fis=' d'>4 \acciaccatura { cis'=''8 } <fis,=' a d>4-> \bar "|."
       }
@@ -29,9 +29,8 @@
 \key d \major
 \relative {
   a,=,8-\stBass a7! b a,@7 | cis8 a,@7! a8 a7 |
-  \repeat unfold 2 { d=8 dM! d dM | g, gM! d' dM! | }
+  \repeat unfold 2 { d=8 dM! d dM | g, gM! d'= dM! | }
   cis=8 a,@7! a8 a7 | d dM! d dM |
-  e=8 a,@7! a,8 a7 | d dM! d dM |
-  d=8 dM! d,+dM4-> |
+  e=8 a,@7! a,8 a7 | d dM! d dM | d= dM! d,+dM4-> |
 }
 {% endmacro %}
