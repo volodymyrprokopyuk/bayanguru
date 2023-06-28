@@ -237,10 +237,9 @@ pieces:
       com: Г. Тишкевич, src: SB3NU1979,
       org: blr, sty: stu, gnr: stu, frm: [pph, tu3], bss: stb, lvl: elb }
   # SB4NU1978
-  # p. 70
-  # - { id: d61l, tit: Етюд A minor,
-  #     com: К. Черні, src: SB4NU1978,
-  #     org: aut, sty: stu, gnr: stu, frm: [pph, arp, wrs], bss: stb, lvl: elb }
+  - { id: d61l, tit: Етюд A minor,
+      com: К. Черні, src: SB4NU1978,
+      org: aut, sty: stu, gnr: stu, frm: [pph, arp, wrs], bss: stb, lvl: elb }
   # SB5NU1980
   # p. 101
   # - { id: 2m7b, tit: Етюд Cis minor,

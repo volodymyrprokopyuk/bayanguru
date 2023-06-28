@@ -1,0 +1,39 @@
+{% from "util.lys" import momentBeat %}
+
+{% macro rightHand() %}
+\tempo "Allegretto cantabile"
+\clef treble
+\key a \minor
+\time 2/4
+\relative {
+  <<
+    \new Voice = voiceOne \relative {
+      \voiceOne
+      {{ momentBeat("1/2", "#'(1)", "Voice") }}
+      a'='8\p a gis a | c b b b | b b e d | d c c c |
+      e=''8_\dCre e a g | g f f e | dis dis dis dis | dis e d b=' |
+    }
+    \new Voice = voiceTwo \relative {
+      \voiceTwo
+      {{ momentBeat("1/8", "1,1,1,1", "Voice") }}
+      a'='32 c,_\aLeg e c a' c, e c gis' c, e c a' c, e c |
+      c'=''32 e, a e \repeat unfold 3 { b'='32 e, gis e=' } | %
+      b'='32 e, gis e b' e, gis e e' gis, b gis d' gis, b gis |
+      d'=''32 e, a e \repeat unfold 3 { c'=''32 e, a e=' } | %
+      e'=''32 a, c a e' a, c a a' c, e c g' cis, e cis |
+      g'=''32 a, d a f' a, d a f' a, d a e' a, c a |
+      \repeat unfold 4 { dis=''32 a c a=' } | %
+      dis=''32 a c a e' gis, b gis d'\> gis, b \af 64.\! gis b d, gis d=' |
+    }
+  >>
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\clef bass
+\key a \minor
+\relative {
+  {{ momentBeat("1/2", "#'(1)") }}
+  a,=,8-\stBass am! am am | e' eM! eM eM |
+}
+{% endmacro %}
