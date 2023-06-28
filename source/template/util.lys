@@ -144,8 +144,8 @@
   << \relative { {{ a }} } \\ \relative { {{ b }} } >>
 {% endmacro %}
 
-% dynPadding adds a vertical padding to dynamics within a \relative
-{% macro dynPadding(bs = 3.0) %}
+% dPad adds a vertical padding to dynamics within a \relative
+{% macro dPad(bs = 3.0) %}
   \override DynamicLineSpanner.staff-padding = #{{ bs }}
 {% endmacro %}
 

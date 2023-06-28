@@ -1,4 +1,4 @@
-{% from "util.lys" import dynPadding %}
+{% from "util.lys" import dPad %}
 
 {% macro rh1(a) %}
   \tuplet 3/2 { {{ a }} 8 8 } %
@@ -36,7 +36,7 @@
 \key c \minor
 \time 4/4
 \relative {
-  {{ dynPadding(4) }}
+  {{ dPad(4) }}
   \repeat segno 2 {
     {{ rh1("<c'=' ees g>8\\mp\\<") }}
     {{ rh3("<b= f' g>8\\<", "") }}

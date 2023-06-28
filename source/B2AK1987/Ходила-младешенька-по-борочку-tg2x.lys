@@ -1,7 +1,7 @@
 {% from "util.lys" import v2 %}
 
 {% macro rh1() %}
-  \afGrace 1/4
+  \afterGrace 1/4
     \fixed c' { <g,= a, c e>4^\markup \center-align \smaller "Б+М" }
     { \fixed c { \once \hide Stem <\parenthesize a,=, \parenthesize c>4 } }
 {% endmacro %}

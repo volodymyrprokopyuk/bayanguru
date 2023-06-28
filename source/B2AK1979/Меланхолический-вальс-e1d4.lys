@@ -1,4 +1,4 @@
-{% from "util.lys" import dynPadding, shapedSlur %}
+{% from "util.lys" import dPad, shapedSlur %}
 
 {% macro rh1() %}
   \autoLineBreaksOff
@@ -8,7 +8,7 @@
   <g,=' d' g>4\< 16 \af 16\! 16 |
   <<
     \relative {
-      {{ dynPadding() }}
+      {{ dPad() }}
       aes''=''4\f g16 f |
       f=''8. ees16\> d \af 16\! ees='' |
     }
