@@ -1,4 +1,4 @@
-{% macro lhFrag1(a) %}
+{% macro lh1(a) %}
   {{ a }} am! a am | d r d dm! |
   e=8 r e e7! | a,=, am! am4 |
 {% endmacro %}
@@ -29,8 +29,8 @@
 \clef bass
 \key a \minor
 \relative {
-  {{ lhFrag1("a,=,8-\\stBass") }}
-  {{ lhFrag1("a=,8") }}
+  {{ lh1("a,=,8-\\stBass") }}
+  {{ lh1("a=,8") }}
 
   b=,8 g,@7! g8 g7 | c cM! c cM |
   b=,8 g,@7! g8 g7 | c cM! cM4 |

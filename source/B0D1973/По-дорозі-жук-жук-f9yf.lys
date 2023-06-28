@@ -1,4 +1,4 @@
-{% macro rhFrag1() %}
+{% macro rh1() %}
   bes='8-. bes-. bes-. g-. | a-. a-. a-. f-. |
   g='8-. g-. c,-. e='-. |
 {% endmacro %}
@@ -12,8 +12,8 @@
   \repeat volta 2 {
     c'='8-.\mf c-. d-. e-. | f4 f |
     c='8-. c-. d-. e-. | f4 a |
-    {{ rhFrag1() }} | f-. a-. c4 |
-    {{ rhFrag1() }} | f4 f=' |
+    {{ rh1() }} | f-. a-. c4 |
+    {{ rh1() }} | f4 f=' |
   }
 }
 {% endmacro %}

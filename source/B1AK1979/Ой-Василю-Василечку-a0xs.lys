@@ -1,9 +1,9 @@
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   {{ a }} c d d | c c a a |
   bes='8 bes( a4) | g8 g( f='4) |
 {% endmacro %}
 
-{% macro lhFrag1(a, b) %}
+{% macro lh1(a, b) %}
   {{ a }} fM! bes besM! | a f,@M! f8 fM |
   bes=,8 besM! {{ b }} c7! f,=, fM! |
 {% endmacro %}
@@ -14,8 +14,8 @@
 \key f \major
 \time 2/4
 \relative {
-  {{ rhFrag1("c''=''8\\mf") }}
-  {{ rhFrag1("c'=''8") }}
+  {{ rh1("c''=''8\\mf") }}
+  {{ rh1("c'=''8") }}
   g='8\p g g( bes | a4 f) |
   g='8 g g( bes | a4 f) |
   c'=''8\mf c d d | c c a a |
@@ -27,8 +27,8 @@
 \clef bass
 \key f \major
 \relative {
-  {{ lhFrag1("f,=,8-\\stBass", "f fM! | c'") }}
-  {{ lhFrag1("f=,8", "c f,@M! | c8") }}
+  {{ lh1("f,=,8-\\stBass", "f fM! | c'") }}
+  {{ lh1("f=,8", "c f,@M! | c8") }}
   \repeat unfold 2 {
     c'=8 c7! e c@7 | f,8 fM! a=, f,@M |
   }

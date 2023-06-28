@@ -1,4 +1,4 @@
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   {{ a }} d-. d-. | d16( c b a g8) |
   c=''16( d e4) | e8( d=''4) |
 {% endmacro %}
@@ -9,8 +9,8 @@
 \key g \major
 \time 3/8
 \relative {
-  {{ rhFrag1("d''=''8-.\\mf") }}
-  {{ rhFrag1("d=''8-.") }}
+  {{ rh1("d''=''8-.\\mf") }}
+  {{ rh1("d=''8-.") }}
   c=''16(\mp b a8) a-. | b16(\< a g8) g-. |
   c=''16( b a8) a-. | b16( a g8) \af 8\! g-. |
   <<

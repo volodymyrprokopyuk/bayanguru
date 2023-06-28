@@ -1,11 +1,11 @@
-{% macro rhFrag1(a, b) %}
+{% macro rh1(a, b) %}
   {{ a }} fis {{ b }} g a b g a fis %
   e=''16 fis g a b\< g a fis |
   e=''16 fis g a b g a fis %
   e=''16 fis g a b cis dis \af 16\! e=''' |
 {% endmacro %}
 
-{% macro lhFrag1(a) %}
+{% macro lh1(a) %}
   {{ a }} r em!] r e[ r em] r | e=[ r em!] r %
 {% endmacro %}
 
@@ -16,11 +16,11 @@
 \time 4/4
 \relative {
   \repeat volta 2 {
-    {{ rhFrag1("e''=''16\\p", "_\\aLeg") }}
+    {{ rh1("e''=''16\\p", "_\\aLeg") }}
     c='''16 e d c b d c b a\> c b a g b a g |
     fis=''16 a g fis e g fis e %
     dis=''16 e fis dis \af 8\! b='8-. r |
-    {{ rhFrag1("e=''16\\p", "") }}
+    {{ rh1("e=''16\\p", "") }}
     c='''16 d c b a g fis e dis e fis g b a fis dis |
     e=''16 fis e dis e fis g fis e g b e e,=''8-.\f r |
   }
@@ -45,10 +45,10 @@
 \clef bass
 \key e \minor
 \relative {
-  {{ lhFrag1("e=8[-\\stBass") }} e[ r em] r |
+  {{ lh1("e=8[-\\stBass") }} e[ r em] r |
   a,=,8[-. r b]-. r c[-. r b]-. r |
   a=,8[-. r ais]-. r b=,-. r r4 |
-  {{ lhFrag1("e=8[") }} g,[ r e@m] r8 |
+  {{ lh1("e=8[") }} g,[ r e@m] r8 |
   a=,8[-. r am!]-. r b[-. r b7!]-. r |
   e=8[-. r em!]-. r e=-. r r4 |
 

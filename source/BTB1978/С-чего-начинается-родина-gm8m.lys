@@ -1,6 +1,6 @@
 {% from "util.lys" import hSpace, shapedSlur %}
 
-{% macro rhFrag1() %}
+{% macro rh1() %}
   b'='4.^~ b8 a g fis dis b | c'=''4 b='8 %
 {% endmacro %}
 
@@ -12,7 +12,7 @@
 \relative {
   \partial 8 { b=8\(\p | }
   \repeat volta 2 {
-    {{ rhFrag1() }} b4.~ b4\) b,8\( |
+    {{ rh1() }} b4.~ b4\) b,8\( |
     \time 6/8
     g'='8 g g g dis e | fis4.~ fis4\) b,8\( |
     <fis'=' a>8 8 8 8 <e g> <dis fis> |
@@ -38,7 +38,7 @@
         {{ hSpace() }}
         <fis'=' a>2.~ 4 %
         {{ shapedSlur("bd", bs = 2.5, wd = 6.3, ht = 2) }} ( b,8)\( |
-        {{ rhFrag1() }} b2.~ | b4.\) %
+        {{ rh1() }} b2.~ | b4.\) %
         \ottava #1
         <e='' c'>4 <g='' b>8(\> 4.~ | \af 8\! 8) %
         \ottava #0

@@ -1,4 +1,4 @@
-{% macro lhFrag1(a, b) %}
+{% macro lh1(a, b) %}
   {{ a }} cM! cM | f, fM! {{ b }} | %
   g=,4 g7! g7 | c= cM! cM |
 {% endmacro %}
@@ -20,7 +20,7 @@
 \clef bass
 \key c \major
 \relative {
-  {{ lhFrag1("c=4-\\stBass", "fM") }}
-  {{ lhFrag1("c=4", "c@M!") }}
+  {{ lh1("c=4-\\stBass", "fM") }}
+  {{ lh1("c=4", "c@M!") }}
 }
 {% endmacro %}

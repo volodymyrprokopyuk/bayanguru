@@ -1,50 +1,50 @@
 {% from "util.lys" import v2 %}
 
-{% macro rhFrag1(a, b = "") %}
+{% macro rh1(a, b = "") %}
   {{ a }} <e c'>16) 16( {{ b }} <c g'>16) 16( {{ b }} <g e'>) <e c'>-. <g d'>-. |
 {% endmacro %}
 
-{% macro rhFrag2(a) %}
+{% macro rh2(a) %}
   {{ a }} <g d'>) <c e>-. g'-. <b, g'>-. <d a'>-. <g b>-. <f d'>-. |
 {% endmacro %}
 
-{% macro rhFrag3(a) %}
+{% macro rh3(a) %}
   {{ a }} <g d'> <e c'> <g d'> <e c'> <g d'>) <e' c'>-. <g='' d'>-. |
 {% endmacro %}
 
-{% macro rhFrag4(a, b = "") %}
+{% macro rh4(a, b = "") %}
   {{ a }} <e c'>16) 16( {{ b }} <c g'>) <e, c'>( {{ b }} <g d'>) <c e>-. g'='-. |
 {% endmacro %}
 
-{% macro rhFrag5(a) %}
+{% macro rh5(a) %}
   {{ a }} <e c'>) <d b'>(-> <c a'>) %
   <b=' gis'>16-.-> <gis e'>-. <a f'>-. <gis e'>-. |
   <f=' d'>16(-> <e c'>) <d b'>(-> <c a'>) %
   <b= gis'>16-.-> <gis e'>-. <e' c'>-. <d=' b'>-. |
 {% endmacro %}
 
-{% macro rhFrag6() %}
+{% macro rh6() %}
   <c=' a'>16( <e b'> <c a'> <e b'> <c a'> <e b'>) <e c'>-. <a e'>-. |
   <c='' a'>16( <e b'>) <e c'>( <a e'>) <a e'>( d) <a f'>-. e'='''-. |
 {% endmacro %}
 
-{% macro rhFrag7() %}
+{% macro rh7() %}
   <c=' a'>16( <e b'>) <e c'>( <a e'>) <c a'>16( <e b'>) <e c'>-. <a='' e'>-. |
 {% endmacro %}
 
-{% macro lhFrag1(a) %}
+{% macro lh1(a) %}
   {{ a }} e7!16 e7 e78 d@m! | e=8 e7!16 e7 e78 e7 |
 {% endmacro %}
 
-{% macro lhFrag2(a) %}
+{% macro lh2(a) %}
   e'=8 16 16 8 8 | 8 16 16 e8 e7! | a,=, am!16 am am8 {{ a }} | %
 {% endmacro %}
 
-{% macro lhFrag3(a) %}
+{% macro lh3(a) %}
   c=16 16 8 8 8 | 16 16 16 16 8 8 | c=8 cM! g g7! |
 {% endmacro %}
 
-{% macro lhFrag4() %}
+{% macro lh4() %}
   {{ v2("r8 cM!16 cM cM8 cM |", "c=4 r") }}
   {{ v2("r8 cM16 cM cM8 cM |", "c=4 r") }}
   c=8( cM!)-. g=,( g7!)-. |
@@ -56,60 +56,60 @@
 \key c \major
 \time 2/4
 \relative {
-  {{ rhFrag1("<g''='' e'>16(\\p") }}
-  {{ rhFrag1("<g=' e'>16(") }}
-  {{ rhFrag2("<e= c'>16(") }}
-  {{ rhFrag3("<e=' c'>16(") }}
-  {{ rhFrag1("<g='' e'>16(") }}
-  {{ rhFrag4("<g=' e'>16(") }}
-  {{ rhFrag2("<e=' c'>16(") }}
+  {{ rh1("<g''='' e'>16(\\p") }}
+  {{ rh1("<g=' e'>16(") }}
+  {{ rh2("<e= c'>16(") }}
+  {{ rh3("<e=' c'>16(") }}
+  {{ rh1("<g='' e'>16(") }}
+  {{ rh4("<g=' e'>16(") }}
+  {{ rh2("<e=' c'>16(") }}
   <e='' c'>16( <g d'> <e c'> <g d'> <e='' c'>8) r |
 
-  {{ rhFrag1("<g='' e'>16(->\\mf", "->") }}
-  {{ rhFrag1("<g=' e'>16(->", "->") }}
-  {{ rhFrag2("<e= c'>16(\\p") }}
-  {{ rhFrag3("<e=' c'>16(_\\dCre") }}
-  {{ rhFrag1("<g='' e'>16(->", "->") }}
-  {{ rhFrag4("<g=' e'>16(->", "->") }}
-  {{ rhFrag2("<e=' c'>16(") }}
+  {{ rh1("<g='' e'>16(->\\mf", "->") }}
+  {{ rh1("<g=' e'>16(->", "->") }}
+  {{ rh2("<e= c'>16(\\p") }}
+  {{ rh3("<e=' c'>16(_\\dCre") }}
+  {{ rh1("<g='' e'>16(->", "->") }}
+  {{ rh4("<g=' e'>16(->", "->") }}
+  {{ rh2("<e=' c'>16(") }}
   <e='' c'>16(\>^\tRit <g d'> <e c'> <g d'> \af 16\! <e c'>) %
   <gis='' c>16[-.\f <a f'>-. <gis='' e'>]-. |
 
-  {{ rhFrag5("<f='' d'>16(->^\\tATem") }}
-  {{ rhFrag6() }}
-  {{ rhFrag5("<f,='' d'>16(->") }}
-  {{ rhFrag7() }}
+  {{ rh5("<f='' d'>16(->^\\tATem") }}
+  {{ rh6() }}
+  {{ rh5("<f,='' d'>16(->") }}
+  {{ rh7() }}
   <a='' c e a>16 \arpeggio <c e a>16 \arpeggio %
   <c=''' e a>16 \arpeggio 16 \arpeggio 16 \arpeggio %
   <gis='' e'>16[-.\p <a f'>-. <gis='' e'>]-. |
 
-  {{ rhFrag5("<f='' d'>16(->") }}
-  {{ rhFrag6() }}
-  {{ rhFrag5("<f,='' d'>16(->") }}
-  {{ rhFrag7() }}
+  {{ rh5("<f='' d'>16(->") }}
+  {{ rh6() }}
+  {{ rh5("<f,='' d'>16(->") }}
+  {{ rh7() }}
   \ottava #1
   <a='' c e a>16 \arpeggio <c e a>16 \arpeggio %
   <c=''' e a>16 \arpeggio 16 \arpeggio %
   <d=''' f b>16^\tRit \arpeggio <d f g>16 \arpeggio %
   <d=''' f g>16 \arpeggio 16 \arpeggio |
 
-  {{ rhFrag1("<g=''' e'>16(^\\tATem") }}
+  {{ rh1("<g=''' e'>16(^\\tATem") }}
   \ottava #0
-  {{ rhFrag1("<g='' e'>16(") }}
-  {{ rhFrag2("<e=' c'>16(") }}
+  {{ rh1("<g='' e'>16(") }}
+  {{ rh2("<e=' c'>16(") }}
   <e='' c'>16( <g d'> <e c'> <g d'> <e c'> <g d'>) <e c'>-. <g d'>-. |
-  {{ rhFrag1("<g='' e'>16(") }}
-  {{ rhFrag1("<g=' e'>16(_\\dCre") }}
-  {{ rhFrag2("<e= c'>16(") }}
+  {{ rh1("<g='' e'>16(") }}
+  {{ rh1("<g=' e'>16(_\\dCre") }}
+  {{ rh2("<e= c'>16(") }}
   <e=' c'>16( <g d'>) <e' c'>-. <g d'>-. <e='' c'>8 r |
 
-  {{ rhFrag1("<g='' e'>16(->\\ff", "->") }}
-  {{ rhFrag1("<g=' e'>16(->", "->") }}
-  {{ rhFrag2("<e= c'>16(") }}
-  {{ rhFrag3("<e=' c'>16(") }}
-  {{ rhFrag1("<g='' e'>16(->", "->") }}
-  {{ rhFrag4("<g=' e'>16(->", "->") }}
-  {{ rhFrag2("<e=' c'>16(") }}
+  {{ rh1("<g='' e'>16(->\\ff", "->") }}
+  {{ rh1("<g=' e'>16(->", "->") }}
+  {{ rh2("<e= c'>16(") }}
+  {{ rh3("<e=' c'>16(") }}
+  {{ rh1("<g='' e'>16(->", "->") }}
+  {{ rh4("<g=' e'>16(->", "->") }}
+  {{ rh2("<e=' c'>16(") }}
   <e='' c'>16(-> <g e'>) <f b>(-> <g d'>) <e='' c'>4->\sf \bar "|."
 }
 {% endmacro %}
@@ -126,20 +126,20 @@
   c=8[ cM! cM] r | c cM r4 |
   c=8 cM! g g7! | c=[ cM! cM16] r r8 |
 
-  {{ lhFrag1("e=8") }}
+  {{ lh1("e=8") }}
   a,=,8 am!16 am am8 am | a am16 am am8 am |
-  {{ lhFrag1("e'=8") }}
+  {{ lh1("e'=8") }}
   a,=,8 am!16 am am8 am | a,,+am!8 r r4 |
 
-  {{ lhFrag2("am") }} | a am16 am16 am8 r |
-  {{ lhFrag2("r") }} | a,,+am!8 r g,,+g7! r |
+  {{ lh2("am") }} | a am16 am16 am8 r |
+  {{ lh2("r") }} | a,,+am!8 r g,,+g7! r |
 
-  {{ lhFrag3() }} | c cM!16 cM cM8 cM |
-  {{ lhFrag3() }} | c cM! c,+cM r |
+  {{ lh3() }} | c cM!16 cM cM8 cM |
+  {{ lh3() }} | c cM! c,+cM r |
 
-  {{ lhFrag4() }}
+  {{ lh4() }}
   {{ v2("r8 cM!16 cM cM8 cM |", "c=4 r") }}
-  {{ lhFrag4() }}
+  {{ lh4() }}
   c,+cM!8 c,+g,@7! c,+cM!4 |
 }
 {% endmacro %}

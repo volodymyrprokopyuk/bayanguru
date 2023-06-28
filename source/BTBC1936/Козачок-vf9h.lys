@@ -1,16 +1,16 @@
 {% from "util.lys" import v2 %}
 
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   {{ a }} <d fis d'>8.-> c'16( |
   b=''8) <d,='' g>8 4 |
 {% endmacro %}
 
-{% macro rhFrag2(a) %}
+{% macro rh2(a) %}
   {{ a }} a fis d c' a fis c |
   b'=''16 g d b g' d b g=' |
 {% endmacro %}
 
-{% macro rhFrag3(a, b) %}
+{% macro rh3(a, b) %}
   {{ a }} fis16 g8) g |
   fis=''16( a g fis {{ b }} | %
 {% endmacro %}
@@ -24,8 +24,8 @@
   \repeat segno 2 {
     \volta 1
     \repeat volta 2 {
-      {{ rhFrag1("d''=''8\\f r") }}
-      {{ rhFrag1("d=''8 d") }}
+      {{ rh1("d''=''8\\f r") }}
+      {{ rh1("d=''8 d") }}
     }
 
     \repeat volta 2 {
@@ -44,8 +44,8 @@
     r8\< <a=' cis e a>8 r8 \af 8\! 8 |
     r4 <d='' fis a d>4-> |
 
-    {{ rhFrag2("d'='''16\\f") }}
-    {{ rhFrag2("d''='''16") }}
+    {{ rh2("d'='''16\\f") }}
+    {{ rh2("d''='''16") }}
     a'=''16 e cis a g' e cis g |
     <fis=' fis'>8 <e e'> <fis fis'> <g g'> |
     <a=' a'>8 r <a cis e a>4-> |
@@ -56,8 +56,8 @@
       g,='8.(->\mf a16 b8) b |
       a='16( c b a g8) d |
       g='8.(-> a16 b8) b | a c b4 |
-      {{ rhFrag3("e=''8.(->\\f", "e8) b='") }}
-      {{ rhFrag3("e=''8.(->", "e=''4)") }}
+      {{ rh3("e=''8.(->\\f", "e8) b='") }}
+      {{ rh3("e=''8.(->", "e=''4)") }}
     }
   }
 }

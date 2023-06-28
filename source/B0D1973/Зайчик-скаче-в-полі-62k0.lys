@@ -1,9 +1,9 @@
-{% macro rhFrag1() %}
+{% macro rh1() %}
   g'=''8-. c,-. g'-. c,-. | a'4( g) |
   c,=''8-. f-. e-. g-. | f=''2 |
 {% endmacro %}
 
-{% macro lhFrag1(a) %}
+{% macro lh1(a) %}
   e=8 c@M! c8 cM | f, fM! g gm! |
   c=8 f@M! c8 {{ a }} | %
 {% endmacro %}
@@ -16,10 +16,10 @@
 \relative {
   a'='8-.\mp bes-. c-. f-. | c4( a) |
   a='8-. bes-. c-. f-. | c2 |
-  {{ rhFrag1() }}
+  {{ rh1() }}
   f=''8-. d-. bes-. d-. | c4( f,) |
   f'=''8-. d-. bes-. d-. | c2 |
-  {{ rhFrag1() }} \bar "|."
+  {{ rh1() }} \bar "|."
 }
 {% endmacro %}
 
@@ -29,10 +29,10 @@
 \relative {
   f=8[-\stBass fM! fM fM] | f@M![ fM8 fM fM] |
   f=8[ fM! fM fM] | f@M![ fM8 fM fM] |
-  {{ lhFrag1("cM!") }} | f[ fM! fM fM] |
+  {{ lh1("cM!") }} | f[ fM! fM fM] |
   \repeat unfold 2 {
     bes,@M![ besM8 besM besM] | f@M![ fM8 fM fM] |
   }
-  {{ lhFrag1("c7!") }} | f,=,4 fM! |
+  {{ lh1("c7!") }} | f,=,4 fM! |
 }
 {% endmacro %}

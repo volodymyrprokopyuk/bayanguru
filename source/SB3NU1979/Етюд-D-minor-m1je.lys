@@ -1,12 +1,12 @@
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   {{ a }} c e f fis g fis g gis a bes c) |
 {% endmacro %}
 
-{% macro rhFrag2(a) %}
+{% macro rh2(a) %}
   {{ a }} a, a' a, bes' a, c' a, a' a, ees'' a,,=') |
 {% endmacro %}
 
-{% macro lhFrag1() %}
+{% macro lh1() %}
   c=8 cM! r e c@M r8 | f fM! r %
 {% endmacro %}
 
@@ -20,7 +20,7 @@
   bes'=''16( bes, a' bes, g' bes, f' bes, e bes g' bes,) |
   g'=''16( g, e' g, d' g, c g d' g, bes g) |
   bes='16( a c a e' a, f' a, g' a, a' a,) |
-  {{ rhFrag2("a'=''16(") }}
+  {{ rh2("a'=''16(") }}
   ees''='''16( d, d' d, bes' d, ees d g d bes' d,) |
   a'=''16( d, d' d, f d g cis, a' a, cis g) |
   <f=' a d>8 r %
@@ -29,11 +29,11 @@
   \clef treble
   f'='8 |
 
-  {{ rhFrag1("e='16(") }}
+  {{ rh1("e='16(") }}
   bes='16( a gis a bes b c cis d ees e f) |
-  {{ rhFrag1("e=''16(") }}
+  {{ rh1("e=''16(") }}
   bes=''16( a gis a c a e a, f' a, g' gis) |
-  {{ rhFrag2("a=''16(") }}
+  {{ rh2("a=''16(") }}
   ees''='''16( d, d' d, bes' d, e' d f b, d f,) |
   d'='''16( f, a d, f a, f' a, e' g,) a-- e'-- |
   <f,=' a d>8 r r <f,= a d> r r \bar "|."
@@ -53,8 +53,8 @@
   f'=8[ d@m! dm8] a, aM! aM |
   d=16( a bes a bes a d=8) dm! r |
 
-  {{ lhFrag1() }} r4. |
-  {{ lhFrag1() }} f fM r |
+  {{ lh1() }} r4. |
+  {{ lh1() }} f fM r |
   fis=8[ d@7! d78] a,[ d@7 d78] |
   g=,8 gm! gm gis[ e@7! e78] |
   a=,8[ d@m! dm8] a a7! a7 |

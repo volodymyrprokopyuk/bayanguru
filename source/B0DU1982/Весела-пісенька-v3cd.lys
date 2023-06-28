@@ -1,4 +1,4 @@
-{% macro lhFrag1(a) %}
+{% macro lh1(a) %}
   {{ a }} gM! b g,@M | c4 cM! g=, gM! |
 {% endmacro %}
 
@@ -19,8 +19,8 @@
 \clef bass
 \key g \major
 \relative {
-  {{ lhFrag1("g,=,4-\\stBass") }}
-  {{ lhFrag1("g=,4") }}
+  {{ lh1("g,=,4-\\stBass") }}
+  {{ lh1("g=,4") }}
   \repeat unfold 3 { d'=4 dM! g,=, gM! | }
   d'=4 d7! g,=, gM! |
 }

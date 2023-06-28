@@ -1,11 +1,11 @@
 {% from "util.lys" import momentBeat %}
 
-{% macro rhFrag1() %}
+{% macro rh1() %}
   d=''8-. d16( ees f8) r |
   d'='''8-.\pp d16( ees f='''8) r |
 {% endmacro %}
 
-{% macro lhFrag1() %}
+{% macro lh1() %}
   a=,8[ f,@M! fM8 fM] | a8[ f,@M fM8 fM] |
   bes=,8 besM! besM besM | bes=, besM besM besM |
 {% endmacro %}
@@ -27,9 +27,9 @@
 
   \repeat volta 2 {
     c'='''4.(\p a8 | f4. ees8) |
-    {{ rhFrag1() }}
+    {{ rh1() }}
     ees='''4.(\p c8) | ees[( c a ees]) |
-    {{ rhFrag1() }}
+    {{ rh1() }}
     bes,=''4.(\p f8 | d'[ c bes a]) |
     c='''8[(\< bes a \af 8\! g] |
     fis=''8 g ees c) | f4 f, | f'(~ f16 ees c a) |
@@ -52,8 +52,8 @@
   bes,,+besM!8-. bes,,+besM-. bes,,+besM-. r |
   c,+c7!8-. c,+c7-. c,+c7-. r | f=,( fM!)-. fM-. r |
 
-  {{ lhFrag1() }}
-  {{ lhFrag1() }}
+  {{ lh1() }}
+  {{ lh1() }}
   d=8[ bes,@M! besM8 besM] | d[ bes,@M besM8 besM] |
   ees=8 eesM! eesM eesM | ees[ c@m! cm8 cm] |
   f,=,8[ bes,@M! besM8 besM] | f f7! f7 f7 |

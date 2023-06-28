@@ -1,6 +1,6 @@
 {% from "util.lys" import hSpace, shapedSlur %}
 
-{% macro lhFrag1() %}
+{% macro lh1() %}
   f,,+fM!8 r a,,+f@7! r8 |
 {% endmacro %}
 
@@ -37,12 +37,12 @@
 \key bes \major
 \relative {
   bes,=,8.-\stBass besM!16 besM8 r |
-  {{ lhFrag1() }}
+  {{ lh1() }}
   c=8. cm!16 cm8 r |
-  {{ lhFrag1() }}
+  {{ lh1() }}
   bes=,8. besM!16 besM8 r |
   c,+cm!8 r ees,+c@m! r8 |
-  {{ lhFrag1() }}
+  {{ lh1() }}
   \repeat unfold 2 {
     bes,,+besM!8[ a,,+f@7!] bes,,+besM!8 r |
   }

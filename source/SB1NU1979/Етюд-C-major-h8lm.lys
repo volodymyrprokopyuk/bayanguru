@@ -1,4 +1,4 @@
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   {{ a }} g' d g e g f g e g f g e g d g='') |
 {% endmacro %}
 
@@ -8,8 +8,8 @@
 \key c \major
 \time 4/4
 \relative {
-  {{ rhFrag1("c''=''16(\\mf") }}
-  {{ rhFrag1("c,=''16(") }}
+  {{ rh1("c''=''16(\\mf") }}
+  {{ rh1("c,=''16(") }}
   e=''16( c g' c, f c e c d g, f' g, e' g, d' g,) |
   c=''16( d c b c e g e c=''8) r r4 \bar "|."
 }

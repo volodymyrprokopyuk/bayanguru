@@ -1,13 +1,13 @@
 {% from "util.lys" import v2, hSpace, shapedSlur %}
 
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   {{ a }} bes <f a>4)-. 4-. | <f d'>-. <f a>2-> |
   <e=' g>8( a <e g>4)-. 4-. | <g e'>-. <e g>2-> |
   <d=' f>8( g <d f>2) | <bes e>8( f' <bes, e>2) |
   <a= cis>8( e' a g f e=' |
 {% endmacro %}
 
-{% macro lhFrag1(a) %}
+{% macro lh1(a) %}
   {{ a }} dm | d( dm) dm |
   cis=4( a,@M!) aM4 | cis( a,@M) aM4 |
   d=4( dm!) dm | g,( gm!) gm |
@@ -23,7 +23,7 @@
   \repeat segno 2 {
     \volta 1
     \repeat volta 2 {
-      {{ rhFrag1("<f'=' a>8(\\mp") }}
+      {{ rh1("<f'=' a>8(\\mp") }}
       \alternative {
         \volta 1 { d='8 e f g a='4) | }
         \volta 2 {
@@ -37,7 +37,7 @@
     bes='8( a g4) a | c2. |
     c,='8( d c e f g | a2.) |
     bes='8( a g4 e | \af 2.\! a2.)\> |
-    {{ rhFrag1("<f=' a>8(\\p") }} | d4) <d=' f d'>2 \fine |
+    {{ rh1("<f=' a>8(\\p") }} | d4) <d=' f d'>2 \fine |
 
     \volta 2
     \key d \major
@@ -63,14 +63,14 @@
 \clef bass
 \key d \minor
 \relative {
-  {{ lhFrag1("d=4(-\\stBass dm!)") }} | d=( dm!) dm |
+  {{ lh1("d=4(-\\stBass dm!)") }} | d=( dm!) dm |
   {{ v2("r4 dm!", "d=2") }} r4 |
 
   g,=,4 c@7! c74 | f fM! fM |
   c'=4 c7! c7 | f, fM! fM |
   g=,4 c@7! c74 | f fM! fM |
   g=,4 gm! gm | a a7! a7 |
-  {{ lhFrag1("d=4( dm!)") }} | d=4 dm!2 |
+  {{ lh1("d=4( dm!)") }} | d=4 dm!2 |
 
   \key d \major
   d=4 dM! dM | a d@M dM4 |

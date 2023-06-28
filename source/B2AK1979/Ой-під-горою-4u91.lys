@@ -1,9 +1,9 @@
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   {{ a }} e d8 c) | b4( d c8 b) |
   c=''4( a fis=' |
 {% endmacro %}
 
-{% macro rhFrag2(a) %}
+{% macro rh2(a) %}
   {{ a }} e' d8 c) | <g b>4( d' c8 b) |
   c=''4\( a fis=' |
 {% endmacro %}
@@ -16,13 +16,13 @@
 \relative {
   g'='4\mf g8\(\< a b \af 8\! c | d2 g4\) |
   e=''4\( g e | d2\> \af 4\! b4\) |
-  {{ rhFrag1("c=''4(\\p") }} | g2 b4) |
-  {{ rhFrag1("c=''4(\\f") }} | g4 g=') r |
+  {{ rh1("c=''4(\\p") }} | g2 b4) |
+  {{ rh1("c=''4(\\f") }} | g4 g=') r |
 
   g='4\p g8\(\< a b \af 8\! c | d2 g4\) |
   <c,='' e>4\( g' <c, e> | <b d>2\) r4 |
-  {{ rhFrag2("<a=' c>4(\\f") }} | g8 a b c d4\) |
-  {{ rhFrag2("<a=' c>4(\\p") }} | g4\) <b,= g'>2 \bar "|."
+  {{ rh2("<a=' c>4(\\f") }} | g8 a b c d4\) |
+  {{ rh2("<a=' c>4(\\p") }} | g4\) <b,= g'>2 \bar "|."
 }
 {% endmacro %}
 

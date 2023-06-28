@@ -15,6 +15,8 @@
 {% macro prelude() %}
   \version "2.25.6"
   rootUrl = "https://volodymyrprokopyuk.github.io/bayan"
+  acc = \acciaccatura \etc
+  af = \after \etc
   stBass = \markup \larger \box Г % Готовий бас = standard (Stradella) bass
   puBass = \markup \larger \box Б % Чистий бас = pure bass
   frBass = \markup \larger \box В % Виборна система = free bass
@@ -31,8 +33,6 @@
   tAcc = "accel."
   tSos = "sost."
   barFermata = \mark \markup \musicglyph #"scripts.ufermata"
-  acc = \acciaccatura \etc
-  af = \after \etc
   keyChangeBeforeBar = \once {
     \override Score.BreakAlignment.break-align-orders =
     #(make-vector 3 '(

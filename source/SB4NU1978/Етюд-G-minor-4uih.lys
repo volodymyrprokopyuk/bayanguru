@@ -1,9 +1,9 @@
-{% macro rhFrag1(a, b, c) %}
+{% macro rh1(a, b, c) %}
   {{ a }} ees {{ b }} d c bes c bes a %
   g='16 fis g a bes a bes {{ c }} | %
 {% endmacro %}
 
-{% macro rhFrag2(a) %}
+{% macro rh2(a) %}
   f=''16 g f ees d ees d c bes a bes c d c d {{ a }} | %
 {% endmacro %}
 
@@ -14,23 +14,23 @@
 \time 4/4
 \relative {
   \partial 4 { bes'='16\mf a_\aLeg bes c | }
-  {{ rhFrag1("d=''16", "", "c=''") }}
-  {{ rhFrag1("d=''16", "", "d=''") }}
+  {{ rh1("d=''16", "", "c=''") }}
+  {{ rh1("d=''16", "", "d=''") }}
   ees=''16 f ees d c d c bes a bes a g a bes c d |
   ees=''16 f ees d c d c bes a gis a bes c d ees e |
-  {{ rhFrag2("ees=''16") }}
+  {{ rh2("ees=''16") }}
   f=''16 g f ees d ees d c bes a bes c cis d ees e |
   f=''16_\dDim g f ees d ees e f ees f ees d c cis d ees |
   d=''16 ees d c bes c cis d c d c bes a bes c cis |
-  {{ rhFrag1("d=''16\\mf", "", "c=''") }}
+  {{ rh1("d=''16\\mf", "", "c=''") }}
   d=''16 ees d c bes c bes a bes a bes c d c d ees |
-  {{ rhFrag2("ees=''16") }}
+  {{ rh2("ees=''16") }}
   f=''16 g f ees d ees d c bes a bes c d ees e f |
   g=''16 a g f ees f ees d c bes c d ees d ees e |
-  {{ rhFrag2("f=''16") }}
+  {{ rh2("f=''16") }}
   ees=''16 f ees d c bes c ees d ees d c bes a bes d |
   c=''16 d c bes a g a c bes\> c bes a g a bes \af 16\! c |
-  {{ rhFrag1("d=''16\\p", "_\\dCre", "c=''") }}
+  {{ rh1("d=''16\\p", "_\\dCre", "c=''") }}
   d=''16 c bes a bes c bes a g fis g a bes a bes c |
   d=''16 ees d c bes a bes d ees f ees d c bes c ees |
   f=''16 g f ees d c d f fis g fis e fis d e fis |

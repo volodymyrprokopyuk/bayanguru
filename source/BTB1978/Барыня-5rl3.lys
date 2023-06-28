@@ -1,4 +1,4 @@
-{% macro rhFrag1() %}
+{% macro rh1() %}
   b='16 d g,8~ g a | b16 g a b=' %
 {% endmacro %}
 
@@ -20,8 +20,8 @@
     b='8 g16 fis g8 g'16 fis |
     g=''8 d16 e f e d c='' |
   }
-  {{ rhFrag1() }} c8 a |
-  {{ rhFrag1() }} c=''4 \bar "||"
+  {{ rh1() }} c8 a |
+  {{ rh1() }} c=''4 \bar "||"
 
   \tempo Allegretto
   \repeat volta 2 {

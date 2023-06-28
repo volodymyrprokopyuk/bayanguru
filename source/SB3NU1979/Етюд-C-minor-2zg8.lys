@@ -2,7 +2,7 @@
   \tuplet 3/2 { {{ a }} } \tuplet 3/2 { {{ b }} } | %
 {% endmacro %}
 
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   {{ t2(a, "b ees bes") }}
   {{ t2("aes='8 ees' c", "g ees' c") }}
 {% endmacro %}
@@ -16,7 +16,7 @@
   <<
     \new Voice = voiceOne \relative {
       \voiceOne
-      {{ rhFrag1("g'='8\\mf ees'_\\aLeg c") }}
+      {{ rh1("g'='8\\mf ees'_\\aLeg c") }}
       {{ t2("f,='8 c' aes", "ees c' aes") }}
       {{ t2("g='8 g' ees", "d ees c") }}
       {{ t2("ees,='8 c' g", "fis c' g") }}
@@ -24,7 +24,7 @@
       {{ t2("d='8 b' g", "fis <g b> f") }}
       {{ t2("ees='8 g c", "ees c g='") }}
 
-      {{ rhFrag1("g='8 ees' c") }}
+      {{ rh1("g='8 ees' c") }}
       {{ t2("bes='8 f' ees", "d c bes") }}
       {{ t2("g='8 bes ees", "g ees bes") }}
       {{ t2("ees,='8 c' aes", "c, f ees") }}

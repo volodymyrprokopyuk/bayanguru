@@ -1,4 +1,4 @@
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   {{ a }} d | a8-. c-. b-. a-. | g-. g-. g='4 |
 {% endmacro %}
 
@@ -8,8 +8,8 @@
 \key g \major
 \time 2/4
 \relative {
-  {{ rhFrag1("b'='4\\mf") }}
-  {{ rhFrag1("b='4") }}
+  {{ rh1("b'='4\\mf") }}
+  {{ rh1("b='4") }}
   e='4 a | d,8-. d-. b'-. a-. | g-. g-. g4 |
   e='8-. e-. a-. a-. | d,8-. d-. b'-. a-. |
   g='8-. g-. g='4 \bar "|."

@@ -1,8 +1,8 @@
-{% macro rhFrag1() %}
+{% macro rh1() %}
   d=''8 d c c | b b a a | e e a='4 |
 {% endmacro %}
 
-{% macro lhFrag1(a) %}
+{% macro lh1(a) %}
   d=8 dm! a am! | e' eM! a, am! |
   e'=8 eM! {{ a }} | %
 {% endmacro %}
@@ -14,8 +14,8 @@
 \time 2/4
 \relative {
   a'='8\mp e' e e | f f e e |
-  {{ rhFrag1() }}
-  {{ rhFrag1() }} \bar "|."
+  {{ rh1() }}
+  {{ rh1() }} \bar "|."
 }
 {% endmacro %}
 
@@ -24,7 +24,7 @@
 \key a \minor
 \relative {
   a,=,8-\stBass am! a am | d dm! a am! |
-  {{ lhFrag1("a,=,4") }}
-  {{ lhFrag1("a,,+am!4") }}
+  {{ lh1("a,=,4") }}
+  {{ lh1("a,,+am!4") }}
 }
 {% endmacro %}

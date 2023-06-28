@@ -1,10 +1,10 @@
 {% from "util.lys" import momentBeat %}
 
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   {{ a }} bes bes4) | bes8( d d4) | f8\( ees c a=' |
 {% endmacro %}
 
-{% macro lhFrag1(a) %}
+{% macro lh1(a) %}
   {{ a }} besM! besM besM | bes besM besM besM | f=, fM! fM fM |
 {% endmacro %}
 
@@ -14,13 +14,13 @@
 \key bes \major
 \time 2/4
 \relative {
-  {{ rhFrag1("f'='8(\\mf") }} | bes d f,4\) |
-  {{ rhFrag1("f='8(") }} | bes4.\) r8 |
+  {{ rh1("f'='8(\\mf") }} | bes d f,4\) |
+  {{ rh1("f='8(") }} | bes4.\) r8 |
   \repeat volta 2 {
     \repeat unfold 2 {
       <a=' ees'>8 8 <bes d>8 16 <d f> | <c ees>8 8 <bes=' d>4 |
     }
-    {{ rhFrag1("f='8(") }} | bes='4.\) r8 |
+    {{ rh1("f='8(") }} | bes='4.\) r8 |
   }
 }
 {% endmacro %}
@@ -30,10 +30,10 @@
 \key bes \major
 \relative {
   {{ momentBeat("1/2", "#'(1)") }}
-  {{ lhFrag1("bes,=,8-\\stBass") }} | bes besM! besM besM |
-  {{ lhFrag1("bes=,8") }} | bes[ besM!] besM r |
+  {{ lh1("bes,=,8-\\stBass") }} | bes besM! besM besM |
+  {{ lh1("bes=,8") }} | bes[ besM!] besM r |
   c,+f@7!4 bes,,+besM!4 | a,,+f@M! bes,,+besM!4 |
   c,+f@M!4 bes,,+besM!4 | a,,+f@M! bes,,+besM!4 |
-  {{ lhFrag1("bes=,8") }} | bes=,[ besM!] besM r |
+  {{ lh1("bes=,8") }} | bes=,[ besM!] besM r |
 }
 {% endmacro %}

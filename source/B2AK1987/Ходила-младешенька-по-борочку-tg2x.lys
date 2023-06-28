@@ -1,16 +1,16 @@
 {% from "util.lys" import v2 %}
 
-{% macro rhFrag1() %}
+{% macro rh1() %}
   \afGrace 1/4
     \fixed c' { <g,= a, c e>4^\markup \center-align \smaller "Б+М" }
     { \fixed c { \once \hide Stem <\parenthesize a,=, \parenthesize c>4 } }
 {% endmacro %}
 
-{% macro rhFrag2() %}
+{% macro rh2() %}
   {{ v2("a'='8 b", "f'='4") }} | %
 {% endmacro %}
 
-{% macro rhFrag3() %}
+{% macro rh3() %}
   <<
     \relative {
       <e'=' a c>8\> <f a c> %
@@ -21,7 +21,7 @@
   >>
 {% endmacro %}
 
-{% macro lhFrag1(a, b) %}
+{% macro lh1(a, b) %}
   {{ a }} am! b d@m! | c8 a,@m! d8 dm! |
   e=8 a,@m! e8 {{ b }} | %
 {% endmacro %}
@@ -35,7 +35,7 @@
   R2\mp | \repeat unfold 3 { R2 | }
   <e'=' a c>8\< 8 <d a' d> <d f a d> |
   <e=' a c e>4  \af 4\! %
-  {{ rhFrag2() }}
+  {{ rh2() }}
   <e=' a c>8\> 8 <d e b'>4 |
   \af 4.\! <c=' e a>4. r8 |
 
@@ -47,8 +47,8 @@
   <a=' c>8 8 <a d>8 8 | <a e'>4 a8 b |
   <a=' c>8 8 <gis b>4 | \af 2\! a2\< |
   <a=' c>8 8 <a d>8 <f a d> |
-  <e=' a e'>4 {{ rhFrag2() }}
-  {{ rhFrag3() }}
+  <e=' a e'>4 {{ rh2() }}
+  {{ rh3() }}
 
   e'=''16\mf g, c e e g, c e |
   d=''16 g, b d c g d' g, |
@@ -69,9 +69,9 @@
   {{ v2("d''=''4 e", "<g'=' b>8 <f a> <e=' gis b>4") }}
   <e=' a c>16 16 8-> <d g d'>8 8 |
   <e=' g e'>4-> <f a>8 <f a b> |
-  {{ rhFrag3() }}
+  {{ rh3() }}
   <c=' e c'>8 8 <d f a d>8 8 |
-  <e=' a e'>4^\tRit_\dDim {{ rhFrag2() }}
+  <e=' a e'>4^\tRit_\dDim {{ rh2() }}
   <c=' fis c'>8 8 <d gis b>4 |
   <c=' e a>2 \bar "|."
 }
@@ -83,20 +83,20 @@
 \relative {
   c@M!8[-\stBass cM8 cM cM] |
   g,@M!4 a,@m!8[ g,@7!8] |
-  c@M!8[ cM8] {{ rhFrag1() }}
+  c@M!8[ cM8] {{ rh1() }}
   d@m!4 e@M!4 |
   a=8[ g f d] | e4 d | e gis, |
   {{ v2("r8 am!4 r8", "a,=,4~ a8 r8") }}
 
   c=8[ cM! cM cM] | g[ gM! gM gM] |
   c=8[ cM! cM cM] | g gM! e' e7! |
-  {{ lhFrag1("a,=,8", "eM!") }} | a[ g f e] |
+  {{ lh1("a,=,8", "eM!") }} | a[ g f e] |
   a=8[ g f d] | c8 a,@m! d8 dm! |
   c=4 b | {{ v2("r4 am!4", "a,=,2") }}
 
   c=8 cM!4 cM8 | g gM!4 gM8 |
   c=8 cM! e c@M | g,8 gM! gis e@7! |
-  {{ lhFrag1("a=,8", "e7!") }}
+  {{ lh1("a=,8", "e7!") }}
   a,=,8 am!4 am8 |
   a=,8 am! g g7! | c cM! d dm! |
   e=8 a,@m! e8 e7! | a,=, am! g,,+g7!4 |

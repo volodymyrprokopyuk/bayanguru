@@ -1,4 +1,4 @@
-{% macro lhFrag1(a) %}
+{% macro lh1(a) %}
   a,@m!4( e@M!4 | a,@m!8[ d@m!8] {{ a }}) |
 {% endmacro %}
 
@@ -22,10 +22,10 @@
 \key a \minor
 \relative {
   a,=,8-\stBass r am! r | a,@m!4( e@M!4) |
-  {{ lhFrag1("a,@m!4") }}
+  {{ lh1("a,@m!4") }}
   \repeat unfold 2 {
     a,@m!8[( d@m!8] a,@m!4) |
   }
-  {{ lhFrag1("a,,+am!4") }}
+  {{ lh1("a,,+am!4") }}
 }
 {% endmacro %}

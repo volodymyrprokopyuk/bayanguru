@@ -1,23 +1,23 @@
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   {{ a }} g a8) a-. a-. | g16( a b8) b4-> |
   a='8-. cis-. e-. cis-. | d-. d16( e fis8)-. d-. |
   fis,='16( g a8) a-. a-. | g16( a b8) b4-> |
   a='8-. cis-. e-. cis-. | d-. fis-. d=''4-> |
 {% endmacro %}
 
-{% macro rhFrag2(a) %}
+{% macro rh2(a) %}
   {{ a }} e-. d-. d-. | cis16( d e8) a, cis |
   b='16( cis d8) gis, b=' |
 {% endmacro %}
 
-{% macro lhFrag1(a, b) %}
+{% macro lh1(a, b) %}
   {{ a }} dM! d dM | g, gM! gM gM |
   a=,8 a7! a a7 | d dM! dM dM |
   d=8 dM! d dM | g, gM! gM gM |
   a=,8 a7! a a7 | d dM! {{ b }} | %
 {% endmacro %}
 
-{% macro lhFrag2() %}
+{% macro lh2() %}
   a=,8 aM! e' e7! | a, aM! aM aM |
   gis=,8 e@7! e'=8 e7 |
 {% endmacro %}
@@ -28,12 +28,12 @@
 \key d \major
 \time 2/4
 \relative {
-  {{ rhFrag1("fis'='16(\\mf") }}
+  {{ rh1("fis'='16(\\mf") }}
 
-  {{ rhFrag2("e=''8-.\\mp") }} | a a16( cis e4) |
-  {{ rhFrag2("e=''8-.") }} | a-.\< r \af 4\! a='4-> |
+  {{ rh2("e=''8-.\\mp") }} | a a16( cis e4) |
+  {{ rh2("e=''8-.") }} | a-.\< r \af 4\! a='4-> |
 
-  {{ rhFrag1("fis='16(\\f") }} \bar "|."
+  {{ rh1("fis='16(\\f") }} \bar "|."
 }
 {% endmacro %}
 
@@ -41,11 +41,11 @@
 \clef bass
 \key d \major
 \relative {
-  {{ lhFrag1("d=8-\\stBass", "dM4") }}
+  {{ lh1("d=8-\\stBass", "dM4") }}
 
-  {{ lhFrag2() }} | a, aM! aM aM |
-  {{ lhFrag2() }} | a, g fis e=, |
+  {{ lh2() }} | a, aM! aM aM |
+  {{ lh2() }} | a, g fis e=, |
 
-  {{ lhFrag1("d'=8", "d,+dM4") }}
+  {{ lh1("d'=8", "d,+dM4") }}
 }
 {% endmacro %}

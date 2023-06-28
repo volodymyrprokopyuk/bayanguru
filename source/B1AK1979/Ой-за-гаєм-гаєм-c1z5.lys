@@ -1,6 +1,6 @@
 {% from "util.lys" import momentBeat %}
 
-{% macro rhFrag1(a, b) %}
+{% macro rh1(a, b) %}
   {{ a }} g( b g) | fis fis( a fis) |
   e='8( g fis e | d4) {{ b }} | %
 {% endmacro %}
@@ -14,8 +14,8 @@
   {{ momentBeat("1/2", "#'(1)") }}
   d'='8\(\f e fis g | a4 d4\) |
   b='8\( b d b | a4 fis\) |
-  {{ rhFrag1("g='8\\mf", "d='") }}
-  {{ rhFrag1("g='8\\mp", "d='8 r") }} \bar "|."
+  {{ rh1("g='8\\mf", "d='") }}
+  {{ rh1("g='8\\mp", "d='8 r") }} \bar "|."
 }
 {% endmacro %}
 

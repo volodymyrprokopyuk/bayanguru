@@ -1,6 +1,6 @@
 {% from "util.lys" import v2 %}
 
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   {{ a }} e fis g) d( e fis g) |
   d=''16( e fis g a g fis g) |
   d=''16( fis g a) d,( fis g a) |
@@ -11,7 +11,7 @@
   g='4( \af 8\! g'=''8) r |
 {% endmacro %}
 
-{% macro lhFrag1(a) %}
+{% macro lh1(a) %}
   {{ a }} r8 gM r | g,@M!2-- |
   d@7!8 r8 d7 r | d@7!2-- |
   g,,+gM!4 r | c,+a,@m! r4 |
@@ -26,7 +26,7 @@
 \time 2/4
 \relative {
   \repeat volta 2 {
-    {{ rhFrag1("d''=''16(\\f") }}
+    {{ rh1("d''=''16(\\f") }}
   }
 
   \repeat volta 2 {
@@ -38,7 +38,7 @@
     b'=''16( a g fis e d cis b) |
     a='16( b cis d e fis g e) |
     d=''16( e d cis d\sf e d cis='') |
-    {{ rhFrag1("d=''16(\\f") }}
+    {{ rh1("d=''16(\\f") }}
   }
 }
 {% endmacro %}
@@ -47,12 +47,12 @@
 \clef bass
 \key g \major
 \relative {
-  {{ lhFrag1("g,@M!8-\\stBass") }}
+  {{ lh1("g,@M!8-\\stBass") }}
 
   dis,+b,@M!8 r8 dis,+bM r | e,+em!4 r |
   cis,+a,@M!8 r8 cis,+aM r | d,+dM!4 r |
   fis,,+d@M!4 r4 | g,,+e@m! r4 |
   a,,+d@M!4 a,,+aM!4 | d,+dM!8 r d,+d7!4 |
-  {{ lhFrag1("g,@M!8") }}
+  {{ lh1("g,@M!8") }}
 }
 {% endmacro %}

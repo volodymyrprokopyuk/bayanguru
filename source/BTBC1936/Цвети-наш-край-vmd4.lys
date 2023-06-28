@@ -1,11 +1,11 @@
 {% from "util.lys" import momentBeat, v2 %}
 
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   {{ a }} <g bes> <f aes>4 <ees g>8 <d f> |
   <ees=' g>8 <f aes> <ees g>4 <d f>8 <c=' ees> |
 {% endmacro %}
 
-{% macro rhFrag2() %}
+{% macro rh2() %}
   <d=' f>8 <ees g> <d f>4 %
   {{ v2("g'='4", "ees'='8 d='") }}
 {% endmacro %}
@@ -29,8 +29,8 @@
     <ees=' g c>2 g4 | <ees g c>2 <g bes>4 |
     <f=' aes>8 <g bes> <aes c>4 <g bes>8 <f aes> |
     <ees=' g>4( c) <g' bes>4 |
-    {{ rhFrag1("<f=' aes>8") }}
-    {{ rhFrag2() }}
+    {{ rh1("<f=' aes>8") }}
+    {{ rh2() }}
     <c=' c'>2 <g' bes>4 |
     <<
       \new Voice = voiceOne \relative {
@@ -39,10 +39,10 @@
       }
       \new Voice = voiceTwo \relative {
         \voiceTwo
-        {{ rhFrag1("<f'=' aes>8") }}
+        {{ rh1("<f'=' aes>8") }}
       }
     >>
-    {{ rhFrag2() }}
+    {{ rh2() }}
     \alternative {
       \volta 1 { <c=' c'>4 <bes bes'>8 r bes=4 | }
       \volta 2 {

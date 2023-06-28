@@ -1,26 +1,26 @@
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   {{ a }} d c d c f e d c g a bes) |
   a='16( bes a bes a d c bes a g f e) |
   f='16( g f g f e f g gis e fis gis) |
   a='16( gis a b c\< b c d e d e \af 16\! f='') |
 {% endmacro %}
 
-{% macro rhFrag2() %}
+{% macro rh2() %}
   g=''16(\mf a g a g c b a g d e f) |
   e=''16( f e f e a g f e d a b=') |
 {% endmacro %}
 
-{% macro rhFrag3() %}
+{% macro rh3() %}
   c=''16(\< d c d c d c d c d c \af 16\! d) |
   c=''16(->\> bes a g a g f e f e d \af 16\! c=') |
 {% endmacro %}
 
-{% macro lhFrag1(a) %}
+{% macro lh1(a) %}
   {{ a }} r fM! r c@7!] r8 | f[ r fM! r a,@7!] r8 |
   d=8[ r dm! r e] r | a,=,[ r am!] r r4 |
 {% endmacro %}
 
-{% macro lhFrag2() %}
+{% macro lh2() %}
   \repeat unfold 2 { c=8[ r cM! r g,@7!] r8 | }
   c=8[ r cM! r f@M!] r8 | c,+c7!8-> r r4 r |
 {% endmacro %}
@@ -32,10 +32,10 @@
 \time 3/4
 \relative {
   \repeat volta 2 {
-    {{ rhFrag1("c''=''16(\\p") }}
-    {{ rhFrag2() }}
+    {{ rh1("c''=''16(\\p") }}
+    {{ rh2() }}
     \alternative {
-      \volta 1 { {{ rhFrag3() }} }
+      \volta 1 { {{ rh3() }} }
       \volta 2 {
         c'=''16(\< d c d c d c d e f e \af 16\! f='') |
       }
@@ -52,11 +52,11 @@
   e=16( c d e f g a bes  \clef treble c d e f) |
   e='16( c d e f^\tRit g a bes a g a bes=') |
 
-  {{ rhFrag1("c=''16(\\p^\\tATem") }}
-  {{ rhFrag2() }}
-  {{ rhFrag3() }}
+  {{ rh1("c=''16(\\p^\\tATem") }}
+  {{ rh2() }}
+  {{ rh3() }}
 
-  {{ rhFrag1("c'=''16(\\p") }}
+  {{ rh1("c'=''16(\\p") }}
   g=''16(\mf a g a g d' c bes a g f e) |
   f=''16( g f g f bes a g f d e f) |
   c=''16(\< d c d c d \af 16\! c d c d c d) |
@@ -71,8 +71,8 @@
 \clef bass
 \key f \major
 \relative {
-  {{ lhFrag1("f=8[-\\stBass") }}
-  {{ lhFrag2() }}
+  {{ lh1("f=8[-\\stBass") }}
+  {{ lh2() }}
   c=8[ r cM!] r r4 | a,,+a7!8-> r r4 r |
 
   d=8[ r dm!] r r4 | d,+dm!8 r r4 r |
@@ -80,10 +80,10 @@
   g=,8[ r gm!] r r4 | d'8[ r g,@m!] r8 r4 |
   \repeat unfold 2 { c=8 r r4 r | }
 
-  {{ lhFrag1("f=8[") }}
-  {{ lhFrag2() }}
+  {{ lh1("f=8[") }}
+  {{ lh2() }}
 
-  {{ lhFrag1("f=8[") }}
+  {{ lh1("f=8[") }}
   bes=,8[ r besM!] r r4 | g8[ r gm!] r r4 |
   c=8[ r cM! r f@M!] r8 | c,+c7!8-> r r4 r |
   \repeat unfold 2 { f=8[ r fM!] r r4 | }

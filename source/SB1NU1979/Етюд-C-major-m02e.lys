@@ -1,17 +1,17 @@
-{% macro rhFrag1(a, b) %}
+{% macro rh1(a, b) %}
   {{ a }} d16 e f g a {{ b }} b |
   c='''8)-. g-. e-. c=''-. |
 {% endmacro %}
 
-{% macro rhFrag2(a) %}
+{% macro rh2(a) %}
   {{ a }} g fis g e g fis g='' |
 {% endmacro %}
 
-{% macro rhFrag3() %}
+{% macro rh3() %}
   d=''8-. d-. d( g)-. | c,-. c-. c=''4-- |
 {% endmacro %}
 
-{% macro lhFrag1() %}
+{% macro lh1() %}
   c,+cM!4 r | R2 | g,,+gM!4-. g,,+gM-. | %
   c,+cM!8-. c,+cM-. c,+cM4-- |
 {% endmacro %}
@@ -22,17 +22,17 @@
 \key c \major
 \time 2/4
 \relative {
-  {{ rhFrag1("c''=''8(\\mf\\<", "\\af 16\\!") }}
+  {{ rh1("c''=''8(\\mf\\<", "\\af 16\\!") }}
   d=''8( g)-. e( g)-. | d-. d-. d4-- |
-  {{ rhFrag1("c=''8(", "") }}
-  {{ rhFrag3() }}
+  {{ rh1("c=''8(", "") }}
+  {{ rh3() }}
 
-  {{ rhFrag2("d=''16(\\p") }}
-  {{ rhFrag2("d=''16_\\dCre") }}
-  {{ rhFrag2("d=''16") }}
+  {{ rh2("d=''16(\\p") }}
+  {{ rh2("d=''16_\\dCre") }}
+  {{ rh2("d=''16") }}
   d=''8)-. d-. d4-- |
-  {{ rhFrag1("c=''8(\\mf\\<", "\\af 16\\!") }}
-  {{ rhFrag3() }} \bar "|."
+  {{ rh1("c=''8(\\mf\\<", "\\af 16\\!") }}
+  {{ rh3() }} \bar "|."
 }
 {% endmacro %}
 
@@ -42,10 +42,10 @@
 \relative {
   c,+cM!4-\stBass r | R2 | g,,+gM!4-. g,,+c@M!-. |
   g,,+gM!8-. g,,+gM-. g,,+gM4-- |
-  {{ lhFrag1() }}
+  {{ lh1() }}
 
   \repeat unfold 3 { g,@M!4 c@M!4 }
   g,@M!8[-. gM8]-. gM4-- |
-  {{ lhFrag1() }}
+  {{ lh1() }}
 }
 {% endmacro %}

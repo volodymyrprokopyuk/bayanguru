@@ -1,4 +1,4 @@
-{% macro rhFrag1() %}
+{% macro rh1() %}
   <<
     \relative {
       b'='8[( <e g>]) b[( <dis fis>]) e='' %
@@ -28,10 +28,10 @@
     r8 c=''8-. f,-. b-. a( e) b16( e fis g) |
     \alternative {
       \volta 1 {
-        {{ rhFrag1() }} r8 f'=''16( e c a) |
+        {{ rh1() }} r8 f'=''16( e c a) |
       }
       \volta 2 {
-        {{ rhFrag1() }} r8 e='16(\mf gis b d) |
+        {{ rh1() }} r8 e='16(\mf gis b d) |
       }
     }
   }

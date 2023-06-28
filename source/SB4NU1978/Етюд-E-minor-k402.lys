@@ -1,4 +1,4 @@
-{% macro rhFrag1() %}
+{% macro rh1() %}
   \repeat unfold 2 {
     <ais,=' cis fis>16 g' <ais, cis fis> cis'='''-> %
   } | %
@@ -68,12 +68,12 @@
       } | %
       \alternative {
         \volta 1 {
-          {{ rhFrag1() }}
+          {{ rh1() }}
           <b,=' d fis>16 g' <b, d fis> b'-> %
           <c,='' d fis>16 g' <c, d fis> a'=''-> |
         }
         \volta 2 {
-          {{ rhFrag1() }}
+          {{ rh1() }}
           <b,=' d fis>16^\tRit g' <b, d fis> b'-> %
           <b,=' dis fis>16\> g' %
           <b,=' dis fis>16 \af 16\! b'=''-> \bar "||"

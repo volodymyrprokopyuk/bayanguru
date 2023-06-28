@@ -1,9 +1,9 @@
-{% macro rhFrag1() %}
+{% macro rh1() %}
   f=4-> ees8-. d-. | ees4-- c-- |
   bes=,8-. g-. bes-. d=-. |
 {% endmacro %}
 
-{% macro rhFrag2() %}
+{% macro rh2() %}
   \acc { g'=16 a b } c='4->\< \af 4\! g-- |
   <>\> \af 2\! <c,= fis bes>2 |
 {% endmacro %}
@@ -17,7 +17,7 @@
   \acc { g=16 a b } c='4->\mp bes8-- aes-- |
   g=4-> c,-- | d8->\< ees-- f-- \af 8\! aes-- |
   <>\> \af 2\! <fis= g>2-> |
-  {{ rhFrag1() }}
+  {{ rh1() }}
   \acc { b=,8 } c=8\< r \af 4\! r4 |
   \acc { g'=16 a b } c='4-> bes8-- aes-- |
   <<
@@ -31,10 +31,10 @@
       \acc { fis=8 } g=2 |
     }
   >>
-  {{ rhFrag1() }}
+  {{ rh1() }}
   \acc { b=,8 } c=2 |
-  {{ rhFrag2() }}
-  {{ rhFrag2() }}
+  {{ rh2() }}
+  {{ rh2() }}
   \acc { g'=16 a b } c='4->_\dDim g-- |
   R2 | c='4-> r \bar "|."
 }

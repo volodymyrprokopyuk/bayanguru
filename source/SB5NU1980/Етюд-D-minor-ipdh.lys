@@ -1,6 +1,6 @@
 {% from "util.lys" import v2 %}
 
-{% macro rhFrag1(a, b) %}
+{% macro rh1(a, b) %}
   {{ a }} a' {{ b }} g f e d | c bes a g f e |
   d='16\> c bes a g a | bes c d e f \af 16\! g |
   a='16\< b cis b cis d | cis d e d e \af 16\! f |
@@ -11,7 +11,7 @@
   d='16\< a' f d' a \af 16\! f' | d=''4 r8 |
 {% endmacro %}
 
-{% macro lhFrag1(a) %}
+{% macro lh1(a) %}
   {{ a }} dm! dm | f,[ d@m! dm8] |
   g=,8 gm! gm | bes[ g,@m! gm8] |
   a=,8 a7! a7 | e'[ a,@7! a78] |
@@ -28,7 +28,7 @@
 \key d \minor
 \time 3/8
 \relative {
-  {{ rhFrag1("a'='16\\mf", "_\\aLeg") }}
+  {{ rh1("a'='16\\mf", "_\\aLeg") }}
 
   c=''16\f\> f e d c bes | a g f e d \af 16\! c |
   g''=''16\> f e d c bes  a g f e d \af 16\! c |
@@ -40,7 +40,7 @@
   e=''16\> d c bes a \af 16\! g |
   f='16\< c' a f' c \af 16\! a' | f=''8 r r |
 
-  {{ rhFrag1("a,='16\\mf", "") }} \bar "|."
+  {{ rh1("a,='16\\mf", "") }} \bar "|."
 }
 {% endmacro %}
 
@@ -48,7 +48,7 @@
 \clef bass
 \key d \minor
 \relative {
-  {{ lhFrag1("d=8-\\stBass") }}
+  {{ lh1("d=8-\\stBass") }}
 
   f=,8 fM! fM | c'[ f,@M! fM8] |
   \repeat unfold 2 {
@@ -60,6 +60,6 @@
   c=8[ f,@M! fM8] | c c7! c7 |
   f,=,8 c' a | f=, r r |
 
-  {{ lhFrag1("d'=8") }}
+  {{ lh1("d'=8") }}
 }
 {% endmacro %}

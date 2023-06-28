@@ -1,18 +1,18 @@
 {% from "util.lys" import momentBeat %}
 
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   {{ a }} g-. g-. e-. f-. e-. d4 |
 {% endmacro %}
 
-{% macro rhFrag2(a) %}
+{% macro rh2(a) %}
   {{ a }} c-. d4 e8-. e-. f4 | g8-. e-. f-. d-. c-. c-. c4 |
 {% endmacro %}
 
-{% macro lhFrag1(a) %}
+{% macro lh1(a) %}
   {{ a }} cM! a c@M d8 f@M! g,=,8 gM! |
 {% endmacro %}
 
-{% macro lhFrag2(a) %}
+{% macro lh2(a) %}
   c=8 cM! g gM! c cM! a f@M! |
   g=,8 c@M! g8 gM! c= cM! {{ a }} | %
 {% endmacro %}
@@ -24,10 +24,10 @@
 \time 4/4
 \relative {
   {{ momentBeat("1/4", "1,1,1,1") }}
-  {{ rhFrag1("g''=''8-.\\mf") }}
-  {{ rhFrag1("g,='8-.") }}
-  {{ rhFrag2("c='8-.") }}
-  {{ rhFrag2("c'=''8-.") }} \bar "|."
+  {{ rh1("g''=''8-.\\mf") }}
+  {{ rh1("g,='8-.") }}
+  {{ rh2("c='8-.") }}
+  {{ rh2("c'=''8-.") }} \bar "|."
 }
 {% endmacro %}
 
@@ -36,9 +36,9 @@
 \key c \major
 \relative {
   {{ momentBeat("1/4", "1,1,1,1") }}
-  {{ lhFrag1("c=8-\\stBass") }}
-  {{ lhFrag1("c=8") }}
-  {{ lhFrag2("cM4") }}
-  {{ lhFrag2("c,+cM4") }}
+  {{ lh1("c=8-\\stBass") }}
+  {{ lh1("c=8") }}
+  {{ lh2("cM4") }}
+  {{ lh2("c,+cM4") }}
 }
 {% endmacro %}

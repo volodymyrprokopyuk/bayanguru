@@ -1,4 +1,4 @@
-{% macro rhFrag1(a, b) %}
+{% macro rh1(a, b) %}
   {{ a }} bes-. a16( bes c a |
   bes='8)-. bes-. bes( {{ b }} | %
 {% endmacro %}
@@ -9,8 +9,8 @@
 \key bes \major
 \time 2/4
 \relative {
-  {{ rhFrag1("f'='8-.\\mf", "d)") }}
-  {{ rhFrag1("f,='8-.", "c)") }}
+  {{ rh1("f'='8-.\\mf", "d)") }}
+  {{ rh1("f,='8-.", "c)") }}
   d=''8.\( ees16 d8 c | bes a g4\) |
   c=''8.\( d16 c8 bes | a g f4\) |
   <<

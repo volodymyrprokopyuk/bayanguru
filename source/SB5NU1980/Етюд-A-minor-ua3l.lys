@@ -12,28 +12,28 @@
   \tuplet 3/2 { {{ c }} } \tuplet 3/2 { {{ d }} } | %
 {% endmacro %}
 
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   {{ t4(a, "d e d", "c d c", "b c b") }} | %
   {{ t3("a='8 b a", "g a \\af 16.\\! g",
      "f\\sf\\> g f", "\\af 8\\! e='\\) r") }} | %
 {% endmacro %}
 
-{% macro rhFrag2() %}
+{% macro rh2() %}
   {{ t4("e='8\\(\\< gis b", "d c b", "a c e", "a g \\af 8\\! f") }} | %
   {{ t4("e=''8 gis b", "d\\> c b", "a c b", "a g \\af 8\\! f=''\\)") }} | %
 {% endmacro %}
 
-{% macro rhFrag3() %}
+{% macro rh3() %}
   {{ t4("e='8\\(_\\dCre gis b", "d c b", "a c e", "a g f") }} | %
   {{ t3("e=''8 gis b", "d c b", "a c e", "a='''8\\)\\f r") }} | %
 {% endmacro %}
 
-{% macro lhFrag1(a) %}
+{% macro lh1(a) %}
   {{ a }} r am!] r e'[ r a,@m] r8 |
   c=8[ r a,@m!] r8 dis4( e=8) r |
 {% endmacro %}
 
-{% macro lhFrag2() %}
+{% macro lh2() %}
   \repeat unfold 2 { e@7!8[ r8 e=] r a,@m! r8 r4 | }
 {% endmacro %}
 
@@ -43,10 +43,10 @@
 \key a \minor
 \time 4/4
 \relative {
-  {{ rhFrag1("e''=''8\\(\\p\\< f e") }}
-  {{ rhFrag2() }}
-  {{ rhFrag1("e=''8\\(\\p\\< f e") }}
-  {{ rhFrag3() }}
+  {{ rh1("e''=''8\\(\\p\\< f e") }}
+  {{ rh2() }}
+  {{ rh1("e=''8\\(\\p\\< f e") }}
+  {{ rh3() }}
 
   {{ t4("g,=''8\\(\\p a g", "e f e", "f g f", "d e d") }}
   {{ t3("e=''8 f e", "c d c", "d e d", "g,='8\\) r") }}
@@ -74,9 +74,9 @@
   {{ t4("e=''8) b'( a", "g f_\\dDim e", "d c b", "a g f") }}
   {{ t4("e='8) f( fis", "g gis a", "ais b c", "cis d dis='')") }}
 
-  {{ rhFrag1("e=''8\\(\\p\\< f e") }}
-  {{ rhFrag2() }}
-  {{ rhFrag1("e=''8\\(\\p\\< f e") }}
+  {{ rh1("e=''8\\(\\p\\< f e") }}
+  {{ rh2() }}
+  {{ rh1("e=''8\\(\\p\\< f e") }}
   {{ t4("e='8(_\\dCre gis b", "d c b", "a c e", "a e c)") }}
   {{ t4("a='8( cis e", "g f e", "d f a", "d a f='')") }}
   \ottava #1
@@ -91,10 +91,10 @@
 \clef bass
 \key a \minor
 \relative {
-  {{ lhFrag1("a,=,8[-\\stBass") }}
-  {{ lhFrag2() }}
-  {{ lhFrag1("a,=,8[") }}
-  {{ lhFrag2() }}
+  {{ lh1("a,=,8[-\\stBass") }}
+  {{ lh2() }}
+  {{ lh1("a,=,8[") }}
+  {{ lh2() }}
 
   c=8[ r cM!] r b[ r g,@M!] r8 |
   a=,8[ r am!] r g[ r gM!] r |
@@ -117,9 +117,9 @@
   e@M!8)-. r8 r4 f,,+d@m!8[ r8 d,+dm] r |
   e,+eM!8[ r d] r c[ r b=,] r |
 
-  {{ lhFrag1("a=,8[") }}
-  {{ lhFrag2() }}
-  {{ lhFrag1("a,=,8[") }}
+  {{ lh1("a=,8[") }}
+  {{ lh2() }}
+  {{ lh1("a,=,8[") }}
   e@7!8[ r8 e=] r a,@m! r8 r4 |
   a,@7!8[ r8 a,=,] r d@m! r8 r4 |
   \repeat unfold 2 { e@7!8[ r8 e'=] r a,@m! r8 r4 | }

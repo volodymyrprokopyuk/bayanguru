@@ -1,14 +1,14 @@
 {% from "util.lys" import hSpace, shapedSlur %}
 
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   {{ a }} c4 | f2 a,4 | c2 bes8 a | bes='2.\) |
 {% endmacro %}
 
-{% macro rhFrag2() %}
+{% macro rh2() %}
   g'=''2\( f4 | e2 d4 | c d e='' |
 {% endmacro %}
 
-{% macro lhFrag1(a) %}
+{% macro lh1(a) %}
   {{ a }} fM! fM | f fM fM | c c7! c7 | c c7 c7 |
   c=4 c7! c7 | c c7 c7 | c c7! c7 | f= fM! fM |
 {% endmacro %}
@@ -20,10 +20,10 @@
 \time 3/4
 \relative {
   \repeat volta 2 {
-    {{ rhFrag1("c''=''2\\(\\mp") }}
-    {{ rhFrag2() }} | f a, bes\) |
-    {{ rhFrag1("c=''2\\(") }}
-    {{ rhFrag2() }}
+    {{ rh1("c''=''2\\(\\mp") }}
+    {{ rh2() }} | f a, bes\) |
+    {{ rh1("c=''2\\(") }}
+    {{ rh2() }}
     \alternative {
       \volta 1 { f=''2.\) | }
       \volta 2 {
@@ -39,7 +39,7 @@
 \clef bass
 \key f \major
 \relative {
-  {{ lhFrag1("f=4-\\stBass") }}
-  {{ lhFrag1("f=4") }} | f,+fM! r r |
+  {{ lh1("f=4-\\stBass") }}
+  {{ lh1("f=4") }} | f,+fM! r r |
 }
 {% endmacro %}

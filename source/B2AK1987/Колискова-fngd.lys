@@ -1,4 +1,4 @@
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   {{ a }} g(\< c) c8( \af 8\! d |
   bes='4 a8\> bes g4) \af 4\! g=' |
 {% endmacro %}
@@ -9,8 +9,8 @@
 \key g \minor
 \time 4/4
 \relative {
-  {{ rhFrag1("g'='4\\p") }}
-  {{ rhFrag1("g='4") }}
+  {{ rh1("g'='4\\p") }}
+  {{ rh1("g='4") }}
   fis='4\( d\< g \af 4\! bes |
   a='4 fis\> g \af 4\! g\) |
   fis='4\( d\< g \af 4\! bes |

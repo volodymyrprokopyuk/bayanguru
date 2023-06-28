@@ -1,6 +1,6 @@
 {% from "util.lys" import v2 %}
 
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   {{ a }} c cis d e \af 8\! d) |
   <<
     \new Voice = voiceOne \relative {
@@ -15,7 +15,7 @@
   >>
 {% endmacro %}
 
-{% macro lhFrag1(a) %}
+{% macro lh1(a) %}
   R2. | {{ a }} r gM! r d' r |
   fis,=,8 r d@7! r8 d' r |
   g,=,8 r gM! r d'= r |
@@ -27,7 +27,7 @@
 \key g \major
 \time 3/4
 \relative {
-  {{ rhFrag1("b'='8(\\p\\<") }}
+  {{ rh1("b'='8(\\p\\<") }}
   \af 2.\! g=''2.\> |
 
   g,='8(\< a ais b c \af 8\! b) |
@@ -52,7 +52,7 @@
   gis='8( a b c dis e) | b( c dis e fis g) |
   b=''8(\mf^\tRit a fis d c  a=') |
 
-  {{ rhFrag1("b='8(\\p\\<^\\tATem") }}
+  {{ rh1("b='8(\\p\\<^\\tATem") }}
   <<
     \new Voice = voiceOne \relative {
       \voiceOne
@@ -74,7 +74,7 @@
 \clef bass
 \key g \major
 \relative {
-  {{ lhFrag1("g,=,8-\\stBass") }}
+  {{ lh1("g,=,8-\\stBass") }}
   g,=,8 r e=, r d,+g,@M! r8 |
 
   R2. | e=,8 r em! r b' r |
@@ -86,7 +86,7 @@
   a=,8 r am! r c r | fis, r a,@m! r8 a r |
   fis=,8 r a,@m! r8 c' r | d= r d7! r r4 |
 
-  {{ lhFrag1("g,=,8") }}
+  {{ lh1("g,=,8") }}
   g,=,8 r gM! r d' r | c r cM! r d@7! r8 |
   g=,8 r gM! r d' r | g,@M! r8 r4 r |
   c,+dm!8 r8 r4 r | g,@M!8 r8 r4 d@7!8 r8 | g,@M!2. |

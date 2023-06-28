@@ -1,8 +1,8 @@
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   {{ a }} d g a b4( g) | a8 a e fis g4( d=') |
 {% endmacro %}
 
-{% macro rhFrag2() %}
+{% macro rh2() %}
   e='8[(->\< d]) e(-> \af 16.\! d) %
   f='8[(->\> e]) d-. \af 8\! d='-. |
 {% endmacro %}
@@ -17,10 +17,10 @@
   g,=''16( a b c d8)-. d-. <a a'>8[-. 8]-. d-. r |
   g,=''8\f r d-. d-. \acc { dis=''8 } e4(-> d8) r |
   g,='8[-.\p g]-. d-. d-. \acc { dis='8 } e4(-> d8) r |
-  {{ rhFrag1("d='8\\mp") }}
-  {{ rhFrag1("d='8") }}
-  {{ rhFrag2() }}
-  {{ rhFrag2() }}
+  {{ rh1("d='8\\mp") }}
+  {{ rh1("d='8") }}
+  {{ rh2() }}
+  {{ rh2() }}
   b'='4(-> g8)-. g-. a16( b a b) g8-. g-. |
   b='4(-> g8)-. g-. a16( b a b g='4) \bar "|."
 }

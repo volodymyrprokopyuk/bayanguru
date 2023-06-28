@@ -1,4 +1,4 @@
-{% macro rhFrag1() %}
+{% macro rh1() %}
   <f=' a>2 <e g>4 |
   <d=' f>2\> <g,= cis e>4 |
   \af 2.\! <f= a d>2. |
@@ -15,7 +15,7 @@
   <e=' g>2 <d f>4 |
   <d=' f>2.\> | \af 2.\! <cis e>2. |
   <e=' g>4\< <f a> \af 4\! <g bes> |
-  {{ rhFrag1() }}
+  {{ rh1() }}
   \repeat volta 2 {
     <f'=' a>4\< \af 4\! <f a d> <a cis e>\mf |
     <f=' d' f>2 <e c' e>4 |
@@ -23,7 +23,7 @@
     <ees=' a c>2 <d bes'>8 <c a'> |
     <bes= d g>2. |
     g'='4 <d g bes> <d g d'> |
-    {{ rhFrag1() }}
+    {{ rh1() }}
   }
 }
 {% endmacro %}

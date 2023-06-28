@@ -1,4 +1,4 @@
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   {{ a }} e a c a e a c) | a( e a e' d c b a=') |
 {% endmacro %}
 
@@ -26,13 +26,13 @@
   a='8( c16 b a8 c16 b) | a8( c b a) |
   gis='8( b e gis | a=''2) |
 
-  {{ rhFrag1("a,='16(\\p") }}
+  {{ rh1("a,='16(\\p") }}
   gis='16( e gis b gis e gis b) | gis( e gis b e d c b) |
-  {{ rhFrag1("a='16(") }}
+  {{ rh1("a='16(") }}
   gis='16( e gis b e d c b | a2) |
   c=''16( g c e c g c e) | c( g c g' f e d c) |
   b='16( g b d b g b d) | b( f b f' e d c b) |
-  {{ rhFrag1("a='16(") }}
+  {{ rh1("a='16(") }}
   gis='16( e gis b e d e gis | a=''2) \bar "|."
 }
 {% endmacro %}

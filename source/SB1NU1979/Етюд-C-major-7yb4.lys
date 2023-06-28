@@ -1,6 +1,6 @@
 {% from "util.lys" import hSpace, shapedSlur %}
 
-{% macro lhFrag1(a) %}
+{% macro lh1(a) %}
   {{ a }} r g,,+c@M! r8 | c= cM! c,+cM r |
 {% endmacro %}
 
@@ -39,8 +39,8 @@
 \key c \major
 \relative {
   \partial 4 { r4 | }
-  {{ lhFrag1("c,+cM!8-\\stBass") }}
-  {{ lhFrag1("c,+cM!8") }}
+  {{ lh1("c,+cM!8-\\stBass") }}
+  {{ lh1("c,+cM!8") }}
   b,,+g,@M!8 r8 c,+cM! r | b,,+e@7! r8 a,,+am! r |
   f,,+d@m!8 r8 fis,,+d@M! r8 | g gM! g,,+gM r |
   g=,8 gM! c,+cM! r |

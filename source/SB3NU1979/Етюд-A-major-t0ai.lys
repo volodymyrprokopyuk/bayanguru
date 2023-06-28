@@ -1,24 +1,24 @@
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   {{ a }} b cis d e fis gis a |
   | b16-> cis d cis b a gis fis\) |
 {% endmacro %}
 
-{% macro rhFrag2(a) %}
+{% macro rh2(a) %}
   {{ a }} fis gis fis e d cis b |
   | a16-> b cis b a-> b cis b\) |
 {% endmacro %}
 
-{% macro rhFrag3(a) %}
+{% macro rh3(a) %}
   {{ a }} b cis b a-> b cis a |
   | b16-> cis d cis b a gis fis\) |
 {% endmacro %}
 
-{% macro lhFrag1(a) %}
+{% macro lh1(a) %}
   {{ a }} r aM! r | a r b,@m! r8 |
   gis=,8 r e@7! r8 | a=, r aM! r |
 {% endmacro %}
 
-{% macro lhFrag2() %}
+{% macro lh2() %}
   fis=,16(-> gis a gis fis8) r |
   b=,16(-> cis d cis b8) r |
   e,=,16(-> fis gis fis e8) r |
@@ -27,7 +27,7 @@
   b=,16(-> cis d cis b=,8) r |
 {% endmacro %}
 
-{% macro lhFrag3() %}
+{% macro lh3() %}
   a=,8 r aM! r | d r b,@m! r8 |
   e=8 r e7! r |
 {% endmacro %}
@@ -38,14 +38,14 @@
 \key a \major
 \time 2/4
 \relative {
-  {{ rhFrag1("a=16\\(->\\f") }}
-  {{ rhFrag2("e='16\\(->") }}
-  {{ rhFrag1("a=16\\(->") }}
+  {{ rh1("a=16\\(->\\f") }}
+  {{ rh2("e='16\\(->") }}
+  {{ rh1("a=16\\(->") }}
   e='16\(-> fis gis fis e d cis b |
   a=16-> b cis d dis e fis gis\) |
-  {{ rhFrag3("a='16\\(->") }}
-  {{ rhFrag2("e='16\\(->") }}
-  {{ rhFrag3("a=16\\(->") }}
+  {{ rh3("a='16\\(->") }}
+  {{ rh2("e='16\\(->") }}
+  {{ rh3("a=16\\(->") }}
   e=16\(-> fis gis fis e fis gis e |
   a=8\)-> r <a= cis e a>-> r |
 
@@ -66,15 +66,15 @@
   <cis='' e a>8 r \ottava #1 <a'='' cis e a> \ottava #0 r |
 
   \ottava #1
-  {{ rhFrag1("a=''16\\(->\\f") }}
-  {{ rhFrag2("e='''16\\(->") }}
+  {{ rh1("a=''16\\(->\\f") }}
+  {{ rh2("e='''16\\(->") }}
   \ottava #0
-  {{ rhFrag3("a=''16\\(->") }}
+  {{ rh3("a=''16\\(->") }}
   e=''16\(-> fis gis fis e d cis b |
   a='16 b cis b a8\) r |
-  {{ rhFrag1("a='16\\(->\\p") }}
-  {{ rhFrag2("e=''16\\(->_\\dCre") }}
-  {{ rhFrag3("a='16\\(->") }}
+  {{ rh1("a='16\\(->\\p") }}
+  {{ rh2("e=''16\\(->_\\dCre") }}
+  {{ rh3("a='16\\(->") }}
   e='16\(-> fis gis fis e d cis b |
   a=8\)\f r <a= cis e a> r \bar "|."
 }
@@ -84,22 +84,22 @@
 \clef bass
 \key a \major
 \relative {
-  {{ lhFrag1("a,=,8-\\stBass") }}
-  {{ lhFrag3() }} | a,,+aM! r r4 |
-  {{ lhFrag1("a,=,8") }}
+  {{ lh1("a,=,8-\\stBass") }}
+  {{ lh3() }} | a,,+aM! r r4 |
+  {{ lh1("a,=,8") }}
   a=,8 r aM! r | d,+b,@m! r8 r4 |
   e=,8 r r e( | a)-> r a=,-> r |
 
-  {{ lhFrag2() }}
+  {{ lh2() }}
   e,=,16(-> fis gis fis e d' cis b |
   a=,8) r a,,+aM! r |
-  {{ lhFrag2() }}
+  {{ lh2() }}
   e,=,16(-> fis gis fis e8) r |
   a=,8 r a,,+aM! r |
 
-  {{ lhFrag1("a=,8") }}
-  {{ lhFrag3() }} | a, r aM! r |
-  {{ lhFrag3() }} | a, r aM! r |
+  {{ lh1("a=,8") }}
+  {{ lh3() }} | a, r aM! r |
+  {{ lh3() }} | a, r aM! r |
   a=,8 r aM! r | b r bm! r |
   e=8 r e7! r | a,=, r a,,+aM! r |
 }

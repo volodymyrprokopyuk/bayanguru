@@ -1,9 +1,9 @@
-{% macro rhFrag1() %}
+{% macro rh1() %}
   r8 d'=''4 b8 | cis4. a8 |
   gis='8 cis, a' gis | fis='2 |
 {% endmacro %}
 
-{% macro lhFrag1(a) %}
+{% macro lh1(a) %}
   b=,8 bm! b bm |
   fis=,8 fism! cis' fis@m |
   cis=8 {{ a }}! cis= {{ a }} | %
@@ -21,12 +21,12 @@
   b='8 b a gis | fis2 |
   cis'=''4 fis | e fis8 e |
   d=''8 d cis b | cis4 fis, |
-  {{ rhFrag1() }}
+  {{ rh1() }}
   <a=' cis>4 <d fis> |
   <cis='' e>4 <d fis>8 <cis e> |
   <b=' d>8 8 <a cis> <gis b> |
   <a=' cis>4 fis |
-  {{ rhFrag1() }} \bar "|."
+  {{ rh1() }} \bar "|."
 }
 {% endmacro %}
 
@@ -45,12 +45,12 @@
   a=,8 aM! ais fis@7! |
   b=,8 bm! fis b,@m |
   fis=,8 fism! fis fism |
-  {{ lhFrag1("cisM") }}
+  {{ lh1("cisM") }}
   fis,=,8 fism! cis' fis@m |
   \repeat unfold 2 { a=,8 aM! d dM! | }
   b=,8 bm! fis b,@m |
   fis=,8 fism! fis fism |
-  {{ lhFrag1("cis7") }}
+  {{ lh1("cis7") }}
   fis,,+fism!2 |
 }
 {% endmacro %}

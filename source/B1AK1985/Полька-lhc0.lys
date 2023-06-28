@@ -1,9 +1,9 @@
-{% macro lhFrag1(a) %}
+{% macro lh1(a) %}
   {{ a }} dm! d dm | d g,@m! d8 g,@m |
   a=,8 a7! a a7 | d dm! d= dm |
 {% endmacro %}
 
-{% macro lhFrag2(a) %}
+{% macro lh2(a) %}
   f,=,8 fM! f fM | g gm! g gm |
   a=,8 d@m! a8 a7! | d dm! {{ a }} | %
 {% endmacro %}
@@ -30,10 +30,10 @@
 \clef bass
 \key d \minor
 \relative {
-  {{ lhFrag1("d=8-\\stBass") }}
-  {{ lhFrag1("d=8") }}
+  {{ lh1("d=8-\\stBass") }}
+  {{ lh1("d=8") }}
 
-  {{ lhFrag2("d=8 dm") }}
-  {{ lhFrag2("d=4->") }}
+  {{ lh2("d=8 dm") }}
+  {{ lh2("d=4->") }}
 }
 {% endmacro %}

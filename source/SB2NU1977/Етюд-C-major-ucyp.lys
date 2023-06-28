@@ -1,12 +1,12 @@
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   {{ a }} e g e f a g e | f d e c d b c=''8\) |
 {% endmacro %}
 
-{% macro lhFrag1(a) %}
+{% macro lh1(a) %}
   {{ a }} r8 f,,+fM! e | d c@M! g,,+gM!8 c,+cM! |
 {% endmacro %}
 
-{% macro lhFrag2() %}
+{% macro lh2() %}
   a,,+am!8 r8 d,+dm! a,,+am! |
   f,,+d@m!8[ e,+a,@m!8] e,+eM!8 a,,+am! |
 {% endmacro %}
@@ -18,8 +18,8 @@
 \time 2/4
 \relative {
   \repeat volta 2 {
-    {{ rhFrag1("c''=''16\\(\\mf") }}
-    {{ rhFrag1("c=''16\\(") }}
+    {{ rh1("c''=''16\\(\\mf") }}
+    {{ rh1("c=''16\\(") }}
     a='16\( c e c d f e c | d b c a b gis a8\) |
     a='16\( c e c d f e c |
     \alternative {
@@ -34,10 +34,10 @@
 \clef bass
 \key c \major
 \relative {
-  {{ lhFrag1("c,+cM!8-\\stBass") }}
-  {{ lhFrag1("c,+cM!8") }}
-  {{ lhFrag2() }}
-  {{ lhFrag2() }}
+  {{ lh1("c,+cM!8-\\stBass") }}
+  {{ lh1("c,+cM!8") }}
+  {{ lh2() }}
+  {{ lh2() }}
   d,+dm!8 g,,+c@M! g,,+gM!8 c,+cM! |
 }
 {% endmacro %}

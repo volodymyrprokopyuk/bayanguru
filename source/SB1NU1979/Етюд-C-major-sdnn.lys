@@ -1,6 +1,6 @@
 {% from "util.lys" import momentBeat %}
 
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   {{ a }} b-. b-. b]-. | c16\( b a g f e d c='' |
 {% endmacro %}
 
@@ -17,9 +17,9 @@
     g=''8( f) f( e) | d( g) g=''4 |
   }
   \repeat volta 2 {
-    {{ rhFrag1("b=''8[-.\\f") }}
+    {{ rh1("b=''8[-.\\f") }}
     d=''8[\) d( g f] | e4 g4) |
-    {{ rhFrag1("b=''8[-.") }}
+    {{ rh1("b=''8[-.") }}
     d=''8[ g f d] | c e c=''4\) |
   }
 }

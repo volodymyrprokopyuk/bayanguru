@@ -1,14 +1,14 @@
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   {{ a }} c c e | g g g e |
   d=''4 d g f | e2 c='' |
 {% endmacro %}
 
-{% macro lhFrag1(a) %}
+{% macro lh1(a) %}
   {{ a }} cM! cM cM | c cM cM cM |
   g=,4 g7! g7 g7 | c= cM! cM cM |
 {% endmacro %}
 
-{% macro lhFrag2(a, b) %}
+{% macro lh2(a, b) %}
   {{ a }} eM! eM eM | a, am! am am |
   e'=4 e7! e7 e7 | a,=, am! {{ b }}
 {% endmacro %}
@@ -19,8 +19,8 @@
 \key a \minor
 \time 4/4
 \relative {
-  {{ rhFrag1("c''=''4\\f") }}
-  {{ rhFrag1("c=''4") }}
+  {{ rh1("c''=''4\\f") }}
+  {{ rh1("c=''4") }}
   e=''4\(\mp d c b | a b c d\) |
   e=''4\( d c b | a2 a'\) |
   e=''4\( d c b | a b c2\) |
@@ -32,9 +32,9 @@
 \clef bass
 \key a \minor
 \relative {
-  {{ lhFrag1("c=4-\\stBass") }}
-  {{ lhFrag1("c=4") }}
-  {{ lhFrag2("e=4", "am am") }}
-  {{ lhFrag2("e'=4", "am2") }}
+  {{ lh1("c=4-\\stBass") }}
+  {{ lh1("c=4") }}
+  {{ lh2("e=4", "am am") }}
+  {{ lh2("e'=4", "am2") }}
 }
 {% endmacro %}

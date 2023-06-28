@@ -1,10 +1,10 @@
 {% from "util.lys" import hSpace, shapedSlur %}
 
-{% macro rhFrag1() %}
+{% macro rh1() %}
   a='8\( a a a | a c b a | gis b e gis,=' |
 {% endmacro %}
 
-{% macro lhFrag1(a) %}
+{% macro lh1(a) %}
   a,=,4 am! | {{ a }} eM! | a,,+am! g,,+gM! |
 {% endmacro %}
 
@@ -16,12 +16,12 @@
 \relative {
   a'='8\(\mf a a a | a c b a |
   gis='8 gis gis gis | gis b a gis\) |
-  {{ rhFrag1() }} | a4 b='\) |
+  {{ rh1() }} | a4 b='\) |
 
   \repeat volta 2 {
     c=''8\( c c c | c e d c |
     b='8 b b b | b d c b\) |
-    {{ rhFrag1() }}
+    {{ rh1() }}
     \alternative {
       \volta 1 { a='4 b='\) | }
       \volta 2 {
@@ -38,9 +38,9 @@
 \key a \minor
 \relative {
   a,=,4-\stBass am! | a am | e' eM! | e eM |
-  {{ lhFrag1("a=,4 am | e'") }}
+  {{ lh1("a=,4 am | e'") }}
 
   c=4 cM! | c cM | g gM! | e' eM! |
-  {{ lhFrag1("d=4 dm! | e") }} | a,=, am! |
+  {{ lh1("d=4 dm! | e") }} | a,=, am! |
 }
 {% endmacro %}

@@ -1,11 +1,11 @@
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   {{ a }} b c d] e) r | a,[(\< b c d] \af 8\! e) r |
   d=''8(\< e f g a \af 8\! f | \af 2.\! e2.)\> |
   f=''8[(->\mf\> e d c] \af 8\! b) r |
   e=''8[(->\mf\> d c b] \af 8\! a=') r |
 {% endmacro %}
 
-{% macro lhFrag1(a) %}
+{% macro lh1(a) %}
   {{ a }} am! am | a am! am |
   d=4 dm! dm | c a,@m! am4 |
   d=4 dm! dm | e= a,@m! am4 |
@@ -17,9 +17,9 @@
 \key a \minor
 \time 3/4
 \relative {
-  {{ rhFrag1("a'='8[(\\mf") }}
+  {{ rh1("a'='8[(\\mf") }}
   b='8(\f c b fis gis a | \af 2.\! b2.)\> |
-  {{ rhFrag1("a='8[(\\mf") }}
+  {{ rh1("a='8[(\\mf") }}
   e='8(\< fis gis a b \af 8\! c |
   \af 2.\! a='2.)\> \bar "|."
 }
@@ -29,9 +29,9 @@
 \clef bass
 \key a \minor
 \relative {
-  {{ lhFrag1("a,=,4-\\stBass") }}
+  {{ lh1("a,=,4-\\stBass") }}
   dis=4 b,@7! b74 | e e7! e7 |
-  {{ lhFrag1("a,=,4") }}
+  {{ lh1("a,=,4") }}
   e=4 e7! e7 | a,=, am!2 |
 }
 {% endmacro %}

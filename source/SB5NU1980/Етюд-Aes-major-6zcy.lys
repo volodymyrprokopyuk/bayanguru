@@ -1,6 +1,6 @@
 {% from "util.lys" import v2, hSpace, shapedSlur %}
 
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   <aes,= des f>8) 8 8 <bes des g>8 {{ a }} 8 8 |
   <c=' ees aes>8 8 <ees aes c> %
 {% endmacro %}
@@ -13,13 +13,13 @@
 \relative {
   \partial 8 { ees'='8(\p | }
   \repeat volta 2 {
-    {{ rhFrag1("") }}
+    {{ rh1("") }}
     {{ v2("<c''='' f>4( <c='' ees>8)", "aes'='4.") }}
     <des=' ees g>8 8 <ees g bes> %
     {{ v2("<f'=' des'>4( <ees=' c'>8)", "g'='4.") }}
     <c=' ees aes>8 <c ees g> <c ees f> %
     <aes= c ees>4 ees'8( |
-    {{ rhFrag1("_\\dCre") }}
+    {{ rh1("_\\dCre") }}
     {{ v2("<ees''='' ges>4(\\mf <ees='' f>8)", "a'='4.") }}
     <f=' bes ees>8 8 <f bes des> %
     <ees=' g c>8_\dDim 8 <des g bes> |
@@ -54,7 +54,7 @@
     <bes=' des g>8\> 8^\tRit <aes=' des f bes> %
     <g=' des' ees>4 \af 8\! ees8(\p |
     \tempo "Tempo I"
-    {{ rhFrag1("") }}
+    {{ rh1("") }}
     {{ v2("<c''='' f>4( <c='' ees>8)", "aes'='4.") }}
     <des=' ees g>8 8 <ees g bes> %
     {{ v2("<f'=' des'>4( <ees=' c'>8)", "g'='4.") }}

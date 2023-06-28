@@ -1,22 +1,22 @@
 {% from "util.lys" import momentBeat %}
 
-{% macro rhFrag1() %}
+{% macro rh1() %}
   c='''8 \tuplet 3/2 { g=''16( aes g) } f8 ees |
   \tuplet 3/2 { ees=''16( f ees) } d8 d16 g, b d |
   g=''8 \tuplet 3/2 { f=''16( g f) } ees8 d='' |
 {% endmacro %}
 
-{% macro rhFrag2() %}
+{% macro rh2() %}
   c,='16 d ees f g8 c |
   \tuplet 3/2 { c=''16( d c) } b8 b16 c d=''8 |
 {% endmacro %}
 
-{% macro rhFrag3() %}
+{% macro rh3() %}
   c,='16 d ees f g a b c |
   \tuplet 3/2 { c=''16( d c) } b8 b16 c d=''8 |
 {% endmacro %}
 
-{% macro rhFrag4() %}
+{% macro rh4() %}
   \repeat unfold 2 {
     c=''8 c16 aes f g aes bes=' |
   }
@@ -36,9 +36,9 @@
   \repeat segno 2 {
     \volta 1
     \repeat volta 2 {
-      {{ rhFrag1() }}
+      {{ rh1() }}
       ees=''8 d16 c b c ees g |
-      {{ rhFrag1() }}
+      {{ rh1() }}
       \alternative {
         \volta 1 {
           c=''8 r <c ees g c> %
@@ -48,19 +48,19 @@
       }
     }
 
-    {{ rhFrag2() }}
+    {{ rh2() }}
     g,='16 a b c d8 ees |
     \tuplet 3/2 { d=''16( ees d) } c8 c16 b c8 |
-    {{ rhFrag2() }}
+    {{ rh2() }}
     \set subdivideBeams = ##t
     \tuplet 3/2 { g,='16( aes g) } fis g a8 b |
     \set subdivideBeams = ##f
     c=''8 r <c='' ees g c> r |
 
-    {{ rhFrag3() }}
+    {{ rh3() }}
     g,='16 a b c d cis d ees |
     \tuplet 3/2 { d=''16( ees d) } c8 c16 b c8 |
-    {{ rhFrag3() }}
+    {{ rh3() }}
     \set subdivideBeams = ##t
     \tuplet 3/2 { g,='16( aes g) } fis g a8 b |
     \set subdivideBeams = ##f
@@ -83,7 +83,7 @@
 
     \key f \minor
     \repeat volta 2 {
-      {{ rhFrag4() }} des8-. c-. |
+      {{ rh4() }} des8-. c-. |
       \repeat unfold 2 {
         bes='16 c bes aes g fis g aes=' |
       }
@@ -92,7 +92,7 @@
       \tuplet 3/2 { bes='16( c bes) } a bes c8-. bes-. |
       \set subdivideBeams = ##f
       aes='16 bes aes g f g aes bes |
-      {{ rhFrag4() }} f8-. ees-. |
+      {{ rh4() }} f8-. ees-. |
       des=''16 ees des c bes8 bes16 c |
       des=''8 \tuplet 3/2 { des=''16( ees des) } c8 bes |
       aes='16 bes aes g f g aes f |

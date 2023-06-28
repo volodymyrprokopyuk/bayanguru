@@ -1,11 +1,11 @@
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   {{ a }} bes a bes f d' cis d %
   f,='32 bes a bes f d' cis \af 32\! d |
   f,='32 c' b c f, f' e f %
   f,='32\> c' b c f, f' e \af 32\! f='' |
 {% endmacro %}
 
-{% macro rhFrag2() %}
+{% macro rh2() %}
   d=''32-> f e f f,-> f' e f %
   c=''32-> f e f f,-> f' e f='' |
 {% endmacro %}
@@ -34,8 +34,8 @@
   f,='32\p bes a bes d bes a bes %
   f='32 bes a bes d bes a bes |
   \repeat unfold 2 { f='32 a gis a c a gis a }
-  {{ rhFrag1("f='32\\<") }}
-  {{ rhFrag1("f,='32\\<") }}
+  {{ rh1("f='32\\<") }}
+  {{ rh1("f,='32\\<") }}
   f,='32 bes a bes f d' cis d %
   g,='32_\dCre b ais b g g' fis g |
   g,='32 c b c g ees' d ees %
@@ -46,10 +46,10 @@
   f,='32 c' b c d c b c |
   bes='32->\mf f' e_\dCre f f,-> f' e f %
   c=''32-> f e f f,-> f' e f |
-  {{ rhFrag2() }}
+  {{ rh2() }}
   bes,='32-> f' e f f,-> f' e f %
   c=''32-> f e f f,-> f' e f |
-  {{ rhFrag2() }}
+  {{ rh2() }}
   bes,='8\f r <d f bes> r |
   <bes=' d f bes>4 r \fermata \bar "|."
 }

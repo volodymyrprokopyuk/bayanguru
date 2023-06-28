@@ -1,19 +1,19 @@
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   {{ a }} c | e8-. g-. e4 |
   d=''8( g)-. g-. f-. | e-. d-. c=''4 |
 {% endmacro %}
 
-{% macro rhFrag2(a) %}
+{% macro rh2(a) %}
   {{ a }} a)-. e-. a-. | gis4(-> e8) r |
   | b'( d)-. c-. b-. |
 {% endmacro %}
 
-{% macro lhFrag1(a, b) %}
+{% macro lh1(a, b) %}
   {{ a }} r | c,+cM!8 r c,+cM4 |
   {{ b }} g,@M! g8 gM | a-. b-. c=4 |
 {% endmacro %}
 
-{% macro lhFrag2(a, b) %}
+{% macro lh2(a, b) %}
   {{ a }} am! a am | b e@7! e8 e7 |
   gis,=,8 e@7! e'8 e7 | a,=, am! {{ b }} | %
 {% endmacro %}
@@ -24,10 +24,10 @@
 \key c \major
 \time 2/4
 \relative {
-  \repeat volta 2 { {{ rhFrag1("g'='4\\mf") }} }
-  {{ rhFrag2("e,='8(\\p") }} | c( d e4) |
-  {{ rhFrag2("e=''8(") }} | a4( a,='8) r |
-  \repeat volta 2 { {{ rhFrag1("g='4\\mf") }} }
+  \repeat volta 2 { {{ rh1("g'='4\\mf") }} }
+  {{ rh2("e,='8(\\p") }} | c( d e4) |
+  {{ rh2("e=''8(") }} | a4( a,='8) r |
+  \repeat volta 2 { {{ rh1("g='4\\mf") }} }
 }
 {% endmacro %}
 
@@ -35,9 +35,9 @@
 \clef bass
 \key c \major
 \relative {
-  {{ lhFrag1("c,+cM!4-\\stBass", "b,=,8") }}
-  {{ lhFrag2("a=,8", "e'= a,@m") }}
-  {{ lhFrag2("a,=,8", "a=, r") }}
-  {{ lhFrag1("c,+cM!4", "b=,8") }}
+  {{ lh1("c,+cM!4-\\stBass", "b,=,8") }}
+  {{ lh2("a=,8", "e'= a,@m") }}
+  {{ lh2("a,=,8", "a=, r") }}
+  {{ lh1("c,+cM!4", "b=,8") }}
 }
 {% endmacro %}

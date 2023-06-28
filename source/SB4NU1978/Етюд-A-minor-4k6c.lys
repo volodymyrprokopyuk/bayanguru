@@ -1,14 +1,14 @@
-{% macro rhFrag1() %}
+{% macro rh1() %}
   a=16(\mf gis a b c8) r a16( gis a b c8) r |
   a=16(\< gis a b c d dis e \af 8\! f8) r r4 |
   \repeat unfold 2 { b,=16( ais b c d='8) r }
 {% endmacro %}
 
-{% macro rhFrag2(a, b, c) %}
+{% macro rh2(a, b, c) %}
   {{ a }} gis {{ b }} a b c b c d e dis e f fis eis fis gis {{ c }} | %
 {% endmacro %}
 
-{% macro lhFrag1(a, b) %}
+{% macro lh1(a, b) %}
   {{ a }} r r {{ b }} a,,+am! r r e |
   a,,+am!8 r r4 r8 a=,[ d,+dm! a] |
   d,+dm!8 r r a=, d,+dm! r r a |
@@ -21,7 +21,7 @@
 \key a \minor
 \time 4/4
 \relative {
-  {{ rhFrag1() }}
+  {{ rh1() }}
   b=16(\< ais b c d cis d dis e dis %
   e='16 f fis eis fis \af 16\! gis) |
   a='16(\f gis a b c8) r a16( gis a b c8) r |
@@ -32,7 +32,7 @@
   e='16\< dis e f g a g \af 16\! f %
   e='16\> f e d c d c \af 16\! b\) |
 
-  {{ rhFrag1() }}
+  {{ rh1() }}
   b=16(\< ais b c d dis e fis \af 2\! gis2) |
   a='16(\f gis a b cis8) r d16( cis d e f8) r |
   g,='16( fis g a b8) r c16( b c d e8) r |
@@ -42,10 +42,10 @@
   g='16 a g f e f e d c d c b\) |
   a=16( gis a b c8) r_\dDim r2 |
   a=16( gis a b c8) r r2 |
-  {{ rhFrag2("a=16(\\pp", "_\\dCre", ")") }}
-  {{ rhFrag2("a='16(", "", ")") }}
+  {{ rh2("a=16(\\pp", "_\\dCre", ")") }}
+  {{ rh2("a='16(", "", ")") }}
   \ottava #1
-  {{ rhFrag2("a=''16(", "", "") }}
+  {{ rh2("a=''16(", "", "") }}
   a='''8)-.\f \ottava #0 r r4 r2 \bar "|."
 }
 {% endmacro %}
@@ -54,7 +54,7 @@
 \clef bass
 \key a \minor
 \relative {
-  {{ lhFrag1("a,,+am!8-\\stBass", "e,=,") }}
+  {{ lh1("a,,+am!8-\\stBass", "e,=,") }}
   b,,+e@7!8 r8 e,,+e7 r |
   a,,+am!8 r r e=, a,,+am! r r e |
   a,,+am!8 r r4 r8 cis'=[ e a,,+a7!] |
@@ -63,7 +63,7 @@
   fis,,+d@M!8 r8 r4 d,+dm!8 r r4 |
   gis,,+e@7!8 r8 d,+dm!8 r b,,+e@7! r8 r4 |
 
-  {{ lhFrag1("a,,+am!8", "e=,") }} r8 e=,( c' b) |
+  {{ lh1("a,,+am!8", "e=,") }} r8 e=,( c' b) |
   cis,+a,@7!8 r8 r e,,+a,@7 d,+dm!8 r r c,+d@m |
   b,,+g,@7!8 r8 r g,,+g7 c,+cM! r r g,,+c@M |
   d,+dm!8 r r e,=, f,,+d@m! r8 r4 |

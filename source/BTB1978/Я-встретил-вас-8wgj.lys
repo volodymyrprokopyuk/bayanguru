@@ -1,28 +1,28 @@
-{% macro rhFrag1() %}
+{% macro rh1() %}
   b='8 d4 d8 | d c4 fis,8 | b4. b8 |
   ais='8 g' fis e='' |
 {% endmacro %}
 
-{% macro rhFrag2() %}
+{% macro rh2() %}
   c=''16 gis a b c b c e | d a' fis e d c a ais |
   b='16 fis g a b ais b d | d c b c fis e c a |
   a='16 g fis g fis' e b g | fis g' fis e dis cis dis e='' |
 {% endmacro %}
 
-{% macro rhFrag3() %}
+{% macro rh3() %}
   <c='' d fis>8 <c d g>16 <c d fis> <c d e>8 <c='' d fis> |
 {% endmacro %}
 
-{% macro lhFrag1() %}
+{% macro lh1() %}
   a,=,4 am! | d d7! | g, gM! | a am! | b=, e@m! |
 {% endmacro %}
 
-{% macro lhFrag2(a) %}
-  {{ lhFrag1() }}
+{% macro lh2(a) %}
+  {{ lh1() }}
   fis=,4 fis7! | b bM! | e= e7! {{ a }} | %
 {% endmacro %}
 
-{% macro lhFrag3() %}
+{% macro lh3() %}
   a,=,8 am! am am | d d7! d7 d7 |
   g,=,8 gM! gM gM | a am! am am |
   b=,8 e@m! em8 em | fis fis7!4 fis78 |
@@ -36,27 +36,27 @@
 \time 2/4
 \relative {
   R2\p | r4 r8 b'='8 | b4 g' | fis4. e8 | d4. c8 |
-  {{ rhFrag1() }} dis4. dis8 |
+  {{ rh1() }} dis4. dis8 |
   e=''4 d | c4. e8 | d4. c8 |
-  {{ rhFrag1() }} dis4. \af 8\! <a=' b dis>8\< |
+  {{ rh1() }} dis4. \af 8\! <a=' b dis>8\< |
 
   \af 8.\! <gis=' b e>4\< \af 4\! <d' gis b>\> \fermata |
   <c='' e a>4. <c e g>8 |
-  {{ rhFrag3() }}
+  {{ rh3() }}
   <b=' d a'>4 <b d g>8. 16 |
   <a=' c fis>8 <a c e> <e a c> fis |
   <g=' b>4. 8 | <fis ais cis>4 <a b dis> |
   <g=' b e>4. b='8 |
 
   b='16 b' a g fis e ais, b |
-  {{ rhFrag2() }}
+  {{ rh2() }}
   fis=''16 b, cis dis e fis g a |
   b=''16 a gis f e d c b |
-  {{ rhFrag2() }}
+  {{ rh2() }}
   fis=''16 a, ais b c\< cis d \af 16\! dis='' |
 
   <gis,=' b e>4\f <d' gis b> | <c e a>4. <c e g>8 |
-  {{ rhFrag3() }}
+  {{ rh3() }}
   <b=' d a'>4\< \af 8\! <b d g>8 r16 \fermata 16\p |
   <a=' c fis>8 <a c e> <e a c> fis | <g b>4. 8 |
   <fis=' ais cis>4^\tRit <a b dis> |
@@ -69,14 +69,14 @@
 \key e \minor
 \relative {
   e=4-\stBass em! \repeat unfold 2 { e=4 em | }
-  {{ lhFrag2("") }}
-  {{ lhFrag2("\\fermata") }}
+  {{ lh2("") }}
+  {{ lh2("\\fermata") }}
 
-  {{ lhFrag1() }} fis=,4 b | e= em! |
+  {{ lh1() }} fis=,4 b | e= em! |
 
   e=8 em! em em |
-  {{ lhFrag3() }}
-  {{ lhFrag3() }}
+  {{ lh3() }}
+  {{ lh3() }}
 
   a,=,8 am! am am | d d7! d7 d7 |
   g,=,8 gM! gM r \fermata | a am! am am |

@@ -1,10 +1,10 @@
-{% macro rhFrag1(a, b) %}
+{% macro rh1(a, b) %}
     \acc { {{ a }} d e } %
     {{ b }} c-. d-. bes-. | c=''8 a g f |
     g='16 a bes g a f g e=' |
 {% endmacro %}
 
-{% macro rhFrag2(a) %}
+{% macro rh2(a) %}
     {{ a }} e ees d des c b bes |
     a='8. c16 bes a g f |
     g='16 a bes g a f g e=' |
@@ -34,15 +34,15 @@
     }
 
     \repeat volta 2 {
-      {{ rhFrag1("c'=''16", "f=''8-.\\f") }}
+      {{ rh1("c'=''16", "f=''8-.\\f") }}
       <e=' c'>8 r <c' e> r |
-      {{ rhFrag1("c=''16", "f=''8-.") }}
+      {{ rh1("c=''16", "f=''8-.") }}
       f='8 r <f=' a c f>4 |
     }
 
-    {{ rhFrag2("f'=''16") }}
+    {{ rh2("f'=''16") }}
     <e=' c'>8 r <c' e> r |
-    {{ rhFrag2("f=''16") }}
+    {{ rh2("f=''16") }}
     f='8 r <f=' a c f>16 \bar "|."
   }
 }

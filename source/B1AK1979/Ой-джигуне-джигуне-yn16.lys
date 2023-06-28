@@ -1,9 +1,9 @@
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   bes='8( g) g-. g-. | a( f) f4 |
   a='8( g f e | d4) {{ a }} | %
 {% endmacro %}
 
-{% macro lhFrag1(a) %}
+{% macro lh1(a) %}
   g,=,8( gm!) g gm | a( d@m!) a8 d@m |
   a=,8 a7! a a7 | d= dm! {{ a }} | %
 {% endmacro %}
@@ -15,8 +15,8 @@
 \time 2/4
 \relative {
   d'='8\mf e f g | a a a4 | c8( bes a g | a4) a |
-  {{ rhFrag1("d'=''4->") }}
-  {{ rhFrag1("d='4") }} \bar "|."
+  {{ rh1("d'=''4->") }}
+  {{ rh1("d='4") }} \bar "|."
 }
 {% endmacro %}
 
@@ -26,7 +26,7 @@
 \relative {
   d=8-\stBass dm! d dm | d dm d dm |
   d=8 g,@m! d8 g,@m | d8 dm! d dm |
-  {{ lhFrag1("d=8 dm") }}
-  {{ lhFrag1("d,+dm4") }}
+  {{ lh1("d=8 dm") }}
+  {{ lh1("d,+dm4") }}
 }
 {% endmacro %}

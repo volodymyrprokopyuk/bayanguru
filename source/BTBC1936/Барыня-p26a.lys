@@ -1,15 +1,15 @@
 {% from "util.lys" import v2 %}
 
-{% macro rhFrag1() %}
+{% macro rh1() %}
   b='16 c b a g4~ | g8 a16 b=' %
 {% endmacro %}
 
-{% macro rhFrag2(a, b, c) %}
+{% macro rh2(a, b, c) %}
   {{ a }} g16( fis) g8 g'16( fis |
   g=''8) {{ b }} e f e d {{ c }} | %
 {% endmacro %}
 
-{% macro rhFrag3(a) %}
+{% macro rh3(a) %}
   {{ a }} \acc { fis'=''8 } g4-> %
   <<
     \relative {
@@ -32,12 +32,12 @@
   >>
 {% endmacro %}
 
-{% macro rhFrag4(a) %}
+{% macro rh4(a) %}
   \tuplet 3/2 { {{ a }} c b } g8~ g) a |
   b='8 g=' %
 {% endmacro %}
 
-{% macro rhFrag5() %}
+{% macro rh5() %}
   <<
     \relative {
       \tuplet 3/2 { b'='16(-> c b } g8~ g) a |
@@ -48,12 +48,12 @@
   >>
 {% endmacro %}
 
-{% macro rhFrag6() %}
+{% macro rh6() %}
   g='8 b16( d) d,8 e16( fis) |
   g='8 b16( d) c16( b c a=') |
 {% endmacro %}
 
-{% macro lhFrag1(a) %}
+{% macro lh1(a) %}
   {{ a }} g,@7! r8 g7 | g, g7! c cM! |
   d=8 g,@7! r8 g7 | g,=, g7! c,+cM!4-> |
 {% endmacro %}
@@ -69,27 +69,27 @@
   \acc { fis=''8 } g8-> d16( e f e d c) |
   b='8 g16( fis g8) g'16( fis |
   g=''8) d16\( e f e d c |
-  {{ rhFrag1() }} c8\) d16\( c |
-  {{ rhFrag1() }} <e,=' c'>8\) r |
+  {{ rh1() }} c8\) d16\( c |
+  {{ rh1() }} <e,=' c'>8\) r |
 
   \repeat volta 2 {
-    {{ rhFrag2("b'='8", "d16(", "c)") }}
-    {{ rhFrag2("b='8", "d16\\(", "c") }}
-    {{ rhFrag1() }} c8\) d16\( c |
-    {{ rhFrag1() }} <e,=' c'>8\) r |
+    {{ rh2("b'='8", "d16(", "c)") }}
+    {{ rh2("b='8", "d16\\(", "c") }}
+    {{ rh1() }} c8\) d16\( c |
+    {{ rh1() }} <e,=' c'>8\) r |
 
-    {{ rhFrag3("g='8") }}
-    {{ rhFrag3("g,='8") }}
+    {{ rh3("g='8") }}
+    {{ rh3("g,='8") }}
 
-    {{ rhFrag4("b,='16(->") }} <g c>8 8 |
-    {{ rhFrag4("b='16(->") }} <g c>4-> |
-    {{ rhFrag5() }}
+    {{ rh4("b,='16(->") }} <g c>8 8 |
+    {{ rh4("b='16(->") }} <g c>4-> |
+    {{ rh5() }}
     {{ v2("c''=''8 c", "g'='8 g") }}
     \alternative {
       \volta 1 {
-        {{ rhFrag5() }}
+        {{ rh5() }}
         {{ v2("<g'=' c>4->", "e'='4->") }}
-        \repeat unfold 3 { {{ rhFrag6() }} }
+        \repeat unfold 3 { {{ rh6() }} }
         g='8 b16( d) d,8 e16( fis) |
         g='8 a16( b) <e,=' g c>8 r |
       }
@@ -125,8 +125,8 @@
   g=,8 g7! b g,@7 | d8 g,@7! c8 cM! |
   g=,8 g7! b g,@7 | d8 g,@7! c=8 r |
 
-  {{ lhFrag1("d=8") }}
-  {{ lhFrag1("d'=8") }}
+  {{ lh1("d=8") }}
+  {{ lh1("d'=8") }}
 
   <<
     \new Voice = voiceOne \relative {

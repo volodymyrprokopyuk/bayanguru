@@ -1,8 +1,8 @@
-{% macro lhFrag1(a) %}
+{% macro lh1(a) %}
   {{ a }} am! c a,@m | e4 e7! gis,=, e@7 |
 {% endmacro %}
 
-{% macro lhFrag2(a) %}
+{% macro lh2(a) %}
   {{ a }} a7! cis a,@7 |
   \repeat unfold 2 { d=4 dm! f d@m | }
 {% endmacro %}
@@ -33,10 +33,10 @@
 \clef bass
 \key a \minor
 \relative {
-  {{ lhFrag1("a,=,4-\\stBass") }}
-  {{ lhFrag1("a=,4") }}
-  {{ lhFrag2("a=,4") }} | e4( e7!) e( e7) |
-  {{ lhFrag2("a,=,4") }} | e4( e7!2) \fermata e74 |
+  {{ lh1("a,=,4-\\stBass") }}
+  {{ lh1("a=,4") }}
+  {{ lh2("a=,4") }} | e4( e7!) e( e7) |
+  {{ lh2("a,=,4") }} | e4( e7!2) \fermata e74 |
   a,=,4 a7! cis a,@7 | d4 dm! f d@m |
   e=4 a,@m! e4 e7! | a,=,( am!) am2 |
 }

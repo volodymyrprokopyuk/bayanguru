@@ -1,4 +1,4 @@
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   <a='' a'>8-. r <a g'>-. r <a f'>-. r |
   <bes='' e>2. | <bes d>2. |
   <bes='' c>8-. r %
@@ -10,7 +10,7 @@
   <bes='' c>8 r <bes='' g'>2-> |
 {% endmacro %}
 
-{% macro rhFrag2() %}
+{% macro rh2() %}
   <a='' c>8-. r %
   <<
     \relative { c'''='''8-. d-. c-. d-. | }
@@ -20,7 +20,7 @@
   <a='' c>8 r <a='' f'>2-> |
 {% endmacro %}
 
-{% macro lhFrag1(a) %}
+{% macro lh1(a) %}
   {{ a }} r fM! r fM r | c' r f,@M! r8 fM r |
   g=,8 r gm! r gm r | f r g,@m! r8 gm r |
   e=,8 r c@7! r8 c7 r | c' r c7! r c7 r |
@@ -40,9 +40,9 @@
     \volta 1
     \repeat volta 2 {
       c='''8-.\mf^\tATem r a( bes b c) |
-      {{ rhFrag1() }}
+      {{ rh1() }}
       \alternative {
-        \volta 1 { {{ rhFrag2() }} }
+        \volta 1 { {{ rh2() }} }
         \volta 2 {
           <a='' f'>2.~ | <a f'>8 r \fine \bar "!!"
           \volta 2
@@ -76,9 +76,9 @@
     \key f \major
     \repeat volta 2 {
       c'='''8-> r a(-. bes-. b-. c)-. |
-      {{ rhFrag1() }}
+      {{ rh1() }}
       \alternative {
-        \volta 1 { {{ rhFrag2() }} }
+        \volta 1 { {{ rh2() }} }
         \volta 2 {
           <a='' f'>2.~ |
           <a='' f'>8 r %
@@ -117,7 +117,7 @@
 \key f \major
 \relative {
   c@7!8-\stBass r8 r4 r | R2. | c@7!8 r8 r4 r | R2. |
-  {{ lhFrag1("f,=,8") }}
+  {{ lh1("f,=,8") }}
 
   \key a \minor
   a=,8 r am! r am r | gis r a,@m! r8 am r |
@@ -131,7 +131,7 @@
   a,,+am!8 r f=,8 r e r | a=,8 r r4 r |
 
   \key f \major
-  {{ lhFrag1("f=,8") }}
+  {{ lh1("f=,8") }}
 
   \key des \major
   aes=,8 r aes7! r aes7 r | c r aes,@7! r8 aes7 r |

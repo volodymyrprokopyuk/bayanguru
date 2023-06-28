@@ -1,6 +1,6 @@
 {% from "util.lys" import momentBeat, v2, dynPadding %}
 
-{% macro lhFrag1() %}
+{% macro lh1() %}
   {{ v2("r4 aM!", "a,=,2") }} | %
 {% endmacro %}
 
@@ -67,20 +67,20 @@
   r8 a,@M! r8 d@M! r8 a,@M! r8 d@M! |
   \repeat unfold 2 {
     a,=,8 aM! e' e7! a, aM! e' e7! |
-    a,=,8 aM! e' e7! {{ lhFrag1() }}
+    a,=,8 aM! e' e7! {{ lh1() }}
   }
   \repeat unfold 2 {
     a,=,8 aM! e' e7! a, aM! d dM! |
   }
-  a=,8 aM! e' e7! {{ lhFrag1() }}
-  e=8 a,@M! e8 e7! {{ lhFrag1() }}
+  a=,8 aM! e' e7! {{ lh1() }}
+  e=8 a,@M! e8 e7! {{ lh1() }}
   a,=,8[( aM!) aM aM] e'[( e7!) e7 e7] |
-  a,=,8 aM! e' e7! {{ lhFrag1() }}
+  a,=,8 aM! e' e7! {{ lh1() }}
   a,=,8[( aM!) aM d@M] e'8[( e7!) e7 e7] |
-  a,=,8 aM! e' e7! {{ lhFrag1() }}
+  a,=,8 aM! e' e7! {{ lh1() }}
   a,=,8 aM! e' e7! a, aM! d dM! |
   a=,8 aM! e' e7! a, aM! b bm! |
   a=,8 aM! e' e7! a, aM! a,,+aM r |
-  e'=8 a,@M! e8 e7! {{ lhFrag1() }}
+  e'=8 a,@M! e8 e7! {{ lh1() }}
 }
 {% endmacro %}

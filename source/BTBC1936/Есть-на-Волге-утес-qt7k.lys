@@ -1,8 +1,8 @@
-{% macro rhFrag1() %}
+{% macro rh1() %}
   <cis=' e a>4 4\< a'8. \af 32.\! <g=' a>16 |
 {% endmacro %}
 
-{% macro rhFrag2() %}
+{% macro rh2() %}
   \tuplet 3/2 { <g=' bes>8 <f a> <e g> } %
   \tuplet 3/2 { <d=' f>8 <c e> <bes= d> | }
 {% endmacro %}
@@ -21,7 +21,7 @@
   \tuplet 3/2 { <g=' bes>8 <f a> <e g> } %
   \tuplet 3/2 { <e=' g>8 <d f> <d e> | }
   \time 3/4
-  {{ rhFrag1() }}
+  {{ rh1() }}
   \repeat volta 2 {
     <f=' a d f>2\f <g a cis e>8. <g a cis>16 |
     <f=' bes d>2 <f a>8 <g bes> |
@@ -30,13 +30,13 @@
     \alternative {
       \volta 1 {
         \time 2/4
-        {{ rhFrag2() }}
+        {{ rh2() }}
         \time 3/4
-        {{ rhFrag1() }}
+        {{ rh1() }}
       }
       \volta 2 {
         \time 2/4
-        {{ rhFrag2() }}
+        {{ rh2() }}
         <cis=' e a>2 | <f,= a d>2 \bar "|."
       }
     }

@@ -1,6 +1,6 @@
 {% from "util.lys" import momentBeat %}
 
-{% macro rhFrag1(a, b) %}
+{% macro rh1(a, b) %}
   {{ a }} bes-. bes( g) | a-. a-. a( f) |
   g='8-. g-. c,( e | f4) {{ b }} | %
 {% endmacro %}
@@ -12,8 +12,8 @@
 \time 2/4
 \relative {
   c'='8\f c( d e | f4) f4 | c8 c( d e | f4) a4 |
-  {{ rhFrag1("bes='8-.\\mf", "a='") }}
-  {{ rhFrag1("bes='8-.", "f='") }} \bar "|."
+  {{ rh1("bes='8-.\\mf", "a='") }}
+  {{ rh1("bes='8-.", "f='") }} \bar "|."
 }
 {% endmacro %}
 

@@ -1,12 +1,12 @@
 {% from "util.lys" import hSpace, shapedSlur %}
 
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   {{ a }} fis16 g a8 g |
   fis='8 e d) r r d( fis a |
   <d='' fis>4 <c e>) e,8( fis b a=') |
 {% endmacro %}
 
-{% macro lhFrag1() %}
+{% macro lh1() %}
   g=,8 gM!4 gM8 b g,@M4 gM8 |
   \repeat unfold 2 { a=,8 d@7!4 d78 d= d74 d78 | }
 {% endmacro %}
@@ -20,10 +20,10 @@
   r2\p r8 d'='8(\< g \af 16.\! b |
   \repeat volta 2 {
     e=''4\mp d) %
-    {{ rhFrag1("g,='8(") }}
+    {{ rh1("g,='8(") }}
     d=''8( c16 b a g e g a8) d,[(\< g \af 8\! b] |
     <c='' e>4\mf <b d>) %
-    {{ rhFrag1("g='8(") }}
+    {{ rh1("g='8(") }}
     g='2~ g8 <d g>[( <g b> <g b d>] |
     <b=' g'>4. <b fis'>8 e) b( d e |
     <d='' fis>8 <c e> b4) r8 c( d b |
@@ -52,9 +52,9 @@
 \key g \major
 \relative {
   g,=,8-\stBass gM!4 gM8 g gM4 gM8 |
-  {{ lhFrag1() }}
+  {{ lh1() }}
   b=,8 g,@M!4 a,@m!8 d,+d7!8 r r4 |
-  {{ lhFrag1() }}
+  {{ lh1() }}
   g,=,8 gM!4 a,@m!8 g,,+gM!8 r r4 |
   e'=8 em!4 em8 cis e@m4 em8 |
   b=,8 bm!4 bm8 b bm4 bm8 |

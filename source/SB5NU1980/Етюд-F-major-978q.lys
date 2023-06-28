@@ -1,46 +1,46 @@
 {% from "util.lys" import v2 %}
 
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   {{ a }} <c f a> <a c f> |
   <bes= d>4 <bes d f> <bes d g> |
   <c=' f a>4-> <a c f> <c=' f a> |
 {% endmacro %}
 
-{% macro rhFrag2(a) %}
+{% macro rh2(a) %}
   {{ a }} <g c e> <c e g> |
   <g=' b d>4 4 4 |
 {% endmacro %}
 
-{% macro rhFrag3(a) %}
-  {{ rhFrag2("<c='' e g>4\\ff") }}
-  {{ rhFrag2("<c='' e g>4") }}
+{% macro rh3(a) %}
+  {{ rh2("<c='' e g>4\\ff") }}
+  {{ rh2("<c='' e g>4") }}
   <f=' a d>4 {{ a }} 4 4 |
 {% endmacro %}
 
-{% macro rhFrag4(a, b) %}
-  {{ rhFrag1(a) }}
+{% macro rh4(a, b) %}
+  {{ rh1(a) }}
   <c=' e g>4-> <g c e> <c e g> |
   <a= c f>4-> <a c> {{ b }} \af 4\! <a c d> |
   <a= c e>4\mf 4 4 |
   {{ v2("<d'=' f>4( <c e> <b= d>)", "gis=2.") }}
   <a= c e a>4\< <a c e> \af 4\! a-> |
-  {{ rhFrag1("<f'=' a c>4->\\f") }}
+  {{ rh1("<f'=' a c>4->\\f") }}
   <e=' gis b>4-> <b e gis> <e=' gis b> |
 {% endmacro %}
 
-{% macro rhFrag5() %}
+{% macro rh5() %}
   r4\f <c=' e g>4 4 | 2 r4 |
   r4 <b= e g>4 4 | 4 <g b e> <f b d> |
   r4\mp <e= g c>4 4 | r4 <d'=' f g>4_\dCre 4 |
 {% endmacro %}
 
-{% macro rhFrag6(a) %}
+{% macro rh6(a) %}
   {{ a }} r r |
   r4 <b= e g>4_\dCre 4 |
   <b= e gis>4 r r | r4 4 4 |
 {% endmacro %}
 
-{% macro lhFrag1() %}
+{% macro lh1() %}
   \repeat unfold 2 {
     c=8 r cM! r cM r |
     g=,8 r gM! r gM r |
@@ -48,7 +48,7 @@
   d'=8 r dm! r dm r |
 {% endmacro %}
 
-{% macro lhFrag2(a, b) %}
+{% macro lh2(a, b) %}
   {{ a }} r fM! r fM r |
   bes=,8 r besM! r besM r |
   f=,8 r fM! r fM r |
@@ -70,20 +70,20 @@
 \relative {
   \repeat segno 2 {
     \volta 1
-    {{ rhFrag4("<f'=' a c>4->\\f", "\\>") }}
+    {{ rh4("<f'=' a c>4->\\f", "\\>") }}
     <e=' a c>4-> <c e a> <e a c> |
     <fis=' a>4\< <fis a c> \af 4\! <fis a d> |
     <g=' b e>4 <e g b> <g b e> |
     <b=' f' g>4 <g b d> <b f' g> |
-    {{ rhFrag3("\\sf") }}
+    {{ rh3("\\sf") }}
     a='4\mf <e a c> <f a d> |
     <a=' c e>4_\dCre 4 4 |
     <gis=' b e>4 4 4 |
-    {{ rhFrag3("_\\dCre") }}
+    {{ rh3("_\\dCre") }}
     <a=' c dis>4 4 4 |
     <a=' c e>4\f 4_\dDim <gis b e> |
     <gis=' b e>4 <g bes e>4 4 |
-    {{ rhFrag4("<f=' a c>4->\\mp", "\\<") }}
+    {{ rh4("<f=' a c>4->\\mp", "\\<") }}
     <e=' a c>4_\dCre <c e a> <e bes' c> |
     <c=' e g>4 <f a c> <c f a> |
     <g'=' bes c>4 <g bes d> <g bes e> |
@@ -92,15 +92,15 @@
     \volta 2
     \key c \major
     \repeat volta 2 {
-      {{ rhFrag5() }}
+      {{ rh5() }}
       r4 <c=' f g>4 4 | r4 <b d g>4 4 |
-      {{ rhFrag5() }}
+      {{ rh5() }}
       <c=' e a>4^\tRit 4 4 | <b= e gis>2.\mf |
     }
-    {{ rhFrag6("<b= e g>4\\p^\\tATem") }}
+    {{ rh6("<b= e g>4\\p^\\tATem") }}
     <c=' e a>4\mf r r | <b e g>_\dDim r r |
     <a= e' fis>4 r r | <g b e> r r |
-    {{ rhFrag6("<b= e g>4\\p") }}
+    {{ rh6("<b= e g>4\\p") }}
     <c=' e a>2 r4 | r4 4 4 |
     <c=' g' bes c>2.~\sf | 4 c'='' c \bar "||"
     \keyChangeBeforeBar \key f \major
@@ -112,19 +112,19 @@
 \clef bass
 \key f \major
 \relative {
-  {{ lhFrag2("f,=,8-\\stBass", "c7") }}
+  {{ lh2("f,=,8-\\stBass", "c7") }}
   a,=,8 r am! r am r |
   e'=8 r a,@m! r8 am r |
   e=8 r em! r em r |
   d=8 r g,@7! r8 g7 r |
-  {{ lhFrag1() }}
+  {{ lh1() }}
   a=,8 r am! r d r |
   a=,8 r am! r am r |
   e'=8 r eM! r eM r |
-  {{ lhFrag1() }}
+  {{ lh1() }}
   f,=,8 r fM! r fM r |
   e'=4 e d | d c c |
-  {{ lhFrag2("f,=,8", "cM") }}
+  {{ lh2("f,=,8", "cM") }}
   a,=,8 r am! r g r |
   c@7!8 r8 f r fM! r8 |
   c'=8 r c7! r c7 r |

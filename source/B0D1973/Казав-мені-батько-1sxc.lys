@@ -1,4 +1,4 @@
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   e='8-. g-. d-. d-. | e-. e-. f4 |
   e='8-. g-. d-. d-. | c4 {{ a }} | %
 {% endmacro %}
@@ -11,8 +11,8 @@
 \relative {
   c'='8-.\mf c-. e-. f-. | g4 g |
   a='8-. a-. a-. a-. | g4 g4 |
-  {{ rhFrag1("g'='4") }}
-  {{ rhFrag1("c='4") }} \bar "|."
+  {{ rh1("g'='4") }}
+  {{ rh1("c='4") }} \bar "|."
 }
 {% endmacro %}
 

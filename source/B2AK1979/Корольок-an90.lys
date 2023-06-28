@@ -1,11 +1,11 @@
 {% from "util.lys" import v2 %}
 
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   {{ a }} <b d>-. <g b>-. <b d>-. | <c e>( <b d>) <a c>-. <g b>-. |
   {{ v2("a'='8-. d-. d16( c b a | g='4)", "fis'='8-. 8-. 4 | s4") }}
 {% endmacro %}
 
-{% macro rhFrag2(a, b) %}
+{% macro rh2(a, b) %}
   {{ a }} <g b>-. <e g>-. <g b>-. | <a c>( <g b>) <fis a>-. <e g>-. |
   {{ v2("fis'='8-. b-. b16( a g fis | " + b, "dis'='8-. 8-. 4 | s4") }}
 {% endmacro %}
@@ -16,11 +16,11 @@
 \key g \major
 \time 2/4
 \relative {
-  {{ rhFrag1("<g'=' b>8-.\\f") }} g4 |
-  {{ rhFrag1("<g=' b>8-.") }} g8 r |
+  {{ rh1("<g'=' b>8-.\\f") }} g4 |
+  {{ rh1("<g=' b>8-.") }} g8 r |
 
-  {{ rhFrag2("<e=' g>8-.\\p", "e='4)") }} e4 |
-  {{ rhFrag2("<e=' g>8-.", "e='8) 8") }} e='4 \bar "|."
+  {{ rh2("<e=' g>8-.\\p", "e='4)") }} e4 |
+  {{ rh2("<e=' g>8-.", "e='8) 8") }} e='4 \bar "|."
 }
 {% endmacro %}
 

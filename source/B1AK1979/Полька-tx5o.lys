@@ -1,14 +1,14 @@
-{% macro rhFrag1() %}
+{% macro rh1() %}
   d=''4-- f-- | f8(-> e)-. e16( f e8)-. |
   e=''8(-> d)-. d16( e d=''8)-. |
 {% endmacro %}
 
-{% macro lhFrag1(a, b) %}
+{% macro lh1(a, b) %}
   {{ a }} cM! g g7! | c cM! c cM |
   g=,8 g7! g g7 | c cM! {{ b }} | %
 {% endmacro %}
 
-{% macro lhFrag2(a) %}
+{% macro lh2(a) %}
   g=,8 g7! g g7 | c cM! c cM |
   g=,8 g7! g g7 | c cM! {{ a }} | %
 {% endmacro %}
@@ -24,8 +24,8 @@
   c=''16( d e8)-. d16( e f8)-. | g8-. g-. e4-- |
   f=''8-. f16( e d8) e16( d | c8) e-. c='' r |
 
-  {{ rhFrag1() }} | d8(-> c)-. c16( d c8)-. |
-  {{ rhFrag1() }} | c-. e-. c='' r \bar "|."
+  {{ rh1() }} | d8(-> c)-. c16( d c8)-. |
+  {{ rh1() }} | c-. e-. c='' r \bar "|."
 
 }
 {% endmacro %}
@@ -34,10 +34,10 @@
 \clef bass
 \key c \major
 \relative {
-  {{ lhFrag1("c=8-\\stBass", "c= cM") }}
-  {{ lhFrag1("c=8", "c= r") }}
+  {{ lh1("c=8-\\stBass", "c= cM") }}
+  {{ lh1("c=8", "c= r") }}
 
-  {{ lhFrag2("c=8 cM") }}
-  {{ lhFrag2("c=8 r") }}
+  {{ lh2("c=8 cM") }}
+  {{ lh2("c=8 r") }}
 }
 {% endmacro %}

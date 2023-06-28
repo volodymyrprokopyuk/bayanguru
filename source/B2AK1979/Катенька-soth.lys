@@ -1,25 +1,25 @@
 {% from "util.lys" import momentBeat, shapedSlur %}
 
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   g='8-.\mp\< bes-. ees-. \af 8\! g-. |
   f=''8-. d-. bes-. aes-. |
   g='8-. bes-. ees-. g-. | f4 r8 {{ a }} | %
 {% endmacro %}
 
-{% macro rhFrag2(a, b) %}
+{% macro rh2(a, b) %}
   {{ a }} <a ees' f> <a ees' g> <a ees' f> |
   <bes=' d g>8 <bes d f> <bes d g> <bes d f> |
   <a=' ees' g>8\< <a ees' f> <a ees' g> \af 8\! {{ b }} | %
 {% endmacro %}
 
-{% macro lhFrag1(a) %}
+{% macro lh1(a) %}
   {{ a }} eesM! g, ees@M |
   bes=,8 bes7! d bes,@7 |
   ees=8 eesM! g, ees@M |
   bes=,8 bes7! bes bes7 |
 {% endmacro %}
 
-{% macro lhFrag2() %}
+{% macro lh2() %}
   c=8 f,@7! f,8 f7 |
   bes=,8 besM! f bes,@M |
   c'=8 f,@7! f,8 f7 |
@@ -33,7 +33,7 @@
 \relative {
   {{ momentBeat("1/2", "#'(1)") }}
   \partial 8 { bes'='8-. | }
-  {{ rhFrag1("bes,='8-.") }}
+  {{ rh1("bes,='8-.") }}
   a='8-. g'-. f-. ees-. | d-. f-. bes,-. d-. |
   c=''8-. ees-. g,-. a-. | bes4 r8 bes='8-. |
 
@@ -46,10 +46,10 @@
   a='16( c ees g f8[)-. a,]-. |
   bes='4\> r8 \af 8\! bes='-. |
 
-  {{ rhFrag1("f=''8-.") }}
-  {{ rhFrag2("<a,=' ees' g>8", "<a=' ees' f>") }}
+  {{ rh1("f=''8-.") }}
+  {{ rh2("<a,=' ees' g>8", "<a=' ees' f>") }}
   bes='4 r8 f'-. |
-  {{ rhFrag2("<a,=' ees' g>8\\mf", "<a=' ees' a>") }}
+  {{ rh2("<a,=' ees' g>8\\mf", "<a=' ees' a>") }}
   <bes=' d f bes>4\f r8 \bar "|."
 }
 {% endmacro %}
@@ -59,16 +59,16 @@
 \key ees \major
 \relative {
   \partial 8 { r8 | }
-  {{ lhFrag1("ees=8-\\stBass") }}
-  {{ lhFrag2() }}
+  {{ lh1("ees=8-\\stBass") }}
+  {{ lh2() }}
   bes=,8 besM! besM r |
-  {{ lhFrag1("ees=8") }}
-  {{ lhFrag2() }}
+  {{ lh1("ees=8") }}
+  {{ lh2() }}
   bes=,4 besM!8 r |
-  {{ lhFrag1("ees=8") }}
-  {{ lhFrag2() }}
+  {{ lh1("ees=8") }}
+  {{ lh2() }}
   bes=,8 besM! bes besM |
-  {{ lhFrag2() }}
+  {{ lh2() }}
   bes=,4 besM!8 %
 }
 {% endmacro %}

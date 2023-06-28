@@ -1,4 +1,4 @@
-{% macro rhFrag1(a, b) %}
+{% macro rh1(a, b) %}
   \repeat volta 2 {
     {{ a }} <g b>8. <fis a>16 |
     {{ b }} <b d>8 <a c> |
@@ -12,7 +12,7 @@
   }
 {% endmacro %}
 
-{% macro lhFrag1(a, b) %}
+{% macro lh1(a, b) %}
   {{ a }} em! a, am! |
   e'=8 em! e em |
   b=,8 b7! e em! | b b7! {{ b }} | %
@@ -24,9 +24,9 @@
 \key e \minor
 \time 2/4
 \relative {
-  {{ rhFrag1("<g'=' b>4\\mf", "<g=' b>16 e g b") }} \bar "||"
-  {{ rhFrag1("<g=' b>4", "<g=' b>16 e <g b>8") }} \bar "||"
-  {{ rhFrag1("<g=' b>8 16 e16", "<g=' b>16 e <g b>8") }} \bar "|."
+  {{ rh1("<g'=' b>4\\mf", "<g=' b>16 e g b") }} \bar "||"
+  {{ rh1("<g=' b>4", "<g=' b>16 e <g b>8") }} \bar "||"
+  {{ rh1("<g=' b>8 16 e16", "<g=' b>16 e <g b>8") }} \bar "|."
 }
 {% endmacro %}
 
@@ -34,8 +34,8 @@
 \clef bass
 \key e \minor
 \relative {
-  {{ lhFrag1("e=8-\\stBass em! b b7! | e", "e= em!") }}
-  {{ lhFrag1("e=8 em! b b7! | e", "e= em!") }}
-  {{ lhFrag1("e=8 em! a, am! | e'", "e,+em!4") }}
+  {{ lh1("e=8-\\stBass em! b b7! | e", "e= em!") }}
+  {{ lh1("e=8 em! b b7! | e", "e= em!") }}
+  {{ lh1("e=8 em! a, am! | e'", "e,+em!4") }}
 }
 {% endmacro %}

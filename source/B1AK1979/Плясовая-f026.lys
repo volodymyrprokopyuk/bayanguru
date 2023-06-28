@@ -1,11 +1,11 @@
 {% from "util.lys" import momentBeat %}
 
-{% macro lhFrag1(a) %}
+{% macro lh1(a) %}
   {{ a }} gM! d' g,@M | g,8 gM! d' g,@M |
   a=,8 d@7! d=8 d7 |
 {% endmacro %}
 
-{% macro lhFrag2(a) %}
+{% macro lh2(a) %}
   {{ a }} dM! dis b,@7! | e8 em! g, e@m |
   a=,8 a7! cis= a,@7 |
 {% endmacro %}
@@ -43,10 +43,10 @@
 \clef bass
 \key g \major
 \relative {
-  {{ lhFrag1("g,=,8-\\stBass") }} | g,8 gM! d' g,@M |
-  {{ lhFrag1("g,=,8") }} | g,8 d' g,=,4 |
+  {{ lh1("g,=,8-\\stBass") }} | g,8 gM! d' g,@M |
+  {{ lh1("g,=,8") }} | g,8 d' g,=,4 |
 
-  {{ lhFrag2("d'=8") }} | d8 dM! fis d@M |
-  {{ lhFrag2("d=8") }} | d=8 dM! d,+dM4 |
+  {{ lh2("d'=8") }} | d8 dM! fis d@M |
+  {{ lh2("d=8") }} | d=8 dM! d,+dM4 |
 }
 {% endmacro %}

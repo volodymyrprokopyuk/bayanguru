@@ -1,4 +1,4 @@
-{% macro rhFrag1(a) %}
+{% macro rh1(a) %}
   {{ a }} b' a c | b4 a8 g\) |
   fis='8( a g4) | fis8( fis e='4) |
 {% endmacro %}
@@ -9,8 +9,8 @@
 \key e \minor
 \time 2/4
 \relative {
-  {{ rhFrag1("e'='8\\(\\p") }}
-  {{ rhFrag1("e='8\\(") }} \bar "|."
+  {{ rh1("e'='8\\(\\p") }}
+  {{ rh1("e='8\\(") }} \bar "|."
 }
 {% endmacro %}
 
