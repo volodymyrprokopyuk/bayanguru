@@ -4,8 +4,8 @@ import { reFromParts } from "./util.js"
 
 const reOctaveCheck = reFromParts(
   "mg",
-  // Line beginning ..., \command [x] { ... }, r/lhFragN("..."), tN("...")
-  /(^ +|\\\w+ (?:\S+ )?\{ |[rl]hFrag\d+\("|t\d\(")/,
+  // Line beginning ..., \command [x] { ... }, r/lhN("..."), v2("..."), tN("...")
+  /(^ +|\\\w+ (?:\S+ )?\{ |[rl]h\d+\("|v2\("|t\d\(")/,
   // First note or chord
   /(<?[a-g](?:is|es){0,2}[,']*)(.)(.*)/
 )
@@ -110,7 +110,7 @@ function lintNoteComponentOrder(content, logs) {
   )) {
     // remove chord end ...>
     const m = note.replace(/(?<![-\\])>/, "")
-      // remove r/lhFragN param ending
+      // remove r/lhN param ending
       .replace(/"[,\)]/, "").match(reNoteComponents)
     if (!m) {
       logs.push(chalk.red(note))
