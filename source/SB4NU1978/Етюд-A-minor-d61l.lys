@@ -12,6 +12,9 @@
       {{ momentBeat("1/2", "#'(1)", "Voice") }}
       a'='8\p a gis a | c b b b | b b e d | d c c c |
       e=''8_\dCre e a g | g f f e | dis dis dis dis | dis e d b=' |
+
+      a='8 a gis a | c b b b_\dCre | b b e d | d c c e |
+      a=''8 c b a | g f e d | c c c b | a a aes g=' |
     }
     \new Voice = voiceTwo \relative {
       \voiceTwo
@@ -24,6 +27,15 @@
       g'=''32 a, d a f' a, d a f' a, d a e' a, c a |
       \repeat unfold 4 { dis=''32 a c a=' } | %
       dis=''32 a c a e' gis, b gis d'\> gis, b \af 64.\! gis b d, gis d=' |
+
+      a'='32\p c, e c a' c, e c gis' d e d a' c, e c |
+      c'=''32 e, a e \repeat unfold 3 { b'='32 e, gis e=' } | %
+      b'='32 e, gis e b' e, gis e e' gis, b gis d' gis, b gis |
+      d'=''32 e, a e c' e, a e c' e, a e e' a, c a |
+      a'=''32 c, e c c' e, a e b' d, e d a' c, e c |
+      g'=''32 a, d a f' a, d a e'\> f, b f d' f, b \af 32\! f |
+      c'=''32 e, a e c'\< e, a \af 64.\! e c' d, gis\> d b' d, gis \af 32\! d |
+      a'='32 c, e c a' c, e c aes'\> d, f d g d g \af 32\! f=' |
     }
   >>
 }
@@ -35,5 +47,13 @@
 \relative {
   {{ momentBeat("1/2", "#'(1)") }}
   a,=,8-\stBass am! am am | e' eM! eM eM |
+  e=8 e7! e7 e7 | a, am! am am |
+  a=,8 am! am am | d dm! d e |
+  f=8 f7! f7 f7 | e= e7! e7 e7 |
+
+  a,=,8 am! b a | e' eM! eM eM |
+  e=8 e7! e7 e7 | a, am! am am |
+  a=,8 am! gis a | d dm! dm dm |
+  e=8[ a,@m! e8 e7!] | a, am! b=, g,@7! |
 }
 {% endmacro %}
