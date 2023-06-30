@@ -206,13 +206,13 @@ pieces:
       org: ukr, sty: flk, gnr: sng, ton: [gj, ei], frm: [mel, in3], bss: stb, lvl: elb }
   - { id: oz96, tit: Сумна пісенька,
       com: К. Мясков, src: B2AK1979,
-      org: ukr, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: elb }
+      org: ukr, sty: aut, gnr: chd, ton: gi, frm: [mel, jmp], bss: stb, lvl: elb }
   - { id: zieh, tit: Жартівлива пісенька,
       com: К. Мясков, src: B2AK1979,
-      org: ukr, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: elb }
+      org: ukr, sty: aut, gnr: chd, ton: fj, frm: [mel, in3], bss: stb, lvl: elb }
   - { id: n7lg, tit: На жовтневе свято,
       com: А. Штогаренко, src: B2AK1979,
-      org: ukr, sty: msc, gnr: pie, frm: var, bss: stb, lvl: elb }
+      org: ukr, sty: aut, gnr: pie, ton: dj, frm: [var cr5], bss: [stb, pub, rep], lvl: elb }
   - { id: ohmw, tit: Вальс,
       com: М. Чайкін, src: B2AK1979,
       org: ukr, sty: msc, gnr: vls, frm: mel, bss: stb, lvl: elb }
