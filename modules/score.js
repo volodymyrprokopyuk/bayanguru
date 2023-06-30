@@ -73,7 +73,7 @@ function nunjucks() {
   const { Environment, FileSystemLoader } = njk
   const env = new Environment(
     ["source", "source/template"].map(dir => new FileSystemLoader(dir)),
-    { autoescape: false }
+    { autoescape: false, tags: { commentStart: "<#", commentEnd: "#>" } }
   )
   env.addFilter("stradella", stradella)
   env.addFilter("join", (x, sep) => Array.isArray(x) ? x.join(sep) : x)
