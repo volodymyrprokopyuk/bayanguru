@@ -10,8 +10,7 @@
 {% macro lh1(a) %}
   {{ a }} dm | d( dm) dm |
   cis=4( a,@M!) aM4 | cis( a,@M) aM4 |
-  d=4( dm!) dm | g,( gm!) gm |
-  a=,4( a7!) a7 |
+  d=4( dm!) dm | g,( gm!) gm | a=,( a7!) a7 |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -33,10 +32,8 @@
       }
     }
 
-    c='8(\mf d c e f g | a2.) |
-    bes='8( a g4) a | c2. |
-    c,='8( d c e f g | a2.) |
-    bes='8( a g4 e | \af 2.\! a2.)\> |
+    c='8(\mf d c e f g | a2.) | bes8( a g4) a | c2. |
+    c,='8( d c e f g | a2.) | bes8( a g4 e | \af 2.\! a2.)\> |
     {{ rh1("<f=' a>8(\\p") }} | d4) <d=' f d'>2 \fine |
 
     \volta 2
@@ -63,7 +60,7 @@
 \clef bass
 \key d \minor
 \relative {
-  {{ lh1("d=4(-\\stBass dm!)") }} | d=( dm!) dm |
+  {{ lh1("d=4(-\\stBass dm!)") }} | d( dm!) dm |
   {{ v2("r4 dm!", "d=2") }} r4 |
 
   g,=,4 c@7! c74 | f fM! fM |

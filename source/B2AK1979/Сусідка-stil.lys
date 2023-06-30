@@ -23,7 +23,7 @@
     <e=' a c>4\mp 4 | <e a d>4 <e a c> |
     <f=' a c>8 <f a b>4 8 | 8 8 4 |
     <e=' gis b>4 <gis b f'> | <gis b e>4 <d e gis> |
-    <c=' e b'>8 <c e a>4 8 | 8 8 4 |
+    <c=' e b'>8 <c=' e a>4 8 | 8 8 4 |
   }
 }
 {% endmacro %}
@@ -44,9 +44,7 @@
 
   {{ momentBeat("1/4", "1,1") }}
   c=8 cM! c cM | c cM c cM |
-  \rep 2 {
-    g=,8 gM! g gM | g gM g gM |
-  }
+  \rep 2 { g=,8 gM! g gM | g=, gM g gM | }
   c=8 cM! c cM | c cM c cM |
   a=,8 am! a am | a am a am |
   d=8 dm! d dm | d dm d dm |
