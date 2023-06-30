@@ -18,7 +18,7 @@
   a,=,8-\stBass am! am am | d dm! dm dm |
   a=,8 am! am am | d dm! dm dm |
   c=8 a,@m! am8 am | e e7! e7 e7 |
-  \repeat unfold 2 { a,=,8 am! am am | }
+  \rep 2 { a,=,8 am! am am | }
   c=8 a,@m! am8 am | d dm! dm dm |
   a=,8 am! am am | f d@m! dm8 dm |
   c'=8 a,@m! am8 am | d dm! dm dm |

@@ -23,7 +23,7 @@
   g=,8 e@m! b8 b7! | e em! fis, d@7! |
   g=,8 gM!4 gM8 | g a,@m!4 g,@M!8 |
   a=,8 am! b b7! | e em! a, am! |
-  \repeat unfold 2 { b=,8 a,@m!4 b,@7!8 | }
+  \rep 2 { b=,8 a,@m!4 b,@7!8 | }
   e=8 em!4 em8 |
 }
 {% endmacro %}

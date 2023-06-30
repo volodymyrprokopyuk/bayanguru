@@ -33,7 +33,7 @@
 \relative {
   d=4(-\stBass dm!) dm | f,( d@m!) dm4 |
   e'=4_\aSim a,@7! a74 |
-  \repeat unfold 2 { d=4 dm! dm | }
+  \rep 2 { d=4 dm! dm | }
   e=4 c@7! c74 | c c7! c7 |
   f,=,4 fM! fM |
   {{ lh1("e'=4") }} | d=4 dm! dm |

@@ -57,14 +57,14 @@
   e=4-\stBass em!8 b4 e@m8 b4 bM!8 |
   e=4 em!8 g,4 e@m8 b4 e@m8 |
   e=4 em!8 b4 e@m8 |
-  \repeat unfold 2 { dis=4 b,@7!8 b=,4 b78 | }
+  \rep 2 { dis=4 b,@7!8 b=,4 b78 | }
   fis=,4 b,@7!8 b=,4 b78 |
   dis=4 b,@7!8 b=,4 b78 |
   e=4 em!8 b4 e@m8 | e4 em!8 b4 bM!8 |
   e=4 em!8 g,4 e@m8 | gis4 e@7!8 e'4 e78 |
   a,=,4 am!8 e'4 a,@m8 | a,4 am!8 c4 a,@m8 |
   g=,4 e@m!8 e'4 em8 | b2. |
-  \repeat unfold 2 {
+  \rep 2 {
     b=,4 b7!8 b74 b8 a g fis=, |
   }
   e'=4 em!8 g,4 e@m8 b4 bM!8 |

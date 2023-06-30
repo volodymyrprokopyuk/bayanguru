@@ -65,11 +65,11 @@
 \relative {
   {{ momentBeat("1/4", "1,1,1,1") }}
   r8 a,@M! r8 d@M! r8 a,@M! r8 d@M! |
-  \repeat unfold 2 {
+  \rep 2 {
     a,=,8 aM! e' e7! a, aM! e' e7! |
     a,=,8 aM! e' e7! {{ lh1() }}
   }
-  \repeat unfold 2 {
+  \rep 2 {
     a,=,8 aM! e' e7! a, aM! d dM! |
   }
   a=,8 aM! e' e7! {{ lh1() }}

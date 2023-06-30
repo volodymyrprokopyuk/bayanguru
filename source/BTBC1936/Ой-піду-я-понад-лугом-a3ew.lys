@@ -22,7 +22,7 @@
 \key f \major
 \relative {
   f,=,8-\stBass fM! f fM | bes besM! c c7! |
-  \repeat unfold 2 { a=,8 f,@M! f8 fM | }
+  \rep 2 { a=,8 f,@M! f8 fM | }
   d'=8 dm! d dm | g, gm! g gm |
   a=,8 d@m! a8 a7! | d dm! dm4 |
   d=8 dm! d,+dm4 |

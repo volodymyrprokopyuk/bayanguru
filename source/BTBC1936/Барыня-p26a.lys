@@ -89,7 +89,7 @@
       \volta 1 {
         {{ rh5() }}
         {{ v2("<g'=' c>4->", "e'='4->") }}
-        \repeat unfold 3 { {{ rh6() }} }
+        \rep 3 { {{ rh6() }} }
         g='8 b16( d) d,8 e16( fis) |
         g='8 a16( b) <e,=' g c>8 r |
       }
@@ -119,7 +119,7 @@
   d'=8 g,@7! c8 cM! | g g7! r g7 |
   d'=8 g,@7! c=8 r |
 
-  \repeat unfold 2 {
+  \rep 2 {
     d=8 g,@7! g,8 g7 | d' g,@7! c8 cM! |
   }
   g=,8 g7! b g,@7 | d8 g,@7! c8 cM! |
@@ -143,7 +143,7 @@
     }
   >>
 
-  \repeat unfold 3 {
+  \rep 3 {
     g=,8 gM! c d@M! | b8 g,@M! a8 d |
   }
   g,=,8 gM! c d@M! | b8 g c r |

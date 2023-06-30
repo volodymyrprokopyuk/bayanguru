@@ -30,11 +30,11 @@
 \key f \major
 \relative {
   f,=,8-\stBass fM! fM |
-  \repeat unfold 2 { f=,8 fM fM | f fM! fM | }
+  \rep 2 { f=,8 fM fM | f fM! fM | }
   f=,8 fM fM |
   g=,8[ c@7! c78] | g[ c@7 c78] |
 
-  \repeat unfold 3 {
+  \rep 3 {
     e'=8[ c@7! c78] | e[ c@7 c78] |
   }
   f,=,8 fM! fM | f fM fM |

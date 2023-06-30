@@ -6,7 +6,7 @@
 {% endmacro %}
 
 {% macro rh2() %}
-  \repeat unfold 2 { r16 <g'=' c>16[ r <g=' c>] } | <g=' c>8 s4. |
+  \rep 2 { r16 <g'=' c>16[ r <g=' c>] } | <g=' c>8 s4. |
 {% endmacro %}
 
 {% macro rh3() %}
@@ -63,7 +63,7 @@
       \voiceTwo
       {{ rh2() }}
       <c,=' f>8 r r16 <c f>16[ r <c f>] | <c=' f>8 s4. |
-      \repeat unfold 2 { r16 <f=' b>16[ r <f b>] } | <f=' b>8 s4. |
+      \rep 2 { r16 <f=' b>16[ r <f b>] } | <f=' b>8 s4. |
       r16 <g,= c>8 16 r <g c>[ r <g c>] | <g c>8 s4. |
       {{ rh2() }}
       <c,=' f>8 r r16 <c f>16[ r <c f>] | <c=' f>8 %
@@ -133,8 +133,8 @@
   <<
     \new Voice = voiceOne \relative {
       \voiceOne
-      \repeat unfold 2 { besM!8 besM besM besM | }
-      \repeat unfold 2 { eesM!8 eesM ees@M[ eesM8] | }
+      \rep 2 { besM!8 besM besM besM | }
+      \rep 2 { eesM!8 eesM ees@M[ eesM8] | }
       f,@m!8[ fm8] f,@m8[ fm8] | d@7![ d78] d7 d7 |
     }
     \new Voice = voiceTwo \relative {

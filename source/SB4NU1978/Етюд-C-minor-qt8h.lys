@@ -91,7 +91,7 @@
   c=8 r cm! r cm r c=4 |
 
   ees=8 r eesM! r ees r eesM r |
-  \repeat unfold 2 {
+  \rep 2 {
     bes=,8 r bes7! r f r bes,@7 r8 |
   }
   ees'=8 r eesM! r d r g,@7! r8 |

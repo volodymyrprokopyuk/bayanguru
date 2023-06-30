@@ -44,8 +44,7 @@
   g,,+gM!8-. g,,+gM-. g,,+gM4-- |
   {{ lh1() }}
 
-  \repeat unfold 3 { g,@M!4 c@M!4 }
-  g,@M!8[-. gM8]-. gM4-- |
+  \rep 3 { g,@M!4 c@M!4 | } g,@M!8[-. gM8]-. gM4-- |
   {{ lh1() }}
 }
 {% endmacro %}

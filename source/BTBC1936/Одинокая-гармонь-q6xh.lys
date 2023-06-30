@@ -32,7 +32,7 @@
 \relative {
   \partial 2 { r4 r | }
   e=4 em! em | b b7! b7 |
-  \repeat unfold 3 { e=4 em! em | }
+  \rep 3 { e=4 em! em | }
   b=,4 b7! b7 |
   {{ lh1() }}
   {{ lh1() }}

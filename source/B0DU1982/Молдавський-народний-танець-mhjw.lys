@@ -10,7 +10,7 @@
 \relative {
   \repeat volta 2 {
     d''=''4\mf c8 b |
-    \repeat unfold 2 { d,='16( g b d c8) b | }
+    \rep 2 { d,='16( g b d c8) b | }
     d=''8 b a g=' |
   }
   \repeat volta 2 {
@@ -31,7 +31,7 @@
 \relative {
   {{ lh1("g,=,8-\\stBass") }}
   {{ lh1("g,=,8") }}
-  \repeat unfold 2 { d=8 d7! d d7 | g, gm! g=, gm | }
+  \rep 2 { d=8 d7! d d7 | g, gm! g=, gm | }
   g=,8 gm! g,,+gm r |
 }
 {% endmacro %}

@@ -35,7 +35,7 @@
 \key fis \minor
 \relative {
   fis,=,8-\stBass fism! fis fism |
-  \repeat unfold 2 { fis=,8 fism fis fism | }
+  \rep 2 { fis=,8 fism fis fism | }
   cis'=8 cisM! gis cis@7! |
   cis=8 cis7! cis cis7 |
   gis=,8 cis@7! cis8 cis7 |
@@ -47,7 +47,7 @@
   fis=,8 fism! fis fism |
   {{ lh1("cisM") }}
   fis,=,8 fism! cis' fis@m |
-  \repeat unfold 2 { a=,8 aM! d dM! | }
+  \rep 2 { a=,8 aM! d dM! | }
   b=,8 bm! fis b,@m |
   fis=,8 fism! fis fism |
   {{ lh1("cis7") }}

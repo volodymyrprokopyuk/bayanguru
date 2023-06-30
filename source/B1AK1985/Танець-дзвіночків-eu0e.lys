@@ -35,6 +35,6 @@
   {{ lh1("ees=4-\\stBass") }}
   {{ lh1("ees=4") }}
 
-  \repeat unfold 2 { c=4 cm! | c cm | g g7! | c= cm! | }
+  \rep 2 { c=4 cm! | c cm | g g7! | c= cm! | }
 }
 {% endmacro %}

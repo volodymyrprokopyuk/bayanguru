@@ -62,12 +62,12 @@
   f,+d@m!4 e,+a,@m!4 | d,+dm! r8 f,+d@m! |
   g,,+c@M!4 g=,8 g7! | c,+cM![ c,+f@M!] c,+cM!8 r8 |
 
-  \repeat unfold 2 {
+  \rep 2 {
     c@M!4 c@7!8[ c78] | c@M!4 r4 |
   }
   f,+f7!4 f,+f78 f,+f7 | f,+f74 r |
   f,+f7!4 f,+f78 f,+f7 | f,+f74~ f,+f78 r |
-  \repeat unfold 2 {
+  \rep 2 {
     e,+c@M!4 r8 f,+fM! | e,+c@M!4 d,+g,@7!4 |
   }
   e,+a,@m!4 r4 | e,+e7! r |

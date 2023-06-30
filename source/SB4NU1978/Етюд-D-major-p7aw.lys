@@ -5,7 +5,7 @@
 
 {% macro rh2(a) %}
   {{ rh1(a) }}
-  \repeat unfold 2 {  a='16( d cis d e d cis d) }
+  \rep 2 {  a='16( d cis d e d cis d) } | %
   cis=''16( e d cis b d cis b=' %
 {% endmacro %}
 
@@ -63,7 +63,7 @@
   {{ lh1("d=8") }}
   d=8 r dM! r g, r e@m! r8 |
   a,,+a7!8 r a,,+a7 r d@M! r8 a=,4 |
-  \repeat unfold 3 {
+  \rep 3 {
     a,@7!8 r8 a=,4 d@M!8 r8 a=,4 |
   }
   a,@7!8 r8 a=,4 d@M!8 r8 r4 |

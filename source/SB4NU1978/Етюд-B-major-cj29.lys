@@ -22,7 +22,7 @@
 {% macro lh1(a) %}
   {{ a }} r bM!] r fis@M! r8 |
   b=,8[ r bM!] r fis@M! r8 |
-  \repeat unfold 2 { b=,8 r r bM! r r | }
+  \rep 2 { b=,8 r r bM! r r | }
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -115,7 +115,7 @@
   b=,8 r r bM!4 r8 |
 
   gis=,8 r r gism! r r |
-  \repeat unfold 2 { gis=,8 r r dis@M! r8 r | }
+  \rep 2 { gis=,8 r r dis@M! r8 r | }
   gis=,8 r r gism! r r |
   gis=,8 r r cis@m! r8 r |
   fis=,8 r r b,@M! r8 r |
@@ -128,8 +128,8 @@
   dis=8 e dis cis( fis,4) \fermata |
 
   {{ lh1("b=,8[") }}
-  \repeat unfold 2 { fis=,8 r r fisM! r r | }
-  \repeat unfold 2 { gis=,8[ r gism!] r dis' r | }
+  \rep 2 { fis=,8 r r fisM! r r | }
+  \rep 2 { gis=,8[ r gism!] r dis' r | }
   gis,=,8 r r gism! r r |
   fis=,8[ r fisM!] b[ r bM!] |
   ais=,8[ r fis@M!] a8[ r b,@M!] |

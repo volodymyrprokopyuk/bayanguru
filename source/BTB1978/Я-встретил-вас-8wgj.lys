@@ -68,7 +68,7 @@
 \clef bass
 \key e \minor
 \relative {
-  e=4-\stBass em! \repeat unfold 2 { e=4 em | }
+  e=4-\stBass em! \rep 2 { e=4 em | }
   {{ lh2("") }}
   {{ lh2("\\fermata") }}
 

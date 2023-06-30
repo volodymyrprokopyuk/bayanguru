@@ -54,6 +54,6 @@
   c=8 cM! cM c cM cM |
   g=,8 gM! f e' e7! e7 |
   a,=,8 am! am gis[ e@7! e78] |
-  \repeat unfold 2 { a=,8 am! am am r r | }
+  \rep 2 { a=,8 am! am am r r | }
 }
 {% endmacro %}

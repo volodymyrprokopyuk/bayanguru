@@ -1,7 +1,7 @@
 {% macro rh1() %}
   a=16(\mf gis a b c8) r a16( gis a b c8) r |
   a=16(\< gis a b c d dis e \af 8\! f8) r r4 |
-  \repeat unfold 2 { b,=16( ais b c d='8) r }
+  \rep 2 { b,=16( ais b c d='8) r } | %
 {% endmacro %}
 
 {% macro rh2(a, b, c) %}
@@ -37,8 +37,8 @@
   a='16(\f gis a b cis8) r d16( cis d e f8) r |
   g,='16( fis g a b8) r c16( b c d e8) r |
   f=''16\( g f e %
-  \repeat unfold 2 { d=''16 e d c }
-  \repeat unfold 2 { b='16 c b a }
+  \rep 2 { d=''16 e d c } %
+  \rep 2 { b='16 c b a } %
   g='16 a g f e f e d c d c b\) |
   a=16( gis a b c8) r_\dDim r2 |
   a=16( gis a b c8) r r2 |

@@ -63,7 +63,7 @@
 \relative {
   c=4(-\stBass c7!)-. c7-. | f,( fM!)-. fM-. |
   c'=4_\aSim c7! c7 | f, fM! fM |
-  \repeat unfold 2 { c'=4 c7! c7 | f, fM! fM | }
+  \rep 2 { c'=4 c7! c7 | f, fM! fM | }
   {{ lh1("f=,4") }} | c c7 c7 |
   {{ lh1("f,=,4") }} | f,=, fM! r |
 

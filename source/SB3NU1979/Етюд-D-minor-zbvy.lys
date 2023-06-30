@@ -28,22 +28,22 @@
     }
     \new Voice = voiceTwo \relative {
       \voiceTwo
-      \repeat unfold 2 { r8 a'='8-. bes-. a-. c( bes) bes-. a-. | }
+      \rep 2 { r8 a'='8-. bes-. a-. c( bes) bes-. a-. | }
       r8 a='8_\aSim bes a c( bes) bes a |
       r8 g='8 a g bes( a) a g | r e f e g( f) f e |
-      \repeat unfold 2 { r8 d='8 e d f( e) e d | }
+      \rep 2 { r8 d='8 e d f( e) e d | }
       r8\< f='8 f \af 16.\! e g(\> f) f \af 8\! e=' |
 
-      \repeat unfold 2 { r8 a='8 bes a c( bes) bes a | }
+      \rep 2 { r8 a='8 bes a c( bes) bes a | }
       r8 c=''8 d c ees( d) d c |
-      \repeat unfold 2 { r8 bes='8 c bes d( c) c bes | }
-      \repeat unfold 2 { r8 d=''8 e d f( e) e d | }
+      \rep 2 { r8 bes='8 c bes d( c) c bes | }
+      \rep 2 { r8 d=''8 e d f( e) e d | }
       r8 e=''8 f e g( f) f e='' |
 
-      \repeat unfold 3 { r8 a=''8 bes a c( bes) bes a | }
+      \rep 3 { r8 a=''8 bes a c( bes) bes a | }
       r8 g=''8 a g bes( a) a g | r f f e g( f) f e |
       r8 e=''8 e d f( e) e d | c( bes) bes e, bes'( a) a cis, |
-      \repeat unfold 2 { e='8( cis) cis d r d( f e) | }
+      \rep 2 { e='8( cis) cis d r d( f e) | }
       e='8( cis) cis d <d=' a'>2 |
     }
   >>

@@ -54,7 +54,7 @@
 
   g,=,16^\aNLeg-\puBass a b c d c b a g a b c d e fis g |
   d,=,16 e fis g a g fis e d fis a d d,=,8-. r |
-  \repeat unfold 2 { d=,16 e fis g a g fis e }
+  \rep 2 { d=,16 e fis g a g fis e } | %
   d=,16 fis a c d c b a g b d g g,=,8-. r |
   fis=,8[-\stBass r b,@7!] r8 fis[ r b,@7] r8 |
   g=,8[ r e@m!] r8 g[ r e@m] r8 |

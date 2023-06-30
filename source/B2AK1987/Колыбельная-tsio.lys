@@ -4,7 +4,7 @@
 
 {% macro lh2(a) %}
   {{ a }} a7! cis a,@7 |
-  \repeat unfold 2 { d=4 dm! f d@m | }
+  \rep 2 { d=4 dm! f d@m | }
 {% endmacro %}
 
 {% macro rightHand() %}

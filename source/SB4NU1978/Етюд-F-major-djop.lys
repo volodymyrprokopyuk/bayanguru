@@ -75,8 +75,8 @@
   bes=,8-- c@M! a8-- f,@M! | g8-- c@7! f8-- fM! |
   a=,8-- ad! bes-- g,@m! | c8-- f,@M! c8-- c7! |
   f,,+fM!8 r f,,+fM! c,+c7! | f,,+fM!8 r f,,+fM! c,+cM! |
-  \repeat unfold 4 { f,,+fM!8 c,+cM! }
-  \repeat unfold 2 { f,,+fM!8 c,+c7! }
+  \rep 4 { f,,+fM!8 c,+cM! } | %
+  \rep 2 { f,,+fM!8 c,+c7! } | %
   f,,+fM!8 f, f=,-> r16 %
 }
 {% endmacro %}

@@ -32,7 +32,7 @@
   d=8-\stBass dm! r dm d dm r dm |
   d=8 dm! r dm d dm r dm |
   c=8 f,@M! r8 fM c c7! r c7 |
-  \repeat unfold 2 {
+  \rep 2 {
     f,=,8 fM! r fM f fM r fM |
   }
   bes=,8 besM! r besM g gm! r gm |

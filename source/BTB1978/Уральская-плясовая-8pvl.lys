@@ -24,12 +24,12 @@
 \key a \major
 \relative {
   e=8-\stBass e7! b e@7 | a8 aM! cis a,@M |
-  \repeat unfold 3 {
+  \rep 3 {
     e=8 e7! b e@7 | a8 aM! cis= a,@M |
   }
 
   \key e \major
-  \repeat unfold 3 {
+  \rep 3 {
     b=,8 b7! fis b,@7 | e'8 eM! gis,=, e@M |
   }
   b=,8 b7! fis b,@7 | e'=8 eM! e,+eM4 |

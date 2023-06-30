@@ -27,8 +27,8 @@
 \key a \minor
 \relative {
   <a,=, e'>4-\puBass r |
-  \repeat unfold 3 { <a=, e'>4 r | }
-  \repeat unfold 3 { <a=, e'>8 r <a=, e'> r | }
+  \rep 3 { <a=, e'>4 r | }
+  \rep 3 { <a=, e'>8 r <a=, e'> r | }
   <a=, e'>8 r <a e'>4 |
   {{ lh1("b=,8-\\stBass") }}
   {{ lh1("b=,8") }}

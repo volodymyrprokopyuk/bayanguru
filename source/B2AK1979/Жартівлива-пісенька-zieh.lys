@@ -40,7 +40,7 @@
   bes=,8 besM! e c@7! f,8 fM! c' f,@M |
   g=,8 gm! c c7! f,,+fM! c= f,,+fM! r |
 
-  \repeat unfold 2 { cis=8 a,@7! a8 a7 d dm! a=, d@m | }
+  \rep 2 { cis=8 a,@7! a8 a7 d dm! a=, d@m | }
   bes=,8 besm! g bes,@m a8 f,@M! f8 bes,@M! |
   g=,8 c@7! c8 c7 f,,+fM!-> c= f,,+fM!-> r |
 }

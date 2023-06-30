@@ -45,13 +45,13 @@
 \key c \minor
 \relative {
   \grace { s16 s s } c,+cm!4 g,=,4-\puBass |
-  \repeat unfold 6 { c=4-> g | }
+  \rep 6 { c=4-> g | }
   c=8-> g-. a-. b-. | c,+cm!4 g=,4 |
-  \repeat unfold 4 { c=4-> g | }
+  \rep 4 { c=4-> g | }
   c=8-> bes aes g |
-  \repeat unfold 2 { c=4-> g | }
-  \repeat unfold 2 { c=4-> g | aes-> ees'= }
-  \repeat unfold 2 { c=4-> g | }
+  \rep 2 { c=4-> g | }
+  \rep 2 { c=4-> g | aes-> ees'= | }
+  \rep 2 { c=4-> g | }
   c=4-> r |
 }
 {% endmacro %}

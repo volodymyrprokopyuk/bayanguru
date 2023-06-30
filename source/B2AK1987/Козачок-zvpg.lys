@@ -92,7 +92,7 @@
   d=8 dM! fis, d@M | g8 gM! b g,@M |
   d=8 dM! fis, d@M | g8 gM! g gM | g=, gM! g,,+gM r |
 
-  \repeat unfold 2 { g=,8 gM! c cM! | g gM! d' d7! | }
+  \rep 2 { g=,8 gM! c cM! | g gM! d' d7! | }
   d,+g,@M!8 d,+d7!8 g,,+gM! r |
 
   g,=,8 gM! d' d7! | g, gM! c cM! |

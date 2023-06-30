@@ -49,7 +49,7 @@
   fis=8 d@7! d8 d7 | g, gM! gis e@7! |
   e'=8 a,@m! e8 e7! | a,=, am! am r |
 
-  \repeat unfold 4 {
+  \rep 4 {
     d=8 g,@7! g,8 g7 | c cM! g=, c@M |
   }
   c=8 cM! cM r |

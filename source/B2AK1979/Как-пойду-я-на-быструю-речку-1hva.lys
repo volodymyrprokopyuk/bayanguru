@@ -66,7 +66,7 @@
   {{ momentBeat("1/4", "1,1,1,1") }}
   \partial 4 { r4 | }
   e=8-\stBass em! em4 c8 a,@m! b8 bM! |
-  \repeat unfold 2 { e=8 em! em em }
+  \rep 2 { e=8 em! em em } | %
   d=8 g,@M! gM4 d8 dM! dM dM |
   g,=,8 gM! gM gM gM4 b8 b7! |
   {{ lh1("em4") }}

@@ -43,7 +43,7 @@
   {{ lh1("fis=8-\\stBass") }}
   g,=,8 gM! fis'( e) | a, a7!4 a78 |
   d=8 d7!4 d78 |
-  \repeat unfold 2 { g,=,8 gM!4 gM8 | c=8 cM!4 dM8 | }
+  \rep 2 { g,=,8 gM!4 gM8 | c=8 cM!4 dM8 | }
   g=,8 gM!4 gM8 |
   {{ lh1("fis'=8") }}
   {{ lh1("fis=8") }}

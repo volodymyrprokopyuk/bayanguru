@@ -41,7 +41,7 @@
   b,,+bm!8 r r a,,+a7! | d,+dM!4 d,+dM |
 
   d'=8-\puBass d16 d d8 d16 d |
-  \repeat unfold 2 { d=8 d16 d d8 d16 d= | }
+  \rep 2 { d=8 d16 d d8 d16 d= | }
   cis=8 c b=,4 |
 
   g=,8-\stBass gM! fis d@M! | g8 gM! fis d@M! |

@@ -29,7 +29,7 @@
   fis,,+d@M! r8 r | g,,+e@m! r8 r |
   a,=,8 r a,,+a7! | d,+dM! r r |
 
-  \repeat unfold 2 { a,,+a7!8 r r | d,+dM! r r | }
+  \rep 2 { a,,+a7!8 r r | d,+dM! r r | }
   g=,8 r r | a r r | a,,+a7! r r | d,+dM! r r |
 }
 {% endmacro %}

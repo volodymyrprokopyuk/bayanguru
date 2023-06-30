@@ -62,7 +62,7 @@
   g,=,2. | c | f,2 f4 | c'2 c4 | bes2 bes4 |
   a=,2 a4 | d2 g,4 | c2 f,4 | bes2 g4 |
   c=2 c4 | f,2. |
-  \repeat unfold 4 { f=,2 f8 f | }
+  \rep 4 { f=,2 f8 f | }
   r8 f=,8-> c'-> a-> ees'-> c-> |
   r8 f,=,8_\aSim b gis d' b |
   r8 f=,8 bes g des' bes |

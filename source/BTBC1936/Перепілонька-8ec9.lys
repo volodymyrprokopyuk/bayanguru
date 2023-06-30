@@ -11,9 +11,9 @@
       b='8 c b4 | a a |
       e='8 e a c | b4 a8 a |
       <gis=' b>8 <a c> <gis b>8 8 | a2 |
-      \repeat unfold 2 { b='4 a8 a | }
+      \rep 2 { b='4 a8 a | }
       <a=' b>8 <a c> <gis b>4 | a4 a |
-      \repeat unfold 2 { b='4 a8 a | }
+      \rep 2 { b='4 a8 a | }
       <gis=' b>8 <a c> <gis b>4 | a='2 \fermata %
     }
     \new Voice = voiceTwo \relative {

@@ -86,7 +86,7 @@
   d=8[ bes,@M! besM8] |
   d=8[ f,@m! fm8] | c[ f,@m! fm8] |
   b=,8[ f,@d! g,@7!8] | c8 cm! bes |
-  \repeat unfold 2 {
+  \rep 2 {
     a=,8[ c@m! cm8] | r16 a16( bes a gis a=,) |
   }
   a,,+c@m!8 r8 r | R4. | d8[ c@m! d,+d7!8] |

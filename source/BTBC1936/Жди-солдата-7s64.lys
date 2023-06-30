@@ -19,9 +19,9 @@
 \key d \minor
 \relative {
   d=8-\stBass dm! g, gm! |
-  \repeat unfold 2 { d'=8 dm! g,=, gm! | }
+  \rep 2 { d'=8 dm! g,=, gm! | }
   f=,8 d@m! e'8 a,@7! |
-  \repeat unfold 2 { d=8 dm! g,=, gm! | }
+  \rep 2 { d=8 dm! g,=, gm! | }
   f=,8 d@m! bes8 besM! | a f,@M! f8 f7! |
   bes=,8 besM! g bes,@M | a8 f,@M! f8 fM |
   g=,8 gm! e' g,@m | f,8 d@m! d'8 dm |

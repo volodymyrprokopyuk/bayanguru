@@ -6,11 +6,11 @@
 {% endmacro %}
 
 {% macro rh2() %}
-  \repeat unfold 2 { f=''16-> aes, c f e g, c e='' | }
+  \rep 2 { f=''16-> aes, c f e g, c e='' | }
 {% endmacro %}
 
 {% macro rh3(a) %}
-  \repeat unfold 2 { b='16 e, gis b c e, a c='' | }
+  \rep 2 { b='16 e, gis b c e, a c='' | }
   d=''16 f, a d dis f, a dis |
   e=''16 {{ a }} e, fis gis a b c d='' |
 {% endmacro %}
@@ -28,12 +28,12 @@
 
 {% macro lh2() %}
   g,,+gM!8 r c,+cM! r |
-  \repeat unfold 2 { f,,+fm!4(-> c,+cM!8)-. r | }
+  \rep 2 { f,,+fm!4(-> c,+cM!8)-. r | }
 {% endmacro %}
 
 {% macro lh3() %}
   b,,+bM!8 r e,+em! r |
-  \repeat unfold 2 { a,,+am!4(-> e,+em!8)-. r | }
+  \rep 2 { a,,+am!4(-> e,+em!8)-. r | }
 {% endmacro %}
 
 {% macro lh4() %}
@@ -42,7 +42,7 @@
 {% endmacro %}
 
 {% macro lh5() %}
-  \repeat unfold 2 { e=8 eM! a,,+am! r | }
+  \rep 2 { e=8 eM! a,,+am! r | }
   d=8 c b4 | e8[ d c b=,] |
 {% endmacro %}
 
@@ -64,7 +64,7 @@
   {{ rh2() }}
   d=''16 c b d c d e f |
   fis=''16_\dCre b, dis fis g b, e g |
-  \repeat unfold 2 { a=''16-> c, e a g b, e g='' | }
+  \rep 2 { a=''16-> c, e a g b, e g='' | }
   fis=''16 ais, cis fis e a, c e |
   dis=''16 b dis fis g b, e g |
   a=''16-> c, e a g b, e g |
@@ -105,7 +105,7 @@
   b,,+bM!8 r e,+em! r |
   {{ lh4() }}
   {{ lh4() }}
-  \repeat unfold 2 { b,,+b7!8 r e,+em! r | }
+  \rep 2 { b,,+b7!8 r e,+em! r | }
   R2 | R2 |
 
   {{ lh1("a,=,8") }}

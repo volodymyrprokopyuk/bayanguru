@@ -21,7 +21,7 @@
 \relative {
   {{ lh1("g,=,4-\\stBass") }}
   {{ lh1("g=,4") }}
-  \repeat unfold 3 { d'=4 dM! g,=, gM! | }
+  \rep 3 { d'=4 dM! g,=, gM! | }
   d'=4 d7! g,=, gM! |
 }
 {% endmacro %}

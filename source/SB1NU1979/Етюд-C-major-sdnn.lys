@@ -32,10 +32,10 @@
   {{ momentBeat("1/2", "#'(1)" ) }}
   c=8 cM! cM cM | c cM! cM cM |
   g=,8 g7! g7 g7 |
-  \repeat unfold 3 { c=8 cM! cM cM | }
+  \rep 3 { c=8 cM! cM cM | }
   b=,8 g,@M! c8 cM! | g gM! g,,+gM4 |
 
-  \repeat unfold 3 {
+  \rep 3 {
     g=,8 g7! g7 g7 | g[ c@M! cM8 cM] |
   }
   g=,8 g7! g7 g7 | c= cM! c,+cM4 |

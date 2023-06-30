@@ -29,10 +29,10 @@
 \key c \major
 \relative {
   c=4-\stBass cM! cM | g c@M cM4 |
-  \repeat unfold 2 {
+  \rep 2 {
     d'=4 g,@7! g74 | g,=, g7 g7 |
   }
-  \repeat unfold 2 {
+  \rep 2 {
     c=4 cM! cM | g=, c@M cM4 |
   }
   d'=4 dm! dm | f, d@m dm4 |

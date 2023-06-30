@@ -54,13 +54,13 @@
   bes,,+besM!2 g,,+g7!4 | c( cm!) c |
   bes=,4( g,@m!) g4 | ees' g, ees' |
 
-  \repeat unfold 2 {
+  \rep 2 {
     d=8( d7!) d7 d7 g,@m![ gm8] |
   }
   d=8_\aSim d7! d7 d7 g,@m![ gm8] |
   d=8 d7! d7 d7 g,@m![ gm8] |
   d=8 d7! d7 d7 d7 d7 |
-  \repeat unfold 2 {
+  \rep 2 {
     bes=,8 besM! besM besM besM besM |
   }
 

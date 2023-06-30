@@ -40,7 +40,7 @@
   f,=,8 fM! fM f fM fM | c' cM! cM c cM cM |
   g=,8[ c@M! cM8] g g7! g7 | c= cM! cM cM r r |
 
-  \repeat unfold 2 {
+  \rep 2 {
     c=8 c7! c7 c c7 c7 | f, fM! fM f fM fM |
   }
   a=,8[ f,@M! fM8] a[ f,@M fM8] |

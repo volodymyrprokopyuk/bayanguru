@@ -53,7 +53,7 @@
   {{ lh1("e=8-\\stBass") }}
   {{ lh1("e=8") }}
   {{ lh2() }}
-  \repeat unfold 2 {
+  \rep 2 {
     e=8 em! em | g,[ e@m em8] |
     b=,8 b7! b7 | b b7 b7 |
   }

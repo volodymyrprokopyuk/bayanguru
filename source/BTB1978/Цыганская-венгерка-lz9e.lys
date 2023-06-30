@@ -134,12 +134,12 @@
   <d='' d'>4 <cis cis'> <b b'> <cis cis'> |
   <d='' d'>2 <d='' f a d>4 r |
 
-  \repeat unfold 2 { <d='' g c>4(-> bes'='') }
-  \repeat unfold 2 { <d,='' f bes>4(-> a'='') }
-  \repeat unfold 2 { <cis,='' e a>4(-> g'='') }
-  \repeat unfold 2 { <a,=' d g>4(-> f'='') }
-  \repeat unfold 2 { <g,=' bes f'>4(-> e'='') }
-  \repeat unfold 2 { <f,=' a e'>4(-> d'='') }
+  \rep 2 { <d='' g c>4(-> bes'='') } | %
+  \rep 2 { <d,='' f bes>4(-> a'='') } | %
+  \rep 2 { <cis,='' e a>4(-> g'='') } | %
+  \rep 2 { <a,=' d g>4(-> f'='') } | %
+  \rep 2 { <g,=' bes f'>4(-> e'='') } | %
+  \rep 2 { <f,=' a e'>4(-> d'='') } | %
   <e,=' g d'>4 cis' b cis | d2 <f,=' a d> |
 
   \tempo Presto
@@ -187,7 +187,7 @@
   g=,4 gm! bes g,@m | d4 em! f, d@m |
   e'=4 e7! a, a7! | d dm! fis,=, d@7! |
 
-  \repeat unfold 2 {
+  \rep 2 {
     g=,4 gm! c c7! | f, fM! d'= d7! |
   }
   g,=,4 gm! a a7! | d dm! bes besM! |

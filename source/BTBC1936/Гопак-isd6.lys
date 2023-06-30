@@ -28,7 +28,7 @@
 \key d \major
 \relative {
   d,+dM!4->-\stBass d,+dM4 |
-  \repeat unfold 3 {
+  \rep 3 {
     a,=,8 a7! d dM! | d dM! d dM |
   }
   a=,8 a7! d,+dM!4 |

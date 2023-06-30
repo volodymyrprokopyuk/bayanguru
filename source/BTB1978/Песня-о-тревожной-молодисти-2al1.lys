@@ -30,7 +30,7 @@
   \partial 4 { r4 | }
   d=4-\stBass dm! dm dm | d dm! dm dm |
   e=4 g,@m! a,4 a7! |
-  \repeat unfold 2 { d=4 dm! dm dm | }
+  \rep 2 { d=4 dm! dm dm | }
   d=4 f,@M! fM4 fM | g, gm! gm c |
   f,=,4 fM! fM a | d dm! dm dm |
   d=4 bes,@M! besM4 besM | c cM! cM cM |

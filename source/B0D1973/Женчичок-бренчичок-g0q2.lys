@@ -29,7 +29,7 @@
 \relative {
   {{ lh1("f=4-\\stBass") }}
   {{ lh1("f=4") }}
-  \repeat unfold 2 { c=4 c7! c7 | f= fM! fm }
+  \rep 2 { c=4 c7! c7 | f= fM! fm | }
   d=4 bes,@M! besM4 | g, bes,@M! besM4 |
   c=4 c7! c7 | f= fM! r |
 }
