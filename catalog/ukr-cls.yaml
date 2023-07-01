@@ -162,7 +162,7 @@ pieces:
       org: ukr, sty: aut, gnr: chd, ton: fj, frm: mel, bss: stb, lvl: ela }
   - { id: qxq9, tit: Їхав козак на війноньку, sub: ukrfs,
       src: B1AK1979,
-      org: ukr, sty: flk, gnr: sng, ton: ei, frm: [mel, in3], bss: stb, lvl: elb }
+      org: ukr, sty: flk, gnr: sng, ton: ei, frm: in3, bss: stb, lvl: elb }
   - { id: e78y, tit: Кучерява Катерина, sub: ukrfs,
       src: B1AK1979,
       org: ukr, sty: flk, gnr: sng, ton: cj, frm: mel, bss: stb, lvl: ela }
@@ -171,7 +171,7 @@ pieces:
       org: ukr, sty: flk, gnr: sng, ton: di, frm: mel, bss: stb, lvl: ela }
   - { id: 5e6l, tit: Полька,
       src: B1AK1979,
-      org: ukr, sty: flk, gnr: plk, ton: besj, frm: [mel, in3], bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: plk, ton: besj, frm: in3, bss: stb, lvl: ela }
    # B1AK1985
   - { id: fh29, tit: Веснянка, sub: ukrfs,
       src: B1AK1985,
@@ -181,10 +181,10 @@ pieces:
       org: ukr, sty: flk, gnr: dnc, ton: [eesj, ci], frm: mel, bss: stb, lvl: ela }
   - { id: cagd, tit: Дощик, sub: ukrfs,
       src: B1AK1985,
-      org: ukr, sty: flk, gnr: sng, ton: [besj, gi], frm: [mel, in3], bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: sng, ton: [besj, gi], frm: in3, bss: stb, lvl: ela }
   - { id: iebw, tit: Святковий вальс,
       com: А. Філіпенко, src: B1AK1985,
-      org: ukr, sty: aut, gnr: vls, ton: eesj, frm: [mel, in3], bss: stb, lvl: ela }
+      org: ukr, sty: aut, gnr: vls, ton: eesj, frm: in3, bss: stb, lvl: ela }
   - { id: 3vej, tit: Ой піду я до гаю,
       com: Д. Січинський, src: B1AK1985,
       org: ukr, sty: flk, gnr: sng, ton: di, frm: mel, bss: stb, lvl: ela }
@@ -197,25 +197,25 @@ pieces:
   # B2AK1979
   - { id: 05cc, tit: Курчатка,
       com: А. Філіпенко, src: B2AK1979,
-      org: ukr, sty: aut, gnr: chd, ton: dj, frm: [mel, in3], bss: stb, lvl: ela }
+      org: ukr, sty: aut, gnr: chd, ton: dj, frm: in3, bss: stb, lvl: ela }
   - { id: ihff, tit: Ой лопнув обруч, sub: ukrfs,
       src: B2AK1979,
-      org: ukr, sty: flk, gnr: sng, ton: [dj, bi], frm: [mel, in3], bss: stb, lvl: elb }
+      org: ukr, sty: flk, gnr: sng, ton: [dj, bi], frm: in3, bss: stb, lvl: elb }
   - { id: an90, tit: Корольок, sub: ukrfs,
       src: B2AK1979,
-      org: ukr, sty: flk, gnr: sng, ton: [gj, ei], frm: [mel, in3], bss: stb, lvl: elb }
+      org: ukr, sty: flk, gnr: sng, ton: [gj, ei], frm: in3, bss: stb, lvl: elb }
   - { id: oz96, tit: Сумна пісенька,
       com: К. Мясков, src: B2AK1979,
       org: ukr, sty: aut, gnr: chd, ton: gi, frm: [mel, jmp], bss: stb, lvl: elb }
   - { id: zieh, tit: Жартівлива пісенька,
       com: К. Мясков, src: B2AK1979,
-      org: ukr, sty: aut, gnr: chd, ton: fj, frm: [mel, in3], bss: stb, lvl: elb }
+      org: ukr, sty: aut, gnr: chd, ton: fj, frm: in3, bss: stb, lvl: elb }
   - { id: n7lg, tit: На жовтневе свято,
       com: А. Штогаренко, src: B2AK1979,
       org: ukr, sty: aut, gnr: pie, ton: dj, frm: [var cr5], bss: [stb, pub, rep], lvl: elb }
   - { id: ohmw, tit: Вальс,
       com: М. Чайкін, src: B2AK1979,
-      org: ukr, sty: aut, gnr: vls, ton: [di, fj, dj], frm: [mel, in3], bss: stb, lvl: elb }
+      org: ukr, sty: aut, gnr: vls, ton: [di, fj, dj], frm: in3, bss: stb, lvl: elb }
   - { id: stil, tit: Сусідка, sub: ukrfs,
       arr: М. Чайкін, src: B2AK1979,
       org: ukr, sty: flk, gnr: sng, ton: [ai cj], frm: ch5, bss: stb, lvl: elb }
@@ -224,13 +224,13 @@ pieces:
       org: ukr, sty: flk, gnr: sng, ton: ei, frm: var, bss: stb, lvl: elb }
   - { id: dvki, tit: Гопак, sub: 'з опери \"Сорочинский ярмарок\"',
       com: М. Мусоргский, src: B2AK1979,
-      org: ukr, sty: flk, gnr: gop, frm: mel, bss: [stb, pub], lvl: elb }
+      org: ukr, sty: flk, gnr: gop, ton: gj, frm: cr5, bss: [stb, pub], lvl: elb }
   - { id: izth, tit: Прогулянка,
       com: К. Мясков, src: B2AK1979,
-      org: ukr, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elb }
+      org: ukr, sty: aut, gnr: pie, ton: dj, frm: [in3, dot], bss: stb, lvl: elb }
   - { id: jkqt, tit: Романс,
       com: М. Чайкін, src: B2AK1979,
-      org: ukr, sty: msc, gnr: rmc, frm: mel, bss: stb, lvl: elb }
+      org: ukr, sty: aut, gnr: rmc, ton: [cj, ai], frm: mel, bss: stb, lvl: elb }
   - { id: q5ip, tit: Сонце низенько, sub: ukrfs,
       arr: А. Иванов, src: B2AK1979,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }

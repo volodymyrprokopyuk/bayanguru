@@ -7,7 +7,7 @@
 {% endmacro %}
 
 {% macro rh3(a) %}
-  <e=' c'>8.\mf b'16( a8) g | r8 <fis a>[ r <fis b>] |
+  {{ a }} b'16( a8) g | r8 <fis a>[ r <fis b>] |
   <e=' c'>8. b'16( a8) g=' |
 {% endmacro %}
 
@@ -17,7 +17,7 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegretto
+\tempo Allegro
 \clef treble
 \key g \major
 \time 2/4
@@ -26,6 +26,7 @@
   {{ rh1("d,='8") }}
   {{ rh2("<g=' b g'>8.->\\f") }}
   {{ rh2("<g=' b g'>8.->") }}
+
   {{ rh3("<e=' c'>8.\\mf") }} | r8 <d a'> <d b'>4 |
   {{ rh3("<e=' c'>8.\\f") }} | r8 <d fis a> <b= d g>4 \bar "|."
 }
@@ -37,10 +38,9 @@
 \relative {
   g,=,8-\stBass gM! g gM | g gM g gM |
   g=,8 gM! g gM | g gM g gM |
-  \rep 2 {
-    g=,8.[-> gM!16 gM8 gM] | e-. g-. b=,4-. |
-  }
-  {{ lh1("a=,8-.-\\puBass") }} | fis d@M! g,8 gM! |
+  \rep 2 { g=,8.[-> gM!16 gM8 gM] | e-. g-. b=,4-. | }
+
+  {{ lh1("a=,8-.-\\puBass") }} | fis( d@M!) g,8( gM!) |
   {{ lh1("a=,8-.") }} | d= dM! g,,+gM!4 |
 }
 {% endmacro %}
