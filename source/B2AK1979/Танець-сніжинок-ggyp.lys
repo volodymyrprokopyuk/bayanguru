@@ -1,22 +1,15 @@
-{% macro rh1(a) %}
+{% from "util.lys" import v2 %}
+
+{% macro rh1() %}
   <a='' a'>8-. r <a g'>-. r <a f'>-. r |
-  <bes='' e>2. | <bes d>2. |
-  <bes='' c>8-. r %
-  <<
-    \relative { c'''='''8-. d-. c-. d-. | }
-    \\
-    \relative { bes''=''2 | }
-  >>
+  <bes='' e>2. | <bes d>2. | <bes c>8-. r %
+  {{ v2("c'''='''8-. d-. c-. d='''-. |", "bes''=''2 |") }}
   <bes='' c>8 r <bes='' g'>2-> |
 {% endmacro %}
 
 {% macro rh2() %}
   <a='' c>8-. r %
-  <<
-    \relative { c'''='''8-. d-. c-. d-. | }
-    \\
-    \relative { a''=''2 | }
-  >>
+  {{ v2("c'''='''8-. d-. c-. d='''-. |", "a''=''2 |") }}
   <a='' c>8 r <a='' f'>2-> |
 {% endmacro %}
 
@@ -36,6 +29,7 @@
 \relative {
   c'='4-.\p e-._\dCre fis-. | gis-. bes-. b |
   c=''4-. e-. fis-. | gis-.^\tRit bes-. b='' |
+
   \repeat segno 2 {
     \volta 1
     \repeat volta 2 {
@@ -46,7 +40,7 @@
         \volta 2 {
           <a='' f'>2.~ | <a f'>8 r \fine \bar "!!"
           \volta 2
-          <a='' d>8\p r <a='' dis> r |
+          <a='' d>8-.\p r <a='' dis>-. r |
         }
       }
     }
@@ -56,13 +50,8 @@
       <a='' e'>8-. r r4 <a a'>4~ | 8 r <a e'>-. r <a dis>-. r |
       <a='' e'>8-. r r4 <a a'>4~ | 8 r <a d>-. r <a dis>-. r |
       <c=''' e>2. | <aes g'>2. |
-      <<
-        \relative { e'''='''2.~ | e8 } %
-        \\
-        \relative {
-          c'''='''8 b, \rest a' b, \rest g' b, \rest | fis'='' %
-        }
-      >>
+      {{ v2(" e'''='''2.~ | e='''8 ",
+         "c'''='''8 b, \\rest a' b, \\rest g' b, \\rest | fis'=''") }}
       r8 <fis='' d'>8-. r <fis c'>-. r |
       <f='' d'>8-. r r4 <f f'>4~ | 8 r <f d'>-. r <f c'>-. r |
       <f='' d'>8-. r r4 <f f'>4~ | 8 r <f d'>-. r <f c'>-. r |
@@ -80,9 +69,7 @@
       \alternative {
         \volta 1 { {{ rh2() }} }
         \volta 2 {
-          <a='' f'>2.~ |
-          <a='' f'>8 r %
-          \ottava #1
+          <a='' f'>2.~ | <a f'>8 r \ottava #1 %
           aes'='''8-.\pp r <des,=''' des'>-. r |
         }
       }
@@ -117,6 +104,7 @@
 \key f \major
 \relative {
   c@7!8-\stBass r8 r4 r | R2. | c@7!8 r8 r4 r | R2. |
+
   {{ lh1("f,=,8") }}
 
   \key a \minor

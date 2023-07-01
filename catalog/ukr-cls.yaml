@@ -233,13 +233,13 @@ pieces:
       org: ukr, sty: aut, gnr: rmc, ton: [cj, ai], frm: mel, bss: stb, lvl: elb }
   - { id: q5ip, tit: Сонце низенько, sub: ukrfs,
       arr: А. Иванов, src: B2AK1979,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
+      org: ukr, sty: flk, gnr: sng, ton: ei, frm: mel, bss: stb, lvl: elb }
   - { id: 4u91, tit: Ой під горою, sub: ukrfs,
       src: B2AK1979,
-      org: ukr, sty: flk, gnr: sng, frm: pph, bss: pub, lvl: elb }
+      org: ukr, sty: flk, gnr: sng, frm: vo2, bss: pub, lvl: elb }
   - { id: ggyp, tit: Танець сніжинок,
       com: К. Мясков, src: B2AK1979,
-      org: ukr, sty: msc, gnr: pie, frm: crd, bss: stb, lvl: elc }
+      org: ukr, sty: aut, gnr: vls, ton: [fj, ai, desj], frm: cr5, bss: stb, lvl: elc }
   # B2AK1987
   - { id: e3u3, tit: Вийшли в поле косарі, sub: ukrfs,
       src: B2AK1987,

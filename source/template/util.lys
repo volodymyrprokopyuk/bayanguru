@@ -19,6 +19,13 @@
   af = #after
   rep = #(define-music-function (n mus) (integer? ly:music?)
     #{ \repeat unfold #n { #mus } #})
+  % momentBeat = #(define-music-function (moment beat scope)
+  %   (fraction? list? (what? Staff))
+  %   #{
+  %     \set #scope.beamExceptions = #'()
+  %     \set #scope.baseMoment = #(ly:make-moment moment)
+  %     \set #scope.beatStructure = #beat
+  %   #})
   stBass = \markup \larger \box Г % Готовий бас = standard (Stradella) bass
   puBass = \markup \larger \box Б % Чистий бас = pure bass
   frBass = \markup \larger \box В % Виборна система = free bass
