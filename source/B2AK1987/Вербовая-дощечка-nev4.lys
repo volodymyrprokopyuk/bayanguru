@@ -31,7 +31,7 @@
   <<
     \new Voice = voiceOne \relative {
       \voiceOne
-      {{ dPad() }}
+      \dPad \default
       e''=''8[(\< b') b b] | a4( b8 \af 8\! g) |
       fis=''4(\> g8 fis | e8) e \af 4\! e=''4 |
     }

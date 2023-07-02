@@ -8,7 +8,7 @@
   <g,=' d' g>4\< 16 \af 16\! 16 |
   <<
     \relative {
-      {{ dPad() }}
+      \dPad \default
       aes''=''4\f g16 f |
       f=''8. ees16\> d \af 16\! ees='' |
     }

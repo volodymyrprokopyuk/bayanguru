@@ -24,7 +24,7 @@
   <<
     \new Voice = voiceOne \relative {
       \voiceOne
-      {{ dPad(4) }}
+      \dPad 4
       \acc { gis''=''8 } a2(->\f gis4. fis=''8) |
     }
     \new Voice = voiceTwo \relative {
@@ -36,7 +36,7 @@
   <<
     \new Voice = voiceOne \relative {
       \voiceOne
-      {{ dPad(4) }}
+      \dPad 4
       \acc { dis''=''8 } %
       e=''4\(->\p cis8 dis e4. dis8 |
       cis=''8 e b4 a2\) |

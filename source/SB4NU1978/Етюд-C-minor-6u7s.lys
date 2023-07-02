@@ -36,7 +36,7 @@
 \key c \minor
 \time 4/4
 \relative {
-  {{ dPad(4) }}
+  \dPad 4
   \repeat segno 2 {
     {{ rh1("<c'=' ees g>8\\mp\\<") }}
     {{ rh3("<b= f' g>8\\<", "") }}
