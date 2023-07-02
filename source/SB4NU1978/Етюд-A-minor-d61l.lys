@@ -1,5 +1,3 @@
-{% from "util.lys" import momentBeat %}
-
 {% macro rightHand() %}
 \tempo "Allegretto cantabile"
 \clef treble
@@ -9,7 +7,7 @@
   <<
     \new Voice = voiceOne \relative {
       \voiceOne
-      {{ momentBeat("1/2", "#'(1)", "Voice") }}
+      \meter Voice 1/2 #'(1)
       a'='8\p a gis a | c b b b | b b e d | d c c c |
       e=''8_\dCre e a g | g f f e | dis dis dis dis | dis e d b=' |
 
@@ -18,7 +16,7 @@
     }
     \new Voice = voiceTwo \relative {
       \voiceTwo
-      {{ momentBeat("1/8", "1,1,1,1", "Voice") }}
+      \meter Voice 1/8 1,1,1,1
       a'='32 c,_\aLeg e c a' c, e c gis' c, e c a' c, e c |
       c'=''32 e, a e \rep 3 { b'='32 e, gis e=' } | %
       b'='32 e, gis e b' e, gis e e' gis, b gis d' gis, b gis |
@@ -45,7 +43,7 @@
 \clef bass
 \key a \minor
 \relative {
-  {{ momentBeat("1/2", "#'(1)") }}
+  \meter 1/2 #'(1)
   a,=,8-\stBass am! am am | e' eM! eM eM |
   e=8 e7! e7 e7 | a, am! am am |
   a=,8 am! am am | d dm! d e |

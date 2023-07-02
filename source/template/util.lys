@@ -15,17 +15,6 @@
 {% macro prelude() %}
   \version "2.25.6"
   rootUrl = "https://volodymyrprokopyuk.github.io/bayan"
-  acc = #acciaccatura
-  af = #after
-  rep = #(define-music-function (n mus) (integer? ly:music?)
-    #{ \repeat unfold #n { #mus } #})
-  % momentBeat = #(define-music-function (moment beat scope)
-  %   (fraction? list? (what? Staff))
-  %   #{
-  %     \set #scope.beamExceptions = #'()
-  %     \set #scope.baseMoment = #(ly:make-moment moment)
-  %     \set #scope.beatStructure = #beat
-  %   #})
   stBass = \markup \larger \box Г % Готовий бас = standard (Stradella) bass
   puBass = \markup \larger \box Б % Чистий бас = pure bass
   frBass = \markup \larger \box В % Виборна система = free bass
@@ -41,6 +30,26 @@
   tATem = "a tempo"
   tAcc = "accel."
   tSos = "sost."
+  acc = #acciaccatura
+  af = #after
+  rep = #(define-music-function (n mus) (integer? ly:music?)
+    #{ \repeat unfold #n { #mus } #})
+  meter = #(define-music-function (scope moment beat)
+    ((symbol? 'Staff) fraction? list?)
+    #{
+      \set #scope .beamExceptions = #'()
+      \set #scope .baseMoment = #(ly:make-moment (/ (car moment) (cdr moment)))
+      \set #scope .beatStructure = #beat
+    #})
+  duo = #(define-music-function (vone vtwo) (ly:music? ly:music?)
+    #{ <<
+         \new Voice = voiceOne \relative { \voiceOne #vone }
+         \new Voice = voiceTwo \relative { \voiceTwo #vtwo }
+       >> #})
+  hSpace = #(define-music-function () ()
+    #{ \once \override NoteHead.extra-spacing-width = #'(-2.5 . 0) #})
+  dPad = #(define-music-function (height) ((number? 3.0))
+    #{ \override DynamicLineSpanner.staff-padding = #height #})
   barFermata = \mark \markup \musicglyph #"scripts.ufermata"
   keyChangeBeforeBar = \once {
     \override Score.BreakAlignment.break-align-orders =
@@ -61,9 +70,9 @@
     \override Staff.KeyCancellation.extra-spacing-width = #'(-1.5 . 0)
   }
   \defineBarLine "!!" #'("!!" "!!" "!!")
-  tocSection =
-  #(define-music-function (label text) (symbol-list-or-symbol? markup?)
-     (add-toc-item! 'tocSectionMarkup text label))
+  tocSection = #(define-music-function
+    (label text) (symbol-list-or-symbol? markup?)
+    (add-toc-item! 'tocSectionMarkup text label))
 {% endmacro %}
 
 {% macro scoreConfig() %}

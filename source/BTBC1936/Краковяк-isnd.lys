@@ -1,4 +1,4 @@
-{% from "util.lys" import hSpace, shapedSlur %}
+{% from "util.lys" import shapedSlur %}
 
 {% macro rh1() %}
   fis='8)-. a-. c-. e-. | d b4 b8 |
