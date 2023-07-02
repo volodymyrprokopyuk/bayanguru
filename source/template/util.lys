@@ -46,10 +46,10 @@
          \new Voice = voiceOne \relative { \voiceOne #vone }
          \new Voice = voiceTwo \relative { \voiceTwo #vtwo }
        >> #})
-  hSpace = #(define-music-function () ()
-    #{ \once \override NoteHead.extra-spacing-width = #'(-2.5 . 0) #})
   dPad = #(define-music-function (height) ((number? 3.0))
     #{ \override DynamicLineSpanner.staff-padding = #height #})
+  hSpace = #(define-music-function () ()
+    #{ \once \override NoteHead.extra-spacing-width = #'(-2.5 . 0) #})
   barFermata = \mark \markup \musicglyph #"scripts.ufermata"
   keyChangeBeforeBar = \once {
     \override Score.BreakAlignment.break-align-orders =
@@ -196,13 +196,13 @@
     {% set bx = bx - 3.0 * wd %}
     {% set cx = cx - 3.0 * wd %}
     {% set dx = dx - 3.0 * wd %}
-    {%set ay = ay + dt %}
+    {% set ay = ay + dt %}
   {% elif dir == "bd" %} <# backward down slur #>
     {% set ax = ax - 3.0 * wd %}
     {% set bx = bx - 3.0 * wd %}
     {% set cx = cx - 3.0 * wd %}
     {% set dx = dx - 3.0 * wd %}
-    {%set ay = ay + dt %}
+    {% set ay = ay + dt %}
     {% set ay = -ay %}
     {% set by = -by %}
     {% set cy = -cy %}
