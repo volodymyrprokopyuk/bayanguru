@@ -12,7 +12,7 @@
 \key f \major
 \time 4/4
 \relative {
-  {{ momentBeat("1/4", "1,1,1,1") }}
+  \meter 1/4 1,1,1,1
   \partial 8 { c'='8\mf | }
   {{ rh1() }}
   <b,= g'>8 8 <bes d> <bes e> <a f'>4 8 c |
@@ -29,7 +29,7 @@
 \clef bass
 \key f \major
 \relative {
-  {{ momentBeat("1/4", "1,1,1,1") }}
+  \meter 1/4 1,1,1,1
   \partial 8 { r8 | }
   f,=,8-\stBass fM! c' f,@M a8 f,@M! c8 f,@M |
   bes=,8 besM! f bes,@M f8 fM! c' f,@M |

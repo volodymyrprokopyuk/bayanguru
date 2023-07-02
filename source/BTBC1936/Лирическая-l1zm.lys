@@ -6,7 +6,7 @@
 \key d \major
 \time 3/4
 \relative {
-  {{ momentBeat("1/4", "1,1,1") }}
+  \meter 1/4 1,1,1
   \partial 4 { <d'=' fis>8\mf <e g> | }
   <fis=' a>4. <a cis>8 8 <g b> |
   {{ v2("b'='16( cis b4)", "g'='4.") }}
@@ -38,7 +38,7 @@
 \clef bass
 \key d \major
 \relative {
-  {{ momentBeat("1/4", "1,1,1") }}
+  \meter 1/4 1,1,1
   \partial 4 { r4 | }
   d=8-\stBass dM! a d@M g8 gM! |
   e'=8 em! g, e@m b8 e@m |

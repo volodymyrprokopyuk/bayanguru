@@ -6,7 +6,7 @@
 \key e \minor
 \time 4/4
 \relative {
-  {{ momentBeat("1/4", "1,1,1,1") }}
+  \meter 1/4 1,1,1,1
   \dPad \default
   R1\p |
   \repeat volta 2 {

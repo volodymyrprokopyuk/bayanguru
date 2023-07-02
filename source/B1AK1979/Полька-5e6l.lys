@@ -29,7 +29,7 @@
 \clef bass
 \key bes \major
 \relative {
-  {{ momentBeat("1/2", "#'(1)") }}
+  \meter 1/2 #'(1)
   {{ lh1("bes,=,8-\\stBass") }} | bes besM! besM besM |
   {{ lh1("bes=,8") }} | bes[ besM!] besM r |
   c,+f@7!4 bes,,+besM!4 | a,,+f@M! bes,,+besM!4 |

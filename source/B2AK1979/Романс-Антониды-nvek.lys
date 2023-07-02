@@ -6,7 +6,7 @@
 \key g \minor
 \time 3/4
 \relative {
-  {{ momentBeat("1/4", "1,1,1") }}
+  \meter 1/4 1,1,1
   r4\p r d''=''8\( d | ees4. ees8 d c |
   d=''4 g,8 g\) d'\( d | ees4. d8 c f |
   d=''2\) g8\( f | ees4. ees8 d c |
@@ -48,7 +48,7 @@
 \clef bass
 \key g \minor
 \relative {
-  {{ momentBeat("1/4", "1,1,1") }}
+  \meter 1/4 1,1,1
   g,=,4( gm!) r | g( c@m!) r4 |
   g=,4( gm!) r | c( cm!) f,,+fM! |
   bes,,+besM!2 g,,+g7!4 | c( cm!) c |

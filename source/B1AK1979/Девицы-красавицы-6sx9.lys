@@ -27,7 +27,7 @@
 \clef bass
 \key g \major
 \relative {
-  {{ momentBeat("1/2", "#'(1)") }}
+  \meter 1/2 #'(1)
   {{ lh1("g,=,8(-\\stBass") }} | g, gM! gM gM |
   g=,8( gM!) gM gM | e'( em!) em em |
   a,=,8( am!) am am | d( dM!) dM dM |

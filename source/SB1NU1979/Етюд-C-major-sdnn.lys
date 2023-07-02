@@ -29,7 +29,7 @@
 \clef bass
 \key c \major
 \relative {
-  {{ momentBeat("1/2", "#'(1)" ) }}
+  \meter 1/2 #'(1)
   c=8 cM! cM cM | c cM! cM cM |
   g=,8 g7! g7 g7 |
   \rep 3 { c=8 cM! cM cM | }

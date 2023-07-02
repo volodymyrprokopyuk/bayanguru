@@ -20,7 +20,7 @@
 \key g \major
 \time 2/4
 \relative {
-  {{ momentBeat("1/2", "#'(1)") }}
+  \meter 1/2 #'(1)
   d''=''4(\mf b)-. | d( b)-. |
   d=''8-. d-. d-. e-. | d4( b)-. |
   {{ rh1("e,='8(") }}
@@ -32,10 +32,10 @@
 \clef bass
 \key g \major
 \relative {
-  {{ momentBeat("1/2", "#'(1)") }}
+  \meter 1/2 #'(1)
   {{ lh1("g,=,8-\\stBass") }}
   {{ lh1("g=,8") }}
-  {{ momentBeat("1/4", "1,1,1,1") }}
+  \meter 1/4 1,1,1,1
   {{ lh2("e'=8", "e em! e= em") }}
   {{ lh2("e=8", "e=4 em!") }}
 }

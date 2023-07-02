@@ -6,7 +6,7 @@
 \key d \minor
 \time 4/4
 \relative {
-  {{ momentBeat("1/4", "1,1,1,1") }}
+  \meter 1/4 1,1,1,1
   d'='4 a' a a8( g) | d4 d8 e f4 f8 g |
   a='8 a a g c4 d | a2~  a8 r r4 |
   f='4 <f c'> <f a c> <g bes>8 <f a> |

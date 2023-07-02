@@ -6,7 +6,7 @@
 \key c \major
 \time 4/4
 \relative {
-  {{ momentBeat("1/4", "1,1,1,1") }}
+  \meter 1/4 1,1,1,1
   \repeat volta 2 {
     g'='4.\(\mp e8 g4. e8 | g4 g f e\) |
     d='4( e g2) | d8( e d e g4) r |

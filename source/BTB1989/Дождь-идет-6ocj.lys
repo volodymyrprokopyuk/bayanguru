@@ -10,9 +10,9 @@
 {% endmacro %}
 
 {% macro rh3() %}
-  {{ momentBeat("1/8", "1,1,1,1") }}
+  \meter 1/8 1,1,1,1
   g'=''32\< g, b d g b, d g b d, g b d g, b \af 32\! d |
-  {{ momentBeat("1/4", "1,1") }}
+  \meter 1/4 1,1
   g='''8 r g,,16\mf g fis g=' |
 {% endmacro %}
 
@@ -41,7 +41,7 @@
     <f=' aes ees'>8. <f aes d>16 <f aes f'>8 <f aes ees'> |
     \alternative {
       \volta 1 {
-        {{ momentBeat("1/8", "1,1,1,1") }}
+        \meter 1/8 1,1,1,1
         <b,= f' g>4 <f' b ees> |
         c'=''32\< b c d ees d ees f g aes g f ees f ees \af 32\! d |
         c=''32\> d c bes aes bes aes g f aes g f ees f ees \af 32\! d=' |

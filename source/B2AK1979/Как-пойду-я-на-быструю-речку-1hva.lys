@@ -12,7 +12,7 @@
 \key e \minor
 \time 4/4
 \relative {
-  {{ momentBeat("1/4", "1,1,1,1") }}
+  \meter 1/4 1,1,1,1
   \partial 4 { e'='8\(\p g | }
   <g=' b>4 <fis a>8 <e g> <e a> <e fis> <dis b'> <fis a> |
   <e=' g>4 e2\) g8\( <g b> |
@@ -62,7 +62,7 @@
 \clef bass
 \key e \minor
 \relative {
-  {{ momentBeat("1/4", "1,1,1,1") }}
+  \meter 1/4 1,1,1,1
   \partial 4 { r4 | }
   e=8-\stBass em! em4 c8 a,@m! b8 bM! |
   \rep 2 { e=8 em! em em } | %

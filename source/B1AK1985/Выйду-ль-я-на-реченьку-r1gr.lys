@@ -6,7 +6,7 @@
 \key d \minor
 \time 2/4
 \relative {
-  {{ momentBeat("1/2", "#'(1)") }}
+  \meter 1/2 #'(1)
   \repeat volta 2 {
     c'='4.\mf c8 | c4 d8 e | f4 a | c4. a8 |
     d=''8( c bes a | g4) c8( bes | a4) a8( bes | a2) |
@@ -24,7 +24,7 @@
 \clef bass
 \key d \minor
 \relative {
-  {{ momentBeat("1/2", "#'(1)") }}
+  \meter 1/2 #'(1)
   c=8-\stBass c7! c7 c7 | e[ c@7 c78 c7] |
   f=8 fM! fM fM | c[ f@M fM8 fM] |
   g=,8[ c@7! c78 c7] | c c7 c7 c7 |

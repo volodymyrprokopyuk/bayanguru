@@ -34,7 +34,7 @@
 \key c \major
 \time 3/4
 \relative {
-  {{ momentBeat("1/4", "#'(2 1)") }}
+  \meter 1/4 #'(2 1)
   \repeat segno 2 {
     \volta 1
     {{ rh2("fis''=''8(\\mp") }}

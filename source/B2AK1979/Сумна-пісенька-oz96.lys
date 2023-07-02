@@ -16,7 +16,7 @@
 \key g \minor
 \time 2/4
 \relative {
-  {{ momentBeat("1/2", "#'(1)") }}
+  \meter 1/2 #'(1)
   \partial 8 { d'='8\(\mp | }
   {{ rh1("g='8") }}
   c=''8 bes a c | bes a g bes\) |
@@ -40,7 +40,7 @@
 \clef bass
 \key g \minor
 \relative {
-  {{ momentBeat("1/2", "#'(1)") }}
+  \meter 1/2 #'(1)
   \partial 8 { r8 | }
   {{ lh1("g,=,4-\\stBass") }}
   a=,4) c@m!8 r8 | g4 gm!8 r |

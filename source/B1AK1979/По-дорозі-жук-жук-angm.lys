@@ -21,7 +21,7 @@
 \clef bass
 \key f \major
 \relative {
-  {{ momentBeat("1/2", "#'(1)") }}
+  \meter 1/2 #'(1)
   c=4-\stBass c7! | f, fM! | c' c7! | f, fM! |
   e'=8[ c@7! c78 c7] | f, fM! fM fM |
   c'=8 cM! cM cM | f, fM! fM4 |

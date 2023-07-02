@@ -23,7 +23,7 @@
   bes=,8 besM! bes besM | f' fM! f fM |
   bes,=,8 besM! bes besM | ees eesM! ees eesM |
   f=8 fM! f fM | bes, besM! bes besM |
-  {{ momentBeat("1/2", "#'(1)") }}
+  \meter 1/2 #'(1)
   bes=,8( besM!) besM besM | ees( eesM!) eesM eesM |
   f=8( fM!) fM fM | bes,=, besM! bes,,+besM4 |
 }

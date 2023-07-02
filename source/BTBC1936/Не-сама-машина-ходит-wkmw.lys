@@ -97,7 +97,7 @@
   \time 3/4 c=8[ g] c,+cM! r r4 |
   \time 2/4 f'=4-. c-.
   \time 4/4
-  {{ momentBeat("1/4", "1,1,1,1") }}
+  \meter 1/4 1,1,1,1
   f=4-. c-. f8 fM! g, gm! |
   c=8 cM! f fM! c f,@M f8 fM |
   {{ lh1() }}

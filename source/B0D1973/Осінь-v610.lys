@@ -6,7 +6,7 @@
 \key d \minor
 \time 2/4
 \relative {
-  {{ momentBeat("1/2", "#'(1)") }}
+  \meter 1/2 #'(1)
   \repeat volta 2 {
     d'='8\(\p d e e | f4 d8 d\) |
     g='8\( a bes d | a4 a\) |

@@ -11,7 +11,7 @@
 \key d \major
 \time 2/4
 \relative {
-  {{ momentBeat("1/2", "#'(1)") }}
+  \meter 1/2 #'(1)
   d'='8\(\f e fis g | a4 d4\) |
   b='8\( b d b | a4 fis\) |
   {{ rh1("g='8\\mf", "d='") }}
@@ -23,7 +23,7 @@
 \clef bass
 \key d \major
 \relative {
-  {{ momentBeat("1/2", "#'(1)") }}
+  \meter 1/2 #'(1)
   d=8(-\stBass dM!) dM dM | fis[( d@M!) dM8 dM] |
   g,=,8( gM!) gM gM | fis'[( d@M!) dM8 dM] |
   g,=,8( gM!) gM gM | d'( dM!) dM dM |

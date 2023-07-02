@@ -5,7 +5,7 @@
   <<
     \new Voice = voiceOne \relative {
       \voiceOne
-      {{ momentBeat("1/8", "1,1,1,1,1,1,1,1") }}
+      \meter 1/8 1,1,1,1,1,1,1,1
       \set subdivideBeams = ##t
       {{ a }}[~ \tuplet 3/2 { {{ b }} } {{ c }}] %
     }
@@ -64,7 +64,7 @@
   {{ v2("g'='4.-> f8", "<bes= d>2") }} | %
   {{ t1("e'='8", "e='16( f e)", "dis16 e='", "gis=4.") }}
   <g,= cis f>4. cis8 |
-  {{ momentBeat("1/2", "1,1") }}
+  \meter 1/2 1,1
   <f,= a e'>4. <f a d>8 8 e' f fis=' |
 
   \tempo "Poco a poco stringendo"
