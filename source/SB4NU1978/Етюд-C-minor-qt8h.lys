@@ -56,7 +56,7 @@
                 ees,='16 c' g c ees, c' g c ees,4\) bes'='\sf |
               }
               \volta 2 {
-                {{ hSpace() }}
+                \hSpace
                 ees,='16\> %
                 {{ shapedSlur("bu", bs = 4, sh = 18, wd = 7, ht = 2) }} ( %
                 c'=''16 g c ees, c' g c \af 4\! ees,4) g='\sf \bar "||"

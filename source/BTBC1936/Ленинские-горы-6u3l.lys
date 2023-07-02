@@ -39,7 +39,7 @@
         g='8) \af 16.\! b='] |
       }
       \volta 2 {
-        {{ hSpace() }}
+        \hSpace
         <g=' b g'>2~ {{ shapedSlur("bu", bs = 3.5) }} ( 4) r \bar "|."
       }
     }

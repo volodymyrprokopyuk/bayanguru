@@ -26,7 +26,7 @@
         a='16 b <>) |
       }
       \volta 2 {
-        {{ hSpace() }}
+        \hSpace
         g='8\mf {{ shapedSlur("bu") }} ( g') c,='' r \bar "|."
       }
     }

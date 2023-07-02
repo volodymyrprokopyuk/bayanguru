@@ -35,7 +35,7 @@
       }
       \volta 2 {
         \time 9/8
-        {{ hSpace() }}
+        \hSpace
         <fis'=' a>2.~ 4 %
         {{ shapedSlur("bd", bs = 2.5, wd = 6.3, ht = 2) }} ( b,8)\( |
         {{ rh1() }} b2.~ | b4.\) %

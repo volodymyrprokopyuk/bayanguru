@@ -26,7 +26,7 @@
       \alternative {
         \volta 1 { d='8 e f g a='4) | }
         \volta 2 {
-          {{ hSpace() }}
+          \hSpace
           d,='2 {{ shapedSlur("bd", bs = 3.5) }} ( r4) |
         }
       }
