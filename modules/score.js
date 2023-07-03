@@ -48,12 +48,14 @@ function stradella(score) {
   const raw = String.raw
   const stNotation = reFromParts(
     "g",
-    /\b(?:([cdefgab](?:es|is|eses|isis)?[,']*)\+)?/, // [bass]
-    /([cdefgab](?:es|is)?[,']*)(@)?/, // root + [bind]
+    /\b(?:([a-g](?:es|is|eses|isis)?[,']*)\+)?/, // [bass]
+    /([a-g](?:es|is)?[,']*)(@)?/, // root + [bind]
     /([Mm7d])(!)?/, // chord + [name]
     /(\S+)?/ // [modifiers]
   )
   function lyNotation(_, bass, root, bind, chord, name, mods) {
+    if (bass) { bass += /[cde]/.test(bass) ? "," : ",," }
+    root += /[cde]/.test(root) ? "" : ","
     let rootKey = root.replace(/[,']*/g, "")
     rootKey = noteEnharm[rootKey] || rootKey
     const triad = stradellaChords[rootKey + chord]
