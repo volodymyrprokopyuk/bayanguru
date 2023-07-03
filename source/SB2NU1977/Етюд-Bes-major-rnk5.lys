@@ -11,11 +11,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegretto
-\clef treble
-\key bes \major
-\time 2/4
 \relative {
+  \tempo Allegretto
+  \clef treble
+  \key bes \major
+  \time 2/4
   \repeat volta 2 {
     bes'='4.(\p d8) | f4.( bes8) |
     a=''16( bes c bes a8)-. g-. |

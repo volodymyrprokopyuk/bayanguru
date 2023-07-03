@@ -7,11 +7,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Moderato
-\clef treble
-\key e \minor
-\time 4/4
 \relative {
+  \tempo Moderato
+  \clef treble
+  \key e \minor
+  \time 4/4
   \meter 1/4 1,1,1,1
   \partial 4 { e'='8\(\p g | }
   <g=' b>4 <fis a>8 <e g> <e a> <e fis> <dis b'> <fis a> |

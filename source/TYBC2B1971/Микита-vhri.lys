@@ -1,9 +1,9 @@
 {% macro rightHand() %}
-\tempo Allegretto
-\clef treble
-\key g \major
-\time 2/4
 \relative {
+  \tempo Allegretto
+  \clef treble
+  \key g \major
+  \time 2/4
   \repeat volta 2 {
     <g'=' b>16(\mf <a c> <b d>4) 8 |
     <c='' e>8 <b d> <a c> <g b> |

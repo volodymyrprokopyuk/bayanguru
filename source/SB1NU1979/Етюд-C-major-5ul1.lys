@@ -7,11 +7,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegretto
-\clef treble
-\key c \major
-\time 3/8
 \relative {
+  \tempo Allegretto
+  \clef treble
+  \key c \major
+  \time 3/8
   \repeat volta 2 {
     {{ rh1("c''=''16(\\mf") }}
     <f,='' a>8)-. 8-. 8-. | <e g>4. |

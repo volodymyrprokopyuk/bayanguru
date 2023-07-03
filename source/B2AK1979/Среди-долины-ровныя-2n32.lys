@@ -1,11 +1,11 @@
 {% from "util.lys" import hSpace, shapedSlur %}
 
 {% macro rightHand() %}
-\tempo Moderato
-\clef treble
-\key a \minor
-\time 6/8
 \relative {
+  \tempo Moderato
+  \clef treble
+  \key a \minor
+  \time 6/8
   <<
     \new Voice = voiceOne \relative {
       \voiceOne

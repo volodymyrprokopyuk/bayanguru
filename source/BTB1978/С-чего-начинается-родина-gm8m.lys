@@ -5,11 +5,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Lento
-\clef treble
-\key e \minor
-\time 9/8
 \relative {
+  \tempo Lento
+  \clef treble
+  \key e \minor
+  \time 9/8
   \partial 8 { b=8\(\p | }
   \repeat volta 2 {
     {{ rh1() }} b4.~ b4\) b,8\( |

@@ -24,11 +24,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo "Allegro moderato"
-\clef treble
-\key d \major
-\time 4/4
 \relative {
+  \tempo "Allegro moderato"
+  \clef treble
+  \key d \major
+  \time 4/4
   {{ rh2("d''=''8(\\mf") }} a b cis d e fis g e='') |
   {{ rh2("d=''8(") }} a8) a16( b cis d e fis='') |
 

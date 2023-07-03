@@ -8,11 +8,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegro
-\clef treble
-\key g \minor
-\time 4/4
 \relative {
+  \tempo Allegro
+  \clef treble
+  \key g \minor
+  \time 4/4
   \partial 4 { bes'='16\mf a_\aLeg bes c | }
   {{ rh1("d=''16", "", "c=''") }}
   {{ rh1("d=''16", "", "d=''") }}

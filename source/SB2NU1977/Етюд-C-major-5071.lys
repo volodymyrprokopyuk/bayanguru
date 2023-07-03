@@ -1,9 +1,9 @@
 {% macro rightHand() %}
-\tempo Moderato
-\clef treble
-\key c \major
-\time 4/4
 \relative {
+  \tempo Moderato
+  \clef treble
+  \key c \major
+  \time 4/4
   r8\mf c''=''8\( d e a, d e f |
   e=''8 d c b e c g4\) |
   r8 g='8\( a b e, a b c | b a g fis b2\) |

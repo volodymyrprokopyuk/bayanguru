@@ -14,11 +14,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegretto
-\clef treble
-\key a \major
-\time 2/4
 \relative {
+  \tempo Allegretto
+  \clef treble
+  \key a \major
+  \time 2/4
   {{ rh1("cis''=''16(\\mf\\<") }}
   cis=''16(\< b a8) cis16( b \af 8\! a8) |
   d=''8-.\> d-. \af 4\! d4-- |

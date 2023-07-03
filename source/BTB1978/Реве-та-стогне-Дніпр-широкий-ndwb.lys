@@ -5,11 +5,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Lento
-\clef treble
-\key d \minor
-\time 3/4
 \relative {
+  \tempo Lento
+  \clef treble
+  \key d \minor
+  \time 3/4
   d'='4\p\< <d f> <f a> |
   \af 4.\! <f=' d'>2 <f a>4 |
   <e=' g>2 <d f>4 |

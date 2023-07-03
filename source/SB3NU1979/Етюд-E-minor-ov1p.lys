@@ -10,11 +10,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Presto
-\clef treble
-\key e \minor
-\time 4/4
 \relative {
+  \tempo Presto
+  \clef treble
+  \key e \minor
+  \time 4/4
   \repeat volta 2 {
     {{ rh1("e''=''16\\p", "_\\aLeg") }}
     c='''16 e d c b d c b a\> c b a g b a g |

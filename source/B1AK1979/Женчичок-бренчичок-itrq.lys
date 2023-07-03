@@ -4,11 +4,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegretto
-\clef treble
-\key g \major
-\time 3/8
 \relative {
+  \tempo Allegretto
+  \clef treble
+  \key g \major
+  \time 3/8
   {{ rh1("d''=''8-.\\mf") }}
   {{ rh1("d=''8-.") }}
   c=''16(\mp b a8) a-. | b16(\< a g8) g-. |

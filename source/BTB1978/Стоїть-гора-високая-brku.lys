@@ -1,9 +1,9 @@
 {% macro rightHand() %}
-\tempo Lento
-\clef treble
-\key b \minor
-\time 3/4
 \relative {
+  \tempo Lento
+  \clef treble
+  \key b \minor
+  \time 3/4
   b=4(\p <b d> <d fis>)\< |
   \af 4.\! <d=' b'>2 ais'4 |
   <e=' cis'>2( <cis ais'>4)\> |

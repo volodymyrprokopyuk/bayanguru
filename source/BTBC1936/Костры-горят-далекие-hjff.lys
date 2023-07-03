@@ -1,9 +1,9 @@
 {% macro rightHand() %}
-\tempo Moderato
-\clef treble
-\key d \minor
-\time 2/4
 \relative {
+  \tempo Moderato
+  \clef treble
+  \key d \minor
+  \time 2/4
   \partial 4. { d'='8[\mf d f] | }
   a='4 g | bes a | d,2~ | d8 d[ d f] |
   <f=' a>4 <e g> | <g bes> <f a> |

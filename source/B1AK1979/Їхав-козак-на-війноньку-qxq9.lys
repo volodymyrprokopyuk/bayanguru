@@ -1,11 +1,11 @@
 {% from "util.lys" import v2 %}
 
 {% macro rightHand() %}
-\tempo Allegretto
-\clef treble
-\key g \major
-\time 2/4
 \relative {
+  \tempo Allegretto
+  \clef treble
+  \key g \major
+  \time 2/4
   e'='4\(\p e8 fis | g4 fis8 e | fis4 b | e,\) d |
   g='4\(\mp g8 a | b4 a8 g | a4 d | b2\) |
   c=''4\(\mf b8 a | b4 g\) | a\( g8 fis | g4 e\) |

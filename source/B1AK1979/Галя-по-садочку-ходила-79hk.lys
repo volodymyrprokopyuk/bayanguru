@@ -7,11 +7,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegretto
-\clef treble
-\key g \major
-\time 2/4
 \relative {
+  \tempo Allegretto
+  \clef treble
+  \key g \major
+  \time 2/4
   {{ rh1("d''=''8\\mf") }}
   {{ rh1("d'=''8") }}
   a='8\p a b b | c4( b8 d | a4 g) |

@@ -6,11 +6,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Adagio
-\clef treble
-\key a \minor
-\time 2/4
 \relative {
+  \tempo Adagio
+  \clef treble
+  \key a \minor
+  \time 2/4
   <<
     \new Voice = voiceOne \relative {
       \voiceOne

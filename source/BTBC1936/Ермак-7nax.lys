@@ -1,9 +1,9 @@
 {% macro rightHand() %}
-\tempo Largo
-\clef treble
-\key e \minor
-\time 2/4
 \relative {
+  \tempo Largo
+  \clef treble
+  \key e \minor
+  \time 2/4
   \partial 8 { g'='8\(\mf | }
   e='4 g | e8. fis16 g8 a | b4.\) b,8\( |
   e='4 g | e8. fis16 g8 a | b\) b r g\f |

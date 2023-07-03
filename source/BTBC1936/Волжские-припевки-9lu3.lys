@@ -1,11 +1,11 @@
 {% from "util.lys" import v2 %}
 
 {% macro rightHand() %}
-\tempo Moderato
-\clef treble
-\key d \major
-\time 2/4
 \relative {
+  \tempo Moderato
+  \clef treble
+  \key d \major
+  \time 2/4
   \partial 4. { d'='8[(\mp fis a]) | }
   <fis=' a d>4 <fis a cis> |
   <g=' b e>4 <g b d> |

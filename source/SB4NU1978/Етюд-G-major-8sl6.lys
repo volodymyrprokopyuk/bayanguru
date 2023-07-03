@@ -38,11 +38,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegro
-\clef treble
-\key g \major
-\time 6/8
 \relative {
+  \tempo Allegro
+  \clef treble
+  \key g \major
+  \time 6/8
   \set subdivideBeams = ##t
   {{ rh1("b'='16(\\p c b", "g=''16(\\f a g") }}
   d=''8 <a cis>^\tRit <a=' c>) |

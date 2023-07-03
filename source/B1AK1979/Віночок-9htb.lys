@@ -1,11 +1,11 @@
 {% from "util.lys" import v2 %}
 
 {% macro rightHand() %}
-\tempo Allegretto
-\clef treble
-\key c \major
-\time 2/4
 \relative {
+  \tempo Allegretto
+  \clef treble
+  \key c \major
+  \time 2/4
   g'='8(\mf a g4) | g8( a g4) |
   g='8( a g a | g a g a) |
   \repeat volta 2 {

@@ -4,11 +4,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegretto
-\clef treble
-\key f \major
-\time 2/4
 \relative {
+  \tempo Allegretto
+  \clef treble
+  \key f \major
+  \time 2/4
   a''=''16(\f bes c a g bes a g) |
   f=''16( g a f d e f d) |
   g=''16( a g f e f e d) |

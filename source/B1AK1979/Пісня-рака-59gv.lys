@@ -1,11 +1,11 @@
 {% from "util.lys" import momentBeat %}
 
 {% macro rightHand() %}
-\tempo Moderato
-\clef treble
-\key bes \major
-\time 2/4
 \relative {
+  \tempo Moderato
+  \clef treble
+  \key bes \major
+  \time 2/4
   bes'='8\f f d'4 | bes8 f d'4 |
   bes='8 f d'4 | c16( bes a g f4) |
   d='8(\mp f) f4 | ees8( g) g4 |

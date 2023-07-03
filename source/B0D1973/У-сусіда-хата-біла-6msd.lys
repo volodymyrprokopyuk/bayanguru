@@ -6,11 +6,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Moderato
-\clef treble
-\key g \major
-\time 4/4
 \relative {
+  \tempo Moderato
+  \clef treble
+  \key g \major
+  \time 4/4
   \meter 1/4 1,1,1,1
   b'='8(\mf e b b c a b b) | b( g' fis e c a b4) |
   {{ rh1() }} e( fis g a) |

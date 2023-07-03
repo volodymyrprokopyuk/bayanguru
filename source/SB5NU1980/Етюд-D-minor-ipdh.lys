@@ -23,11 +23,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegro
-\clef treble
-\key d \minor
-\time 3/8
 \relative {
+  \tempo Allegro
+  \clef treble
+  \key d \minor
+  \time 3/8
   {{ rh1("a'='16\\mf", "_\\aLeg") }}
 
   c=''16\f\> f e d c bes | a g f e d \af 16\! c |

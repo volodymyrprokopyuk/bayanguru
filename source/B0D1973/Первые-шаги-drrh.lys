@@ -4,11 +4,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Lento
-\clef treble
-\key c \major
-\time 2/4
 \relative {
+  \tempo Lento
+  \clef treble
+  \key c \major
+  \time 2/4
   \repeat volta 2 {
     {{ rh1("c''=''8\\(\\p") }} g=''4\) |
     {{ rh1("c,=''8\\(") }} c,=''4\) |

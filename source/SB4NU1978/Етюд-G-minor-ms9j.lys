@@ -30,11 +30,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo "Andante cantabile"
-\clef treble
-\key g \minor
-\time 3/8
 \relative {
+  \tempo "Andante cantabile"
+  \clef treble
+  \key g \minor
+  \time 3/8
   {{ rh2("<bes'=' d>8.\\(\\p") }}
   <g=' bes>8. <g ees'>16 <bes g'> <ees bes'> | <bes f'>4.\) |
   <f'='' aes>8.\(_\dCre <ees g>16 <d f> <ees g> |

@@ -11,11 +11,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Adagio
-\clef treble
-\key g \minor
-\time 2/4
 \relative {
+  \tempo Adagio
+  \clef treble
+  \key g \minor
+  \time 2/4
   \meter 1/2 #'(1)
   \partial 8 { d'='8\(\mp | }
   {{ rh1("g='8") }}

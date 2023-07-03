@@ -4,11 +4,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegretto
-\clef treble
-\key a \minor
-\time 2/4
 \relative {
+  \tempo Allegretto
+  \clef treble
+  \key a \minor
+  \time 2/4
   \repeat segno 2 {
     \volta 1
     e'='8(\mf c') c c | c( b) b a |

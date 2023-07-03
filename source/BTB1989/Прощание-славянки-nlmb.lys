@@ -1,11 +1,11 @@
 {% from "util.lys" import v2 %}
 
 {% macro rightHand() %}
-\tempo "Tempo di marcia"
-\clef treble
-\key f \minor
-\time 4/4
 \relative {
+  \tempo "Tempo di marcia"
+  \clef treble
+  \key f \minor
+  \time 4/4
   \acc { c''=''16 d e } f=''2\ff des | c bes4. g8 |
   {{ v2("aes'='4( c) g( c='') |", "<c'=' f>4 r <c=' e> r |") }}
   <aes,= c f>4 r \acc { des'=''8 } <aes c>4.(\mf des=''8 ) |

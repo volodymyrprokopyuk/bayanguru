@@ -9,11 +9,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Moderato
-\clef treble
-\key bes \major
-\time 2/4
 \relative {
+  \tempo Moderato
+  \clef treble
+  \key bes \major
+  \time 2/4
   {{ rh1("f'='8(\\mf") }} | bes d f,4\) |
   {{ rh1("f='8(") }} | bes4.\) r8 |
   \repeat volta 2 {

@@ -15,11 +15,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegretto
-\clef treble
-\key d \major
-\time 6/8
 \relative {
+  \tempo Allegretto
+  \clef treble
+  \key d \major
+  \time 6/8
   {{ rh1("a'='8-.\\mp") }}
   a='8-. d-. fis-. a4-- fis8 | b4-- fis8 a4.-- |
   <a='' cis>8-. 8-. <gis b>-. <fis a>-. <cis gis'>-. <a fis'>-. |

@@ -8,11 +8,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegretto
-\clef treble
-\key g \major
-\time 4/4
 \relative {
+  \tempo Allegretto
+  \clef treble
+  \key g \major
+  \time 4/4
   <g''='' g'>8-.\mf r d'-. r <a a'>8[-. 8]-. d-. r |
   g,=''16( a b c d8)-. d-. <a a'>8[-. 8]-. d-. r |
   g,=''8\f r d-. d-. \acc { dis=''8 } e4(-> d8) r |

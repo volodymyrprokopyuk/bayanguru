@@ -11,11 +11,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Moderato
-\clef treble
-\key f \major
-\time 3/4
 \relative {
+  \tempo Moderato
+  \clef treble
+  \key f \major
+  \time 3/4
   {{ rh1("a'='8(\\f") }}
   d'=''8( a f g a bes | c4) c c |
   bes='4( a g | a2 f4) |

@@ -60,11 +60,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Moderato
-\clef treble
-\key b \minor
-\time 6/8
 \relative {
+  \tempo Moderato
+  \clef treble
+  \key b \minor
+  \time 6/8
   {{ rh1("<d''='' fis b>8\\mf", "_\\aSta") }}
   {{ rh1("<d'='' fis b>8", "") }}
   {{ rh3() }}

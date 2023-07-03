@@ -1,11 +1,11 @@
 {% from "util.lys" import momentBeat %}
 
 {% macro rightHand() %}
-\tempo Allegretto
-\clef treble
-\key a \minor
-\time 2/4
 \relative {
+  \tempo Allegretto
+  \clef treble
+  \key a \minor
+  \time 2/4
   e'='4\mp a | <e a c>4. a8 |
   b='8( d c b | a4 e) |
   <e=' a c>4 a | d8( c b a) |

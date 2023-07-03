@@ -11,11 +11,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Moderato
-\clef treble
-\key d \minor
-\time 2/4
 \relative {
+  \tempo Moderato
+  \clef treble
+  \key d \minor
+  \time 2/4
   \repeat segno 2 {
     \partial 8. { a'='16(\mp \acc { c=''8 } bes16 a) | }
     \repeat volta 2 {

@@ -9,11 +9,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo "Tempo di valzer"
-\clef treble
-\key b \minor
-\time 3/4
 \relative {
+  \tempo "Tempo di valzer"
+  \clef treble
+  \key b \minor
+  \time 3/4
   <b= d>2\(\p <cis e>4 | <d fis>2 <b' d>4 |
   <a=' cis>2 <g b>4 | <fis a>2.\) |
   <a=' cis>2\( <g b>4 | <cis, e>2 <e g>4 |

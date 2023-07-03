@@ -4,11 +4,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Lento
-\clef treble
-\key g \minor
-\time 4/4
 \relative {
+  \tempo Lento
+  \clef treble
+  \key g \minor
+  \time 4/4
   {{ rh1("g'='4\\p") }}
   {{ rh1("g='4") }}
   fis='4\( d\< g \af 4\! bes |

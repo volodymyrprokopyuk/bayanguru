@@ -8,11 +8,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Lento
-\clef treble
-\key a \minor
-\time 4/4
 \relative {
+  \tempo Lento
+  \clef treble
+  \key a \minor
+  \time 4/4
   e'='4.\p f8 e4.\< \af 8\! a,8 |
   c='4 \af 2.\! b2.\> |
   e='4. f8 e4. a,8 |

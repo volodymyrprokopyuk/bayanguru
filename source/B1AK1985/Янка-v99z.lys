@@ -23,11 +23,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegretto
-\clef treble
-\key d \major
-\time 2/4
 \relative {
+  \tempo Allegretto
+  \clef treble
+  \key d \major
+  \time 2/4
   {{ rh1("fis'='16(\\mf") }}
 
   {{ rh2("e=''8-.\\mp") }} | a a16( cis e4) |

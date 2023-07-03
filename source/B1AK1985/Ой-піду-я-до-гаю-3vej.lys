@@ -9,11 +9,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Andante
-\clef treble
-\key d \minor
-\time 2/4
 \relative {
+  \tempo Andante
+  \clef treble
+  \key d \minor
+  \time 2/4
   d''=''8(\mf f a) a | bes( a g4) |
   c,=''8( e g) g | a16( g f e d4) |
   {{ rh1() }}

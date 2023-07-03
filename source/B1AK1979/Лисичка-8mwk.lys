@@ -5,11 +5,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Presto
-\clef treble
-\key c \major
-\time 2/4
 \relative {
+  \tempo Presto
+  \clef treble
+  \key c \major
+  \time 2/4
   c'='8(\mf d e f | g) g g g |
   a='8 a a a | g4 g |
   {{ rh1() }} | c4( g') |

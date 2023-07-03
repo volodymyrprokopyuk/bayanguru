@@ -1,11 +1,11 @@
 {% from "util.lys" import shapedSlur %}
 
 {% macro rightHand() %}
-\tempo Lento
-\clef treble
-\key e \minor
-\time 3/4
 \relative {
+  \tempo Lento
+  \clef treble
+  \key e \minor
+  \time 3/4
   b=2\(\p b4 | b dis fis | e2 fis4 | g fis e\) |
   fis='2\( a4 | g2 fis4 | e2.~ | e2.\) |
   \repeat volta 2 {

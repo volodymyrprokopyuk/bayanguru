@@ -9,11 +9,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegro
-\clef treble
-\key a \minor
-\time 4/4
 \relative {
+  \tempo Allegro
+  \clef treble
+  \key a \minor
+  \time 4/4
   \partial 4 { f''=''16(\p e c a) | }
   \repeat volta 2 {
     r8 c=''8-. f,-. b-. a( e) f='16( e c a) |

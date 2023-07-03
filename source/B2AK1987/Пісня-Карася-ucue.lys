@@ -5,11 +5,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegretto
-\clef treble
-\key bes \major
-\time 2/4
 \relative {
+  \tempo Allegretto
+  \clef treble
+  \key bes \major
+  \time 2/4
   bes'='8-.\mf 8-. 8-. 8-. |
   bes='16( a bes c d8)-. bes-. |
   ees=''8-. g,-. g16( f g a |

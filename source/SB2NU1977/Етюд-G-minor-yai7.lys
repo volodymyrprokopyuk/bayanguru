@@ -15,11 +15,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo "Allegro moderato"
-\clef treble
-\key g \minor
-\time 4/4
 \relative {
+  \tempo "Allegro moderato"
+  \clef treble
+  \key g \minor
+  \time 4/4
   {{ rh1("<c'=' ees g>8-.\\mf", "\\p", "\\f", "\\p") }}
   {{ rh1("<c=' ees g>8-.\\p", "", "\\mp", "") }}
   \tuplet 3/2 { <b= f' aes>8-.\mf 8-. 8-. } %

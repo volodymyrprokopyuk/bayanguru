@@ -4,11 +4,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Moderato
-\clef treble
-\key b \minor
-\time 3/8
 \relative {
+  \tempo Moderato
+  \clef treble
+  \key b \minor
+  \time 3/8
   b'='8(\p fis) fis | a(\> \af 4\! fis4) |
   b='8( fis) fis | a(\> \af 4\! fis4) |
   d'=''8(\mp cis b) | b(\< \af 16.\! ais) ais |

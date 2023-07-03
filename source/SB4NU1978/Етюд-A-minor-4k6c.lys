@@ -16,11 +16,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo "Allegro moderator, dramatico"
-\clef treble
-\key a \minor
-\time 4/4
 \relative {
+  \tempo "Allegro moderator, dramatico"
+  \clef treble
+  \key a \minor
+  \time 4/4
   {{ rh1() }}
   b=16(\< ais b c d cis d dis e dis %
   e='16 f fis eis fis \af 16\! gis) |

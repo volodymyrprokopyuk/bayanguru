@@ -1,11 +1,11 @@
 {% from "util.lys" import momentBeat, v2 %}
 
 {% macro rightHand() %}
-\tempo Lento
-\clef treble
-\key d \major
-\time 3/4
 \relative {
+  \tempo Lento
+  \clef treble
+  \key d \major
+  \time 3/4
   \meter 1/4 1,1,1
   \partial 4 { <d'=' fis>8\mf <e g> | }
   <fis=' a>4. <a cis>8 8 <g b> |

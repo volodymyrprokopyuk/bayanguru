@@ -3,11 +3,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegro
-\clef treble
-\key bes \major
-\time 2/4
 \relative {
+  \tempo Allegro
+  \clef treble
+  \key bes \major
+  \time 2/4
   {{ rh1("f'='8-.\\mf", "d)") }}
   {{ rh1("f,='8-.", "c)") }}
   d=''8.\( ees16 d8 c | bes a g4\) |

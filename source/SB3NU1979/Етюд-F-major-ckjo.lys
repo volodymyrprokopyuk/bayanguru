@@ -1,9 +1,9 @@
 {% macro rightHand() %}
-\tempo Allegretto
-\clef treble
-\key f \major
-\time 3/8
 \relative {
+  \tempo Allegretto
+  \clef treble
+  \key f \major
+  \time 3/8
   f'='8\(\p g16 f e f | a8 bes16 a gis a |
   c=''8 d16 c b c | f8 g16 f e f\) |
   a=''8.( g16 f e | d c bes a g f) |

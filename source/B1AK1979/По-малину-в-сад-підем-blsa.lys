@@ -9,11 +9,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegretto
-\clef treble
-\key d \minor
-\time 2/4
 \relative {
+  \tempo Allegretto
+  \clef treble
+  \key d \minor
+  \time 2/4
   {{ rh1("d'='8\\(\\mf") }}
   {{ rh1("d='8\\(\\f") }}
   e='4\(\mp e8 e | d e f4\) |

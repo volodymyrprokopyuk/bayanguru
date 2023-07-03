@@ -18,11 +18,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo "Con moto"
-\clef treble
-\key c \major
-\time 4/4
 \relative {
+  \tempo "Con moto"
+  \clef treble
+  \key c \major
+  \time 4/4
   \meter 1/4 1,1,1,1
   {{ rh1("g''=''8-.\\mf") }}
   {{ rh1("g,='8-.") }}

@@ -10,11 +10,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegretto
-\clef treble
-\key g \major
-\time 2/4
 \relative {
+  \tempo Allegretto
+  \clef treble
+  \key g \major
+  \time 2/4
   \partial 8 { \tuplet 3/2 { g'='16(\mf a g } | }
   \repeat volta 2 {
     {{ rh1() }} | g b4 g8( |

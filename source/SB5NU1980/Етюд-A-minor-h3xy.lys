@@ -47,11 +47,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegro
-\clef treble
-\key a \minor
-\time 2/4
 \relative {
+  \tempo Allegro
+  \clef treble
+  \key a \minor
+  \time 2/4
   {{ rh1("a''=''32\\mp", "_\\aLeg") }}
   {{ rh5() }} a='''8 \ottava #0 r |
 

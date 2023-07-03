@@ -1,9 +1,9 @@
 {% macro rightHand() %}
-\tempo Allegro
-\clef treble
-\key c \major
-\time 3/4
 \relative {
+  \tempo Allegro
+  \clef treble
+  \key c \major
+  \time 3/4
   g''=''4\f g g | g8( f e d c b |
   c=''4) c c | d d e8( f |
   g=''4) g g | g8( f e d c b |

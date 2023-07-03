@@ -9,11 +9,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Lento
-\clef bass
-\key c \minor
-\time 2/4
 \relative {
+  \tempo Lento
+  \clef bass
+  \key c \minor
+  \time 2/4
   \acc { g=16 a b } c='4->\mp bes8-- aes-- |
   g=4-> c,-- | d8->\< ees-- f-- \af 8\! aes-- |
   <>\> \af 2\! <fis= g>2-> |

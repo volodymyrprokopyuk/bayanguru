@@ -31,11 +31,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo "Allegro moderato"
-\clef treble
-\key c \minor
-\time 4/4
 \relative {
+  \tempo "Allegro moderato"
+  \clef treble
+  \key c \minor
+  \time 4/4
   \dPad 4
   \repeat segno 2 {
     {{ rh1("<c'=' ees g>8\\mp\\<") }}

@@ -26,11 +26,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegro
-\clef treble
-\key b \major
-\time 6/8
 \relative {
+  \tempo Allegro
+  \clef treble
+  \key b \major
+  \time 6/8
   {{ rh1("<dis'=' fis b>8\\f", "_\\dCre") }}
   {{ rh2() }}
   <dis='' gis b>8_\dDim <cis fisis ais> <dis gis b> %

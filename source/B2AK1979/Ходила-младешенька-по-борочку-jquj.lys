@@ -1,9 +1,9 @@
 {% macro rightHand() %}
-\tempo Andante
-\clef treble
-\key c \major
-\time 2/4
 \relative {
+  \tempo Andante
+  \clef treble
+  \key c \major
+  \time 2/4
   <c''='' e>8\mf 8 8 8 | <b d>4 <a c>8( <b d>) |
   <c='' e>8 8 <e g>4 | <b d>( <gis e'>) |
   <a=' c>8 8 <a d>8 8 | <c e>4 a8( b) |

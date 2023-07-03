@@ -5,11 +5,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Moderato
-\clef treble
-\key c \major
-\time 2/4
 \relative {
+  \tempo Moderato
+  \clef treble
+  \key c \major
+  \time 2/4
   \partial 4 { r16 g'='16\(\mf a b | }
   \repeat volta 2 {
     c=''16\< b c d e c e \af 16\! f |

@@ -24,11 +24,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo "Moderato tranquillo"
-\clef treble
-\key fis \major
-\time 2/4
 \relative {
+  \tempo "Moderato tranquillo"
+  \clef treble
+  \key fis \major
+  \time 2/4
   \partial 8 { <fis'=' ais>16\(\mf <gis b> | }
   \repeat volta 2 {
     {{ rh1("<ais=' cis>16") }}

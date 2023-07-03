@@ -33,11 +33,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegretto
-\clef treble
-\key a \major
-\time 2/4
 \relative {
+  \tempo Allegretto
+  \clef treble
+  \key a \major
+  \time 2/4
   {{ rh1("a=16\\(->\\f") }}
   {{ rh2("e='16\\(->") }}
   {{ rh1("a=16\\(->") }}

@@ -16,11 +16,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegretto
-\clef treble
-\key bes \major
-\time 2/4
 \relative {
+  \tempo Allegretto
+  \clef treble
+  \key bes \major
+  \time 2/4
   \repeat volta 2 {
     {{ rh1("f''=''16(\\mf") }} f bes16( d) |
     f=''16( ees c ees) d8( f) |

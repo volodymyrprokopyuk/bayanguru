@@ -7,11 +7,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegro
-\clef treble
-\key f \major
-\time 4/4
 \relative {
+  \tempo Allegro
+  \clef treble
+  \key f \major
+  \time 4/4
   \meter 1/4 1,1,1,1
   \partial 8 { c'='8\mf | }
   {{ rh1() }}

@@ -11,11 +11,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Largo
-\clef treble
-\key ees \major
-\time 3/4
 \relative {
+  \tempo Largo
+  \clef treble
+  \key ees \major
+  \time 3/4
   \partial 4 { bes=4\mf | }
   \repeat volta 2 {
     ees='2 c4 | f2 bes,4 |

@@ -3,11 +3,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Moderato
-\clef treble
-\key g \major
-\time 4/4
 \relative {
+  \tempo Moderato
+  \clef treble
+  \key g \major
+  \time 4/4
   g'='2\(\mf d'2 | e4 d8 c b4\) r |
   g='2\( d'4 g | e4 d8 c b4\) r |
   c=''4( c b b) | a( b8 c d4) r |

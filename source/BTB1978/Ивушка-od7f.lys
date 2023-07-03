@@ -1,9 +1,9 @@
 {% macro rightHand() %}
-\tempo Lento
-\clef treble
-\key c \major
-\time 3/4
 \relative {
+  \tempo Lento
+  \clef treble
+  \key c \major
+  \time 3/4
   g=4\p c e | a2 g4 | g2. | b,2. |
   g=4 b d | f2 e4 | c2.~ | c2. |
   g=4 c e | <a c>2 <g b>4 | <f a>2. | <d f>2. |

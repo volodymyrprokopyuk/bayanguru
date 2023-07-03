@@ -14,11 +14,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Andante
-\clef treble
-\key e \minor
-\time 3/8
 \relative {
+  \tempo Andante
+  \clef treble
+  \key e \minor
+  \time 3/8
   \set subdivideBeams = ##t
   e''=''8\(\p b b | b16 a c b a g\) |
   fis='16\( g a8[ a] | a16 fis b a g fis\) |

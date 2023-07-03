@@ -4,11 +4,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Moderato
-\clef treble
-\key c \major
-\time 2/4
 \relative {
+  \tempo Moderato
+  \clef treble
+  \key c \major
+  \time 2/4
   c'='8-.\mf c-. e-. f-. | g4 g |
   a='8-. a-. a-. a-. | g4 g4 |
   {{ rh1("g'='4") }}

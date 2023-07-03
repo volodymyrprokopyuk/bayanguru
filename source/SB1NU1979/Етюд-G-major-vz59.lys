@@ -1,9 +1,9 @@
 {% macro rightHand() %}
-\tempo Allegretto
-\clef treble
-\key g \major
-\time 4/4
 \relative {
+  \tempo Allegretto
+  \clef treble
+  \key g \major
+  \time 4/4
   g'='8\(\mf a\< b c d e fis \af 8\! g |
   fis=''8 g a b c4\)-- r |
   c='''8\(\> b a g fis e d \af 8\! c |

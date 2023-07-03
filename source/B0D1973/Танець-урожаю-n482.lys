@@ -19,11 +19,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Moderato
-\clef treble
-\key c \major
-\time 2/4
 \relative {
+  \tempo Moderato
+  \clef treble
+  \key c \major
+  \time 2/4
   \repeat volta 2 { {{ rh1("g'='4\\mf") }} }
   {{ rh2("e,='8(\\p") }} | c( d e4) |
   {{ rh2("e=''8(") }} | a4( a,='8) r |

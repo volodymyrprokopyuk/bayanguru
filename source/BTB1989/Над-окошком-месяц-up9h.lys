@@ -1,11 +1,11 @@
 {% from "util.lys" import v2 %}
 
 {% macro rightHand() %}
-\tempo Andante
-\clef treble
-\key d \minor
-\time 3/4
 \relative {
+  \tempo Andante
+  \clef treble
+  \key d \minor
+  \time 3/4
   a=2 a4 |
   {{ v2("f'='2 d4 | e2 f4 | e2. |", "a=2. | gis=~ | gis |") }}
   a=2 a4 | {{ v2("g'='2 e='4 |", "cis'='2. |") }}

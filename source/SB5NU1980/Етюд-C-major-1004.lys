@@ -51,11 +51,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo "Allegro moderato"
-\clef treble
-\key c \major
-\time 2/4
 \relative {
+  \tempo "Allegro moderato"
+  \clef treble
+  \key c \major
+  \time 2/4
   {{ rh1("<g''='' e'>16(\\p") }}
   {{ rh1("<g=' e'>16(") }}
   {{ rh2("<e= c'>16(") }}

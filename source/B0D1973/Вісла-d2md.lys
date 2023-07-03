@@ -4,11 +4,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Moderato
-\clef treble
-\key a \minor
-\time 3/4
 \relative {
+  \tempo Moderato
+  \clef treble
+  \key a \minor
+  \time 3/4
   {{ rh1("a'='8\\(\\mf") }}
   {{ rh1("a='8\\(\\mf") }}
   e='8\(\mp\< gis b4 gis | \af 8\! a8 c e4 c |

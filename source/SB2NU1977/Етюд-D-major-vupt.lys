@@ -1,9 +1,9 @@
 {% macro rightHand() %}
-\tempo Allegro
-\clef treble
-\key d \major
-\time 3/8
 \relative {
+  \tempo Allegro
+  \clef treble
+  \key d \major
+  \time 3/8
   \repeat volta 2 {
     a=16\mf d_\aLeg fis e d cis | b e g fis e d |
     cis='16 e a g fis e | d\< fis a d fis \af 16\! a |

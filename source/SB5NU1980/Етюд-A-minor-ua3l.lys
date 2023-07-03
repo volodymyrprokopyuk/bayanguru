@@ -38,11 +38,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Vivace
-\clef treble
-\key a \minor
-\time 4/4
 \relative {
+  \tempo Vivace
+  \clef treble
+  \key a \minor
+  \time 4/4
   {{ rh1("e''=''8\\(\\p\\< f e") }}
   {{ rh2() }}
   {{ rh1("e=''8\\(\\p\\< f e") }}

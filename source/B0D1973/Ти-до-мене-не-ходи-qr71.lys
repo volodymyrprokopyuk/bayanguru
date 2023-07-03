@@ -10,11 +10,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegretto
-\clef treble
-\key a \minor
-\time 2/4
 \relative {
+  \tempo Allegretto
+  \clef treble
+  \key a \minor
+  \time 2/4
   {{ rh1("a'='16(\\mf") }} | a4) a |
   {{ rh1("a='16(") }} | a4) b |
   \repeat volta 2 {

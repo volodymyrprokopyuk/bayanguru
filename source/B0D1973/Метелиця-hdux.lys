@@ -8,11 +8,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo "Con moto"
-\clef treble
-\key a \minor
-\time 2/4
 \relative {
+  \tempo "Con moto"
+  \clef treble
+  \key a \minor
+  \time 2/4
   {{ rh1("e''=''8-.\\mp") }}
   {{ rh1("e'=''8-.") }}
   gis='4( e8)-. e-. | e'16( d c b a8)-. a-. |

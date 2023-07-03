@@ -14,11 +14,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Moderato
-\clef treble
-\key a \minor
-\time 4/4
 \relative {
+  \tempo Moderato
+  \clef treble
+  \key a \minor
+  \time 4/4
   {{ rh1("c''=''4\\f") }}
   {{ rh1("c=''4") }}
   e=''4\(\mp d c b | a b c d\) |

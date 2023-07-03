@@ -47,11 +47,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegro
-\clef treble
-\key a \minor
-\time 2/4
 \relative {
+  \tempo Allegro
+  \clef treble
+  \key a \minor
+  \time 2/4
   {{ rh1("e''=''16\\mf a, c_\\aLeg", "") }} a b c d |
   {{ rh1("e=''16 a, c", "_\\dCre") }} a gis a ais |
   {{ rh3("\\f") }}

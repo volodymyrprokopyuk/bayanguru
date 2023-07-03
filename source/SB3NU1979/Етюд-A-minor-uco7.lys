@@ -1,11 +1,11 @@
 {% from "util.lys" import v2, hSpace, shapedSlur %}
 
 {% macro rightHand() %}
-\tempo "Andante cantabile"
-\clef treble
-\key a \minor
-\time 4/4
 \relative {
+  \tempo "Andante cantabile"
+  \clef treble
+  \key a \minor
+  \time 4/4
   \partial 8 { <d''='' f>8(\p | }
   <c='' e>8 <b d> <a c> <gis b> <a c> <gis b> <a c>) <d f>( |
   <c='' e>8 <b d> <a c> <gis b> <a c>4.) <d f>8( |

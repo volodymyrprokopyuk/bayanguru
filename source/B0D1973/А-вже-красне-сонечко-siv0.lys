@@ -1,9 +1,9 @@
 {% macro rightHand() %}
-\tempo Lento
-\clef treble
-\key a \minor
-\time 2/4
 \relative {
+  \tempo Lento
+  \clef treble
+  \key a \minor
+  \time 2/4
   \repeat volta 2 {
     a'='8\(\mp e' d f | e4 d8 c\) | b( d c4) |
     \alternative {

@@ -17,11 +17,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegro
-\clef treble
-\key g \major
-\time 2/4
 \relative {
+  \tempo Allegro
+  \clef treble
+  \key g \major
+  \time 2/4
   {{ rh1("d'='8\\mf") }}
   {{ rh1("d,='8") }}
   {{ rh2("<g=' b g'>8.->\\f") }}

@@ -11,11 +11,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegro
-\clef treble
-\key a \major
-\time 3/4
 \relative {
+  \tempo Allegro
+  \clef treble
+  \key a \major
+  \time 3/4
   {{ rh1("a'='16(\\p") }}
   a=''8)-.\f r r4 r |
 

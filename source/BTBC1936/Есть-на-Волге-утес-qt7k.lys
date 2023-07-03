@@ -8,11 +8,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Largo
-\clef treble
-\key d \minor
-\time 3/4
 \relative {
+  \tempo Largo
+  \clef treble
+  \key d \minor
+  \time 3/4
   \partial 4 { a'='8.\mp g16 | }
   f='4 a e8. f16 | d2 <f a>8 <g bes> |
   <a=' c>2 <d, bes'>8 <e c'> |

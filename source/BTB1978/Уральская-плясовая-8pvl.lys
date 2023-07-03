@@ -1,9 +1,9 @@
 {% macro rightHand() %}
-\tempo Allegretto
-\clef treble
-\key a \major
-\time 2/4
 \relative {
+  \tempo Allegretto
+  \clef treble
+  \key a \major
+  \time 2/4
   b'='8\mf b e8. d16 | cis8 cis e8. cis16 |
   b='8 b e8. d16 | cis8( a) a4 |
   b='16( e, gis b) e8. d16 | cis( b cis d) e8. cis16 |

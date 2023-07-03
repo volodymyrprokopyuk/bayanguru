@@ -1,15 +1,15 @@
 {% macro rightHand() %}
-\tempo _
-\clef treble
-\key _
-\time _
 \relative {
+  \tempo _
+  \clef treble
+  \key _
+  \time _
 }
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key _
 \relative {
+  \clef bass
+  \key _
 }
 {% endmacro %}

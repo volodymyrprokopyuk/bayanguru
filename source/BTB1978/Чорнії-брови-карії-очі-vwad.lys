@@ -13,11 +13,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Moderato
-\clef treble
-\key d \minor
-\time 3/4
 \relative {
+  \tempo Moderato
+  \clef treble
+  \key d \minor
+  \time 3/4
   d'='4\(\p f a\< | d2 \af 4\! d4 |
   cis=''4 b cis | d2 a4\) |
   f'=''4\( e d | c2 bes4 |

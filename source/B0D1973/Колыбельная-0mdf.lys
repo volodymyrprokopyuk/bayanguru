@@ -3,11 +3,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Lento
-\clef treble
-\key a \minor
-\time 2/4
 \relative {
+  \tempo Lento
+  \clef treble
+  \key a \minor
+  \time 2/4
   \repeat volta 2 {
     e'='8\(\p e a a | c a b4\) |
     c=''8\( a gis e | a a a='4\) |

@@ -9,11 +9,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Presto
-\clef treble
-\key d \minor
-\time 2/4
 \relative {
+  \tempo Presto
+  \clef treble
+  \key d \minor
+  \time 2/4
   d''=''8\mf f16( e d8)-. d-. | e r e4-> |
   cis=''8-- cis16( b a b cis a | d8)-. r d4-> |
   d=''8--\p f16( e d\< e f d | e8)-. \af 8\! e-. e4-> |

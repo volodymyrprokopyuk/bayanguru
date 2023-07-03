@@ -1,9 +1,9 @@
 {% macro rightHand() %}
-\tempo Moderato
-\clef treble
-\key c \major
-\time 4/4
 \relative {
+  \tempo Moderato
+  \clef treble
+  \key c \major
+  \time 4/4
   \repeat volta 2 {
     c''=''4\(\mf e g e | d8 e d c b4 g\) |
     c=''4\( e g e | d4. f8 e d c b='\) |

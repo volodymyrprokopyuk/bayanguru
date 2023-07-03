@@ -1,9 +1,9 @@
 {% macro rightHand() %}
-\tempo Lento
-\clef treble
-\key d \minor
-\time 2/4
 \relative {
+  \tempo Lento
+  \clef treble
+  \key d \minor
+  \time 2/4
   \partial 4 { a=8\mf d | }
   f='4 a,8 f' | e4 a,8 e' |
   d='4 a4~ | a a8 d |

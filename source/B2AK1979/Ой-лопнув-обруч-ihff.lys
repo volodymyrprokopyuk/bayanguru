@@ -18,11 +18,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegro
-\clef treble
-\key d \major
-\time 2/4
 \relative {
+  \tempo Allegro
+  \clef treble
+  \key d \major
+  \time 2/4
   {{ rh1("<fis''='' a>4\\f") }} | <d fis>4 4 |
   {{ rh1("<fis='' a>4") }} | <d fis>4 <ais=' e' fis>-> |
 

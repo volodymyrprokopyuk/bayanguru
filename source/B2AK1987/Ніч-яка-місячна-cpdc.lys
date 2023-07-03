@@ -1,9 +1,9 @@
 {% macro rightHand() %}
-\tempo Moderato
-\clef treble
-\key a \minor
-\time 3/4
 \relative {
+  \tempo Moderato
+  \clef treble
+  \key a \minor
+  \time 3/4
   e''=''4\(\p d c | c b\< a\) |
   b='4\( b \af 4\! b | b gis e\) |
   e='4\( gis b | d c b |

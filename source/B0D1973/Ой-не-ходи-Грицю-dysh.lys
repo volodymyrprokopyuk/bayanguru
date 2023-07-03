@@ -11,11 +11,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Lento
-\clef treble
-\key a \minor
-\time 4/4
 \relative {
+  \tempo Lento
+  \clef treble
+  \key a \minor
+  \time 4/4
   {{ rh1("a'='4.\\(\\p", "a='\\)") }}
   {{ rh1("a='4.\\(", "b='\\)") }}
 

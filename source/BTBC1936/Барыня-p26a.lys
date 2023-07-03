@@ -59,11 +59,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegro
-\clef treble
-\key c \major
-\time 2/4
 \relative {
+  \tempo Allegro
+  \clef treble
+  \key c \major
+  \time 2/4
   \acc { fis''=''8 } g4->\f %
   \acc { fis=''8 } g4-> |
   \acc { fis=''8 } g8-> d16( e f e d c) |

@@ -4,11 +4,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Presto
-\clef treble
-\key g \major
-\time 2/4
 \relative {
+  \tempo Presto
+  \clef treble
+  \key g \major
+  \time 2/4
   {{ rh1("d'='8-.\\mf\\<") }}
   ees='8(-- d)-. d-. d-. | e(-- d)-. d-. d-. |
   f='8(-- d)-. d-. d-. | \acc { gis='8 } a8(-- d,)-. d='4-> |

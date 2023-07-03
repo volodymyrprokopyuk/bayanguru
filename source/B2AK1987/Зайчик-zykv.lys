@@ -5,11 +5,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegretto
-\clef treble
-\key a \major
-\time 4/4
 \relative {
+  \tempo Allegretto
+  \clef treble
+  \key a \major
+  \time 4/4
   \meter 1/4 1,1,1,1
   a'='8\mf a \acc { gis'=''8 } a4-> %
   a,='8 a \acc { gis'=''8 } a4-> |

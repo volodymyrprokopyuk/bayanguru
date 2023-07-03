@@ -16,11 +16,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Moderato
-\clef treble
-\key a \minor
-\time 2/4
 \relative {
+  \tempo Moderato
+  \clef treble
+  \key a \minor
+  \time 2/4
   {{ rh1("c''=''8-.\\mp") }}
   {{ rh1("c=''8-.") }}
   {{ rh2("<f=' a>8-. <f=' a>-. 4") }}

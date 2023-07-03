@@ -1,11 +1,11 @@
 {% from "util.lys" import momentBeat %}
 
 {% macro rightHand() %}
-\tempo Andante
-\clef treble
-\key g \minor
-\time 3/4
 \relative {
+  \tempo Andante
+  \clef treble
+  \key g \minor
+  \time 3/4
   \meter 1/4 1,1,1
   r4\p r d''=''8\( d | ees4. ees8 d c |
   d=''4 g,8 g\) d'\( d | ees4. d8 c f |

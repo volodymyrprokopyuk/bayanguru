@@ -1,11 +1,11 @@
 {% from "util.lys" import hSpace, shapedSlur %}
 
 {% macro rightHand() %}
-\tempo Andante
-\clef treble
-\key c \major
-\time 2/4
 \relative {
+  \tempo Andante
+  \clef treble
+  \key c \major
+  \time 2/4
   c''=''8\(\mf g' g e | f16 e d8 c g\) |
   c=''8\( g' g e | c d e g\) |
   \repeat volta 2 {

@@ -15,11 +15,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegretto
-\clef treble
-\key g \major
-\time 2/4
 \relative {
+  \tempo Allegretto
+  \clef treble
+  \key g \major
+  \time 2/4
   {{ rh1("d''=''16(\\p") }}
   \repeat volta 2 {
     b'='8\mp b a( g) | a4( e) | a8 a g fis | g4 d |

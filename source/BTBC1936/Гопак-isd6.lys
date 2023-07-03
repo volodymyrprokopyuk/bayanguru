@@ -9,11 +9,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegro
-\clef treble
-\key d \major
-\time 2/4
 \relative {
+  \tempo Allegro
+  \clef treble
+  \key d \major
+  \time 2/4
   {{ rh1("<fis'=' d'>4->\\f", "fis8 d='") }}
   {{ rh1("d'=''8 d", "d='4") }}
   g='8 g <g b>4-> | <fis a>8 <fis c'> <g b>4-> |

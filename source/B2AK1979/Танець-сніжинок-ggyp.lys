@@ -22,11 +22,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegretto
-\clef treble
-\key f \major
-\time 3/4
 \relative {
+  \tempo Allegretto
+  \clef treble
+  \key f \major
+  \time 3/4
   c'='4-.\p e-._\dCre fis-. | gis-. bes-. b |
   c=''4-. e-. fis-. | gis-.^\tRit bes-. b='' |
 

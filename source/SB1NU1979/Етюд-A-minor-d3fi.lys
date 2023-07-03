@@ -12,11 +12,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo "Tempo di valzer"
-\clef treble
-\key a \minor
-\time 3/4
 \relative {
+  \tempo "Tempo di valzer"
+  \clef treble
+  \key a \minor
+  \time 3/4
   {{ rh1("a'='8[(\\mf") }}
   b='8(\f c b fis gis a | \af 2.\! b2.)\> |
   {{ rh1("a='8[(\\mf") }}

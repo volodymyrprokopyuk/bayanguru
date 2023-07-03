@@ -1,9 +1,9 @@
 {% macro rightHand() %}
-\tempo Lento
-\clef treble
-\key g \minor
-\time 4/4
 \relative {
+  \tempo Lento
+  \clef treble
+  \key g \minor
+  \time 4/4
   g'='8\(\p a bes g fis4 d8 d\) |
   g='8\( a bes4 a d\) |
   c=''8\( c bes a bes4 g8 g |

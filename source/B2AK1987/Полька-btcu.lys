@@ -22,11 +22,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegretto
-\clef treble
-\key c \major
-\time 2/4
 \relative {
+  \tempo Allegretto
+  \clef treble
+  \key c \major
+  \time 2/4
   {{ rh1("g'='8-.\\mf") }}
   a'=''8-. g-. g16( f e8) |
   {{ rh1("g,='8-.") }}

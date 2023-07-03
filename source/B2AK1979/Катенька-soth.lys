@@ -26,11 +26,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegretto
-\clef treble
-\key ees \major
-\time 2/4
 \relative {
+  \tempo Allegretto
+  \clef treble
+  \key ees \major
+  \time 2/4
   \meter 1/2 #'(1)
   \partial 8 { bes'='8-. | }
   {{ rh1("bes,='8-.") }}

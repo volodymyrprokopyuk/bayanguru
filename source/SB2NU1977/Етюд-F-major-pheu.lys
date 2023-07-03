@@ -4,11 +4,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegretto
-\clef treble
-\key f \major
-\time 6/8
 \relative {
+  \tempo Allegretto
+  \clef treble
+  \key f \major
+  \time 6/8
   \repeat volta 2 {
     a'='16(\p c_\aDol f a c a' f4 c8) |
     a,='16( c f a c a' f4 c8) |

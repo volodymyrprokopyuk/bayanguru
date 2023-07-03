@@ -1,9 +1,9 @@
 {% macro rightHand() %}
-\tempo "Con moto"
-\clef treble
-\key c \major
-\time 2/4
 \relative {
+  \tempo "Con moto"
+  \clef treble
+  \key c \major
+  \time 2/4
   \repeat volta 2 {
     g''=''4\mf g8 f | e e e4 | d8 e f4 | e e='' |
   }

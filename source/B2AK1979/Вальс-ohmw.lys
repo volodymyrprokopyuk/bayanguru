@@ -14,11 +14,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo "Tempo di valzer"
-\clef treble
-\key d \minor
-\time 3/4
 \relative {
+  \tempo "Tempo di valzer"
+  \clef treble
+  \key d \minor
+  \time 3/4
   \repeat segno 2 {
     \volta 1
     \repeat volta 2 {

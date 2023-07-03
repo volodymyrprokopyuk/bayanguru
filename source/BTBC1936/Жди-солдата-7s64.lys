@@ -1,9 +1,9 @@
 {% macro rightHand() %}
-\tempo "Tempo di marcia"
-\clef treble
-\key d \minor
-\time 2/4
 \relative {
+  \tempo "Tempo di marcia"
+  \clef treble
+  \key d \minor
+  \time 2/4
   d'='8\mf d g4 | f8 f e4 | d8 d bes'4 | a2 |
   d,='8 d g4 | f8 f e4 | d8 d <bes' d>4 | <a c>2 |
   <bes=' d>4 <bes d f> | <a c>4. a8 |

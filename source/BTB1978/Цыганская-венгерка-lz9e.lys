@@ -18,11 +18,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Largo
-\clef treble
-\key d \minor
-\time 4/4
 \relative {
+  \tempo Largo
+  \clef treble
+  \key d \minor
+  \time 4/4
   \partial 2 { r8 a=8( d e | }
   \acc { d='16 e } d4 %
   \acc { cis='8 } <g e'>4) r8 a( e' f |

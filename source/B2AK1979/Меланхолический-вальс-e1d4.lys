@@ -32,11 +32,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Moderato
-\clef treble
-\key g \minor
-\time 3/8
 \relative {
+  \tempo Moderato
+  \clef treble
+  \key g \minor
+  \time 3/8
   <g'=' bes d g>8\mf 8 8 | 4 d'8\(\p \bar "||"
   \repeat segno 2 {
     \volta 1

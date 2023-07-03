@@ -1,11 +1,11 @@
 {% from "util.lys" import hSpace, shapedSlur %}
 
 {% macro rightHand() %}
-\tempo Andantino
-\clef treble
-\key g \major
-\time 2/4
 \relative {
+  \tempo Andantino
+  \clef treble
+  \key g \major
+  \time 2/4
   a'='8\mf a( fis d) | g g g( b) |
   a='8 a( fis d | g4 b) |
   \repeat volta 2 {

@@ -11,11 +11,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegro
-\clef treble
-\key ees \major
-\time 2/4
 \relative {
+  \tempo Allegro
+  \clef treble
+  \key ees \major
+  \time 2/4
   \repeat volta 2 {
     {{ rh1("ees''=''8\\(\\mf") }} | g8( f ees4) |
     {{ rh1("ees=''8\\(\\f") }} | ees=''2 |

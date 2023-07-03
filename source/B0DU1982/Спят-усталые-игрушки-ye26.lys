@@ -1,11 +1,11 @@
 {% from "util.lys" import momentBeat, hSpace, shapedSlur %}
 
 {% macro rightHand() %}
-\tempo Andante
-\clef treble
-\key c \major
-\time 4/4
 \relative {
+  \tempo Andante
+  \clef treble
+  \key c \major
+  \time 4/4
   \meter 1/4 1,1,1,1
   \repeat volta 2 {
     g'='4.\(\mp e8 g4. e8 | g4 g f e\) |

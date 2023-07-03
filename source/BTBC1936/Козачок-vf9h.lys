@@ -16,11 +16,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegro
-\clef treble
-\key g \major
-\time 2/4
 \relative {
+  \tempo Allegro
+  \clef treble
+  \key g \major
+  \time 2/4
   \repeat segno 2 {
     \volta 1
     \repeat volta 2 {

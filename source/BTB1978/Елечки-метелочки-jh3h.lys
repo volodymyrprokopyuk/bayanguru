@@ -19,11 +19,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Moderato
-\clef treble
-\key e \minor
-\time 2/4
 \relative {
+  \tempo Moderato
+  \clef treble
+  \key e \minor
+  \time 2/4
   {{ rh1("<g'=' b>4\\mf", "<g=' b>16 e g b") }} \bar "||"
   {{ rh1("<g=' b>4", "<g=' b>16 e <g b>8") }} \bar "||"
   {{ rh1("<g=' b>8 16 e16", "<g=' b>16 e <g b>8") }} \bar "|."

@@ -1,11 +1,11 @@
 {% from "util.lys" import v2, hSpace, shapedSlur %}
 
 {% macro rightHand() %}
-\tempo Lento
-\clef treble
-\key e \minor
-\time 3/4
 \relative {
+  \tempo Lento
+  \clef treble
+  \key e \minor
+  \time 3/4
   r4\p r r8 e'='8 |
   \repeat volta 2 {
     e='4\(\< g4. \af 8\! a8 | b4 ais4.\) b8 |

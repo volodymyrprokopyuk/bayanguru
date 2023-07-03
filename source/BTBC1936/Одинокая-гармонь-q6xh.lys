@@ -5,11 +5,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Lento
-\clef treble
-\key e \minor
-\time 3/4
 \relative {
+  \tempo Lento
+  \clef treble
+  \key e \minor
+  \time 3/4
   \partial 2 { e'='4\(\p\< g | }
   b='4 g \af 4\! e | dis fis a |
   c=''4 b2~\> | \af 8.\! b4\) e,\( fis |

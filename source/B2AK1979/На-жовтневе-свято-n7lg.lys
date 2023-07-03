@@ -1,9 +1,9 @@
 {% macro rightHand() %}
-\tempo "Tempo di marcia"
-\clef treble
-\key d \major
-\time 2/4
 \relative {
+  \tempo "Tempo di marcia"
+  \clef treble
+  \key d \major
+  \time 2/4
   \repeat volta 2 {
     d'='8-.\mf e-. d-. d-. | fis-. g-. a4 |
     b='8-. a-. g-. b-. | <d, fis a>4-- <c e a>-- |

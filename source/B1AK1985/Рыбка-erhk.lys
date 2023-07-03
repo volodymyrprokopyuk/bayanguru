@@ -1,9 +1,9 @@
 {% macro rightHand() %}
-\tempo Allegretto
-\clef treble
-\key e \major
-\time 3/4
 \relative {
+  \tempo Allegretto
+  \clef treble
+  \key e \major
+  \time 3/4
   \partial 4 { gis'='8( a | }
   b='4) b gis8( a | b4) b e,8( fis |
   gis='4) gis e8( fis | gis2) a8( b |

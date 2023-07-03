@@ -5,11 +5,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegretto
-\clef treble
-\key c \major
-\time 2/4
 \relative {
+  \tempo Allegretto
+  \clef treble
+  \key c \major
+  \time 2/4
   \repeat volta 2 {
     g''=''8\(\mf e16 f g f e d | c8[ e g c] |
     b=''8\) b\( c16 b a b | c4 g\) |

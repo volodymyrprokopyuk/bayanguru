@@ -12,11 +12,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Moderato
-\clef treble
-\key ees \major
-\time 3/4
 \relative {
+  \tempo Moderato
+  \clef treble
+  \key ees \major
+  \time 3/4
   bes'='2\(\mf aes4 | g2 bes4 | aes2 g4 | f2.\) |
   aes='2\( g4 | f2.\) | g2\( f4 | ees2.\) |
   bes'='2\( c4 | bes2 g4 | aes2 g4 | f2.\) |

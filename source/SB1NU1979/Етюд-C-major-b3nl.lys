@@ -1,9 +1,9 @@
 {% macro rightHand() %}
-\tempo Presto
-\clef treble
-\key c \major
-\time 2/4
 \relative {
+  \tempo Presto
+  \clef treble
+  \key c \major
+  \time 2/4
   r16\mf c'='16(\< d e f g a \af 16\! b | c4) r |
   r16 g='16(\< a b c d e \af 16\! fis | g4) r |
   r16 fis=''16(\< g a b c d \af 16\! e | fis4) r |

@@ -1,9 +1,9 @@
 {% macro rightHand() %}
-\tempo Moderato
-\clef treble
-\key g \major
-\time 2/4
 \relative {
+  \tempo Moderato
+  \clef treble
+  \key g \major
+  \time 2/4
   r8\f <d'=' g>8[ r <d g>] |
   r8 <d=' fis a>8[ r <d g>] |
   r8 <d=' g>[ r <d g>] |

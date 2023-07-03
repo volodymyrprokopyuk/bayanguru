@@ -12,11 +12,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Lento
-\clef treble
-\key g \major
-\time 4/4
 \relative {
+  \tempo Lento
+  \clef treble
+  \key g \major
+  \time 4/4
   r2\p r8 d'='8(\< g \af 16.\! b |
   \repeat volta 2 {
     e=''4\mp d) %

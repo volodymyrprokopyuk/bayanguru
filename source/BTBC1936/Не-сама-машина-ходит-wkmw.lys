@@ -5,11 +5,11 @@
 {% endmacro %}
 
 {% macro rightHand() %}
-\tempo Allegretto
-\clef treble
-\key f \major
-\time 4/4
 \relative {
+  \tempo Allegretto
+  \clef treble
+  \key f \major
+  \time 4/4
   r8 c''=''8(\mf c[ g] bes16 a g8 f d |
   c='8) r r4 r8 <g' c e>-. 8-. <f bes d>-. |
   \rep 2 {
