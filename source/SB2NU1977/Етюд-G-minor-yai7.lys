@@ -96,9 +96,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key g \minor
 \relative {
+  \clef bass
+  \key g \minor
   r4 \tuplet 3/2 { r8 d,=,(-\puBass a') } %
   r4 \tuplet 3/2 { r8 d,=,( a') } | %
   {{ lh1("g=,8", "d'", "g,", "d'=") }}

@@ -29,9 +29,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key d \minor
 \relative {
+  \clef bass
+  \key d \minor
   d=2.-\puBass | f, | g | a~ | a |
   g=,4 f e | f2 g4 | a2 a4 | d2. |
   f=2 e4 | d2 c4 | bes2 f4 | fis2 e8 fis |

@@ -55,9 +55,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key ees \major
 \relative {
+  \clef bass
+  \key ees \major
   \meter 1/4 2,1
   \partial 4 { r4 | }
   ees=8(-\stBass eesM!) eesM eesM bes( ees@M!) |

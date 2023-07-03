@@ -40,9 +40,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key a \minor
 \relative {
+  \clef bass
+  \key a \minor
   a,=,8-\stBass am! e' a,@m | b8 e@7! e8 e7 |
   gis,=,8 e@7! e'8 e7 | a, am! e' a,@m |
   a,=,8 am! c a,@m | d8 dm! f d@m |

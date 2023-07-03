@@ -65,9 +65,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key c \minor
 \relative {
+  \clef bass
+  \key c \minor
   c=4-\stBass cm! | c cm | c f@m! | c4 cm! |
   c=4 cm! | c cm | g gM! | c= cm! |
 

@@ -27,9 +27,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key e \minor
 \relative {
+  \clef bass
+  \key e \minor
   \partial 2 { r4 r | }
   e=4 em! em | b b7! b7 |
   \rep 3 { e=4 em! em | }

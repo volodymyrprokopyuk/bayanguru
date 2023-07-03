@@ -19,9 +19,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key bes \major
 \relative {
+  \clef bass
+  \key bes \major
   bes,=,8-\stBass besM! f' f7! | bes, besM! bes besM |
   bes=,8 besM! f' f7! | bes, besM! bes r |
   d=8 d7! fis d@7 | g,8 gm! bes g,@m |

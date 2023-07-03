@@ -24,9 +24,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key d \minor
 \relative {
+  \clef bass
+  \key d \minor
   \partial 4 { r4 | }
   d=4-\stBass dm! dm dm | d dm! dm dm |
   e=4 g,@m! a,4 a7! |

@@ -36,9 +36,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key e \minor
 \relative {
+  \clef bass
+  \key e \minor
   e=4(-\stBass em!) em | dis( b,@7!) b74 |
   e=4_\aSim em! em | dis b,@7! b74 |
   e=4 em! em | c cM! cM |

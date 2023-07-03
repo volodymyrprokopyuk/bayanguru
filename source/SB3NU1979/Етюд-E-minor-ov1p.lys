@@ -42,9 +42,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key e \minor
 \relative {
+  \clef bass
+  \key e \minor
   {{ lh1("e=8[-\\stBass") }} e[ r em] r |
   a,=,8[-. r b]-. r c[-. r b]-. r |
   a=,8[-. r ais]-. r b=,-. r r4 |

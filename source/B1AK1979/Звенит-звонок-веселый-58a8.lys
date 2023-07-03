@@ -15,9 +15,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key d \major
 \relative {
+  \clef bass
+  \key d \major
   \partial 4 { r4 | }
   d=4 dM! a d@M |
   \rep 2 { e'=4 a,@7! a,4 a7 | }

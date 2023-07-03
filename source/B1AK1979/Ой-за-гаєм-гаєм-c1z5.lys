@@ -20,9 +20,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key d \major
 \relative {
+  \clef bass
+  \key d \major
   \meter 1/2 #'(1)
   d=8(-\stBass dM!) dM dM | fis[( d@M!) dM8 dM] |
   g,=,8( gM!) gM gM | fis'[( d@M!) dM8 dM] |

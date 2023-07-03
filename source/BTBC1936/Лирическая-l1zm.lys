@@ -35,9 +35,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key d \major
 \relative {
+  \clef bass
+  \key d \major
   \meter 1/4 1,1,1
   \partial 4 { r4 | }
   d=8-\stBass dM! a d@M g8 gM! |

@@ -65,9 +65,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key e \minor
 \relative {
+  \clef bass
+  \key e \minor
   e=4-\stBass em! \rep 2 { e=4 em | }
   {{ lh2("") }}
   {{ lh2("\\fermata") }}

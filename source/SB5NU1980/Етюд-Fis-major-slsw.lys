@@ -85,9 +85,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key fis \major
 \relative {
+  \clef bass
+  \key fis \major
   \partial 8 { r8 | }
   {{ lh1("fis,=,8-\\stBass") }}
   \rep 2 { fis,=,8 fisM! fisM r | }

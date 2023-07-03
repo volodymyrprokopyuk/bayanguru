@@ -77,9 +77,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key g \minor
 \relative {
+  \clef bass
+  \key g \minor
   g,=,8( gm!)-. gm-. | fis'[( g,@m!)-. gm8]-. |
   f=8[_\aSim g,@m! e8] |
   {{ lh1() }}

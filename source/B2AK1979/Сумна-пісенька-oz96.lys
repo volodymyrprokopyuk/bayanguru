@@ -37,9 +37,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key g \minor
 \relative {
+  \clef bass
+  \key g \minor
   \meter 1/2 #'(1)
   \partial 8 { r8 | }
   {{ lh1("g,=,4-\\stBass") }}

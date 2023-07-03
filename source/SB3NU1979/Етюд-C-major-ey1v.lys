@@ -46,9 +46,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key c \major
 \relative {
+  \clef bass
+  \key c \major
   c=4-\stBass cM! cM |
   \rep 3 { c=4 cM! cM | }
   \rep 2 { g=,4 g7! g7 | }

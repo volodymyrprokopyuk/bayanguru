@@ -55,9 +55,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key ees \major
 \relative {
+  \clef bass
+  \key ees \major
   \partial 8 { r8 | }
   {{ lh1("ees=8-\\stBass") }}
   {{ lh2() }}

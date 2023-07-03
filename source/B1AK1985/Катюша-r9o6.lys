@@ -31,9 +31,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key fis \minor
 \relative {
+  \clef bass
+  \key fis \minor
   fis,=,8-\stBass fism! fis fism |
   \rep 2 { fis=,8 fism fis fism | }
   cis'=8 cisM! gis cis@7! |

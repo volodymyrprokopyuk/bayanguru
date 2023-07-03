@@ -18,9 +18,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key g \minor
 \relative {
+  \clef bass
+  \key g \minor
   bes,=,8-\stBass besM! bes besM | bes besM bes besM |
   bes=,8 besM! f f7! | bes besM! bes besM |
   \meter 1/2 #'(1)

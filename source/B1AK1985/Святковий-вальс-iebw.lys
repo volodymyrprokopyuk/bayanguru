@@ -31,9 +31,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key ees \major
 \relative {
+  \clef bass
+  \key ees \major
   {{ lh1("ees=4-\\stBass") }} | aes f,@m! fm4 |
   bes=,4 bes7! bes7 | d bes,@7! bes74 |
   ees=4 eesM! eesM | g, ees@M! eesM4 |

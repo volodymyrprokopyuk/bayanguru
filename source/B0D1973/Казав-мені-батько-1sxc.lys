@@ -17,9 +17,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key c \major
 \relative {
+  \clef bass
+  \key c \major
   c=4-\stBass cM! | c cM | f, fM! | c' cM! |
   c=8 cM! b g,@M! | c8 cM! f, fM! |
   c'=8 cM! g gM! | c4 g,,+gM! |

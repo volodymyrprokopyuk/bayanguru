@@ -59,9 +59,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key e \minor
 \relative {
+  \clef bass
+  \key e \minor
   \meter 1/4 1,1,1,1
   \partial 4 { r4 | }
   e=8-\stBass em! em4 c8 a,@m! b8 bM! |

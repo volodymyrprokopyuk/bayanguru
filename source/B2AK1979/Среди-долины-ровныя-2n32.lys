@@ -43,9 +43,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key a \minor
 \relative {
+  \clef bass
+  \key a \minor
   \partial 8 { r8 | }
   a,=,8(-\stBass am!) am a am am |
   e'=8( e7!) e7 e e7 e7 |

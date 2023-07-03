@@ -20,9 +20,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key a \minor
 \relative {
+  \clef bass
+  \key a \minor
   a,=,8-\stBass am! a am | d dm! a am! |
   {{ lh1("a,=,4") }}
   {{ lh1("a,,+am!4") }}

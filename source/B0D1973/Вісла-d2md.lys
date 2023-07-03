@@ -19,9 +19,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key a \minor
 \relative {
+  \clef bass
+  \key a \minor
   a,=,4(-\stBass am!)-. am-. | d( dm!)-. dm-. |
   a=,2 am!4-. | f@M!2 fM4-. |
   a=,4( am!)-. am-. | d( dm!)-. dm-. |

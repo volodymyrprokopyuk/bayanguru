@@ -45,9 +45,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key a \minor
 \relative {
+  \clef bass
+  \key a \minor
   \partial 8 { r8 | }
   e=4-\stBass e7! a, am! | e' e7! a, am! |
   gis=,4 e@7! a4 am! | g g7! c cM! |

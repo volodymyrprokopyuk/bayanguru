@@ -77,9 +77,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key fis \minor
 \relative {
+  \clef bass
+  \key fis \minor
   \meter 1/2 #'(1)
   fis,=,8(-\stBass fism!) fism fism |
   fis=,8( fism) fism fism |

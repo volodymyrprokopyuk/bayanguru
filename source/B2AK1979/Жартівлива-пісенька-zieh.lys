@@ -26,9 +26,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key f \major
 \relative {
+  \clef bass
+  \key f \major
   \meter 1/4 1,1,1,1
   \partial 8 { r8 | }
   f,=,8-\stBass fM! c' f,@M a8 f,@M! c8 f,@M |

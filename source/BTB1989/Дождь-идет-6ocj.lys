@@ -99,9 +99,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key c \minor
 \relative {
+  \clef bass
+  \key c \minor
   f,=,4-\stBass fm! | g8 c@m! aes8 aesM! |
   a=,8 d@7! g8 gM! | c,+cm!4 g,,+g7!-> | c,+cm!-> r |
 

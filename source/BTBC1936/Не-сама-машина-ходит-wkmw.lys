@@ -90,9 +90,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key f \major
 \relative {
+  \clef bass
+  \key f \major
   R1 | c,+cM!8-\stBass r r4 r2 | c4 cM! c cM |
   \time 3/4 c=8[ g] c,+cM! r r4 |
   \time 2/4 f'=4-. c-.

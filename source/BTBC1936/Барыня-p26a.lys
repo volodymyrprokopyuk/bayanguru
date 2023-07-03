@@ -110,9 +110,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key c \major
 \relative {
+  \clef bass
+  \key c \major
   \grace { s8 } g,=,8-\stBass g7! r g7 |
   g=,8 g7! c cM! | g g7! r g7 |
   b=,8 g,@7! c8 cM! | g g7! r g7 |

@@ -19,9 +19,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key g \major
 \relative {
+  \clef bass
+  \key g \major
   \meter 1/4 1,1,1,1
   e=4-\stBass em! a,@m! e@m!4 | e em! a,@m! e@m!4 |
   e=8 em! b bM! e em! a, am! |

@@ -30,9 +30,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key b \minor
 \relative {
+  \clef bass
+  \key b \minor
   b,=,4 bm! bm | d( b,@m!) r4 |
   \rep 2 {
     fis,=,4 fis7! fis7 | cis'= fis,@7! fis74 |

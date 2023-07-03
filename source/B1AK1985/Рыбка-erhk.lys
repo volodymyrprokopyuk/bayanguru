@@ -15,9 +15,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key e \major
 \relative {
+  \clef bass
+  \key e \major
   \partial 4 { r4 | }
   e=4(-\stBass eM!) eM-. | dis( e@M) eM4-. |
   cis=4_\aSim cism! cism | b e@M! r4 |

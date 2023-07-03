@@ -17,9 +17,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key g \minor
 \relative {
+  \clef bass
+  \key g \minor
   g,=,4\(-\puBass d' c2\) | bes4\( d fis d\) |
   ees=2\( d4 bes\) | c\( d g,\) g |
   g=,8\( a bes g fis4 d8 d\) | g\( a bes4 a d\) |

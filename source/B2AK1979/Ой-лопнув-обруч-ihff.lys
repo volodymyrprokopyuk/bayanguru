@@ -33,9 +33,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key d \major
 \relative {
+  \clef bass
+  \key d \major
   {{ lh1("d=8-\\stBass") }} | d dM! a d@M |
   {{ lh1("d=8") }} | d4 cis=-> |
 

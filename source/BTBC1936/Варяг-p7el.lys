@@ -23,9 +23,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key ees \major
 \relative {
+  \clef bass
+  \key ees \major
   \partial 16 { r16 | }
   ees,+eesM!4-\stBass \rep 3 { ees,+eesM }
   \rep 2 {

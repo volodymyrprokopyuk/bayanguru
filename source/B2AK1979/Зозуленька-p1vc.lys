@@ -58,9 +58,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key f \major
 \relative {
+  \clef bass
+  \key f \major
   c=4(-\stBass c7!)-. c7-. | f,( fM!)-. fM-. |
   c'=4_\aSim c7! c7 | f, fM! fM |
   \rep 2 { c'=4 c7! c7 | f, fM! fM | }

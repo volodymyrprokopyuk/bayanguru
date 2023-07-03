@@ -80,9 +80,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key f \minor
 \relative {
+  \clef bass
+  \key f \minor
   R2 | {{ lh1("f,,+fm!8-\\stBass") }}
   {{ lh3() }}
   f,,+fm!8 r f,,+fm r |

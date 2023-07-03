@@ -33,9 +33,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key g \major
 \relative {
+  \clef bass
+  \key g \major
   g,=,8-\stBass gM! g gM | g gM g gM |
   g=,8 gM! g gM | g gM g gM |
   \rep 2 { g=,8.[-> gM!16 gM8 gM] | e-. g-. b=,4-. | }

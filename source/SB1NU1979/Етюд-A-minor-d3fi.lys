@@ -26,9 +26,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key a \minor
 \relative {
+  \clef bass
+  \key a \minor
   {{ lh1("a,=,4-\\stBass") }}
   dis=4 b,@7! b74 | e e7! e7 |
   {{ lh1("a,=,4") }}

@@ -29,9 +29,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key a \minor
 \relative {
+  \clef bass
+  \key a \minor
   \meter 1/2 #'(1)
   a,=,8(-\stBass am!) am am | a( am) am am |
   e'=8( e7!) e7 e7 | a,( am!) am am |

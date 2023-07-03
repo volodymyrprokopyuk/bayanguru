@@ -45,9 +45,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key g \minor
 \relative {
+  \clef bass
+  \key g \minor
   \meter 1/4 1,1,1
   g,=,4( gm!) r | g( c@m!) r4 |
   g=,4( gm!) r | c( cm!) f,,+fM! |

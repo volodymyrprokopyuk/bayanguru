@@ -28,9 +28,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key d \minor
 \relative {
+  \clef bass
+  \key d \minor
   d=4(-\stBass dm!) dm | f,( d@m!) dm4 |
   e'=4_\aSim a,@7! a74 |
   \rep 2 { d=4 dm! dm | }

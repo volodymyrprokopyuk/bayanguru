@@ -29,9 +29,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key ees \major
 \relative {
+  \clef bass
+  \key ees \major
   {{ lh1("ees=4-\\stBass") }}
   {{ lh1("ees=4") }}
 

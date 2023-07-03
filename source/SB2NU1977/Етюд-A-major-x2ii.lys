@@ -34,9 +34,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key a \major
 \relative {
+  \clef bass
+  \key a \major
   a,=,8-.-\stBass r aM!-. r aM-. r |
   e@M!8-. r8 eM-. r e'-. r |
   fis=8_\aSim r fism! r fism r |

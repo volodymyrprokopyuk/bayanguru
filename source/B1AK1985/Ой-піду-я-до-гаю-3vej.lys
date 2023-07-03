@@ -25,9 +25,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key d \minor
 \relative {
+  \clef bass
+  \key d \minor
   d=8-\stBass dm! f d@m | g,8 a bes g,@m! |
   c=8 cM! bes c@M | a8 a7! d dm! |
   {{ lh1() }}

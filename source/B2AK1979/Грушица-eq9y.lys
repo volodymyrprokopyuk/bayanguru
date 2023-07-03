@@ -48,9 +48,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key b \minor
 \relative {
+  \clef bass
+  \key b \minor
   b,=,4-\stBass bm! bm | b bm bm |
   e=4 em! a,@7! | d4 dM! dM |
   a=,4 aM! aM | a aM aM |

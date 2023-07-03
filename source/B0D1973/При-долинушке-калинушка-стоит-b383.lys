@@ -21,9 +21,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key c \major
 \relative {
+  \clef bass
+  \key c \major
   \partial 4 { r4 | }
   {{ lh1("f@M!4-\\stBass") }} r |
   {{ lh1("f@M!4") }} r |

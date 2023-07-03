@@ -32,9 +32,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key c \major
 \relative {
+  \clef bass
+  \key c \major
   {{ lh1("c,+cM!4-\\stBass", "b,=,8") }}
   {{ lh2("a=,8", "e'= a,@m") }}
   {{ lh2("a,=,8", "a=, r") }}

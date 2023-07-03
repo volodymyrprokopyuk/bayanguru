@@ -100,9 +100,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key c \minor
 \relative {
+  \clef bass
+  \key c \minor
   {{ lh1("c=4-\\stBass") }}
   d=4 g,@7! des4 g,@7 |
   b=,4 g,@7! g4 g7 |

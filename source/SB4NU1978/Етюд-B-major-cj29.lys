@@ -100,9 +100,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key b \major
 \relative {
+  \clef bass
+  \key b \major
   {{ lh1("b,=,8[-\\stBass") }}
   fis=,8 r r fisM! r r |
   gis=,8 r r gism! r r |

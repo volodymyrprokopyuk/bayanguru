@@ -26,9 +26,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key f \major
 \relative {
+  \clef bass
+  \key f \major
   {{ lh1("f,=,4-\\stBass") }}
   f,=,4 fM! fM |
   {{ lh1("f=,4") }} f,,+fM!2. |

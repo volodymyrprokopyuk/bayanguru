@@ -85,9 +85,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key c \major
 \relative {
+  \clef bass
+  \key c \major
   \override TupletBracket.bracket-visibility = ##f
   \override TupletNumber.stencil = ##f
   {{ lh1("c=8-\\stBass") }}

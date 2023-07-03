@@ -41,9 +41,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key c \minor
 \relative {
+  \clef bass
+  \key c \minor
   \grace { s16 s s } c,+cm!4 g,=,4-\puBass |
   \rep 6 { c=4-> g | }
   c=8-> g-. a-. b-. | c,+cm!4 g=,4 |

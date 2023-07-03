@@ -61,9 +61,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key c \major
 \relative {
+  \clef bass
+  \key c \major
   c=4-\stBass r cM!8-. r | g4 r c@M!8-. r8 |
   c=4_\aSim r cM!8 r | g4 r c@M!8 r8 |
   {{ lh1() }}

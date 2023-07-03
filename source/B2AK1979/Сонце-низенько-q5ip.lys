@@ -44,9 +44,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key e \minor
 \relative {
+  \clef bass
+  \key e \minor
   {{ lh1("e=8-\\stBass") }}
   {{ lh1("e=8") }}
   {{ lh2() }}

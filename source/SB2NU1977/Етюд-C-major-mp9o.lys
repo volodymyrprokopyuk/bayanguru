@@ -23,9 +23,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key c \major
 \relative {
+  \clef bass
+  \key c \major
   \meter 1/2 #'(1)
   c=8(-\stBass cM!) cM cM | d,+d7!4 g16( a b a) |
   g=,8( g7!) g7 g7 | c,+cM!4 c16( b c d) |

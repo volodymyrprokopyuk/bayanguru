@@ -28,9 +28,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key g \major
 \relative {
+  \clef bass
+  \key g \major
   g,=,8(-\stBass gM!) gM | b[( g,@M!) gM8] |
   c=8[( g,@M!) gM8] | g( gM!) gM |
   g=,8( gM!) gM | d'[( d7!) g,@M!] |

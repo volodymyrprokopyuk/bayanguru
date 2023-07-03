@@ -29,9 +29,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key b \minor
 \relative {
+  \clef bass
+  \key b \minor
   {{ lh1("b,,+bm!-\\stBass") }}
   r8 d,+b,@m! r8 | r cis,+fis@7! r8 |
   r8 b,,+bm! r | r ais,,+fis@7! r8 |

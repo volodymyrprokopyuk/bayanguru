@@ -25,9 +25,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key g \major
 \relative {
+  \clef bass
+  \key g \major
   R2. | g,=,8[(-\puBass fis g a] b) r |
   c=8( d e4) c | b( g) r |
   a=,8( b c4) r | g8( a b4) r |

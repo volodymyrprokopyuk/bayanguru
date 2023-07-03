@@ -99,9 +99,9 @@
 {% endmacro %}
 
 {% macro leftHand() %}
-\clef bass
-\key aes \major
 \relative {
+  \clef bass
+  \key aes \major
   \partial 8 { r8 | }
   bes,=,4.\(-\puBass ees | aes ees8 ees4\) |
   bes'=4.\( ees,8 ees4 | aes,4. ees'4\) r8 |
