@@ -2,33 +2,32 @@ import { readFile } from "fs/promises"
 import chalk from "chalk"
 import { reFromParts } from "./util.js"
 
-const reOctaveCheck = reFromParts(
-  "mg",
-  // Line beginning ..., \command [x] { ... }, r/lhN("..."), v2("..."), tN("...")
-  /(^ +|\\\w+ (?:\S+ )?\{ |[rl]h\d+\("|v2\("|t\d\(")/,
-  // First note or chord
-  /(<?[a-g](?:is|es){0,2}[,']*)(.)(.*)/
-)
-
 // Disable: prepend | (measure starts)
 function lintFirstNoteOctaveCheck(content, logs) {
   logs.push(chalk.yellow("* Missing first note octave check or duration"))
+  const reOctaveCheck = reFromParts(
+    "mg",
+    // ^ space, rN, sN, { }, \cmd { }, {{ mcr("") }}
+    /^( +| +[rs]\d{0,2} | +\{ | +\\[^{]+\{ | +\{\{ [^(]+\(")/,
+    // First note or chord + check + rest
+    /(<?[a-g](?:es|is){0,2}[,']{0,4})(.)(.*)/
+  )
   let conforms = true
   for (const [_, start, note, check, rest] of
        content.matchAll(reOctaveCheck)) {
     // No octave check
     if (!/[=+@Mm7d]/.test(check)) {
-      logs.push(`${start}${chalk.red(note)}${chalk.red(check)}${rest}`)
+      logs.push(`${start}${chalk.red(note + check)}${rest}`)
       conforms = false
     }
     // No duration for the non-chord first note
-    if (check === "=" && !/^</.test(note) && !/^[,']*\d/.test(rest)) {
-      logs.push(`${start}${chalk.red(note)}${chalk.red(check)}${rest}`)
+    if (check === "=" && !/^</.test(note) && !/^[,']{0,4}\d/.test(rest)) {
+      logs.push(`${start}${chalk.red(note + check)}${rest}`)
       conforms = false
     }
     // No duration for the first chord
     if (/^</.test(note) && !/^[^>]+>\d/.test(rest)) {
-      logs.push(`${start}${chalk.red(note)}${chalk.red(check)}${rest}`)
+      logs.push(`${start}${chalk.red(note + check)}${rest}`)
       conforms = false
     }
   }

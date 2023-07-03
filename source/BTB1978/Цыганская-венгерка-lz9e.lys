@@ -82,7 +82,7 @@
       r4 <f= a d>4 4 s4 |
     }
   >>
-  r4 <g,= bes e> 2.->~ | 4 <f a d> 2.->~ | 4 %
+  r4 <g,= bes e>2.~-> | 4 <f a d> 2.->~ | 4 %
   <e= g cis>4 b' cis | d2 <fis a d>8 c' bes a=' |
 
   r8 g='8-. bes-. d-. e4-. <g, bes d>-> |
