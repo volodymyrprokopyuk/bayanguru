@@ -12,12 +12,12 @@
 {% endmacro %}
 
 {% macro lh1(a) %}
-  {{ a }} cM! cM r | b g,@7! g78 r |
+  {{ a }} cM! cM r | b g@7! g78 r |
   g=,8 g7! g g7 | c= cM! cM r |
 {% endmacro %}
 
 {% macro lh2() %}
-  c=8 a,@m! am8 r | d d7! d7 r |
+  c=8 a@m! am8 r | d d7! d7 r |
   g,=,8 gM! gM r |
 {% endmacro %}
 
@@ -61,8 +61,8 @@
   g=,8 gM! g gM | {{ lh2() }}
 
   g=,8 g7! g7 r | c cM! cM r |
-  d=8 g,@7! g78 r | c cM! cM r |
-  d=8 g,@7! g,8 g7 | c cM! cM r |
+  d=8 g@7! g78 r | c cM! cM r |
+  d=8 g@7! g,8 g7 | c cM! cM r |
   f,=,8 d@m! g8 g7! | c= cM! cM4 |
 }
 {% endmacro %}

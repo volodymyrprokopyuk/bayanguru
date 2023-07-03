@@ -5,7 +5,7 @@
 {% endmacro %}
 
 {% macro lh1(a) %}
-  a,=,4 am! | {{ a }} eM! | a,,+am! g,,+gM! |
+  a,=,4 am! | {{ a }} eM! | a+am! g+gM! |
 {% endmacro %}
 
 {% macro rightHand() %}

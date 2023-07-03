@@ -4,7 +4,7 @@
 {% endmacro %}
 
 {% macro lh1(a, b) %}
-  {{ a }} fM! bes besM! | a f,@M! f8 fM |
+  {{ a }} fM! bes besM! | a f@M! f8 fM |
   bes=,8 besM! {{ b }} c7! f,=, fM! |
 {% endmacro %}
 
@@ -28,11 +28,11 @@
   \clef bass
   \key f \major
   {{ lh1("f,=,8-\\stBass", "f fM! | c'") }}
-  {{ lh1("f=,8", "c f,@M! | c8") }}
+  {{ lh1("f=,8", "c f@M! | c8") }}
   \rep 2 {
-    c'=8 c7! e c@7 | f,8 fM! a=, f,@M |
+    c'=8 c7! e c@7 | f,8 fM! a=, f@M |
   }
-  f=,8 fM! bes besM! | a f,@M! f8 fM |
+  f=,8 fM! bes besM! | a f@M! f8 fM |
   c'=8 c7! e c@7 | f,8 fM! f=, r |
 }
 {% endmacro %}

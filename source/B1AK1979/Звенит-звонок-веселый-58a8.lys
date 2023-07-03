@@ -20,11 +20,11 @@
   \key d \major
   \partial 4 { r4 | }
   d=4 dM! a d@M |
-  \rep 2 { e'=4 a,@7! a,4 a7 | }
+  \rep 2 { e'=4 a@7! a,4 a7 | }
   d=4 dM! a d@M | b4 d@M! a4 d@M |
-  g=,4 e@m! e'4 em | a, d@M! g4 a,@M! |
-  fis=,4 d@M! a4 d@M | b4 bm! a b,@m |
+  g=,4 e@m! e'4 em | a, d@M! g4 a@M! |
+  fis=,4 d@M! a4 d@M | b4 bm! a b@m |
   g=,4 e@m! e'4 em | a, d@M! a4 a7! |
-  d=4 a=, d,+dM! r |
+  d=4 a=, d+dM! r |
 }
 {% endmacro %}

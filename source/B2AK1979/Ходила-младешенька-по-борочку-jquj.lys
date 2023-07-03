@@ -21,11 +21,11 @@
   \key c \major
   c=8-\stBass cM! c cM | g g7! g g7 |
   c=8 cM! c cM | g gM! e' e7! |
-  a,=,8 am! f d@m! | e'8 a,@m! d8 dm! |
-  e=8 a,@m! e8 e7! | a, am! a,,+am r |
+  a,=,8 am! f d@m! | e'8 a@m! d8 dm! |
+  e=8 a@m! e8 e7! | a, am! a+am r |
   c=8 cM! c cM | g gM! a b |
   c=8 cM! e c@M | g,8 gM! e' e7! |
-  a,=,8 am! f d@m! | e'8 a,@m! f,8 d@m! |
-  e'=8 a,@m! e8 e7! | a,=, am! a,,+am r |
+  a,=,8 am! f d@m! | e'8 a@m! f,8 d@m! |
+  e'=8 a@m! e8 e7! | a,=, am! a+am r |
 }
 {% endmacro %}

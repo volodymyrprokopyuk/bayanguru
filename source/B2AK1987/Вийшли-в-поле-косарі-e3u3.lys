@@ -24,9 +24,9 @@
   \key bes \major
   bes,=,8-\stBass besM! f' f7! | bes, besM! bes besM |
   bes=,8 besM! f' f7! | bes, besM! bes r |
-  d=8 d7! fis d@7 | g,8 gm! bes g,@m |
+  d=8 d7! fis d@7 | g,8 gm! bes g@m |
   c=8 c7! e c@7 | c8 c7! f ees |
   d=8 d7! a d@7 | d8 d7! g, gm! |
-  c=8 c7! g c@7 | f'8 c= f,,+fM! r |
+  c=8 c7! g c@7 | f'8 c= f+fM! r |
 }
 {% endmacro %}

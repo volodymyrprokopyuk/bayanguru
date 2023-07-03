@@ -26,17 +26,17 @@
 {% endmacro %}
 
 {% macro lh1(a) %}
-  {{ a }} fM!4 fM8 | g bes,@M!4 besM8 |
+  {{ a }} fM!4 fM8 | g bes@M!4 besM8 |
   c=8 c7!4 c78 |
 {% endmacro %}
 
 {% macro lh2(a) %}
   {{ a }} cM!4 cM8 | c d@m!4 dm8 |
-  b=,8 g,@7!4 g78 |
+  b=,8 g@7!4 g78 |
 {% endmacro %}
 
 {% macro lh3(a) %}
-  bes=,8 g,@m!4 gm8 | c f@M!4 fM8 |
+  bes=,8 g@m!4 gm8 | c f@M!4 fM8 |
   c=8 c7!4 c78 |
 {% endmacro %}
 
@@ -100,26 +100,26 @@
   a=,8 am!4 am8 | f d@m!4 dm8 |
   g=,8 g7!4 g78 | c cM!4 cM8 |
   {{ lh2("c=8") }} | a a7!4 a78 |
-  d=8 dm!4 dm8 | g, a,@M!4 aM8 |
+  d=8 dm!4 dm8 | g, a@M!4 aM8 |
   f=,8 d@m!4 dm8 | d@m![ dm8] dm dm |
   fis=,8 d@7!4 d78 | d@7![ d78] d74 |
   g=,8 c@M!4 cM8 | g f@M!4 fM8 |
   g=,8 e@m!4 em8 | g g7!4 g78 |
   \rep 2 {
-    c=8 cM!4 cM8 | c= g,@7!4 g78 |
+    c=8 cM!4 cM8 | c= g@7!4 g78 |
   }
-  c,+c7!4. r8 | R2 |
-  r4 bes,,+c@M! | a,,+am!4 g,,+c@7! |
+  c+c7!4. r8 | R2 |
+  r4 bes+c@M! | a+am!4 g+c@7! |
 
   \key f \major
   {{ lh1("f,=,8") }} | f, fM!4 fM8 |
   {{ lh1("f=,8") }} | f,[ fM! fM] r |
   {{ lh3() }} | f, fM!4 fM8 |
-  {{ lh3() }} | f,,+fM!4 r |
+  {{ lh3() }} | f+fM!4 r |
   c=8 c7!4 c78 | f@M!4 r4 |
-  c=8 c7!4 c78 | f,,+fM!4 r |
-  bes,,+c@M!4 bes,,+cM4 |
-  a,,+f@M!4 d,+f@M!4 | bes,,+g,@m!4 r4 |
-  c=4 r | f,,+fM!4 r | R2 |
+  c=8 c7!4 c78 | f+fM!4 r |
+  bes+c@M!4 bes+cM4 |
+  a+f@M!4 d+f@M!4 | bes+g@m!4 r4 |
+  c=4 r | f+fM!4 r | R2 |
 }
 {% endmacro %}

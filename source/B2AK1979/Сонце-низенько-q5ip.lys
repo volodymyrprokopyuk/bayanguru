@@ -10,7 +10,7 @@
 {% endmacro %}
 
 {% macro lh2() %}
-  a=,8 b4 | e8 em! em | a, b=,4 | b,,+b7!8( e,+em!) r |
+  a=,8 b4 | e8 em! em | a, b=,4 | b+b7!8( e+em!) r |
 {% endmacro %}
 
 {% macro rightHand() %}

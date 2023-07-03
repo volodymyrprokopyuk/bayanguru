@@ -43,8 +43,8 @@
   \rep 2 {
     c=8 c7! c7 c c7 c7 | f, fM! fM f fM fM |
   }
-  a=,8[ f,@M! fM8] a[ f,@M fM8] |
+  a=,8[ f@M! fM8] a[ f@M fM8] |
   bes=,8 besM! besM bes besM besM |
-  c=8[ f,@M! fM8] c c7! c7 | f,=, fM! fM fM r r |
+  c=8[ f@M! fM8] c c7! c7 | f,=, fM! fM fM r r |
 }
 {% endmacro %}

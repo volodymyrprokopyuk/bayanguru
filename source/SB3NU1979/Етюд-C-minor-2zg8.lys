@@ -71,13 +71,13 @@
   c=4-\stBass cm! | c cm | c f@m! | c4 cm! |
   c=4 cm! | c cm | g gM! | c= cm! |
 
-  c=4 cm! | c cm | d bes,@7! | ees4 eesM! |
-  aes,=,4 aesM! | f fm! | g,,+c@m! g,,+g7!4 | c'= cm! |
+  c=4 cm! | c cm | d bes@7! | ees4 eesM! |
+  aes,=,4 aesM! | f fm! | g+c@m! g+g7!4 | c'= cm! |
 
-  d=4 g,@7! | ees4 c@m! | b4 g,@7! | c4 cm! |
-  d=4 bes,@7! | ees4 eesM! | d d7! | g,=, g7! |
+  d=4 g@7! | ees4 c@m! | b4 g@7! | c4 cm! |
+  d=4 bes@7! | ees4 eesM! | d d7! | g,=, g7! |
 
   aes=,4 aesM! | g ees@M! | f4 fm! | ees' c@m! |
-  aes,=,4 aesM! | g g7! | c= f@m! | c,+cm!2 \fermata |
+  aes,=,4 aesM! | g g7! | c= f@m! | c+cm!2 \fermata |
 }
 {% endmacro %}

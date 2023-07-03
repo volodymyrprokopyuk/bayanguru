@@ -31,6 +31,6 @@
   {{ lh1("g,=,8(-\\stBass") }} | g, gM! gM gM |
   g=,8( gM!) gM gM | e'( em!) em em |
   a,=,8( am!) am am | d( dM!) dM dM |
-  {{ lh1("g,=,8(") }} | g,=,8 gM! g,,+gM4 |
+  {{ lh1("g,=,8(") }} | g,=,8 gM! g+gM4 |
 }
 {% endmacro %}

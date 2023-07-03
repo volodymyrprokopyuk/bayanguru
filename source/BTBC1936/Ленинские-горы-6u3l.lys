@@ -7,7 +7,7 @@
 {% endmacro %}
 
 {% macro lh1() %}
-  g=,8 gM!4 gM8 b g,@M4 gM8 |
+  g=,8 gM!4 gM8 b g@M4 gM8 |
   \rep 2 { a=,8 d@7!4 d78 d= d74 d78 | }
 {% endmacro %}
 
@@ -53,17 +53,17 @@
   \key g \major
   g,=,8-\stBass gM!4 gM8 g gM4 gM8 |
   {{ lh1() }}
-  b=,8 g,@M!4 a,@m!8 d,+d7!8 r r4 |
+  b=,8 g@M!4 a@m!8 d+d7!8 r r4 |
   {{ lh1() }}
-  g,=,8 gM!4 a,@m!8 g,,+gM!8 r r4 |
+  g,=,8 gM!4 a@m!8 g+gM!8 r r4 |
   e'=8 em!4 em8 cis e@m4 em8 |
   b=,8 bm!4 bm8 b bm4 bm8 |
   c=8 cM!4 cM8 a c@M4 cM8 |
   e'=8 e7!4 e78 gis, e@74 e78 |
   a=,8 am!4 am8 a am4 am8 |
-  d=8 g,@M!4 gM8 d r r4 |
-  d=8 a,@m!4 d@7!8 d8 d74 d78 |
-  g,=,8 gM!4 a,@m!8 g,@M!8 r8 r4 |
-  g=,8 gM!4 a,@m!8 g,@M!4 r4 |
+  d=8 g@M!4 gM8 d r r4 |
+  d=8 a@m!4 d@7!8 d8 d74 d78 |
+  g,=,8 gM!4 a@m!8 g@M!8 r8 r4 |
+  g=,8 gM!4 a@m!8 g@M!4 r4 |
 }
 {% endmacro %}

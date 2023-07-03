@@ -9,8 +9,8 @@
 {% endmacro %}
 
 {% macro lh1(a, b) %}
-  {{ a }} r | c,+cM!8 r c,+cM4 |
-  {{ b }} g,@M! g8 gM | a-. b-. c=4 |
+  {{ a }} r | c+cM!8 r c+cM4 |
+  {{ b }} g@M! g8 gM | a-. b-. c=4 |
 {% endmacro %}
 
 {% macro lh2(a, b) %}
@@ -35,9 +35,9 @@
 \relative {
   \clef bass
   \key c \major
-  {{ lh1("c,+cM!4-\\stBass", "b,=,8") }}
-  {{ lh2("a=,8", "e'= a,@m") }}
+  {{ lh1("c+cM!4-\\stBass", "b,=,8") }}
+  {{ lh2("a=,8", "e'= a@m") }}
   {{ lh2("a,=,8", "a=, r") }}
-  {{ lh1("c,+cM!4", "b=,8") }}
+  {{ lh1("c+cM!4", "b=,8") }}
 }
 {% endmacro %}

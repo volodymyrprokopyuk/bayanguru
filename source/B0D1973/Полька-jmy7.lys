@@ -30,10 +30,10 @@
   \clef bass
   \key c \major
   {{ lh1("c=8-\\stBass", "c= cM") }}
-  {{ lh1("c=8", "c,+cM8 r") }}
-  e=8 eM! gis, e@M | a8 am! e' a,@m |
-  gis,=,8 e@M! e'8 eM | a, am! g a,@m |
+  {{ lh1("c=8", "c+cM8 r") }}
+  e=8 eM! gis, e@M | a8 am! e' a@m |
+  gis,=,8 e@M! e'8 eM | a, am! g a@m |
   fis=,8 d@M! d'8 dM | g, gM! g=, gM |
-  d,+d7!4 r | g,,+g7! r |
+  d+d7!4 r | g+g7! r |
 }
 {% endmacro %}

@@ -19,7 +19,7 @@
   \key c \major
   c=8-\stBass r cM! r | c r cM r |
   c=8 r cM! r | c r cM r |
-  b=,8 r g,@M! r8 | b r g,@M r8 |
+  b=,8 r g@M! r8 | b r g@M r8 |
   g=,8 r gM! r | c= r cM! r |
 }
 {% endmacro %}

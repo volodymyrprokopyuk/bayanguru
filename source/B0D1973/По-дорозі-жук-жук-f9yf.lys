@@ -23,7 +23,7 @@
   \clef bass
   \key f \major
   c=4-\stBass c7! | f fM! | c c7! | f fM! |
-  bes,@M!8[ bes,M8 bes,M] r | f@M![ fM8 fM] r |
+  bes@M!8[ bes,M8 bes,M] r | f@M![ fM8 fM] r |
   c@7!8[ c78 c7] r | f@M![ fM8] fM4 |
   g,=,4 gm! | c f@M! | c4 c7! | f= fM! |
 }

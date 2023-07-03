@@ -1,7 +1,7 @@
 {% from "util.lys" import hSpace, shapedSlur %}
 
 {% macro lh1() %}
-  f,,+fM!8 r a,,+f@7! r8 |
+  f+fM!8 r a+f@7! r8 |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -41,10 +41,10 @@
   c=8. cm!16 cm8 r |
   {{ lh1() }}
   bes=,8. besM!16 besM8 r |
-  c,+cm!8 r ees,+c@m! r8 |
+  c+cm!8 r ees+c@m! r8 |
   {{ lh1() }}
   \rep 2 {
-    bes,,+besM!8[ a,,+f@7!] bes,,+besM!8 r |
+    bes+besM!8[ a+f@7!] bes+besM!8 r |
   }
 }
 {% endmacro %}

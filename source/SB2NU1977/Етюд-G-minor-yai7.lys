@@ -128,6 +128,6 @@
   \rep 4 { \tuplet 3/2 { r8 d,=, d } } | %
   g=,4~ \tuplet 3/2 { g8 d4 } g4 d |
   \tuplet 3/2 { g=,8 d4 } g4 %
-  \tuplet 3/2 { g=,8-- g-- d=,-- } g,,+gm!4 |
+  \tuplet 3/2 { g=,8-- g-- d=,-- } g+gm!4 |
 }
 {% endmacro %}

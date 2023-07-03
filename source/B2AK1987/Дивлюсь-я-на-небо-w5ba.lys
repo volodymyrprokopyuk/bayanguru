@@ -57,7 +57,7 @@
   \clef bass
   \key e \minor
   e=4-\stBass em! em |
-  e=4 em! em | fis b,@7! b74 |
+  e=4 em! em | fis b@7! b74 |
   b,=,4 b7! b7 | e em! em |
   g,=,4 gM! gM | d' d7! d7 |
   fis=4 d@7! d74 | g, gM! gM |

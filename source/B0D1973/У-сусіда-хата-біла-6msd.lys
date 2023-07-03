@@ -23,10 +23,10 @@
   \clef bass
   \key g \major
   \meter 1/4 1,1,1,1
-  e=4-\stBass em! a,@m! e@m!4 | e em! a,@m! e@m!4 |
+  e=4-\stBass em! a@m! e@m!4 | e em! a@m! e@m!4 |
   e=8 em! b bM! e em! a, am! |
-  b=,8 e@m! b8 bM! e,+em!4 r4 |
+  b=,8 e@m! b8 bM! e+em!4 r4 |
   g=,8 gM! d' dM! e em! a, am! |
-  b=,8 e@m! b8 bM! e= em! e,+em4 |
+  b=,8 e@m! b8 bM! e= em! e+em4 |
 }
 {% endmacro %}

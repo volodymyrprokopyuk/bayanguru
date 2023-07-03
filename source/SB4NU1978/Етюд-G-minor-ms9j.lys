@@ -80,30 +80,30 @@
 \relative {
   \clef bass
   \key g \minor
-  g,=,8( gm!)-. gm-. | fis'[( g,@m!)-. gm8]-. |
-  f=8[_\aSim g,@m! e8] |
+  g,=,8( gm!)-. gm-. | fis'[( g@m!)-. gm8]-. |
+  f=8[_\aSim g@m! e8] |
   {{ lh1() }}
-  d=8[ bes,@M! besM8] |
-  d=8[ f,@m! fm8] | c[ f,@m! fm8] |
-  b=,8[ f,@d! g,@7!8] | c8 cm! bes |
+  d=8[ bes@M! besM8] |
+  d=8[ f@m! fm8] | c[ f@m! fm8] |
+  b=,8[ f@d! g@7!8] | c8 cm! bes |
   \rep 2 {
     a=,8[ c@m! cm8] | r16 a16( bes a gis a=,) |
   }
-  a,,+c@m!8 r8 r | R4. | d8[ c@m! d,+d7!8] |
+  a+c@m!8 r8 r | R4. | d8[ c@m! d+d7!8] |
   {{ v2("r8 gm! r |", "g,=,4 f=,8 |") }}
 
   ees,=,8 eesM! eesM | f f7! f7 |
-  bes=,8 besM! besM | b[ f,@d! g,@7!8] |
+  bes=,8 besM! besM | b[ f@d! g@7!8] |
   c=8 cm! cm | bes[ c@m! cm8] |
   a=,8[ c@m! cm8] | d16( ees d c bes a=,) |
 
-  g=,8 gm! gm | fis'[ g,@m! gm8] | f[ g,@m! e8] |
+  g=,8 gm! gm | fis'[ g@m! gm8] | f[ g@m! e8] |
   {{ lh1() }} | ees@M!8 r8 r |
-  d=8[ f,@m! fm8] | c[ f,@m! fm8] |
-  b=,8[ f,@d! fd8] | g,@7! r8 r |
+  d=8[ f@m! fm8] | c[ f@m! fm8] |
+  b=,8[ f@d! fd8] | g@7! r8 r |
   c=8 cm! bes | r16 a16( bes a gis a) |
   a=,8[ c@m! cm8] | r16 a16( bes a gis a) |
-  a,,+c@m!8 r8 r | R4. | d=8[ c@m! d,+d7!8] |
+  a+c@m!8 r8 r | R4. | d=8[ c@m! d+d7!8] |
   {{ v2("r8 gm!4 |", "g,=,4. |") }}
 }
 {% endmacro %}

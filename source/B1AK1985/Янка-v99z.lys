@@ -46,6 +46,6 @@
   {{ lh2() }} | a, aM! aM aM |
   {{ lh2() }} | a, g fis e=, |
 
-  {{ lh1("d'=8", "d,+dM4") }}
+  {{ lh1("d'=8", "d+dM4") }}
 }
 {% endmacro %}

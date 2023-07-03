@@ -64,7 +64,7 @@
   \clef bass
   \key a \major
   \meter 1/4 1,1,1,1
-  r8 a,@M! r8 d@M! r8 a,@M! r8 d@M! |
+  r8 a@M! r8 d@M! r8 a@M! r8 d@M! |
   \rep 2 {
     a,=,8 aM! e' e7! a, aM! e' e7! |
     a,=,8 aM! e' e7! {{ lh1() }}
@@ -73,14 +73,14 @@
     a,=,8 aM! e' e7! a, aM! d dM! |
   }
   a=,8 aM! e' e7! {{ lh1() }}
-  e=8 a,@M! e8 e7! {{ lh1() }}
+  e=8 a@M! e8 e7! {{ lh1() }}
   a,=,8[( aM!) aM aM] e'[( e7!) e7 e7] |
   a,=,8 aM! e' e7! {{ lh1() }}
   a,=,8[( aM!) aM d@M] e'8[( e7!) e7 e7] |
   a,=,8 aM! e' e7! {{ lh1() }}
   a,=,8 aM! e' e7! a, aM! d dM! |
   a=,8 aM! e' e7! a, aM! b bm! |
-  a=,8 aM! e' e7! a, aM! a,,+aM r |
-  e'=8 a,@M! e8 e7! {{ lh1() }}
+  a=,8 aM! e' e7! a, aM! a+aM r |
+  e'=8 a@M! e8 e7! {{ lh1() }}
 }
 {% endmacro %}

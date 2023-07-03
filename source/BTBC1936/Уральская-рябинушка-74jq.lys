@@ -6,7 +6,7 @@
 {% macro lh1() %}
   d=4 dm! dm | a d@m! dm4 |
   f=,4 f7! f7 | g gm! gm |
-  bes=,4 g,@m! gm4 | a a7! a7 |
+  bes=,4 g@m! gm4 | a a7! a7 |
   d=4 dm! dm |
 {% endmacro %}
 
@@ -37,22 +37,22 @@
   \clef bass
   \key d \minor
   d=4-\stBass dm! dm | c d@m! dm4 |
-  bes=,4 g,@m! gm4 | g gm! gm |
-  a=,4 g,@m! gm4 | a a7! a7 |
+  bes=,4 g@m! gm4 | g gm! gm |
+  a=,4 g@m! gm4 | a a7! a7 |
   d=4 dm! dm | a a7! a7 |
   d=4 dm! dm | a d@m! dm4 |
   g=,4 gm! gm | c c7! c7 |
   f,=,4 fM! fM | c' c7! c7 |
-  f,=,4 fM! fM | a f,@M! fM4 |
+  f,=,4 fM! fM | a f@M! fM4 |
   f=,4 fM! fM | fis d@7! d74 |
-  g=,4 gm! gm | d' g,@m! gm4 |
+  g=,4 gm! gm | d' g@m! gm4 |
   c=4 c7! c7 | g c@7! c74 |
   f=,4 d@m! dm4 | a a7! a7 |
   {{ lh1() }} | a d@m! dm4 |
   d=4 d7! d7 | fis, d@7! d74 |
-  g=,4 gm! gm | d' g,@m! gm4 |
+  g=,4 gm! gm | d' g@m! gm4 |
   c=4 c7! c7 | e c@7! c74 |
   f,=,4 d@m! dm4 | a a7! a7 |
-  {{ lh1() }} | d,+dm! r r |
+  {{ lh1() }} | d+dm! r r |
 }
 {% endmacro %}

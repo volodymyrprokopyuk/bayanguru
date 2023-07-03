@@ -40,7 +40,7 @@
   f,=,8 fM! c' c7! | d dm! d dm |
   c=8 cM! d dm! | c cM! r cM |
 
-  f,=,8 fM! a f,@M | bes8 besM! d bes,@M |
+  f,=,8 fM! a f@M | bes8 besM! d bes@M |
   c=8 c7! e c@7 | f,8 fM! f fM |
   {{ lh1("fM8 r") }}
   {{ lh1("fM4") }}

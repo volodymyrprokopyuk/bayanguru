@@ -4,8 +4,8 @@
 {% endmacro %}
 
 {% macro lh1(a) %}
-  {{ a }} gM! gM4-> | d'8 dM! g,,+gM!4-> |
-  g,=,8 gM! g gM | d'=8 dM! g,,+gM!4 |
+  {{ a }} gM! gM4-> | d'8 dM! g+gM!4-> |
+  g,=,8 gM! g gM | d'=8 dM! g+gM!4 |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -27,11 +27,11 @@
 \relative {
   \clef bass
   \key d \major
-  d,+dM!4->-\stBass d,+dM4 |
+  d+dM!4->-\stBass d+dM4 |
   \rep 3 {
     a,=,8 a7! d dM! | d dM! d dM |
   }
-  a=,8 a7! d,+dM!4 |
+  a=,8 a7! d+dM!4 |
   {{ lh1("g=,8") }}
   {{ lh1("g,=,8") }}
 }

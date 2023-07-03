@@ -117,36 +117,36 @@
   \clef bass
   \key c \minor
   \partial 8 { r8 | }
-  c=8-\stBass cm! g c@m | b8 g,@7! g8 g7 |
-  d'=8 g,@7! g,8 g7 |
+  c=8-\stBass cm! g c@m | b8 g@7! g8 g7 |
+  d'=8 g@7! g,8 g7 |
   \rep 2 { c=8 cm! g c@m | }
-  b=,8 g,@7! d8 g,@7 | b8 g,@7! g8 g7 |
+  b=,8 g@7! d8 g@7 | b8 g@7! g8 g7 |
   \rep 2 { c=8 g c= r | }
 
-  c=8 cm! g c@m | d'8 g,@7! g,8 g7 |
-  b=,8 g,@7! g8 g7 | c cm! g c@m |
+  c=8 cm! g c@m | d'8 g@7! g,8 g7 |
+  b=,8 g@7! g8 g7 | c cm! g c@m |
   c=8 cm! ees c@m |
-  \rep 2 { d=8 g,@7! g,8 g7 | }
+  \rep 2 { d=8 g@7! g,8 g7 | }
   c=8 g c= r |
 
   c=8 cm! g c@m |
-  \rep 2 { d'=8 g,@7! g,8 g7 | }
+  \rep 2 { d'=8 g@7! g,8 g7 | }
   \rep 2 { c=8 cm! g c@m | }
-  d'=8 g,@7! g,8 g7 | b8 g,@7! g8 g7 |
+  d'=8 g@7! g,8 g7 | b8 g@7! g8 g7 |
   c=8 g c= r |
 
-  c=8 cm! e c@7! | f,8 fm! aes f,@m |
-  g=,8 g7! b g,@7 | c8 cm! ees c@m |
+  c=8 cm! e c@7! | f,8 fm! aes f@m |
+  g=,8 g7! b g@7 | c8 cm! ees c@m |
   c=8 g c= r |
 
   \key f \minor
-  \rep 2 { f,=,8 fm! c' f,@m | }
-  f,=,8 fm! aes f,@m |
+  \rep 2 { f,=,8 fm! c' f@m | }
+  f,=,8 fm! aes f@m |
   \rep 3 { g=,8 c@M! c8 cM | }
-  g=,8 c@7! c8 c7 | f, fm! aes f,@m |
-  \rep 2 { f=,8 fm! c' f,@m | }
-  f,=,8 fm! a f,@7! | bes8 besm! bes r |
-  bes=,8 besm! des bes,@m | f,8 fm! aes f,@m |
+  g=,8 c@7! c8 c7 | f, fm! aes f@m |
+  \rep 2 { f=,8 fm! c' f@m | }
+  f,=,8 fm! a f@7! | bes8 besm! bes r |
+  bes=,8 besm! des bes@m | f,8 fm! aes f@m |
   c=8 c7! c c7 |
   \rep 2 { f,=,8 c' f,=, r | }
   \keyChangeBeforeBar \key c \minor

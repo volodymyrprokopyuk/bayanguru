@@ -14,7 +14,7 @@
 {% endmacro %}
 
 {% macro lh1(a) %}
-  {{ a }} r aM! r | a r b,@m! r8 |
+  {{ a }} r aM! r | a r b@m! r8 |
   gis=,8 r e@7! r8 | a=, r aM! r |
 {% endmacro %}
 
@@ -28,7 +28,7 @@
 {% endmacro %}
 
 {% macro lh3() %}
-  a=,8 r aM! r | d r b,@m! r8 |
+  a=,8 r aM! r | d r b@m! r8 |
   e=8 r e7! r |
 {% endmacro %}
 
@@ -85,22 +85,22 @@
   \clef bass
   \key a \major
   {{ lh1("a,=,8-\\stBass") }}
-  {{ lh3() }} | a,,+aM! r r4 |
+  {{ lh3() }} | a+aM! r r4 |
   {{ lh1("a,=,8") }}
-  a=,8 r aM! r | d,+b,@m! r8 r4 |
+  a=,8 r aM! r | d+b@m! r8 r4 |
   e=,8 r r e( | a)-> r a=,-> r |
 
   {{ lh2() }}
   e,=,16(-> fis gis fis e d' cis b |
-  a=,8) r a,,+aM! r |
+  a=,8) r a+aM! r |
   {{ lh2() }}
   e,=,16(-> fis gis fis e8) r |
-  a=,8 r a,,+aM! r |
+  a=,8 r a+aM! r |
 
   {{ lh1("a=,8") }}
   {{ lh3() }} | a, r aM! r |
   {{ lh3() }} | a, r aM! r |
   a=,8 r aM! r | b r bm! r |
-  e=8 r e7! r | a,=, r a,,+aM! r |
+  e=8 r e7! r | a,=, r a+aM! r |
 }
 {% endmacro %}

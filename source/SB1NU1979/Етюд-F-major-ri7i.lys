@@ -6,7 +6,7 @@
 {% macro lh1(a) %}
   {{ a }} fM! fM | g c@7! c74 |
   e'=4 c@7! c74 | f, fM! fM |
-  d'=4 dm! dm | c f,@M! fM4 |
+  d'=4 dm! dm | c f@M! fM4 |
   c=4 c7! c7 |
 {% endmacro %}
 
@@ -31,6 +31,6 @@
   \key f \major
   {{ lh1("f,=,4-\\stBass") }}
   f,=,4 fM! fM |
-  {{ lh1("f=,4") }} f,,+fM!2. |
+  {{ lh1("f=,4") }} f+fM!2. |
 }
 {% endmacro %}

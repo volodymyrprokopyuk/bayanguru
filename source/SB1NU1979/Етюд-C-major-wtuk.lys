@@ -5,9 +5,9 @@
 {% endmacro %}
 
 {% macro lh1(a) %}
-  {{ a }} r r | g,,+g7! r r |
-  c,+cM!4 r r | g,,+g7! r r |
-  c,+cM!4 r r | f,,+d@m! r4 r |
+  {{ a }} r r | g+g7! r r |
+  c+cM!4 r r | g+g7! r r |
+  c+cM!4 r r | f+d@m! r4 r |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -27,9 +27,9 @@
 \relative {
   \clef bass
   \key c \major
-  {{ lh1("c,+cM!4-\\stBass") }}
-  fis,,+d@M! r4 r | g,,+gM! r r |
-  {{ lh1("c,+cM!4") }}
-  g,,+g7! r r | c,+cM!4 r r |
+  {{ lh1("c+cM!4-\\stBass") }}
+  fis+d@M! r4 r | g+gM! r r |
+  {{ lh1("c+cM!4") }}
+  g+g7! r r | c+cM!4 r r |
 }
 {% endmacro %}

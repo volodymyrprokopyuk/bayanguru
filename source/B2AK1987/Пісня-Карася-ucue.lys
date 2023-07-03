@@ -34,6 +34,6 @@
   f,=,8 f7! f f7 |
   {{ lh1() }}
   f=,8 f7! f f7 |
-  bes=,8 besM! bes,,+besM r |
+  bes=,8 besM! bes+besM r |
 }
 {% endmacro %}

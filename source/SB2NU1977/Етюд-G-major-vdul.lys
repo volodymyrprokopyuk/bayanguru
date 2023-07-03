@@ -75,20 +75,20 @@
   \clef bass
   \key g \major
   {{ lh1("g,=,8-\\stBass") }}
-  g,=,8 r e=, r d,+g,@M! r8 |
+  g,=,8 r e=, r d+g@M! r8 |
 
   R2. | e=,8 r em! r b' r |
-  dis=8 r b,@7! r8 b r |
-  e,=,8 r em! r b,@7! r8 | e=, r c@M! r8 e,@m! r8 |
+  dis=8 r b@7! r8 b r |
+  e,=,8 r em! r b@7! r8 | e=, r c@M! r8 e@m! r8 |
 
   R2. | d'=8 r d7! r a r |
   R2. | c=8 r cM! r b r |
-  a=,8 r am! r c r | fis, r a,@m! r8 a r |
-  fis=,8 r a,@m! r8 c' r | d= r d7! r r4 |
+  a=,8 r am! r c r | fis, r a@m! r8 a r |
+  fis=,8 r a@m! r8 c' r | d= r d7! r r4 |
 
   {{ lh1("g,=,8") }}
   g,=,8 r gM! r d' r | c r cM! r d@7! r8 |
-  g=,8 r gM! r d' r | g,@M! r8 r4 r |
-  c,+dm!8 r8 r4 r | g,@M!8 r8 r4 d@7!8 r8 | g,@M!2. |
+  g=,8 r gM! r d' r | g@M! r8 r4 r |
+  c+dm!8 r8 r4 r | g@M!8 r8 r4 d@7!8 r8 | g@M!2. |
 }
 {% endmacro %}

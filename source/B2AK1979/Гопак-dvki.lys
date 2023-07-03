@@ -41,6 +41,6 @@
   \rep 2 { g=,8.[-> gM!16 gM8 gM] | e-. g-. b=,4-. | }
 
   {{ lh1("a=,8-.-\\puBass") }} | fis( d@M!) g,8( gM!) |
-  {{ lh1("a=,8-.") }} | d= dM! g,,+gM!4 |
+  {{ lh1("a=,8-.") }} | d= dM! g+gM!4 |
 }
 {% endmacro %}

@@ -27,8 +27,8 @@
   g=,4 gm!8 r ees'4 c@m!8 r8 |
   d=4 d7!8 r g,4 gm!8 r |
   \rep 3 {
-    d@7!4( d'=8) r g,@m!4( d8) r |
+    d@7!4( d'=8) r g@m!4( d8) r |
   }
-  d@7!4( d=8) r g,,+gm!4 r |
+  d@7!4( d=8) r g+gm!4 r |
 }
 {% endmacro %}

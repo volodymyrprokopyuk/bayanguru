@@ -40,6 +40,6 @@
   \clef bass
   \key f \major
   {{ lh1("f=4-\\stBass") }}
-  {{ lh1("f=4") }} | f,+fM! r r |
+  {{ lh1("f=4") }} | f+fM! r r |
 }
 {% endmacro %}

@@ -28,6 +28,6 @@
   c=8 cM! g gM! | c cM! f, fM! |
   c'=8 cM! g gM! | c cM! g gM! |
   c=8 cM! g gM! | c8 cM! f, fM! |
-  g=,8 c@M! g8 g7! | c= cM! c,+cM4 |
+  g=,8 c@M! g8 g7! | c= cM! c+cM4 |
 }
 {% endmacro %}

@@ -25,8 +25,8 @@
   \clef bass
   \key d \minor
   d=8-\stBass dm! d dm | d dm d dm |
-  d=8 g,@m! d8 g,@m | d8 dm! d dm |
+  d=8 g@m! d8 g@m | d8 dm! d dm |
   {{ lh1("d=8 dm") }}
-  {{ lh1("d,+dm4") }}
+  {{ lh1("d+dm4") }}
 }
 {% endmacro %}

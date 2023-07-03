@@ -1,5 +1,5 @@
 {% macro lh1(a) %}
-  {{ a }} gM! b g,@M | c4 cM! g=, gM! |
+  {{ a }} gM! b g@M | c4 cM! g=, gM! |
 {% endmacro %}
 
 {% macro rightHand() %}

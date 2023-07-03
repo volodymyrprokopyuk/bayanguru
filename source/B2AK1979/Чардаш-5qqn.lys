@@ -35,23 +35,23 @@
   \clef bass
   \key g \minor
   d=8-\stBass d7!4 d78 | d d74 d78 |
-  \rep 2 { g,=,8 gm! d' g,@m | }
+  \rep 2 { g,=,8 gm! d' g@m | }
   f,=,8 f7!4 f78 | f f74 f78 |
-  \rep 2 { bes=,8 besM! f bes,@M | }
+  \rep 2 { bes=,8 besM! f bes@M | }
   a=,8 a7!4 a78 | a a74 a78 |
   d=8 dm! a a7! | d dm! a d@m |
   g=,8( gm!) gis( e@7!) | a=,8 a7!4 a78 |
-  d,+dm!-> r r4 | d,+dm!8-> r r4 |
+  d+dm!-> r r4 | d+dm!8-> r r4 |
 
-  g=,8 g7! d' g,@7 | g,8 g7! b g,@7 |
+  g=,8 g7! d' g@7 | g,8 g7! b g@7 |
   \rep 2 { c=8 cm! g c@m | }
-  f=,8 f7! c' f,@7 | f,8 f7! a f,@7 |
-  \rep 2 { bes=,8 besM! f bes,@M | }
+  f=,8 f7! c' f@7 | f,8 f7! a f@7 |
+  \rep 2 { bes=,8 besM! f bes@M | }
   c'=8 cm!4 cm8 | c cm4 cm8 |
-  d=8 g,@m!4 gm8 | g,8 gm! c cm! |
+  d=8 g@m!4 gm8 | g,8 gm! c cm! |
   d=8 d7!4 d78 | d d74 d78 |
-  g,=,8 gm!4 gm8 | d' d7! g,,+gm! r |
-  d=8 d7! g,,+gm! r | c,+cm! r d,+d7! r |
-  g,,+gm! r r4 |
+  g,=,8 gm!4 gm8 | d' d7! g+gm! r |
+  d=8 d7! g+gm! r | c+cm! r d+d7! r |
+  g+gm! r r4 |
 }
 {% endmacro %}

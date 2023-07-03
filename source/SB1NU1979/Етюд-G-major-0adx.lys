@@ -25,9 +25,9 @@
   g,=,4-\stBass gM! gM gM | a d@7! d74 d7 |
   fis=,4 d@7! d74 d7 |
   \rep 2 { g=,4 gM! gM gM | }
-  c=4 a,@m! am4 am | d g,@M! d4 d7! |
-  g,,+gM!4 r r2 | d,+d7!4 r r2 |
+  c=4 a@m! am4 am | d g@M! d4 d7! |
+  g+gM!4 r r2 | d+d7!4 r r2 |
   g,=,4( a8 b c d e fis | g=4) r gM! r |
-  g,,+gM!4 r r2 |
+  g+gM!4 r r2 |
 }
 {% endmacro %}

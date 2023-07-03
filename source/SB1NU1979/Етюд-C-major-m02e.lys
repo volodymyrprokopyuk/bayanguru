@@ -12,8 +12,8 @@
 {% endmacro %}
 
 {% macro lh1() %}
-  c,+cM!4 r | R2 | g,,+gM!4-. g,,+gM-. | %
-  c,+cM!8-. c,+cM-. c,+cM4-- |
+  c+cM!4 r | R2 | g+gM!4-. g+gM-. | %
+  c+cM!8-. c+cM-. c+cM4-- |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -40,11 +40,11 @@
 \relative {
   \clef bass
   \key c \major
-  c,+cM!4-\stBass r | R2 | g,,+gM!4-. g,,+c@M!-. |
-  g,,+gM!8-. g,,+gM-. g,,+gM4-- |
+  c+cM!4-\stBass r | R2 | g+gM!4-. g+c@M!-. |
+  g+gM!8-. g+gM-. g+gM4-- |
   {{ lh1() }}
 
-  \rep 3 { g,@M!4 c@M!4 | } g,@M!8[-. gM8]-. gM4-- |
+  \rep 3 { g@M!4 c@M!4 | } g@M!8[-. gM8]-. gM4-- |
   {{ lh1() }}
 }
 {% endmacro %}

@@ -10,8 +10,8 @@
 {% endmacro %}
 
 {% macro lh1(a) %}
-  {{ a }} d@7! d8 g,@M! | fis8 d@7!4 d78 |
-  d=8 d7! d g,@m! | fis=8 d@7!4 d78 |
+  {{ a }} d@7! d8 g@M! | fis8 d@7!4 d78 |
+  d=8 d7! d g@m! | fis=8 d@7!4 d78 |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -47,6 +47,6 @@
   g=,8 gM!4 gM8 |
   {{ lh1("fis'=8") }}
   {{ lh1("fis=8") }}
-  fis=8 d@7! d=8 d7 | g,,+gM!4 g,,+gM-> |
+  fis=8 d@7! d=8 d7 | g+gM!4 g+gM-> |
 }
 {% endmacro %}

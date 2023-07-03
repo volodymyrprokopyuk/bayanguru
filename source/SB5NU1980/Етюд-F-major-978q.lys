@@ -54,7 +54,7 @@
   f=,8 r fM! r fM r |
   c'=8 r {{ b }}! r {{ b }} r |
   f,=,8 r fM! r fM r |
-  e'=8 r a,@m! r8 am r |
+  e'=8 r a@m! r8 am r |
   e=8 r e7! r e7 r | a,2(-> g4) |
   f=,8 r fM! r fM r |
   bes=,8 r besM! r besM r |
@@ -114,9 +114,9 @@
   \key f \major
   {{ lh2("f,=,8-\\stBass", "c7") }}
   a,=,8 r am! r am r |
-  e'=8 r a,@m! r8 am r |
+  e'=8 r a@m! r8 am r |
   e=8 r em! r em r |
-  d=8 r g,@7! r8 g7 r |
+  d=8 r g@7! r8 g7 r |
   {{ lh1() }}
   a=,8 r am! r d r |
   a=,8 r am! r am r |

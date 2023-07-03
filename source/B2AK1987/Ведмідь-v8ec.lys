@@ -44,9 +44,9 @@
 \relative {
   \clef bass
   \key c \minor
-  \grace { s16 s s } c,+cm!4 g,=,4-\puBass |
+  \grace { s16 s s } c+cm!4 g,=,4-\puBass |
   \rep 6 { c=4-> g | }
-  c=8-> g-. a-. b-. | c,+cm!4 g=,4 |
+  c=8-> g-. a-. b-. | c+cm!4 g=,4 |
   \rep 4 { c=4-> g | }
   c=8-> bes aes g |
   \rep 2 { c=4-> g | }

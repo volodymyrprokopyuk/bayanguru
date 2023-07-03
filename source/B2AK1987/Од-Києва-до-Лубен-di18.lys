@@ -76,14 +76,14 @@
   a=,8. g16 fis8 e | d e16 fis g4 |
   a=,16 b a g fis8 e | d e16 fis g=,8 r |
 
-  g=,8-\stBass gM! d' g,@M | d8 dM! g, gM! |
-  g=,8 gM! d' g,@M | d8 d7! g, gM! |
-  a=,8 am! c a,@m | d8 d7! g, gM! |
-  d'=8 d7! a d@7 | d=8 d7! g,,+gM! r |
+  g=,8-\stBass gM! d' g@M | d8 dM! g, gM! |
+  g=,8 gM! d' g@M | d8 d7! g, gM! |
+  a=,8 am! c a@m | d8 d7! g, gM! |
+  d'=8 d7! a d@7 | d=8 d7! g+gM! r |
 
-  g,=,8 gM! b g,@M | fis8 d@7! g8 gM! |
-  g=,8 gM! d' g,@M | fis,8 d@7! g8 gM! |
-  d'=8 d7! d d7 | c d@M! b8 g,@M! |
+  g,=,8 gM! b g@M | fis8 d@7! g8 gM! |
+  g=,8 gM! d' g@M | fis,8 d@7! g8 gM! |
+  d'=8 d7! d d7 | c d@M! b8 g@M! |
   a=,8 am! d d7! | fis, d@7! g=,8 gM! |
 
   g=,8 gM!4-> gM8 | d' dM! g, gM! |

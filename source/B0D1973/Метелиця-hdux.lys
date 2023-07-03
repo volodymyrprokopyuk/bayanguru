@@ -4,7 +4,7 @@
 {% endmacro %}
 
 {% macro lh1(a) %}
-  {{ a }} e@7! e8 e7 | a, am! e'= a,@m |
+  {{ a }} e@7! e8 e7 | a, am! e'= a@m |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -32,7 +32,7 @@
   <a=, e'>8 r <a e'>4 |
   {{ lh1("b=,8-\\stBass") }}
   {{ lh1("b=,8") }}
-  gis,=,8 e@7! e'8 e7 | a, am! e' a,@m |
-  b=,8 e@7! e8 e7 | a,=, d@m! a,@m!4 |
+  gis,=,8 e@7! e'8 e7 | a, am! e' a@m |
+  b=,8 e@7! e8 e7 | a,=, d@m! a@m!4 |
 }
 {% endmacro %}

@@ -26,14 +26,14 @@
 {% endmacro %}
 
 {% macro lh1(a) %}
-  {{ a }} gM! gM d'[ g,@M gM8] |
-  g,=,8 gM! gM d'[ g,@M gM8] |
+  {{ a }} gM! gM d'[ g@M gM8] |
+  g,=,8 gM! gM d'[ g@M gM8] |
   \rep 2 {
     fis,=,8[ d@7! d78] d' d7 d7 |
   }
-  b=,8[( g,@M!) gM8] gis[( e@7!) e78] |
-  a=,8( am!) am c[( a,@m) am8] |
-  d=8[( g,@M!) gM8] e( em!) em |
+  b=,8[( g@M!) gM8] gis[( e@7!) e78] |
+  a=,8( am!) am c[( a@m) am8] |
+  d=8[( g@M!) gM8] e( em!) em |
   a,=,8( a7!) a7 %
 {% endmacro %}
 
@@ -81,20 +81,20 @@
 \relative {
   \clef bass
   \key g \major
-  {{ lh1("g,=,8-\\stBass") }} d,+dM!( e' fis) |
-  {{ lh1("g,=,8") }} d,+dM! d( cis |
+  {{ lh1("g,=,8-\\stBass") }} d+dM!( e' fis) |
+  {{ lh1("g,=,8") }} d+dM! d( cis |
 
-  c=8) d@M! r8 b g,@M! r8 |
+  c=8) d@M! r8 b g@M! r8 |
   fis=,8[( d@M!) dM8] g( gM!) gM |
-  a=,8 b,@M! r8 g e@m! r8 |
-  dis'=8[( b,@7!) b78] e( em!) em |
-  f,=,8 g,@M! r8 e' c@M! r8 |
-  d=8 e@M! r8 c a,@m! r8 |
-  cis=8[( a,@7!) a78] d[( g,@M!) gM8] |
-  dis=8[( b,@7!) b78] e( em!) em |
-  a,=,8( a7!) a7 d[( g,@M!) gM8] |
-  d=8 d7! d7 g,,+gM! d g,=, |
+  a=,8 b@M! r8 g e@m! r8 |
+  dis'=8[( b@7!) b78] e( em!) em |
+  f,=,8 g@M! r8 e' c@M! r8 |
+  d=8 e@M! r8 c a@m! r8 |
+  cis=8[( a@7!) a78] d[( g@M!) gM8] |
+  dis=8[( b@7!) b78] e( em!) em |
+  a,=,8( a7!) a7 d[( g@M!) gM8] |
+  d=8 d7! d7 g+gM! d g,=, |
   r4. b=,8 a g | e' d b g d' b |
-  g=,8 r r g,@M! r8 r g=,2. |
+  g=,8 r r g@M! r8 r g=,2. |
 }
 {% endmacro %}

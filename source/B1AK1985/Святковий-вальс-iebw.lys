@@ -34,18 +34,18 @@
 \relative {
   \clef bass
   \key ees \major
-  {{ lh1("ees=4-\\stBass") }} | aes f,@m! fm4 |
-  bes=,4 bes7! bes7 | d bes,@7! bes74 |
+  {{ lh1("ees=4-\\stBass") }} | aes f@m! fm4 |
+  bes=,4 bes7! bes7 | d bes@7! bes74 |
   ees=4 eesM! eesM | g, ees@M! eesM4 |
   {{ lh1("ees'=4") }} | bes bes7! bes7 |
-  d=4 bes,@7! bes74 | bes bes7! bes7 |
+  d=4 bes@7! bes74 | bes bes7! bes7 |
   ees=4 eesM! eesM | bes=, ees@M! eesM4 |
 
-  aes=,4( aesM!) aesM | f( aes,@M!) aesM4 |
+  aes=,4( aesM!) aesM | f( aes@M!) aesM4 |
   bes=,4( bes7!) bes7 | ees( eesM!) eesM |
   {{ lh2() }} | g, ees@M! eesM4 |
-  aes=,4( aesM!) aesM | f( aes,@M!) aesM4 |
+  aes=,4( aesM!) aesM | f( aes@M!) aesM4 |
   bes=,4( besm!) besm | c( cm!) cm |
-  {{ lh2() }} | ees,+eesM! r r |
+  {{ lh2() }} | ees+eesM! r r |
 }
 {% endmacro %}

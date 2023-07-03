@@ -39,11 +39,11 @@
 \relative {
   \clef bass
   \key e \minor
-  e=4(-\stBass em!) em | dis( b,@7!) b74 |
-  e=4_\aSim em! em | dis b,@7! b74 |
+  e=4(-\stBass em!) em | dis( b@7!) b74 |
+  e=4_\aSim em! em | dis b@7! b74 |
   e=4 em! em | c cM! cM |
-  a=,4 am! am | dis b,@7! b74 |
-  e=4 em! em | dis b,@7! b74 |
+  a=,4 am! am | dis b@7! b74 |
+  e=4 em! em | dis b@7! b74 |
   e=4 em! em | g, g7! g7 |
   c=4 cM! cM | gis e@7! e74 |
   a=,4 a7! a7 | d dm! dm |

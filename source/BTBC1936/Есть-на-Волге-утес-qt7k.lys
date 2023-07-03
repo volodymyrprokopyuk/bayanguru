@@ -49,19 +49,19 @@
   \clef bass
   \key d \minor
   \partial 4 { r4 | }
-  d,+dm!2-\stBass a,,+a7!4 | d,+dm!2 r4 |
-  f,,+fM!2 c,+c7!4 | f,,+fM!2 r4 |
+  d+dm!2-\stBass a+a7!4 | d+dm!2 r4 |
+  f+fM!2 c+c7!4 | f+fM!2 r4 |
   \time 2/4
-  g,,+gm!2 |
+  g+gm!2 |
   \time 3/4
-  a,,+aM!4 g,=,4 f8 e |
-  d,+dm!2 a,,+a7!4 | bes,,+besM!2 c'=8 bes |
-  a=,4( g) c,+c7!4 | f,,+fM!2 r4 |
+  a+aM!4 g,=,4 f8 e |
+  d+dm!2 a+a7!4 | bes+besM!2 c'=8 bes |
+  a=,4( g) c+c7!4 | f+fM!2 r4 |
   \time 2/4
-  g,,+gm!2 |
+  g+gm!2 |
   \time 3/4
-  a,,+aM!4 g=,4 f8 e |
+  a+aM!4 g=,4 f8 e |
   \time 2/4
-  g,,+gm!2 | a,,+a7!2 | d,+dm!2 |
+  g+gm!2 | a+a7!2 | d+dm!2 |
 }
 {% endmacro %}

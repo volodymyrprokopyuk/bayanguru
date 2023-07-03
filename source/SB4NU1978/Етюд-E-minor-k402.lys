@@ -88,15 +88,15 @@
 \relative {
   \clef bass
   \key e \minor
-  e=8-\stBass r em! r | e r a,@m! r8 |
-  dis=8 r b,@7! r8 | e r em! r |
+  e=8-\stBass r em! r | e r a@m! r8 |
+  dis=8 r b@7! r8 | e r em! r |
   c=8 r cM! r | a r am! r |
   ais=,8. r16 ais8. r16 | b2 |
   ais=,8. r16 b8. r16 | e=8 r em!4-- |
 
-  g,=,8 r gM! r | g r a,@M! r8 |
+  g,=,8 r gM! r | g r a@M! r8 |
   g=,8 r c@m! r8 | g r gM! r |
-  e'=8 r em! r | fis r b,@m! r8 |
+  e'=8 r em! r | fis r b@m! r8 |
   fis=8 r fis7! r | b,8. r16 a8. r16 |
   fis'=8 r fis7! r | b,=, r b7! r |
 }

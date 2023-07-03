@@ -49,20 +49,20 @@
 \relative {
   \clef bass
   \key g \major
-  g,=,8-\stBass gM! b g,@M | g8 gM! c cM! |
-  g=,8 gM! b g,@M | g8 gM! c cM! |
-  g=,8 gM! b g,@M | d8 g,@M! c8 cM! |
-  g=,8 gM! b g,@M | d=8 g,@M! c,+cM!4 |
+  g,=,8-\stBass gM! b g@M | g8 gM! c cM! |
+  g=,8 gM! b g@M | g8 gM! c cM! |
+  g=,8 gM! b g@M | d8 g@M! c8 cM! |
+  g=,8 gM! b g@M | d=8 g@M! c+cM!4 |
 
   \rep 2 {
-    g,=,8 gM! b g,@M | g8 gM! c= cM! |
+    g,=,8 gM! b g@M | g8 gM! c= cM! |
   }
-  d=8 g,@M! g,8 gM | f g,@M! e'8 c@M! |
-  d=8 g,@M! g,8 gM | d'=8 g,@M! c,+cM!4 |
+  d=8 g@M! g,8 gM | f g@M! e'8 c@M! |
+  d=8 g@M! g,8 gM | d'=8 g@M! c+cM!4 |
 
   \rep 4 {
     g,=,8 gM! d' dM! | g, gM! c= cM! |
   }
-  g=,8 gM! d' d7! | g,=, gM! g,,+gM4 |
+  g=,8 gM! d' d7! | g,=, gM! g+gM4 |
 }
 {% endmacro %}

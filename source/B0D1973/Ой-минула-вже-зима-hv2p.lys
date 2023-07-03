@@ -29,11 +29,11 @@
 \relative {
   \clef bass
   \key c \major
-  c@M!8[-\stBass cM8] g,@M![ gM8] | c@M! r8 r4 |
-  c@M!8[ cM8] g,@M![ gM8] | c@M![ cM8] cM4 |
+  c@M!8[-\stBass cM8] g@M![ gM8] | c@M! r8 r4 |
+  c@M!8[ cM8] g@M![ gM8] | c@M![ cM8] cM4 |
   \rep 3 { c=8 cM! g=, gM! | }
   c=8 cM! cM4 |
   {{ lh1() }} | c=8 cM! cM4 |
-  {{ lh1() }} | c=8 f,@M! c@M!4 |
+  {{ lh1() }} | c=8 f@M! c@M!4 |
 }
 {% endmacro %}

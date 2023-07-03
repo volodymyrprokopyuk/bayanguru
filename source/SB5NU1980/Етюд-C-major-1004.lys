@@ -129,17 +129,17 @@
   {{ lh1("e=8") }}
   a,=,8 am!16 am am8 am | a am16 am am8 am |
   {{ lh1("e'=8") }}
-  a,=,8 am!16 am am8 am | a,,+am!8 r r4 |
+  a,=,8 am!16 am am8 am | a+am!8 r r4 |
 
   {{ lh2("am") }} | a am16 am16 am8 r |
-  {{ lh2("r") }} | a,,+am!8 r g,,+g7! r |
+  {{ lh2("r") }} | a+am!8 r g+g7! r |
 
   {{ lh3() }} | c cM!16 cM cM8 cM |
-  {{ lh3() }} | c cM! c,+cM r |
+  {{ lh3() }} | c cM! c+cM r |
 
   {{ lh4() }}
   {{ v2("r8 cM!16 cM cM8 cM |", "c=4 r") }}
   {{ lh4() }}
-  c,+cM!8 c,+g,@7! c,+cM!4 |
+  c+cM!8 c+g@7! c+cM!4 |
 }
 {% endmacro %}

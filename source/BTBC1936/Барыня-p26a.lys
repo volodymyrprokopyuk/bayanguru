@@ -54,8 +54,8 @@
 {% endmacro %}
 
 {% macro lh1(a) %}
-  {{ a }} g,@7! r8 g7 | g, g7! c cM! |
-  d=8 g,@7! r8 g7 | g,=, g7! c,+cM!4-> |
+  {{ a }} g@7! r8 g7 | g, g7! c cM! |
+  d=8 g@7! r8 g7 | g,=, g7! c+cM!4-> |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -115,15 +115,15 @@
   \key c \major
   \grace { s8 } g,=,8-\stBass g7! r g7 |
   g=,8 g7! c cM! | g g7! r g7 |
-  b=,8 g,@7! c8 cM! | g g7! r g7 |
-  d'=8 g,@7! c8 cM! | g g7! r g7 |
-  d'=8 g,@7! c=8 r |
+  b=,8 g@7! c8 cM! | g g7! r g7 |
+  d'=8 g@7! c8 cM! | g g7! r g7 |
+  d'=8 g@7! c=8 r |
 
   \rep 2 {
-    d=8 g,@7! g,8 g7 | d' g,@7! c8 cM! |
+    d=8 g@7! g,8 g7 | d' g@7! c8 cM! |
   }
-  g=,8 g7! b g,@7 | d8 g,@7! c8 cM! |
-  g=,8 g7! b g,@7 | d8 g,@7! c=8 r |
+  g=,8 g7! b g@7 | d8 g@7! c8 cM! |
+  g=,8 g7! b g@7 | d8 g@7! c=8 r |
 
   {{ lh1("d=8") }}
   {{ lh1("d'=8") }}
@@ -131,10 +131,10 @@
   <<
     \new Voice = voiceOne \relative {
       \voiceOne
-      r8 g,@M![ r8 gM] | r8 g,@M![ r8 c@M!] |
-      r8 g,@M![ r8 gM] | r8 g,@M! c@M!4-> |
-      r8 g,@7![ r8 g7] | r8 g,@7![ r8 c@M!] |
-      r8 g,@7![ r8 g7] | r8 g,@7! cM!4-> |
+      r8 g@M![ r8 gM] | r8 g@M![ r8 c@M!] |
+      r8 g@M![ r8 gM] | r8 g@M! c@M!4-> |
+      r8 g@7![ r8 g7] | r8 g@7![ r8 c@M!] |
+      r8 g@7![ r8 g7] | r8 g@7! cM!4-> |
     }
     \new Voice = voiceTwo \relative {
       \voiceTwo
@@ -144,10 +144,10 @@
   >>
 
   \rep 3 {
-    g=,8 gM! c d@M! | b8 g,@M! a8 d |
+    g=,8 gM! c d@M! | b8 g@M! a8 d |
   }
   g,=,8 gM! c d@M! | b8 g c r |
-  {{ v2("r8 g,@7![ r8 g7]", "d=2") }}
-  g=,8 g7! c,+cM!4 |
+  {{ v2("r8 g@7![ r8 g7]", "d=2") }}
+  g=,8 g7! c+cM!4 |
 }
 {% endmacro %}

@@ -56,7 +56,7 @@
   d,=,16 e fis g a g fis e d fis a d d,=,8-. r |
   \rep 2 { d=,16 e fis g a g fis e } | %
   d=,16 fis a c d c b a g b d g g,=,8-. r |
-  fis=,8[-\stBass r b,@7!] r8 fis[ r b,@7] r8 |
+  fis=,8[-\stBass r b@7!] r8 fis[ r b@7] r8 |
   g=,8[ r e@m!] r8 g[ r e@m] r8 |
   a=,8[ r am!] r b[ r b7!] r |
   e=8[ r em!] r e=-. r r4 |

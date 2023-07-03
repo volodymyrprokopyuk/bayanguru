@@ -43,14 +43,14 @@
   fis,=,8 fism! fis fism |
   cis'=8 fis@m! cis8 fis@m |
   a=,8 aM! ais fis@7! |
-  b=,8 bm! fis b,@m |
+  b=,8 bm! fis b@m |
   fis=,8 fism! fis fism |
   {{ lh1("cisM") }}
   fis,=,8 fism! cis' fis@m |
   \rep 2 { a=,8 aM! d dM! | }
-  b=,8 bm! fis b,@m |
+  b=,8 bm! fis b@m |
   fis=,8 fism! fis fism |
   {{ lh1("cis7") }}
-  fis,,+fism!2 |
+  fis+fism!2 |
 }
 {% endmacro %}

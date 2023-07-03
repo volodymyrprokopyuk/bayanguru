@@ -52,12 +52,12 @@
   e=4-\stBass e7! a, am! | e' e7! a, am! |
   gis=,4 e@7! a4 am! | g g7! c cM! |
   c=4 cM! d dm! | g, g7! c cM! |
-  d=4 dm! e a,@m! | e4 e7! a,=, am! |
+  d=4 dm! e a@m! | e4 e7! a,=, am! |
 
   e'=4 e7! a, am! | g g7! c cM! |
   a=,4 a7! d dm! | g, g7! c cM! |
-  g=,4 g7! c cM! | b g,@7! c4( cis) |
-  d=4 dm! e a,@m! | e4 e7! a, am! |
-  d=4 dm! \fermata e a,@m! | e4 e7! a,=, am! |
+  g=,4 g7! c cM! | b g@7! c4( cis) |
+  d=4 dm! e a@m! | e4 e7! a, am! |
+  d=4 dm! \fermata e a@m! | e4 e7! a,=, am! |
 }
 {% endmacro %}

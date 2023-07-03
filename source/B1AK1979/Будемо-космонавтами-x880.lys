@@ -19,13 +19,13 @@
 \relative {
   \clef bass
   \key g \major
-  g,=,8-\stBass gM! d' g,@M | c8 a,@m! a8 am |
-  d=8 d7! fis d@7 | g,8 gM! d' g,@M |
-  g,=,8 gM! d' g,@M | c8 a,@m! a8 am |
+  g,=,8-\stBass gM! d' g@M | c8 a@m! a8 am |
+  d=8 d7! fis d@7 | g,8 gM! d' g@M |
+  g,=,8 gM! d' g@M | c8 a@m! a8 am |
   d=8 d7! e, fis | g gM! gis e@7! |
-  a=,8 am! fis' d@7! | g,8 gM! d' g,@M |
-  fis=8 d@7! d8 d7 | g, gM! f g,@M |
-  e,,+c@M!8 r8 ees,,+c@m! r8 | d' g,@M!4 gM8 |
-  fis=8 d@7! d=8 d7 | g,,+gM!8 r g,,+gM r |
+  a=,8 am! fis' d@7! | g,8 gM! d' g@M |
+  fis=8 d@7! d8 d7 | g, gM! f g@M |
+  e+c@M!8 r8 ees+c@m! r8 | d' g@M!4 gM8 |
+  fis=8 d@7! d=8 d7 | g+gM!8 r g+gM r |
 }
 {% endmacro %}

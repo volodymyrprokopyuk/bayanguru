@@ -24,6 +24,6 @@
   \clef bass
   \key a \minor
   {{ lh1("a,=,8-\\stBass", "a,=, am!") }}
-  {{ lh1("a=,8", "a,,+am!4") }}
+  {{ lh1("a=,8", "a+am!4") }}
 }
 {% endmacro %}

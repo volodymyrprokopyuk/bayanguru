@@ -32,9 +32,9 @@
   \partial 8 { r8 | }
   f=8-\stBass r c@M! r8 | f@M!8 r8 r4 |
   f=8 r c@M!( r8 | f@M!4.) r8 |
-  bes,=,8 r g,,+gm! r |
-  cis,+a,@M! r8 d,+dm! r |
-  c,+f@M!8 r8 c,+c7! r |
-  f,,+fM!4 r | f,,+fM!4. r8 |
+  bes,=,8 r g+gm! r |
+  cis+a@M! r8 d+dm! r |
+  c+f@M!8 r8 c+c7! r |
+  f+fM!4 r | f+fM!4. r8 |
 }
 {% endmacro %}

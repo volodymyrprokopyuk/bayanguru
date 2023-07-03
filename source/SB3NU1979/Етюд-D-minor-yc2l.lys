@@ -84,6 +84,6 @@
   {{ lh1("d=8") }}
   {{ lh1("d=8") }}
   d=8 dm!4 | g,8 gm!4 |
-  a=,8 a7!4 | d=8 d,+dm! r |
+  a=,8 a7!4 | d=8 d+dm! r |
 }
 {% endmacro %}

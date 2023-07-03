@@ -4,14 +4,14 @@
 
 {% macro lh1(a, b, c) %}
   {{ a }} em! em em g[-- e@m em8 em] |
-  a=,8-- am! am am {{ b }} a,@m am8 am] |
-  b=,8-- b7! b7 b7 dis[-- b,@7 b78 b7] |
+  a=,8-- am! am am {{ b }} a@m am8 am] |
+  b=,8-- b7! b7 b7 dis[-- b@7 b78 b7] |
   e,=,8-- em! em em b'-- {{ c }} | %
 {% endmacro %}
 
 {% macro lh2() %}
   g=,8[-- e@m! em8 em] gis[-- e@7! e78 e7] |
-  a=,8[ am!] g a,@m fis8 d@7! d'=8 d7 |
+  a=,8[ am!] g a@m fis8 d@7! d'=8 d7 |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -44,7 +44,7 @@
 
   {{ lh1("e,=,8--", "c[--", "r8 r4") }}
   {{ lh2() }}
-  c=8-- cM! cM cM fis,[-- a,@m! am8 am] |
-  b=,8-- b7! b7 b7 e,+em!2-- |
+  c=8-- cM! cM cM fis,[-- a@m! am8 am] |
+  b=,8-- b7! b7 b7 e+em!2-- |
 }
 {% endmacro %}

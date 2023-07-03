@@ -3,12 +3,12 @@
 {% endmacro %}
 
 {% macro lh1(a) %}
-  {{ a }} r8 f,,+fM! e | d c@M! g,,+gM!8 c,+cM! |
+  {{ a }} r8 f+fM! e | d c@M! g+gM!8 c+cM! |
 {% endmacro %}
 
 {% macro lh2() %}
-  a,,+am!8 r8 d,+dm! a,,+am! |
-  f,,+d@m!8[ e,+a,@m!8] e,+eM!8 a,,+am! |
+  a+am!8 r8 d+dm! a+am! |
+  f+d@m!8[ e+a@m!8] e+eM!8 a+am! |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -34,10 +34,10 @@
 \relative {
   \clef bass
   \key c \major
-  {{ lh1("c,+cM!8-\\stBass") }}
-  {{ lh1("c,+cM!8") }}
+  {{ lh1("c+cM!8-\\stBass") }}
+  {{ lh1("c+cM!8") }}
   {{ lh2() }}
   {{ lh2() }}
-  d,+dm!8 g,,+c@M! g,,+gM!8 c,+cM! |
+  d+dm!8 g+c@M! g+gM!8 c+cM! |
 }
 {% endmacro %}

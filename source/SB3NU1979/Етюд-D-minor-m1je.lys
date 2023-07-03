@@ -45,7 +45,7 @@
   \clef bass
   \key d \minor
   d=8 dm! dm f[ d@m dm8] |
-  e=8[ g,@m! gm8] g, gm gm |
+  e=8[ g@m! gm8] g, gm gm |
   c=8 c7! c7 e[ c@7 c78] |
   f=8 fM! fM f fM fM |
   fis=8[ d@M! dM8] a,[ d@M dM8] |

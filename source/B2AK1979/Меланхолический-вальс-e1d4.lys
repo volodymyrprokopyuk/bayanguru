@@ -21,13 +21,13 @@
 
 {% macro lh1() %}
   g=,8( gm!) gm |
-  bes=,8[ g,@m! gm8] | b[ g,@7! g78] |
+  bes=,8[ g@m! gm8] | b[ g@7! g78] |
   c=8 cm! cm | c cm cm |
-  d=8[ g,@m! gm8] | d= d7! d7 |
+  d=8[ g@m! gm8] | d= d7! d7 |
 {% endmacro %}
 
 {% macro lh2() %}
-  a=,8[ f,@7! f78] | a[ f,@7 f78] |
+  a=,8[ f@7! f78] | a[ f@7 f78] |
   bes=,8 besM! besM | bes=, besM besM |
 {% endmacro %}
 

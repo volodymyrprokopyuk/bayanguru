@@ -4,7 +4,7 @@
 {% endmacro %}
 
 {% macro lh1(a) %}
-  {{ a }} gM! b g,@M | a8 am! g a,@m |
+  {{ a }} gM! b g@M | a8 am! g a@m |
   fis'=8 d@M! d8 d7! | g,=, gM! %
 {% endmacro %}
 
@@ -36,12 +36,12 @@
   \partial 4 { r4 | }
   {{ lh1("g,=,8-\\stBass") }} g gM |
   {{ lh1("g=,8") }} r4 |
-  dis'=8 b,@7! b8 b7 | e em! g, e@m |
-  a=,8 aM! g a,@M | fis'8 d@M! a,8 a7! |
-  d=8 dM! dis b,@7! | e8 em! g, e@m |
+  dis'=8 b@7! b8 b7 | e em! g, e@m |
+  a=,8 aM! g a@M | fis'8 d@M! a,8 a7! |
+  d=8 dM! dis b@7! | e8 em! g, e@m |
   a=,8 e@m! a8 a7! | d dM! r4 |
   {{ lh1("g,=,8") }} g gM |
-  g=,8 gM! f' g,@M | e8 c@M! c=8 r |
-  r4 d,+d7!8 r | g,,+gM!4 r |
+  g=,8 gM! f' g@M | e8 c@M! c=8 r |
+  r4 d+d7!8 r | g+gM!4 r |
 }
 {% endmacro %}

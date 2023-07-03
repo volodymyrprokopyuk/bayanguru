@@ -22,27 +22,27 @@
 {% endmacro %}
 
 {% macro lh1(a) %}
-  {{ a }} am! d,+dm! r | a=,8 am! d,+dm! r |
-  a=,8 am! e' eM! | a,,+am! r r4 |
+  {{ a }} am! d+dm! r | a=,8 am! d+dm! r |
+  a=,8 am! e' eM! | a+am! r r4 |
 {% endmacro %}
 
 {% macro lh2() %}
-  g,,+gM!8 r c,+cM! r |
-  \rep 2 { f,,+fm!4(-> c,+cM!8)-. r | }
+  g+gM!8 r c+cM! r |
+  \rep 2 { f+fm!4(-> c+cM!8)-. r | }
 {% endmacro %}
 
 {% macro lh3() %}
-  b,,+bM!8 r e,+em! r |
-  \rep 2 { a,,+am!4(-> e,+em!8)-. r | }
+  b+bM!8 r e+em! r |
+  \rep 2 { a+am!4(-> e+em!8)-. r | }
 {% endmacro %}
 
 {% macro lh4() %}
-  fis,,+b,@7!8 r8 g,,+e@m! r8 |
-  a,,+am!8 b,,+b7! e,+em! r |
+  fis+b@7!8 r8 g+e@m! r8 |
+  a+am!8 b+b7! e+em! r |
 {% endmacro %}
 
 {% macro lh5() %}
-  \rep 2 { e=8 eM! a,,+am! r | }
+  \rep 2 { e=8 eM! a+am! r | }
   d=8 c b4 | e8[ d c b=,] |
 {% endmacro %}
 
@@ -96,22 +96,22 @@
   {{ lh5() }}
   {{ lh1("a=,8") }}
   {{ lh2() }}
-  d,+dM!8 r f,,+fm! r |
+  d+dM!8 r f+fm! r |
   {{ lh2() }}
-  d,+dM!8 g,,+g7! c,+cM! r |
+  d+dM!8 g+g7! c+cM! r |
   {{ lh3() }}
-  fis,,+fisM!8 r a,,+am! r |
+  fis+fisM!8 r a+am! r |
   {{ lh3() }}
-  b,,+bM!8 r e,+em! r |
+  b+bM!8 r e+em! r |
   {{ lh4() }}
   {{ lh4() }}
-  \rep 2 { b,,+b7!8 r e,+em! r | }
+  \rep 2 { b+b7!8 r e+em! r | }
   R2 | R2 |
 
   {{ lh1("a,=,8") }}
   {{ lh1("a,=,8") }}
   {{ lh5() }}
-  a=,8 am! d,+dm! r | a=,8 am! d,+dm! r |
-  a=,8 am! e' eM! | a, e' a,,+am! r |
+  a=,8 am! d+dm! r | a=,8 am! d+dm! r |
+  a=,8 am! e' eM! | a, e' a+am! r |
 }
 {% endmacro %}

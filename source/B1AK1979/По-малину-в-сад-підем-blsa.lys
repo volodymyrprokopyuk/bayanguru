@@ -5,7 +5,7 @@
 
 {% macro lh1(a) %}
   {{ a }} dm!)-. f( d@m)-. | g,8( gm!)-. d'( dm!)-. |
-  cis=8( a,@7!)-. d8( dm!)-. | a( a7!)-. d=( dm!)-. |
+  cis=8( a@7!)-. d8( dm!)-. | a( a7!)-. d=( dm!)-. |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -29,9 +29,9 @@
   \key d \minor
   {{ lh1("d=8(-\\stBass") }}
   {{ lh1("d=8(") }}
-  a=,8( aM!)-. g( a,@M)-. | f'8( d@m!)-. d8( dm)-. |
-  cis=8( a,@7!)-. a8( a7)-. | d( dm!)-. f( d@m)-. |
-  cis=8( a,@7!)-. a8( a7)-. | d( dm!)-. f( d@m)-. |
-  cis=8( a,@7!)-. a8( a7)-. | d=( dm!)-. d,+dm4 |
+  a=,8( aM!)-. g( a@M)-. | f'8( d@m!)-. d8( dm)-. |
+  cis=8( a@7!)-. a8( a7)-. | d( dm!)-. f( d@m)-. |
+  cis=8( a@7!)-. a8( a7)-. | d( dm!)-. f( d@m)-. |
+  cis=8( a@7!)-. a8( a7)-. | d=( dm!)-. d+dm4 |
 }
 {% endmacro %}

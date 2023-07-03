@@ -1,7 +1,7 @@
 {% from "util.lys" import hSpace, shapedSlur %}
 
 {% macro lh1(a) %}
-  {{ a }} r g,,+c@M! r8 | c= cM! c,+cM r |
+  {{ a }} r g+c@M! r8 | c= cM! c+cM r |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -39,10 +39,10 @@
   \clef bass
   \key c \major
   \partial 4 { r4 | }
-  {{ lh1("c,+cM!8-\\stBass") }}
-  {{ lh1("c,+cM!8") }}
-  b,,+g,@M!8 r8 c,+cM! r | b,,+e@7! r8 a,,+am! r |
-  f,,+d@m!8 r8 fis,,+d@M! r8 | g gM! g,,+gM r |
-  g=,8 gM! c,+cM! r |
+  {{ lh1("c+cM!8-\\stBass") }}
+  {{ lh1("c+cM!8") }}
+  b+g@M!8 r8 c+cM! r | b+e@7! r8 a+am! r |
+  f+d@m!8 r8 fis+d@M! r8 | g gM! g+gM r |
+  g=,8 gM! c+cM! r |
 }
 {% endmacro %}

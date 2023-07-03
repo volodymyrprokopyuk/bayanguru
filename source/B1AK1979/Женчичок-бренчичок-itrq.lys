@@ -31,13 +31,13 @@
 \relative {
   \clef bass
   \key g \major
-  g,=,8(-\stBass gM!) gM | b[( g,@M!) gM8] |
-  c=8[( g,@M!) gM8] | g( gM!) gM |
-  g=,8( gM!) gM | d'[( d7!) g,@M!] |
+  g,=,8(-\stBass gM!) gM | b[( g@M!) gM8] |
+  c=8[( g@M!) gM8] | g( gM!) gM |
+  g=,8( gM!) gM | d'[( d7!) g@M!] |
   fis=8[( d@7!) d78] | g,( gM!) gM |
   a=,8[( d@7!) d78] | g( gM!) gM |
   fis'=8[( d@7!) d78] | g,=,( gM!) gM |
-  e,,+c@M!4 r8 | a,,+c@M!4 r8 |
-  d,+d7!4 d,+d78 | g,,+gM! g,,+gM r |
+  e+c@M!4 r8 | a+c@M!4 r8 |
+  d+d7!4 d+d78 | g+gM! g+gM r |
 }
 {% endmacro %}

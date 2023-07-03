@@ -39,6 +39,6 @@
   f'=4 fM! f fM | d f@M! d4 f@M |
   g,=,4 c@M! g4 c@M | a4 a7! a a7 |
   d=4 dm! g, g7! | c cM! g=, c@M |
-  c,+cM!2. r4 |
+  c+cM!2. r4 |
 }
 {% endmacro %}

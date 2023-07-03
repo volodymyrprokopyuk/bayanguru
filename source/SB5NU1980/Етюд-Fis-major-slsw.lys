@@ -92,12 +92,12 @@
   {{ lh1("fis,=,8-\\stBass") }}
   \rep 2 { fis,=,8 fisM! fisM r | }
 
-  \rep 2 { cis'=8 gis,@m! gism8 gis | }
+  \rep 2 { cis'=8 gis@m! gism8 gis | }
   \rep 2 { cis=8 cisM! cisM gis | }
-  cis=8 gis,@m! gism8 eis, | gis gism! gism ais |
+  cis=8 gis@m! gism8 eis, | gis gism! gism ais |
   dis=8 dism! dism ais | dis= dism! dism r |
 
-  \rep 2 { cis=8 gis,@m! gism8 gis | }
+  \rep 2 { cis=8 gis@m! gism8 gis | }
   cis=8 cisM! cisM gis | cis cisM! cisM eis, |
   {{ v2("r8 dis@m![ dism8] r | r dis@m![ dism8] r |",
      "bis,=,4. eis,8 | bis'4. eis,=,8 |") }}
@@ -105,7 +105,7 @@
 
   \rep 5 { ais=,8 aism! aism eis=, | }
   ais=,8 aism! aism ais |
-  bis=,8 gis,@7! gis78 gis | cis cis7! cis7 cis= |
+  bis=,8 gis@7! gis78 gis | cis cis7! cis7 cis= |
 
   {{ lh1("fis,=,8") }}
   fis,=,8 fisM! fisM cis' |

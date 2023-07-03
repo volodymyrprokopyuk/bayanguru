@@ -29,6 +29,6 @@
   g,=,8( gM!) gM gM | d'( dM!) dM dM |
   a=,8( a7!) a7 a7 | d( dM!) dM dM |
   g,=,8( gM!) gM gM | a[( d@M!) dM8 dM] |
-  a=,8( a7!) a7 a7 | d=[ dM!] d,+dM r |
+  a=,8( a7!) a7 a7 | d=[ dM!] d+dM r |
 }
 {% endmacro %}

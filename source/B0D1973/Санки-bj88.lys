@@ -27,9 +27,9 @@
   \clef bass
   \key g \major
   \partial 4 { r4 | }
-  g,,+gM!4-\stBass e=4 | g,,+gM! r |
-  g,,+gM!4 e=4 | g,,+gM! r |
-  d=4 dM! | e,+em! r |
-  a,,+am! d,+dM! | g,,+gM! r | g,,+gM! r |
+  g+gM!4-\stBass e=4 | g+gM! r |
+  g+gM!4 e=4 | g+gM! r |
+  d=4 dM! | e+em! r |
+  a+am! d+dM! | g+gM! r | g+gM! r |
 }
 {% endmacro %}

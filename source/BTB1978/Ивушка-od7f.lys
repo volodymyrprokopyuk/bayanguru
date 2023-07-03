@@ -30,22 +30,22 @@
   \key c \major
   c=4-\stBass cM! cM | g c@M cM4 |
   \rep 2 {
-    d'=4 g,@7! g74 | g,=, g7 g7 |
+    d'=4 g@7! g74 | g,=, g7 g7 |
   }
   \rep 2 {
     c=4 cM! cM | g=, c@M cM4 |
   }
   d'=4 dm! dm | f, d@m dm4 |
-  g=,4 g7! g7 | d' g,@7 g74 |
+  g=,4 g7! g7 | d' g@7 g74 |
   c=4 cM! cM | g gM! gM |
   c=4 cM! cM | g c@M cM4 |
   d'=4 dm! dm | f, d@m dm4 |
-  g=,4 g7! g7 | d' g,@7 g74 |
+  g=,4 g7! g7 | d' g@7 g74 |
   c=4 cM! cM | g c@M cM4 |
-  a=,4 a7! a7 | cis a,@7 a74 |
+  a=,4 a7! a7 | cis a@7 a74 |
   d=4 dm! dm | f, d@m dm4 |
-  g=,4 g7! g7 | d' g,@7 g74 |
+  g=,4 g7! g7 | d' g@7 g74 |
   c=4 cM! cM | g g7! g7 |
-  c=4 cM! cM | c,+cM!2 r4 |
+  c=4 cM! cM | c+cM!2 r4 |
 }
 {% endmacro %}

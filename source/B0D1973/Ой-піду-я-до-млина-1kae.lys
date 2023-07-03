@@ -22,10 +22,10 @@
   \clef bass
   \key a \minor
   a,=,8[-\stBass am! am am] | a[ am am am] |
-  a=,8[ d@m! dm8 dm] | a am! e' a,@m |
+  a=,8[ d@m! dm8 dm] | a am! e' a@m |
   gis,=,8 e@M! e'8 eM | a, am! a am |
   e'=8 eM! e eM | a, am! a am |
-  d=8 dm! d dm | e a,@m! e8 a,@m |
+  d=8 dm! d dm | e a@m! e8 a@m |
   e=8 e7! e e7 | a,=,4 am! |
 }
 {% endmacro %}

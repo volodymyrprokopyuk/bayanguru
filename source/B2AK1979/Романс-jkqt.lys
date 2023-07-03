@@ -4,7 +4,7 @@
 {% endmacro %}
 
 {% macro lh1(a) %}
-  {{ a }} r cM! r f, r fM! r | d' r g,@7! r8 e r c@M! r8 |
+  {{ a }} r cM! r f, r fM! r | d' r g@7! r8 e r c@M! r8 |
   f,=,8 r fM!4 e'8 r c@M!4 |
 {% endmacro %}
 
@@ -35,23 +35,23 @@
   \clef bass
   \key c \major
   {{ lh1("c=8-\\stBass") }}
-  d=8 r g,@7! r8 c r cM! r |
+  d=8 r g@7! r8 c r cM! r |
   {{ lh1("c=8") }}
   d=8 r dm! r e r e7! r |
 
   a,=,8 r am! r g r e@m! r8 |
   f=,8 r d@m! r8 gis r e@7! r8 |
-  a=,8 r am! r g r a,@m! r8 |
+  a=,8 r am! r g r a@m! r8 |
   f=,8 r d@m! r8 e' r e7! r |
   a,=,8 r am! r g r e@m! r8 |
   f=,8 r d@m! r8 d' r dm! r8 |
-  g,,+g7!4~ g,,+g78 r r2 | R1 |
+  g+g7!4~ g+g78 r r2 | R1 |
 
   {{ lh1("c=8") }}
-  d=8 r g,@7! r8 c r cM! r |
+  d=8 r g@7! r8 c r cM! r |
   c=8 r cM! r f, r fM! r |
   d'=8 r dm! r b r d@m! r8 |
-  g=,8 r a,@m!4 g8 r g7!4 |
-  c=8 r f,@M! r8 c@M! r8 c= r \fermata |
+  g=,8 r a@m!4 g8 r g7!4 |
+  c=8 r f@M! r8 c@M! r8 c= r \fermata |
 }
 {% endmacro %}

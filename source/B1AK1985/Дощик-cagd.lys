@@ -27,7 +27,7 @@
   g=,8( gm!) gm gm | c( cm!) cm cm |
   d=8( d7!) d7 d7 | g,( gm!) gm gm |
   \meter 1/4 1,1
-  bes=,8 g,@m! g8 gm | ees' c@m! c8 cm |
-  d=8 d7! d8 d7 | g,=, gm! g,,+gm4 |
+  bes=,8 g@m! g8 gm | ees' c@m! c8 cm |
+  d=8 d7! d8 d7 | g,=, gm! g+gm4 |
 }
 {% endmacro %}

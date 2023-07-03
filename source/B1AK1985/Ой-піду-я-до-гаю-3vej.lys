@@ -4,8 +4,8 @@
 {% endmacro %}
 
 {% macro lh1() %}
-  a=,8 aM! g a,@M | f'8 d@m! d8 dm |
-  g,=,8 gm! e' g,@m | a,8 a7! d= dm! |
+  a=,8 aM! g a@M | f'8 d@m! d8 dm |
+  g,=,8 gm! e' g@m | a,8 a7! d= dm! |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -28,11 +28,11 @@
 \relative {
   \clef bass
   \key d \minor
-  d=8-\stBass dm! f d@m | g,8 a bes g,@m! |
+  d=8-\stBass dm! f d@m | g,8 a bes g@m! |
   c=8 cM! bes c@M | a8 a7! d dm! |
   {{ lh1() }}
   {{ lh1() }}
   d=8 dm! f, d@m | g8 gm! gm4-> |
-  a,,+d@m!8 r8 a,,+a7! r | d,+dm! a=, d,+dm!4-> |
+  a+d@m!8 r8 a+a7! r | d+dm! a=, d+dm!4-> |
 }
 {% endmacro %}

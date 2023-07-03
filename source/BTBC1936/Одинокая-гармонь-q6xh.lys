@@ -1,7 +1,7 @@
 {% macro lh1() %}
   e=4 em! em | e em! em |
   a,=,4 am! am | d d7! d7 | g, gM! gM |
-  c=4 cM! cM | fis, a,@m! am4 | b=, b7! b7 |
+  c=4 cM! cM | fis, a@m! am4 | b=, b7! b7 |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -36,6 +36,6 @@
   b=,4 b7! b7 |
   {{ lh1() }}
   {{ lh1() }}
-  e=4 em! em | e,+em!4 %
+  e=4 em! em | e+em!4 %
 }
 {% endmacro %}

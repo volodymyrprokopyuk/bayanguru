@@ -9,7 +9,7 @@
 
 {% macro lh1(a) %}
   {{ a }} dm | d( dm) dm |
-  cis=4( a,@M!) aM4 | cis( a,@M) aM4 |
+  cis=4( a@M!) aM4 | cis( a@M) aM4 |
   d=4( dm!) dm | g,( gm!) gm | a=,( a7!) a7 |
 {% endmacro %}
 
@@ -71,10 +71,10 @@
 
   \key d \major
   d=4 dM! dM | a d@M dM4 |
-  a=,4 aM! aM | cis a,@M aM4 |
+  a=,4 aM! aM | cis a@M aM4 |
   d=4 dM! dM | g, gM! gM |
   b=,4 b7! b7 | e em! em |
-  cis=4 a,@7! a74 | a a7 a7 |
+  cis=4 a@7! a74 | a a7 a7 |
   d=4 dM! dM | b d@M dM4 |
   g=,4 gM! gM | a a7! a7 |
   d=4 dM! dM | d r r | d= r r |

@@ -7,11 +7,11 @@
 {% endmacro %}
 
 {% macro lh1(a) %}
-  {{ a }} cM! cM | g c@M! cM4 | d'= g,@7! g74 |
+  {{ a }} cM! cM | g c@M! cM4 | d'= g@7! g74 |
 {% endmacro %}
 
 {% macro lh2() %}
-  g,=,4 g7! g7 | b g,@7! g74 | g g7! g7 | c= cM! cM |
+  g,=,4 g7! g7 | b g@7! g74 | g g7! g7 | c= cM! cM |
 {% endmacro %}
 
 {% macro lh3(a) %}
@@ -45,8 +45,8 @@
   g=,4 c@M! cM4 | {{ lh1("c=4") }}
   {{ lh2() }}
 
-  c,+cM!4 r r | {{ lh3("gis=,4") }}
-  e'=4 a,@m! am4 | {{ lh3("gis,=,4") }}
+  c+cM!4 r r | {{ lh3("gis=,4") }}
+  e'=4 a@m! am4 | {{ lh3("gis,=,4") }}
   a=,4 r r | f' fM! fM | f fm! fm |
   \rep 2 { e=4 c@M! cM4 | }
   f=4 fM! fM | g, g7! g7 | c cM! cM | c= r r |

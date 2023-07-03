@@ -84,36 +84,36 @@
 \relative {
   \clef bass
   \key g \major
-  g,,+gM!8-\stBass r g,,+gM r | g,,+gM r g,,+gM r |
-  g,,+gM!8 r g,,+gM r | g,,+gM g,,+gM g,,+gM r |
-  g,,+gM!8 r g,,+gM r | d,+d7! r g,,+gM! r |
-  g,,+gM!8 r g,,+gM r | d,+d7! d,+d7 g,,+gM! r |
+  g+gM!8-\stBass r g+gM r | g+gM r g+gM r |
+  g+gM!8 r g+gM r | g+gM g+gM g+gM r |
+  g+gM!8 r g+gM r | d+d7! r g+gM! r |
+  g+gM!8 r g+gM r | d+d7! d+d7 g+gM! r |
 
-  d=8 dM! fis, d@M | g8 gM! b g,@M |
-  d=8 dM! fis, d@M | g8 gM! g gM | g=, gM! g,,+gM r |
+  d=8 dM! fis, d@M | g8 gM! b g@M |
+  d=8 dM! fis, d@M | g8 gM! g gM | g=, gM! g+gM r |
 
   \rep 2 { g=,8 gM! c cM! | g gM! d' d7! | }
-  d,+g,@M!8 d,+d7!8 g,,+gM! r |
+  d+g@M!8 d+d7!8 g+gM! r |
 
   g,=,8 gM! d' d7! | g, gM! c cM! |
-  g=,8 gM! d' d7! | g, gM! b g,@M |
+  g=,8 gM! d' d7! | g, gM! b g@M |
   g=,8 gM! d' d7! | g, gM! c cM! |
-  d=8 g,@M! d8 d7! | g,,+gM! d,+d7! g,,+gM! r |
+  d=8 g@M! d8 d7! | g+gM! d+d7! g+gM! r |
 
   g,=,8 gM! c cM! | g gM! fis d@7! |
   g=,8 gM! a d@7! | g8 gM! fis d@7! |
-  g,,+gM!8 d,+d7! g,,+gM!4 |
+  g+gM!8 d+d7! g+gM!4 |
 
   g=,8 gM! g gM | g gM! g-. e-. |
-  a=,8-. d,-. g-. e-. | c'-. d-. g,@M![( g,8]) |
-  g=,8 gM! g gM | g gM! g,,+gM8 \noBeam e-. |
+  a=,8-. d,-. g-. e-. | c'-. d-. g@M![( g,8]) |
+  g=,8 gM! g gM | g gM! g+gM8 \noBeam e-. |
   a=,8-. d,-. g-. e-. | c'-. d-. g,=,4-- |
 
   \key g \minor
   {{ lh1("g=,4") }}
-  g,@m![( d8]) g,@m[( d=8]) |
+  g@m![( d8]) g@m[( d=8]) |
   {{ lh1("g,=,4") }}
-  g,,+gm! d,+d7! g,,+gm!4 |
+  g+gm! d+d7! g+gm!4 |
   \key g \major
 }
 {% endmacro %}

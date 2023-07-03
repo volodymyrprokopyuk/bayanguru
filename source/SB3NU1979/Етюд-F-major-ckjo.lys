@@ -39,11 +39,11 @@
   }
   f,=,8 fM! fM | f fM fM |
 
-  e'=8[ a,@7! a78] | e[ a,@7 a78] |
+  e'=8[ a@7! a78] | e[ a@7 a78] |
   d=8 dm! dm | d dm dm |
-  c=8[ f,@7! f78] | c[ f,@7 f78] |
-  bes=,8 besM! besM | bes[ g,@7! g78] |
-  c=8[ f,@M! fM8] | c c7! c7 |
-  f,=,8 fM! fM | f,,+fM!4 r8 |
+  c=8[ f@7! f78] | c[ f@7 f78] |
+  bes=,8 besM! besM | bes[ g@7! g78] |
+  c=8[ f@M! fM8] | c c7! c7 |
+  f,=,8 fM! fM | f+fM!4 r8 |
 }
 {% endmacro %}

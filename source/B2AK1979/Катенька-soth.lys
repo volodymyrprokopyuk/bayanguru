@@ -14,15 +14,15 @@
 
 {% macro lh1(a) %}
   {{ a }} eesM! g, ees@M |
-  bes=,8 bes7! d bes,@7 |
+  bes=,8 bes7! d bes@7 |
   ees=8 eesM! g, ees@M |
   bes=,8 bes7! bes bes7 |
 {% endmacro %}
 
 {% macro lh2() %}
-  c=8 f,@7! f,8 f7 |
-  bes=,8 besM! f bes,@M |
-  c'=8 f,@7! f,8 f7 |
+  c=8 f@7! f,8 f7 |
+  bes=,8 besM! f bes@M |
+  c'=8 f@7! f,8 f7 |
 {% endmacro %}
 
 {% macro rightHand() %}

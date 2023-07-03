@@ -37,13 +37,13 @@
 {% endmacro %}
 
 {% macro lh2(a) %}
-  e'=8 eM! a, am! | b e@7! c8 a,@m! |
-  {{ a }} e8 a,@m! | e8 e7! a,=, am! |
+  e'=8 eM! a, am! | b e@7! c8 a@m! |
+  {{ a }} e8 a@m! | e8 e7! a,=, am! |
 {% endmacro %}
 
 {% macro lh3(a) %}
   e'=8 d c r | e d c a |
-  f'=8 d@m! e8 a,@m! | f8 e a,=, {{ a }} | %
+  f'=8 d@m! e8 a@m! | f8 e a,=, {{ a }} | %
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -101,6 +101,6 @@
   {{ lh1("a=,8") }}
   {{ lh1("a=,8") }}
   {{ lh1("a=,8") }}
-  a=,8 am! f d@m! | e'8 e7! a,=, a,,+am! |
+  a=,8 am! f d@m! | e'8 e7! a,=, a+am! |
 }
 {% endmacro %}

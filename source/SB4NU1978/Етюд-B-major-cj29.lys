@@ -110,7 +110,7 @@
   fis=8 gis fis e dis cis |
   {{ lh1("b=,8[") }}
   e,=,8 r r cis@m! r8 r |
-  fis=,8 r r b,@M! r8 r |
+  fis=,8 r r b@M! r8 r |
   fis=,8 r r fis7! r r |
   b=,8 r r bM!4 r8 |
 
@@ -118,7 +118,7 @@
   \rep 2 { gis=,8 r r dis@M! r8 r | }
   gis=,8 r r gism! r r |
   gis=,8 r r cis@m! r8 r |
-  fis=,8 r r b,@M! r8 r |
+  fis=,8 r r b@M! r8 r |
   e=,8 r r ais r r |
   dis=8[ r dis] dis[ r dis] |
   gis,=,8 r r gism! r r |
@@ -132,10 +132,10 @@
   \rep 2 { gis=,8[ r gism!] r dis' r | }
   gis,=,8 r r gism! r r |
   fis=,8[ r fisM!] b[ r bM!] |
-  ais=,8[ r fis@M!] a8[ r b,@M!] |
-  gis=,8[ r e@M!] fis8[ r b,@M!] |
+  ais=,8[ r fis@M!] a8[ r b@M!] |
+  gis=,8[ r e@M!] fis8[ r b@M!] |
   e=,8 r r eM! r r |
-  fis=,8 r r b,@M! r8 r |
+  fis=,8 r r b@M! r8 r |
   fis=,8[ r fis] fis[ r fis] |
   b=,4 b8 b[-> b-> b]-> |
   b=,4-> r8 r4. |

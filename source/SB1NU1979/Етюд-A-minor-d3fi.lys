@@ -7,8 +7,8 @@
 
 {% macro lh1(a) %}
   {{ a }} am! am | a am! am |
-  d=4 dm! dm | c a,@m! am4 |
-  d=4 dm! dm | e= a,@m! am4 |
+  d=4 dm! dm | c a@m! am4 |
+  d=4 dm! dm | e= a@m! am4 |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -30,7 +30,7 @@
   \clef bass
   \key a \minor
   {{ lh1("a,=,4-\\stBass") }}
-  dis=4 b,@7! b74 | e e7! e7 |
+  dis=4 b@7! b74 | e e7! e7 |
   {{ lh1("a,=,4") }}
   e=4 e7! e7 | a,=, am!2 |
 }

@@ -8,9 +8,9 @@
 {% endmacro %}
 
 {% macro lh1(a) %}
-  {{ a }} r am! r c r a,@m r8 |
+  {{ a }} r am! r c r a@m r8 |
   gis=,8 r e@7! r8 b r e@7 r8 |
-  e=8 r e7! r a,@m! r8 e@7! r8 |
+  e=8 r e7! r a@m! r8 e@7! r8 |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -53,20 +53,20 @@
   \clef bass
   \key a \minor
   {{ lh1("a,=,8-\\stBass") }}
-  a,=,8 r am! r c r a,@m r8 |
-  cis=8 r a,@7! r8 e r a,@7 r8 |
+  a,=,8 r am! r c r a@m r8 |
+  cis=8 r a@7! r8 e r a@7 r8 |
   d=8 r dm! r f, r d@m r8 |
   a=,8 r am! r gis r e@7! r8 |
-  a=,8 r am! r f,@M! r8 a,@m! r8 |
-  c=8 r cM! r cis r a,@7! r8 |
-  d=8 r g,@7! r8 g, r g7 r |
-  d'=8 r g,@7! r8 b r g,@7 r8 |
+  a=,8 r am! r f@M! r8 a@m! r8 |
+  c=8 r cM! r cis r a@7! r8 |
+  d=8 r g@7! r8 g, r g7 r |
+  d'=8 r g@7! r8 b r g@7 r8 |
   c=8 r cM! r gis r e@7! r8 |
 
   {{ lh1("a=,8") }}
-  a,,+am!8 r r4 e,+a,@m!8 r8 r4 |
-  d,+dm!8 r r4 b,,+e@7!8 r8 r4 |
-  a,,+am!8 r r4 e,8-. r r4 |
+  a+am!8 r r4 e+a@m!8 r8 r4 |
+  d+dm!8 r r4 b+e@7!8 r8 r4 |
+  a+am!8 r r4 e,8-. r r4 |
   a=,8-. r r4 r2 |
 }
 {% endmacro %}

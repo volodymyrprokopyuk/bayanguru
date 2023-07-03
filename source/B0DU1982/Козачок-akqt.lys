@@ -7,7 +7,7 @@
 {% endmacro %}
 
 {% macro lh1(a) %}
-  {{ a }} gM! b g,@M | c8 cM! e= c@M |
+  {{ a }} gM! b g@M | c8 cM! e= c@M |
 {% endmacro %}
 
 {% macro lh2(a) %}
@@ -35,7 +35,7 @@
   \key c \major
   {{ lh1("g,=,8-\\stBass") }}
   {{ lh1("g,=,8") }}
-  {{ lh2("b=,8 g,@M") }}
-  {{ lh2("g,,+gM r") }}
+  {{ lh2("b=,8 g@M") }}
+  {{ lh2("g+gM r") }}
 }
 {% endmacro %}

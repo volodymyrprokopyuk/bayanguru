@@ -26,8 +26,8 @@
 {% endmacro %}
 
 {% macro lh1(a) %}
-  {{ a }} aes,@M! c4 aes,@M! |
-  c=4 cm! c=4 aes,@M! |
+  {{ a }} aes@M! c4 aes@M! |
+  c=4 cm! c=4 aes@M! |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -104,18 +104,18 @@
   \clef bass
   \key c \minor
   {{ lh1("c=4-\\stBass") }}
-  d=4 g,@7! des4 g,@7 |
-  b=,4 g,@7! g4 g7 |
+  d=4 g@7! des4 g@7 |
+  b=,4 g@7! g4 g7 |
   {{ lh1("c=4") }}
 
   aes=,4 aes7! des desM! |
   ges,=,4 c@7! f4 fm! |
   bes=,4 besm! ees, ees7! |
-  aes=,4 aesM! f aes,@M |
+  aes=,4 aesM! f aes@M |
   bes=,4 besm! ees, ees7! |
-  aes=,4 aesM! c aes,@M |
+  aes=,4 aesM! c aes@M |
   bes=,4 besm! ees, ees7! |
-  c'=4 cM! cis a,@7! |
+  c'=4 cM! cis a@7! |
   d=4 dm! g, g7! |
   c=4-> b-- a-- aes-- |
 

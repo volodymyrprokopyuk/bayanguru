@@ -70,8 +70,8 @@
   d=8-\stBass r dM!4-> | g,8 gM! gM4 |
   d'=8 dM! dM4-> | g,=,8 gM! gM4 |
 
-  cis=8 a,@7! a8 a7 | d dM! a d@M |
-  e'=8 a,@7! a,8 a7 | d dM! a d@M |
+  cis=8 a@7! a8 a7 | d dM! a d@M |
+  e'=8 a@7! a,8 a7 | d dM! a d@M |
   d=8 dM! dM r |
 
   d=4-\puBass c | b g | d' c | b g |
@@ -84,8 +84,8 @@
   {{ v2("r4 aM!", "a,=,2") }}
   {{ v2("r4 dM!", "d=2") }}
 
-  g,@M!8[ gM8 gM gM] | d@M![ dM8 g,@M! gM8] |
-  g,@M!8[ gM8 gM gM] | d@M![ dM8] g,@M!4 |
+  g@M!8[ gM8 gM gM] | d@M![ dM8 g@M! gM8] |
+  g@M!8[ gM8 gM gM] | d@M![ dM8] g@M!4 |
   e=8 em! e em | b b7! e em! |
   e=8 em! e em | b=, b7! e@m!4 |
 }

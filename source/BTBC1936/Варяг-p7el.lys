@@ -27,15 +27,15 @@
   \clef bass
   \key ees \major
   \partial 16 { r16 | }
-  ees,+eesM!4-\stBass \rep 3 { ees,+eesM }
+  ees+eesM!4-\stBass \rep 3 { ees+eesM }
   \rep 2 {
-    bes,,+besM!4 \rep 3 { bes,,+besM }
+    bes+besM!4 \rep 3 { bes+besM }
   }
-  ees,+eesM!4 \rep 3 { ees,+eesM }
-  aes,,+aesM!4 aes,,+aesM c,+c7! c,+c7 |
-  f,,+fm!4 f,,+fm aes,,+f,@m! aes,,+fm4 |
-  bes,,+besM!4 bes,,+besM d,+bes,@M! d,+besM4 |
-  ees,+eesM!4 \rep 3 { ees,+eesM }
-  ees,+eesM!4 \rep 2 { ees,+eesM } r8. %
+  ees+eesM!4 \rep 3 { ees+eesM }
+  aes+aesM!4 aes+aesM c+c7! c+c7 |
+  f+fm!4 f+fm aes+f@m! aes+fm4 |
+  bes+besM!4 bes+besM d+bes@M! d+besM4 |
+  ees+eesM!4 \rep 3 { ees+eesM }
+  ees+eesM!4 \rep 2 { ees+eesM } r8. %
 }
 {% endmacro %}

@@ -14,11 +14,11 @@
 {% endmacro %}
 
 {% macro lh1(a) %}
-  {{ a }} r fM! r fM r | c' r f,@M! r8 fM r |
-  g=,8 r gm! r gm r | f r g,@m! r8 gm r |
+  {{ a }} r fM! r fM r | c' r f@M! r8 fM r |
+  g=,8 r gm! r gm r | f r g@m! r8 gm r |
   e=,8 r c@7! r8 c7 r | c' r c7! r c7 r |
   f,=,8 r fM! r fM r | f r fM! r fM r |
-  f,,+fM!8 r d' r c r | f,=, r r4 r |
+  f+fM!8 r d' r c r | f,=, r r4 r |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -108,25 +108,25 @@
   {{ lh1("f,=,8") }}
 
   \key a \minor
-  a=,8 r am! r am r | gis r a,@m! r8 am r |
-  g=,8 r a,@m! r8 am r | fis r a,@m! r8 am r |
+  a=,8 r am! r am r | gis r a@m! r8 am r |
+  g=,8 r a@m! r8 am r | fis r a@m! r8 am r |
   a=,8 r am! r am r | bes r bes7! r bes7 r |
   a=,8 r am! r am r | d r dM! r dM r |
-  bes=,8 r besM! r besM r | a r bes,@M! r8 besM r |
-  aes=,8 r bes,@M! r8 besM r | g r bes,@M! r8 besM r |
+  bes=,8 r besM! r besM r | a r bes@M! r8 besM r |
+  aes=,8 r bes@M! r8 besM r | g r bes@M! r8 besM r |
   bes=,8 r bes7! r bes7 r | e, r e7! r e7 r |
-  a,,+am!8 r c'=8 r f, r | e,,+a,@m!8 r8 r4 r |
-  a,,+am!8 r f=,8 r e r | a=,8 r r4 r |
+  a+am!8 r c'=8 r f, r | e+a@m!8 r8 r4 r |
+  a+am!8 r f=,8 r e r | a=,8 r r4 r |
 
   \key f \major
   {{ lh1("f=,8") }}
 
   \key des \major
-  aes=,8 r aes7! r aes7 r | c r aes,@7! r8 aes7 r |
+  aes=,8 r aes7! r aes7 r | c r aes@7! r8 aes7 r |
   des=8 r desM! r desM r | aes r des@M! r8 desM r |
   ees'=8 r eesm! r eesm r | aes, r aes7! r aes7 r |
   des=8 r desM! r desM r | R2. | aes8 r aes7! r aes7 r |
-  des,+desM!8 r bes=,8 r aes=, r | des,+desM! r r4 r |
+  des+desM!8 r bes=,8 r aes=, r | des+desM! r r4 r |
   \key f \major
 }
 {% endmacro %}

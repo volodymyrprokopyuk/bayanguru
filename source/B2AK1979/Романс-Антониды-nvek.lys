@@ -50,15 +50,15 @@
   \key g \minor
   \meter 1/4 1,1,1
   g,=,4( gm!) r | g( c@m!) r4 |
-  g=,4( gm!) r | c( cm!) f,,+fM! |
-  bes,,+besM!2 g,,+g7!4 | c( cm!) c |
-  bes=,4( g,@m!) g4 | ees' g, ees' |
+  g=,4( gm!) r | c( cm!) f+fM! |
+  bes+besM!2 g+g7!4 | c( cm!) c |
+  bes=,4( g@m!) g4 | ees' g, ees' |
 
   \rep 2 {
-    d=8( d7!) d7 d7 g,@m![ gm8] |
+    d=8( d7!) d7 d7 g@m![ gm8] |
   }
-  d=8_\aSim d7! d7 d7 g,@m![ gm8] |
-  d=8 d7! d7 d7 g,@m![ gm8] |
+  d=8_\aSim d7! d7 d7 g@m![ gm8] |
+  d=8 d7! d7 d7 g@m![ gm8] |
   d=8 d7! d7 d7 d7 d7 |
   \rep 2 {
     bes=,8 besM! besM besM besM besM |
@@ -71,9 +71,9 @@
   d'=8 dM! dM dM c cm! |
   d=8 dM! dM dM d dM! |
   g,=,8( gm!) bes( besM!) c( cm!) |
-  d=4( dM!) d,+d7! |
-  ees,+eesM!4 bes,,+besM! c,+cm! |
-  d,+g,@m!2 d,+d7!4 |
-  g,,+gm!4 r r |
+  d=4( dM!) d+d7! |
+  ees+eesM!4 bes+besM! c+cm! |
+  d+g@m!2 d+d7!4 |
+  g+gm!4 r r |
 }
 {% endmacro %}

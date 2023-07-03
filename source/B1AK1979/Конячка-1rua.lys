@@ -17,7 +17,7 @@
 \relative {
   \clef bass
   \key d \minor
-  d=4-\stBass dm! | d dm | g, gm! | g,@m!2 |
-  f'=4 c | bes besM! | a g=, | d,+dm!2 |
+  d=4-\stBass dm! | d dm | g, gm! | g@m!2 |
+  f'=4 c | bes besM! | a g=, | d+dm!2 |
 }
 {% endmacro %}

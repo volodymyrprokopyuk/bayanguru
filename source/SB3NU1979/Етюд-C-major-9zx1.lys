@@ -17,7 +17,7 @@
 {% endmacro %}
 
 {% macro lh1() %}
-  b=,4 r g,@7!8 r8 | g4 r g7!8 r |
+  b=,4 r g@7!8 r8 | g4 r g7!8 r |
   \rep 3 {
     c=4 r cM!8 r | g=,4 r c@M!8 r8 |
   }
@@ -67,23 +67,23 @@
   c=4-\stBass r cM!8-. r | g4 r c@M!8-. r8 |
   c=4_\aSim r cM!8 r | g4 r c@M!8 r8 |
   {{ lh1() }}
-  \rep 2 { d'=4 r g,@M!8 r8 | }
+  \rep 2 { d'=4 r g@M!8 r8 | }
   \rep 2 { d=4 r d7!8 r | }
-  g,,+gM!8 r r4 r | R2. |
+  g+gM!8 r r4 r | R2. |
   \rep 2 {
     c=4 r cM!8 r | g4 r c@M!8 r8 |
   }
   {{ lh1() }}
-  f,,+d@m!4 r4 r | g,,+g7! r r |
-  \rep 2 { c,+cM! r r | }
+  f+d@m!4 r4 r | g+g7! r r |
+  \rep 2 { c+cM! r r | }
 
   \key g \major
   {{ lh2() }}
-  g=,4)-\stBass r r | c,+a,@m! r4 r |
-  d,+g,@M! r4 r | d,+d7! r r |
+  g=,4)-\stBass r r | c+a@m! r4 r |
+  d+g@M! r4 r | d+d7! r r |
   {{ lh2() }}
-  g,,+gM!4)-\stBass r r | c,+a,@m! r4 r |
-  d,+d7!4 r r | g,,+gM!8 r r4 r | R2. | R2. |
+  g+gM!4)-\stBass r r | c+a@m! r4 r |
+  d+d7!4 r r | g+gM!8 r r4 r | R2. | R2. |
   \keyChangeBeforeBar \key c \major
 }
 {% endmacro %}

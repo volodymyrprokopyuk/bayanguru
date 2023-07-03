@@ -74,7 +74,7 @@
   e=8-\stBass em! g, e@m |
   \rep 2 { a=,8 am! g e@m! | }
   a=,8 am! b b7! |
-  e=8 em! d e@m | c8 a,@m! b8 e@m! |
+  e=8 em! d e@m | c8 a@m! b8 e@m! |
   a=,8 am! b b7! | e em! b e@m |
   e=4-\puBass d | c b | d b |
   {{ v2("r4 em!", "e=2") }}
@@ -87,7 +87,7 @@
   g=,4( gis | a2) | b4.( d8 | e c e=4) |
 
   e=8-\stBass em! g, e@m | a8 am! b e@m! |
-  c=8 a,@m! b8 e@m | a8 am! b=, b7! |
+  c=8 a@m! b8 e@m | a8 am! b=, b7! |
 
   e,=,8\(-\puBass b' b b | a4 b8 g\) |
   a=,4\( b8 a | g fis e4\) |

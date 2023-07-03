@@ -6,7 +6,7 @@
 {% endmacro %}
 
 {% macro lh1() %}
-  a=,8[ f,@M! fM8 fM] | a8[ f,@M fM8 fM] |
+  a=,8[ f@M! fM8 fM] | a8[ f@M fM8 fM] |
   bes=,8 besM! besM besM | bes=, besM besM besM |
 {% endmacro %}
 
@@ -48,15 +48,15 @@
   bes=,8( besM)-. besM-. besM-. |
   bes=,8[_\aSim ees@M! eesM8 eesM] |
   bes=,8 besM! besM besM |
-  a,,+f,@M!8[-. a,,+fM8-. a,,+fM]-. r |
-  bes,,+besM!8-. bes,,+besM-. bes,,+besM-. r |
-  c,+c7!8-. c,+c7-. c,+c7-. r | f=,( fM!)-. fM-. r |
+  a+f@M!8[-. a+fM8-. a+fM]-. r |
+  bes+besM!8-. bes+besM-. bes+besM-. r |
+  c+c7!8-. c+c7-. c+c7-. r | f=,( fM!)-. fM-. r |
 
   {{ lh1() }}
   {{ lh1() }}
-  d=8[ bes,@M! besM8 besM] | d[ bes,@M besM8 besM] |
+  d=8[ bes@M! besM8 besM] | d[ bes@M besM8 besM] |
   ees=8 eesM! eesM eesM | ees[ c@m! cm8 cm] |
-  f,=,8[ bes,@M! besM8 besM] | f f7! f7 f7 |
+  f,=,8[ bes@M! besM8 besM] | f f7! f7 f7 |
   bes=,8[-. besM!]-. bes-. besM-. |
   bes=,8(-. besM!)-. besM-. r |
 }

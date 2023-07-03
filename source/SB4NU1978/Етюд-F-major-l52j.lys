@@ -67,6 +67,6 @@
   r8 f,=,8_\aSim b gis d' b |
   r8 f=,8 bes g des' bes |
   f=,2-> des'8-> bes=,-> |
-  f,,+fM!2. \fermata |
+  f+fM!2. \fermata |
 }
 {% endmacro %}

@@ -3,7 +3,7 @@
 {% endmacro %}
 
 {% macro lh1(a) %}
-  b=,8 g,@M! bes8 g,@m! | a8 d@m! dm8 dm |
+  b=,8 g@M! bes8 g@m! | a8 d@m! dm8 dm |
   a=,8 d@m! a8 a7! | d= dm! {{ a }} | %
 {% endmacro %}
 
@@ -27,6 +27,6 @@
   d=8-\stBass dm! d dm | d dM! d d7! |
   g,=,8 gm! g gm | d' dm! d dm |
   {{ lh1("r dm") }}
-  {{ lh1("d,+dm4") }}
+  {{ lh1("d+dm4") }}
 }
 {% endmacro %}

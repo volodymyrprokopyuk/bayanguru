@@ -27,7 +27,7 @@
 {% endmacro %}
 
 {% macro lh1(a) %}
-  {{ a }} r c,+cM! r | f,,+fm!8 r f,,+fm r |
+  {{ a }} r c+cM! r | f+fm!8 r f+fm r |
 {% endmacro %}
 
 {% macro lh2(a) %}
@@ -36,18 +36,18 @@
 {% endmacro %}
 
 {% macro lh3() %}
-  aes,,+f,@m!8 r8 bes,,+besm! r |
-  c,+cM! r c,+cM r |
-  {{ lh1("f,,+fm!8") }}
-  g,,+c@m!8 r8 g,,+gM! r |
-  c,+cM! r c,+c7! r |
-  f,,+fm!8 r c,+c7! r |
-  f,,+fm!8 r a,,+f,@7! r8 |
-  bes,,+besm!8 r f,,+f7! r |
-  bes,,+besm!8 r g,,+bes,@m! r8 |
-  aes,,+f,@m!8 r8 c,+c7! r |
-  f,,+fm!8 r bes,,+besm! r |
-  c,+f,@m!8 r8 c,+c7! r |
+  aes+f@m!8 r8 bes+besm! r |
+  c+cM! r c+cM r |
+  {{ lh1("f+fm!8") }}
+  g+c@m!8 r8 g+gM! r |
+  c+cM! r c+c7! r |
+  f+fm!8 r c+c7! r |
+  f+fm!8 r a+f@7! r8 |
+  bes+besm!8 r f+f7! r |
+  bes+besm!8 r g+bes@m! r8 |
+  aes+f@m!8 r8 c+c7! r |
+  f+fm!8 r bes+besm! r |
+  c+f@m!8 r8 c+c7! r |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -83,19 +83,19 @@
 \relative {
   \clef bass
   \key f \minor
-  R2 | {{ lh1("f,,+fm!8-\\stBass") }}
+  R2 | {{ lh1("f+fm!8-\\stBass") }}
   {{ lh3() }}
-  f,,+fm!8 r f,,+fm r |
+  f+fm!8 r f+fm r |
 
-  {{ lh2("aes=,8 r bes,@m! r8") }}
+  {{ lh2("aes=,8 r bes@m! r8") }}
   {{ lh2("g=,8 r g7! r") }}
   f,=,8 r c@M! r8 | f r f7! r |
-  bes=,8 r f,@7! r8 | bes r besm! r |
-  c=8 r c7! r | f, r bes,@m! r8 |
+  bes=,8 r f@7! r8 | bes r besm! r |
+  c=8 r c7! r | f, r bes@m! r8 |
   c'=8 r c7! r | f,=,8 r fm! r |
 
-  {{ lh1("f,,+fm!8") }}
+  {{ lh1("f+fm!8") }}
   {{ lh3() }}
-  f,,+fm!8 c,+cM!-.-> f,,+fm!-.-> r |
+  f+fm!8 c+cM!-.-> f+fm!-.-> r |
 }
 {% endmacro %}

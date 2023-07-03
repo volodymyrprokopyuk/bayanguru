@@ -19,13 +19,13 @@
 \relative {
   \clef bass
   \key c \major
-  c,+cM!4-\stBass r | r8 c,+cM!8[ c,+cM c,+cM] |
-  g,,+gM!4 r | r8 g,,+gM!8[ g,,+gM g,,+gM] |
-  a,,+d@7!4 r4 | r8 a,,+d@7!8[ a,,+d78 a,,+d7] |
-  g,,+gM!4 r | r8 b,,+g,@M!8[ b,,+gM8 b,,+gM] |
-  b,,+g,@7!4 r4 | r8 b,,+g,@7!8[ b,,+g78 b,,+g7] |
-  c,+cM!4 r | r8 c,+cM!8[ c,+cM c,+cM] |
-  g,,+g7!4 r | r8 g,,+g7!8[ g,,+g7 g,,+g7 ] |
-  c,+cM!4 r | c= r |
+  c+cM!4-\stBass r | r8 c+cM!8[ c+cM c+cM] |
+  g+gM!4 r | r8 g+gM!8[ g+gM g+gM] |
+  a+d@7!4 r4 | r8 a+d@7!8[ a+d78 a+d7] |
+  g+gM!4 r | r8 b+g@M!8[ b+gM8 b+gM] |
+  b+g@7!4 r4 | r8 b+g@7!8[ b+g78 b+g7] |
+  c+cM!4 r | r8 c+cM!8[ c+cM c+cM] |
+  g+g7!4 r | r8 g+g7!8[ g+g7 g+g7 ] |
+  c+cM!4 r | c= r |
 }
 {% endmacro %}

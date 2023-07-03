@@ -34,17 +34,17 @@
 \relative {
   \clef bass
   \key a \minor
-  a,=,4-\stBass am! am | e' a,@m a,m4 |
+  a,=,4-\stBass am! am | e' a@m a,m4 |
   e=4 e7! e7 | gis, e@7 e74 |
   e'=4 e7! e7 | b e@7 e74 |
-  a=,4( am!) am | e'( a,@m) a,m4 |
-  a,=,4 am! am | e' a,@m a,m4 |
+  a=,4( am!) am | e'( a@m) a,m4 |
+  a,=,4 am! am | e' a@m a,m4 |
   d=4 dm! dm | a d@m dm4 |
-  e'=4 a,@m! am4 | e e7! e7 |
-  a,=,4( am!) am | e'( a,@m) a,m4 |
-  a,=,4 am! am | g a,@m am4 |
+  e'=4 a@m! am4 | e e7! e7 |
+  a,=,4( am!) am | e'( a@m) a,m4 |
+  a,=,4 am! am | g a@m am4 |
   f=,4 d@m! dm4 | b d@m dm4 |
-  e=4 a,@m! am4 | e e7! e7 |
-  a,=,4( am!) am | a,,+am! r r |
+  e=4 a@m! am4 | e e7! e7 |
+  a,=,4( am!) am | a+am! r r |
 }
 {% endmacro %}

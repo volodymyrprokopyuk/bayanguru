@@ -15,9 +15,9 @@
 \relative {
   \clef bass
   \key f \major
-  f,,+fM!4-\stBass r |
-  \rep 3 { f,,+fM!4 r | }
-  \rep 3 { c,+cM!4 r | }
-  f,,+fM!4 r |
+  f+fM!4-\stBass r |
+  \rep 3 { f+fM!4 r | }
+  \rep 3 { c+cM!4 r | }
+  f+fM!4 r |
 }
 {% endmacro %}

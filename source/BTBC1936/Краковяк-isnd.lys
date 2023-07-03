@@ -48,16 +48,16 @@
   \clef bass
   \key g \major
   \partial 8 { r8 | }
-  d=8-\stBass d7! d d7 | g, gM! b g,@M |
-  a=,8 d@7! d8 d7 | g, gM! b g,@M |
-  d=8 d7! d d7 | g, gM! b g,@M |
+  d=8-\stBass d7! d d7 | g, gM! b g@M |
+  a=,8 d@7! d8 d7 | g, gM! b g@M |
+  d=8 d7! d d7 | g, gM! b g@M |
   d=8 d7! d8 d7 | g, gM! g=, r |
-  g=,8 gM! g,,+gM r |
+  g=,8 gM! g+gM r |
 
-  c=8 cM! e c@M | g,8 gM! b g,@M |
-  a=,8 d@7! d8 d7 | g, gM! b g,@M |
-  c=8 cM! c cM | g gM! b g,@M |
-  a=,8 d@7! d8 d7 | g, gM! g,,+gM r |
-  g=,8 gM! g,,+gM %
+  c=8 cM! e c@M | g,8 gM! b g@M |
+  a=,8 d@7! d8 d7 | g, gM! b g@M |
+  c=8 cM! c cM | g gM! b g@M |
+  a=,8 d@7! d8 d7 | g, gM! g+gM r |
+  g=,8 gM! g+gM %
 }
 {% endmacro %}

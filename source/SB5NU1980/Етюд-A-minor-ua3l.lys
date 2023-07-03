@@ -29,12 +29,12 @@
 {% endmacro %}
 
 {% macro lh1(a) %}
-  {{ a }} r am!] r e'[ r a,@m] r8 |
-  c=8[ r a,@m!] r8 dis4( e=8) r |
+  {{ a }} r am!] r e'[ r a@m] r8 |
+  c=8[ r a@m!] r8 dis4( e=8) r |
 {% endmacro %}
 
 {% macro lh2() %}
-  \rep 2 { e@7!8[ r8 e=] r a,@m! r8 r4 | }
+  \rep 2 { e@7!8[ r8 e=] r a@m! r8 r4 | }
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -96,34 +96,34 @@
   {{ lh1("a,=,8[") }}
   {{ lh2() }}
 
-  c=8[ r cM!] r b[ r g,@M!] r8 |
+  c=8[ r cM!] r b[ r g@M!] r8 |
   a=,8[ r am!] r g[ r gM!] r |
   c=8[ r cM!] r g[ r g7!] r |
-  c=8[ r g,@7!] r8 c@M! r8 r4 |
-  g=,8[ r e@m!] r8 fis[ r b,@7!] r8 |
-  e'=8[ r em!] r dis[ r b,@M!] r8 |
+  c=8[ r g@7!] r8 c@M! r8 r4 |
+  g=,8[ r e@m!] r8 fis[ r b@7!] r8 |
+  e'=8[ r em!] r dis[ r b@M!] r8 |
   e=8[ r em!] r b[ r b7!] r |
-  e=8[ r b,@7!] r8 e@m! r8 r4 |
+  e=8[ r b@7!] r8 e@m! r8 r4 |
 
-  r4 g,@7!4(-> c@M!8) r8 r4 |
-  r4 e@7!4(-> a,@m!8) r8 r4 |
-  r4 c@7!4(-> f,@M!8) r8 r4 |
-  r4 a,@7!4(-> d@m!8) r8 r4 |
+  r4 g@7!4(-> c@M!8) r8 r4 |
+  r4 e@7!4(-> a@m!8) r8 r4 |
+  r4 c@7!4(-> f@M!8) r8 r4 |
+  r4 a@7!4(-> d@m!8) r8 r4 |
 
   r4 d=8 r r4 e8 r | r4 f,8 r r4 g8 r |
   r4 a=,8 r r4 b8 r | r4 c8 r r4 d=8 r |
 
-  e,+e7!8 r r4 d@m!2( | e@M!8)-. r8 r4 d@m!2( |
-  e@M!8)-. r8 r4 f,,+d@m!8[ r8 d,+dm] r |
-  e,+eM!8[ r d] r c[ r b=,] r |
+  e+e7!8 r r4 d@m!2( | e@M!8)-. r8 r4 d@m!2( |
+  e@M!8)-. r8 r4 f+d@m!8[ r8 d+dm] r |
+  e+eM!8[ r d] r c[ r b=,] r |
 
   {{ lh1("a=,8[") }}
   {{ lh2() }}
   {{ lh1("a,=,8[") }}
-  e@7!8[ r8 e=] r a,@m! r8 r4 |
-  a,@7!8[ r8 a,=,] r d@m! r8 r4 |
-  \rep 2 { e@7!8[ r8 e'=] r a,@m! r8 r4 | }
-  r4 e@7!8 r8 a,@m! r8 r4 |
-  e,+eM!4 r e,+eM r | a,,+am! r r2 |
+  e@7!8[ r8 e=] r a@m! r8 r4 |
+  a@7!8[ r8 a,=,] r d@m! r8 r4 |
+  \rep 2 { e@7!8[ r8 e'=] r a@m! r8 r4 | }
+  r4 e@7!8 r8 a@m! r8 r4 |
+  e+eM!4 r e+eM r | a+am! r r2 |
 }
 {% endmacro %}

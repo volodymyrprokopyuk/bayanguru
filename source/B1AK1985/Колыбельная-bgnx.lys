@@ -4,7 +4,7 @@
 {% endmacro %}
 
 {% macro lh1(a, b) %}
-  {{ a }} am! a am | d g,@M! e4 {{ b }} | %
+  {{ a }} am! a am | d g@M! e4 {{ b }} | %
   a,=,4 am! d= d7! |
 {% endmacro %}
 

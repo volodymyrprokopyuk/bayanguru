@@ -52,6 +52,6 @@
   a,=,8 am! b a | e' eM! eM eM |
   e=8 e7! e7 e7 | a, am! am am |
   a=,8 am! gis a | d dm! dm dm |
-  e=8[ a,@m! e8 e7!] | a, am! b=, g,@7! |
+  e=8[ a@m! e8 e7!] | a, am! b=, g@7! |
 }
 {% endmacro %}

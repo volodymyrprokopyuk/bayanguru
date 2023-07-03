@@ -177,14 +177,14 @@
   \clef bass
   \key d \minor
   \partial 2 { d=4-\stBass dm! | }
-  a=,4 a7! cis a,@7 | d4 dm! d dm |
+  a=,4 a7! cis a@7 | d4 dm! d dm |
   c=4 c7! e c@7 | f,4 fM! fis d@7! |
-  g=,4 gm! e' g,@m | a,4 d@m! f4 d@m |
-  a=,4 a7! cis a,@7! | d4 a d=2 |
+  g=,4 gm! e' g@m | a,4 d@m! f4 d@m |
+  a=,4 a7! cis a@7! | d4 a d=2 |
 
-  g,=,4 gm! bes g,@m | d4 em! f, d@m |
-  a=,4 a7! cis a,@7 | d4 em! f, d@m |
-  g=,4 gm! bes g,@m | d4 em! f, d@m |
+  g,=,4 gm! bes g@m | d4 em! f, d@m |
+  a=,4 a7! cis a@7 | d4 em! f, d@m |
+  g=,4 gm! bes g@m | d4 em! f, d@m |
   e'=4 e7! a, a7! | d dm! fis,=, d@7! |
 
   \rep 2 {
@@ -193,65 +193,65 @@
   g,=,4 gm! a a7! | d dm! bes besM! |
   e=4 e7! a, a7! | d dm! d c= |
 
-  {{ v2("r4 g,@M! r4 bes,7!", "b,=,2 bes=,") }} %
+  {{ v2("r4 g@M! r4 bes,7!", "b,=,2 bes=,") }} %
   a=,4 d@m! f4 d@m | e'4 e7! a, a7! |
-  d=4 dm! d dm | g, gm! bes g,@m |
-  a=,4 d@m! f4 d@m | a4 a7! cis a,@7 |
+  d=4 dm! d dm | g, gm! bes g@m |
+  a=,4 d@m! f4 d@m | a4 a7! cis a@7 |
   d=4 dm! d fis= |
 
-  g,=,4 gm! bes g,@m | a4 d@m! f4 d@m |
-  a=,4 a7! cis a,@7 | d4 d7! fis, d@7 |
-  g=,4 gm! e' g,@m | a,4 d@m! f4 d@m |
-  a=,4 a7! cis a,@7 | d=4 dm! d,+dm r |
+  g,=,4 gm! bes g@m | a4 d@m! f4 d@m |
+  a=,4 a7! cis a@7 | d4 d7! fis, d@7 |
+  g=,4 gm! e' g@m | a,4 d@m! f4 d@m |
+  a=,4 a7! cis a@7 | d=4 dm! d+dm r |
 
-  g,=,4 gm! bes g,@m | d4 dm! f,,+d@m r4 |
-  e=4 a,@7! a,4 a7 | d dm! a,,+d@m r4 |
-  g,=,4 gm! bes,,+g,@m r4 | a d@m! d,+dm4 r |
+  g,=,4 gm! bes g@m | d4 dm! f+d@m r4 |
+  e=4 a@7! a,4 a7 | d dm! a+d@m r4 |
+  g,=,4 gm! bes+g@m r4 | a d@m! d+dm4 r |
   e'=4 e7! a, a7! | d, e f fis=, |
 
-  g=,4 gm! e' g,@m | a,4 d@m! f4 d@m |
+  g=,4 gm! e' g@m | a,4 d@m! f4 d@m |
   a=,4 a7! b cis | d dm! f, d@m |
-  g=,4 gm! bes g,@m | a4 d@m! f4 d@m |
-  a=,4 a7! cis a,@7 | d4 dm! d= dm |
+  g=,4 gm! bes g@m | a4 d@m! f4 d@m |
+  a=,4 a7! cis a@7 | d4 dm! d= dm |
 
-  g,=,4 gm! bes g,@m | a4 d@m! f4 d@m |
-  e'=4 a,@7! cis4 a,@7 | a4 d@m! d4 dm |
-  g,=,4 gm! bes g,@m | a4 d@m! f4 d@m |
-  e'=4 e7! a, a7! | d= dm! d,+dm2 |
+  g,=,4 gm! bes g@m | a4 d@m! f4 d@m |
+  e'=4 a@7! cis4 a@7 | a4 d@m! d4 dm |
+  g,=,4 gm! bes g@m | a4 d@m! f4 d@m |
+  e'=4 e7! a, a7! | d= dm! d+dm2 |
 
-  fis,=,4 g,@m! g4 gis | a d@m! f4 d@m |
-  e'=4 a,@7! a,4 cis | d dm! a d@m |
+  fis,=,4 g@m! g4 gis | a d@m! f4 d@m |
+  e'=4 a@7! a,4 cis | d dm! a d@m |
   g=,4 gm! bes gis | a d@m! f4 d@m |
-  e'=4 a,@7! a,4 a7 | d= dm! d,+dm r |
+  e'=4 a@7! a,4 a7 | d= dm! d+dm r |
 
-  g,=,4 gm! e' g,@m | f,4 d@m! a4 d@m |
-  a=,4 aM! g a,@M | f4 d@m! g4 a |
-  bes=,4 g,@m! e4 g,@m | f,4 d@m! a4 d@m |
-  a=,4 a7! cis a,@7 | d=4 dm! d,+dm r |
+  g,=,4 gm! e' g@m | f,4 d@m! a4 d@m |
+  a=,4 aM! g a@M | f4 d@m! g4 a |
+  bes=,4 g@m! e4 g@m | f,4 d@m! a4 d@m |
+  a=,4 a7! cis a@7 | d=4 dm! d+dm r |
 
   g,=,4 gm! g gm | d' dm! d dm |
   a=,4 a7! a a7 | d dm! d dm |
   g,=,4 gm! g gm | d' dm! d dm |
-  a=,4 a7! a a7 | d= dm! d,+dm2 |
+  a=,4 a7! a a7 | d= dm! d+dm2 |
 
-  r2 e,+g,@m!2 | r2 a,,+d@m! |
-  r2 g,,+a,@M!2 | r2 f,,+d@m! |
-  r2 e,+g,@m!2 | r2 a,,+d@m! |
-  r2 a,,+a7!2 | d=4 r d,+dm! r |
+  r2 e+g@m!2 | r2 a+d@m! |
+  r2 g+a@M!2 | r2 f+d@m! |
+  r2 e+g@m!2 | r2 a+d@m! |
+  r2 a+a7!2 | d=4 r d+dm! r |
 
-  g,=,4 gm! bes g,@m | a4 d@m! d4 dm |
-  e=4 a,@7! cis4 a,@7 | d4 dm! f, d@m |
-  g=,4 gm! e' g,@m | a,4 d@m! d4 dm |
-  a=,4-> aM! g-> a,@M | f=,4-> d@m! d,+dm4 r |
+  g,=,4 gm! bes g@m | a4 d@m! d4 dm |
+  e=4 a@7! cis4 a@7 | d4 dm! f, d@m |
+  g=,4 gm! e' g@m | a,4 d@m! d4 dm |
+  a=,4-> aM! g-> a@M | f=,4-> d@m! d+dm4 r |
 
-  a=,4 a7! cis a,@7 | d4 dm! a d@m |
-  c=4 c7! e c@7 | f,4 fM! c' f,@M |
-  g=,4 gm! bes g,@m | a4 d@m! f4 d@m |
-  a=,4 a7! cis a,@7 | d=4 dm! d,+dm r |
+  a=,4 a7! cis a@7 | d4 dm! a d@m |
+  c=4 c7! e c@7 | f,4 fM! c' f@M |
+  g=,4 gm! bes g@m | a4 d@m! f4 d@m |
+  a=,4 a7! cis a@7 | d=4 dm! d+dm r |
 
   g,=,4 gm! bes besM! | f d@m! g4 gm! |
-  e'=4 g,@M! a,4 a7! | f d@m! fis4 d@M! |
-  g=,4 gm! e' g,@M! | a,4 d@m! f4 d@m |
-  e'=4 e7! a, a7! | d=4 dm! d,+dm r |
+  e'=4 g@M! a,4 a7! | f d@m! fis4 d@M! |
+  g=,4 gm! e' g@M! | a,4 d@m! f4 d@m |
+  e'=4 e7! a, a7! | d=4 dm! d+dm r |
 }
 {% endmacro %}

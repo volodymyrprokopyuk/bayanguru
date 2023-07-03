@@ -37,26 +37,26 @@
 {% endmacro %}
 
 {% macro lh1(a, b) %}
-  {{ a }} r r d,+b,@m r8 r |
-  fis,,+b,@m!8 r8 r b,,+bm r r |
-  e,+em!8 r r fis,,+fM! r r |
-  b,,+bm!8 r r {{ b }} | %
+  {{ a }} r r d+b@m r8 r |
+  fis+b@m!8 r8 r b+bm r r |
+  e+em!8 r r fis+fM! r r |
+  b+bm!8 r r {{ b }} | %
 {% endmacro %}
 
 {% macro lh2() %}
-  e,+a,@7!8 r8 r a,,+a7 r r |
-  d,+dM!8 r r d,+g,@m! r8 r |
-  bes,,+bes7!8 r r a,,+d@M! r8 r |
+  e+a@7!8 r8 r a+a7 r r |
+  d+dM!8 r r d+g@m! r8 r |
+  bes+bes7!8 r r a+d@M! r8 r |
 {% endmacro %}
 
 {% macro lh3() %}
-  a,,+am!8 r r d,+d7! r r |
-  g,,+gM!8 r r r4. |
+  a+am!8 r r d+d7! r r |
+  g+gM!8 r r r4. |
 {% endmacro %}
 
 {% macro lh4() %}
-  e,+em!8 r r cis,+e@m r8 r |
-  fis,,+fisM!8 r r r4. |
+  e+em!8 r r cis+e@m r8 r |
+  fis+fisM!8 r r r4. |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -102,12 +102,12 @@
 \relative {
   \clef bass
   \key b \minor
-  {{ lh1("b,,+bm!8-\\stBass", "r4.") }}
-  {{ lh1("b,,+bm!8", "r4.") }}
+  {{ lh1("b+bm!8-\\stBass", "r4.") }}
+  {{ lh1("b+bm!8", "r4.") }}
   {{ lh2() }}
-  bes,,+bes7!8 r r a,,+d@M! r8 r |
+  bes+bes7!8 r r a+d@M! r8 r |
   {{ lh2() }}
-  a,,+a7!8 r r d,+dM! r r |
+  a+a7!8 r r d+dM! r r |
   {{ lh3() }}
   {{ lh3() }}
   {{ lh4() }}
@@ -115,7 +115,7 @@
   g,=,4.( cis | fis, e') |
   dis=4.( d | cis2.) | cis( |
   fis,=,4) cis'8 fis, r r | R2. | R2. |
-  {{ lh1("b,,+bm!8", "r4.") }}
-  {{ lh1("b,,+bm!8", "b,,+bm8 r r") }}
+  {{ lh1("b+bm!8", "r4.") }}
+  {{ lh1("b+bm!8", "b+bm8 r r") }}
 }
 {% endmacro %}

@@ -32,8 +32,8 @@
   \meter 1/2 #'(1)
   {{ lh1("bes,=,8-\\stBass") }} | bes besM! besM besM |
   {{ lh1("bes=,8") }} | bes[ besM!] besM r |
-  c,+f@7!4 bes,,+besM!4 | a,,+f@M! bes,,+besM!4 |
-  c,+f@M!4 bes,,+besM!4 | a,,+f@M! bes,,+besM!4 |
+  c+f@7!4 bes+besM!4 | a+f@M! bes+besM!4 |
+  c+f@M!4 bes+besM!4 | a+f@M! bes+besM!4 |
   {{ lh1("bes=,8") }} | bes=,[ besM!] besM r |
 }
 {% endmacro %}

@@ -1,5 +1,5 @@
 {% macro lh1(a) %}
-  {{ a }} dm! d dm | d g,@m! d8 g,@m |
+  {{ a }} dm! d dm | d g@m! d8 g@m |
   a=,8 a7! a a7 | d dm! d= dm |
 {% endmacro %}
 
