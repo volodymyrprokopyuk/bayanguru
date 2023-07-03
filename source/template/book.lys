@@ -87,7 +87,7 @@
   title = "{{ book.tit }}"
   subtitle = "{{ book.sub }}"
   pdftitle = "{{ book.tit }} {{ book.sub }}"
-  tagline = \markup { {{ logo(0.5) }} \with-url \rootUrl \rootUrl }
+  tagline = \markup { {{ logo(0.5) }} \with-url \bayanUrl \bayanUrl }
 }
 \pageBreak \markup \null \pageBreak
 
