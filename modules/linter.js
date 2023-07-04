@@ -2,19 +2,20 @@ import { readFile } from "fs/promises"
 import chalk from "chalk"
 import { reFromParts } from "./util.js"
 
+const reMusicContent = reFromParts(
+  "mg",
+  // ^ space, rN, sN, { }, \cmd { } \!, {{ mcr("") }}
+  /^( +| +[rs]\d{0,2} | +\{ | +\\[^\n{!]+[{!] | +\{\{ [^\n(]+\(")/,
+  // First note or chord + check + rest
+  /(<?[a-g](?:es|is){0,2}[,']{0,4})(.)(.*)/
+)
+
 // Disable: prepend | (measure starts)
 function lintFirstNoteOctaveCheck(content, logs) {
   logs.push(chalk.yellow("* Missing first note octave check or duration"))
-  const reOctaveCheck = reFromParts(
-    "mg",
-    // ^ space, rN, sN, { }, \cmd { }, {{ mcr("") }}
-    /^( +| +[rs]\d{0,2} | +\{ | +\\[^{]+\{ | +\{\{ [^(]+\(")/,
-    // First note or chord + check + rest
-    /(<?[a-g](?:es|is){0,2}[,']{0,4})(.)(.*)/
-  )
   let conforms = true
   for (const [_, start, note, check, rest] of
-       content.matchAll(reOctaveCheck)) {
+       content.matchAll(reMusicContent)) {
     // No octave check
     if (!/[=+@Mm7d]/.test(check)) {
       logs.push(`${start}${chalk.red(note + check)}${rest}`)
@@ -38,29 +39,13 @@ function lintFirstNoteOctaveCheck(content, logs) {
 function lintEndLineBarCheck(content, logs) {
   logs.push(chalk.yellow("* Missing end line bar check"))
   let conforms = true
-  // Bar check at the line end |$
-  for (const [_, rest, end] of content.matchAll(
-    /((?:^ +|^ +\| |^ +\{\{ )<?[a-gsrR](?:is|es){0,2}[,']*.*)(.{2})$/mg
-  )) {
-    if (!/ \||."|\}\}| \}| %/.test(end)) {
-      logs.push(`${rest}${chalk.red(end)}`)
-      conforms = false
+  for (const [_, start, note, check, rest] of
+       content.matchAll(reMusicContent)) {
+    // OK |, "|.", | }, "|." }, }}, %
+    if (!/ \|( \})?$| ".."( \})?$| \}\}$| %$/.test(rest)) {
+      logs.push(`${start + note + check +
+        rest.slice(0, -2)}${chalk.red(rest.slice(-2))}`)
     }
-  }
-  // Bar check within a \command [x] { ... | }
-  for (const [_, rest, end] of content.matchAll(
-    /(^ +\\\w+ (?:\S+ )?\{ .+)(.{2} \}(?: %)?)$/mg
-  )) {
-    if (!/ \||."|\}\}| %/.test(end)) {
-      logs.push(`${rest}${chalk.red(end)}`)
-      conforms = false
-    }
-  }
-  logs.push(chalk.yellow("* Extra end line bar check"))
-  // No bar check after } or >>
-  for (const [_, rest, end] of content.matchAll(/(^.+)(\} \||>> \|)$/mg)) {
-    logs.push(`${rest}${chalk.red(end)}`)
-    conforms = false
   }
   return conforms
 }
@@ -136,10 +121,10 @@ function lintDurationAfterBoundChord(content, logs) {
 }
 
 const linters = [
-  lintFirstNoteOctaveCheck,
+  // lintFirstNoteOctaveCheck,
   lintEndLineBarCheck,
-  lintNoteComponentOrder,
-  lintDurationAfterBoundChord
+  // lintNoteComponentOrder,
+  // lintDurationAfterBoundChord
 ]
 
 export async function lint(piece) {
