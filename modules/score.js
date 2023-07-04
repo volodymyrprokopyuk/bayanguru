@@ -54,8 +54,8 @@ function stradella(score) {
     /(\S+)?/ // [modifiers]
   )
   function lyNotation(_, bass, root, bind, chord, name, mods) {
-    if (bass) { bass += /[cde]/.test(bass) ? "," : ",," }
-    root += /[cde]/.test(root) ? "" : ","
+    if (bass) { bass += /^[cde]/.test(bass) ? "," : ",," }
+    root += /^[cde]/.test(root) ? "" : ","
     let rootKey = root.replace(/[,']*/g, "")
     rootKey = noteEnharm[rootKey] || rootKey
     const triad = stradellaChords[rootKey + chord]

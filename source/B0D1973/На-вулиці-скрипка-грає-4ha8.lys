@@ -3,8 +3,7 @@
 {% endmacro %}
 
 {% macro lh1(a) %}
-  d=8 dm! a am! | e' eM! a, am! |
-  e'=8 eM! {{ a }} |
+  d=8 dm! a am! | e' eM! a, am! | e'= eM! {{ a }} |
 {% endmacro %}
 
 {% macro rightHand() %}

@@ -1,6 +1,5 @@
 {% macro rh1(a) %}
-  {{ a }} d-. c-. b-. | a-. b-. c4 |
-  b='8-. c-. d4 | a a=' |
+  {{ a }} d-. c-. b-. | a-. b-. c4 | b8-. c-. d4 | a a=' |
 {% endmacro %}
 
 {% macro rightHand() %}

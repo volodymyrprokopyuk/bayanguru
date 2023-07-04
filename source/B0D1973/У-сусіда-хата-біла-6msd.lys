@@ -1,8 +1,6 @@
-{% from "util.lys" import momentBeat %}
-
 {% macro rh1() %}
   b='8-. b-. a( fis)-. g-. g-. a( fis)-. |
-  g='8-. g-. fis-. dis='-.
+  g='8-. g-. fis-. dis='-. %
 {% endmacro %}
 
 {% macro rightHand() %}
