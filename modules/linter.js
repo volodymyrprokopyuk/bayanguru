@@ -45,62 +45,48 @@ function lintEndLineBarCheck(content, logs) {
     if (!/ \|( \})?$| ".."( \})?$| \}\}$| %$/.test(rest)) {
       logs.push(`${start + note + check +
         rest.slice(0, -2)}${chalk.red(rest.slice(-2))}`)
+      conforms = false
     }
   }
   return conforms
-}
-
-const reNoteComponents = reFromParts(
-  null,
-  // pitch
-  /(^[a-gsrR](?:is|es){0,2})/,
-  // stradella
-  /(,{0,2}[@+]?(?:[a-g](?:is|es){0,2},?@?)?[Mm7d]?!?)?/,
-  // octave check
-  /([,']*=?[,']*)?/,
-  // duration
-  /(\d{0,2}\.{0,2}[\[\]]?)?/,
-  // slur
-  /([_^]?\\{0,2}[\(\)~]){0,2}/,
-  // articulation
-  /(-[-.>]){0,2}/,
-  // dynamic
-  /(\\{1,2}[ms]?[pf]{1,3})?/,
-  // hairpin
-  /(\\{1,2}[<>])?/,
-  // text
-  /([-^_]\\{1,2}\w+){0,2}/,
-  // end
-  /$/
-)
-
-function showNote(m, logs) {
-  const [_, pch, str, och, dur, slr, art, dyn, hrp, txt] = m
-  const note = [
-    pch + (str || "") + (och || ""), chalk.yellow(dur || ""),
-    chalk.blue(slr || ""), chalk.green(art || ""),
-    chalk.magenta((dyn || "") + (hrp || "")), chalk.italic(txt || "")
-  ]
-  logs.push(note.join(''))
 }
 
 // Disable: insert space
 // Pitch, duration, slur, articulation, dynamic, hairpin, text
 function lintNoteComponentOrder(content, logs) {
   logs.push(chalk.yellow("* Unordered note components"))
+  const reNote = reFromParts(
+    null,
+    // pitch
+    /^([a-g](?:es|is){0,2})/,
+    // stradella
+    /(\+?(?:[a-g](?:is|es){0,2})?@?[Mm7d]!?)?/,
+    // octave check
+    /([,']{0,4}=?[,']{0,4})?/,
+    // duration
+    /(>?\d{0,2}\.{0,2}[\[\]]?)?/,
+    // slur
+    /([_^]?\\?[()~]){0,2}/,
+    // articulation
+    /(-[-.>]){0,2}/,
+    // dynamic
+    /(\\[ms]?[pf]{1,3})?/,
+    // hairpin
+    /(\\[<>])?/,
+    // text
+    /([-^_]\\\w+){0,2}/,
+    // end
+    /$/
+  )
   let conforms = true
-  for (const [note] of content.matchAll(
-    /\b[a-gsrR](?:is|es){0,2}[Mm7d]?\d{0,2}\b\S*/g
-  )) {
-    // remove chord end ...>
-    const m = note.replace(/(?<![-\\])>/, "")
-      // remove r/lhN param ending
-      .replace(/"[,\)]/, "").match(reNoteComponents)
-    if (!m) {
-      logs.push(chalk.red(note))
-      conforms = false
+  for (const [line] of
+       content.matchAll(reMusicContent)) {
+    for (let [_, note] of line.matchAll(/[ <"]([a-g][^ ]+)/g)) {
+      if (!reNote.test(note.replace(/",$|"\)$/, "").replace(/\\{2}/g, "\\"))) {
+        logs.push(chalk.red(note))
+        conforms = false
+      }
     }
-    // if (m) { showNote(m, logs) }
   }
   return conforms
 }
@@ -122,8 +108,8 @@ function lintDurationAfterBoundChord(content, logs) {
 
 const linters = [
   // lintFirstNoteOctaveCheck,
-  lintEndLineBarCheck,
-  // lintNoteComponentOrder,
+  // lintEndLineBarCheck,
+  lintNoteComponentOrder,
   // lintDurationAfterBoundChord
 ]
 
