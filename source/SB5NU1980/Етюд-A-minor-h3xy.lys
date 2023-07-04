@@ -11,25 +11,25 @@
 {% endmacro %}
 
 {% macro rh4(a) %}
-  {{ a }} gis b e gis, b e gis %
+  {{ a }} gis b e gis, b e gis
   a,=32\< c e a c, e a c |
-  e,='32 gis b e gis, b e gis %
+  e,='32 gis b e gis, b e gis
   a,='32 c e a c, e a \af 32\! c |
-  b=''32\mf a f d b a f d %
+  b=''32\mf a f d b a f d
   e='32 a c e a, c e a |
-  b,='32 d f a e\> gis b e=''' %
+  b,='32 d f a e\> gis b e='''
 {% endmacro %}
 
 {% macro rh5() %}
   {{ rh2("gis='32") }}
   {{ rh1("a=''32\\mf", "") }}
-  gis='32 a b c d e fis gis %
+  gis='32 a b c d e fis gis
   \ottava #1
   a=''32\< b c d dis e fis \af 32\! gis |
   {{ rh1("a='''32\\f", "") }}
   {{ rh2("gis=''32", "", "") }}
   {{ rh1("a='''32", "") }}
-  gis=''32 a b c d e fis gis=''' %
+  gis=''32 a b c d e fis gis='''
 {% endmacro %}
 
 {% macro lh1(a) %}
@@ -43,7 +43,7 @@
 
 {% macro lh3(a) %}
   e'=8 d c r | e d c a |
-  f'=8 d@m! e8 a@m! | f8 e a,=, {{ a }} | %
+  f'=8 d@m! e8 a@m! | f8 e a,=, {{ a }} |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -56,20 +56,20 @@
   {{ rh5() }} a='''8 \ottava #0 r |
 
   {{ rh3("gis,,,=32\\p") }}
-  f='32 e d c b c e d %
+  f='32 e d c b c e d
   c='32 b a b c d dis e |
-  g='32 fis f e d e f g %
+  g='32 fis f e d e f g
   a='32 b c d dis e g fis |
-  f=''32 e d c b c e d %
+  f=''32 e d c b c e d
   c=''32 b a b c d e fis |
   \ottava #1
   {{ rh3("gis=''32\\mf") }}
-  f='''32 e d c b c e d %
+  f='''32 e d c b c e d
   c='''32 b a gis g fis f e |
   \ottava #0
-  d=''32 c b a b c d e %
+  d=''32 c b a b c d e
   c=''32 b a b c d dis e |
-  g=''32 fis f e dis e fis gis %
+  g=''32 fis f e dis e fis gis
   a=''32 b c e a='''8 |
 
   {{ rh4("e,,,=32\\p") }}

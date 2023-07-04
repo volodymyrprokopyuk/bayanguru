@@ -1,9 +1,9 @@
 {% macro rh1(a) %}
-  {{ a }} f e <a c> e f e) %
+  {{ a }} f e <a c> e f e)
   r16 e='16( f e <c' e> e, f e) |
-  r16 e='16( f e <b' d> e, f e) %
+  r16 e='16( f e <b' d> e, f e)
   r16 e='16( f e <gis b> e f e) |
-  r16 e='16( f e <b' d> e, f e %
+  r16 e='16( f e <b' d> e, f e
   <a=' c>16 e f e <gis b> e f e=') |
 {% endmacro %}
 
@@ -20,28 +20,28 @@
   \key a \minor
   \time 4/4
   {{ rh1("r16\\mp e'='16(") }}
-  r16 e='16( f e <a c> e f e) %
+  r16 e='16( f e <a c> e f e)
   r16 e='16( f e <c' e> e, f e) |
-  r16 a='16( bes a <cis e> a bes a) %
+  r16 a='16( bes a <cis e> a bes a)
   r16 a='16( bes a <e' g> a, bes a) |
-  r16 a='16( bes a <d f> a bes a) %
+  r16 a='16( bes a <d f> a bes a)
   r16 a='16( b a <f' a> a, b a) |
-  r16 e='16( f e <a c> e f e) %
+  r16 e='16( f e <a c> e f e)
   r16 e='16( f e <gis b> e f e) |
   r16 e='16( f e a e f e) <a c>( e f e a e f e) |
-  r16\mf g='16( a g <c e> g a g ) %
+  r16\mf g='16( a g <c e> g a g )
   r16 g='16( a g <e' g> g, a g) |
-  r16 g='16( a g <d' f> g, <c e> g %
+  r16 g='16( a g <d' f> g, <c e> g
   <b=' d>16 g <c e> g <b d> g <a c> g) |
-  r16 g='16( a g <b d> g a g ) %
+  r16 g='16( a g <b d> g a g )
   r16 g='16( a g <d' f> g, a g) |
-  r16 g='16( a g <e' g> g, <d' f> g, %
+  r16 g='16( a g <e' g> g, <d' f> g,
   <c='' e>16 gis <d' f> gis, <c e> gis <b d> gis) |
 
   {{ rh1("r16\\p e='16(") }}
-  r16 e='16( f e a e f e) %
+  r16 e='16( f e a e f e)
   r16 a='16( b a c a b a) |
-  r16 b='16( c b d b c b) %
+  r16 b='16( c b d b c b)
   r16 e=''16( f e gis e f e) |
   a=''8-> r r4 e,8-. r r4 |
   a,=8-. r r4 r2 \bar "|."

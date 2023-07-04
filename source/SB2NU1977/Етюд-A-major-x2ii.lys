@@ -2,11 +2,11 @@
   {{ a }} b cis d e8)-. a,16( b cis d e8)-. |
   gis,='16(\mp a b cis d8)-. gis,16( a b cis d8)-. |
   cis=''16(\mf b a gis fis8)-. fis16( gis a b cis8)-. |
-  b='16(\> a gis fis \af 8\! e8)-. %
+  b='16(\> a gis fis \af 8\! e8)-.
   e='16(\< fis gis a b \af 16\! cis) |
   a='16(\mp b cis d e8)-. a,16( b cis d e8)-. |
   b='16(\mf cis d e fis8)-. b,16( cis d e fis8)-. |
-  e=''16(\< fis gis a b8)-. %
+  e=''16(\< fis gis a b8)-.
   b,='16( cis d e fis \af 16\! gis='' |
 {% endmacro %}
 

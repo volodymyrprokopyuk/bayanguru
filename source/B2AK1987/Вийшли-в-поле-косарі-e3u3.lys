@@ -1,5 +1,5 @@
 {% macro rh1(a, b) %}
-  {{ a }} bes-. a16( bes c a | bes8)-. bes-. bes( {{ b }} | %
+  {{ a }} bes-. a16( bes c a | bes8)-. bes-. bes( {{ b }} |
 {% endmacro %}
 
 {% macro rightHand() %}

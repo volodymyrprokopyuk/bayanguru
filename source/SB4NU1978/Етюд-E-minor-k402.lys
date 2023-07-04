@@ -1,7 +1,7 @@
 {% macro rh1() %}
   \rep 2 {
-    <ais,=' cis fis>16 g' <ais, cis fis> cis'='''-> %
-  } | %
+    <ais,=' cis fis>16 g' <ais, cis fis> cis'='''->
+  } |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -13,35 +13,35 @@
   \repeat segno 2 {
     \volta 1
     \repeat volta 2 {
-      <e''='' g b>16\mf c' <e, g b>_\aLeg g'-> %
+      <e''='' g b>16\mf c' <e, g b>_\aLeg g'->
       <e,='' g b>16 c' <e, g b> g'='''-> |
       \rep 2 {
-        <e,='' fis a>16 b' <e, fis a > fis'='''-> %
-      } | %
+        <e,='' fis a>16 b' <e, fis a > fis'='''->
+      } |
       \rep 2 {
-        <b,,=' fis' a>16 b' <b, fis' a > fis''='''-> %
-      } | %
+        <b,,=' fis' a>16 b' <b, fis' a > fis''='''->
+      } |
       \rep 2 {
-        <b,,=' e g>16 a' <b, e g> e'='''-> %
-      } | %
+        <b,,=' e g>16 a' <b, e g> e'='''->
+      } |
       \rep 2 {
-        <c,='' e g>16 a' <c, e g> e'='''-> %
-      } | %
+        <c,='' e g>16 a' <c, e g> e'='''->
+      } |
       \rep 2 {
-        <c,='' e fis>16 g' <c, e fis> c'='''-> %
-      } | %
+        <c,='' e fis>16 g' <c, e fis> c'='''->
+      } |
       \alternative {
         \volta 1 {
           \rep 2 {
-            <g,=' c e>16 fis' <g, c e> g'=''-> %
-          } | %
-          <fis,=' b dis>16^\tRit b' <g, cis e> b'-> %
+            <g,=' c e>16 fis' <g, c e> g'=''->
+          } |
+          <fis,=' b dis>16^\tRit b' <g, cis e> b'->
           <gis,=' cisis eis>16 b' <a, dis fis> c'='''-> |
         }
         \volta 2 {
-          <g,=' c e>16 fis' <g, c e> g'-> %
+          <g,=' c e>16 fis' <g, c e> g'->
           <fis,=' b dis>16 e' <fis, b dis> fis'-> |
-          <g,=' b e>16^\tRit fis' %
+          <g,=' b e>16^\tRit fis'
           <b,=' e g>16 b'-> <g='' b e>4-- \fine |
         }
       }
@@ -49,33 +49,33 @@
 
     \volta 2
     \repeat volta 2 {
-      <g,=' b d>16\f^\tATem e' <g, b d> b'-> %
+      <g,=' b d>16\f^\tATem e' <g, b d> b'->
       <g,=' b d>16 e' <g, b d> b'=''-> |
       \rep 2 {
-        <g,=' cis e>16 fis' <g, cis e> a'=''-> %
-      } | %
+        <g,=' cis e>16 fis' <g, cis e> a'=''->
+      } |
       \rep 2 {
-        <g,=' c ees>16 f' <g, c ees> a'=''-> %
-      } | %
+        <g,=' c ees>16 f' <g, c ees> a'=''->
+      } |
       \rep 2 {
-        <g,=' b d>16 e' <g, b d> g'=''-> %
-      } | %
+        <g,=' b d>16 e' <g, b d> g'=''->
+      } |
       \rep 2 {
-        <g,=' b cis>16 d' <g, b cis> g'=''-> %
-      } | %
+        <g,=' b cis>16 d' <g, b cis> g'=''->
+      } |
       \rep 2 {
-        <b,=' d fis>16 g' <b, d fis> d'='''-> %
-      } | %
+        <b,=' d fis>16 g' <b, d fis> d'='''->
+      } |
       \alternative {
         \volta 1 {
           {{ rh1() }}
-          <b,=' d fis>16 g' <b, d fis> b'-> %
+          <b,=' d fis>16 g' <b, d fis> b'->
           <c,='' d fis>16 g' <c, d fis> a'=''-> |
         }
         \volta 2 {
           {{ rh1() }}
-          <b,=' d fis>16^\tRit g' <b, d fis> b'-> %
-          <b,=' dis fis>16\> g' %
+          <b,=' d fis>16^\tRit g' <b, d fis> b'->
+          <b,=' dis fis>16\> g'
           <b,=' dis fis>16 \af 16\! b'=''-> \bar "||"
         }
       }

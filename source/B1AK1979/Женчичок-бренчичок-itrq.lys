@@ -16,7 +16,7 @@
   <<
     \new Voice = voiceOne \relative {
       \voiceOne
-      c''=''8(\f b c | d4\>^\tRit \af 8\! c=''8) | \barFermata %
+      c''=''8(\f b c | d4\>^\tRit \af 8\! c=''8) | \barFermata
     }
     \new Voice = voiceTwo \relative {
       \voiceTwo

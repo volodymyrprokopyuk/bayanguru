@@ -1,10 +1,10 @@
 {% macro rh1(a, b, c) %}
-  {{ a }} ees {{ b }} d c bes c bes a %
-  g='16 fis g a bes a bes {{ c }} | %
+  {{ a }} ees {{ b }} d c bes c bes a
+  g='16 fis g a bes a bes {{ c }} |
 {% endmacro %}
 
 {% macro rh2(a) %}
-  f=''16 g f ees d ees d c bes a bes c d c d {{ a }} | %
+  f=''16 g f ees d ees d c bes a bes c d c d {{ a }} |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -34,7 +34,7 @@
   d=''16 c bes a bes c bes a g fis g a bes a bes c |
   d=''16 ees d c bes a bes d ees f ees d c bes c ees |
   f=''16 g f ees d c d f fis g fis e fis d e fis |
-  \rep 4 { g=''16 a g fis } | %
+  \rep 4 { g=''16 a g fis } |
   g=''16\f a bes c d c bes a g a bes c d c bes a |
   g=''8 f16 ees d c bes a g8\> f16 ees d c bes \af 16\! a |
   g=4\p r8. <bes' ees g>16\f <bes=' d g>4 \bar "|."
@@ -58,6 +58,6 @@
   d=8-> r r4 c8-> r r4 | bes8-> r r4 a8-> r r4 |
   g=,8 r f r ees r d r |
   ees@M!8 r8 \rep 3 { eesM8 r8 }
-  d+g@m!8 r8 r4 g@m!8 r8 r4 | g=,4 r g+gm! %
+  d+g@m!8 r8 r4 g@m!8 r8 r4 | g=,4 r g+gm!
 }
 {% endmacro %}

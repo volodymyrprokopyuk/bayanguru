@@ -17,9 +17,9 @@
 {% endmacro %}
 
 {% macro rh5(a) %}
-  {{ a }} <e c'>) <d b'>(-> <c a'>) %
+  {{ a }} <e c'>) <d b'>(-> <c a'>)
   <b=' gis'>16-.-> <gis e'>-. <a f'>-. <gis e'>-. |
-  <f=' d'>16(-> <e c'>) <d b'>(-> <c a'>) %
+  <f=' d'>16(-> <e c'>) <d b'>(-> <c a'>)
   <b= gis'>16-.-> <gis e'>-. <e' c'>-. <d=' b'>-. |
 {% endmacro %}
 
@@ -37,7 +37,7 @@
 {% endmacro %}
 
 {% macro lh2(a) %}
-  e'=8 16 16 8 8 | 8 16 16 e8 e7! | a,=, am!16 am am8 {{ a }} | %
+  e'=8 16 16 8 8 | 8 16 16 e8 e7! | a,=, am!16 am am8 {{ a }} |
 {% endmacro %}
 
 {% macro lh3(a) %}
@@ -72,15 +72,15 @@
   {{ rh1("<g='' e'>16(->", "->") }}
   {{ rh4("<g=' e'>16(->", "->") }}
   {{ rh2("<e=' c'>16(") }}
-  <e='' c'>16(\>^\tRit <g d'> <e c'> <g d'> \af 16\! <e c'>) %
+  <e='' c'>16(\>^\tRit <g d'> <e c'> <g d'> \af 16\! <e c'>)
   <gis='' c>16[-.\f <a f'>-. <gis='' e'>]-. |
 
   {{ rh5("<f='' d'>16(->^\\tATem") }}
   {{ rh6() }}
   {{ rh5("<f,='' d'>16(->") }}
   {{ rh7() }}
-  <a='' c e a>16 \arpeggio <c e a>16 \arpeggio %
-  <c=''' e a>16 \arpeggio 16 \arpeggio 16 \arpeggio %
+  <a='' c e a>16 \arpeggio <c e a>16 \arpeggio
+  <c=''' e a>16 \arpeggio 16 \arpeggio 16 \arpeggio
   <gis='' e'>16[-.\p <a f'>-. <gis='' e'>]-. |
 
   {{ rh5("<f='' d'>16(->") }}
@@ -88,9 +88,9 @@
   {{ rh5("<f,='' d'>16(->") }}
   {{ rh7() }}
   \ottava #1
-  <a='' c e a>16 \arpeggio <c e a>16 \arpeggio %
-  <c=''' e a>16 \arpeggio 16 \arpeggio %
-  <d=''' f b>16^\tRit \arpeggio <d f g>16 \arpeggio %
+  <a='' c e a>16 \arpeggio <c e a>16 \arpeggio
+  <c=''' e a>16 \arpeggio 16 \arpeggio
+  <d=''' f b>16^\tRit \arpeggio <d f g>16 \arpeggio
   <d=''' f g>16 \arpeggio 16 \arpeggio |
 
   {{ rh1("<g=''' e'>16(^\\tATem") }}

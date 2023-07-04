@@ -39,7 +39,7 @@
     >>
     \alternative {
       \volta 1 {
-        <aes,= c f>4 8 8 4 4 | 4 r %
+        <aes,= c f>4 8 8 4 4 | 4 r
         \acc { des'=''8 } <aes c>4.( des=''8) |
       }
       \volta 2 { <aes,= c f>4 8 8 4 4 | 4 r r2\f | }
@@ -75,7 +75,7 @@
     <bes=' c g'>2 {{ v2("aes''=''4.( g8) |", "<bes'=' c>2 |") }}
     <aes=' c f>1~ | 4 c( \acc { ees=''8 } des4 c) |
     <des,=' f bes>2( <bes' des g>) | r4 bes4( c bes) |
-    <c,=' f aes>2( <aes' c f>) | r4 aes4( %
+    <c,=' f aes>2( <aes' c f>) | r4 aes4(
     \acc { c=''8 } bes4 aes) |
     <c,=' g'>2 <e bes' des> | <c e c'> <bes c e> |
     <<

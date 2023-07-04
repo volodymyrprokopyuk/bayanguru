@@ -3,7 +3,7 @@
 {% endmacro %}
 
 {% macro rh2() %}
-  \tuplet 3/2 { <g=' bes>8 <f a> <e g> } %
+  \tuplet 3/2 { <g=' bes>8 <f a> <e g> }
   \tuplet 3/2 { <d=' f>8 <c e> <bes= d> | }
 {% endmacro %}
 
@@ -18,7 +18,7 @@
   <a=' c>2 <d, bes'>8 <e c'> |
   <f=' a>2 8 8 |
   \time 2/4
-  \tuplet 3/2 { <g=' bes>8 <f a> <e g> } %
+  \tuplet 3/2 { <g=' bes>8 <f a> <e g> }
   \tuplet 3/2 { <e=' g>8 <d f> <d e> | }
   \time 3/4
   {{ rh1() }}

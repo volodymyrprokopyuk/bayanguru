@@ -1,5 +1,5 @@
 {% macro rh1(a, b, c) %}
-  {{ a }} d e f g8)-. g-. | a16( g a8) g-. {{ b }} | %
+  {{ a }} d e f g8)-. g-. | a16( g a8) g-. {{ b }} |
   {{ c }} e f8) e16( d e8) | d16( c d8) c-. c='-. |
 {% endmacro %}
 

@@ -34,20 +34,20 @@
     {{ rh1("<ais=' cis>16") }}
     \alternative {
       \volta 1 {
-        <ais= cis>16\p <gis b> <fis ais>8~ 8\) <fis' ais>16\mf %
+        <ais= cis>16\p <gis b> <fis ais>8~ 8\) <fis' ais>16\mf
         {{ shapedSlur("fu", bs = 4, wd = 1.5) }} ( <gis=' b>) |
       }
       \volta 2 {
         \hSpace
-        <ais,= cis>16 <gis b> <fis ais>8~ %
-        {{ shapedSlur("bd", bs = 6, sh = 4, wd = 4, ht = 2) }} ( 8) %
+        <ais,= cis>16 <gis b> <fis ais>8~
+        {{ shapedSlur("bd", bs = 6, sh = 4, wd = 4, ht = 2) }} ( 8)
         <gis= b>16\(\p <ais= cis> |
       }
     }
   }
 
   {{ rh2("", "\\<") }}
-  <eis=' gis>16 <dis fis> <cis eis> <dis fis> %
+  <eis=' gis>16 <dis fis> <cis eis> <dis fis>
   <eis=' gis>16 <fis ais> <gis b> \af 16\! <ais cis>\) |
   <b=' dis>4~\(\mf 16 <ais cis> <b dis> <ais cis> |
   <gis=' b>16 <ais cis> <gis b> <fis ais> <gis b>8\) <fis ais>16\( <eis gis> |
@@ -57,26 +57,26 @@
   {{ rh2("_\\dCre", "") }}
   <eis=' gis>16 <dis fis> <eis gis> <fis ais> <gis b> <ais cis> <b dis> <cis eis>\) |
   <dis='' fis>4~\( 16 <eis gis> <fis ais> <eis gis> |
-  <dis='' fis>16_\dDim <eis gis> <dis fis> <cis eis> %
+  <dis='' fis>16_\dDim <eis gis> <dis fis> <cis eis>
   <dis='' fis>8\) <cis eis>16\( <bis dis> |
   <cis='' eis>16 <dis fis> <cis eis>8~ 16 <dis fis> <cis eis> <bis dis> |
   <cis='' eis>16 <bis dis> <ais cis>8~ 8\) <ais, cis>16\(\p <bis= dis> |
 
   <cis=' eis>16 <dis fis> <cis eis> <dis fis> <cis eis> <bis dis> <ais cis> <bis dis> |
-  <cis=' eis>16\< <dis fis> <eis gis> \af 32.\! <fis ais> %
+  <cis=' eis>16\< <dis fis> <eis gis> \af 32.\! <fis ais>
   <eis=' gis>16\> <dis fis> <cis eis> \af 16\! <dis fis> |
   <cis=' eis>16\p <bis dis> <ais cis>8~ 4~ | 4~ 8~\) 16\( <bis dis> |
   \rep 3 { <cis=' eis>16 <bis= dis> } <cis eis> <dis fis> |
   \rep 3 { <eis=' gis>16 <dis=' fis> } <eis gis> <fis ais> |
-  <eis=' gis>16 <fis ais> <eis gis> <fis ais> %
+  <eis=' gis>16 <fis ais> <eis gis> <fis ais>
   <eis=' gis>16\< <dis fis> <eis gis> <fis ais> |
-  <gis=' b>16 <ais cis> <b dis> <cis eis> %
+  <gis=' b>16 <ais cis> <b dis> <cis eis>
   <dis='' fis>16 \af 16\! <eis gis>\) <fis ais>\(\mf <gis='' b> |
 
   {{ rh1("<ais='' cis>16") }}
   <ais=' cis>16 <gis b> <fis ais>8~\p 4\) |
   <b,= dis>4~\( 16\< <cis eis> <dis fis> <eis gis> |
-  <dis=' fis>16 <eis gis> \af 16\! <dis fis> <cis eis> %
+  <dis=' fis>16 <eis gis> \af 16\! <dis fis> <cis eis>
   <b= dis>8\> <ais cis>16 \af 16\! <gis b> |
   <ais= cis>4~ 16 <b dis> <ais cis> <b dis> |
   <ais= cis>16 <gis b> <fis ais>8~ 4\) |

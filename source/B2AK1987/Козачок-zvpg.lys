@@ -7,7 +7,7 @@
   {{ a }} ais b d) a( gis a d) |
   b='16( ais b e) d8( c ) |
   b='16( ais b d) a( gis a d) |
-  b='16( c b a=' %
+  b='16( c b a='
 {% endmacro %}
 
 {% macro rh3(a) %}
@@ -73,7 +73,7 @@
     {{ rh4("<g'=' bes>4->\\f") }}
     \acc { c'=''8 } bes16( a g fis g='4)-- |
     {{ rh4("<g=' bes>4->") }}
-    \acc { c'=''8 } %
+    \acc { c'=''8 }
     bes='16(\> a g fis \af 4\! g='4)-- \bar "||"
     \keyChangeBeforeBar \key g \major
   }

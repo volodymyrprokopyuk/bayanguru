@@ -1,31 +1,31 @@
 {% macro t2(a, b, c) %}
-  \tuplet 3/2 { {{ a }} } \tuplet 3/2 { {{ b }} } {{ c }} | %
+  \tuplet 3/2 { {{ a }} } \tuplet 3/2 { {{ b }} } {{ c }} |
 {% endmacro %}
 
 {% macro t3(a, b, c, d) %}
   \tuplet 3/2 { {{ a }} } \tuplet 3/2 { {{ b }} }
-  \tuplet 3/2 { {{ c }} } {{ d }} | %
+  \tuplet 3/2 { {{ c }} } {{ d }} |
 {% endmacro %}
 
 {% macro t4(a, b, c, d) %}
   \tuplet 3/2 { {{ a }} } \tuplet 3/2 { {{ b }} }
-  \tuplet 3/2 { {{ c }} } \tuplet 3/2 { {{ d }} } | %
+  \tuplet 3/2 { {{ c }} } \tuplet 3/2 { {{ d }} } |
 {% endmacro %}
 
 {% macro rh1(a) %}
-  {{ t4(a, "d e d", "c d c", "b c b") }} | %
+  {{ t4(a, "d e d", "c d c", "b c b") }} |
   {{ t3("a='8 b a", "g a \\af 16.\\! g",
-     "f\\sf\\> g f", "\\af 8\\! e='\\) r") }} | %
+     "f\\sf\\> g f", "\\af 8\\! e='\\) r") }} |
 {% endmacro %}
 
 {% macro rh2() %}
-  {{ t4("e='8\\(\\< gis b", "d c b", "a c e", "a g \\af 8\\! f") }} | %
-  {{ t4("e=''8 gis b", "d\\> c b", "a c b", "a g \\af 8\\! f=''\\)") }} | %
+  {{ t4("e='8\\(\\< gis b", "d c b", "a c e", "a g \\af 8\\! f") }} |
+  {{ t4("e=''8 gis b", "d\\> c b", "a c b", "a g \\af 8\\! f=''\\)") }} |
 {% endmacro %}
 
 {% macro rh3() %}
-  {{ t4("e='8\\(_\\dCre gis b", "d c b", "a c e", "a g f") }} | %
-  {{ t3("e=''8 gis b", "d c b", "a c e", "a='''8\\)\\f r") }} | %
+  {{ t4("e='8\\(_\\dCre gis b", "d c b", "a c e", "a g f") }} |
+  {{ t3("e=''8 gis b", "d c b", "a c e", "a='''8\\)\\f r") }} |
 {% endmacro %}
 
 {% macro lh1(a) %}

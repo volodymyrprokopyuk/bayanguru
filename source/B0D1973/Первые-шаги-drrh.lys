@@ -1,6 +1,6 @@
 {% macro rh1(a) %}
   {{ a }} g' f e | d e c c\) |
-  d=''8\( f e c | d g %
+  d=''8\( f e c | d g
 {% endmacro %}
 
 {% macro rightHand() %}

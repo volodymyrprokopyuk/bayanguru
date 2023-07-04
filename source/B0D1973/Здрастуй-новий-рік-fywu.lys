@@ -14,7 +14,7 @@
 
 {% macro lh2(a) %}
   c=8 cM! g gM! c cM! a f@M! |
-  g=,8 c@M! g8 gM! c= cM! {{ a }} | %
+  g=,8 c@M! g8 gM! c= cM! {{ a }} |
 {% endmacro %}
 
 {% macro rightHand() %}

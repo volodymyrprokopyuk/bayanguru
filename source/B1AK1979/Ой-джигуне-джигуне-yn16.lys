@@ -1,11 +1,11 @@
 {% macro rh1(a) %}
   bes='8( g) g-. g-. | a( f) f4 |
-  a='8( g f e | d4) {{ a }} | %
+  a='8( g f e | d4) {{ a }} |
 {% endmacro %}
 
 {% macro lh1(a) %}
   g,=,8( gm!) g gm | a( d@m!) a8 d@m |
-  a=,8 a7! a a7 | d= dm! {{ a }} | %
+  a=,8 a7! a a7 | d= dm! {{ a }} |
 {% endmacro %}
 
 {% macro rightHand() %}

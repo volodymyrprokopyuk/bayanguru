@@ -5,8 +5,8 @@
 
 {% macro rh2(a) %}
   {{ rh1(a) }}
-  \rep 2 {  a='16( d cis d e d cis d) } | %
-  cis=''16( e d cis b d cis b=' %
+  \rep 2 {  a='16( d cis d e d cis d) } |
+  cis=''16( e d cis b d cis b='
 {% endmacro %}
 
 {% macro rh3(a) %}
@@ -35,7 +35,7 @@
   g=''8 g16( fis g b a g) fis( g fis e fis a g fis) |
   e=''16( fis e dis e g fis e d8)-. a-. fis'-. d-. |
   g=''8 g16( fis g b a g) fis( g fis e fis a g fis |
-  e=''8)-. a-. b,-. e-. %
+  e=''8)-. a-. b,-. e-.
   a,='16(\< b cis d e fis g \af 16\! e='') |
 
   {{ rh1("d=''8(\\f") }}

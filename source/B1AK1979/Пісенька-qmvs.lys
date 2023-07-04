@@ -4,7 +4,7 @@
 
 {% macro rh2(a) %}
   ees=''8 ees ees ees | d( bes) bes r |
-  c=''8 c g( a) | bes d {{ a }} | %
+  c=''8 c g( a) | bes d {{ a }} |
 {% endmacro %}
 
 {% macro lh1(a) %}

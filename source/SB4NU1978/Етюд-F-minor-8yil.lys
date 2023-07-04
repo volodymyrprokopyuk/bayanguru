@@ -1,11 +1,11 @@
 {% macro rh1(a) %}
   aes'=''16(-> f)-. c-. aes-. g'(-> e)-. c-. g-. |
-  f'=''16(-> c)-. aes-. f='-.  aes-. c-. f-. {{ a }} | %
+  f'=''16(-> c)-. aes-. f='-.  aes-. c-. f-. {{ a }} |
 {% endmacro %}
 
 {% macro rh2() %}
   c='''16(-> aes)-. f-. c-. bes'(-> g)-. e-. c-. |
-  aes'=''16(-> f)-. c-. aes='-. %
+  aes'=''16(-> f)-. c-. aes='-.
 {% endmacro %}
 
 {% macro rh3(a) %}
@@ -71,7 +71,7 @@
   des'='''16(-> bes)-. f-. des-. f-. g-. bes-. des-. |
   {{ rh2() }} f'(-> des)-. bes-. g-. |
   c=''16(-> aes)-. f-. c-. e'(-> c)-. bes-. g-. |
-  f'=''16(->\> f,)-.^\tRit aes-. c-. %
+  f'=''16(->\> f,)-.^\tRit aes-. c-.
   \af 8\! f8 c,16\f c=' |
 
   {{ rh3("aes'='8->^\\tATem") }}

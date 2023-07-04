@@ -1,9 +1,9 @@
 {% from "util.lys" import hSpace, shapedSlur %}
 
 {% macro rh1() %}
-  c,=''16 aes' f aes c, aes' f aes %
+  c,=''16 aes' f aes c, aes' f aes
   aes,='16 f' c f aes, f' c f\) |
-  g,='16\( ees' c ees g, ees' c ees %
+  g,='16\( ees' c ees g, ees' c ees
   f,='16 d' b d f, d' b d='' |
 {% endmacro %}
 
@@ -15,15 +15,15 @@
   \time 4/4
   \repeat segno 2 {
     \repeat volta 2 {
-      g'='16\(\p ees' c ees g, ees' c ees %
+      g'='16\(\p ees' c ees g, ees' c ees
       g,='16\< ees' c ees g, ees' c ees |
-      f,='16 d' b d f, d' b d %
+      f,='16 d' b d f, d' b d
       f,='16 d' b d f, d' \af 16\! b d\) |
-      c,='16\( c' g c c, c' g c %
+      c,='16\( c' g c c, c' g c
       c,='16 c' g c c, c' g c |
-      ees,='16 c' aes c ees, c' aes c %
+      ees,='16 c' aes c ees, c' aes c
       f,='16 c' aes c f, c' aes c\) |
-      f,='16\( des' aes des f, des' aes des %
+      f,='16\( des' aes des f, des' aes des
       bes='16 g' e g bes, g' e g |
       {{ rh1() }}
       \alternative {
@@ -40,15 +40,15 @@
       \alternative {
         \volta 1 {
           \repeat volta 2 {
-            bes,='16\(\mf g' ees g bes, g' ees g %
+            bes,='16\(\mf g' ees g bes, g' ees g
             bes,='16 g' ees g bes, g' ees g |
-            bes,='16 aes' f aes bes, aes' f aes %
+            bes,='16 aes' f aes bes, aes' f aes
             bes,='16 aes' f aes bes, aes' f aes\) |
-            bes,='16\( bes' aes bes bes, bes' aes bes %
+            bes,='16\( bes' aes bes bes, bes' aes bes
             bes,='16_\dCre aes' f aes bes, aes' f aes |
-            bes,='16 g' ees g bes, g' ees g %
+            bes,='16 g' ees g bes, g' ees g
             b,='16 g' f g b, g' f g\) |
-            c,=''16\(\f c' e, c' c, c' e, c' %
+            c,=''16\(\f c' e, c' c, c' e, c'
             c,=''16 bes' g bes c, bes' g bes |
             {{ rh1() }}
             \alternative {
@@ -57,8 +57,8 @@
               }
               \volta 2 {
                 \hSpace
-                ees,='16\> %
-                {{ shapedSlur("bu", bs = 4, sh = 18, wd = 7, ht = 2) }} ( %
+                ees,='16\>
+                {{ shapedSlur("bu", bs = 4, sh = 18, wd = 7, ht = 2) }} (
                 c'=''16 g c ees, c' g c \af 4\! ees,4) g='\sf \bar "||"
               }
             }
@@ -69,9 +69,9 @@
     }
   }
 
-  r16 aes,=16( ces des f) ces( des f aes) %
+  r16 aes,=16( ces des f) ces( des f aes)
   des,='16( f aes ces aes f des) |
-  r16 aes=16( g fis) r ees'( d des) %
+  r16 aes=16( g fis) r ees'( d des)
   r16 aes'='16( g f <ees=' c'>4) \bar "|."
 }
 {% endmacro %}

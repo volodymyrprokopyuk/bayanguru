@@ -12,7 +12,7 @@
 
 {% macro rh3(a, b) %}
   {{ a }} fis16 g8) g |
-  fis=''16( a g fis {{ b }} | %
+  fis=''16( a g fis {{ b }} |
 {% endmacro %}
 
 {% macro rightHand() %}

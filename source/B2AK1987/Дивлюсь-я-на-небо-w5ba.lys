@@ -19,11 +19,11 @@
         \voiceOne
         b'='4(\< cis dis) | e( dis \af 4\! e) |
         <a,=' fis'>4(\f <b g'>4. <a=' fis'>8 |
-        <a=' fis'>4 <g e'>) %
+        <a=' fis'>4 <g e'>)
       }
       \new Voice = voiceTwo \relative {
         \voiceTwo
-        b'='2 a4 | g2. | dis'=''2. | s2 %
+        b'='2 a4 | g2. | dis'=''2. | s2
       }
     >>
     r8 e=''8 |
@@ -40,10 +40,10 @@
         <<
           \relative {
             b'='4( cis dis='' |
-            <g,=' b e>2.~\> | \af 2\! 2) %
+            <g,=' b e>2.~\> | \af 2\! 2)
           }
           \\
-          \relative { b'='2. | s2. | s2 } %
+          \relative { b'='2. | s2. | s2 }
         >>
         r4 \bar "|."
       }

@@ -1,9 +1,9 @@
 {% macro rh1(a) %}
-  {{ a }} d-. e-. c-. | d( c d e | c4) %
+  {{ a }} d-. e-. c-. | d( c d e | c4)
 {% endmacro %}
 
 {% macro lh1(a) %}
-  {{ a }} c@M!4 | d+dm!4 g+gM! | c+cM! %
+  {{ a }} c@M!4 | d+dm!4 g+gM! | c+cM!
 {% endmacro %}
 
 {% macro rightHand() %}

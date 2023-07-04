@@ -1,6 +1,6 @@
 {% macro rh1(a, b) %}
   {{ a }} a8. g16 | fis8 e fis d |
-  a=8 d fis a | g16 fis g e {{ b }} | %
+  a=8 d fis a | g16 fis g e {{ b }} |
 {% endmacro %}
 
 {% macro lh1(a) %}

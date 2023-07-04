@@ -1,5 +1,5 @@
 {% macro t2(a, b) %}
-  \tuplet 3/2 { {{ a }} } \tuplet 3/2 { {{ b }} } | %
+  \tuplet 3/2 { {{ a }} } \tuplet 3/2 { {{ b }} } |
 {% endmacro %}
 
 {% macro rh1(a) %}

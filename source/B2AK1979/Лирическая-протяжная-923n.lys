@@ -24,7 +24,7 @@
     \relative { fis'='2 | eis4. r8 | }
   >>
   fis='8( <a, d fis>\> gis' a) |
-  \af 8\! b='8[( fis]^\tRit %
+  \af 8\! b='8[( fis]^\tRit
   <fis=' b fis'>8 \fermata d'='' \fermata) |
   cis=''8(\pp a gis fis) |
   <<
@@ -60,16 +60,16 @@
   r8\< <a,= d fis>4 \af 8\! 8 |
   r8 <gis= bis dis fis>4 8 |
   r8\> <gis= b d fis>4 \af 8\! 8 |
-  r8\p <a= cis fis>4^\tRit %
+  r8\p <a= cis fis>4^\tRit
   <<
     \relative {
       \dPad 6
-      s8 | a'='4\> \af 4\! cis | cis=''\pp %
+      s8 | a'='4\> \af 4\! cis | cis=''\pp
     }
     \\
     \relative {
       \once \stemUp
-      <cis'=' fis( >8 | fis) fis4 <fis a>8~ | <fis=' a>4 %
+      <cis'=' fis( >8 | fis) fis4 <fis a>8~ | <fis=' a>4
     }
   >>
   r4 \bar "|."

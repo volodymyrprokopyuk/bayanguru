@@ -13,12 +13,12 @@
       <c=' a'>4 8 <e c'> <d b'> <c a'> |
       b'='4 gis8 e4\) e8 |
       <c=' a'>4\( 8 g' a b |
-      <e,=' g c>4.~ 8\) %
+      <e,=' g c>4.~ 8\)
     }
     \new Voice = voiceTwo \relative {
       \voiceTwo
       \partial 8 { s8 | }
-      s2. | d'='4.~ d4. | s4. f='4. | s2 %
+      s2. | d'='4.~ d4. | s4. f='4. | s2
     }
   >>
   r8 g'='8\( |
@@ -28,13 +28,13 @@
     <a=' c>8 <d, b'> <c a'> <e e'>4 <d e gis>8 |
     \alternative {
       \volta 1 {
-        <c=' e a>4.~\> \af 8\! 8\) r\< %
-        {{ shapedSlur("fu", sh = 3) }} ( %
+        <c=' e a>4.~\> \af 8\! 8\) r\<
+        {{ shapedSlur("fu", sh = 3) }} (
         \af 16..\! g'=') |
       }
       \volta 2 {
         \hSpace
-        <c,=' e a>4.~\> 8 %
+        <c,=' e a>4.~\> 8
         {{ shapedSlur("bu", wd = 3.5, ht = 1.8) }} ( r) \! r \bar "|."
       }
     }

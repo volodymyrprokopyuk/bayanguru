@@ -2,7 +2,7 @@
 
 {% macro rh1(a, b) %}
   {{ a }} bes-. bes( g) | a-. a-. a( f) |
-  g='8-. g-. c,( e | f4) {{ b }} | %
+  g='8-. g-. c,( e | f4) {{ b }} |
 {% endmacro %}
 
 {% macro rightHand() %}

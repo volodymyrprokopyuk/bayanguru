@@ -7,7 +7,7 @@
 {% endmacro %}
 
 {% macro lh1() %}
-  c=8 cM! r e c@M r8 | f fM! r %
+  c=8 cM! r e c@M r8 | f fM! r
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -23,9 +23,9 @@
   {{ rh2("a'=''16(") }}
   ees''='''16( d, d' d, bes' d, ees d g d bes' d,) |
   a'=''16( d, d' d, f d g cis, a' a, cis g) |
-  <f=' a d>8 r %
+  <f=' a d>8 r
   \clef bass
-  <e,= g cis>8[ <f= a d>] r %
+  <e,= g cis>8[ <f= a d>] r
   \clef treble
   f'='8 |
 

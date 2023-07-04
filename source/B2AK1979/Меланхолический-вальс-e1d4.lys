@@ -2,8 +2,8 @@
 
 {% macro rh1() %}
   \autoLineBreaksOff
-  g='8.\) %
-  \shape #'((0 . 0) (0 . 1) (0 . 4.5) (0 . 0)) PhrasingSlur %
+  g='8.\)
+  \shape #'((0 . 0) (0 . 1) (0 . 4.5) (0 . 0)) PhrasingSlur
   g='16\( bes d |
   <g,=' d' g>4\< 16 \af 16\! 16 |
   <<

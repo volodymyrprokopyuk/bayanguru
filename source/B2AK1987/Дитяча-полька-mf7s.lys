@@ -1,7 +1,7 @@
 {% macro rh1(a) %}
   {{ a }} c') c8-. d-. bes-. |
   f,='16( c') c8-. d-. bes-. |
-  g='16( a bes='8) %
+  g='16( a bes='8)
 {% endmacro %}
 
 {% macro rh2(a) %}

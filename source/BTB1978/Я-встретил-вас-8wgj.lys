@@ -19,7 +19,7 @@
 
 {% macro lh2(a) %}
   {{ lh1() }}
-  fis=,4 fis7! | b bM! | e= e7! {{ a }} | %
+  fis=,4 fis7! | b bM! | e= e7! {{ a }} |
 {% endmacro %}
 
 {% macro lh3() %}

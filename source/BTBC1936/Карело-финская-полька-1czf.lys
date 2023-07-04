@@ -21,7 +21,7 @@
     c=''8 c16 aes f g aes bes=' |
   }
   \set subdivideBeams = ##t
-  \tuplet 3/2 { c=''16( des c) } b c='' %
+  \tuplet 3/2 { c=''16( des c) } b c=''
   \set subdivideBeams = ##f
 {% endmacro %}
 
@@ -41,8 +41,8 @@
       {{ rh1() }}
       \alternative {
         \volta 1 {
-          c=''8 r <c ees g c> %
-          \tuplet 3/2 { g'=''16( a b='') } %
+          c=''8 r <c ees g c>
+          \tuplet 3/2 { g'=''16( a b='') }
         }
         \volta 2 { c,=''8 r <c='' ees g c> r | }
       }
@@ -102,7 +102,7 @@
           f='8 aes16 c <aes c f>8 bes16 b=' |
         }
         \volta 2 {
-          f='8 aes16 c <aes c f>8 %
+          f='8 aes16 c <aes c f>8
           \tuplet 3/2 { g'=''16( a b='') } \bar "||"
         }
       }

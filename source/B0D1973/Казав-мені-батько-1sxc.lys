@@ -1,6 +1,6 @@
 {% macro rh1(a) %}
   e='8-. g-. d-. d-. | e-. e-. f4 |
-  e='8-. g-. d-. d-. | c4 {{ a }} | %
+  e='8-. g-. d-. d-. | c4 {{ a }} |
 {% endmacro %}
 
 {% macro rightHand() %}

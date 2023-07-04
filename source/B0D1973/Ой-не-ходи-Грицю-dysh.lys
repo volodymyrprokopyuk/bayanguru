@@ -2,12 +2,12 @@
 
 {% macro rh1(a, b) %}
   {{ a }} b8 c4 a | e' c b a\) |
-  gis='4\( b e4. gis,8 | a2 {{ b }} | %
+  gis='4\( b e4. gis,8 | a2 {{ b }} |
 {% endmacro %}
 
 {% macro lh1(a, b) %}
   {{ a }} am! am am | a am am am |
-  e'=4 eM! eM eM | a, am! {{ b }} | %
+  e'=4 eM! eM eM | a, am! {{ b }} |
 {% endmacro %}
 
 {% macro rightHand() %}

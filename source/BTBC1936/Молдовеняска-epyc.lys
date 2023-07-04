@@ -1,5 +1,5 @@
 {% macro rh1(a, b) %}
-    \acc { {{ a }} d e } %
+    \acc { {{ a }} d e }
     {{ b }} c-. d-. bes-. | c=''8 a g f |
     g='16 a bes g a f g e=' |
 {% endmacro %}
@@ -20,13 +20,13 @@
     \partial 8. { a'='16(\mp \acc { c=''8 } bes16 a) | }
     \repeat volta 2 {
       a='4(\< d8. \af 16\! e16 | f4~ f16) f( e f |
-      g=''8) f e d | \af 8.\! <g, cis>4~\> %
+      g=''8) f e d | \af 8.\! <g, cis>4~\>
       16\< a( \acc { c=''8 } bes16 \af 16\! a) |
       a='4( cis8. d16 | e4~ e16) f e d |
       cis=''16\< b a \af 16\! b cis d e f |
       \alternative {
         \volta 1 {
-          \af 8.\! <f,=' d'>4~\> %
+          \af 8.\! <f,=' d'>4~\>
           16 a( \acc { c=''8 } bes16 a) |
         }
         \volta 2 { <f=' d'>4 <f=' a d>8 r | }
@@ -67,6 +67,6 @@
   \rep 2 { f=,8 fM! f fM | }
   c'=8 cM! c cM | c g c4 |
   \rep 2 { f,=,8 fM! f fM | }
-  c'=8 cM! c c7! | f,=, r f+fM!16 %
+  c'=8 cM! c c7! | f,=, r f+fM!16
 }
 {% endmacro %}

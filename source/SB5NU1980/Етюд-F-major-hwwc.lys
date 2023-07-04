@@ -9,11 +9,11 @@
 {% endmacro %}
 
 {% macro rh3(a, b) %}
-  {{ a }} d {{ b }} c d %
-  \rep 3 { c='16 d c d } %
+  {{ a }} d {{ b }} c d
+  \rep 3 { c='16 d c d }
   c='16 d e f g c, d e |
   f='16 e f g a g a bes |
-  \rep 4 { c=''16 d c d } | %
+  \rep 4 { c=''16 d c d } |
   c=''16 d e f g c, d e |
   f=''16\> c f a \af 8\! f=''8-. r |
 {% endmacro %}
@@ -61,16 +61,16 @@
   cis='16 d e f g cis d e |
   f=''16 e d c b a g f |
   e='16 f g a b cis d e |
-  \rep 7 { d=''16 e d e } %
+  \rep 7 { d=''16 e d e }
   d=''16 c b a |
-  g='16\p a_\dCre g a %
-  \rep 6 { g='16 a g a } %
+  g='16\p a_\dCre g a
+  \rep 6 { g='16 a g a }
   g='16 f e d |
   {{ rh2("c='16") }}
   {{ rh2("c=''16\\f") }}
   c='''16\f d c bes a g f e |
   d=''16 c bes a g f e d |
-  c='16_\dDim d c d %
+  c='16_\dDim d c d
   \rep 3 { c='16 d c d } \bar "||"
 
   \key f \major

@@ -16,8 +16,8 @@
       \voiceOne
       b'='8 \rest\mp \stemDown a='8[\( c e] |
       \stemUp e=''4. d8 | e4 d8 e | <b d>4 <a c>\) |
-      b='8 \rest \stemDown d=''8[ %
-      \slashedGrace { \stemUp c=''16_( d } %
+      b='8 \rest \stemDown d=''8[
+      \slashedGrace { \stemUp c=''16_( d }
       \stemDown c8) a] | \stemUp c4. b8 | e,4 b' |
       \slashedGrace { a='16_( b } <c,='_~ a')^~> 2 |
       \time 4/4
@@ -35,7 +35,7 @@
     <<
       \new Voice = voiceOne \relative {
         \voiceOne
-        c''=''2 b~ | b8 d[ d  d] %
+        c''=''2 b~ | b8 d[ d  d]
         \slashedGrace { c=''16_( d } c8) b a b |
         <a=' c>8 a,[ c e] b[ a] b' a |
         e='8 e'[ d c] b8.[ a16 gis8 a] |
@@ -69,7 +69,7 @@
     \alternative {
       \volta 1 {
         \time 4/4
-        <c=' a'>8 %
+        <c=' a'>8
         {{ v2("e''=''8[ d c] b8.[ a16 gis8 a='] |", "e'='4.~ e='2 |") }}
       }
       \volta 2 {

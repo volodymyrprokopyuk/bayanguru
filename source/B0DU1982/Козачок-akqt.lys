@@ -3,7 +3,7 @@
 {% endmacro %}
 
 {% macro rh2(a) %}
-  a='8 a d( c) | b-. g-. {{ a }} | %
+  a='8 a d( c) | b-. g-. {{ a }} |
 {% endmacro %}
 
 {% macro lh1(a) %}
@@ -11,7 +11,7 @@
 {% endmacro %}
 
 {% macro lh2(a) %}
-  d=8 dM! fis d@M | g,=,8 gM! {{ a }} | %
+  d=8 dM! fis d@M | g,=,8 gM! {{ a }} |
 {% endmacro %}
 
 {% macro rightHand() %}

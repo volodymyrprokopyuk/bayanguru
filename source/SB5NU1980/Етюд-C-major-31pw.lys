@@ -2,17 +2,17 @@
 
 {% macro t2(a, b, c, d, e, f) %}
   \tuplet 3/2 { {{ a }} {{ b }} {{ c }} }
-  \tuplet 3/2 { {{ d }} {{ e }} {{ f }} } | %
+  \tuplet 3/2 { {{ d }} {{ e }} {{ f }} } |
 {% endmacro %}
 
 {% macro t3(a, b, c, d) %}
-  \tuplet 3/2 { {{ a }}[ r8 {{ b }}] } %
-  \tuplet 3/2 { {{ c }}[ r8 {{ d }}] } | %
+  \tuplet 3/2 { {{ a }}[ r8 {{ b }}] }
+  \tuplet 3/2 { {{ c }}[ r8 {{ d }}] } |
 {% endmacro %}
 
 {% macro t4(a, b) %}
-  \tuplet 3/2 { {{ a }} r8 r } %
-  \tuplet 3/2 { {{ b }} r8 r } | %
+  \tuplet 3/2 { {{ a }} r8 r }
+  \tuplet 3/2 { {{ b }} r8 r } |
 {% endmacro %}
 
 {% macro rh1(a, b) %}
@@ -94,8 +94,8 @@
   {{ t3("c=8", "cM!", "f", "fM!") }}
   {{ t3("c=8", "cM!", "a", "a7!") }}
   {{ t3("d=8", "d7!", "d", "d7") }}
-  \tuplet 3/2 { g+gM!8 r r } %
-  \tuplet 3/2 { f=8 e d= } | %
+  \tuplet 3/2 { g+gM!8 r r }
+  \tuplet 3/2 { f=8 e d= } |
 
   {{ lh1("c=8") }}
   {{ t3("c=8", "cM!", "a", "a7!") }}
@@ -129,7 +129,7 @@
   {{ t3("g=,8", "c@M!", "g8", "c@M") }}
   {{ t3("g=,8", "g7!", "g", "g7") }}
   \tuplet 3/2 { c+cM!8 r r } r4 |
-  r4 \tuplet 3/2 { g+g7!8 r r } | %
+  r4 \tuplet 3/2 { g+g7!8 r r } |
   \tuplet 3/2 { c+cM!8 r r } r4 |
   {{ t2("g=,8", "a", "g", "f", "e", "d") }}
   c=,4 r | c'= r |

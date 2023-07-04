@@ -1,7 +1,7 @@
 {% macro rh1(a) %}
-  {{ a }} f e a e f \af 16\! e) %
+  {{ a }} f e a e f \af 16\! e)
   r16\> e='16( f e b' e, f \af 16\! e) |
-  r16\< e='16( f e d' e, f \af 16\! e) %
+  r16\< e='16( f e d' e, f \af 16\! e)
   r16\> e='16( f e c' e, f \af 16\! e=') |
 {% endmacro %}
 
@@ -17,14 +17,14 @@
   \key a \minor
   \time 4/4
   {{ rh1("r16\\mp\\< e'='16(") }}
-  r16\< e='16( f e a e f e) %
+  r16\< e='16( f e a e f e)
   r16 b'='16( c b g' b, c \af 16\! b) |
-  r16\> b='16( c b fis' b, c b) %
+  r16\> b='16( c b fis' b, c b)
   e=''16( f d e c d b \af 16\! f) |
   {{ rh1("r16\\p\\< e='16(") }}
-  r16 a='16(\< bes a e' a, bes a) %
+  r16 a='16(\< bes a e' a, bes a)
   r16 a='16( b a d a b \af 16\! a) |
-  e='16\mf e f( e) e e f( e) %
+  e='16\mf e f( e) e e f( e)
   a='16( b c^\tRit e a=''8) r \bar "|."
 }
 {% endmacro %}

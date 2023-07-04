@@ -54,6 +54,6 @@
   fis=,8 b@7! r8 b7 | b b7! r dis |
   e=8 em! b e@m | e8 r r4 |
   e=8 em! r em | a, a7! r a7 |
-  d=8 dM! g,=, gM! | d+dM! %
+  d=8 dM! g,=, gM! | d+dM!
 }
 {% endmacro %}

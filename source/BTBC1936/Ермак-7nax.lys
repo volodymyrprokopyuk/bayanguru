@@ -34,6 +34,6 @@
   d+dM!4 d+dM \fermata r |
   c=8 cM! cM e | a, am! b b7! |
   e=8 e+em!~ e+em4 \fermata r |
-  e=8 e+em!~ e+em4 \fermata r8 %
+  e=8 e+em!~ e+em4 \fermata r8
 }
 {% endmacro %}

@@ -15,7 +15,7 @@
 
 {% macro lh2(a, b) %}
   {{ a }} am! a am | b e@7! e8 e7 |
-  gis,=,8 e@7! e'8 e7 | a,=, am! {{ b }} | %
+  gis,=,8 e@7! e'8 e7 | a,=, am! {{ b }} |
 {% endmacro %}
 
 {% macro rightHand() %}

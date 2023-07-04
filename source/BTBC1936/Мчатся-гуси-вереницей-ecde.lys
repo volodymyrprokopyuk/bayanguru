@@ -11,7 +11,7 @@
   a='8 a a g c4 d | a2~  a8 r r4 |
   f='4 <f c'> <f a c> <g bes>8 <f a> |
   g='4 <f a> <e bes' d> <a c>8 <g bes> |
-  <f=' a>8 8 8 <d f> <e g>4 %
+  <f=' a>8 8 8 <d f> <e g>4
   {{ v2("a'='8 g", "e'='4") }}
   <d=' d'>2.~ 8 r |
   <bes'=' d f>4 4 <c e> <bes d> |

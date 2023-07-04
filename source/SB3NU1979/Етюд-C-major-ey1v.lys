@@ -19,7 +19,7 @@
       \volta 1 { g=''4\)\f r\> \af 8.\! r | }
       \volta 2 {
         \hSpace
-        g=''4\f {{ shapedSlur("bu", bs = 3.5) }} ( r)\> %
+        g=''4\f {{ shapedSlur("bu", bs = 3.5) }} ( r)\>
         \af 8.\! r |
       }
     }

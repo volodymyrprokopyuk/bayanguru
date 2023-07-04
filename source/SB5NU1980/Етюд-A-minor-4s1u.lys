@@ -2,7 +2,7 @@
   {{ a }} e f a, d f |
   e=''16 {{ b }} a, c e d f, a d |
   c=''16 e, a c b e, gis b |
-  a='16 e fis gis=' %
+  a='16 e fis gis='
 {% endmacro %}
 
 {% macro rh2() %}

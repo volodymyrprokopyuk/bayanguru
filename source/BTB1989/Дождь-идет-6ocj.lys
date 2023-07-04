@@ -2,7 +2,7 @@
 
 {% macro rh1(a) %}
   {{ a }} ees~ | ees8 b \rest \stemDown ees16 d c g \stemUp |
-  bes='8. a16 aes='4~ | aes8 %
+  bes='8. a16 aes='4~ | aes8
 {% endmacro %}
 
 {% macro rh2() %}
@@ -18,7 +18,7 @@
 
 {% macro rh4() %}
   <g=' c ees>16 <c ees g>8 <ees g c>16 <ees aes ees'>4 |
-  \acc { cis'='''8 } <fis,='' d'>16 a8 bes=''16 %
+  \acc { cis'='''8 } <fis,='' d'>16 a8 bes=''16
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -66,7 +66,7 @@
       \rep 2 { r16 <f=' b>16[ r <f b>] } | <f=' b>8 s4. |
       r16 <g,= c>8 16 r <g c>[ r <g c>] | <g c>8 s4. |
       {{ rh2() }}
-      <c,=' f>8 r r16 <c f>16[ r <c f>] | <c=' f>8 %
+      <c,=' f>8 r r16 <c f>16[ r <c f>] | <c=' f>8
     }
   >>
 
@@ -88,7 +88,7 @@
     \new Voice = voiceTwo \relative {
       \voiceTwo
       {{ rh2() }}
-      <c,=' f>8 r r16 <c f>16[ r <c f>] | <c=' f>8 %
+      <c,=' f>8 r r16 <c f>16[ r <c f>] | <c=' f>8
     }
   >>
   <c='' aes'>8\f <bes g'> <aes f'> |

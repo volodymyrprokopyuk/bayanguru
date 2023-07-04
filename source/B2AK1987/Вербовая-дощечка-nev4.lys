@@ -44,7 +44,7 @@
   e'=''16(\mf g b8) b16( e, g b) |
   a=''16( c, e a) b( g e b) |
   a='16( c, e a) b( b, e g) |
-  fis='16( a, c e) %
+  fis='16( a, c e)
   {{ v2("b'='4", "b'='16 a g fis='") }}
 
   <<

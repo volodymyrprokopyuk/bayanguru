@@ -36,6 +36,6 @@
   b=,4 b7! b7 |
   {{ lh1() }}
   {{ lh1() }}
-  e=4 em! em | e+em!4 %
+  e=4 em! em | e+em!4
 }
 {% endmacro %}

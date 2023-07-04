@@ -34,6 +34,6 @@
   d'=8 dm! a d@m | d8 dm! r dm |
   g,=,8 gm! r gm | a a7! r a7 |
   d=8 dm! a d@m | d8 d7! r d7 |
-  d=8 dm! a d@m | d=8 %
+  d=8 dm! a d@m | d=8
 }
 {% endmacro %}

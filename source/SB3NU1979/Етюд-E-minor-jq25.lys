@@ -6,7 +6,7 @@
   {{ a }} em! em em g[-- e@m em8 em] |
   a=,8-- am! am am {{ b }} a@m am8 am] |
   b=,8-- b7! b7 b7 dis[-- b@7 b78 b7] |
-  e,=,8-- em! em em b'-- {{ c }} | %
+  e,=,8-- em! em em b'-- {{ c }} |
 {% endmacro %}
 
 {% macro lh2() %}

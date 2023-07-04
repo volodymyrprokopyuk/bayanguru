@@ -1,38 +1,38 @@
 {% macro rh1(a, b) %}
-  {{ a }} <cis fis ais> {{ b }} <d fis b> %
+  {{ a }} <cis fis ais> {{ b }} <d fis b>
   <b=' d fis>8 <b cis eis> <b d fis> |
-  <fis=' b d>8 <fis ais cis> <fis b d> %
+  <fis=' b d>8 <fis ais cis> <fis b d>
   <d=' fis b>8 <cis fis ais> <d fis b> |
-  <g=' b e>8 <fis b dis> <g b e> %
+  <g=' b e>8 <fis b dis> <g b e>
   <fis=' ais cis>8 <fis gisis bis> <fis ais cis> |
-  <fis=' b d>8 <fis ais cis> <fis b d> %
+  <fis=' b d>8 <fis ais cis> <fis b d>
   <d=' fis b>8 <cis fis ais> <d=' fis b> |
 {% endmacro %}
 
 {% macro rh2() %}
-  <gis=' d' f>8 <gis d' e> <gis d' f> %
+  <gis=' d' f>8 <gis d' e> <gis d' f>
   <a=' d fis>8 <a d eis> <a=' d fis> |
 {% endmacro %}
 
 {% macro rh3() %}
-  <g=' a cis>8 <g a bis> <g a cis> %
+  <g=' a cis>8 <g a bis> <g a cis>
   <cis,=' g' a>8 <d g b> <e g cis> |
-  <fis=' a d>8 <fis a cis> <fis a d> %
+  <fis=' a d>8 <fis a cis> <fis a d>
   <g=' bes e>8 <g bes dis> <g=' bes e> |
   {{ rh2() }}
 {% endmacro %}
 
 {% macro rh4(a) %}
-  {{ a }} <c e gis> <c e a> %
+  {{ a }} <c e gis> <c e a>
   <c='' d fis>8 <c d eis> <c d fis> |
-  <b=' d g>8 <b d fis> <b d g> %
+  <b=' d g>8 <b d fis> <b d g>
   <g=' b d>8 <g b cis> <g=' b d> |
 {% endmacro %}
 
 {% macro rh5() %}
-  <b=' cis g'>8 <b cis fis> <b cis g'> %
+  <b=' cis g'>8 <b cis fis> <b cis g'>
   <g=' b e>8 <g b dis> <g b e> |
-  <ais=' cis fis>8 <ais cis eis> <ais cis fis> %
+  <ais=' cis fis>8 <ais cis eis> <ais cis fis>
   <fis=' ais cis>8 <fis ais bis> <fis=' ais cis> |
 {% endmacro %}
 
@@ -40,7 +40,7 @@
   {{ a }} r r d+b@m r8 r |
   fis+b@m!8 r8 r b+bm r r |
   e+em!8 r r fis+fM! r r |
-  b+bm!8 r r {{ b }} | %
+  b+bm!8 r r {{ b }} |
 {% endmacro %}
 
 {% macro lh2() %}
@@ -70,7 +70,7 @@
   {{ rh3() }}
   {{ rh2() }}
   {{ rh3() }}
-  <b=' cis g'>8 <a cis fis> <g cis e> %
+  <b=' cis g'>8 <a cis fis> <g cis e>
   <fis=' a d>8 <fis a cis> <fis a d> |
   {{ rh4("<c'='' e a>8") }}
   {{ rh4("<c='' e a>8") }}
@@ -81,19 +81,19 @@
   <b= fis' gis>8 8 8 <c fis a>8 8 8 |
   <cis=' fis ais>8 8 8 8 8 8 |
   <b= dis ais'>8 8 8 <cis eis ais>8 8 <b eis ais> |
-  <ais= fis'>8 8 <gis b fis'> <fis ais fis'> %
+  <ais= fis'>8 8 <gis b fis'> <fis ais fis'>
   <gis= b>8[\(_\dCre <ais cis>] |
   <b= d>8 <cis e> <d fis> <e gis> <fis ais> <gis b> |
-  <ais=' cis>8 <b d> <cis e> <d fis>^\tRit %
+  <ais=' cis>8 <b d> <cis e> <d fis>^\tRit
   <b=' e gis>8 <cis fis ais>\) |
   {{ rh1("<d='' fis b>8\\mf^\\tATem", "") }}
-  <d'='' fis b>8 <cis fis ais> <d fis b> %
+  <d'='' fis b>8 <cis fis ais> <d fis b>
   <b=' d fis>8 <b cis eis> <b d fis> |
-  <fis=' b d>8 <fis ais cis> <fis b d> %
+  <fis=' b d>8 <fis ais cis> <fis b d>
   <d=' fis b>8 <cis fis ais> <d fis b> |
-  <g=' b e>8 <fis b dis> <g b e> %
+  <g=' b e>8 <fis b dis> <g b e>
   <fis=' ais cis>8 <e gis> <e fis ais> |
-  <d=' fis b>8 <fis b d> <b d fis> %
+  <d=' fis b>8 <fis b d> <b d fis>
   <d='' fis b>8 r r \bar "|."
 }
 {% endmacro %}

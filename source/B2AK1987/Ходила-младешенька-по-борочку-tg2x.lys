@@ -7,13 +7,13 @@
 {% endmacro %}
 
 {% macro rh2() %}
-  {{ v2("a'='8 b", "f'='4") }} | %
+  {{ v2("a'='8 b", "f'='4") }} |
 {% endmacro %}
 
 {% macro rh3() %}
   <<
     \relative {
-      <e'=' a c>8\> <f a c> %
+      <e'=' a c>8\> <f a c>
       \af 4\! <gis=' b>4 | a='2 |
     }
     \\
@@ -23,7 +23,7 @@
 
 {% macro lh1(a, b) %}
   {{ a }} am! b d@m! | c8 a@m! d8 dm! |
-  e=8 a@m! e8 {{ b }} | %
+  e=8 a@m! e8 {{ b }} |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -34,7 +34,7 @@
   \time 2/4
   R2\mp | \rep 3 { R2 | }
   <e'=' a c>8\< 8 <d a' d> <d f a d> |
-  <e=' a c e>4  \af 4\! %
+  <e=' a c e>4  \af 4\!
   {{ rh2() }}
   <e=' a c>8\> 8 <d e b'>4 |
   \af 4.\! <c=' e a>4. r8 |

@@ -1,5 +1,5 @@
 {% macro rh1() %}
-  b='16 d g,8~ g a | b16 g a b=' %
+  b='16 d g,8~ g a | b16 g a b='
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -8,7 +8,7 @@
   \clef treble
   \key g \major
   \time 2/4
-  \acc { fis''=''8 } g=''4\f %
+  \acc { fis''=''8 } g=''4\f
   \acc { fis=''8 } g=''4 |
   \acc { fis=''8 } g=''8 d16 f e8 c |
   b='8 g g g'16 fis | g8 d e c |

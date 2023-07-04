@@ -2,13 +2,13 @@
 
 {% macro rh1() %}
   <a='' a'>8-. r <a g'>-. r <a f'>-. r |
-  <bes='' e>2. | <bes d>2. | <bes c>8-. r %
+  <bes='' e>2. | <bes d>2. | <bes c>8-. r
   {{ v2("c'''='''8-. d-. c-. d='''-. |", "bes''=''2 |") }}
   <bes='' c>8 r <bes='' g'>2-> |
 {% endmacro %}
 
 {% macro rh2() %}
-  <a='' c>8-. r %
+  <a='' c>8-. r
   {{ v2("c'''='''8-. d-. c-. d='''-. |", "a''=''2 |") }}
   <a='' c>8 r <a='' f'>2-> |
 {% endmacro %}
@@ -69,7 +69,7 @@
       \alternative {
         \volta 1 { {{ rh2() }} }
         \volta 2 {
-          <a='' f'>2.~ | <a f'>8 r \ottava #1 %
+          <a='' f'>2.~ | <a f'>8 r \ottava #1
           aes'='''8-.\pp r <des,=''' des'>-. r |
         }
       }

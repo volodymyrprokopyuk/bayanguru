@@ -3,7 +3,7 @@
 {% endmacro %}
 
 {% macro rh2() %}
-  e='8[(->\< d]) e(-> \af 16.\! d) %
+  e='8[(->\< d]) e(-> \af 16.\! d)
   f='8[(->\> e]) d-. \af 8\! d='-. |
 {% endmacro %}
 

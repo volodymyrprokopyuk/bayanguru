@@ -6,7 +6,7 @@
 {% endmacro %}
 
 {% macro rh2() %}
-  <d=' f>8 <ees g> <d f>4 %
+  <d=' f>8 <ees g> <d f>4
   {{ v2("g'='4", "ees'='8 d='") }}
 {% endmacro %}
 

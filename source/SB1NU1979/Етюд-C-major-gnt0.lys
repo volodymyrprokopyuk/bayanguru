@@ -6,7 +6,7 @@
   \time 4/4
   g''=''8(\mf f e d c4) r | f8( e d c b4) r |
   e=''8( d c b a4) r | d8( c b a g4) r |
-  \rep 2 { g='8( a b c) } | %
+  \rep 2 { g='8( a b c) } |
   a='4( f' e d) | c( b f' b, | c) r r2 \bar "|."
 }
 {% endmacro %}

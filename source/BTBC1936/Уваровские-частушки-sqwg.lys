@@ -1,6 +1,6 @@
 {% macro lh1(a) %}
   d'=8 d7! fis, d@7 | g8 gm! g gm |
-  c=8 c7! c c7 | f,=, fM! {{ a }} | %
+  c=8 c7! c c7 | f,=, fM! {{ a }} |
 {% endmacro %}
 
 {% macro rightHand() %}

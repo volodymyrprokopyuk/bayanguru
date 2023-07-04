@@ -7,7 +7,7 @@
       \volta 1 {
         <a=' c>8 <g b> e16 fis g a=' |
       }
-      \volta 2 { <a=' c>8 <g b> e='4 } %
+      \volta 2 { <a=' c>8 <g b> e='4 }
     }
   }
 {% endmacro %}
@@ -15,7 +15,7 @@
 {% macro lh1(a, b) %}
   {{ a }} em! a, am! |
   e'=8 em! e em |
-  b=,8 b7! e em! | b b7! {{ b }} | %
+  b=,8 b7! e em! | b b7! {{ b }} |
 {% endmacro %}
 
 {% macro rightHand() %}

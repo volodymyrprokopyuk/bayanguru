@@ -2,7 +2,7 @@
   {{ a }} e f g a8)-. a-. | bes16( a bes8) a16( g a8) |
   g='4-- f16( e f8) | e16( d e8) d-. d-. |
   d='16( e f g a8)-. a-. | bes-. bes-. a16( g a8) |
-  a='8[( f' e cis] | d)-. d-. {{ b }} | %
+  a='8[( f' e cis] | d)-. d-. {{ b }} |
 {% endmacro %}
 
 {% macro rh2(a) %}
@@ -14,7 +14,7 @@
   {{ a }} dm! f, d@m | g8 gm! f d@m! |
   e'=8 a@7! d8 dm! | a a7! d dm! |
   d=8 dm! f, d@m | g8 gm! f d@m! |
-  e'=8 a@7! a,8 a7 | d dm! {{ b }} | %
+  e'=8 a@7! a,8 a7 | d dm! {{ b }} |
 {% endmacro %}
 
 {% macro lh2() %}

@@ -5,7 +5,7 @@
 
 {% macro lh2(a) %}
   f,=,8 fM! f fM | g gm! g gm |
-  a=,8 d@m! a8 a7! | d dm! {{ a }} | %
+  a=,8 d@m! a8 a7! | d dm! {{ a }} |
 {% endmacro %}
 
 {% macro rightHand() %}
