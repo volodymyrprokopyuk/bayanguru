@@ -95,22 +95,25 @@ function lintNoteComponentOrder(content, logs) {
 function lintDurationAfterBoundChord(content, logs) {
   logs.push(chalk.yellow("* Missing explicit duration after bound chord"))
   let conforms = true
-  for (const [_, chord, note] of content.matchAll(
-    /(@[Mm7d]\S* (?:\| )?)([a-gsrR]\S*)/g)
-  ) {
-    if (!/[123468]+/.test(note)) {
-      logs.push(`${chord}${chalk.red(note)}`)
-      conforms = false
+  for (const [line] of
+       content.matchAll(reMusicContent)) {
+    for (const [_, chord, note] of line.matchAll(
+      /(@[Mm7d]\S* (?:\| )?)([a-gr]\S*)/g)
+        ) {
+      if (!/[123468]+/.test(note)) {
+        logs.push(`${chord}${chalk.red(note)}`)
+        conforms = false
+      }
     }
   }
   return conforms
 }
 
 const linters = [
-  // lintFirstNoteOctaveCheck,
-  // lintEndLineBarCheck,
+  lintFirstNoteOctaveCheck,
+  lintEndLineBarCheck,
   lintNoteComponentOrder,
-  // lintDurationAfterBoundChord
+  lintDurationAfterBoundChord
 ]
 
 export async function lint(piece) {
