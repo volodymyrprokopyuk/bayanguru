@@ -1,5 +1,3 @@
-{% from "util.lys" import hSpace, shapedSlur %}
-
 {% macro rh1(a, b) %}
   {{ a }} b c b d c b a | b8)-. b-. b4 |
   e=''8-. e-. e16( d c b=' |
@@ -23,8 +21,7 @@
     \alternative {
       \volta 1 { a='4) b=' | }
       \volta 2 {
-        \hSpace
-        a='4 {{ shapedSlur("bu") }} ( a'='') \bar "|."
+        \hSpace a='4 \sSlur bu #'() ( a'='') \bar "|."
       }
     }
   }

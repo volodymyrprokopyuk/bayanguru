@@ -1,11 +1,9 @@
 {% macro rh1(a) %}
-  {{ a }} c c | c8 bes a g f4\) |
-  bes='8( c d2) | d4( c=''2) |
+  {{ a }} c c | c8 bes a g f4\) | bes8( c d2) | d4( c=''2) |
 {% endmacro %}
 
 {% macro lh1(a) %}
-  {{ a }} fM! fm | f fM fM |
-  f=4 bes@M! besM4 | f= fM! fM |
+  {{ a }} fM! fm | f fM fM | f bes@M! besM4 | f= fM! fM |
 {% endmacro %}
 
 {% macro rightHand() %}

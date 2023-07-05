@@ -4,8 +4,7 @@
 {% endmacro %}
 
 {% macro lh1(a) %}
-  e=8 c@M! c8 cM | f, fM! g gm! |
-  c=8 f@M! c8 {{ a }} |
+  e=8 c@M! c8 cM | f, fM! g gm! | c f@M! c=8 {{ a }} |
 {% endmacro %}
 
 {% macro rightHand() %}
