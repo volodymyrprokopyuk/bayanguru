@@ -1,6 +1,5 @@
 {% macro rh1(a) %}
-  {{ a }} c c e | g g g e |
-  d=''4 d g f | e2 c='' |
+  {{ a }} c c e | g g g e | d d g f | e2 c='' |
 {% endmacro %}
 
 {% macro lh1(a) %}
