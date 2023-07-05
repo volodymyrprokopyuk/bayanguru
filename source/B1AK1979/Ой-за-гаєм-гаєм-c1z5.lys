@@ -1,5 +1,3 @@
-{% from "util.lys" import momentBeat %}
-
 {% macro rh1(a, b) %}
   {{ a }} g( b g) | fis fis( a fis) |
   e='8( g fis e | d4) {{ b }} |
