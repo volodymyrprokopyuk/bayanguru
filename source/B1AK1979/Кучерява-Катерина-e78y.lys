@@ -4,8 +4,7 @@
 {% endmacro %}
 
 {% macro rh2(a) %}
-  {{ a }} d e8) d16( c d8) | e16( d e8) f-. f-. |
-  | e16( d e8) d16( c d8) |
+  {{ a }} d e8) d16( c d8) | e16( d e8) f-. f-. | e16( d e8) d16( c d8) |
 {% endmacro %}
 
 {% macro lh1() %}

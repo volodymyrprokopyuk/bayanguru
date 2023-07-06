@@ -1,6 +1,5 @@
 {% macro rh1(a) %}
-  {{ a }} d-. d-. | d16( c b a g8) |
-  c=''16( d e4) | e8( d=''4) |
+  {{ a }} d-. d-. | d16( c b a g8) | c16( d e4) | e8( d=''4) |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -13,16 +12,8 @@
   {{ rh1("d=''8-.") }}
   c=''16(\mp b a8) a-. | b16(\< a g8) g-. |
   c=''16( b a8) a-. | b16( a g8) \af 8\! g-. |
-  <<
-    \new Voice = voiceOne \relative {
-      \voiceOne
-      c''=''8(\f b c | d4\>^\tRit \af 8\! c=''8) | \barFermata
-    }
-    \new Voice = voiceTwo \relative {
-      \voiceTwo
-      g'='4 r8 | g='4 r8 |
-    }
-  >>
+  \duo { c''=''8(\f b c | d4\>^\tRit \af 8\! c=''8) \barFermata | }
+  { g'='4 r8 | g='4 r8 | }
   b='16(\mf^\tATem c b8) a-. | g-. g='-. r \bar "|."
 }
 {% endmacro %}

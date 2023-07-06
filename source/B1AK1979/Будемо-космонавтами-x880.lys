@@ -4,8 +4,7 @@
   \clef treble
   \key g \major
   \time 2/4
-  d'='8[(\mf b' a g]) | a4-> e8( g) |
-  fis='4-- a-- | g2 |
+  d'='8[(\mf b' a g]) | a4-> e8( g) | fis4-- a-- | g2 |
   d='8[( b' a g]) | a a e8( g) |
   fis='8[\< fis g \af 8\! a] | b-- b-- b4-> |
   c=''8[-. r a]-. r | b-. b( g)-. g-. |
