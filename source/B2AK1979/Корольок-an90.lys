@@ -1,13 +1,11 @@
-{% from "util.lys" import v2 %}
-
 {% macro rh1(a) %}
-  {{ a }} <b d>-. <g b>-. <b d>-. | <c e>( <b d>) <a c>-. <g b>-. |
-  {{ v2("a'='8-. d-. d16( c b a | g='4)", "fis'='8-. 8-. 4 | s4") }}
+  {{ a }} <b d>-. <g b>-. <b d>-. | <c e>( <b d>) <a c>-. <g=' b>-. |
+  \duo { a'='8-. d-. d16( c b a | g='4) } { fis'='8-. 8-. 4 | s4 } %
 {% endmacro %}
 
 {% macro rh2(a, b) %}
-  {{ a }} <g b>-. <e g>-. <g b>-. | <a c>( <g b>) <fis a>-. <e g>-. |
-  {{ v2("fis'='8-. b-. b16( a g fis | " + b, "dis'='8-. 8-. 4 | s4") }}
+  {{ a }} <g b>-. <e g>-. <g b>-. | <a c>( <g b>) <fis a>-. <e=' g>-. |
+  \duo { fis'='8-. b-. b16( a g fis | {{ b }} } { dis'='8-. 8-. 4 | s4 } %
 {% endmacro %}
 
 {% macro rightHand() %}

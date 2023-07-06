@@ -25,8 +25,7 @@
   \key g \major
   g@M!8-.-\stBass r8 b@m!-. r8 | e@m!-. r8 b@m!-. r8 |
   g@M!_\aSim r8 d= r | g@M! r8 d r |
-  \rep 3 { d@7!8 r8 d= r | }
-  d@7!8 r8 d=4-> |
+  \rep 3 { d@7!8 r8 d= r | } d@7!8 r8 d=4-> |
 
   g@M!8 r8 b@m! r8 | e@m!8 r8 b@m! r8 |
   \rep 2 { g@M! r8 d= r | }

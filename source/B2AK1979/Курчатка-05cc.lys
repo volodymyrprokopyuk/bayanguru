@@ -12,8 +12,7 @@
     \acc { cis'=''8 } <fis, d'>8 8 <fis a>8 8 |
     <g=' b>16( ais <g b>8) <fis a>4 |
     <g=' a>8\mp 8 <g b> <g cis> |
-    <fis=' d'>4 <fis a d> |
-    <g=' a>8 8 <g b> <g cis> |
+    <fis=' d'>4 <fis a d> | <g a>8 8 <g b> <g cis> |
     \alternative {
       \volta 1 { <fis=' d'>4 <fis=' a d> | }
       \volta 2 {
