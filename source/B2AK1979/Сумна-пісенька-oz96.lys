@@ -1,13 +1,10 @@
-{% from "util.lys" import momentBeat %}
-
 {% macro rh1(a) %}
   {{ a }} a bes c | d bes g\) g'\( |
   ees=''8 c g\) g'( | d4.)\> \af 8\! d=''8\( |
 {% endmacro %}
 
 {% macro lh1(a) %}
-  {{ a }} gm!8 r | bes4 g@m!8 r8 |
-  c=4 cm!8 r | bes( a g) bes=,( |
+  {{ a }} gm!8 r | bes4 g@m!8 r8 | c4 cm!8 r | bes( a g) bes=,( |
 {% endmacro %}
 
 {% macro rightHand() %}

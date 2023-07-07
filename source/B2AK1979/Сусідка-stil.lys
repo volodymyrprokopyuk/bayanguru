@@ -1,5 +1,3 @@
-{% from "util.lys" import momentBeat %}
-
 {% macro rightHand() %}
 \relative {
   \tempo Allegretto
