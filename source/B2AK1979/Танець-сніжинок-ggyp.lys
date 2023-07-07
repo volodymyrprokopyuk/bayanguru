@@ -1,15 +1,13 @@
-{% from "util.lys" import v2 %}
-
 {% macro rh1() %}
   <a='' a'>8-. r <a g'>-. r <a f'>-. r |
-  <bes='' e>2. | <bes d>2. | <bes c>8-. r
-  {{ v2("c'''='''8-. d-. c-. d='''-. |", "bes''=''2 |") }}
+  <bes='' e>2. | <bes d>2. | <bes c>8-. r %
+  \duo { c'''='''8-. d-. c-. d='''-. | } { bes''=''2 | }
   <bes='' c>8 r <bes='' g'>2-> |
 {% endmacro %}
 
 {% macro rh2() %}
-  <a='' c>8-. r
-  {{ v2("c'''='''8-. d-. c-. d='''-. |", "a''=''2 |") }}
+  <a='' c>8-. r %
+  \duo { c'''='''8-. d-. c-. d='''-. | } { a''=''2 | }
   <a='' c>8 r <a='' f'>2-> |
 {% endmacro %}
 
@@ -38,7 +36,7 @@
       \alternative {
         \volta 1 { {{ rh2() }} }
         \volta 2 {
-          <a='' f'>2.~ | <a f'>8 r \fine \bar "!!"
+          <a='' f'>2.~ | <a='' f'>8 r \fine \bar "!!"
           \volta 2
           <a='' d>8-.\p r <a='' dis>-. r |
         }
@@ -50,8 +48,8 @@
       <a='' e'>8-. r r4 <a a'>4~ | 8 r <a e'>-. r <a dis>-. r |
       <a='' e'>8-. r r4 <a a'>4~ | 8 r <a d>-. r <a dis>-. r |
       <c=''' e>2. | <aes g'>2. |
-      {{ v2(" e'''='''2.~ | e='''8 ",
-         "c'''='''8 b, \\rest a' b, \\rest g' b, \\rest | fis'=''") }}
+      \duo { e'''='''2.~ | e='''8 } %
+      { c'''='''8 b, \rest a' b, \rest g' b, \rest | fis'='' } %
       r8 <fis='' d'>8-. r <fis c'>-. r |
       <f='' d'>8-. r r4 <f f'>4~ | 8 r <f d'>-. r <f c'>-. r |
       <f='' d'>8-. r r4 <f f'>4~ | 8 r <f d'>-. r <f c'>-. r |
@@ -69,7 +67,7 @@
       \alternative {
         \volta 1 { {{ rh2() }} }
         \volta 2 {
-          <a='' f'>2.~ | <a f'>8 r \ottava #1
+          <a='' f'>2.~ | <a f'>8 r \ottava #1 %
           aes'='''8-.\pp r <des,=''' des'>-. r |
         }
       }

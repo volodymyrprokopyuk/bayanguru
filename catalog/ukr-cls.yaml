@@ -236,7 +236,7 @@ pieces:
       org: ukr, sty: flk, gnr: sng, ton: ei, frm: mel, bss: stb, lvl: elb }
   - { id: 4u91, tit: Ой під горою, sub: ukrfs,
       src: B2AK1979,
-      org: ukr, sty: flk, gnr: sng, frm: vo2, bss: pub, lvl: elb }
+      org: ukr, sty: flk, gnr: sng, ton: gj, frm: vo2, bss: pub, lvl: elb }
   - { id: ggyp, tit: Танець сніжинок,
       com: К. Мясков, src: B2AK1979,
       org: ukr, sty: aut, gnr: vls, ton: [fj, ai, desj], frm: cr5, bss: stb, lvl: elc }
