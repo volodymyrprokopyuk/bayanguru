@@ -1,7 +1,5 @@
 {% macro lh1() %}
-  bes=,8 besM! bes besM |
-  ees=8 eesM! ees eesM |
-  bes=,8 besM! bes besM |
+  bes=,8 besM! bes besM | ees eesM! ees eesM | bes besM! bes=, besM |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -30,10 +28,8 @@
   \key bes \major
   bes,=,8-\stBass besM! bes besM |
   {{ lh1() }}
-  f=,4( fis | g8) gm! e' c@7! |
-  f,=,8 f7! f f7 |
+  f=,4( fis | g8) gm! e' c@7! | f,8 f7! f f7 |
   {{ lh1() }}
-  f=,8 f7! f f7 |
-  bes=,8 besM! bes+besM r |
+  f=,8 f7! f f7 | bes=, besM! bes+besM r |
 }
 {% endmacro %}

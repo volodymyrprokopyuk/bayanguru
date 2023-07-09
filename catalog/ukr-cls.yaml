@@ -246,22 +246,22 @@ pieces:
       org: ukr, sty: flk, gnr: sng, ton: besj, frm: mel, bss: stb, lvl: elb }
   - { id: ucue, tit: Пісня Карася, sub: 'з опери \"Запорожець за Дунаєм\"',
       com: С. Гулак-Артемовський, src: B2AK1987,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: sng, ton: besj, frm: mel, bss: stb, lvl: ela }
   - { id: fngd, tit: Колискова,
       com: Я. Степовий, src: B2AK1987,
-      org: ukr, sty: flk, gnr: lul, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: aut, gnr: lul, ton: gi, frm: mel, bss: stb, lvl: ela }
   - { id: cpdc, tit: Ніч яка місячна, sub: ukrfs,
       src: B2AK1987,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: sng, ton: ai, frm: mel, bss: stb, lvl: ela }
   - { id: 9k9u, tit: Горлиця, sub: ukrfs,
       src: B2AK1987,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: sng, ton: gj, frm: mel, bss: stb, lvl: ela }
   - { id: 0r9e, tit: Їхав козак за Дунай, sub: ukrfs,
       src: B2AK1987,
-      org: ukr, sty: flk, gnr: sng, frm: var, bss: stb, lvl: elb }
+      org: ukr, sty: flk, gnr: sng, ton: ai, frm: var, bss: stb, lvl: elb }
   - { id: v8ec, tit: Ведмідь,
       com: К. Мясков, src: B2AK1987,
-      org: ukr, sty: msc, gnr: chd, frm: mel, bss: pub, lvl: elb }
+      org: ukr, sty: aut, gnr: chd, ton: ci, frm: mel, bss: pub, lvl: elb }
   - { id: w5ba, tit: Дивлюсь я на небо, sub: ukrfs,
       arr: А. Иванов, src: B2AK1987,
       org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
