@@ -4,8 +4,8 @@ import { reFromParts } from "./util.js"
 
 const reMusicContent = reFromParts(
   "mg",
-  // ^ space, rN, sN, { }, \cmd { } \!, {{ mcr("") }}
-  /^( +| +[rs]\d{0,2} | +\{ | +\\[^\n{!]+[{!] | +\{\{ [^\n(]+\(")/,
+  // ^ space, rN, sN, { }, } { }, \cmd { } \!, {{ mcr("") }}
+  /^( +| +[rs]\d{0,2} | +(?:\} )?\{ | +\\[^\n{!]+[{!] | +\{\{ [^\n(]+\(")/,
   // First note or chord + check + rest
   /(<?[a-g](?:es|is){0,2}[,']{0,4})(.)(.*)/
 )

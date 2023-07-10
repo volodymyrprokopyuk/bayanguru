@@ -13,8 +13,8 @@
     <a=' c>4\> \af 8.\! <g b>) r8 b |
     \duo {
       b'='4(\< cis dis) | e( dis \af 4\! e) |
-      <a,=' fis'>4(\f <b g'>4. <a fis'>8 | <a fis'>4 <g=' e'>) } %
-    { b'='2 a4 | g2. | dis'=''2. | s2 } r8 e=''8 |
+      <a,=' fis'>4(\f <b g'>4. <a fis'>8 | <a fis'>4 <g=' e'>) %
+    } { b'='2 a4 | g2. | dis'=''2. | s2 } r8 e=''8 |
     <c='' e>4( <b d>4. <a c>8 | <a c>4 <g b>4.) <a c>8 |
     <g=' b>4^( fis4.\> \af 8\! g8 |
     \alternative {
@@ -24,7 +24,7 @@
       }
       \volta 2 {
         \hSpace e='2.)\p |
-        \duo { b'='4( cis dis='' | <g,_~ b_~ e^~ >2.\> | \af 2\! 2) } %
+        \duo { b'='4( cis dis='' | <g,='_~ b_~ e^~ >2.\> | \af 2\! 2) } %
         { b'='2. | s2. | s2 } r4 \bar "|."
       }
     }
