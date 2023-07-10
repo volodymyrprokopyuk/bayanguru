@@ -52,9 +52,9 @@
 
     \meter Voice 1/8 1,1,1,1
     c=''32 a c e a e c e gis e d e a e c e |
-    c'='''32 a e a b gis e gis b gis e gis b gis e gis |
+    c'='''32 a e a \rep 3 { b='' gis e gis='' } |
     b=''32 gis e gis b gis e gis e' a, e a d gis, e gis |
-    d'='''32 a e a c a e a c a e a c a e a |
+    d'='''32 a e a \rep 3 { c=''' a e a='' } |
     c='''32 a e a cis a e a d a f a e' cis g cis |
     g'='''32 d a d f d a d e b f b d b d b |
     d='''32 a e a c a e a c gis d gis b gis d gis='' |
