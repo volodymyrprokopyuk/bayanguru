@@ -279,10 +279,10 @@ pieces:
       org: ukr, sty: flk, gnr: plk, ton: gi, frm: [mel, jmp], bss: stb, lvl: elb }
   - { id: zykv, tit: Зайчик, sub: ukrfs,
       src: B2AK1987,
-      org: ukr, sty: flk, gnr: chd, frm: [var, in3, vo2], bss: stb, lvl: elc }
+      org: ukr, sty: flk, gnr: chd, ton: aj, frm: [var, in3, vo2], bss: stb, lvl: elc }
   - { id: 26qx, tit: Казка,
       com: І. Беркович, src: B2AK1987,
-      org: ukr, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: elb }
+      org: ukr, sty: aut, gnr: chd, ton: bi, frm: mel, bss: stb, lvl: elb }
   - { id: di18, tit: Од Києва до Лубен, sub: ukrfs,
       src: B2AK1987,
       org: ukr, sty: flk, gnr: sng, frm: var, bss: [stb, pub], lvl: elc }
