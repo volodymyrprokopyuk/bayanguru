@@ -4,10 +4,8 @@
 {% endmacro %}
 
 {% macro rh2(a) %}
-  {{ a }} ais b d) a( gis a d) |
-  b='16( ais b e) d8( c ) |
-  b='16( ais b d) a( gis a d) |
-  b='16( c b a='
+  {{ a }} ais b d) a( gis a d) | b( ais b e) d8( c ) |
+  b='16( ais b d) a( gis a d) | b( c b a=' %
 {% endmacro %}
 
 {% macro rh3(a) %}
@@ -18,18 +16,16 @@
 {% endmacro %}
 
 {% macro rh4(a) %}
-  {{ a }} <fis a> | <g bes>8 8 <fis a>4-> |
-  <g=' bes>8 8 <fis a>8 8 |
+  {{ a }} <fis a> | <g bes>8 8 <fis a>4-> | <g bes>8 8 <fis=' a>8 8 |
 {% endmacro %}
 
 {% macro lh1(a) %}
-  {{ a }} d' | g,8 bes d@M![( d8]) |
-  g,=,16( a bes c) d@M!8[( d=8]) |
+  {{ a }} d' | g,8 bes d@M![( d8]) | g,16( a bes c) d@M!8[( d=8]) |
 {% endmacro %}
 
 {% macro rightHand() %}
 \relative {
-  \tempo Allegro
+  \tempo Presto
   \clef treble
   \key g \major
   \time 2/4
@@ -37,8 +33,7 @@
   {{ rh1("g,='8-.") }}
 
   \repeat volta 2 {
-    fis=''8-.\mp a-. d,-. fis-. |
-    g=''16( fis g a b8) g-. |
+    fis=''8-.\mp a-. d,-. fis-. | g16( fis g a b8) g-. |
     fis=''8-. a-. d,-. fis-. |
     \alternative {
       \volta 1 { g=''16( fis g a b=''8) r | }
@@ -47,8 +42,7 @@
   }
 
   \repeat volta 2 {
-    g,='8\f g' e(-> d16 c) |
-    b='16( ais b d a gis a d) |
+    g,='8\f g' e(-> d16 c) | b( ais b d a gis a d) |
     g,='8 g' e(-> d16 c) |
     \alternative {
       \volta 1 { b='16( ais b d a='8) r | }
@@ -56,7 +50,7 @@
     }
   }
 
-  {{ rh2("b='16(\\mf") }} g='4) |
+  {{ rh2("b='16(\\mf") }} g4) |
   {{ rh2("b='16(") }} g='8) r \bar "||"
 
   \repeat segno 2 {
@@ -71,10 +65,9 @@
     \volta 2
     \key g \minor
     {{ rh4("<g'=' bes>4->\\f") }}
-    \acc { c'=''8 } bes16( a g fis g='4)-- |
+    \acc { c'=''8 } bes16( a g fis g4)-- |
     {{ rh4("<g=' bes>4->") }}
-    \acc { c'=''8 }
-    bes='16(\> a g fis \af 4\! g='4)-- \bar "||"
+    \acc { c'=''8 } bes16(\> a g fis \af 4\! g='4)-- \bar "||"
     \keyChangeBeforeBar \key g \major
   }
 }
@@ -92,17 +85,16 @@
   d=8 dM! fis, d@M | g8 gM! b g@M |
   d=8 dM! fis, d@M | g8 gM! g gM | g=, gM! g+gM r |
 
-  \rep 2 { g=,8 gM! c cM! | g gM! d' d7! | }
-  d+g@M!8 d+d7!8 g+gM! r |
+  \rep 2 { g=,8 gM! c cM! | g gM! d'= d7! | }
+  d+g@M!8[ d+d7!8] g+gM! r |
 
   g,=,8 gM! d' d7! | g, gM! c cM! |
   g=,8 gM! d' d7! | g, gM! b g@M |
   g=,8 gM! d' d7! | g, gM! c cM! |
-  d=8 g@M! d8 d7! | g+gM! d+d7! g+gM! r |
+  d=8 g@M! d=8 d7! | g+gM! d+d7! g+gM! r |
 
   g,=,8 gM! c cM! | g gM! fis d@7! |
-  g=,8 gM! a d@7! | g8 gM! fis d@7! |
-  g+gM!8 d+d7! g+gM!4 |
+  g=,8 gM! a d@7! | g8 gM! fis=, d@7! | g+gM!8 d+d7! g+gM!4 |
 
   g=,8 gM! g gM | g gM! g-. e-. |
   a=,8-. d,-. g-. e-. | c'-. d-. g@M![( g,8]) |
@@ -110,10 +102,8 @@
   a=,8-. d,-. g-. e-. | c'-. d-. g,=,4-- |
 
   \key g \minor
-  {{ lh1("g=,4") }}
-  g@m![( d8]) g@m[( d=8]) |
-  {{ lh1("g,=,4") }}
-  g+gm! d+d7! g+gm!4 |
+  {{ lh1("g=,4") }} g@m![( d8]) g@m[( d=8]) |
+  {{ lh1("g,=,4") }} g+gm! d+d7! g+gm!4 |
   \key g \major
 }
 {% endmacro %}
