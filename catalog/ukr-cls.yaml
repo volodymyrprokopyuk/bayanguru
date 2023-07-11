@@ -288,10 +288,10 @@ pieces:
       org: ukr, sty: flk, gnr: sng, ton: gj, frm: [var, in3, ch5], bss: [stb, pub], lvl: elc }
   - { id: btcu, tit: Полька,
       com: М. Глинка, src: B2AK1987,
-      org: ukr, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: elb }
+      org: ukr, sty: flk, gnr: plk, ton: cj, frm: [mel, jmp], bss: stb, lvl: elb }
   - { id: nev4, tit: Вербовая дощечка, sub: ukrfs,
       src: B2AK1987,
-      org: ukr, sty: flk, gnr: sng, frm: [var, crd, pph], bss: [stb, pub], lvl: elc }
+      org: ukr, sty: flk, gnr: sng, frm: [var, cr5, vo3], bss: [stb, pub], lvl: elc }
   - { id: foaz, tit: Зимонька,
       com: К. Мясков, src: B2AK1987,
       org: ukr, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: elb }
