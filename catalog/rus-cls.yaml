@@ -13,23 +13,23 @@ pieces:
       org: rus, sty: flk, gnr: sng, ton: cj, frm: [mel, jmp], bss: stb, lvl: ela }
   - { id: vt18, tit: На горе-то калина, sub: rusfs,
       src: B0D1973,
-      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
+      org: rus, sty: flk, gnr: sng, ton: gj, frm: mel, bss: stb, lvl: ela }
   - { id: 8fs0, tit: На улице дождь идет, sub: rusfs,
       src: B0D1973,
-      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
+      org: rus, sty: flk, gnr: sng, ton: [cj, ai], frm: mel, bss: stb, lvl: ela }
   - { id: 0mdf, tit: Колыбельная, sub: rusfs,
       src: B0D1973,
-      org: rus, sty: flk, gnr: lul, frm: mel, bss: stb, lvl: ela }
+      org: rus, sty: flk, gnr: lul, ton: ai, frm: mel, bss: stb, lvl: ela }
   - { id: bspm, tit: "Белолица, круглолица", sub: rusfs,
       src: B0D1973,
-      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
+      org: rus, sty: flk, gnr: sng, ton: [cj, ai], frm: mel, bss: stb, lvl: ela }
   - { id: kkks, tit: Елочка,
       com: Л. Бекман, src: B0D1973,
-      org: rus, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: ela }
+      org: rus, sty: aut, gnr: chd, ton: fj, frm: mel, bss: stb, lvl: ela }
   # B0DU1982
   - { id: ye26, tit: Спят усталые игрушки,
       com: А. Островский, src: B0DU1982,
-      org: rus, sty: jaz, gnr: chd, frm: mel, bss: stb, lvl: ela }
+      org: rus, sty: aut, gnr: chd, ton: cj, frm: mel, bss: stb, lvl: ela }
   # B1AK1979
   - { id: ebam, tit: Елочка,
       com: М. Красев, src: B1AK1979,
