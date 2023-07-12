@@ -1,5 +1,3 @@
-{% from "util.lys" import hSpace, shapedSlur %}
-
 {% macro rightHand() %}
 \relative {
   \tempo Moderato
@@ -13,10 +11,7 @@
     a='8 g a b | g4\) c8\( b | a8 g a b |
     \alternative {
       \volta 1 { g='4\) g8-. b='-. | }
-      \volta 2 {
-        \hSpace
-        g='4 {{ shapedSlur("bu") }} ( r) \bar "|."
-      }
+      \volta 2 { \hSpace g='4 \sSlur bu #'() ( r) \bar "|." }
     }
   }
 }
@@ -27,9 +22,7 @@
   \clef bass
   \key g \major
   \partial 4 { r4 | }
-  g+gM!4-\stBass e=4 | g+gM! r |
-  g+gM!4 e=4 | g+gM! r |
-  d=4 dM! | e+em! r |
-  a+am! d+dM! | g+gM! r | g+gM! r |
+  g+gM!4-\stBass e=4 | g+gM! r | g+gM!4 e | g+gM! r |
+  d=4 dM! | e+em! r | a+am! d+dM! | g+gM! r | g+gM! r |
 }
 {% endmacro %}

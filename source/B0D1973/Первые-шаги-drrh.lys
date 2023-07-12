@@ -1,6 +1,5 @@
 {% macro rh1(a) %}
-  {{ a }} g' f e | d e c c\) |
-  d=''8\( f e c | d g
+  {{ a }} g' f e | d e c c\) | d\( f e c | d g %
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -10,7 +9,7 @@
   \key c \major
   \time 2/4
   \repeat volta 2 {
-    {{ rh1("c''=''8\\(\\p") }} g=''4\) |
+    {{ rh1("c''=''8\\(\\p") }} g4\) |
     {{ rh1("c,=''8\\(") }} c,=''4\) |
   }
 }
