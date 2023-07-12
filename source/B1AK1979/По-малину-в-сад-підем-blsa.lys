@@ -2,11 +2,6 @@
   {{ a }} a' a a | bes bes a4\) | g8( g f4) | e8( e d='4) |
 {% endmacro %}
 
-{% macro lh1(a) %}
-  {{ a }} dm!)-. f( d@m)-. | g,8( gm!)-. d'( dm!)-. |
-  cis=8( a@7!)-. d8( dm!)-. | a( a7!)-. d=( dm!)-. |
-{% endmacro %}
-
 {% macro rightHand() %}
 \relative {
   \tempo Allegretto
@@ -25,11 +20,13 @@
 \relative {
   \clef bass
   \key d \minor
-  {{ lh1("d=8(-\\stBass") }}
-  {{ lh1("d=8(") }}
-  a=,8( aM!)-. g( a@M)-. | f'8( d@m!)-. d8( dm)-. |
-  cis=8( a@7!)-. a8( a7)-. | d( dm!)-. f( d@m)-. |
-  cis=8( a@7!)-. a8( a7)-. | d( dm!)-. f( d@m)-. |
-  cis=8( a@7!)-. a8( a7)-. | d=( dm!)-. d+dm4 |
+  d=8(-\stBass dm!)-. f( d@m)-. | g,8( gm!)-. d'( dm!)-. |
+  cis=8_\aSim a@7! d8 dm! | a a7! d dm! |
+  d=8 dm! f d@m | g,8 gm! d' dm! |
+  cis=8 a@7! d8 dm! | a a7! d dm! |
+  a=,8 aM! g a@M | f'8 d@m! d8 dm |
+  cis=8 a@7! a8 a7 | d dm! f d@m |
+  cis=8 a@7! a8 a7 | d dm! f d@m |
+  cis=8 a@7! a8 a7 | d= dm! d+dm4 |
 }
 {% endmacro %}

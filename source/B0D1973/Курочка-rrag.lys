@@ -12,7 +12,7 @@
 {% endmacro %}
 
 {% macro lh2(a, b) %}
-  {{ a }} e= | f@M!8[-. fM8]-. fM4 | r4 e= | {{ b }} |
+  {{ a }} e= | f@M!8[ fM8] fM4 | r4 e= | {{ b }} |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -34,7 +34,7 @@
   \key a \minor
   {{ lh1("a=8-\\puBass") }}
   {{ lh1("a=8") }}
-  {{ lh2("r4-\\stBass", "f@M!8[-. fM8]-. fM4") }}
+  {{ lh2("r4-\\stBass", "f@M!8[ fM8] fM4") }}
   {{ lh2("r4", "f=8-. d-. a+am!4") }}
 }
 {% endmacro %}

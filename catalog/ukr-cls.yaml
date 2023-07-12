@@ -197,7 +197,7 @@ pieces:
   # B2AK1979
   - { id: 05cc, tit: Курчатка,
       com: А. Філіпенко, src: B2AK1979,
-      org: ukr, sty: aut, gnr: chd, ton: dj, frm: in3, bss: stb, lvl: ela }
+      org: ukr, sty: aut, gnr: chd, ton: dj, frm: [in3, acc], bss: stb, lvl: ela }
   - { id: ihff, tit: Ой лопнув обруч, sub: ukrfs,
       src: B2AK1979,
       org: ukr, sty: flk, gnr: sng, ton: [dj, bi], frm: in3, bss: stb, lvl: elb }
@@ -261,7 +261,7 @@ pieces:
       org: ukr, sty: flk, gnr: sng, ton: ai, frm: var, bss: stb, lvl: elb }
   - { id: v8ec, tit: Ведмідь,
       com: К. Мясков, src: B2AK1987,
-      org: ukr, sty: aut, gnr: chd, ton: ci, frm: mel, bss: pub, lvl: elb }
+      org: ukr, sty: aut, gnr: chd, ton: ci, frm: [mel, acc], bss: pub, lvl: elb }
   - { id: w5ba, tit: Дивлюсь я на небо, sub: ukrfs,
       arr: А. Иванов, src: B2AK1987,
       org: ukr, sty: flk, gnr: sng, ton: ei, frm: mel, bss: stb, lvl: elb }
@@ -270,10 +270,10 @@ pieces:
       org: ukr, sty: aut, gnr: chd, ton: ai, frm: crd, bss: stb, lvl: elb }
   - { id: i11j, tit: Бджілка,
       com: К. Мясков, src: B2AK1987,
-      org: ukr, sty: aut, gnr: chd, ton: gj, frm: [mel, jpm], bss: stb, lvl: elb }
+      org: ukr, sty: aut, gnr: chd, ton: gj, frm: [mel, jpm, acc], bss: stb, lvl: elb }
   - { id: zvpg, tit: Козачок, sub: ukrfd,
       src: B2AK1987,
-      org: ukr, sty: flk, gnr: koz, ton: [gj, gi], frm: [var, in3], bss: stb, lvl: elb }
+      org: ukr, sty: flk, gnr: koz, ton: [gj, gi], frm: [var, in3, acc], bss: stb, lvl: elb }
   - { id: mf7s, tit: Дитяча полька,
       com: М. Глинка, src: B2AK1987,
       org: ukr, sty: flk, gnr: plk, ton: gi, frm: [mel, jmp], bss: stb, lvl: elb }
@@ -288,13 +288,13 @@ pieces:
       org: ukr, sty: flk, gnr: sng, ton: gj, frm: [var, in3, ch5], bss: [stb, pub], lvl: elc }
   - { id: btcu, tit: Полька,
       com: М. Глинка, src: B2AK1987,
-      org: ukr, sty: flk, gnr: plk, ton: cj, frm: [mel, jmp], bss: stb, lvl: elb }
+      org: ukr, sty: flk, gnr: plk, ton: cj, frm: [mel, jmp, acc], bss: stb, lvl: elb }
   - { id: nev4, tit: Вербовая дощечка, sub: ukrfs,
       src: B2AK1987,
       org: ukr, sty: flk, gnr: sng, ton: ei, frm: [var, cr5, vo3], bss: [stb, pub], lvl: elc }
   - { id: foaz, tit: Зимонька,
       com: К. Мясков, src: B2AK1987,
-      org: ukr, sty: aut, gnr: chd, ton: gj, frm: mel, bss: stb, lvl: elb }
+      org: ukr, sty: aut, gnr: chd, ton: gj, frm: [mel, acc], bss: stb, lvl: elb }
   - { id: f45r, tit: Прелюд,
       com: К. Мясков, src: B2AK1987,
       org: ukr, sty: aut, gnr: pie, ton: ei, frm: in3, bss: stb, lvl: elb }
