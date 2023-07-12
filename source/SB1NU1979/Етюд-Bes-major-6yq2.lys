@@ -23,8 +23,7 @@
         d='16 f c f bes, c d ees='\) |
       }
       \volta 2 {
-        \hSpace
-        d='16 \sSlur bd #'((bs . 4.5) (sh . 9) (wd . 4)) (
+        \hSpace d='16 \sSlur bd #'((bs . 4.5) (sh . 9) (wd . 4)) ( %
         f='16 c f bes,=8) r \bar "|."
       }
     }

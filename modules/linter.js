@@ -4,8 +4,8 @@ import { reFromParts } from "./util.js"
 
 const reMusicContent = reFromParts(
   "mg",
-  // ^ space, rN, sN, { }, } { }, \cmd { } \!, {{ mcr("") }}
-  /^( +| +[rs]\d{0,2} | +(?:\} )?\{ | +\\[^\n{!]+[{!] | +\{\{ [^\n(]+\(")/,
+  // ^ space, rN, sN, { }, } { }, \cmd , \cmd { } \!, {{ mcr("") }}
+  /^( +| +[rs]\d{0,2} | +(?:\} )?\{ | +\\(?:hSpace|sSlur) | +\\[^{!\n]+[{!] | +\{\{ [^(\n]+\(")/,
   // First note or chord + check + rest
   /(<?[a-g](?:es|is){0,2}[,']{0,4})(.)(.*)/
 )
@@ -17,7 +17,7 @@ function lintFirstNoteOctaveCheck(content, logs) {
   for (const [_, start, note, check, rest] of
        content.matchAll(reMusicContent)) {
     // No octave check
-    if (!/[=+@Mm7d]/.test(check)) {
+    if (!/[=+@Mm7dust]/.test(check)) {
       logs.push(`${start}${chalk.red(note + check)}${rest}`)
       conforms = false
     }
@@ -58,7 +58,7 @@ function lintNoteComponentOrder(content, logs) {
   const reNote = reFromParts(
     null,
     // pitch
-    /^([a-g](?:es|is){0,2})/,
+    /^([a-g](?:es|is){0,2}|(?:fu|fd|bu|bd|bs|dt)$)/,
     // stradella
     /(\+?(?:[a-g](?:is|es){0,2})?@?[Mm7d]!?)?/,
     // octave check

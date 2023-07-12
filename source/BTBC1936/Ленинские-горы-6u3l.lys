@@ -19,11 +19,9 @@
   \time 4/4
   r2\p r8 d'='8(\< g \af 16.\! b |
   \repeat volta 2 {
-    e=''4\mp d)
-    {{ rh1("g,='8(") }}
+    e=''4\mp d) {{ rh1("g,='8(") }}
     d=''8( c16 b a g e g a8) d,[(\< g \af 8\! b] |
-    <c='' e>4\mf <b d>)
-    {{ rh1("g='8(") }}
+    <c='' e>4\mf <b d>) {{ rh1("g='8(") }}
     g='2~ g8 <d g>[( <g b> <g b d>] |
     <b=' g'>4. <b fis'>8 e) b( d e |
     <d='' fis>8 <c e> b4) r8 c( d b |
@@ -34,13 +32,12 @@
     <c='' e>4 <c d>) r8 a[( c b] |
     \alternative {
       \volta 1 {
-        g='2~ g8) d[\<
-        \sSlur fu #'((bs . 2.5) (sh . 1) (wd . 2) (ht . 1.7) (dt . 0.5)) (
+        g='2~ g8) d[\< %
+        \sSlur fu #'((bs . 2.5) (sh . 1) (wd . 2) (ht . 1.7) (dt . 0.5)) ( %
         g='8) \af 16.\! b='] |
       }
       \volta 2 {
-        \hSpace
-        <g=' b g'>2~ \sSlur bu #'((bs . 3.5)) ( 4) r \bar "|."
+        \hSpace <g=' b g'>2~ \sSlur bu #'((bs . 3.5)) ( 4) r \bar "|."
       }
     }
   }
