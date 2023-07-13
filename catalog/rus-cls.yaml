@@ -33,19 +33,19 @@ pieces:
   # B1AK1979
   - { id: ebam, tit: Елочка,
       com: М. Красев, src: B1AK1979,
-      org: rus, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: ela }
+      org: rus, sty: aut, gnr: chd, ton: cj, frm: mel, bss: stb, lvl: ela }
   - { id: 6sx9, tit: Девицы-красавицы, sub: rusfs,
       src: B1AK1979,
-      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
+      org: rus, sty: flk, gnr: sng, ton: gj, frm: mel, bss: stb, lvl: ela }
   - { id: dj8u, tit: "Я пойду ли, молоденька", sub: rusfs,
       src: B1AK1979,
-      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
+      org: rus, sty: flk, gnr: sng, ton: cj, frm: mel, bss: stb, lvl: ela }
   - { id: e40b, tit: Песенка,
       com: Ю. Шишаков, src: B1AK1979,
-      org: rus, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: ela }
+      org: rus, sty: aut, gnr: chd, ton: ai, frm: mel, bss: stb, lvl: ela }
   - { id: 58a8, tit: Звенит звонок веселый,
       com: А. Долуханян, src: B1AK1979,
-      org: rus, sty: msc, gnr: chd, frm: mel, bss: stb, lvl: ela }
+      org: rus, sty: aut, gnr: chd, ton: dj, frm: mel, bss: stb, lvl: ela }
   - { id: sgyu, tit: Новогодняя полька,
       com: А. Александров, src: B1AK1979,
       org: rus, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: ela }
