@@ -48,10 +48,10 @@ pieces:
       org: rus, sty: aut, gnr: chd, ton: dj, frm: mel, bss: stb, lvl: ela }
   - { id: sgyu, tit: Новогодняя полька,
       com: А. Александров, src: B1AK1979,
-      org: rus, sty: flk, gnr: plk, frm: mel, bss: stb, lvl: ela }
+      org: rus, sty: flk, gnr: plk, ton: aj, frm: mel, bss: stb, lvl: ela }
   - { id: f026, tit: Плясовая,
       com: Л. Бирнов, src: B1AK1979,
-      org: rus, sty: msc, gnr: dnc, frm: mel, bss: stb, lvl: ela }
+      org: rus, sty: aut, gnr: dnc, ton: gj, frm: mel, bss: stb, lvl: ela }
   # B1AK1985
   - { id: r9dx, tit: Родина, sub: rusfs,
       src: B1AK1985,

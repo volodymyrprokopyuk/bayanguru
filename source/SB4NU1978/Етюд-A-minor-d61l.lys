@@ -25,7 +25,7 @@
 
     \meter Voice 1/2 #'(1)
     s8\p a=''8 gis a | c b b b | b b e d | d c c c |
-    c='''8\< cis d \af 8\! e | e\f d c b | d_\dDim c c b='' |
+    c='''8\< cis d \af 8\! e | g\f f e d | d_\dDim c c b='' |
   } {
     \meter Voice 1/8 1,1,1,1
     a'='32 c,_\aLeg e c a' c, e c gis' c, e c a' c, e c |
@@ -56,7 +56,7 @@
     b=''32 gis e gis b gis e gis e' a, e a d gis, e gis |
     d'='''32 a e a \rep 3 { c=''' a e a='' } |
     c='''32 a e a cis a e a d a f a e' cis g cis |
-    g'='''32 d a d f d a d e b f b d b d b |
+    g'='''32 d a d f d a d e b f b d b f b |
     d='''32 a e a c a e a c gis d gis b gis d gis='' |
   }
   \meter 1/8 1,1,1,1
@@ -71,7 +71,7 @@
   \meter 1/2 #'(1)
   a,=,8-\stBass am! am am | e' eM! eM eM |
   e=8 e7! e7 e7 | a, am! am am |
-  a=,8 am! am am | d dm! d e |
+  a=,8 am! am a7! | d dm! d e |
   f=8 f7! f7 f7 | e= e7! e7 e7 |
 
   a,=,8 am! b a | e' eM! eM eM |
@@ -80,9 +80,9 @@
   e=8[ a@m! e8 e7!] | a, am! b=, g@7! |
 
   c=8 cM! b c | g g' f e |
-  d=8 dM! cis d | a a' g fis |
-  e=8 em! d d | c[ a@m! g8 e@7!] |
-  a=,8 am! d dis | e=[ em! a@m! e@7!8] |
+  d=8 dm! cis d | a a' g fis |
+  e=8 em! d d | c[ a@m! b8 e@7!] |
+  a=,8 am! d dis | e=[ eM! a@m! e@7!8] |
 
   a,=,8 am! b a | e' e7! e7 e7 |
   e=8 d c b | a am! am am |
