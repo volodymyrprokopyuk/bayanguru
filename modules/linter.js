@@ -5,7 +5,7 @@ import { reFromParts } from "./util.js"
 const reMusicContent = reFromParts(
   "mg",
   // ^ space, rN, sN, { }, } { }, \cmd , \cmd { } \!, {{ mcr("") }}
-  /^( +| +[rs]\d{0,2}\.?(?: \|)? | +(?:\} )?\{ | +\\(?:hSpace|sSlur) | +\\[^{!\n]+[{!] | +\{\{ [^(\n]+\(")/,
+  /^( +| +[rs]\d{0,2}\.?(?:\\[mspf]{1,3}| \|)? | +(?:\} )?\{ | +\\(?:hSpace|sSlur) | +\\[^{!\n]+[{!] | +\{\{ [^(\n]+\(")/,
   // First note or chord + check + rest
   /(<?[a-g](?:es|is){0,2}[,']{0,4})(.)(.*)/
 )
