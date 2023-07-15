@@ -77,10 +77,10 @@ pieces:
       org: rus, sty: flk, gnr: sng, ton: besj, frm: cr5, bss: stb, lvl: elb }
   - { id: 2n32, tit: Среди долины ровныя, sub: rusfs,
       src: B2AK1979,
-      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
+      org: rus, sty: flk, gnr: sng, ton: ai, frm: [in3, in6], bss: stb, lvl: elb }
   - { id: 923n, tit: Лирическая протяжная,
       com: Н. Речменский, src: B2AK1979,
-      org: rus, sty: msc, gnr: pie, frm: pph, bss: stb, lvl: elc }
+      org: rus, sty: aut, gnr: pie, frm: [in3, vo2], bss: stb, lvl: elc }
   - { id: zk1t, tit: Щебетала пташечка,
       com: Н. Руднев, src: B2AK1979,
       org: rus, sty: flk, gnr: sng, frm: pph, bss: pub, lvl: elb }

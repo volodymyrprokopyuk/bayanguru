@@ -1,5 +1,3 @@
-{% from "util.lys" import momentBeat, dPad %}
-
 {% macro rightHand() %}
 \relative {
   \tempo Lento
@@ -8,70 +6,42 @@
   \time 2/4
   \meter 1/2 #'(1)
   \dPad 4
-  R2\p | R2 |
-  fis'='4\( cis | cis'4. a8 |
+  R2\p | R2 | fis'='4\( cis | cis'4. a8 |
   b='8\< a gis \af 8\! fis | gis[ e] cis\) r |
   a'='4\(\p fis8 cis' | d4. cis8 |
   b='8\< <gis fis'> <cis e> \af 8\! <b d> |
   <a=' cis>8[ <b d>] <cis e>\)\< \af 8\! g |
-  <<
-    \relative {
-      \dPad 4
-      <cis''='' e>4(\mf <b d>) |
-      r8\< <b=' d>( <a cis> \af 8\! <gis=' b>) |
-    }
-    \\
-    \relative { fis'='2 | eis4. r8 | }
-  >>
-  fis='8( <a, d fis>\> gis' a) |
-  \af 8\! b='8[( fis]^\tRit
-  <fis=' b fis'>8 \fermata d'='' \fermata) |
-  cis=''8(\pp a gis fis) |
-  <<
-    \relative {
-      \af 8.\! dis'='4(\< \af 4\! eis\> | fis='2) |
-    }
-    \\
-    \relative { r8 <gis= bis>[ r <gis b>] | }
-  >>
-  <<
-    \new Voice = voiceOne \relative {
-      \voiceOne
-      \dPad 4
-      cis''=''4(\p fis,8 fis') |
-      fis=''8[( fis] fis fis) |
-      gis,='8(\< <d' fis> <cis e> \af 8\! <b d>) |
-      e=''4 <cis e> |
-      g='8[\(\< \af 16.\! <cis e>] d cis |
-      e=''8[\mf d] cis b\) | \af 2\! cis2\> |
-      \af 8.\! dis,='4\< \af 4\! eis\> | fis='2 |
-    }
-    \new Voice = voiceTwo \relative {
-      \voiceTwo
-      cis''=''4 fis, | d'8[( cis] b a) |
-      gis='4 r | cis8( b a gis) |
-      g='4 b8 ais | fis[ b] a gis |
-      cis=''8( a gis fis) |
-      r8 <gis,= bis>8[ r <gis b>] |
-      r8 <a= cis>8[ r <a= cis>] |
-    }
-  >>
+  \duo {
+    \dPad 4
+    <cis''='' e>4(\mf <b d>) | r8\< <b d>( <a cis> \af 8\! <gis=' b>) |
+  } { fis'='2 | eis='4. r8 | }
+  fis='8( <a, d fis>\> gis' a) | \af 8\! b[( fis]^\tRit %
+  <fis=' b fis'>8 \fermata d'='' \fermata) | cis(\pp a gis fis) |
+  \duo { \af 8.\! dis'='4(\< \af 4\! eis\> | fis='2) | }
+  { r8 <gis= bis>[ r <gis= b>] | }
+
+  \duo {
+    \dPad 4
+    cis''=''4(\p fis,8 fis') | fis[( fis] fis fis) |
+    gis,='8(\< <d' fis> <cis e> \af 8\! <b d>) | e4 <cis e> |
+    g='8[\(\< \af 16.\! <cis e>] d cis |
+    e=''8[\mf d] cis b\) | \af 2\! cis2\> |
+    \af 8.\! dis,='4\< \af 4\! eis\> | fis='2 |
+  } {
+    cis''=''4 fis, | d'8[( cis] b a) | gis4 r | cis8( b a gis) |
+    g='4 b8 ais | fis[ b] a gis | cis( a gis fis) |
+    r8 <gis,= bis>8[ r <gis b>] | r <a cis>[ r <a= cis>] |
+  }
   \dPad 6
-  r8\< <a,= d fis>4 \af 8\! 8 |
-  r8 <gis= bis dis fis>4 8 |
-  r8\> <gis= b d fis>4 \af 8\! 8 |
-  r8\p <a= cis fis>4^\tRit
-  <<
-    \relative {
-      \dPad 6
-      s8 | a'='4\> \af 4\! cis | cis=''\pp
-    }
-    \\
-    \relative {
-      \once \stemUp
-      <cis'=' fis( >8 | fis) fis4 <fis a>8~ | <fis=' a>4
-    }
-  >>
+  r8\< <a,= d fis>4 \af 8\! 8 | r <gis bis dis fis>4 8 |
+  r8\> <gis= b d fis>4 \af 8\! 8 | r\p <a cis fis>4^\tRit %
+  \duo {
+    \dPad 6
+    s8 | a'='4\> \af 4\! cis | cis=''\pp %
+  } {
+    \once \stemUp
+    <cis'=' fis( >8 | fis) fis4 <fis a>8~ | <fis=' a>4 %
+  }
   r4 \bar "|."
 }
 {% endmacro %}
@@ -81,33 +51,20 @@
   \clef bass
   \key fis \minor
   \meter 1/2 #'(1)
-  fis,=,8(-\stBass fism!) fism fism |
-  fis=,8( fism) fism fism |
-  fis=,8( fism!) fism fism |
-  a=,8[( fis@m!) fism8 fism] |
-  gis=,8[( b@m!) bm8 bm] |
-  cis=8( cism!) cism cism |
-  fis,=,8( fism!) fism fism |
-  b=,8( bm!) bm bm |
-  e=8( e7!) e7 e7 |
-  a,=,8( aM!) fis@7![ ais8] |
-  b=,8( bm!) bm bm |
-  cis=8( cis7!) cis7 cis7 |
-  d=8( cis b a |
-  gis=,8) b@m! bm4 \fermata |
-  cis=8[( fis@m!) fism8 fism] |
-  r gis=,8[ r cis] |
-  fis,=,8( fism!) fism fism |
-  ais=,8[( fis@7!) fis78 fis7] |
-  b=,8( bm!) bm bm |
-  e=8( e7!) e7 e7 |
-  a,=,8( aM!) aM aM |
-  ais=,8 fis@7! fis8 fis7 |
-  b=,8( bm!) bm bm |
-  cis=8[( fis@m!) fism8 fism] |
-  gis=,4 cis | fis8( gis fis e) |
-  d=8( cis b a) |
-  gis=,2 | b4 a8( gis) |
-  fis=,8[( cis'] fis) fism!~ | fism4 r | R2 |
+  fis,=,8(-\stBass fism!) fism fism | fis( fism) fism fism |
+  fis=,8_\aSim fism! fism fism | a[ fis@m! fism8 fism] |
+  gis=,8[ b@m! bm8 bm] | cis cism! cism cism |
+  fis,=,8 fism! fism fism | b bm! bm bm |
+  e=8 e7! e7 e7 | a, aM! fis@7![ ais8] |
+  b=,8 bm! bm bm | cis cis7! cis7 cis7 |
+  d=8( cis b a | gis) b@m! bm4 \fermata |
+  cis=8[ fis@m! fism8 fism] | r gis[ r cis=] |
+
+  fis,=,8 fism! fism fism | ais[ fis@7! fis78 fis7] |
+  b=,8 bm! bm bm | e e7! e7 e7 |
+  a,=,8 aM! aM aM | ais fis@7! fis8 fis7 |
+  b=,8 bm! bm bm | cis[ fis@m! fism8 fism] |
+  gis=,4 cis | fis8( gis fis e) | d( cis b a) |
+  gis=,2 | b4 a8( gis) | fis[( cis'] fis=) fism!~ | fism4 r | R2 |
 }
 {% endmacro %}
