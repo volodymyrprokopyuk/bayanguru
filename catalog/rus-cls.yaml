@@ -95,10 +95,10 @@ pieces:
       org: rus, sty: aut, gnr: pie, frm: mel, bss: stb, lvl: elb }
   - { id: e1d4, tit: Меланхолический вальс,
       com: А. Даргомыжский, src: B2AK1979,
-      org: rus, sty: msc, gnr: vls, frm: mel, bss: stb, lvl: elb }
+      org: rus, sty: aut, gnr: vls, ton: gi, frm: dot, bss: stb, lvl: elb }
   - { id: 1hva, tit: Как пойду я на быструю речку, sub: rusfs,
       src: B2AK1979,
-      org: rus, sty: flk, gnr: sng, frm: var, bss: stb, lvl: elc }
+      org: rus, sty: flk, gnr: sng, ton: ei, frm: [var, in3], bss: stb, lvl: elc }
   # B2AK1987
   - { id: tsio, tit: Колыбельная,
       com: Т. Хренников, arr: А. Кирюхин, art: ipr, src: B2AK1987,
