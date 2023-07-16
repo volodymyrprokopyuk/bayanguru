@@ -1,3 +1,7 @@
+{% macro rh1(a) %}
+  a='8 g f e | {{ a }} f e d | c\) c g'\( c | a g f e | {{ a }} f e d | c='4\) %
+{% endmacro %}
+
 {% macro lh1(a) %}
   {{ a }} fM! d' f@M | g,8 gM! g=, gM |
 {% endmacro %}
@@ -9,8 +13,8 @@
   \key c \major
   \time 2/4
   \partial 4 { g'='8\(\p c | }
-  a='8 g f e | d f e d | c\) c g'\( c | a g f e | d f e d | c4\) g'8\( c |
-  a='8 g f e | g f e d | c\) c g'\( c | a g f e | g f e d | c='4\) \bar "|."
+  {{ rh1("d='8") }} g'8\( c |
+  {{ rh1("g='8") }} \bar "|."
 }
 {% endmacro %}
 
