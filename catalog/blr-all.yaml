@@ -5,7 +5,7 @@ pieces:
   # B0D1973
   - { id: bv2w, tit: Лявоніха, sub: blrfs,
       src: B0D1973,
-      org: blr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
+      org: blr, sty: flk, gnr: sng, ton: gj, frm: mel, bss: stb, lvl: ela }
   # B1AK1985
   - { id: v99z, tit: Янка, sub: blrfd,
       arr: М. Чайкін, src: B1AK1985,
@@ -15,6 +15,7 @@ pieces:
   # - { id: wnc5, tit: Прилетіли гуси, sub: blrfs,
   #     arr: А. Зубарев, src: FBB3BZ1982,
   #     org: blr, sty: flk, gnr: sng, ton: ai, frm: vo2, bss: frb, lvl: ela }
+
   # Tutorial
   # BTBC1936
   - { id: 8ec9, tit: Перепілонька, sub: blrfs,
@@ -24,6 +25,7 @@ pieces:
   - { id: 2q9x, tit: Крижaчок, sub: blrfd,
       arr: А. Стоянов, src: BTB1989,
       org: blr, sty: flk, gnr: dnc, frm: var, bss: stb, lvl: elb }
+
   # Course
   # TYBC2B1971
   - { id: vhri, tit: Микита, sub: blrfd,

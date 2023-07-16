@@ -41,6 +41,10 @@ pieces:
   - { id: xi84, tit: Їхав козак за Дунай, sub: ukrfs,
       src: B0D1973,
       org: ukr, sty: flk, gnr: sng, ton: ai, frm: [mel, rep], bss: stb, lvl: ela }
+  # p. 71
+  # - { id: iyb2, tit: Настала зима,
+  #     com: М. Дремлюга, src: B0D1973,
+  #     org: ukr, sty: aut, gnr: sng, ton: cj, frm: mel, bss: stb, lvl: ela }
   - { id: dysh, tit: "Ой не ходи, Грицю", sub: ukrfs,
       src: B0D1973,
       org: ukr, sty: flk, gnr: sng, ton: ai, frm: mel, bss: stb, lvl: ela }
