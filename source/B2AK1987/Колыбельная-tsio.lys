@@ -3,8 +3,7 @@
 {% endmacro %}
 
 {% macro lh2(a) %}
-  {{ a }} a7! cis a@7 |
-  \rep 2 { d=4 dm! f d@m | }
+  {{ a }} a7! cis a@7 | \rep 2 { d=4 dm! f= d@m | }
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -13,19 +12,13 @@
   \clef treble
   \key a \minor
   \time 4/4
-  e'='4.\p f8 e4.\< \af 8\! a,8 |
-  c='4 \af 2.\! b2.\> |
-  e='4. f8 e4. a,8 |
-  \af 4..\! c='2\< \af 2\! b2\> |
+  e'='4.\p f8 e4.\< \af 8\! a,8 | c4 \af 2.\! b2.\> |
+  e='4. f8 e4. a,8 | \af 4..\! c2\< \af 2\! b2\> |
   cis='4. d8 e4 g\< | f8 g \af 2.\! a2. |
-  a='4.\< \af 8\! a8 c4 b |
-  \af 2.\! gis='2.\> r4 |
-  a='4.\mp bes8 a4 g | f a2. |
-  a='4. a8 c4\< \af 4\! b |
-  d=''2.\mf \fermata r4 |
-  e=''4. e8 f4 e | d a2 b4 |
-  e,='4. a8\> a gis fis \af 8\! gis |
-  a='1\pp \bar "|."
+  a='4.\< \af 8\! a8 c4 b | \af 2.\! gis2.\> r4 |
+  a='4.\mp bes8 a4 g | f a2. | a4. a8 c4\< \af 4\! b |
+  d=''2.\mf \fermata r4 | e4. e8 f4 e | d a2 b4 |
+  e,='4. a8\> a gis fis \af 8\! gis | a='1\pp \bar "|."
 }
 {% endmacro %}
 

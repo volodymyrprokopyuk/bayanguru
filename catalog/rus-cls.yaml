@@ -102,10 +102,10 @@ pieces:
   # B2AK1987
   - { id: tsio, tit: Колыбельная,
       com: Т. Хренников, arr: А. Кирюхин, art: ipr, src: B2AK1987,
-      org: rus, sty: msc, gnr: lul, frm: mel, bss: stb, lvl: ela }
+      org: rus, sty: aut, gnr: lul, ton: ai, frm: mel, bss: stb, lvl: ela }
   - { id: tg2x, tit: Ходила младешенька по борочку, sub: rusfs,
       src: B2AK1987,
-      org: rus, sty: flk, gnr: sng, frm: [var, crd], bss: stb, lvl: elc }
+      org: rus, sty: flk, gnr: sng, frm: [var, cr5], bss: stb, lvl: elc }
   # FBB3BZ1982
   # p. 10
   # - { id: 3hw7, tit: Полифоническая пьеса,
