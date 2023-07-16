@@ -5,10 +5,9 @@ pieces:
   - { id: drrh, tit: Первые шаги,
       com: С. Майкапар, src: B0D1973,
       org: rus, sty: aut, gnr: chd, ton: cj, frm: mel, bss: stb, lvl: ela }
-  # p. 49
-  # - { id: xwt6, tit: Мы пойдем в лужок,
-  #     src: B0D1973, sub: rusfs,
-  #     org: rus, sty: flk, gnr: sng, ton: cj, frm: mel, bss: stb, lvl: ela }
+  - { id: xwt6, tit: Мы пойдем в лужок,
+      src: B0D1973, sub: rusfs,
+      org: rus, sty: flk, gnr: sng, ton: cj, frm: mel, bss: stb, lvl: ela }
   - { id: bj88, tit: Санки,
       com: М. Красев, src: B0D1973,
       org: rus, sty: aut, gnr: chd, ton: gj, frm: mel, bss: stb, lvl: ela }
