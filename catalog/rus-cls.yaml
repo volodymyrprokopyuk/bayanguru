@@ -92,10 +92,10 @@ pieces:
       org: rus, sty: aut, gnr: rmc, ton: gi, frm: in3, bss: stb, lvl: elb }
   - { id: eq9y, tit: Грушица, sub: rusfs,
       src: B2AK1979,
-      org: rus, sty: flk, gnr: sng, frm: in3, bss: stb, lvl: elb }
+      org: rus, sty: flk, gnr: sng, ton: bi, frm: in3, bss: stb, lvl: elb }
   - { id: xzce, tit: Каватина Людмилы, sub: 'из оперы \"Руслан и Людмила\"',
       com: М. Глинка, src: B2AK1979,
-      org: rus, sty: aut, gnr: pie, frm: mel, bss: stb, lvl: elb }
+      org: rus, sty: aut, gnr: pie, ton: gj, frm: mel, bss: stb, lvl: elb }
   - { id: e1d4, tit: Меланхолический вальс,
       com: А. Даргомыжский, src: B2AK1979,
       org: rus, sty: aut, gnr: vls, ton: gi, frm: dot, bss: stb, lvl: elb }
@@ -108,7 +108,7 @@ pieces:
       org: rus, sty: aut, gnr: lul, ton: ai, frm: mel, bss: stb, lvl: ela }
   - { id: tg2x, tit: Ходила младешенька по борочку, sub: rusfs,
       src: B2AK1987,
-      org: rus, sty: flk, gnr: sng, frm: [var, cr5], bss: stb, lvl: elc }
+      org: rus, sty: flk, gnr: sng, ton: [cj, ai], frm: [var, cr5], bss: stb, lvl: elc }
   # FBB3BZ1982
   # p. 10
   # - { id: 3hw7, tit: Полифоническая пьеса,

@@ -22,13 +22,9 @@
 \relative {
   \clef bass
   \key a \minor
-  a,=,4(-\stBass am!)-. am-. | d( dm!)-. dm-. |
-  a=,2 am!4-. | f@M!2 fM4-. |
-  a=,4( am!)-. am-. | d( dm!)-. dm-. |
-  f@M!2 fM4-. | a@m!2 am4-. |
-  e=4 eM!-. eM-. | a, am!-. am-. |
-  gis=,4 e@M!-. eM4-. | r e@M!-. eM4-. |
-  e'=4 e7!-. e7-. | a,=, am!-. am-. |
-  d@m!( a@m!2) | e+e7!4 a+am!2 |
+  a,=,4(-\stBass am!) am | d( dm!) dm | a2 am!4 | f@M!2 fM4 |
+  a=,4( am!) am | d( dm!) dm | f@M!2 fM4 | a@m!2 am4 |
+  e=4 eM! eM | a, am! am | gis e@M! eM4 | r e@M! eM4 |
+  e'=4 e7! e7 | a,=, am! am | d@m!( a@m!2) | e+e7!4 a+am!2 |
 }
 {% endmacro %}

@@ -3,9 +3,13 @@
 pieces:
   # Class
   # B0D1973
+  # p. 92
+  # - { id: v2x4, tit: Жучка і кіт, sub: czefs,
+  #     src: B0D1973,
+  #     org: cze, sty: flk, gnr: sng, ton: cj, frm: mel, bss: stb, lvl: ela }
   - { id: d2md, tit: Вісла, sub: polfs,
       src: B0D1973,
-      org: pol, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
+      org: pol, sty: flk, gnr: sng, ton: ai, frm: mel, bss: stb, lvl: ela }
   # B2AK1979
   - { id: p1vc, tit: Зозуленька, sub: polfs,
       src: B2AK1979,
