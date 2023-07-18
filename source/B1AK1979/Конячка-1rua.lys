@@ -1,6 +1,6 @@
 {% macro rightHand() %}
 \relative {
-  \tempo Moderato
+  \tempo Andante
   \clef treble
   \key d \minor
   \time 2/4
