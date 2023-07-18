@@ -24,6 +24,8 @@ const meta = {
   polfd: "Польський народний танець",
   czefs: "Чеська народна пісня",
   czefd: "Чеський народний танець",
+  svkfs: "Словацька народна пісня",
+  svkfd: "Словацький народний танець",
   // Piece arrangment type (art)
   arr: "Обр.", // обробка = arrangment (default)
   ipr: "Пер.", // переклад = interpratation
