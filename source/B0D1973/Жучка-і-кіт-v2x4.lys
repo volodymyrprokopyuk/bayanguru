@@ -13,8 +13,8 @@
   \clef treble
   \key c \major
   \time 2/4
-  {{ rh1("c'='16(\\mf", "e8) e | d16(") }}
-  {{ rh1("c='16(", "e d c e | d16") }} \bar "|."
+  {{ rh1("c'='16(\\mf", "e='8) e | d16(") }}
+  {{ rh1("c='16(", "e='16 d c e | d16") }} \bar "|."
 }
 {% endmacro %}
 
@@ -22,7 +22,7 @@
 \relative {
   \clef bass
   \key c \major
-  {{ lh1("c=8-\\stBass", "f8 fM!", "c= cM!") }}
-  {{ lh1("c=8", "d8 dm!", "c+cM!4") }}
+  {{ lh1("c=8-\\stBass", "f=8 fM!", "c= cM!") }}
+  {{ lh1("c=8", "d=8 dm!", "c+cM!4") }}
 }
 {% endmacro %}
