@@ -8,7 +8,7 @@ pieces:
       org: hun, sty: flk, gnr: sng, ton: di, frm: mel, bss: stb, lvl: ela }
   - { id: 9htb, tit: Віночок, sub: hunfs,
       src: B1AK1979,
-      org: hun, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
+      org: hun, sty: flk, gnr: sng, ton: cj, frm: mel, bss: stb, lvl: ela }
   # B2AK1979
   - { id: 5qqn, tit: Чардаш, sub: hunfd,
       src: B2AK1979,
