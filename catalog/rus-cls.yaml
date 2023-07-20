@@ -52,10 +52,13 @@ pieces:
   - { id: sgyu, tit: Новогодняя полька,
       com: А. Александров, src: B1AK1979,
       org: rus, sty: flk, gnr: plk, ton: aj, frm: mel, bss: stb, lvl: ela }
+  - { id: ca30, tit: Физкультурный марш,
+      com: М. Раухвергер, src: B1AK1979,
+      org: rus, sty: aut, gnr: mrc, ton: dj, frm: in3, bss: stb, lvl: ela }
   # p. 70
-  # - { id: ca30, tit: Физкультурный марш,
-  #     com: М. Раухвергер, src: B1AK1979,
-  #     org: rus, sty: aut, gnr: mrc, ton: dj, frm: in3, bss: stb, lvl: ela }
+  # - { id: ottj, tit: Речная песенка,
+  #     com: Т. Хренников, src: B1AK1979,
+  #     org: rus, sty: aut, gnr: sng, ton: fj, frm: in3, bss: stb, lvl: ela }
   - { id: f026, tit: Плясовая,
       com: Л. Бирнов, src: B1AK1979,
       org: rus, sty: aut, gnr: dnc, ton: gj, frm: mel, bss: stb, lvl: ela }

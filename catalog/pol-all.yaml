@@ -22,6 +22,10 @@ pieces:
   # - { id: 4zsm, tit: Чеський народний танець,
   #     src: B1AK1979,
   #     org: cze, sty: flk, gnr: dnc, ton: gj, frm: mel, bss: stb, lvl: ela }
+  # p. 74
+  # - { id: ipw4, tit: Маленька рибка, sub: czefs,
+  #     src: B1AK1979,
+  #     org: cze, sty: flk, gnr: sng, ton: dj, frm: in3, bss: stb, lvl: ela }
   # B2AK1979
   - { id: p1vc, tit: Зозуленька, sub: polfs,
       src: B2AK1979,
