@@ -10,10 +10,9 @@ pieces:
       src: B0D1973,
       org: pol, sty: flk, gnr: sng, ton: ai, frm: mel, bss: stb, lvl: ela }
   # B1AK1979
-  # p. 48
-  # - { id: 41bl, tit: Латвійська народна полька,
-  #     arr: А. Жилінський, art: ipr, src: B1AK1979,
-  #     org: lva, sty: flk, gnr: plk, ton: cj, frm: mel, bss: stb, lvl: ela }
+  - { id: 41bl, tit: Латвійська народна полька,
+      arr: А. Жилінський, art: ipr, src: B1AK1979,
+      org: lva, sty: flk, gnr: plk, ton: cj, frm: mel, bss: stb, lvl: ela }
   # p. 49
   # - { id: busq, tit: Маленький краков'як,
   #     src: B1AK1979,
@@ -26,6 +25,11 @@ pieces:
   # - { id: ipw4, tit: Маленька рибка, sub: czefs,
   #     src: B1AK1979,
   #     org: cze, sty: flk, gnr: sng, ton: dj, frm: in3, bss: stb, lvl: ela }
+  # B1AK1985
+  # p. 33
+  # - { id: x378, tit: На добраніч, sub: czefs,
+  #     src: B1AK1985,
+  #     org: cze, sty: flk, gnr: lul, ton: ai, frm: mel, bss: stb, lvl: ela }
   # B2AK1979
   - { id: p1vc, tit: Зозуленька, sub: polfs,
       src: B2AK1979,
