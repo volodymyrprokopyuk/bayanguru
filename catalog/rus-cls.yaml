@@ -94,6 +94,10 @@ pieces:
       arr: М. Чайкін, art: ipr, com: М. Блантер, src: B1AK1985,
       org: rus, sty: aut, gnr: mil, ton: fisi, frm: in3, bss: stb, lvl: ela }
   # B2AK1979
+  # p. 7
+  # - { id: jlp4, tit: Марш юных пионеров,
+  #     com: С. Дешкин, src: B2AK1979,
+  #     org: rus, sty: aut, gnr: mrc, ton: gj, frm: [cr5, tu3], bss: stb, lvl: elb }
   - { id: jquj, tit: Ходила младешенька по борочку, sub: rusfs,
       src: B2AK1979,
       org: rus, sty: flk, gnr: sng, ton: [cj, ai], frm: [var, in3], bss: stb, lvl: elb }

@@ -9,7 +9,7 @@ pieces:
   # B1AK1985
   - { id: v99z, tit: Янка, sub: blrfd,
       arr: М. Чайкін, src: B1AK1985,
-      org: blr, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: ela }
+      org: blr, sty: flk, gnr: dnc, ton: dj, frm: mel, bss: stb, lvl: ela }
   # FBB3BZ1982
   # p. 26
   # - { id: wnc5, tit: Прилетіли гуси, sub: blrfs,
