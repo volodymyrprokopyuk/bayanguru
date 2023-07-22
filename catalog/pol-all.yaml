@@ -32,10 +32,10 @@ pieces:
   # B2AK1979
   - { id: p1vc, tit: Зозуленька, sub: polfs,
       src: B2AK1979,
-      org: pol, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
+      org: pol, sty: flk, gnr: sng, ton: fj, frm: in3, bss: stb, lvl: ela }
 
   # Tutorial
   # BTBC1936
   - { id: isnd, tit: Краков'як, sub: polfd,
       arr: М. Чайкін, src: BTBC1936,
-      org: pol, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: ela }
+      org: pol, sty: flk, gnr: dnc, ton: gj, frm: mel, bss: stb, lvl: ela }
