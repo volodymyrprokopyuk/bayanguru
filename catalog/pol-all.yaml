@@ -16,10 +16,9 @@ pieces:
   - { id: busq, tit: Маленький краков'як,
       src: B1AK1979,
       org: pol, sty: flk, gnr: dnc, ton: gj, frm: mel, bss: stb, lvl: ela }
-  # p. 51
-  # - { id: 4zsm, tit: Чеський народний танець,
-  #     src: B1AK1979,
-  #     org: cze, sty: flk, gnr: dnc, ton: gj, frm: mel, bss: stb, lvl: ela }
+  - { id: 4zsm, tit: Чеський народний танець,
+      src: B1AK1979,
+      org: cze, sty: flk, gnr: dnc, ton: gj, frm: mel, bss: stb, lvl: ela }
   # p. 74
   # - { id: ipw4, tit: Маленька рибка, sub: czefs,
   #     src: B1AK1979,
