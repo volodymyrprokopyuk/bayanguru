@@ -28,5 +28,12 @@
 \relative {
   \clef bass
   \key b \minor
+  R1 | R1 | b,=,8[ r bm!] r bm[ r bm] r |
+  e+em![ r e+em] r fis+fisM! r fis+fisM4 |
+
+  \rep 3 { e+em!8[ r b+bm!] r } b+bm r b=,16( a g fis) |
+  \rep 2 { e+em!8[ r b+bm!] r } | e+em![ r fis+fis7!] r b+bm! r b+bm4 |
+
+  R1 | R1 | b=,8[ r a] r g[ r fis] r | e+em![ r a+a7!] r d+dM!2 |
 }
 {% endmacro %}
