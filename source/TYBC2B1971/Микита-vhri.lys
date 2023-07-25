@@ -5,10 +5,8 @@
   \key g \major
   \time 2/4
   \repeat volta 2 {
-    <g'=' b>16(\mf <a c> <b d>4) 8 |
-    <c='' e>8 <b d> <a c> <g b> |
-    <fis=' a>16( <g b> <a c>4) 8 |
-    <b=' d>8 <a c> <g b> <d a'> |
+    <g'=' b>16(\mf <a c> <b d>4) 8 | <c e> <b d> <a c> <g b> |
+    <fis=' a>16( <g b> <a c>4) 8 | <b d> <a c> <g b> <d a'> |
     \rep 2 { g='8 b d,='4-> | }
     g='8 b <fis a> b16( a | g8) g g4-> |
     \rep 2 { g='8 b <d,=' d'>4-> | }

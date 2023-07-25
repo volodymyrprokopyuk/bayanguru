@@ -278,6 +278,10 @@ pieces:
   - { id: i11j, tit: Бджілка,
       com: К. Мясков, src: B2AK1987,
       org: ukr, sty: aut, gnr: chd, ton: gj, frm: [mel, jpm, acc], bss: stb, lvl: elb }
+  # p. 65
+  # - { id: 9hwt, tit: Танець,
+  #     com: І. Беркович, src: B2AK1987,
+  #     org: ukr, sty: aut, gnr: dnc, ton: [bi, dj], frm: mel, bss: stb, lvl: elb }
   - { id: zvpg, tit: Козачок, sub: ukrfd,
       src: B2AK1987,
       org: ukr, sty: flk, gnr: koz, ton: [gj, gi], frm: [var, in3, acc], bss: stb, lvl: elb }

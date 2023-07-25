@@ -128,6 +128,10 @@ pieces:
   - { id: 1hva, tit: Как пойду я на быструю речку, sub: rusfs,
       src: B2AK1979,
       org: rus, sty: flk, gnr: sng, ton: ei, frm: [var, in3], bss: stb, lvl: elc }
+  # p. 92
+  # - { id: arni, tit: Вальс,
+  #     com: А. Грибоедов, src: B2AK1979,
+  #     org: rus, sty: aut, gnr: vls, ton: [ei, gj, cj], frm: mel, bss: stb, lvl: elb }
   # B2AK1987
   - { id: tsio, tit: Колыбельная,
       com: Т. Хренников, arr: А. Кирюхин, art: ipr, src: B2AK1987,

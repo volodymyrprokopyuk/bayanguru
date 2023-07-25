@@ -12,4 +12,4 @@ pieces:
   # B2AK1979
   - { id: 5qqn, tit: Чардаш, sub: hunfd,
       src: B2AK1979,
-      org: hun, sty: flk, gnr: dnc, frm: mel, bss: stb, lvl: elb }
+      org: hun, sty: flk, gnr: dnc, ton: gi, frm: dot, bss: stb, lvl: elb }
