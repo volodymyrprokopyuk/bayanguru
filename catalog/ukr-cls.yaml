@@ -188,10 +188,9 @@ pieces:
   - { id: iebw, tit: Святковий вальс,
       com: А. Філіпенко, src: B1AK1985,
       org: ukr, sty: aut, gnr: vls, ton: eesj, frm: in3, bss: stb, lvl: ela }
-  # p. 47
-  # - { id: 4g7a, tit: Марш,
-  #     com: Є. Юцевич, src: B1AK1985,
-  #     org: ukr, sty: aut, gnr: mrc, ton: cj, frm: mel, bss: stb, lvl: ela }
+  - { id: 4g7a, tit: Марш,
+      com: Є. Юцевич, src: B1AK1985,
+      org: ukr, sty: aut, gnr: mrc, ton: cj, frm: mel, bss: stb, lvl: ela }
   - { id: 3vej, tit: Ой піду я до гаю,
       com: Д. Січинський, src: B1AK1985,
       org: ukr, sty: flk, gnr: sng, ton: di, frm: mel, bss: stb, lvl: ela }
