@@ -23,10 +23,9 @@ pieces:
       src: B1AK1979,
       org: cze, sty: flk, gnr: sng, ton: dj, frm: in3, bss: stb, lvl: ela }
   # B1AK1985
-  # p. 33
-  # - { id: x378, tit: На добраніч, sub: czefs,
-  #     src: B1AK1985,
-  #     org: cze, sty: flk, gnr: lul, ton: ai, frm: mel, bss: stb, lvl: ela }
+  - { id: x378, tit: На добраніч, sub: czefs,
+      src: B1AK1985,
+      org: cze, sty: flk, gnr: lul, ton: ai, frm: mel, bss: stb, lvl: ela }
   # B2AK1979
   - { id: p1vc, tit: Зозуленька, sub: polfs,
       src: B2AK1979,
