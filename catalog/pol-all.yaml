@@ -30,10 +30,9 @@ pieces:
   - { id: p1vc, tit: Зозуленька, sub: polfs,
       src: B2AK1979,
       org: pol, sty: flk, gnr: sng, ton: fj, frm: in3, bss: stb, lvl: ela }
-  # p. 58
-  # - { id: 1wgi, tit: Словацька полька,
-  #     src: B2AK1979,
-  #     org: svk, sty: flk, gnr: plk, ton: aj, frm: in3, bss: stb, lvl: elb }
+  - { id: 1wgi, tit: Словацька полька,
+      src: B2AK1979,
+      org: svk, sty: flk, gnr: plk, ton: aj, frm: in3, bss: stb, lvl: elb }
 
   # Tutorial
   # BTBC1936
