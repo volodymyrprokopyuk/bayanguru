@@ -62,10 +62,9 @@ pieces:
       com: Л. Бирнов, src: B1AK1979,
       org: rus, sty: aut, gnr: dnc, ton: gj, frm: mel, bss: stb, lvl: ela }
   # B1AK1985
-  # p. 31
-  # - { id: esj3, tit: Игра,
-  #     com: Ю. Шишаков, src: B1AK1985,
-  #     org: rus, sty: aut, gnr: chd, ton: cj, frm: mel, bss: stb, lvl: ela }
+  - { id: esj3, tit: Игра,
+      com: Ю. Шишаков, src: B1AK1985,
+      org: rus, sty: aut, gnr: chd, ton: cj, frm: mel, bss: stb, lvl: ela }
   - { id: r9dx, tit: Родина, sub: rusfs,
       src: B1AK1985,
       org: rus, sty: flk, gnr: sng, ton: ei, frm: mel, bss: stb, lvl: ela }
