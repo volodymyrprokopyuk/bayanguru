@@ -47,7 +47,7 @@
   \key a \major
   {{ lh1("a,=,8-\\stBass") }}
   {{ lh2() }}
-  \rep 2 { fis=8 fism! cis= fis@m | } \rep 2 { b=,8 bm! d= b@m | }
+  \rep 2 { fis=8 fism! cis= fis@m | } \rep 2 { b=,8( bm!) d= b@m | }
   {{ lh2() }}
 
   {{ lh3("a,=,8") }} {{ lh4() }} | a,8 aM! e' a@M |
