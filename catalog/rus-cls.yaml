@@ -71,10 +71,9 @@ pieces:
   - { id: wtq2, tit: "Я вечор, млада", sub: rusfs,
       src: B1AK1985,
       org: rus, sty: flk, gnr: sng, ton: gj, frm: mel, bss: stb, lvl: ela }
-  # p. 48
-  # - { id: zist, tit: Песенка,
-  #     com: А. Гурилев, src: B1AK1985,
-  #     org: rus, sty: aut, gnr: chd, ton: cj, frm: mel, bss: stb, lvl: ela }
+  - { id: zist, tit: Песенка,
+      com: А. Гурилев, src: B1AK1985,
+      org: rus, sty: aut, gnr: chd, ton: cj, frm: mel, bss: stb, lvl: ela }
   - { id: r1gr, tit: Выйду ль я на реченьку, sub: rusfs,
       src: B1AK1985,
       org: rus, sty: flk, gnr: sng, ton: di, frm: mel, bss: stb, lvl: ela }
