@@ -7,10 +7,10 @@ pieces:
       org: ukr, sty: flk, gnr: plk, ton: ai, frm: mel, bss: stb, lvl: ela }
   - { id: cckj, tit: За городом качки пливуть, sub: ukrfs,
       arr: М. Чайкін, art: ipr, src: BTBC1936,
-      org: ukr, sty: flk, gnr: chd, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: chd, ton: fj, frm: [mel, rep], bss: stb, lvl: ela }
   - { id: a3ew, tit: Ой піду я понад лугом, sub: ukrfs,
       arr: М. Чайкін, src: BTBC1936,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: sng, ton: [fj, di], frm: mel, bss: stb, lvl: ela }
   - { id: isd6, tit: Гопак, sub: ukrfd,
       arr: М. Чайкін, src: BTBC1936,
       org: ukr, sty: flk, gnr: gop, frm: mel, bss: stb, lvl: ela }

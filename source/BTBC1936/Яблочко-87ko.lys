@@ -13,10 +13,8 @@
   \clef treble
   \key d \minor
   \time 2/4
-  d''=''4\mf d | a8 c4 a8 |
-  bes='8 g d'4 | a8 f4 f8 |
-  {{ rh1() }}
-  {{ rh1() }} \bar "|."
+  d''=''4\mf d | a8 c4 a8 | bes g d'4 | a8 f4 f8 |
+  {{ rh1() }} {{ rh1() }} \bar "|."
 }
 {% endmacro %}
 
@@ -24,9 +22,7 @@
 \relative {
   \clef bass
   \key d \minor
-  d=8-\stBass dm! d dm | d dM! d d7! |
-  g,=,8 gm! g gm | d' dm! d dm |
-  {{ lh1("r dm") }}
-  {{ lh1("d+dm4") }}
+  d=8-\stBass dm! d dm | d dM! d d7! | g, gm! g gm | d' dm! d dm |
+  {{ lh1("r dm") }} {{ lh1("d+dm4") }}
 }
 {% endmacro %}
