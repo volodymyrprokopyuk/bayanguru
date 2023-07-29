@@ -68,10 +68,9 @@ pieces:
   - { id: r9dx, tit: Родина, sub: rusfs,
       src: B1AK1985,
       org: rus, sty: flk, gnr: sng, ton: ei, frm: mel, bss: stb, lvl: ela }
-  # p. 32
-  # - { id: wtq2, tit: "Я вечор, млада", sub: rusfs,
-  #     src: B1AK1985,
-  #     org: rus, sty: flk, gnr: sng, ton: gj, frm: mel, bss: stb, lvl: ela }
+  - { id: wtq2, tit: "Я вечор, млада", sub: rusfs,
+      src: B1AK1985,
+      org: rus, sty: flk, gnr: sng, ton: gj, frm: mel, bss: stb, lvl: ela }
   # p. 48
   # - { id: zist, tit: Песенка,
   #     com: А. Гурилев, src: B1AK1985,
