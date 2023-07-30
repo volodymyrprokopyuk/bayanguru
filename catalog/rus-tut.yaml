@@ -19,10 +19,10 @@ pieces:
       org: rus, sty: flk, gnr: sng, ton: di, frm: [in3, cr5, tu3, dot], bss: stb, lvl: elb }
   - { id: oz1w, tit: При долине куст калины,
       com: А. Новиков, arr: Н. Речменский, art: ipr, src: BTBC1936,
-      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
+      org: rus, sty: flk, gnr: sng, ton: di, frm: in3, bss: stb, lvl: elb }
   - { id: p26a, tit: Барыня, sub: rusfd,
       arr: М. Чайкін, src: BTBC1936,
-      org: rus, sty: flk, gnr: dnc, frm: var, bss: stb, lvl: elb }
+      org: rus, sty: flk, gnr: dnc, ton: cj, frm: [var, tu3, acc, syn], bss: stb, lvl: elb }
   - { id: frcu, tit: "Ах ты, ноченька", sub: rusfs,
       arr: М. Чайкін, src: BTBC1936,
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
