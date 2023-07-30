@@ -13,10 +13,10 @@ pieces:
       org: rus, sty: flk, gnr: sng, ton: eesj, frm: dot, bss: stb, lvl: ela }
   - { id: 6u3l, tit: Ленинские горы,
       com: Ю. Милютин, arr: А. Басурманов, art: ipr, src: BTBC1936,
-      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elb }
+      org: rus, sty: aut, gnr: pie, ton: gj, frm: syn, bss: [stb, syn], lvl: elb }
   - { id: qt7k, tit: Есть на Волге утес, sub: rusfs,
       arr: А. Холминов, src: BTBC1936,
-      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
+      org: rus, sty: flk, gnr: sng, ton: di, frm: [in3, cr5, tu3, dot], bss: stb, lvl: elb }
   - { id: oz1w, tit: При долине куст калины,
       com: А. Новиков, arr: Н. Речменский, art: ipr, src: BTBC1936,
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
