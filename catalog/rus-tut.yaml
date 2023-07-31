@@ -25,16 +25,16 @@ pieces:
       org: rus, sty: flk, gnr: dnc, ton: cj, frm: [var, tu3, acc, syn], bss: stb, lvl: elb }
   - { id: frcu, tit: "Ах ты, ноченька", sub: rusfs,
       arr: М. Чайкін, src: BTBC1936,
-      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
+      org: rus, sty: flk, gnr: sng, ton: ei, frm: mel, bss: [stb, syn], lvl: ela }
   - { id: hjff, tit: Костры горят далекие,
       com: Б. Мокроусов, arr: А. Басурманов, art: ipr, src: BTBC1936,
-      org: rus, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elb }
+      org: rus, sty: aut, gnr: sng, ton: di, frm: in3, bss: stb, lvl: elb }
   - { id: 7nax, tit: Ермак, sub: rusfs,
       arr: М. Чайкін, art: ipr, src: BTBC1936,
-      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
+      org: rus, sty: flk, gnr: sng, ton: ei, frm: in3, bss: stb, lvl: elb }
   - { id: 74jq, tit: Уральская рябинушка,
       com: Е. Родыгин, arr: А. Басурманов, art: ipr, src: BTBC1936,
-      org: rus, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: ela }
+      org: rus, sty: aut, gnr: sng, ton: di, frm: in3, bss: stb, lvl: ela }
   - { id: 7s64, tit: Жди солдата,
       com: Б. Мокроусов, arr: М. Чайкін, art: ipr, src: BTBC1936,
       org: rus, sty: msc, gnr: mil, frm: mel, bss: stb, lvl: elb }
