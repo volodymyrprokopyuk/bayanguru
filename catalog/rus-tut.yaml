@@ -37,13 +37,13 @@ pieces:
       org: rus, sty: aut, gnr: sng, ton: di, frm: in3, bss: stb, lvl: ela }
   - { id: 7s64, tit: Жди солдата,
       com: Б. Мокроусов, arr: М. Чайкін, art: ipr, src: BTBC1936,
-      org: rus, sty: msc, gnr: mil, frm: mel, bss: stb, lvl: elb }
+      org: rus, sty: aut, gnr: mil, ton: di, frm: in3, bss: stb, lvl: elb }
   - { id: blt6, tit: Родина, sub: rusfs,
       com: В. Смыслов, arr: М. Чайкін, art: hrm, src: BTBC1936,
-      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
+      org: rus, sty: flk, gnr: sng, ton: di, frm: in3, bss: stb, lvl: elb }
   - { id: l1zm, tit: Лирическая,
       com: Н. Поликарпов, src: BTBC1936,
-      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elb }
+      org: rus, sty: aut, gnr: pie, ton: dj, frm: [in3, syn], bss: stb, lvl: elb }
   - { id: sqwg, tit: Уваровские частушки,
       arr: С. Аксюк, src: BTBC1936,
       org: rus, sty: flk, gnr: pry, frm: var, bss: stb, lvl: elb }
