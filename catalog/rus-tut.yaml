@@ -46,13 +46,13 @@ pieces:
       org: rus, sty: aut, gnr: pie, ton: dj, frm: [in3, syn], bss: stb, lvl: elb }
   - { id: sqwg, tit: Уваровские частушки,
       arr: С. Аксюк, src: BTBC1936,
-      org: rus, sty: flk, gnr: pry, frm: var, bss: stb, lvl: elb }
+      org: rus, sty: flk, gnr: pry, ton: fj, frm: [var, in3], bss: stb, lvl: elb }
   - { id: 9lu3, tit: Волжские припевки,
       com: Ю. Щекотов, arr: А. Басурманов, art: ipr, src: BTBC1936,
-      org: rus, sty: flk, gnr: pry, frm: crd, bss: stb, lvl: elb }
+      org: rus, sty: flk, gnr: pry, ton: dj, frm: [in3, cr5], bss: stb, lvl: elb }
   - { id: wkmw, tit: Не сама машина ходит, sub: Алтайские частушки,
       arr: Н. Кутузов, src: BTBC1936,
-      org: rus, sty: flk, gnr: pry, frm: crd, bss: stb, lvl: elc }
+      org: rus, sty: flk, gnr: pry, frm: [in3, cr5, syn], bss: stb, lvl: elc }
   - { id: ecde, tit: Мчатся гуси вереницей, sub: rusfs,
       com: У. Жук, arr: М. Чайкін, art: hrm, src: BTBC1936,
       org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
