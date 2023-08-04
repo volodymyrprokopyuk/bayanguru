@@ -77,10 +77,9 @@ pieces:
   - { id: r1gr, tit: Выйду ль я на реченьку, sub: rusfs,
       src: B1AK1985,
       org: rus, sty: flk, gnr: sng, ton: di, frm: mel, bss: stb, lvl: ela }
-  # p. 58
-  # - { id: 7zfc, tit: Песня,
-  #     com: М. Михайлов, src: B1AK1985,
-  #     org: rus, sty: aut, gnr: sng, ton: ci, frm: mel, bss: stb, lvl: ela }
+  - { id: 7zfc, tit: Песня,
+      com: М. Михайлов, src: B1AK1985,
+      org: rus, sty: aut, gnr: sng, ton: ci, frm: mel, bss: stb, lvl: ela }
   - { id: erhk, tit: Рыбка,
       com: М. Красев, src: B1AK1985,
       org: rus, sty: aut, gnr: chd, ton: ej, frm: mel, bss: stb, lvl: ela }

@@ -171,7 +171,7 @@ pieces:
       org: ukr, sty: flk, gnr: sng, ton: cj, frm: mel, bss: stb, lvl: ela }
   - { id: z48n, tit: На вулиці скрипка грає, sub: ukrfs,
       src: B1AK1979,
-      org: ukr, sty: flk, gnr: sng, ton: di, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: sng, ton: di, frm: [mel, rep], bss: stb, lvl: ela }
   - { id: 5e6l, tit: Полька,
       src: B1AK1979,
       org: ukr, sty: flk, gnr: plk, ton: besj, frm: in3, bss: stb, lvl: ela }
