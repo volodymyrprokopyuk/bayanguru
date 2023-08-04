@@ -1,0 +1,37 @@
+{% macro rightHand() %}
+\relative {
+  \tempo "Tempo di valzer"
+  \clef treble
+  \key e \minor
+  \time 3/4
+  \repeat segno 2 {
+    \volta 1
+    \repeat volta 2 {
+      b''=''8(\p c_\aDol b g e b' | g b b, b' g b) |
+      a=''8( b a fis dis a' | fis a b, a' fis a) |
+      g=''8( a g e\< b g') | fis( \af 8\! g fis c a fis') |
+      \alternative {
+        \volta 1 {
+          e=''8( fis e cis g e') | dis( b ais'\> b, b' \af 8\! b,=') |
+        }
+        \volta 2 {
+          dis=''8(\> e dis b fis \af 8\! dis' | e=''2) r4 \fine \bar "||"
+        }
+      }
+    }
+
+    \volta 2
+    d'='''8(\mp e d b g d' | b d d, d' b d) |
+    cis='''8( d cis bes\< b cis | bes \af 8\! cis e, cis' bes cis) |
+    c='''8(\> d c a ees c') | b( c b g d \af 8\! g) |
+    a=''8(\mf\< e a e g \af 8\! e | fis d cis'\> d, d' \af 8\! d,) |
+  }
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\relative {
+  \clef bass
+  \key e \minor
+}
+{% endmacro %}

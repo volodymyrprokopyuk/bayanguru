@@ -1,5 +1,6 @@
 {% from "util.lys" import
-   prelude, logo, scoreConfig, paperLayout, pieceTitleMarkup, pieceScore %}
+   prelude, logo, scoreConfig, voiceConfig, paperLayout, pieceTitleMarkup,
+   pieceScore %}
 
 {{ prelude() }}
 
@@ -26,9 +27,8 @@
 {% endmacro %}
 
 \layout {
-  \context {
-    {{ scoreConfig() }}
-  }
+  {{ scoreConfig() }}
+  {{ voiceConfig() }}
 }
 
 \paper {

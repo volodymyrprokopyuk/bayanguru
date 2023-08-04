@@ -70,9 +70,8 @@
 {% endmacro %}
 
 \layout {
-  \context {
-    {{ scoreConfig() }}
-  }
+  {{ scoreConfig() }}
+  {{ voiceConfig() }}
 }
 
 \paper {
