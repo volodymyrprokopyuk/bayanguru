@@ -52,13 +52,13 @@ pieces:
       org: rus, sty: flk, gnr: pry, ton: dj, frm: [in3, cr5], bss: stb, lvl: elb }
   - { id: wkmw, tit: Не сама машина ходит, sub: Алтайские частушки,
       arr: Н. Кутузов, src: BTBC1936,
-      org: rus, sty: flk, gnr: pry, frm: [in3, cr5, syn], bss: stb, lvl: elc }
+      org: rus, sty: flk, gnr: pry, ton: fj, frm: [in3, cr5, syn], bss: stb, lvl: elc }
   - { id: ecde, tit: Мчатся гуси вереницей, sub: rusfs,
       com: У. Жук, arr: М. Чайкін, art: hrm, src: BTBC1936,
-      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
+      org: rus, sty: flk, gnr: sng, ton: di, frm: in3, bss: [stb, syn], lvl: elb }
   - { id: vmd4, tit: "Цвети, наш край",
       com: С. Туликов, arr: А. Басурманов, art: ipr, src: BTBC1936,
-      org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: elb }
+      org: rus, sty: aut, gnr: pie, ton: [eesj, ci], frm: in3, bss: [stb, syn], lvl: elb }
   - { id: s31k, tit: "Где же вы теперь, друзья-однополчане",
       com: В. Соловьев-Седой, arr: А. Басурманов, art: ipr, src: BTBC1936,
       org: rus, sty: msc, gnr: mil, frm: mel, bss: stb, lvl: elb }
