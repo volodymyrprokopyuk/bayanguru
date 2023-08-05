@@ -61,10 +61,10 @@ pieces:
       org: rus, sty: aut, gnr: pie, ton: [eesj, ci], frm: in3, bss: [stb, syn], lvl: elb }
   - { id: s31k, tit: "Где же вы теперь, друзья-однополчане",
       com: В. Соловьев-Седой, arr: А. Басурманов, art: ipr, src: BTBC1936,
-      org: rus, sty: msc, gnr: mil, frm: mel, bss: stb, lvl: elb }
+      org: rus, sty: aut, gnr: mil, ton: ei, frm: in3, bss: stb, lvl: elb }
   - { id: 1czf, tit: Карело-финская полька,
       arr: Б. Тихонов, src: BTBC1936,
-      org: rus, sty: flk, gnr: plk, frm: var, bss: stb, lvl: elb }
+      org: rus, sty: flk, gnr: plk, ton: [ci, fi], frm: [var tu3], bss: stb, lvl: elb }
   # BTB1978
   - { id: lknz, tit: "Ах ты, зимушка-зима", sub: rusfs,
       arr: Л. Захарова, art: ipr, src: BTB1978,
