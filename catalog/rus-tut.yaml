@@ -68,7 +68,7 @@ pieces:
   # BTB1978
   - { id: lknz, tit: "Ах ты, зимушка-зима", sub: rusfs,
       arr: Л. Захарова, art: ipr, src: BTB1978,
-      org: rus, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: ela }
+      org: rus, sty: flk, gnr: sng, ton: ai, frm: mel, bss: stb, lvl: ela }
   - { id: od7f, tit: Ивушка,
       com: Г. Пономаренко, arr: Л. Захарова, art: ipr, src: BTB1978,
       org: rus, sty: msc, gnr: pie, frm: mel, bss: stb, lvl: ela }

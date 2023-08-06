@@ -16,14 +16,14 @@ pieces:
       org: ukr, sty: flk, gnr: gop, ton: [dj, gj], frm: mel, bss: stb, lvl: ela }
   - { id: vf9h, tit: Козачок, sub: ukrfd,
       arr: М. Різоль, src: BTBC1936,
-      org: ukr, sty: flk, gnr: koz, frm: [var, crd], bss: [stb, pub], lvl: elb }
+      org: ukr, sty: flk, gnr: koz, ton: [gj, dj, ei], frm: [var, cr5], bss: [stb, pub], lvl: elb }
   # BTB1978
   - { id: vwad, tit: "Чорнії брови, карії очі", sub: ukrfs,
       src: BTB1978,
-      org: ukr, sty: flk, gnr: rmc, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: rmc, ton: di, frm: mel, bss: stb, lvl: ela }
   - { id: brku, tit: Стоїть гора високая, sub: ukrfs,
       src: BTB1978,
-      org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elb }
+      org: ukr, sty: flk, gnr: sng, ton: bi, frm: [in3, in6], bss: stb, lvl: elb }
   - { id: tzb9, tit: Черемшина,
       com: В. Михайлюк, arr: А. Басурманов, art: ipr, src: BTB1978,
       org: ukr, sty: msc, gnr: sng, frm: crd, bss: stb, lvl: elb }
