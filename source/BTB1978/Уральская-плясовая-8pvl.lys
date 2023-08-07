@@ -1,6 +1,6 @@
 {% macro rightHand() %}
 \relative {
-  \tempo Allegretto
+  \tempo Allegro
   \clef treble
   \key a \major
   \time 2/4
@@ -24,14 +24,10 @@
   \clef bass
   \key a \major
   e=8-\stBass e7! b e@7 | a8 aM! cis a@M |
-  \rep 3 {
-    e=8 e7! b e@7 | a8 aM! cis= a@M |
-  }
+  \rep 3 { e=8 e7! b e@7 | a8 aM! cis= a@M | }
 
   \key e \major
-  \rep 3 {
-    b=,8 b7! fis b@7 | e'8 eM! gis,=, e@M |
-  }
+  \rep 3 { b=,8 b7! fis b@7 | e'8 eM! gis,=, e@M | }
   b=,8 b7! fis b@7 | e'=8 eM! e+eM4 |
 }
 {% endmacro %}
