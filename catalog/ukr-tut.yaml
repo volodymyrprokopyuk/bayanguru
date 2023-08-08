@@ -26,7 +26,7 @@ pieces:
       org: ukr, sty: flk, gnr: sng, ton: bi, frm: [in3, in6], bss: stb, lvl: elb }
   - { id: tzb9, tit: Черемшина,
       com: В. Михайлюк, arr: А. Басурманов, art: ipr, src: BTB1978,
-      org: ukr, sty: aut, gnr: sng, frm: cr5, bss: stb, lvl: elb }
+      org: ukr, sty: aut, gnr: sng, ton: ei, frm: cr5, bss: stb, lvl: elb }
   - { id: ndwb, tit: Реве та стогне Дніпр широкий,
       com: Д. Крижанівський, arr: А. Басурманов, art: ipr, src: BTB1978,
-      org: ukr, sty: msc, gnr: sng, frm: crd, bss: pub, lvl: elb }
+      org: ukr, sty: aut, gnr: sng, ton: di, frm: cr5, bss: pub, lvl: elb }
