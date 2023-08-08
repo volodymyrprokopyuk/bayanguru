@@ -80,13 +80,13 @@ pieces:
       org: rus, sty: flk, gnr: dnc, ton: [aj, ej], frm: mel, bss: stb, lvl: ela }
   - { id: 5rl3, tit: Барыня, sub: rusfd,
       arr: Л. Захарова, art: ipr, src: BTB1978,
-      org: rus, sty: flk, gnr: dnc, frm: var, bss: stb, lvl: elb }
+      org: rus, sty: flk, gnr: dnc, ton: gj, frm: [var, jmp], bss: stb, lvl: elb }
   - { id: jh3h, tit: Елечки-метелочки, sub: Сибирские народные припевки,
       arr: Л. Захарова, art: ipr, src: BTB1978,
-      org: rus, sty: flk, gnr: pry, frm: mel, bss: stb, lvl: ela }
+      org: rus, sty: flk, gnr: pry, frm: in3, bss: stb, lvl: elb }
   - { id: gm8m, tit: "С чего начинается родина?",
       com: В. Баснер, arr: А. Басурманов, art: ipr, src: BTB1978,
-      org: rus, sty: msc, gnr: sng, frm: mel, bss: stb, lvl: elb }
+      org: rus, sty: aut, gnr: sng, ton: ei, frm: [in3, syn], bss: [stb, syn], lvl: elb }
   - { id: 5h39, tit: А где мне взять такую песню,
       com: Г. Пономаренко, arr: Л. Захарова, art: ipr, src: BTB1978,
       org: rus, sty: msc, gnr: sng, frm: [crd, pph], bss: stb, lvl: elc }

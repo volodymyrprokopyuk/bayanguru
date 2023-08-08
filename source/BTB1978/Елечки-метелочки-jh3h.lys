@@ -1,26 +1,21 @@
 {% macro rh1(a, b) %}
   \repeat volta 2 {
-    {{ a }} <g b>8. <fis a>16 |
-    {{ b }} <b d>8 <a c> |
+    {{ a }} <g b>8. <fis a>16 | {{ b }} <b d>8 <a c> |
     <g=' b>8 8 8 <fis a> |
     \alternative {
-      \volta 1 {
-        <a=' c>8 <g b> e16 fis g a=' |
-      }
-      \volta 2 { <a=' c>8 <g b> e='4 }
+      \volta 1 { <a=' c>8 <g b> e16 fis g a=' | }
+      \volta 2 { <a=' c>8 <g b> e='4 | }
     }
   }
 {% endmacro %}
 
 {% macro lh1(a, b) %}
-  {{ a }} em! a, am! |
-  e'=8 em! e em |
-  b=,8 b7! e em! | b b7! {{ b }} |
+  {{ a }} em! a, am! | e' em! e em | b b7! e em! | b b7! {{ b }} |
 {% endmacro %}
 
 {% macro rightHand() %}
 \relative {
-  \tempo Moderato
+  \tempo Sostenuto
   \clef treble
   \key e \minor
   \time 2/4
