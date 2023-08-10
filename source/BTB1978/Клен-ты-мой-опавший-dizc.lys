@@ -12,7 +12,7 @@
 
 {% macro rightHand() %}
 \relative {
-  \tempo Moderato
+  \tempo Sostenuto
   \clef treble
   \key b \minor
   \time 4/4
@@ -46,7 +46,7 @@
       \volta 1 {
         g='4 e <a cis> <g b> |
         r4 <d=' fis>8\< 8 <e gis>4. \af 8\! <fis ais>8 |
-        {{ v2("cis''=''4\\> \\af 2\\! b2 b4 \\rest |",
+        {{ v2("cis''=''4(\\> \\af 2\\! b2) b4 \\rest |",
            "<d'=' fis>2. s4 |") }}
       }
       \volta 2 {
