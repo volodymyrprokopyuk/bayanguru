@@ -87,10 +87,9 @@ pieces:
   - { id: gm8m, tit: "С чего начинается родина?",
       com: В. Баснер, arr: А. Басурманов, art: ipr, src: BTB1978,
       org: rus, sty: aut, gnr: sng, ton: ei, frm: [in3, syn], bss: [stb, syn], lvl: elb }
-  # p. 76
-  # - { id: al4t, tit: Марш коммунистических бригад,
-  #     com: А. Новиков, src: BTB1978,
-  #     org: rus, sty: aut, gnr: mrc, ton: ei, frm: cr5, bss: stb, lvl: elb }
+  - { id: al4t, tit: Марш коммунистических бригад,
+      com: А. Новиков, src: BTB1978,
+      org: rus, sty: aut, gnr: mrc, ton: ei, frm: cr5, bss: stb, lvl: elb }
   - { id: 5h39, tit: А где мне взять такую песню,
       com: Г. Пономаренко, arr: Л. Захарова, art: ipr, src: BTB1978,
       org: rus, sty: aut, gnr: sng, ton: ai, frm: [cr5, dot, acc], bss: [stb, syn], lvl: elc }
