@@ -96,7 +96,7 @@ pieces:
       org: rus, sty: aut, gnr: sng, ton: ai, frm: [cr5, dot, acc], bss: [stb, syn], lvl: elc }
   - { id: 8wgj, tit: Я встретил вас, sub: Старинный романс,
       arr: М. Рожков, src: BTB1978,
-      org: rus, sty: msc, gnr: rmc, frm: [var, crd], bss: stb, lvl: elc }
+      org: rus, sty: aut, gnr: rmc, ton: ei, frm: [var, cr5], bss: stb, lvl: elc }
   - { id: dizc, tit: Клен ты мой опавший,
       arr: А. Басурманов, art: ipr, src: BTB1978,
       org: rus, sty: flk, gnr: sng, frm: crd, bss: stb, lvl: elc }
