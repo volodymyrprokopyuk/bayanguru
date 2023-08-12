@@ -55,7 +55,7 @@ books:
       "vmd4", "s31k", "1czf",
       # BTB1978
       "lknz", "od7f", "2al1", "8pvl", "5rl3", "jh3h", "gm8m", "al4t", "5h39",
-      "8wgj", "dizc", "lz9e",
+      "8wgj", "dizc",
       # BTB1989
       "q7i3", "up9h", "6ocj", "nlmb"] }
   - { id: hual, tit: Угорські народні пісні і танці, sub: для баяна,
@@ -64,7 +64,9 @@ books:
       # B1AK1979
       "1rua", "9htb",
       # B2AK1979
-      "5qqn"] }
+      "5qqn"
+      # BTB1978
+       "lz9e",] }
   - { id: mdal, tit: Молдавські народні пісні і танці, sub: для баяна,
       pieces: [
       # Class

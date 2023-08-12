@@ -13,3 +13,9 @@ pieces:
   - { id: 5qqn, tit: Чардаш, sub: hunfd,
       src: B2AK1979,
       org: hun, sty: flk, gnr: dnc, ton: gi, frm: dot, bss: stb, lvl: elb }
+
+  # Tutorial
+  # BTB1978
+  - { id: lz9e, tit: Цыганская венгерка,
+      arr: А. Кисиленко, src: BTB1978,
+      org: hun, sty: flk, gnr: gyp, ton: di, frm: [var, in3, in6, in8, cr5, tu3, acc], bss: stb, lvl: elc }
