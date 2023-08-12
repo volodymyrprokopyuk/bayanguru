@@ -33,5 +33,15 @@
 \relative {
   \clef bass
   \key e \minor
+  e+em!4-\stBass e+em e+em e+em | a+am! a+am a+am a+am |
+  d+d7!4 d+d7 d+d7 d+d7 | g+gM! g+gM b+b7! b+b7 |
+  e+em!4 e+em e+em e+em | c+a@m! c+am4 a+am! a+am |
+  b+e@m!4 b+em4 b+em b+b7! | e+em!4 e+em e+em d= |
+
+  g+gM!4 d+g@M4 g+gM4 d+g@M | a+d@7!4 d+d78. d+d716 d+d74 r |
+  a+am!4 e+a@m cis+fis@7!4 fis+fis7 | b+b7! b+b7 b+b7 d+d7! |
+  g,=,4 b c e | a, e' c a | d+d7! a+d@7 d+d74 d+d7 | g+gM! g+gM g+gM d+d7! |
+  g=,4 b c e | a, am! fis fis7! | b+e@m! b+em4 b4 b7! |
+  e+em!4 e+em e+em r | e+em!4 e+em c a@m! | e+em!2 e+em8 r r4 |
 }
 {% endmacro %}
