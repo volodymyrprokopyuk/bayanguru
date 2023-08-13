@@ -1,16 +1,10 @@
-{% from "util.lys" import momentBeat, v2 %}
-
 {% macro t1(a, b, c, d) %}
   r8
-  <<
-    \new Voice = voiceOne \relative {
-      \voiceOne
-      \meter 1/8 1,1,1,1,1,1,1,1
-      \set subdivideBeams = ##t
-      {{ a }}[~ \tuplet 3/2 { {{ b }} } {{ c }}]
-    }
-    \new Voice = voiceTwo \relative { \voiceTwo {{ d }} }
-  >>
+  \duo {
+    \meter 1/8 1,1,1,1,1,1,1,1
+    \set subdivideBeams = ##t
+    {{ a }}[~ \tuplet 3/2 { {{ b }} } {{ c }}]
+  } { \voiceTwo {{ d }} }
 {% endmacro %}
 
 {% macro t2(a, b) %}
@@ -24,20 +18,13 @@
   \key d \minor
   \time 4/4
   \partial 2 { r8 a=8( d e | }
-  \acc { d='16 e } d4
-  \acc { cis='8 } <g e'>4) r8 a( e' f |
-  \acc { e='16 f } e4
-  \acc { d='8 } <a f'>4) r8 a( f' g |
-  \acc { f='16 g } f4
-  \acc { e='8 } <bes g'>4) r8 c( g' a |
-  \acc { g='16 a } g4
-  \acc { f='8 } <c a'>4) r8 d( a' bes |
-  \acc { a='16 bes } a4
-  \acc { bes,=8 } g'4) r8 bes,( g' a |
-  \acc { g='16 a } g4
-  \acc { a,=8 } f'4) r8 a,( f' g |
-  \acc { f='16 g } f8 g, cis e g a, b cis |
-  d='2) <f=' a d> |
+  \acc { d='16 e } d4 \acc { cis='8 } <g e'>4) r8 a( e' f |
+  \acc { e='16 f } e4 \acc { d='8 } <a f'>4) r8 a( f' g |
+  \acc { f='16 g } f4 \acc { e='8 } <bes g'>4) r8 c( g' a |
+  \acc { g='16 a } g4 \acc { f='8 } <c a'>4) r8 d( a' bes |
+  \acc { a='16 bes } a4 \acc { bes,=8 } g'4) r8 bes,( g' a |
+  \acc { g='16 a } g4 \acc { a,=8 } f'4) r8 a,( f' g |
+  \acc { f='16 g } f8 g, cis e g a, b cis | d2) <f=' a d> |
 
   \tempo Larghetto
   r8 <bes'='' d>8 8 8 \acc { <a='' c>16 d } <a c>4.-> <g bes>8 |
@@ -53,36 +40,29 @@
   {{ t1("d''=''8", "d=''16( e d)", "cis16 d=''", "bes'='4.") }}
   <c'='' e>4.-> <bes d>8 |
   {{ t1("c''=''8", "c=''16( d c)", "b16 c=''", "a'='4.") }}
-  {{ v2("<bes'=' d>4.-> <a=' c>8", "fis'='2") }} |
+  \duo { <bes'=' d>4.-> <a=' c>8 | } { fis'='2 | }
   {{ t1("bes'='8", "bes='16( c bes)", "a16 bes='", "g'='4.") }}
-  {{ v2("c''=''4.-> bes8", "e'='2") }} |
+  \duo { c''=''4.-> bes='8 | } { e'='2 | }
   {{ t1("a'='8", "a='16( bes a)", "gis16 a='", "f'='4.") }}
-  {{ v2("bes'='4.-> a8", "<c'=' fis>2") }} |
+  \duo { bes'='4.-> a='8 | } { <c'=' fis>2 | }
   {{ t1("g'='8", "g='16( a g)", "fis16 g='", "bes=4.") }}
-  {{ v2("a'='4.-> g8", "cis'='2") }} |
+  \duo { a'='4.-> g='8 | } { cis'='2 | }
   {{ t1("<d'=' f>8", "<d=' f>16( g f)", "e16 f='", "a=4.") }}
-  {{ v2("g'='4.-> f8", "<bes= d>2") }} |
+  \duo { g'='4.-> f='8 | } { <bes= d>2 | }
   {{ t1("e'='8", "e='16( f e)", "dis16 e='", "gis=4.") }}
   <g,= cis f>4. cis8 |
   \meter 1/2 1,1
   <f,= a e'>4. <f a d>8 8 e' f fis=' |
 
   \tempo "Poco a poco stringendo"
-  <<
-    \new Voice = voiceOne \relative {
-      \voiceOne
-      g'='2 gis | a2. b8 \rest <a, d f a> |
-      gis'='2 g | f2. b8 \rest <f,= a d f> |
-    }
-    \new Voice = voiceTwo \relative {
-      \voiceTwo
-      r4 <g= b d>8 8 r4 <gis d' e>8 8 |
-      r4 <a= d f>4 4 s4 |
-      r4 <gis= d' e>8 8 r4 <g cis e>8 8 |
-      r4 <f= a d>4 4 s4 |
-    }
-  >>
-  r4 <g,= bes e>2.~-> | 4 <f a d> 2.->~ | 4
+  \duo {
+    g'='2 gis | a2. b8 \rest <a, d f a> |
+    gis'='2 g | f2. b8 \rest <f,= a d f> |
+  } {
+    r4 <g= b d>8 8 r4 <gis d' e>8 8 | r4 <a d f>4 4 s4 |
+    r4 <gis= d' e>8 8 r4 <g cis e>8 8 | r4 <f a d>4 4 s4 |
+  }
+  r4 <g,= bes e>2.~-> | 4 <f a d> 2.->~ | 4 %
   <e= g cis>4 b' cis | d2 <fis a d>8 c' bes a=' |
 
   r8 g='8-. bes-. d-. e4-. <g, bes d>-> |
@@ -94,45 +74,34 @@
   r8 g='8-. a-. cis-. f4-. <g, cis e>-> |
   <f=' a d>4 r <f' a d> d'8 c=''' |
 
-  bes=''8 d g, f e d c' bes |
-  a=''8 d f, e d a bes' a |
-  g=''8 bes e, d cis a a' g |
-  f=''8 a d, a f d' g f |
-  e=''8 g bes, a g cis f e |
-  d=''8 f a, g f a e' d |
-  gis,='8 f' e d g, e' d cis |
-  d=''8 e f a d4 <d,='' fis a c>-> |
+  bes=''8 d g, f e d c' bes | a d f, e d a bes' a |
+  g=''8 bes e, d cis a a' g | f a d, a f d' g f |
+  e=''8 g bes, a g cis f e | d f a, g f a e' d |
+  gis,='8 f' e d g, e' d cis | d e f a d4 <d,='' fis a c>-> |
 
-  <d='' g c>4 r <d g bes> r8 8 |
-  <f='' a d>4 <d f a>4 4 r8 8 |
-  a'=''4 <cis, e> <d f> <e g> |
-  <d='' f bes>4 <d f a>4 4 r8 <a d f> |
-  <g=' bes f'>4 r <g bes e> r8 8 |
-  <f=' a e'>4 <f a d>4 4 r8 8 |
-  <e=' g d'>4 <e g cis> <e g b> <e g cis> |
-  <f=' a e'>4 <f=' a d>4 4 r |
+  <d='' g c>4 r <d g bes> r8 8 | <f a d>4 <d f a>4 4 r8 8 |
+  a'=''4 <cis, e> <d f> <e g> | <d f bes> <d f a>4 4 r8 <a d f> |
+  <g=' bes f'>4 r <g bes e> r8 8 | <f a e'>4 <f a d>4 4 r8 8 |
+  <e=' g d'>4 <e g cis> <e g b> <e g cis> | <f a e'> <f=' a d>4 4 r |
 
-  r8 g='8 bes d {{ v2("e''=''2", "r4 <g'=' bes>") }} |
-  r8 a='8 d f {{ v2("a''=''2", "r4 <a'=' d f>") }} |
-  r8 g,='8 cis e {{ v2("g''=''2", "r4 <g'=' cis e>") }} |
-  r8 f,='8 a d {{ v2("f''=''2", "r4 <f'=' a d>") }} |
-  r8 g,='8 bes f' {{ v2("e''=''2", "r4 <g'=' bes>") }} |
-  r8 f,='8 a e' {{ v2("d''=''2", "r4 <f'=' a>") }} |
+  r8 g='8 bes d \duo { e''=''2 | } { r4 <g'=' bes> | }
+  r8 a='8 d f \duo { a''=''2 | } { r4 <a'=' d f> | }
+  r8 g,='8 cis e \duo { g''=''2 | } { r4 <g'=' cis e> | }
+  r8 f,='8 a d \duo { f''=''2 | } { r4 <f'=' a d> | }
+  r8 g,='8 bes f' \duo { e''=''2 | } { r4 <g'=' bes> | }
+  r8 f,='8 a e' \duo { d''=''2 | } { r4 <f'=' a> | }
   r8 gis,='8 b d cis a b cis | d2 <f,=' a d> |
 
   c'=''4 bes~ bes8 a bes c | bes4 <d, f a>4 4 r |
   a'='4 g~ g8 fis g a | g4 <a, d f>4 4 r |
-  \acc { dis='16 e } f='4 e~ e8 dis e f |
-  e='4 <f, a d>4 4 r |
-  \acc { c'='16 cis } d='4 cis b cis |
-  d='2 <f,= a d>4 r |
+  \acc { dis='16 e } f='4 e~ e8 dis e f | e4 <f, a d>4 4 r |
+  \acc { c'='16 cis } d='4 cis b cis | d2 <f,= a d>4 r |
 
   \tempo Allegro
   <g= g'>2-> <bes bes'>-> | <a a'>-> <d d'>-> |
   <cis=' cis'>2-> <e e'>-> | <d d'> <e e'>4 <fis fis'> |
   <g=' g'>2-> <bes bes'>-> | <a a'>-> <d d'>~-> |
-  <d='' d'>4 <cis cis'> <b b'> <cis cis'> |
-  <d='' d'>2 <d='' f a d>4 r |
+  <d='' d'>4 <cis cis'> <b b'> <cis cis'> | <d d'>2 <d='' f a d>4 r |
 
   \rep 2 { <d='' g c>4(-> bes'='') } |
   \rep 2 { <d,='' f bes>4(-> a'='') } |
@@ -143,14 +112,10 @@
   <e,=' g d'>4 cis' b cis | d2 <f,=' a d> |
 
   \tempo Presto
-  c'=''4 bes <d, g c>(-> bes') |
-  bes='4 a <d, f bes>(-> a') |
-  a='4 g <cis, e a>(-> g') |
-  g='4 f <a, d g>(-> f') |
-  f='4 e <g, bes f'>(-> e') |
-  e='4 d <f, a e'>(-> d') |
-  d='4 cis <e, g b>(-> cis') |
-  d='4 r <f,= a d> r |
+  c'=''4 bes <d, g c>(-> bes') | bes a <d, f bes>(-> a') |
+  a='4 g <cis, e a>(-> g') | g f <a, d g>(-> f') |
+  f='4 e <g, bes f'>(-> e') | e d <f, a e'>(-> d') |
+  d='4 cis <e, g b>(-> cis') | d r <f,= a d> r |
 
   {{ t2("g=8( bes d", "e4)") }} |
   {{ t2("f,=8( a d", "f4)") }} |
@@ -187,17 +152,14 @@
   g=,4 gm! bes g@m | d4 dm! f, d@m |
   e'=4 e7! a, a7! | d dm! fis,=, d@7! |
 
-  \rep 2 {
-    g=,4 gm! c c7! | f, fM! d'= d7! |
-  }
+  \rep 2 { g=,4 gm! c c7! | f, fM! d'= d7! | }
   g,=,4 gm! a a7! | d dm! bes besM! |
   e=4 e7! a, a7! | d dm! d c= |
 
-  {{ v2("r4 g@M! r4 bes,7!", "b,=,2 bes=,") }}
+  \duo { r4 g@M! r4 bes,7! | } { b,=,2 bes=, | }
   a=,4 d@m! f4 d@m | e'4 e7! a, a7! |
   d=4 dm! d dm | g, gm! bes g@m |
-  a=,4 d@m! f4 d@m | a4 a7! cis a@7 |
-  d=4 dm! d fis= |
+  a=,4 d@m! f4 d@m | a4 a7! cis a@7 | d4 dm! d fis= |
 
   g,=,4 gm! bes g@m | a4 d@m! f4 d@m |
   a=,4 a7! cis a@7 | d4 d7! fis, d@7 |
@@ -234,10 +196,8 @@
   g,=,4 gm! g gm | d' dm! d dm |
   a=,4 a7! a a7 | d= dm! d+dm2 |
 
-  r2 e+g@m!2 | r2 a+d@m! |
-  r2 g+a@M!2 | r2 f+d@m! |
-  r2 e+g@m!2 | r2 a+d@m! |
-  r2 a+a7!2 | d=4 r d+dm! r |
+  r2 e+g@m!2 | r2 a+d@m! | r2 g+a@M!2 | r2 f+d@m! |
+  r2 e+g@m!2 | r2 a+d@m! | r2 a+a7!2 | d=4 r d+dm! r |
 
   g,=,4 gm! bes g@m | a4 d@m! d4 dm |
   e=4 a@7! cis4 a@7 | d4 dm! f, d@m |

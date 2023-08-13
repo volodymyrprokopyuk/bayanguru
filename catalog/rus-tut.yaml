@@ -108,7 +108,7 @@ pieces:
       org: rus, sty: aut, gnr: sng, ton: di, frm: cr5, bss: stb, lvl: elb }
   - { id: 6ocj, tit: Дождь идет, sub: Танго,
       arr: А. Басурманов, art: ipr, src: BTB1989,
-      org: fra, sty: msc, gnr: tng, frm: crd, bss: stb, lvl: elc }
+      org: fra, sty: aut, gnr: tng, ton: ci, frm: [in3, cr5, dot, syn], bss: stb, lvl: elc }
   - { id: nlmb, tit: Прощание славянки, sub: Старинный марш,
       com: В. Агапкин, src: BTB1989,
       org: rus, sty: msc, gnr: mrc, frm: crd, bss: [stb, pub], lvl: elc }
