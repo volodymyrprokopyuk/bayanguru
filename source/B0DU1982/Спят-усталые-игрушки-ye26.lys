@@ -1,5 +1,3 @@
-{% from "util.lys" import momentBeat, hSpace, shapedSlur %}
-
 {% macro rightHand() %}
 \relative {
   \tempo Andante
