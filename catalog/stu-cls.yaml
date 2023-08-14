@@ -5,16 +5,16 @@ pieces:
   # SB1NU1979
   - { id: gnt0, tit: Етюд C major,
       com: Л. Шітте, src: SB1NU1979,
-      org: dnk, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: ela }
+      org: dnk, sty: cls, gnr: stu, ton: cj, frm: scl, bss: stb, lvl: ela }
   - { id: jxnz, tit: Етюд C major,
       com: Г. Беренс, src: SB1NU1979,
-      org: swe, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: ela }
+      org: swe, sty: cls, gnr: stu, ton: cj, frm: [scl, rep], bss: stb, lvl: ela }
   - { id: e4vv, tit: Етюд C major,
       com: Г. Беренс, src: SB1NU1979,
-      org: swe, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: ela }
+      org: swe, sty: cls, gnr: stu, ton: [cj, gj], frm: [scl, syn], bss: stb, lvl: ela }
   - { id: d3fi, tit: Етюд A minor,
       com: А. Салин, src: SB1NU1979,
-      org: rus, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: ela }
+      org: rus, sty: aut, gnr: stu, ton: ai, frm: scl, bss: stb, lvl: ela }
   - { id: wtuk, tit: Етюд C major,
       com: Л. Шітте, src: SB1NU1979,
       org: dnk, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: ela }

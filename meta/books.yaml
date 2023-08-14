@@ -75,10 +75,6 @@ books:
       # Tutorial
       # BTBC1936
       "epyc"] }
-  # - { id: roal, tit: Румунські народні пісні і танці, sub: для баяна,
-  #     pieces: [
-  #     # SOURCE
-  #     "anID"] }
   - { id: byal, tit: Білоруські народні пісні і танці, sub: для баяна,
       pieces: [
       # Class
@@ -107,8 +103,7 @@ books:
       "isnd"] }
   - { id: scl1, tit: Вибрані етюди, sub: для баяна,
       pieces: [
-      # Scale
-      { sec: Гами, pieces: [
+      { sec: Гами, pieces: [ # Scale
         # SB1NU1979
         "gnt0", "jxnz", "e4vv", "d3fi", "wtuk", "b3nl", "vz59", "ryca",
         # SB2NU1977
@@ -119,8 +114,7 @@ books:
         "4uih", "j5us", "4k6c",
         # SB5NU1980
         "hwwc", "ipdh", "h3xy"] },
-      # Arpeggio
-      { sec: Арпеджіо, pieces: [
+      { sec: Арпеджіо, pieces: [ # Arpeggio
         # SB1NU1979
         "9h35", "h8lm", "09ok", "ktnb", "ri7i",
         # SB2NU1977
@@ -142,8 +136,9 @@ books:
         "ua3l", "m8an", "31pw", "1004", "slsw"] } ] }
   - { id: scl2, tit: Вибрані етюди, sub: для баяна,
       pieces: [
-      # Chords
-      { sec: Акорди, pieces: [
+      { sec: Інтервали, pieces: [ # Intervals
+      ]},
+      { sec: Акорди, pieces: [ # Chords
         # SB2NU1977
         "yai7",
         # SB4NU1978
