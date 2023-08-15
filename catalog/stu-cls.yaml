@@ -17,16 +17,16 @@ pieces:
       org: rus, sty: aut, gnr: stu, ton: ai, frm: scl, bss: stb, lvl: ela }
   - { id: wtuk, tit: Етюд C major,
       com: Л. Шітте, src: SB1NU1979,
-      org: dnk, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: ela }
+      org: dnk, sty: cls, gnr: stu, ton: cj, frm: scl, bss: stb, lvl: ela }
   - { id: b3nl, tit: Етюд C major,
       com: К. Гурлітт, src: SB1NU1979,
-      org: deu, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: ela }
+      org: deu, sty: cls, gnr: stu, ton: cj, frm: [scl, syn, jmp], bss: stb, lvl: ela }
   - { id: vz59, tit: Етюд G major,
       com: К. Черні, src: SB1NU1979,
-      org: aut, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: ela }
+      org: aut, sty: cls, gnr: stu, ton: gj, frm: scl, bss: stb, lvl: ela }
   - { id: ryca, tit: Етюд G major,
       com: К. Черні, src: SB1NU1979,
-      org: aut, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: ela }
+      org: aut, sty: cls, gnr: stu, ton: gj, frm: [scl, rep], bss: stb, lvl: ela }
   # SB2NU1977
   - { id: mp9o, tit: Етюд C major,
       com: М. Різоль, src: SB2NU1977,

@@ -11,7 +11,7 @@
   r16 f=''16(\> e d c b a \af 16\! g | f4) r |
   r16 e'=''16(\> d c b a g \af 16\! f | e4) r |
   r16 d'=''16(\> c b a g f \af 16\! e | d4) r |
-  r16 c='16(\< d e f g a \af 16\! b | c4) r \bar "|."
+  r16 c='16(\< d e f g a \af 16\! b | c=''4) r \bar "|."
 }
 {% endmacro %}
 
