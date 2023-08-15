@@ -1,7 +1,6 @@
 %YAML 1.2
 ---
 pieces:
-  # Scale
   # SB1NU1979
   - { id: gnt0, tit: Етюд C major,
       com: Л. Шітте, src: SB1NU1979,
@@ -27,6 +26,26 @@ pieces:
   - { id: ryca, tit: Етюд G major,
       com: К. Черні, src: SB1NU1979,
       org: aut, sty: cls, gnr: stu, ton: gj, frm: [scl, rep], bss: stb, lvl: ela }
+  - { id: 9h35, tit: Етюд G major,
+      com: Г. Беренс, src: SB1NU1979,
+      org: swe, sty: cls, gnr: stu, ton: gj, frm: arp, bss: stb, lvl: ela }
+  # p. 16
+  # - { id: "5402", tit: Етюд G major,
+  #     com: М. Любарський, src: SB1NU1979,
+  #     org: ukr, sty: aut, gnr: stu, ton: gj, frm: arp, bss: stb, lvl: ela }
+  - { id: h8lm, tit: Етюд C major,
+      com: К. Черні–Г. Гермер, src: SB1NU1979,
+      org: aut, sty: cls, gnr: stu, ton: cj, frm: arp, bss: stb, lvl: ela }
+  - { id: 09ok, tit: Етюд G minor,
+      com: С. Аксюк, src: SB1NU1979,
+      org: rus, sty: aut, gnr: stu, ton: gi, frm: [arp, jpm, fi5], bss: [stb, jmp], lvl: ela }
+  - { id: ktnb, tit: Етюд A minor,
+      com: К. Мясков, src: SB1NU1979,
+      org: ukr, sty: stu, gnr: stu, frm: [arp, wrs], bss: stb, lvl: ela }
+  - { id: ri7i, tit: Етюд F major,
+      com: Л. Шітте, src: SB1NU1979,
+      org: dnk, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: ela }
+
   # SB2NU1977
   - { id: mp9o, tit: Етюд C major,
       com: М. Різоль, src: SB2NU1977,
@@ -66,22 +85,6 @@ pieces:
       org: ukr, sty: stu, gnr: stu, frm: [scl, arp], bss: stb, lvl: elb }
 
   # Arpeggio
-  # SB1NU1979
-  - { id: 9h35, tit: Етюд G major,
-      com: Г. Беренс, src: SB1NU1979,
-      org: swe, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: ela }
-  - { id: h8lm, tit: Етюд C major,
-      com: К. Черні–Г. Гермер, src: SB1NU1979,
-      org: aut, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: ela }
-  - { id: 09ok, tit: Етюд G minor,
-      com: С. Аксюк, src: SB1NU1979,
-      org: rus, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: ela }
-  - { id: ktnb, tit: Етюд A minor,
-      com: К. Мясков, src: SB1NU1979,
-      org: ukr, sty: stu, gnr: stu, frm: [arp, wrs], bss: stb, lvl: ela }
-  - { id: ri7i, tit: Етюд F major,
-      com: Л. Шітте, src: SB1NU1979,
-      org: dnk, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: ela }
   # SB2NU1977
   - { id: ucyp, tit: Етюд C major,
       com: В. Белов, src: SB2NU1977,
