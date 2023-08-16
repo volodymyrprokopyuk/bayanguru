@@ -116,7 +116,7 @@ books:
         "hwwc", "ipdh", "h3xy"] },
       { sec: Арпеджіо, pieces: [ # Arpeggio
         # SB1NU1979
-        "9h35", "h8lm", "09ok", "ktnb", "ri7i",
+        "9h35", "h8lm", "09ok", "ktnb", "ri7i", "xkj4",
         # SB2NU1977
         "ucyp",
         # SB3NU1979
@@ -125,7 +125,7 @@ books:
         "qt8h", "djop", "z04b", "4s1u"] },
       { sec: Повороти кисті, pieces: [
         # SB1NU1979
-        "xkj4", "0adx", "sdnn", "m02e", "7yb4", "5ul1", "6yq2",
+        "0adx", "sdnn", "m02e", "7yb4", "5ul1", "6yq2",
         # SB2NU1977
         "rnk5", "5071", "vupt", "zvjv", "pheu", "vdul",
         # SB3NU1979

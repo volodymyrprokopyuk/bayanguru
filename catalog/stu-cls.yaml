@@ -41,10 +41,35 @@ pieces:
       org: rus, sty: aut, gnr: stu, ton: gi, frm: [arp, jpm, fi5], bss: [stb, jmp], lvl: ela }
   - { id: ktnb, tit: Етюд A minor,
       com: К. Мясков, src: SB1NU1979,
-      org: ukr, sty: stu, gnr: stu, frm: [arp, wrs], bss: stb, lvl: ela }
+      org: ukr, sty: aut, gnr: stu, ton: ai, frm: [arp, fi5, syn], bss: stb, lvl: ela }
   - { id: ri7i, tit: Етюд F major,
       com: Л. Шітте, src: SB1NU1979,
-      org: dnk, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: ela }
+      org: dnk, sty: cls, gnr: stu, ton: fj, frm: arp, bss: stb, lvl: ela }
+  # p. 27
+  # - { id: 67ka, tit: Етюд C major,
+  #     com: І. Беркович, src: SB1NU1979,
+  #     org: ukr, sty: aut, gnr: stu, ton: cj, frm: arp, bss: stb, lvl: ela }
+  - { id: xkj4, tit: Етюд G major,
+      com: Д. Левидова, src: SB1NU1979,
+      org: rus, sty: aut, gnr: stu, ton: gj, frm: arp, bss: stb, lvl: ela }
+  - { id: 0adx, tit: Етюд G major,
+      com: К. Черні, src: SB1NU1979,
+      org: aut, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: ela }
+  - { id: sdnn, tit: Етюд C major,
+      com: К. Черні, src: SB1NU1979,
+      org: aut, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: ela }
+  - { id: m02e, tit: Етюд C major,
+      com: Й. Ванхаль, src: SB1NU1979,
+      org: cze, sty: stu, gnr: stu, frm: [scl, arp, wrs], bss: stb, lvl: ela }
+  - { id: 7yb4, tit: Етюд C major,
+      com: В. Белов, src: SB1NU1979,
+      org: rus, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: ela }
+  - { id: 5ul1, tit: Етюд C major,
+      com: К. Черні, src: SB1NU1979,
+      org: aut, sty: stu, gnr: stu, frm: [scl, arp], bss: stb, lvl: ela }
+  - { id: 6yq2, tit: Етюд Bes major,
+      com: Т. Федин, src: SB1NU1979,
+      org: rus, sty: stu, gnr: stu, frm: [scl, wrs], bss: stb, lvl: ela }
 
   # SB2NU1977
   - { id: mp9o, tit: Етюд C major,
@@ -112,28 +137,6 @@ pieces:
       org: rus, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elb }
 
   # Wrist movement
-  # SB1NU1979
-  - { id: xkj4, tit: Етюд G major,
-      com: Д. Левидова, src: SB1NU1979,
-      org: rus, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: ela }
-  - { id: 0adx, tit: Етюд G major,
-      com: К. Черні, src: SB1NU1979,
-      org: aut, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: ela }
-  - { id: sdnn, tit: Етюд C major,
-      com: К. Черні, src: SB1NU1979,
-      org: aut, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: ela }
-  - { id: m02e, tit: Етюд C major,
-      com: Й. Ванхаль, src: SB1NU1979,
-      org: cze, sty: stu, gnr: stu, frm: [scl, arp, wrs], bss: stb, lvl: ela }
-  - { id: 7yb4, tit: Етюд C major,
-      com: В. Белов, src: SB1NU1979,
-      org: rus, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: ela }
-  - { id: 5ul1, tit: Етюд C major,
-      com: К. Черні, src: SB1NU1979,
-      org: aut, sty: stu, gnr: stu, frm: [scl, arp], bss: stb, lvl: ela }
-  - { id: 6yq2, tit: Етюд Bes major,
-      com: Т. Федин, src: SB1NU1979,
-      org: rus, sty: stu, gnr: stu, frm: [scl, wrs], bss: stb, lvl: ela }
   # SB2NU1977
   - { id: rnk5, tit: Етюд Bes major,
       com: К. Черні, src: SB2NU1977,
