@@ -54,16 +54,16 @@ pieces:
       org: rus, sty: aut, gnr: stu, ton: gj, frm: arp, bss: stb, lvl: ela }
   - { id: 0adx, tit: Етюд G major,
       com: К. Черні, src: SB1NU1979,
-      org: aut, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: ela }
+      org: aut, sty: cls, gnr: stu, ton: gj, frm: scl, bss: stb, lvl: ela }
   - { id: sdnn, tit: Етюд C major,
       com: К. Черні, src: SB1NU1979,
-      org: aut, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: ela }
+      org: aut, sty: cls, gnr: stu, ton: cj, frm: scl, bss: stb, lvl: ela }
   - { id: m02e, tit: Етюд C major,
       com: Й. Ванхаль, src: SB1NU1979,
-      org: cze, sty: stu, gnr: stu, frm: [scl, arp, wrs], bss: stb, lvl: ela }
+      org: cze, sty: cls, gnr: stu, ton: cj, frm: arp, bss: stb, lvl: ela }
   - { id: 7yb4, tit: Етюд C major,
       com: В. Белов, src: SB1NU1979,
-      org: rus, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: ela }
+      org: rus, sty: aut, gnr: stu, ton: cj, frm: arp, bss: stb, lvl: ela }
   - { id: 5ul1, tit: Етюд C major,
       com: К. Черні, src: SB1NU1979,
       org: aut, sty: stu, gnr: stu, frm: [scl, arp], bss: stb, lvl: ela }
