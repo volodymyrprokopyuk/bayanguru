@@ -13,16 +13,13 @@
   \key c \major
   \time 3/8
   \repeat volta 2 {
-    {{ rh1("c''=''16(\\mf") }}
-    <f,='' a>8)-. 8-. 8-. | <e g>4. |
-    {{ rh1("c=''16(") }}
-    g=''16 a g f e d | c=''4.) |
+    {{ rh1("c''=''16(\\mf") }} | <f, a>8)-. 8-. 8-. | <e g>4. |
+    {{ rh1("c=''16(") }} | g16 a g f e d | c=''4.) |
   }
+
   \repeat volta 2 {
-    {{ rh2("d=''16(\\f") }}
-    <d,='' g b>8-. 8-. 8-. | <e g c>4. |
-    {{ rh2("d=''16(") }}
-    b=''16( a g f e d | c=''4.) |
+    {{ rh2("d=''16(\\f") }} | <d, g b>8-. 8-. 8-. | <e g c>4. |
+    {{ rh2("d=''16(") }} | b16( a g f e d | c=''4.) |
   }
 }
 {% endmacro %}
@@ -31,12 +28,9 @@
 \relative {
   \clef bass
   \key c \major
-  c=8(-\stBass cM!)-. cM-. | c( cM!)-. cM-. |
-  c=8[_\aSim f@M! fM8] |
-  \rep 3 { c=8 cM! cM | }
-  g=,8 g7! g7 | c= cM! cM |
+  c=8(-\stBass cM!)-. cM-. | c( cM!)-. cM-. | c[_\aSim f@M! fM8] |
+  \rep 3 { c=8 cM! cM | } g g7! g7 | c= cM! cM |
 
-  \rep 3 { g=,8 g7! g7 | g[ c@M! cM8] | }
-  g=,8 g7! g7 | c= cM! cM |
+  \rep 3 { g=,8 g7! g7 | g[ c@M! cM8] | } g g7! g7 | c= cM! cM |
 }
 {% endmacro %}

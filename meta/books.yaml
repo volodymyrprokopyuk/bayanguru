@@ -106,7 +106,7 @@ books:
       { sec: Гами, pieces: [ # Scale
         # SB1NU1979
         "gnt0", "jxnz", "e4vv", "d3fi", "wtuk", "b3nl", "vz59", "ryca", "0adx",
-        "sdnn",
+        "sdnn", "5ul1",
         # SB2NU1977
         "mp9o", "x2ii",
         # SB3NU1979
@@ -126,7 +126,7 @@ books:
         "qt8h", "djop", "z04b", "4s1u"] },
       { sec: Повороти кисті, pieces: [
         # SB1NU1979
-        "5ul1", "6yq2",
+        "6yq2",
         # SB2NU1977
         "rnk5", "5071", "vupt", "zvjv", "pheu", "vdul",
         # SB3NU1979
