@@ -29,10 +29,9 @@ pieces:
   - { id: 9h35, tit: Етюд G major,
       com: Г. Беренс, src: SB1NU1979,
       org: swe, sty: cls, gnr: stu, ton: gj, frm: arp, bss: stb, lvl: ela }
-  # p. 16
-  # - { id: "5402", tit: Етюд G major,
-  #     com: М. Любарський, src: SB1NU1979,
-  #     org: ukr, sty: aut, gnr: stu, ton: gj, frm: arp, bss: stb, lvl: ela }
+  - { id: "5402", tit: Етюд G major,
+      com: М. Любарський, src: SB1NU1979,
+      org: ukr, sty: aut, gnr: stu, ton: gj, frm: arp, bss: stb, lvl: ela }
   - { id: h8lm, tit: Етюд C major,
       com: К. Черні–Г. Гермер, src: SB1NU1979,
       org: aut, sty: cls, gnr: stu, ton: cj, frm: arp, bss: stb, lvl: ela }
