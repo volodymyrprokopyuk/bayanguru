@@ -91,6 +91,24 @@ pieces:
   - { id: ucyp, tit: Етюд C major,
       com: В. Белов, src: SB2NU1977,
       org: rus, sty: aut, gnr: stu, frm: arp, bss: stb, lvl: ela }
+  - { id: rnk5, tit: Етюд Bes major,
+      com: К. Черні, src: SB2NU1977,
+      org: aut, sty: cls, gnr: stu, frm: [arp, dot, jmp], bss: stb, lvl: ela }
+  - { id: "5071", tit: Етюд C major,
+      com: А. Гедике, src: SB2NU1977,
+      org: rus, sty: stu, gnr: stu, frm: [arp, pph], bss: pub, lvl: ela }
+  - { id: vupt, tit: Етюд D major,
+      com: Г. Вольфарт, src: SB2NU1977,
+      org: deu, sty: stu, gnr: stu, frm: [scl, arp, wrs], bss: stb, lvl: elb }
+  - { id: zvjv, tit: Етюд G major,
+      com: А. Лешгорн, src: SB2NU1977,
+      org: deu, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elb }
+  - { id: pheu, tit: Етюд F major,
+      com: К. Черні, src: SB2NU1977,
+      org: aut, sty: stu, gnr: stu, frm: [arp, wrs], bss: stb, lvl: elb }
+  - { id: vdul, tit: Етюд G major,
+      com: К. Мясков, src: SB2NU1977,
+      org: ukr, sty: stu, gnr: stu, frm: [scl, wrs], bss: stb, lvl: elb }
 
   # SB3NU1979
   - { id: ey1v, tit: Етюд C major,
@@ -149,25 +167,6 @@ pieces:
       org: rus, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elb }
 
   # Wrist movement
-  # SB2NU1977
-  - { id: rnk5, tit: Етюд Bes major,
-      com: К. Черні, src: SB2NU1977,
-      org: aut, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: ela }
-  - { id: "5071", tit: Етюд C major,
-      com: А. Гедике, src: SB2NU1977,
-      org: rus, sty: stu, gnr: stu, frm: [arp, pph], bss: pub, lvl: ela }
-  - { id: vupt, tit: Етюд D major,
-      com: Г. Вольфарт, src: SB2NU1977,
-      org: deu, sty: stu, gnr: stu, frm: [scl, arp, wrs], bss: stb, lvl: elb }
-  - { id: zvjv, tit: Етюд G major,
-      com: А. Лешгорн, src: SB2NU1977,
-      org: deu, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elb }
-  - { id: pheu, tit: Етюд F major,
-      com: К. Черні, src: SB2NU1977,
-      org: aut, sty: stu, gnr: stu, frm: [arp, wrs], bss: stb, lvl: elb }
-  - { id: vdul, tit: Етюд G major,
-      com: К. Мясков, src: SB2NU1977,
-      org: ukr, sty: stu, gnr: stu, frm: [scl, wrs], bss: stb, lvl: elb }
   # SB3NU1979
   - { id: ckjo, tit: Етюд F major,
       com: Г. Беренс, src: SB3NU1979,
