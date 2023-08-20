@@ -99,13 +99,13 @@ pieces:
       org: rus, sty: aut, gnr: stu, ton: [cj, cj], frm: [arp, vo2], bss: pub, lvl: ela }
   - { id: vupt, tit: Етюд D major,
       com: Г. Вольфарт, src: SB2NU1977,
-      org: deu, sty: cls, gnr: stu, frm: [scl, arp], bss: stb, lvl: elb }
+      org: deu, sty: cls, gnr: stu, ton: dj, frm: [scl, arp], bss: stb, lvl: elb }
   - { id: zvjv, tit: Етюд G major,
       com: А. Лешгорн, src: SB2NU1977,
-      org: deu, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elb }
+      org: deu, sty: cls, gnr: stu, ton: gj, frm: scl, bss: stb, lvl: elb }
   - { id: pheu, tit: Етюд F major,
       com: К. Черні, src: SB2NU1977,
-      org: aut, sty: stu, gnr: stu, frm: [arp, wrs], bss: stb, lvl: elb }
+      org: aut, sty: stu, gnr: stu, ton: fj, frm: [arp, fi1, fi5, jmp], bss: stb, lvl: elb }
   - { id: vdul, tit: Етюд G major,
       com: К. Мясков, src: SB2NU1977,
       org: ukr, sty: stu, gnr: stu, frm: [scl, wrs], bss: stb, lvl: elb }
