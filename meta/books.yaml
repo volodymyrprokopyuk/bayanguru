@@ -108,7 +108,7 @@ books:
         "gnt0", "jxnz", "e4vv", "d3fi", "wtuk", "b3nl", "vz59", "ryca", "0adx",
         "sdnn", "5ul1",
         # SB2NU1977
-        "mp9o", "x2ii", "vupt", "zvjv",
+        "mp9o", "x2ii", "vupt", "zvjv", "vdul",
         # SB3NU1979
         "ey1v", "yc2l", "t0ai",
         # SB4NU1978
@@ -126,8 +126,6 @@ books:
         # SB4NU1978
         "qt8h", "djop", "z04b", "4s1u"] },
       { sec: Повороти кисті, pieces: [
-        # SB2NU1977
-        "vdul",
         # SB3NU1979
         "ckjo", "ov1p", "9zx1", "a7ra", "uco7", "zbvy",
         # SB4NU1978

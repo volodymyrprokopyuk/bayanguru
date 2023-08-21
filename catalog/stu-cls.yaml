@@ -108,7 +108,7 @@ pieces:
       org: aut, sty: stu, gnr: stu, ton: fj, frm: [arp, fi1, fi5, jmp], bss: stb, lvl: elb }
   - { id: vdul, tit: Етюд G major,
       com: К. Мясков, src: SB2NU1977,
-      org: ukr, sty: stu, gnr: stu, frm: [scl, wrs], bss: stb, lvl: elb }
+      org: ukr, sty: aut, gnr: stu, ton: cj, frm: [scl, fi1, fi5], bss: stb, lvl: elb }
 
   # SB3NU1979
   - { id: ey1v, tit: Етюд C major,
