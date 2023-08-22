@@ -22,5 +22,12 @@
 \relative {
   \clef bass
   \key e \minor
+  e@m!4-\stBass a@m!4 e@m!4 r4 | b@M!4 c@M!4 b@M!4 r4 |
+  e+em!4 fis+a@m!4 e+em!4 r4 |
+  fis+b@m!4 fis+fis7!4 b+bm!8 b,=,16 c b a g fis=, |
+
+  e'=16_\aLeg fis e fis e fis e fis e fis g a b g fis e |
+  b=,16 c b c b c b c b c b c b a g fis=, |
+  e+em!4 fis+a@m!4 e+em!4 r4 | a+am! b+bM! e+em! r |
 }
 {% endmacro %}
