@@ -20,7 +20,7 @@
 \relative {
   \clef bass
   \key c \major
-  r16 c,=,16( d e f g a b | c4) r | r16 d,( e f g a b d | d4) r |
+  r16 c,=,16( d e f g a b | c4) r | r16 d,( e f g a b c | d4) r |
   r16 e,=,16( f g a bes c d | e4) r | r16 f,( g a bes c d e | f4) r |
   r16 f,=,16( g aes bes c d e | f4) r |
   \rep 2 { r16 g,=,( a b c d e f | g=4) r | }
