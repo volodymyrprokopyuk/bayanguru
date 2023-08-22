@@ -148,4 +148,7 @@ books:
         "jq25", "2zg8",
         # SB4NU1978
         "d61l"] },
-      { sec: Ліва рука, pieces: [] } ] }
+      { sec: Ліва рука, pieces: [
+        # SB1NU1979
+        "7smk"
+      ] } ] }

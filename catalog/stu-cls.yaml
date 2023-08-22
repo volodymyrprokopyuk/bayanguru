@@ -68,10 +68,9 @@ pieces:
   - { id: 6yq2, tit: Етюд Bes major,
       com: Т. Федин, src: SB1NU1979,
       org: rus, sty: aut, gnr: stu, ton: besj, frm: [arp, scl], bss: [stb, dot], lvl: ela }
-  # p. 36
-  # - { id: 7smk, tit: Етюд G major,
-  #     com: К. Гурлітт, src: SB1NU1979,
-  #     org: deu, sty: cls, gnr: stu, ton: cj, frm: [cr5, syn], bss: [pub, scl], lvl: ela }
+  - { id: 7smk, tit: Етюд C major,
+      com: К. Гурлітт, src: SB1NU1979,
+      org: deu, sty: cls, gnr: stu, ton: cj, frm: [cr5, syn], bss: [pub, scl], lvl: ela }
   # p. 36
   # - { id: zvmc, tit: Етюд E minor,
   #     com: О. Гедике, src: SB1NU1979,
