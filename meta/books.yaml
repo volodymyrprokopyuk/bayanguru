@@ -150,5 +150,7 @@ books:
         "d61l"] },
       { sec: Ліва рука, pieces: [
         # SB1NU1979
-        "7smk", "zvmc"
+        "7smk", "zvmc",
+        # SB2NU1977
+        "4upq"
       ] } ] }

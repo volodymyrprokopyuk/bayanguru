@@ -79,10 +79,9 @@ pieces:
   - { id: mp9o, tit: Етюд C major,
       com: М. Різоль, src: SB2NU1977,
       org: ukr, sty: cls, gnr: stu, ton: cj, frm: scl, bss: stb, lvl: ela }
-  # p. 4
-  # - { id: 4upq, tit: Етюд A major,
-  #     com: А. Лешгорн, src: SB2NU1977,
-  #     org: deu, sty: cls, gnr: stu, ton: aj, frm: scl, bss: [stb, pub, scl], lvl: ela }
+  - { id: 4upq, tit: Етюд A major,
+      com: А. Лешгорн, src: SB2NU1977,
+      org: deu, sty: cls, gnr: stu, ton: aj, frm: scl, bss: [stb, pub, scl], lvl: ela }
   - { id: x2ii, tit: Етюд A major,
       com: А. Нечипоренко, src: SB2NU1977,
       org: ukr, sty: aut, gnr: stu, ton: aj, frm: [scl, syn], bss: stb, lvl: elb }
