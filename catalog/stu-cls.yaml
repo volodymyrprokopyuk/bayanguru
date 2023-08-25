@@ -118,7 +118,7 @@ pieces:
       org: swe, sty: cls, gnr: stu, ton: cj, frm: scl, bss: stb, lvl: ela }
   - { id: yc2l, tit: Етюд D minor,
       com: А. Нечипоренко, src: SB3NU1979,
-      org: ukr, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elb }
+      org: ukr, sty: aut, gnr: stu, ton: [di, fj], frm: [scl, fi5], bss: stb, lvl: elb }
   - { id: t0ai, tit: Етюд A major,
       com: С. Чапкій, src: SB3NU1979,
       org: ukr, sty: stu, gnr: stu, frm: [scl, crd], bss: [stb, pub], lvl: elb }
