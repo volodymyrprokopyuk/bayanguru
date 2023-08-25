@@ -74,7 +74,6 @@ pieces:
   - { id: zvmc, tit: Етюд E minor,
       com: О. Гедике, src: SB1NU1979,
       org: rus, sty: aut, gnr: stu, ton: ei, frm: scl, bss: [stb, pub, scl], lvl: ela }
-
   # SB2NU1977
   - { id: mp9o, tit: Етюд C major,
       com: М. Різоль, src: SB2NU1977,
@@ -106,14 +105,17 @@ pieces:
   - { id: vdul, tit: Етюд G major,
       com: К. Мясков, src: SB2NU1977,
       org: ukr, sty: aut, gnr: stu, ton: cj, frm: [scl, fi1, fi5], bss: stb, lvl: elb }
+  # p. 50
+  # - { id: tfnd, tit: Етюд C major,
+  #     com: В. Иванов, src: SB2NU1977,
+  #     org: rus, sty: aut, gnr: stu, ton: [cj, ei], frm: [in6, syn], bss: stb, lvl: elb }
   - { id: yai7, tit: Етюд G minor,
       com: К. Мясков, src: SB2NU1977,
-      org: ukr, sty: aut, gnr: stu, frm: [cr5, tu3, syn], bss: [pub, tu3, syn], lvl: elc }
-
+      org: ukr, sty: aut, gnr: stu, ton: gi, frm: [cr5, tu3, syn], bss: [pub, tu3, syn], lvl: elc }
   # SB3NU1979
   - { id: ey1v, tit: Етюд C major,
       com: Г. Беренс, src: SB3NU1979,
-      org: swe, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: ela }
+      org: swe, sty: cls, gnr: stu, ton: cj, frm: scl, bss: stb, lvl: ela }
   - { id: yc2l, tit: Етюд D minor,
       com: А. Нечипоренко, src: SB3NU1979,
       org: ukr, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elb }
