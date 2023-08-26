@@ -121,7 +121,17 @@ pieces:
       org: ukr, sty: aut, gnr: stu, ton: [di, fj], frm: [scl, fi5], bss: stb, lvl: elb }
   - { id: t0ai, tit: Етюд A major,
       com: С. Чапкій, src: SB3NU1979,
-      org: ukr, sty: stu, gnr: stu, frm: [scl, crd], bss: [stb, pub], lvl: elb }
+      org: ukr, sty: aut, gnr: stu, ton: aj, frm: [scl, cr7], bss: [stb, pub, scl], lvl: elb }
+  # p. 12
+  # - { id: vk0o, tit: Етюд C major,
+  #     com: К. Дюрінг, src: SB3NU1979,
+  #     org: swe, sty: cls, gnr: stu, ton: cj, frm: [arp, syn], bss: stb, lvl: elb }
+  - { id: m1je, tit: Етюд D minor,
+      com: Г. Гембера, src: SB3NU1979,
+      org: ukr, sty: aut, gnr: stu, ton: di, frm: [arp, fi5], bss: stb, lvl: elb }
+  - { id: x745, tit: Етюд A minor,
+      com: К. Мясков, src: SB3NU1979,
+      org: ukr, sty: stu, gnr: stu, frm: [arp, wrs], bss: stb, lvl: elb }
 
   # SB4NU1978
   - { id: 4uih, tit: Етюд G minor,
@@ -146,13 +156,6 @@ pieces:
       org: ukr, sty: stu, gnr: stu, frm: [scl, arp], bss: stb, lvl: elb }
 
   # Arpeggio
-  # SB3NU1979
-  - { id: m1je, tit: Етюд D minor,
-      com: Г. Гембера, src: SB3NU1979,
-      org: ukr, sty: stu, gnr: stu, frm: [arp, wrs], bss: stb, lvl: elb }
-  - { id: x745, tit: Етюд A minor,
-      com: К. Мясков, src: SB3NU1979,
-      org: ukr, sty: stu, gnr: stu, frm: [arp, wrs], bss: stb, lvl: elb }
   # SB4NU1978
   - { id: qt8h, tit: Етюд C minor,
       com: В. Хведченя, src: SB4NU1978,
