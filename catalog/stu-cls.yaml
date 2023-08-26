@@ -131,7 +131,25 @@ pieces:
       org: ukr, sty: aut, gnr: stu, ton: di, frm: [arp, fi5], bss: stb, lvl: elb }
   - { id: x745, tit: Етюд A minor,
       com: К. Мясков, src: SB3NU1979,
-      org: ukr, sty: stu, gnr: stu, frm: [arp, wrs], bss: stb, lvl: elb }
+      org: ukr, sty: aut, gnr: stu, ton: ai, frm: [arp, in3, syn, fi5], bss: stb, lvl: elb }
+  - { id: ckjo, tit: Етюд F major,
+      com: Г. Беренс, src: SB3NU1979,
+      org: swe, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elb }
+  - { id: ov1p, tit: Етюд E minor,
+      com: К. Черні, src: SB3NU1979,
+      org: aut, sty: stu, gnr: stu, frm: [scp, arp], bss: [stb, pub], lvl: elb }
+  - { id: 9zx1, tit: Етюд C major,
+      com: А. Лемуан, src: SB3NU1979,
+      org: fra, sty: stu, gnr: stu, frm: [arp, wrs], bss: [stb, pub], lvl: elb }
+  - { id: a7ra, tit: Етюд F major,
+      com: A. Гедике, src: SB3NU1979,
+      org: rus, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elb }
+  - { id: uco7, tit: Етюд A minor,
+      com: В. Саєвський, src: SB3NU1979,
+      org: ukr, sty: stu, gnr: stu, frm: [in3, wrs], bss: stb, lvl: elb }
+  - { id: zbvy, tit: Етюд D minor,
+      com: К. Мясков, src: SB3NU1979,
+      org: ukr, sty: stu, gnr: stu, frm: [scl, wrs], bss: stb, lvl: elb }
 
   # SB4NU1978
   - { id: 4uih, tit: Етюд G minor,
@@ -172,25 +190,6 @@ pieces:
       org: rus, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elb }
 
   # Wrist movement
-  # SB3NU1979
-  - { id: ckjo, tit: Етюд F major,
-      com: Г. Беренс, src: SB3NU1979,
-      org: swe, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elb }
-  - { id: ov1p, tit: Етюд E minor,
-      com: К. Черні, src: SB3NU1979,
-      org: aut, sty: stu, gnr: stu, frm: [scp, arp], bss: [stb, pub], lvl: elb }
-  - { id: 9zx1, tit: Етюд C major,
-      com: А. Лемуан, src: SB3NU1979,
-      org: fra, sty: stu, gnr: stu, frm: [arp, wrs], bss: [stb, pub], lvl: elb }
-  - { id: a7ra, tit: Етюд F major,
-      com: A. Гедике, src: SB3NU1979,
-      org: rus, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elb }
-  - { id: uco7, tit: Етюд A minor,
-      com: В. Саєвський, src: SB3NU1979,
-      org: ukr, sty: stu, gnr: stu, frm: [in3, wrs], bss: stb, lvl: elb }
-  - { id: zbvy, tit: Етюд D minor,
-      com: К. Мясков, src: SB3NU1979,
-      org: ukr, sty: stu, gnr: stu, frm: [scl, wrs], bss: stb, lvl: elb }
   # SB4NU1978
   - { id: 8yil, tit: Етюд F minor,
       com: А. Нечипоренко, src: SB4NU1978,
