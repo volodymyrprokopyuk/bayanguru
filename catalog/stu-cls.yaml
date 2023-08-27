@@ -140,7 +140,7 @@ pieces:
       org: aut, sty: cls, gnr: stu, ton: ei, frm: [arp, cr5], bss: [stb, pub, scl], lvl: elb }
   - { id: 9zx1, tit: Етюд C major,
       com: А. Лемуан, src: SB3NU1979,
-      org: fra, sty: stu, gnr: stu, frm: [arp, wrs], bss: [stb, pub], lvl: elb }
+      org: fra, sty: cls, gnr: stu, ton: [cj, gj], frm: [arp, fi5], bss: [stb, pub, syn], lvl: elb }
   - { id: a7ra, tit: Етюд F major,
       com: A. Гедике, src: SB3NU1979,
       org: rus, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elb }
