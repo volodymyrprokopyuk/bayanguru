@@ -134,10 +134,10 @@ pieces:
       org: ukr, sty: aut, gnr: stu, ton: ai, frm: [arp, in3, syn, fi5], bss: stb, lvl: elb }
   - { id: ckjo, tit: Етюд F major,
       com: Г. Беренс, src: SB3NU1979,
-      org: swe, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elb }
+      org: swe, sty: cls, gnr: stu, ton: fj, frm: [arp, fi5], bss: stb, lvl: elb }
   - { id: ov1p, tit: Етюд E minor,
       com: К. Черні, src: SB3NU1979,
-      org: aut, sty: stu, gnr: stu, frm: [scp, arp], bss: [stb, pub], lvl: elb }
+      org: aut, sty: cls, gnr: stu, ton: ei, frm: [arp, cr5], bss: [stb, pub, scl], lvl: elb }
   - { id: 9zx1, tit: Етюд C major,
       com: А. Лемуан, src: SB3NU1979,
       org: fra, sty: stu, gnr: stu, frm: [arp, wrs], bss: [stb, pub], lvl: elb }
