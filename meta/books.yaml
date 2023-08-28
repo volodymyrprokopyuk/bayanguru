@@ -110,7 +110,7 @@ books:
         # SB2NU1977
         "mp9o", "x2ii", "vupt", "zvjv", "vdul",
         # SB3NU1979
-        "ey1v", "yc2l", "t0ai",
+        "ey1v", "yc2l", "t0ai", "a7ra",
         # SB4NU1978
         "4uih", "j5us", "4k6c",
         # SB5NU1980
@@ -127,7 +127,7 @@ books:
         "qt8h", "djop", "z04b", "4s1u"] },
       { sec: Повороти кисті, pieces: [
         # SB3NU1979
-        "a7ra", "uco7", "zbvy",
+        "zbvy",
         # SB4NU1978
         "8yil", "p7aw", "8sl6", "ms9j",
         # SB5NU1980
@@ -135,7 +135,8 @@ books:
   - { id: scl2, tit: Вибрані етюди, sub: для баяна,
       pieces: [
       { sec: Інтервали, pieces: [ # Intervals
-      ]},
+      # SB3NU1979
+      "uco7"] },
       { sec: Акорди, pieces: [ # Chords
         # SB2NU1977
         "yai7",

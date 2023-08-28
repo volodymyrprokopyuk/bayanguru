@@ -143,10 +143,10 @@ pieces:
       org: fra, sty: cls, gnr: stu, ton: [cj, gj], frm: [arp, fi5], bss: [stb, pub, syn], lvl: elb }
   - { id: a7ra, tit: Етюд F major,
       com: A. Гедике, src: SB3NU1979,
-      org: rus, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elb }
+      org: rus, sty: aut, gnr: stu, ton: fj, frm: scl, bss: stb, lvl: elb }
   - { id: uco7, tit: Етюд A minor,
       com: В. Саєвський, src: SB3NU1979,
-      org: ukr, sty: stu, gnr: stu, frm: [in3, wrs], bss: stb, lvl: elb }
+      org: ukr, sty: aut, gnr: stu, frm: [in3, fi1, rep], bss: stb, lvl: elb }
   - { id: zbvy, tit: Етюд D minor,
       com: К. Мясков, src: SB3NU1979,
       org: ukr, sty: stu, gnr: stu, frm: [scl, wrs], bss: stb, lvl: elb }

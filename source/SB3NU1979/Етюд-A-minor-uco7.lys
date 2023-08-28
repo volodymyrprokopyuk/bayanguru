@@ -1,5 +1,3 @@
-{% from "util.lys" import v2, hSpace, shapedSlur %}
-
 {% macro rightHand() %}
 \relative {
   \tempo "Andante cantabile"
@@ -12,9 +10,9 @@
   <c='' e>8 <b d> <a c> <gis b> <a c> <gis b> <a c>) <c e>( |
   <e='' g>8\< <d f> <c e> <b d> \af 4.\! <c e>4.) <e g>8(\mp |
   <e='' g>8\< <c e> <d f> <e g> <f a> <d f> <e g> \af 8\! <f a> |
-  <g='' b>8 <f a> <e g> <d f> <c e>4.)
-  {{ v2("\\stemDown <e''='' g>8(\\mp | <d='' f>8 <c e> \\stemUp d=''4)",
-     "s8 | s4 b'='8 a='") }}
+  <g='' b>8 <f a> <e g> <d f> <c e>4.) %
+  \duo { \stemDown <e''='' g>8(\mp | <d f> <c e> \stemUp d=''4) } %
+  { s8 | s4 b'='8 a=' } %
   <c='' e>8( <b d> <a c>) <d f> |
   <c='' e>8(\> <b d> <a c> <gis b> \af 4.\! a4.) a='8( |
 
@@ -27,15 +25,13 @@
     <e='' g>8 <d f> <c e> <b d>^\tRit <c e>4)\> r8 \af 8\! <e g>( |
     \alternative {
       \volta 1 {
-        <d='' f>8^\tATem <c e>)
-        {{ v2("d''=''4", "b'='8 a='") }}
+        <d='' f>8^\tATem <c e>) \duo { d''=''4 } { b'='8 a=' } %
         <c='' e>8( <b d> <a c>) <d f>( |
-        <c='' e>8 <b d> <a c> <gis b> a4.)
-        a='8 {{ shapedSlur("fd") }} ( <>) |
+        <c='' e>8 <b d> <a c> <gis b> a4.) a='8 \sSlur fd #'() ( |
       }
       \volta 2 {
         \hSpace
-        <d='' f>8 {{ shapedSlur("bu", bs = 2.5, sh = 7, wd = 3.5) }} (
+        <d='' f>8) \sSlur bu #'((bs . 2.5) (sh . 7) (wd . 3.5)) ( %
         <c='' e>8 <b_~ d>) <b f' a> \fermata <c e>8( <b d> <a c>) <d f>( |
         <c='' e>8\> <b d> <a c> <gis e'> \af 4.\! <a=' a'>4.) r8 \bar "|."
       }
