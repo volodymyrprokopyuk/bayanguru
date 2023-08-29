@@ -135,6 +135,8 @@ books:
   - { id: scl2, tit: Вибрані етюди, sub: для баяна,
       pieces: [
       { sec: Інтервали, pieces: [ # Intervals
+      # SB2NU1977
+      "tfnd",
       # SB3NU1979
       "uco7"] },
       { sec: Акорди, pieces: [ # Chords
