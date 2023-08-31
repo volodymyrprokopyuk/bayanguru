@@ -121,10 +121,9 @@ pieces:
   - { id: t0ai, tit: Етюд A major,
       com: С. Чапкій, src: SB3NU1979,
       org: ukr, sty: aut, gnr: stu, ton: aj, frm: [scl, cr7], bss: [stb, pub, scl], lvl: elb }
-  # p. 12
-  # - { id: vk0o, tit: Етюд C major,
-  #     com: К. Дюрінг, src: SB3NU1979,
-  #     org: swe, sty: cls, gnr: stu, ton: cj, frm: [arp, syn], bss: stb, lvl: elb }
+  - { id: vk0o, tit: Етюд C major,
+      com: К. Дюрінг, src: SB3NU1979,
+      org: swe, sty: cls, gnr: stu, ton: cj, frm: [arp, syn], bss: stb, lvl: elb }
   - { id: m1je, tit: Етюд D minor,
       com: Г. Гембера, src: SB3NU1979,
       org: ukr, sty: aut, gnr: stu, ton: di, frm: [arp, fi5], bss: stb, lvl: elb }
@@ -149,6 +148,10 @@ pieces:
   - { id: zbvy, tit: Етюд D minor,
       com: К. Мясков, src: SB3NU1979,
       org: ukr, sty: aut, gnr: stu, ton: di, frm: [scl, fi5, syn], bss: stb, lvl: elb }
+  # p. 41
+  # - { id: q2ew, tit: Етюд A minor,
+  #     com: К. Мясков, src: SB3NU1979,
+  #     org: ukr, sty: aut, gnr: stu, ton: ai, frm: [arp, tu3, tu6, syn], bss: [stb, syn], lvl: elb }
 
   # SB4NU1978
   - { id: 4uih, tit: Етюд G minor,

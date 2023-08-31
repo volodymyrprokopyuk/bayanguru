@@ -1,0 +1,31 @@
+{% macro rh1(a) %}
+  {{ a }} g c e c g e g e' c g e g c e='') |
+{% endmacro %}
+
+{% macro rightHand() %}
+\relative {
+  \tempo Allegro
+  \clef treble
+  \key c \major
+  \time 4/4
+  r16\mf c'='16( e g c g e c e c' g e c d g c) |
+  r16 d,='16( g b d b g d) r16 e( g c e c g e) |
+  r16 f='16(_\dCre a c f c a f a f' c a f a c f) |
+  r16 g,='16( c e g e c b c g' e c g c e g) |
+  {{ rh1("r16\\f e,='16(") }}
+  r16 d,='16( g b d b g d) r16 f( b d f d b f) |
+  {{ rh1("r16 e='16(") }}
+  r16 d,='16(\> g b d b g d) g d' b g d g b \af 16\! d='' |
+
+  {{ rh1("r16\\p e,='16(") }}
+  r16 d,='16( f b d b f d) r16 c( e a c a e c) |
+  r16 b=16(\< e gis b gis e b e b' gis e b e gis \af 16\! b) |
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\relative {
+  \clef bass
+  \key c \major
+}
+{% endmacro %}
