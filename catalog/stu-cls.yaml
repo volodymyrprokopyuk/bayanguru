@@ -168,6 +168,16 @@ pieces:
   # - { id: kgbs, tit: Етюд A minor,
   #     com: С. Чапкій, src: SB3NU1979,
   #     org: ukr, sty: aut, gnr: stu, ton: [ai, cj], frm: [arp, in6, rep], bss: stb, lvl: elb }
+  # p. 50
+  # - { id: xe4q, tit: Етюд G major,
+  #     com: Г. Салов, src: SB3NU1979,
+  #     org: rus, sty: aut, gnr: stu, ton: [gj, ei], frm: [arp, tu3], bss: stb, lvl: elb }
+  - { id: jq25, tit: Етюд E minor,
+      com: А. Зубарев, src: SB3NU1979,
+      org: rus, sty: aut, gnr: stu, frm: scl, bss: stb, lvl: ela }
+  - { id: 2zg8, tit: Етюд C minor,
+      com: Г. Тишкевич, src: SB3NU1979,
+      org: blr, sty: stu, gnr: stu, frm: [pph, tu3], bss: stb, lvl: elb }
 
   # SB4NU1978
   - { id: 4uih, tit: Етюд G minor,
@@ -264,13 +274,6 @@ pieces:
       org: ukr, sty: stu, gnr: stu, frm: cr5, bss: pub, lvl: elc }
 
   # Polyphony
-  # SB3NU1979
-  - { id: jq25, tit: Етюд E minor,
-      com: А. Зубарев, src: SB3NU1979,
-      org: rus, sty: stu, gnr: stu, frm: [scl, leg], bss: stb, lvl: elb }
-  - { id: 2zg8, tit: Етюд C minor,
-      com: Г. Тишкевич, src: SB3NU1979,
-      org: blr, sty: stu, gnr: stu, frm: [pph, tu3], bss: stb, lvl: elb }
   # SB4NU1978
   - { id: d61l, tit: Етюд A minor,
       com: К. Черні, src: SB4NU1978,

@@ -110,7 +110,7 @@ books:
         # SB2NU1977
         "mp9o", "x2ii", "vupt", "zvjv", "vdul",
         # SB3NU1979
-        "ey1v", "yc2l", "t0ai", "a7ra", "zbvy",
+        "ey1v", "yc2l", "t0ai", "a7ra", "zbvy", "jq25",
         # SB4NU1978
         "4uih", "j5us", "4k6c",
         # SB5NU1980
@@ -146,7 +146,7 @@ books:
         "pnrg", "978q", "6zcy"] },
       { sec: Поліфонія, pieces: [
         # SB3NU1979
-        "jq25", "2zg8",
+        "2zg8",
         # SB4NU1978
         "d61l"] },
       { sec: Ліва рука, pieces: [

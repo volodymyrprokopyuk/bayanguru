@@ -37,13 +37,11 @@
 \relative {
   \clef bass
   \key e \minor
-  {{ lh1("e,=,8---\\stBass", "fis[--", "b7! b7 b7") }}
-  {{ lh2() }}
+  {{ lh1("e,=,8---\\stBass", "fis[--", "b7! b7 b7") }} {{ lh2() }}
   c=8-- cM! cM cM a-- am! am am |
   ais=,8[-- fis@7! fis78 fis7] b=,-- b7! b7 b7 |
 
-  {{ lh1("e,=,8--", "c[--", "r8 r4") }}
-  {{ lh2() }}
+  {{ lh1("e,=,8--", "c[--", "r8 r4") }} {{ lh2() }}
   c=8-- cM! cM cM fis,[-- a@m! am8 am] |
   b=,8-- b7! b7 b7 e+em!2-- |
 }
