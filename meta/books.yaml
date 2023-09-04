@@ -133,10 +133,10 @@ books:
   - { id: scl2, tit: Вибрані етюди, sub: для баяна,
       pieces: [
       { sec: Інтервали, pieces: [ # Intervals
-      # SB2NU1977
-      "tfnd",
-      # SB3NU1979
-      "uco7"] },
+        # SB2NU1977
+        "tfnd",
+        # SB3NU1979
+        "uco7"] },
       { sec: Акорди, pieces: [ # Chords
         # SB2NU1977
         "yai7",
@@ -144,12 +144,12 @@ books:
         "k402", "l52j", "6u7s", "cj29",
         # SB5NU1980
         "pnrg", "978q", "6zcy"] },
-      { sec: Поліфонія, pieces: [
+      { sec: Поліфонія, pieces: [ # Polyphone
         # SB3NU1979
         "2zg8",
         # SB4NU1978
         "d61l"] },
-      { sec: Ліва рука, pieces: [
+      { sec: Ліва рука, pieces: [ # Left hand
         # SB1NU1979
         "7smk", "zvmc",
         # SB2NU1977
