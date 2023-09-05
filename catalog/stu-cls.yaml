@@ -178,6 +178,9 @@ pieces:
   - { id: 2zg8, tit: Етюд C minor,
       com: Г. Тишкевич, src: SB3NU1979,
       org: blr, sty: aut, gnr: stu, ton: ci, frm: [arp, tu3, vo2, fi1, fi5], bss: stb, lvl: elb }
+  - { id: d6ra, tit: Етюд G major,
+      com: Ф. Лекуппе, src: SB3NU1979,
+      org: fra, sty: cls, gnr: stu, ton: [gj, ei], frm: [vo2, cr3], bss: pub, lvl: elb }
 
   # SB4NU1978
   - { id: 4uih, tit: Етюд G minor,
