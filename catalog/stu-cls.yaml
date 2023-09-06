@@ -148,10 +148,9 @@ pieces:
   - { id: zbvy, tit: Етюд D minor,
       com: К. Мясков, src: SB3NU1979,
       org: ukr, sty: aut, gnr: stu, ton: di, frm: [scl, fi5, syn], bss: stb, lvl: elb }
-  # p. 37
-  # - { id: zeeh, tit: Песня веретена,
-  #     com: А. Гедике, src: SB3NU1979,
-  #     org: rus, sty: aut, gnr: stu, ton: di, frm: [scl, tri], bss: [stb, pub, scl, tri], lvl: elb }
+  - { id: zeeh, tit: Песня веретена,
+      com: А. Гедике, src: SB3NU1979,
+      org: rus, sty: aut, gnr: stu, ton: di, frm: [scl, tri], bss: [stb, pub, scl, tri], lvl: elb }
   # p. 39
   # - { id: egr1, tit: Етюд F major,
   #     com: К. Черні, src: SB3NU1979,
