@@ -18,7 +18,7 @@
   \key g \major
   \time 4/4
   \duo {
-    b'='2\p c_\aLeg | d b | a b | c a | <fis=' a> b |
+    b'='2\p c_\aLeg | d b | a b | c a | <fis=' a> g |
     <fis=' c'>2 <b g> | a g | <g b>\> \af 2\! <fis=' a> |
 
     {{ rh1a("b='4") }}

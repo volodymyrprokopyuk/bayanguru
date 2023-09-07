@@ -1,3 +1,8 @@
+{% macro rh1(a) %}
+  {{ a }} bes a bes a bes a bes a g f a | g) a( g a g a g a g f e g |
+  f='16) g( f g f g f g f ees d f | ees f ees d cis e d='4) r8 |
+{% endmacro %}
+
 {% macro rightHand() %}
 \relative {
   \tempo Allegretto
@@ -11,6 +16,15 @@
 
   r4 \clef bass <f,,= a>8( <e gis>4.) | r4\< <ees g>8( \af 4.\! <d fis>4.) |
   \clef treble r4 <d'=' f>8( <cis e>4.) | r4 <d a'>8( <cis=' e>4) r8 |
+
+  d='16\(\f ees \rep 10 { d=' ees=' } d ees\) |
+  f='16\( g \rep 10 { f=' g=' } f g\) |
+  {{ rh1("a='16(\\f") }}
+
+  r4\p <bes= d>8( <a cis>4.)_\dCre | r4 <aes c>8( <g b>4.) |
+  r4 <g= bes>8( <fis a>4.) | r4 <fis= c'>8( <g= bes>4)\> \af 8\! r8 |
+
+  {{ rh1("a'='16(\\f") }} \bar "|."
 }
 {% endmacro %}
 
