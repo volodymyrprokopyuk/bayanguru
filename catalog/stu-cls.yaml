@@ -184,7 +184,7 @@ pieces:
   # SB4NU1978
   - { id: 4uih, tit: Етюд G minor,
       com: В. Логачов, src: SB4NU1978,
-      org: rus, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elb }
+      org: rus, sty: aut, gnr: stu, ton: gi, frm: [scl, fi5], bss: stb, lvl: elb }
   - { id: j5us, tit: Етюд G major,
       com: Є. Юцевич, src: SB4NU1978,
       org: ukr, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elb }
