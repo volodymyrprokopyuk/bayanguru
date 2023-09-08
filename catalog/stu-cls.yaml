@@ -180,14 +180,13 @@ pieces:
   - { id: d6ra, tit: Етюд G major,
       com: Ф. Лекуппе, src: SB3NU1979,
       org: fra, sty: cls, gnr: stu, ton: [gj, ei], frm: [vo2, cr3], bss: pub, lvl: elb }
-
   # SB4NU1978
   - { id: 4uih, tit: Етюд G minor,
       com: В. Логачов, src: SB4NU1978,
       org: rus, sty: aut, gnr: stu, ton: gi, frm: [scl, fi5], bss: stb, lvl: elb }
   - { id: j5us, tit: Етюд G major,
       com: Є. Юцевич, src: SB4NU1978,
-      org: ukr, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elb }
+      org: ukr, sty: aut, gnr: stu, ton: gj, frm: scl, bss: [stb, jmp], lvl: elb }
   - { id: 4k6c, tit: Етюд A minor,
       com: К. Мясков, src: SB4NU1978,
       org: ukr, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elb }
