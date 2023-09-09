@@ -189,7 +189,7 @@ pieces:
       org: ukr, sty: aut, gnr: stu, ton: gj, frm: scl, bss: [stb, jmp], lvl: elb }
   - { id: 4k6c, tit: Етюд A minor,
       com: К. Мясков, src: SB4NU1978,
-      org: ukr, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elb }
+      org: ukr, sty: aut, gnr: stu, ton: ai, frm: scl, bss: stb, lvl: elb }
 
   # SB5NU1980
   - { id: hwwc, tit: Етюд F major,
