@@ -190,6 +190,19 @@ pieces:
   - { id: 4k6c, tit: Етюд A minor,
       com: К. Мясков, src: SB4NU1978,
       org: ukr, sty: aut, gnr: stu, ton: ai, frm: scl, bss: stb, lvl: elb }
+  # p. 13
+  # - { id: yi1u, tit: Етюд D minor,
+  #     com: В. Угринович, src: SB4NU1978,
+  #     org: ukr, sty: aut, gnr: stu, ton: di, frm: [arp, fi5], bss: stb, lvl: elb }
+  - { id: qt8h, tit: Етюд C minor,
+      com: В. Хведченя, src: SB4NU1978,
+      org: ukr, sty: aut, gnr: stu, frm: [arp, fi5], bss: stb, lvl: elb }
+  - { id: djop, tit: Етюд F major,
+      com: К. Черні, src: SB4NU1978,
+      org: aut, sty: stu, gnr: stu, frm: [arp, wst], bss: stb, lvl: elb }
+  - { id: z04b, tit: Етюд Bes major,
+      com: К. Черні, src: SB4NU1978,
+      org: aut, sty: stu, gnr: stu, frm: [arp, wst], bss: stb, lvl: elb }
 
   # SB5NU1980
   - { id: hwwc, tit: Етюд F major,
@@ -203,16 +216,6 @@ pieces:
       org: ukr, sty: stu, gnr: stu, frm: [scl, arp], bss: stb, lvl: elb }
 
   # Arpeggio
-  # SB4NU1978
-  - { id: qt8h, tit: Етюд C minor,
-      com: В. Хведченя, src: SB4NU1978,
-      org: ukr, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elb }
-  - { id: djop, tit: Етюд F major,
-      com: К. Черні, src: SB4NU1978,
-      org: aut, sty: stu, gnr: stu, frm: [arp, wst], bss: stb, lvl: elb }
-  - { id: z04b, tit: Етюд Bes major,
-      com: К. Черні, src: SB4NU1978,
-      org: aut, sty: stu, gnr: stu, frm: [arp, wst], bss: stb, lvl: elb }
   # SB5NU1980
   - { id: 4s1u, tit: Етюд A minor,
       com: А. Холминов, src: SB5NU1980,
