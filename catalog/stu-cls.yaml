@@ -196,13 +196,13 @@ pieces:
   #     org: ukr, sty: aut, gnr: stu, ton: di, frm: [arp, fi5], bss: stb, lvl: elb }
   - { id: qt8h, tit: Етюд C minor,
       com: В. Хведченя, src: SB4NU1978,
-      org: ukr, sty: aut, gnr: stu, frm: [arp, fi5], bss: stb, lvl: elb }
+      org: ukr, sty: aut, gnr: stu, ton: [ci, eesj], frm: [arp, fi5], bss: stb, lvl: elb }
   - { id: djop, tit: Етюд F major,
       com: К. Черні, src: SB4NU1978,
-      org: aut, sty: stu, gnr: stu, frm: [arp, wst], bss: stb, lvl: elb }
+      org: aut, sty: cls, gnr: stu, ton: fj, frm: [arp, scl, fi5], bss: stb, lvl: elb }
   - { id: z04b, tit: Етюд Bes major,
       com: К. Черні, src: SB4NU1978,
-      org: aut, sty: stu, gnr: stu, frm: [arp, wst], bss: stb, lvl: elb }
+      org: aut, sty: cls, gnr: stu, ton: besj, frm: [arp, fi5, jmp], bss: stb, lvl: elb }
 
   # SB5NU1980
   - { id: hwwc, tit: Етюд F major,
