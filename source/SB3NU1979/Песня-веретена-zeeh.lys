@@ -43,11 +43,11 @@
   a=,16\) bes( \rep 6 { a=, bes=, } a g f g a bes a bes a=,8) |
 
   r4 g@m!8(-\stBass d@M!4.) | r4 d@7!8( g@m!4.) |
-  r4 bes@M!8( f@M!4.) | r4 f@7!8( bes@M!4.) | {{ lh1("f+d@m!8(") }}
+  r4 bes@M!8( f@M!4.) | r4 f@7!8( bes@M!4.) | {{ lh1("f+bes@m!8(") }}
 
-  ees'=16\(-\puBass d \rep 11 { ees= d= } |
+  ees'=16\(-\puBass f \rep 11 { ees= f= } |
   d=16\) ees\( \rep 8 { d= ees= } d c bes a g=,8\) |
 
-  {{ lh1("f+d@m!8(-\\stBass") }}
+  {{ lh1("f+bes@m!8(-\\stBass") }}
 }
 {% endmacro %}
