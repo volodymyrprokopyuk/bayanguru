@@ -112,7 +112,7 @@ books:
         # SB3NU1979
         "ey1v", "yc2l", "t0ai", "a7ra", "zbvy", "jq25", "zeeh",
         # SB4NU1978
-        "4uih", "j5us", "4k6c",
+        "4uih", "j5us", "4k6c", "8sl6",
         # SB5NU1980
         "hwwc", "ipdh", "h3xy"] },
       { sec: Арпеджіо, pieces: [ # Arpeggio
@@ -124,10 +124,10 @@ books:
         # SB3NU1979
         "m1je", "x745", "ckjo", "ov1p", "9zx1", "vk0o",
         # SB4NU1978
-        "qt8h", "djop", "z04b", "4s1u", "8yil"] },
+        "qt8h", "djop", "z04b", "4s1u", "8yil", "p7aw"] },
       { sec: Повороти кисті, pieces: [
         # SB4NU1978
-        "p7aw", "8sl6", "ms9j",
+        "ms9j",
         # SB5NU1980
         "ua3l", "m8an", "31pw", "1004", "slsw"] } ] }
   - { id: scl2, tit: Вибрані етюди, sub: для баяна,

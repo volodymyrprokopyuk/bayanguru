@@ -208,10 +208,10 @@ pieces:
       org: ukr, sty: aut, gnr: stu, ton: fi, frm: [arp, rep, fi5, jpm], bss: stb, lvl: elb }
   - { id: p7aw, tit: Етюд D major,
       com: А. Лешгорн, src: SB4NU1978,
-      org: deu, sty: stu, gnr: stu, frm: [scl, arp, wrs], bss: stb, lvl: elb }
+      org: deu, sty: cls, gnr: stu, ton: dj, frm: [arp, fi5], bss: stb, lvl: elb }
   - { id: 8sl6, tit: Етюд G major,
       com: Т. Лак, src: SB4NU1978,
-      org: fra, sty: stu, gnr: stu, frm: [scl, arp, wrs], bss: stb, lvl: elb }
+      org: fra, sty: cls, gnr: stu, ton: gj, frm: [scl, arp, tu3, fi5], bss: stb, lvl: elb }
   - { id: ms9j, tit: Етюд G minor,
       com: О. Денисов, src: SB4NU1978,
       org: ukr, sty: stu, gnr: stu, frm: [in3, wrs], bss: stb, lvl: elb }
