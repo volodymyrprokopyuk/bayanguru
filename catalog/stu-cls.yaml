@@ -203,6 +203,18 @@ pieces:
   - { id: z04b, tit: Етюд Bes major,
       com: К. Черні, src: SB4NU1978,
       org: aut, sty: cls, gnr: stu, ton: besj, frm: [arp, fi5, jmp], bss: stb, lvl: elb }
+  - { id: 8yil, tit: Етюд F minor,
+      com: А. Нечипоренко, src: SB4NU1978,
+      org: ukr, sty: aut, gnr: stu, ton: fi, frm: [arp, rep, fi5, jpm], bss: stb, lvl: elb }
+  - { id: p7aw, tit: Етюд D major,
+      com: А. Лешгорн, src: SB4NU1978,
+      org: deu, sty: stu, gnr: stu, frm: [scl, arp, wrs], bss: stb, lvl: elb }
+  - { id: 8sl6, tit: Етюд G major,
+      com: Т. Лак, src: SB4NU1978,
+      org: fra, sty: stu, gnr: stu, frm: [scl, arp, wrs], bss: stb, lvl: elb }
+  - { id: ms9j, tit: Етюд G minor,
+      com: О. Денисов, src: SB4NU1978,
+      org: ukr, sty: stu, gnr: stu, frm: [in3, wrs], bss: stb, lvl: elb }
 
   # SB5NU1980
   - { id: hwwc, tit: Етюд F major,
@@ -222,19 +234,6 @@ pieces:
       org: rus, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elb }
 
   # Wrist movement
-  # SB4NU1978
-  - { id: 8yil, tit: Етюд F minor,
-      com: А. Нечипоренко, src: SB4NU1978,
-      org: ukr, sty: stu, gnr: stu, frm: [arp, wrs], bss: stb, lvl: elb }
-  - { id: p7aw, tit: Етюд D major,
-      com: А. Лешгорн, src: SB4NU1978,
-      org: deu, sty: stu, gnr: stu, frm: [scl, arp, wrs], bss: stb, lvl: elb }
-  - { id: 8sl6, tit: Етюд G major,
-      com: Т. Лак, src: SB4NU1978,
-      org: fra, sty: stu, gnr: stu, frm: [scl, arp, wrs], bss: stb, lvl: elb }
-  - { id: ms9j, tit: Етюд G minor,
-      com: О. Денисов, src: SB4NU1978,
-      org: ukr, sty: stu, gnr: stu, frm: [in3, wrs], bss: stb, lvl: elb }
   # SB5NU1980
   - { id: ua3l, tit: Етюд A minor,
       com: Т. Лак, src: SB5NU1980,
