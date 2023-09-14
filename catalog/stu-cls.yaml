@@ -151,10 +151,9 @@ pieces:
   - { id: zeeh, tit: Песня веретена,
       com: А. Гедике, src: SB3NU1979,
       org: rus, sty: aut, gnr: stu, ton: di, frm: [scl, tri], bss: [stb, pub, scl, tri], lvl: elb }
-  # p. 39
-  # - { id: egr1, tit: Етюд F major,
-  #     com: К. Черні, src: SB3NU1979,
-  #     org: aut, sty: cls, gnr: stu, ton: fj, frm: [arp, tu3, acc], bss: [stb], lvl: elb }
+  - { id: egr1, tit: Етюд F major,
+      com: К. Черні, src: SB3NU1979,
+      org: aut, sty: cls, gnr: stu, ton: fj, frm: [arp, tu3, acc], bss: [stb], lvl: elb }
   # p. 41
   # - { id: q2ew, tit: Етюд A minor,
   #     com: К. Мясков, src: SB3NU1979,
@@ -290,14 +289,3 @@ pieces:
   # - { id: n7j0, tit: Етюд B minor,
   #     com: М. Черемухин, src: SB5NU1980,
   #     org: rus, sty: stu, gnr: stu, frm: [pph, scl, wrs, leg], bss: stb, lvl: elc }
-
-  # Left hand
-  # SB4NU1978
-  # p. 32
-  # - { id: l4sv, tit: Етюд A major,
-  #     com: М. Чайкін, src: SB4NU1978,
-  #     org: ukr, sty: stu, gnr: stu, frm: [scl], bss: [stb, jmp, leg], lvl: elb }
-  # p. 34
-  # - { id: 8sz0, tit: Етюд D major,
-  #     com: К. Черні, src: SB4NU1978,
-  #     org: aut, sty: stu, gnr: stu, frm: [scl], bss: [pub, scl, leg], lvl: elb }
