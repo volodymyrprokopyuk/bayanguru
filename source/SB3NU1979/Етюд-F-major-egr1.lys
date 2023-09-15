@@ -41,5 +41,12 @@
 \relative {
   \clef bass
   \key f \major
+  \meter 1/2 #'(1)
+  f,=,8-\stBass fM! fM fM | f fM fM fM | c' c7! c7 c7 | f, fM! fM fM |
+  f=,8 fM! fM fM | f fM fM fM | g[ c@M! g=,8 g7!] | c@M![ cM8] cM4 |
+
+  e=,8[ c@7! c78 c7] | f fM! fM fM | c' c7! c7 c7 | f, fM! fM fM |
+  e=,8[ c@7! c78 c7] | f[ fM! d' bes@M!] |
+  c=8[ f@M! c=8 c7!] | f+fM![ f+fM] f+fM r |
 }
 {% endmacro %}
