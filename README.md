@@ -137,10 +137,13 @@ meta:
       dot: пунктирний ритм = dotted rhythm
       syn: синкопа = syncopation
     orn: мелізми = ornamentation
-      rep: репетиції = repetition
-      acc: форшлаги = acciaccatura
-      mor: морденти = mordents
-      tri: трелі = trills
+      rep: репетиція = repetition
+      tre: тремоло = tremolo
+      acc: форшлаг = acciaccatura
+      mor: мордент = mordent
+      gru: групето = gruppetto
+      tri: трель = trill
+      gli: глісандо = gissando
     pph: поліфонія = polyphony
       vo2: двоголосся
       vo3: триголосся
