@@ -43,5 +43,16 @@
 \relative {
   \clef bass
   \key a \minor
+  \duo {
+    \override TupletBracket.bracket-visibility = ##f
+    \override TupletNumber.text = ""
+    {{ t4("r4 am!8", "r4 dm!8", "r4 g7!8", "r4 cM!8") }}
+    {{ t2("r4 fM!8", "r4 dm!8") }} e7!4( am!8)-. d \rest |
+    {{ t4("r4 am!8", "r4 dm!8", "r4 g7!8", "r4 cM!8") }}
+    {{ t2("r4 am!8", "r4 em!8") }} b7!4( eM!8)-. d \rest |
+  } {
+    a,=,4-\stBass d, g c | f, d e( a8)-. s8 |
+    a=,4 d, g c | a e b'( e,=,8)-. s8 |
+  }
 }
 {% endmacro %}
