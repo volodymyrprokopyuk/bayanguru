@@ -41,8 +41,8 @@ function lintEndLineBarCheck(content, logs) {
   let conforms = true
   for (const [_, start, note, check, rest] of
        content.matchAll(reMusicContent)) {
-    // OK |, "|.", | }, "|." }, }}, %
-    if (!/ \|( \})?$| ".."( \})?$| \}\}$| %$/.test(rest)) {
+    // OK |, "|.", | }, "|." }, }}, %, "...",
+    if (!/ \|( \})?$| ".."( \})?$| \}\}$| %$|",/.test(rest)) {
       logs.push(`${start + note + check +
         rest.slice(0, -2)}${chalk.red(rest.slice(-2))}`)
       conforms = false
