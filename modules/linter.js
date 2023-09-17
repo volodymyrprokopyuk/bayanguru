@@ -58,7 +58,7 @@ function lintNoteComponentOrder(content, logs) {
   const reNote = reFromParts(
     null,
     // pitch
-    /^([a-g](?:es|is){0,2}|(?:fu|fd|bu|bd|bs|dt)$)/,
+    /^([a-g](?:es|is){0,2}|(?:fu|fd|bu|bd|bs|dt|bass)$)/,
     // stradella
     /(\+?(?:[a-g](?:is|es){0,2})?@?[Mm7d]!?)?/,
     // octave check
