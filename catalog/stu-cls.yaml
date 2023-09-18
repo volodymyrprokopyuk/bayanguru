@@ -237,6 +237,13 @@ pieces:
   - { id: cj29, tit: Етюд B major,
       com: М. Їжакевич, src: SB4NU1978,
       org: ukr, sty: aut, gnr: stu, ton: bj, frm: [cr5, fi5], bss: stb, lvl: ina }
+  # p. 68
+  # - { id: glv4, tit: Етюд A minor,
+  #     com: В. Переселенцев, src: SB4NU1978,
+  #     org: rus, sty: aut, gnr: stu, ton: ai, frm: [vo2, in2, fi1, fi5], bss: stb, lvl: elb }
+  - { id: d61l, tit: Етюд A minor,
+      com: К. Черні, src: SB4NU1978,
+      org: aut, sty: cls, gnr: stu, ton: ai, frm: [vo2, arp, fi5], bss: stb, lvl: elb }
 
   # SB5NU1980
   - { id: hwwc, tit: Етюд F major,
@@ -248,13 +255,11 @@ pieces:
   - { id: h3xy, tit: Етюд A minor,
       com: А. Нечипоренко, src: SB5NU1980,
       org: ukr, sty: stu, gnr: stu, frm: [scl, arp], bss: stb, lvl: elb }
-
   # Arpeggio
   # SB5NU1980
   - { id: 4s1u, tit: Етюд A minor,
       com: А. Холминов, src: SB5NU1980,
       org: rus, sty: stu, gnr: stu, frm: arp, bss: stb, lvl: elb }
-
   # Wrist movement
   # SB5NU1980
   - { id: ua3l, tit: Етюд A minor,
@@ -272,7 +277,6 @@ pieces:
   - { id: slsw, tit: Етюд Fis major,
       com: П. Куликов, src: SB5NU1980,
       org: rus, sty: stu, gnr: stu, frm: [in3, leg], bss: stb, lvl: elb }
-
   # Chords
   # SB5NU1980
   - { id: pnrg, tit: Етюд B minor,
@@ -284,12 +288,7 @@ pieces:
   - { id: 6zcy, tit: Етюд Aes major,
       com: О. Денисов, src: SB5NU1980,
       org: ukr, sty: stu, gnr: stu, frm: cr5, bss: pub, lvl: elc }
-
   # Polyphony
-  # SB4NU1978
-  - { id: d61l, tit: Етюд A minor,
-      com: К. Черні, src: SB4NU1978,
-      org: aut, sty: stu, gnr: stu, frm: [pph, arp, wrs], bss: stb, lvl: elb }
   # SB5NU1980
   # p. 101
   # - { id: 2m7b, tit: Етюд Cis minor,
