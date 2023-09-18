@@ -233,10 +233,10 @@ pieces:
       org: rus, sty: aut, gnr: stu, ton: fj, frm: [cr7, syn], bss: pub, lvl: ina }
   - { id: 6u7s, tit: Етюд C minor,
       com: К. Мясков, src: SB4NU1978,
-      org: ukr, sty: aut, gnr: stu, frm: [cr5,tu3, jmp], bss: [stb, jmp], lvl: elc }
+      org: ukr, sty: aut, gnr: stu, ton: ci, frm: [cr5,tu3, jmp], bss: [stb, jmp], lvl: elc }
   - { id: cj29, tit: Етюд B major,
       com: М. Їжакевич, src: SB4NU1978,
-      org: ukr, sty: stu, gnr: stu, frm: cr5, bss: stb, lvl: ina }
+      org: ukr, sty: aut, gnr: stu, ton: bj, frm: [cr5, fi5], bss: stb, lvl: ina }
 
   # SB5NU1980
   - { id: hwwc, tit: Етюд F major,
