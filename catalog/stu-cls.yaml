@@ -160,10 +160,9 @@ pieces:
   - { id: 4efu, tit: Етюд E minor,
       com: А. Нечипоренко, src: SB3NU1979,
       org: ukr, sty: aut, gnr: stu, ton: ei, frm: [scl, tu3, rep], bss: stb, lvl: ela }
-  # p. 47
-  # - { id: kgbs, tit: Етюд A minor,
-  #     com: С. Чапкій, src: SB3NU1979,
-  #     org: ukr, sty: aut, gnr: stu, ton: [ai, cj], frm: [arp, in6, rep], bss: stb, lvl: elb }
+  - { id: kg4s, tit: Етюд A minor,
+      com: С. Чапкій, src: SB3NU1979,
+      org: ukr, sty: aut, gnr: stu, ton: [ai, cj], frm: [arp, in6, rep], bss: stb, lvl: elb }
   # p. 50
   # - { id: xe4q, tit: Етюд G major,
   #     com: Г. Салов, src: SB3NU1979,

@@ -1,0 +1,42 @@
+{% macro rh1(a) %}
+  {{ a }} e) e-. e-. <d b'>( e) e-. e-. |
+  <e=' c'>16( a) a-. c-. <f, d'>( b) b-. d=''-. |
+{% endmacro %}
+
+{% macro rh2(a) %}
+  <e,=' c'>16( a) a-. c-. <d, b'>( gis) gis-. b-. |
+  <c,=' a'>16-. b'-. <e, c'>-. a-. <d,=' gis b>8 r |
+{% endmacro %}
+
+{% macro rh3(a) %}
+  {{ a }} g) g-. g-. <f d'>( g) g-. g-. |
+  | <g e'>16( d') <g, c>( e') <f, d'>( g) g-. g-. |
+  | <e c'>16( g) g-. c-. <d, b'>( g) g-. a-. |
+{% endmacro %}
+
+{% macro rightHand() %}
+\relative {
+  \tempo Moderato
+  \clef treble
+  \key a \minor
+  \time 2/4
+  {{ rh1("<c'=' a'>16(\\f") }} {{ rh2() }}
+  {{ rh1("<c=' a'>16(") }}
+  <e,=' c'>16( e') e-. <c a'>-. <c a'>( gis') <b, d gis>-. b'-. |
+  <c,='' e a>8-. <b d gis>-. <c e a> a'32( g fis g='' |
+
+  {{ rh3("<e='' c'>16") }}
+  <d,='' g b>8 <c fis a> <b d g> \acc { g='16 g } g16 g |
+  {{ rh3("<e=' c'>16(") }}
+  <d,=' g b>8^\tRit <c fis a> <b d g> g'32( f e d=' |
+
+  {{ rh1("<c=' a'>16\\p^\\tATem") }} {{ rh2() }}
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\relative {
+  \clef bass
+  \key a \minor
+}
+{% endmacro %}
