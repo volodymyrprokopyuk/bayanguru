@@ -163,10 +163,9 @@ pieces:
   - { id: kg4s, tit: Етюд A minor,
       com: С. Чапкій, src: SB3NU1979,
       org: ukr, sty: aut, gnr: stu, ton: [ai, cj], frm: [arp, in6, rep], bss: stb, lvl: elb }
-  # p. 50
-  # - { id: xe4q, tit: Етюд G major,
-  #     com: Г. Салов, src: SB3NU1979,
-  #     org: rus, sty: aut, gnr: stu, ton: [gj, ei], frm: [arp, tu3], bss: stb, lvl: elb }
+  - { id: xe4q, tit: Етюд G major,
+      com: Г. Салов, src: SB3NU1979,
+      org: rus, sty: aut, gnr: stu, ton: [gj, ei], frm: [arp, tu3], bss: stb, lvl: elb }
   - { id: jq25, tit: Етюд E minor,
       com: А. Зубарев, src: SB3NU1979,
       org: rus, sty: aut, gnr: stu, ton: ei, frm: scl, bss: stb, lvl: ela }
