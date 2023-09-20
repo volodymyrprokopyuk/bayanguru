@@ -9,15 +9,23 @@
 {% endmacro %}
 
 {% macro rh1(a) %}
-  {{ t4(a, "b-. ais-. b-.", "c( d) c-.", "a='-. gis-. a-.") }}
+  {{ t4(a, "b-. ais-. b-.", "c( d) c-.", "a-. gis-. a='-.") }}
 {% endmacro %}
 
 {% macro rh2(a) %}
-  {{ t4(a, "b g' fis", "e c b", "c fis c") }}
+  {{ t4(a, "b g' fis", "e c b", "c fis c=''") }}
 {% endmacro %}
 
 {% macro rh3(a) %}
-  {{ t4(a, "b-. g'-. fis-.", "e( c) b-.", "c-. fis-. c-.") }}
+  {{ t4(a, "b-. g'-. fis-.", "e( c) b-.", "c-. fis-. c=''-.") }}
+{% endmacro %}
+
+{% macro rh4(a) %}
+  {{ t4(a, "b(-> ais) b-.", "c(-> d) c-.", "a(-> gis) a='-.") }}
+{% endmacro %}
+
+{% macro rh5(a) %}
+  {{ t4(a, "b ais b", "c d c", "a gis a='") }}
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -29,9 +37,9 @@
   \meter 1/8 1,1,1,1
   \repeat volta 2 {
     {{ rh1("d''=''16(\\f e) d-.") }}
-    {{ t4("b='16( c b)-.", "g-. fis-. g-.", "a( b) a-.", "fis-. e-. d-.") }}
+    {{ t4("b='16( c) b-.", "g-. fis-. g-.", "a( b) a-.", "fis-. e-. d-.") }}
     {{ rh1("d'=''16( e) d-.") }}
-    {{ t3("b='16( c b)-.", "g-. fis-. g-.", "a( e) fis-.", "g='8") }}
+    {{ t3("b='16( c) b-.", "g-. fis-. g-.", "a( e) fis-.", "g='8") }}
   }
 
   {{ rh2("b='16\\(\\p ais_\\aDol b") }}
@@ -43,6 +51,16 @@
   {{ t4("b='16( ais) b-.", "b-. a'-. b,-.", "g'-. b,-. fis'-.", "e-. d-. c-.") }}
   {{ rh3("b='16( ais) b-.") }}
   {{ t3("b='16( ais) b-.", "b-. a'-. b,-.", "g'-. b,-. fis'-.", "e=''8") }}
+
+  {{ rh4("d=''16(->\\f e) d-.") }}
+  {{ t4("b='16(-> c) b-.", "g(-> fis) g-.", "a(-> b) a-.", "fis(-> e) d-.") }}
+  {{ rh4("d'=''16(-> e) d-.") }}
+  {{ t3("b='16(-> c) b-.", "g(-> fis) g-.", "a(-> e) fis-.", "g='8") }}
+
+  {{ rh5("d'=''16\\(\\p e_\\dCre d") }}
+  {{ t4("b='16 c b", "g fis g", "a b a", "fis e d\\)") }}
+  {{ rh5("d'=''16\\( e d") }}
+  {{ t3("b='16 c\\) b-.", "g-. fis-. g-.", "a(-> e) fis-.", "g='8->") }} \bar "|."
 }
 {% endmacro %}
 
