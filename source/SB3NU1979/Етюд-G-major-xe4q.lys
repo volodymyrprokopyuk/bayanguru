@@ -28,6 +28,12 @@
   {{ t4(a, "b ais b", "c d c", "a gis a='") }}
 {% endmacro %}
 
+{% macro t1(a, b) %}
+  \tuplet 3/2 { \set stemRightBeamCount = #2 {{ a }} %
+  \set stemLeftBeamCount = #1 \set stemRightBeamCount = #1 r16 %
+  \set stemLeftBeamCount = #2 {{ b }} }
+{% endmacro %}
+
 {% macro rightHand() %}
 \relative {
   \tempo Allegro
@@ -68,5 +74,17 @@
 \relative {
   \clef bass
   \key g \major
+  g+gM!8-\stBass e+em! a+am! d+d7! | \rep 2 { g+gM!8 e+em! a+am! d+d7! | }
+  g+gM!8 e+em! {{ t1("a+am!16[", "d@7!]") }} g+gM!8 |
+
+  \rep 2 {
+    e=8 em! a, am! | b b7! e+em! r | e em! a, am! |
+    b=,8 b7! {{ t1("e+em!16[", "b@7!]") }} e+em!8 |
+  }
+
+  \rep 2 {
+    \rep 3 { g+gM!8 e+em! a+am! d+d7! | }
+    g+gM!8 e+em! {{ t1("a+am!16[", "d+d7!]") }} g+gM!8 |
+  }
 }
 {% endmacro %}
