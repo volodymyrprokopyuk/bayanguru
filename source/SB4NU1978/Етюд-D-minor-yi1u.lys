@@ -22,11 +22,28 @@
     \alternative {
       \volta 1 {
         c='16\p e_\dCre g c cis, e g cis d, g bes d e, g bes e |
+        e,='16 a c e f, a c f g, a c g' f, a c f |
+        d,='16 fis a d dis, fis a dis e, a c e fis, a c fis |
+        fis,='16 bes d fis g, bes d g a, bes d a' g, bes d g |
+        \duo { bes'='4 a bes c | d f g g='' | }
+        {
+          bes'='16 des f bes a, des f a bes, d g bes c, d g c |
+          d,=''16 f bes d f, bes d f g, b d g g, c ees g=''' |
+        }
+        bes,='16 des f bes a, des f a g, bes des g f, bes des f |
+        \duo {
+          r16\f \rep 12 { <des''='' f a>16 } <des='' f>16\> 16 \af 16\! 16 \bar "||"
+        } { a'='1 | }
       }
 
       \volta 2 { \section \sectionLabel "Coda" }
     }
   }
+
+  {{ rh1("d=''16 a", "") }}
+  cis'='''16 a e cis a' e cis a e' cis a e cis' a e cis |
+  c='16( f a c) f,( a c f) c,( d f c') cis,( e g cis) |
+  <d,=' f a d>4~ 8 r r2 \bar "|."
 }
 {% endmacro %}
 
