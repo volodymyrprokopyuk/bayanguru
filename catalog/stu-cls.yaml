@@ -185,10 +185,9 @@ pieces:
   - { id: 4k6c, tit: Етюд A minor,
       com: К. Мясков, src: SB4NU1978,
       org: ukr, sty: aut, gnr: stu, ton: ai, frm: scl, bss: stb, lvl: elb }
-  # p. 13
-  # - { id: yi1u, tit: Етюд D minor,
-  #     com: В. Угринович, src: SB4NU1978,
-  #     org: ukr, sty: aut, gnr: stu, ton: di, frm: [arp, fi5], bss: stb, lvl: elb }
+  - { id: yi1u, tit: Етюд D minor,
+      com: В. Угринович, src: SB4NU1978,
+      org: ukr, sty: aut, gnr: stu, ton: di, frm: [arp, fi5], bss: stb, lvl: elb }
   - { id: qt8h, tit: Етюд C minor,
       com: В. Хведченя, src: SB4NU1978,
       org: ukr, sty: aut, gnr: stu, ton: [ci, eesj], frm: [arp, fi5], bss: stb, lvl: elb }
@@ -241,6 +240,22 @@ pieces:
   - { id: d61l, tit: Етюд A minor,
       com: К. Черні, src: SB4NU1978,
       org: aut, sty: cls, gnr: stu, ton: ai, frm: [vo2, arp, fi5], bss: stb, lvl: elb }
+  # p. 73
+  # - { id: i4g9, tit: Етюд F major,
+  #     com: К. Черні, src: SB4NU1978,
+  #     org: aut, sty: cls, gnr: stu, ton: fj, frm: [scl, arp], bss: stb, lvl: elb }
+  # p. 75
+  # - { id: uoxw, tit: Етюд A minor,
+  #     com: К. Бурындин, src: SB4NU1978,
+  #     org: rus, sty: aut, gnr: stu, ton: ai, frm: [arp, dot], bss: stb, lvl: elb }
+  # p. 79
+  # - { id: rru6, tit: Етюд A minor,
+  #     com: А. Дювернуа, src: SB4NU1978,
+  #     org: fra, sty: aut, gnr: stu, ton: ai, frm: scl, bss: [stb, pub, scl], lvl: elb }
+  # p. 81
+  # - { id: 6jhw, tit: Етюд Bes minor,
+  #     com: Г. Тишкевич, src: SB4NU1978,
+  #     org: ukr, sty: aut, gnr: stu, ton: besi, frm: [in8, ch5], bss: [stb, pub, rep], lvl: elb }
 
   # SB5NU1980
   - { id: hwwc, tit: Етюд F major,

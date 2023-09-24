@@ -1,0 +1,38 @@
+{% macro rh1(a, b) %}
+  {{ a }} f d f' d a f a' f d a d' a f {{ b }} d='' |
+{% endmacro %}
+
+{% macro rightHand() %}
+\relative {
+  \tempo "Allegro moderato"
+  \clef treble
+  \key d \minor
+  \time 4/4
+  \repeat segno 2 {
+    {{ rh1("d''=''16\\mp\\< a_\\aLeg", "\\af 16\\!") }}
+    e'='''16 bes g e d' bes g d c'\> g e c bes' g e \af 16\! bes |
+    a'=''16 f d a f' d a f e' bes g e d' bes f d |
+    \duo { a'='4\< \af 4\! bes d\> \af 4\! cis='' | }
+    { a'='16 e cis e bes' f d f d' a g f cis' bes a g=' | }
+    {{ rh1("d'=''16\\mp\\< a", "\\af 16\\!") }}
+    e'='''16\mf bes g e d' bes g d c' a e c a' f c a |
+    cis'='''16\p bes f cis bes' f cis bes a' f d a g' d bes g |
+    f'=''16 d bes a e' cis bes a d a f e d='4 \bar "||"
+
+    \alternative {
+      \volta 1 {
+        c='16\p e_\dCre g c cis, e g cis d, g bes d e, g bes e |
+      }
+
+      \volta 2 { \section \sectionLabel "Coda" }
+    }
+  }
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\relative {
+  \clef bass
+  \key d \minor
+}
+{% endmacro %}
