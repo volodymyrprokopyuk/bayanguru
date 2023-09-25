@@ -268,7 +268,7 @@ pieces:
   # SB5NU1980
   - { id: hwwc, tit: Етюд F major,
       com: О. Денисов, src: SB5NU1980,
-      org: ukr, sty: stu, gnr: stu, frm: scl, bss: stb, lvl: elb }
+      org: ukr, sty: aut, gnr: stu, ton: [fj, cj], frm: scl, bss: stb, lvl: elb }
   - { id: ipdh, tit: Етюд D minor,
       com: С. Титов, src: SB5NU1980,
       org: rus, sty: stu, gnr: stu, frm: [scl, wrs], bss: stb, lvl: elb }
