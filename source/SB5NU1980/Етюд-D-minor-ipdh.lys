@@ -1,5 +1,3 @@
-{% from "util.lys" import v2 %}
-
 {% macro rh1(a, b) %}
   {{ a }} a' {{ b }} g f e d | c bes a g f e |
   d='16\> c bes a g a | bes c d e f \af 16\! g |
@@ -12,14 +10,10 @@
 {% endmacro %}
 
 {% macro lh1(a) %}
-  {{ a }} dm! dm | f,[ d@m! dm8] |
-  g=,8 gm! gm | bes[ g@m! gm8] |
-  a=,8 a7! a7 | e'[ a@7! a78] |
-  d=8 dm! dm | a a7! a7 |
-  d=8 dm! dm | d d7! d7 |
-  g,=,8 gm! gm | bes[ g@m! gm8] |
-  a=,8[ d@m! dm8] | a a7! a7 |
-  d=8 a f | {{ v2("r8 dm!", "d=4") }} r8 |
+  {{ a }} dm! dm | f,[ d@m! dm8] | g gm! gm | bes[ g@m! gm8] |
+  a=,8 a7! a7 | e'[ a@7! a78] | d dm! dm | a a7! a7 |
+  d=8 dm! dm | d d7! d7 | g, gm! gm | bes[ g@m! gm8] |
+  a=,8[ d@m! dm8] | a a7! a7 | d a f | \duo { r8 dm! } { d=4 } r8 |
 {% endmacro %}
 
 {% macro rightHand() %}
@@ -51,14 +45,10 @@
   {{ lh1("d=8-\\stBass") }}
 
   f=,8 fM! fM | c'[ f@M! fM8] |
-  \rep 2 {
-    g=,8[ c@7! c78] | c c7! c7 |
-  }
-  f,=,8 fM! fM | c' c7! c7 |
-  f,=,8 f7! f7 | c'[ f@7! f78] |
+  \rep 2 { g=,8[ c@7! c78] | c= c7! c7 | }
+  f,=,8 fM! fM | c' c7! c7 | f, f7! f7 | c'[ f@7! f78] |
   bes=,8 besM! besM | g[ bes@M! besM8] |
-  c=8[ f@M! fM8] | c c7! c7 |
-  f,=,8 c' a | f=, r r |
+  c=8[ f@M! fM8] | c c7! c7 | f, c' a | f=, r r |
 
   {{ lh1("d'=8") }}
 }

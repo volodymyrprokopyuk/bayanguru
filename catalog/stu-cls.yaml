@@ -271,7 +271,7 @@ pieces:
       org: ukr, sty: aut, gnr: stu, ton: [fj, cj], frm: scl, bss: stb, lvl: elb }
   - { id: ipdh, tit: Етюд D minor,
       com: С. Титов, src: SB5NU1980,
-      org: rus, sty: stu, gnr: stu, frm: [scl, wrs], bss: stb, lvl: elb }
+      org: rus, sty: aut, gnr: stu, frm: [scl, fi5], bss: stb, lvl: elb }
   - { id: h3xy, tit: Етюд A minor,
       com: А. Нечипоренко, src: SB5NU1980,
       org: ukr, sty: stu, gnr: stu, frm: [scl, arp], bss: stb, lvl: elb }
