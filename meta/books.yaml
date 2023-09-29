@@ -114,7 +114,7 @@ books:
         # SB4NU1978
         "4uih", "j5us", "4k6c", "8sl6",
         # SB5NU1980
-        "hwwc", "ipdh", "h3xy"] },
+        "hwwc", "ipdh", "h3xy", "m8an"] },
       { sec: Арпеджіо, pieces: [ # Arpeggio
         # SB1NU1979
         "9h35", "5402", "h8lm", "09ok", "ktnb", "ri7i", "67ka", "xkj4", "m02e",
@@ -127,10 +127,10 @@ books:
         # SB4NU1978
         "yi1u", "qt8h", "djop", "z04b", "8yil", "p7aw",
         # SB5NU1980
-        "4s1u"] },
+        "4s1u", "ua3l"] },
       { sec: Повороти кисті, pieces: [
         # SB5NU1980
-        "ua3l", "m8an", "31pw", "1004", "slsw"] } ] }
+        "31pw", "1004", "slsw"] } ] }
   - { id: scl2, tit: Вибрані етюди, sub: для баяна,
       pieces: [
       { sec: Інтервали, pieces: [ # Intervals
