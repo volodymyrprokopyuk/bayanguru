@@ -264,31 +264,32 @@ pieces:
   # - { id: 1dyw, tit: Етюд Ees major,
   #     com: А. Лешгорн, src: SB4NU1978,
   #     org: deu, sty: aut, gnr: stu, ton: eesj, frm: arp, bss: stb, lvl: elc }
-
   # SB5NU1980
   - { id: hwwc, tit: Етюд F major,
       com: О. Денисов, src: SB5NU1980,
       org: ukr, sty: aut, gnr: stu, ton: [fj, cj], frm: scl, bss: stb, lvl: elb }
   - { id: ipdh, tit: Етюд D minor,
       com: С. Титов, src: SB5NU1980,
-      org: rus, sty: aut, gnr: stu, frm: [scl, fi5], bss: stb, lvl: elb }
+      org: rus, sty: aut, gnr: stu, ton: [di, fj], frm: [scl, fi5], bss: stb, lvl: elb }
   - { id: h3xy, tit: Етюд A minor,
       com: А. Нечипоренко, src: SB5NU1980,
-      org: ukr, sty: aut, gnr: stu, frm: [scl, arp], bss: stb, lvl: elb }
+      org: ukr, sty: aut, gnr: stu, ton: ai, frm: [scl, arp], bss: stb, lvl: elb }
   - { id: 4s1u, tit: Етюд A minor,
       com: А. Холминов, src: SB5NU1980,
-      org: rus, sty: aut, gnr: stu, frm: arp, bss: stb, lvl: elb }
-  # Wrist movement
-  # SB5NU1980
+      org: rus, sty: aut, gnr: stu, ton: ai, frm: arp, bss: stb, lvl: elb }
   - { id: ua3l, tit: Етюд A minor,
       com: Т. Лак, src: SB5NU1980,
-      org: fra, sty: cls, gnr: stu, frm: [arp, tu3], bss: stb, lvl: elb }
+      org: fra, sty: cls, gnr: stu, ton: ai, frm: [arp, tu3], bss: stb, lvl: elb }
   - { id: m8an, tit: Етюд F major,
       com: М. Магиденко, src: SB5NU1980,
-      org: rus, sty: aut, gnr: stu, frm: scl, bss: stb, lvl: elb }
+      org: rus, sty: aut, gnr: stu, ton: fj, frm: scl, bss: stb, lvl: elb }
+  # p. 72
+  # - { id: j4zh, tit: Етюд G major,
+  #     com: А. Соловьев–Г. Стадник, src: SB5NU1980,
+  #     org: rus, sty: aut, gnr: stu, ton: [gj, besj], frm: [scl, in3], bss: [stb, pub], lvl: elc }
   - { id: 31pw, tit: Етюд C major,
       com: О. Денисов, src: SB5NU1980,
-      org: ukr, sty: stu, gnr: stu, frm: [in3, sta], bss: stb, lvl: elb }
+      org: ukr, sty: aut, gnr: stu, ton: cj, frm: [in3, tu3, fi1], bss: [stb, syn], lvl: elb }
   - { id: "1004", tit: Етюд C major,
       com: С. Чапкій, src: SB5NU1980,
       org: ukr, sty: stu, gnr: stu, ton: cj, frm: in6, bss: stb, lvl: elb }
