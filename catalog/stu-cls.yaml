@@ -289,7 +289,7 @@ pieces:
   #     org: rus, sty: aut, gnr: stu, ton: [gj, besj], frm: [scl, in3], bss: [stb, pub], lvl: elc }
   - { id: 31pw, tit: Етюд C major,
       com: О. Денисов, src: SB5NU1980,
-      org: ukr, sty: aut, gnr: stu, ton: cj, frm: [in3, tu3, fi1], bss: [stb, syn], lvl: elb }
+      org: ukr, sty: aut, gnr: stu, ton: cj, frm: [scl, in3, tu3, fi1], bss: [stb, syn], lvl: elb }
   - { id: "1004", tit: Етюд C major,
       com: С. Чапкій, src: SB5NU1980,
       org: ukr, sty: stu, gnr: stu, ton: cj, frm: in6, bss: stb, lvl: elb }

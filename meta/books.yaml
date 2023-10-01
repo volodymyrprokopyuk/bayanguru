@@ -130,7 +130,7 @@ books:
         "4s1u", "ua3l"] },
       { sec: Повороти кисті, pieces: [
         # SB5NU1980
-        "31pw", "1004", "slsw"] } ] }
+        "1004", "slsw"] } ] }
   - { id: scl2, tit: Вибрані етюди, sub: для баяна,
       pieces: [
       { sec: Інтервали, pieces: [ # Intervals
@@ -139,7 +139,9 @@ books:
         # SB3NU1979
         "uco7"
         # SB4NU1978
-        "ms9j"] },
+        "ms9j",
+        # SB5NU1980
+        "31pw" ] },
       { sec: Акорди, pieces: [ # Chords
         # SB2NU1977
         "yai7",

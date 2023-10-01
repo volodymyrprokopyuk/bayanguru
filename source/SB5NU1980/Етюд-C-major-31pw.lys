@@ -1,5 +1,3 @@
-{% from "util.lys" import v2 %}
-
 {% macro t2(a, b, c, d, e, f) %}
   \tuplet 3/2 { {{ a }} {{ b }} {{ c }} }
   \tuplet 3/2 { {{ d }} {{ e }} {{ f }} } |
@@ -11,8 +9,7 @@
 {% endmacro %}
 
 {% macro t4(a, b) %}
-  \tuplet 3/2 { {{ a }} r8 r }
-  \tuplet 3/2 { {{ b }} r8 r } |
+  \tuplet 3/2 { {{ a }} r8 r } \tuplet 3/2 { {{ b }} r8 r } |
 {% endmacro %}
 
 {% macro rh1(a, b) %}
@@ -58,7 +55,7 @@
   {{ rh2() }}
   {{ t2("<a=' c>8(", "<gis b>)-.", "<a c>", "<c e>", "<b dis>", "<c e>") }}
   {{ t2("<cis='' e>8(", "<bis dis>)-.", "<cis e>", "<e g>", "<d fis>", "<cis e>") }}
-  {{ t2("<d='' fis>8(\\>", "<cis eis>)-.", "\\af 8\\! <d fis>", "<c e>\\p", "<b dis>", "<c e>") }}
+  {{ t2("<d='' fis>8(\\>", "<cis eis>)-.", "\\af 8\\! <d fis>", "<c e>\\p", "<b dis>", "<c='' e>") }}
 
   {{ t2("<b=' d>8(", "<ais cis>)-.", "<b d>", "<g b>(", "<fis ais>)-.", "<g b>") }}
   {{ rh2() }}
@@ -94,8 +91,7 @@
   {{ t3("c=8", "cM!", "f", "fM!") }}
   {{ t3("c=8", "cM!", "a", "a7!") }}
   {{ t3("d=8", "d7!", "d", "d7") }}
-  \tuplet 3/2 { g+gM!8 r r }
-  \tuplet 3/2 { f=8 e d= } |
+  \tuplet 3/2 { g+gM!8 r r } \tuplet 3/2 { f=8 e d= } |
 
   {{ lh1("c=8") }}
   {{ t3("c=8", "cM!", "a", "a7!") }}
@@ -120,8 +116,7 @@
   {{ t3("a=,8", "am!", "c", "a@m") }}
   {{ t3("d=8", "g@M!", "d8", "g@M") }}
   {{ t3("d=8", "d7!", "d", "d7") }}
-  g,=,2~ | g |
-  {{ v2("r4 c@m! | r4 g7! |", "g,=,2 | g=, |") }}
+  g,=,2~ | g | \duo { r4 c@m! | r4 g7! | } { g,=,2 | g=, | }
 
   {{ lh1("c=8") }}
   {{ t3("c=8", "cM!", "a", "a7!") }}
@@ -131,7 +126,6 @@
   \tuplet 3/2 { c+cM!8 r r } r4 |
   r4 \tuplet 3/2 { g+g7!8 r r } |
   \tuplet 3/2 { c+cM!8 r r } r4 |
-  {{ t2("g=,8", "a", "g", "f", "e", "d") }}
-  c=,4 r | c'= r |
+  {{ t2("g=,8", "a", "g", "f", "e", "d") }} c4 r | c'= r |
 }
 {% endmacro %}
