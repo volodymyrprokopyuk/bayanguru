@@ -300,7 +300,7 @@ pieces:
   # SB5NU1980
   - { id: pnrg, tit: Етюд B minor,
       com: А. Холминов, src: SB5NU1980,
-      org: rus, sty: stu, gnr: stu, frm: cr5, bss: stb, lvl: ina }
+      org: rus, sty: aut, gnr: stu, frm: cr5, bss: stb, lvl: ina }
   - { id: 978q, tit: Етюд F major,
       com: М. Черемухин, src: SB5NU1980,
       org: rus, sty: stu, gnr: stu, frm: cr5, bss: stb, lvl: elc }
