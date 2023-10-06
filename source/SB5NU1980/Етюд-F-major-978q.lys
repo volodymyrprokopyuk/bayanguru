@@ -1,5 +1,3 @@
-{% from "util.lys" import v2 %}
-
 {% macro rh1(a) %}
   {{ a }} <c f a> <a c f> | <bes d> <bes d f> <bes d g> |
   <c=' f a>4-> <a c f> <c=' f a> |

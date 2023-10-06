@@ -306,7 +306,7 @@ pieces:
       org: rus, sty: aut, gnr: stu, frm: cr5, bss: stb, lvl: elb }
   - { id: 6zcy, tit: Етюд Aes major,
       com: О. Денисов, src: SB5NU1980,
-      org: ukr, sty: stu, gnr: stu, frm: cr5, bss: pub, lvl: elc }
+      org: ukr, sty: aut, gnr: stu, frm: [scl, cr5], bss: pub, lvl: elc }
   # Polyphony
   # SB5NU1980
   # p. 101
