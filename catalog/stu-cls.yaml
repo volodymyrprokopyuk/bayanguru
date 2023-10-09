@@ -206,10 +206,9 @@ pieces:
   - { id: 8sl6, tit: Етюд G major,
       com: Т. Лак, src: SB4NU1978,
       org: fra, sty: cls, gnr: stu, ton: gj, frm: [scl, arp, tu3, fi5], bss: stb, lvl: elb }
-  # p. 48
-  # - { id: lzbk, tit: Етюд E minor,
-  #     com: М. Чайкін, src: SB4NU1978,
-  #     org: ukr, sty: aut, gnr: stu, ton: ei, frm: [arp, tre, tri], bss: stb, lvl: elb }
+  - { id: lzbk, tit: Етюд E minor,
+      com: М. Чайкін, src: SB4NU1978,
+      org: ukr, sty: aut, gnr: stu, ton: ei, frm: [arp, tre, tri], bss: stb, lvl: elb }
   # p. 50
   # - { id: b5q1, tit: Етюд C major,
   #     com: К. Черні, src: SB4NU1978,
