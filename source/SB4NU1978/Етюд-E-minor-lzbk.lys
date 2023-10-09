@@ -1,3 +1,7 @@
+{% macro t1(a, b) %}
+  \repeat tremolo 4 { {{ a }} } {{ b }} |
+{% endmacro %}
+
 {% macro rightHand() %}
 \relative {
   \tempo Moderato
@@ -20,7 +24,10 @@
         \volta 2 { e='''4. \fine \bar "!!" e,=''8 | }
       }
     }
-    % \volta 2
+
+    \volta 2
+    \meter 1/8 1,1,1,1
+    {{ t1("e=''32( c", "e8) g") }} {{ t1("g=''32( d", "g8) a") }}
   }
 }
 {% endmacro %}
