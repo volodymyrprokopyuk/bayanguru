@@ -233,7 +233,7 @@ pieces:
       org: ukr, sty: flk, gnr: gop, ton: gj, frm: cr5, bss: [stb, pub], lvl: elb }
   - { id: izth, tit: Прогулянка,
       com: К. Мясков, src: B2AK1979,
-      org: ukr, sty: aut, gnr: pie, ton: dj, frm: [in3, dot], bss: stb, lvl: elb }
+      org: ukr, sty: aut, gnr: pie, ton: dj, frm: [in3, dot, rep], bss: stb, lvl: elb }
   - { id: jkqt, tit: Романс,
       com: М. Чайкін, src: B2AK1979,
       org: ukr, sty: aut, gnr: rmc, ton: [cj, ai], frm: mel, bss: stb, lvl: elb }
