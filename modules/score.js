@@ -3,7 +3,7 @@ import { mkdirp, pathExists, remove } from "fs-extra"
 import chalk from "chalk"
 import { $ } from "zx"
 import njk from "nunjucks"
-import { reFromParts, asyncParallel } from "./util.js"
+import { reFromParts, parallelLimit } from "./util.js"
 import { readPieces } from "./catalog.js"
 import { lint } from "./linter.js"
 
@@ -127,7 +127,7 @@ async function engravePiece(piece, args) {
 
 export async function engravePieces(pieces, args) {
   const jobs = pieces.map(piece => () => engravePiece(piece, args))
-  return await asyncParallel(jobs, args.j)
+  return await parallelLimit(jobs, args.j)
 }
 
 async function lintBook(book) {
@@ -156,5 +156,5 @@ async function engraveBook(book, args) {
 
 export async function engraveBooks(books, args) {
   const jobs = books.map(book => () => engraveBook(book, args))
-  return await asyncParallel(jobs, args.j)
+  return await parallelLimit(jobs, args.j)
 }

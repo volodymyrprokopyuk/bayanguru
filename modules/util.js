@@ -5,21 +5,17 @@ export function reFromParts(flags, ...parts) {
   return flags ? new RegExp(re, flags) : new RegExp(re)
 }
 
-export function asyncParallel(jobs, limit) {
-  let index = 0
-  let running = 0
-  let completed = 0
+export function parallelLimit(jobs, limit) {
+  let i = 0, running = 0, completed = 0
   return new Promise((resolve, reject) => {
-    function done() {
+    function check() {
       if (++completed === jobs.length) { return resolve() }
       if (--running < limit) { parallel() }
     }
     function parallel() {
-      while (index < jobs.length && running < limit) {
-        const job = jobs[index++]
-        job().then(done, error => {
-          console.log(chalk.red(error))
-          process.exit(1)
+      while (i < jobs.length && running < limit) {
+        jobs[i++]().then(check, error => {
+          console.log(chalk.red(error)); process.exit(1)
         })
         ++running
       }
