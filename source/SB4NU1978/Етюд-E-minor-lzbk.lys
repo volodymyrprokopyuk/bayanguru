@@ -10,6 +10,12 @@
   {{ t1("<c,='' g'>32( g", "<c g'>8) " + a) }}
 {% endmacro %}
 
+{% macro lh1(a) %}
+  c=8 cM! cM r | b g@M! gM8 r |
+  d=8 d7! d7 r | g, gM! gM r |
+  f=,8 g@M! gM8 r | e'= c@M! cM8 r |
+{% endmacro %}
+
 {% macro rightHand() %}
 \relative {
   \tempo Moderato
@@ -58,6 +64,20 @@
 \relative {
   \clef bass
   \key e \minor
+  \meter 1/8 2,1,1
   \partial 8. { r16 r8 | }
+  e=8-\stBass em! em r | e b@7! b78 r |
+  e=8 em! em r | e b@7! b78 r |
+  e=8 em! em r | b b7! b78 r |
+  g=,8 gM! gM r | a am! am r |
+  b=,8 e@m! em8 r | dis b@7! b78 r |
+  b=,8 b7! b7 r | \rep 3 { e= em! em r | }
+
+  {{ lh1() }} | d=8 dm! dm r | e e7! e7 e |
+  a,=,8 am! am g | f fM! fM f |
+  f=,8 g@M! gM8 f | e' c@M! cM8 e |
+  f,=,8 d@m! dm8 f | g c@M! cM8 g |
+  g=,8 g7! g7 g | c cM! cM r |
+  {{ lh1() }} | \rep 2 { d= d7! d7 r | }
 }
 {% endmacro %}
