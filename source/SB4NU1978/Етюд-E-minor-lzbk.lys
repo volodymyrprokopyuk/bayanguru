@@ -68,8 +68,8 @@
   \partial 8. { r16 r8 | }
   e=8-\stBass em! em r | e b@7! b78 r |
   e=8 em! em r | e b@7! b78 r |
-  e=8 em! em r | b b7! b78 r |
-  g=,8 gM! gM r | a am! am r |
+  e=8 em! em r | d d7! d78 r |
+  g,=,8 gM! gM r | a am! am r |
   b=,8 e@m! em8 r | dis b@7! b78 r |
   b=,8 b7! b7 r | \rep 3 { e= em! em r | }
 
@@ -78,6 +78,6 @@
   f=,8 g@M! gM8 f | e' c@M! cM8 e |
   f,=,8 d@m! dm8 f | g c@M! cM8 g |
   g=,8 g7! g7 g | c cM! cM r |
-  {{ lh1() }} | \rep 2 { d= d7! d7 r | }
+  {{ lh1() }} | d d7! d7 r | b=, b7! b7 r |
 }
 {% endmacro %}
