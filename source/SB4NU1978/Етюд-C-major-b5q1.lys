@@ -1,0 +1,25 @@
+{% macro t1(a, b, c) %}
+  \afterGrace 15/16 {{ a }} \trill { {{ b }} } | {{ c }} %
+{% endmacro %}
+
+{% macro rightHand() %}
+\relative {
+  % \tempo "Lento con espressivo"
+  \clef treble
+  \key c \major
+  \time 4/4
+  {{ t1("c''=''1\\(\\p", "b16( c", "d2)\\)") }} r2 |
+  {{ t1("d=''1\\(", "c16( d", "e2)\\)") }} r8 g, c e |
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\relative {
+  \clef bass
+  \key c \major
+  c=8(-\stBass cM!) cM cM c( cM) cM cM |
+  b=,8[( g@7!) g78 g7] b[_\aSim g@7 g78 g7] |
+  b=,8[ g@7! g78 g7] b[ g@7 g78 g7] |
+  c=8 cM! cM cM c cM cM cM |
+}
+{% endmacro %}
