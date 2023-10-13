@@ -9,7 +9,9 @@
   \key c \major
   \time 4/4
   {{ t1("c''=''1\\(\\p", "b16( c", "d2)\\)") }} r2 |
-  {{ t1("d=''1\\(", "c16( d", "e2)\\)") }} r8 g, c e |
+  {{ t1("d=''1\\(", "c16( d", "e2)\\)") }} r8 g,\( c e |
+  \after 4. { \markupInsideSlur <>^\markup \dTurn \sharp }
+  g=''2 a8 g f e | \acc { f=''8 } e d d4 \acc { e=''8 } d'4. c8\) |
 }
 {% endmacro %}
 
@@ -19,7 +21,7 @@
   \key c \major
   c=8(-\stBass cM!) cM cM c( cM) cM cM |
   b=,8[( g@7!) g78 g7] b[_\aSim g@7 g78 g7] |
-  b=,8[ g@7! g78 g7] b[ g@7 g78 g7] |
-  c=8 cM! cM cM c cM cM cM |
+  b=,8[ g@7! g78 g7] b[ g@7 g78 g7] | c8 cM! cM cM c cM cM cM |
+  e=8[ c@M! cM8 cM] e[ c@M cM8 cM] |
 }
 {% endmacro %}
