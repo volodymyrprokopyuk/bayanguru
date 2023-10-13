@@ -8,10 +8,28 @@
   \clef treble
   \key c \major
   \time 4/4
-  {{ t1("c''=''1\\(\\p", "b16( c", "d2)\\)") }} r2 |
-  {{ t1("d=''1\\(", "c16( d", "e2)\\)") }} r8 g,\( c e |
-  \after 4. { \markupInsideSlur <>^\markup \dTurn \sharp }
-  g=''2 a8 g f e | \acc { f=''8 } e d d4 \acc { e=''8 } d'4. c8\) |
+  \repeat volta 2 {
+    {{ t1("c''=''1\\(\\p", "b16( c", "d2)\\)") }} r2 |
+    {{ t1("d=''1\\(", "c16( d", "e2)\\)") }} r8 g,\( c e |
+    \af 4. { \markupInsideSlur <>^\markup \dTurn \sharp } %
+    g=''2 a8 g f e | \acc { f=''8 } e d d4 \acc { e=''8 } d'4. c8\) |
+    b=''2\( \trill \acc { a=''16 b } d8 c a fis |
+    a=''2-> \acc { gis=''16 a b a } g8\) fis( f d='') |
+  }
+
+  \repeat volta 2 {
+    {{ t1("d=''1\\(", "cis16( d", "e8)\\)") }} r8 e2 e8\( c |
+    {{ t1("a='1", "gis16( a", "d4)~") }} d16 b d b g4\) r |
+    b'=''2\(\f \trill \acc { a=''16 b } c8 b a g\) |
+    a=''8( \prall g) fis( \prall e) d( \prall c) b( \prall a) |
+    e'=''4( d8. b16 d4 c8. a16 | g8) g'(_\dDim fis g e g d g) |
+    {{ t1("c,=''1\\(\\p", "b16( c", "d2)\\)") }} r8 g,( b d) |
+    {{ t1("d=''1\\(\\p", "cis16( d", "dis4)\\<") }} e4~ e8\) c( e \af 8\! g) |
+    \af 8. \turn c='''4\(\< e8 d f e d \af 8\! c='''8 |
+    b=''8\> a d c gis a f \af 8\! d\) |
+    \afterGrace 15/16 \af 2\! c=''2\(\< \trill { b16( c } e4.)\> \af 8\! d8 |
+    d=''2-> c=''4\) r |
+  }
 }
 {% endmacro %}
 
