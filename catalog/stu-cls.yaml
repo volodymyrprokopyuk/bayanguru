@@ -214,11 +214,10 @@ pieces:
       org: aut, sty: cls, gnr: stu, ton: cj, frm: [scl, acc, mor, gru, tri], bss: stb, lvl: elb }
   - { id: ms9j, tit: Етюд G minor,
       com: О. Денисов, src: SB4NU1978,
-      org: ukr, sty: aut, gnr: stu, ton: gi, frm: [in3, dot, fi1], bss: stb, lvl: elb }
-  # p. 59
-  # - { id: qqge, tit: Етюд G major,
-  #     com: К. Черні, src: SB4NU1978,
-  #     org: aut, sty: aut, gnr: stu, ton: gj, frm: [in3, tu3, fi1], bss: stb, lvl: elb }
+      org: ukr, sty: aut, gnr: stu, ton: gi, frm: [scl, in3, dot, fi1], bss: stb, lvl: elb }
+  - { id: qqge, tit: Етюд G major,
+      com: К. Черні, src: SB4NU1978,
+      org: aut, sty: aut, gnr: stu, ton: gj, frm: [scl, in3, tu3, fi1], bss: stb, lvl: elb }
   - { id: k402, tit: Етюд E minor,
       com: В. Иванов, src: SB4NU1978,
       org: rus, sty: aut, gnr: stu, ton: [ei, gj], frm: [cr5, fi5], bss: stb, lvl: elc }

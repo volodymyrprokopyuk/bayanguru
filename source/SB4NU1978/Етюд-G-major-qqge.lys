@@ -1,0 +1,42 @@
+{% macro t1(a, b, c, d) %}
+  \tuplet 3/2 { {{ a }} } \tuplet 3/2 { {{ b }} } %
+  \tuplet 3/2 { {{ c }} } \tuplet 3/2 { {{ d }} } |
+{% endmacro %}
+
+{% macro rh1(a) %}
+  {{ t1(a + " <a c> <g b>8", "8\\< <a c> <b d>",
+     "<c='' e>8 <d fis> <e g>8", "8 <d fis> \\af 8\\! <c e>)") }}
+{% endmacro %}
+
+{% macro rightHand() %}
+\relative {
+  \tempo Allegretto
+  \clef treble
+  \key g \major
+  \time 4/4
+  \repeat volta 2 {
+    {{ rh1("<b'=' d>8(\\p") }}
+    {{ t1("<b=' d>8(\\> <a c> \\af 8\\! <g b>8", "8\\< <a c> <b d>",
+       "<c='' e>8 <d fis> <e g>8", "8 <d fis> \\af 8\\! <c e>") }}
+    {{ t1("<b=' d>8) <g b>( <a c>", "<b d>\\< <c e> <b d>",
+       "<a=' c>8 <b d> <a c>", "<g b> <a c> <g b>") }}
+    {{ t1("<fis=' a>8 <eis gis> <fis a>", "<g b> <fis a> \\af 8\\! <eis gis>",
+       "<fis=' a>8)\\< <d fis>( <e g>", "<fis a> <g b> \\af 8\\! <a c>") }}
+    {{ rh1("<b=' d>8\\p") }}
+    {{ t1("<b=' d>8(\\> <a c> \\af 8\\! <g b>8", "8\\< <a c> <b d>",
+       "<e='' g>8 <fis a> <g b>8", "8 <fis a> \\af 8\\! <e g>") }}
+    {{ t1("<d='' fis>8)\\f \\ottava #1 <fis'=''' a>( <e g>",
+       "<d=''' fis>8 <cis e> <b d>", "<a c> <g b> <fis a> \\ottava #0",
+       "<e='' g>8 <d fis> <cis e>") }}
+    \tuplet 3/2 { d=''8)-.\> a'-. fis-. } \tuplet 3/2 { d-. a-. fis-. } %
+    \af 8\! d='8-. r r4 |
+  }
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\relative {
+  \clef bass
+  \key g \major
+}
+{% endmacro %}
