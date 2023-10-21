@@ -21,7 +21,7 @@
 
     \volta 2
     fis'='4 a | g8( fis e4) | e8( g fis e | fis) fis d4 |
-    fis='8[ fis]( a) a( | g fis d4) | e8( g fis e | d) d d='4 \bar "||"
+    fis='8[ fis]( a) a( | g fis e4) | e8( g fis e | d) d d='4 \bar "||"
   }
 }
 {% endmacro %}
