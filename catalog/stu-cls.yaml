@@ -230,10 +230,9 @@ pieces:
   - { id: cj29, tit: Етюд B major,
       com: М. Їжакевич, src: SB4NU1978,
       org: ukr, sty: aut, gnr: stu, ton: bj, frm: [cr5, fi5], bss: stb, lvl: ina }
-  # p. 68
-  # - { id: glv4, tit: Етюд A minor,
-  #     com: В. Переселенцев, src: SB4NU1978,
-  #     org: rus, sty: aut, gnr: stu, ton: ai, frm: [vo2, in2, fi1, fi5], bss: stb, lvl: elb }
+  - { id: glv4, tit: Етюд A minor,
+      com: В. Переселенцев, src: SB4NU1978,
+      org: rus, sty: aut, gnr: stu, ton: ai, frm: [vo2, in2, fi1, fi5], bss: stb, lvl: elb }
   - { id: d61l, tit: Етюд A minor,
       com: К. Черні, src: SB4NU1978,
       org: aut, sty: cls, gnr: stu, ton: ai, frm: [vo2, arp, fi5], bss: stb, lvl: elb }

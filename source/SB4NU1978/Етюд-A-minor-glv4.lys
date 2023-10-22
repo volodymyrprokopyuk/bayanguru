@@ -1,0 +1,38 @@
+{% macro rightHand() %}
+\relative {
+  \tempo Moderato
+  \clef treble
+  \key a \minor
+  \time 4/4
+  \repeat segno 2 {
+    \volta 1
+    \duo {
+      e''=''2(\p c4 a | a2 gis) | e4( a c e | e2 d) |
+      f=''2( d4 b | a2 g) | g4( b d f | e g e2) |
+      g=''2( cis, | e4 d a2) | f'( b, | d4 c g2) |
+      f='4( a c f | e c a c) | b( d gis, b | a c8 e a=''2) \fine \bar "||"
+    } {
+      r8 <e'=' a>8 8 8 r8 8 r <c e> | r <b d>8 8 8 r8 8 8 8 |
+      r8\< <a= c>8 r <c e> r <e a> r \af 8\! <a c> |
+      r8 <f=' a>8 8 8 r8\> 8 8 \af 8\! 8 |
+      r8 <g=' b>8 8 8 r8 8 r <d g> | r <b d>8 8 8 r8 8 8 8 |
+      r8\< <b= d>8 r <d g> r <g b> r8 \af 8\! 8 |
+      r8 <g=' c>8 r8 8 r <gis d'>8 8 8 |
+      r8 <a=' cis>8 8 8 r <g a>8 8 8 | r <fis a> r8 8 r <d fis>8 8 8 |
+      r8 <g=' b>8 8 8 r <f g>8 8 8 | r <e g> r8 8 r <c e>8 8 8 |
+      r8\< <a= c>8 r <c f> r <f a> r <a c> |
+      r8 <e=' a>8 r8 8 r <c e> r \af 8\! <e a> |
+      r8 <f=' a>8 r8 8 r <d e> r8 8 | r\> <c e> r4 \af 2\! <a'=' c>2 |
+    }
+
+    %\volta 2
+  }
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\relative {
+  \clef bass
+  \key a \minor
+}
+{% endmacro %}
