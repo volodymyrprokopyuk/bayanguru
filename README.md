@@ -23,7 +23,7 @@ Stradella bass and free bass
       and **for print** (PDF)
     - **Indexed database** of individual sheet music pieces for sheet music
       browsing, searching and visualization
-    - **Flexible query langauge** that allows dynamic construction of
+    - **Flexible query language** that allows dynamic construction of
       fine-grained playlists for sheet music reading
     - **Built-in linter** to ensure source code quality and consistency
     - **Clean codebase** for easy maintenance and flexible extension
@@ -34,7 +34,7 @@ Stradella bass and free bass
 - [LilyPond](https://lilypond.org/)
 - [pdfcpu](https://pdfcpu.io/)
 
-```zsh
+```fish
 yay -S ghostscript gsfonts fontforge t1utils pdfcpu \
   texlive-metapost texlive-langcyrillic
 ```
@@ -42,7 +42,7 @@ yay -S ghostscript gsfonts fontforge t1utils pdfcpu \
 ## CLI
 
 Specifications and options
-```bash
+```fish
 <catalog spec> = glob
 <piece spec> = pid1 pid2 ... | --frbk bid1 bid2 ... | all
 <piece select> = --org re1,^re2 --sty --gnr --ton --frm --bss --lvl \
@@ -55,25 +55,25 @@ Specifications and options
 
 Initialize pieces
 
-```bash
+```fish
 ./index.js -c <catalog spec> -i <piece spec>
 ```
 
 Engrave pieces
 
-```bash
+```fish
 ./index.js -c <catalog spec> <piece spec> <piece select> <engrave opts> -j
 ```
 
 Play pieces
 
-```bash
+```fish
 ./index.js -c <catalog spec> -p <piece spec> <piece select> <play opts> --dry
 ```
 
 Engrave books
 
-```bash
+```fish
 ./index.js -c <catalog spec> -b <book spec> <engrave opts> -j
 ./index.js -c <catalog spec> -p <piece spec> <piece select> <engrave opts> \
   --tobk <tobook spec> -j
@@ -81,13 +81,13 @@ Engrave books
 
 Generate picece/book random ID
 
-``` bash
-shuf -ern 4 {a..z} {0..9} | tr -d '\n'
+```fish
+tr -dc a-z0-9 </dev/urandom | head -c 4
 ```
 
 ## Meta
 
-``` yaml
+```yaml
 meta:
   # ** Piece identification
   id: [mandatory, single] [a-z0-9]{4} piece ID
