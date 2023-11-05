@@ -22,10 +22,30 @@
       r8 <g=' b>8 8 8 r <f g>8 8 8 | r <e g> r8 8 r <c e>8 8 8 |
       r8\< <a= c>8 r <c f> r <f a> r <a c> |
       r8 <e=' a>8 r8 8 r <c e> r \af 8\! <e a> |
-      r8 <f=' a>8 r8 8 r <d e> r8 8 | r\> <c e> r4 \af 2\! <a'=' c>2 |
+      r8 <f=' a>8 r8 8 r <d e> r8 8 | r\> <c e> r4 \af 2\! <a'=' c>2 \fine |
     }
 
-    %\volta 2
+    \volta 2
+    \duo {
+      r8\mf <c''='' e>8 8 8 r <g c> r <c e> |
+      r\< <c='' f>8 8 8 r <a c> r \af 8\! <c f> |
+      r8 <d='' g>8 8 8 r <d f> r <d f> | r\> <c e>8 8 8 8 8 8 \af 8\! 8 |
+      r8\p <a=' c>8 8 8 r <e a> r <a c> | r\< <a d>8 8 8 r <f a> r <a d> |
+      r8 \af 8\! <gis=' b>8 r <b e> r <e gis> r <e b'> | r <e a>8 8 8 8 8 8 8 |
+
+      g=''2(\f a4 g | g f d2) | f2( g4 f | f e c g) |
+      f='4( a c f | e a c a) | g( f b, a | gis2 e'='') |
+    } {
+      g'='2\( e4 g | a2 f4 a | b2 a4 g | g1\) |
+      e='2\( c4 e | f2 d4 f | e gis b d | c1\)
+
+      r8 <cis='' e>8 8 8 r8 8 r8 8 | r <a d> r8 8 r <f a>8 8 8 |
+      r8 <g=' b>8 8 8 r8 8 r8 8 | r\> <g c> r8 8 r <e g> r \af 8\! <c e> |
+      r8\< <a= c>8 r <c f> r <f a> r <a c> |
+      r8 \af 8\! <a=' c>8 r <c e> r <e a> r <c e> |
+      r8 <a b> r8 8 r\> <f a> r <b, fis'> |
+      r8 <d=' e>8 8 \af 8\! 8 r <e=' b>8 8 8 \bar "||"
+    }
   }
 }
 {% endmacro %}
