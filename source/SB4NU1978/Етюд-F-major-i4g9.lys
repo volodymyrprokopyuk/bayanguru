@@ -41,5 +41,15 @@
 \relative {
   \clef bass
   \key f \major
+  f,=,8-\stBass r fM! r \rep 3 { f=, r fM r } |
+  c'=8 r c7! r c r c7 r | f, r fM! r r2 |
+  f=,8 r fM! r \rep 3 { f=, r fM r } |
+  g=,8 r g7! r g r g7 r | g r g7 r c+cM! r c= r |
+
+  aes=,8 r aesM! r aes r aesM r | bes r ees@7! r8 bes r ees@7 r8 |
+  ees=8 r ees7! r ees r ees7 r | aes, r aesM! r aes r aesM r |
+  g=,8 r c@7! r8 c r c7 r | a r g@M! r8 a r g@M r8 |
+  bes=,8 r g@m! r8 bes r g@m! r8 | c r f@M! r8 c r f@M r8 |
+  c=8 r c7! r c r c7 r | f, r fM! r f=, r r4 |
 }
 {% endmacro %}
