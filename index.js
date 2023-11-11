@@ -12,6 +12,11 @@ import {
 
 function configure() {
   const argsConfig = {
+    string: [
+      "bid", "btit", "bsub",
+      "org", "sty", "gnr", "ton", "frm", "bss", "lvl",
+      "tit", "com", "arr"
+    ] ,
     boolean: [
       "i", "b", "nometa", "lint", "relax", "dry", "optimize",
       "p", "cycle", "random",
@@ -23,6 +28,11 @@ function configure() {
       bid: "selc", btit: "Вибрані твори", bsub: "для баяна",
       org: "", sty: "", gnr: "", ton: "", frm: "", bss: "", lvl: "",
       tit: "", com: "", arr: ""
+    },
+    unknown(opt) {
+      if (opt.startsWith("-")) {
+        throw new Error(`unknown option ${opt}`)
+      }
     }
   }
   const args = parseArgs(process.argv.slice(2), argsConfig)
