@@ -239,10 +239,9 @@ pieces:
   - { id: i4g9, tit: Етюд F major,
       com: К. Черні, src: SB4NU1978,
       org: aut, sty: cls, gnr: stu, ton: fj, frm: [scl, arp], bss: stb, lvl: elb }
-  # p. 75
-  # - { id: uoxw, tit: Етюд A minor,
-  #     com: К. Бурындин, src: SB4NU1978,
-  #     org: rus, sty: aut, gnr: stu, ton: ai, frm: [arp, dot], bss: stb, lvl: elb }
+  - { id: uoxw, tit: Етюд A minor,
+      com: К. Бурындин, src: SB4NU1978,
+      org: rus, sty: aut, gnr: stu, ton: ai, frm: [arp, dot], bss: stb, lvl: elb }
   # p. 79
   # - { id: rru6, tit: Етюд A minor,
   #     com: А. Дювернуа, src: SB4NU1978,

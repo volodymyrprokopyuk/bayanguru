@@ -1,0 +1,49 @@
+{% macro rh1(a) %}
+  {{ a }} gis16) a8-. c-. b-. d-. | c8.( b16) c8-. e-. d-. f-. |
+  e=''8.(_\aSim dis16) e8 a e d | c8.( e16) c8 b a gis |
+  a='8.( gis16) a8 c b d | c8.( b16) c8 e d f |
+  e=''8.( dis16) e8 f fis gis | a8.( e16) fis8 gis a b |
+  a=''8.(\f gis16) a8 c b d | c8.( b16) c8 e d f |
+  e='''8.( dis16) e8 a e d | c8.( e16) c8 b a gis='' |
+{% endmacro %}
+
+{% macro rightHand() %}
+\relative {
+  \tempo Moderato
+  \clef treble
+  \key a \minor
+  \time 3/4
+  \meter 3/4 #'(1)
+  \repeat volta 2 {
+    {{ rh1("a'='8.(\\mf") }}
+    \alternative {
+      \volta 1 {
+        a=''8.( gis16) a8 c fis, a | g8.( fis16) g8 b e, g |
+        fis=''8.( eis16) fis8 a dis, fis | e8.( dis16) e8 d c b=' |
+      }
+      \volta 2 { a'=''8.( gis16) a8 c fis, a='' | }
+    }
+  }
+  g=''8.( fis16) g8 b e, g | fis8.( g16) fis8^\tRit a dis, fis | e4 r g,=' |
+
+  e'=''8\p^\tATem c_\aSta e f fis g | a_\dCre g f e d c |
+  b='8 g b d g f | e f e d c b |
+  a='8 gis a b d e | f e d c b a |
+  gis='8 e gis b a c | b d c e d f |
+  e=''8 c e f fis g | a g f e d c |
+  b='8 g b d g f | e f e d c b |
+  a='8 e a b c e | d e d c b a |
+  gis='8\> a b c d dis | e f e d^\tRit c \af 8\! b=' |
+
+  {{ rh1("a='8.(\\mf^\\tATem") }}
+  a=''8.(\p\< gis16) a8 c b d | c8.( b16) c8 e d f |
+  e='''8 dis e f fis \af 8\! gis | <c,=''' a'>8\sf r r4 r \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\relative {
+  \clef bass
+  \key a \minor
+}
+{% endmacro %}
