@@ -53,6 +53,6 @@
   d=8[ g@M! gM8 gM] d= dM! dM dM | g+gM! r gM r c@M! r8 g@7! r8 |
 
   c=8 cM! cM cM c cM cM cM | b[ g@7! g78 g7] b[ g@7 g78 g7] |
-  {{ lh1() }} | g,=,8[ c@M! cM8 cM] g g7! g7 g7 | g=, g7 g7 g7 c+cM!4 r |
+  {{ lh1() }} | g,=,8[ c@M! cM8 cM] g g7! g7 g7 | g=, g7! g7 g7 c+cM!4 r |
 }
 {% endmacro %}
