@@ -242,10 +242,9 @@ pieces:
   - { id: uoxw, tit: Етюд A minor,
       com: К. Бурындин, src: SB4NU1978,
       org: rus, sty: aut, gnr: stu, ton: ai, frm: [arp, dot], bss: stb, lvl: elb }
-  # p. 79
-  # - { id: rru6, tit: Етюд A minor,
-  #     com: А. Дювернуа, src: SB4NU1978,
-  #     org: fra, sty: aut, gnr: stu, ton: ai, frm: scl, bss: [stb, pub, scl], lvl: elb }
+  - { id: rru6, tit: Етюд A minor,
+      com: А. Дювернуа, src: SB4NU1978,
+      org: fra, sty: aut, gnr: stu, ton: ai, frm: scl, bss: [stb, pub, scl], lvl: elb }
   # p. 81
   # - { id: 6jhw, tit: Етюд Bes minor,
   #     com: Г. Тишкевич, src: SB4NU1978,

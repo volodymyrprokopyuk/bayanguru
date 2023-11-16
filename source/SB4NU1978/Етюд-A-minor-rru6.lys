@@ -1,0 +1,44 @@
+{% macro rh1(a) %}
+  {{ a }} gis a b c d | e a, b c d e | f e f g a f | e=''2\) r4 |
+{% endmacro %}
+
+{% macro rh2(a, b) %}
+  {{ a }} r e,-. r c'-. r | b2-> r4 | a8-. r c,-. r a'-. r | g2-> r4 |
+  d=''8(\< cis d e f \af 8\! g | a\> g f e d \af 8\! {{ b }} |
+{% endmacro %}
+
+{% macro rh3(a) %}
+  {{ a }} fis gis a] b)-. r | a[( b c d] e)-. r |
+{% endmacro %}
+
+{% macro rightHand() %}
+\relative {
+  \tempo "Allegro moderato"
+  \clef treble
+  \key a \minor
+  \time 3/4
+  {{ rh1("a'='8\\(\\p") }}
+  f=''8[(\> e d c] \af 8\! b)-. r | e[(\> d c b] \af 8\! a)-. r |
+  a='8( gis a b c a | b4 e)-. e-. | {{ rh1("a,='8\\(") }}
+  e=''8(\< dis e fis g \af 8\! a | b4\> a8 g fis \af 8\! e) |
+  dis=''8(\> c b a g \af 8\! fis | e='2) r4 |
+
+  {{ rh2("c''='''8-.\\f", "cis=''") }} | d cis d e d c | b4 g'8)-. r g-. r |
+  {{ rh2("c='''8-.\\f", "c=''") }} | b)-. r g'-. r b,-. r | c=''2 r4 |
+
+  {{ rh3("e,='8[(\\p") }} {{ rh3("e=''8[(_\\dCre") }}
+  a='''8(\f g f e d c | b a g f_\dDim e d |
+  c=''8 b a c b a | e')-. r e( d c b |
+  a='8)\p gis( a b c d | e a, b c d e | f e f g a f | e2) r4 |
+  f=''8[(\> e d c] \af 8\! b)-. r | e[(\> d c b] \af 8\! a)-. r |
+  a='8( gis a b c a | b4) e-. e-. | {{ rh1("a,='8\\(") }}
+  e'='''8(\f d c b a g | f e d c b a | gis)-. r e-. r e'-. r | a,='2 r4 \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\relative {
+  \clef bass
+  \key a \minor
+}
+{% endmacro %}
