@@ -11,6 +11,20 @@
   {{ a }} fis gis a] b)-. r | a[( b c d] e)-. r |
 {% endmacro %}
 
+{% macro lh1(a) %}
+  {{ a }} am! am | a am am | a d@m! dm4 | a=, am! am |
+{% endmacro %}
+
+{% macro lh2(a) %}
+  {{ a }} b c d e f | g)-. r g,-. r g'-. r |
+  f,=,8( e f g a b | c)-. r c-. r c-. r |
+  f,=,4 d@m! dm4 | f=, d@m dm4 |
+{% endmacro %}
+
+{% macro lh3() %}
+  gis=,4 e@M! eM4 | a am! am | f=, fM! fM | e+eM! r r |
+{% endmacro %}
+
 {% macro rightHand() %}
 \relative {
   \tempo "Allegro moderato"
@@ -40,5 +54,15 @@
 \relative {
   \clef bass
   \key a \minor
+  {{ lh1("a,=,4-\\stBass") }} {{ lh3() }} {{ lh1("a=,4") }}
+  b=,4 e@m! em4 | b e@m em4 | b=, r b7! | e+em!2 r4 |
+
+  {{ lh2("c=8(") }} | fis4 d@7! d74 | g+gM! r r |
+  {{ lh2("c'=8(") }} | g8 r r4 g7!8 r | c+cM!2 r4 |
+
+  \rep 2 { e'=8 r e7! r e7 r | e= r a@m! r8 am r | }
+  c=4 a@m! am4 | d dm! dm | dis b@7! b74 | e+eM!8 r r4 r |
+  {{ lh1("a=,4") }} {{ lh3() }} {{ lh1("a=,4") }}
+  c=4 a@m! am4 | d dm! dm | e8 r r4 e7!8 r | a+am!2 r4 |
 }
 {% endmacro %}
