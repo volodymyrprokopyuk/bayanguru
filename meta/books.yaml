@@ -27,7 +27,7 @@ books:
       sub: для готово-виборного баяна,
       pieces: [
       # FBB3BZ1982
-      "ltfu", "z16r"
+      "ltfu", "z16r", "jclp"
       ] }
   # Tutorial
   - { id: utu1, tit: Українські народні пісні і танці, sub: для баяна,

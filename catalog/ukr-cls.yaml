@@ -314,10 +314,9 @@ pieces:
   - { id: z16r, tit: Ой на горі та й женці жнуть, sub: ukrfs,
       arr: И. Шестириков, src: FBB3BZ1982,
       org: ukr, sty: flk, gnr: sng, ton: di, frm: vo2, bss: frb, lvl: ela }
-  # p. 12
-  # - { id: jclp, tit: "Віє вітер, віє буйний", sub: ukrfs,
-  #     arr: И. Шестириков, src: FBB3BZ1982,
-  #     org: ukr, sty: flk, gnr: sng, ton: di, frm: vo2, bss: frb, lvl: ela }
+  - { id: jclp, tit: "Віє вітер, віє буйний", sub: ukrfs,
+      arr: И. Шестириков, src: FBB3BZ1982,
+      org: ukr, sty: flk, gnr: sng, ton: di, frm: vo2, bss: frb, lvl: ela }
   # p. 15
   # - { id: ekrs, tit: Аркан,
   #     arr: Л. Колодуб, src: FBB3BZ1982,
