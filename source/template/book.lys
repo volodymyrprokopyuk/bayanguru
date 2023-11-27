@@ -22,19 +22,34 @@
   }
 {% endmacro %}
 
-{% macro bookTitleMarkup() %}
+{% macro bookTitleMarkup(book) %}
   bookTitleMarkup = \markup \column {
-    \vspace #8
+    {% if book.aut %}
+      \vspace #2
+      \fill-line { \fontsize #6 \bold "{{ book.aut }}" }
+      \vspace #6
+    {% else %}
+      \vspace #8
+    {% endif %}
     \fill-line { \fontsize #8 \bold \fromproperty #'header:title }
     \vspace #2
     \fill-line { \fontsize #4 \bold \fromproperty #'header:subtitle }
+    {% if book.yr %}
+      \vspace #28
+      \fill-line { \fontsize #2 \bold "{{ book.yr }}" }
+    {% endif %}
   }
 {% endmacro %}
 
 {% macro tocMarkup() %}
   tocTitleMarkup = \markup \column {
     \vspace #2
-    \fill-line { \fontsize #4 \bold "Зміст" }
+    \fill-line {
+      \fontsize #4 \bold
+      {% if args.lang == "eng" %} "Contents"
+      {% else %} "Зміст"
+      {% endif %}
+    }
     \vspace #1
   }
   tocSectionMarkup = \markup \column {
@@ -77,7 +92,7 @@
 \paper {
   {{ paperLayout() }}
   {{ bookHfMarkup() }}
-  {{ bookTitleMarkup() }}
+  {{ bookTitleMarkup(book) }}
   {{ tocMarkup() }}
   {{ pieceTitleMarkup() }}
 }
@@ -86,7 +101,11 @@
   title = "{{ book.tit }}"
   subtitle = "{{ book.sub }}"
   pdftitle = "{{ book.tit }} {{ book.sub }}"
-  tagline = \markup { {{ logo(0.5) }} \with-url \bayanUrl \bayanUrl }
+  {% if args.nologo %}
+    tagline = #f
+  {% else %}
+    tagline = \markup { {{ logo(0.5) }} \with-url \bayanUrl \bayanUrl }
+  {% endif %}
 }
 \pageBreak \markup \null \pageBreak
 

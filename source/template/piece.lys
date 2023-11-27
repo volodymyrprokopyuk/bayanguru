@@ -49,7 +49,11 @@
   {% if piece.sub %}
     pdfsubject = "{{ piece.sub }}"
   {% endif %}
-  tagline = \markup { {{ logo(0.5) }} \with-url \bayanUrl \bayanUrl }
+  {% if args.nologo %}
+    tagline = #f
+  {% else %}
+    tagline = \markup { {{ logo(0.5) }} \with-url \bayanUrl \bayanUrl }
+  {% endif %}
 }
 
 {{ pieceScore(piece, args) }}

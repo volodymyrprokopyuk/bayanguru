@@ -13,19 +13,19 @@ import {
 function configure() {
   const argsConfig = {
     string: [
-      "bid", "btit", "bsub",
+      "lang", "bid", "btit", "bsub",
       "org", "sty", "gnr", "ton", "frm", "bss", "lvl",
       "tit", "com", "arr"
     ] ,
     boolean: [
-      "i", "b", "nometa", "lint", "relax", "dry", "optimize",
+      "i", "b", "nometa", "nologo", "lint", "relax", "dry", "optimize",
       "p", "cycle", "random",
       "tobk", "frbk"
     ],
     alias: { c: "catalog", i: "init", b: "book", p: "play", j: "jobs" },
     default: {
       c: "", j: cpus().length,
-      bid: "selc", btit: "Вибрані твори", bsub: "для баяна",
+      lang: "ukr", bid: "selc", btit: "Вибрані твори", bsub: "для баяна",
       org: "", sty: "", gnr: "", ton: "", frm: "", bss: "", lvl: "",
       tit: "", com: "", arr: ""
     },

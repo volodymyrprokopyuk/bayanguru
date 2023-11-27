@@ -41,8 +41,11 @@
 \relative {
   \clef bass
   \key c \major
-  \rep 2 { {{ t3("c=8 e g") }} | }
-  {{ t3("a,=,8 c e") }} | {{ t3("f, a c") }} |
-  {{ t3("g=,8 b d") }} | {{ t3("c e g") }} |
+  {{ t3("c=8 e g") }} |
+  \rep 6 {
+    {{ t3("c,=8 e g") }} | {{ t3("a, c e") }} |
+    {{ t3("f,=,8 a c") }} | {{ t3("g b d=") }} |
+  }
+  {{ t1("c=8 e g=") }} r2. | R1 |
 }
 {% endmacro %}
