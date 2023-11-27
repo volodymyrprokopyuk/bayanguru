@@ -162,3 +162,9 @@ books:
         "7smk", "zvmc",
         # SB2NU1977
         "4upq"] } ] }
+
+  # Piano
+  - { id: pst1, tit: Twelve studies for piano, sub: in twelve major tonalities,
+      pieces: [
+      # TSFPP2023
+      "2ldq"] }

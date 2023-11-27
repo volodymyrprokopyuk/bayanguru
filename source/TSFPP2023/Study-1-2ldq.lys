@@ -1,0 +1,16 @@
+{% macro rightHand() %}
+\relative {
+  \tempo Moderato
+  \clef treble
+  \key c \major
+  \time 4/4
+  R1 | e'='
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\relative {
+  \clef bass
+  \key c \major
+}
+{% endmacro %}

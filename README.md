@@ -79,7 +79,7 @@ Engrave books
   --tobk <tobook spec> -j
 ```
 
-Generate picece/book random ID
+Generate piece/book random ID
 
 ```fish
 tr -dc a-z0-9 </dev/urandom | head -c 4

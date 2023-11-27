@@ -41,3 +41,7 @@ sources:
   - { id: SB5NU1980, tit: Етюди для баяна на різні види техніки, sub: 5 клас,
       aut: [А. Нечипоренко, В. Угринович], pub: Музична Україна, yr: 1980 }
   # Misc
+
+  # Piano
+  - { id: TSFPP2023, tit: Twelve studies for piano, sub: in twelve major tonalities,
+      aut: [I. Prokopiuk], pub: Handwritten scores, yr: 2023 }
