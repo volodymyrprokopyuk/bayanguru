@@ -1,10 +1,39 @@
+{% macro t1(a) %}
+  \tuplet 3/2 { {{ a }} } %
+{% endmacro %}
+
+{% macro t2(a, b) %}
+  \tuplet 3/2 { {{ a }} } \tuplet 3/2 { {{ b }} } |
+{% endmacro %}
+
+{% macro t4(a, b, c, d) %}
+  \tuplet 3/2 { {{ a }} } \tuplet 3/2 { {{ b }} } %
+  \tuplet 3/2 { {{ c }} } \tuplet 3/2 { {{ d }} } |
+{% endmacro %}
+
+{% macro t3(a) %}
+  \rep 4 { \tuplet 3/2 { {{ a }} } } |
+{% endmacro %}
+
 {% macro rightHand() %}
 \relative {
   \tempo Moderato
   \clef treble
   \key c \major
   \time 4/4
-  R1 | e'='
+  R1 | e'='2 {{ t2("e8 f e", "d c b")}} | c2 r4 {{ t1("r8 d e") }} |
+  f='2 {{ t2("f8 g f", "e d c") }} | c4 b2. |
+  e='2 {{ t2("e8 f e", "d c b") }} | c2. d4 |
+  a=2 {{ t2("a8 b c", "d e f") }} | d2 r4 {{ t1("r8 e f") }} |
+  g='2 a4 b | c2 {{ t2("b8 c d", "c b a") }} |
+  g='4 f2 {{ t1("e8 d c") }} | {{ t4("b c d", "e f g", "a b c", "d e f") }} |
+  g=''2 {{ t2("e8 f e", "d c b") }} | c2 {{ t2("b8 c b", "a g f") }} |
+  a='2 {{ t2("g8 a g", "f e d") }} | e2-> d |
+  e'=''2 {{ t2("e8 f e", "d c b") }} | c2 r4 {{ t1("r8 d e") }} |
+  f=''2 {{ t2("f8 g f", "e d c") }} | c4 b2. |
+  e=''2. d4 | c2. {{ t1("b4 c8") }} | a2. c4 | b2. b4 |
+  c=''4 {{ t1("c,8 e g") }} {{ t2("c e g", "c e g") }} |
+  c,='''2 \fermata r2 \bar "|."
 }
 {% endmacro %}
 
@@ -12,5 +41,8 @@
 \relative {
   \clef bass
   \key c \major
+  \rep 2 { {{ t3("c=8 e g") }} | }
+  {{ t3("a,=,8 c e") }} | {{ t3("f, a c") }} |
+  {{ t3("g=,8 b d") }} | {{ t3("c e g") }} |
 }
 {% endmacro %}
