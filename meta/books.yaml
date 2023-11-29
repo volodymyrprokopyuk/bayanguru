@@ -94,7 +94,11 @@ books:
       # BTB1989
       "2q9x",
       # TYBCB21971
-      "vhri"] }
+      "vhri",
+      # Free bass
+      # FBB3BZ1982
+      "wnc5"
+      ] }
   - { id: plal, tit: Польські народні пісні і танці, sub: для баяна,
       pieces: [
       # Class
