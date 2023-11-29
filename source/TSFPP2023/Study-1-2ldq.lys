@@ -15,25 +15,39 @@
   \rep 4 { \tuplet 3/2 { {{ a }} } } |
 {% endmacro %}
 
+{% macro h(a) %}
+  \markup \italic "{{ a }}"
+{% endmacro %}
+
 {% macro rightHand() %}
 \relative {
   \tempo Moderato
   \clef treble
   \key c \major
   \time 4/4
-  R1 | e'='2 {{ t2("e8 f e", "d c b")}} | c2 r4 {{ t1("r8 d e") }} |
-  f='2 {{ t2("f8 g f", "e d c") }} | c4 b2. |
-  e='2 {{ t2("e8 f e", "d c b") }} | c2. d4 |
-  a=2 {{ t2("a8 b c", "d e f") }} | d2 r4 {{ t1("r8 e f") }} |
-  g='2 a4 b | c2 {{ t2("b8 c d", "c b a") }} |
-  g='4 f2 {{ t1("e8 d c") }} | {{ t4("b c d", "e f g", "a b c", "d e f") }} |
-  g=''2 {{ t2("e8 f e", "d c b") }} | c2 {{ t2("b8 c b", "a g f") }} |
-  a='2 {{ t2("g8 a g", "f e d") }} | e2-> d |
-  e'=''2 {{ t2("e8 f e", "d c b") }} | c2 r4 {{ t1("r8 d e") }} |
-  f=''2 {{ t2("f8 g f", "e d c") }} | c4 b2. |
-  e=''2. d4 | c2. {{ t1("b4 c8") }} | a2. c4 | b2. b4 |
-  c=''4 {{ t1("c,8 e g") }} {{ t2("c e g", "c e g") }} |
-  c,='''2 \fermata r2 \bar "|."
+  \override TupletBracket.bracket-visibility = ##f
+  \override TupletNumber.text = ""
+  R1 | e'='2(-4 {{ t2("e8 f e", "d c b")}} | c2) r4 {{ t1("r8 d(-2 e") }} |
+  f='2 {{ t2("f8 g f", "e d c-1") }} | c4-3 b2) r4 |
+  e='2(-4 {{ t2("e8 f e", "d c b") }} | c2. d4) |
+  a=2( {{ t2("a8-1 b c", "d-1 e f") }} | d2)-1 r4 {{ t1("r8 e\\(-1 f") }} |
+  g='2 a4-1 b | c2 {{ t2("b8 c d", "c b a-1") }} |
+  g='4-3 f\) r4 {{ t1("e8(-4 d c") }} |
+  {{ t4("b=8-1 c d", "e-1 f g", "a-1 b c", "d-1 e f") }} |
+  g=''4) r4 {{ t2("e8(-4 f e", "d c b") }} |
+  c=''4) r4 {{ t2("b8(-4 c b", "a g f") }} |
+  a='4) r4 {{ t2("g8(-4 a g", "f e d") }} | g2 f4) r4 |
+  e'=''2(-4 {{ t2("e8 f e", "d c b") }} | c2) r4 {{ t1("r8 d(-2 e") }} |
+  f=''2-4 {{ t2("f8 g f", "e d c-1") }} | c4-3 b2) r4 |
+  e=''2.\(-5 d4 | c2. {{ t1("b4-2 c8-3") }} | a2.-1 c4 | b2. b4\) |
+  \duo {
+    \override TupletNumber.text = ""
+    \change Staff = leftHand {{ t1("c=8( e g=") }} %
+    \change Staff = rightHand
+    {{ t1("c='8 e g") }} {{ t1("c _" + h("L.H.") + "e g") }} %
+    \ottava #1 {{ t1("c='''8_" + h("R.H.") + "e g") }} |
+    c=''''2) _{{ h("L.H.") }} \fermata \ottava #0 b,,2 \rest \bar "|."
+  } { c''=''4 s2. | s1 | }
 }
 {% endmacro %}
 
@@ -41,11 +55,12 @@
 \relative {
   \clef bass
   \key c \major
-  {{ t3("c=8 e g") }} |
+  {{ t1("c=8-5 e-3 g-1") }} \rep 3 { {{ t1("c,=8 e g") }} } |
+  \override TupletNumber.text = ""
   \rep 6 {
     {{ t3("c,=8 e g") }} | {{ t3("a, c e") }} |
     {{ t3("f,=,8 a c") }} | {{ t3("g b d=") }} |
   }
-  {{ t1("c=8 e g=") }} r2. | R1 |
+  s1 | R1 |
 }
 {% endmacro %}

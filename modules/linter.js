@@ -74,7 +74,7 @@ function lintNoteComponentOrder(content, logs) {
     // hairpin
     /(\\[<>])?/,
     // text
-    /([-^_]\\\w+){0,2}/,
+    /([-^_]\\?\w+){0,2}/,
     // end
     /$/
   )

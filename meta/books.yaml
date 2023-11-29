@@ -168,7 +168,7 @@ books:
         "4upq"] } ] }
 
   # Piano
-  - { id: pst1, tit: Twelve studies for piano, sub: in twelve major tonalities,
+  - { id: pst1, tit: Twelve studies for piano, sub: in all major keys,
       aut: Ihor Prokopiuk, yr: 2023,
       pieces: [
       # TSFPP2023
