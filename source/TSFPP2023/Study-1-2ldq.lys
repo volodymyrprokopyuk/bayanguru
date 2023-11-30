@@ -21,7 +21,7 @@
 
 {% macro rightHand() %}
 \relative {
-  \tempo Moderato
+  % \tempo Moderato
   \clef treble
   \key c \major
   \time 4/4
