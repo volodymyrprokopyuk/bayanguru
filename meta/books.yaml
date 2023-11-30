@@ -52,6 +52,12 @@ books:
       "e1d4", "1hva", "arni",
       # B2AK1987
       "tsio", "tg2x"] }
+  - { id: rfr1, tit: Російські народні пісні і танці,
+      sub: для готово-виборного баяна,
+      pieces: [
+      # FBB3BZ1982
+      "3hw7"
+      ] }
   # Tutorial
   - { id: rtu1, tit: Російські народні пісні і танці, sub: для баяна,
       pieces: [
