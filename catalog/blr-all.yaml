@@ -28,6 +28,7 @@ pieces:
       org: blr, sty: flk, gnr: dnc, ton: gj, frm: in3, bss: stb, lvl: ela }
 
   # Free bass
+  # Class
   # FBB3BZ1982
   - { id: wnc5, tit: Прилетіли гуси, sub: blrfs,
       arr: А. Зубарев, src: FBB3BZ1982,

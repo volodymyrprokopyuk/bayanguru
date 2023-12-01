@@ -135,11 +135,11 @@ pieces:
       org: rus, sty: flk, gnr: sng, ton: [cj, ai], frm: [var, cr5], bss: stb, lvl: elc }
 
   # Free bass
+  # Class
   # FBB3BZ1982
   - { id: 3hw7, tit: Полифоническая пьеса,
       com: М. Глинка, src: FBB3BZ1982,
       org: rus, sty: aut, gnr: pie, ton: di, frm: vo2, bss: frb, lvl: ela }
-  # p. 25
-  # - { id: w7lt, tit: Ничто в поле не колышется, sub: rusfs,
-  #     arr: А. Зубарев, src: FBB3BZ1982,
-  #     org: rus, sty: flk, gnr: sng, ton: ei, frm: vo2, bss: frb, lvl: ela }
+  - { id: w7lt, tit: Ничто в поле не колышется, sub: rusfs,
+      arr: А. Зубарев, src: FBB3BZ1982,
+      org: rus, sty: flk, gnr: sng, ton: ei, frm: vo2, bss: frb, lvl: ela }
