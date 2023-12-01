@@ -23,20 +23,6 @@ books:
       "e3u3", "ucue", "fngd", "cpdc", "9k9u", "0r9e", "v8ec", "w5ba", "plh0",
       "i11j", "9hwt", "zvpg", "mf7s", "zykv", "26qx", "di18", "btcu", "nev4",
       "foaz", "f45r"] }
-  - { id: ufr1, tit: Українські народні пісні і танці,
-      sub: для готово-виборного баяна,
-      pieces: [
-      # FBB3BZ1982
-      "ltfu", "z16r", "jclp"
-      ] }
-  # Tutorial
-  - { id: utu1, tit: Українські народні пісні і танці, sub: для баяна,
-      pieces: [
-      # BTBC1936
-      "yq8y", "cckj", "a3ew", "isd6", "vf9h",
-      # BTB1978
-      "vwad", "brku", "tzb9", "ndwb"] }
-  # Class
   - { id: rcl1, tit: Російські народні пісні і танці, sub: для баяна,
       pieces: [
       # B0D1973
@@ -52,13 +38,14 @@ books:
       "e1d4", "1hva", "arni",
       # B2AK1987
       "tsio", "tg2x"] }
-  - { id: rfr1, tit: Російські народні пісні і танці,
-      sub: для готово-виборного баяна,
-      pieces: [
-      # FBB3BZ1982
-      "3hw7"
-      ] }
+
   # Tutorial
+  - { id: utu1, tit: Українські народні пісні і танці, sub: для баяна,
+      pieces: [
+      # BTBC1936
+      "yq8y", "cckj", "a3ew", "isd6", "vf9h",
+      # BTB1978
+      "vwad", "brku", "tzb9", "ndwb"] }
   - { id: rtu1, tit: Російські народні пісні і танці, sub: для баяна,
       pieces: [
       # BTBC1936
@@ -70,6 +57,8 @@ books:
       "8wgj", "dizc",
       # BTB1989
       "q7i3", "up9h", "6ocj", "nlmb"] }
+
+  # All
   - { id: hual, tit: Угорські народні пісні і танці, sub: для баяна,
       pieces: [
       # Class
@@ -89,22 +78,24 @@ books:
       "epyc"] }
   - { id: byal, tit: Білоруські народні пісні і танці, sub: для баяна,
       pieces: [
-      # Class
-      # B0D1973
-      "bv2w",
-      # B1AK1985
-      "v99z",
-      # Tutorial
-      # BTBC1936
-      "8ec9",
-      # BTB1989
-      "2q9x",
-      # TYBCB21971
-      "vhri",
-      # Free bass
-      # FBB3BZ1982
-      "wnc5"
-      ] }
+      { sec: Готовий баян, pieces: [ # Stradella bass
+        # Class
+        # B0D1973
+        "bv2w",
+        # B1AK1985
+        "v99z",
+        # Tutorial
+        # BTBC1936
+        "8ec9",
+        # BTB1989
+        "2q9x",
+        # TYBCB21971
+        "vhri"
+      ] },
+      { sec: Готово-виборний баян, pieces: [ # Free bass
+        # FBB3BZ1982
+        "wnc5"
+      ] } ] }
   - { id: plal, tit: Польські народні пісні і танці, sub: для баяна,
       pieces: [
       # Class
@@ -117,6 +108,9 @@ books:
       # Tutorial
       # BTBC1936
       "isnd"] }
+
+  # Study
+  # Class
   - { id: scl1, tit: Вибрані етюди, sub: для баяна,
       pieces: [
       { sec: Гами, pieces: [ # Scale
@@ -172,6 +166,21 @@ books:
         "7smk", "zvmc",
         # SB2NU1977
         "4upq"] } ] }
+
+  # Free bass
+  # Class
+  - { id: ufr1, tit: Українські народні пісні і танці,
+      sub: для готово-виборного баяна,
+      pieces: [
+      # FBB3BZ1982
+      "ltfu", "z16r", "jclp"
+      ] }
+  - { id: rfr1, tit: Російські народні пісні і танці,
+      sub: для готово-виборного баяна,
+      pieces: [
+      # FBB3BZ1982
+      "3hw7"
+      ] }
 
   # Piano
   - { id: pst1, tit: Twelve studies for piano, sub: in all major keys,

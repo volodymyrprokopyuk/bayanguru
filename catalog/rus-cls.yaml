@@ -133,6 +133,8 @@ pieces:
   - { id: tg2x, tit: Ходила младешенька по борочку, sub: rusfs,
       src: B2AK1987,
       org: rus, sty: flk, gnr: sng, ton: [cj, ai], frm: [var, cr5], bss: stb, lvl: elc }
+
+  # Free bass
   # FBB3BZ1982
   - { id: 3hw7, tit: Полифоническая пьеса,
       com: М. Глинка, src: FBB3BZ1982,
