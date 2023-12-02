@@ -323,10 +323,9 @@ pieces:
   - { id: ekrs, tit: Аркан,
       arr: Л. Колодуб, src: FBB3BZ1982,
       org: ukr, sty: flk, gnr: dnc, ton: ei, frm: vo2, bss: frb, lvl: ela }
-  # p. 27
-  # - { id: nr36, tit: Колискова,
-  #     com: В. Власов, src: FBB3BZ1982,
-  #     org: ukr, sty: aut, gnr: lul, ton: ai, frm: vo2, bss: frb, lvl: ela }
+  - { id: nr36, tit: Колискова,
+      com: В. Власов, src: FBB3BZ1982,
+      org: ukr, sty: aut, gnr: lul, ton: ai, frm: vo2, bss: frb, lvl: ela }
   # p. 29
   # - { id: yeld, tit: Сумна пісенька,
   #     com: К. Мясков, src: FBB3BZ1982,
