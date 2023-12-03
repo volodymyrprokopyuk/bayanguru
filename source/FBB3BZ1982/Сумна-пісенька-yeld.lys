@@ -1,0 +1,33 @@
+{% macro rightHand() %}
+\relative {
+  \tempo "Andante cantabile"
+  \clef treble
+  \key g \minor
+  \time 2/4
+  \meter 1/2 #'(1)
+  \partial 8 { d'='8(\mp | }
+  g='8 a bes c | d bes g) g'( | ees c g) g'( | d4.) d8( |
+  c=''8 bes a c | bes a g bes | a\< e fis \af 8\! g | fis4.)\> \af 8\! d8( |
+  g='8 a bes c | d bes g) bes'( | a g f ees | d4.) g8( |
+  ees=''8 c a) g'( | d bes g) bes( | a[ c] fis, a | g4.) bes='8\( |
+
+  a='8\p fis_\dCre d c' | bes a g g' | f c d ees | d4.\) d8\( |
+  cis=''8 b a g' | fis d a fis' |
+  \duo { e''=''8[\mf b] cis a=' | } { g'='2 | } | <fis, d'>4.\) d8( |
+  g='8\p a bes c | d bes g) g'( | ees c a) g'( | d4.) d8\( | c ees a, c |
+  bes='8 d g, bes | a[ c] fis, a | g4 <bes=' d g>\) \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\relative {
+  \clef bass
+  \key g \minor
+  \meter 1/2 #'(1)
+  \partial 8 { r8 | }
+  \duo {
+    g=8(_\frBass bes~ <bes d>) d, \rest | g( d'~ <bes d>) d, \rest |
+    g=8( c~ <c ees>) d, \rest | \stemDown bes'[( a] g) d \rest |
+  } { \rep 3 { g=4. s8 | } | s2 | }
+}
+{% endmacro %}
