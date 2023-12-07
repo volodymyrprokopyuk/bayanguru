@@ -44,5 +44,17 @@
 \relative {
   \clef bass
   \key d \major
+  d=8-\frBass e fis g |
+  \duo { r8 d'='8 r d | r d r e | cis4 s4 | cis='4 d=' | }
+  { a=4 bes | b c | r8 a d d, | r a' d,=4 | }
+
+  \rep 2 { \duo { r4 <cis= e a>8 } { a,=,4~ a8 } r | }
+  a,=,8 e'16 fis g( fis) e fis | g8 a fis d | g a d,=4 |
+
+  \duo { g=4 g | g d= | } { g=8 <b d> g <c ees> | g <b d> d, <a'= c> | }
+  g,=,16 a b c b( d,) c' b | a( c) b a b8 g | a16( c) b a g=,4 |
+
+  \rep 2 { \duo { r4 <fis= a d>8 } { d=4~ d8 } r | }
+  d'=8 a16 b c( b) a b | c8 d b g | c d g,=,4 |
 }
 {% endmacro %}
