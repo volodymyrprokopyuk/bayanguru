@@ -1,8 +1,0 @@
-%YAML 1.2
----
-pieces:
-  # Studies
-  # TSFPP2023
-  - { id: 2ldq, tit: Study 1, sub: C major,
-      com: I. Prokopiuk, src: TSFPP2023,
-      org: ukr, sty: aut, gnr: stu, ton: cj, frm: mel, bss: frb, lvl: ela }
