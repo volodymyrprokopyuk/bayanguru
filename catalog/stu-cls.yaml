@@ -248,7 +248,7 @@ pieces:
   # p. 81
   # - { id: 6jhw, tit: Етюд Bes minor,
   #     com: Г. Тишкевич, src: SB4NU1978,
-  #     org: ukr, sty: aut, gnr: stu, ton: besi, frm: [in8, ch5], bss: [stb, pub, rep], lvl: elb }
+  #     org: ukr, sty: aut, gnr: stu, ton: besi, frm: [in8, cr5], bss: [stb, pub, rep], lvl: elb }
   # p. 82
   # - { id: xkep, tit: Етюд F minor,
   #     com: Л. Шітте, src: SB4NU1978,
@@ -321,5 +321,15 @@ pieces:
   # p. 126
   # - { id: f87r, tit: Етюд B minor,
   #     com: А. Салин, src: SB5NU1980,
-  #     org: rus, sty: aut, gnr: stu, ton: bi, frm: [scl, in8, ch7, fi1, fi5],
-  #     bss: [pub, scl], lvl: ina }
+  #     org: rus, sty: aut, gnr: stu, ton: bi, frm: [scl, in8, cr7, fi1, fi5], bss: [pub, scl], lvl: ina }
+
+  # Free bass
+  # FBB3BZ1982
+  # p. 81
+  # - { id: iwqa, tit: Етюд A minor,
+  #     com: А. Зубарев, src: FBB3BZ1982,
+  #     org: rus, sty: aut, gnr: stu, ton: ai, frm: [scl, vo2], bss: [frb, scl], lvl: ela }
+  # p. 84
+  # - { id: 6ky7, tit: Етюд C major,
+  #     com: С. Чапкій, src: FBB3BZ1982,
+  #     org: ukr, sty: aut, gnr: stu, ton: cj, frm: [scl, cr5], bss: [frb, cr5], lvl: elb }

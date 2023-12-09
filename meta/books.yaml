@@ -166,6 +166,12 @@ books:
         "7smk", "zvmc",
         # SB2NU1977
         "4upq"] } ] }
+  # Free bass
+  - { id: scl3, tit: Вибрані етюди, sub: для готово-виборного баяна,
+      pieces: [
+      { sec: Гами, pieces: [ # Scale
+        # FBB3BZ1982
+      ] } ] }
 
   # Free bass
   # Class
