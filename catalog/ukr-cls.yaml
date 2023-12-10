@@ -224,7 +224,7 @@ pieces:
       org: ukr, sty: aut, gnr: vls, ton: [di, fj, dj], frm: in3, bss: stb, lvl: elb }
   - { id: stil, tit: Сусідка, sub: ukrfs,
       arr: М. Чайкін, src: B2AK1979,
-      org: ukr, sty: flk, gnr: sng, ton: [ai cj], frm: ch5, bss: stb, lvl: elb }
+      org: ukr, sty: flk, gnr: sng, ton: [ai cj], frm: cr5, bss: stb, lvl: elb }
   - { id: nizv, tit: "Чом, чом не прийшов", sub: ukrfs,
       src: B2AK1979,
       org: ukr, sty: flk, gnr: sng, ton: ei, frm: var, bss: stb, lvl: elb }
@@ -294,7 +294,7 @@ pieces:
       org: ukr, sty: aut, gnr: chd, ton: bi, frm: mel, bss: stb, lvl: elb }
   - { id: di18, tit: Од Києва до Лубен, sub: ukrfs,
       src: B2AK1987,
-      org: ukr, sty: flk, gnr: sng, ton: gj, frm: [var, in3, ch5], bss: [stb, pub], lvl: elc }
+      org: ukr, sty: flk, gnr: sng, ton: gj, frm: [var, in3, cr5], bss: [stb, pub], lvl: elc }
   - { id: btcu, tit: Полька,
       com: М. Глинка, src: B2AK1987,
       org: ukr, sty: flk, gnr: plk, ton: cj, frm: [mel, jmp, acc], bss: stb, lvl: elb }
