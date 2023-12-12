@@ -344,3 +344,15 @@ pieces:
   # - { id: xe0v, tit: Етюд A minor,
   #     com: В. Подгорний, src: FBB3BZ1982,
   #     org: ukr, sty: aut, gnr: stu, ton: ai, frm: scl, bss: [frb, scl], lvl: ela }
+  # p. 103
+  # - { id: zkl0, tit: Етюд C major,
+  #     com: А. Золкин, src: FBB3BZ1982,
+  #     org: rus, sty: aut, gnr: stu, ton: cj, frm: [scl, in6], bss: [frb, scl], lvl: ela }
+  # p. 105
+  # - { id: f0py, tit: Етюд C major,
+  #     com: М. Різоль, src: FBB3BZ1982,
+  #     org: ukr, sty: aut, gnr: stu, ton: cj, frm: cr3, bss: frb, lvl: elb }
+  # p. 108
+  # - { id: u5b8, tit: Етюд C major,
+  #     com: А. Тихончук, src: FBB3BZ1982,
+  #     org: ukr, sty: aut, gnr: stu, ton: cj, frm: [arp, tri], bss: [frb, arp], lvl: elb }

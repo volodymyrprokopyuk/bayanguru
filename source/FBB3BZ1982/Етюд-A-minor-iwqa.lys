@@ -10,7 +10,7 @@
   \duo {
     g'='8(\< a b \af 8\! c | d4 f) | \stemDown <c e>( <b g'> | \stemUp a2) |
     e'=''8(\mf d c b | a4 e) | fis(^\tRit gis) | a='2-- \bar "|."
-  } { s2 | b'='2 | s2 | a4( b) | f2 | e4 e | d2 | \af 2\! a=--\> | }
+  } { s2 | b'='2 | s2 | a4( g) | f2 | e4 e | d2 | \af 2\! a=--\> | }
 }
 {% endmacro %}
 
