@@ -328,10 +328,9 @@ pieces:
   - { id: iwqa, tit: Етюд A minor,
       com: А. Зубарев, src: FBB3BZ1982,
       org: rus, sty: aut, gnr: stu, ton: ai, frm: [scl, vo2], bss: [frb, scl], lvl: ela }
-  # p. 84
-  # - { id: 6ky7, tit: Етюд C major,
-  #     com: С. Чапкій, src: FBB3BZ1982,
-  #     org: ukr, sty: aut, gnr: stu, ton: cj, frm: [scl, cr5], bss: [frb, cr5], lvl: elb }
+  - { id: 6ky7, tit: Етюд C major,
+      com: С. Чапкій, src: FBB3BZ1982,
+      org: ukr, sty: aut, gnr: stu, ton: cj, frm: [scl, cr5], bss: [frb, cr5], lvl: elb }
   # p. 86
   # - { id: 47p1, tit: Етюд D minor,
   #     com: В. Власов, src: FBB3BZ1982,

@@ -183,6 +183,10 @@ books:
   - { id: sfr1, tit: Вибрані етюди, sub: для готово-виборного баяна,
       pieces: [
       { sec: Гами, pieces: [ # Scale
-      # FBB3BZ1982
-      "iwqa"
+        # FBB3BZ1982
+        "iwqa"
+      ] },
+      { sec: Акорди, pieces: [ # Chords
+        # FBB3BZ1982
+        "6ky7"
       ] } ] }
