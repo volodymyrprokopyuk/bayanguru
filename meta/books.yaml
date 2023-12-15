@@ -186,6 +186,10 @@ books:
         # FBB3BZ1982
         "iwqa"
       ] },
+      { sec: Арпеджіо, pieces: [ # Arpeggio
+        # FBB3BZ1982
+        "47p1"
+      ] },
       { sec: Акорди, pieces: [ # Chords
         # FBB3BZ1982
         "6ky7"
