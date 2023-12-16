@@ -13,7 +13,7 @@
 {% endmacro %}
 
 {% macro prelude() %}
-  \version "2.25.8"
+  \version "2.25.11"
   bayanUrl = "https://volodymyrprokopyuk.github.io/bayan"
   stBass = \markup \larger \box Г % Готовий бас = standard (Stradella) bass
   puBass = \markup \larger \box Б % Чистий бас = pure bass

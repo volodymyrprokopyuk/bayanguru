@@ -334,10 +334,9 @@ pieces:
   - { id: 47p1, tit: Етюд D minor,
       com: В. Власов, src: FBB3BZ1982,
       org: ukr, sty: aut, gnr: stu, ton: di, frm: arp, bss: [frb, arp], lvl: ela }
-  # p. 95
-  # - { id: zp6s, tit: Етюд D major,
-  #     com: В. Хаперський, src: FBB3BZ1982,
-  #     org: ukr, sty: aut, gnr: stu, ton: dj, frm: scl, bss: [frb, scl], lvl: ela }
+  - { id: zp6s, tit: Етюд D major,
+      com: В. Хаперський, src: FBB3BZ1982,
+      org: ukr, sty: aut, gnr: stu, ton: dj, frm: scl, bss: [frb, scl], lvl: ela }
   # p. 97
   # - { id: xe0v, tit: Етюд A minor,
   #     com: В. Подгорний, src: FBB3BZ1982,
