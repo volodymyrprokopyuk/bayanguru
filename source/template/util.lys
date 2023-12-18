@@ -50,6 +50,15 @@
        >>
     #}
   )
+  trio = #(define-music-function (vone vtwo vthree)
+    (ly:music? ly:music? ly:music?)
+    #{ <<
+         \new Voice = voiceOne \relative { \voiceOne #vone }
+         \new Voice = voiceTwo \relative { \voiceTwo #vtwo }
+         \new Voice = voiceThree \relative { \voiceThree #vthree }
+       >>
+    #}
+  )
   dPad = #(define-music-function (height) ((number? 3.0))
     #{ \override DynamicLineSpanner.staff-padding = #height #}
   )
