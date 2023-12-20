@@ -1,0 +1,32 @@
+{% macro rh1() %}
+  <a=' f'>8(\< <g e'> <f d'> \af 8\! <e c'> | <f d'> <e c'> <d b'> <c a'> |
+  <b= gis'>2)\f | <gis'=' e'>2 |
+{% endmacro %}
+
+{% macro rightHand() %}
+\relative {
+  \tempo Moderato
+  \clef treble
+  \key c \major
+  \time 2/4
+  \meter 1/2 #'(1)
+  <e''='' c'>8[\mf r8 8] r | <d b'>[ r8 8] r | <e c'>2 | <e g> |
+  <c='' a'>8[ r8 8] r | <b gis'>[ r8 8] r | <c a'>2 | <c e> |
+  <a=' f'>8[\f r8 8] r | <g e'>2 | <aes f'>8[\p r8 8] r | <g e'>2 | {{ rh1() }}
+  <a=' f'>8(\mf <g e'> <f d'> <e c'> | <d b'> <c a'> <b g'> <a f'> |
+  <gis= e'>2) | <d'=' f>4 r |
+
+  c'=''8\( d e f | g a g f | e f e d | c d c b\) |
+  a='8\( b c d | e f e d | c d c b | a b a g\) |
+  a='8(\f b c d | <g, e'>2) | aes8(\p bes c d | <g, e'>2) | {{ rh1() }}
+  <a=' f'>8\( <g e'> <f d'> <e c'> | <d b'>\> <c a'> <b g'>8 \af 8\! 8 |
+  <e=' c'>2~\p | 8\) r r4 \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\relative {
+  \clef bass
+  \key c \major
+}
+{% endmacro %}
