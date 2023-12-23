@@ -4,7 +4,7 @@ import ("fmt"; "os")
 import "github.com/spf13/cobra"
 
 func ExecuteCmd() {
-  var (catalog string; book bool)
+  var (cat string; book bool)
   bayanCmd := &cobra.Command{
     Use: "bayan",
     Short: "Engrave and play bayan sheet music",
@@ -13,7 +13,7 @@ func ExecuteCmd() {
 classification and search system to selectively play pieces from a catalog`,
   }
   bayanCmd.PersistentFlags().StringVarP(
-    &catalog, "catalog", "c", "", "pattern for catalog files",
+    &cat, "cat", "c", "", "pattern for catalog files",
   )
   bayanCmd.PersistentFlags().BoolVarP(
     &book, "book", "b", false, "engrave or play books",
@@ -24,8 +24,20 @@ classification and search system to selectively play pieces from a catalog`,
     Use: "eng",
     Short: "Engrave pieces and books",
     Long: `Engrave command initializes, lints, and engraves pieces and books`,
+    Args: func(cmd *cobra.Command, args []string) error {
+      if len(args) == 0 {
+        return fmt.Errorf("at least one piece of book is required")
+      }
+      if book && init {
+        return fmt.Errorf("cannot initialize books")
+      }
+      if !book && piece {
+        return fmt.Errorf("missing books")
+      }
+      return nil
+    },
     Run: func (cmd *cobra.Command, args []string) {
-      fmt.Println("eng", catalog, book, init, piece, args)
+      fmt.Println("eng", cat, book, init, piece, args)
     },
   }
   engraveCmd.Flags().BoolVarP(
@@ -51,7 +63,7 @@ classification and search system to selectively play pieces from a catalog`,
     Short: "Play pieces from a catalog",
     Long: `Play command searches, lists, and plays pieces from a catalog`,
     Run: func (cmd *cobra.Command, args []string) {
-      fmt.Println("play", catalog, book, org, args)
+      fmt.Println("play", cat, book, org, args)
     },
   }
   playCmd.Flags().BoolVarP(
