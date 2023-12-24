@@ -1,0 +1,28 @@
+{% macro rightHand() %}
+\relative {
+  \tempo "Allegretto scherzoso"
+  \clef treble
+  \key c \major
+  \time 4/4
+  g''=''8->\mf e r4 f8-> d r4 | f8-> d r4 e8-> c r4 |
+  e=''8\pp c g'[\< e] f g a \af 8\! f | e c d[\> b] c d e \af 8\! f |
+  g=''8\mf e r4 f8 d r4 | f8 d r4 e8 c r4 |
+  e=''8\pp c g'[\< e] a f b[ g] | c a d[ \af 8\! b] e d c b='' |
+
+  e='''4.(\mf \startTrillSpan \af 16\stopTrillSpan dis8 e) d c b |
+  e='''4.(\mp \startTrillSpan \af 16\stopTrillSpan dis16[ e] f8) e d c |
+  d='''8 c bes a g[ f e dis] |
+  \time 6/4
+  e=''2( \startTrillSpan \acc { dis=''16 e } \af 16\stopTrillSpan %
+  f=''8[) e\> d c] b a gis \af 8\! f=' |
+
+  % \time 4/4
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\relative {
+  \clef bass
+  \key c \major
+}
+{% endmacro %}
