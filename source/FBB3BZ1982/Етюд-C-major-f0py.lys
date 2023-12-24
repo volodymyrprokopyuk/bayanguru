@@ -1,0 +1,32 @@
+{% macro rh1(a) %}
+  {{ a }} 8 8 <d f>4 8 | <e g>8 8 8 <f=' a>4 8 |
+{% endmacro %}
+
+{% macro rightHand() %}
+\relative {
+  \tempo Moderato
+  \clef treble
+  \key c \major
+  \time 6/8
+  {{ rh1("<c'=' e>8\\p") }}
+  <g=' b>8 8 8 <a c>4 <f a>8 | <e g>4.~ 4 8 |
+  <d=' f>8 8 8 <e g>4 <d f>8 | <c e>8 8 8 <e g>4 <c e>8 |
+  <b= d>8(\< g' b <a c> <g b> \af 8\! <fis a> | <b d>4.\> <b, g'>4 \af 8\! f'8 |
+  {{ rh1("<c=' e>8)") }}
+  <g=' b>8 8 8 <a c>4 <b d>8 | <g e'>4.~\< 4 \af 8\! 8 |
+  <g=' g'>8( <f f'> <e e'> <f d'>4 8) | <f f'>( <e e'> <d d'> <e c'>4 8) |
+  \duo {
+    s4. b'='8( a g | <e g c>4.)\< \stemDown <g c e>4 \af 8\! <g=' e' g>8 |
+  } { \stemUp <c'=' e'>8( <d d'> <e c'> \stemDown f='4.) | s2. | }
+  <g'='' bes>8(\f <f a> <e g> <d f>4 8) | <f aes>( <e g> <d f> <c e>4 8) |
+  \duo { e''=''8( d a e' a, e' | <e,=' g c>4.~ 4.) | }
+  { fis'='4. f | s4. \acc { fis,= 8 } \af 4.\! g=4.\> | } R2.\pp \bar "|."
+}
+{% endmacro %}
+
+{% macro leftHand() %}
+\relative {
+  \clef bass
+  \key c \major
+}
+{% endmacro %}

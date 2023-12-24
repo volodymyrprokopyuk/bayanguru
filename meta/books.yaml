@@ -190,6 +190,10 @@ books:
         # FBB3BZ1982
         "47p1"
       ] },
+      { sec: Інтервали, pieces: [ # Intervals
+        # FBB3BZ1982
+        "f0py"
+      ] },
       { sec: Акорди, pieces: [ # Chords
         # FBB3BZ1982
         "6ky7"
