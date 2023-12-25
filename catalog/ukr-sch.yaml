@@ -1,0 +1,8 @@
+%YAML 1.2
+---
+pieces:
+  # Free bass
+  # FBBSC1978
+  - { id: 39bh, tit: П'єса,
+      com: Д. Пшеничний, src: FBBSC1978,
+      org: ukr, sty: aut, gnr: pie, ton: ai, frm: vo2, bss: frb, lvl: ela }
