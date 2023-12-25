@@ -24,6 +24,8 @@ sources:
   - { id: BTB1989, tit: Самоучитель игры на баяне,
       aut: [А. Басурманов], pub: Советский композитор, yr: 1989 }
   # School sch sc
+  - { id: FBBSC1978, tit: Школа гри на виборному баяні,
+      aut: [С. Чапкій], pub: Музична Україна, yr: 1978 }
   # Course crs cr
   - { id: TYBC1B1970, tit: Трехгодичный курс обучения игры на баяне,
       sub: Часть 1, aut: [А. Басурманов], pub: Советский композитор, yr: 1970 }
@@ -41,7 +43,3 @@ sources:
   - { id: SB5NU1980, tit: Етюди для баяна на різні види техніки, sub: 5 клас,
       aut: [А. Нечипоренко, В. Угринович], pub: Музична Україна, yr: 1980 }
   # Misc
-
-  # Piano
-  - { id: TSFPP2023, tit: Twelve studies for piano, sub: in twelve major tonalities,
-      aut: [I. Prokopiuk], pub: Handwritten scores, yr: 2023 }

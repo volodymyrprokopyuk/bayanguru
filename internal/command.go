@@ -1,9 +1,9 @@
 package internal
 
-import ("fmt"; "os")
+import "fmt"
 import "github.com/spf13/cobra"
 
-func ExecuteCmd() {
+func CmdExecute() error {
   var (cat string; book bool)
   bayanCmd := &cobra.Command{
     Use: "bayan",
@@ -92,8 +92,5 @@ classification and search system to selectively play pieces from a catalog`,
   }
 
   bayanCmd.AddCommand(engraveCmd, playCmd)
-  if err := bayanCmd.Execute(); err != nil {
-    fmt.Println(err)
-    os.Exit(1)
-  }
+  return bayanCmd.Execute()
 }
