@@ -192,7 +192,9 @@ books:
       ] },
       { sec: Арпеджіо, pieces: [ # Arpeggio
         # FBB3BZ1982
-        "47p1", "u5b8"
+        "47p1", "u5b8",
+        # FBBSC1978
+        "kbmk"
       ] },
       { sec: Інтервали, pieces: [ # Intervals
         # FBB3BZ1982
