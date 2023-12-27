@@ -33,3 +33,10 @@ pieces:
   - { id: wnc5, tit: Прилетіли гуси, sub: blrfs,
       arr: А. Зубарев, src: FBB3BZ1982,
       org: blr, sty: flk, gnr: sng, ton: ai, frm: vo2, bss: frb, lvl: ela }
+
+  # School
+  # FBBSC1978
+  # p. 54
+  # - { id: bx7x, tit: Чому ж мені не співати, sub: blrfs
+  #     src: FBBSC1978,
+  #     org: blr, sty: flk, gnr: sng, ton: di, frm: vo2, bss: frb, lvl: ela }
