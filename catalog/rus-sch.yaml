@@ -6,6 +6,6 @@ pieces:
   - { id: v2kv, tit: На горе-то калина, sub: rusfs,
       src: FBBSC1978,
       org: rus, sty: flk, gnr: sng, ton: fj, frm: vo2, bss: frb, lvl: ela }
-  - { id: b06y, tit: Солнышко не греет, sub: rusfs,
+  - { id: b06y, tit: Солнышко не греет,
       com: К. Савцов, src: FBBSC1978,
       org: rus, sty: aut, gnr: pie, ton: ai, frm: vo2, bss: frb, lvl: ela }

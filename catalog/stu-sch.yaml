@@ -4,9 +4,8 @@ pieces:
   # Free bass
   # FBBSC1978
   - { id: kbmk, tit: Етюд C major,
-      com: К. Гурлітт, src: FBBSC1978,
+      com: К. Гурліт, src: FBBSC1978,
       org: deu, sty: cls, gnr: stu, ton: cj, frm: scl, bss: [frb, arp], lvl: ela }
-  # p. 46
-  # - { id: g2e5, tit: Етюд C major,
-  #     com: С. Чапкій, src: FBBSC1978,
-  #     org: ukr, sty: aut, gnr: stu, ton: cj, frm: arp, bss: [frb, arp], lvl: ela }
+  - { id: g2e5, tit: Етюд C major,
+      com: С. Чапкій, src: FBBSC1978,
+      org: ukr, sty: aut, gnr: stu, ton: cj, frm: arp, bss: [frb, arp], lvl: ela }

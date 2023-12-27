@@ -18,7 +18,7 @@ pieces:
       com: Л. Шітте, src: SB1NU1979,
       org: dnk, sty: cls, gnr: stu, ton: cj, frm: scl, bss: stb, lvl: ela }
   - { id: b3nl, tit: Етюд C major,
-      com: К. Гурлітт, src: SB1NU1979,
+      com: К. Гурліт, src: SB1NU1979,
       org: deu, sty: cls, gnr: stu, ton: cj, frm: [scl, syn, jmp], bss: stb, lvl: ela }
   - { id: vz59, tit: Етюд G major,
       com: К. Черні, src: SB1NU1979,
@@ -69,7 +69,7 @@ pieces:
       com: Т. Федин, src: SB1NU1979,
       org: rus, sty: aut, gnr: stu, ton: besj, frm: [arp, scl], bss: [stb, dot], lvl: ela }
   - { id: 7smk, tit: Етюд C major,
-      com: К. Гурлітт, src: SB1NU1979,
+      com: К. Гурліт, src: SB1NU1979,
       org: deu, sty: cls, gnr: stu, ton: cj, frm: [cr5, syn], bss: [pub, scl], lvl: ela }
   - { id: zvmc, tit: Етюд E minor,
       com: О. Гедике, src: SB1NU1979,
