@@ -199,6 +199,6 @@ export async function playPieces(pieces, args) {
       console.log(summary.join(" "))
       continue
     }
-    await $`xdg-open scores/${file}.pdf`
+    await $`xdg-open pieces/${file}.pdf`
   }
 }

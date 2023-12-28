@@ -122,7 +122,7 @@ async function engravePiece(piece, args) {
   }
   if (args.dry) { return }
   const score = template.render("piece.lys", { piece, args })
-  return await lilypond(score, `scores/${piece.file}`, args)
+  return await lilypond(score, `pieces/${piece.file}`, args)
 }
 
 export async function engravePieces(pieces, args) {
