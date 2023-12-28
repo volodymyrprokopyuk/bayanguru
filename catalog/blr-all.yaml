@@ -36,7 +36,6 @@ pieces:
 
   # School
   # FBBSC1978
-  # p. 54
-  # - { id: bx7x, tit: Чому ж мені не співати, sub: blrfs
-  #     src: FBBSC1978,
-  #     org: blr, sty: flk, gnr: sng, ton: di, frm: vo2, bss: frb, lvl: ela }
+  - { id: bx7x, tit: Чому ж мені не співати, sub: blrfs,
+      src: FBBSC1978,
+      org: blr, sty: flk, gnr: sng, ton: di, frm: vo2, bss: frb, lvl: ela }
