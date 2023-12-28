@@ -11,6 +11,10 @@
   {{ a }} r f-.-> r | a-. r f-.-> r | c-.-> r d-. e='-. |
 {% endmacro %}
 
+{% macro lh2() %}
+  \rep 2 { f='4( e='8)-. r | }
+{% endmacro %}
+
 {% macro rightHand() %}
 \relative {
   \tempo Allegretto
@@ -35,7 +39,7 @@
   {{ lh1("a'='8-.-\\frBass") }} | f-. r e-.-> r |
   {{ lh1("a='8-.") }} | f-. c-. f='-.-> r |
 
-  \rep 2 { f='4( e8)-. r | } | f-. r g-. r | e-. r r4 |
-  \rep 2 { f='4( e8)-. r | } | f4( g8 f | e)-. g-. e-. r |
+  {{ lh2() }} | f-. r g-. r | e-. r r4 |
+  {{ lh2() }} | f4( g8 f | e)-. g-. e='-. r |
 }
 {% endmacro %}
