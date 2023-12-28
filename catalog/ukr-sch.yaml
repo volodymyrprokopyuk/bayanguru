@@ -9,7 +9,6 @@ pieces:
   - { id: c2ql, tit: Осінній дощик,
       com: Л. Вільчик, src: FBBSC1978,
       org: ukr, sty: aut, gnr: chd, ton: di, frm: vo2, bss: frb, lvl: ela }
-  # p. 50
-  # - { id: axyx, tit: Будуєм дім,
-  #     com: К. Мясков, src: FBBSC1978,
-  #     org: ukr, sty: aut, gnr: chd, ton: [fj, cj], frm: vo2, bss: frb, lvl: ela }
+  - { id: axyx, tit: Будуєм дім,
+      com: К. Мясков, src: FBBSC1978,
+      org: ukr, sty: aut, gnr: chd, ton: [fj, cj], frm: vo2, bss: frb, lvl: ela }
