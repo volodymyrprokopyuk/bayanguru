@@ -1,9 +1,9 @@
 package internal
 
-import "github.com/muesli/termenv"
+import "github.com/gookit/color"
 
-var cp = termenv.ColorProfile()
+var styError = color.HEXStyle("#FF0066").AddOpts(color.OpBold)
 
-func StyError(str string) termenv.Style {
-  return termenv.String(str).Foreground(cp.Color("#FF0066"))
+func StyError(format string, vals ...any) string {
+  return styError.Sprintf(format, vals...)
 }

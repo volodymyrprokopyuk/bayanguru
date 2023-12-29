@@ -1,7 +1,10 @@
 package main
 
-import ("fmt"; "os")
-import "github.com/volodymyrprokopyuk/bayan/internal"
+import (
+  "fmt"
+  "os"
+  "github.com/volodymyrprokopyuk/bayan/internal"
+)
 
 func main() {
   if err := internal.CmdExecute(); err != nil {
