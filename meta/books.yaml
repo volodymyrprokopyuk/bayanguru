@@ -205,7 +205,9 @@ books:
       pieces: [
       { sec: Гами, pieces: [ # Scale
         # FBB3BZ1982
-        "zp6s", "zkl0"
+        "zp6s", "zkl0",
+        # FBBSC1978
+        "a4cg"
       ] },
       { sec: Арпеджіо, pieces: [ # Arpeggio
         # FBB3BZ1982
