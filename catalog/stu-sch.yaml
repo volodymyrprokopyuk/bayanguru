@@ -12,7 +12,6 @@ pieces:
   - { id: a4cg, tit: Етюд C major,
       com: С. Чапкій, src: FBBSC1978,
       org: ukr, sty: aut, gnr: stu, ton: cj, frm: [scl, dot], bss: [frb, scl], lvl: ela }
-  # p. 51
-  # - { id: 4b2w, tit: Етюд C major,
-  #     com: С. Чапкій, src: FBBSC1978,
-  #     org: ukr, sty: aut, gnr: stu, ton: cj, frm: [scl, dot], bss: [frb, scl], lvl: ela }
+  - { id: 4b2w, tit: Етюд C major,
+      com: С. Чапкій, src: FBBSC1978,
+      org: ukr, sty: aut, gnr: stu, ton: cj, frm: [scl, dot], bss: [frb, scl], lvl: ela }
