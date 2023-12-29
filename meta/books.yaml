@@ -100,7 +100,9 @@ books:
       ] },
       { sec: Готово-виборний баян, pieces: [ # Free bass
         # FBB3BZ1982
-        "wnc5", "bx7x"
+        "wnc5",
+        # FBBSC1978
+        "bx7x"
       ] } ] }
   - { id: plal, tit: Польські народні пісні і танці, sub: для баяна,
       pieces: [
