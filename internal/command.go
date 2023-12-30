@@ -3,15 +3,31 @@ package internal
 import (
   "fmt"
   "regexp"
+  "slices"
   "github.com/spf13/cobra"
+  cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
 )
+
+var wrongNeg = regexp.MustCompile(`^.+\^`)
 
 func cmdError(format string, vals ...any) error {
   return fmt.Errorf("command: " + format, vals...)
 }
 
+func validate(catalog string, args []string) error {
+  if len(args) > 1 && slices.Contains(args, "all") {
+    return cmdError("either all or pieces and books, got %v", args)
+  }
+  if wrongNeg.MatchString(catalog) {
+    return cmdError("^ must be the first e.g. ^rus,blr, got -c %v", catalog)
+  }
+  if len(args) == 0 {
+    return cmdError("at least one piece or book is required")
+  }
+  return nil
+}
+
 func CmdExecute() error {
-  var wrongNeg = regexp.MustCompile(`^.+\^`)
   var catalog string
   var book bool
   bayanCmd := &cobra.Command{
@@ -41,11 +57,8 @@ classification and search system to selectively play pieces from a catalog`,
 bayan engrave [-c catalog] -b books... [--piece]
 bayan engrave pieces... --lint=f --optimize=f --meta=f`,
     Args: func(cmd *cobra.Command, args []string) error {
-      if wrongNeg.MatchString(catalog) {
-        return cmdError("^ must be the first e.g. ^rus,blr, got -c %v", catalog)
-      }
-      if len(args) == 0 {
-        return cmdError("at least one piece or book is required")
+      if err := validate(catalog, args); err != nil {
+        return err
       }
       if book && init {
         return cmdError("cannot initialize books")
@@ -98,11 +111,8 @@ bayan engrave pieces... --lint=f --optimize=f --meta=f`,
 bayan play [-c catalog] -b books... [--query...]
 bayan play --query... --cycle --random=f --list`,
     Args: func(cmd *cobra.Command, args []string) error {
-      if wrongNeg.MatchString(catalog) {
-        return cmdError("^ must be the first e.g. ^rus,blr, got -c %v", catalog)
-      }
-      if len(args) == 0 {
-        return cmdError("at least one piece or book is required")
+      if err := validate(catalog, args); err != nil {
+        return err
       }
       for opt, query := range queries {
         if wrongNeg.MatchString(*query.varp) {
@@ -114,7 +124,23 @@ bayan play --query... --cycle --random=f --list`,
       return nil
     },
     Run: func (cmd *cobra.Command, args []string) {
-      fmt.Println("play", catalog, book, org, args)
+      pc := cat.PlayCommand{
+        Catalog: catalog,
+        Book: book, Cycle: cycle, Random: random, List: list,
+        All: len(args) == 1 && args[0] == "all",
+        Queries: map[string]string{},
+      }
+      if book {
+        pc.Books = args
+      } else {
+        pc.Pieces = args
+      }
+      for opt, query := range queries {
+        if len(*query.varp) != 0 {
+          pc.Queries[opt] = *query.varp
+        }
+      }
+      fmt.Printf("play %+v\n", pc)
     },
   }
   playCmd.Flags().BoolVarP(
