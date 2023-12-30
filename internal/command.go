@@ -68,8 +68,9 @@ bayan engrave pieces... --lint=f --optimize=f --meta=f`,
       }
       return nil
     },
-    Run: func (cmd *cobra.Command, args []string) {
+    RunE: func (cmd *cobra.Command, args []string) error {
       fmt.Println("eng", catalog, book, init, piece, args)
+      return nil
     },
   }
   engraveCmd.Flags().BoolVarP(
@@ -106,7 +107,7 @@ bayan engrave pieces... --lint=f --optimize=f --meta=f`,
     Use: "play",
     Short: "Play pieces from a catalog or a book",
     Long:
-      `Play command searches, lists, and plays pieces from a catalog or a book`,
+    `Play command searches, lists, and plays pieces from a catalog or a book`,
     Example: `bayan play [-c catalog] pieces...
 bayan play [-c catalog] -b books... [--query...]
 bayan play --query... --cycle --random=f --list`,
@@ -123,24 +124,26 @@ bayan play --query... --cycle --random=f --list`,
       }
       return nil
     },
-    Run: func (cmd *cobra.Command, args []string) {
+    RunE: func (cmd *cobra.Command, args []string) error {
       pc := cat.PlayCommand{
         Catalog: catalog,
         Book: book, Cycle: cycle, Random: random, List: list,
         All: len(args) == 1 && args[0] == "all",
         Queries: map[string]string{},
       }
-      if book {
-        pc.Books = args
-      } else {
-        pc.Pieces = args
+      if !pc.All {
+        if book {
+          pc.Books = args
+        } else {
+          pc.Pieces = args
+        }
       }
       for opt, query := range queries {
         if len(*query.varp) != 0 {
           pc.Queries[opt] = *query.varp
         }
       }
-      fmt.Printf("play %+v\n", pc)
+      return cat.Play(pc)
     },
   }
   playCmd.Flags().BoolVarP(
