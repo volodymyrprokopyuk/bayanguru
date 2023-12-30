@@ -22,9 +22,8 @@ func catError(format string, vals ...any) error {
 
 func makeMatch(pattern string) (MatchFunc, error) {
   isNeg := strings.HasPrefix(pattern, "^")
-  r, err := regexp.Compile(
-    strings.ReplaceAll(strings.TrimPrefix(pattern, "^"), ",", "|"),
-  )
+  pattern = regexp.QuoteMeta(strings.TrimPrefix(pattern, "^"))
+  r, err := regexp.Compile(strings.ReplaceAll(pattern, ",", "|"))
   if err != nil {
     return nil, catError("%v", err)
   }
@@ -35,23 +34,33 @@ func makeMatch(pattern string) (MatchFunc, error) {
       return r.MatchString(s)
     }
   }
-  return match , nil
+  return match, nil
 }
 
-func Play(pc PlayCommand) error {
-  entries, err := os.ReadDir("catalog")
+func listCatalog(dir, query string) ([]string, error) {
+  entries, err := os.ReadDir(dir)
   if err != nil {
-    return catError("%v", err)
+    return nil, catError("%v", err)
   }
-  match, err := makeMatch(pc.Catalog)
+  match, err := makeMatch(query)
   if err != nil {
-    return catError("%v", err)
+    return nil, catError("%v", err)
   }
+  files := make([]string, 0, 40)
   for _, entry := range entries {
     if !entry.IsDir() && strings.HasSuffix(entry.Name(), ".yaml") &&
       match(strings.TrimSuffix(entry.Name(), ".yaml")) {
-      fmt.Println(entry.Name())
+      files = append(files, entry.Name())
     }
   }
+  return files, nil
+}
+
+func Play(pc PlayCommand) error {
+  files, err := listCatalog("catalog", pc.Catalog)
+  if err != nil {
+    return catError("%v", err)
+  }
+  fmt.Println(files)
   return nil
 }
