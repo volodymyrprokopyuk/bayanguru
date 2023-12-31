@@ -83,8 +83,8 @@ books:
         "epyc"
       ] }
   - { id: byal, tit: Білоруські народні пісні і танці, sub: для баяна,
-      pieces: [
-      { sec: Готовий баян, pieces: [ # Stradella bass
+      sections: [
+      { tit: Готовий баян, pieces: [ # Stradella bass
         # Class
         # B0D1973
         "bv2w",
@@ -98,7 +98,7 @@ books:
         # TYBCB21971
         "vhri"
       ] },
-      { sec: Готово-виборний баян, pieces: [ # Free bass
+      { tit: Готово-виборний баян, pieces: [ # Free bass
         # FBB3BZ1982
         "wnc5",
         # FBBSC1978
@@ -121,8 +121,8 @@ books:
   # Study
   # Class
   - { id: scl1, tit: Вибрані етюди, sub: для баяна,
-      pieces: [
-      { sec: Гами, pieces: [ # Scale
+      sections: [
+      { tit: Гами, pieces: [ # Scale
         # SB1NU1979
         "gnt0", "jxnz", "e4vv", "d3fi", "wtuk", "b3nl", "vz59", "ryca", "0adx",
         "sdnn", "5ul1",
@@ -135,7 +135,7 @@ books:
         # SB5NU1980
         "hwwc", "ipdh", "h3xy", "m8an"
       ] },
-      { sec: Арпеджіо, pieces: [ # Arpeggio
+      { tit: Арпеджіо, pieces: [ # Arpeggio
         # SB1NU1979
         "9h35", "5402", "h8lm", "09ok", "ktnb", "ri7i", "67ka", "xkj4", "m02e",
         "7yb4", "6yq2",
@@ -150,8 +150,8 @@ books:
         "4s1u", "ua3l"
       ] } ] }
   - { id: scl2, tit: Вибрані етюди, sub: для баяна,
-      pieces: [
-      { sec: Інтервали, pieces: [ # Intervals
+      sections: [
+      { tit: Інтервали, pieces: [ # Intervals
         # SB2NU1977
         "tfnd",
         # SB3NU1979
@@ -161,7 +161,7 @@ books:
         # SB5NU1980
         "31pw", "1004", "slsw"
       ] },
-      { sec: Акорди, pieces: [ # Chords
+      { tit: Акорди, pieces: [ # Chords
         # SB2NU1977
         "yai7",
         # SB4NU1978
@@ -169,13 +169,13 @@ books:
         # SB5NU1980
         "pnrg", "978q", "6zcy"
       ] },
-      { sec: Поліфонія, pieces: [ # Polyphone
+      { tit: Поліфонія, pieces: [ # Polyphone
         # SB3NU1979
         "2zg8", "d6ra",
         # SB4NU1978
         "glv4", "d61l"
       ] },
-      { sec: Ліва рука, pieces: [ # Left hand
+      { tit: Ліва рука, pieces: [ # Left hand
         # SB1NU1979
         "7smk", "zvmc",
         # SB2NU1977
@@ -204,28 +204,28 @@ books:
         "v2kv", "b06y"
       ] }
   - { id: sfr1, tit: Вибрані етюди, sub: для готово-виборного баяна,
-      pieces: [
-      { sec: Гами, pieces: [ # Scale
+      sections: [
+      { tit: Гами, pieces: [ # Scale
         # FBB3BZ1982
         "zp6s", "zkl0",
         # FBBSC1978
         "a4cg", "4b2w"
       ] },
-      { sec: Арпеджіо, pieces: [ # Arpeggio
+      { tit: Арпеджіо, pieces: [ # Arpeggio
         # FBB3BZ1982
         "47p1", "u5b8",
         # FBBSC1978
         "kbmk", "g2e5"
       ] },
-      { sec: Інтервали, pieces: [ # Intervals
+      { tit: Інтервали, pieces: [ # Intervals
         # FBB3BZ1982
         "f0py"
       ] },
-      { sec: Акорди, pieces: [ # Chords
+      { tit: Акорди, pieces: [ # Chords
         # FBB3BZ1982
         "6ky7"
       ] },
-      { sec: Поліфонія, pieces: [ # Polyphone
+      { tit: Поліфонія, pieces: [ # Polyphone
         # FBB3BZ1982
         "iwqa", "xe0v"
       ] } ] }
