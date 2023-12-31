@@ -15,14 +15,20 @@ func cmdError(format string, vals ...any) error {
 }
 
 func validate(catalog string, args []string) error {
-  if len(args) > 1 && slices.Contains(args, "all") {
-    return cmdError("either all or pieces and books, got %v", args)
-  }
   if wrongNeg.MatchString(catalog) {
     return cmdError("^ must be the first e.g. ^rus,blr, got -c %v", catalog)
   }
   if len(args) == 0 {
     return cmdError("at least one piece or book is required")
+  }
+  if len(args) > 1 && slices.Contains(args, "all") {
+    return cmdError("either all or pieces and books, got %v", args)
+  }
+  validID := regexp.MustCompile(`^[0-9a-z]{4}$`)
+  for _, arg := range args {
+    if !validID.MatchString(arg) && arg != "all" {
+      return cmdError("ID must be [0-9a-z]{4} or all, got %v", arg)
+    }
   }
   return nil
 }

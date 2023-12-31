@@ -5,8 +5,37 @@ import (
   "strings"
   "os"
   "regexp"
+  "path/filepath"
   "gopkg.in/yaml.v3"
 )
+
+var meta = map[string]string{
+  // Piece subtitle (sub)
+  "ukrfs": "Українська народна пісня",
+  "ukrfsvar": "Варіації на тему української народної пісні",
+  "ukrfd": "Український народний танець",
+  "rusfs": "Російська народна пісня",
+  "rusfsvar": "Варіації на тему російської народної пісні",
+  "rusfd": "Російський народний танець",
+  "blrfs": "Білоруська народна пісня",
+  "blrfd": "Білоруський народний танець",
+  "hunfs": "Угорська народна пісня",
+  "hunfd": "Угорський народний танець",
+  "mdafs": "Молдавська народна пісня",
+  "mdafd": "Молдавський народний танець",
+  "roufs": "Румуньска народна пісня",
+  "roufd": "Румунський народний танець",
+  "polfs": "Польська народна пісня",
+  "polfd": "Польський народний танець",
+  "czefs": "Чеська народна пісня",
+  "czefd": "Чеський народний танець",
+  "svkfs": "Словацька народна пісня",
+  "svkfd": "Словацький народний танець",
+  // Piece arrangment type (art)
+  "arr": "Обр.", // обробка = arrangment (default)
+  "ipr": "Пер.", // переклад = interpratation
+  "hrm": "Гарм.", // гармонізація = harmonization
+}
 
 type PlayCommand struct {
   Catalog string
@@ -36,12 +65,13 @@ func (ss *StrSlice) UnmarshalYAML(node *yaml.Node) error {
 }
 
 type Piece struct {
-  Id string `yaml:"id"`
+  ID string `yaml:"id"`
   Tit string `yaml:"tit"`
   Sub string `yaml:"sub"`
   Com string `yaml:"com"`
   Arr string `yaml:"arr"`
   Art string `yaml:"art"`
+  Src string `yaml:"src"`
   Org string `yaml:"org"`
   Sty string `yaml:"sty"`
   Gnr string `yaml:"gnr"`
@@ -49,6 +79,7 @@ type Piece struct {
   Frm StrSlice `yaml:"frm"`
   Bss StrSlice `yaml:"bss"`
   Lvl string `yaml:"lvl"`
+  File string
 }
 
 func catError(format string, vals ...any) error {
@@ -72,16 +103,16 @@ func makeMatch(pattern string) (MatchFunc, error) {
   return match, nil
 }
 
-func listCatalogFiles(dir, query string) ([]string, error) {
-  entries, err := os.ReadDir(dir)
+func listCatalogFiles(catDir, catQuery string) ([]string, error) {
+  entries, err := os.ReadDir(catDir)
   if err != nil {
     return nil, err
   }
-  match, err := makeMatch(query)
+  match, err := makeMatch(catQuery)
   if err != nil {
     return nil, err
   }
-  files := make([]string, 0, 40)
+  files := make([]string, 0, 50)
   for _, entry := range entries {
     if !entry.IsDir() && strings.HasSuffix(entry.Name(), ".yaml") &&
       match(strings.TrimSuffix(entry.Name(), ".yaml")) {
@@ -91,8 +122,8 @@ func listCatalogFiles(dir, query string) ([]string, error) {
   return files, nil
 }
 
-func readCatalogFile(path string) ([]Piece, error) {
-  file, err := os.Open(path)
+func readCatalogFile(catDir, catFile string) ([]Piece, error) {
+  file, err := os.Open(filepath.Join(catDir, catFile))
   if err != nil {
     return nil, err
   }
@@ -106,19 +137,56 @@ func readCatalogFile(path string) ([]Piece, error) {
   return pieces.Pieces, nil
 }
 
+func addMetaToPieces(pieces []Piece) {
+  cleanTit := regexp.MustCompile(`[',\.!\?]`)
+  for i := range pieces {
+    piece := &pieces[i]
+    // sub
+    if sub, ok := meta[piece.Sub]; ok {
+      piece.Sub = sub
+    }
+    // art
+    if len(piece.Arr) > 0 {
+      if len(piece.Art) > 0 {
+        piece.Art = meta[piece.Art]
+      } else {
+        piece.Art = meta["arr"]
+      }
+    }
+    // file
+    tit := strings.ReplaceAll(
+      cleanTit.ReplaceAllLiteralString(piece.Tit, ""), " ", "-",
+    )
+    piece.File = fmt.Sprintf("%v-%v", tit, piece.ID)
+  }
+}
+
+func readPieces(catDir, catQuery string) (map[string]Piece, error) {
+  catFiles, err := listCatalogFiles(catDir, catQuery)
+  if err != nil {
+    return nil, err
+  }
+  idPiece := make(map[string]Piece, 1000)
+  for _, catFile := range catFiles {
+    pieces, err := readCatalogFile(catDir, catFile)
+    if err != nil {
+      return nil, err
+    }
+    addMetaToPieces(pieces)
+    for _, piece := range pieces {
+      idPiece[piece.ID] = piece
+    }
+  }
+  return idPiece, nil
+}
+
 func Play(pc PlayCommand) error {
-
-  files, err := listCatalogFiles("catalog", pc.Catalog)
+  pieces, err := readPieces("catalog", pc.Catalog)
   if err != nil {
     return catError("%v", err)
   }
-  fmt.Println(files)
-
-  pieces, err := readCatalogFile("catalog/stu-cls.yaml")
-  if err != nil {
-    return catError("%v", err)
+  for _, piece := range pieces {
+    fmt.Println(piece)
   }
-  fmt.Printf("%+v\n", pieces)
-
   return nil
 }
