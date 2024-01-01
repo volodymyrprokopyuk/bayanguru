@@ -7,7 +7,8 @@ import (
 )
 
 func main() {
-  if err := internal.CmdExecute(); err != nil {
+  err := internal.CmdExecute()
+  if err != nil {
     fmt.Println(internal.StyError("%v", err))
     os.Exit(1)
   }

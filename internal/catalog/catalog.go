@@ -3,9 +3,10 @@ package catalog
 import (
   "fmt"
   "strings"
-  "os"
   "regexp"
   "path/filepath"
+  "os"
+  "github.com/sanity-io/litter"
   "gopkg.in/yaml.v3"
 )
 
@@ -48,7 +49,7 @@ func (ss *StrSlice) UnmarshalYAML(node *yaml.Node) error {
     if err != nil {
       return err
     }
-    *ss = []string{str} // convert a string to a string slice
+    *ss = []string{str} // convert a single string to a string slice
     return nil
   }
   *ss = slc // return a string slice
@@ -101,34 +102,72 @@ type Book struct {
   Sections []Section
 }
 
+type PieceQueries map[string]string
+
 type PlayCommand struct {
   Catalog string
   Book, Cycle, Random, List, All bool
   Pieces, Books []string
-  Queries map[string]string
+  Queries PieceQueries
 }
 
-func catError(format string, vals ...any) error {
-  return fmt.Errorf("catalog: " + format, vals...)
-}
+type MatchStr func(str string) bool
 
-type MatchFunc func(s string) bool
-
-func makeMatch(pattern string) (MatchFunc, error) {
+func makeMatchStr(pattern string) (MatchStr, error) {
   isNeg := strings.HasPrefix(pattern, "^")
   pattern = regexp.QuoteMeta(strings.TrimPrefix(pattern, "^"))
-  r, err := regexp.Compile(strings.ReplaceAll(pattern, ",", "|"))
+  re, err := regexp.Compile(strings.ReplaceAll(pattern, ",", "|"))
   if err != nil {
     return nil, err
   }
-  match := func (s string) bool {
+  match := func (str string) bool {
     if isNeg {
-      return !r.MatchString(s)
+      return !re.MatchString(str)
     } else {
-      return r.MatchString(s)
+      return re.MatchString(str)
     }
   }
   return match, nil
+}
+
+type MatchPiece func(piece Piece) bool
+
+func makeMatchPiece(queries PieceQueries) (MatchPiece, error) {
+  matches := make(map[string]MatchStr, len(queries))
+  for opt, query := range queries {
+    match, err := makeMatchStr(query)
+    if err != nil {
+      return nil, err
+    }
+    matches[opt] = match
+  }
+  matchSlice := func(slc StrSlice, match MatchStr) bool {
+    for _, str := range slc {
+      if match(str) {
+        return true
+      }
+    }
+    return false
+  }
+  matchPiece := func(piece Piece) bool {
+    for opt, match := range matches {
+      switch opt {
+      case "org": if !match(piece.Org) { return false }
+      case "sty": if !match(piece.Sty) { return false }
+      case "gnr": if !match(piece.Gnr) { return false }
+      case "ton": if !matchSlice(piece.Ton, match) { return false }
+      case "frm": if !matchSlice(piece.Frm, match) { return false }
+      case "bss": if !matchSlice(piece.Bss, match) { return false }
+      case "lvl": if !match(piece.Lvl) { return false }
+      case "tit": if !match(piece.Tit) { return false }
+      case "com": if !match(piece.Com) { return false }
+      case "arr": if !match(piece.Arr) { return false }
+      default: panic(fmt.Sprintf("catalog: unknown query option %v", opt))
+      }
+    }
+    return true
+  }
+  return matchPiece, nil
 }
 
 func listCatalogFiles(catDir, catQuery string) ([]string, error) {
@@ -136,7 +175,7 @@ func listCatalogFiles(catDir, catQuery string) ([]string, error) {
   if err != nil {
     return nil, err
   }
-  match, err := makeMatch(catQuery)
+  match, err := makeMatchStr(catQuery)
   if err != nil {
     return nil, err
   }
@@ -178,7 +217,7 @@ func addMetaToPieces(pieces []Piece) {
       if len(piece.Art) > 0 {
         piece.Art = meta[piece.Art]
       } else {
-        piece.Art = meta["arr"]
+        piece.Art = meta["arr"] // default: arrangement
       }
     }
     // file
@@ -225,8 +264,8 @@ func readBookFile(bookDir, bookFile string) ([]RawBook, error) {
 
 func selectRawBooks(rawBooks []RawBook, bookIDs []string) ([]RawBook, error) {
   rawBookMap := make(map[string]RawBook, 50)
-  for _, rb := range rawBooks {
-    rawBookMap[rb.ID] = rb
+  for _, rawBook := range rawBooks {
+    rawBookMap[rawBook.ID] = rawBook
   }
   selRawBooks := make([]RawBook, 0, 50)
   for _, bookID := range bookIDs {
@@ -241,15 +280,15 @@ func selectRawBooks(rawBooks []RawBook, bookIDs []string) ([]RawBook, error) {
 
 func addPiecesToBooks(rawBooks []RawBook, pieceMap PieceMap) ([]Book, error) {
   books := make([]Book, 0, 50)
-  for _, rb := range rawBooks {
-    book := Book{ID: rb.ID, Tit: rb.Tit, Sub: rb.Sub}
+  for _, rawBook := range rawBooks {
+    book := Book{ID: rawBook.ID, Tit: rawBook.Tit, Sub: rawBook.Sub}
     book.Pieces = make([]Piece, 0, 200)
-    if len(rb.Sections) > 0 {
+    if len(rawBook.Sections) > 0 { // book with sections
       book.Sections = make([]Section, 0, 10)
-      for _, rs := range rb.Sections {
-        sec := Section{Tit: rs.Tit}
+      for _, rawSec := range rawBook.Sections {
+        sec := Section{Tit: rawSec.Tit}
         sec.Pieces = make([]Piece, 0, 20)
-        for _, pieceID := range rs.Pieces {
+        for _, pieceID := range rawSec.Pieces {
           if piece, ok := pieceMap[pieceID]; ok {
             sec.Pieces = append(sec.Pieces, piece)
             book.Pieces = append(book.Pieces, piece)
@@ -260,9 +299,10 @@ func addPiecesToBooks(rawBooks []RawBook, pieceMap PieceMap) ([]Book, error) {
             return nil, err
           }
         }
+        book.Sections = append(book.Sections, sec)
       }
-    } else {
-      for _, pieceID := range rb.Pieces {
+    } else { // book without sections
+      for _, pieceID := range rawBook.Pieces {
         if piece, ok := pieceMap[pieceID]; ok {
           book.Pieces = append(book.Pieces, piece)
         } else {
@@ -285,7 +325,7 @@ func readBooks(
   if err != nil {
     return nil, err
   }
-  if !all {
+  if !all { // select books
     rawBooks, err = selectRawBooks(rawBooks, bookIDs)
     if err != nil {
       return nil, err
@@ -298,20 +338,61 @@ func readBooks(
   return books, nil
 }
 
-func Play(pc PlayCommand) error {
+func queryPieces(pieces []Piece, queries map[string]string) ([]Piece, error) {
+  match, err := makeMatchPiece(queries)
+  if err != nil {
+    return nil, err
+  }
+  selPieces := make([]Piece, 0, 200)
+  for _, piece := range pieces {
+    if match(piece) {
+      selPieces = append(selPieces, piece)
+    }
+  }
+  return selPieces, nil
+}
 
+func catError(format string, vals ...any) error {
+  return fmt.Errorf("catalog: " + format, vals...)
+}
+
+func Play(pc PlayCommand) error {
   pieceMap, err := readPieces("catalog", pc.Catalog)
   if err != nil {
     return catError("%v", err)
   }
-
-  if pc.Book {
+  pieces := make([]Piece, 0, 1000)
+  if pc.Book { // play books
     books, err := readBooks("meta", "books2.yaml", pc.Books, pc.All, pieceMap)
     if err != nil {
       return catError("%v", err)
     }
-    fmt.Printf("%#+v\n", books)
+    for _, book := range books {
+      for _, piece := range book.Pieces {
+        pieces = append(pieces, piece)
+      }
+    }
+  } else { // play pieces
+    if !pc.All { // select pieces
+      for _, pieceID := range pc.Pieces {
+        if piece, ok := pieceMap[pieceID]; ok {
+          pieces = append(pieces, piece)
+        } else {
+          return catError("piece %v not in catalog", pieceID)
+        }
+      }
+    } else {
+      for _, piece := range pieceMap {
+        pieces = append(pieces, piece)
+      }
+    }
   }
-
+  if len(pc.Queries) > 0 {
+    pieces, err = queryPieces(pieces, pc.Queries)
+    if err != nil {
+      return catError("%v", err)
+    }
+  }
+  litter.Dump(pieces)
   return nil
 }

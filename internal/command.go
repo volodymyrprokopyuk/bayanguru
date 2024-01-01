@@ -4,33 +4,34 @@ import (
   "fmt"
   "regexp"
   "slices"
+  // "github.com/sanity-io/litter"
   "github.com/spf13/cobra"
   cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
 )
 
-var wrongNeg = regexp.MustCompile(`^.+\^`)
-
-func cmdError(format string, vals ...any) error {
-  return fmt.Errorf("command: " + format, vals...)
-}
+var invalidNeg = regexp.MustCompile(`^.+\^`)
 
 func validate(catalog string, args []string) error {
-  if wrongNeg.MatchString(catalog) {
-    return cmdError("^ must be the first e.g. ^rus,blr, got -c %v", catalog)
+  if invalidNeg.MatchString(catalog) {
+    return fmt.Errorf("^ must be the first e.g. ^rus,blr, got -c %v", catalog)
   }
   if len(args) == 0 {
-    return cmdError("at least one piece or book is required")
+    return fmt.Errorf("at least one piece or book is required, got zero")
   }
   if len(args) > 1 && slices.Contains(args, "all") {
-    return cmdError("either all or pieces and books, got %v", args)
+    return fmt.Errorf("either all or pieces and books, got %v", args)
   }
   validID := regexp.MustCompile(`^[0-9a-z]{4}$`)
   for _, arg := range args {
     if !validID.MatchString(arg) && arg != "all" {
-      return cmdError("ID must be [0-9a-z]{4} or all, got %v", arg)
+      return fmt.Errorf("valid ID [0-9a-z]{4} or all, got %v", arg)
     }
   }
   return nil
+}
+
+func cmdError(format string, vals ...any) error {
+  return fmt.Errorf("command: " + format, vals...)
 }
 
 func CmdExecute() error {
@@ -63,8 +64,9 @@ classification and search system to selectively play pieces from a catalog`,
 bayan engrave [-c catalog] -b books... [--piece]
 bayan engrave pieces... --lint=f --optimize=f --meta=f`,
     Args: func(cmd *cobra.Command, args []string) error {
-      if err := validate(catalog, args); err != nil {
-        return err
+      err := validate(catalog, args)
+      if err != nil {
+        return cmdError("%v", err)
       }
       if book && init {
         return cmdError("cannot initialize books")
@@ -75,7 +77,7 @@ bayan engrave pieces... --lint=f --optimize=f --meta=f`,
       return nil
     },
     RunE: func (cmd *cobra.Command, args []string) error {
-      fmt.Println("eng", catalog, book, init, piece, args)
+      fmt.Println("enggrave", catalog, book, args)
       return nil
     },
   }
@@ -118,11 +120,12 @@ bayan engrave pieces... --lint=f --optimize=f --meta=f`,
 bayan play [-c catalog] -b books... [--query...]
 bayan play --query... --cycle --random=f --list`,
     Args: func(cmd *cobra.Command, args []string) error {
-      if err := validate(catalog, args); err != nil {
-        return err
+      err := validate(catalog, args)
+      if err != nil {
+        return cmdError("%v", err)
       }
       for opt, query := range queries {
-        if wrongNeg.MatchString(*query.varp) {
+        if invalidNeg.MatchString(*query.varp) {
           return cmdError(
             "^ must be the first e.g. ^rus,blr, got --%v %v", opt, *query.varp,
           )
@@ -145,7 +148,7 @@ bayan play --query... --cycle --random=f --list`,
         }
       }
       for opt, query := range queries {
-        if len(*query.varp) != 0 {
+        if len(*query.varp) > 0 {
           pc.Queries[opt] = *query.varp
         }
       }
