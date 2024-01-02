@@ -85,7 +85,7 @@ func makeMatchStr(pattern string) (MatchStr, error) {
   if err != nil {
     return nil, err
   }
-  match := func (str string) bool {
+  match := func(str string) bool {
     if isNeg {
       return !re.MatchString(str)
     } else {
@@ -214,7 +214,7 @@ func readPieces(catDir, catQuery string) (PieceMap, []string, error) {
   return pieceMap, pieceIDs, nil
 }
 
-func queryPieces(pieces []Piece, queries map[string]string) ([]Piece, error) {
+func queryPieces(pieces []Piece, queries PieceQueries) ([]Piece, error) {
   match, err := makeMatchPiece(queries)
   if err != nil {
     return nil, err

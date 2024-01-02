@@ -29,8 +29,8 @@ func validate(catalog string, args []string) error {
   return nil
 }
 
-func cmdError(format string, vals ...any) error {
-  return fmt.Errorf("command: " + format, vals...)
+func cmdError(format string, args ...any) error {
+  return fmt.Errorf("command: " + format, args...)
 }
 
 func Execute() error {
@@ -158,7 +158,7 @@ bayan play --query... --random --list`,
     &random, "random", "r", false, "play pieces in a random order",
   )
   playCmd.Flags().BoolVarP(
-    &list, "list", "", false, "list pieces without playing",
+    &list, "list", "l", false, "list pieces without playing",
   )
   for opt, query := range queries {
     playCmd.Flags().StringVarP(query.varp, opt, "", "", query.short)

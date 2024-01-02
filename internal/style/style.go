@@ -10,30 +10,29 @@ var org = color.HEXStyle("00D4AA")
 var bss = color.HEXStyle("FF5555")
 var lvl = color.HEXStyle("2AD4FF")
 
-func Error(format string, vals ...any) string {
-  return err.Sprintf(format, vals...)
+func Error(format string, args ...any) string {
+  return err.Sprintf(format, args...)
 }
 
-func ID(format string, vals ...any) string {
-  return id.Sprintf(format, vals...)
+func ID(format string, args ...any) string {
+  return id.Sprintf(format, args...)
 }
 
-func Tit(format string, vals ...any) string {
-  return tit.Sprintf(format, vals...)
+func Tit(format string, args ...any) string {
+  return tit.Sprintf(format, args...)
 }
 
-func Com(format string, vals ...any) string {
-  return com.Sprintf(format, vals...)
+func Com(format string, args ...any) string {
+  return com.Sprintf(format, args...)
 }
 
-func Org(format string, vals ...any) string {
-  return org.Sprintf(format, vals...)
+func Org(format string, args ...any) string {
+  return org.Sprintf(format, args...)
 }
 
-func Bss(format string, vals ...any) string {
-  return bss.Sprintf(format, vals...)
+func Bss(format string, args ...any) string {
+  return bss.Sprintf(format, args...)
 }
 
-func Lvl(format string, vals ...any) string {
-  return lvl.Sprintf(format, vals...)
-}
+func Lvl(format string, args ...any) string {
+  return lvl.Sprintf(format, args...)}

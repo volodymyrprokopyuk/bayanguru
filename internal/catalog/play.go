@@ -5,6 +5,8 @@ import (
   "strings"
   "math/rand"
   "time"
+  "path/filepath"
+  "os/exec"
   sty "github.com/volodymyrprokopyuk/bayan/internal/style"
 )
 
@@ -17,12 +19,19 @@ type PlayCommand struct {
   Queries PieceQueries
 }
 
+func printStat(catalog, selected int) {
+  fmt.Printf(
+    "%v %v\n%v %v\n",
+    sty.Bss("%10v", "Catalog"), sty.Lvl("%4v", catalog),
+    sty.Bss("%10v", "Selected"), sty.Lvl("%4v", selected),
+  )
+}
+
 func printPiece(piece Piece) {
   bassType := func(bss []string) string {
     for _, b := range bss {
       switch b {
       case "stb", "pub", "frb": return b
-      default: return "unk"
       }
     }
     return "unk"
@@ -46,14 +55,6 @@ func printPiece(piece Piece) {
   )
 }
 
-func printStat(catalog, selected int) {
-  fmt.Printf(
-    "%v %v\n%v %v\n",
-    sty.Bss("%10v", "Catalog"), sty.Lvl("%4v", catalog),
-    sty.Bss("%10v", "Selected"), sty.Lvl("%4v", selected),
-  )
-}
-
 func makeRange(a, b int) []int {
   slc := make([]int, b - a)
   for i := range slc {
@@ -71,8 +72,18 @@ func orderPieces(pieceLen int, random bool) []int {
   return idx
 }
 
-func catError(format string, vals ...any) error {
-  return fmt.Errorf("catalog: " + format, vals...)
+func openPiece(pieceDir string, piece Piece) error {
+  piecePDF := filepath.Join(pieceDir, piece.File + ".pdf")
+  err := exec.Command("xdg-open", piecePDF).Run()
+  fmt.Println()
+  if err != nil {
+    return err
+  }
+  return nil
+}
+
+func catError(format string, args ...any) error {
+  return fmt.Errorf("catalog: " + format, args...)
 }
 
 func Play(pc PlayCommand) error {
@@ -114,9 +125,12 @@ func Play(pc PlayCommand) error {
   for _, i := range indices {
     piece := pieces[i]
     printPiece(piece)
-    // if ! pc.List {
-    //   openPiece(piece)
-    // }
+    if ! pc.List {
+      err := openPiece("pieces", piece)
+      if err != nil {
+        return catError("%v", err)
+      }
+    }
   }
   return nil
 }
