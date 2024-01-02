@@ -34,7 +34,7 @@ func cmdError(format string, vals ...any) error {
   return fmt.Errorf("command: " + format, vals...)
 }
 
-func CmdExecute() error {
+func Execute() error {
   var catalog string
   var book bool
   bayanCmd := &cobra.Command{

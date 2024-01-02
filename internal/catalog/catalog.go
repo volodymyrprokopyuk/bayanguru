@@ -6,8 +6,9 @@ import (
   "regexp"
   "path/filepath"
   "os"
-  "github.com/sanity-io/litter"
+  // "github.com/sanity-io/litter"
   "gopkg.in/yaml.v3"
+  "github.com/volodymyrprokopyuk/bayan/internal"
 )
 
 var meta = map[string]string{
@@ -116,7 +117,8 @@ type MatchStr func(str string) bool
 func makeMatchStr(pattern string) (MatchStr, error) {
   isNeg := strings.HasPrefix(pattern, "^")
   pattern = regexp.QuoteMeta(strings.TrimPrefix(pattern, "^"))
-  re, err := regexp.Compile(strings.ReplaceAll(pattern, ",", "|"))
+  pattern = fmt.Sprintf("(?i:%v)", strings.ReplaceAll(pattern, ",", "|"))
+  re, err := regexp.Compile(pattern)
   if err != nil {
     return nil, err
   }
@@ -352,6 +354,39 @@ func queryPieces(pieces []Piece, queries map[string]string) ([]Piece, error) {
   return selPieces, nil
 }
 
+func printPieces(pieces []Piece) {
+  bassType := func(bss []string) string {
+    for _, b := range bss {
+      switch b {
+      case "stb", "pub", "frb": return b
+      default: return "unk"
+      }
+    }
+    return "unk"
+  }
+  for _, piece := range pieces {
+    tit := piece.Tit
+    com := fmt.Sprintf("%v %v %v", piece.Com, piece.Art, piece.Arr)
+    com = strings.TrimSpace(com)
+    titLen, comLen := len([]rune(tit)), len([]rune(com))
+    maxTit := 53 - comLen
+    if titLen > maxTit {
+      tit = fmt.Sprintf("%v…", string([]rune(tit)[:maxTit - 1]))
+      titLen = maxTit
+    }
+    spaceLen := 53 - titLen - comLen
+    fmt.Printf(
+      "%v %v %v %v %v %v %v %v %v\n",
+      internal.StyID(piece.ID),
+      internal.StyTit(tit), strings.Repeat(" ", spaceLen), internal.StyCom(com),
+      internal.StyOrg(piece.Org), internal.StyOrg(piece.Sty),
+      internal.StyOrg(piece.Gnr),
+      internal.StyBss(bassType(piece.Bss)), internal.StyLvl(piece.Lvl),
+    )
+
+  }
+}
+
 func catError(format string, vals ...any) error {
   return fmt.Errorf("catalog: " + format, vals...)
 }
@@ -393,6 +428,6 @@ func Play(pc PlayCommand) error {
       return catError("%v", err)
     }
   }
-  litter.Dump(pieces)
+  printPieces(pieces)
   return nil
 }

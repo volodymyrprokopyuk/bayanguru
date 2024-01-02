@@ -4,10 +4,11 @@ import (
   "fmt"
   "os"
   "github.com/volodymyrprokopyuk/bayan/internal"
+  cmd "github.com/volodymyrprokopyuk/bayan/internal/command"
 )
 
 func main() {
-  err := internal.CmdExecute()
+  err := cmd.Execute()
   if err != nil {
     fmt.Println(internal.StyError("%v", err))
     os.Exit(1)
