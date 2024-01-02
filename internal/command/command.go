@@ -4,7 +4,6 @@ import (
   "fmt"
   "regexp"
   "slices"
-  // "github.com/sanity-io/litter"
   "github.com/spf13/cobra"
   cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
 )
@@ -97,7 +96,7 @@ bayan engrave pieces... --lint=f --optimize=f --meta=f`,
     &meta, "meta", "", true, "include piece meta information",
   )
 
-  var cycle, random, list bool
+  var random, list bool
   var org, sty, gnr, ton, frm, bss, lvl, tit, com, arr string
   var queries = map[string]struct{ short string; varp *string }{
     "org": {"piece origin e.g. ukr,rus", &org},
@@ -118,7 +117,7 @@ bayan engrave pieces... --lint=f --optimize=f --meta=f`,
     `Play command searches, lists, and plays pieces from a catalog or a book`,
     Example: `bayan play [-c catalog] pieces...
 bayan play [-c catalog] -b books... [--query...]
-bayan play --query... --cycle --random=f --list`,
+bayan play --query... --random --list`,
     Args: func(cmd *cobra.Command, args []string) error {
       err := validate(catalog, args)
       if err != nil {
@@ -136,7 +135,7 @@ bayan play --query... --cycle --random=f --list`,
     RunE: func (cmd *cobra.Command, args []string) error {
       pc := cat.PlayCommand{
         Catalog: catalog,
-        Book: book, Cycle: cycle, Random: random, List: list,
+        Book: book, Random: random, List: list,
         All: len(args) == 1 && args[0] == "all",
         Queries: map[string]string{},
       }
@@ -156,10 +155,7 @@ bayan play --query... --cycle --random=f --list`,
     },
   }
   playCmd.Flags().BoolVarP(
-    &random, "random", "r", true, "play pieces in a random order",
-  )
-  playCmd.Flags().BoolVarP(
-    &cycle, "cycle", "", false, "cycle through a playlist",
+    &random, "random", "r", false, "play pieces in a random order",
   )
   playCmd.Flags().BoolVarP(
     &list, "list", "", false, "list pieces without playing",

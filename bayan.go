@@ -3,14 +3,14 @@ package main
 import (
   "fmt"
   "os"
-  "github.com/volodymyrprokopyuk/bayan/internal"
+  sty "github.com/volodymyrprokopyuk/bayan/internal/style"
   cmd "github.com/volodymyrprokopyuk/bayan/internal/command"
 )
 
 func main() {
   err := cmd.Execute()
   if err != nil {
-    fmt.Println(internal.StyError("%v", err))
+    fmt.Println(sty.Error("%v", err))
     os.Exit(1)
   }
 }

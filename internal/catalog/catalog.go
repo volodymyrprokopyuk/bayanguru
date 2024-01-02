@@ -4,12 +4,21 @@ import (
   "fmt"
   "strings"
   "regexp"
+  "math/rand"
+  "time"
   "path/filepath"
   "os"
-  // "github.com/sanity-io/litter"
   "gopkg.in/yaml.v3"
-  "github.com/volodymyrprokopyuk/bayan/internal"
+  sty "github.com/volodymyrprokopyuk/bayan/internal/style"
 )
+
+func makeRange(a, b int) []int {
+  slc := make([]int, b - a)
+  for i := range slc {
+    slc[i] = a + i
+  }
+  return slc
+}
 
 var meta = map[string]string{
   // Piece subtitle (sub)
@@ -230,23 +239,25 @@ func addMetaToPieces(pieces []Piece) {
   }
 }
 
-func readPieces(catDir, catQuery string) (PieceMap, error) {
+func readPieces(catDir, catQuery string) (PieceMap, []string, error) {
   catFiles, err := listCatalogFiles(catDir, catQuery)
   if err != nil {
-    return nil, err
+    return nil, nil, err
   }
   pieceMap := make(PieceMap, 1000)
+  pieceIDs := make([]string, 0, 1000) // ordered pieces for all
   for _, catFile := range catFiles {
     pieces, err := readCatalogFile(catDir, catFile)
     if err != nil {
-      return nil, err
+      return nil, nil, err
     }
     addMetaToPieces(pieces)
     for _, piece := range pieces {
       pieceMap[piece.ID] = piece
+      pieceIDs = append(pieceIDs, piece.ID)
     }
   }
-  return pieceMap, nil
+  return pieceMap, pieceIDs, nil
 }
 
 func readBookFile(bookDir, bookFile string) ([]RawBook, error) {
@@ -327,7 +338,7 @@ func readBooks(
   if err != nil {
     return nil, err
   }
-  if !all { // select books
+  if !all {
     rawBooks, err = selectRawBooks(rawBooks, bookIDs)
     if err != nil {
       return nil, err
@@ -354,7 +365,7 @@ func queryPieces(pieces []Piece, queries map[string]string) ([]Piece, error) {
   return selPieces, nil
 }
 
-func printPieces(pieces []Piece) {
+func printPiece(piece Piece) {
   bassType := func(bss []string) string {
     for _, b := range bss {
       switch b {
@@ -364,27 +375,40 @@ func printPieces(pieces []Piece) {
     }
     return "unk"
   }
-  for _, piece := range pieces {
-    tit := piece.Tit
-    com := fmt.Sprintf("%v %v %v", piece.Com, piece.Art, piece.Arr)
-    com = strings.TrimSpace(com)
-    titLen, comLen := len([]rune(tit)), len([]rune(com))
-    maxTit := 53 - comLen
-    if titLen > maxTit {
-      tit = fmt.Sprintf("%v…", string([]rune(tit)[:maxTit - 1]))
-      titLen = maxTit
-    }
-    spaceLen := 53 - titLen - comLen
-    fmt.Printf(
-      "%v %v %v %v %v %v %v %v %v\n",
-      internal.StyID(piece.ID),
-      internal.StyTit(tit), strings.Repeat(" ", spaceLen), internal.StyCom(com),
-      internal.StyOrg(piece.Org), internal.StyOrg(piece.Sty),
-      internal.StyOrg(piece.Gnr),
-      internal.StyBss(bassType(piece.Bss)), internal.StyLvl(piece.Lvl),
-    )
-
+  tit := piece.Tit
+  com := fmt.Sprintf("%v %v %v", piece.Com, piece.Art, piece.Arr)
+  com = strings.TrimSpace(com)
+  titLen, comLen := len([]rune(tit)), len([]rune(com))
+  maxTit := 53 - comLen
+  if titLen > maxTit {
+    tit = fmt.Sprintf("%v…", string([]rune(tit)[:maxTit - 1]))
+    titLen = maxTit
   }
+  spaceLen := 53 - titLen - comLen
+  fmt.Printf(
+    "%v %v %v %v %v %v %v %v %v\n",
+    sty.ID(piece.ID), sty.Tit(tit),
+    strings.Repeat(" ", spaceLen), sty.Com(com),
+    sty.Org(piece.Org), sty.Org(piece.Sty), sty.Org(piece.Gnr),
+    sty.Bss(bassType(piece.Bss)), sty.Lvl(piece.Lvl),
+  )
+}
+
+func printStat(catalog, selected int) {
+  fmt.Printf(
+    "%v %v\n%v %v\n",
+    sty.Bss("%10v", "Catalog"), sty.Lvl("%4v", catalog),
+    sty.Bss("%10v", "Selected"), sty.Lvl("%4v", selected),
+  )
+}
+
+func orderPieces(pieceLen int, random bool) []int {
+  idx := makeRange(0, pieceLen)
+  if random {
+    rand.Seed(time.Now().UnixNano())
+    rand.Shuffle(pieceLen, func (i, j int) { idx[i], idx[j] = idx[j], idx[i] })
+  }
+  return idx
 }
 
 func catError(format string, vals ...any) error {
@@ -392,7 +416,7 @@ func catError(format string, vals ...any) error {
 }
 
 func Play(pc PlayCommand) error {
-  pieceMap, err := readPieces("catalog", pc.Catalog)
+  pieceMap, pieceIDs, err := readPieces("catalog", pc.Catalog)
   if err != nil {
     return catError("%v", err)
   }
@@ -408,17 +432,14 @@ func Play(pc PlayCommand) error {
       }
     }
   } else { // play pieces
-    if !pc.All { // select pieces
-      for _, pieceID := range pc.Pieces {
-        if piece, ok := pieceMap[pieceID]; ok {
-          pieces = append(pieces, piece)
-        } else {
-          return catError("piece %v not in catalog", pieceID)
-        }
-      }
-    } else {
-      for _, piece := range pieceMap {
+    if !pc.All {
+      pieceIDs = pc.Pieces
+    }
+    for _, pieceID := range pieceIDs {
+      if piece, ok := pieceMap[pieceID]; ok {
         pieces = append(pieces, piece)
+      } else {
+        return catError("piece %v not in catalog", pieceID)
       }
     }
   }
@@ -428,6 +449,14 @@ func Play(pc PlayCommand) error {
       return catError("%v", err)
     }
   }
-  printPieces(pieces)
+  indices := orderPieces(len(pieces), pc.Random)
+  for _, i := range indices {
+    piece := pieces[i]
+    printPiece(piece)
+    // if ! pc.List {
+    //   openPiece(piece)
+    // }
+  }
+  printStat(len(pieceMap), len(pieces))
   return nil
 }
