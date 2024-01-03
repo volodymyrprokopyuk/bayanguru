@@ -106,10 +106,18 @@ func makeMatchPiece(queries PieceQueries) (MatchPiece, error) {
     }
     matches[opt] = match
   }
-  matchSlice := func(slc StrSlice, match MatchStr) bool {
+  matchSlice := func(slc StrSlice, match MatchStr, negMatch bool) bool {
+    if negMatch {
+      for _, str := range slc {
+        if !match(str) {
+          return false // first false on negative match e.g. ^frb
+        }
+      }
+      return true
+    }
     for _, str := range slc {
       if match(str) {
-        return true
+        return true // first true on positive match e.g. frb
       }
     }
     return false
@@ -120,9 +128,21 @@ func makeMatchPiece(queries PieceQueries) (MatchPiece, error) {
       case "org": if !match(piece.Org) { return false }
       case "sty": if !match(piece.Sty) { return false }
       case "gnr": if !match(piece.Gnr) { return false }
-      case "ton": if !matchSlice(piece.Ton, match) { return false }
-      case "frm": if !matchSlice(piece.Frm, match) { return false }
-      case "bss": if !matchSlice(piece.Bss, match) { return false }
+      case "ton":
+        negMatch := strings.HasPrefix(queries["ton"], "^")
+        if !matchSlice(piece.Ton, match, negMatch) {
+          return false
+        }
+      case "frm":
+        negMatch := strings.HasPrefix(queries["frm"], "^")
+        if !matchSlice(piece.Frm, match, negMatch) {
+          return false
+        }
+      case "bss":
+        negMatch := strings.HasPrefix(queries["bss"], "^")
+        if !matchSlice(piece.Bss, match, negMatch) {
+          return false
+        }
       case "lvl": if !match(piece.Lvl) { return false }
       case "tit": if !match(piece.Tit) { return false }
       case "com": if !match(piece.Com) { return false }
