@@ -6,6 +6,7 @@ import (
   "slices"
   "github.com/spf13/cobra"
   cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
+  "github.com/volodymyrprokopyuk/bayan/internal/score"
 )
 
 var invalidNeg = regexp.MustCompile(`^.+\^`)
@@ -54,7 +55,7 @@ classification and search system to selectively play pieces from a catalog`,
     &book, "book", "b", false, "engrave or play books",
   )
 
-  var init, piece, lint, optimize, meta bool
+  var piece, init, lint, optimize, meta bool
   engraveCmd := &cobra.Command{
     Use: "engrave",
     Short: "Engrave pieces and books",
@@ -76,15 +77,27 @@ bayan engrave pieces... --lint=f --optimize=f --meta=f`,
       return nil
     },
     RunE: func (cmd *cobra.Command, args []string) error {
-      fmt.Println("enggrave", catalog, book, args)
-      return nil
+      ec := score.EngraveCommand{
+        Catalog: catalog,
+        All: len(args) == 1 && args[0] == "all",
+        Book: book, Piece: piece,
+        Init: init, Lint: lint, Optimize: optimize, Meta: meta,
+      }
+      if !ec.All {
+        if book {
+          ec.Books = args
+        } else {
+          ec.Pieces = args
+        }
+      }
+      return score.Engrave(ec)
     },
   }
   engraveCmd.Flags().BoolVarP(
-    &init, "init", "i", false, "initialize a new piece",
+    &piece, "piece", "p", false, "engrave individual pieces from books",
   )
   engraveCmd.Flags().BoolVarP(
-    &piece, "piece", "p", false, "engrave individual pieces from books",
+    &init, "init", "i", false, "initialize a new piece",
   )
   engraveCmd.Flags().BoolVarP(
     &lint, "lint", "", true, "lint pieces before engraving",
@@ -135,8 +148,8 @@ bayan play --query... --random --list`,
     RunE: func (cmd *cobra.Command, args []string) error {
       pc := cat.PlayCommand{
         Catalog: catalog,
-        Book: book, Random: random, List: list,
         All: len(args) == 1 && args[0] == "all",
+        Book: book, Random: random, List: list,
         Queries: map[string]string{},
       }
       if !pc.All {

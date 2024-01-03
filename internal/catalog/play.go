@@ -14,7 +14,8 @@ type PieceQueries map[string]string
 
 type PlayCommand struct {
   Catalog string
-  Book, Cycle, Random, List, All bool
+  All, Book bool
+  Random, List bool
   Pieces, Books []string
   Queries PieceQueries
 }
