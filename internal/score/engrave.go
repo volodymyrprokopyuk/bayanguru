@@ -2,8 +2,11 @@ package score
 
 import (
   "fmt"
-  // "text/template"
-  // "os"
+  "text/template"
+  "io"
+  "path/filepath"
+  "os"
+  "os/exec"
   cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
 )
 
@@ -24,15 +27,57 @@ func initPiece(pieces []cat.Piece, sourceDir string) error {
   return nil
 }
 
-func engravePieces(pieces []cat.Piece, pieceDir string) error {
-  for _, piece := range pieces {
-    cat.PrintPiece(piece)
+func templatePiece(w io.Writer, piece cat.Piece, sourceDir string) error {
+  scoreFile := filepath.Join(sourceDir, "template", "score.ly")
+  pieceFile := filepath.Join(sourceDir, "template", "piece.ly")
+  tpl, err := template.ParseFiles(scoreFile, pieceFile)
+  if err != nil {
+    return err
   }
-  // TODO
+  tpl.Funcs(template.FuncMap{"w": templateArgs})
+  pieceFile = filepath.Join(sourceDir, piece.Src, piece.File + ".ly")
+  _, err = tpl.ParseFiles(pieceFile)
+  if err != nil {
+    return err
+  }
+  err = tpl.Execute(w, piece)
+  if err != nil {
+    return err
+  }
   return nil
 }
 
-func engraveBooks(books []cat.Book, pieces []cat.Piece, bookDir string) error {
+func engravePieces(pieces []cat.Piece, sourceDir, pieceDir string) error {
+  for _, piece := range pieces {
+    cat.PrintPiece(piece)
+    pieceFile := filepath.Join(pieceDir, piece.File)
+    ly := exec.Command(
+      "lilypond", "-dbackend=cairo", "-f", "pdf", "-o", pieceFile, "-",
+    )
+    lyStdin, err := ly.StdinPipe()
+    ly.Stdout = os.Stdout
+    ly.Stderr = os.Stderr
+    if err != nil {
+      return err
+    }
+    go func() {
+      defer lyStdin.Close()
+      err = templatePiece(lyStdin, piece, sourceDir)
+      if err != nil {
+        fmt.Println("=>", err)
+      }
+    }()
+    err = ly.Run()
+    if err != nil {
+      return err
+    }
+  }
+  return nil
+}
+
+func engraveBooks(
+  books []cat.Book, pieces []cat.Piece, sourceDir, bookDir string,
+) error {
   fmt.Println("engrave books")
   // TODO
   return nil
@@ -76,13 +121,13 @@ func Engrave (ec EngraveCommand) error {
     if ec.Piece {
       goto pieces
     }
-    err := engraveBooks(books, pieces, "books")
+    err := engraveBooks(books, pieces, "source2", "books")
     if err != nil {
       return scoreError("%v", err)
     }
     return nil
   }
-  pieces: err = engravePieces(pieces, "pieces")
+  pieces: err = engravePieces(pieces, "source2", "pieces")
   if err != nil {
     return scoreError("%v", err)
   }

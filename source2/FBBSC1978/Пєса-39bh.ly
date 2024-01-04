@@ -1,4 +1,4 @@
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Moderato
   \clef treble
@@ -8,9 +8,9 @@
   f=''2( e | d a') | e( d | c a') | d,( c | b e) | c( b | a1) |
   d=''2( c | b a') | c,( b | a a') | b,( a | e' d) | a1~ a=' \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key a \minor
@@ -18,4 +18,4 @@
   d='2( c | b1) | c2( b | a1) | b2( a | gis1) | a2( b | c e) |
   f='2( e | d1) | e2( d | c1) | d2( c | b1) | c2( b | a=1) |
 }
-{% endmacro %}
+{{ end }}
