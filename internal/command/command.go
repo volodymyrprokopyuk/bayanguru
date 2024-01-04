@@ -68,6 +68,10 @@ bayan engrave pieces... --lint=f --optimize=f --meta=f`,
       if err != nil {
         return cmdError("%v", err)
       }
+      if init && len(args) > 1 ||
+        init && len(args) == 1 && args[0] == "all" {
+        return cmdError("cannot initialize more than one piece, got %v", args)
+      }
       if book && init {
         return cmdError("cannot initialize books")
       }
