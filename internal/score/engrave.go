@@ -27,16 +27,23 @@ func initPiece(pieces []cat.Piece, sourceDir string) error {
   return nil
 }
 
-func templatePiece(w io.Writer, piece cat.Piece, sourceDir string) error {
+func makeTemplate(sourceDir, targetFile string) (*template.Template, error) {
   scoreFile := filepath.Join(sourceDir, "template", "score.ly")
-  pieceFile := filepath.Join(sourceDir, "template", "piece.ly")
-  tpl, err := template.ParseFiles(scoreFile, pieceFile)
+  targetFile = filepath.Join(sourceDir, "template", targetFile)
+  tpl, err := template.ParseFiles(scoreFile, targetFile)
   if err != nil {
-    return err
+    return nil, err
   }
   tpl.Funcs(template.FuncMap{"w": templateArgs})
-  pieceFile = filepath.Join(sourceDir, piece.Src, piece.File + ".ly")
-  _, err = tpl.ParseFiles(pieceFile)
+  return tpl, nil
+}
+
+func templatePiece(
+  tpl *template.Template, w io.WriteCloser, piece cat.Piece, sourceDir string,
+) error {
+  defer w.Close()
+  pieceFile := filepath.Join(sourceDir, piece.Src, piece.File + ".ly")
+  _, err := tpl.ParseFiles(pieceFile)
   if err != nil {
     return err
   }
@@ -48,26 +55,31 @@ func templatePiece(w io.Writer, piece cat.Piece, sourceDir string) error {
 }
 
 func engravePieces(pieces []cat.Piece, sourceDir, pieceDir string) error {
+  tpl, err := makeTemplate(sourceDir, "piece.ly")
+  if err != nil {
+    return err
+  }
   for _, piece := range pieces {
     cat.PrintPiece(piece)
-    pieceFile := filepath.Join(pieceDir, piece.File)
+    piecePDF := filepath.Join(pieceDir, piece.File)
     ly := exec.Command(
-      "lilypond", "-dbackend=cairo", "-f", "pdf", "-o", pieceFile, "-",
+      "lilypond", "-dbackend=cairo", "-f", "pdf", "-o", piecePDF, "-",
     )
     lyStdin, err := ly.StdinPipe()
-    ly.Stdout = os.Stdout
-    ly.Stderr = os.Stderr
     if err != nil {
       return err
     }
-    go func() {
-      defer lyStdin.Close()
-      err = templatePiece(lyStdin, piece, sourceDir)
-      if err != nil {
-        fmt.Println("=>", err)
-      }
-    }()
-    err = ly.Run()
+    ly.Stdout = os.Stdout
+    ly.Stderr = os.Stderr
+    err = ly.Start()
+    if err != nil {
+      return err
+    }
+    err = templatePiece(tpl, lyStdin, piece, sourceDir)
+    if err != nil {
+      return err
+    }
+    err = ly.Wait()
     if err != nil {
       return err
     }
