@@ -7,6 +7,7 @@ import (
   "path/filepath"
   "os"
   "os/exec"
+  sty "github.com/volodymyrprokopyuk/bayan/internal/style"
   cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
 )
 
@@ -17,13 +18,41 @@ type EngraveCommand struct {
   Pieces, Books []string
 }
 
+func copyFile(src, dst string) (int64, error) {
+  srcFile, err := os.Open(src)
+  if err != nil {
+    return 0, err
+  }
+  defer srcFile.Close()
+  dstFile, err := os.Create(dst)
+  if err != nil {
+    return 0, err
+  }
+  defer dstFile.Close()
+  return io.Copy(dstFile, srcFile)
+}
+
 func initPiece(pieces []cat.Piece, sourceDir string) error {
   if len(pieces) == 0 {
     return fmt.Errorf("no piece to initialize")
   }
   piece := pieces[0]
-  fmt.Println("init", piece)
-  // TODO
+  pieceFile := filepath.Join(sourceDir, piece.Src, piece.File + ".ly")
+  _, err := os.Stat(pieceFile)
+  if err == nil {
+    return fmt.Errorf("%v already exists", pieceFile)
+  }
+  pieceDir := filepath.Join(sourceDir, piece.Src)
+  err = os.MkdirAll(pieceDir, 0755)
+  if err != nil {
+    return err
+  }
+  initFile := filepath.Join(sourceDir, "template", "init.ly")
+  _, err = copyFile(initFile, pieceFile)
+  if err != nil {
+    return err
+  }
+  fmt.Printf("%v %v\n", sty.ID("init"), sty.Tit(pieceFile))
   return nil
 }
 
