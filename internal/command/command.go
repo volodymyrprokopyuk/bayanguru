@@ -104,10 +104,10 @@ bayan engrave pieces... --lint=f --optimize=f --meta=f`,
     &init, "init", "i", false, "initialize a new piece",
   )
   engraveCmd.Flags().BoolVarP(
-    &lint, "lint", "", true, "lint pieces before engraving",
+    &lint, "lint", "", false, "lint pieces before engraving",
   )
   engraveCmd.Flags().BoolVarP(
-    &optimize, "optimize", "", true, "optimize PDF after engraving",
+    &optimize, "optimize", "", false, "optimize PDF after engraving",
   )
   engraveCmd.Flags().BoolVarP(
     &meta, "meta", "", true, "include piece meta information",

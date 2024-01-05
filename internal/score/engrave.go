@@ -2,6 +2,7 @@ package score
 
 import (
   "fmt"
+  "strings"
   "text/template"
   "io"
   "path/filepath"
@@ -68,43 +69,54 @@ func makeTemplate(sourceDir, targetFile string) (*template.Template, error) {
 }
 
 func templatePiece(
-  tpl *template.Template, w io.WriteCloser, piece cat.Piece, sourceDir string,
-) error {
-  defer w.Close()
+  tpl *template.Template, piece cat.Piece, sourceDir string,
+) (string, error) {
   pieceFile := filepath.Join(sourceDir, piece.Src, piece.File + ".ly")
   _, err := tpl.ParseFiles(pieceFile)
   if err != nil {
-    return err
+    return "", err
   }
-  return tpl.Execute(w, piece)
+  var score strings.Builder
+  err = tpl.Execute(&score, piece)
+  if err != nil {
+    return "", err
+  }
+  return score.String(), nil
 }
 
-func engravePieces(pieces []cat.Piece, sourceDir, pieceDir string) error {
+func engravePiece(
+  piece cat.Piece, pieceScore, pieceDir string, optimize bool,
+) error {
+  var piecePDF string
+  if optimize {
+    piecePDF = filepath.Join(pieceDir, piece.File + "_")
+  } else {
+    piecePDF = filepath.Join(pieceDir, piece.File)
+  }
+  lyCmd := exec.Command(
+    "lilypond", "-d", "backend=cairo", "-f", "pdf", "-o", piecePDF, "-",
+  )
+  lyCmd.Stdin = strings.NewReader(pieceScore)
+  lyCmd.Stdout = os.Stdout
+  lyCmd.Stderr = os.Stderr
+  return lyCmd.Run()
+}
+
+func engravePieces(
+  pieces []cat.Piece, sourceDir, pieceDir string, ec EngraveCommand,
+) error {
   tpl, err := makeTemplate(sourceDir, "piece.ly")
   if err != nil {
     return err
   }
   for _, piece := range pieces {
+    piece.Meta = ec.Meta
     cat.PrintPiece(piece)
-    piecePDF := filepath.Join(pieceDir, piece.File)
-    ly := exec.Command(
-      "lilypond", "-dbackend=cairo", "-f", "pdf", "-o", piecePDF, "-",
-    )
-    lyStdin, err := ly.StdinPipe()
+    pieceScore, err := templatePiece(tpl, piece, sourceDir)
     if err != nil {
       return err
     }
-    ly.Stdout = os.Stdout
-    ly.Stderr = os.Stderr
-    err = ly.Start()
-    if err != nil {
-      return err
-    }
-    err = templatePiece(tpl, lyStdin, piece, sourceDir)
-    if err != nil {
-      return err
-    }
-    err = ly.Wait()
+    err = engravePiece(piece, pieceScore, pieceDir, ec.Optimize)
     if err != nil {
       return err
     }
@@ -113,7 +125,8 @@ func engravePieces(pieces []cat.Piece, sourceDir, pieceDir string) error {
 }
 
 func engraveBooks(
-  books []cat.Book, pieces []cat.Piece, sourceDir, bookDir string,
+  books []cat.Book, pieces []cat.Piece,
+  sourceDir, bookDir string, ec EngraveCommand,
 ) error {
   fmt.Println("engrave books")
   // TODO
@@ -158,13 +171,13 @@ func Engrave (ec EngraveCommand) error {
     if ec.Piece {
       goto pieces
     }
-    err := engraveBooks(books, pieces, "source2", "books")
+    err := engraveBooks(books, pieces, "source2", "books", ec)
     if err != nil {
       return scoreError("%v", err)
     }
     return nil
   }
-  pieces: err = engravePieces(pieces, "source2", "pieces")
+  pieces: err = engravePieces(pieces, "source2", "pieces", ec)
   if err != nil {
     return scoreError("%v", err)
   }

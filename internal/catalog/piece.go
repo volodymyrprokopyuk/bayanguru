@@ -71,6 +71,7 @@ type Piece struct {
   Bss StrSlice `yaml:"bss"`
   Lvl string `yaml:"lvl"`
   File string
+  Meta bool
 }
 
 type PieceMap map[string]Piece
