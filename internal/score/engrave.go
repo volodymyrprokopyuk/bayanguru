@@ -8,6 +8,7 @@ import (
   "path/filepath"
   "os"
   "os/exec"
+  pdf "github.com/pdfcpu/pdfcpu/pkg/api"
   sty "github.com/volodymyrprokopyuk/bayan/internal/style"
   cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
 )
@@ -84,15 +85,8 @@ func templatePiece(
   return score.String(), nil
 }
 
-func engravePiece(
-  piece cat.Piece, pieceScore, pieceDir string, optimize bool,
-) error {
-  var piecePDF string
-  if optimize {
-    piecePDF = filepath.Join(pieceDir, piece.File + "_")
-  } else {
-    piecePDF = filepath.Join(pieceDir, piece.File)
-  }
+func engravePiece(piece cat.Piece, pieceScore, pieceDir string) error {
+  piecePDF := filepath.Join(pieceDir, piece.File)
   lyCmd := exec.Command(
     "lilypond", "-d", "backend=cairo", "-f", "pdf", "-o", piecePDF, "-",
   )
@@ -100,6 +94,11 @@ func engravePiece(
   lyCmd.Stdout = os.Stdout
   lyCmd.Stderr = os.Stderr
   return lyCmd.Run()
+}
+
+func optimizePiece(piece cat.Piece, pieceDir string) error {
+  piecePDF := filepath.Join(pieceDir, piece.File + ".pdf")
+  return pdf.OptimizeFile(piecePDF, piecePDF, nil)
 }
 
 func engravePieces(
@@ -116,9 +115,15 @@ func engravePieces(
     if err != nil {
       return err
     }
-    err = engravePiece(piece, pieceScore, pieceDir, ec.Optimize)
+    err = engravePiece(piece, pieceScore, pieceDir)
     if err != nil {
       return err
+    }
+    if ec.Optimize {
+      err = optimizePiece(piece, pieceDir)
+      if err != nil {
+        return err
+      }
     }
   }
   return nil
@@ -129,7 +134,6 @@ func engraveBooks(
   sourceDir, bookDir string, ec EngraveCommand,
 ) error {
   fmt.Println("engrave books")
-  // TODO
   return nil
 }
 
