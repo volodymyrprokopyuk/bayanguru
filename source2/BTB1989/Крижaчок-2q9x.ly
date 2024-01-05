@@ -1,8 +1,8 @@
-{% macro rh1(a) %}
+{{ define "rh1" }}
   f=''16 e f g a b c a | g a g f e c d e='' |
-{% endmacro %}
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo "Con moto"
   \clef treble
@@ -16,14 +16,14 @@
   d=''16( e d c b8)-. g-. | c-. e-. c=''-> r |
 
   c=''16_\aLeg g a b c d e f | g a g f e c d e |
-  {{ rh1() }} {{ rh1() }}
+  {{ template "rh1" }} {{ template "rh1" }}
   d=''16 e d c b g a b | c b c d e c d e |
   f=''16 g f e d e f d | e f e d c d e c |
   d=''16 e d c b g a b | c8-. e-. c=''-> r \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key c \major
@@ -39,4 +39,4 @@
   f+fM!8 r r f+fM | c+cM! r r c+cM |
   g+gM!8 r r g+gM | c g c=-> r |
 }
-{% endmacro %}
+{{ end }}
