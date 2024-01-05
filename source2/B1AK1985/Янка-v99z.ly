@@ -1,47 +1,47 @@
-{% macro rh1(a) %}
-  {{ a }} g a8) a-. a-. | g16( a b8) b4-> |
+{{ define "rh1" }}
+  {{ .a }} g a8) a-. a-. | g16( a b8) b4-> |
   a='8[-. cis-. e-. cis]-. | d-. d16( e fis8)-. d-. |
   fis,='16( g a8) a-. a-. | g16( a b8) b4-> |
   a='8[-. cis-. e-. cis]-. | d-. fis-. d=''4-> |
-{% endmacro %}
+{{ end }}
 
-{% macro rh2(a) %}
-  {{ a }} e-. d-. d]-. | cis16( d e8) a, cis | b16( cis d8) gis, b=' |
-{% endmacro %}
+{{ define "rh2" }}
+  {{ .a }} e-. d-. d]-. | cis16( d e8) a, cis | b16( cis d8) gis, b=' |
+{{ end }}
 
-{% macro lh1(a, b) %}
-  {{ a }} dM! d dM | g,[ gM! gM gM] | a a7! a a7 | d[ dM! dM dM] |
-  d=8 dM! d dM | g,[ gM! gM gM] | a a7! a a7 | d dM! {{ b }} |
-{% endmacro %}
+{{ define "lh1" }}
+  {{ .a }} dM! d dM | g,[ gM! gM gM] | a a7! a a7 | d[ dM! dM dM] |
+  d=8 dM! d dM | g,[ gM! gM gM] | a a7! a a7 | d dM! {{ .b }} |
+{{ end }}
 
-{% macro lh2() %}
+{{ define "lh2" }}
   a=,8 aM! e' e7! | a,[ aM! aM aM] | gis e@7! e'=8 e7 |
-{% endmacro %}
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Allegretto
   \clef treble
   \key d \major
   \time 2/4
-  {{ rh1("fis'='16(\\mf") }}
+  {{ template "rh1" (w `fis'='16(\mf`) }}
 
-  {{ rh2("e=''8[-.\\mp") }} | a a16( cis e4) |
-  {{ rh2("e=''8[-.") }} | a-.\< r \af 4\! a='4-> |
+  {{ template "rh2" (w `e=''8[-.\mp`) }} | a a16( cis e4) |
+  {{ template "rh2" (w `e=''8[-.`) }} | a-.\< r \af 4\! a='4-> |
 
-  {{ rh1("fis='16(\\f") }} \bar "|."
+  {{ template "rh1" (w `fis='16(\f`) }} \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key d \major
-  {{ lh1("d=8-\\stBass", "dM4") }}
+  {{ template "lh1" (w `d=8-\stBass` `dM4`) }}
 
-  {{ lh2() }} | a,[ aM! aM aM] |
-  {{ lh2() }} | a,[ g fis e=,] |
+  {{ template "lh2" }} | a,[ aM! aM aM] |
+  {{ template "lh2" }} | a,[ g fis e=,] |
 
-  {{ lh1("d'=8", "d+dM4") }}
+  {{ template "lh1" (w `d'=8` `d+dM4`) }}
 }
-{% endmacro %}
+{{ end }}
