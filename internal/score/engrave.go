@@ -76,11 +76,7 @@ func templatePiece(
   if err != nil {
     return err
   }
-  err = tpl.Execute(w, piece)
-  if err != nil {
-    return err
-  }
-  return nil
+  return tpl.Execute(w, piece)
 }
 
 func engravePieces(pieces []cat.Piece, sourceDir, pieceDir string) error {
@@ -173,19 +169,4 @@ func Engrave (ec EngraveCommand) error {
     return scoreError("%v", err)
   }
   return nil
-
-  // tpl, err := template.ParseFiles("score.ly", "piece.ly")
-  // if err != nil {
-  //   return scoreError("%v", err)
-  // }
-  // tpl.Funcs(template.FuncMap{"w": templateArgs})
-  // tpl.ParseFiles("1a2b.ly")
-  // if err != nil {
-  //   return scoreError("%v", err)
-  // }
-  // pieces := []string{"1a2b.ly", "3c4d.ly"}
-  // err = tpl.Execute(os.Stdout, pieces)
-  // if err != nil {
-  //   return scoreError("%v", err)
-  // }
 }

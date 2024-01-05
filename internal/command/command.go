@@ -9,11 +9,11 @@ import (
   "github.com/volodymyrprokopyuk/bayan/internal/score"
 )
 
-var invalidNeg = regexp.MustCompile(`^.+\^`)
+var validPat = regexp.MustCompile(`^\^?\w[\w,]*[^,]$`)
 
 func validate(catalog string, args []string) error {
-  if invalidNeg.MatchString(catalog) {
-    return fmt.Errorf("^ must be the first e.g. ^rus,blr, got -c %v", catalog)
+  if len(catalog) > 0 && !validPat.MatchString(catalog) {
+    return fmt.Errorf("invalid pattern, got -c %v", catalog)
   }
   if len(args) == 0 {
     return fmt.Errorf("at least one piece or book is required, got zero")
@@ -141,10 +141,9 @@ bayan play --query... --random --list`,
         return cmdError("%v", err)
       }
       for opt, query := range queries {
-        if invalidNeg.MatchString(*query.varp) {
-          return cmdError(
-            "^ must be the first e.g. ^rus,blr, got --%v %v", opt, *query.varp,
-          )
+        val := *query.varp
+        if len(val) > 0 && !validPat.MatchString(val) {
+          return cmdError("invalid pattern, got --%v %v", opt, val)
         }
       }
       return nil

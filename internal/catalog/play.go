@@ -73,11 +73,7 @@ func orderPieces(pieceLen int, random bool) []int {
 
 func openPiece(pieceDir string, piece Piece) error {
   piecePDF := filepath.Join(pieceDir, piece.File + ".pdf")
-  err := exec.Command("xdg-open", piecePDF).Run()
-  if err != nil {
-    return err
-  }
-  return nil
+  return exec.Command("xdg-open", piecePDF).Run()
 }
 
 func ReadPiecesAndBooks(
