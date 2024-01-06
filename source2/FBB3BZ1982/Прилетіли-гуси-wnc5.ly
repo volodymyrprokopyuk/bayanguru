@@ -12,7 +12,8 @@
   \clef treble
   \key a \minor
   \time 4/4
-  {{ template "rh1" (w `a'='4(\mp`) }} {{ template "rh2" (w `c=''4(` `<e=' e'>4 <fis e'>`) }}
+  {{ template "rh1" (w `a'='4(\mp`) }}
+  {{ template "rh2" (w `c=''4(` `<e=' e'>4 <fis e'>`) }}
   <c,=' a'>4(\mf <e c'> <d b'> <c a'> | <e a e'>2 <c e c'>) |
   <f=' d'>4( <g e'> <a f'> <g e'> | <f d'> <e c'> <d b'> <c a'>) |
   r2 c='4( e | f2 g) | gis4( <c e> <b e> <gis d'> | <a c>2 <e' g>) |
