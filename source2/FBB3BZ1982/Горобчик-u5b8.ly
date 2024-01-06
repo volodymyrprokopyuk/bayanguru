@@ -1,19 +1,19 @@
-{% macro rh1(a) %}
-  {{ a }} e r4 f8-> d r4 | f8-> d r4 e8-> c r4 |
+{{ define "rh1" }}
+  {{ .a }} e r4 f8-> d r4 | f8-> d r4 e8-> c r4 |
   e=''8\pp c g'[\< e] f g a \af 8\! f | e c d[\> b] c d e \af 8\! f='' |
-{% endmacro %}
+{{ end }}
 
-{% macro lh1(a) %}
-  r4 {{ a }} e r4 f8 d | r4 f8 d r4 e8 c | r4 e8 c d2( | g, c='8) r r4 |
-{% endmacro %}
+{{ define "lh1" }}
+  r4 {{ .a }} e r4 f8 d | r4 f8 d r4 e8 c | r4 e8 c d2( | g, c='8) r r4 |
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo "Allegretto scherzoso"
   \clef treble
   \key c \major
   \time 4/4
-  {{ rh1("g''=''8->\\mf") }}
+  {{ template "rh1" (w `g''=''8->\mf`) }}
   g=''8\mf e r4 f8 d r4 | f8 d r4 e8 c r4 |
   e=''8\pp c g'[\< e] a f b[ g] | c a d[ \af 8\! b] e d c b='' |
 
@@ -25,19 +25,19 @@
   \time 4/4 r8 e='8 e' e, r e' e'^\tRit e, |
   r8 \ottava #1 e'=''' e' e, \ottava #0 r e, e' f,='' |
 
-  {{ rh1("g=''8->^\\tATem") }}
+  {{ template "rh1" (w `g=''8->^\tATem`) }}
   g=''8 e g'16( e c g f8) d-. f'16( d b g |
   f=''8) d-. b'16( g f d e8) c-. g'16( e c g |
   a='8) f-. c'16( b a aes g8) e'-. d16( c b a |
   g='8) d'-. g16( f e d c8[) aes']-. \slashedGrace { b=''8( } <e,='' c') > r \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef treble
   \key c \major
-  {{ lh1("g'='8-\\frBass") }}
+  {{ template "lh1" (w `g'='8-\frBass`) }}
   r4 g'='8-> e r4 f8-> d | r4 f8-> d r4 e8-> c | r4 e'8 c f d g[ e] |
   a=''8 fis b[ g] gis=''4 r |
 
@@ -46,8 +46,8 @@
   \time 6/4 e='2( f8) r d r b r gis r |
   \time 4/4 e=8 r r4 e'8 r r4 | e'8 r r4 e,='8 r r4 |
 
-  {{ lh1("g='8") }}
+  {{ template "lh1" (w `g='8`) }}
   e='8 c g4( d'8) b g4 | b8 g f4( c'8) g e4( | f) f16( g a b c4) c16( d e f |
   g='4) g16( gis a b c4) <c,=' gis' c>8 r |
 }
-{% endmacro %}
+{{ end }}
