@@ -1,14 +1,14 @@
-{% macro rh1(a, b) %}
-  \acc { {{ a }} d e } {{ b }} c-. d-. bes-. | c a g f |
+{{ define "rh1" }}
+  \acc { {{ .a }} d e } {{ .b }} c-. d-. bes-. | c a g f |
   g='16 a bes g a f g e=' |
-{% endmacro %}
+{{ end }}
 
-{% macro rh2(a) %}
-  {{ a }} e ees d des c b bes | a8. c16 bes a g f |
+{{ define "rh2" }}
+  {{ .a }} e ees d des c b bes | a8. c16 bes a g f |
   g='16 a bes g a f g e=' |
-{% endmacro %}
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Moderato
   \clef treble
@@ -31,17 +31,17 @@
     }
 
     \repeat volta 2 {
-      {{ rh1("c'=''16", "f=''8-.\\f") }} | <e c'>8 r <c' e> r |
-      {{ rh1("c=''16", "f=''8-.") }} | f8 r <f=' a c f>4 |
+      {{ template "rh1" (w `c'=''16` `f=''8-.\f`) }} | <e c'>8 r <c' e> r |
+      {{ template "rh1" (w `c=''16` `f=''8-.`) }} | f8 r <f=' a c f>4 |
     }
 
-    {{ rh2("f'=''16") }} | <e c'>8 r <c' e> r |
-    {{ rh2("f=''16") }} | f8 r <f=' a c f>16 \bar "|."
+    {{ template "rh2" (w `f'=''16`) }} | <e c'>8 r <c' e> r |
+    {{ template "rh2" (w `f=''16`) }} | f8 r <f=' a c f>16 \bar "|."
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key d \minor
@@ -56,4 +56,4 @@
   \rep 2 { f=,8 fM! f=, fM | } c' cM! c cM | c g c4 |
   \rep 2 { f,=,8 fM! f=, fM | } c' cM! c c7! | f,=, r f+fM!16 %
 }
-{% endmacro %}
+{{ end }}
