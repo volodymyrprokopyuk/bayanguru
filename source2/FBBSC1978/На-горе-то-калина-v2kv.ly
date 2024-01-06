@@ -1,4 +1,4 @@
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Allegretto
   \clef treble
@@ -8,12 +8,12 @@
   d='2(\p g) | c,4( c a' g | f) f f2 | d4(\p d g f |
   e='4 c a'\> g | f)^\tRit f \af 2\! f='2 \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef treble
   \key f \major
   f'='1(-\frBass | c | f) | f( | c | f) | \rep 2 { bes,=( | c | f=') | }
 }
-{% endmacro %}
+{{ end }}

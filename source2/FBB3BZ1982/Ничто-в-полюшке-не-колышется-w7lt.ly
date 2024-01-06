@@ -1,4 +1,4 @@
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Cantabile
   \clef treble
@@ -20,9 +20,9 @@
     s2 | \stemDown d='2~ | d='( | s2) |
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef treble
   \key e \minor
@@ -35,4 +35,4 @@
   e,=8 \noBeam e( fis g) | r g( fis g) | r c( b a) | r fis( g a) |
   b=8\( e, g4 | b8 e, fis4 | a8 fis g b, | e=2\) |
 }
-{% endmacro %}
+{{ end }}
