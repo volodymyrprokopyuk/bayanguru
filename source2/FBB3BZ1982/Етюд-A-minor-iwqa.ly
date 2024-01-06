@@ -1,4 +1,4 @@
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Andante
   \clef treble
@@ -12,9 +12,9 @@
     e'=''8(\mf d c b | a4 e) | fis(^\tRit gis) | a='2-- \bar "|."
   } { s2 | b'='2 | s2 | a4( g) | f2 | e4 e | d2 | \af 2\! a=--\> | }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key a \minor
@@ -22,4 +22,4 @@
   g=2( | a8 b c4) | d2( | c) | f( | g,) | c4( d | cis2) |
   d='2( | c8 b c b) | e,2-- | a,=,-- |
 }
-{% endmacro %}
+{{ end }}

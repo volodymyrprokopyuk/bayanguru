@@ -1,4 +1,4 @@
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo "Tempo di valzer"
   \clef treble
@@ -24,9 +24,9 @@
     }
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef treble
   \key a \minor
@@ -38,4 +38,4 @@
   \rep 3 { a'=8( gis a gis a=4) | } | <gis d'>4 <a c> <gis b> |
   a=4 b c | d e f | e ees d | <a c> <gis b> <a= c> |
 }
-{% endmacro %}
+{{ end }}

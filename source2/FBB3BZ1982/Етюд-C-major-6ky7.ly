@@ -1,8 +1,8 @@
-{% macro rh1(a, b) %}
-  {{ a }} a='16( b c8)-. {{ b }} a-. d16( e f e d c b a=') |
-{% endmacro %}
+{{ define "rh1" }}
+  {{ .a }} a='16( b c8)-. {{ .b }} a-. d16( e f e d c b a=') |
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo "Moderato"
   \clef treble
@@ -15,17 +15,17 @@
   }
 
   \repeat volta 2 {
-    {{ rh1("r8\\p", "") }} | r8 g16( a b8)-. d-. c16( d e f e d c b) |
-    {{ rh1("r8\\<", "\\af 16.\\!") }}
+    {{ template "rh1" (w `r8\p` ``) }} | r8 g16( a b8)-. d-. c16( d e f e d c b) |
+    {{ template "rh1" (w `r8\<` `\af 16.\!`) }}
     \alternative {
       \volta 1 { r8 g='16( a b8)-. d-. c=''2 | }
       \volta 2 { r8 g='16( a b8)-. g-. c=''4-- r \bar "|." }
     }
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key c \major
@@ -40,4 +40,4 @@
   <g= b d>8-- r r8 8 \rep 4 { <g c e> } |
   <g= b d>8 r r8 8 <g= c e>4-- r |
 }
-{% endmacro %}
+{{ end }}
