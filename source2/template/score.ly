@@ -1,5 +1,7 @@
 \version "2.25.11"
 
+#(ly:set-option 'warning-as-error #t)
+
 % Bass
 stBass = \markup \larger \box Г % Готовий бас = standard (Stradella) bass
 puBass = \markup \larger \box Б % Чистий бас = pure bass
@@ -28,10 +30,6 @@ acc = #acciaccatura
 af = #after
 
 % Music function
-rep = #(define-music-function (n mus) (integer? ly:music?)
-  #{ \repeat unfold #n { #mus } #}
-)
-
 meter = #(define-music-function (scope moment beat)
   ((symbol? 'Staff) fraction? list?)
   #{
@@ -41,23 +39,45 @@ meter = #(define-music-function (scope moment beat)
   #}
 )
 
+rep = #(define-music-function (n mus) (integer? ly:music?)
+  #{ \repeat unfold #n { #mus } #}
+)
+
 duo = #(define-music-function (vone vtwo) (ly:music? ly:music?)
-  #{ <<
-       \new Voice = voiceOne \relative { \voiceOne #vone }
-       \new Voice = voiceTwo \relative { \voiceTwo #vtwo }
-     >>
+  #{
+    <<
+      \new Voice = voiceOne \relative { \voiceOne #vone }
+      \new Voice = voiceTwo \relative { \voiceTwo #vtwo }
+    >>
   #}
 )
 
 trio = #(define-music-function (vone vtwo vthree)
   (ly:music? ly:music? ly:music?)
-  #{ <<
-       \new Voice = voiceOne \relative { \voiceOne #vone }
-       \new Voice = voiceTwo \relative { \voiceTwo #vtwo }
-       \new Voice = voiceThree \relative { \voiceThree #vthree }
-     >>
+  #{
+    <<
+      \new Voice = voiceOne \relative { \voiceOne #vone }
+      \new Voice = voiceTwo \relative { \voiceTwo #vtwo }
+      \new Voice = voiceThree \relative { \voiceThree #vthree }
+    >>
   #}
 )
+
+\layout {
+  \context {
+    \Score
+    \omit BarNumber
+    \override DynamicLineSpanner.staff-padding = #3
+  }
+  \context {
+    \Staff
+    \numericTimeSignature
+  }
+  \context {
+    \Voice
+    \override TupletBracket.span-all-note-heads = ##t
+  }
+}
 
 {{ block "piece" . }} {{ end }}
 {{ block "book" . }} {{ end }}

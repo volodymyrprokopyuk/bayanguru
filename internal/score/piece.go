@@ -162,7 +162,7 @@ func engravePiece(piece cat.Piece, pieceScore, pieceDir string) error {
   piecePDF := filepath.Join(pieceDir, piece.File)
   fmt.Printf("%v %v\n", sty.ID("engrave"), sty.Tit(piecePDF + ".pdf"))
   lyCmd := exec.Command(
-    "lilypond", "-d", "backend=cairo", "-f", "pdf", "-o", piecePDF, "-",
+    "lilypond", "-d", "backend=cairo", "-f", "pdf", "-o", piecePDF, "-s", "-",
   )
   lyCmd.Stdin = strings.NewReader(pieceScore)
   lyCmd.Stdout = os.Stdout
