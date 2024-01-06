@@ -34,9 +34,11 @@
   \meter 1/2 #'(1)
   \partial 8 { r8 | }
   \duo {
-    \mergeDifferentlyDottedOn {{ template "lh1a" (w `g=8(_\frBass`) }} {{ template "lh2a" }}
+    \mergeDifferentlyDottedOn
+    {{ template "lh1a" (w `g=8(_\frBass`) }} {{ template "lh2a" }}
     \stemUp fis=8( c'~ <c d>) d, \rest | g( bes~ <bes d>) d, \rest |
-    \stemDown <a'= cis>2-> | d8( c bes) a( | \stemUp {{ template "lh1a" (w `g=8)(`) }}
+    \stemDown <a'= cis>2-> | d8( c bes) a( |
+    \stemUp {{ template "lh1a" (w `g=8)(`) }}
   } {
     \rep 3 { g=4. s8 | } | s2 | fis4. s8 | g4. s8 | s2 | s2 |
     \rep 2 { g=4. s8 | }
@@ -46,7 +48,9 @@
 
   d,=8\( c' a c | g d' bes d | f, a ees' a, | bes a g\) f\( |
   a=8 e' cis e | d, a' fis a | <g b>4 a | d,8 c' a\) r |
-  \duo { {{ template "lh1a" (w `g=8(`) }} {{ template "lh2a" }} } { \rep 3 { g=4. s8 | } | s2 | }
+  \duo {
+    {{ template "lh1a" (w `g=8(`) }} {{ template "lh2a" }}
+  } { \rep 3 { g=4. s8 | } | s2 | }
   <c=' ees>4-- <fis, c'>-- | <g d'>-- <e c'>-- | <ees c'>-- <d c'>-- |
   <ees= g>8( d <g= bes d>4) |
 }
