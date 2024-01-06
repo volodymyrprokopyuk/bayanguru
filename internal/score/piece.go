@@ -186,20 +186,21 @@ func engravePieces(
         return err
       }
     }
-    pieceScore, err := templatePiece(tpl, piece, sourceDir)
-    if err != nil {
-      return err
-    }
-    err = engravePiece(piece, pieceScore, pieceDir)
-    if err != nil {
-      return err
-    }
-    if ec.Optimize {
-      err = optimizeScore(pieceDir, piece.File)
-      if err != nil {
-        return err
-      }
-    }
+    _ = tpl
+    // pieceScore, err := templatePiece(tpl, piece, sourceDir)
+    // if err != nil {
+    //   return err
+    // }
+    // err = engravePiece(piece, pieceScore, pieceDir)
+    // if err != nil {
+    //   return err
+    // }
+    // if ec.Optimize {
+    //   err = optimizeScore(pieceDir, piece.File)
+    //   if err != nil {
+    //     return err
+    //   }
+    // }
   }
   return nil
 }
