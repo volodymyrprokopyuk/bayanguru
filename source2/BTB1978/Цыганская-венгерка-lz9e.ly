@@ -1,17 +1,17 @@
-{% macro t1(a, b, c, d) %}
+{{ define "t1" }}
   r8
   \duo {
     \meter 1/8 1,1,1,1,1,1,1,1
     \set subdivideBeams = ##t
-    {{ a }}[~ \tuplet 3/2 { {{ b }} } {{ c }}]
-  } { \voiceTwo {{ d }} }
-{% endmacro %}
+    {{ .a }}[~ \tuplet 3/2 { {{ .b }} } {{ .c }}]
+  } { \voiceTwo {{ .d }} }
+{{ end }}
 
-{% macro t2(a, b) %}
-  r4 \tuplet 3/2 { {{ a }} } {{ b }} r |
-{% endmacro %}
+{{ define "t2" }}
+  r4 \tuplet 3/2 { {{ .a }} } {{ .b }} r |
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Largo
   \clef treble
@@ -37,19 +37,19 @@
   <f,=' d'>2 <c' a'>8 <a fis'> <c ees> <fis,=' d'> |
 
   \tempo Lento
-  {{ t1("d''=''8", "d=''16( e d)", "cis16 d=''", "bes'='4.") }}
+  {{ template "t1" (w `d''=''8` `d=''16( e d)` `cis16 d=''` `bes'='4.`) }}
   <c'='' e>4.-> <bes d>8 |
-  {{ t1("c''=''8", "c=''16( d c)", "b16 c=''", "a'='4.") }}
+  {{ template "t1" (w `c''=''8` `c=''16( d c)` `b16 c=''` `a'='4.`) }}
   \duo { <bes'=' d>4.-> <a=' c>8 | } { fis'='2 | }
-  {{ t1("bes'='8", "bes='16( c bes)", "a16 bes='", "g'='4.") }}
+  {{ template "t1" (w `bes'='8` `bes='16( c bes)` `a16 bes='` `g'='4.`) }}
   \duo { c''=''4.-> bes='8 | } { e'='2 | }
-  {{ t1("a'='8", "a='16( bes a)", "gis16 a='", "f'='4.") }}
+  {{ template "t1" (w `a'='8` `a='16( bes a)` `gis16 a='` `f'='4.`) }}
   \duo { bes'='4.-> a='8 | } { <c'=' fis>2 | }
-  {{ t1("g'='8", "g='16( a g)", "fis16 g='", "bes=4.") }}
+  {{ template "t1" (w `g'='8` `g='16( a g)` `fis16 g='` `bes=4.`) }}
   \duo { a'='4.-> g='8 | } { cis'='2 | }
-  {{ t1("<d'=' f>8", "<d=' f>16( g f)", "e16 f='", "a=4.") }}
+  {{ template "t1" (w `<d'=' f>8` `<d=' f>16( g f)` `e16 f='` `a=4.`) }}
   \duo { g'='4.-> f='8 | } { <bes= d>2 | }
-  {{ t1("e'='8", "e='16( f e)", "dis16 e='", "gis=4.") }}
+  {{ template "t1" (w `e'='8` `e='16( f e)` `dis16 e='` `gis=4.`) }}
   <g,= cis f>4. cis8 |
   \meter 1/2 1,1
   <f,= a e'>4. <f a d>8 8 e' f fis=' |
@@ -117,12 +117,12 @@
   f='4 e <g, bes f'>(-> e') | e d <f, a e'>(-> d') |
   d='4 cis <e, g b>(-> cis') | d r <f,= a d> r |
 
-  {{ t2("g=8( bes d", "e4)") }} |
-  {{ t2("f,=8( a d", "f4)") }} |
-  {{ t2("g,=8( cis e", "g4)") }} |
-  {{ t2("a,=8( d f", "a4)") }} |
-  {{ t2("bes,=8( d e", "g4)") }} |
-  {{ t2("f,=8( a d", "f4)") }} |
+  {{ template "t2" (w `g=8( bes d` `e4)`) }} |
+  {{ template "t2" (w `f,=8( a d` `f4)`) }} |
+  {{ template "t2" (w `g,=8( cis e` `g4)`) }} |
+  {{ template "t2" (w `a,=8( d f` `a4)`) }} |
+  {{ template "t2" (w `bes,=8( d e` `g4)`) }} |
+  {{ template "t2" (w `f,=8( a d` `f4)`) }} |
   r4 a,=4 b cis | d r <f,= a d> r |
 
   <g= cis f>4-> e' dis e | <a, d g>-> f' e f |
@@ -135,9 +135,9 @@
   <c=' c'>2-> <b b'>-> | <bes bes'>-> <a a'>-> |
   <b= b'>2-> <cis cis'>-> | <d d'>-> <d=' f a d>4-> r \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key d \minor
@@ -214,4 +214,4 @@
   g=,4 gm! e' g@M! | a,4 d@m! f4 d@m |
   e'=4 e7! a, a7! | d=4 dm! d+dm r |
 }
-{% endmacro %}
+{{ end }}
