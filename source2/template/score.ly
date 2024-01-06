@@ -2,6 +2,8 @@
 
 #(ly:set-option 'warning-as-error #t)
 
+bayanUrl = "https://volodymyrprokopyuk.github.io/bayan"
+
 % Bass
 stBass = \markup \larger \box Г % Готовий бас = standard (Stradella) bass
 puBass = \markup \larger \box Б % Чистий бас = pure bass
@@ -62,6 +64,60 @@ trio = #(define-music-function (vone vtwo vthree)
     >>
   #}
 )
+
+hSpace = #(define-music-function () ()
+  #{ \once \override NoteHead.extra-spacing-width = #'(-2.5 . 0) #}
+)
+
+sSlur = #(define-music-function (dir prs mus) (symbol? alist? ly:music?)
+  (let* ((bs (assoc-get 'bs prs 2.0)) ;; vertical base line
+         (sh (assoc-get 'sh prs 0.5)) ;; horiaontal shift
+         (wd (assoc-get 'wd prs 1.0)) ;; slur width
+         (ht (assoc-get 'ht prs 1.0)) ;; slur height
+         (dt (assoc-get 'dt prs 0.0)) ;; vertical delta
+         (pts (cond
+               ((equal? dir 'fu)
+                (let ((ax (+ sh (* 0.0 wd)))
+                      (bx (+ sh (* 1.0 wd)))
+                      (cx (+ sh (* 2.0 wd)))
+                      (dx (+ sh (* 3.0 wd)))
+                      (ay bs)
+                      (by (+ bs ht))
+                      (cy (+ bs ht))
+                      (dy (+ bs dt)))
+                  `((,ax . ,ay) (,bx . ,by) (,cx . ,cy) (,dx . ,dy))))
+               ((equal? dir 'fd)
+                (let ((ax (+ sh (* 0.0 wd)))
+                      (bx (+ sh (* 1.0 wd)))
+                      (cx (+ sh (* 2.0 wd)))
+                      (dx (+ sh (* 3.0 wd)))
+                      (ay (* -1 bs))
+                      (by (* -1 (+ bs ht)))
+                      (cy (* -1 (+ bs ht)))
+                      (dy (* -1 (+ bs dt))))
+                  `((,ax . ,ay) (,bx . ,by) (,cx . ,cy) (,dx . ,dy))))
+               ((equal? dir 'bu)
+                (let ((ax (- (+ sh (* 0.0 wd)) (* 3.0 wd)))
+                      (bx (- (+ sh (* 1.0 wd)) (* 3.0 wd)))
+                      (cx (- (+ sh (* 2.0 wd)) (* 3.0 wd)))
+                      (dx (- (+ sh (* 3.0 wd)) (* 3.0 wd)))
+                      (ay (+ bs dt))
+                      (by (+ bs ht))
+                      (cy (+ bs ht))
+                      (dy bs))
+                  `((,ax . ,ay) (,bx . ,by) (,cx . ,cy) (,dx . ,dy))))
+               ((equal? dir 'bd)
+                (let ((ax (- (+ sh (* 0.0 wd)) (* 3.0 wd)))
+                      (bx (- (+ sh (* 1.0 wd)) (* 3.0 wd)))
+                      (cx (- (+ sh (* 2.0 wd)) (* 3.0 wd)))
+                      (dx (- (+ sh (* 3.0 wd)) (* 3.0 wd)))
+                      (ay (* -1 (+ bs dt)))
+                      (by (* -1 (+ bs ht)))
+                      (cy (* -1 (+ bs ht)))
+                      (dy (* -1 bs)))
+                  `((,ax . ,ay) (,bx . ,by) (,cx . ,cy) (,dx . ,dy))
+               )))))
+    (tweak 'control-points pts mus)))
 
 \layout {
   \context {

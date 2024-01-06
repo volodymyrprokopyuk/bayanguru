@@ -1,27 +1,29 @@
-{% macro rh1() %}
-  \duo { cis''=''2~\sf | cis | d~\sf | d='' | }
-  { cis''=''4.(\< \af 8\! a8 | fis4\> \af 4\1 e=') |
-    d'=''4.(\< \af 8\! b8 | gis4\> \af 4\! fis=') | }
+{{ define "rh1" }}
+  \duo { cis''=''2~\sf | cis | d~\sf | d='' |
+  } {
+    cis''=''4.(\< \af 8\! a8 | fis4\> \af 4\1 e=') |
+    d'=''4.(\< \af 8\! b8 | gis4\> \af 4\! fis=') |
+  }
   e='4\mf e | <d fis> <d=' gis> |
-{% endmacro %}
+{{ end }}
 
-{% macro lh1(a) %}
-  {{ a }} aM! e' a@M | a,8 aM! e' a@M | \rep 2 { b=,8( e@7!) e=8 e7 | }
-{% endmacro %}
+{{ define "lh1" }}
+  {{ .a }} aM! e' a@M | a,8 aM! e' a@M | \rep 2 { b=,8( e@7!) e=8 e7 | }
+{{ end }}
 
-{% macro lh2() %}
+{{ define "lh2" }}
   \rep 2 { b=,8 e@7! e=8 e7 | } \rep 2 { a,=,( aM!) e'= a@M | }
-{% endmacro %}
+{{ end }}
 
-{% macro lh3() %}
+{{ define "lh3" }}
   \rep 2 { a,=,8 aM! e'= a@M | } \rep 2 { b=,8 e@7! e=8 e7 | }
-{% endmacro %}
+{{ end }}
 
-{% macro lh4() %}
+{{ define "lh4" }}
   gis,=,8 e@7! e'8 e7 | b e@7! e8 e7 | a, aM! e'= a@M |
-{% endmacro %}
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Allegretto
   \clef treble
@@ -36,21 +38,22 @@
   <gis=' e'>4-> e-> | <d fis>-> <d gis>-> |
   \rep 2 { <d=' b'>8( <cis=' a'>4) 8-. | }
 
-  {{ rh1() }} \rep 2 { <d=' b'>8( <cis=' a'>4) 8-. | }
-  {{ rh1() }} <d=' b'>8( <cis=' a'>4) 8-. | <d b'> <cis=' e a>8 8-> r \bar "|."
+  {{ template "rh1" }} \rep 2 { <d=' b'>8( <cis=' a'>4) 8-. | }
+  {{ template "rh1" }} <d=' b'>8( <cis=' a'>4) 8-. |
+  <d=' b'>8 <cis=' e a>8 8-> r \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key a \major
-  {{ lh1("a,=,8-\\stBass") }}
-  {{ lh2() }}
+  {{ template "lh1" (w `a,=,8-\stBass`) }}
+  {{ template "lh2" }}
   \rep 2 { fis=8 fism! cis= fis@m | } \rep 2 { b=,8( bm!) d= b@m | }
-  {{ lh2() }}
+  {{ template "lh2" }}
 
-  {{ lh3("a,=,8") }} {{ lh4() }} | a,8 aM! e' a@M |
-  {{ lh3("a,=,8") }} {{ lh4() }} | a,=,8 aM! a+aM-> r |
+  {{ template "lh3" (w `a,=,8`) }} {{ template "lh4" }} | a,8 aM! e' a@M |
+  {{ template "lh3" (w `a,=,8`) }} {{ template "lh4" }} | a,=,8 aM! a+aM-> r |
 }
-{% endmacro %}
+{{ end }}

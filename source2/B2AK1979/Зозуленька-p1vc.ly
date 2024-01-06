@@ -1,18 +1,19 @@
-{% macro rh1() %}
+{{ define "rh1" }}
   <a=' f'>8\f r <a c>2-> | <a f'>8\p r <a c>2-> |
-  \duo { e''=''8(\< d c2) | e8( d \af 2\! c=''2) | } { bes'='2. | bes='2. | }
-{% endmacro %}
+  \duo { e''=''8(\< d c2) | e8( d \af 2\! c=''2) | }
+  { bes'='2. | bes='2. | }
+{{ end }}
 
-{% macro rh2(a) %}
+{{ define "rh2" }}
   \duo { r4\p <g'=' bes>4 4 | r <f=' a>4 4 | } { c'='2. | c='2. | }
-  c='8(\< e g bes a \af 8\! {{ a }} |
-{% endmacro %}
+  c='8(\< e g bes a \af 8\! {{ .a }} |
+{{ end }}
 
-{% macro lh1(a) %}
-  {{ a }} fM! fM | f fM fM | c'= c7! c7 |
-{% endmacro %}
+{{ define "lh1" }}
+  {{ .a }} fM! fM | f fM fM | c'= c7! c7 |
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo "Con moto"
   \clef treble
@@ -23,21 +24,21 @@
   \duo { bes'='8( a g4)-. c=''-. | } { e'='2 e='4 | }
   <f=' a>4 f='2-> |
 
-  {{ rh1() }}
+  {{ template "rh1" }}
   <a=' f'>8\f r <a c>2-> | <a f'>8\p r <a c>2-> |
   \duo { e''=''8(\< d c4) \af 4\! c='' | } { bes'='2 c=''4 | }
   f='4\f f='-> r |
 
-  {{ rh2("g='8)") }} | a4(\> f) \af 4\! f-. |
-  {{ rh2("g='8") }} | f4) f='-> r |
+  {{ template "rh2" (w `g='8)`) }} | a4(\> f) \af 4\! f-. |
+  {{ template "rh2" (w `g='8`) }} | f4) f='-> r |
 
-  {{ rh1() }}
+  {{ template "rh1" }}
   a='8.\f a16 a4.( f8) | f( e f a g f) |
   e='8( f g c, d e | f4) <a,= c f>-> r \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key f \major
@@ -45,8 +46,8 @@
   c'=4_\aSim c7! c7 | f, fM! fM |
   \rep 2 { c'=4 c7! c7 | f,=, fM! fM | }
 
-  {{ lh1("f=,4") }} | c c7 c7 |
-  {{ lh1("f,=,4") }} | f,=, fM! r |
+  {{ template "lh1" (w `f=,4`) }} | c c7 c7 |
+  {{ template "lh1" (w `f,=,4`) }} | f,=, fM! r |
 
   g=,4 c@7! c74 | f fM! fM | e c@7! c74 | f fM! fM |
   e=,4 c@7! c74 | f fM! fM | c' c7! c7 | f,=, f+fM! r |
@@ -54,4 +55,4 @@
   f=,4 fM! fM | f fM fM | c' c7! c7 | c c7 c7 |
   f,=,4 fM! fM | a f@M! bes@M!4 | c cM! c7! | f,=, f+fM! r |
 }
-{% endmacro %}
+{{ end }}
