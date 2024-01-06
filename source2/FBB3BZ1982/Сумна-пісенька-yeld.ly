@@ -1,12 +1,12 @@
-{% macro lh1a(a) %}
-  {{ a }} bes~ <bes d>) d, \rest | g( d'~ <bes= d>) d, \rest |
-{% endmacro %}
+{{ define "lh1a" }}
+  {{ .a }} bes~ <bes d>) d, \rest | g( d'~ <bes= d>) d, \rest |
+{{ end }}
 
-{% macro lh2a() %}
+{{ define "lh2a" }}
   g=8( c~ <c ees>) d, \rest | \stemDown bes'[( a] g=) d \rest |
-{% endmacro %}
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo "Andante cantabile"
   \clef treble
@@ -25,18 +25,18 @@
   g='8\p a bes c | d bes g) g'( | ees c a) g'( | d4.) d8\( | c ees a, c |
   bes='8 d g, bes | a[ c] fis, a | g4 <bes=' d g>\) \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key g \minor
   \meter 1/2 #'(1)
   \partial 8 { r8 | }
   \duo {
-    \mergeDifferentlyDottedOn {{ lh1a("g=8(_\\frBass") }} {{ lh2a() }}
+    \mergeDifferentlyDottedOn {{ template "lh1a" (w `g=8(_\frBass`) }} {{ template "lh2a" }}
     \stemUp fis=8( c'~ <c d>) d, \rest | g( bes~ <bes d>) d, \rest |
-    \stemDown <a'= cis>2-> | d8( c bes) a( | \stemUp {{ lh1a("g=8)(") }}
+    \stemDown <a'= cis>2-> | d8( c bes) a( | \stemUp {{ template "lh1a" (w `g=8)(`) }}
   } {
     \rep 3 { g=4. s8 | } | s2 | fis4. s8 | g4. s8 | s2 | s2 |
     \rep 2 { g=4. s8 | }
@@ -46,8 +46,8 @@
 
   d,=8\( c' a c | g d' bes d | f, a ees' a, | bes a g\) f\( |
   a=8 e' cis e | d, a' fis a | <g b>4 a | d,8 c' a\) r |
-  \duo { {{ lh1a("g=8(") }} {{ lh2a() }} } { \rep 3 { g=4. s8 | } | s2 | }
+  \duo { {{ template "lh1a" (w `g=8(`) }} {{ template "lh2a" }} } { \rep 3 { g=4. s8 | } | s2 | }
   <c=' ees>4-- <fis, c'>-- | <g d'>-- <e c'>-- | <ees c'>-- <d c'>-- |
   <ees= g>8( d <g= bes d>4) |
 }
-{% endmacro %}
+{{ end }}

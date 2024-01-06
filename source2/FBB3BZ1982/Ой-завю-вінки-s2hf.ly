@@ -1,16 +1,16 @@
-{% macro rh1(a, b) %}
-  {{ a }} fis cis' | b cis fis,) |
-  \duo { a'='4( {{ b }} a8 gis | fis4) <eis=' b' cis>2 | } { r4 d'='2 | s2. | }
-{% endmacro %}
+{{ define "rh1" }}
+  {{ .a }} fis cis' | b cis fis,) |
+  \duo { a'='4( {{ .b }} a8 gis | fis4) <eis=' b' cis>2 | } { r4 d'='2 | s2. | }
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Moderato
   \clef treble
   \key fis \minor
   \time 3/4
   \meter 1/4 1,1,1
-  {{ rh1("a'='4(\\p", "b") }} {{ rh1("a='4(", "<gis b>") }}
+  {{ template "rh1" (w `a'='4(\p` `b`) }} {{ template "rh1" (w `a='4(` `<gis b>`) }}
   a='4(\mp cis8 d <cis e>4) | b8( cis <b d>4 b) |
   a='8( a a b <a cis>4) | gis8( a <gis b>4 gis) |
   fis='4(\p fis8 gis a fis) | eis( fis gis4 cis,) |
@@ -23,9 +23,9 @@
   \duo { fis'='8( gis^\tRit a4 <d,=' gis b>) | } { fis'='2 s4 | }
   <eis,=' b' cis>4 \af 2\! <fis=' a cis fis>2--\> \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key fis \minor
@@ -40,4 +40,4 @@
   cis='8-. r cis-. r cis-. r | d2-- d8-. r | cis( dis eis4 cis=') |
   \clef bass fis,=8( e d4 b) | cis fis=2-- |
 }
-{% endmacro %}
+{{ end }}

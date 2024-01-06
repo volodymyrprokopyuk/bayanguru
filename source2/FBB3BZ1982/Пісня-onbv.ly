@@ -1,4 +1,4 @@
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Andante
   \clef treble
@@ -11,9 +11,9 @@
   \duo { a'='4( e'2. | g4 f e2) | e4( d f e | a=''1) \bar "|." }
   { r4 c''=''4 b a | g2 c | c4 a2\> gis4 | \af 1\! a='1 | }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef treble
   \key a \minor
@@ -23,4 +23,4 @@
   \clef treble r4 a''='4( g f | e d c b=) |
   \clef bass a=4( f d e | a2 a,=,) |
 }
-{% endmacro %}
+{{ end }}
