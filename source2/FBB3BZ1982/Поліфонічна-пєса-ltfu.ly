@@ -1,4 +1,4 @@
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo "Andante cantabile"
   \clef treble
@@ -10,9 +10,9 @@
   d,='8(\p\< e f \af 8\! g | a4\mf f') | e8( f g e | f4 d) |
   bes='8(\> d e d) | a( d e \af 8\! d) | a(\p^\tRit d e cis | d=''2) \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef treble
   \key d \minor
@@ -21,4 +21,4 @@
   a=2 | g4( bes) | a( b8 cis) | d2 | d8( f a d) |
   cis=''8( d e cis) | d( c bes a) | g2 | f | e4( a,) | d='2 |
 }
-{% endmacro %}
+{{ end }}
