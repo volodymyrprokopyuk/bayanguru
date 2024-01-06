@@ -63,25 +63,6 @@ books:
       ] }
 
   # All
-  - { id: hual, tit: Угорські народні пісні і танці, sub: для баяна,
-      pieces: [
-        # Class
-        # B1AK1979
-        "1rua", "9htb",
-        # B2AK1979
-        "5qqn",
-        # BTB1978
-        "lz9e"
-      ] }
-  - { id: mdal, tit: Молдавські народні пісні і танці, sub: для баяна,
-      pieces: [
-        # Class
-        # B0DU1982
-        "mhjw",
-        # Tutorial
-        # BTBC1936
-        "epyc"
-      ] }
   - { id: byal, tit: Білоруські народні пісні і танці, sub: для баяна,
       sections: [
       { tit: Готовий баян, pieces: [ # Stradella bass
@@ -104,6 +85,25 @@ books:
         # FBBSC1978
         "bx7x"
       ] } ] }
+  - { id: hual, tit: Угорські народні пісні і танці, sub: для баяна,
+      pieces: [
+        # Class
+        # B1AK1979
+        "1rua", "9htb",
+        # B2AK1979
+        "5qqn",
+        # BTB1978
+        "lz9e"
+      ] }
+  - { id: mdal, tit: Молдавські народні пісні і танці, sub: для баяна,
+      pieces: [
+        # Class
+        # B0DU1982
+        "mhjw",
+        # Tutorial
+        # BTBC1936
+        "epyc"
+      ] }
   - { id: plal, tit: Польські народні пісні і танці, sub: для баяна,
       pieces: [
         # Class
