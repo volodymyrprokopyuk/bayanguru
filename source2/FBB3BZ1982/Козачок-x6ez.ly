@@ -17,8 +17,12 @@
     \rep 2 { r8\p\< a'='8[ \acc { a='16 cis e } \af 8\! a=''8]\sf r | } |
     R2\mf |
     \alternative {
-      \volta 1 { r8 \duo { b'='16 cis d8 d='' | } { g'='8 <fis=' a>8 8 | } }
-      \volta 2 { r8 \duo { b'='16 cis d=''4 | } { g'='8 <fis=' a>4 | } }
+      \volta 1 {
+        r8 \duo { b'='16 cis d8 d='' | } { g'='8 <fis=' a>8 8 | }
+      }
+      \volta 2 {
+        r8 \duo { b'='16 cis d=''4 | } { g'='8 <fis=' a>4 | }
+      }
     }
   }
 

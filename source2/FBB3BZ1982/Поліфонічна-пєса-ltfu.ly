@@ -17,7 +17,7 @@
   \clef treble
   \key d \minor
   \meter 1/2 #'(1)
-  R2 | d'='8(-\frBass e f g | a4 g) | f8(e d c) | bes2 |
+  R2 | d'='8(-\frBass e f g | a4 g) | f8( e d c) | bes2 |
   a=2 | g4( bes) | a( b8 cis) | d2 | d8( f a d) |
   cis=''8( d e cis) | d( c bes a) | g2 | f | e4( a,) | d='2 |
 }

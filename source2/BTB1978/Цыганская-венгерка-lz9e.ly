@@ -1,10 +1,10 @@
 {{ define "t1" }}
-  r8
+  r8 %
   \duo {
     \meter 1/8 1,1,1,1,1,1,1,1
     \set subdivideBeams = ##t
-    {{ .a }}[~ \tuplet 3/2 { {{ .b }} } {{ .c }}]
-  } { \voiceTwo {{ .d }} }
+    {{ .a }}[~ \tuplet 3/2 { {{ .b }} } {{ .c }}] %
+  } { \voiceTwo {{ .d }} } %
 {{ end }}
 
 {{ define "t2" }}
@@ -156,7 +156,7 @@
   g,=,4 gm! a a7! | d dm! bes besM! |
   e=4 e7! a, a7! | d dm! d c= |
 
-  \duo { r4 g@M! r4 bes,7! | } { b,=,2 bes=, | }
+  \duo { r4 g@M! r4 bes7! | } { b,=,2 bes=, | }
   a=,4 d@m! f4 d@m | e'4 e7! a, a7! |
   d=4 dm! d dm | g, gm! bes g@m |
   a=,4 d@m! f4 d@m | a4 a7! cis a@7 | d4 dm! d fis= |

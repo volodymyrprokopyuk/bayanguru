@@ -1,7 +1,7 @@
 {{ define "rh1" }}
   \duo { cis''=''2~\sf | cis | d~\sf | d='' |
   } {
-    cis''=''4.(\< \af 8\! a8 | fis4\> \af 4\1 e=') |
+    cis''=''4.(\< \af 8\! a8 | fis4\> \af 4\! e=') |
     d'=''4.(\< \af 8\! b8 | gis4\> \af 4\! fis=') |
   }
   e='4\mf e | <d fis> <d=' gis> |

@@ -17,10 +17,10 @@
   g=''8\mf e r4 f8 d r4 | f8 d r4 e8 c r4 |
   e=''8\pp c g'[\< e] a f b[ g] | c a d[ \af 8\! b] e d c b='' |
 
-  e='''4.(\mf \startTrillSpan \af 16\stopTrillSpan dis8 e) d c b |
-  e='''4.(\mp \startTrillSpan \af 16\stopTrillSpan dis16[ e] f8) e d c |
+  e='''4.(\mf \startTrillSpan \af 16 \stopTrillSpan dis8 e) d c b |
+  e='''4.(\mp \startTrillSpan \af 16 \stopTrillSpan dis16[ e] f8) e d c |
   d='''8 c bes a g[ f e dis] |
-  \time 6/4 e=''2( \startTrillSpan \acc { dis=''16 e } \af 16\stopTrillSpan %
+  \time 6/4 e=''2( \startTrillSpan \acc { dis=''16 e } \af 16 \stopTrillSpan %
   f=''8[) e\> d c] b a gis \af 8\! f=' |
   \time 4/4 r8 e='8 e' e, r e' e'^\tRit e, |
   r8 \ottava #1 e'=''' e' e, \ottava #0 r e, e' f,='' |
@@ -29,7 +29,7 @@
   g=''8 e g'16( e c g f8) d-. f'16( d b g |
   f=''8) d-. b'16( g f d e8) c-. g'16( e c g |
   a='8) f-. c'16( b a aes g8) e'-. d16( c b a |
-  g='8) d'-. g16( f e d c8[) aes']-. \slashedGrace { b=''8( }
+  g='8) d'-. g16( f e d c8[) aes']-. \slashedGrace { b=''8( } %
   <e,='' c')>8 r \bar "|."
 }
 {{ end }}

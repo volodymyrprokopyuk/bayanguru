@@ -23,7 +23,7 @@
   \clef treble
   \key c \major
   e'='2(-\frBass c4) | e2( c4) | d( c g | c2.) |
-  e='2( f4) | e2( c4) | d( c g | \rep 2 { {{ template "lh1" }} }
+  e='2( f4) | e2( c4) | d( c g | \rep 2 { {{ template "lh1" }} | }
   \clef bass c,=2.) |
 }
 {{ end }}
