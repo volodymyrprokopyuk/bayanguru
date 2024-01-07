@@ -38,9 +38,10 @@ var removeParts = []string{
   ` \\clef (?:treble|bass)`,
   ` \\(?:partial|volta|rep) \d+`,
   ` \\(?:tuplet) \d+/\d+`,
-  ` \\af \d{1,2}\\!`,
+  `\\af \d{1,2}\.{0,2}(?:\\!)?`,
   ` {{ template "[^"]+" [}]{0,2}`,
   ` \\\w+`, // \command
+  `(?:bs|dt) \. `, // command parameters (bs . 2)
 }
 var removeCommand = regexp.MustCompile(strings.Join(removeParts, "|"))
 
@@ -57,7 +58,12 @@ func cleanLines(pieceFile string) ([]Line, error) {
     line := scanner.Text()
     if !excludeLine.MatchString(line) {
       cleanLine := removeCommand.ReplaceAllLiteralString(line, "")
-      lines = append(lines, Line{num, strings.Trim(cleanLine, " ")})
+      cleanLine = strings.Trim(cleanLine, " ")
+      if len(cleanLine) > 0 {
+        line := Line{num, strings.Trim(cleanLine, " ")}
+        lines = append(lines, line)
+        // fmt.Printf("%3v: %v\n", line.Num, line.Text)
+      }
     }
     num++
   }
@@ -75,7 +81,7 @@ var firstNote = regexp.MustCompile(strings.Join(firstParts, "|"))
 var octaveParts = []string{
   `^[a-g](?:es|is){0,2}[,']*=[,']*\d+`, // valid first note
   `^<[a-g](?:es|is){0,2}[,']*=[^>]+>\d+`, // valid first chord
-  `^[a-g](?:es|is){0,2}[+@Mm7d]`, // valid Stradella chord
+  `^[a-g](?:es|is){0,2}[+@Mm7d]`, // valid Stradella chord (no octave check)
 }
 var octaveCheck = regexp.MustCompile(strings.Join(octaveParts, "|"))
 
@@ -93,8 +99,8 @@ func lintFirstNoteOctaveCheck(lines []Line) []Line {
 }
 
 var newParts = []string{
-  "(?:{ |w `)[a-g]\\S*", // first note
-  "(?:{ |w `)<[^>]+>\\S*", // first chord
+  "(?:{ |w `)[a-g]\\S*", // first note in new context
+  "(?:{ |w `)<[^>]+>\\S*", // first chord in new context
 }
 var newContext = regexp.MustCompile(strings.Join(newParts, "|"))
 
@@ -131,10 +137,36 @@ func lintLineEndBarCheck(lines []Line) []Line {
   return errors
 }
 
+var noteParts = []string{
+  `[a-g]\S*`, // first note
+  `<[^>]+>\S*`, // first chord
+}
+var noteChord = regexp.MustCompile(strings.Join(noteParts, "|"))
+var compParts = []string{
+  `(?:^[a-g](?:es|is){0,2}[,']{0,4}=?[,']{0,4}`, // either note
+  `|^<[a-g][^>]+>`, // or chord
+   // or Stradella chord
+  `|^(?:[a-g](?:es|is){0,2}\+)?[a-g](?:es|is){0,2}@?[Mm7d]!?)`,
+  `\d{0,2}\.{0,2}[\[\]]?`, // duration + beaming
+  `(?:[_^]?\\?[()]|[_^]?~){0,2}`, // slurs + ties
+  `(?:-[-.>]){0,2}`, // articulations
+  `(?:\\[ms]?[pf]{1,3})?`, // dynamic
+  `(?:\\[<>])?`, // hairpin
+  `(?:[-^_]\\\w+){0,2}`, // markup
+}
+var noteComponents = regexp.MustCompile(strings.Join(compParts, "") + `$`)
+
 func lintNoteComponentOrder(lines []Line) []Line {
   errors := make([]Line, 0, 50)
   for _, line := range lines {
-    fmt.Printf("%3v: %v\n", line.Num, line.Text)
+    notes := noteChord.FindAllString(line.Text, -1)
+    for _, note := range notes {
+      note = strings.ReplaceAll(note, "`)", "")
+      note = strings.ReplaceAll(note, "`", "")
+      if !noteComponents.MatchString(note) {
+        errors = append(errors, Line{line.Num, note})
+      }
+    }
   }
   return errors
 }
@@ -142,7 +174,7 @@ func lintNoteComponentOrder(lines []Line) []Line {
 func lintDurationAfterBoundChord(lines []Line) []Line {
   errors := make([]Line, 0, 50)
   for _, line := range lines {
-    fmt.Printf("%3v: %v\n", line.Num, line.Text)
+    _ = line
   }
   return errors
 }
@@ -150,7 +182,7 @@ func lintDurationAfterBoundChord(lines []Line) []Line {
 func printErrors(title string, errors []Line) {
   fmt.Println(sty.Com(title))
   for _, error := range errors {
-    fmt.Println(sty.Lvl("%v:", error.Num), sty.Bss(error.Text))
+    fmt.Println(sty.Lvl("%3v:", error.Num), sty.Bss(error.Text))
   }
 }
 
@@ -179,7 +211,7 @@ func lintPiece(piece cat.Piece, sourceDir string) error {
   }
   errors = lintNoteComponentOrder(lines)
   if len(errors) > 0 {
-    printErrors("* Unordered note components", errors)
+    printErrors(`* Unordered note components e.g. c'='4[(-.\mf\<^\tRit`, errors)
     hasErrors = true
   }
   errors = lintDurationAfterBoundChord(lines)
