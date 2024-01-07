@@ -101,14 +101,48 @@ var newContext = regexp.MustCompile(strings.Join(newParts, "|"))
 func lintNewContextOctaveCheck(lines []Line) []Line {
   errors := make([]Line, 0, 50)
   for _, line := range lines {
-    // fmt.Printf("%3v: %v\n", line.Num, line.Text)
     fstNote := newContext.FindString(line.Text)
     if len(fstNote) > 0 {
       if !octaveCheck.MatchString(strings.TrimLeft(fstNote, "{ w`")) {
-        // fmt.Println("    ", sty.Bss(fstNote))
         errors = append(errors, Line{line.Num, fstNote})
       }
     }
+  }
+  return errors
+}
+
+var endParts = []string{
+  ` (?:\||"\|\|"|"\|\.")(?: })?$`, // | or | }
+  ` (?:}}|%)$`, // }} or %
+}
+var barCheck = regexp.MustCompile(strings.Join(endParts, "|"))
+
+func lintLineEndBarCheck(lines []Line) []Line {
+  errors := make([]Line, 0, 50)
+  for _, line := range lines {
+    if !barCheck.MatchString(line.Text) {
+      suffix := 0
+      if len(line.Text) > 4 {
+        suffix = len(line.Text) - 4
+      }
+      errors = append(errors, Line{line.Num, line.Text[suffix:]})
+    }
+  }
+  return errors
+}
+
+func lintNoteComponentOrder(lines []Line) []Line {
+  errors := make([]Line, 0, 50)
+  for _, line := range lines {
+    fmt.Printf("%3v: %v\n", line.Num, line.Text)
+  }
+  return errors
+}
+
+func lintDurationAfterBoundChord(lines []Line) []Line {
+  errors := make([]Line, 0, 50)
+  for _, line := range lines {
+    fmt.Printf("%3v: %v\n", line.Num, line.Text)
   }
   return errors
 }
@@ -136,6 +170,21 @@ func lintPiece(piece cat.Piece, sourceDir string) error {
   errors = lintNewContextOctaveCheck(lines)
   if len(errors) > 0 {
     printErrors("* Missing new context octave check or duration", errors)
+    hasErrors = true
+  }
+  errors = lintLineEndBarCheck(lines)
+  if len(errors) > 0 {
+    printErrors("* Missing line end bar check", errors)
+    hasErrors = true
+  }
+  errors = lintNoteComponentOrder(lines)
+  if len(errors) > 0 {
+    printErrors("* Unordered note components", errors)
+    hasErrors = true
+  }
+  errors = lintDurationAfterBoundChord(lines)
+  if len(errors) > 0 {
+    printErrors("* Missing explicit duration after bound chord", errors)
     hasErrors = true
   }
   if hasErrors {
