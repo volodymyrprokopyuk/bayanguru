@@ -130,7 +130,7 @@ func initPiece(pieces []cat.Piece, sourceDir string) error {
   if err != nil {
     return err
   }
-  fmt.Printf("%v %v\n", sty.ID("init"), sty.Tit(pieceFile))
+  fmt.Printf("%v %v\n", sty.Org("init"), sty.Lvl(pieceFile))
   return nil
 }
 
@@ -160,7 +160,7 @@ func templatePiece(
 
 func engravePiece(piece cat.Piece, pieceScore, pieceDir string) error {
   piecePDF := filepath.Join(pieceDir, piece.File)
-  fmt.Printf("%v %v\n", sty.ID("engrave"), sty.Tit(piecePDF + ".pdf"))
+  fmt.Printf("%v %v\n", sty.Org("engrave"), sty.Lvl(piecePDF + ".pdf"))
   lyCmd := exec.Command(
     "lilypond", "-d", "backend=cairo", "-f", "pdf", "-o", piecePDF, "-s", "-",
   )
@@ -186,21 +186,21 @@ func engravePieces(
         return err
       }
     }
-    _ = tpl
-    // pieceScore, err := templatePiece(tpl, piece, sourceDir)
-    // if err != nil {
-    //   return err
-    // }
-    // err = engravePiece(piece, pieceScore, pieceDir)
-    // if err != nil {
-    //   return err
-    // }
-    // if ec.Optimize {
-    //   err = optimizeScore(pieceDir, piece.File)
-    //   if err != nil {
-    //     return err
-    //   }
-    // }
+    // _ = tpl
+    pieceScore, err := templatePiece(tpl, piece, sourceDir)
+    if err != nil {
+      return err
+    }
+    err = engravePiece(piece, pieceScore, pieceDir)
+    if err != nil {
+      return err
+    }
+    if ec.Optimize {
+      err = optimizeScore(pieceDir, piece.File)
+      if err != nil {
+        return err
+      }
+    }
   }
   return nil
 }

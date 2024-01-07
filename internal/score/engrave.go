@@ -39,7 +39,7 @@ func makeTemplate(sourceDir, targetFile string) (*template.Template, error) {
 
 func optimizeScore(scoreDir, scoreFile string) error {
   scorePDF := filepath.Join(scoreDir, scoreFile + ".pdf")
-  fmt.Printf("%v %v\n", sty.ID("optimize"), sty.Tit(scorePDF))
+  fmt.Printf("%v %v\n", sty.Org("optimize"), sty.Lvl(scorePDF))
   return pdf.OptimizeFile(scorePDF, scorePDF, nil)
 }
 

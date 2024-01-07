@@ -23,20 +23,21 @@ var excludeParts = []string{
   `^ +\\tempo (?:\w+|"[^"]+")$`,
   `^ +\\clef (?:treble|bass)$`,
   `^ +\\key \w+ \\(?:major|minor)$`,
-  `^ +\\time \d/\d$`,
+  `^ +\\time \d+/\d+$`,
   `^ +\\repeat (?:volta|segno) \d {$|^ +}$`,
   `^ +\\alternative {$`,
   `^ +\\volta \d {$|^ +\\volta \d$`,
-  `^ +\\meter \d/\d .+$`,
+  `^ +\\meter \d+/\d+ .+$`,
   `^ +\\(?:duo|trio) {$|^ +} {$`,
-  `^ +\\set .+$`,
+  `^ +\\(?:set|override) .+$`,
   `^ +\\\w+$`, // \command
   `^$`, // empty line
 }
 var excludeLine = regexp.MustCompile(strings.Join(excludeParts, "|"))
 var removeParts = []string{
   ` \\clef (?:treble|bass)`,
-  ` \\(?:volta|rep) \d{1,2}`,
+  ` \\(?:partial|volta|rep) \d+`,
+  ` \\(?:tuplet) \d+/\d+`,
   ` \\af \d{1,2}\\!`,
   ` {{ template "[^"]+" [}]{0,2}`,
   ` \\\w+`, // \command
@@ -81,13 +82,31 @@ var octaveCheck = regexp.MustCompile(strings.Join(octaveParts, "|"))
 func lintFirstNoteOctaveCheck(lines []Line) []Line {
   errors := make([]Line, 0, 50)
   for _, line := range lines {
-    // fmt.Printf("%3v: %v\n", line.Num, line.Text)
     fstNote := firstNote.FindString(line.Text)
     if len(fstNote) > 0 {
-      // fmt.Println("    ", sty.Lvl(fstNote))
       if !octaveCheck.MatchString(fstNote) {
         errors = append(errors, Line{line.Num, fstNote})
+      }
+    }
+  }
+  return errors
+}
+
+var newParts = []string{
+  "(?:{ |w `)[a-g]\\S*", // first note
+  "(?:{ |w `)<[^>]+>\\S*", // first chord
+}
+var newContext = regexp.MustCompile(strings.Join(newParts, "|"))
+
+func lintNewContextOctaveCheck(lines []Line) []Line {
+  errors := make([]Line, 0, 50)
+  for _, line := range lines {
+    // fmt.Printf("%3v: %v\n", line.Num, line.Text)
+    fstNote := newContext.FindString(line.Text)
+    if len(fstNote) > 0 {
+      if !octaveCheck.MatchString(strings.TrimLeft(fstNote, "{ w`")) {
         // fmt.Println("    ", sty.Bss(fstNote))
+        errors = append(errors, Line{line.Num, fstNote})
       }
     }
   }
@@ -95,7 +114,7 @@ func lintFirstNoteOctaveCheck(lines []Line) []Line {
 }
 
 func printErrors(title string, errors []Line) {
-  fmt.Println(sty.Com("* Missing first note octave check or duration"))
+  fmt.Println(sty.Com(title))
   for _, error := range errors {
     fmt.Println(sty.Lvl("%v:", error.Num), sty.Bss(error.Text))
   }
@@ -103,7 +122,7 @@ func printErrors(title string, errors []Line) {
 
 func lintPiece(piece cat.Piece, sourceDir string) error {
   pieceFile := filepath.Join(sourceDir, piece.Src, piece.File + ".ly")
-  fmt.Printf("%v %v\n", sty.ID("lint"), sty.Tit(pieceFile))
+  fmt.Printf("%v %v\n", sty.Org("lint"), sty.Lvl(pieceFile))
   lines, err := cleanLines(pieceFile)
   if err != nil {
     return err
@@ -111,7 +130,12 @@ func lintPiece(piece cat.Piece, sourceDir string) error {
   hasErrors := false
   errors := lintFirstNoteOctaveCheck(lines)
   if len(errors) > 0 {
-    printErrors("Missing first note octave check or duration", errors)
+    printErrors("* Missing first note octave check or duration", errors)
+    hasErrors = true
+  }
+  errors = lintNewContextOctaveCheck(lines)
+  if len(errors) > 0 {
+    printErrors("* Missing new context octave check or duration", errors)
     hasErrors = true
   }
   if hasErrors {
