@@ -53,6 +53,6 @@
   e=,4 c@7! c74 | f fM! fM | c' c7! c7 | f,=, f+fM! r |
 
   f=,4 fM! fM | f fM fM | c' c7! c7 | c c7 c7 |
-  f,=,4 fM! fM | a f@M! bes@M!4 | c cM! c7! | f,=, f+fM! r |
+  f,=,4 fM! fM | a f@M! bes@M!4 | c4 cM! c7! | f,=, f+fM! r |
 }
 {{ end }}
