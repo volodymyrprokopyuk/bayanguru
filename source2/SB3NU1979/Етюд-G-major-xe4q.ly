@@ -29,9 +29,12 @@
 {% endmacro %}
 
 {% macro t1(a, b) %}
-  \tuplet 3/2 { \set stemRightBeamCount = #2 {{ a }} %
-  \set stemLeftBeamCount = #1 \set stemRightBeamCount = #1 r16 %
-  \set stemLeftBeamCount = #2 {{ b }} }
+  \tuplet 3/2 {
+    \set stemRightBeamCount = #2 {{ a }}
+    \set stemLeftBeamCount = #1
+    \set stemRightBeamCount = #1 r16
+    \set stemLeftBeamCount = #2 {{ b }}
+  }
 {% endmacro %}
 
 {% macro rightHand() %}
