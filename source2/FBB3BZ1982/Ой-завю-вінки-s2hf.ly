@@ -10,7 +10,8 @@
   \key fis \minor
   \time 3/4
   \meter 1/4 1,1,1
-  {{ template "rh1" (w `a'='4(\p` `b`) }} {{ template "rh1" (w `a='4(` `<gis b>`) }}
+  {{ template "rh1" (w `a'='4(\p` `b`) }}
+  {{ template "rh1" (w `a='4(` `<gis b>`) }}
   a='4(\mp cis8 d <cis e>4) | b8( cis <b d>4 b) |
   a='8( a a b <a cis>4) | gis8( a <gis b>4 gis) |
   fis='4(\p fis8 gis a fis) | eis( fis gis4 cis,) |

@@ -27,7 +27,8 @@
     {{ template "rh1" (w `c=''8-.`) }} | f-. a-. f='-.-> r \fine \bar "||"
 
     \volta 2
-    {{ template "rh2" }} | c( a g) r | {{ template "rh2" }} | c-. c-. c=''-. r \bar "||"
+    {{ template "rh2" }} | c( a g) r | {{ template "rh2" }} |
+    c=''8-. c-. c=''-. r \bar "||"
   }
 }
 {{ end }}

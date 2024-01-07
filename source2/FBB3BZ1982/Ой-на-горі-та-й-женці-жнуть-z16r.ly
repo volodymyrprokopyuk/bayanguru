@@ -29,7 +29,8 @@
   \clef bass
   \key d \minor
   \meter 1/2 #'(1)
-  R2 | {{ template "lh1" (w `d'='4\(-\frBass`) }} {{ template "lh1" (w `d'='4\(`) }}
+  R2 | {{ template "lh1" (w `d'='4\(-\frBass`) }}
+  {{ template "lh1" (w `d'='4\(`) }}
   f=8 f f a | bes4. bes8 | a( g f e | d e f4 | d2) |
   bes'=2 | a8( g f g | a2) | a4 bes | a8( g f e | d e f a | d,=2) |
 }

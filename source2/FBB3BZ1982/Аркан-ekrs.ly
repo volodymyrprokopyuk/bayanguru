@@ -29,8 +29,11 @@
   e,=8 r d'(-> cis | c4) <e,= b'> |
   \clef treble <c'=' a'>8 e f4 | <c a'>8 e fis4 |
   e='8-. r f4( | e8)-. r fis4( | e8)-. r g4( | fis8 f) <a,= e'>4 |
-  \clef bass {{ template "lh1" (w `e=16-.` `c4--`) }} {{ template "lh1" (w `e,=16-.` `cis4--`) }}
-  {{ template "lh1" (w `e,=16-.` `d4--`) }} {{ template "lh1" (w `e,=16-.` `cis4--`) }}
+  \clef bass
+  {{ template "lh1" (w `e=16-.` `c4--`) }}
+  {{ template "lh1" (w `e,=16-.` `cis4--`) }}
+  {{ template "lh1" (w `e,=16-.` `d4--`) }}
+  {{ template "lh1" (w `e,=16-.` `cis4--`) }}
   {{ template "lh1" (w `e,=16-.` `d8(-> cis`) }} | c4) <e,= b'> |
 }
 {{ end }}
