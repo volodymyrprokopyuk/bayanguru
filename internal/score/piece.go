@@ -186,7 +186,6 @@ func engravePieces(
         return err
       }
     }
-    // _ = tpl
     pieceScore, err := templatePiece(tpl, piece, sourceDir)
     if err != nil {
       return err

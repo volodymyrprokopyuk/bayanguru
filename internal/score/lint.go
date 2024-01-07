@@ -171,10 +171,25 @@ func lintNoteComponentOrder(lines []Line) []Line {
   return errors
 }
 
+var boundChord = regexp.MustCompile(`@[Mm7d]\S+ `)
+var durationParts = []string{
+  `^\S+[123468]`, // next note with duration
+  `^\.[a-g]`, // {{ .a }}
+}
+var noteDuration = regexp.MustCompile(strings.Join(durationParts, "|"))
+
 func lintDurationAfterBoundChord(lines []Line) []Line {
   errors := make([]Line, 0, 50)
   for _, line := range lines {
-    _ = line
+    chords := boundChord.FindAllStringIndex(line.Text, -1)
+    for _, idx := range chords {
+      chord := line.Text[idx[0]:idx[1]]
+      nextNote := line.Text[idx[1]:]
+      nextNote = strings.TrimLeft(nextNote, " {|}")
+      if len(nextNote) > 0 && !noteDuration.MatchString(nextNote) {
+        errors = append(errors, Line{line.Num, chord})
+      }
+    }
   }
   return errors
 }
