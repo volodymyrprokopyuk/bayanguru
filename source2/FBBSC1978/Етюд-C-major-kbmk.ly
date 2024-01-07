@@ -14,6 +14,6 @@
   \clef bass
   \clef treble
   \key c \major
-  c'='2(-\frBass g' | e g) | \rep 2 { c,='( g' | e g=') | } c,( g' | e c=') |
+  c'='2(-\frBass g' | e g) | \rep 2 { c,='2( g' | e g=') | } c,( g' | e c=') |
 }
 {{ end }}

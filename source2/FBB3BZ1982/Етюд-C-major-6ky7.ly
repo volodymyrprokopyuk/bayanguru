@@ -10,8 +10,9 @@
   \time 4/4
   \meter 1/4 1,1,1,1
   \repeat volta 2 {
-    r8\mf g'='8 \rep 3 { <c='' e g>( g=') } | r8 g \rep 3 { <c='' e g>( g=') } |
-    <d'='' f>8( <c e>) \rep 3 { <b=' d>( <a=' c>) } | <c='' e g>2~ 2 |
+    r8\mf g'='8 \rep 3 { <c='' e g>8( g=') } |
+    r8 g='8 \rep 3 { <c='' e g>8( g=') } |
+    <d'='' f>8( <c e>) \rep 3 { <b=' d>8( <a=' c>) } | <c='' e g>2~ 2 |
   }
 
   \repeat volta 2 {
@@ -30,14 +31,14 @@
   \clef bass
   \key c \major
   \meter 1/4 1,1,1,1
-  <g= c e>8-\frBass \rep 15 { <g= c e> } |
+  <g= c e>8-\frBass \rep 15 { <g= c e>8 } |
   \rep 4 { <f= a d>8 } \rep 4 { <g= b d> } |
   \rep 2 { c,=8 \rep 3 { <g'= c e> } } |
 
   \rep 4 { <e= a c>8 } <f a d>-- r r4 |
   \rep 4 { <g= b d>8 } <g c e>-- r r4 |
   \rep 4 { <e= a c>8 } <f a d>-- r r4 |
-  <g= b d>8-- r r8 8 \rep 4 { <g c e> } |
+  <g= b d>8-- r r8 8 \rep 4 { <g= c e>8 } |
   <g= b d>8 r r8 8 <g= c e>4-- r |
 }
 {{ end }}

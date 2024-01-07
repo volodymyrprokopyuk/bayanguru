@@ -14,6 +14,6 @@
 \relative {
   \clef treble
   \key f \major
-  f'='1(-\frBass | c | f) | f( | c | f) | \rep 2 { bes,=( | c | f=') | }
+  f'='1(-\frBass | c | f) | f( | c | f) | \rep 2 { bes,=1( | c | f=') | }
 }
 {{ end }}

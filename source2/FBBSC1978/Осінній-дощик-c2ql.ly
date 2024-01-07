@@ -18,7 +18,7 @@
 \relative {
   \clef treble
   \key d \minor
-  f'='8-.-\frBass d-. \rep 3 { f='-. d='-. } | e_\aSim cis e cis | f d f d |
+  f'='8-.-\frBass d-. \rep 3 { f='8-. d='-. } | e_\aSim cis e cis | f d f d |
   \clef bass cis='8 a cis a | d( cis c bes) | a r a4~ | a= r |
   \clef treble bes''=''8-. f-. ais-. f-. | r f( bes,='4)-- |
 }
