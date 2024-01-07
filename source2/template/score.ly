@@ -2,7 +2,17 @@
 
 #(ly:set-option 'warning-as-error #t)
 
-bayanUrl = "https://volodymyrprokopyuk.github.io/bayan"
+% Logo
+bayanURL = "https://volodymyrprokopyuk.github.io/bayan"
+bayanLogo = \markup {
+  \serif \bold \concat {
+    \magnify #0.75 \musicglyph "clefs.G"
+    \magnify #1.25 {
+      \rotate #30 Б \lower #0.4 а \raise #0.4 я \rotate #-30 Н
+    }
+  }
+}
+logoURL = \markup { \bayanLogo \with-url \bayanURL \bayanURL }
 
 % Bass
 stBass = \markup \larger \box Г % Готовий бас = standard (Stradella) bass
