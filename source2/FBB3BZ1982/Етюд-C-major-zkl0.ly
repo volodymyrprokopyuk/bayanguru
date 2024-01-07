@@ -16,7 +16,8 @@
   \meter 1/2 #'(1)
   <e''='' c'>8[\mf r8 8] r | <d b'>[ r8 8] r | <e c'>2 | <e g> |
   <c='' a'>8[ r8 8] r | <b gis'>[ r8 8] r | <c a'>2 | <c e> |
-  <a=' f'>8[\f r8 8] r | <g e'>2 | <aes f'>8[\p r8 8] r | <g e'>2 | {{ template "rh1" }}
+  <a=' f'>8[\f r8 8] r | <g e'>2 | <aes f'>8[\p r8 8] r | <g e'>2 |
+  {{ template "rh1" }}
   <a=' f'>8(\mf <g e'> <f d'> <e c'> | <d b'> <c a'> <b g'> <a f'> |
   <gis= e'>2) | <d'=' f>4 r |
 

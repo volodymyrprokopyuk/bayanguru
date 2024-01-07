@@ -29,7 +29,8 @@
   g=''8 e g'16( e c g f8) d-. f'16( d b g |
   f=''8) d-. b'16( g f d e8) c-. g'16( e c g |
   a='8) f-. c'16( b a aes g8) e'-. d16( c b a |
-  g='8) d'-. g16( f e d c8[) aes']-. \slashedGrace { b=''8( } <e,='' c') > r \bar "|."
+  g='8) d'-. g16( f e d c8[) aes']-. \slashedGrace { b=''8( }
+  <e,='' c')>8 r \bar "|."
 }
 {{ end }}
 
