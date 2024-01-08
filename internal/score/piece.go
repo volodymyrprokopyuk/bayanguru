@@ -148,10 +148,9 @@ func templatePiece(
     return "", err
   }
   lyNotation := stradella(stNotation.String())
+  stPiece := struct{ cat.Piece; StradellaLeftHand string}{piece, lyNotation}
   var score strings.Builder
-  err = tpl.Execute(
-    &score, struct{ cat.Piece; StradellaLeftHand string}{piece, lyNotation},
-  )
+  err = tpl.ExecuteTemplate(&score, "score.ly", stPiece)
   if err != nil {
     return "", err
   }

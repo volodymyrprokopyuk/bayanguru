@@ -1,6 +1,7 @@
 % === Template util ===
 
 {% macro logo(scale = 1) %}
+  % DONE
   \serif \bold \concat {
     \magnify #{{ 1.5 * scale }} \musicglyph "clefs.G"
     \magnify #{{ 2.5 * scale }} {
@@ -13,6 +14,7 @@
 {% endmacro %}
 
 {% macro prelude() %}
+  % DONE
   \version "2.25.11"
   bayanUrl = "https://volodymyrprokopyuk.github.io/bayan"
   stBass = \markup \larger \box Г % Готовий бас = standard (Stradella) bass
@@ -114,6 +116,7 @@
                     `((,ax . ,ay) (,bx . ,by) (,cx . ,cy) (,dx . ,dy))
                  )))))
       (tweak 'control-points pts mus)))
+  % TODO
   barFermata = \mark \markup \musicglyph #"scripts.ufermata"
   #(define-markup-command (uTurn layout props up) (markup?)
     (interpret-markup layout props
@@ -174,6 +177,7 @@
 {% endmacro %}
 
 {% macro scoreConfig() %}
+  % DONE
   \context {
     \Score
     \omit BarNumber
@@ -182,6 +186,7 @@
 {% endmacro %}
 
 {% macro voiceConfig() %}
+  % DONE
   \context {
     \Voice
     \override TupletBracket.span-all-note-heads = ##t
@@ -199,6 +204,7 @@
 % === Piece util ===
 
 {% macro pieceMeta(piece) %}
+  % DONE
   \markup \line {
     \caps id: {{ piece.id }}, \caps org: {{ piece.org }},
     \caps sty: {{ piece.sty }}, \caps gnr: {{ piece.gnr }},
@@ -210,6 +216,7 @@
 {% endmacro %}
 
 {% macro pieceTitle(piece, args) %}
+  % DONE
   \header {
     title = "{{ piece.tit }}"
     subtitle = "{{ piece.sub or '' }}"
@@ -226,6 +233,7 @@
 {% endmacro %}
 
 {% macro pieceTitleMarkup() %}
+  % DONE
   scoreTitleMarkup = \markup \column {
     \fill-line { \fontsize #4 \bold \fromproperty #'header:title }
     \vspace #0.2
@@ -241,6 +249,7 @@
 {% endmacro %}
 
 {% macro pieceScore(piece, args) %}
+  % DONE
   \score {
     {{ pieceTitle(piece, args) }}
     {% set source = piece.src + "/" + piece.file + ".lys" %}

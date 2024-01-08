@@ -2,6 +2,7 @@ package score
 
 import (
   "fmt"
+  "strings"
   "text/template"
   "path/filepath"
   pdf "github.com/pdfcpu/pdfcpu/pkg/api"
@@ -27,13 +28,19 @@ func templateArgs(args ...string) map[string]string {
 }
 
 func makeTemplate(sourceDir, targetFile string) (*template.Template, error) {
+  tpl := template.New("score")
+  tpl.Funcs(template.FuncMap{
+    "w": templateArgs,
+    "join": func(sep string, slc []string) string {
+      return strings.Join(slc, sep)
+    },
+  })
   scoreFile := filepath.Join(sourceDir, "template", "score.ly")
   targetFile = filepath.Join(sourceDir, "template", targetFile)
-  tpl, err := template.ParseFiles(scoreFile, targetFile)
+  _, err := tpl.ParseFiles(scoreFile, targetFile)
   if err != nil {
     return nil, err
   }
-  tpl.Funcs(template.FuncMap{"w": templateArgs})
   return tpl, nil
 }
 

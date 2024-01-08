@@ -32,9 +32,9 @@ var meta = map[string]string{
   "svkfs": "Словацька народна пісня",
   "svkfd": "Словацький народний танець",
   // Piece arrangment type (art)
-  "arr": "Обр.", // обробка = arrangment (default)
-  "ipr": "Пер.", // переклад = interpratation
-  "hrm": "Гарм.", // гармонізація = harmonization
+  "arr": "Обр. ", // обробка = arrangment (default)
+  "ipr": "Пер. ", // переклад = interpratation
+  "hrm": "Гарм. ", // гармонізація = harmonization
 }
 
 type StrSlice []string
