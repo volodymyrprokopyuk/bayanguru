@@ -43,7 +43,7 @@ func makeRange(start, end int) []int {
   return slc
 }
 
-func orderPieces(pieceLen int, random bool) []int {
+func arrangePieces(pieceLen int, random bool) []int {
   idx := makeRange(0, pieceLen)
   if random {
     rand.Shuffle(pieceLen, func (i, j int) { idx[i], idx[j] = idx[j], idx[i] })
@@ -112,7 +112,7 @@ func Play(pc PlayCommand) error {
     }
   }
   PrintStat(catLen, len(pieces))
-  indices := orderPieces(len(pieces), pc.Random)
+  indices := arrangePieces(len(pieces), pc.Random)
   for _, i := range indices {
     piece := pieces[i]
     PrintPiece(piece)

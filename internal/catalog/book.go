@@ -107,6 +107,26 @@ func addPiecesToBooks(rawBooks []RawBook, pieceMap PieceMap) ([]Book, error) {
   return books, nil
 }
 
+func SectionPieces(book Book) (next func() bool, value func() *Piece) {
+  i, j := 0, 0
+  next = func() bool { // check for the next iterator value
+    return i < len(book.Sections) && j < len(book.Sections[i].Pieces)
+  }
+  value = func() *Piece { // return a current iterator value
+    if !next() {
+      panic("out of bound Section Piece")
+    }
+    piece := &book.Sections[i].Pieces[j]
+    switch {
+    case j < len(book.Sections[i].Pieces) - 1: j++
+    case i < len(book.Sections): i++; j = 0
+    default: i++
+    }
+    return piece
+  }
+  return next, value
+}
+
 func readBooks(
   bookDir, bookFile string, bookIDs []string, all bool, pieceMap PieceMap,
 ) ([]Book, error) {

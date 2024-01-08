@@ -49,7 +49,7 @@ func (ss *StrSlice) UnmarshalYAML(node *yaml.Node) error {
     if err != nil {
       return err
     }
-    *ss = []string{str} // convert a single string to a string slice
+    *ss = []string{str} // convert a single string into a string slice
     return nil
   }
   *ss = slc // return a string slice

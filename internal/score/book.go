@@ -1,36 +1,32 @@
 package score
 
 import (
-  // "fmt"
+  "fmt"
   "strings"
   "text/template"
   "path/filepath"
   cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
-  "github.com/sanity-io/litter"
+  // "github.com/sanity-io/litter"
 )
 
-func bookPieces(book *cat.Book) []*cat.Piece {
+func bookPieces(book cat.Book) []*cat.Piece {
   pieces := make([]*cat.Piece, 0, 200)
   if len(book.Sections) > 0 {
-    for i := range book.Sections {
-      sec := &book.Sections[i]
-      for j := range sec.Pieces {
-        piece := &sec.Pieces[j]
-        pieces = append(pieces, piece)
-      }
+    nextPiece, piece := cat.SectionPieces(book)
+    for nextPiece() {
+      pieces = append(pieces, piece())
     }
   } else {
     for i := range book.Pieces {
-      piece := &book.Pieces[i]
-      pieces = append(pieces, piece)
+      pieces = append(pieces, &book.Pieces[i])
     }
   }
   return pieces
 }
 
-func lintPieces(pieces []*cat.Piece, sourceDir string) error {
+func lintPieces(pieces []cat.Piece, sourceDir string) error {
   for _, piece := range pieces {
-    err := lintPiece(*piece, sourceDir)
+    err := lintPiece(piece, sourceDir)
     if err != nil {
       return err
     }
@@ -48,21 +44,27 @@ func templatePieces(
     if err != nil {
       return err
     }
-    var scoreHand strings.Builder
-    err = tpl.ExecuteTemplate(&scoreHand, "rightHand", *piece)
+    var rightHand strings.Builder
+    err = tpl.ExecuteTemplate(&rightHand, "rightHand", *piece)
     if err != nil {
       return err
     }
-    piece.RightHand = scoreHand.String()
-    scoreHand.Reset()
-    err = tpl.ExecuteTemplate(&scoreHand, "leftHand", *piece)
+    piece.RightHand = rightHand.String()
+    var leftHand strings.Builder
+    err = tpl.ExecuteTemplate(&leftHand, "leftHand", *piece)
     if err != nil {
       return err
     }
-    piece.LeftHand = stradella(scoreHand.String())
+    piece.LeftHand = stradella(leftHand.String())
   }
   return nil
 }
+
+// func templateBook(
+//   tpl *template.Template, book cat.Book, sourceDir string,
+// ) (string, error) {
+//   bookFile := filepath.Join()
+// }
 
 func engraveBooks(
   books []cat.Book, sourceDir, bookDir string, ec EngraveCommand,
@@ -73,18 +75,34 @@ func engraveBooks(
   }
   for _, book := range books {
     cat.PrintBook(book)
-    pieces := bookPieces(&book)
     if ec.Lint {
-      err := lintPieces(pieces, sourceDir)
+      err := lintPieces(book.Pieces, sourceDir)
       if err != nil {
         return err
       }
     }
+    pieces := bookPieces(book)
     err = templatePieces(tpl, pieces, sourceDir, ec.Meta)
     if err != nil {
       return err
     }
-    litter.Dump(book)
+    var bookScore strings.Builder
+    err = tpl.ExecuteTemplate(&bookScore, "score.ly", book)
+    if err != nil {
+      return err
+    }
+    err = engraveScore(bookScore.String(), book.File, bookDir)
+    if err != nil {
+      return err
+    }
+    if ec.Optimize {
+      err = optimizeScore(book.File, bookDir)
+      if err != nil {
+        return err
+      }
+    }
+    fmt.Println(bookScore.String())
+    // litter.Dump(book)
   }
   return nil
 }

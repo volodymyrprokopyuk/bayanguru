@@ -8,7 +8,6 @@ import (
   "io"
   "path/filepath"
   "os"
-  "os/exec"
   sty "github.com/volodymyrprokopyuk/bayan/internal/style"
   cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
 )
@@ -156,18 +155,6 @@ func templatePiece(
   return score.String(), nil
 }
 
-func engravePiece(piece cat.Piece, pieceScore, pieceDir string) error {
-  piecePDF := filepath.Join(pieceDir, piece.File)
-  fmt.Printf("%v %v\n", sty.Org("engrave"), sty.Lvl(piecePDF + ".pdf"))
-  lyCmd := exec.Command(
-    "lilypond", "-d", "backend=cairo", "-f", "pdf", "-o", piecePDF, "-s", "-",
-  )
-  lyCmd.Stdin = strings.NewReader(pieceScore)
-  lyCmd.Stdout = os.Stdout
-  lyCmd.Stderr = os.Stderr
-  return lyCmd.Run()
-}
-
 func engravePieces(
   pieces []cat.Piece, sourceDir, pieceDir string, ec EngraveCommand,
 ) error {
@@ -188,12 +175,12 @@ func engravePieces(
     if err != nil {
       return err
     }
-    err = engravePiece(piece, pieceScore, pieceDir)
+    err = engraveScore(pieceScore, piece.File, pieceDir)
     if err != nil {
       return err
     }
     if ec.Optimize {
-      err = optimizeScore(pieceDir, piece.File)
+      err = optimizeScore(piece.File, pieceDir)
       if err != nil {
         return err
       }

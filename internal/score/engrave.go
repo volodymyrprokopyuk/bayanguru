@@ -5,6 +5,8 @@ import (
   "strings"
   "text/template"
   "path/filepath"
+  "os"
+  "os/exec"
   pdf "github.com/pdfcpu/pdfcpu/pkg/api"
   sty "github.com/volodymyrprokopyuk/bayan/internal/style"
   cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
@@ -44,7 +46,19 @@ func makeTemplate(sourceDir, targetFile string) (*template.Template, error) {
   return tpl, nil
 }
 
-func optimizeScore(scoreDir, scoreFile string) error {
+func engraveScore(score, scoreFile, scoreDir string) error {
+  scorePDF := filepath.Join(scoreDir, scoreFile)
+  fmt.Printf("%v %v\n", sty.Org("engrave"), sty.Lvl(scorePDF + ".pdf"))
+  lyCmd := exec.Command(
+    "lilypond", "-d", "backend=cairo", "-f", "pdf", "-o", scorePDF, "-s", "-",
+  )
+  lyCmd.Stdin = strings.NewReader(score)
+  lyCmd.Stdout = os.Stdout
+  lyCmd.Stderr = os.Stderr
+  return lyCmd.Run()
+}
+
+func optimizeScore(scoreFile, scoreDir  string) error {
   scorePDF := filepath.Join(scoreDir, scoreFile + ".pdf")
   fmt.Printf("%v %v\n", sty.Org("optimize"), sty.Lvl(scorePDF))
   return pdf.OptimizeFile(scorePDF, scorePDF, nil)
