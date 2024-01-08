@@ -1,5 +1,17 @@
 {{ define "piece" }}
 
+\header {
+  pdftitle = "{{ .Tit }}"
+  {{ if and .Com .Arr }}
+    pdfauthor = "{{ .Com }} {{ .Art }}{{ .Arr }}"
+  {{ else if .Arr }}
+    pdfauthor = "{{ .Art }}{{ .Arr }}"
+  {{ else }}
+    pdfauthor = "{{ .Com }}"
+  {{ end }}
+  pdfsubject = \bayanURL
+}
+
 \paper {
   oddHeaderMarkup = \markup \null
   evenHeaderMarkup = \markup \null
