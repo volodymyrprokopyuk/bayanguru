@@ -32,6 +32,7 @@ type Book struct {
   Sub string
   Pieces []Piece
   Sections []Section
+  File string
 }
 
 func readBookFile(bookDir, bookFile string) ([]RawBook, error) {
@@ -69,6 +70,7 @@ func addPiecesToBooks(rawBooks []RawBook, pieceMap PieceMap) ([]Book, error) {
   books := make([]Book, 0, 50)
   for _, rawBook := range rawBooks {
     book := Book{ID: rawBook.ID, Tit: rawBook.Tit, Sub: rawBook.Sub}
+    book.File = scoreFile(book.Tit, book.ID)
     book.Pieces = make([]Piece, 0, 200)
     if len(rawBook.Sections) > 0 { // book with sections
       book.Sections = make([]Section, 0, 10)

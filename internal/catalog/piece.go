@@ -193,7 +193,6 @@ func readCatalogFile(catDir, catFile string) ([]Piece, error) {
 }
 
 func addMetaToPieces(pieces []Piece) {
-  cleanTit := regexp.MustCompile(`[',\.!\?]`)
   for i := range pieces {
     piece := &pieces[i]
     // sub
@@ -209,10 +208,7 @@ func addMetaToPieces(pieces []Piece) {
       }
     }
     // file
-    tit := strings.ReplaceAll(
-      cleanTit.ReplaceAllLiteralString(piece.Tit, ""), " ", "-",
-    )
-    piece.File = fmt.Sprintf("%v-%v", tit, piece.ID)
+    piece.File = scoreFile(piece.Tit, piece.ID)
   }
 }
 

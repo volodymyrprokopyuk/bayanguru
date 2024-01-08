@@ -5,7 +5,6 @@ import (
   "strings"
   "text/template"
   "path/filepath"
-  // sty "github.com/volodymyrprokopyuk/bayan/internal/style"
   cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
   "github.com/sanity-io/litter"
 )
@@ -27,6 +26,16 @@ func bookPieces(book *cat.Book) []*cat.Piece {
     }
   }
   return pieces
+}
+
+func lintPieces(pieces []*cat.Piece, sourceDir string) error {
+  for _, piece := range pieces {
+    err := lintPiece(*piece, sourceDir)
+    if err != nil {
+      return err
+    }
+  }
+  return nil
 }
 
 func templatePieces(
@@ -65,6 +74,12 @@ func engraveBooks(
   for _, book := range books {
     cat.PrintBook(book)
     pieces := bookPieces(&book)
+    if ec.Lint {
+      err := lintPieces(pieces, sourceDir)
+      if err != nil {
+        return err
+      }
+    }
     err = templatePieces(tpl, pieces, sourceDir, ec.Meta)
     if err != nil {
       return err

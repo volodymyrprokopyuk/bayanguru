@@ -2,6 +2,8 @@ package catalog
 
 import (
   "fmt"
+  "strings"
+  "regexp"
   "math/rand"
   "path/filepath"
   "os/exec"
@@ -16,6 +18,13 @@ type PlayCommand struct {
   Random, List bool
   Pieces, Books []string
   Queries PieceQueries
+}
+
+var cleanTit = regexp.MustCompile(`[',\.!\?]`)
+
+func scoreFile(tit, ID string) string {
+  tit = strings.ReplaceAll(cleanTit.ReplaceAllLiteralString(tit, ""), " ", "-")
+  return fmt.Sprintf("%v-%v", tit, ID)
 }
 
 func PrintStat(catalog, selected int) {
