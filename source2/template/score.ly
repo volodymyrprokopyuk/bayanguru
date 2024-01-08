@@ -125,6 +125,18 @@ sSlur = #(define-music-function (dir prs mus) (symbol? alist? ly:music?)
                )))))
     (tweak 'control-points pts mus)))
 
+\paper {
+  indent = 8
+  % top-margin = 8
+  % bottom-margin = 8
+  % left-margin = 12
+  % right-margin = 12
+  two-sided = ##t
+  inner-margin = 12
+  outer-margin = 12
+  binding-offset = 6
+}
+
 \layout {
   \context {
     \Score
