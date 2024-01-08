@@ -5,6 +5,7 @@ import (
   "path/filepath"
   "os"
   "gopkg.in/yaml.v3"
+  sty "github.com/volodymyrprokopyuk/bayan/internal/style"
 )
 
 type RawSection struct {
@@ -122,4 +123,12 @@ func readBooks(
     return nil, err
   }
   return books, nil
+}
+
+func PrintBook(book Book) {
+  fmt.Printf(
+    "%v %v %v\n",
+    sty.ID(book.ID), sty.Tit(book.Tit),
+    sty.Com("%v pieces", len(book.Pieces)),
+  )
 }

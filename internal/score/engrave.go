@@ -78,7 +78,7 @@ func Engrave (ec EngraveCommand) error {
     if ec.Piece {
       goto pieces
     }
-    err := engraveBooks(books, pieces, "source2", "books", ec)
+    err := engraveBooks(books, "source2", "books", ec)
     if err != nil {
       return scoreError("%v", err)
     }

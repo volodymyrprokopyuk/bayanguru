@@ -142,15 +142,14 @@ func templatePiece(
   if err != nil {
     return "", err
   }
-  var stNotation strings.Builder
-  err = tpl.ExecuteTemplate(&stNotation, "leftHand", nil)
+  var leftHand strings.Builder
+  err = tpl.ExecuteTemplate(&leftHand, "leftHand", nil)
   if err != nil {
     return "", err
   }
-  lyNotation := stradella(stNotation.String())
-  stPiece := struct{ cat.Piece; StradellaLeftHand string}{piece, lyNotation}
+  piece.LeftHand = stradella(leftHand.String())
   var score strings.Builder
-  err = tpl.ExecuteTemplate(&score, "score.ly", stPiece)
+  err = tpl.ExecuteTemplate(&score, "score.ly", piece)
   if err != nil {
     return "", err
   }
@@ -177,8 +176,8 @@ func engravePieces(
     return err
   }
   for _, piece := range pieces {
-    piece.Meta = ec.Meta
     cat.PrintPiece(piece)
+    piece.Meta = ec.Meta
     if ec.Lint {
       err := lintPiece(piece, sourceDir)
       if err != nil {

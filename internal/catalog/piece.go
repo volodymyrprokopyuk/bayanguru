@@ -7,6 +7,7 @@ import (
   "path/filepath"
   "os"
   "gopkg.in/yaml.v3"
+  sty "github.com/volodymyrprokopyuk/bayan/internal/style"
 )
 
 var meta = map[string]string{
@@ -72,6 +73,7 @@ type Piece struct {
   Lvl string `yaml:"lvl"`
   File string
   Meta bool
+  RightHand, LeftHand string
 }
 
 type PieceMap map[string]Piece
@@ -247,4 +249,32 @@ func queryPieces(pieces []Piece, queries PieceQueries) ([]Piece, error) {
     }
   }
   return selPieces, nil
+}
+
+func PrintPiece(piece Piece) {
+  bassType := func(bss []string) string {
+    for _, b := range bss {
+      switch b {
+      case "stb", "pub", "frb": return b
+      }
+    }
+    return "unk"
+  }
+  tit := piece.Tit
+  com := fmt.Sprintf("%v %v %v", piece.Com, piece.Art, piece.Arr)
+  com = strings.TrimSpace(com)
+  titLen, comLen := len([]rune(tit)), len([]rune(com))
+  maxTit := 53 - comLen
+  if titLen > maxTit {
+    tit = fmt.Sprintf("%v…", string([]rune(tit)[:maxTit - 1]))
+    titLen = maxTit
+  }
+  spaceLen := 53 - titLen - comLen
+  fmt.Printf(
+    "%v %v %v %v %v %v %v %v %v\n",
+    sty.ID(piece.ID), sty.Tit(tit),
+    strings.Repeat(" ", spaceLen), sty.Com(com),
+    sty.Org(piece.Org), sty.Org(piece.Sty), sty.Org(piece.Gnr),
+    sty.Bss(bassType(piece.Bss)), sty.Lvl(piece.Lvl),
+  )
 }

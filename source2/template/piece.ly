@@ -52,7 +52,7 @@
   \new PianoStaff = bayan {
     <<
       \new Staff = rightHand { {{ template "rightHand" }} }
-      \new Staff = leftHand { {{ .StradellaLeftHand }} }
+      \new Staff = leftHand { {{ .LeftHand }} }
     >>
   }
 }

@@ -194,6 +194,7 @@
 {% endmacro %}
 
 {% macro paperLayout() %}
+  % DONE
   top-margin = 8
   bottom-margin = 8
   left-margin = 15
