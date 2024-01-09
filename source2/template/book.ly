@@ -21,11 +21,16 @@
     tit = "{{ .Tit }}"
     sub = "{{ .Sub }}"
   }
-
   \pageBreak \markup \null \pageBreak
 
   {{ if len .Sections }} % book with sections
-    {{ range .Sections }}
+    {{ range $i, $sec := .Sections }}
+      \pageBreak
+      \markup \column {
+        \fill-line { \fontsize #6 \bold \caps "{{ .Tit }}" }
+        \vspace #1
+      }
+      \tocSection "tocSec{{ $i }}" \markup "{{ .Tit }}"
       {{ range .Pieces }}
         {{ template "pieceScore" . }}
       {{ end }}
@@ -35,6 +40,9 @@
       {{ template "pieceScore" . }}
     {{ end }}
   {{ end }}
+
+  \pageBreak
+  \markuplist \table-of-contents
 }
 
 {{ end }}

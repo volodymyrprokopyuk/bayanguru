@@ -2,8 +2,6 @@ package score
 
 import (
   "strings"
-  // "text/template"
-  // "path/filepath"
   cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
 )
 

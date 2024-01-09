@@ -33,11 +33,35 @@ tATem = "a tempo"
 tAcc = "accel."
 tSos = "sost."
 
+% Bars
+barFermata = \mark \markup \musicglyph #"scripts.ufermata"
+\defineBarLine "!!" #'("!!" "!!" "!!")
+
+keyChangeBeforeBar = \once {
+  \override Score.BreakAlignment.break-align-orders =
+  #(make-vector 3 '(
+    left-edge
+    staff-ellipsis
+    cue-end-clef
+    ambitus
+    breathing-sign
+    signum-repetitionis
+    clef
+    cue-clef
+    key-cancellation
+    key-signature
+    staff-bar
+    time-signature
+    custos
+  ))
+  \override Staff.KeyCancellation.extra-spacing-width = #'(-1.5 . 0)
+}
+
 % Alias
 acc = #acciaccatura
 af = #after
 
-% Music function
+% Meter
 meter = #(define-music-function (scope moment beat)
   ((symbol? 'Staff) fraction? list?)
   #{
@@ -47,10 +71,12 @@ meter = #(define-music-function (scope moment beat)
   #}
 )
 
+% Repetition
 rep = #(define-music-function (n mus) (integer? ly:music?)
   #{ \repeat unfold #n { #mus } #}
 )
 
+% Voices
 duo = #(define-music-function (vone vtwo) (ly:music? ly:music?)
   #{
     <<
@@ -71,6 +97,7 @@ trio = #(define-music-function (vone vtwo vthree)
   #}
 )
 
+% Volta
 hSpace = #(define-music-function () ()
   #{ \once \override NoteHead.extra-spacing-width = #'(-2.5 . 0) #}
 )
@@ -125,6 +152,12 @@ sSlur = #(define-music-function (dir prs mus) (symbol? alist? ly:music?)
                )))))
     (tweak 'control-points pts mus)))
 
+% TOC
+tocSection = #(define-music-function
+  (label text) (symbol-list-or-symbol? markup?)
+  (add-toc-item! 'tocSectionMarkup text label)
+)
+
 \layout {
   \context {
     \Score
@@ -164,14 +197,14 @@ sSlur = #(define-music-function (dir prs mus) (symbol? alist? ly:music?)
     {{ if .Meta }}
       \fill-line {
         \line {
-          \caps { id: } \concat { \fromproperty #'header:id "," }
-          \caps { org: } \concat { \fromproperty #'header:org "," }
-          \caps { sty: } \concat { \fromproperty #'header:sty "," }
-          \caps { gnr: } \concat { \fromproperty #'header:gnr "," }
-          \caps { ton: } \concat { \fromproperty #'header:ton "," }
-          \caps { frm: } \concat { \fromproperty #'header:frm "," }
-          \caps { bss: } \concat { \fromproperty #'header:bss "," }
-          \caps { lvl: } \fromproperty #'header:lvl
+          \caps id: \concat { \fromproperty #'header:id "," }
+          \caps org: \concat { \fromproperty #'header:org "," }
+          \caps sty: \concat { \fromproperty #'header:sty "," }
+          \caps gnr: \concat { \fromproperty #'header:gnr "," }
+          \caps ton: \concat { \fromproperty #'header:ton "," }
+          \caps frm: \concat { \fromproperty #'header:frm "," }
+          \caps bss: \concat { \fromproperty #'header:bss "," }
+          \caps lvl: \fromproperty #'header:lvl
         }
       }
       \vspace #0.2
@@ -188,9 +221,30 @@ sSlur = #(define-music-function (dir prs mus) (symbol? alist? ly:music?)
     \vspace #1
     \fill-line { \fontsize #5 \bold \fromproperty #'header:sub }
   }
+
+  tocTitleMarkup = \markup \column {
+    \fill-line { \fontsize #4 \bold "Зміст" }
+    \vspace #1
+  }
+
+  tocSectionMarkup = \markup \column {
+    \vspace #0.5
+    \line { \fontsize #1 \bold \caps \fromproperty #'toc:text }
+    \vspace #0.3
+  }
+
+  tocItemMarkup = \markup \fill-line {
+    \fill-with-pattern #0.5 #RIGHT .
+    \fromproperty #'toc:text \fromproperty #'toc:page
+  }
 }
 
 {{ define "pieceScore" }}
+\tocItem \markup {
+  \caps id: "{{ .ID }}" "{{ .Tit }}"
+  {{ if .Com }} \italic "{{ .Com }}" {{ end }}
+  {{ if .Arr }} \italic "{{ .Art }}{{ .Arr }}" {{ end }}
+}
 \score {
   \header {
     tit = "{{ .Tit }}"

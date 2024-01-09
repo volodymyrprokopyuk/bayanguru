@@ -116,8 +116,8 @@
                     `((,ax . ,ay) (,bx . ,by) (,cx . ,cy) (,dx . ,dy))
                  )))))
       (tweak 'control-points pts mus)))
-  % TODO
   barFermata = \mark \markup \musicglyph #"scripts.ufermata"
+  % TODO
   #(define-markup-command (uTurn layout props up) (markup?)
     (interpret-markup layout props
       #{
@@ -150,6 +150,7 @@
     \once \override TextScript.outside-staff-priority = ##f
     \once \override TextScript.avoid-slur = #'inside
   }
+  % DONE
   keyChangeBeforeBar = \once {
     \override Score.BreakAlignment.break-align-orders =
     #(make-vector 3 '(
