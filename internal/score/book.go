@@ -37,6 +37,9 @@ func engraveBooks(
         }
       }
     }
+    if ec.Dry {
+      continue
+    }
     book.Meta = ec.Meta
     pieces := bookPieces(book)
     for _, piece := range pieces {

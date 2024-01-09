@@ -98,10 +98,6 @@ trio = #(define-music-function (vone vtwo vthree)
 )
 
 % Volta
-hSpace = #(define-music-function () ()
-  #{ \once \override NoteHead.extra-spacing-width = #'(-2.5 . 0) #}
-)
-
 sSlur = #(define-music-function (dir prs mus) (symbol? alist? ly:music?)
   (let* ((bs (assoc-get 'bs prs 2.0)) ;; vertical base line
          (sh (assoc-get 'sh prs 0.5)) ;; horiaontal shift

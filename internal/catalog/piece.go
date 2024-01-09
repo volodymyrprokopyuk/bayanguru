@@ -257,7 +257,7 @@ func PrintPiece(piece Piece) {
     return "unk"
   }
   tit := piece.Tit
-  com := fmt.Sprintf("%v %v %v", piece.Com, piece.Art, piece.Arr)
+  com := fmt.Sprintf("%v %v%v", piece.Com, piece.Art, piece.Arr)
   com = strings.TrimSpace(com)
   titLen, comLen := len([]rune(tit)), len([]rune(com))
   maxTit := 53 - comLen

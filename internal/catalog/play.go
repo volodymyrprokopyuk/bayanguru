@@ -15,7 +15,7 @@ type PieceQueries map[string]string
 type PlayCommand struct {
   Catalog string
   All, Book bool
-  Random, List bool
+  Random, List, Dry bool
   Pieces, Books []string
   Queries PieceQueries
 }
@@ -116,7 +116,7 @@ func Play(pc PlayCommand) error {
   for _, i := range indices {
     piece := pieces[i]
     PrintPiece(piece)
-    if ! pc.List {
+    if !pc.Dry {
       err := openPiece("pieces", piece)
       if err != nil {
         return catError("%v", err)
