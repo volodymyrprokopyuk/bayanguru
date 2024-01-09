@@ -125,18 +125,6 @@ sSlur = #(define-music-function (dir prs mus) (symbol? alist? ly:music?)
                )))))
     (tweak 'control-points pts mus)))
 
-\paper {
-  indent = 8
-  % top-margin = 8
-  % bottom-margin = 8
-  % left-margin = 12
-  % right-margin = 12
-  two-sided = ##t
-  inner-margin = 12
-  outer-margin = 12
-  binding-offset = 6
-}
-
 \layout {
   \context {
     \Score
@@ -152,6 +140,80 @@ sSlur = #(define-music-function (dir prs mus) (symbol? alist? ly:music?)
     \override TupletBracket.span-all-note-heads = ##t
   }
 }
+
+\paper {
+  indent = 8
+  % top-margin = 8
+  % bottom-margin = 8
+  % left-margin = 12
+  % right-margin = 12
+
+  two-sided = ##t
+  inner-margin = 12
+  outer-margin = 12
+  binding-offset = 6
+
+  oddHeaderMarkup = \markup \null
+  evenHeaderMarkup = \markup \null
+
+  scoreTitleMarkup = \markup \column {
+    \fill-line { \fontsize #5 \bold \fromproperty #'header:tit }
+    \vspace #0.2
+    \fill-line { \fontsize #2 \fromproperty #'header:sub }
+    \vspace #0.2
+    {{ if .Meta }}
+      \fill-line {
+        \line {
+          \caps { id: } \concat { \fromproperty #'header:id "," }
+          \caps { org: } \concat { \fromproperty #'header:org "," }
+          \caps { sty: } \concat { \fromproperty #'header:sty "," }
+          \caps { gnr: } \concat { \fromproperty #'header:gnr "," }
+          \caps { ton: } \concat { \fromproperty #'header:ton "," }
+          \caps { frm: } \concat { \fromproperty #'header:frm "," }
+          \caps { bss: } \concat { \fromproperty #'header:bss "," }
+          \caps { lvl: } \fromproperty #'header:lvl
+        }
+      }
+      \vspace #0.2
+    {{ end }}
+    \fill-line {
+      \fontsize #1 \italic \fromproperty #'header:arr
+      \fontsize #1 \italic \fromproperty #'header:com
+    }
+  }
+
+  bookTitleMarkup = \markup \column {
+    \vspace #12
+    \fill-line { \fontsize #7 \bold \fromproperty #'header:tit }
+    \vspace #1
+    \fill-line { \fontsize #5 \bold \fromproperty #'header:sub }
+  }
+}
+
+{{ define "pieceScore" }}
+\score {
+  \header {
+    tit = "{{ .Tit }}"
+    sub = "{{ .Sub }}"
+    com = "{{ .Com }}"
+    arr = "{{ .Art }}{{ .Arr }}"
+    id = "{{ .ID }}"
+    org = "{{ .Org }}"
+    sty = "{{ .Sty }}"
+    gnr = "{{ .Gnr }}"
+    ton = "{{ .Ton | join ` ` }}"
+    frm = "{{ .Frm | join ` ` }}"
+    bss = "{{ .Bss | join ` ` }}"
+    lvl = "{{ .Lvl }}"
+  }
+  \new PianoStaff = bayan {
+    <<
+      \new Staff = rightHand { {{ .RightHand }} }
+      \new Staff = leftHand { {{ .LeftHand }} }
+    >>
+  }
+}
+{{ end }}
 
 {{ block "piece" . }} {{ end }}
 {{ block "book" . }} {{ end }}

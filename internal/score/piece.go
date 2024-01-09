@@ -134,25 +134,27 @@ func initPiece(pieces []cat.Piece, sourceDir string) error {
 }
 
 func templatePiece(
-  tpl *template.Template, piece cat.Piece, sourceDir string,
-) (string, error) {
+  tpl *template.Template, piece *cat.Piece, sourceDir string, meta bool,
+) error {
+  piece.Meta = meta
   pieceFile := filepath.Join(sourceDir, piece.Src, piece.File + ".ly")
   _, err := tpl.ParseFiles(pieceFile)
   if err != nil {
-    return "", err
+    return err
   }
-  var leftHand strings.Builder
-  err = tpl.ExecuteTemplate(&leftHand, "leftHand", nil)
+  var rightHand strings.Builder
+  err = tpl.ExecuteTemplate(&rightHand, "rightHand", piece)
   if err != nil {
-    return "", err
+    return err
+  }
+  piece.RightHand = rightHand.String()
+  var leftHand strings.Builder
+  err = tpl.ExecuteTemplate(&leftHand, "leftHand", piece)
+  if err != nil {
+    return err
   }
   piece.LeftHand = stradella(leftHand.String())
-  var score strings.Builder
-  err = tpl.ExecuteTemplate(&score, "score.ly", piece)
-  if err != nil {
-    return "", err
-  }
-  return score.String(), nil
+  return nil
 }
 
 func engravePieces(
@@ -164,18 +166,22 @@ func engravePieces(
   }
   for _, piece := range pieces {
     cat.PrintPiece(piece)
-    piece.Meta = ec.Meta
     if ec.Lint {
       err := lintPiece(piece, sourceDir)
       if err != nil {
         return err
       }
     }
-    pieceScore, err := templatePiece(tpl, piece, sourceDir)
+    err := templatePiece(tpl, &piece, sourceDir, ec.Meta)
     if err != nil {
       return err
     }
-    err = engraveScore(pieceScore, piece.File, pieceDir)
+    var pieceScore strings.Builder
+    err = tpl.ExecuteTemplate(&pieceScore, "score.ly", piece)
+    if err != nil {
+      return err
+    }
+    err = engraveScore(pieceScore.String(), piece.File, pieceDir)
     if err != nil {
       return err
     }

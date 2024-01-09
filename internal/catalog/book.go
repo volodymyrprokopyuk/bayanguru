@@ -33,6 +33,7 @@ type Book struct {
   Pieces []Piece
   Sections []Section
   File string
+  Meta bool
 }
 
 func readBookFile(bookDir, bookFile string) ([]RawBook, error) {
