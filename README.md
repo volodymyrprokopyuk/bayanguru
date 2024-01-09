@@ -1,7 +1,8 @@
-# Sheet music for bayan engraved with LilyPond
+# High quality sheet music for bayan
 
-Engraving system for high quality bayan sheet music in PDF with support for
-Stradella bass and free bass
+Bayan is an engraving system that produces high quality sheet music in PDF for
+bayan. The system uses [LilyPond](https://lilypond.org/) for engraving
+and supports Stradella bass and free bass
 
 ## Sheet music library
 
@@ -30,59 +31,12 @@ Stradella bass and free bass
 
 ## Dependencies
 
-- [Node.js](https://nodejs.org/)
 - [LilyPond](https://lilypond.org/)
-- [pdfcpu](https://pdfcpu.io/)
+- [Go](https://go.dev/)
 
 ```fish
-yay -S ghostscript gsfonts fontforge t1utils pdfcpu \
+yay -S ghostscript gsfonts fontforge t1utils \
   texlive-metapost texlive-langcyrillic
-```
-
-## CLI
-
-Specifications and options
-```fish
-<catalog spec> = glob
-<piece spec> = pid1 pid2 ... | --frbk bid1 bid2 ... | all
-<piece select> = --org re1,^re2 --sty --gnr --ton --frm --bss --lvl \
-  --tit --com --arr
-<book spec> = bid1 bid2 ... | all
-<engrave opts> = --nometa --lint --relax --dry --optimize
-<play opts> = --cycle --random
-<tobook spec> = --bid --btit --bsub
-```
-
-Initialize pieces
-
-```fish
-./index.js -c <catalog spec> -i <piece spec>
-```
-
-Engrave pieces
-
-```fish
-./index.js -c <catalog spec> <piece spec> <piece select> <engrave opts> -j
-```
-
-Play pieces
-
-```fish
-./index.js -c <catalog spec> -p <piece spec> <piece select> <play opts> --dry
-```
-
-Engrave books
-
-```fish
-./index.js -c <catalog spec> -b <book spec> <engrave opts> -j
-./index.js -c <catalog spec> -p <piece spec> <piece select> <engrave opts> \
-  --tobk <tobook spec> -j
-```
-
-Generate piece/book random ID
-
-```fish
-tr -dc a-z0-9 </dev/urandom | head -c 4
 ```
 
 ## Meta
