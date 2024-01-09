@@ -9,7 +9,7 @@ import (
   "github.com/volodymyrprokopyuk/bayan/internal/score"
 )
 
-var validPat = regexp.MustCompile(`^\^?\w[-\w,]*[^,]$`)
+var validPat = regexp.MustCompile(`^\^?\pL[-\pL,]*[^,]$`)
 
 func validate(catalog string, args []string) error {
   if len(catalog) > 0 && !validPat.MatchString(catalog) {
@@ -35,8 +35,6 @@ func cmdError(format string, args ...any) error {
 }
 
 func Execute() error {
-  var catalog string
-  var book bool
   bayanCmd := &cobra.Command{
     Use: "bayan",
     Short: "Engrave and play bayan sheet music",
@@ -48,14 +46,9 @@ classification and search system to selectively play pieces from a catalog`,
     SilenceUsage: true,
     SilenceErrors: true,
   }
-  bayanCmd.PersistentFlags().StringVarP(
-    &catalog, "catalog", "c", "", "catalog files e.g. ukr,rus, ^stu,sch",
-  )
-  bayanCmd.PersistentFlags().BoolVarP(
-    &book, "book", "b", false, "engrave or play books",
-  )
 
-  var piece, init, lint, optimize, eDry, meta bool
+  var catalog string
+  var book, piece, init, lint, optimize, dry, meta bool
   engraveCmd := &cobra.Command{
     Use: "engrave",
     Short: "Engrave pieces and books",
@@ -86,7 +79,7 @@ bayan engrave pieces... --lint --optimize --dry --meta=f`,
         All: len(args) == 1 && args[0] == "all",
         Book: book, Piece: piece,
         Init: init, Lint: lint, Optimize: optimize,
-        Dry: eDry, Meta: meta,
+        Dry: dry, Meta: meta,
       }
       if !ec.All {
         if book {
@@ -98,6 +91,12 @@ bayan engrave pieces... --lint --optimize --dry --meta=f`,
       return score.Engrave(ec)
     },
   }
+  engraveCmd.Flags().StringVarP(
+    &catalog, "catalog", "c", "", "read catalog files e.g. ukr,rus, ^stu,sch",
+  )
+  engraveCmd.Flags().BoolVarP(
+    &book, "book", "b", false, "engrave books or pieces from books",
+  )
   engraveCmd.Flags().BoolVarP(
     &piece, "piece", "p", false, "engrave individual pieces from books",
   )
@@ -111,13 +110,13 @@ bayan engrave pieces... --lint --optimize --dry --meta=f`,
     &optimize, "optimize", "", false, "optimize PDF after engraving",
   )
   engraveCmd.Flags().BoolVarP(
-    &eDry, "dry", "", false, "list and lint pieces without engraving",
+    &dry, "dry", "", false, "list and lint pieces without engraving",
   )
   engraveCmd.Flags().BoolVarP(
     &meta, "meta", "", true, "include piece meta information",
   )
 
-  var random, list, pDry bool
+  var random bool
   var org, sty, gnr, ton, frm, bss, lvl, tit, com, arr string
   var queries = map[string]struct{ short string; varp *string }{
     "org": {"piece origin e.g. ukr,rus", &org},
@@ -138,7 +137,7 @@ bayan engrave pieces... --lint --optimize --dry --meta=f`,
     `Play command searches, lists, and plays pieces from a catalog or a book`,
     Example: `bayan play [-c catalog] pieces...
 bayan play [-c catalog] -b books... [--query...]
-bayan play --query... --random --list --dry`,
+bayan play --query... --random --dry`,
     Args: func(cmd *cobra.Command, args []string) error {
       err := validate(catalog, args)
       if err != nil {
@@ -158,7 +157,7 @@ bayan play --query... --random --list --dry`,
       pc := cat.PlayCommand{
         Catalog: catalog,
         All: len(args) == 1 && args[0] == "all",
-        Book: book, Random: random, List: list, Dry: pDry,
+        Book: book, Random: random, Dry: dry,
         Queries: map[string]string{},
       }
       if !pc.All {
@@ -176,14 +175,17 @@ bayan play --query... --random --list --dry`,
       return cat.Play(pc)
     },
   }
+  playCmd.Flags().StringVarP(
+    &catalog, "catalog", "c", "", "read catalog files e.g. ukr,rus, ^stu,sch",
+  )
+  playCmd.Flags().BoolVarP(
+    &book, "book", "b", false, "play pieces from books",
+  )
   playCmd.Flags().BoolVarP(
     &random, "random", "r", false, "play pieces in a random order",
   )
   playCmd.Flags().BoolVarP(
-    &list, "list", "l", false, "list pieces and books",
-  )
-  playCmd.Flags().BoolVarP(
-    &pDry, "dry", "", false, "list pieces without playing",
+    &dry, "dry", "", false, "list pieces without playing",
   )
   for opt, query := range queries {
     playCmd.Flags().StringVarP(query.varp, opt, "", "", query.short)
