@@ -222,6 +222,8 @@ tocSection = #(define-music-function
     \fill-line { \fontsize #7 \bold \fromproperty #'header:tit }
     \vspace #1
     \fill-line { \fontsize #5 \bold \fromproperty #'header:sub }
+    \vspace #3
+    \fill-line { \logoURL }
   }
 
   tocTitleMarkup = \markup \column {
