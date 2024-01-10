@@ -75,7 +75,7 @@ func cleanLines(pieceFile string) ([]Line, error) {
 
 var firstParts = []string{
   `^[a-g]\S*`, // first note
-  `^<[^>]+>\S*`, // first chord
+  `^<[a-g][^>]+>\S*`, // first chord
 }
 var firstNote = regexp.MustCompile(strings.Join(firstParts, "|"))
 var octaveParts = []string{
@@ -100,7 +100,7 @@ func lintFirstNoteOctaveCheck(lines []Line) []Line {
 
 var newParts = []string{
   "(?:{ |w `)[a-g]\\S*", // first note in new context
-  "(?:{ |w `)<[^>]+>\\S*", // first chord in new context
+  "(?:{ |w `)<[a-g][^>]+>\\S*", // first chord in new context
 }
 var newContext = regexp.MustCompile(strings.Join(newParts, "|"))
 
@@ -139,7 +139,7 @@ func lintLineEndBarCheck(lines []Line) []Line {
 
 var noteParts = []string{
   `[a-g]\S*`, // first note
-  `<[^>]+>\S*`, // first chord
+  `<[a-g][^>]+>\S*`, // first chord
 }
 var noteChord = regexp.MustCompile(strings.Join(noteParts, "|"))
 var compParts = []string{
