@@ -5,14 +5,12 @@
   \key fis \minor
   \time 2/4
   \meter 1/2 #'(1)
-  \dPad 4
   R2\p | R2 | fis'='4\( cis | cis'4. a8 |
   b='8\< a gis \af 8\! fis | gis[ e] cis\) r |
   a'='4\(\p fis8 cis' | d4. cis8 |
   b='8\< <gis fis'> <cis e> \af 8\! <b d> |
   <a=' cis>8[ <b d>] <cis e>\)\< \af 8\! g |
   \duo {
-    \dPad 4
     <cis''='' e>4(\mf <b d>) | r8\< <b d>( <a cis> \af 8\! <gis=' b>) |
   } { fis'='2 | eis='4. r8 | }
   fis='8( <a, d fis>\> gis' a) | \af 8\! b[( fis]^\tRit %
@@ -21,7 +19,6 @@
   { r8 <gis= bis>[ r <gis= b>] | }
 
   \duo {
-    \dPad 4
     cis''=''4(\p fis,8 fis') | fis[( fis] fis fis) |
     gis,='8(\< <d' fis> <cis e> \af 8\! <b d>) | e4 <cis e> |
     g='8[\(\< \af 16.\! <cis e>] d cis |
@@ -32,11 +29,9 @@
     g='4 b8 ais | fis[ b] a gis | cis( a gis fis) |
     r8 <gis,= bis>8[ r <gis b>] | r <a cis>[ r <a= cis>] |
   }
-  \dPad 6
   r8\< <a,= d fis>4 \af 8\! 8 | r <gis bis dis fis>4 8 |
   r8\> <gis= b d fis>4 \af 8\! 8 | r\p <a cis fis>4^\tRit %
   \duo {
-    \dPad 6
     s8 | a'='4\> \af 4\! cis | cis=''\pp %
   } {
     \once \stemUp

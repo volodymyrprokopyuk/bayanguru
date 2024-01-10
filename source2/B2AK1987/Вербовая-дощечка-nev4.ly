@@ -16,7 +16,6 @@
   <e=' a c>4\> <dis a' b dis>4 | \af 2\! <e=' g b e>2 |
 
   \duo {
-    \dPad \default
     e''=''8[(\< b') b b] | a4( b8 \af 8\! g) |
     fis=''4(\> g8 fis | e8) e \af 4\! e=''4 |
   } { b'='2 | cis | d | e8 e e=''4 | }

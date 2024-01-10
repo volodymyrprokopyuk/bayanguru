@@ -20,7 +20,6 @@
   \clef treble
   \key c \minor
   \time 4/4
-  \dPad 4
   \repeat segno 2 {
     {{ rh1("<c'=' ees g>8\\mp\\< 8 8") }}
     {{ t4("<b= f' g>8\\< 8 8", "<b= f' aes>8 8 8",

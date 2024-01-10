@@ -19,11 +19,11 @@
   cis=''8 <a cis> <gis b>4 a2 |
   <e=' a cis>8\> 8 <d gis b>4 \af 2\! <cis=' e a>2 |
 
-  \duo { \dPad 4 \acc { gis''=''8 } a2(->\f gis4. fis=''8) | }
+  \duo { \acc { gis''=''8 } a2(->\f gis4. fis=''8) | }
   { r8 a'='8[( cis e] e4. d=''8) | }
   <cis'='' e>8 8 <b d>4 <a cis>2 |
   \duo {
-    \dPad 4 \acc { dis''=''8 } e4\(->\p cis8 dis e4. dis8 |
+    \acc { dis''=''8 } e4\(->\p cis8 dis e4. dis8 |
     cis=''8 e b4 a='2\) \barFermata |
 
     \tempo Moderato

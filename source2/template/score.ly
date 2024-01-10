@@ -63,7 +63,7 @@ keyChangeBeforeBar = \once {
   \override Staff.KeyCancellation.extra-spacing-width = #'(-1.5 . 0)
 }
 
-% Alias
+% Aliases
 acc = #acciaccatura
 af = #after
 

@@ -4,7 +4,6 @@
   \clef treble
   \key f \major
   \time 3/4
-  \dPad 4
   r8\p <c'=' f a>8--\< \af 16.\! <d f bes>-- %
   <c=' f a>8--\> <b d f gis>-- \af 16.\! <c f a>-- |
   r8 <bes= d e g>8\<_\aSim \af 16.\! <bes d e a> %
