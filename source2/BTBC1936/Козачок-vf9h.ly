@@ -1,16 +1,16 @@
-{% macro rh1(a) %}
-  {{ a }} <d fis d'>8.-> c'16( | b8) <d,='' g>8 4 |
-{% endmacro %}
+{{ define "rh1" }}
+  {{ .a }} <d fis d'>8.-> c'16( | b8) <d,='' g>8 4 |
+{{ end }}
 
-{% macro rh2(a) %}
-  {{ a }} a fis d c' a fis c | b' g d b g' d b g=' |
-{% endmacro %}
+{{ define "rh2" }}
+  {{ .a }} a fis d c' a fis c | b' g d b g' d b g=' |
+{{ end }}
 
-{% macro rh3(a, b) %}
-  {{ a }} fis16 g8) g | fis16( a g fis {{ b }} |
-{% endmacro %}
+{{ define "rh3" }}
+  {{ .a }} fis16 g8) g | fis16( a g fis {{ .b }} |
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Allegro
   \clef treble
@@ -19,7 +19,7 @@
   \repeat segno 2 {
     \volta 1
     \repeat volta 2 {
-      {{ rh1("d''=''8\\f r") }} {{ rh1("d=''8 d") }}
+      {{ template "rh1" (w `d''=''8\f r`) }} {{ template "rh1" (w `d=''8 d`) }}
     }
 
     \repeat volta 2 {
@@ -36,7 +36,7 @@
     r8 <a=' cis e a>8 r8 8 | r <a d fis a> r8 8 |
     r8\< <a=' cis e a>8 r8 \af 8\! 8 | r4 <d='' fis a d>4-> |
 
-    {{ rh2("d'='''16\\f") }} {{ rh2("d''='''16") }}
+    {{ template "rh2" (w `d'='''16\f`) }} {{ template "rh2" (w `d''='''16`) }}
     a'=''16 e cis a g' e cis g |
     <fis=' fis'>8 <e e'> <fis fis'> <g g'> |
     <a=' a'>8 r <a cis e a>4-> |
@@ -46,14 +46,14 @@
     \repeat volta 2 {
       g,='8.(->\mf a16 b8) b | a16( c b a g8) d |
       g='8.(-> a16 b8) b | a c b4 |
-      {{ rh3("e=''8.(->\\f", "e8) b='") }}
-      {{ rh3("e=''8.(->", "e=''4)") }}
+      {{ template "rh3" (w `e=''8.(->\f` `e8) b='`) }}
+      {{ template "rh3" (w `e=''8.(->` `e=''4)`) }}
     }
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key g \major
@@ -74,4 +74,4 @@
   g@M!8[ gM8 gM gM] | d@M![ dM8] g@M!4 |
   e=8 em! e em | b b7! e em! | e em! e em | b=, b7! e@m!4 |
 }
-{% endmacro %}
+{{ end }}
