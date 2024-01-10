@@ -197,7 +197,8 @@ func lintDurationAfterBoundChord(lines []Line) []Line {
 func printErrors(title string, errors []Line) {
   fmt.Println(sty.Com(title))
   for _, error := range errors {
-    fmt.Println(sty.Lvl("%3v:", error.Num), sty.Bss(error.Text))
+    err := strings.ReplaceAll(error.Text, "%", "%%")
+    fmt.Println(sty.Lvl("%3v:", error.Num), sty.Bss(err))
   }
 }
 
