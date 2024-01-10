@@ -2,7 +2,7 @@
 ---
 books:
   # Class
-  - { id: ucl1, tit: Українські народні пісні і танці, sub: для баяна,
+  - { id: ucl1, tit: Українські народні пісні і танці, sub: для готового баяна,
       pieces: [
         # B0D1973
         "1kae", "4ha8", "7n13", "jnuj", "j6sq", "fywu", "1sxc", "hv2p", "siv0",
@@ -24,7 +24,7 @@ books:
         "i11j", "9hwt", "zvpg", "mf7s", "zykv", "26qx", "di18", "btcu", "nev4",
         "foaz", "f45r"
       ] }
-  - { id: rcl1, tit: Російські народні пісні і танці, sub: для баяна,
+  - { id: rcl1, tit: Російські народні пісні і танці, sub: для готового баяна,
       pieces: [
         # B0D1973
         "drrh", "xwt6", "bj88", "b383", "vt18", "8fs0", "0mdf", "bspm", "kkks",
@@ -42,14 +42,14 @@ books:
       ] }
 
   # Tutorial
-  - { id: utu1, tit: Українські народні пісні і танці, sub: для баяна,
+  - { id: utu1, tit: Українські народні пісні і танці, sub: для готового баяна,
       pieces: [
         # BTBC1936
         "yq8y", "cckj", "a3ew", "isd6", "vf9h",
         # BTB1978
         "vwad", "brku", "tzb9", "ndwb"
       ] }
-  - { id: rtu1, tit: Російські народні пісні і танці, sub: для баяна,
+  - { id: rtu1, tit: Російські народні пісні і танці, sub: для готового баяна,
       pieces: [
         # BTBC1936
         "q6xh", "87ko", "p7el", "6u3l", "qt7k", "oz1w", "p26a", "frcu", "hjff",
