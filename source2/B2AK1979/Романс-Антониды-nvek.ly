@@ -1,4 +1,4 @@
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Andantino
   \clef treble
@@ -7,8 +7,7 @@
   \meter 1/4 1,1,1
   r4\p r d''=''8\( d | ees4. ees8 d c |
   d=''4 g,8 g\) d'\( d | ees4. d8 c f |
-  d=''2\) g8\( f | ees4. ees8 d c |
-  d=''4 g,8 g\) \once \phrasingSlurUp bes\( a |
+  d=''2\) g8\( f | ees4. ees8 d c | d4 g,8 g\) bes^\( a |
   \duo { g'='8 a bes b c cis='' | } { g'='4. g8 g g=' | }
 
   <fis=' d'>2\) <bes d>8 8 | <a c>2 <g bes>8 8 |
@@ -22,9 +21,9 @@
   \tuplet 3/2 { f=''8 ees d } \tuplet 3/2 { c=''8 bes a } |
   d=''2\)\> \af 4\! fis,4 | g='4 r r \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key g \minor
@@ -46,4 +45,4 @@
   d=4( dM!) d+d7! | ees+eesM!4 bes+besM! c+cm! |
   d+g@m!2 d+d7!4 | g+gm!4 r r |
 }
-{% endmacro %}
+{{ end }}
