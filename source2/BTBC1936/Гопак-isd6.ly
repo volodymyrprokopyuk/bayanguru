@@ -29,6 +29,7 @@
   \key d \major
   d+dM!4->-\stBass d+dM4 |
   \rep 3 { a,=,8 a7! d dM! | d dM! d= dM | }
-  a=,8 a7! d+dM!4 | {{ template "lh1" (w `g=,8`) }} {{ template "lh1" (w `g,=,8`) }}
+  a=,8 a7! d+dM!4 | {{ template "lh1" (w `g=,8`) }}
+  {{ template "lh1" (w `g,=,8`) }}
 }
 {{ end }}

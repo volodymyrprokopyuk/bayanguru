@@ -1,15 +1,14 @@
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Moderato
   \clef treble
   \key e \minor
   \time 4/4
   \meter 1/4 1,1,1,1
-  \dPad \default R1\p |
+  R1\p |
   \repeat volta 2 {
     e'='8 e e\< e <e g>8 8 <g b> \af 8\! d' |
     \duo {
-      \dPad \default
       \rep 2 { d''=''8\> c~ \af 4\! c=''4 } |
       <fis,=' a d>8\< 8 8 \af 16.\! d' d c b a |
       \rep 2 { c=''8\> b~ \af 4\! b='4 } |
@@ -32,15 +31,15 @@
     \alternative {
       \volta 1 { \af 2..\! <g= b e>1\> | }
       \volta 2 {
-        \duo { \dPad 4 b'='2 \rest \> \af 4.\! <g=' b e>2 | }
+        \duo { b'='2 \rest \> \af 4.\! <g=' b e>2 | }
         { e'='1 | } \bar "|."
       }
     }
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key e \minor
@@ -54,4 +53,4 @@
   a,=,4 am! am am | a am! e' em! |
   b=,4 b7! b7 b7 | e em! em em | e em! e=2 |
 }
-{% endmacro %}
+{{ end }}
