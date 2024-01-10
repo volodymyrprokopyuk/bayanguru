@@ -53,8 +53,7 @@
   \clef bass
   \key a \minor
   \duo {
-    \override TupletBracket.bracket-visibility = ##f
-    \override TupletNumber.text = ""
+    \hideTupletBracket
     {{ lh1a() }}
     {{ t4("r4 am!8", "r4 dm!8", "r4 g7!8", "r4 cM!8") }}
     {{ t2("r4 am!8", "r4 em!8") }} b7!4( eM!8)-. d \rest |

@@ -85,8 +85,7 @@
 \relative {
   \clef bass
   \key c \major
-  \override TupletBracket.bracket-visibility = ##f
-  \override TupletNumber.stencil = ##f
+  \hideTupletBracket
   {{ lh1("c=8-\\stBass") }}
   {{ t3("c=8", "cM!", "f", "fM!") }}
   {{ t3("c=8", "cM!", "a", "a7!") }}
