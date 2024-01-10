@@ -15,7 +15,7 @@ import (
 type EngraveCommand struct {
   Catalog string
   All, Book, Piece bool
-  Init, Lint, Optimize, Dry, Meta bool
+  Init, Lint, Optimize, Meta bool
   Pieces, Books []string
 }
 

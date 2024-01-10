@@ -172,9 +172,6 @@ func engravePieces(
         return err
       }
     }
-    if ec.Dry {
-      continue
-    }
     err := templatePiece(tpl, &piece, sourceDir, ec.Meta)
     if err != nil {
       return err

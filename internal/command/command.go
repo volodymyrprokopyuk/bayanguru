@@ -48,14 +48,14 @@ classification and search system to selectively play pieces from a catalog`,
   }
 
   var catalog string
-  var book, piece, init, lint, optimize, dry, meta bool
+  var book, piece, init, lint, optimize, meta bool
   engraveCmd := &cobra.Command{
     Use: "engrave",
     Short: "Engrave pieces and books",
     Long: `Engrave command initializes, lints, and engraves pieces and books`,
     Example: `bayan engrave [-c catalog] pieces... [--init]
 bayan engrave [-c catalog] -b books... [--piece]
-bayan engrave pieces... --lint --optimize --dry --meta=f`,
+bayan engrave pieces... --lint --optimize --meta=f`,
     Args: func(cmd *cobra.Command, args []string) error {
       err := validate(catalog, args)
       if err != nil {
@@ -78,8 +78,7 @@ bayan engrave pieces... --lint --optimize --dry --meta=f`,
         Catalog: catalog,
         All: len(args) == 1 && args[0] == "all",
         Book: book, Piece: piece,
-        Init: init, Lint: lint, Optimize: optimize,
-        Dry: dry, Meta: meta,
+        Init: init, Lint: lint, Optimize: optimize, Meta: meta,
       }
       if !ec.All {
         if book {
@@ -110,13 +109,10 @@ bayan engrave pieces... --lint --optimize --dry --meta=f`,
     &optimize, "optimize", "", false, "optimize PDF after engraving",
   )
   engraveCmd.Flags().BoolVarP(
-    &dry, "dry", "", false, "list and lint pieces without engraving",
-  )
-  engraveCmd.Flags().BoolVarP(
     &meta, "meta", "", true, "include piece meta information",
   )
 
-  var random bool
+  var random, list bool
   var org, sty, gnr, ton, frm, bss, lvl, tit, com, arr string
   var queries = map[string]struct{ short string; varp *string }{
     "org": {"piece origin e.g. ukr,rus", &org},
@@ -137,7 +133,7 @@ bayan engrave pieces... --lint --optimize --dry --meta=f`,
     `Play command searches, lists, and plays pieces from a catalog or a book`,
     Example: `bayan play [-c catalog] pieces...
 bayan play [-c catalog] -b books... [--query...]
-bayan play --query... --random --dry`,
+bayan play --query... --random --list`,
     Args: func(cmd *cobra.Command, args []string) error {
       err := validate(catalog, args)
       if err != nil {
@@ -157,7 +153,7 @@ bayan play --query... --random --dry`,
       pc := cat.PlayCommand{
         Catalog: catalog,
         All: len(args) == 1 && args[0] == "all",
-        Book: book, Random: random, Dry: dry,
+        Book: book, Random: random, List: list,
         Queries: map[string]string{},
       }
       if !pc.All {
@@ -185,7 +181,7 @@ bayan play --query... --random --dry`,
     &random, "random", "r", false, "play pieces in a random order",
   )
   playCmd.Flags().BoolVarP(
-    &dry, "dry", "", false, "list pieces without playing",
+    &list, "list", "l", false, "list pieces without playing",
   )
   for opt, query := range queries {
     playCmd.Flags().StringVarP(query.varp, opt, "", "", query.short)
