@@ -1,8 +1,8 @@
-{% macro rh1() %}
+{{ define "rh1" }}
   b='16 d g,8~ g a | b16 g a b=' %
-{% endmacro %}
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Moderato
   \clef treble
@@ -15,7 +15,7 @@
 
   \tempo "Più Mosso"
   \rep 2 { b='8 g16 fis g8 g'16 fis | g8 d16 e f e d c='' | }
-  {{ rh1() }} c8 a | {{ rh1() }} c=''4 \bar "||"
+  {{ template "rh1" }} c=''8 a | {{ template "rh1" }} c=''4 \bar "||"
 
   \tempo Allegro
   \repeat volta 2 {
@@ -28,9 +28,9 @@
     }
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key g \major
@@ -46,4 +46,4 @@
   \rep 4 { g,=,8 gM! d' dM! | g, gM! c= cM! | }
   g=,8 gM! d' d7! | g,=, gM! g+gM4 |
 }
-{% endmacro %}
+{{ end }}

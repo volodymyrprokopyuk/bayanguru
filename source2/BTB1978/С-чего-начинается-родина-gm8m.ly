@@ -1,8 +1,8 @@
-{% macro rh1() %}
+{{ define "rh1" }}
   b'='4.^~ b8 a g fis dis b | c'=''4 b='8 %
-{% endmacro %}
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Lento
   \clef treble
@@ -10,7 +10,7 @@
   \time 9/8
   \partial 8 { b=8\(\p | }
   \repeat volta 2 {
-    {{ rh1() }} b4.~ b4\) b,8\( |
+    {{ template "rh1" }} b='4.~ b4\) b,8\( |
     \time 6/8
     g'='8 g g g dis e | fis4.~ fis4\) b,8\( |
     <fis'=' a>8 8 8 8 <e g> <dis fis> |
@@ -26,16 +26,16 @@
         \time 9/8 \hSpace
         <fis'=' a>2.)~ 4 %
         \sSlur bd #'((bs . 2.5) (wd . 6.3) (ht . 2)) ( b,8)\( |
-        {{ rh1() }} b2.~ | b4.\) %
-        \ottava #1 <e='' c'>4 <g='' b>8(\> 4.~ | \af 8\! 8) \ottava #0
+        {{ template "rh1" }} b='2.~ | b4.\) %
+        \ottava #1 <e='' c'>4 <g='' b>8(\> 4.~ | \af 8\! 8) \ottava #0 %
         r r r4. r4 \bar "|."
       }
     }
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key e \minor
@@ -51,4 +51,4 @@
   e'=4 em!8 g,4 e@m8 b4 bM!8 | e4 em!8 em4 b8 e4 em!8 |
   em4 b=,8 e4 em!8 em4 b8 | e= r r r4. r4 %
 }
-{% endmacro %}
+{{ end }}

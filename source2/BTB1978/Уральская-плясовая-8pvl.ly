@@ -1,4 +1,4 @@
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Allegro
   \clef treble
@@ -17,9 +17,9 @@
   fis='16( b, dis fis) b8. a16 |
   gis='16( a gis fis e='4) \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key a \major
@@ -30,4 +30,4 @@
   \rep 3 { b=,8 b7! fis b@7 | e'8 eM! gis,=, e@M | }
   b=,8 b7! fis b@7 | e'=8 eM! e+eM4 |
 }
-{% endmacro %}
+{{ end }}
