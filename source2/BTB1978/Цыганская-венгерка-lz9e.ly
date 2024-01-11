@@ -3,8 +3,7 @@
   \duo {
     \meter 1/8 1,1,1,1,1,1,1,1
     \set subdivideBeams = ##t
-    {{ .a }}[~ \tuplet 3/2 { {{ .b }} } {{ .c }}] %
-  } { \voiceTwo {{ .d }} } %
+    {{ .a }}[~ \tuplet 3/2 { {{ .b }} } {{ .c }}] } { {{ .d }} } %
 {{ end }}
 
 {{ define "t2" }}

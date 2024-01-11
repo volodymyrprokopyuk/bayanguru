@@ -40,12 +40,14 @@
   \acc { fis''=''8 } g4->\f \acc { fis=''8 } g4-> |
   \acc { fis=''8 } g8-> d16( e f e d c) |
   b='8 g16( fis g8) g'16( fis | g8) d16\( e f e d c |
-  {{ template "rh1" }} c=''8\) d16\( c | {{ template "rh1" }} <e,=' c'>8\) r |
+  {{ template "rh1" }} c=''8\) d16\( c |
+  {{ template "rh1" }} <e,=' c'>8\) r |
 
   \repeat volta 2 {
     {{ template "rh2" (w `b'='8` `d=''16(` `c='')`) }}
     {{ template "rh2" (w `b='8` `d=''16\(` `c=''`) }}
-    {{ template "rh1" }} c=''8\) d16\( c | {{ template "rh1" }} <e,=' c'>8\) r |
+    {{ template "rh1" }} c=''8\) d16\( c |
+    {{ template "rh1" }} <e,=' c'>8\) r |
 
     {{ template "rh3" (w `g='8`) }} {{ template "rh3" (w `g,='8`) }}
 
