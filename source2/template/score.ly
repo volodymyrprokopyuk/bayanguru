@@ -180,6 +180,7 @@ tocSection = #(define-music-function
 
 \paper {
   indent = 8
+
   % top-margin = 8
   % bottom-margin = 8
   % left-margin = 12
@@ -218,39 +219,17 @@ tocSection = #(define-music-function
       \fontsize #1 \italic \fromproperty #'header:com
     }
   }
-
-  bookTitleMarkup = \markup \column {
-    \vspace #12
-    \fill-line { \fontsize #7 \bold \fromproperty #'header:tit }
-    \vspace #1
-    \fill-line { \fontsize #5 \bold \fromproperty #'header:sub }
-    \vspace #3
-    \fill-line { \logoURL }
-  }
-
-  tocTitleMarkup = \markup \column {
-    \fill-line { \fontsize #4 \bold "Зміст" }
-    \vspace #1
-  }
-
-  tocSectionMarkup = \markup \column {
-    \vspace #0.5
-    \line { \fontsize #1 \bold \caps \fromproperty #'toc:text }
-    \vspace #0.3
-  }
-
-  tocItemMarkup = \markup \fill-line {
-    \fill-with-pattern #0.5 #RIGHT .
-    \fromproperty #'toc:text \fromproperty #'toc:page
-  }
 }
 
-{{ define "pieceScore" }}
+{{ define "pieceTocItem" }}
 \tocItem \markup {
   \caps id: "{{ .ID }}" "{{ .Tit }}"
   {{ if .Com }} \italic "{{ .Com }}" {{ end }}
   {{ if .Arr }} \italic "{{ .Art }}{{ .Arr }}" {{ end }}
 }
+{{ end }}
+
+{{ define "pieceScore" }}
 \score {
   \header {
     tit = "{{ .Tit }}"

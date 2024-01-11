@@ -13,6 +13,8 @@
 }
 
 \paper {
+  ragged-last-bottom = ##t
+
   oddFooterMarkup = \markup \fill-line {
     \null \if \on-last-page \logoURL \fromproperty #'page:page-number-string
   }
