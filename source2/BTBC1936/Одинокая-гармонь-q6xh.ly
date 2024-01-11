@@ -1,9 +1,9 @@
-{% macro lh1() %}
+{{ define "lh1" }}
   e=4 em! em | e em! em | a, am! am | d d7! d7 |
   g,=,4 gM! gM | c cM! cM | fis, a@m! am4 | b=, b7! b7 |
-{% endmacro %}
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Lento
   \clef treble
@@ -21,14 +21,14 @@
   a='4\< a \af 4\! g | fis e dis |
   e='2.~\> | \af 4\! e='4\)\p \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key e \minor
   \partial 2 { r4 r | }
   e=4 em! em | b b7! b7 | \rep 3 { e=4 em! em | }
-  b=,4 b7! b7 | \rep 2 { {{ lh1() }} } | e=4 em! em | e+em!4 %
+  b=,4 b7! b7 | \rep 2 { {{ template "lh1" }} } | e=4 em! em | e+em!4 %
 }
-{% endmacro %}
+{{ end }}

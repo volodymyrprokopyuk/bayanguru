@@ -1,12 +1,12 @@
-{% macro rh1() %}
+{{ define "rh1" }}
   <cis=' e a>4 4\< a'8. \af 32.\! <g=' a>16 |
-{% endmacro %}
+{{ end }}
 
-{% macro rh2() %}
+{{ define "rh2" }}
   \tuplet 3/2 { <g=' bes>8 <f a> <e g> } \tuplet 3/2 { <d f>8 <c e> <bes= d> | }
-{% endmacro %}
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Largo
   \clef treble
@@ -17,25 +17,25 @@
   \time 2/4
   \tuplet 3/2 { <g=' bes>8 <f a> <e g> } \tuplet 3/2 { <e g>8 <d f> <d e> | }
   \time 3/4
-  {{ rh1() }}
+  {{ template "rh1" }}
   \repeat volta 2 {
     <f=' a d f>2\f <g a cis e>8. <g a cis>16 | <f bes d>2 <f a>8 <g bes> |
     <a=' c>4( <bes d>) <g bes>8. <bes d>16 | <a c>2 <f a>8 8 |
     \alternative {
       \volta 1 {
-        \time 2/4 {{ rh2() }}
-        \time 3/4 {{ rh1() }}
+        \time 2/4 {{ template "rh2" }}
+        \time 3/4 {{ template "rh1" }}
       }
       \volta 2 {
-        \time 2/4 {{ rh2() }}
+        \time 2/4 {{ template "rh2" }}
         <cis=' e a>2 | <f,= a d>2 \bar "|."
       }
     }
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key d \minor
@@ -48,4 +48,4 @@
   \time 3/4 a+aM!4 g=,4 f8 e |
   \time 2/4 g+gm!2 | a+a7!2 | d+dm!2 |
 }
-{% endmacro %}
+{{ end }}

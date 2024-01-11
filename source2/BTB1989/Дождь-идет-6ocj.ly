@@ -49,7 +49,6 @@
 
   {{ rh3() }}
   \duo {
-    \voiceOne
     {{ rh1("ees''=''4") }} b \rest f16 f e f |
     d'=''4 d~ | d8 b \rest d16 b g f |
     ees='2~ | ees8 b' \rest g16 g fis g |

@@ -1,37 +1,37 @@
-{% macro rh1() %}
+{{ define "rh1" }}
   b='16 c b a g4~ | g8 a16 b=' %
-{% endmacro %}
+{{ end }}
 
-{% macro rh2(a, b, c) %}
-  {{ a }} g16( fis) g8 g'16( fis | g8) {{ b }} e f e d {{ c }} |
-{% endmacro %}
+{{ define "rh2" }}
+  {{ .a }} g16( fis) g8 g'16( fis | g8) {{ .b }} e f e d {{ .c }} |
+{{ end }}
 
-{% macro rh3(a) %}
-  {{ a }} \acc { fis'=''8 } g4-> %
+{{ define "rh3" }}
+  {{ .a }} \acc { fis'=''8 } g4-> %
   \duo { \once \stemDown g''=''8~-> | g=''2 | }
   { s8 | fis''=''8 f <g, e'>( c='') | }
   g,='8 \acc { fis'=''8 } g4-> %
   \duo { \once \stemDown g''=''8~-> | g=''2 | }
   { s8 | fis''=''8 f <g,=' c e>4^\accent | }
-{% endmacro %}
+{{ end }}
 
-{% macro rh4(a) %}
-  \tuplet 3/2 { {{ a }} c b } g8~ g) a | b g=' %
-{% endmacro %}
+{{ define "rh4" }}
+  \tuplet 3/2 { {{ .a }} c b } g8~ g) a | b g=' %
+{{ end }}
 
-{% macro rh5() %}
+{{ define "rh5" }}
   \duo { \tuplet 3/2 { b'='16(-> c b } g8~ g) a | b g=' } { f'='2-> | f='4 } %
-{% endmacro %}
+{{ end }}
 
-{% macro rh6() %}
+{{ define "rh6" }}
   g='8 b16( d) d,8 e16( fis) | g8 b16( d) c16( b c a=') |
-{% endmacro %}
+{{ end }}
 
-{% macro lh1(a) %}
-  {{ a }} g@7! r8 g7 | g, g7! c cM! | d g@7! r8 g7 | g,=, g7! c+cM!4-> |
-{% endmacro %}
+{{ define "lh1" }}
+  {{ .a }} g@7! r8 g7 | g, g7! c cM! | d g@7! r8 g7 | g,=, g7! c+cM!4-> |
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Allegro
   \clef treble
@@ -40,23 +40,23 @@
   \acc { fis''=''8 } g4->\f \acc { fis=''8 } g4-> |
   \acc { fis=''8 } g8-> d16( e f e d c) |
   b='8 g16( fis g8) g'16( fis | g8) d16\( e f e d c |
-  {{ rh1() }} c8\) d16\( c | {{ rh1() }} <e,=' c'>8\) r |
+  {{ template "rh1" }} c=''8\) d16\( c | {{ template "rh1" }} <e,=' c'>8\) r |
 
   \repeat volta 2 {
-    {{ rh2("b'='8", "d=''16(", "c='')") }}
-    {{ rh2("b='8", "d=''16\\(", "c=''") }}
-    {{ rh1() }} c8\) d16\( c | {{ rh1() }} <e,=' c'>8\) r |
+    {{ template "rh2" (w `b'='8` `d=''16(` `c='')`) }}
+    {{ template "rh2" (w `b='8` `d=''16\(` `c=''`) }}
+    {{ template "rh1" }} c=''8\) d16\( c | {{ template "rh1" }} <e,=' c'>8\) r |
 
-    {{ rh3("g='8") }} {{ rh3("g,='8") }}
+    {{ template "rh3" (w `g='8`) }} {{ template "rh3" (w `g,='8`) }}
 
-    {{ rh4("b,='16(->") }} <g c>8 8 |
-    {{ rh4("b='16(->") }} <g c>4-> |
-    {{ rh5() }} \duo { c''=''8 c='' | } { g'='8 g=' | }
+    {{ template "rh4" (w `b,='16(->`) }} <g c>8 8 |
+    {{ template "rh4" (w `b='16(->`) }} <g c>4-> |
+    {{ template "rh5" }} \duo { c''=''8 c='' | } { g'='8 g=' | }
 
     \alternative {
       \volta 1 {
-        {{ rh5() }} \duo { <g'=' c>4-> } { e'='4-> } %
-        \rep 3 { {{ rh6() }} }
+        {{ template "rh5" }} \duo { <g'=' c>4-> } { e'='4-> } %
+        \rep 3 { {{ template "rh6" }} }
         g='8 b16( d) d,8 e16( fis) | g8 a16( b) <e,=' g c>8 r |
       }
       \volta 2 {
@@ -68,9 +68,9 @@
     }
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key c \major
@@ -81,7 +81,7 @@
   \rep 2 { d=8 g@7! g,8 g7 | d' g@7! c=8 cM! | }
   g=,8 g7! b g@7 | d8 g@7! c8 cM! | g g7! b g@7 | d8 g@7! c=8 r |
 
-  {{ lh1("d=8") }} {{ lh1("d'=8") }}
+  {{ template "lh1" (w `d=8`) }} {{ template "lh1" (w `d'=8`) }}
 
   \duo {
     r8 g@M![ r8 gM] | r8 g@M![ r8 c@M!] |
@@ -94,4 +94,4 @@
   g,=,8 gM! c d@M! | b8 g c r |
   \duo { r8 g@7![ r8 g7] } { d=2 } g=,8 g7! c+cM!4 |
 }
-{% endmacro %}
+{{ end }}
