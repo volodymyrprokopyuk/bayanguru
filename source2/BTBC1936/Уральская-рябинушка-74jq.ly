@@ -1,14 +1,14 @@
-{% macro rh1() %}
+{{ define "rh1" }}
   <d=' f>2 4 | 4 g a | <a c>2. | <g bes>2 <f a>4 |
   <e=' g>2 e4 | <f a>2 <e g>4 | d='2.~ |
-{% endmacro %}
+{{ end }}
 
-{% macro lh1() %}
+{{ define "lh1" }}
   d=4 dm! dm | a d@m! dm4 | f f7! f7 | g gm! gm |
   bes=,4 g@m! gm4 | a a7! a7 | d= dm! dm |
-{% endmacro %}
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Lento
   \clef treble
@@ -21,16 +21,16 @@
   <a=' c>2 4 | 4 bes a | g2. | d2 d4 |
   <c=' e>2 <d f>4 | <e g> <d f> <e g> |
   <f=' a^~ >2.( | <e a>2) r4 |
-  {{ rh1() }} | d2. |
+  {{ template "rh1" }} | d2. |
   d='2 <bes' d>4 | 4 <a c> <bes d> |
   <a=' c>2. | <g bes>2 4 | 2 <a c>4 |
   <bes=' d>4 <a c> <g bes> |
   <f='( a^~ >2. | <e a>2.) |
-  {{ rh1() }} | d4 r r \bar "|."
+  {{ template "rh1" }} | d4 r r \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key d \minor
@@ -40,8 +40,8 @@
   f,=,4 fM! fM | c' c7! c7 | f, fM! fM | a f@M! fM4 |
   f=,4 fM! fM | fis d@7! d74 | g gm! gm | d' g@m! gm4 |
   c=4 c7! c7 | g c@7! c74 | f d@m! dm4 | a a7! a7 |
-  {{ lh1() }} | a d@m! dm4 | d d7! d7 | fis, d@7! d74 |
+  {{ template "lh1" }} | a d@m! dm4 | d d7! d7 | fis, d@7! d74 |
   g=,4 gm! gm | d' g@m! gm4 | c c7! c7 | e c@7! c74 |
-  f,=,4 d@m! dm4 | a=, a7! a7 | {{ lh1() }} | d+dm! r r |
+  f,=,4 d@m! dm4 | a=, a7! a7 | {{ template "lh1" }} | d+dm! r r |
 }
-{% endmacro %}
+{{ end }}

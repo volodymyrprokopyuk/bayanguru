@@ -1,4 +1,4 @@
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Adagio
   \clef treble
@@ -12,9 +12,9 @@
   4 <d=' d'>8 <g bes> | <f a>4 <d f>8 <f a> |
   <e=' g>4 <f a>8 <e g> | <d=' d'>2~ | 4 \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key d \minor
@@ -26,4 +26,4 @@
   bes+g@m!4 e+g@m4 | f+d@m!4 f+dm4 | g+gm!4 a+a7! |
   d+dm!4 d+dm | d+dm! %
 }
-{% endmacro %}
+{{ end }}

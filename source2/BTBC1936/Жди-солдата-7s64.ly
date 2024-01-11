@@ -1,4 +1,4 @@
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo "Tempo di marcia"
   \clef treble
@@ -11,9 +11,9 @@
   e='8 f g( e) | a2 | <e g>8 <f a> <g bes> a | <d,=' d'>2 \bar "|."
 
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key d \minor
@@ -26,4 +26,4 @@
   g,=,8 gm! c c7! | f, fM! fM fM |
   g=,8 f e' a@7! | d=8 dm! dm dm |
 }
-{% endmacro %}
+{{ end }}
