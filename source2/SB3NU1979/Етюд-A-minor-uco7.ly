@@ -30,8 +30,7 @@
         <c='' e>8 <b d> <a c> <gis b> a4.) a='8 \sSlur fd #'() ( |
       }
       \volta 2 {
-        \hSpace
-        <d='' f>8) \sSlur bu #'((bs . 2.5) (sh . 7) (wd . 3.5)) ( %
+        \hSpace <d='' f>8) \sSlur bu #'((bs . 2.5) (sh . 7) (wd . 3.5)) ( %
         <c='' e>8 <b_~ d>) <b f' a> \fermata <c e>8( <b d> <a c>) <d f>( |
         <c='' e>8\> <b d> <a c> <gis e'> \af 4.\! <a=' a'>4.) r8 \bar "|."
       }

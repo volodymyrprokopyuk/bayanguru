@@ -40,8 +40,7 @@
   {{ rh3() }} \af 4.\! <g=' g'>4.\) |
 
   \duo {
-    \stemDown
-    <ees''='' g>8.\(\p^\tATem <d f>16_\dCre <c ees> <d f> |
+    \stemDown <ees''='' g>8.\(\p^\tATem <d f>16_\dCre <c ees> <d f> |
     <ees='' g>8. <d f>16 <c ees> <ees g> |
     <d='' f>8. <c ees>16 <bes d> <c ees> | \stemUp <d='' f>4.\) |
   } { s4. | s4. | s4. | r8. aes'='16( g f=') | }
