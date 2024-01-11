@@ -17,33 +17,35 @@ type Line struct {
 }
 
 var excludeParts = []string{
-  `^{{ (?:define|end).* }}$`,
+  `^{{ define "\w+" }}$`,
+  `^{{ end }}$`,
   `^\\relative {$|^}$`,
   `^ +{{ template "\w+" }}$`,
   `^ +\\tempo (?:\w+|"[^"]+")$`,
   `^ +\\clef (?:treble|bass)$`,
   `^ +\\key \w+ \\(?:major|minor)$`,
   `^ +\\time \d+/\d+$`,
+  `^ +\\meter \d+/\d+`,
   `^ +\\repeat (?:volta|segno) \d {$|^ +}$`,
   `^ +\\alternative {$`,
   `^ +\\volta \d {$|^ +\\volta \d$`,
-  `^ +\\meter \d+/\d+ .+$`,
   `^ +\\(?:duo|trio) {$|^ +} {$`,
-  `^ +\\(?:set|override) .+$`,
-  `^ +\\\w+$`, // \command
-  `^$`, // empty line
+  `^ +\\set \w`,
+  `^ +\\\w+$`,
 }
 var excludeLine = regexp.MustCompile(strings.Join(excludeParts, "|"))
 var removeParts = []string{
-  ` \\clef (?:treble|bass)`,
-  ` \\(?:partial|volta|rep) \d+`,
-  ` \\(?:tuplet) \d+/\d+`,
+  `{{ template "[^"]+" (?:}})?`,
+  `\\clef (?:treble|bass)`,
+  `\\(?:partial|volta|rep) \d+`,
+  `\\(?:tuplet|time) \d+/\d+`,
   `\\af \d{1,2}\.{0,2}(?:\\!)?`,
-  ` {{ template "[^"]+" [}]{0,2}`,
-  ` \\\w+`, // \command
-  `(?:bs|dt) \. `, // command parameters (bs . 2)
+  ` \\(?:once|acc|grace|stemUp|stemDown|bar)`,
+  ` \\(?:duo|trio|hSpace|sSlur)`,
+  `(?:bs|dt) \. |(?:fu|fd|bu|bd) #'`, // \sSlur
 }
 var removeCommand = regexp.MustCompile(strings.Join(removeParts, "|"))
+var hasMusic = regexp.MustCompile(`[a-g]`)
 
 func cleanLines(pieceFile string) ([]Line, error) {
   file, err := os.Open(pieceFile)
@@ -59,7 +61,7 @@ func cleanLines(pieceFile string) ([]Line, error) {
     if !excludeLine.MatchString(line) {
       cleanLine := removeCommand.ReplaceAllLiteralString(line, "")
       cleanLine = strings.Trim(cleanLine, " ")
-      if len(cleanLine) > 0 {
+      if len(cleanLine) > 0 && hasMusic.MatchString(cleanLine) {
         line := Line{num, strings.Trim(cleanLine, " ")}
         lines = append(lines, line)
         // fmt.Printf("%3v: %v\n", line.Num, line.Text)
@@ -118,8 +120,8 @@ func lintNewContextOctaveCheck(lines []Line) []Line {
 }
 
 var endParts = []string{
-  ` (?:\||"\|\|"|"\|\.")(?: })?$`, // | or | }
-  ` (?:}}|%)$`, // }} or %
+  `(?:\||"\|\|"|"\|\.")(?: })?$`, // | or | }
+  `(?:}}|%)$`, // }} or %
 }
 var barCheck = regexp.MustCompile(strings.Join(endParts, "|"))
 
