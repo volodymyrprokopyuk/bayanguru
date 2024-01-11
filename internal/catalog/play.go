@@ -20,7 +20,7 @@ type PlayCommand struct {
   Queries PieceQueries
 }
 
-var cleanTit = regexp.MustCompile(`[^ \pL\d]+`)
+var cleanTit = regexp.MustCompile(`[^- \pL\d]+`)
 
 func scoreFile(tit, ID string) string {
   tit = strings.ReplaceAll(cleanTit.ReplaceAllLiteralString(tit, ""), " ", "-")

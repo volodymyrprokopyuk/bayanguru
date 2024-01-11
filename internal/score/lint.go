@@ -40,11 +40,10 @@ var removeParts = []string{
   `\\(?:partial|volta|rep) \d+`,
   `\\(?:tuplet|time) \d+/\d+`,
   `\\af \d{1,2}\.{0,2}(?:\\!)?`,
-  ` \\(?:once|acc|grace|stemUp|stemDown|bar)`,
-  ` \\(?:duo|trio|hSpace|sSlur)`,
   `(?:bs|dt) \. |(?:fu|fd|bu|bd) #'`, // \sSlur
 }
-var removeCommand = regexp.MustCompile(strings.Join(removeParts, "|"))
+var removeKnownCmd = regexp.MustCompile(strings.Join(removeParts, "|"))
+var removeOtherCmd = regexp.MustCompile(` \\\w+`)
 var hasMusic = regexp.MustCompile(`[a-g]`)
 
 func cleanLines(pieceFile string) ([]Line, error) {
@@ -59,7 +58,8 @@ func cleanLines(pieceFile string) ([]Line, error) {
   for scanner.Scan() {
     line := scanner.Text()
     if !excludeLine.MatchString(line) {
-      cleanLine := removeCommand.ReplaceAllLiteralString(line, "")
+      cleanLine := removeKnownCmd.ReplaceAllLiteralString(line, "")
+      cleanLine = removeOtherCmd.ReplaceAllLiteralString(cleanLine, "")
       cleanLine = strings.Trim(cleanLine, " ")
       if len(cleanLine) > 0 && hasMusic.MatchString(cleanLine) {
         line := Line{num, strings.Trim(cleanLine, " ")}
