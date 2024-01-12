@@ -39,7 +39,6 @@ var removeParts = []string{
   `\\clef (?:treble|bass)`,
   `\\(?:partial|volta|rep) \d+`,
   `\\(?:tuplet|time) \d+/\d+`,
-  `\\af \d{1,2}\.{0,2}(?:\\!)?`,
   `(?:bs|dt) \. |(?:fu|fd|bu|bd) #'`, // \sSlur
 }
 var removeKnownCmd = regexp.MustCompile(strings.Join(removeParts, "|"))
