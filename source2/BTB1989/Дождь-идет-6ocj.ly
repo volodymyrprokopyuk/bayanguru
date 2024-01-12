@@ -1,25 +1,25 @@
-{% macro rh1(a) %}
-  {{ a }} ees~ | ees8 b \rest \stemDown ees16 d c g \stemUp |
+{{ define "rh1" }}
+  {{ .a }} ees~ | ees8 b \rest \stemDown ees16 d c g \stemUp |
   bes='8. a16 aes4~ | aes='8 %
-{% endmacro %}
+{{ end }}
 
-{% macro rh2() %}
+{{ define "rh2" }}
   \rep 2 { r16 <g'=' c>16[ r <g=' c>] } | <g=' c>8 s4. |
-{% endmacro %}
+{{ end }}
 
-{% macro rh3() %}
+{{ define "rh3" }}
   \meter 1/8 1,1,1,1
   g'=''32\< g, b d g b, d g b d, g b d g, b \af 32\! d |
   \meter 1/4 1,1
   g='''8 r g,,16\mf g fis g=' |
-{% endmacro %}
+{{ end }}
 
-{% macro rh4() %}
+{{ define "rh4" }}
   <g=' c ees>16 <c ees g>8 <ees g c>16 <ees aes ees'>4 |
   \acc { cis'='''8 } <fis, d'>16 a8 bes=''16 %
-{% endmacro %}
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Moderato
   \clef treble
@@ -47,36 +47,36 @@
     }
   }
 
-  {{ rh3() }}
+  {{ template "rh3" }}
   \duo {
-    {{ rh1("ees''=''4") }} b \rest f16 f e f |
+    {{ template "rh1" (w `ees''=''4`) }} b \rest f16 f e f |
     d'=''4 d~ | d8 b \rest d16 b g f |
     ees='2~ | ees8 b' \rest g16 g fis g |
-    {{ rh1("ees'=''4") }}
+    {{ template "rh1" (w `ees'=''4`) }}
   } {
-    {{ rh2() }} | <c,=' f>8 r r16 <c f>16[ r <c f>] | <c f>8 s4. |
+    {{ template "rh2" }} | <c,=' f>8 r r16 <c f>16[ r <c f>] | <c f>8 s4. |
     \rep 2 { r16 <f=' b>16[ r <f=' b>] } | <f b>8 s4. |
     r16 <g,= c>8 16 r <g c>[ r <g c>] | <g c>8 s4. |
-    {{ rh2() }} | <c,=' f>8 r r16 <c f>16[ r <c f>] | <c=' f>8
+    {{ template "rh2" }} | <c,=' f>8 r r16 <c f>16[ r <c f>] | <c=' f>8 %
   }
 
-  <c='' aes'>8\f <bes g'> <aes f'> | {{ rh4() }}
+  <c='' aes'>8\f <bes g'> <aes f'> | {{ template "rh4" }}
   \duo { b''=''8 g | c2~ | c8 s4.\mf | }
   { f''=''4 | <ees g>16 8 16 <d aes'>8 8 | <ees g>8 c c8. b='16 | }
   <d,,=' bes'>8. <bes' d>16 <d f>4~ | 8 <f aes>8 16 <ees g>8 <d fis>16 |
   <ees='' g>4 <g, ees'>~ | 8 <ees' g>8 16 <f aes>8 <ees g>16 |
   <aes,=' c f>4 <f c' d> | <fis a ees'> <fis=' a c> |
 
-  {{ rh3() }}
-  \duo { {{ rh1("ees''=''4") }} }
-  { {{ rh2() }} | <c,=' f>8 r r16 <c f>16[ r <c f>] | <c=' f>8 }
-  <c='' aes'>8\f <bes g'> <aes f'> | {{ rh4() }}
+  {{ template "rh3" }}
+  \duo { {{ template "rh1" (w `ees''=''4`) }} } %
+  { {{ template "rh2" }} | <c,=' f>8 r r16 <c f>16[ r <c f>] | <c=' f>8 } %
+  <c='' aes'>8\f <bes g'> <aes f'> | {{ template "rh4" }}
   \duo { b''=''8 g | } { f''=''4 | }
   <ees,='' g c>4 <b f' g>\mp | <c='' ees g c> r \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key c \minor
@@ -111,4 +111,4 @@
   f,=,8 fm! c' f@m | f,8 r r4 | g8 c@m! aes8 aesM! |
   a=,8 d@7! g=,8 g7! | c+cm!4 g+g7! | c+cm! r |
 }
-{% endmacro %}
+{{ end }}

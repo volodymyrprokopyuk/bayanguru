@@ -17,7 +17,7 @@
 
   \repeat volta 2 {
     {{ template "rh1" (w `r8\p` ``) }} | r8 g16( a b8)-. d-. c16( d e f e d c b) |
-    {{ template "rh1" (w `r8\<` `\af 16.\!`) }}
+    {{ template "rh1" (w `r8\<` ` \af 16.\!`) }}
     \alternative {
       \volta 1 { r8 g='16( a b8)-. d-. c=''2 | }
       \volta 2 { r8 g='16( a b8)-. g-. c=''4-- r \bar "|." }

@@ -1,8 +1,8 @@
-{% macro rh1(a) %}
-  {{ a }} a g f e f e d | c e g,8~ g16 e' d c='' |
-{% endmacro %}
+{{ define "rh1" }}
+  {{ .a }} a g f e f e d | c e g,8~ g16 e' d c='' |
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo "Con moto"
   \clef treble
@@ -19,18 +19,18 @@
   }
 
   \repeat volta 2 {
-    {{ rh1("g'=''16\\mf") }}
+    {{ template "rh1" (w `g'=''16\mf`) }}
     b='16 d g,8~ g16 f' e d | c e g,8~ g16 e' f fis |
-    {{ rh1("g=''16") }} b g b d g f e d |
+    {{ template "rh1" (w `g=''16`) }} b g b d g f e d |
     \alternative {
       \volta 1 { c=''16 b c d e d e f='' | }
       \volta 2 { c=''8 e c='' r \bar "|." }
     }
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key a \minor
@@ -42,4 +42,4 @@
 
   \rep 4 { d=8 g@7! g,8 g7 | c cM! g=, c@M | } c=8 cM! cM r |
 }
-{% endmacro %}
+{{ end }}

@@ -1,13 +1,13 @@
-{% macro rh1(a) %}
-  {{ a }} <g bes> <f aes>4 <ees g>8 <d f> |
+{{ define "rh1" }}
+  {{ .a }} <g bes> <f aes>4 <ees g>8 <d f> |
   <ees=' g>8 <f aes> <ees g>4 <d f>8 <c=' ees> |
-{% endmacro %}
+{{ end }}
 
-{% macro rh2() %}
+{{ define "rh2" }}
   <d=' f>8 <ees g> <d f>4 \duo { g'='4 | } { ees'='8 d=' | }
-{% endmacro %}
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Largo
   \clef treble
@@ -26,11 +26,12 @@
     <ees=' g c>2 g4 | <ees g c>2 <g bes>4 |
     <f=' aes>8 <g bes> <aes c>4 <g bes>8 <f aes> |
     <ees=' g>4( c) <g' bes>4 |
-    {{ rh1("<f=' aes>8") }}
-    {{ rh2() }}
+    {{ template "rh1" (w `<f=' aes>8`) }}
+    {{ template "rh2" }}
     <c=' c'>2 <g' bes>4 |
-    \duo { \rep 2 { c''=''8 c8 c=''2 | } } { {{ rh1("<f'=' aes>8") }} }
-    {{ rh2() }}
+    \duo { \rep 2 { c''=''8 c8 c=''2 | } | }
+    { {{ template "rh1" (w `<f'=' aes>8`) }} | }
+    {{ template "rh2" }}
     \alternative {
       \volta 1 { <c=' c'>4 <bes bes'>8 r bes=4 | }
       \volta 2 {
@@ -40,9 +41,9 @@
     }
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key ees \major
@@ -75,4 +76,4 @@
   g=,8[-- c@m! cm8 cm] f-- fm! |
   g+c@m!4 r4 g+g7! c+cm!4 c'=4-> r |
 }
-{% endmacro %}
+{{ end }}

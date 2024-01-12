@@ -1,25 +1,25 @@
-{% macro rh1() %}
+{{ define "rh1" }}
   c='''8 \tuplet 3/2 { g=''16( aes g) } f8 ees |
   \tuplet 3/2 { ees=''16( f ees) } d8 d16 g, b d |
   g=''8 \tuplet 3/2 { f=''16( g f) } ees8 d='' |
-{% endmacro %}
+{{ end }}
 
-{% macro rh2() %}
+{{ define "rh2" }}
   c,='16 d ees f g8 c | \tuplet 3/2 { c=''16( d c) } b8 b16 c d=''8 |
-{% endmacro %}
+{{ end }}
 
-{% macro rh3() %}
+{{ define "rh3" }}
   c,='16 d ees f g a b c | \tuplet 3/2 { c=''16( d c) } b8 b16 c d=''8 |
-{% endmacro %}
+{{ end }}
 
-{% macro rh4() %}
+{{ define "rh4" }}
   \rep 2 { c=''8 c16 aes f g aes bes=' | }
   \set subdivideBeams = ##t
   \tuplet 3/2 { c=''16( des c) } b c='' %
   \set subdivideBeams = ##f
-{% endmacro %}
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Moderato
   \clef treble
@@ -30,24 +30,24 @@
   \repeat segno 2 {
     \volta 1
     \repeat volta 2 {
-      {{ rh1() }} | ees=''8 d16 c b c ees g | {{ rh1() }}
+      {{ template "rh1" }} | ees=''8 d16 c b c ees g | {{ template "rh1" }}
       \alternative {
         \volta 1 { c=''8 r <c ees g c> \tuplet 3/2 { g'=''16( a b='') } | }
         \volta 2 { c,=''8 r <c='' ees g c> r | }
       }
     }
 
-    {{ rh2() }} | g,='16 a b c d8 ees |
+    {{ template "rh2" }} | g,='16 a b c d8 ees |
     \tuplet 3/2 { d=''16( ees d) } c8 c16 b c8 |
-    {{ rh2() }}
+    {{ template "rh2" }}
     \set subdivideBeams = ##t
     \tuplet 3/2 { g,='16( aes g) } fis g a8 b |
     \set subdivideBeams = ##f
     c=''8 r <c='' ees g c> r |
 
-    {{ rh3() }} | g,='16 a b c d cis d ees |
+    {{ template "rh3" }} | g,='16 a b c d cis d ees |
     \tuplet 3/2 { d=''16( ees d) } c8 c16 b c8 |
-    {{ rh3() }}
+    {{ template "rh3" }}
     \set subdivideBeams = ##t
     \tuplet 3/2 { g,='16( aes g) } fis g a8 b |
     \set subdivideBeams = ##f
@@ -65,13 +65,13 @@
 
     \key f \minor
     \repeat volta 2 {
-      {{ rh4() }} des8-. c-. |
+      {{ template "rh4" }} des=''8-. c-. |
       \rep 2 { bes='16 c bes aes g fis g aes=' | }
       bes='8 bes16 aes g fis g aes |
       \set subdivideBeams = ##t
       \tuplet 3/2 { bes='16( c bes) } a bes c8-. bes-. |
       \set subdivideBeams = ##f
-      aes='16 bes aes g f g aes bes | {{ rh4() }} f8-. ees-. |
+      aes='16 bes aes g f g aes bes | {{ template "rh4" }} f8-. ees-. |
       des=''16 ees des c bes8 bes16 c |
       des=''8 \tuplet 3/2 { des=''16( ees des) } c8 bes |
       aes='16 bes aes g f g aes f | g aes g f e f g e |
@@ -83,11 +83,12 @@
       }
     }
   }
-  \keyChangeBeforeBar \key c \minor
+  \keyChangeBeforeBar
+  \key c \minor
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key c \minor
@@ -114,6 +115,7 @@
   f,=,8 fm! a f@7! | bes8 besm! bes r |
   bes=,8 besm! des bes@m | f,8 fm! aes f@m |
   c=8 c7! c c7 | \rep 2 { f,=,8 c' f,=, r | }
-  \keyChangeBeforeBar \key c \minor
+  \keyChangeBeforeBar
+  \key c \minor
 }
-{% endmacro %}
+{{ end }}

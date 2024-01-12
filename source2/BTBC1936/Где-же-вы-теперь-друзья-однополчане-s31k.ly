@@ -1,18 +1,18 @@
-{% macro rh1(a) %}
-  {{ a }} g d' c) e,(\< g c e) d( gis, b \af 16\! f') |
+{{ define "rh1" }}
+  {{ .a }} g d' c) e,(\< g c e) d( gis, b \af 16\! f') |
   e=''8\mf b16( c a8)\> a16( b g a fis \af 32.\! b=') |
-{% endmacro %}
+{{ end }}
 
-{% macro lh1(a) %}
-  {{ a }} cM! b | c a@m! b=,4 |
-{% endmacro %}
+{{ define "lh1" }}
+  {{ .a }} cM! b | c a@m! b=,4 |
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Moderato
   \clef treble
   \key e \minor
-  \time 3/4 {{ rh1("e'='16(\\p") }}
+  \time 3/4 {{ template "rh1" (w `e'='16(\p`) }}
   \repeat volta 2 {
     \time 2/4
     b='8.(\p e,16) e8( fis) | e( b a' g) | fis2( b,2) |
@@ -33,17 +33,17 @@
     }
     <a'=' c>4 a | <g b> <e g> | <f a>4 <e fis> |
     <dis=' g>8. b'16 <dis, g>8( fis) | e='2 |
-    \time 3/4 {{ rh1("e='16(") }}
+    \time 3/4 {{ template "rh1" (w `e='16(`) }}
   }
   e,='4(\p e'='') \fermata r \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key e \minor
-  {{ lh1("c=4-\\stBass") }}
+  {{ template "lh1" (w `c=4-\stBass`) }}
   e=4 em! | g, e@m! | a4 am! | b b7! |
   e=4 em! | a, d@7! | g4 gM! | g d'8 b |
   c=4 c7! | e e7! | gis, e@7! | a4 am! |
@@ -52,6 +52,6 @@
   fis,=,4 d@7! | d'4 d7! | b bM! | g gM! |
   c=4 cM! | e e7! | gis, e@7! | a4 am! |
   e'=4 em! | f, fis@7! | b4 b7! | e em! |
-  {{ lh1("c=4") }} | e=4 em! \fermata r |
+  {{ template "lh1" (w `c=4`) }} | e=4 em! \fermata r |
 }
-{% endmacro %}
+{{ end }}

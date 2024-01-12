@@ -1,12 +1,12 @@
-{% macro lh1(a) %}
-  {{ a }} bm!4 bm8 d4 b@m | e8 em!4 em8 g,=,4 e@m |
-{% endmacro %}
+{{ define "lh1" }}
+  {{ .a }} bm!4 bm8 d4 b@m | e8 em!4 em8 g,=,4 e@m |
+{{ end }}
 
-{% macro lh2() %}
+{{ define "lh2" }}
   b=,8 bm!4 bm8 d4 b@m | e8( em!4) em8 g,=,8( e@m4) em8 |
-{% endmacro %}
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Sostenuto
   \clef treble
@@ -39,25 +39,25 @@
     }
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key b \minor
-  {{ lh1("b,=,8-\\stBass") }}
+  {{ template "lh1" (w `b,=,8-\stBass`) }}
   fis=,4 b@m! cis+cis7!4 fis+fis7! | b=,8 bm!4 bm8 bm4 \fermata r |
 
-  {{ lh1("b=,8") }}
+  {{ template "lh1" (w `b=,8`) }}
   fis=,8 fis7!4 fis78 cis+cis7!4 fis+fis7! | b8 bm!4 bm8 d4 b@m |
-  {{ lh2("b=,8") }}
+  {{ template "lh2" (w `b=,8`) }}
   fis=,8 b@m!4 bm8 fis4 fis7! | b8 bm!4 bm8 d=4 b@m |
 
-  {{ lh1("b=,8") }}
+  {{ template "lh1" (w `b=,8`) }}
   a=,8 a7!4 a78 a4 a7 | d8 dM!4 dM8 fis,4 fis7! |
-  {{ lh2() }}
+  {{ template "lh2" }}
   fis=,8 b@m!4 bm8 fis4 fis7! | b8 bm!4 bm8 b4 bm |
   e=8 em!4 em8 e4 em | fis, b@m! cis+cis7!4 fis+fis7! |
   b=,8 bm!4 bm8 b+bm2 \fermata |
 }
-{% endmacro %}
+{{ end }}
