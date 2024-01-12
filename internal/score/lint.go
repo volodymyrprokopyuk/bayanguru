@@ -120,7 +120,7 @@ func lintNewContextOctaveCheck(lines []Line) []Line {
 
 var endParts = []string{
   `(?:\||"\|\|"|"\|\.")(?: })?$`, // | or | }
-  `(?:}}|%)$`, // }} or %
+  "(?:`|" + `}}|%)$`, // ` or }} or %
 }
 var barCheck = regexp.MustCompile(strings.Join(endParts, "|"))
 
