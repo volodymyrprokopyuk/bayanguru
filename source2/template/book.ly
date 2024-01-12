@@ -8,6 +8,7 @@
 \paper {
   page-breaking = #ly:minimal-breaking
   ragged-right = ##f
+  ragged-bottom = ##f
   ragged-last-bottom = ##f
 
   oddFooterMarkup = \markup \fill-line {

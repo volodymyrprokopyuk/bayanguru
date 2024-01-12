@@ -15,6 +15,7 @@
 \paper {
   page-breaking = #ly:optimal-breaking
   ragged-right = ##f
+  ragged-bottom = ##f
   ragged-last-bottom = ##t
 
   oddFooterMarkup = \markup \fill-line {
