@@ -6,6 +6,7 @@
 }
 
 \paper {
+  page-breaking = #ly:minimal-breaking
   ragged-right = ##f
   ragged-last-bottom = ##f
 
