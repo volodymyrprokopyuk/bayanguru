@@ -12,13 +12,13 @@ pieces:
   # B1AK1979
   - { id: 41bl, tit: Латвійська народна полька,
       arr: А. Жилінський, art: ipr, src: B1AK1979,
-      org: lva, sty: flk, gnr: plk, ton: cj, frm: mel, bss: stb, lvl: ela }
+      org: lva, sty: flk, gnr: plk, ton: [cj, gj], frm: mel, bss: stb, lvl: ela }
   - { id: busq, tit: Маленький краков'як,
       src: B1AK1979,
       org: pol, sty: flk, gnr: dnc, ton: gj, frm: mel, bss: stb, lvl: ela }
   - { id: 4zsm, tit: Чеський народний танець,
       src: B1AK1979,
-      org: cze, sty: flk, gnr: dnc, ton: gj, frm: mel, bss: stb, lvl: ela }
+      org: cze, sty: flk, gnr: dnc, ton: gj, frm: [mel, dot], bss: stb, lvl: ela }
   - { id: ipw4, tit: Маленька рибка, sub: czefs,
       src: B1AK1979,
       org: cze, sty: flk, gnr: sng, ton: dj, frm: in3, bss: stb, lvl: ela }
@@ -32,10 +32,10 @@ pieces:
       org: pol, sty: flk, gnr: sng, ton: fj, frm: in3, bss: stb, lvl: ela }
   - { id: 1wgi, tit: Словацька полька,
       src: B2AK1979,
-      org: svk, sty: flk, gnr: plk, ton: aj, frm: in3, bss: stb, lvl: elb }
+      org: svk, sty: flk, gnr: plk, ton: aj, frm: [in3, syn], bss: stb, lvl: elb }
 
   # Tutorial
   # BTBC1936
   - { id: isnd, tit: Краков'як, sub: polfd,
       arr: М. Чайкін, src: BTBC1936,
-      org: pol, sty: flk, gnr: dnc, ton: gj, frm: mel, bss: stb, lvl: ela }
+      org: pol, sty: flk, gnr: dnc, ton: gj, frm: [dot, syn], bss: stb, lvl: ela }
