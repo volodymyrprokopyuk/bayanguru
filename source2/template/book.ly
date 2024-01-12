@@ -6,6 +6,7 @@
 }
 
 \paper {
+  ragged-right = ##f
   ragged-last-bottom = ##f
 
   oddFooterMarkup = \markup \fill-line {
