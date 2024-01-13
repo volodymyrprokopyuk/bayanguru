@@ -6,8 +6,9 @@
 }
 
 \paper {
-  page-breaking = #ly:minimal-breaking
+  page-breaking = #ly:optimal-breaking
   ragged-right = ##f
+  ragged-last = ##f
   ragged-bottom = ##f
   ragged-last-bottom = ##f
 

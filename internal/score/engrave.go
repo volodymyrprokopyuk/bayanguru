@@ -20,7 +20,7 @@ type EngraveCommand struct {
 }
 
 func templateArgs(args ...string) map[string]string {
-  keys := []string{"a", "b", "c", "d", "e", "f", "g"}
+  keys := []string{"a", "b", "c", "d", "e", "f", "g", "h"}
   l := min(len(args), len(keys))
   argMap := make(map[string]string, l)
   for i := 0; i < l; i++ {
@@ -50,7 +50,8 @@ func engraveScore(score, scoreFile, scoreDir string) error {
   scorePDF := filepath.Join(scoreDir, scoreFile)
   fmt.Printf("%v %v\n", sty.Org("engrave"), sty.Lvl(scorePDF + ".pdf"))
   lyCmd := exec.Command(
-    "lilypond", "-d", "backend=cairo", "-f", "pdf", "-o", scorePDF, "-s", "-",
+    "lilypond", "-d", "backend=cairo", "-l", "WARN",
+    "-f", "pdf", "-o", scorePDF, "-",
   )
   lyCmd.Stdin = strings.NewReader(score)
   lyCmd.Stdout = os.Stdout

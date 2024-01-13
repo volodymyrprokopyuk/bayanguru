@@ -1,7 +1,5 @@
 \version "2.25.11"
 
-#(ly:set-option 'warning-as-error #t)
-
 % Logo
 bayanURL = "https://volodymyrprokopyuk.github.io/bayan"
 bayanLogo = \markup \serif \bold \concat {
