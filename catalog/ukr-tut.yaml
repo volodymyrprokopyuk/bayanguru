@@ -4,19 +4,19 @@ pieces:
   # BTBC1936
   - { id: yq8y, tit: Українська полька,
       com: М. Чайкін, src: BTBC1936,
-      org: ukr, sty: flk, gnr: plk, ton: ai, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: plk, ton: ai, frm: rep, bss: stb, lvl: ela }
   - { id: cckj, tit: За городом качки пливуть, sub: ukrfs,
       arr: М. Чайкін, art: ipr, src: BTBC1936,
-      org: ukr, sty: flk, gnr: chd, ton: fj, frm: [mel, rep], bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: chd, ton: fj, frm: rep, bss: stb, lvl: ela }
   - { id: a3ew, tit: Ой піду я понад лугом, sub: ukrfs,
       arr: М. Чайкін, src: BTBC1936,
       org: ukr, sty: flk, gnr: sng, ton: [fj, di], frm: mel, bss: stb, lvl: ela }
   - { id: isd6, tit: Гопак, sub: ukrfd,
       arr: М. Чайкін, src: BTBC1936,
-      org: ukr, sty: flk, gnr: gop, ton: [dj, gj], frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: gop, ton: [dj, gj], frm: [dot, syn], bss: stb, lvl: ela }
   - { id: vf9h, tit: Козачок, sub: ukrfd,
       arr: М. Різоль, src: BTBC1936,
-      org: ukr, sty: flk, gnr: koz, ton: [gj, dj, ei], frm: [var, cr5], bss: [stb, pub], lvl: elb }
+      org: ukr, sty: flk, gnr: koz, ton: [gj, dj, ei], frm: [var, cr5, dot, syn], bss: [stb, pub], lvl: elb }
   # BTB1978
   - { id: vwad, tit: "Чорнії брови, карії очі", sub: ukrfs,
       src: BTB1978,

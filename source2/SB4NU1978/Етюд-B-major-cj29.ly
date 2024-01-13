@@ -1,42 +1,42 @@
-{% macro rh1(a, b) %}
-  {{ a }} <cis e ais> <dis fis b> %
+{{ define "rh1" }}
+  {{ .a }} <cis e ais> <dis fis b> %
   <e=' gis cis>4 <fis ais dis>8 |
   <dis=' fis b>8 <cis e ais> <dis fis b> %
   <e=' gis cis>4 <fis ais dis>8 |
-  <dis=' fis b>8 {{ b }} <cis e ais> <dis fis b> %
+  <dis=' fis b>8 {{ .b }} <cis e ais> <dis fis b> %
   <dis=' fis b>8 <e gis cis> <fis ais dis> |
   <fis=' ais dis>8 <gis b e> <ais cis fis> %
   <b=' dis gis>8 <cis e ais> <dis='' fis b> |
-{% endmacro %}
+{{ end }}
 
-{% macro rh2() %}
+{{ define "rh2" }}
   <e='' gis cis>8 <dis fis b> <e gis cis> %
   <cis='' e ais>8 <b dis gis> <cis='' e ais> |
-{% endmacro %}
+{{ end }}
 
-{% macro rh3(a) %}
-  {{ a }} <ais cis fisis> <b dis gis> %
+{{ define "rh3" }}
+  {{ .a }} <ais cis fisis> <b dis gis> %
   <cis=' fisis ais>4 <dis=' fisis b>8 |
-{% endmacro %}
+{{ end }}
 
-{% macro lh1(a) %}
-  {{ a }} r bM!] r fis@M! r8 | b[ r bM!] r fis@M! r8 |
+{{ define "lh1" }}
+  {{ .a }} r bM!] r fis@M! r8 | b[ r bM!] r fis@M! r8 |
   \rep 2 { b=,8 r r bM! r r | }
-{% endmacro %}
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Allegro
   \clef treble
   \key b \major
   \time 6/8
-  {{ rh1("<dis'=' fis b>8\\f", "_\\dCre") }}
-  {{ rh2() }}
+  {{ template "rh1" (w `<dis'=' fis b>8\f` `_ \dCre`) }}
+  {{ template "rh2" }}
   <dis='' gis b>8_\dDim <cis fisis ais> <dis gis b> %
   <b=' dis gis>8 <ais cis fisis> <b dis gis> |
   <b=' dis gis>8 <ais cis fis> <gis b eis> %
   <gis=' b eis>8 <ais cis fis> <b dis gis> | <ais=' cis fis>2. |
-  {{ rh1("<dis,=' fis b>8\\mf", "") }}
+  {{ template "rh1" (w `<dis,=' fis b>8\mf` ``) }}
   <e='' gis cis>8 <gis b e> <fis ais dis> %
   <e='' gis cis>8 <dis fis b> <e gis cis> |
   <dis='' fis b>8 <fis ais dis> <e gis cis> %
@@ -67,10 +67,12 @@
   <cisis='' eis ais>8 <ais cisis eis> <cisis eis ais> |
   <fis,=' ais dis>4. r8 <cis=' e fis ais>4 \fermata |
 
-  {{ rh1("<dis=' fis b>8\\f", "_\\dCre") }} {{ rh2() }}
+  {{ template "rh1" (w `<dis=' fis b>8\f` `_ \dCre`) }}
+  {{ template "rh2" }}
   <ais=' cis fis>8_\dDim <gis b e> <fis ais dis> %
   <e=' gis cis>8 <dis fis b> <cis e ais> |
-  {{ rh3("<b= dis gis>8\\mf") }} {{ rh3("<b= dis gis>8") }}
+  {{ template "rh3" (w `<b= dis gis>8\mf`) }}
+  {{ template "rh3" (w `<b= dis gis>8`) }}
   <b= dis gis>8 <ais cis fisis> <b dis gis> %
   <b= dis gis>8 <ais cis fisis> <b dis gis> |
   <cis=' e ais>8_\dCre <b e gis> <cis e ais> %
@@ -89,16 +91,16 @@
   <fis=' b dis>8-> \af 8\! <b dis fis>-> |
   <dis='' fis b>4->\f r8 r4. \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key b \major
-  {{ lh1("b,=,8[-\\stBass") }}
+  {{ template "lh1" (w `b,=,8[-\stBass`) }}
   fis=,8 r r fisM! r r | gis r r gism! r r |
   cis=8 r r cis7! r r | fis gis fis e dis cis |
-  {{ lh1("b=,8[") }}
+  {{ template "lh1" (w `b=,8[`) }}
   e,=,8 r r cis@m! r8 r | fis r r b@M! r8 r |
   fis=,8 r r fis7! r r | b=, r r bM!4 r8 |
 
@@ -109,7 +111,7 @@
   ais=,8 r r b r r | ais r r dis@m! r8 r |
   ais=,8 r r aisM! r r | dis e dis cis( fis,=,4) \fermata |
 
-  {{ lh1("b=,8[") }}
+  {{ template "lh1" (w `b=,8[`) }}
   \rep 2 { fis=,8 r r fisM! r r | }
   \rep 2 { gis=,8[ r gism!] r dis'= r | }
   gis,=,8 r r gism! r r | fis[ r fisM!] b[ r bM!] |
@@ -117,4 +119,4 @@
   e=,8 r r eM! r r | fis r r b@M! r8 r | fis[ r fis] fis[ r fis] |
   b=,4 b8 b[-> b-> b]-> | b=,4-> r8 r4. |
 }
-{% endmacro %}
+{{ end }}

@@ -139,7 +139,7 @@ func lintLineEndBarCheck(lines []Line) []Line {
 }
 
 var noteParts = []string{
-  `[a-g]\S*`, // first note
+  `\b[a-g]\S*`, // first note
   `<[a-g][^>]+>\S*`, // first chord
 }
 var noteChord = regexp.MustCompile(strings.Join(noteParts, "|"))

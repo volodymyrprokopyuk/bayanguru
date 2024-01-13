@@ -1,4 +1,4 @@
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo "Lento. Rubato"
   \clef treble
@@ -44,9 +44,9 @@
   <f=' g bes des>8-> <f g bes f'>-> <g des' f g>]-> |
   <a=' c f a>2.\f \fermata \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key f \major
@@ -58,6 +58,6 @@
   \rep 4 { f=,2 f8 f=, | }
   r8 f=,8-> c'-> a-> ees'-> c-> | r8 f,_\aSim b gis d' b |
   r8 f=,8 bes g des' bes | f2-> des'8-> bes=,-> |
-  \fixed c' { <f,,=, c, a, c f>2.^\markup \smaller "Б" \fermata } |
+  | \fixed c' { <f,,=, c, a, c f>2.^\markup \smaller "Б" \fermata } |
 }
-{% endmacro %}
+{{ end }}

@@ -1,8 +1,8 @@
-{% macro rh1(a) %}
-  <aes,= des f>8) 8 8 <bes des g>8 {{ a }} 8 8 | <c ees aes>8 8 <ees=' aes c> %
-{% endmacro %}
+{{ define "rh1" }}
+  <aes,= des f>8) 8 8 <bes des g>8 {{ .a }} 8 8 | <c ees aes>8 8 <ees=' aes c> %
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo "Moderato espressivo"
   \clef treble
@@ -10,12 +10,12 @@
   \time 6/8
   \partial 8 { ees'='8(\p | }
   \repeat volta 2 {
-    {{ rh1("") }}
+    {{ template "rh1" (w ``) }}
     \duo { <c''='' f>4( <c='' ees>8) | } { aes'='4. | }
     <des=' ees g>8 8 <ees g bes> %
     \duo { <f'=' des'>4( <ees=' c'>8) | } { g'='4. | }
     <c=' ees aes>8 <c ees g> <c ees f> <aes c ees>4 ees'8( |
-    {{ rh1("_\\dCre") }}
+    {{ template "rh1" (w `_ \dCre`) }}
     \duo { <ees''='' ges>4(\mf <ees='' f>8) | } { a'='4. | }
     <f=' bes ees>8 8 <f bes des> <ees g c>8_\dDim 8 <des g bes> |
     \alternative {
@@ -41,7 +41,7 @@
     <bes=' des g>8\> 8^\tRit <aes=' des f bes> <g des' ees>4 \af 8\! ees='8(\p |
 
     \tempo "Tempo I"
-    {{ rh1("") }}
+    {{ template "rh1" (w ``) }}
     \duo { <c''='' f>4( <c='' ees>8) | } { aes'='4. | }
     <des=' ees g>8 8 <ees g bes> %
     \duo { <f'=' des'>4( <ees=' c'>8) | } { g'='4. | }
@@ -69,9 +69,9 @@
     \bar "|."
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key aes \major
@@ -90,4 +90,4 @@
   aes,=,4.~ aes4\) r8 | bes2.\(~ | bes~ | bes |
   ees=4.~ ees4\) \fermata r8 | ees2.\( | aes,4.~ aes=,4\) %
 }
-{% endmacro %}
+{{ end }}

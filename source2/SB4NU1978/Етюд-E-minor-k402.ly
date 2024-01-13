@@ -1,8 +1,8 @@
-{% macro rh1() %}
+{{ define "rh1" }}
   \rep 2 { <ais,=' cis fis>16 g' <ais, cis fis> cis'='''-> } |
-{% endmacro %}
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Moderato
   \clef treble
@@ -42,12 +42,12 @@
       \rep 2 { <b,=' d fis>16 g' <b, d fis> d'='''-> } |
       \alternative {
         \volta 1 {
-          {{ rh1() }}
+          {{ template "rh1" }}
           <b,=' d fis>16 g' <b, d fis> b'-> %
           <c,='' d fis>16 g' <c, d fis> a'=''-> |
         }
         \volta 2 {
-          {{ rh1() }}
+          {{ template "rh1" }}
           <b,=' d fis>16^\tRit g' <b, d fis> b'-> <b, dis fis>\> g' %
           <b,=' dis fis>16 \af 16\! b'=''-> \bar "||"
         }
@@ -55,9 +55,9 @@
     }
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key e \minor
@@ -69,4 +69,4 @@
   e'=8 r em! r | fis r b@m! r8 | fis r fis7! r | b,8. r16 a8. r16 |
   fis'=8 r fis7! r | b,=, r b7! r |
 }
-{% endmacro %}
+{{ end }}
