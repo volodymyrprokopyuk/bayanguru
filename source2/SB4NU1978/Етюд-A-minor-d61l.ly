@@ -1,4 +1,4 @@
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo "Allegretto cantabile"
   \clef treble
@@ -52,9 +52,9 @@
 
     \meter Voice 1/8 1,1,1,1
     c=''32 a c e a e c e gis e d e a e c e |
-    c'='''32 a e a \rep 3 { b='' gis e gis='' } |
+    c'='''32 a e a \rep 3 { b=''32 gis e gis='' } |
     b=''32 gis e gis b gis e gis e' a, e a d gis, e gis |
-    d'='''32 a e a \rep 3 { c=''' a e a='' } |
+    d'='''32 a e a \rep 3 { c='''32 a e a='' } |
     c='''32 a e a cis a e a d a f a e' cis g cis |
     g'='''32 d a d f d a d e b f b d b f b |
     d='''32 a e a c a e a c gis d gis b gis d gis='' |
@@ -62,9 +62,9 @@
   \meter 1/8 1,1,1,1
   a''=''32 e c a e a c, e a,=8 r \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key a \minor
@@ -81,4 +81,4 @@
   a,=,8 am! b a | e' e7! e7 e7 | e d c b | a am! am am |
   a=,8 g' f e | d dm! dm dm | e[ a@m! e=8 e7!] | a@m! r8 r4 |
 }
-{% endmacro %}
+{{ end }}

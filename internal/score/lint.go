@@ -25,7 +25,7 @@ var excludeParts = []string{
   `^ +\\clef (?:treble|bass)$`,
   `^ +\\key \w+ \\(?:major|minor)$`,
   `^ +\\time \d+/\d+$`,
-  `^ +\\meter \d+/\d+`,
+  `^ +\\meter(?: Voice)? \d+/\d+`,
   `^ +\\repeat (?:volta|segno) \d {$|^ +}$`,
   `^ +\\alternative {$`,
   `^ +\\volta \d {$|^ +\\volta \d$`,

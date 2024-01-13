@@ -1,22 +1,25 @@
-{% macro rh1(a) %}
-  {{ a }}4--\< \af 4\! r | r8 {{ a }}8[(-. 8-. 8])-. |
-{% endmacro %}
+{{ define "rh1" }}
+  {{ .a }}4--\< \af 4\! r | r8 {{ .a }}8[(-. 8-. 8])-. |
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Presto
   \clef treble
   \key c \major
   \time 2/4
   <e'=' g c>4--\f\< \af 4\! r | r8 <e g c>8[(-. 8-. 8])-. |
-  | {{ rh1("<f=' g b>") }} {{ rh1("<c=' g' bes>") }}
-  | {{ rh1("<c=' f a>") }} {{ rh1("<c=' f aes>") }}
-  | {{ rh1("<c=' e g>") }} {{ rh1("<b= d f g>") }}
+  {{ template "rh1" (w  `<f=' g b>`) }}
+  {{ template "rh1" (w  `<c=' g' bes>`) }}
+  {{ template "rh1" (w  `<c=' f a>`) }}
+  {{ template "rh1" (w  `<c=' f aes>`) }}
+  {{ template "rh1" (w  `<c=' e g>`) }}
+  {{ template "rh1" (w  `<b= d f g>`) }}
   <c=' e g>4--\> \af 4\! r | R2 \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key c \major
@@ -26,4 +29,4 @@
   \rep 2 { r16 g,=,( a b c d e f | g=4) r | }
   r16 c,=16( b a g f' e d | c=4) r |
 }
-{% endmacro %}
+{{ end }}
