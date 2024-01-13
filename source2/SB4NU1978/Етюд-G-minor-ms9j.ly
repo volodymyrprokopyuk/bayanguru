@@ -36,7 +36,8 @@
   <f'='' aes>8.\(_\dCre <ees g>16 <d f> <ees g> |
   <f='' aes>8. <ees g>16 <d f> <ees g> |
   <f='' aes>8. <ees g>16 <d f> <f aes> | <ees g>4.\) |
-  {{ template "rh1" (w `<ees='' g>8.\(\mf`) }} {{ template "rh1" (w `<ees,=' g>8.\(\p`) }}
+  {{ template "rh1" (w `<ees='' g>8.\(\mf`) }}
+  {{ template "rh1" (w `<ees,=' g>8.\(\p`) }}
   {{ template "rh3" }} \af 4.\! <g=' g'>4.\) |
 
   \duo {
@@ -55,7 +56,8 @@
   <f=' aes>8. <ees g>16 <d f> <ees g> |
   <f=' aes>16 <ees g> <d f> <ees g> <f aes> <g b> |
   <a=' c>16 <b d> <c ees> <d f> <ees g> <f aes>\) |
-  {{ template "rh1" (w `<ees='' g>8.\(`) }} {{ template "rh1" (w `<ees,=' g>8.\(`) }} {{ template "rh3" }}
+  {{ template "rh1" (w `<ees='' g>8.\(`) }}
+  {{ template "rh1" (w `<ees,=' g>8.\(`) }} {{ template "rh3" }}
   \af 4.\! \duo { <g'=' g'>4. } { r8 <d'=' bes'>4 } <>\) \bar "|."
 }
 {{ end }}

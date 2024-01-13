@@ -14,16 +14,23 @@
 
 {{ define "rh1" }}
   {{ template "t2" (w .a .b `<e g>` `<a c>8` `<g b>` `<f a>`) }}
-  {{ template "t2" (w `<e='' g>8` `<dis fis>` `<e g>` `<c e>` `<b dis>` `<c e>`) }}
-  {{ template "t2" (w `<d='' f>8` `<cis e>` `<d f>` `<f a>` `<e g>` `<d f>`) }}
-  {{ template "t2" (w `<c='' e>8` `<d f>` `<c e>` `<g d'>` `<c e>` `<d='' f>`) }}
+  {{ template "t2" (w `<e='' g>8` `<dis fis>` `<e g>`
+     `<c e>` `<b dis>` `<c e>`) }}
+  {{ template "t2" (w `<d='' f>8` `<cis e>` `<d f>`
+     `<f a>` `<e g>` `<d f>`) }}
+  {{ template "t2" (w `<c='' e>8` `<d f>` `<c e>`
+     `<g d'>` `<c e>` `<d='' f>`) }}
 {{ end }}
 
 {{ define "rh2" }}
-  {{ template "t2" (w `<a=' c>8(` `<gis b>)-.` `<a c>` `<c e>` `<b dis>` `<c e>`) }}
-  {{ template "t2" (w `<a=' c>8(` `<gis b>)-.` `<a c>` `<fis a>(` `<eis gis>)-.` `<fis a>`) }}
-  {{ template "t2" (w `<g=' b>8(` `<fis ais>)-.` `<g b>` `<b d>` `<ais cis>` `<a c>`) }}
-  {{ template "t2" (w `<b=' d>8(` `<ais cis>)-.` `<b d>` `<d f>` `<c e>` `<b=' d>`) }}
+  {{ template "t2" (w `<a=' c>8(` `<gis b>)-.` `<a c>`
+     `<c e>` `<b dis>` `<c e>`) }}
+  {{ template "t2" (w `<a=' c>8(` `<gis b>)-.` `<a c>`
+     `<fis a>(` `<eis gis>)-.` `<fis a>`) }}
+  {{ template "t2" (w `<g=' b>8(` `<fis ais>)-.` `<g b>`
+     `<b d>` `<ais cis>` `<a c>`) }}
+  {{ template "t2" (w `<b=' d>8(` `<ais cis>)-.` `<b d>`
+     `<d f>` `<c e>` `<b=' d>`) }}
 {{ end }}
 
 {{ define "lh1" }}
@@ -40,42 +47,68 @@
   \key c \major
   \time 2/4
   {{ template "rh1" (w `<e''='' g>8\mp` `<dis fis>_\aSta`) }}
-  {{ template "t2" (w `<e='' g>8` `<dis fis>` `<e g>` `<a c>` `<g b>` `<f a>`) }}
-  {{ template "t2" (w `<e='' g>8` `<dis fis>` `<e g>` `<g bes>` `<f a>` `<e g>`) }}
-  {{ template "t2" (w `<fis='' a>8\<` `<eis gis>` `<fis a>` `<e c'>` `<d b'>` ` \af 8\! <c a'>`) }}
-  {{ template "t2" (w `<b=' g'>8\>` `<g b>` `<a c>` `<b d>` `<c e>` ` \af 8\! <d='' f>`) }}
+  {{ template "t2" (w `<e='' g>8` `<dis fis>` `<e g>`
+     `<a c>` `<g b>` `<f a>`) }}
+  {{ template "t2" (w `<e='' g>8` `<dis fis>` `<e g>`
+     `<g bes>` `<f a>` `<e g>`) }}
+  {{ template "t2" (w `<fis='' a>8\<` `<eis gis>` `<fis a>`
+     `<e c'>` `<d b'>` ` \af 8\! <c a'>`) }}
+  {{ template "t2" (w `<b=' g'>8\>` `<g b>` `<a c>`
+     `<b d>` `<c e>` ` \af 8\! <d='' f>`) }}
 
   {{ template "rh1" (w `<e='' g>8\mp` `<dis fis>`) }}
-  {{ template "t2" (w `<e='' g>8_\dCre` `<dis fis>` `<e g>` `<g bes>` `<f a>` `<e g>`) }}
-  {{ template "t2" (w `<d='' f>8` `<cis e>` `<d f>` `<f, d'>` `<e cis'>` `<f d'>`) }}
-  {{ template "t2" (w `<g=' e'>8` `<fis dis'>` `<g e'>` `<f d'>` `<e cis'>` `<f d'>`) }}
+  {{ template "t2" (w `<e='' g>8_\dCre` `<dis fis>` `<e g>`
+     `<g bes>` `<f a>` `<e g>`) }}
+  {{ template "t2" (w `<d='' f>8` `<cis e>` `<d f>`
+     `<f, d'>` `<e cis'>` `<f d'>`) }}
+  {{ template "t2" (w `<g=' e'>8` `<fis dis'>` `<g e'>`
+     `<f d'>` `<e cis'>` `<f d'>`) }}
   \tuplet 3/2 { <e=' c'>8\mf g <g e'> } <e=' c'>4 |
 
-  {{ template "t2" (w `<b'=' d>8(` `<ais cis>)-.` `<b d>` `<gis b>(` `<fisis ais>)-.` `<gis b>`) }}
+  {{ template "t2" (w `<b'=' d>8(` `<ais cis>)-.` `<b d>`
+     `<gis b>(` `<fisis ais>)-.` `<gis b>`) }}
   {{ template "rh2" }}
-  {{ template "t2" (w `<a=' c>8(` `<gis b>)-.` `<a c>` `<c e>` `<b dis>` `<c e>`) }}
-  {{ template "t2" (w `<cis='' e>8(` `<bis dis>)-.` `<cis e>` `<e g>` `<d fis>` `<cis e>`) }}
-  {{ template "t2" (w `<d='' fis>8(\>` `<cis eis>)-.` ` \af 8\! <d fis>` `<c e>\p` `<b dis>` `<c='' e>`) }}
+  {{ template "t2" (w `<a=' c>8(` `<gis b>)-.` `<a c>`
+     `<c e>` `<b dis>` `<c e>`) }}
+  {{ template "t2" (w `<cis='' e>8(` `<bis dis>)-.` `<cis e>`
+     `<e g>` `<d fis>` `<cis e>`) }}
+  {{ template "t2" (w `<d='' fis>8(\>` `<cis eis>)-.` ` \af 8\! <d fis>`
+     `<c e>\p` `<b dis>` `<c='' e>`) }}
 
-  {{ template "t2" (w `<b=' d>8(` `<ais cis>)-.` `<b d>` `<g b>(` `<fis ais>)-.` `<g b>`) }}
+  {{ template "t2" (w `<b=' d>8(` `<ais cis>)-.` `<b d>`
+     `<g b>(` `<fis ais>)-.` `<g b>`) }}
   {{ template "rh2" }}
-  {{ template "t2" (w `<c='' e>8_\dCre` `<b dis>` `<c e>` `<e c'>` `<d b'>` `<c a'>`) }}
-  {{ template "t2" (w `<b=' d>8` `<ais cis>` `<b d>` `<d b'>` `<c a'>` `<b g'>`) }}
-  {{ template "t2" (w `<a=' fis'>8` `<g e'>` `<fis d'>` `<e c'>` `<d b'>` `<c a'>`) }}
-  {{ template "t2" (w `<b= g'>8(\sf` `fis')-.\p` `g` `<g b>` `<fis ais>` `<g b>`) }}
-  {{ template "t2" (w `<a=' c>8_\dCre` `<gis b>` `<a c>` `<bes des>` `<a c>` `<bes des>`) }}
-  {{ template "t2" (w `<b=' d>8` `<ais cis>` `<b d>` `<c ees>` `<b d>` `<c ees>`) }}
-  {{ template "t2" (w `<cis='' e>8` `<c ees>` `<cis e>` `<d f>` `<cis e>` `<d='' f>`) }}
+  {{ template "t2" (w `<c='' e>8_\dCre` `<b dis>` `<c e>`
+     `<e c'>` `<d b'>` `<c a'>`) }}
+  {{ template "t2" (w `<b=' d>8` `<ais cis>` `<b d>`
+     `<d b'>` `<c a'>` `<b g'>`) }}
+  {{ template "t2" (w `<a=' fis'>8` `<g e'>` `<fis d'>`
+     `<e c'>` `<d b'>` `<c a'>`) }}
+  {{ template "t2" (w `<b= g'>8(\sf` `fis')-.\p` `g`
+     `<g b>` `<fis ais>` `<g b>`) }}
+  {{ template "t2" (w `<a=' c>8_\dCre` `<gis b>` `<a c>`
+     `<bes des>` `<a c>` `<bes des>`) }}
+  {{ template "t2" (w `<b=' d>8` `<ais cis>` `<b d>`
+     `<c ees>` `<b d>` `<c ees>`) }}
+  {{ template "t2" (w `<cis='' e>8` `<c ees>` `<cis e>`
+     `<d f>` `<cis e>` `<d='' f>`) }}
 
   {{ template "rh1" (w `<e='' g>8\f` `<dis fis>`) }}
-  {{ template "t2" (w `<e='' g>8` `<dis fis>` `<e g>` `<g bes>` `<f a>` `<e g>`) }}
-  {{ template "t2" (w `<f='' a>8` `<e gis>` `<f a>` `<a f'>` `<g e'>` `<f d'>`) }}
-  {{ template "t2" (w `<e='' g>8` `<dis fis>` `<e g>` `<g e'>` `<f d'>` `<e c'>`) }}
-  {{ template "t2" (w `<d='' b'>8` `<c a'>` `<b g'>` `<a f'>` `<g e'>` `<f d'>`) }}
-  {{ template "t2" (w `<e=' c'>8` `<g e'>` `<f d'>` `<e c'>_\dDim` `<d b'>` `<c a'>`) }}
-  {{ template "t2" (w `<b= g'>8` `<c a'>` `<b g'>` `<a f'>` `<g e'>` `<f d'>`) }}
+  {{ template "t2" (w `<e='' g>8` `<dis fis>` `<e g>`
+     `<g bes>` `<f a>` `<e g>`) }}
+  {{ template "t2" (w `<f='' a>8` `<e gis>` `<f a>`
+     `<a f'>` `<g e'>` `<f d'>`) }}
+  {{ template "t2" (w `<e='' g>8` `<dis fis>` `<e g>`
+     `<g e'>` `<f d'>` `<e c'>`) }}
+  {{ template "t2" (w `<d='' b'>8` `<c a'>` `<b g'>`
+     `<a f'>` `<g e'>` `<f d'>`) }}
+  {{ template "t2" (w `<e=' c'>8` `<g e'>` `<f d'>`
+     `<e c'>_\dDim` `<d b'>` `<c a'>`) }}
+  {{ template "t2" (w `<b= g'>8` `<c a'>` `<b g'>`
+     `<a f'>` `<g e'>` `<f d'>`) }}
   \clef bass
-  {{ template "t2" (w `<e= c'>8` `<g e'>` `<f d'>` `<e c'>` `<d b'>` `<c a'>`) }}
+  {{ template "t2" (w `<e= c'>8` `<g e'>` `<f d'>`
+     `<e c'>` `<d b'>` `<c a'>`) }}
   <b=, g'>4 \clef treble <b'= f' g>( |
   <c=' e c'>4)\p <c g' e'> <g= e' c'> r \bar "|."
 }

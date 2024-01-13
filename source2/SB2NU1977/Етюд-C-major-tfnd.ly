@@ -34,7 +34,8 @@
   {{ template "t2" (w `<b=' g'>16` `<e b'>`) }}
   {{ template "t3" (w `<c='' a'>16` `<e c'>`) }}
   {{ template "t2" (w `<c='' fis>16` `<d a'>`) }}
-  r16^\tRit <b=' g'>16( \rep 2 { <d='' b'>16 <b=' g'> } <d b'> <b=' g'>) \bar "||"
+  r16^\tRit <b=' g'>16( \rep 2 { <d='' b'>16 <b=' g'> } %
+  <d='' b'>16 <b=' g'>) \bar "||"
 
   \keyChangeBeforeBar
   \key c \major
