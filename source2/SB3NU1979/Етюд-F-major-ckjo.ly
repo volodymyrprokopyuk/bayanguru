@@ -1,4 +1,4 @@
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Allegretto
   \clef treble
@@ -21,9 +21,9 @@
   c=''16->\f^\tATem c'16( bes a g f | e d c bes a g) |
   f='8-. a-. c-. | f=''4 r8 \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key f \major
@@ -36,4 +36,4 @@
   c=8[ f@7! f78] | c[ f@7 f78] | bes besM! besM | b[ g@7! g78] |
   c=8[ f@M! fM8] | c c7! c7 | f,=, fM! fM | f+fM!4 r8 |
 }
-{% endmacro %}
+{{ end }}

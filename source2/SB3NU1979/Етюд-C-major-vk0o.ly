@@ -1,8 +1,8 @@
-{% macro rh1(a) %}
-  {{ a }} g c e c g e g e' c g e g c e='') |
-{% endmacro %}
+{{ define "rh1" }}
+  {{ .a }} g c e c g e g e' c g e g c e='') |
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Allegro
   \clef treble
@@ -12,12 +12,12 @@
   r16 d,='16( g b d b g d) r16 e( g c e c g e) |
   r16 f='16(_\dCre a c f c a f a f' c a f a c f) |
   r16 g,='16( c e g e c g c g' e c g c e g) |
-  {{ rh1("r16\\f e,='16(") }}
+  {{ template "rh1" (w `r16\f e,='16(`) }}
   r16 d,='16( g b d b g d) r16 f( b d f d b f) |
-  {{ rh1("r16 e='16(") }}
+  {{ template "rh1" (w `r16 e='16(`) }}
   r16 d,='16(\> g b d b g d g d' b g d g b \af 16\! d='') |
 
-  {{ rh1("r16\\p e,='16(") }}
+  {{ template "rh1" (w `r16\p e,='16(`) }}
   r16 d,='16( f b d b f d) r16 c( e a c a e c) |
   r16 b=16(\< e gis b gis e b e b' gis e b e gis \af 16\! b) |
   r16\mf a,=16( c e a e c a) r16 e'( g a e' a, g e) |
@@ -26,15 +26,16 @@
 
   r16\f g='16( c e g e c g c g' e c bes c e g) |
   r16 a,='16( c f a f c a) r16 f( a c f c a f) |
-  {{ rh1("r16 e='16(") }}
+  {{ template "rh1" (w `r16 e='16(`) }}
   r16 d,='16( f c' d c f,_\dDim d f d' b f d f b d) |
   r16 c,='16( e g c g e c) r16 c( ees aes c aes ees c) |
   r16 e='16( g c e c g e) r16 c( ees aes c aes ees c) |
-  <e=' g c e>4\p r <g b d g>\< \af 4\! r | <c='' e g c>1\mf \fermata \bar "|."
+  <e=' g c e>4\p r <g b d g>\< \af 4\! r |
+  <c='' e g c>1\mf \fermata \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key c \major
@@ -51,4 +52,4 @@
   g,=,4 c@M!8 r8 cM r cM r | g4 g7!8 r g7 r g7 r |
   c=2 aes | c aes | c4 r g r | c=1 \fermata |
 }
-{% endmacro %}
+{{ end }}
