@@ -1,13 +1,13 @@
-{% macro rh1() %}
+{{ define "rh1" }}
   d=''8-. d16( ees f8) r | d'-.\pp d16( ees f='''8) r |
-{% endmacro %}
+{{ end }}
 
-{% macro lh1() %}
+{{ define "lh1" }}
   a=,8[ f@M! fM8 fM] | a8[ f@M fM8 fM] |
   bes=,8 besM! besM besM | bes=, besM besM besM |
-{% endmacro %}
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Allegretto
   \clef treble
@@ -20,17 +20,17 @@
   }
 
   \repeat volta 2 {
-    c'='''4.(\p a8 | f4. ees8) | {{ rh1() }}
-    ees='''4.(\p c8) | ees[( c a ees]) | {{ rh1() }}
+    c'='''4.(\p a8 | f4. ees8) | {{ template "rh1" }}
+    ees='''4.(\p c8) | ees[( c a ees]) | {{ template "rh1" }}
     bes,=''4.(\p f8 | d'[ c bes a]) | c[(\< bes a \af 8\! g] |
     fis=''8 g ees c) | f4 f, | f'(~ f16 ees c a) |
     bes='8-.\> f16( d' bes8)-. f16( \af 16\! d' |
     bes='16 d f d bes='8) r |
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key bes \major
@@ -40,10 +40,10 @@
   a+f@M!8[ a+fM8 a+fM] r | bes+besM!8 bes+besM bes+besM r |
   c+c7!8 c+c7 c+c7 r | f=, fM! fM r |
 
-  {{ lh1() }} {{ lh1() }}
+  {{ template "lh1" }} {{ template "lh1" }}
   d=8[ bes@M! besM8 besM] | d[ bes@M besM8 besM] |
   ees=8 eesM! eesM eesM | ees[ c@m! cm8 cm] |
   f,=,8[ bes@M! besM8 besM] | f f7! f7 f7 |
   bes=,8[ besM!] bes besM | bes=,8 besM! besM r |
 }
-{% endmacro %}
+{{ end }}

@@ -1,8 +1,8 @@
-{% macro lh1() %}
+{{ define "lh1" }}
   f+fM!8 r a+f@7! r8 |
-{% endmacro %}
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Allegretto
   \clef treble
@@ -22,15 +22,15 @@
     }
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key bes \major
-  bes,=,8.-\stBass besM!16 besM8 r | {{ lh1() }}
-  c=8. cm!16 cm8 r | {{ lh1() }}
+  bes,=,8.-\stBass besM!16 besM8 r | {{ template "lh1" }}
+  c=8. cm!16 cm8 r | {{ template "lh1" }}
   bes=,8. besM!16 besM8 r | c+cm!8 r ees+c@m! r8 |
-  {{ lh1() }} \rep 2 { bes+besM!8[ a+f@7!] bes+besM!8 r | }
+  {{ template "lh1" }} \rep 2 { bes+besM!8[ a+f@7!] bes+besM!8 r | }
 }
-{% endmacro %}
+{{ end }}

@@ -1,23 +1,24 @@
-{% macro rh1(a) %}
-  {{ a }} e g e f a g e | f d e c d b c=''8\) |
-{% endmacro %}
+{{ define "rh1" }}
+  {{ .a }} e g e f a g e | f d e c d b c=''8\) |
+{{ end }}
 
-{% macro lh1(a) %}
-  {{ a }} r8 f+fM! e | d c@M! g+gM!8 c+cM! |
-{% endmacro %}
+{{ define "lh1" }}
+  {{ .a }} r8 f+fM! e | d c@M! g+gM!8 c+cM! |
+{{ end }}
 
-{% macro lh2() %}
+{{ define "lh2" }}
   a+am!8 r8 d+dm! a+am! | f+d@m!8[ e+a@m!8] e+eM!8 a+am! |
-{% endmacro %}
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Allegretto
   \clef treble
   \key c \major
   \time 2/4
   \repeat volta 2 {
-    {{ rh1("c''=''16\\(\\mf") }} {{ rh1("c=''16\\(") }}
+    {{ template "rh1" (w `c''=''16\(\mf`) }}
+    {{ template "rh1" (w `c=''16\(`) }}
     a='16\( c e c d f e c | d b c a b gis a8\) | a16\( c e c d f e c |
     \alternative {
       \volta 1 { d=''16 b c a b gis a='8\) | }
@@ -25,13 +26,15 @@
     }
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key c \major
-  {{ lh1("c+cM!8-\\stBass") }} {{ lh1("c+cM!8") }}
-  {{ lh2() }} {{ lh2() }} d+dm!8 g+c@M! g+gM!8 c+cM! |
+  {{ template "lh1" (w `c+cM!8-\stBass`) }}
+  {{ template "lh1" (w `c+cM!8`) }}
+  {{ template "lh2" }} {{ template "lh2" }}
+  d+dm!8 g+c@M! g+gM!8 c+cM! |
 }
-{% endmacro %}
+{{ end }}
