@@ -1,4 +1,4 @@
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Moderato
   \clef treble
@@ -11,9 +11,9 @@
     d=''8( e fis g a fis | g4) g=''-. r |
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key g \major
@@ -21,4 +21,4 @@
   fis=,4_\aSim d@7! d74 | fis d@7 d74 |
   g=,4 gM! gM | g gM gM | d'=4 d7! d7 | g+gM! g+gM r |
 }
-{% endmacro %}
+{{ end }}
