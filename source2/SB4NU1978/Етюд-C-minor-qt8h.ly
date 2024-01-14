@@ -1,9 +1,9 @@
-{% macro rh1() %}
+{{ define "rh1" }}
   c,=''16 aes' f aes c, aes' f aes aes, f' c f aes, f' c f\) |
   g,='16\( ees' c ees g, ees' c ees f, d' b d f, d' b d='' |
-{% endmacro %}
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Moderato
   \clef treble
@@ -16,7 +16,7 @@
       c,='16\( c' g c c, c' g c c, c' g c c, c' g c |
       ees,='16 c' aes c ees, c' aes c f, c' aes c f, c' aes c\) |
       f,='16\( des' aes des f, des' aes des bes g' e g bes, g' e g |
-      {{ rh1() }}
+      {{ template "rh1" }}
       \alternative {
         \volta 1 { c=''16 ees, g c g c ees g, c8\) r g='4 | }
         \volta 2 { c=''16( g ees' c g' c, ees g c='''8) r r4 | }
@@ -32,7 +32,7 @@
             bes,='16\( bes' aes bes bes, bes' aes bes bes,_\dCre aes' f aes bes, aes' f aes |
             bes,='16 g' ees g bes, g' ees g b, g' f g b, g' f g\) |
             c,=''16\(\f c' e, c' c, c' e, c' c, bes' g bes c, bes' g bes |
-            {{ rh1() }}
+            {{ template "rh1" }}
             \alternative {
               \volta 1 { ees,='16 c' g c ees, c' g c ees,4\) bes'='\sf | }
               \volta 2 {
@@ -43,7 +43,7 @@
             }
           }
         }
-        \volta 2 { \section \sectionLabel "Coda" }
+        \volta 2 { \section \sectionLabel "Coda" } %
       }
     }
   }
@@ -51,9 +51,9 @@
   r16 aes,=16( ces des f) ces( des f aes) des,( f aes ces aes f des) |
   r16 aes=16( g fis) r ees'( d des) r16 aes'( g f <ees=' c'>4) \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key c \minor
@@ -71,4 +71,4 @@
 
   des=1 | g,4 g g c= |
 }
-{% endmacro %}
+{{ end }}

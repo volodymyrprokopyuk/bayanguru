@@ -1,13 +1,13 @@
-{% macro rh1(a) %}
-  {{ a }} bes a bes f d' cis d f, bes a bes f d' cis \af 32\! d |
+{{ define "rh1" }}
+  {{ .a }} bes a bes f d' cis d f, bes a bes f d' cis \af 32\! d |
   f,='32 c' b c f, f' e f f,\> c' b c f, f' e \af 32\! f='' |
-{% endmacro %}
+{{ end }}
 
-{% macro rh2() %}
+{{ define "rh2" }}
   d=''32-> f e f f,-> f' e f c-> f e f f,-> f' e f='' |
-{% endmacro %}
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Allegro
   \clef treble
@@ -26,20 +26,20 @@
   f,='32\p bes a bes d bes a bes f bes a bes d bes a bes |
   \rep 2 { f='32 a gis a c a gis a=' } |
 
-  {{ rh1("f='32\\<") }} {{ rh1("f,='32\\<") }}
+  {{ template "rh1" (w `f='32\<`) }} {{ template "rh1" (w `f,='32\<`) }}
   f,='32 bes a bes f d' cis d g,_\dCre b ais b g g' fis g |
   g,='32 c b c g ees' d ees a,\f cis bis cis a a' gis a |
   a,='32 f' e f g f e f c_\dDim ees d ees f ees d ees |
   f,='32 d' cis d ees d cis d f, c' b c d c b c |
   bes='32->\mf f' e_\dCre f f,-> f' e f c-> f e f f,-> f' e f |
-  {{ rh2() }}
+  {{ template "rh2" }}
   bes,='32-> f' e f f,-> f' e f c-> f e f f,-> f' e f |
-  {{ rh2() }}
+  {{ template "rh2" }}
   bes,='8\f r <d f bes> r | <bes=' d f bes>4 r \fermata \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key bes \major
@@ -56,4 +56,4 @@
   \rep 3 { bes@M!8[ f=8] f@7![ f=8] | }
   bes@M!8 r8 bes+besM! r | bes,=,4 r \fermata |
 }
-{% endmacro %}
+{{ end }}
