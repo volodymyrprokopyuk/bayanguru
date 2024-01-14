@@ -1,8 +1,8 @@
-{% macro lh1()%}
+{{ define "lh1" }}
   g@M!8 r8 r | c@M! r8 r | d@7!8 r8 r | g@M! r8 r |
-{% endmacro %}
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Allegro
   \clef treble
@@ -22,15 +22,15 @@
     r8 fis=''16( g a \af 16\! b | g8)-.\> g-. \af 8\! g=''-. \bar "||"
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key c \major
   c@M!8-\stBass r8 r | g@7! r8 r | c@M!8 r8 r | g@M! r8 r |
   c@M!8 r8 r | g@7! r8 r | c@M!8[ cM8 g@7!8] | c@M!8 r8 r |
 
-  {{ lh1() }} {{ lh1() }}
+  {{ template "lh1" }} {{ template "lh1" }}
 }
-{% endmacro %}
+{{ end }}

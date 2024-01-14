@@ -1,4 +1,4 @@
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Presto
   \clef treble
@@ -13,9 +13,9 @@
   r16 d'=''16(\> c b a g f \af 16\! e | d4) r |
   r16 c='16(\< d e f g a \af 16\! b | c=''4) r \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key c \major
@@ -28,4 +28,4 @@
   g+g7!4 r | r8 g+g7!8[ g+g7 g+g7 ] |
   c+cM!4 r | c= r |
 }
-{% endmacro %}
+{{ end }}
