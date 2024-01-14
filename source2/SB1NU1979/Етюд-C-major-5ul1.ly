@@ -1,30 +1,30 @@
-{% macro rh1(a) %}
-  {{ a }} d e f g8)-. | e16( f g a b c=''' |
-{% endmacro %}
+{{ define "rh1" }}
+  {{ .a }} d e f g8)-. | e16( f g a b c=''' |
+{{ end }}
 
-{% macro rh2(a) %}
-  {{ a }} g b g b8)-. | e,16( g c g c='''8)-. |
-{% endmacro %}
+{{ define "rh2" }}
+  {{ .a }} g b g b8)-. | e,16( g c g c='''8)-. |
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Allegretto
   \clef treble
   \key c \major
   \time 3/8
   \repeat volta 2 {
-    {{ rh1("c''=''16(\\mf") }} | <f, a>8)-. 8-. 8-. | <e g>4. |
-    {{ rh1("c=''16(") }} | g16 a g f e d | c=''4.) |
+    {{ template "rh1" (w `c''=''16(\mf`) }} | <f, a>8)-. 8-. 8-. | <e g>4. |
+    {{ template "rh1" (w `c=''16(`) }} | g16 a g f e d | c=''4.) |
   }
 
   \repeat volta 2 {
-    {{ rh2("d=''16(\\f") }} | <d, g b>8-. 8-. 8-. | <e g c>4. |
-    {{ rh2("d=''16(") }} | b16( a g f e d | c=''4.) |
+    {{ template "rh2" (w `d=''16(\f`) }} | <d, g b>8-. 8-. 8-. | <e g c>4. |
+    {{ template "rh2" (w `d=''16(`) }} | b16( a g f e d | c=''4.) |
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key c \major
@@ -33,4 +33,4 @@
 
   \rep 3 { g=,8 g7! g7 | g[ c@M! cM8] | } g g7! g7 | c= cM! cM |
 }
-{% endmacro %}
+{{ end }}

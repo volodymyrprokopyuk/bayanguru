@@ -1,20 +1,20 @@
-{% macro rh1(a) %}
-  {{ a }} b cis d e8)-. a,16( b cis d e8)-. |
+{{ define "rh1" }}
+  {{ .a }} b cis d e8)-. a,16( b cis d e8)-. |
   gis,='16(\mp a b cis d8)-. gis,16( a b cis d8)-. |
   cis=''16(\mf b a gis fis8)-. fis16( gis a b cis8)-. |
   b='16(\> a gis fis \af 8\! e8)-. e16(\< fis gis a b \af 16\! cis) |
   a='16(\mp b cis d e8)-. a,16( b cis d e8)-. |
   b='16(\mf cis d e fis8)-. b,16( cis d e fis8)-. |
   e=''16(\< fis gis a b8)-. b,16( cis d e fis \af 16\! gis='' |
-{% endmacro %}
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Allegro
   \clef treble
   \key a \major
   \time 3/4
-  {{ rh1("a'='16(\\p") }} | a=''8)-.\f r r4 r |
+  {{ template "rh1" (w `a'='16(\p`) }} | a=''8)-.\f r r4 r |
 
   cis,=''16(\p b a gis fis8)-. fis16( gis a b cis a) |
   b='16(\mp a gis fis eis8)-. eis16( fis gis a b) r |
@@ -24,11 +24,11 @@
   e='16(_\dCre d cis b a8)-. a16( b cis d e cis) |
   d='16( cis b ais b8)-. b16( cis d e fis gis | a='8)-.\f r r4 r |
 
-  {{ rh1("a='16(\\p") }} | a8)-.\f r <a,=' cis e a> r r4 \bar "|."
+  {{ template "rh1" (w `a='16(\p`) }} | a8)-.\f r <a,=' cis e a> r r4 \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key a \major
@@ -47,4 +47,4 @@
   a,=,8 r aM! r aM r | b r bm! r bm r |
   e,=,8 r gis r b r | a=,8 r a+aM! r r4 |
 }
-{% endmacro %}
+{{ end }}

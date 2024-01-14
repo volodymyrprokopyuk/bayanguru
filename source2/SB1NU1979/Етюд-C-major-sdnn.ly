@@ -1,8 +1,8 @@
-{% macro rh1(a) %}
-  {{ a }} b-. b-. b]-. | c16\( b a g f e d c='' |
-{% endmacro %}
+{{ define "rh1" }}
+  {{ .a }} b-. b-. b]-. | c16\( b a g f e d c='' |
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Allegretto
   \clef treble
@@ -16,13 +16,13 @@
   }
 
   \repeat volta 2 {
-    {{ rh1("b=''8[-.\\f") }} | d8[\) d( g f] | e4 g4) |
-    {{ rh1("b=''8[-.") }} | d8[ g f d] | c e c=''4\) |
+    {{ template "rh1" (w `b=''8[-.\f`) }} | d8[\) d( g f] | e4 g4) |
+    {{ template "rh1" (w `b=''8[-.`) }} | d8[ g f d] | c e c=''4\) |
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key c \major
@@ -33,4 +33,4 @@
   \rep 3 { g=,8 g7! g7 g7 | g=,[ c@M! cM8 cM] | }
   g=,8 g7! g7 g7 | c= cM! c+cM4 |
 }
-{% endmacro %}
+{{ end }}
