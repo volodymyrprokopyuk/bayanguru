@@ -328,7 +328,7 @@ pieces:
       org: ukr, sty: aut, gnr: lul, ton: ai, frm: [vo2, cr5], bss: frb, lvl: ela }
   - { id: yeld, tit: Сумна пісенька,
       com: К. Мясков, src: FBB3BZ1982,
-      org: ukr, sty: aut, gnr: chd, ton: gi, frm: vo2, bss: frb, lvl: elb }
+      org: ukr, sty: aut, gnr: chd, ton: gi, frm: [vo2, syn], bss: [frb, jpm], lvl: elb }
   - { id: onbv, tit: Пісня,
       com: І. Яшкевич, src: FBB3BZ1982,
       org: ukr, sty: flk, gnr: sng, ton: ai, frm: [vo2, cr5], bss: frb, lvl: ela }

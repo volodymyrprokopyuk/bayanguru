@@ -61,7 +61,6 @@
   e=4 em! | a, am! | b b7! | e em! |
   e=4 em! | a, am! | d d7! | g,=, g7! |
 
-  \keyChangeBeforeBar
   \key c \major
   c=4 cM! | d dm! | g, g7! | c cM! |
   bes=,4 c@M! | a4 f@M! | g4 g7! c= cM! |

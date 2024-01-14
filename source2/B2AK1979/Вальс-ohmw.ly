@@ -46,7 +46,8 @@
         \volta 2 { <fis=' d'>4 \repeatTie a g=' \bar "||" }
       }
     }
-    \keyChangeBeforeBar \key d \minor
+    \keyChangeBeforeBar
+    \key d \minor
   }
 }
 {% endmacro %}

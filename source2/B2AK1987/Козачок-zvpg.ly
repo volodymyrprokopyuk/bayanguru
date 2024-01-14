@@ -68,7 +68,8 @@
     \acc { c'=''8 } bes16( a g fis g4)-- |
     {{ rh4("<g=' bes>4->") }}
     \acc { c'=''8 } bes16(\> a g fis \af 4\! g='4)-- \bar "||"
-    \keyChangeBeforeBar \key g \major
+    \keyChangeBeforeBar
+    \key g \major
   }
 }
 {% endmacro %}

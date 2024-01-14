@@ -76,7 +76,6 @@
   {{ template "lh2" }}
   g+gM!4)-\stBass r r | c+a@m! r4 r | d+d7!4 r r |
   g+gM!8 r r4 r | R2. | R2. |
-  \keyChangeBeforeBar
   \key c \major
 }
 {{ end }}

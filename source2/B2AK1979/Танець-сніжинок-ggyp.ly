@@ -92,7 +92,8 @@
         }
       }
     }
-    \keyChangeBeforeBar \key f \major
+    \keyChangeBeforeBar
+    \key f \major
   }
 }
 {% endmacro %}

@@ -115,7 +115,6 @@
   f,=,8 fm! a f@7! | bes8 besm! bes r |
   bes=,8 besm! des bes@m | f,8 fm! aes f@m |
   c=8 c7! c c7 | \rep 2 { f,=,8 c' f,=, r | }
-  \keyChangeBeforeBar
   \key c \minor
 }
 {{ end }}
