@@ -1,30 +1,38 @@
-{% macro t2(a, b) %}
-  \tuplet 3/2 { {{ a }} } \tuplet 3/2 { {{ b }} } |
-{% endmacro %}
+{{ define "t2" }}
+  \tuplet 3/2 { {{ .a }} } \tuplet 3/2 { {{ .b }} } |
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Moderato
   \clef treble
   \key e \minor
   \time 2/4
-  {{ t2("b'='8(-\\mf a) g", "g a b") }} {{ t2("c( fis,) fis", "fis g a") }}
-  {{ t2("a='8( fis) fis", "fis g a") }} {{ t2("b( e,) e", "e g b") }}
-  {{ t2("d=''8(_\\dCre c) b", "b c d") }} {{ t2("e( a,) a", "a b c") }}
-  {{ t2("c=''8( a) a", "a b c") }} {{ t2("d( g,) g", "g a b") }}
-  {{ t2("c=''8( fis,) fis", "fis g a") }} {{ t2("b( e,) e", "e fis g") }}
-  {{ t2("fis='8 ais cis", "e_\\dDim dis e") }}
-  {{ t2("fis=''8( b,) b", "b\\>^\\tRit c \\af 8\\! cis=''") }}
+  {{ template "t2" (w `b'='8(-\mf a) g` `g a b`) }}
+  {{ template "t2" (w `c=''8( fis,) fis` `fis g a`) }}
+  {{ template "t2" (w `a='8( fis) fis` `fis g a`) }}
+  {{ template "t2" (w `b='8( e,) e` `e g b`) }}
+  {{ template "t2" (w `d=''8(_\dCre c) b` `b c d`) }}
+  {{ template "t2" (w `e=''8( a,) a` `a b c`) }}
+  {{ template "t2" (w `c=''8( a) a` `a b c`) }}
+  {{ template "t2" (w `d=''8( g,) g` `g a b`) }}
+  {{ template "t2" (w `c=''8( fis,) fis` `fis g a`) }}
+  {{ template "t2" (w `b='8( e,) e` `e fis g`) }}
+  {{ template "t2" (w `fis='8 ais cis` `e_\dDim dis e`) }}
+  {{ template "t2" (w `fis=''8( b,) b` `b\>^\tRit c \af 8\! cis=''`) }}
 
-  {{ t2("d=''8(\\p^\\tATem c) b", "b c d") }} {{ t2("e( a,) a", "a b c") }}
-  {{ t2("c=''8(_\\dCre a) a", "a b c") }} {{ t2("d( g,) g", "g a b") }}
-  {{ t2("c=''8(-> fis,) fis", "fis g a") }} {{ t2("b(-> e,) e", "e fis g") }}
-  {{ t2("fis='8-> ais cis", "b-> dis fis") }}
+  {{ template "t2" (w `d=''8(\p^\tATem c) b` `b c d`) }}
+  {{ template "t2" (w `e=''8( a,) a` `a b c`) }}
+  {{ template "t2" (w `c=''8(_\dCre a) a` `a b c`) }}
+  {{ template "t2" (w `d=''8( g,) g` `g a b`) }}
+  {{ template "t2" (w `c=''8(-> fis,) fis` `fis g a`) }}
+  {{ template "t2" (w `b='8(-> e,) e` `e fis g`) }}
+  {{ template "t2" (w `fis='8-> ais cis` `b-> dis fis`) }}
   \tuplet 3/2 { e=''8-> g b } e='''4\sf \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key e \minor
@@ -35,4 +43,4 @@
   g=,8 r gM! r | a r am! r | d r d7! r | g, r gM! r |
   a+am!8 r r4 | e+em!8 r r4 | fis+fis7!8 r b+b7! r | e+em! r e'=4 |
 }
-{% endmacro %}
+{{ end }}

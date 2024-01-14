@@ -1,16 +1,16 @@
-{% macro lh1(a) %}
-  {{ a }} r dm! r a r d@m r8 | cis r a@7! r8 a=, r a7 r |
-{% endmacro %}
+{{ define "lh1" }}
+  {{ .a }} r dm! r a r d@m r8 | cis r a@7! r8 a=, r a7 r |
+{{ end }}
 
-{% macro lh2() %}
+{{ define "lh2" }}
   g=,8 r g7! r d' r g@7 r8 | a r a7! r cis= r a@7 r8 |
-{% endmacro %}
+{{ end }}
 
-{% macro lh3() %}
+{{ define "lh3" }}
   fis=,8 r d@7! r8 d' r d7 r | g, r gm! r d'= r g@m r8 |
-{% endmacro %}
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Andante
   \clef treble
@@ -43,21 +43,24 @@
     e='8( cis) cis d <d=' a'>2 |
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key d \minor
-  {{ lh1("d=8-\\stBass") }} {{ lh3() }}
-  cis=8 r a@7! r8 a r a7 r | d r dm! r a=, r d@m r8 | {{ lh2() }}
+  {{ template "lh1" (w `d=8-\stBass`) }} {{ template "lh3" }}
+  cis=8 r a@7! r8 a r a7 r | d r dm! r a=, r d@m r8 |
+  {{ template "lh2" }}
 
-  {{ lh1("d=8") }} | d=8 r d7! r a r d@7 r8 | g r gm! r e' r g@m r8 |
-  bes=,8 r bes7! r f r bes@7 r8 | d' r dm! r a=, r d@m r8 | {{ lh2() }}
+  {{ template "lh1" (w `d=8`) }}
+  d=8 r d7! r a r d@7 r8 | g r gm! r e' r g@m r8 |
+  bes=,8 r bes7! r f r bes@7 r8 | d' r dm! r a=, r d@m r8 |
+  {{ template "lh2" }}
 
-  {{ lh1("d=8") }} {{ lh3() }}
+  {{ template "lh1" (w `d=8`) }} {{ template "lh3" }}
   a=,8 r a7! r cis r a@7 r8 | d r dm! r a r d@m r8 |
   g=,8 r gm! r a r a7! r | d r dm! r g@m!4 r4 |
   d=8 r dm! r g@M!4 r4 | d=8 r dm! r d+dm2 \fermata |
 }
-{% endmacro %}
+{{ end }}
