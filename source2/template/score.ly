@@ -154,6 +154,40 @@ sSlur = #(define-music-function (dir prs mus) (symbol? alist? ly:music?)
                )))))
     (tweak 'control-points pts mus)))
 
+% Turns
+markupInsideSlur = {
+  \once \override TextScript.outside-staff-priority = ##f
+  \once \override TextScript.avoid-slur = #'inside
+}
+#(define-markup-command (uTurn layout props up) (markup?)
+  (interpret-markup layout props
+    #{
+      \markup \center-column {
+         \raise #-1 \teeny #up
+         \musicglyph "scripts.turn"
+      }
+    #}
+))
+#(define-markup-command (dTurn layout props down) (markup?)
+  (interpret-markup layout props
+  #{
+    \markup \center-column {
+      \musicglyph "scripts.turn"
+      \lower #-1 \teeny #down
+    }
+  #}
+))
+#(define-markup-command (udTurn layout props up down) (markup? markup?)
+  (interpret-markup layout props
+  #{
+    \markup \center-column {
+      \raise #-1 \teeny #up
+      \musicglyph "scripts.turn"
+      \lower #-1 \teeny #down
+    }
+  #}
+))
+
 % TOC
 tocSection = #(define-music-function
   (label text) (symbol-list-or-symbol? markup?)

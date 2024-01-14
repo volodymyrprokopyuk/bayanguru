@@ -1,37 +1,37 @@
-{% macro rh1(a, b, c) %}
-  {{ a }} ees {{ b }} d c bes c bes a g fis g a bes a bes {{ c }} |
-{% endmacro %}
+{{ define "rh1" }}
+  {{ .a }} ees {{ .b }} d c bes c bes a g fis g a bes a bes {{ .c }} |
+{{ end }}
 
-{% macro rh2(a) %}
-  f=''16 g f ees d ees d c bes a bes c d c d {{ a }} |
-{% endmacro %}
+{{ define "rh2" }}
+  f=''16 g f ees d ees d c bes a bes c d c d {{ .a }} |
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Allegro
   \clef treble
   \key g \minor
   \time 4/4
   \partial 4 { bes'='16\mf a_\aLeg bes c | }
-  {{ rh1("d=''16", "", "c=''") }}
-  {{ rh1("d=''16", "", "d=''") }}
+  {{ template "rh1" (w `d=''16` `` `c=''`) }}
+  {{ template "rh1" (w `d=''16` `` `d=''`) }}
   ees=''16 f ees d c d c bes a bes a g a bes c d |
   ees=''16 f ees d c d c bes a gis a bes c d ees e |
-  {{ rh2("ees=''16") }}
+  {{ template "rh2" (w `ees=''16`) }}
   f=''16 g f ees d ees d c bes a bes c cis d ees e |
   f=''16_\dDim g f ees d ees e f ees f ees d c cis d ees |
   d=''16 ees d c bes c cis d c d c bes a bes c cis='' |
 
-  {{ rh1("d=''16\\mf", "", "c=''") }}
+  {{ template "rh1" (w `d=''16\mf` `` `c=''`) }}
   d=''16 ees d c bes c bes a bes a bes c d c d ees |
-  {{ rh2("ees=''16") }}
+  {{ template "rh2" (w `ees=''16`) }}
   f=''16 g f ees d ees d c bes a bes c d ees e f |
   g=''16 a g f ees f ees d c bes c d ees d ees e |
-  {{ rh2("f=''16") }}
+  {{ template "rh2" (w `f=''16`) }}
   ees=''16 f ees d c bes c ees d ees d c bes a bes d |
   c=''16 d c bes a g a c bes\> c bes a g a bes \af 16\! c='' |
 
-  {{ rh1("d=''16\\p", "_\\dCre", "c=''") }}
+  {{ template "rh1" (w `d=''16\p` `_ \dCre` `c=''`) }}
   d=''16 c bes a bes c bes a g fis g a bes a bes c |
   d=''16 ees d c bes a bes d ees f ees d c bes c ees |
   f=''16 g f ees d c d f fis g fis e fis d e fis |
@@ -40,9 +40,9 @@
   g=''8 f16 ees d c bes a g8\> f16 ees d c bes \af 16\! a |
   g=4\p r8. <bes' ees g>16\f <bes=' d g>4 \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key g \minor
@@ -62,4 +62,4 @@
   g=,8 r f r ees r d r | ees@M!8 r8 \rep 3 { eesM8 r8 } |
   d+g@m!8 r8 r4 g@m!8 r8 r4 | g=,4 r g+gm! %
 }
-{% endmacro %}
+{{ end }}
