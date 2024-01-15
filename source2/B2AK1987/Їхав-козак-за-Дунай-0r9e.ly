@@ -1,8 +1,8 @@
-{% macro rh1(a) %}
-  {{ a }} e a c a e a c) | a( e a e' d c b a=') |
-{% endmacro %}
+{{ define "rh1" }}
+  {{ .a }} e a c a e a c) | a( e a e' d c b a=') |
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Moderato
   \clef treble
@@ -26,18 +26,18 @@
   a='8( c16 b a8 c16 b) | a8( c b a) |
   gis='8( b e gis | a=''2) |
 
-  {{ rh1("a,='16(\\p") }}
+  {{ template "rh1" (w `a,='16(\p`) }}
   gis='16( e gis b gis e gis b) | gis( e gis b e d c b) |
-  {{ rh1("a='16(") }}
+  {{ template "rh1" (w `a='16(`) }}
   gis='16( e gis b e d c b | a2) |
   c=''16( g c e c g c e) | c( g c g' f e d c) |
   b='16( g b d b g b d) | b( f b f' e d c b) |
-  {{ rh1("a='16(") }}
+  {{ template "rh1" (w `a='16(`) }}
   gis='16( e gis b e d e gis | a=''2) \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key a \minor
@@ -56,4 +56,4 @@
   c=4 cM! | e c@M | g,4 g7! | gis e@7! |
   a=,4 am! | c a@m | e4 e7! | a,=, am! |
 }
-{% endmacro %}
+{{ end }}

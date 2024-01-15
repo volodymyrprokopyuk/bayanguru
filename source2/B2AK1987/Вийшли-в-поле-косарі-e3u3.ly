@@ -1,23 +1,23 @@
-{% macro rh1(a, b) %}
-  {{ a }} bes-. a16( bes c a | bes8)-. bes-. bes( {{ b }} |
-{% endmacro %}
+{{ define "rh1" }}
+  {{ .a }} bes-. a16( bes c a | bes8)-. bes-. bes( {{ .b }} |
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Allegro
   \clef treble
   \key bes \major
   \time 2/4
-  {{ rh1("f'='8-.\\mf", "d='')") }}
-  {{ rh1("f,='8-.", "c='')") }}
+  {{ template "rh1" (w `f'='8-.\mf` `d='')`) }}
+  {{ template "rh1" (w `f,='8-.` `c='')`) }}
   d=''8.\( ees16 d8 c | bes a g4\) | c8.\( d16 c8 bes | a g f4\) |
   \duo { d''=''8.\( ees16 d8 c | bes a g4\) | c8.( d16 c8 bes=') | }
   { fis'='2~ | fis4 g | e='2 | }
   <f=' a>8 <e g> f=' r \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key bes \major
@@ -28,4 +28,4 @@
   d=8 d7! a d@7 | d8 d7! g, gm! |
   c=8 c7! g c@7 | f'8 c= f+fM! r |
 }
-{% endmacro %}
+{{ end }}

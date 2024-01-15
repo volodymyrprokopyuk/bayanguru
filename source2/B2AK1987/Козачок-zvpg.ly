@@ -1,36 +1,36 @@
-{% macro rh1(a) %}
-  {{ a }} a-. b-. c-. | d16( e d cis d8 g) |
+{{ define "rh1" }}
+  {{ .a }} a-. b-. c-. | d16( e d cis d8 g) |
   g,='8-. a-. b-. c-. | d16( e d cis d=''8) r |
-{% endmacro %}
+{{ end }}
 
-{% macro rh2(a) %}
-  {{ a }} ais b d) a( gis a d) | b( ais b e) d8( c ) |
+{{ define "rh2" }}
+  {{ .a }} ais b d) a( gis a d) | b( ais b e) d8( c ) |
   b='16( ais b d) a( gis a d) | b( c b a=' %
-{% endmacro %}
+{{ end }}
 
-{% macro rh3(a) %}
-  {{ a }} <a c>16 \acc { e'=''8 } <b d>8( <ais cis>)-. |
+{{ define "rh3" }}
+  {{ .a }} <a c>16 \acc { e'=''8 } <b d>8( <ais cis>)-. |
   \acc { e'=''8 } <b d>8( <ais cis>)-. <b d> <gis e'> |
   <a=' c>8-.\< <fis d'>-. <g b>-. \af 8\! <g c>-. |
   <g=' a>8\> \acc { b='8 } <c, fis a>8 \af 4\! <b= g'>4-- |
-{% endmacro %}
+{{ end }}
 
-{% macro rh4(a) %}
-  {{ a }} <fis a> | <g bes>8 8 <fis a>4-> | <g bes>8 8 <fis=' a>8 8 |
-{% endmacro %}
+{{ define "rh4" }}
+  {{ .a }} <fis a> | <g bes>8 8 <fis a>4-> | <g bes>8 8 <fis=' a>8 8 |
+{{ end }}
 
-{% macro lh1(a) %}
-  {{ a }} d' | g,8 bes d@M![( d8]) | g,16( a bes c) d@M!8[( d=8]) |
-{% endmacro %}
+{{ define "lh1" }}
+  {{ .a }} d' | g,8 bes d@M![( d8]) | g,16( a bes c) d@M!8[( d=8]) |
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Presto
   \clef treble
   \key g \major
   \time 2/4
-  {{ rh1("g'='8-.\\f") }}
-  {{ rh1("g,='8-.") }}
+  {{ template "rh1" (w `g'='8-.\f`) }}
+  {{ template "rh1" (w `g,='8-.`) }}
 
   \repeat volta 2 {
     fis=''8-.\mp a-. d,-. fis-. | g16( fis g a b8) g-. |
@@ -50,8 +50,8 @@
     }
   }
 
-  {{ rh2("b='16(\\mf") }} g4) |
-  {{ rh2("b='16(") }} g='8) r \bar "||"
+  {{ template "rh2" (w `b='16(\mf`) }} g4) |
+  {{ template "rh2" (w `b='16(`) }} g='8) r \bar "||"
 
   \repeat segno 2 {
     \volta 1
@@ -59,22 +59,23 @@
     b='8-. d-. \acc { d=''8 } c16(_\dCre b c a) |
     b='8-. d-. a-. d-. | b-. a-. g='4--\f |
 
-    {{ rh3("<g=' b>8.\\mf") }}
-    {{ rh3("<g'=' b>8.") }} \fine \bar "||"
+    {{ template "rh3" (w `<g=' b>8.\mf`) }}
+    {{ template "rh3" (w `<g'=' b>8.`) }} \fine \bar "||"
 
     \volta 2
+    \keyChangeBeforeBar
     \key g \minor
-    {{ rh4("<g'=' bes>4->\\f") }}
+    {{ template "rh4" (w `<g'=' bes>4->\f`) }}
     \acc { c'=''8 } bes16( a g fis g4)-- |
-    {{ rh4("<g=' bes>4->") }}
+    {{ template "rh4" (w `<g=' bes>4->`) }}
     \acc { c'=''8 } bes16(\> a g fis \af 4\! g='4)-- \bar "||"
     \keyChangeBeforeBar
     \key g \major
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key g \major
@@ -103,8 +104,8 @@
   a=,8-. d,-. g-. e-. | c'-. d-. g,=,4-- |
 
   \key g \minor
-  {{ lh1("g=,4") }} g@m![( d8]) g@m[( d=8]) |
-  {{ lh1("g,=,4") }} g+gm! d+d7! g+gm!4 |
+  {{ template "lh1" (w `g=,4`) }} g@m![( d8]) g@m[( d=8]) |
+  {{ template "lh1" (w `g,=,4`) }} g+gm! d+d7! g+gm!4 |
   \key g \major
 }
-{% endmacro %}
+{{ end }}

@@ -1,8 +1,8 @@
-{% macro rh1() %}
+{{ define "rh1" }}
   \duo { b'='8[( <e g>]) b[( <dis fis>]) e='' } { b'='4 b b='8 } %
-{% endmacro %}
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Allegro
   \clef treble
@@ -14,8 +14,8 @@
     \duo { e'='8[( <a c>]) d,[( <gis b>]) c,[( <e=' a>]) } { e'='4 d c=' } %
     f''=''16( e c a) | r8 c8-. f,-. b-. a( e) b16( e fis g) |
     \alternative {
-      \volta 1 { {{ rh1() }} r8 f'=''16( e c a=') | }
-      \volta 2 { {{ rh1() }} r8 e='16(\mf gis b d='') | }
+      \volta 1 { {{ template "rh1" }} r8 f'=''16( e c a=') | }
+      \volta 2 { {{ template "rh1" }} r8 e='16(\mf gis b d='') | }
     }
   }
 
@@ -29,9 +29,9 @@
   c='8( b) f'16( d c b) a8( gis) a16( b c d |
   e='8)\> r <d b'>-. r \af 8.\! <c=' a'>4 \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key a \minor
@@ -41,8 +41,8 @@
   a@m!8 r8 d@m! r8 a@m! r8 r4 |
   \rep 2 { r4 b+b7!8 r e+em! r r4 | }
 
-  \rep 3 { R1 | } g@7!2 e@7!4 r |
+  \rep 3 { R1 | } g@7!2 e@7!4 r4 |
   a@m!8 r8 d@m! r8 a@m! r8 r4 |
   r4 e+e7!8 r f+fM! r r4 | R1 | r4 e=8-. r a+am!4 %
 }
-{% endmacro %}
+{{ end }}
