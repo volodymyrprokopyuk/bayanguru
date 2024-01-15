@@ -1,19 +1,19 @@
-{% macro rh1() %}
+{{ define "rh1" }}
   d=''4-- f-- | f8(-> e)-. e16( f e8)-. |
   e=''8(-> d)-. d16( e d=''8)-. |
-{% endmacro %}
+{{ end }}
 
-{% macro lh1(a, b) %}
-  {{ a }} cM! g g7! | c cM! c cM |
-  g=,8 g7! g g7 | c cM! {{ b }} |
-{% endmacro %}
+{{ define "lh1" }}
+  {{ .a }} cM! g g7! | c cM! c cM |
+  g=,8 g7! g g7 | c cM! {{ .b }} |
+{{ end }}
 
-{% macro lh2(a) %}
+{{ define "lh2" }}
   g=,8 g7! g g7 | c cM! c cM |
-  g=,8 g7! g g7 | c cM! {{ a }} |
-{% endmacro %}
+  g=,8 g7! g g7 | c cM! {{ .a }} |
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Allegro
   \clef treble
@@ -24,19 +24,19 @@
   c=''16( d e8)-. d16( e f8)-. | g8-. g-. e4-- |
   f=''8-. f16( e d8) e16( d | c8) e-. c='' r |
 
-  {{ rh1() }} | d8(-> c)-. c16( d c8)-. |
-  {{ rh1() }} | c-. e-. c='' r \bar "|."
+  {{ template "rh1" }} | d8(-> c)-. c16( d c8)-. |
+  {{ template "rh1" }} | c-. e-. c='' r \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key c \major
-  {{ lh1("c=8-\\stBass", "c= cM") }}
-  {{ lh1("c=8", "c= r") }}
+  {{ template "lh1" (w `c=8-\stBass` `c= cM`) }}
+  {{ template "lh1" (w `c=8` `c= r`) }}
 
-  {{ lh2("c=8 cM") }}
-  {{ lh2("c=8 r") }}
+  {{ template "lh2" (w `c=8 cM`) }}
+  {{ template "lh2" (w `c=8 r`) }}
 }
-{% endmacro %}
+{{ end }}
