@@ -1,21 +1,21 @@
-{% macro rh1(a, b) %}
-  {{ a }} b8 c4 a | e' c b a\) |
-  gis='4\( b e4. gis,8 | a2 {{ b }} |
-{% endmacro %}
+{{ define "rh1" }}
+  {{ .a }} b8 c4 a | e' c b a\) |
+  gis='4\( b e4. gis,8 | a2 {{ .b }} |
+{{ end }}
 
-{% macro lh1(a, b) %}
-  {{ a }} am! am am | a am am am |
-  e'=4 eM! eM eM | a, am! {{ b }} |
-{% endmacro %}
+{{ define "lh1" }}
+  {{ .a }} am! am am | a am am am |
+  e'=4 eM! eM eM | a, am! {{ .b }} |
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Lento
   \clef treble
   \key a \minor
   \time 4/4
-  {{ rh1("a'='4.\\(\\p", "a='\\)") }}
-  {{ rh1("a='4.\\(", "b='\\)") }}
+  {{ template "rh1" (w `a'='4.\(\p` `a='\)`) }}
+  {{ template "rh1" (w `a='4.\(` `b='\)`) }}
 
   \repeat volta 2 {
     c=''4.\( g8 c4 e | g2 f8 e d c\) |
@@ -28,18 +28,18 @@
     }
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key a \minor
-  {{ lh1("a,=,4-\\stBass", "am am") }}
-  {{ lh1("a=,4", "g=, gM!") }}
+  {{ template "lh1" (w `a,=,4-\stBass` `am am`) }}
+  {{ template "lh1" (w `a=,4` `g=, gM!`) }}
 
   c=4 cM! cM cM | e c@M! cM4 cM |
   g,=,4 gM! gM gM | e' eM! eM eM |
   a,=,4 am! am am | a am! d dm! |
   e=4 eM! eM eM | a, am! g gM! | a=, r am! r |
 }
-{% endmacro %}
+{{ end }}

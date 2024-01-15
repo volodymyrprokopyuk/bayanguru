@@ -1,9 +1,9 @@
-{% macro rh1() %}
+{{ define "rh1" }}
   bes='8-. bes-. bes-. g-. | a-. a-. a-. f-. |
   g='8-. g-. c,-. e='-. |
-{% endmacro %}
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Moderato
   \clef treble
@@ -12,13 +12,13 @@
   \repeat volta 2 {
     c'='8-.\mf c-. d-. e-. | f4 f |
     c='8-. c-. d-. e-. | f4 a |
-    {{ rh1() }} | f-. a-. c4 |
-    {{ rh1() }} | f4 f=' |
+    {{ template "rh1" }} | f-. a-. c4 |
+    {{ template "rh1" }} | f4 f=' |
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key f \major
@@ -27,4 +27,4 @@
   c@7!8[ c78 c7] r | f@M![ fM8] fM4 |
   g,=,4 gm! | c f@M! | c4 c7! | f= fM! |
 }
-{% endmacro %}
+{{ end }}
