@@ -1,9 +1,9 @@
-{% macro lh1(a, b) %}
-  {{ a }} cM! e c@M | f8 fM! f fM |
-  g,=,8 g7! g g7 | c cM! {{ b }} |
-{% endmacro %}
+{{ define "lh1" }}
+  {{ .a }} cM! e c@M | f8 fM! f fM |
+  g,=,8 g7! g g7 | c cM! {{ .b }} |
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Sostenuto
   \clef treble
@@ -23,17 +23,17 @@
     d'=''8 c b a | g\< f e  \af 8\! d='\) \bar "||"
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key c \major
-  {{ lh1("c=8-\\stBass", "c= cM") }}
-  {{ lh1("c=8", "c+cM8 r") }}
+  {{ template "lh1" (w `c=8-\stBass` `c= cM`) }}
+  {{ template "lh1" (w `c=8` `c+cM8 r`) }}
   e=8 eM! gis, e@M | a8 am! e' a@m |
   gis,=,8 e@M! e'8 eM | a, am! g a@m |
   fis=,8 d@M! d'8 dM | g, gM! g=, gM |
   d+d7!4 r | g+g7! r |
 }
-{% endmacro %}
+{{ end }}
