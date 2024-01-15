@@ -1,12 +1,12 @@
-{% macro rh1(a) %}
-  {{ a }} e d8 c) | b4( d c8 b) | c4( a fis=' |
-{% endmacro %}
+{{ define "rh1" }}
+  {{ .a }} e d8 c) | b4( d c8 b) | c4( a fis=' |
+{{ end }}
 
-{% macro rh2(a) %}
-  {{ a }} e' d8 c) | <g b>4( d' c8 b) | c4\( a fis=' |
-{% endmacro %}
+{{ define "rh2" }}
+  {{ .a }} e' d8 c) | <g b>4( d' c8 b) | c4\( a fis=' |
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Allegretto
   \clef treble
@@ -14,17 +14,17 @@
   \time 3/4
   g'='4\mf g8\(\< a b \af 8\! c | d2 g4\) |
   e=''4\( g e | d2\> \af 4\! b4\) |
-  {{ rh1("c=''4(\\p") }} | g2 b4) |
-  {{ rh1("c=''4(\\f") }} | g4 g=') r |
+  {{ template "rh1" (w `c=''4(\p`) }} | g2 b4) |
+  {{ template "rh1" (w `c=''4(\f`) }} | g4 g=') r |
 
   g='4\p g8\(\< a b \af 8\! c | d2 g4\) |
   <c,='' e>4\( g' <c, e> | <b d>2\) r4 |
-  {{ rh2("<a=' c>4(\\f") }} | g8 a b c d4\) |
-  {{ rh2("<a=' c>4(\\p") }} | g4\) <b,= g'>2 \bar "|."
+  {{ template "rh2" (w `<a=' c>4(\f`) }} | g8 a b c d4\) |
+  {{ template "rh2" (w `<a=' c>4(\p`) }} | g4\) <b,= g'>2 \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key g \major
@@ -40,4 +40,4 @@
   \rep 3 { r4 d'=8( cis d=4) | } g, g8( a b c) |
   \rep 3 { d=8( cis d=4) r4 | } g,=,4 gM!2 |
 }
-{% endmacro %}
+{{ end }}

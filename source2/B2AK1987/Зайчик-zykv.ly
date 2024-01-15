@@ -1,8 +1,8 @@
-{% macro lh1() %}
-  \duo { r4 aM! } { a,=,2 }
-{% endmacro %}
+{{ define "lh1" }}
+  \duo { r4 aM! | } { a,=,2 | }
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Allegretto
   \clef treble
@@ -38,9 +38,9 @@
   \tempo Lento
   <e,=' a cis>8--\f 8-- <d e gis b>4-> <cis=' e a>2-- \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key a \major
@@ -48,21 +48,21 @@
   r8 a@M! r8 d@M! r8 a@M! r8 d@M! |
   \rep 2 {
     a,=,8 aM! e' e7! a, aM! e' e7! |
-    a,=,8 aM! e'= e7! {{ lh1() }}
+    a,=,8 aM! e'= e7! {{ template "lh1" }} %
   }
 
   \rep 2 { a,=,8 aM! e' e7! a, aM! d= dM! | }
-  a=,8 aM! e' e7! {{ lh1() }}
-  e=8 a@M! e=8 e7! {{ lh1() }}
+  a=,8 aM! e' e7! {{ template "lh1" }} %
+  e=8 a@M! e=8 e7! {{ template "lh1" }} %
 
   a,=,8[( aM!) aM aM] e'[( e7!) e7 e7] |
-  a,=,8 aM! e' e7! {{ lh1() }}
+  a,=,8 aM! e' e7! {{ template "lh1" }} %
   a,=,8[( aM!) aM d@M] e'8[( e7!) e7 e7] |
-  a,=,8 aM! e'= e7! {{ lh1() }}
+  a,=,8 aM! e'= e7! {{ template "lh1" }} %
 
   a,=,8 aM! e' e7! a, aM! d dM! |
   a=,8 aM! e' e7! a, aM! b bm! |
   a=,8 aM! e' e7! a, aM! a+aM r |
-  e'=8 a@M! e=8 e7! {{ lh1() }}
+  e'=8 a@M! e=8 e7! {{ template "lh1" }} %
 }
-{% endmacro %}
+{{ end }}

@@ -1,12 +1,12 @@
-{% macro rh1(a) %}
-  {{ a }} d g a b4( g) | a8 a e fis g4( d=') |
-{% endmacro %}
+{{ define "rh1" }}
+  {{ .a }} d g a b4( g) | a8 a e fis g4( d=') |
+{{ end }}
 
-{% macro rh2() %}
+{{ define "rh2" }}
   e='8[(->\< d]) e(-> \af 16.\! d) f8[(->\> e]) d-. \af 8\! d='-. |
-{% endmacro %}
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Allegro
   \clef treble
@@ -16,16 +16,16 @@
   g,=''16( a b c d8)-. d-. <a a'>8[-. 8]-. d-. r |
   g,=''8\f r d-. d-. \acc { dis=''8 } e4(-> d8) r |
   g,='8[-.\p g]-. d-. d-. \acc { dis='8 } e4(-> d8) r |
-  {{ rh1("d='8\\mp") }}
-  {{ rh1("d='8") }}
-  {{ rh2() }}
-  {{ rh2() }}
+  {{ template "rh1" (w `d='8\mp`) }}
+  {{ template "rh1" (w `d='8`) }}
+  {{ template "rh2" }}
+  {{ template "rh2" }}
   b'='4(-> g8)-. g-. a16( b a b) g8-. g-. |
   b='4(-> g8)-. g-. a16( b a b g='4) \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key g \major
@@ -40,4 +40,4 @@
   g=,8( gM!4) gM8 d'[ d7!] g, gM! |
   a=,8( a7!4) a78 d=[ d7!] g+gM!4 |
 }
-{% endmacro %}
+{{ end }}

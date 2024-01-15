@@ -1,25 +1,25 @@
-{% macro rh1() %}
+{{ define "rh1" }}
   <a='' a'>8-. r <a g'>-. r <a f'>-. r |
   <bes='' e>2. | <bes d>2. | <bes c>8-. r %
   \duo { c'''='''8-. d-. c-. d='''-. | } { bes''=''2 | }
   <bes='' c>8 r <bes='' g'>2-> |
-{% endmacro %}
+{{ end }}
 
-{% macro rh2() %}
+{{ define "rh2" }}
   <a='' c>8-. r %
   \duo { c'''='''8-. d-. c-. d='''-. | } { a''=''2 | }
   <a='' c>8 r <a='' f'>2-> |
-{% endmacro %}
+{{ end }}
 
-{% macro lh1(a) %}
-  {{ a }} r fM! r fM r | c' r f@M! r8 fM r |
+{{ define "lh1" }}
+  {{ .a }} r fM! r fM r | c' r f@M! r8 fM r |
   g=,8 r gm! r gm r | f r g@m! r8 gm r |
   e=,8 r c@7! r8 c7 r | c' r c7! r c7 r |
   f,=,8 r fM! r fM r | f r fM! r fM r |
   f+fM!8 r d' r c r | f,=, r r4 r |
-{% endmacro %}
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Allegretto
   \clef treble
@@ -32,11 +32,11 @@
     \volta 1
     \repeat volta 2 {
       c='''8-.\mf^\tATem r a( bes b c) |
-      {{ rh1() }}
+      {{ template "rh1" }}
       \alternative {
-        \volta 1 { {{ rh2() }} }
+        \volta 1 { {{ template "rh2" }} }
         \volta 2 {
-          <a='' f'>2.~ | <a='' f'>8 r \fine \bar "!!"
+          <a='' f'>2.~ | <a='' f'>8 r \fine \bar "!!" %
           \volta 2
           <a='' d>8-.\p r <a='' dis>-. r |
         }
@@ -63,9 +63,9 @@
     \key f \major
     \repeat volta 2 {
       c'='''8-> r a(-. bes-. b-. c)-. |
-      {{ rh1() }}
+      {{ template "rh1" }}
       \alternative {
-        \volta 1 { {{ rh2() }} }
+        \volta 1 { {{ template "rh2" }} }
         \volta 2 {
           <a='' f'>2.~ | <a f'>8 r \ottava #1 %
           aes'='''8-.\pp r <des,=''' des'>-. r |
@@ -96,15 +96,15 @@
     \key f \major
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key f \major
   c@7!8-\stBass r8 r4 r | R2. | c@7!8 r8 r4 r | R2. |
 
-  {{ lh1("f,=,8") }}
+  {{ template "lh1" (w `f,=,8`) }}
 
   \key a \minor
   a=,8 r am! r am r | gis r a@m! r8 am r |
@@ -118,7 +118,7 @@
   a+am!8 r f=,8 r e r | a=,8 r r4 r |
 
   \key f \major
-  {{ lh1("f=,8") }}
+  {{ template "lh1" (w `f=,8`) }}
 
   \key des \major
   aes=,8 r aes7! r aes7 r | c r aes@7! r8 aes7 r |
@@ -128,4 +128,4 @@
   des+desM!8 r bes=,8 r aes=, r | des+desM! r r4 r |
   \key f \major
 }
-{% endmacro %}
+{{ end }}

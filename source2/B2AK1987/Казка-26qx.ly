@@ -1,8 +1,8 @@
-{% macro lh1(a) %}
-  r8 {{ a }} r | r cis+a@M! r8 | r8 b+bm! r | r cis+a@M! r8 |
-{% endmacro %}
+{{ define "lh1" }}
+  r8 {{ .a }} r | r cis+a@M! r8 | r8 b+bm! r | r cis+a@M! r8 |
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Moderato
   \clef treble
@@ -22,13 +22,13 @@
   b='8( fis) fis | a( fis4) | d'8( cis b | cis a) a |
   d=''8(_\dDim^\tRit b e | fis b,) b=' \fermata \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key b \minor
-  {{ lh1("b+bm!-\\stBass") }}
+  {{ template "lh1" (w `b+bm!-\stBass`) }}
   r8 d+b@m! r8 | r cis+fis@7! r8 |
   r8 b+bm! r | r ais+fis@7! r8 |
   e=8[( fis@M!) fisM8] | d+b@m!4 r8 |
@@ -38,8 +38,8 @@
   b+e@m!4 r8 | a+aM!4 r8 | a+d@M!4 r8 | a+aM!4 r8 |
   g+e@m!4 r8 | fis+fis7!4.~ |
   fis+fis74.~ | fis+fis74. \fermata |
-  {{ lh1("b+bm!") }}
+  {{ template "lh1" (w `b+bm!`) }}
   b+bm!4 r8 | a+aM!4 r8 |
   g+gM!4 r8 | b+bm!4 r8 \fermata |
 }
-{% endmacro %}
+{{ end }}

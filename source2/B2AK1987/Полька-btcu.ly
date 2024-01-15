@@ -1,36 +1,36 @@
-{% macro rh1(a) %}
-  {{ a }} c-. \acc { d=''8 } c16( b c8) |
+{{ define "rh1" }}
+  {{ .a }} c-. \acc { d=''8 } c16( b c8) |
   d=''8-. g,-. \acc { a='8 } g16( fis g8) |
   d'=''8-. g,-. f'-. g,='-. |
-{% endmacro %}
+{{ end }}
 
-{% macro rh2(a) %}
-  {{ a }} \acc { cis=''8 } d8 \acc { fis=''8 } g8 \acc { ais=''8 } b8] |
+{{ define "rh2" }}
+  {{ .a }} \acc { cis=''8 } d8 \acc { fis=''8 } g8 \acc { ais=''8 } b8] |
   b=''8( a16 g fis8)-. e=''-. |
-{% endmacro %}
+{{ end }}
 
-{% macro lh1(a) %}
-  {{ a }} cM! cM r | b g@7! g78 r | g g7! g g7 | c= cM! cM r |
-{% endmacro %}
+{{ define "lh1" }}
+  {{ .a }} cM! cM r | b g@7! g78 r | g g7! g g7 | c= cM! cM r |
+{{ end }}
 
-{% macro lh2() %}
+{{ define "lh2" }}
   c=8 a@m! am8 r | d d7! d7 r | g,=, gM! gM r |
-{% endmacro %}
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Allegretto
   \clef treble
   \key c \major
   \time 2/4
-  {{ rh1("g'='8-.\\mf") }}
+  {{ template "rh1" (w `g'='8-.\mf`) }}
   a'=''8-. g-. g16( f e8) |
-  {{ rh1("g,='8-.") }}
+  {{ template "rh1" (w `g,='8-.`) }}
   e'=''16( g, e' d c8) d16 c='' |
 
-  {{ rh2("b='8[\\p") }}
+  {{ template "rh2" (w `b='8[\p`) }}
   \rep 2 { e=''8-. d-. \acc { e=''8 } d16( cis d=''8) | }
-  {{ rh2("b='8[") }}
+  {{ template "rh2" (w `b='8[`) }}
   e=''16( d cis d e d b' a |
   g=''8) \acc { fis=''8 } g8 \acc { fis=''8 } g16(\< gis a \af 16\! ais='' |
 
@@ -40,21 +40,21 @@
   a=''8-. g-. g16( f e8) | cis16( d b' a g f e d |
   c=''8) \acc { d=''8 } c16( b c=''4) \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key c \major
-  {{ lh1("c=8-\\stBass") }}
-  {{ lh1("c=8") }}
+  {{ template "lh1" (w `c=8-\stBass`) }}
+  {{ template "lh1" (w `c=8`) }}
 
-  g=,8[ gM! gM gM] | {{ lh2() }}
-  g=,8 gM! g gM | {{ lh2() }}
+  g=,8[ gM! gM gM] | {{ template "lh2" }}
+  g=,8 gM! g gM | {{ template "lh2" }}
 
   g=,8 g7! g7 r | c cM! cM r |
   d=8 g@7! g78 r | c cM! cM r |
   d=8 g@7! g,8 g7 | c cM! cM r |
   f,=,8 d@m! g8 g7! | c= cM! cM4 |
 }
-{% endmacro %}
+{{ end }}
