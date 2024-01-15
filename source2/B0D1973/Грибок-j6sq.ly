@@ -1,4 +1,4 @@
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Moderato
   \clef treble
@@ -10,9 +10,9 @@
   e=''8-. c-. d-. d-. | c-. c-. g-. f-. |
   e='8-. c-. d-. d-. | c='4 r \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key c \major
@@ -22,4 +22,4 @@
   c=8 cM! g gM! | a am! d dm! |
   g,=,8 c@M! g=,8 gM! | c+cM!4 r |
 }
-{% endmacro %}
+{{ end }}

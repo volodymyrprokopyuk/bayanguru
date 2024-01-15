@@ -1,9 +1,9 @@
-{% macro rh1(a) %}
+{{ define "rh1" }}
   e='8-. g-. d-. d-. | e-. e-. f4 |
-  e='8-. g-. d-. d-. | c4 {{ a }} |
-{% endmacro %}
+  e='8-. g-. d-. d-. | c4 {{ .a }} |
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Moderato
   \clef treble
@@ -11,12 +11,12 @@
   \time 2/4
   c'='8-.\mf c-. e-. f-. | g4 g |
   a='8-. a-. a-. a-. | g4 g4 |
-  {{ rh1("g'='4") }}
-  {{ rh1("c='4") }} \bar "|."
+  {{ template "rh1" (w `g'='4`) }}
+  {{ template "rh1" (w `c='4`) }} \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key c \major
@@ -26,4 +26,4 @@
   c=8 cM! b g@M! | c8 cM! d dm! |
   g,=,8 c@M! g8 gM! | c=4 cM! |
 }
-{% endmacro %}
+{{ end }}

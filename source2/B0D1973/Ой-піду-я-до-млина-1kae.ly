@@ -1,8 +1,8 @@
-{% macro rh1(a) %}
-  {{ a }} d-. c-. b-. | a-. b-. c4 | b8-. c-. d4 | a a=' |
-{% endmacro %}
+{{ define "rh1" }}
+  {{ .a }} d-. c-. b-. | a-. b-. c4 | b8-. c-. d4 | a a=' |
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo "Con moto"
   \clef treble
@@ -11,12 +11,12 @@
   \repeat volta 2 {
     a'='8(\mf c e4) | e4 e | d8( e f4) | e8( d c=''4) |
   }
-  {{ rh1("e=''8-.") }}
-  {{ rh1("e'=''8-.") }} \bar "|."
+  {{ template "rh1" (w `e=''8-.`) }}
+  {{ template "rh1" (w `e'=''8-.`) }} \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key a \minor
@@ -27,4 +27,4 @@
   d=8 dm! d dm | e a@m! e8 a@m |
   e=8 e7! e e7 | a,=,4 am! |
 }
-{% endmacro %}
+{{ end }}
