@@ -1,17 +1,17 @@
-{% macro rh1(a) %}
-  {{ a }} bes <f a>4)-. 4-. | <f d'>-. <f a>2-> |
+{{ define "rh1" }}
+  {{ .a }} bes <f a>4)-. 4-. | <f d'>-. <f a>2-> |
   <e=' g>8( a <e g>4)-. 4-. | <g e'>-. <e g>2-> |
   <d=' f>8( g <d f>2) | <bes e>8( f' <bes, e>2) |
   <a= cis>8( e' a g f e=' |
-{% endmacro %}
+{{ end }}
 
-{% macro lh1(a) %}
-  {{ a }} dm | d( dm) dm |
+{{ define "lh1" }}
+  {{ .a }} dm | d( dm) dm |
   cis=4( a@M!) aM4 | cis( a@M) aM4 |
   d=4( dm!) dm | g,( gm!) gm | a=,( a7!) a7 |
-{% endmacro %}
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo "Tempo di valzer"
   \clef treble
@@ -20,7 +20,7 @@
   \repeat segno 2 {
     \volta 1
     \repeat volta 2 {
-      {{ rh1("<f'=' a>8(\\mp") }}
+      {{ template "rh1" (w `<f'=' a>8(\mp`) }}
       \alternative {
         \volta 1 { d='8 e f g a='4) | }
         \volta 2 { \hSpace d,='2 \sSlur bd #'((bs . 3.5)) ( r4) | }
@@ -29,7 +29,7 @@
 
     c='8(\mf d c e f g | a2.) | bes8( a g4) a | c2. |
     c,='8( d c e f g | a2.) | bes8( a g4 e | \af 2.\! a2.)\> |
-    {{ rh1("<f=' a>8(\\p") }} | d4) <d=' f d'>2 \fine |
+    {{ template "rh1" (w `<f=' a>8(\p`) }} | d4) <d=' f d'>2 \fine |
 
     \volta 2
     \key d \major
@@ -50,20 +50,20 @@
     \key d \minor
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key d \minor
-  {{ lh1("d=4(-\\stBass dm!)") }} | d( dm!) dm |
+  {{ template "lh1" (w `d=4(-\stBass dm!)`) }} | d( dm!) dm |
   \duo { r4 dm! } { d=2 } r4 |
 
   g,=,4 c@7! c74 | f fM! fM |
   c'=4 c7! c7 | f, fM! fM |
   g=,4 c@7! c74 | f fM! fM |
   g=,4 gm! gm | a a7! a7 |
-  {{ lh1("d=4( dm!)") }} | d=4 dm!2 |
+  {{ template "lh1" (w `d=4( dm!)`) }} | d=4 dm!2 |
 
   \key d \major
   d=4 dM! dM | a d@M dM4 |
@@ -76,4 +76,4 @@
   d=4 dM! dM | d r r | d= r r |
   \key d \minor
 }
-{% endmacro %}
+{{ end }}
