@@ -1,40 +1,40 @@
-{% macro rh1(a) %}
-  {{ a }} d ees d | ees f g4\) | aes8( g f=''4) |
-{% endmacro %}
+{{ define "rh1" }}
+  {{ .a }} d ees d | ees f g4\) | aes8( g f=''4) |
+{{ end }}
 
-{% macro rh2(a) %}
-  {{ a }} c,8\) c | c( d ees4) | f8( ees d=''4) |
-{% endmacro %}
+{{ define "rh2" }}
+  {{ .a }} c,8\) c | c( d ees4) | f8( ees d=''4) |
+{{ end }}
 
-{% macro lh1(a) %}
-  {{ a }} eesM! | ees eesM | bes bes7! | ees= eesM! |
-{% endmacro %}
+{{ define "lh1" }}
+  {{ .a }} eesM! | ees eesM | bes bes7! | ees= eesM! |
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Allegro
   \clef treble
   \key ees \major
   \time 2/4
   \repeat volta 2 {
-    {{ rh1("ees''=''8\\(\\mf") }} | g8( f ees4) |
-    {{ rh1("ees=''8\\(\\f") }} | ees=''2 |
+    {{ template "rh1" (w `ees''=''8\(\mf`) }} | g8( f ees4) |
+    {{ template "rh1" (w `ees=''8\(\f`) }} | ees=''2 |
   }
 
   \repeat volta 2 {
-    {{ rh2("c'='''4\\(\\p") }} | ees8( d c4) |
-    {{ rh2("c'='''4\\(") }} | c=''2 |
+    {{ template "rh2" (w `c'='''4\(\p`) }} | ees8( d c4) |
+    {{ template "rh2" (w `c'='''4\(`) }} | c=''2 |
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key ees \major
-  {{ lh1("ees=4-\\stBass") }}
-  {{ lh1("ees=4") }}
+  {{ template "lh1" (w `ees=4-\stBass`) }}
+  {{ template "lh1" (w `ees=4`) }}
 
   \rep 2 { c=4 cm! | c cm | g g7! | c= cm! | }
 }
-{% endmacro %}
+{{ end }}

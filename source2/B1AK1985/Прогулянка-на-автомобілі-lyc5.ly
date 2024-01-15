@@ -1,25 +1,25 @@
-{% macro rh1(a) %}
-  {{ a }} e-. d-. e-. | d-. e-. d-. \af 8\! e-. |
+{{ define "rh1" }}
+  {{ .a }} e-. d-. e-. | d-. e-. d-. \af 8\! e-. |
   d='8-. e-. d-. g-. | fis-. g-. fis-. e='-. |
-{% endmacro %}
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Presto
   \clef treble
   \key g \major
   \time 2/4
-  {{ rh1("d'='8-.\\mf\\<") }}
+  {{ template "rh1" (w `d'='8-.\mf\<`) }}
   ees='8(-- d)-. d-. d-. | e(-- d)-. d-. d-. |
   f='8(-- d)-. d-. d-. | \acc { gis='8 } a8(-- d,)-. d='4-> |
 
-  {{ rh1("d='8-.\\<") }}
+  {{ template "rh1" (w `d='8-.\<`) }}
   <fis=' b>8->\f 8-> 4-> | <fis b>8-> 8-> <fis a>4-> |
   d='8-. e-. d-. <g b>-. | <d=' g>8-> 8-> 8-> r \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key g \major
@@ -31,4 +31,4 @@
   \rep 2 { g@M! r8 d= r | }
   R2 | R2 | d@7!8 r8 d= r | g+gM!8-> g+gM-> g+gM-> r |
 }
-{% endmacro %}
+{{ end }}

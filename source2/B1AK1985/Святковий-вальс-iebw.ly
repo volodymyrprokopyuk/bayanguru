@@ -1,17 +1,17 @@
-{% macro rh1(a) %}
-  {{ a }} ees4 | <aes c>2.\) |
+{{ define "rh1" }}
+  {{ .a }} ees4 | <aes c>2.\) |
   <g=' bes>2\( <f aes>4 | <ees=' g>2.\) |
-{% endmacro %}
+{{ end }}
 
-{% macro lh1(a) %}
-  {{ a }} eesM! eesM | e c@7! c74 | f,=, fm! fm |
-{% endmacro %}
+{{ define "lh1" }}
+  {{ .a }} eesM! eesM | e c@7! c74 | f,=, fm! fm |
+{{ end }}
 
-{% macro lh2() %}
+{{ define "lh2" }}
   f,=,4 fm! fm | bes bes7! bes7 | ees= eesM! eesM |
-{% endmacro %}
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Moderato
   \clef treble
@@ -22,30 +22,30 @@
   bes'='2\( c4 | bes2 g4 | aes2 g4 | f2.\) |
   bes='2\( aes4 | g2 f4 | ees2.~ | ees='2.\) |
 
-  {{ rh1("ees='2\\(") }}
+  {{ template "rh1" (w `ees='2\(`) }}
   f='2\( g4 | aes2 f4 | bes2.~ | bes2.\) |
-  {{ rh1("ees,='2\\(") }}
+  {{ template "rh1" (w `ees,='2\(`) }}
   aes='2\( c4 | g2 f4 | ees2.~ | ees='4\) r r \bar "|."
 
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key ees \major
-  {{ lh1("ees=4-\\stBass") }} | aes f@m! fm4 |
+  {{ template "lh1" (w `ees=4-\stBass`) }} | aes f@m! fm4 |
   bes=,4 bes7! bes7 | d bes@7! bes74 |
   ees=4 eesM! eesM | g, ees@M! eesM4 |
-  {{ lh1("ees'=4") }} | bes bes7! bes7 |
+  {{ template "lh1" (w `ees'=4`) }} | bes bes7! bes7 |
   d=4 bes@7! bes74 | bes bes7! bes7 |
   ees=4 eesM! eesM | bes=, ees@M! eesM4 |
 
   aes=,4( aesM!) aesM | f( aes@M!) aesM4 |
   bes=,4( bes7!) bes7 | ees( eesM!) eesM |
-  {{ lh2() }} | g, ees@M! eesM4 |
+  {{ template "lh2" }} | g, ees@M! eesM4 |
   aes=,4( aesM!) aesM | f( aes@M!) aesM4 |
   bes=,4( besm!) besm | c( cm!) cm |
-  {{ lh2() }} | ees+eesM! r r |
+  {{ template "lh2" }} | ees+eesM! r r |
 }
-{% endmacro %}
+{{ end }}

@@ -1,14 +1,14 @@
-{% macro lh1(a) %}
-  {{ a }} dm! d dm | d g@m! d8 g@m |
+{{ define "lh1" }}
+  {{ .a }} dm! d dm | d g@m! d8 g@m |
   a=,8 a7! a a7 | d dm! d= dm |
-{% endmacro %}
+{{ end }}
 
-{% macro lh2(a) %}
+{{ define "lh2" }}
   f,=,8 fM! f fM | g gm! g gm |
-  a=,8 d@m! a8 a7! | d dm! {{ a }} |
-{% endmacro %}
+  a=,8 d@m! a8 a7! | d dm! {{ .a }} |
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Presto
   \clef treble
@@ -24,16 +24,16 @@
   a=''8\mf a16( g f g a f | g8) g16( f e8.) g16\( |
   f=''16\> e d f e d cis \af 16\! e | d8\) r d=''4-> \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key d \minor
-  {{ lh1("d=8-\\stBass") }}
-  {{ lh1("d=8") }}
+  {{ template "lh1" (w `d=8-\stBass`) }}
+  {{ template "lh1" (w `d=8`) }}
 
-  {{ lh2("d=8 dm") }}
-  {{ lh2("d=4->") }}
+  {{ template "lh2" (w `d=8 dm`) }}
+  {{ template "lh2" (w `d=4->`) }}
 }
-{% endmacro %}
+{{ end }}
