@@ -29,7 +29,7 @@ pieces:
   - { id: 9h35, tit: Етюд G major,
       com: Г. Беренс, src: SB1NU1979,
       org: swe, sty: cls, gnr: stu, ton: gj, frm: arp, bss: stb, lvl: ela }
-  - { id: "5402", tit: Етюд G major,
+  - { id: 5402, tit: Етюд G major,
       com: М. Любарський, src: SB1NU1979,
       org: ukr, sty: aut, gnr: stu, ton: gj, frm: arp, bss: stb, lvl: ela }
   - { id: h8lm, tit: Етюд C major,
@@ -90,7 +90,7 @@ pieces:
   - { id: rnk5, tit: Етюд Bes major,
       com: К. Черні, src: SB2NU1977,
       org: aut, sty: cls, gnr: stu, ton: besj, frm: [arp, dot, jmp], bss: stb, lvl: ela }
-  - { id: "5071", tit: Етюд C major,
+  - { id: 5071, tit: Етюд C major,
       com: А. Гедике, src: SB2NU1977,
       org: rus, sty: aut, gnr: stu, ton: [cj, cj], frm: [arp, vo2], bss: pub, lvl: ela }
   - { id: vupt, tit: Етюд D major,
@@ -283,7 +283,7 @@ pieces:
   - { id: 31pw, tit: Етюд C major,
       com: О. Денисов, src: SB5NU1980,
       org: ukr, sty: aut, gnr: stu, ton: cj, frm: [scl, in3, tu3, fi1], bss: [stb, syn], lvl: elb }
-  - { id: "1004", tit: Етюд C major,
+  - { id: 1004, tit: Етюд C major,
       com: С. Чапкій, src: SB5NU1980,
       org: ukr, sty: aut, gnr: stu, ton: [cj ai], frm: [arp, in6, fi1], bss: stb, lvl: elb }
   - { id: slsw, tit: Етюд Fis major,
