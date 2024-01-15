@@ -1,15 +1,13 @@
 {% macro rh1(a) %}
   {{ a }} <b d>-. <g b>-. <b d>-. |
   <c='' e>8( <b d>) <a c>-. <g=' b>-. |
-  \duo { a'='8-. d-. d16( c b a | g='4) } %
-  { fis'='8-. 8-. 4 | s4 } %
+  \duo { a'='8-. d-. d16( c b a | g='4) } { fis'='8-. 8-. 4 | s4 } %
 {% endmacro %}
 
 {% macro rh2(a, b) %}
   {{ a }} <g b>-. <e g>-. <g b>-. |
   <a=' c>8( <g b>) <fis a>-. <e=' g>-. |
-  \duo { fis'='8-. b-. b16( a g fis | {{ b }} } %
-  { dis'='8-. 8-. 4 | s4 } %
+  \duo { fis'='8-. b-. b16( a g fis | {{ b }} } { dis'='8-. 8-. 4 | s4 } %
 {% endmacro %}
 
 {% macro rightHand() %}

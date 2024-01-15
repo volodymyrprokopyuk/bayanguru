@@ -9,7 +9,7 @@
 
 {{ define "rh1" }}
   {{ template "t4" (w .a `f'( d a)` `d( b g)` `e'( c g)`) }}
-  {{ template "t2" (w `c=''8( a f)` `d'( b a)`) }} %
+  {{ template "t2" (w `c=''8( a f)` `d'( b a)`) }}
   gis='8.(\< \trill fis32 gis \af 8\! a8)-. r |
 {{ end }}
 
