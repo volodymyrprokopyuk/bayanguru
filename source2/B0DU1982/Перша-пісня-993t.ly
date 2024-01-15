@@ -1,8 +1,8 @@
-{% macro lh1() %}
+{{ define "lh1" }}
   c=4 cM! f fM! | e c@M! f4 fM! | g, c@M! g=,4 gM! |
-{% endmacro %}
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Allegretto
   \clef treble
@@ -14,15 +14,15 @@
   e=''2\(\f f4 a | g2.\) f4\( | e e f^\tRit d |
   c=''1\) \fermata \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key c \major
   c=4-\stBass cM! cM cM | g gM! c cM! |
   a=,4 am! am am | g gM! c cM! |
-  {{ lh1() }} | a am! am am |
-  {{ lh1() }} | c@M!1-\fermata |
+  {{ template "lh1" }} | a am! am am |
+  {{ template "lh1" }} | c@M!1-\fermata |
 }
-{% endmacro %}
+{{ end }}

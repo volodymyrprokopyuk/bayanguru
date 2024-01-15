@@ -1,29 +1,29 @@
-{% macro rh1(a, b) %}
-  {{ a }} c8-. e-. | d16( c b8)-. c-. e-. |
-  c=''8-. e-. c-. e-. | d16( c b8)-. {{ b }} |
-{% endmacro %}
+{{ define "rh1" }}
+  {{ .a }} c8-. e-. | d16( c b8)-. c-. e-. |
+  c=''8-. e-. c-. e-. | d16( c b8)-. {{ .b }} |
+{{ end }}
 
-{% macro lh1(a, b) %}
-  {{ a }} am! a am | e' e7! a, am! |
-  a=,8 am! a am | e'= e7! {{ b }} |
-{% endmacro %}
+{{ define "lh1" }}
+  {{ .a }} am! a am | e' e7! a, am! |
+  a=,8 am! a am | e'= e7! {{ .b }} |
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo "Con moto"
   \clef treble
   \key a \minor
   \time 2/4
-  {{ rh1("e''=''4\\mf", "c=''4") }}
-  {{ rh1("e=''4", "a='4") }} \bar "|."
+  {{ template "rh1" (w `e''=''4\mf` `c=''4`) }}
+  {{ template "rh1" (w `e=''4` `a='4`) }} \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key a \minor
-  {{ lh1("a,=,8-\\stBass", "a,=, am!") }}
-  {{ lh1("a=,8", "a+am!4") }}
+  {{ template "lh1" (w `a,=,8-\stBass` `a,=, am!`) }}
+  {{ template "lh1" (w `a=,8` `a+am!4`) }}
 }
-{% endmacro %}
+{{ end }}

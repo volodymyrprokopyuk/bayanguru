@@ -7,7 +7,7 @@ pieces:
       org: rus, sty: aut, gnr: sng, ton: ei, frm: mel, bss: stb, lvl: ela }
   - { id: 87ko, tit: Яблочко, sub: rusfd,
       arr: М. Чайкін, src: BTBC1936,
-      org: rus, sty: flk, gnr: dnc, ton: di, frm: mel, bss: stb, lvl: ela }
+      org: rus, sty: flk, gnr: dnc, ton: di, frm: [mel, syn], bss: stb, lvl: ela }
   - { id: p7el, tit: Варяг, sub: rusfs,
       arr: М. Чайкін, art: ipr, src: BTBC1936,
       org: rus, sty: flk, gnr: sng, ton: eesj, frm: dot, bss: stb, lvl: ela }

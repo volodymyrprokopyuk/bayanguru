@@ -1,41 +1,41 @@
-{% macro rh1(a) %}
-  {{ a }} g'8( f) | e-. c-. c=''4 |
-{% endmacro %}
+{{ define "rh1" }}
+  {{ .a }} g'8( f) | e-. c-. c=''4 |
+{{ end }}
 
-{% macro rh2(a) %}
-  a='8 a d( c) | b-. g-. {{ a }} |
-{% endmacro %}
+{{ define "rh2" }}
+  a='8 a d( c) | b-. g-. {{ .a }} |
+{{ end }}
 
-{% macro lh1(a) %}
-  {{ a }} gM! b g@M | c8 cM! e= c@M |
-{% endmacro %}
+{{ define "lh1" }}
+  {{ .a }} gM! b g@M | c8 cM! e= c@M |
+{{ end }}
 
-{% macro lh2(a) %}
-  d=8 dM! fis d@M | g,=,8 gM! {{ a }} |
-{% endmacro %}
+{{ define "lh2" }}
+  d=8 dM! fis d@M | g,=,8 gM! {{ .a }} |
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo "Con moto"
   \clef treble
   \key c \major
   \time 2/4
   \repeat volta 2 {
-    {{ rh1("g'='4\\mf") }}
-    {{ rh1("g='4") }}
-    {{ rh2("g='4") }}
-    {{ rh2("g='8 r") }}
+    {{ template "rh1" (w `g'='4\mf`) }}
+    {{ template "rh1" (w `g='4`) }}
+    {{ template "rh2" (w `g='4`) }}
+    {{ template "rh2" (w `g='8 r`) }}
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key c \major
-  {{ lh1("g,=,8-\\stBass") }}
-  {{ lh1("g,=,8") }}
-  {{ lh2("b=,8 g@M") }}
-  {{ lh2("g+gM r") }}
+  {{ template "lh1" (w `g,=,8-\stBass`) }}
+  {{ template "lh1" (w `g,=,8`) }}
+  {{ template "lh2" (w `b=,8 g@M`) }}
+  {{ template "lh2" (w `g+gM r`) }}
 }
-{% endmacro %}
+{{ end }}
