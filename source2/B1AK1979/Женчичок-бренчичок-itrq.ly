@@ -1,24 +1,24 @@
-{% macro rh1(a) %}
-  {{ a }} d-. d-. | d16( c b a g8) | c16( d e4) | e8( d=''4) |
-{% endmacro %}
+{{ define "rh1" }}
+  {{ .a }} d-. d-. | d16( c b a g8) | c16( d e4) | e8( d=''4) |
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Allegretto
   \clef treble
   \key g \major
   \time 3/8
-  {{ rh1("d''=''8-.\\mf") }}
-  {{ rh1("d=''8-.") }}
+  {{ template "rh1" (w `d''=''8-.\mf`) }}
+  {{ template "rh1" (w `d=''8-.`) }}
   c=''16(\mp b a8) a-. | b16(\< a g8) g-. |
   c=''16( b a8) a-. | b16( a g8) \af 8\! g-. |
   \duo { c''=''8(\f b c | d4\>^\tRit \af 8\! c=''8) \barFermata | }
   { g'='4 r8 | g='4 r8 | }
   b='16(\mf^\tATem c b8) a-. | g-. g='-. r \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key g \major
@@ -31,4 +31,4 @@
   e+c@M!4 r8 | a+c@M!4 r8 |
   d+d7!4 d+d78 | g+gM! g+gM r |
 }
-{% endmacro %}
+{{ end }}

@@ -1,22 +1,22 @@
-{% macro rh1(a) %}
-  {{ a }} a' a a | bes bes a4\) | g8( g f4) | e8( e d='4) |
-{% endmacro %}
+{{ define "rh1" }}
+  {{ .a }} a' a a | bes bes a4\) | g8( g f4) | e8( e d='4) |
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Allegretto
   \clef treble
   \key d \minor
   \time 2/4
-  {{ rh1("d'='8\\(\\mf") }}
-  {{ rh1("d='8\\(\\f") }}
+  {{ template "rh1" (w `d'='8\(\mf`) }}
+  {{ template "rh1" (w `d='8\(\f`) }}
   e='4\(\mp e8 e | d e f4\) | e8\( f g e | f4 d\) |
   a'='4\(\mf a8 g | f e d4\) |
   e='8\(\p f g e | d4\) d=' \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key d \minor
@@ -29,4 +29,4 @@
   cis=8 a@7! a8 a7 | d dm! f d@m |
   cis=8 a@7! a8 a7 | d= dm! d+dm4 |
 }
-{% endmacro %}
+{{ end }}
