@@ -5,7 +5,6 @@ go 1.21.5
 require (
 	github.com/gookit/color v1.5.4
 	github.com/pdfcpu/pdfcpu v0.6.0
-	github.com/sanity-io/litter v1.5.5
 	github.com/spf13/cobra v1.8.0
 	gopkg.in/yaml.v3 v3.0.1
 )
