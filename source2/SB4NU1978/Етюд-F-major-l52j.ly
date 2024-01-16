@@ -58,6 +58,6 @@
   \rep 4 { f=,2 f8 f=, | }
   r8 f=,8-> c'-> a-> ees'-> c-> | r8 f,_\aSim b gis d' b |
   r8 f=,8 bes g des' bes | f2-> des'8-> bes=,-> |
-  | \fixed c' { <f,,=, c, a, c f>2.^\markup \smaller "Б" \fermata } |
+  \fixed c' { <f,,=, c, a, c f>2.^\markup \smaller "Б" \fermata } |
 }
 {{ end }}

@@ -1,12 +1,12 @@
-{% macro lh1(a) %}
-  {{ a }} gM! d' g@M | g,8 gM! d' g@M | a8 d@7! d=8 d7 |
-{% endmacro %}
+{{ define "lh1" }}
+  {{ .a }} gM! d' g@M | g,8 gM! d' g@M | a8 d@7! d=8 d7 |
+{{ end }}
 
-{% macro lh2(a) %}
-  {{ a }} dM! dis b@7! | e8 em! g, e@m | a8 a7! cis= a@7 |
-{% endmacro %}
+{{ define "lh2" }}
+  {{ .a }} dM! dis b@7! | e8 em! g, e@m | a8 a7! cis= a@7 |
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Allegro
   \clef treble
@@ -24,16 +24,16 @@
     fis='8[ fis]( a) a( | g fis e4) | e8( g fis e | d) d d='4 \bar "||"
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key g \major
-  {{ lh1("g,=,8-\\stBass") }} | g,8 gM! d' g@M |
-  {{ lh1("g,=,8") }} | g,8 d' g,=,4 |
+  {{ template "lh1" (w `g,=,8-\stBass`) }} | g,8 gM! d' g@M |
+  {{ template "lh1" (w `g,=,8`) }} | g,8 d' g,=,4 |
 
-  {{ lh2("d'=8") }} | d8 dM! fis d@M |
-  {{ lh2("d=8") }} | d=8 dM! d+dM4 |
+  {{ template "lh2" (w `d'=8`) }} | d8 dM! fis d@M |
+  {{ template "lh2" (w `d=8`) }} | d=8 dM! d+dM4 |
 }
-{% endmacro %}
+{{ end }}

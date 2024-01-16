@@ -31,7 +31,7 @@ var excludeParts = []string{
   `^ +\\volta \d {$|^ +\\volta \d$`,
   `^ +\\(?:duo|trio) {$|^ +} {$`,
   `^ +\\set \w`,
-  `^ +\\\w+$`,
+  `^ +\\[-\w]+$`,
 }
 var excludeLine = regexp.MustCompile(strings.Join(excludeParts, "|"))
 var removeParts = []string{
@@ -39,10 +39,11 @@ var removeParts = []string{
   `\\clef (?:treble|bass)`,
   `\\(?:partial|volta|rep) \d+`,
   `\\(?:tuplet|time) \d+/\d+`,
+  `\\fixed c'?`,
   `(?:bs|dt) \. |(?:fu|fd|bu|bd) #'`, // \sSlur
 }
 var removeKnownCmd = regexp.MustCompile(strings.Join(removeParts, "|"))
-var removeOtherCmd = regexp.MustCompile(` \\\w+`)
+var removeOtherCmd = regexp.MustCompile(` \\[-\w]+`)
 var hasMusic = regexp.MustCompile(`[a-g]`)
 
 func cleanLines(pieceFile string) ([]Line, error) {
