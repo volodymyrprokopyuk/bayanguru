@@ -1,4 +1,4 @@
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Vivo
   \clef treble
@@ -13,9 +13,9 @@
     }
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key g \major
@@ -23,6 +23,7 @@
   g,=,8( gM!) gM gM | d'( d7!) d7 d7 | g,_\aSim gM! gM gM |
   b=,8( g@M!) g8( g7!) | c cM! cM cM | g gM! gM gM |
   d'=8 dM! dm dm | a aM! aM aM | cis( a@7!) d8( dM!) |
-  g,=,8[( gM!]) e( g@M) | a8 a7! a7 a7 | d( c b a) | \duo { r4 dM! | } { d=2 | }
+  g,=,8[( gM!]) e( g@M) | a8 a7! a7 a7 | d( c b a) |
+  \duo { r4 dM! | } { d=2 | }
 }
-{% endmacro %}
+{{ end }}

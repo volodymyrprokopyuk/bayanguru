@@ -1,4 +1,4 @@
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Allegro
   \clef treble
@@ -16,9 +16,9 @@
     }
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key d \minor
@@ -32,4 +32,4 @@
   g,=,8 gm! gm gm | a a7! a7 a7 |
   d=8 dm! dm dm | d+dm! f-- e-- d=-- | d+dm!2 |
 }
-{% endmacro %}
+{{ end }}

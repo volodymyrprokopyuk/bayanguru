@@ -1,12 +1,12 @@
-{% macro rh1() %}
+{{ define "rh1" }}
   r8 d'=''4 b8 | cis4. a8 | gis cis, a' gis | fis='2 |
-{% endmacro %}
+{{ end }}
 
-{% macro lh1(a) %}
-  b=,8 bm! b bm | fis fism! cis' fis@m | cis8 {{ a }}! cis= {{ a }} |
-{% endmacro %}
+{{ define "lh1" }}
+  b=,8 bm! b bm | fis fism! cis' fis@m | cis8 {{ .a }}! cis= {{ .a }} |
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Andante
   \clef treble
@@ -15,14 +15,14 @@
   fis'='4.\mf gis8 | a4. fis8 | a a gis fis | gis4 cis,8 r |
   gis'='4. a8 | b4. gis8 | b b a gis | fis2 |
   cis'=''4 fis | e fis8 e | d d cis b | cis4 fis, |
-  {{ rh1() }}
+  {{ template "rh1" }}
   <a=' cis>4 <d fis> | <cis e> <d fis>8 <cis e> |
   <b=' d>8 8 <a cis> <gis b> | <a cis>4 fis |
-  {{ rh1() }} \bar "|."
+  {{ template "rh1" }} \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key fis \minor
@@ -33,10 +33,10 @@
   fis,=,8 fism! fis fism | cis' fis@m! cis8 fis@m |
   a=,8 aM! ais fis@7! | b8 bm! fis b@m |
   fis=,8 fism! fis fism |
-  {{ lh1("cisM") }}
+  {{ template "lh1" (w `cisM`) }}
   fis,=,8 fism! cis' fis@m |
   \rep 2 { a=,8 aM! d= dM! | }
   b=,8 bm! fis b@m | fis8 fism! fis fism |
-  {{ lh1("cis7") }} fis+fism!2 |
+  {{ template "lh1" (w `cis7`) }} fis+fism!2 |
 }
-{% endmacro %}
+{{ end }}
