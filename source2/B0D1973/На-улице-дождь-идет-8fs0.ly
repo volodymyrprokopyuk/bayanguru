@@ -1,4 +1,4 @@
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Lento
   \clef treble
@@ -12,9 +12,9 @@
     a='8( e')-. a,( e')-. | d\( c b a | b d c b | a4 a'=''8\) r |
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key c \major
@@ -24,4 +24,4 @@
   a,=,4 am! | d dm! | e eM! | a, am! |
   a=,4 am! | d dm! | e eM! | a@m!4 a,=,8 r |
 }
-{% endmacro %}
+{{ end }}
