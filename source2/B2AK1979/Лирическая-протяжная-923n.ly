@@ -1,4 +1,4 @@
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Lento
   \clef treble
@@ -39,9 +39,9 @@
   }
   r4 \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key fis \minor
@@ -62,4 +62,4 @@
   gis=,4 cis | fis8( gis fis e) | d( cis b a) |
   gis=,2 | b4 a8( gis) | fis[( cis'] fis=) fism!~ | fism4 r | R2 |
 }
-{% endmacro %}
+{{ end }}

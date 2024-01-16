@@ -1,12 +1,12 @@
-{% macro lh1() %}
+{{ define "lh1" }}
   e=4 em! em | g, e@m em4 | a=, a7! a7 |
-{% endmacro %}
+{{ end }}
 
-{% macro lh2() %}
+{{ define "lh2" }}
   e=4 em! em | fis fis7! fis7 | b, bm! bm |
-{% endmacro %}
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo "Tempo di valzer"
   \clef treble
@@ -27,17 +27,17 @@
   <cis=' e b'>2\( <e g b>4 | <d fis>2 <cis e fis>4 |
   <b= b'>2.~ | 2.\) \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key b \minor
   b,=,4-\stBass bm! bm | b bm bm | e em! a@7! | d4 dM! dM |
   a=,4 aM! aM | a aM aM | d dM! dM | d dM dM |
-  {{ lh1() }} | b cis d |
-  {{ lh2() }} | b bm bm |
-  {{ lh1() }} | d= dM! dM |
-  {{ lh2() }} | b@m!2 r4 |
+  {{ template "lh1" }} | b cis d |
+  {{ template "lh2" }} | b bm bm |
+  {{ template "lh1" }} | d= dM! dM |
+  {{ template "lh2" }} | b@m!2 r4 |
 }
-{% endmacro %}
+{{ end }}

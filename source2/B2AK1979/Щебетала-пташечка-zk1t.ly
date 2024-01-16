@@ -1,4 +1,4 @@
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Lento
   \clef treble
@@ -12,9 +12,9 @@
   r4\p <ees='( g~ >4^\tRit <d) g>2 |
   r4\> <c='( d~ >4 \af 4.\! <bes=) d>2 \bar "|."
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key g \minor
@@ -25,4 +25,4 @@
   ees=2\( d4 bes\) | c8\( bes a4 bes2\) |
   c=8\( c bes a bes4 g8 g\) | a\( g fis4 g=,2\) |
 }
-{% endmacro %}
+{{ end }}

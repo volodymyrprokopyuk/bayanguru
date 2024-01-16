@@ -1,4 +1,4 @@
-{% macro rh1() %}
+{{ define "rh1" }}
   \autoLineBreaksOff
   g='8.\) \shape #'((0 . 0) (0 . 1) (0 . 4.5) (0 . 0)) PhrasingSlur %
   g='16\( bes d | <g, d' g>4\< 16 \af 16\! 16 |
@@ -6,18 +6,18 @@
   { <aes'=' d>4 8 | <g=' c>4 r8 | }
   \autoLineBreaksOn
   c=''8.\) c16\( d ees='' |
-{% endmacro %}
+{{ end }}
 
-{% macro lh1() %}
+{{ define "lh1" }}
   g=,8 gm! gm | bes[ g@m! gm8] | b[ g@7! g78] |
   c=8 cm! cm | c cm cm | d[ g@m! gm8] | d= d7! d7 |
-{% endmacro %}
+{{ end }}
 
-{% macro lh2() %}
+{{ define "lh2" }}
   a=,8[ f@7! f78] | a[ f@7 f78] | bes besM! besM | bes=, besM besM |
-{% endmacro %}
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo Sostenuto
   \clef treble
@@ -29,13 +29,13 @@
     ees=''8. d16 cis d | bes'8.\) bes16\( a g |
     g=''8. fis16 g gis | a8.\) fis16\( d ees |
     d=''8. cis16 d ees | d8.\) c16\( bes a | c8. bes16 a bes |
-    {{ rh1() }}
+    {{ template "rh1" }}
     ees=''8. d16 bes g | bes8. a16 e fis | g8.\) d16\( bes' a |
-    {{ rh1() }}
+    {{ template "rh1" }}
     \set subdivideBeams = ##t
     d=''16 d' c bes a g | fis ees d c bes a |
     \set subdivideBeams = ##f
-    g='8\)\> r \af 8\! r | r r \fine \bar "!!"
+    g='8\)\> r \af 8\! r | r r \fine \bar "!!" %
 
     \volta 2
     g='8\(\mf | g8. f16 e f | d'8. c16 g a | c8. bes16 a g | f4\) f8\( |
@@ -46,20 +46,20 @@
     \af 4\! 4-\sSlur fu #'((sh . 6)) ( d'=''8)\p \bar "||"
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key g \minor
   g,=,8-\stBass d' bes | g4 r8 | g( gm!) gm | g( gm) gm |
   a=,8[_\aSim d@7! d78] | fis[ d@7 d78] |
   d'=8 d7! d7 | fis,[ d@7 d78] | g gm! gm |
-  {{ lh1() }} | g,[ gm! d@7!] |
-  {{ lh1() }} | g, d' bes | g=, r r |
+  {{ template "lh1" }} | g,[ gm! d@7!] |
+  {{ template "lh1" }} | g, d' bes | g=, r r |
 
-  \rep 2 { {{ lh2() }} }
+  \rep 2 { {{ template "lh2" }} }
   d=8 d7! d7 | fis,[ d@7 d78] | g gm! gm | g gm gm |
   ees'=4. | ees4. | d8 a' fis | d=4 r8 |
 }
-{% endmacro %}
+{{ end }}

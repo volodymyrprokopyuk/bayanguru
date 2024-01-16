@@ -1,24 +1,24 @@
-{% macro rh1() %}
+{{ define "rh1" }}
   d'='''8(\mp e d b g d' | b d d, d' b d) |
   cis='''8(\< d cis bes g cis | bes cis e, cis' bes \af 8\! cis) |
   c='''8(\> d c a ees c') | b( c b g d \af 8\! g='') |
-{% endmacro %}
+{{ end }}
 
-{% macro rh2(a, b) %}
-  e='8(\p fis c' fis, e fis) | e( {{ a }} fis b fis e fis) |
-  e='8( fis {{ b }} fis e \af 8\! fis=') |
-{% endmacro %}
+{{ define "rh2" }}
+  e='8(\p fis c' fis, e fis) | e( {{ .a }} fis b fis e fis) |
+  e='8( fis {{ .b }} fis e \af 8\! fis=') |
+{{ end }}
 
-{% macro lh1(a) %}
+{{ define "lh1" }}
   g,=,4 gM! gM | g gM gM | g gd! gd | g gd gd |
-  g=,4 c@m! cm4 | g gM! gM | c a@m! {{ a }} |
-{% endmacro %}
+  g=,4 c@m! cm4 | g gM! gM | c a@m! {{ .a }} |
+{{ end }}
 
-{% macro lh2(a) %}
-  a=,2 a4 | b2 b4 | c2 c4 | b2 {{ a }} |
-{% endmacro %}
+{{ define "lh2" }}
+  a=,2 a4 | b2 b4 | c2 c4 | b2 {{ .a }} |
+{{ end }}
 
-{% macro rightHand() %}
+{{ define "rightHand" }}
 \relative {
   \tempo "Tempo di valzer"
   \clef treble
@@ -41,9 +41,9 @@
     }
 
     \volta 2
-    {{ rh1() }}
+    {{ template "rh1" }}
     a=''8(\mf\< e a e g \af 8\! e | fis d cis'\> d, d' \af 8\! d,) |
-    {{ rh1() }} | a=''8(\mf\> e e' e, fis \af 8\! d) |
+    {{ template "rh1" }} | a=''8(\mf\> e e' e, fis \af 8\! d) |
     g=''4 r \tuplet 3/2 { g,='8(\< a \af 8\! b=') } |
 
     \rep 2 {
@@ -56,8 +56,9 @@
     e='8(\mp\> g c g e g | c g e g c \af 8\! g=') |
 
     \repeat volta 2 {
-      {{ rh2("\\<", "a='") }} | e='8(\> fis b fis e \af 8\! fis) |
-      {{ rh2("\\>", "ais='") }}
+      {{ template "rh2" (w `\<` `a='`) }} |
+      e='8(\> fis b fis e \af 8\! fis) |
+      {{ template "rh2" (w `\>` `ais='`) }}
       \alternative {
         \volta 1 { <dis=' b'>2\pp r4 | }
         \volta 2 { <dis=' b'>2\pp b''=''4 \bar "||" }
@@ -65,17 +66,18 @@
     }
   }
 }
-{% endmacro %}
+{{ end }}
 
-{% macro leftHand() %}
+{{ define "leftHand" }}
 \relative {
   \clef bass
   \key e \minor
   e=4-\stBass em! em | e em em | b b7! b7 | b b7 b7 |
   g=,4 e@m! em4 | a am! am | ais fis@M! fisM4 |
-  b=,4 e@m! b@M!4 | b b7! b7 | e= em! r |
+  b=,4 e@m! b@M!4 | b4 b7! b7 | e= em! r |
 
-  {{ lh1("cis=4") }} | d=4 g@m! d@M!4 | {{ lh1("d+d7!4") }} | g=,4 gM! r |
+  {{ template "lh1" (w `cis=4`) }} | d=4 g@m! d@M!4 |
+  {{ template "lh1" (w `d+d7!4`) }} | g=,4 gM! r |
 
   \rep 2 {
     c=4 cM! cM | e c@M! cM4 | f, fM! fM | f fm! fm |
@@ -83,6 +85,7 @@
   }
   c=4 cM! cM | c= cM r |
 
-  {{ lh2("b=,4") }} {{ lh2("r4") }} | b=,2 r4 |
+  {{ template "lh2" (w `b=,4`) }}
+  {{ template "lh2" (w `r4`) }} | b=,2 r4 |
 }
-{% endmacro %}
+{{ end }}
