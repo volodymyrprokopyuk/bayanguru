@@ -100,7 +100,7 @@ func catError(format string, args ...any) error {
 func Play(pc PlayCommand) error {
   pieces, _, catLen, err := ReadPiecesAndBooks(
     "catalog", pc.Catalog, pc.Pieces,
-    "meta", "books2.yaml", pc.Books, pc.Book, pc.All,
+    "meta", "books.yaml", pc.Books, pc.Book, pc.All,
   )
   if err != nil {
     return catError("%v", err)

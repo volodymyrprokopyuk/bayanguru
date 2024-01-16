@@ -76,13 +76,13 @@ func scoreError(format string, args ...any) error {
 func Engrave (ec EngraveCommand) error {
   pieces, books, catLen, err := cat.ReadPiecesAndBooks(
     "catalog", ec.Catalog, ec.Pieces,
-    "meta", "books2.yaml", ec.Books, ec.Book, ec.All,
+    "meta", "books.yaml", ec.Books, ec.Book, ec.All,
   )
   if err != nil {
     return catError("%v", err)
   }
   if ec.Init {
-    err := initPiece(pieces, "source2")
+    err := initPiece(pieces, "source")
     if err != nil {
       return catError("%v", err)
     }
@@ -93,13 +93,13 @@ func Engrave (ec EngraveCommand) error {
     if ec.Piece {
       goto pieces
     }
-    err := engraveBooks(books, "source2", "books", ec)
+    err := engraveBooks(books, "source", "books", ec)
     if err != nil {
       return scoreError("%v", err)
     }
     return nil
   }
-  pieces: err = engravePieces(pieces, "source2", "pieces", ec)
+  pieces: err = engravePieces(pieces, "source", "pieces", ec)
   if err != nil {
     return scoreError("%v", err)
   }
