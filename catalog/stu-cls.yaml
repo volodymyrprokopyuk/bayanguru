@@ -245,10 +245,9 @@ pieces:
   - { id: rru6, tit: Етюд A minor,
       com: А. Дювернуа, src: SB4NU1978,
       org: fra, sty: aut, gnr: stu, ton: ai, frm: scl, bss: [stb, pub, scl], lvl: elb }
-  # p. 81
-  # - { id: 6jhw, tit: Етюд Bes minor,
-  #     com: Г. Тишкевич, src: SB4NU1978,
-  #     org: ukr, sty: aut, gnr: stu, ton: besi, frm: [in8, cr5], bss: [stb, pub, rep], lvl: elb }
+  - { id: 6jhw, tit: Етюд Bes minor,
+      com: Г. Тишкевич, src: SB4NU1978,
+      org: ukr, sty: aut, gnr: stu, ton: besi, frm: [in8, cr5, tu3, jmp], bss: [stb, pub, rep], lvl: elb }
   # p. 82
   # - { id: xkep, tit: Етюд F minor,
   #     com: Л. Шітте, src: SB4NU1978,
