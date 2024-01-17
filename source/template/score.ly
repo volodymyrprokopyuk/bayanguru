@@ -23,6 +23,14 @@ aDol = \markup \italic dolce
 % Dynamic
 dCre = \markup \lower #3 \italic "cresc."
 dDim = \markup \lower #3 \italic "dim."
+#(define-markup-command (dAlt layout props d1 d2) (markup? markup?)
+  (interpret-markup layout props
+    #{
+      \markup \concat {
+        \dynamic #d1 \bold \italic ( \dynamic #d2 \bold \italic )
+      }
+    #}
+))
 
 % Tempo
 tRit = "rit."
