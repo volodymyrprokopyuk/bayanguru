@@ -39,12 +39,6 @@ tATem = "a tempo"
 tAcc = "accel."
 tSos = "sost."
 
-% Tuplet
-hideTupletBracket = {
-  \override TupletBracket.bracket-visibility = ##f
-  \override TupletNumber.stencil = ##f
-}
-
 % Bars
 barFermata = \mark \markup \musicglyph #"scripts.ufermata"
 \defineBarLine "!!" #'("!!" "!!" "!!")

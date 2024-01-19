@@ -16,6 +16,7 @@
   {{ template "t2" (w .a .b `<e g>` `<a c>8` `<g b>` `<f a>`) }}
   {{ template "t2" (w `<e='' g>8` `<dis fis>` `<e g>`
      `<c e>` `<b dis>` `<c e>`) }}
+  \omit TupletNumber
   {{ template "t2" (w `<d='' f>8` `<cis e>` `<d f>`
      `<f a>` `<e g>` `<d f>`) }}
   {{ template "t2" (w `<c='' e>8` `<d f>` `<c e>`
@@ -36,6 +37,7 @@
 {{ define "lh1" }}
   {{ template "t3" (w .a `cM!` `f,` `fM!`) }}
   {{ template "t3" (w `c'=8` `cM!` `g` `c@M`) }}
+  \omit TupletNumber
   {{ template "t3" (w `d'=8` `dm!` `g,` `g7!`) }}
   {{ template "t3" (w `c=8` `cM!` `g=,` `g7!`) }}
 {{ end }}
@@ -118,7 +120,7 @@
 \relative {
   \clef bass
   \key c \major
-  \hideTupletBracket
+  \omit TupletBracket
   {{ template "lh1" (w `c=8-\stBass`) }}
   {{ template "t3" (w `c=8` `cM!` `f` `fM!`) }}
   {{ template "t3" (w `c=8` `cM!` `a` `a7!`) }}

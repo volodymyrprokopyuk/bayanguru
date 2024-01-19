@@ -10,6 +10,7 @@
 {{ define "rh1" }}
   {{ template "t4" (w .a `f'( d a)` `d( b g)` `e'( c g)`) }}
   {{ template "t2" (w `c=''8( a f)` `d'( b a)`) }}
+  \omit TupletNumber
   gis='8.(\< \trill fis32 gis \af 8\! a8)-. r |
 {{ end }}
 
@@ -33,11 +34,13 @@
   {{ template "t2" (w `c'='''8( a fis)` `b( g e)`) }} %
   dis=''8.(\< \trill cis32 dis \af 8\! e=''8)-. r |
 
+  \undo \omit TupletNumber
   r4\mf \tuplet 6/4 { a=''16( g f e d c) } %
   r4 \tuplet 6/4 { g'=''16( f e d c b) } |
   r4 \tuplet 6/4 { f'=''16( e d c bes a) } %
   \tuplet 6/4 { d=''16(\< c bes a g \af 16\! f) } \af 4\! e='4\> \trill |
 
+  \omit TupletNumber
   {{ template "rh1" (w `e'=''8(\p c a)`) }}
   cis=''8.(\mf\< \trill c32 cis \af 8\! d8)-. r %
   gis,='8.(\p\< \trill fis32 gis \af 8\! a8)-. r |
@@ -53,7 +56,8 @@
   \clef bass
   \key a \minor
   \duo {
-    \hideTupletBracket
+    \omit TupletBracket
+    \omit TupletNumber
     {{ template "lh1a" }}
     {{ template "t4" (w `r4 am!8` `r4 dm!8` `r4 g7!8` `r4 cM!8`) }}
     {{ template "t2" (w `r4 am!8` `r4 em!8`) }} b7!4( eM!8)-. d \rest |

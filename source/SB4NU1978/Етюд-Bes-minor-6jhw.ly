@@ -14,7 +14,7 @@
       {{ template "t2" (w `<bes'=' bes'>8\mf 8 8` `8 8 8`) }}
       {{ template "t2" (w `<des='' des'>8 <c c'> <bes bes'>`
          `<a a'> <bes bes'> <ges ges'>`) }}
-      \hideTupletBracket
+      \omit TupletNumber
       {{ template "t2" (w `<f=' f'>8 8 8` `8 8 8`) }}
       {{ template "t2" (w `<f=' f'>8 <e e'> <f f'>`
          `<g g'> <a a'> <bes bes'>`) }}
@@ -41,7 +41,17 @@
 
     \volta 2
     \repeat volta 2 {
+      \undo \omit TupletNumber
       <des,='' f des'>4_\markup \dAlt f p <des f bes> |
+      <des='' f aes>4~ 8 r | <c ges' aes>4 <c ges' bes> |
+      <c='' ges' c>4~ 8 r | <c ees ges c>4 <c ees ges bes> |
+      <c='' f aes>4~ 8 r | <des f bes>4 <des fes g> |
+      <des='' f aes>4~_\dCre 8 r | <des f des'>4 <ces des f> |
+      <ces='' des f>4~ 8 r | <bes des bes'>4 <bes des ees> |
+      <beses=' c ees>4~ \tuplet 3/2 { 8 <bes des e>4 } |
+      <aes=' des f>4 <f aes des> | <ges aes c> <ges beses ees> |
+      <f=' aes des>4 \tuplet 3/2 { <fes=' bes des>4 <ees ges c>8 } |
+      <des=' f des'>4~\> 8 \af 8\! r |
     }
   }
 }
