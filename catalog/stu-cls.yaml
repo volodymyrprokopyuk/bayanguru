@@ -344,7 +344,7 @@ pieces:
       org: rus, sty: aut, gnr: stu, ton: cj, frm: [scl, in6], bss: [frb, scl], lvl: ela }
   - { id: f0py, tit: Етюд C major,
       com: М. Різоль, src: FBB3BZ1982,
-      org: ukr, sty: aut, gnr: stu, ton: cj, frm: in3, bss: frb, lvl: elb }
+      org: ukr, sty: aut, gnr: stu, ton: cj, frm: [scl, in3, in8, dot], bss: [frb, vo2], lvl: elb }
   - { id: u5b8, tit: Горобчик,
       com: А. Тихончук, src: FBB3BZ1982,
       org: ukr, sty: aut, gnr: stu, ton: cj, frm: [arp, tri], bss: [frb, arp], lvl: elb }
