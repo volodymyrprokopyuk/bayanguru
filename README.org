@@ -1,8 +1,8 @@
-* Sheet music library
+* Sheet music library for bayan
 
-Bayan is an *engraving system* that produces a *high quality sheet music* in PDF
-for bayan. The system uses [[https://lilypond.org/][LilyPond]] for engraving and supports the *Stradella
-bass* and the *free bass*
+Bayan is an *engraving system* that produces the *highest quality sheet music*
+in PDF for bayan. The system uses [[https://lilypond.org/][LilyPond]] for engraving and supports the
+*Stradella bass* and the *free bass*
 
 *Purpose* (the reason to exist, why?). To promote and support the art of bayan
 music through the free and open source sheet music content of the highest
