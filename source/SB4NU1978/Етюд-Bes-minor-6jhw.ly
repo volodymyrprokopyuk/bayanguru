@@ -61,5 +61,27 @@
 \relative {
   \clef bass
   \key bes \minor
+  bes,=,4-\stBass besm! | bes ees@m! | bes4 besm! | des bes@m! |
+  f,=,4 f7! | f bes@m! | a4 f@7! | f4 f7! |
+  bes=,4 besm! | d+bes@7! bes+bes7!4 | ees eesm! | ees+eesm! ges+ees@m! |
+  f,=,4 bes@m! | f4 f7! | bes+besm! f+f7! | bes+besm! r |
+
+  {{ template "t2" (w `des'=8 8 8` `8 8 8`) }}
+  {{ template "t2" (w `des=8 c bes` `aes ges f`) }}
+  \omit TupletNumber
+  {{ template "t2" (w `ees=,8 8 8` `8 8 8`) }}
+  {{ template "t2" (w `ees=,8 d ees` `ges f ges`) }}
+  {{ template "t2" (w `aes=,8 8 8` `8 8 8`) }}
+  {{ template "t2" (w `aes=,8 bes aes` `ges f ees`) }}
+  {{ template "t2" (w `des=,8 8 8` `8 8 8`) }}
+  {{ template "t2" (w `des=,8 f ges` `aes bes c`) }}
+  {{ template "t2" (w `des=8 8 8` `8 8 8`) }}
+  {{ template "t2" (w `des=8 ees des` `ces bes aes`) }}
+  {{ template "t2" (w `ges=,8 8 8` `8 8 8`) }}
+  {{ template "t2" (w `ges=,8 f ees` `f ges g`) }}
+  {{ template "t2" (w `aes=,8 g aes` `des aes f`) }}
+  {{ template "t2" (w `ees=,8 d ees` `ges ees c`) }}
+  {{ template "t2" (w `des=,8 ees f` `ges g aes`) }}
+  \tuplet 3/2 { des=8 aes f } des=, r |
 }
 {{ end }}
