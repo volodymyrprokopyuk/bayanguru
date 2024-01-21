@@ -58,7 +58,7 @@
   r8 <e c'>16( c des c) r8 <f c'>16( c des c) |
   r8 <e=' c'>16( c des c des^\tRit c d e f g=') |
 
-  {{ template "rh1" (w `aes='16(->\f^\tATem` `` ``) }}
+  {{ template "rh1" (w `aes='16(\f^\tATem` `` ``) }}
   {{ template "rh3" }}
   ees=''16[) r des( des, c' des,] bes' des, aes' des, g) r |
   <des=' f>16( bes des bes <c e> bes <aes= c f>8) r r \bar "|."
