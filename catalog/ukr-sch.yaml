@@ -12,10 +12,9 @@ pieces:
   - { id: axyx, tit: Будуєм дім,
       com: К. Мясков, src: FBBSC1978,
       org: ukr, sty: aut, gnr: chd, ton: [fj, cj], frm: vo2, bss: frb, lvl: ela }
-  # p. 56
-  # - { id: 1k22, tit: "Ой при лужку, при лужку", sub: ukrfs,
-  #     arr: С. Чапкій, src: FBBSC1978,
-  #     org: ukr, sty: flk, gnr: sng, ton: ai, frm: vo2, bss: frb, lvl: ela }
+  - { id: 1k22, tit: "Ой при лужку, при лужку", sub: ukrfs,
+      arr: С. Чапкій, src: FBBSC1978,
+      org: ukr, sty: flk, gnr: sng, ton: ai, frm: vo2, bss: frb, lvl: ela }
   # p. 58
   # - { id: 8w4m, tit: Гра в зайчики, sub: ukrfs,
   #     arr: М. Леонтович, src: FBBSC1978,
