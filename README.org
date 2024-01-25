@@ -37,11 +37,16 @@ music production with the best music engraving tool [[https://lilypond.org/][Lil
 - [[https://go.dev/][Go]]
 
 #+BEGIN_SRC fish
-yay -S ghostscript gsfonts fontforge t1utils \
-  texlive-metapost texlive-langcyrillic
+yay -S ghostscript gsfonts fontforge t1utils texlive-{metapost,langcyrillic}
 #+END_SRC
 
 ** Meta
+
+Piece ID generation
+
+#+BEGIN_SRC fish
+tr -dc a-z0-9 </dev/urandom | head -c 4
+#+END_SRC
 
 #+BEGIN_SRC yaml
 meta:

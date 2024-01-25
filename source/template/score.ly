@@ -1,4 +1,4 @@
-\version "2.25.11"
+\version "2.25.12"
 
 % Logo
 bayanURL = "https://volodymyrprokopyuk.github.io/bayan"
