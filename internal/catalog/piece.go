@@ -5,6 +5,7 @@ import (
   "strings"
   "regexp"
   "path/filepath"
+  "io"
   "os"
   "gopkg.in/yaml.v3"
   sty "github.com/volodymyrprokopyuk/bayan/internal/style"
@@ -269,7 +270,7 @@ func queryPieces(pieces []Piece, queries PieceQueries) ([]Piece, error) {
   return selPieces, nil
 }
 
-func PrintPiece(piece Piece) {
+func PrintPiece(w io.Writer, piece Piece) {
   bassType := func(bss []string) string {
     for _, b := range bss {
       switch b {
@@ -289,8 +290,8 @@ func PrintPiece(piece Piece) {
     titLen = maxTit
   }
   spaceLen := 53 - titLen - comLen
-  fmt.Printf(
-    "%v %v %v %v %v %v %v %v %v\n",
+  fmt.Fprintf(
+    w, "%v %v %v %v %v %v %v %v %v\n",
     sty.ID(piece.ID), sty.Tit(tit),
     strings.Repeat(" ", spaceLen), sty.Com(com),
     sty.Org(piece.Org), sty.Org(piece.Sty), sty.Org(piece.Gnr),

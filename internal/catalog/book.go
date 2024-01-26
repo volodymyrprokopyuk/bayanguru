@@ -1,11 +1,13 @@
 package catalog
 
 import (
-  "fmt"
-  "path/filepath"
-  "os"
-  "gopkg.in/yaml.v3"
-  sty "github.com/volodymyrprokopyuk/bayan/internal/style"
+	"fmt"
+	"io"
+	"os"
+	"path/filepath"
+
+	sty "github.com/volodymyrprokopyuk/bayan/internal/style"
+	"gopkg.in/yaml.v3"
 )
 
 type RawSection struct {
@@ -151,9 +153,9 @@ func readBooks(
   return books, nil
 }
 
-func PrintBook(book Book) {
-  fmt.Printf(
-    "%v %v %v\n",
+func PrintBook(w io.Writer, book Book) {
+  fmt.Fprintf(
+    w, "%v %v %v\n",
     sty.ID(book.ID), sty.Tit(book.Tit),
     sty.Com("%v pieces", len(book.Pieces)),
   )

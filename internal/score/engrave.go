@@ -2,14 +2,16 @@ package score
 
 import (
   "fmt"
-  "strings"
-  "text/template"
-  "path/filepath"
+  "io"
   "os"
   "os/exec"
+  "path/filepath"
+  "strings"
+  "text/template"
+
   pdf "github.com/pdfcpu/pdfcpu/pkg/api"
-  sty "github.com/volodymyrprokopyuk/bayan/internal/style"
   cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
+  sty "github.com/volodymyrprokopyuk/bayan/internal/style"
 )
 
 type EngraveCommand struct {
@@ -46,9 +48,9 @@ func makeTemplate(sourceDir, targetFile string) (*template.Template, error) {
   return tpl, nil
 }
 
-func engraveScore(score, scoreFile, scoreDir string) error {
+func engraveScore(w io.Writer, score, scoreFile, scoreDir string) error {
   scorePDF := filepath.Join(scoreDir, scoreFile)
-  fmt.Printf("%v %v\n", sty.Org("engrave"), sty.Lvl(scorePDF + ".pdf"))
+  fmt.Fprintf(w, "%v %v\n", sty.Org("engrave"), sty.Lvl(scorePDF + ".pdf"))
   lyCmd := exec.Command(
     "lilypond", "-d", "backend=cairo", "-l", "WARN",
     "-f", "pdf", "-o", scorePDF, "-",
@@ -59,9 +61,9 @@ func engraveScore(score, scoreFile, scoreDir string) error {
   return lyCmd.Run()
 }
 
-func optimizeScore(scoreFile, scoreDir  string) error {
+func optimizeScore(w io.Writer, scoreFile, scoreDir  string) error {
   scorePDF := filepath.Join(scoreDir, scoreFile + ".pdf")
-  fmt.Printf("%v %v\n", sty.Org("optimize"), sty.Lvl(scorePDF))
+  fmt.Fprintf(w, "%v %v\n", sty.Org("optimize"), sty.Lvl(scorePDF))
   return pdf.OptimizeFile(scorePDF, scorePDF, nil)
 }
 

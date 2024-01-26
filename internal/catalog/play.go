@@ -6,6 +6,7 @@ import (
   "regexp"
   "math/rand"
   "path/filepath"
+  "os"
   "os/exec"
   sty "github.com/volodymyrprokopyuk/bayan/internal/style"
 )
@@ -115,7 +116,7 @@ func Play(pc PlayCommand) error {
   indices := arrangePieces(len(pieces), pc.Random)
   for _, i := range indices {
     piece := pieces[i]
-    PrintPiece(piece)
+    PrintPiece(os.Stdout, piece)
     if !pc.List {
       err := openPiece("pieces", piece)
       if err != nil {

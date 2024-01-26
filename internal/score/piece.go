@@ -1,15 +1,17 @@
 package score
 
 import (
-  "fmt"
-  "strings"
-  "regexp"
-  "text/template"
-  "io"
-  "path/filepath"
-  "os"
-  sty "github.com/volodymyrprokopyuk/bayan/internal/style"
-  cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
+	"fmt"
+	"io"
+	"os"
+	"path/filepath"
+	"regexp"
+	"strings"
+	"sync"
+	"text/template"
+
+	cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
+	sty "github.com/volodymyrprokopyuk/bayan/internal/style"
 )
 
 var chordNames = map[string]string{"M": "Б", "m": "М", "7": "7", "d": "У"}
@@ -157,39 +159,57 @@ func templatePiece(
   return nil
 }
 
-func engravePieces(
-  pieces []cat.Piece, sourceDir, pieceDir string, ec EngraveCommand,
+func engravePiece(
+  tplPool *sync.Pool,
+  piece cat.Piece, sourceDir, pieceDir string, ec EngraveCommand,
 ) error {
-  tpl, err := makeTemplate(sourceDir, "piece.ly")
+  cat.PrintPiece(os.Stdout, piece)
+  if ec.Lint {
+    err := lintPiece(os.Stdout, piece, sourceDir)
+    if err != nil {
+      return err
+    }
+  }
+  tpl := tplPool.Get().(*template.Template)
+  err := templatePiece(tpl, &piece, sourceDir, ec.Meta)
   if err != nil {
     return err
   }
+  var pieceScore strings.Builder
+  err = tpl.ExecuteTemplate(&pieceScore, "score.ly", piece)
+  if err != nil {
+    return err
+  }
+  err = engraveScore(os.Stdout, pieceScore.String(), piece.File, pieceDir)
+  if err != nil {
+    return err
+  }
+  if ec.Optimize {
+    err := optimizeScore(os.Stdout, piece.File, pieceDir)
+    if err != nil {
+      return err
+    }
+  }
+  return nil
+}
+
+func engravePieces(
+  pieces []cat.Piece, sourceDir, pieceDir string, ec EngraveCommand,
+) error {
+  _, err := makeTemplate(sourceDir, "piece.ly") // validate template
+  if err != nil {
+    return err
+  }
+  var tplPool = sync.Pool{
+    New: func() any {
+      tpl, _ := makeTemplate(sourceDir, "piece.ly")
+      return tpl
+    },
+  }
   for _, piece := range pieces {
-    cat.PrintPiece(piece)
-    if ec.Lint {
-      err := lintPiece(piece, sourceDir)
-      if err != nil {
-        return err
-      }
-    }
-    err := templatePiece(tpl, &piece, sourceDir, ec.Meta)
+    err := engravePiece(&tplPool, piece, sourceDir, pieceDir, ec)
     if err != nil {
       return err
-    }
-    var pieceScore strings.Builder
-    err = tpl.ExecuteTemplate(&pieceScore, "score.ly", piece)
-    if err != nil {
-      return err
-    }
-    err = engraveScore(pieceScore.String(), piece.File, pieceDir)
-    if err != nil {
-      return err
-    }
-    if ec.Optimize {
-      err = optimizeScore(piece.File, pieceDir)
-      if err != nil {
-        return err
-      }
     }
   }
   return nil

@@ -1,14 +1,16 @@
 package score
 
 import (
-  "fmt"
-  "strings"
-  "regexp"
-  "path/filepath"
-  "os"
-  "bufio"
-  sty "github.com/volodymyrprokopyuk/bayan/internal/style"
-  cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
+	"bufio"
+	"fmt"
+	"io"
+	"os"
+	"path/filepath"
+	"regexp"
+	"strings"
+
+	cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
+	sty "github.com/volodymyrprokopyuk/bayan/internal/style"
 )
 
 type Line struct {
@@ -197,17 +199,17 @@ func lintDurationAfterBoundChord(lines []Line) []Line {
   return errors
 }
 
-func printErrors(title string, errors []Line) {
-  fmt.Println(sty.Com(title))
+func printErrors(w io.Writer, title string, errors []Line) {
+  fmt.Fprintf(w, "%v\n", sty.Com(title))
   for _, error := range errors {
     err := strings.ReplaceAll(error.Text, "%", "%%")
-    fmt.Println(sty.Lvl("%3v:", error.Num), sty.Bss(err))
+    fmt.Fprintf(w, "%v %v\n", sty.Lvl("%3v:", error.Num), sty.Bss(err))
   }
 }
 
-func lintPiece(piece cat.Piece, sourceDir string) error {
+func lintPiece(w io.Writer, piece cat.Piece, sourceDir string) error {
   pieceFile := filepath.Join(sourceDir, piece.Src, piece.File + ".ly")
-  fmt.Printf("%v %v\n", sty.Org("lint"), sty.Lvl(pieceFile))
+  fmt.Fprintf(w, "%v %v\n", sty.Org("lint"), sty.Lvl(pieceFile))
   lines, err := cleanLines(pieceFile)
   if err != nil {
     return err
@@ -215,27 +217,27 @@ func lintPiece(piece cat.Piece, sourceDir string) error {
   hasErrors := false
   errors := lintFirstNoteOctaveCheck(lines)
   if len(errors) > 0 {
-    printErrors("* Missing first note octave check or duration", errors)
+    printErrors(w, "* Missing first note octave check or duration", errors)
     hasErrors = true
   }
   errors = lintNewContextOctaveCheck(lines)
   if len(errors) > 0 {
-    printErrors("* Missing new context octave check or duration", errors)
+    printErrors(w, "* Missing new context octave check or duration", errors)
     hasErrors = true
   }
   errors = lintLineEndBarCheck(lines)
   if len(errors) > 0 {
-    printErrors("* Missing line end bar check", errors)
+    printErrors(w, "* Missing line end bar check", errors)
     hasErrors = true
   }
   errors = lintNoteComponentOrder(lines)
   if len(errors) > 0 {
-    printErrors(`* Unordered note components e.g. c'='4[(-.\mf\<^\tRit`, errors)
+    printErrors(w, `* Unordered note components e.g. c'='4[(-.\mf\<^\tRit`, errors)
     hasErrors = true
   }
   errors = lintDurationAfterBoundChord(lines)
   if len(errors) > 0 {
-    printErrors("* Missing explicit duration after bound chord", errors)
+    printErrors(w, "* Missing explicit duration after bound chord", errors)
     hasErrors = true
   }
   if hasErrors {
