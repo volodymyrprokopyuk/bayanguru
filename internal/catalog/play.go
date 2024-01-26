@@ -58,7 +58,7 @@ func openPiece(pieceDir string, piece Piece) error {
 
 func ReadPiecesAndBooks(
   catDir, catQuery string, cmdPieceIDs []string,
-  bookDir, bookFile string, cmdBookIDs []string, book, all bool,
+  bookFile string, cmdBookIDs []string, book, all bool,
 ) ([]Piece, []Book, int, error) {
   pieceMap, pieceIDs, err := readPieces(catDir, catQuery)
   if err != nil {
@@ -66,7 +66,7 @@ func ReadPiecesAndBooks(
   }
   // read books
   if book {
-    books, err := readBooks(bookDir, bookFile, cmdBookIDs, all, pieceMap)
+    books, err := readBooks(catDir, bookFile, cmdBookIDs, all, pieceMap)
     if err != nil {
       return nil, nil, 0, err
     }
@@ -100,7 +100,7 @@ func catError(format string, args ...any) error {
 func Play(pc PlayCommand) error {
   pieces, _, catLen, err := ReadPiecesAndBooks(
     "catalog", pc.Catalog, pc.Pieces,
-    "meta", "books.yaml", pc.Books, pc.Book, pc.All,
+    "books.yaml", pc.Books, pc.Book, pc.All,
   )
   if err != nil {
     return catError("%v", err)

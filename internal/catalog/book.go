@@ -36,8 +36,8 @@ type Book struct {
   Meta bool
 }
 
-func readBookFile(bookDir, bookFile string) ([]RawBook, error) {
-  file, err := os.Open(filepath.Join(bookDir, bookFile))
+func readBookFile(catDir, bookFile string) ([]RawBook, error) {
+  file, err := os.Open(filepath.Join(catDir, bookFile))
   if err != nil {
     return nil, err
   }
@@ -129,9 +129,9 @@ func SectionPieces(book Book) (next func() bool, value func() *Piece) {
 }
 
 func readBooks(
-  bookDir, bookFile string, bookIDs []string, all bool, pieceMap PieceMap,
+  catDir, bookFile string, bookIDs []string, all bool, pieceMap PieceMap,
 ) ([]Book, error) {
-  rawBooks, err := readBookFile(bookDir, bookFile)
+  rawBooks, err := readBookFile(catDir, bookFile)
   if err != nil {
     return nil, err
   }
