@@ -154,7 +154,7 @@ bayan play --query... --random --list`,
         Catalog: catalog,
         All: len(args) == 1 && args[0] == "all",
         Book: book, Random: random, List: list,
-        Queries: map[string]string{},
+        Queries: make(map[string]string, 10),
       }
       if !pc.All {
         if book {

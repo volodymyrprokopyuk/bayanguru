@@ -10,7 +10,7 @@ var org = color.HEXStyle("00D4AA")
 var bss = color.HEXStyle("FF5555")
 var lvl = color.HEXStyle("2AD4FF")
 
-func Error(format string, args ...any) string {
+func Err(format string, args ...any) string {
   return err.Sprintf(format, args...)
 }
 

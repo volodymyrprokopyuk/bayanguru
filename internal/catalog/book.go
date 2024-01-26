@@ -58,7 +58,7 @@ func selectRawBooks(rawBooks []RawBook, bookIDs []string) ([]RawBook, error) {
   }
   selRawBooks := make([]RawBook, 0, 50)
   for _, bookID := range bookIDs {
-    if rawBook, ok := rawBookMap[bookID]; ok {
+    if rawBook, in := rawBookMap[bookID]; in {
       selRawBooks = append(selRawBooks, rawBook)
     } else {
       return nil, fmt.Errorf("invalid book %v", bookID)
@@ -119,8 +119,11 @@ func SectionPieces(book Book) (next func() bool, value func() *Piece) {
     }
     piece := &book.Sections[i].Pieces[j]
     switch {
-    case j < len(book.Sections[i].Pieces) - 1: j++
-    case i < len(book.Sections): i++; j = 0
+    case j < len(book.Sections[i].Pieces) - 1:
+      j++
+    case i < len(book.Sections):
+      i++
+      j = 0
     default: i++
     }
     return piece

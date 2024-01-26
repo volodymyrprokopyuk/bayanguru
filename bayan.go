@@ -10,7 +10,7 @@ import (
 func main() {
   err := cmd.Execute()
   if err != nil {
-    fmt.Println(sty.Error("%v", err))
+    fmt.Println(sty.Err("%v", err))
     os.Exit(1)
   }
 }

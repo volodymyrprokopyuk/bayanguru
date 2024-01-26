@@ -128,9 +128,18 @@ func makeMatchPiece(queries PieceQueries) (MatchPiece, error) {
   matchPiece := func(piece Piece) bool {
     for opt, match := range matches {
       switch opt {
-      case "org": if !match(piece.Org) { return false }
-      case "sty": if !match(piece.Sty) { return false }
-      case "gnr": if !match(piece.Gnr) { return false }
+      case "org":
+        if !match(piece.Org) {
+          return false
+        }
+      case "sty":
+        if !match(piece.Sty) {
+          return false
+        }
+      case "gnr":
+        if !match(piece.Gnr) {
+          return false
+        }
       case "ton":
         negMatch := strings.HasPrefix(queries["ton"], "^")
         if !matchSlice(piece.Ton, match, negMatch) {
@@ -146,11 +155,24 @@ func makeMatchPiece(queries PieceQueries) (MatchPiece, error) {
         if !matchSlice(piece.Bss, match, negMatch) {
           return false
         }
-      case "lvl": if !match(piece.Lvl) { return false }
-      case "tit": if !match(piece.Tit) { return false }
-      case "com": if !match(piece.Com) { return false }
-      case "arr": if !match(piece.Arr) { return false }
-      default: panic(fmt.Sprintf("catalog: unknown query option %v", opt))
+      case "lvl":
+        if !match(piece.Lvl) {
+          return false
+        }
+      case "tit":
+        if !match(piece.Tit) {
+          return false
+        }
+      case "com":
+        if !match(piece.Com) {
+          return false
+        }
+      case "arr":
+        if !match(piece.Arr) {
+          return false
+        }
+      default:
+        panic(fmt.Sprintf("catalog: unknown query option %v", opt))
       }
     }
     return true
@@ -196,7 +218,7 @@ func addMetaToPieces(pieces []Piece) {
   for i := range pieces {
     piece := &pieces[i]
     // sub
-    if sub, ok := meta[piece.Sub]; ok {
+    if sub, in := meta[piece.Sub]; in {
       piece.Sub = sub
     }
     // art
@@ -251,7 +273,8 @@ func PrintPiece(piece Piece) {
   bassType := func(bss []string) string {
     for _, b := range bss {
       switch b {
-      case "stb", "pub", "frb": return b
+      case "stb", "pub", "frb":
+        return b
       }
     }
     return "unk"

@@ -84,7 +84,7 @@ func ReadPiecesAndBooks(
   }
   pieces := make([]Piece, 0, len(pieceIDs))
   for _, pieceID := range pieceIDs {
-    if piece, ok := pieceMap[pieceID]; ok {
+    if piece, in := pieceMap[pieceID]; in {
       pieces = append(pieces, piece)
     } else {
       return nil, nil, 0, fmt.Errorf("piece %v not in catalog", pieceID)
