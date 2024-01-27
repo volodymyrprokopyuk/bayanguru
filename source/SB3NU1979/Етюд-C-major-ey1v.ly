@@ -16,7 +16,7 @@
     \alternative {
       \volta 1 { g=''4\)\f r\> \af 8.\! r | }
       \volta 2 {
-        \hSpace g=''4\f \sSlur bu #'((bs . 3.5)) ( r)\> \af 8.\! r |
+        \hSpace g=''4\f \sSlur nb #'((wb . 3.5)) ( r)\> \af 8.\! r |
       }
     }
   }
@@ -31,7 +31,7 @@
     f=''8\( g f e d c | b a b g a b\) | c\( e g c g e |
     \alternative {
       \volta 1 { c=''4\) r r | }
-      \volta 2 { \hSpace c=''4 \sSlur bu #'() ( r) r \bar "|." }
+      \volta 2 { \hSpace c=''4 \sSlur nb #'() ( r) r \bar "|." }
     }
   }
 }

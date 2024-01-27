@@ -21,11 +21,11 @@
     \alternative {
       \volta 1 {
         \af 2.\! <e=' e'>2.\)\> %
-        b'='8\< \sSlur fu #'((bs . 3.5) (sh . 1.3) (wd . 2)) ( %
+        b'='8\< \sSlur nf #'((wb . 3.5) (ws . 1.3) (ww . 2)) ( %
         \af 16.\! <a=' b>8) |
       }
       \volta 2 {
-        \hSpace \af 2.\! <e=' e'>2.\> -\sSlur bd #'((bs . 3)) ( %
+        \hSpace \af 2.\! <e=' e'>2.\> -\sSlur ub #'((wb . 3)) ( %
         e='16)\< fis g \af 16\! a=' |
       }
     }

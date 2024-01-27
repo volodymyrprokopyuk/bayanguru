@@ -23,7 +23,7 @@
       {{ template "rh1" (w `<f'=' a>8(\mp`) }}
       \alternative {
         \volta 1 { d='8 e f g a='4) | }
-        \volta 2 { \hSpace d,='2 \sSlur bd #'((bs . 3.5)) ( r4) | }
+        \volta 2 { \hSpace d,='2 \sSlur ub #'((wb . 3.5)) ( r4) | }
       }
     }
 

@@ -21,11 +21,11 @@
     <a=' c>4.~ 4\) e8_\( | <c' e> c a g fis8. fis16 |
     b='4 g8 b,4\) b8_\( | <a' c>4 16 16 8 <g b>8. <e g>16 |
     \alternative {
-      \volta 1 { \time 9/8 <fis=' a>2.~ 4\) b,8 \sSlur fu #'() ( | }
+      \volta 1 { \time 9/8 <fis=' a>2.~ 4\) b,8 \sSlur nf #'() ( | }
       \volta 2 {
         \time 9/8 \hSpace
         <fis'=' a>2.)~ 4 %
-        \sSlur bd #'((bs . 2.5) (wd . 6.3) (ht . 2)) ( b,8)\( |
+        \sSlur ub #'((wb . 2.5) (ww . 6.3) (wh . 2)) ( b,8)\( |
         {{ template "rh1" }} b='2.~ | b4.\) %
         \ottava #1 <e='' c'>4 <g='' b>8(\> 4.~ | \af 8\! 8) \ottava #0 %
         r r r4. r4 \bar "|."

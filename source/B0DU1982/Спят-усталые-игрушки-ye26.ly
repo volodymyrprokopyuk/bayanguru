@@ -15,7 +15,7 @@
     e='4\( e f e | g2.\) r4 | f2\( d |
     \alternative {
       \volta 1 { c='2.\) r4 | }
-      \volta 2 { \hSpace c='2. \sSlur bd #'((bs . 4)) ( r4) \bar "|." }
+      \volta 2 { \hSpace c='2. \sSlur ub #'((wb . 4)) ( r4) \bar "|." }
     }
   }
 }

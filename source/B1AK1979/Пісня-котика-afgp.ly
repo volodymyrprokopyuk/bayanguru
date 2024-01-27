@@ -9,7 +9,7 @@
     d=''8 d( c8.) c16( | b8) b( a8. g16) | fis8( d fis a |
     \alternative {
       \volta 1 { g='4) b=' | }
-      \volta 2 { \hSpace g='4 \sSlur bd #'() ( g='8) r \bar "|." }
+      \volta 2 { \hSpace g='4 \sSlur ub #'() ( g='8) r \bar "|." }
     }
   }
 }

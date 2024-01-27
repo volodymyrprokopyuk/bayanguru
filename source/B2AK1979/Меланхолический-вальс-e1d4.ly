@@ -43,7 +43,7 @@
     ees=''8. d16 cis d | bes'8. a16 e fis | a8. g16 fis a | g4\) g,8 |
     <g=' cis g'>8\f 16 16 8 | <bes cis bes'> <a cis a'> <g cis g'> |
     <a=' d fis>8 <fis a d>8\> 8 |
-    \af 4\! 4-\sSlur fu #'((sh . 6)) ( d'=''8)\p \bar "||"
+    \af 4\! 4-\sSlur nf #'((wb . 2.5) (ws . 6)) ( d'=''8)\p \bar "||"
   }
 }
 {{ end }}
