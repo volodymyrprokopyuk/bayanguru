@@ -12,10 +12,9 @@ pieces:
   - { id: 8rvx, tit: Ивушка, sub: rusfs,
       arr: С. Чапкій, src: FBBSC1978,
       org: rus, sty: flk, gnr: sng, ton: ei, frm: [vo2, dot], bss: [frb, dot], lvl: ela }
-  # p. 58
-  # - { id: pouc, tit: То не ветер ветку клонит, sub: rusfs,
-  #     arr: С. Чапкій, src: FBBSC1978,
-  #     org: rus, sty: flk, gnr: sng, ton: ei, frm: [vo2, dot], bss: [frb, dot], lvl: ela }
+  - { id: pouc, tit: То не ветер ветку клонит, sub: rusfs,
+      arr: С. Чапкій, src: FBBSC1978,
+      org: rus, sty: flk, gnr: sng, ton: ei, frm: [vo2, dot], bss: [frb, dot], lvl: ela }
   # p. 60
   # - { id: tq21, tit: Утушка луговая, sub: rusfs,
   #     arr: С. Чапкій, src: FBBSC1978,
