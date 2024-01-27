@@ -14,6 +14,7 @@ import (
 type PieceQueries map[string]string
 
 type PlayCommand struct {
+  CatalogDir, BookFile, PieceDir, BookDir string
   Catalog string
   All, Book bool
   Random, List bool
@@ -100,8 +101,8 @@ func catError(format string, args ...any) error {
 
 func Play(pc PlayCommand) error {
   pieces, _, catLen, err := ReadPiecesAndBooks(
-    "catalog", pc.Catalog, pc.Pieces,
-    "books.yaml", pc.Books, pc.Book, pc.All,
+    pc.CatalogDir, pc.Catalog, pc.Pieces,
+    pc.BookFile, pc.Books, pc.Book, pc.All,
   )
   if err != nil {
     return catError("%v", err)
@@ -118,7 +119,7 @@ func Play(pc PlayCommand) error {
     piece := pieces[i]
     PrintPiece(os.Stdout, piece)
     if !pc.List {
-      err := openPiece("pieces", piece)
+      err := openPiece(pc.PieceDir, piece)
       if err != nil {
         return catError("%v", err)
       }

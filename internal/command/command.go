@@ -75,6 +75,8 @@ bayan engrave pieces... --lint --optimize --meta=f`,
     },
     RunE: func (cmd *cobra.Command, args []string) error {
       ec := score.EngraveCommand{
+        CatalogDir: "catalog", BookFile: "books.yaml",
+        SourceDir: "source", PieceDir: "pieces", BookDir: "books",
         Catalog: catalog,
         All: len(args) == 1 && args[0] == "all",
         Book: book, Piece: piece,
@@ -151,6 +153,8 @@ bayan play --query... --random --list`,
     },
     RunE: func (cmd *cobra.Command, args []string) error {
       pc := cat.PlayCommand{
+        CatalogDir: "catalog", BookFile: "books.yaml",
+        PieceDir: "pieces", BookDir: "books",
         Catalog: catalog,
         All: len(args) == 1 && args[0] == "all",
         Book: book, Random: random, List: list,

@@ -25,13 +25,12 @@ func bookPieces(book cat.Book) []*cat.Piece {
 }
 
 func engraveBook(
-  tplPool *sync.Pool,
-  book cat.Book, sourceDir, bookDir string, ec EngraveCommand,
+  tplPool *sync.Pool, book cat.Book, ec EngraveCommand,
 ) error {
   cat.PrintBook(os.Stdout, book)
   if ec.Lint {
     for _, piece := range book.Pieces {
-      err := lintPiece(os.Stdout, piece, sourceDir)
+      err := lintPiece(os.Stdout, piece, ec.SourceDir)
       if err != nil {
         return err
       }
@@ -41,7 +40,7 @@ func engraveBook(
   pieces := bookPieces(book)
   tpl := tplPool.Get().(*template.Template)
   for _, piece := range pieces {
-    err := templatePiece(tpl, piece, sourceDir, ec.Meta)
+    err := templatePiece(tpl, piece, ec.SourceDir, ec.Meta)
     if err != nil {
       return err
     }
@@ -51,12 +50,12 @@ func engraveBook(
   if err != nil {
     return err
   }
-  err = engraveScore(os.Stdout, bookScore.String(), book.File, bookDir)
+  err = engraveScore(os.Stdout, bookScore.String(), book.File, ec.BookDir)
   if err != nil {
     return err
   }
   if ec.Optimize {
-    err := optimizeScore(os.Stdout, book.File, bookDir)
+    err := optimizeScore(os.Stdout, book.File, ec.BookDir)
     if err != nil {
       return err
     }
@@ -64,21 +63,19 @@ func engraveBook(
   return nil
 }
 
-func engraveBooks(
-  books []cat.Book, sourceDir, bookDir string, ec EngraveCommand,
-) error {
-  _, err := makeTemplate(sourceDir, "book.ly") // validate template
+func engraveBooks(books []cat.Book, ec EngraveCommand) error {
+  _, err := makeTemplate(ec.SourceDir, "book.ly") // validate template
   if err != nil {
     return err
   }
   var tplPool = sync.Pool {
     New: func() any {
-      tpl, _ := makeTemplate(sourceDir, "book.ly")
+      tpl, _ := makeTemplate(ec.SourceDir, "book.ly")
       return tpl
     },
   }
   for _, book := range books {
-    err := engraveBook(&tplPool, book, sourceDir, bookDir, ec)
+    err := engraveBook(&tplPool, book, ec)
     if err != nil {
       return err
     }

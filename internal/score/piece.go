@@ -1,17 +1,18 @@
 package score
 
 import (
-	"fmt"
-	"io"
-	"os"
-	"path/filepath"
-	"regexp"
-	"strings"
-	"sync"
-	"text/template"
-
-	cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
-	sty "github.com/volodymyrprokopyuk/bayan/internal/style"
+  "fmt"
+  "strings"
+  "regexp"
+  "text/template"
+  "io"
+  "os"
+  "path/filepath"
+  "sync"
+  "context"
+  "runtime"
+  cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
+  sty "github.com/volodymyrprokopyuk/bayan/internal/style"
 )
 
 var chordNames = map[string]string{"M": "Б", "m": "М", "7": "7", "d": "У"}
@@ -160,18 +161,17 @@ func templatePiece(
 }
 
 func engravePiece(
-  tplPool *sync.Pool,
-  piece cat.Piece, sourceDir, pieceDir string, ec EngraveCommand,
+  w io.Writer, tplPool *sync.Pool, piece cat.Piece, ec EngraveCommand,
 ) error {
-  cat.PrintPiece(os.Stdout, piece)
+  cat.PrintPiece(w, piece)
   if ec.Lint {
-    err := lintPiece(os.Stdout, piece, sourceDir)
+    err := lintPiece(w, piece, ec.SourceDir)
     if err != nil {
       return err
     }
   }
   tpl := tplPool.Get().(*template.Template)
-  err := templatePiece(tpl, &piece, sourceDir, ec.Meta)
+  err := templatePiece(tpl, &piece, ec.SourceDir, ec.Meta)
   if err != nil {
     return err
   }
@@ -180,12 +180,12 @@ func engravePiece(
   if err != nil {
     return err
   }
-  err = engraveScore(os.Stdout, pieceScore.String(), piece.File, pieceDir)
+  err = engraveScore(w, pieceScore.String(), piece.File, ec.PieceDir)
   if err != nil {
     return err
   }
   if ec.Optimize {
-    err := optimizeScore(os.Stdout, piece.File, pieceDir)
+    err := optimizeScore(w, piece.File, ec.PieceDir)
     if err != nil {
       return err
     }
@@ -193,24 +193,75 @@ func engravePiece(
   return nil
 }
 
-func engravePieces(
-  pieces []cat.Piece, sourceDir, pieceDir string, ec EngraveCommand,
-) error {
-  _, err := makeTemplate(sourceDir, "piece.ly") // validate template
+func receiveAndEngravePieces(
+  ctx context.Context, wg *sync.WaitGroup,
+  pieces <-chan cat.Piece, errors chan<- error,
+  tplPool *sync.Pool, ec EngraveCommand,
+) {
+  defer wg.Done()
+  var w strings.Builder
+  for {
+    select {
+    case <- ctx.Done():
+      return
+    case piece, open := <- pieces:
+      if !open {
+        return
+      }
+      w.Reset()
+      err := engravePiece(&w, tplPool, piece, ec)
+      fmt.Print(w.String())
+      if err != nil {
+        errors <- err
+        pieces = nil // do not process pieces after an error
+      }
+    }
+  }
+}
+
+func engravePieces(pieces []cat.Piece, ec EngraveCommand) error {
+  _, err := makeTemplate(ec.SourceDir, "piece.ly") // validate template
   if err != nil {
     return err
   }
   var tplPool = sync.Pool{
     New: func() any {
-      tpl, _ := makeTemplate(sourceDir, "piece.ly")
+      tpl, _ := makeTemplate(ec.SourceDir, "piece.ly")
       return tpl
     },
   }
-  for _, piece := range pieces {
-    err := engravePiece(&tplPool, piece, sourceDir, pieceDir, ec)
-    if err != nil {
-      return err
-    }
+  var wg sync.WaitGroup
+  ctx, cancel := context.WithCancel(context.Background())
+  defer cancel()
+  engPieces, engErrors := make(chan cat.Piece), make(chan error)
+  for i := 0; i < min(len(pieces), runtime.GOMAXPROCS(0)); i++ {
+    wg.Add(1)
+    go receiveAndEngravePieces(
+      ctx, &wg, engPieces, engErrors, &tplPool, ec,
+    )
   }
-  return nil
+  wg.Add(1)
+  go func() {
+    defer wg.Done()
+    pieces: for _, piece := range pieces {
+      select {
+      case <- ctx.Done():
+        break pieces
+      case engPieces <- piece:
+      }
+    }
+    close(engPieces)
+  }()
+  go func() {
+    for {
+      select {
+      case err = <- engErrors:
+        cancel()
+        return
+      }
+    }
+  }()
+  wg.Wait()
+  close(engErrors)
+  return err
 }
