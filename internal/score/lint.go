@@ -1,16 +1,15 @@
 package score
 
 import (
-	"bufio"
-	"fmt"
-	"io"
-	"os"
-	"path/filepath"
-	"regexp"
-	"strings"
-
-	cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
-	sty "github.com/volodymyrprokopyuk/bayan/internal/style"
+  "fmt"
+  "strings"
+  "regexp"
+  "io"
+  "bufio"
+  "path/filepath"
+  "os"
+  cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
+  sty "github.com/volodymyrprokopyuk/bayan/internal/style"
 )
 
 type Line struct {
@@ -67,7 +66,6 @@ func cleanLines(pieceFile string) ([]Line, error) {
       if len(cleanLine) > 0 && hasMusic.MatchString(cleanLine) {
         line := Line{num, strings.Trim(cleanLine, " ")}
         lines = append(lines, line)
-        // fmt.Printf("%3v: %v\n", line.Num, line.Text)
       }
     }
     num++

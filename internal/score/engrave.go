@@ -2,13 +2,11 @@ package score
 
 import (
   "fmt"
-  "io"
-  "os"
-  "os/exec"
-  "path/filepath"
   "strings"
   "text/template"
-
+  "path/filepath"
+  "io"
+  "os/exec"
   pdf "github.com/pdfcpu/pdfcpu/pkg/api"
   cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
   sty "github.com/volodymyrprokopyuk/bayan/internal/style"
@@ -57,8 +55,8 @@ func engraveScore(w io.Writer, score, scoreFile, scoreDir string) error {
     "-f", "pdf", "-o", scorePDF, "-",
   )
   lyCmd.Stdin = strings.NewReader(score)
-  lyCmd.Stdout = os.Stdout
-  lyCmd.Stderr = os.Stderr
+  lyCmd.Stdout = w
+  lyCmd.Stderr = w
   return lyCmd.Run()
 }
 
