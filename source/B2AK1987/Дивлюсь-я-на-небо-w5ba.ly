@@ -19,7 +19,7 @@
     <g=' b>4^( fis4.\> \af 8\! g8 |
     \alternative {
       \volta 1 {
-        e='2)\p r8 e='8 \sSlur bu #'((sh . 8)) ( |
+        e='2)\p r8 e='8 \sSlur nb #'((wb . -1) (ws . 8)) ( |
       }
       \volta 2 {
         \hSpace e='2.)\p |

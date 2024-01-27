@@ -17,10 +17,10 @@
     \alternative {
       \volta 1 {
         g='8) g' g16 g, %
-        \sSlur fu #'((bs . 0) (wd . 2.2) (ht . 2.8) (dt . 2)) ( a='16 b |
+        \sSlur nf #'((wb . 0) (ww . 2.2) (wh . 2.8) (wd . 2)) ( a='16 b |
       }
       \volta 2 {
-        \hSpace g='8)\mf \sSlur bu #'() ( g') c,='' r \bar "|."
+        \hSpace g='8)\mf \sSlur nb #'((wb . 0)) ( g') c,='' r \bar "|."
       }
     }
   }

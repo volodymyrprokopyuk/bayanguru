@@ -11,12 +11,12 @@
   \repeat volta 2 {
     f'='16\(\mf d f g f d f d' | c bes a g f ees d c\) |
     ees='16\( c ees f ees d ees bes' | a g f ees d c d ees\) |
-    f='16\( d f g f d f f' | ees d c bes a g fis g\) |
+    f='16_\( d f g f d f f' | ees d c bes a g fis g\) |
     c=''16\( bes a g f ees d c |
     \alternative {
       \volta 1 { d='16 f c f bes, c d ees='\) | }
       \volta 2 {
-        \hSpace d='16 \sSlur bd #'((bs . 4.5) (sh . 9) (wd . 4)) ( %
+        \hSpace d='16 \sSlur ub #'((wb . 4.5) (ws . 9) (ww . 4)) ( %
         f='16 c f bes,=8) r \bar "|."
       }
     }
