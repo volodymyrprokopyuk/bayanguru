@@ -107,13 +107,13 @@ trio = #(define-music-function (vone vtwo vthree)
 hSpace = \once \override NoteHead.extra-spacing-width = #'(-2.5 . 0)
 
 sSlur = #(define-music-function (dir prs mus) (symbol? alist? ly:music?)
-  (let* ((bs (assoc-get 'bs prs 2.0)) ;; vertical base line
-         (sh (assoc-get 'sh prs 0.5)) ;; horiaontal shift
-         (wd (assoc-get 'wd prs 1.0)) ;; slur width
-         (ht (assoc-get 'ht prs 1.0)) ;; slur height
-         (dt (assoc-get 'dt prs 0.0)) ;; vertical delta
+  (let* ((bs (assoc-get 'wb prs 2.0)) ;; vertical base line
+         (sh (assoc-get 'ws prs 0.5)) ;; horiaontal shift
+         (wd (assoc-get 'ww prs 1.0)) ;; slur width
+         (ht (assoc-get 'wh prs 1.0)) ;; slur height
+         (dt (assoc-get 'wd prs 0.0)) ;; vertical delta
          (pts (cond
-               ((equal? dir 'fu)
+               ((equal? dir 'nf)
                 (let ((ax (+ sh (* 0.0 wd)))
                       (bx (+ sh (* 1.0 wd)))
                       (cx (+ sh (* 2.0 wd)))
@@ -123,7 +123,7 @@ sSlur = #(define-music-function (dir prs mus) (symbol? alist? ly:music?)
                       (cy (+ bs ht))
                       (dy (+ bs dt)))
                   `((,ax . ,ay) (,bx . ,by) (,cx . ,cy) (,dx . ,dy))))
-               ((equal? dir 'fd)
+               ((equal? dir 'uf)
                 (let ((ax (+ sh (* 0.0 wd)))
                       (bx (+ sh (* 1.0 wd)))
                       (cx (+ sh (* 2.0 wd)))
@@ -133,7 +133,7 @@ sSlur = #(define-music-function (dir prs mus) (symbol? alist? ly:music?)
                       (cy (* -1 (+ bs ht)))
                       (dy (* -1 (+ bs dt))))
                   `((,ax . ,ay) (,bx . ,by) (,cx . ,cy) (,dx . ,dy))))
-               ((equal? dir 'bu)
+               ((equal? dir 'nb)
                 (let ((ax (- (+ sh (* 0.0 wd)) (* 3.0 wd)))
                       (bx (- (+ sh (* 1.0 wd)) (* 3.0 wd)))
                       (cx (- (+ sh (* 2.0 wd)) (* 3.0 wd)))
@@ -143,7 +143,7 @@ sSlur = #(define-music-function (dir prs mus) (symbol? alist? ly:music?)
                       (cy (+ bs ht))
                       (dy bs))
                   `((,ax . ,ay) (,bx . ,by) (,cx . ,cy) (,dx . ,dy))))
-               ((equal? dir 'bd)
+               ((equal? dir 'ub)
                 (let ((ax (- (+ sh (* 0.0 wd)) (* 3.0 wd)))
                       (bx (- (+ sh (* 1.0 wd)) (* 3.0 wd)))
                       (cx (- (+ sh (* 2.0 wd)) (* 3.0 wd)))

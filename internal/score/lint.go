@@ -42,7 +42,6 @@ var removeParts = []string{
   `\\(?:tuplet|time) \d+/\d+`,
   `\\fixed c'?`,
   `\\(?:hide|omit) \S+`,
-  `(?:bs|dt) \. |(?:fu|fd|bu|bd) #'`, // \sSlur
 }
 var removeKnownCmd = regexp.MustCompile(strings.Join(removeParts, "|"))
 var removeOtherCmd = regexp.MustCompile(` \\[-\w]+`)
