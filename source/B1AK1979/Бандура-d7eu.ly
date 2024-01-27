@@ -11,7 +11,7 @@
     b='2. | b4\> a \af 4\! g\) |
     fis='2\(\mp a4 | g2\> \af 4\! fis4 | e2.~\p |
     \alternative {
-      \volta 1 { \af 2\! e='2.\)\<-\sSlur bd #'((bs . 3) (sh . 13)) ( | }
+      \volta 1 { \af 2\! e='2.\)\<-\sSlur ub #'((wb . 3) (ws . 13)) ( | }
       \volta 2 { e='2.) \bar "|." }
     }
   }

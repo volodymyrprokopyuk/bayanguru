@@ -20,11 +20,12 @@
     <a=' c>8 <d, b'> <c a'> <e e'>4 <d e gis>8 |
     \alternative {
       \volta 1 {
-        <c=' e a>4.~\> \af 8\! 8\) r\< \sSlur fu #'((sh . 3)) ( \af 16..\! g'=') |
+        <c=' e a>4.~\> \af 8\! 8\) r\< %
+        \sSlur nf #'((wb . 2.5) (ws . 3)) ( \af 16..\! g'=') |
       }
       \volta 2 {
         \hSpace <c,=' e a>4.~\> 8 %
-        \sSlur bu #'((wd . 3.5) (ht . 1.8)) ( \af 16\! r) r \bar "|."
+        \sSlur nb #'((wb . 2.5) (ww . 3.5) (wh . 1.8)) ( \af 16\! r) r \bar "|."
       }
     }
   }

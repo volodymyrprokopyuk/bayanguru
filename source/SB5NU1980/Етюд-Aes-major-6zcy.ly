@@ -21,7 +21,7 @@
     \alternative {
       \volta 1 {
         <c=' ees aes>8 8 <ees aes c> %
-        <c=' ees aes>4 ees='8 \sSlur fd #'((bs . 3)) ( |
+        <c=' ees aes>4 ees='8 \sSlur uf #'((wb . 3)) ( |
       }
       \volta 2 {
         <c=' ees aes>8) <ees aes c> <aes c ees> <c ees aes>4 aes'=''8( |
@@ -53,7 +53,7 @@
       \volta 1 {
         <aes=' c f>8 8 <aes c ees> <ees g c>8 8 <des g bes> |
         <c=' ees aes>8\> <ees aes c> <aes c ees> <c ees aes>4 %
-        \af 8\! aes'=''8\p -\sSlur fu #'((bs . 4)) ( |
+        \af 8\! aes'=''8\p-\sSlur nf #'((wb . 4)) ( |
       }
       \volta 2 {
         <aes,=' des fes>8)^\tAcc 8 <des fes aes> %
@@ -79,7 +79,7 @@
   bes,=,4.\(-\puBass ees | aes ees8 ees4\) |
   bes'=4.\( ees,8 ees4 | aes,4. ees'4\) r8 |
   bes=,4.\( ees | aes f8 f4\) | bes4.\( ees,4. | aes,4.~ aes4\) r8 |
-  \hSpace aes=,4.~ aes=,4 \sSlur bu #'((wd . 3.7)) ( r8) |
+  \hSpace aes=,4.~ aes=,4 \sSlur nb #'((wb . 2.5) (ww . 3.7)) ( r8) |
 
   ees'=4.\( aes, | ees' aes, | des4. aes | des_~ des+desM!4\) r8 |
   f=4.\( bes, | f' bes, | ees bes | ees~ ees=4\) r8 |

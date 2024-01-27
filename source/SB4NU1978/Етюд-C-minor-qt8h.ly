@@ -37,7 +37,7 @@
               \volta 1 { ees,='16 c' g c ees, c' g c ees,4\) bes'='\sf | }
               \volta 2 {
                 \hSpace ees,='16\> %
-                \sSlur bu #'((bs . 4) (sh . 18) (wd . 7) (ht . 2)) ( %
+                \sSlur nb #'((wb . 4) (ws . 18) (ww . 7) (wh . 2)) ( %
                 c'=''16 g c ees, c' g c \af 4\! ees,4) g='\sf \bar "||"
               }
             }

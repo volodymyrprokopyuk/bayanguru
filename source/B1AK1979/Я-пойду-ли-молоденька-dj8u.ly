@@ -10,7 +10,7 @@
     \alternative {
       \volta 1 { g='4 g='\) | }
       \volta 2 {
-        \hSpace g='4 \sSlur bu #'((sh . 5) (wd . 2.5) (ht . 1.5)) ( g='4) \bar "|."
+        \hSpace g='4 \sSlur nb #'((ws . 5) (ww . 2.5) (wh . 1.5)) ( g='4) \bar "|."
       }
     }
   }

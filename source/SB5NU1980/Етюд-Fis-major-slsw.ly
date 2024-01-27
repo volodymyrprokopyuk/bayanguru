@@ -32,11 +32,11 @@
     \alternative {
       \volta 1 {
         <ais= cis>16 <gis b> <fis ais>8~ 8\) <fis' ais>16\mf %
-        \sSlur fu #'((bs . 4) (wd . 1.5)) ( <gis=' b>) |
+        \sSlur nf #'((wb . 4) (ww . 1.5)) ( <gis=' b>) |
       }
       \volta 2 {
         \hSpace <ais,= cis>16 <gis b> <fis ais>8~ %
-        \sSlur bd #'((bs . 6) (sh . 4) (wd . 4) (ht . 2)) ( 8) %
+        \sSlur ub #'((wb . 6) (ws . 4) (ww . 4) (wh . 2)) ( 8) %
         <gis= b>16\(\p <ais= cis> |
       }
     }
