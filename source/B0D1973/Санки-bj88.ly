@@ -11,7 +11,7 @@
     a='8 g a b | g4\) c8\( b | a8 g a b |
     \alternative {
       \volta 1 { g='4\) g8-. b='-. | }
-      \volta 2 { \hSpace g='4 \sSlur bu #'() ( r) \bar "|." }
+      \volta 2 { \hSpace g='4 \sSlur nb #'((wb . 0.2)) ( r) \bar "|." }
     }
   }
 }

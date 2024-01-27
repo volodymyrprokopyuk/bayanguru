@@ -18,7 +18,7 @@
     \alternative {
       \volta 1 {
         g='8 b g %
-        \tuplet 3/2 { g='16[ \sSlur fd #'((bs . 2.5) (wd . 2)) ( a g='] | }
+        \tuplet 3/2 { g='16[ \sSlur uf #'((wb . 2.5) (ww . 2)) ( a g='] | }
       }
       \volta 2 { g='8) b g=' r | }
     }

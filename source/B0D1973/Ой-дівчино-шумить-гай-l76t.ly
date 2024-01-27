@@ -24,7 +24,7 @@
     {{ template "rh2" }}
     \alternative {
       \volta 1 { f=''2.\) | }
-      \volta 2 { \hSpace f=''4 \sSlur bu #'((bs . 3)) ( r) r \bar "|." }
+      \volta 2 { \hSpace f=''4 \sSlur nb #'((wb . 3)) ( r) r \bar "|." }
     }
   }
 }

@@ -9,9 +9,9 @@
   \repeat volta 2 {
     d,='8 d bes' bes | a g f\) f\( | a a g a |
     \alternative {
-      \volta 1 { f='4.\) f8 \sSlur fu #'() ( | }
+      \volta 1 { f='4.\) f8 \sSlur nf #'() ( | }
       \volta 2 {
-        \hSpace f='4.) \sSlur bd #'((bs . 2.5)) ( r8) \bar "|."
+        \hSpace f='4.) \sSlur ub #'((wb . 2.5)) ( r8) \bar "|."
       }
     }
   }

@@ -20,7 +20,7 @@
     {{ template "rh1" (w `a='16(`) }}
     \alternative {
       \volta 1 { a='4) b=' | }
-      \volta 2 { \hSpace a='4 \sSlur bu #'() ( a'='') \bar "|." }
+      \volta 2 { \hSpace a='4 \sSlur nb #'((wb . 0.7)) ( a'='') \bar "|." }
     }
   }
 }

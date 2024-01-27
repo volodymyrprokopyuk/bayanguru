@@ -24,7 +24,7 @@
     gis='4\( b e4. gis,8 |
     \alternative {
       \volta 1 { a='2 b='\) | }
-      \volta 2 { \hSpace a='2 \sSlur bu #'() ( a='4) r \bar "|." }
+      \volta 2 { \hSpace a='2 \sSlur nb #'((wb . 0.7)) ( a='4) r \bar "|." }
     }
   }
 }

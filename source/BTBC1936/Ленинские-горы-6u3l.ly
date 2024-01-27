@@ -27,11 +27,11 @@
     \alternative {
       \volta 1 {
         g='2~ g8) d[\< %
-        \sSlur fu #'((bs . 2.5) (sh . 1) (wd . 2) (ht . 1.7) (dt . 0.5)) ( %
+        \sSlur nf #'((wb . 2.5) (ws . 1) (ww . 2) (wh . 1.9) (wd . 0.7)) ( %
         g='8) \af 16.\! b='] |
       }
       \volta 2 {
-        \hSpace <g=' b g'>2~ \sSlur bu #'((bs . 3.5)) ( 4) r \bar "|."
+        \hSpace <g=' b g'>2~ \sSlur nb #'((wb . 3.5)) ( 4) r \bar "|."
       }
     }
   }
