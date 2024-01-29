@@ -24,6 +24,8 @@ music production with the best music engraving tool [[https://lilypond.org/][Lil
   most wanted pieces)
 - *A platform* for distribution of the top quality sheet music *on the web*
   (HTML) and *for print* (PDF)
+- An ideal source for *progressive self-education* to play bayan both the
+  Stradella bass and the free bass
 - *An indexed database* of individual sheet music pieces for browsing,
   searching, and visualization of sheet music
 - *A flexible query language* that allows for dynamic construction of

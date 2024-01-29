@@ -21,10 +21,9 @@ pieces:
   - { id: z6yg, tit: Їхав козак на війноньку, sub: ukrfs,
       arr: Є. Юцевич, src: FBBSC1978,
       org: ukr, sty: flk, gnr: sng, ton: ai, frm: vo2, bss: frb, lvl: ela }
-  # p. 69
-  # - { id: mq61, tit: "Ой ти, дівчино зарученая", sub: ukrfs,
-  #     arr: С. Чапкій, src: FBBSC1978,
-  #     org: ukr, sty: flk, gnr: sng, ton: ai, frm: vo2, bss: [frb, jmp], lvl: ela }
+  - { id: mq61, tit: "Ой ти, дівчино зарученая", sub: ukrfs,
+      arr: С. Чапкій, src: FBBSC1978,
+      org: ukr, sty: flk, gnr: sng, ton: ai, frm: vo2, bss: [frb, jmp], lvl: ela }
   # p. 77
   # - { id: a6rk, tit: На просторі,
   #     com: І. Поляруш, src: FBBSC1978,
