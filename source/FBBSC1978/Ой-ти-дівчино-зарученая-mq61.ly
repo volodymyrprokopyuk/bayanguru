@@ -2,11 +2,11 @@
   e=''8\( f e | e, gis b | d c b | a4 a='8\) |
 {{ end }}
 
-{{ define "rh2a" }}
+{{ define "lh1a" }}
   s4. | r4 gis='8( | b a gis | a='4.) |
 {{ end }}
 
-{{ define "rh2b" }}
+{{ define "lh1b" }}
   {{ .a }} d c | e,4.~ | e | a=') |
 {{ end }}
 
@@ -32,16 +32,16 @@
   \key a \minor
   \duo {
     s4. | r4 gis'='8( | b a gis | a4) r8 |
-    {{ template "rh2a" }}
+    {{ template "lh1a" }}
 
     s4. | r4 b='8( | e d c | a4.) |
-    {{ template "rh2a" }}
+    {{ template "lh1a" }}
   } {
     c''=''8( d c | e,4.~ | e) | s4. |
-    {{ template "rh2b" (w `c'=''8(`) }}
+    {{ template "lh1b" (w `c'=''8(`) }}
 
     f'=''8\( e d | g,4.~ | g | a\) |
-    {{ template "rh2b" (w `c=''8(`) }}
+    {{ template "lh1b" (w `c=''8(`) }}
   }
 }
 {{ end }}
