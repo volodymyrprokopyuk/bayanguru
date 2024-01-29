@@ -24,7 +24,6 @@ pieces:
   - { id: mq61, tit: "Ой ти, дівчино зарученая", sub: ukrfs,
       arr: С. Чапкій, src: FBBSC1978,
       org: ukr, sty: flk, gnr: sng, ton: ai, frm: vo2, bss: [frb, jmp], lvl: ela }
-  # p. 77
-  # - { id: a6rk, tit: На просторі,
-  #     com: І. Поляруш, src: FBBSC1978,
-  #     org: ukr, sty: aut, gnr: pie, ton: bi, frm: vo2, bss: [frb, in3], lvl: ela }
+  - { id: a6rk, tit: На просторі,
+      com: І. Поляруш, src: FBBSC1978,
+      org: ukr, sty: aut, gnr: pie, ton: bi, frm: vo2, bss: [frb, in3], lvl: ela }
