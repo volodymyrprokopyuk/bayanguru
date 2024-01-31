@@ -15,3 +15,7 @@ pieces:
   - { id: 4b2w, tit: Етюд C major,
       com: С. Чапкій, src: FBBSC1978,
       org: ukr, sty: aut, gnr: stu, ton: cj, frm: [scl, dot], bss: [frb, scl, dot], lvl: ela }
+  # p. 80
+  # - { id: ja4a, tit: Етюд Bes major,
+  #     com: К. Черні, src: FBBSC1978,
+  #     org: aut, sty: cls, gnr: stu, ton: besj, frm: scl, bss: [frb, cr5, cr7], lvl: elb }
