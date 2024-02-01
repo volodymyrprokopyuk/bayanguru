@@ -30,7 +30,6 @@ pieces:
   - { id: 3aac, tit: Танцювальна,
       com: К. Мясков, src: FBBSC1978,
       org: ukr, sty: aut, gnr: pie, ton: ei, frm: [vo2, cr5], bss: frb, lvl: ela }
-  # p. 84
-  # - { id: nele, tit: Українська полька,
-  #     arr: С. Чапкій, src: FBBSC1978,
-  #     org: ukr, sty: flk, gnr: plk, ton: ai, frm: [var, tu3], bss: [frb, in8, cr5, cr7], lvl: elb }
+  - { id: nele, tit: Українська полька,
+      arr: С. Чапкій, src: FBBSC1978,
+      org: ukr, sty: flk, gnr: plk, ton: ai, frm: [var, tu3], bss: [frb, in8, cr5, cr7], lvl: elb }

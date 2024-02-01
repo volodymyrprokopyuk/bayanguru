@@ -35,8 +35,9 @@ music production with the best music engraving tool [[https://lilypond.org/][Lil
 
 ** Dependencies
 
-- [[https://lilypond.org/][LilyPond]]
-- [[https://go.dev/][Go]]
+- [[https://lilypond.org/][LilyPond]] sheet music engraving system
+- [[https://go.dev/][Go]] programming language
+- [[https://gohugo.io/][Hugo]] static site generator
 
 #+BEGIN_SRC fish
 yay -S ghostscript gsfonts fontforge t1utils texlive-{metapost,langcyrillic}
