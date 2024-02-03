@@ -3,9 +3,9 @@
 {{ end }}
 
 {{ define "rh1" }}
-  {{ .a }} \arpeggio {{ template "t1" (w `e'=''16( f e`) }} d8)-. c-. |
-  {{ template "t1" (w `c=''16( c d`) }} b8) %
-  {{ template "t1" (w `b='16( c b`) }} a='8) |
+  {{ .a }} \arpeggio {{ template "t1" (w ` e'16( f e`) }} d8)-. c-. |
+  {{ template "t1" (w ` c16( d c`) }} b8) %
+  {{ template "t1" (w ` b16( c b`) }} a8) |
 {{ end }}
 
 {{ define "rh2" }}
@@ -67,6 +67,36 @@
       }
     }
   }
+
+  \repeat volta 2 {
+    <c,='' e g c>8_\markup \dAlt f p \arpeggio %
+    {{ template "t1" (w `g'=''16( a g`) }} f8)-. e-. |
+    {{ template "t1" (w `e=''16( f e`) }} d8) %
+    {{ template "t1" (w `d=''16( e d`) }} c8) |
+    b='16( d f a g8) b, |
+    {{ template "t1" (w `d=''16( e d`) }} c8) c16( d e g |
+    c='''8)_\dCre {{ template "t1" (w `g=''16( a g`) }} f8)-. e-. |
+    {{ template "t1" (w `e=''16( f e`) }} d8) d16( b c a) |
+    g='16( a b c) d8( b) |
+    \alternative {
+      \volta 1 { {{ template "t1" (w `d=''16( e d`) }} c8) c='' r | }
+      \volta 2 { <e,=' g c>8[-> d'-> <gis, b e>-> gis'='']-> | }
+    }
+  }
+
+  {{ template "rh1" (w `<a,=' c e a>8\f`) }}
+  gis='16( b d f e8) d |
+  {{ template "t1" (w `d=''16( e d`) }} c8) %
+  {{ template "t1" (w `b='16( c b`) }} a8) |
+  {{ template "rh1" (w `<a,= c e a>8`) }}
+  gis=16( b d f e8) gis, | a-.\< \af 16.\! e'-. a-.\> \af 8\! e'=''-. |
+
+  {{ template "rh1" (w `<a,=' c e a>8\p`) }}
+  gis='16(_\dCre b d f e8) b |
+  {{ template "t1" (w `d=''16( e d`) }} c8) %
+  {{ template "t1" (w `b='16( c b`) }} a8) |
+  {{ template "rh1" (w `<a,= c e a>8\f`) }}
+  gis=16( b d f e8) gis-> | a-> r <a=' c e a>-> r \bar "|."
 }
 {{ end }}
 
