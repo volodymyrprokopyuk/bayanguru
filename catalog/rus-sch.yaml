@@ -21,3 +21,7 @@ pieces:
   - { id: h64c, tit: Мелодия,
       com: К. Михайлов, src: FBBSC1978,
       org: rus, sty: aut, gnr: pie, ton: ai, frm: vo2, bss: [frb, cr5], lvl: ela }
+  # p. 91
+  # - { id: ct44, tit: Русская протяжная,
+  #     com: Ю. Щуровський, src: FBBSC1978,
+  #     org: rus, sty: aut, gnr: pie, ton: bi, frm: vo2, bss: [frb, jmp], lvl: elb }
