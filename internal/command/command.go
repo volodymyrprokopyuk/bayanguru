@@ -7,11 +7,12 @@ import (
   "github.com/spf13/cobra"
   cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
   "github.com/volodymyrprokopyuk/bayan/internal/score"
+  "github.com/volodymyrprokopyuk/bayan/internal/site"
 )
 
 var validPat = regexp.MustCompile(`^\^?\pL[-\pL,]*[^,]$`)
 
-func validate(catalog string, args []string) error {
+func validateReq(catalog string, args []string) error {
   if len(catalog) > 0 && !validPat.MatchString(catalog) {
     return fmt.Errorf("valid pattern ukr-cls or ^rus,blr, got -c %v", catalog)
   }
@@ -30,6 +31,22 @@ func validate(catalog string, args []string) error {
   return nil
 }
 
+type Query struct {
+  short string; varp *string
+}
+
+func validateQueries(queries map[string]Query) error {
+  for opt, query := range queries {
+    val := *query.varp
+    if len(val) > 0 && !validPat.MatchString(val) {
+      return cmdError(
+        "valid pattern ukr,stu or ^rus,blr, got --%v %v", opt, val,
+      )
+    }
+  }
+  return nil
+}
+
 func cmdError(format string, args ...any) error {
   return fmt.Errorf("command: " + format, args...)
 }
@@ -37,11 +54,12 @@ func cmdError(format string, args ...any) error {
 func Execute() error {
   bayanCmd := &cobra.Command{
     Use: "bayan",
-    Short: "Engrave and play bayan sheet music",
+    Short: "Engrave, play and publish bayan sheet music",
     Long:
-    `Bayan engraves pieces and books of bayan sheet music. Bayan provides a piece
-classification and search system to selectively play pieces from a catalog`,
-    Example: "bayan engrave | play pieces... | books... [flags]",
+`Bayan engraves pieces and books of sheet music for bayan. Bayan selectively
+plays pieces from a catalog using a classification and search system based on
+catalog metadata. Bayan publishes high quality PDF pieces on the web`,
+    Example: `bayan engrave | play | publish pieces... | books... [flags]`,
     Version: "0.1.0",
     SilenceUsage: true,
     SilenceErrors: true,
@@ -52,12 +70,14 @@ classification and search system to selectively play pieces from a catalog`,
   engraveCmd := &cobra.Command{
     Use: "engrave",
     Short: "Engrave pieces and books",
-    Long: `Engrave command initializes, lints, and engraves pieces and books`,
-    Example: `bayan engrave [-c catalog] pieces... [--init]
+    Long:
+`Engrave command initializes, lints, engraves, and optimizes pieces and books`,
+    Example:
+`bayan engrave [-c catalog] pieces... [--init]
 bayan engrave [-c catalog] -b books... [--piece]
-bayan engrave pieces... --lint --optimize --meta=f`,
+bayan engrave all --lint --optimize --meta=f`,
     Args: func(cmd *cobra.Command, args []string) error {
-      err := validate(catalog, args)
+      err := validateReq(catalog, args)
       if err != nil {
         return cmdError("%v", err)
       }
@@ -116,7 +136,7 @@ bayan engrave pieces... --lint --optimize --meta=f`,
 
   var random, list bool
   var org, sty, gnr, ton, frm, bss, lvl, tit, com, arr string
-  var queries = map[string]struct{ short string; varp *string }{
+  var queries = map[string]Query{
     "org": {"piece origin e.g. ukr,rus", &org},
     "sty": {"piece style e.g. flk,cls", &sty},
     "gnr": {"piece genre e.g. sng,stu", &gnr},
@@ -132,22 +152,19 @@ bayan engrave pieces... --lint --optimize --meta=f`,
     Use: "play",
     Short: "Play pieces from a catalog or a book",
     Long:
-    `Play command searches, lists, and plays pieces from a catalog or a book`,
-    Example: `bayan play [-c catalog] pieces...
+`Play command searches, lists, and plays pieces from a catalog or a book`,
+    Example:
+`bayan play [-c catalog] pieces...
 bayan play [-c catalog] -b books... [--query...]
-bayan play --query... --random --list`,
+bayan play all --query... --random --list`,
     Args: func(cmd *cobra.Command, args []string) error {
-      err := validate(catalog, args)
+      err := validateReq(catalog, args)
       if err != nil {
         return cmdError("%v", err)
       }
-      for opt, query := range queries {
-        val := *query.varp
-        if len(val) > 0 && !validPat.MatchString(val) {
-          return cmdError(
-            "valid pattern ukr,stu or ^rus,blr, got --%v %v", opt, val,
-          )
-        }
+      err = validateQueries(queries)
+      if err != nil {
+        return cmdError("%v", err)
       }
       return nil
     },
@@ -191,6 +208,61 @@ bayan play --query... --random --list`,
     playCmd.Flags().StringVarP(query.varp, opt, "", "", query.short)
   }
 
-  bayanCmd.AddCommand(engraveCmd, playCmd)
+  publishCmd := &cobra.Command{
+    Use: "publish",
+    Short: "Publish pieces on the web",
+    Long:
+`Publish command uploads PDF pieces to a cloud storage, generates and publishes
+a web site`,
+    Example:
+`bayan publish [-c catalog] pieces...
+bayan publish [-c catalog] -b books... [--query]
+bayan publish all --query...`,
+    Args: func(cmd *cobra.Command, args []string) error {
+      err := validateReq(catalog, args)
+      if err != nil {
+        return cmdError("%v", err)
+      }
+      err = validateQueries(queries)
+      if err != nil {
+        return cmdError("%v", err)
+      }
+      return nil
+    },
+    RunE: func(cmd *cobra.Command, args []string) error {
+      pc := site.PublishCommand{
+        CatalogDir: "catalog", BookFile: "books.yaml",
+        PieceDir: "pieces", BookDir: "books",
+        Catalog: catalog,
+        All: len(args) == 1 && args[0] == "all",
+        Book: book,
+        Queries: make(map[string]string, 10),
+      }
+      if !pc.All {
+        if book {
+          pc.Books = args
+        } else {
+          pc.Pieces = args
+        }
+      }
+      for opt, query := range queries {
+        if len(*query.varp) > 0 {
+          pc.Queries[opt] = *query.varp
+        }
+      }
+      return site.Publish(pc)
+    },
+  }
+  publishCmd.Flags().StringVarP(
+    &catalog, "catalog", "c", "", "read catalog files e.g. ukr,rus, ^stu,sch",
+  )
+  publishCmd.Flags().BoolVarP(
+    &book, "book", "b", false, "publish pieces from books",
+  )
+  for opt, query := range queries {
+    publishCmd.Flags().StringVarP(query.varp, opt, "", "", query.short)
+  }
+
+  bayanCmd.AddCommand(engraveCmd, playCmd, publishCmd)
   return bayanCmd.Execute()
 }
