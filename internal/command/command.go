@@ -237,6 +237,7 @@ bayan publish all --query...`,
         All: len(args) == 1 && args[0] == "all",
         Book: book,
         Queries: make(map[string]string, 10),
+        SiteDir: "site", PublicDir: "site/public",
       }
       if !pc.All {
         if book {

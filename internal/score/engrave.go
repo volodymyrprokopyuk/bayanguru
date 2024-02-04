@@ -66,10 +66,6 @@ func optimizeScore(w io.Writer, scoreFile, scoreDir  string) error {
   return pdf.OptimizeFile(scorePDF, scorePDF, nil)
 }
 
-func catError(format string, args ...any) error {
-  return fmt.Errorf("catalog: " + format, args...)
-}
-
 func scoreError(format string, args ...any) error {
   return fmt.Errorf("score: " + format, args...)
 }
@@ -80,12 +76,12 @@ func Engrave (ec EngraveCommand) error {
     ec.BookFile, ec.Books, ec.Book, ec.All,
   )
   if err != nil {
-    return catError("%v", err)
+    return cat.CatError("%v", err)
   }
   if ec.Init {
     err := initPiece(pieces, ec.SourceDir)
     if err != nil {
-      return catError("%v", err)
+      return cat.CatError("%v", err)
     }
     return nil
   }

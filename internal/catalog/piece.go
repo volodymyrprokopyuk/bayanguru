@@ -256,7 +256,7 @@ func readPieces(catDir, catQuery string) (PieceMap, []string, error) {
   return pieceMap, pieceIDs, nil
 }
 
-func queryPieces(pieces []Piece, queries PieceQueries) ([]Piece, error) {
+func QueryPieces(pieces []Piece, queries PieceQueries) ([]Piece, error) {
   match, err := makeMatchPiece(queries)
   if err != nil {
     return nil, err
