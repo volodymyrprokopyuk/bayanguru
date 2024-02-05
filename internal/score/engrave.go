@@ -40,11 +40,7 @@ func makeTemplate(sourceDir, targetFile string) (*template.Template, error) {
   })
   scoreFile := filepath.Join(sourceDir, "template", "score.ly")
   targetFile = filepath.Join(sourceDir, "template", targetFile)
-  _, err := tpl.ParseFiles(scoreFile, targetFile)
-  if err != nil {
-    return nil, err
-  }
-  return tpl, nil
+  return tpl.ParseFiles(scoreFile, targetFile)
 }
 
 func engraveScore(w io.Writer, score, scoreFile, scoreDir string) error {

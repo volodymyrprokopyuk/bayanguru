@@ -1,0 +1,10 @@
+# -*- mode: conf -*-
+# caddy run --config site/Caddyfile
+:7512 {
+  @pdfpieces file {
+    root pieces
+  }
+  root @pdfpieces pieces
+  root * site/public
+  file_server
+}

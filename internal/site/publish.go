@@ -20,32 +20,35 @@ type PublishCommand struct {
 func makeTemplate(siteDir string) (*template.Template, error) {
   tpl := template.New("page")
   pageFile := filepath.Join(siteDir, "page.html")
-  _, err := tpl.ParseFiles(pageFile)
+  return tpl.ParseFiles(pageFile)
+}
+
+func generateFile(
+  tpl *template.Template,
+  siteDir, templateFile, publicDir, generatedFile string, data any,
+) error {
+  tplFile := filepath.Join(siteDir, templateFile)
+  _, err := tpl.ParseFiles(tplFile)
   if err != nil {
-    return nil, err
+    return err
   }
-  return tpl, nil
+  genFile := filepath.Join(publicDir, generatedFile)
+  w, err := os.Create(genFile)
+  if err != nil {
+    return err
+  }
+  return tpl.ExecuteTemplate(w, "page.html", data)
 }
 
 func generateIndex(
   tpl *template.Template, pieces []cat.Piece, siteDir, publicDir string,
 ) error {
-  indexFile := filepath.Join(siteDir, "index.html")
-  _, err := tpl.ParseFiles(indexFile)
-  if err != nil {
-    return err
-  }
-  indexHTML := filepath.Join(publicDir, "index.html")
-  index, err := os.Create(indexHTML)
-  if err != nil {
-    return err
-  }
   type indexData struct {
     Title string
     Pieces []cat.Piece
   }
   data := indexData{"Sheet music library", pieces}
-  return tpl.ExecuteTemplate(index, "page.html", data)
+  return generateFile(tpl, siteDir, "index.html", publicDir, "index.html", data)
 }
 
 func siteError(format string, args ...any) error {
