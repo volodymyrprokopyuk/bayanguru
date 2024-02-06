@@ -1,5 +1,7 @@
 {{ define "body" }}
   {{ with .Piece }}
   <h1>{{ .Tit }}</h1>
+  <object type="application/pdf" data="/{{ .File }}.pdf"
+          width="1000" height="800"></object>
   {{ end }}
 {{ end }}

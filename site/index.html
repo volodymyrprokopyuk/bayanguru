@@ -2,8 +2,7 @@
   <h2>Pieces</h2>
   <ul>
     {{ range .Pieces }}
-    <li><a href="pieces/{{ .File }}">{{ .Tit }}</a></li>
-    <li><a href="{{ .File }}.pdf">PDF {{ .Tit }}</a></li>
+    <li><a href="/pieces/{{ .File }}">{{ .Tit }}</a></li>
     {{ end }}
   </ul>
 {{ end }}

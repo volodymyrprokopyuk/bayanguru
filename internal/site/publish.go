@@ -25,15 +25,18 @@ func makeTemplate(siteDir string) (*template.Template, error) {
 
 func generateFile(
   tpl *template.Template,
-  siteDir, templateFile, publicDir, generatedFile string, data any,
+  // siteDir, templateFile, publicDir, generatedFile string, data any,
+  publicDir, publicFile string, data any,
 ) error {
-  tplFile := filepath.Join(siteDir, templateFile)
-  _, err := tpl.ParseFiles(tplFile)
-  if err != nil {
-    return err
-  }
-  genFile := filepath.Join(publicDir, generatedFile)
-  w, err := os.Create(genFile)
+
+  // tplFile := filepath.Join(siteDir, templateFile)
+  // _, err := tpl.ParseFiles(tplFile)
+  // if err != nil {
+  //   return err
+  // }
+
+  file := filepath.Join(publicDir, publicFile)
+  w, err := os.Create(file)
   if err != nil {
     return err
   }
@@ -43,25 +46,33 @@ func generateFile(
 func generateIndex(
   tpl *template.Template, pieces []cat.Piece, siteDir, publicDir string,
 ) error {
-  data := struct {
+  indexFile := filepath.Join(siteDir, "index.html")
+  _, err := tpl.ParseFiles(indexFile)
+  if err != nil {
+    return err
+  }
+  indexData := struct {
     Title string
     Pieces []cat.Piece
   }{"Sheet music library", pieces}
-  return generateFile(tpl, siteDir, "index.html", publicDir, "index.html", data)
+  return generateFile(tpl, publicDir, "index.html", indexData)
 }
 
 func generatePieces(
   tpl *template.Template, pieces []cat.Piece, siteDir, publicDir string,
 ) error {
+  pieceFile := filepath.Join(siteDir, "piece.html")
+  _, err := tpl.ParseFiles(pieceFile)
+  if err != nil {
+    return err
+  }
   piecesDir := filepath.Join(publicDir, "pieces")
   for _, piece := range pieces {
-    data := struct {
+    pieceData := struct {
       Title string
       Piece cat.Piece
     }{piece.Tit, piece}
-    err := generateFile(
-      tpl, siteDir, "piece.html", piecesDir, piece.File + ".html", data,
-    )
+    err := generateFile(tpl, piecesDir, piece.File + ".html", pieceData)
     if err != nil {
       return err
     }

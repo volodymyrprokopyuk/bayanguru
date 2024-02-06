@@ -1,15 +1,12 @@
 # -*- mode: conf -*-
 # caddy run --config site/Caddyfile
 :7512 {
+  # PDF pieces from pieces/
   @pdfpieces file {
     root pieces
   }
   root @pdfpieces pieces
-
-  # root * site/public
-
-  # try_files {path}.html
-
+  # URL path without .html
   @htmlless file {path}.html
   rewrite @htmlless {file_match.relative}
   root * site/public
