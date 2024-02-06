@@ -5,6 +5,7 @@ import (
   "text/template"
   "path/filepath"
   "os"
+  "os/exec"
   cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
 )
 
@@ -80,6 +81,23 @@ func generatePieces(
   return nil
 }
 
+func genereateSearchIndex(siteDir string) error {
+  cwd, err := os.Getwd()
+  if err != nil {
+    return err
+  }
+  err = os.Chdir(siteDir)
+  if err != nil {
+    return err
+  }
+  defer os.Chdir(cwd)
+  pfFile := filepath.Join(cwd, "pagefind")
+  pfCmd := exec.Command(pfFile)
+  pfCmd.Stdout = os.Stdout
+  pfCmd.Stderr = os.Stderr
+  return pfCmd.Run()
+}
+
 func siteError(format string, args ...any) error {
   return fmt.Errorf("site: " + format, args...)
 }
@@ -108,6 +126,10 @@ func Publish(pc PublishCommand) error {
     return siteError("%v", err)
   }
   err = generatePieces(tpl, pieces, pc.SiteDir, pc.PublicDir)
+  if err != nil {
+    return siteError("%v", err)
+  }
+  err = genereateSearchIndex(pc.SiteDir)
   if err != nil {
     return siteError("%v", err)
   }
