@@ -1,3 +1,5 @@
 bayan
 pieces/*.pdf
 books/*.pdf
+site/public/*.html
+site/public/*/*.html

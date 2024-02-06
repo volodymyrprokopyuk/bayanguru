@@ -39,7 +39,10 @@ music production with the best music engraving tool [[https://lilypond.org/][Lil
 - [[https://go.dev/][Go]] programming language
 
 #+BEGIN_SRC fish
+# engrave sheet music
 yay -S ghostscript gsfonts fontforge t1utils texlive-{metapost,langcyrillic}
+# generate the web site
+yay -S caddy pagefind
 #+END_SRC
 
 ** Meta
