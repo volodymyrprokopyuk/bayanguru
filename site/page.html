@@ -5,7 +5,9 @@
     <title>{{ .Title }}</title>
   </head>
   <body>
-    {{ block "header" . }} {{ end }}
+    {{ block "header" . }}
+      <h1><a href="/">Sheet music library</a></h1>
+    {{ end }}
     {{ block "body" . }} {{ end }}
     {{ block "footer" . }} {{ end }}
   </body>

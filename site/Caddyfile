@@ -5,6 +5,18 @@
     root pieces
   }
   root @pdfpieces pieces
+
+  # root * site/public
+
+  # try_files {path}.html
+
+  @htmlless file {path}.html
+  rewrite @htmlless {file_match.relative}
   root * site/public
+
   file_server
+
+  handle_errors {
+    respond "{err.status_code} {err.status_text}"
+  }
 }

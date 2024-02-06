@@ -43,12 +43,30 @@ func generateFile(
 func generateIndex(
   tpl *template.Template, pieces []cat.Piece, siteDir, publicDir string,
 ) error {
-  type indexData struct {
+  data := struct {
     Title string
     Pieces []cat.Piece
-  }
-  data := indexData{"Sheet music library", pieces}
+  }{"Sheet music library", pieces}
   return generateFile(tpl, siteDir, "index.html", publicDir, "index.html", data)
+}
+
+func generatePieces(
+  tpl *template.Template, pieces []cat.Piece, siteDir, publicDir string,
+) error {
+  piecesDir := filepath.Join(publicDir, "pieces")
+  for _, piece := range pieces {
+    data := struct {
+      Title string
+      Piece cat.Piece
+    }{piece.Tit, piece}
+    err := generateFile(
+      tpl, siteDir, "piece.html", piecesDir, piece.File + ".html", data,
+    )
+    if err != nil {
+      return err
+    }
+  }
+  return nil
 }
 
 func siteError(format string, args ...any) error {
@@ -75,6 +93,10 @@ func Publish(pc PublishCommand) error {
     return siteError("%v", err)
   }
   err = generateIndex(tpl, pieces, pc.SiteDir, pc.PublicDir)
+  if err != nil {
+    return siteError("%v", err)
+  }
+  err = generatePieces(tpl, pieces, pc.SiteDir, pc.PublicDir)
   if err != nil {
     return siteError("%v", err)
   }
