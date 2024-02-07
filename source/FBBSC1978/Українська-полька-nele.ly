@@ -35,7 +35,7 @@
   {{ template "rh2" (w `<c='' e>8(\f`) }} | c( d c b a b c d) |
   {{ template "rh2" (w `<c='' e>8(`) }} | a( e c' b a b c d='') |
 
-  {{ template "rh2" (w `<c='' e>8(\f`) }} | c( d c b a b c d) |
+  {{ template "rh2" (w `<c='' e>8(`) }} | c( d c b a b c d) |
   {{ template "rh2" (w `<c='' e>8(`) }} | a8 r <a=' c e a> r |
 
   \repeat volta 2 {
@@ -48,7 +48,7 @@
         {{ template "t1" (w `b=''16( c b`) }} a8) <a,=' c e a> \arpeggio r |
       }
       \volta 2 {
-        e'=''16(\< fis \af 16\! gis a b e, b' c | a8)-> r <a,=' c e a>-> r |
+        e'=''16(\< fis \af 16\! gis a b e, c' b | a8)-> r <a,=' c e a>-> r |
       }
     }
   }
@@ -63,7 +63,7 @@
       }
       \volta 2 {
         \duo { a''=''8 b, \rest \grace { e=''16_( fis gis } a=''8) b, \rest | }
-        { <c''='' e>8 s4. | }
+        { <c''='' e>8 s8 a'=''8 s8 | }
       }
     }
   }
@@ -76,7 +76,7 @@
     b='16( d f a g8) b, |
     {{ template "t1" (w `d=''16( e d`) }} c8) c16( d e g |
     c='''8)_\dCre {{ template "t1" (w `g=''16( a g`) }} f8)-. e-. |
-    {{ template "t1" (w `e=''16( f e`) }} d8) d16( b c a) |
+    {{ template "t1" (w `e=''16( f e`) }} d8) d16( c b a) |
     g='16( a b c) d8( b) |
     \alternative {
       \volta 1 { {{ template "t1" (w `d=''16( e d`) }} c8) c='' r | }
