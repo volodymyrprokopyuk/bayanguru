@@ -29,15 +29,8 @@ func generateFile(
   // siteDir, templateFile, publicDir, generatedFile string, data any,
   publicDir, publicFile string, data any,
 ) error {
-
-  // tplFile := filepath.Join(siteDir, templateFile)
-  // _, err := tpl.ParseFiles(tplFile)
-  // if err != nil {
-  //   return err
-  // }
-
   file := filepath.Join(publicDir, publicFile)
-  w, err := os.Create(file)
+  w, err := os.Create(file) // overwrites an existing file
   if err != nil {
     return err
   }
@@ -81,7 +74,12 @@ func generatePieces(
   return nil
 }
 
-func genereateSearchIndex(siteDir string) error {
+func genereateSearchIndex(siteDir, publicDir string) error {
+  pfDir := filepath.Join(publicDir, "pagefind")
+  err := os.RemoveAll(pfDir) // removes an existing index
+  if err != nil {
+    return err
+  }
   cwd, err := os.Getwd()
   if err != nil {
     return err
@@ -129,7 +127,7 @@ func Publish(pc PublishCommand) error {
   if err != nil {
     return siteError("%v", err)
   }
-  err = genereateSearchIndex(pc.SiteDir)
+  err = genereateSearchIndex(pc.SiteDir, pc.PublicDir)
   if err != nil {
     return siteError("%v", err)
   }
