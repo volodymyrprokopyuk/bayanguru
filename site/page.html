@@ -3,10 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <title>{{ .Title }}</title>
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", (event) => {
+        new PagefindUI({ element: "#search", showSubResults: true })
+      })
+    </script>
   </head>
   <body>
     {{ block "header" . }}
       <h1><a href="/">Sheet music library</a></h1>
+      <div id="search"></div>
     {{ end }}
     {{ block "body" . }} {{ end }}
     {{ block "footer" . }} {{ end }}
