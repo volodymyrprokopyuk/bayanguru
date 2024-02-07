@@ -1,7 +1,9 @@
 {{ define "body" }}
   {{ with .Piece }}
-  <h1>{{ .Tit }}</h1>
-  <object type="application/pdf" data="/{{ .File }}.pdf"
-          width="1000" height="800"></object>
+  <main data-pagefind-body>
+    <h1>{{ .Tit }}</h1>
+    <object type="application/pdf" data="/{{ .File }}.pdf"
+            width="1000" height="800"></object>
+  </main>
   {{ end }}
 {{ end }}

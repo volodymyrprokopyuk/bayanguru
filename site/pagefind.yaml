@@ -1,3 +1,4 @@
 site: public
 glob: pieces/*
+root_selector: main
 verbose: true

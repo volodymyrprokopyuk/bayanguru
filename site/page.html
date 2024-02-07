@@ -7,14 +7,21 @@
     <script src="/pagefind/pagefind-ui.js"></script>
     <script>
       window.addEventListener("DOMContentLoaded", (event) => {
-        new PagefindUI({ element: "#search", showSubResults: true })
+        new PagefindUI({
+          element: "#search",
+          showSubResults: false, // a single result per page
+          translations: {
+            placeholder: "Search pieces | Пошук п'єс",
+            zero_results: "Nothing found for | Нічого не знайдено для [SEARCH_TERM]"
+          }
+        })
       })
     </script>
   </head>
   <body>
     {{ block "header" . }}
       <h1><a href="/">Sheet music library</a></h1>
-      <div id="search"></div>
+      <search id="search"></search>
     {{ end }}
     {{ block "body" . }} {{ end }}
     {{ block "footer" . }} {{ end }}
