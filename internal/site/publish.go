@@ -66,7 +66,7 @@ func generatePieces(
       Title string
       Piece cat.Piece
     }{piece.Tit, piece}
-    err := generateFile(tpl, piecesDir, piece.File + ".html", pieceData)
+    err := generateFile(tpl, piecesDir, piece.File, pieceData)
     if err != nil {
       return err
     }

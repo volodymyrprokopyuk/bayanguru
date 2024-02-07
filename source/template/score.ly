@@ -1,7 +1,7 @@
 \version "2.25.12"
 
 % Logo
-bayanURL = "https://volodymyrprokopyuk.github.io/bayan"
+bayanURL = "https://bayan-music.org"
 bayanLogo = \markup \serif \bold \concat {
   \magnify #0.75 \musicglyph "clefs.G"
   \magnify #1.45 { \rotate #30 Б \lower #0.35 а \raise #0.35 я \rotate #-30 Н }
