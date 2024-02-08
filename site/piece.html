@@ -36,13 +36,16 @@
         <div data-pagefind-filter="Bass | Бас">{{ . }}</div>
       {{ end }}
       <div data-pagefind-meta="lvl"
-           data-pagefind-filter="Level | Складність">
+           data-pagefind-filter="Level | Складність"
+           data-pagefind-sort="lvl">
         {{ .Lvl }}
       </div>
     </div>
     <object type="application/pdf" data="/scores/{{ .File }}.pdf"
             width="1000" height="800"
-            data-pagefind-meta="title">{{ .Tit }}</object>
+            data-pagefind-meta="title" data-pagefind-sort="tit">
+      {{ .Tit }}
+    </object>
   </main>
   {{ end }}
 {{ end }}

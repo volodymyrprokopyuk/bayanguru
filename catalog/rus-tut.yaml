@@ -102,7 +102,7 @@ pieces:
   # BTB1989
   - { id: q7i3, tit: Деревенская полька,
       com: В. Ефимов, src: BTB1989,
-      org: ukr, sty: flk, gnr: plk, ton: [ai, cj], frm: mel, bss: stb, lvl: elb }
+      org: rus, sty: flk, gnr: plk, ton: [ai, cj], frm: [var, syn], bss: stb, lvl: elb }
   - { id: up9h, tit: Над окошком месяц,
       com: Е. Попов, arr: А. Кисиленко, art: ipr, src: BTB1989,
       org: rus, sty: aut, gnr: sng, ton: di, frm: cr5, bss: stb, lvl: elb }

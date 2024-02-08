@@ -12,10 +12,14 @@
       window.addEventListener("DOMContentLoaded", (event) => {
         new PagefindUI({
           element: "#search",
+          pageSize: 7, // number of results before Load more
           showSubResults: false, // a single result per page
+          showEmptyFilters: true, // always show filters
+          sort: { lvl: "desc", tit: "asc" },
+          resetStyles: false, // inherit CSS from the site
           translations: {
-            placeholder: "Search pieces | Пошук п'єс",
-            zero_results: "Nothing found for | Нічого не знайдено для [SEARCH_TERM]"
+placeholder: "Search pieces | Пошук п'єс",
+zero_results: "Nothing found for | Нічого не знайдено для [SEARCH_TERM]"
           }
         })
       })
