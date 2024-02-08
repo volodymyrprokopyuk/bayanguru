@@ -1,9 +1,48 @@
 {{ define "body" }}
   {{ with .Piece }}
   <main data-pagefind-body>
-    <h1>{{ .Tit }}</h1>
+    <div id="piece-meta">
+      <div data-pagefind-meta="id">{{ .ID }}</div>
+      <div data-pagefind-meta="com"
+           data-pagefind-filter="Composer | Копмозитор">
+        {{ .Com }}
+      </div>
+      <div data-pagefind-meta="arr"
+           data-pagefind-filter="Arranger | Обробка">
+        {{ .Arr }}
+      </div>
+      <div data-pagefind-meta="org"
+           data-pagefind-filter="Origin | Країна">
+        {{ .Org }}
+      </div>
+      <div data-pagefind-meta="sty"
+           data-pagefind-filter="Style | Стиль">
+        {{ .Sty }}
+      </div>
+      <div data-pagefind-meta="gnr"
+           data-pagefind-filter="Genre | Жанр">
+        {{ .Gnr }}
+      </div>
+      <div data-pagefind-meta="ton">{{ .Ton | join ` ` }}</div>
+      {{ range .Ton }}
+        <div data-pagefind-filter="Bass | Бас">{{ . }}</div>
+      {{ end }}
+      <div data-pagefind-meta="frm">{{ .Frm | join ` ` }}</div>
+      {{ range .Frm }}
+        <div data-pagefind-filter="Form | Форма">{{ . }}</div>
+      {{ end }}
+      <div data-pagefind-meta="bss">{{ .Bss | join ` ` }}</div>
+      {{ range .Bss }}
+        <div data-pagefind-filter="Bass | Бас">{{ . }}</div>
+      {{ end }}
+      <div data-pagefind-meta="lvl"
+           data-pagefind-filter="Level | Складність">
+        {{ .Lvl }}
+      </div>
+    </div>
     <object type="application/pdf" data="/scores/{{ .File }}.pdf"
-            width="1000" height="800"></object>
+            width="1000" height="800"
+            data-pagefind-meta="title">{{ .Tit }}</object>
   </main>
   {{ end }}
 {{ end }}

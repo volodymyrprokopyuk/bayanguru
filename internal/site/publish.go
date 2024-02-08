@@ -2,6 +2,7 @@ package site
 
 import (
   "fmt"
+  "strings"
   "text/template"
   "path/filepath"
   "os"
@@ -20,14 +21,17 @@ type PublishCommand struct {
 
 func makeTemplate(siteDir string) (*template.Template, error) {
   tpl := template.New("page")
+  tpl.Funcs(template.FuncMap{
+    "join": func(sep string, slc []string) string {
+      return strings.Join(slc, sep)
+    },
+  })
   pageFile := filepath.Join(siteDir, "page.html")
   return tpl.ParseFiles(pageFile)
 }
 
 func generateFile(
-  tpl *template.Template,
-  // siteDir, templateFile, publicDir, generatedFile string, data any,
-  publicDir, publicFile string, data any,
+  tpl *template.Template, publicDir, publicFile string, data any,
 ) error {
   file := filepath.Join(publicDir, publicFile)
   w, err := os.Create(file) // overwrites an existing file
@@ -38,7 +42,7 @@ func generateFile(
 }
 
 func generateIndex(
-  tpl *template.Template, pieces []cat.Piece, siteDir, publicDir string,
+  tpl *template.Template, siteDir, publicDir string,
 ) error {
   indexFile := filepath.Join(siteDir, "index.html")
   _, err := tpl.ParseFiles(indexFile)
@@ -47,8 +51,7 @@ func generateIndex(
   }
   indexData := struct {
     Title string
-    Pieces []cat.Piece
-  }{"Sheet music library", pieces}
+  }{"Sheet music library"}
   return generateFile(tpl, publicDir, "index.html", indexData)
 }
 
@@ -119,7 +122,7 @@ func Publish(pc PublishCommand) error {
   if err != nil {
     return siteError("%v", err)
   }
-  err = generateIndex(tpl, pieces, pc.SiteDir, pc.PublicDir)
+  err = generateIndex(tpl, pc.SiteDir, pc.PublicDir)
   if err != nil {
     return siteError("%v", err)
   }
