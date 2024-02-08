@@ -1,18 +1,11 @@
 # -*- mode: conf -*-
 # caddy run --config site/Caddyfile
 :7512 {
-  # PDF pieces from pieces/
-  @pdfpieces file {
+  handle_path /scores/* {
     root pieces
   }
-  root @pdfpieces pieces
-  # URL path without .html
-  @htmlless file {path}.html
-  rewrite @htmlless {file_match.relative}
-  root * site/public
-
+  root site/public
   file_server
-
   handle_errors {
     respond "{err.status_code} {err.status_text}"
   }
