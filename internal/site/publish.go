@@ -49,9 +49,7 @@ func generateIndex(
   if err != nil {
     return err
   }
-  indexData := struct {
-    Title string
-  }{"Sheet music library"}
+  indexData := struct{}{}
   return generateFile(tpl, publicDir, "index.html", indexData)
 }
 
@@ -65,10 +63,7 @@ func generatePieces(
   }
   piecesDir := filepath.Join(publicDir, "pieces")
   for _, piece := range pieces {
-    pieceData := struct {
-      Title string
-      Piece cat.Piece
-    }{piece.Tit, piece}
+    pieceData := struct { Piece cat.Piece }{piece}
     err := generateFile(tpl, piecesDir, piece.File, pieceData)
     if err != nil {
       return err

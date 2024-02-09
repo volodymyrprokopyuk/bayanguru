@@ -1,8 +1,8 @@
 * Sheet music library for bayan
 
-Bayan is an *engraving system* that produces the *highest quality sheet music*
-in PDF for bayan. The system uses [[https://lilypond.org/][LilyPond]] for engraving and supports the
-*Stradella bass* and the *free bass*
+Bayan is an *engraving and publishing system* that produces the *highest quality
+sheet music* in PDF for bayan. The system uses [[https://lilypond.org/][LilyPond]] for engraving and
+supports the *Stradella bass* and the *free bass*
 
 *Purpose* (the reason to exist, why?). To promote and support the art of bayan
 music through the free and open source sheet music content of the highest
@@ -11,8 +11,8 @@ quality
 *Vision* (the goal of the purpose, what?). Become the most complete and
 comprehensive sheet music library for bayan
 
-*Mission* (the path to the purpose, how?). Combine the community effort to sheet
-music production with the best music engraving tool [[https://lilypond.org/][LilyPond]]
+*Mission* (the path to the purpose, how?). Combine the community effort for
+sheet music production with the best music engraving tool [[https://lilypond.org/][LilyPond]]
 
 ** Features
 
@@ -135,6 +135,6 @@ meta:
   lvl: [mandatory, single] piece difficulty
     el[a-c]: простий a, b, c = elementary
     in[a-c]: середній a, b, c = intermediate
-    ad[a-c]: складний a, b, c = advanced
+    pr[a-c]: складний a, b, c = proficient
     vi[a-c]: віртуозний a, b, c = virtuoso
 #+END_SRC

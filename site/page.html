@@ -2,35 +2,46 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>{{ .Title }}</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="robots" content="index,follow" />
+    {{ block "meta" . }}
+      <title>Sheet music for bayan | Ноти для баяна</title>
+      <meta name="description"
+            content="Sheet music library for bayan | Бібліотека нот для баяна" />
+    {{ end }}
     <style>
-      #piece-meta { display: none; }
+      .piece-meta { display: none; }
     </style>
     <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
-    <script src="/pagefind/pagefind-ui.js"></script>
-    <script>
-      window.addEventListener("DOMContentLoaded", (event) => {
-        new PagefindUI({
-          element: "#search",
-          pageSize: 7, // number of results before Load more
-          showSubResults: false, // a single result per page
-          showEmptyFilters: true, // always show filters
-          sort: { lvl: "desc", tit: "asc" },
-          resetStyles: false, // inherit CSS from the site
-          translations: {
-placeholder: "Search pieces | Пошук п'єс",
-zero_results: "Nothing found for | Нічого не знайдено для [SEARCH_TERM]"
-          }
-        })
-      })
-    </script>
   </head>
   <body>
     {{ block "header" . }}
-      <h1><a href="/">Sheet music library</a></h1>
+      <h1><a href="/">Sheet music for bayan | Ноти для баяна</a></h1>
       <search id="search"></search>
     {{ end }}
     {{ block "body" . }} {{ end }}
     {{ block "footer" . }} {{ end }}
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      const translations = {
+        placeholder: "Search pieces | Пошук п'єс",
+        clear_search: "Clear | Очистити",
+        zero_results: "Nothing found for | Нічого не знайдено для [SEARCH_TERM]",
+        one_result: "[COUNT] piece for | п'єса для [SEARCH_TERM]",
+        many_results: "[COUNT] pieces for | п'єс для [SEARCH_TERM]",
+        load_more: "Show more pieces | Показати більше п'єс",
+      }
+      window.addEventListener("DOMContentLoaded", (event) => {
+        new PagefindUI({
+          element: "#search",
+          pageSize: 7, // number of results before Show more
+          showSubResults: false, // a single result per page
+          showEmptyFilters: true, // always show filters
+          sort: { lvl: "desc", tit: "asc" },
+          resetStyles: false, // inherit CSS from the site
+          translations
+        })
+      })
+    </script>
   </body>
 </html>

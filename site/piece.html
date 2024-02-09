@@ -1,51 +1,45 @@
+{{ define "meta" }}
+  {{ with .Piece }}
+    <title>{{ .Tit }}</title>
+    <meta name="description"
+          content="{{ .Tit }} {{ .Sub }} {{ .Com }} {{ .Art }} {{ .Arr }}" />
+  {{ end }}
+{{ end }}
+
 {{ define "body" }}
   {{ with .Piece }}
-  <main data-pagefind-body>
-    <div id="piece-meta">
-      <div data-pagefind-meta="id">{{ .ID }}</div>
-      <div data-pagefind-meta="com"
-           data-pagefind-filter="Composer | Копмозитор">
-        {{ .Com }}
+    <main data-pagefind-body>
+      <div class="piece-meta">
+        <h1 data-pagefind-meta="title" data-pagefind-sort="tit">{{ .Tit }}</h1>
+        <div data-pagefind-meta="id">{{ .ID }}</div>
+        <div data-pagefind-meta="com"
+             data-pagefind-filter="Composer | Копмозитор">{{ .Com }}</div>
+        <div data-pagefind-meta="arr"
+             data-pagefind-filter="Arranger | Обробка">{{ .Arr }}</div>
+        <div data-pagefind-meta="org"
+             data-pagefind-filter="Origin | Країна">{{ .Org }}</div>
+        <div data-pagefind-meta="sty"
+             data-pagefind-filter="Style | Стиль">{{ .Sty }}</div>
+        <div data-pagefind-meta="gnr"
+             data-pagefind-filter="Genre | Жанр">{{ .Gnr }}</div>
+        <div data-pagefind-meta="ton">{{ .Ton | join ` ` }}</div>
+        {{ range .Ton }}
+          <div data-pagefind-filter="Tonality | Тональність">{{ . }}</div>
+        {{ end }}
+        <div data-pagefind-meta="frm">{{ .Frm | join ` ` }}</div>
+        {{ range .Frm }}
+          <div data-pagefind-filter="Form | Форма">{{ . }}</div>
+        {{ end }}
+        <div data-pagefind-meta="bss">{{ .Bss | join ` ` }}</div>
+        {{ range .Bss }}
+          <div data-pagefind-filter="Bass | Бас">{{ . }}</div>
+        {{ end }}
+        <div data-pagefind-meta="lvl"
+             data-pagefind-filter="Level | Складність"
+             data-pagefind-sort="lvl">{{ .Lvl }}</div>
       </div>
-      <div data-pagefind-meta="arr"
-           data-pagefind-filter="Arranger | Обробка">
-        {{ .Arr }}
-      </div>
-      <div data-pagefind-meta="org"
-           data-pagefind-filter="Origin | Країна">
-        {{ .Org }}
-      </div>
-      <div data-pagefind-meta="sty"
-           data-pagefind-filter="Style | Стиль">
-        {{ .Sty }}
-      </div>
-      <div data-pagefind-meta="gnr"
-           data-pagefind-filter="Genre | Жанр">
-        {{ .Gnr }}
-      </div>
-      <div data-pagefind-meta="ton">{{ .Ton | join ` ` }}</div>
-      {{ range .Ton }}
-        <div data-pagefind-filter="Tonality | Тональність">{{ . }}</div>
-      {{ end }}
-      <div data-pagefind-meta="frm">{{ .Frm | join ` ` }}</div>
-      {{ range .Frm }}
-        <div data-pagefind-filter="Form | Форма">{{ . }}</div>
-      {{ end }}
-      <div data-pagefind-meta="bss">{{ .Bss | join ` ` }}</div>
-      {{ range .Bss }}
-        <div data-pagefind-filter="Bass | Бас">{{ . }}</div>
-      {{ end }}
-      <div data-pagefind-meta="lvl"
-           data-pagefind-filter="Level | Складність"
-           data-pagefind-sort="lvl">
-        {{ .Lvl }}
-      </div>
-    </div>
-    <object type="application/pdf" data="/scores/{{ .File }}.pdf"
-            width="1000" height="800"
-            data-pagefind-meta="title" data-pagefind-sort="tit">
-      {{ .Tit }}
-    </object>
-  </main>
+      <object type="application/pdf" data="/scores/{{ .File }}.pdf"
+              width="1000" height="800">{{ .Tit }}</object>
+    </main>
   {{ end }}
 {{ end }}
