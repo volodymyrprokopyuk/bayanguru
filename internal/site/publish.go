@@ -98,6 +98,17 @@ func siteError(format string, args ...any) error {
   return fmt.Errorf("site: " + format, args...)
 }
 
+func generateCatalog(tpl *template.Template, pc PublishCommand) error {
+  pieces, _, catLen, err := cat.ReadPiecesAndBooks(
+    pc.CatalogDir, "", nil, pc.BookFile, nil, false, true,
+  )
+  if err != nil {
+    return cat.CatError("%v", err)
+  }
+  cat.PrintStat(catLen, len(pieces))
+  return nil
+}
+
 func Publish(pc PublishCommand) error {
   pieces, _, catLen, err := cat.ReadPiecesAndBooks(
     pc.CatalogDir, pc.Catalog, pc.Pieces,
@@ -126,6 +137,10 @@ func Publish(pc PublishCommand) error {
     return siteError("%v", err)
   }
   err = genereateSearchIndex(pc.SiteDir, pc.PublicDir)
+  if err != nil {
+    return siteError("%v", err)
+  }
+  err = generateCatalog(tpl, pc)
   if err != nil {
     return siteError("%v", err)
   }
