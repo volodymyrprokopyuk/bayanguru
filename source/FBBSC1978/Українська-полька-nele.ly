@@ -22,6 +22,18 @@
   {{ .a }} <b b'> <c c'> <cis cis'> | <d d'> <e e'> <f f'> <d=, d'> |
 {{ end }}
 
+{{ define "lh3" }}
+  e=8( <gis d'>) <e gis d'> r | a,8 r {{ .a }} r |
+{{ end }}
+
+{{ define "lh4b" }}
+  c=8[^( <g' c e>8) 8 8] | d^( <f a d>8) 4 | g8^( <b= f'>8) 4 |
+{{ end }}
+
+{{ define "lh5" }}
+  {{ .a }} b8 c | d e f4) | e16( gis b d c8) b= |
+{{ end }}
+
 {{ define "rightHand" }}
 \relative {
   \tempo "Allegro con moto"
@@ -57,7 +69,7 @@
         {{ template "t1" (w `b=''16( c b`) }} a8) <a,=' c e a> \arpeggio r |
       }
       \volta 2 {
-        e'=''16(\< fis \af 16\! gis a b e, c' b | a8)-> r <a,=' c e a>-> r |
+        e'=''16(\< fis \af 16\! gis a b e, c' b | a8) r <a,=' c e a>-> r |
       }
     }
   }
@@ -105,7 +117,7 @@
   {{ template "t1" (w `d=''16( e d`) }} c8) %
   {{ template "t1" (w `b='16( c b`) }} a8) |
   {{ template "rh1" (w `<a,= c e a>8\f`) }}
-  gis=16( b d f e8) gis-> | a-> r <a=' c e a>-> r \bar "|."
+  gis=16( b d f e8) gis | a-> r <a=' c e a>-> r \bar "|."
 }
 {{ end }}
 
@@ -115,7 +127,7 @@
   \key a \minor
   {{ template "lh1" (w `a,=,8[(-\frBass` `4` `4`) }}
   {{ template "lh1" (w `a,=,8[(` `8 r` `8 r`) }}
-  e=8( <gis d'>) <e gis d'> r | a,8 r <e'= a c> r |
+  {{ template "lh3" (w `<e'= a c>8`) }}
 
   \meter 1/2 #'(1)
   a,=,8( b c cis | d e f4) | e8( fis g gis | a b c4) |
@@ -125,5 +137,35 @@
   <e,=,, e'>8 <fis fis'> <g g'> <gis gis'> | <a a'> <b b'> <c c'> <b b'> |
   {{ template "lh2" (w `<a=,, a'>8`) }}
   <e=, e'>8 <fis fis'> <g g'> <gis gis'> | <a a'> r <a=, e' a c> r |
+
+  \meter 1/4 1,1
+  {{ template "lh1" (w `a=,8[(` `4` `8 r`) }}
+  {{ template "lh3" (w `<a=, e' a c>8->`) }}
+
+  \meter 1/2 #'(1)
+  \clef treble
+  r8 <a'= e' a c>8 8 8 | r <d f a d>[ r8 8] |
+  r8 <e=' gis d'>8 8 8 | r <a, e' a c>[ r8 8] | 8 r %
+  \clef bass <a,=, e' a c>8 r |
+
+  \duo { c=2 | d | g | c,=4 s8 } %
+  {
+    \meter 1/4 1,1
+    {{ template "lh4b" }} | c,8^( <g'= c e>8) 8 %
+  } r8 |
+  \duo { c=2 | d | g | c,=4 s8 } %
+  {
+    \meter 1/4 1,1
+    {{ template "lh4b" }} | c,8^( <g' c e>8) <c,= g' c e> %
+  } r8 |
+  <c= g' c>8-> r <b=, e gis d'>-> r |
+
+  {{ template "lh5" (w `a=,4(`) }} | a4( e) |
+  {{ template "lh5" (w `a,=,4(`) }} | a=8 r r4 |
+
+  \meter 1/2 #'(1)
+  {{ template "lh1" (w `a,=,8[(` `4` `8 8`) }}
+  \meter 1/4 1,1
+  {{ template "lh5" (w `a,=,4(`) }} | a=8-> r <a,=, e' a c>-> r |
 }
 {{ end }}
