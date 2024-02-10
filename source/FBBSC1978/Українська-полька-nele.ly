@@ -166,6 +166,6 @@
   \meter 1/2 #'(1)
   {{ template "lh1" (w `a,=,8[(` `4` `8 8`) }}
   \meter 1/4 1,1
-  {{ template "lh5" (w `a,=,4(`) }} | a=8-> r <a,=, e' a c>-> r |
+  {{ template "lh5" (w `a,=,4(`) }} | a8-> r <a,=, e' a c>-> r |
 }
 {{ end }}
