@@ -13,6 +13,15 @@
   <gis=' b>8( <e e'>~ 16 d' c b=') |
 {{ end }}
 
+{{ define "lh1" }}
+  {{ .a }} <e' a c>8) 8 8] | d( <f a d>8) {{ .b }} |
+  e=8( <gis d'>) <e gis d'>4 | a,8( <e' a c>8) {{ .c }} |
+{{ end }}
+
+{{ define "lh2" }}
+  {{ .a }} <b b'> <c c'> <cis cis'> | <d d'> <e e'> <f f'> <d=, d'> |
+{{ end }}
+
 {{ define "rightHand" }}
 \relative {
   \tempo "Allegro con moto"
@@ -104,5 +113,17 @@
 \relative {
   \clef bass
   \key a \minor
+  {{ template "lh1" (w `a,=,8[(-\frBass` `4` `4`) }}
+  {{ template "lh1" (w `a,=,8[(` `8 r` `8 r`) }}
+  e=8( <gis d'>) <e gis d'> r | a,8 r <e'= a c> r |
+
+  \meter 1/2 #'(1)
+  a,=,8( b c cis | d e f4) | e8( fis g gis | a b c4) |
+  a=8( b c cis | d e f4) | e,8( fis g gis | a) r <a,=, e' a c> r |
+
+  {{ template "lh2" (w `<a,=,, a'>8`) }}
+  <e,=,, e'>8 <fis fis'> <g g'> <gis gis'> | <a a'> <b b'> <c c'> <b b'> |
+  {{ template "lh2" (w `<a=,, a'>8`) }}
+  <e=, e'>8 <fis fis'> <g g'> <gis gis'> | <a a'> r <a=, e' a c> r |
 }
 {{ end }}
