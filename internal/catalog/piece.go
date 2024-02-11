@@ -270,16 +270,17 @@ func QueryPieces(pieces []Piece, queries PieceQueries) ([]Piece, error) {
   return selPieces, nil
 }
 
-func PrintPiece(w io.Writer, piece Piece) {
-  bassType := func(bss []string) string {
-    for _, b := range bss {
-      switch b {
-      case "stb", "pub", "frb":
-        return b
-      }
+func Bass(bss []string) string {
+  for _, b := range bss {
+    switch b {
+    case "stb", "pub", "frb":
+      return b
     }
-    return "unk"
   }
+  panic("catalog: missing bass type, expected: stb, pub, frb")
+}
+
+func PrintPiece(w io.Writer, piece Piece) {
   tit := piece.Tit
   com := fmt.Sprintf("%v %v%v", piece.Com, piece.Art, piece.Arr)
   com = strings.TrimSpace(com)
@@ -295,6 +296,6 @@ func PrintPiece(w io.Writer, piece Piece) {
     sty.ID(piece.ID), sty.Tit(tit),
     strings.Repeat(" ", spaceLen), sty.Com(com),
     sty.Org(piece.Org), sty.Org(piece.Sty), sty.Org(piece.Gnr),
-    sty.Bss(bassType(piece.Bss)), sty.Lvl(piece.Lvl),
+    sty.Bss(Bass(piece.Bss)), sty.Lvl(piece.Lvl),
   )
 }
