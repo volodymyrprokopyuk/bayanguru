@@ -1,4 +1,4 @@
-\version "2.25.12"
+\version "2.25.13"
 
 % Logo
 bayanURL = "https://bayan-music.org"

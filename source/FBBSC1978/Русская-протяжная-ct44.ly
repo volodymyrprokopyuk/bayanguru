@@ -20,7 +20,7 @@
 \relative {
   \clef bass
   \key b \minor
-  <b,=, fis'>2\(-\frBass | e4 b | cis g' | b, a'\) |
+  <b,=, fis'>2\(-\frBass | e4 d | cis g' | b, a'\) |
   g=4( b) | fis( b) | e,( b') | d,( b') |
   d='4( b) | g'( b,) | fis'4.(-- fis8 | e[ d cis b] |
   d='4 b) | e( b) | fis'(~-- fis8 fis16 a | g8[ fis e fis=']) |

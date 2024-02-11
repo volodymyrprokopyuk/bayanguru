@@ -1,6 +1,6 @@
 % lilypond -d backend=cairo -l WARN -f svg -o site/public/images/icon site/icon.ly
 
-\version "2.25.12"
+\version "2.25.13"
 
 \paper {
   #(set-paper-size '(cons (* 8 mm) (* 8 mm)))
