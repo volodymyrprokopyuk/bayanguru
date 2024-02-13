@@ -97,6 +97,20 @@ meta:
   frm: [mandatory, multiple] права рука = right hand
     mel: мелодія (default) = melody
     var: варіації = variation
+    scl: гами = scales
+    arp: арпеджіо = arpeggio
+    int: інтервали = invervals
+      in3: терції = thirds
+      in4: кварти = forths
+      in5: квінти = fifths
+      in6: сексти = sixths
+      in8: октави = eighths
+    crd: акорди = chords
+      cr5: тризвуки = triads
+      cr7: септакорди = seventh chords
+    pph: поліфонія = polyphony
+      vo2: двоголосся
+      vo3: триголосся
     prh: поліритмія = polyrithm
       tu3: тріолі = triplet
       tu5: квінтолі = quintuplet
@@ -110,20 +124,6 @@ meta:
       gru: групето = gruppetto
       tri: трель = trill
       gli: глісандо = gissando
-    pph: поліфонія = polyphony
-      vo2: двоголосся
-      vo3: триголосся
-    scl: гами = scales
-    arp: арпеджіо = arpeggio
-    int: інтервали = invervals
-      in3: терції = thirds
-      in4: кварти = forths
-      in5: квінти = fifths
-      in6: сексти = sixths
-      in8: октави = eighths
-    crd: акорди = chords
-      cr5: тризвуки = triads
-      cr7: септакорди = seventh chords
     wrs: повороти кисті = wrist movements
       fi1: перший палець = first finger
       fi5: п'ятий палець = fifth finger

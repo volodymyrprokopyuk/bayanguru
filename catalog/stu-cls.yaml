@@ -101,7 +101,7 @@ pieces:
       org: deu, sty: cls, gnr: stu, ton: [gj, ei], frm: scl, bss: stb, lvl: elb }
   - { id: pheu, tit: Етюд F major,
       com: К. Черні, src: SB2NU1977,
-      org: aut, sty: stu, gnr: stu, ton: fj, frm: [arp, fi1, fi5, jmp], bss: stb, lvl: elb }
+      org: aut, sty: cls, gnr: stu, ton: fj, frm: [arp, fi1, fi5, jmp], bss: stb, lvl: elb }
   - { id: vdul, tit: Етюд G major,
       com: К. Мясков, src: SB2NU1977,
       org: ukr, sty: aut, gnr: stu, ton: cj, frm: [scl, fi1, fi5, jmp], bss: stb, lvl: elb }

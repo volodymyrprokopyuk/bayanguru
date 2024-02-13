@@ -270,14 +270,32 @@ func QueryPieces(pieces []Piece, queries PieceQueries) ([]Piece, error) {
   return selPieces, nil
 }
 
-func Bass(bss []string) string {
+func Bss(bss []string, ID string) string {
   for _, b := range bss {
     switch b {
     case "stb", "pub", "frb":
       return b
     }
   }
-  panic("catalog: missing bass type, expected: stb, pub, frb")
+  err := fmt.Sprintf(
+    "catalog: piece %v missing bass type, expected: stb, pub, frb", ID,
+  )
+  panic(err)
+}
+
+var studyType = regexp.MustCompile(`^(scl|arp|in|cr|vo|pub)\d?$`)
+
+func Stu(frmOrBss []string, ID string) string {
+  for _, s := range frmOrBss {
+    if m := studyType.FindStringSubmatch(s); m != nil {
+      return m[1]
+    }
+  }
+  err := fmt.Sprintf(
+    "catalog: piece %v missing study type, expected: scl, arp, in, cr, vo, pub",
+    ID,
+  )
+  panic(err)
 }
 
 func PrintPiece(w io.Writer, piece Piece) {
@@ -296,6 +314,6 @@ func PrintPiece(w io.Writer, piece Piece) {
     sty.ID(piece.ID), sty.Tit(tit),
     strings.Repeat(" ", spaceLen), sty.Com(com),
     sty.Org(piece.Org), sty.Org(piece.Sty), sty.Org(piece.Gnr),
-    sty.Bss(Bass(piece.Bss)), sty.Lvl(piece.Lvl),
+    sty.Bss(Bss(piece.Bss, piece.ID)), sty.Lvl(piece.Lvl),
   )
 }
