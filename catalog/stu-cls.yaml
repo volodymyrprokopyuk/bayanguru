@@ -72,7 +72,7 @@ pieces:
       com: К. Гурліт, src: SB1NU1979,
       org: deu, sty: cls, gnr: stu, ton: cj, frm: [cr5, syn], bss: [pub, scl], lvl: ela }
   - { id: zvmc, tit: Етюд E minor,
-      com: О. Гедике, src: SB1NU1979,
+      com: А. Гедике, src: SB1NU1979,
       org: rus, sty: aut, gnr: stu, ton: ei, frm: scl, bss: [stb, pub, scl], lvl: ela }
   # SB2NU1977
   - { id: mp9o, tit: Етюд C major,
@@ -140,7 +140,7 @@ pieces:
       com: А. Лемуан, src: SB3NU1979,
       org: fra, sty: cls, gnr: stu, ton: [cj, gj], frm: [arp, fi5], bss: [stb, pub, syn], lvl: elb }
   - { id: a7ra, tit: Етюд F major,
-      com: A. Гедике, src: SB3NU1979,
+      com: А. Гедике, src: SB3NU1979,
       org: rus, sty: aut, gnr: stu, ton: fj, frm: scl, bss: stb, lvl: elb }
   - { id: uco7, tit: Етюд A minor,
       com: В. Саєвський, src: SB3NU1979,
