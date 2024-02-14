@@ -17,6 +17,7 @@ type PublishCommand struct {
   Pieces, Books []string
   Queries cat.PieceQueries
   SiteDir, PublicDir string
+  PageSize int
 }
 
 func makeTemplate(siteDir string) (*template.Template, error) {

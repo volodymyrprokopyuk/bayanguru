@@ -22,13 +22,29 @@ func groupPieces(
   return groups
 }
 
-// func keyBss(bss []string, ID string) string {
-//   b := cat.Bss(bss, ID)
-//   if b == "pub" {
-//     b = "stb"
-//   }
-//   return b
-// }
+func pageGroups(groups PieceGroups, pageSize int) PieceGroups {
+  pagedGroups := make(PieceGroups, 200)
+  for key, group := range groups {
+    i := 1
+    if len(group) <= pageSize {
+      pagedGroups[fmt.Sprintf("%v/%v", key, i)] = group
+      continue
+    }
+    pieces := make([]cat.Piece, 0, pageSize)
+    for _, piece := range group {
+      pieces = append(pieces, piece)
+      if len(pieces) == pageSize {
+        pagedGroups[fmt.Sprintf("%v/%v", key, i)] = pieces
+        pieces = make([]cat.Piece, 0, pageSize)
+        i++
+      }
+    }
+    if len(pieces) > 0 {
+      pagedGroups[fmt.Sprintf("%v/%v", key, i)] = pieces
+    }
+  }
+  return pagedGroups
+}
 
 func keyByOrg(piece cat.Piece) string {
   org := piece.Org
@@ -100,14 +116,18 @@ func generateCatalog(tpl *template.Template, pc PublishCommand) error {
     return err
   }
   cat.PrintStat(catLen, len(pieces))
-  // piecesByOrg := groupPieces(pieces, keyByOrg)
-  // piecesBySty := groupPieces(pieces, keyBySty)
-  // piecesByGnr := groupPieces(pieces, keyByGnr)
-  piecesByCom := groupPieces(pieces, keyByCom)
-  // piecesByBss := groupPieces(pieces, keyByBss)
-  // piecesByLvl := groupPieces(pieces, keyByLvl)
-  for k, v := range piecesByCom {
+  piecesByOrg := groupPieces(pieces, keyByOrg)
+  for k, v := range piecesByOrg {
     fmt.Println(k, len(v))
   }
+  piecesByOrg = pageGroups(piecesByOrg, pc.PageSize)
+  for k, v := range piecesByOrg {
+    fmt.Println(k, len(v))
+  }
+  // piecesBySty := groupPieces(pieces, keyBySty)
+  // piecesByGnr := groupPieces(pieces, keyByGnr)
+  // piecesByCom := groupPieces(pieces, keyByCom)
+  // piecesByBss := groupPieces(pieces, keyByBss)
+  // piecesByLvl := groupPieces(pieces, keyByLvl)
   return nil
 }
