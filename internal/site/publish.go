@@ -20,14 +20,14 @@ type PublishCommand struct {
   PageSize int
 }
 
-func makeTemplate(siteDir string) (*template.Template, error) {
+func makeTemplate(templateDir string) (*template.Template, error) {
   tpl := template.New("page")
   tpl.Funcs(template.FuncMap{
     "join": func(sep string, slc []string) string {
       return strings.Join(slc, sep)
     },
   })
-  pageFile := filepath.Join(siteDir, "page.html")
+  pageFile := filepath.Join(templateDir, "page.html")
   return tpl.ParseFiles(pageFile)
 }
 
@@ -43,9 +43,9 @@ func generateFile(
 }
 
 func generateIndex(
-  tpl *template.Template, siteDir, publicDir string,
+  tpl *template.Template, templateDir, publicDir string,
 ) error {
-  indexFile := filepath.Join(siteDir, "index.html")
+  indexFile := filepath.Join(templateDir, "index.html")
   _, err := tpl.ParseFiles(indexFile)
   if err != nil {
     return err
@@ -55,9 +55,9 @@ func generateIndex(
 }
 
 func generatePieces(
-  tpl *template.Template, pieces []cat.Piece, siteDir, publicDir string,
+  tpl *template.Template, pieces []cat.Piece, templateDir, publicDir string,
 ) error {
-  pieceFile := filepath.Join(siteDir, "piece.html")
+  pieceFile := filepath.Join(templateDir, "piece.html")
   _, err := tpl.ParseFiles(pieceFile)
   if err != nil {
     return err
