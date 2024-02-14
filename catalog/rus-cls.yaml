@@ -142,4 +142,4 @@ pieces:
       org: rus, sty: aut, gnr: pie, ton: di, frm: vo2, bss: frb, lvl: ela }
   - { id: w7lt, tit: Ничто в полюшке не колышется, sub: rusfs,
       arr: А. Зубарев, src: FBB3BZ1982,
-      org: rus, sty: flk, gnr: sng, ton: ei, frm: [vo2, cr5], bss: frb, lvl: ela }
+      org: rus, sty: flk, gnr: sng, ton: ei, frm: [vo2, cr5], bss: frb, lvl: elb }

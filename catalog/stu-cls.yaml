@@ -104,7 +104,7 @@ pieces:
       org: aut, sty: cls, gnr: stu, ton: fj, frm: [arp, fi1, fi5, jmp], bss: stb, lvl: elb }
   - { id: vdul, tit: Етюд G major,
       com: К. Мясков, src: SB2NU1977,
-      org: ukr, sty: aut, gnr: stu, ton: cj, frm: [scl, fi1, fi5, jmp], bss: stb, lvl: elb }
+      org: ukr, sty: aut, gnr: stu, ton: gj, frm: [scl, syn, fi1, fi5, jmp], bss: stb, lvl: elb }
   - { id: tfnd, tit: Етюд C major,
       com: В. Иванов, src: SB2NU1977,
       org: rus, sty: aut, gnr: stu, ton: [cj, ei], frm: [in6, syn], bss: stb, lvl: elb }
