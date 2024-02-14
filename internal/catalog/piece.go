@@ -288,7 +288,16 @@ var studyType = regexp.MustCompile(`^(scl|arp|in|cr|vo|pub)\d?$`)
 func Stu(frmOrBss []string, ID string) string {
   for _, s := range frmOrBss {
     if m := studyType.FindStringSubmatch(s); m != nil {
-      return m[1]
+      stu := m[1]
+      switch stu {
+      case "in":
+        stu = "int"
+      case "cr":
+        stu = "crd"
+      case "vo":
+        stu = "pph"
+      }
+      return stu
     }
   }
   err := fmt.Sprintf(

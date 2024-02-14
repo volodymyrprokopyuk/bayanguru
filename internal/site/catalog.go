@@ -22,45 +22,42 @@ func groupPieces(
   return groups
 }
 
-func keyBss(bss []string, ID string) string {
-  b := cat.Bss(bss, ID)
-  if b == "pub" {
-    b = "stb"
-  }
-  return b
-}
+// func keyBss(bss []string, ID string) string {
+//   b := cat.Bss(bss, ID)
+//   if b == "pub" {
+//     b = "stb"
+//   }
+//   return b
+// }
 
 func keyByOrg(piece cat.Piece) string {
   org := piece.Org
   switch org {
-  case "blr", "hun", "pol", "cze", "svk", "lva", "mda":
+  case "pol", "cze", "svk", "lva", "mda":
     org = "ext"
   case "aut", "deu", "dnk", "fra", "swe":
     org = "eur"
   }
-  bss := keyBss(piece.Bss, piece.ID)
-  return fmt.Sprintf("%v-%v", org, bss)
+  return org
 }
 
 func keyBySty(piece cat.Piece) string {
-  sty := piece.Sty
-  bss := keyBss(piece.Bss, piece.ID)
-  return fmt.Sprintf("%v-%v", sty, bss)
+  return piece.Sty
 }
 
 func keyByGnr(piece cat.Piece) string {
   gnr := piece.Gnr
   if gnr == "stu" {
     bss := cat.Bss(piece.Bss, piece.ID)
+    var stu string
     if bss == "stb" {
-      stu := cat.Stu(piece.Frm, piece.ID)
-      return fmt.Sprintf("%v-%v-%v", gnr, bss, stu)
+      stu = cat.Stu(piece.Frm, piece.ID)
     } else if bss == "pub" {
-      return fmt.Sprintf("%v-%v-%v", gnr, "stb", bss)
+      stu = "lft"
     } else {
-      stu := cat.Stu(piece.Bss, piece.ID)
-      return fmt.Sprintf("%v-%v-%v", gnr, bss, stu)
+      stu = cat.Stu(piece.Bss, piece.ID)
     }
+    return fmt.Sprintf("%v-%v", gnr, stu)
   }
   switch gnr {
   case "chd", "lul", "mil", "pry", "rmc", "ves":
@@ -70,8 +67,25 @@ func keyByGnr(piece cat.Piece) string {
   case "gyp":
     gnr = "pie"
   }
-  bss := keyBss(piece.Bss, piece.ID)
-  return fmt.Sprintf("%v-%v", gnr, bss)
+  return gnr
+}
+
+func keyByCom(piece cat.Piece) string {
+  com := "noc"
+  if len(piece.Com) > 0 {
+    com = piece.Com
+  } else if len(piece.Arr) > 0 {
+    com = piece.Arr
+  }
+  return com
+}
+
+func keyByBss(piece cat.Piece) string {
+  return cat.Bss(piece.Bss, piece.ID)
+}
+
+func keyByLvl(piece cat.Piece) string {
+  return piece.Lvl
 }
 
 func generateCatalog(tpl *template.Template, pc PublishCommand) error {
@@ -88,8 +102,11 @@ func generateCatalog(tpl *template.Template, pc PublishCommand) error {
   cat.PrintStat(catLen, len(pieces))
   // piecesByOrg := groupPieces(pieces, keyByOrg)
   // piecesBySty := groupPieces(pieces, keyBySty)
-  piecesByGnr := groupPieces(pieces, keyByGnr)
-  for k, v := range piecesByGnr {
+  // piecesByGnr := groupPieces(pieces, keyByGnr)
+  piecesByCom := groupPieces(pieces, keyByCom)
+  // piecesByBss := groupPieces(pieces, keyByBss)
+  // piecesByLvl := groupPieces(pieces, keyByLvl)
+  for k, v := range piecesByCom {
     fmt.Println(k, len(v))
   }
   return nil
