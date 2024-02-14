@@ -96,7 +96,7 @@ bayan engrave all --lint --optimize --meta=f`,
     RunE: func (cmd *cobra.Command, args []string) error {
       ec := score.EngraveCommand{
         CatalogDir: "catalog", BookFile: "books.yaml",
-        SourceDir: "source", PieceDir: "pieces", BookDir: "books",
+        SourceDir: "source", PieceDir: "piece", BookDir: "book",
         Catalog: catalog,
         All: len(args) == 1 && args[0] == "all",
         Book: book, Piece: piece,
@@ -171,7 +171,7 @@ bayan play all --query... --random --list`,
     RunE: func (cmd *cobra.Command, args []string) error {
       pc := cat.PlayCommand{
         CatalogDir: "catalog", BookFile: "books.yaml",
-        PieceDir: "pieces", BookDir: "books",
+        PieceDir: "piece", BookDir: "book",
         Catalog: catalog,
         All: len(args) == 1 && args[0] == "all",
         Book: book, Random: random, List: list,
@@ -232,12 +232,13 @@ bayan publish all --query...`,
     RunE: func(cmd *cobra.Command, args []string) error {
       pc := site.PublishCommand{
         CatalogDir: "catalog", BookFile: "books.yaml",
-        PieceDir: "pieces", BookDir: "books",
+        PieceDir: "piece", BookDir: "book",
         Catalog: catalog,
         All: len(args) == 1 && args[0] == "all",
         Book: book,
         Queries: make(map[string]string, 10),
-        SiteDir: "site", PublicDir: "site/public",
+        SiteDir: "site", TemplateDir: "site/template",
+        PublicDir: "site/public",
         PageSize: 24,
       }
       if !pc.All {

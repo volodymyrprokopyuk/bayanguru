@@ -1,4 +1,4 @@
 site: public
-glob: pieces/*
+glob: piece/*
 root_selector: main
 verbose: true

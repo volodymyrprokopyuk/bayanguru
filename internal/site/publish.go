@@ -16,7 +16,7 @@ type PublishCommand struct {
   All, Book bool
   Pieces, Books []string
   Queries cat.PieceQueries
-  SiteDir, PublicDir string
+  SiteDir, TemplateDir, PublicDir string
   PageSize int
 }
 
@@ -62,7 +62,7 @@ func generatePieces(
   if err != nil {
     return err
   }
-  piecesDir := filepath.Join(publicDir, "pieces")
+  piecesDir := filepath.Join(publicDir, "piece")
   for _, piece := range pieces {
     pieceData := struct { Piece cat.Piece }{piece}
     err := generateFile(tpl, piecesDir, piece.File, pieceData)
@@ -100,36 +100,36 @@ func siteError(format string, args ...any) error {
 }
 
 func Publish(pc PublishCommand) error {
-  // pieces, _, catLen, err := cat.ReadPiecesAndBooks(
-  //   pc.CatalogDir, pc.Catalog, pc.Pieces,
-  //   pc.BookFile, pc.Books, pc.Book, pc.All,
-  // )
-  // if err != nil {
-  //   return cat.CatError("%v", err)
-  // }
-  // if len(pc.Queries) > 0 {
-  //   pieces, err = cat.QueryPieces(pieces, pc.Queries)
-  //   if err != nil {
-  //     return cat.CatError("%v", err)
-  //   }
-  // }
-  // cat.PrintStat(catLen, len(pieces))
-  tpl, err := makeTemplate(pc.SiteDir)
-  // if err != nil {
-  //   return siteError("%v", err)
-  // }
-  // err = generateIndex(tpl, pc.SiteDir, pc.PublicDir)
-  // if err != nil {
-  //   return siteError("%v", err)
-  // }
-  // err = generatePieces(tpl, pieces, pc.SiteDir, pc.PublicDir)
-  // if err != nil {
-  //   return siteError("%v", err)
-  // }
-  // err = genereateSearchIndex(pc.SiteDir, pc.PublicDir)
-  // if err != nil {
-  //   return siteError("%v", err)
-  // }
+  pieces, _, catLen, err := cat.ReadPiecesAndBooks(
+    pc.CatalogDir, pc.Catalog, pc.Pieces,
+    pc.BookFile, pc.Books, pc.Book, pc.All,
+  )
+  if err != nil {
+    return cat.CatError("%v", err)
+  }
+  if len(pc.Queries) > 0 {
+    pieces, err = cat.QueryPieces(pieces, pc.Queries)
+    if err != nil {
+      return cat.CatError("%v", err)
+    }
+  }
+  cat.PrintStat(catLen, len(pieces))
+  tpl, err := makeTemplate(pc.TemplateDir)
+  if err != nil {
+    return siteError("%v", err)
+  }
+  err = generateIndex(tpl, pc.TemplateDir, pc.PublicDir)
+  if err != nil {
+    return siteError("%v", err)
+  }
+  err = generatePieces(tpl, pieces, pc.TemplateDir, pc.PublicDir)
+  if err != nil {
+    return siteError("%v", err)
+  }
+  err = genereateSearchIndex(pc.SiteDir, pc.PublicDir)
+  if err != nil {
+    return siteError("%v", err)
+  }
   err = generateCatalog(tpl, pc)
   if err != nil {
     return siteError("%v", err)

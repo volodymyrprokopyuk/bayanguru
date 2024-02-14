@@ -1,8 +1,8 @@
 # -*- mode: conf -*-
 # caddy run --config site/Caddyfile
 :7512 {
-  handle_path /scores/* {
-    root pieces
+  handle_path /score/* {
+    root piece
   }
   root site/public
   file_server

@@ -1,5 +1,5 @@
 bayan
 pagefind
-pieces/*.pdf
-books/*.pdf
+piece/*.pdf
+book/*.pdf
 site/public/
