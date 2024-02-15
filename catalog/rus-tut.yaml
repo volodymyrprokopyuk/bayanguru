@@ -72,7 +72,7 @@ pieces:
   - { id: od7f, tit: Ивушка,
       com: Г. Пономаренко, arr: Л. Захарова, art: ipr, src: BTB1978,
       org: rus, sty: aut, gnr: pie, ton: cj, frm: [in3, dot], bss: stb, lvl: ela }
-  - { id: 2al1, tit: Песня о тревожной молодисти,
+  - { id: 2al1, tit: Песня о тревожной молодости,
       com: А. Пахмутова, arr: М. Чайкін, art: ipr, src: BTB1978,
       org: rus, sty: aut, gnr: sng, ton: di, frm: [in3, dot], bss: stb, lvl: elb }
   - { id: 8pvl, tit: Уральская плясовая,
