@@ -7,17 +7,49 @@ import (
   "path/filepath"
   "os"
   "os/exec"
+  sty "github.com/volodymyrprokopyuk/bayan/internal/style"
   cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
 )
 
 type PublishCommand struct {
   CatalogDir, BookFile, PieceDir, BookDir string
   Catalog string
-  All, Book bool
+  Init, All, Book bool
   Pieces, Books []string
   Queries cat.PieceQueries
   SiteDir, TemplateDir, PublicDir string
   PageSize int
+}
+
+func initSite(siteDir, publicDir string) error {
+  dirs := []string{
+    filepath.Join(publicDir, "image"),
+    filepath.Join(publicDir, "piece"),
+  }
+  for _, dir := range dirs {
+    fmt.Printf("%v %v\n", sty.Org("init"), sty.Lvl(dir))
+    err := os.MkdirAll(dir, 0755)
+    if err != nil {
+      return err
+    }
+  }
+  images := []string{"image/icon", "image/logo"}
+  for _, image := range images {
+    lyImage := filepath.Join(siteDir, image + ".ly")
+    svgImage := filepath.Join(publicDir, image)
+    fmt.Printf("%v %v\n", sty.Org("engrave"), sty.Lvl(svgImage + ".svg"))
+    lyCmd := exec.Command(
+      "lilypond", "-d", "backend=cairo", "-l", "WARN", "-f", "svg",
+      "-o", svgImage, lyImage,
+    )
+    lyCmd.Stdout = os.Stdout
+    lyCmd.Stderr = os.Stderr
+    err := lyCmd.Run()
+    if err != nil {
+      return err
+    }
+  }
+  return nil
 }
 
 func makeTemplate(templateDir string) (*template.Template, error) {
@@ -35,6 +67,7 @@ func generateFile(
   tpl *template.Template, publicDir, publicFile string, data any,
 ) error {
   file := filepath.Join(publicDir, publicFile)
+  fmt.Printf("%v %v\n", sty.Org("publish"), sty.Lvl(file))
   w, err := os.Create(file) // overwrites an existing file
   if err != nil {
     return err
@@ -88,6 +121,9 @@ func genereateSearchIndex(siteDir, publicDir string) error {
     return err
   }
   defer os.Chdir(cwd)
+  fmt.Printf(
+    "%v %v\n", sty.Org("index"), sty.Lvl(filepath.Join(publicDir, "piece")),
+  )
   pfFile := filepath.Join(cwd, "pagefind")
   pfCmd := exec.Command(pfFile)
   pfCmd.Stdout = os.Stdout
@@ -114,6 +150,12 @@ func Publish(pc PublishCommand) error {
     }
   }
   cat.PrintStat(catLen, len(pieces))
+  if pc.Init {
+    err := initSite(pc.SiteDir, pc.PublicDir)
+    if err != nil {
+      return siteError("%v", err)
+    }
+  }
   tpl, err := makeTemplate(pc.TemplateDir)
   if err != nil {
     return siteError("%v", err)

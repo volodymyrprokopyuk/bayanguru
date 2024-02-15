@@ -234,6 +234,7 @@ bayan publish all --query...`,
         CatalogDir: "catalog", BookFile: "books.yaml",
         PieceDir: "piece", BookDir: "book",
         Catalog: catalog,
+        Init: init,
         All: len(args) == 1 && args[0] == "all",
         Book: book,
         Queries: make(map[string]string, 10),
@@ -258,6 +259,9 @@ bayan publish all --query...`,
   }
   publishCmd.Flags().StringVarP(
     &catalog, "catalog", "c", "", "read catalog files e.g. ukr,rus, ^stu,sch",
+  )
+  publishCmd.Flags().BoolVarP(
+    &init, "init", "i", false, "initialize the site",
   )
   publishCmd.Flags().BoolVarP(
     &book, "book", "b", false, "publish pieces from books",

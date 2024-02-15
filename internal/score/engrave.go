@@ -8,8 +8,8 @@ import (
   "io"
   "os/exec"
   pdf "github.com/pdfcpu/pdfcpu/pkg/api"
-  cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
   sty "github.com/volodymyrprokopyuk/bayan/internal/style"
+  cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
 )
 
 type EngraveCommand struct {
