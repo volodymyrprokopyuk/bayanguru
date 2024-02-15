@@ -1,5 +1,3 @@
-% lilypond -d backend=cairo -l WARN -f svg -o site/public/images/logo site/logo.ly
-
 \version "2.25.13"
 
 \paper {

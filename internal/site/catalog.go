@@ -104,7 +104,7 @@ func keyByLvl(piece cat.Piece) string {
   return piece.Lvl
 }
 
-func generateCatalog(tpl *template.Template, pc PublishCommand) error {
+func publishCatalog(tpl *template.Template, pc PublishCommand) error {
   pieces, _, catLen, err := cat.ReadPiecesAndBooks(
     pc.CatalogDir, "", nil, pc.BookFile, nil, false, true,
   )

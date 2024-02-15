@@ -21,30 +21,32 @@ type PublishCommand struct {
   PageSize int
 }
 
+func engraveImage(siteDir, publicDir, image string) error {
+  lyImage := filepath.Join(siteDir, image + ".ly")
+  svgImage := filepath.Join(publicDir, image)
+  fmt.Printf("%v %v\n", sty.Org("engrave"), sty.Lvl(svgImage + ".svg"))
+  lyCmd := exec.Command(
+    "lilypond", "-d", "backend=cairo", "-l", "WARN", "-f", "svg",
+    "-o", svgImage, lyImage,
+  )
+  lyCmd.Stdout = os.Stdout
+  lyCmd.Stderr = os.Stderr
+  return lyCmd.Run()
+}
+
 func initSite(siteDir, publicDir string) error {
-  dirs := []string{
-    filepath.Join(publicDir, "image"),
-    filepath.Join(publicDir, "piece"),
-  }
+  dirs := []string{"image", "piece"}
   for _, dir := range dirs {
-    fmt.Printf("%v %v\n", sty.Org("init"), sty.Lvl(dir))
-    err := os.MkdirAll(dir, 0755)
+    d := filepath.Join(publicDir, dir)
+    fmt.Printf("%v %v\n", sty.Org("init"), sty.Lvl(d))
+    err := os.MkdirAll(d, 0755)
     if err != nil {
       return err
     }
   }
   images := []string{"image/icon", "image/logo"}
   for _, image := range images {
-    lyImage := filepath.Join(siteDir, image + ".ly")
-    svgImage := filepath.Join(publicDir, image)
-    fmt.Printf("%v %v\n", sty.Org("engrave"), sty.Lvl(svgImage + ".svg"))
-    lyCmd := exec.Command(
-      "lilypond", "-d", "backend=cairo", "-l", "WARN", "-f", "svg",
-      "-o", svgImage, lyImage,
-    )
-    lyCmd.Stdout = os.Stdout
-    lyCmd.Stderr = os.Stderr
-    err := lyCmd.Run()
+    err := engraveImage(siteDir, publicDir, image)
     if err != nil {
       return err
     }
@@ -63,7 +65,7 @@ func makeTemplate(templateDir string) (*template.Template, error) {
   return tpl.ParseFiles(pageFile)
 }
 
-func generateFile(
+func publishFile(
   tpl *template.Template, publicDir, publicFile string, data any,
 ) error {
   file := filepath.Join(publicDir, publicFile)
@@ -75,7 +77,7 @@ func generateFile(
   return tpl.ExecuteTemplate(w, "page.html", data)
 }
 
-func generateIndex(
+func publishIndex(
   tpl *template.Template, templateDir, publicDir string,
 ) error {
   indexFile := filepath.Join(templateDir, "index.html")
@@ -84,10 +86,10 @@ func generateIndex(
     return err
   }
   indexData := struct{}{}
-  return generateFile(tpl, publicDir, "index.html", indexData)
+  return publishFile(tpl, publicDir, "index.html", indexData)
 }
 
-func generatePieces(
+func publishPieces(
   tpl *template.Template, pieces []cat.Piece, templateDir, publicDir string,
 ) error {
   pieceFile := filepath.Join(templateDir, "piece.html")
@@ -98,7 +100,7 @@ func generatePieces(
   piecesDir := filepath.Join(publicDir, "piece")
   for _, piece := range pieces {
     pieceData := struct { Piece cat.Piece }{piece}
-    err := generateFile(tpl, piecesDir, piece.File, pieceData)
+    err := publishFile(tpl, piecesDir, piece.File, pieceData)
     if err != nil {
       return err
     }
@@ -106,7 +108,7 @@ func generatePieces(
   return nil
 }
 
-func genereateSearchIndex(siteDir, publicDir string) error {
+func indexPieces(siteDir, publicDir string) error {
   pfDir := filepath.Join(publicDir, "pagefind")
   err := os.RemoveAll(pfDir) // removes an existing index
   if err != nil {
@@ -160,19 +162,19 @@ func Publish(pc PublishCommand) error {
   if err != nil {
     return siteError("%v", err)
   }
-  err = generateIndex(tpl, pc.TemplateDir, pc.PublicDir)
+  err = publishIndex(tpl, pc.TemplateDir, pc.PublicDir)
   if err != nil {
     return siteError("%v", err)
   }
-  err = generatePieces(tpl, pieces, pc.TemplateDir, pc.PublicDir)
+  err = publishPieces(tpl, pieces, pc.TemplateDir, pc.PublicDir)
   if err != nil {
     return siteError("%v", err)
   }
-  err = genereateSearchIndex(pc.SiteDir, pc.PublicDir)
+  err = indexPieces(pc.SiteDir, pc.PublicDir)
   if err != nil {
     return siteError("%v", err)
   }
-  err = generateCatalog(tpl, pc)
+  err = publishCatalog(tpl, pc)
   if err != nil {
     return siteError("%v", err)
   }
