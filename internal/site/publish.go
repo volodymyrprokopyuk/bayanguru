@@ -35,7 +35,15 @@ func engraveImage(siteDir, publicDir, image string) error {
 }
 
 func initSite(siteDir, publicDir string) error {
-  dirs := []string{"image", "piece"}
+  orgDirs := []string{
+    "ukrainian", "russian", "belarusian", "hungarian", "extra", "european",
+  }
+  for i, dir := range orgDirs {
+    orgDirs[i] = filepath.Join("catalog", "origin", dir)
+  }
+  dirs := make([]string, 0, 100)
+  dirs = append(dirs, "image", "piece")
+  dirs = append(dirs, orgDirs...)
   for _, dir := range dirs {
     d := filepath.Join(publicDir, dir)
     fmt.Printf("%v %v\n", sty.Org("init"), sty.Lvl(d))
@@ -138,26 +146,26 @@ func siteError(format string, args ...any) error {
 }
 
 func Publish(pc PublishCommand) error {
-  pieces, _, catLen, err := cat.ReadPiecesAndBooks(
-    pc.CatalogDir, pc.Catalog, pc.Pieces,
-    pc.BookFile, pc.Books, pc.Book, pc.All,
-  )
-  if err != nil {
-    return cat.CatError("%v", err)
-  }
-  if len(pc.Queries) > 0 {
-    pieces, err = cat.QueryPieces(pieces, pc.Queries)
-    if err != nil {
-      return cat.CatError("%v", err)
-    }
-  }
-  cat.PrintStat(catLen, len(pieces))
-  if pc.Init {
-    err := initSite(pc.SiteDir, pc.PublicDir)
-    if err != nil {
-      return siteError("%v", err)
-    }
-  }
+  // pieces, _, catLen, err := cat.ReadPiecesAndBooks(
+  //   pc.CatalogDir, pc.Catalog, pc.Pieces,
+  //   pc.BookFile, pc.Books, pc.Book, pc.All,
+  // )
+  // if err != nil {
+  //   return cat.CatError("%v", err)
+  // }
+  // if len(pc.Queries) > 0 {
+  //   pieces, err = cat.QueryPieces(pieces, pc.Queries)
+  //   if err != nil {
+  //     return cat.CatError("%v", err)
+  //   }
+  // }
+  // cat.PrintStat(catLen, len(pieces))
+  // if pc.Init {
+  //   err := initSite(pc.SiteDir, pc.PublicDir)
+  //   if err != nil {
+  //     return siteError("%v", err)
+  //   }
+  // }
   tpl, err := makeTemplate(pc.TemplateDir)
   if err != nil {
     return siteError("%v", err)
@@ -166,14 +174,14 @@ func Publish(pc PublishCommand) error {
   if err != nil {
     return siteError("%v", err)
   }
-  err = publishPieces(tpl, pieces, pc.TemplateDir, pc.PublicDir)
-  if err != nil {
-    return siteError("%v", err)
-  }
-  err = indexPieces(pc.SiteDir, pc.PublicDir)
-  if err != nil {
-    return siteError("%v", err)
-  }
+  // err = publishPieces(tpl, pieces, pc.TemplateDir, pc.PublicDir)
+  // if err != nil {
+  //   return siteError("%v", err)
+  // }
+  // err = indexPieces(pc.SiteDir, pc.PublicDir)
+  // if err != nil {
+  //   return siteError("%v", err)
+  // }
   err = publishCatalog(tpl, pc)
   if err != nil {
     return siteError("%v", err)

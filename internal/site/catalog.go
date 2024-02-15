@@ -2,7 +2,9 @@ package site
 
 import (
   "fmt"
+  "strings"
   "text/template"
+  "path/filepath"
   cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
 )
 
@@ -46,15 +48,56 @@ func pageGroups(groups PieceGroups, pageSize int) PieceGroups {
   return pagedGroups
 }
 
+type Link struct{
+  Link, Title string
+}
+
+type CatalogData struct {
+  GroupLinks []Link // constant
+  Title string
+  AlphaLinks []Link // constant
+  Pieces []cat.Piece
+  PageLinks []Link
+}
+
 func keyByOrg(piece cat.Piece) string {
   org := piece.Org
   switch org {
+  case "ukr":
+    org = "ukrainian"
+  case "rus":
+    org = "russian"
+  case "blr":
+    org = "belarusian"
+  case "hun":
+    org = "hungarian"
   case "pol", "cze", "svk", "lva", "mda":
-    org = "ext"
+    org = "extra"
   case "aut", "deu", "dnk", "fra", "swe":
-    org = "eur"
+    org = "european"
   }
   return org
+}
+
+func publishByOrg(
+  tpl *template.Template, pieces []cat.Piece, pc PublishCommand,
+) error {
+  piecesByOrg := groupPieces(pieces, keyByOrg)
+  piecesByOrg = pageGroups(piecesByOrg, pc.PageSize)
+  // for k, v := range piecesByOrg {
+  //   fmt.Println(k, len(v))
+  // }
+  for key, pieces := range piecesByOrg {
+    slc := strings.Split(key, "/")
+    org, catalogFile := slc[0], slc[1]
+    catalogDir := filepath.Join(pc.PublicDir, "catalog", "origin", org)
+    catalogData := CatalogData{nil, pieces}
+    err := publishFile(tpl, catalogDir, catalogFile, catalogData)
+    if err != nil {
+      return err
+    }
+  }
+  return nil
 }
 
 func keyBySty(piece cat.Piece) string {
@@ -108,21 +151,18 @@ func publishCatalog(tpl *template.Template, pc PublishCommand) error {
   pieces, _, catLen, err := cat.ReadPiecesAndBooks(
     pc.CatalogDir, "", nil, pc.BookFile, nil, false, true,
   )
-  // pieces, _, catLen, err := cat.ReadPiecesAndBooks(
-  //   pc.CatalogDir, pc.Catalog, pc.Pieces,
-  //   pc.BookFile, pc.Books, pc.Book, pc.All,
-  // )
   if err != nil {
     return err
   }
   cat.PrintStat(catLen, len(pieces))
-  piecesByOrg := groupPieces(pieces, keyByOrg)
-  for k, v := range piecesByOrg {
-    fmt.Println(k, len(v))
+  catalogFile := filepath.Join(pc.TemplateDir, "catalog.html")
+  _, err = tpl.ParseFiles(catalogFile)
+  if err != nil {
+    return err
   }
-  piecesByOrg = pageGroups(piecesByOrg, pc.PageSize)
-  for k, v := range piecesByOrg {
-    fmt.Println(k, len(v))
+  err = publishByOrg(tpl, pieces, pc)
+  if err != nil {
+    return err
   }
   // piecesBySty := groupPieces(pieces, keyBySty)
   // piecesByGnr := groupPieces(pieces, keyByGnr)
