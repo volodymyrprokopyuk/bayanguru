@@ -4,6 +4,7 @@ import (
   "fmt"
   "strings"
   "text/template"
+  "sort"
   "path/filepath"
   cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
 )
@@ -57,8 +58,26 @@ func pageGroups(groups PieceGroups, pageSize int) PieceGroups {
   return pagedGroups
 }
 
+func sortGroups(groups PieceGroups) {
+  keyTitStuCom := func(piece cat.Piece) string {
+    if piece.Gnr == "stu" {
+      com := []rune(piece.Com)
+      if len(com) > 3 {
+        return string(com[3:])
+      }
+    }
+    return piece.Tit
+  }
+  for _, pieces := range groups {
+    sort.Slice(pieces, func(i, j int) bool {
+      return keyTitStuCom(pieces[i]) < keyTitStuCom(pieces[j])
+    })
+  }
+}
+
 type Link struct{
   URL, Title string
+  Disabled bool
 }
 
 type CatalogData struct {
@@ -67,6 +86,38 @@ type CatalogData struct {
   AlphaLinks []Link
   Pieces []cat.Piece
   PageLinks []Link
+}
+
+func publishGroups(
+  tpl *template.Template, groups PieceGroups, groupNames []string,
+  groupDir, groupURL string,
+) error {
+  for key, pieces := range groups {
+    slc := strings.Split(key, "/")
+    currentGroup, catalogFile := slc[0], slc[1]
+    catalogDir := filepath.Join(groupDir, currentGroup)
+    groupLinks := make([]Link, 0, len(groups))
+    for _, groupName := range groupNames {
+      link := Link{
+        URL: filepath.Join(groupURL, groupName, "1"),
+        Title: tr[groupName],
+        Disabled: groupName == currentGroup,
+      }
+      groupLinks = append(groupLinks, link)
+    }
+    catalogData := CatalogData{
+      GroupLinks: groupLinks,
+      Title: tr[currentGroup],
+      AlphaLinks: nil,
+      Pieces: pieces,
+      PageLinks: nil,
+    }
+    err := publishFile(tpl, catalogDir, catalogFile, catalogData)
+    if err != nil {
+      return err
+    }
+  }
+  return nil
 }
 
 func keyByOrg(piece cat.Piece) string {
@@ -91,35 +142,15 @@ func keyByOrg(piece cat.Piece) string {
 func publishByOrg(
   tpl *template.Template, pieces []cat.Piece, pc PublishCommand,
 ) error {
-  rootURL := "/catalog/origin"
-  origins := []string{
+  groupDir := filepath.Join(pc.PublicDir, "catalog", "origin")
+  groupURL := "/catalog/origin"
+  groups := []string{
     "ukrainian", "russian", "belarusian", "hungarian", "extra", "european",
   }
   piecesByOrg := groupPieces(pieces, keyByOrg)
+  sortGroups(piecesByOrg)
   piecesByOrg = pageGroups(piecesByOrg, pc.PageSize)
-  // publishGroups
-  for key, pieces := range piecesByOrg {
-    slc := strings.Split(key, "/")
-    org, catalogFile := slc[0], slc[1]
-    catalogDir := filepath.Join(pc.PublicDir, "catalog", "origin", org)
-    groupLinks := make([]Link, 0, len(origins))
-    for _, origin := range origins {
-      link := Link{filepath.Join(rootURL, origin, "1"), tr[origin]}
-      groupLinks = append(groupLinks, link)
-    }
-    catalogData := CatalogData{
-      GroupLinks: groupLinks,
-      Title: tr[org],
-      AlphaLinks: nil,
-      Pieces: pieces,
-      PageLinks: nil,
-    }
-    err := publishFile(tpl, catalogDir, catalogFile, catalogData)
-    if err != nil {
-      return err
-    }
-  }
-  return nil
+  return publishGroups(tpl, piecesByOrg, groups, groupDir, groupURL)
 }
 
 func keyBySty(piece cat.Piece) string {

@@ -27,7 +27,11 @@
 {{ define "body" }}
   <div>
     {{ range .GroupLinks }}
-      <a href="{{ .URL }}">{{ .Title }}</a>
+      {{ if .Disabled }}
+        <span>{{ .Title }}</span>
+      {{ else }}
+        <a href="{{ .URL }}">{{ .Title }}</a>
+      {{ end }}
     {{ end }}
   </div>
   <h2>{{ .Title }}</h2>
