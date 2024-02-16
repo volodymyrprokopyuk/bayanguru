@@ -1,7 +1,39 @@
+{{ define "meta" }}
+  <title>{{ .Title }}</title>
+  <meta name="description"
+        content="Sheet music library for bayan | Бібліотека нот для баяна. {{ .Title }}" />
+{{ end }}
+
+{{ define "piece" }}
+  <div>
+    <a href="/piece/{{ .File }}">
+      <span>{{ .Tit }}</span>
+    </a>
+    <span>{{ .Com }}</span>
+    <span>{{ .Art }} {{ .Arr }}</span>
+  </div>
+  <div>
+    <span>id: </span><span>{{ .ID }}</span>
+    <span>org: </span><span>{{ .Org }}</span>
+    <span>sty: </span><span>{{ .Sty }}</span>
+    <span>gnr: </span><span>{{ .Gnr }}</span>
+    <span>ton: </span><span>{{ .Ton | join ` ` }}</span>
+    <span>frm: </span><span>{{ .Frm | join ` ` }}</span>
+    <span>bss: </span><span>{{ .Bss | join ` ` }}</span>
+    <span>lvl: </span><span>{{ .Lvl }}</span>
+  </div>
+{{ end }}
+
 {{ define "body" }}
+  <div>
+    {{ range .GroupLinks }}
+      <a href="{{ .URL }}">{{ .Title }}</a>
+    {{ end }}
+  </div>
+  <h2>{{ .Title }}</h2>
   <ul>
     {{ range .Pieces }}
-      <li>{{ .Tit }}</li>
+      <li>{{ template "piece" . }}</li>
     {{ end }}
   </ul>
 {{ end }}
