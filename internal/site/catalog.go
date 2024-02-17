@@ -82,19 +82,27 @@ func sortGroups(groups PieceGroups) {
   }
 }
 
-var alphabet = strings.Split("АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЭЮЯ", "")
+func makeAlphabet() []string {
+  var alphabet = strings.Split("АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЭЮЯ", "")
+  slices.SortStableFunc(alphabet, func(a, b string) int {
+    return collator.CompareString(a, b)
+  })
+  return alphabet
+}
 
-func linkAlphaPieces(groups PieceGroups) {
-  startsWith := func(piece, target cat.Piece) int {
-    tit := keyTit(piece)
-    return collator.CompareString(string([]rune(tit)[0:1]), target.AlphaLink)
-  }
+var alphabet = makeAlphabet()
+
+func markAlphaPieces(groups PieceGroups) {
   for _, pieces := range groups {
+    i := 0
     for _, alpha := range alphabet {
-      target := cat.Piece{AlphaLink: alpha}
-      i, in := slices.BinarySearchFunc(pieces, target, startsWith)
-      if in {
-        pieces[i].AlphaLink = alpha
+      for j := i; j < len(pieces); j++ {
+        tit := keyTit(pieces[j])
+        if collator.CompareString(string([]rune(tit)[0:1]), alpha) == 0 {
+          pieces[j].AlphaLink = alpha
+          i = j + 1
+          break
+        }
       }
     }
   }
@@ -208,7 +216,7 @@ func publishByOrg(
   }
   piecesByOrg := groupPieces(pieces, keyByOrg)
   sortGroups(piecesByOrg)
-  linkAlphaPieces(piecesByOrg)
+  markAlphaPieces(piecesByOrg)
   piecesByOrg = pageGroups(piecesByOrg, pc.PageSize)
   return publishGroups(tpl, piecesByOrg, groups, groupDir, groupURL)
 }
