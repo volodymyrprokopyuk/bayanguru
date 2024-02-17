@@ -40,4 +40,13 @@
       <li>{{ template "piece" . }}</li>
     {{ end }}
   </ul>
+  <div>
+    {{ range .PageLinks }}
+      {{ if .Disabled }}
+        <span>{{ .Title }}</span>
+      {{ else }}
+        <a href="{{ .URL }}">{{ .Title }}</a>
+      {{ end }}
+    {{ end }}
+  </div>
 {{ end }}

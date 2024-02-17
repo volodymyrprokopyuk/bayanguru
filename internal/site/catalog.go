@@ -1,12 +1,16 @@
 package site
 
 import (
-  "fmt"
-  "strings"
-  "text/template"
-  "sort"
-  "path/filepath"
-  cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
+	"fmt"
+	"path/filepath"
+	"slices"
+	"strconv"
+	"strings"
+	"text/template"
+
+	cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
+	"golang.org/x/text/collate"
+	"golang.org/x/text/language"
 )
 
 var tr = map[string]string{
@@ -58,19 +62,21 @@ func pageGroups(groups PieceGroups, pageSize int) PieceGroups {
   return pagedGroups
 }
 
-func sortGroups(groups PieceGroups) {
-  keyTitStuCom := func(piece cat.Piece) string {
-    if piece.Gnr == "stu" {
-      com := []rune(piece.Com)
-      if len(com) > 3 {
-        return string(com[3:])
-      }
+func keyTitStuCom(piece cat.Piece) string {
+  if piece.Gnr == "stu" {
+    com := []rune(piece.Com)
+    if len(com) > 3 {
+      return string(com[3:])
     }
-    return piece.Tit
   }
+  return piece.Tit
+}
+
+func sortGroups(groups PieceGroups) {
+  collator := collate.New(language.Und)
   for _, pieces := range groups {
-    sort.Slice(pieces, func(i, j int) bool {
-      return keyTitStuCom(pieces[i]) < keyTitStuCom(pieces[j])
+    slices.SortStableFunc(pieces, func(a, b cat.Piece) int {
+      return collator.CompareString(keyTitStuCom(a), keyTitStuCom(b))
     })
   }
 }
@@ -88,31 +94,65 @@ type CatalogData struct {
   PageLinks []Link
 }
 
+func makeGroupLinks(groupNames []string, currentGroup, groupURL string) []Link {
+  links := make([]Link, 0, len(groupNames))
+  for _, groupName := range groupNames {
+    link := Link{
+      URL: filepath.Join(groupURL, groupName, "1"),
+      Title: tr[groupName],
+      Disabled: groupName == currentGroup,
+    }
+    links = append(links, link)
+  }
+  return links
+}
+
+func makePageLinks(
+  groups PieceGroups, currentGroup, currentPage, groupURL string,
+) []Link {
+  currPage, _ := strconv.Atoi(currentPage)
+  page := currPage - 2 // start page
+  if page < 1 {
+    page = 1
+  }
+  links := make([]Link, 0, 5)
+  for range 5 { // at most 5 pages
+    if _, in := groups[fmt.Sprintf("%v/%v", currentGroup, page)]; !in {
+      break
+    }
+    strPage := strconv.Itoa(page)
+    link := Link{
+      URL: filepath.Join(groupURL, currentGroup, strPage),
+      Title: strPage,
+      Disabled: page == currPage,
+    }
+    links = append(links, link)
+    page++
+  }
+  if len(links) == 1 {
+    return nil
+  }
+  return links
+}
+
 func publishGroups(
   tpl *template.Template, groups PieceGroups, groupNames []string,
   groupDir, groupURL string,
 ) error {
   for key, pieces := range groups {
     slc := strings.Split(key, "/")
-    currentGroup, catalogFile := slc[0], slc[1]
+    currentGroup, currentPage := slc[0], slc[1]
     catalogDir := filepath.Join(groupDir, currentGroup)
-    groupLinks := make([]Link, 0, len(groups))
-    for _, groupName := range groupNames {
-      link := Link{
-        URL: filepath.Join(groupURL, groupName, "1"),
-        Title: tr[groupName],
-        Disabled: groupName == currentGroup,
-      }
-      groupLinks = append(groupLinks, link)
-    }
+    groupLinks := makeGroupLinks(groupNames, currentGroup, groupURL)
+    pageLinks := makePageLinks(groups, currentGroup, currentPage, groupURL)
     catalogData := CatalogData{
       GroupLinks: groupLinks,
       Title: tr[currentGroup],
       AlphaLinks: nil,
       Pieces: pieces,
-      PageLinks: nil,
+      PageLinks: pageLinks,
     }
-    err := publishFile(tpl, catalogDir, catalogFile, catalogData)
+    err := publishFile(tpl, catalogDir, currentPage, catalogData)
     if err != nil {
       return err
     }
