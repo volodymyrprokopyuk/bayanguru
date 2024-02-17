@@ -75,6 +75,7 @@ type Piece struct {
   File string
   Meta bool
   RightHand, LeftHand string
+  AlphaLink string
 }
 
 type PieceMap map[string]Piece

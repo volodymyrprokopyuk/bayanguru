@@ -62,7 +62,7 @@ func pageGroups(groups PieceGroups, pageSize int) PieceGroups {
   return pagedGroups
 }
 
-func keyTitStuCom(piece cat.Piece) string {
+func keyTit(piece cat.Piece) string {
   if piece.Gnr == "stu" {
     com := []rune(piece.Com)
     if len(com) > 3 {
@@ -72,12 +72,31 @@ func keyTitStuCom(piece cat.Piece) string {
   return piece.Tit
 }
 
+var collator = collate.New(language.Und)
+
 func sortGroups(groups PieceGroups) {
-  collator := collate.New(language.Und)
   for _, pieces := range groups {
     slices.SortStableFunc(pieces, func(a, b cat.Piece) int {
-      return collator.CompareString(keyTitStuCom(a), keyTitStuCom(b))
+      return collator.CompareString(keyTit(a), keyTit(b))
     })
+  }
+}
+
+var alphabet = strings.Split("АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЭЮЯ", "")
+
+func linkAlphaPieces(groups PieceGroups) {
+  startsWith := func(piece, target cat.Piece) int {
+    tit := keyTit(piece)
+    return collator.CompareString(string([]rune(tit)[0:1]), target.AlphaLink)
+  }
+  for _, pieces := range groups {
+    for _, alpha := range alphabet {
+      target := cat.Piece{AlphaLink: alpha}
+      i, in := slices.BinarySearchFunc(pieces, target, startsWith)
+      if in {
+        pieces[i].AlphaLink = alpha
+      }
+    }
   }
 }
 
@@ -189,6 +208,7 @@ func publishByOrg(
   }
   piecesByOrg := groupPieces(pieces, keyByOrg)
   sortGroups(piecesByOrg)
+  linkAlphaPieces(piecesByOrg)
   piecesByOrg = pageGroups(piecesByOrg, pc.PageSize)
   return publishGroups(tpl, piecesByOrg, groups, groupDir, groupURL)
 }

@@ -5,22 +5,24 @@
 {{ end }}
 
 {{ define "piece" }}
-  <div>
-    <a href="/piece/{{ .File }}">
-      <span>{{ .Tit }}</span>
-    </a>
-    <span>{{ .Com }}</span>
-    <span>{{ .Art }} {{ .Arr }}</span>
-  </div>
-  <div>
-    <span>id: </span><span>{{ .ID }}</span>
-    <span>org: </span><span>{{ .Org }}</span>
-    <span>sty: </span><span>{{ .Sty }}</span>
-    <span>gnr: </span><span>{{ .Gnr }}</span>
-    <span>ton: </span><span>{{ .Ton | join ` ` }}</span>
-    <span>frm: </span><span>{{ .Frm | join ` ` }}</span>
-    <span>bss: </span><span>{{ .Bss | join ` ` }}</span>
-    <span>lvl: </span><span>{{ .Lvl }}</span>
+  <div {{ if .AlphaLink }} id="{{ .AlphaLink }}" {{ end }}>
+    <div>
+      <a href="/piece/{{ .File }}">
+        <span>{{ .Tit }}</span>
+      </a>
+      <span>{{ .Com }}</span>
+      <span>{{ .Art }} {{ .Arr }}</span>
+    </div>
+    <div>
+      <span>id: </span><span>{{ .ID }}</span>
+      <span>org: </span><span>{{ .Org }}</span>
+      <span>sty: </span><span>{{ .Sty }}</span>
+      <span>gnr: </span><span>{{ .Gnr }}</span>
+      <span>ton: </span><span>{{ .Ton | join ` ` }}</span>
+      <span>frm: </span><span>{{ .Frm | join ` ` }}</span>
+      <span>bss: </span><span>{{ .Bss | join ` ` }}</span>
+      <span>lvl: </span><span>{{ .Lvl }}</span>
+    </div>
   </div>
 {{ end }}
 
