@@ -224,7 +224,7 @@ pieces:
       org: ukr, sty: aut, gnr: vls, ton: [di, fj, dj], frm: in3, bss: stb, lvl: elb }
   - { id: stil, tit: Сусідка, sub: ukrfs,
       arr: М. Чайкін, src: B2AK1979,
-      org: ukr, sty: flk, gnr: sng, ton: [ai cj], frm: cr5, bss: stb, lvl: elb }
+      org: ukr, sty: flk, gnr: sng, ton: [ai, cj], frm: cr5, bss: stb, lvl: elb }
   - { id: nizv, tit: "Чом, чом не прийшов", sub: ukrfs,
       src: B2AK1979,
       org: ukr, sty: flk, gnr: sng, ton: ei, frm: var, bss: stb, lvl: elb }

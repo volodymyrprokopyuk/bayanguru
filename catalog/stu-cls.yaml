@@ -283,7 +283,7 @@ pieces:
       org: ukr, sty: aut, gnr: stu, ton: cj, frm: [scl, in3, tu3, fi1], bss: [stb, syn], lvl: elb }
   - { id: 1004, tit: Етюд C major,
       com: С. Чапкій, src: SB5NU1980,
-      org: ukr, sty: aut, gnr: stu, ton: [cj ai], frm: [arp, in6, fi1], bss: stb, lvl: elb }
+      org: ukr, sty: aut, gnr: stu, ton: [cj, ai], frm: [arp, in6, fi1], bss: stb, lvl: elb }
   - { id: slsw, tit: Етюд Fis major,
       com: П. Куликов, src: SB5NU1980,
       org: rus, sty: aut, gnr: stu, ton: fisj, frm: [scl, in3, fi1], bss: stb, lvl: elb }

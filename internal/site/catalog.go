@@ -256,7 +256,7 @@ func keyByOrg(piece cat.Piece) string {
     org = "belarusian"
   case "hun":
     org = "hungarian"
-  case "pol", "cze", "svk", "lva", "mda":
+  case "mda", "pol", "cze", "svk", "lva":
     org = "extra"
   case "aut", "deu", "dnk", "fra", "swe":
     org = "european"

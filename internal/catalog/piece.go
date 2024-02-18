@@ -201,6 +201,56 @@ func listCatalogFiles(catDir, catQuery string) ([]string, error) {
   return files, nil
 }
 
+var (
+  validID = regexp.MustCompile(`^[a-z0-9]{4}$`)
+  orgParts = []string{
+    `^ukr|rus|blr|hun|mda|pol|cze|svk|lva`,
+    `|aut|deu|dnk|fra|swe$`,
+  }
+  validOrg = regexp.MustCompile(strings.Join(orgParts, ""))
+  validSty = regexp.MustCompile(`^flk|aut|cls$`)
+  gnrParts = []string{
+    `^sng|chd|lul|mil|pry|rmc|ves`,
+    `|dnc|gop|koz|mrc|plk|tng|vls`,
+    `|pie|stu|gyp$`,
+  }
+  validGnr = regexp.MustCompile(strings.Join(gnrParts, ""))
+  validTon = regexp.MustCompile(`^[a-g](?:es|is)?[ij]$`)
+  validLvl = regexp.MustCompile(`^(?:el|in|pr|vi)[a-c]$`)
+)
+
+func validatePieces(pieces []Piece) error {
+  for _, piece := range pieces {
+    errors := make([]string, 0, 5)
+    if !validID.MatchString(piece.ID) {
+      errors = append(errors, fmt.Sprintf("* Invalid id %v", piece.ID))
+    }
+    if !validOrg.MatchString(piece.Org) {
+      errors = append(errors, fmt.Sprintf("* Invalid org %v", piece.Org))
+    }
+    if !validSty.MatchString(piece.Sty) {
+      errors = append(errors, fmt.Sprintf("* Invalid sty %v", piece.Sty))
+    }
+    if !validGnr.MatchString(piece.Gnr) {
+      errors = append(errors, fmt.Sprintf("* Invalid gnr %v", piece.Gnr))
+    }
+    for _, ton := range piece.Ton {
+      if !validTon.MatchString(ton) {
+        errors = append(errors, fmt.Sprintf("* Invalid ton %v", ton))
+      }
+    }
+    if !validLvl.MatchString(piece.Lvl) {
+      errors = append(errors, fmt.Sprintf("* Invalid lvl %v", piece.Lvl))
+    }
+    if len(errors) > 0 {
+      return fmt.Errorf(
+        "validation: piece %v\n%v", piece.ID, strings.Join(errors, "\n"),
+      )
+    }
+  }
+  return nil
+}
+
 func readCatalogFile(catDir, catFile string) ([]Piece, error) {
   file, err := os.Open(filepath.Join(catDir, catFile))
   if err != nil {
@@ -210,6 +260,10 @@ func readCatalogFile(catDir, catFile string) ([]Piece, error) {
   dec := yaml.NewDecoder(file)
   var pieces struct { Pieces []Piece `yaml:"pieces"` }
   err = dec.Decode(&pieces)
+  if err != nil {
+    return nil, err
+  }
+  err = validatePieces(pieces.Pieces)
   if err != nil {
     return nil, err
   }
