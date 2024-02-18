@@ -24,10 +24,9 @@ pieces:
   - { id: ct44, tit: Русская протяжная,
       com: Ю. Щуровський, src: FBBSC1978,
       org: rus, sty: aut, gnr: pie, ton: bi, frm: vo2, bss: [frb, jmp], lvl: elb }
-  # p. 111
-  # - { id: uvv4, tit: "Вниз по матушке, по Волге", sub: rusfs,
-  #     src: FBBSC1978,
-  #     org: rus, sty: flk, gnr: sng, ton: gi, frm: vo2, bss: [frb, in5], lvl: ela }
+  - { id: uvv4, tit: "Вниз по матушке, по Волге", sub: rusfs,
+      src: FBBSC1978,
+      org: rus, sty: flk, gnr: sng, ton: gi, frm: vo2, bss: [frb, in5], lvl: ela }
   # p. 115
   # - { id: 7nrq, tit: Вальс,
   #     com: А. Грибоедов, arr: С. Чапкій, src: FBBSC1978,
