@@ -4,10 +4,20 @@ import (
   "fmt"
   "regexp"
   "slices"
+  "path/filepath"
   "github.com/spf13/cobra"
   cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
   "github.com/volodymyrprokopyuk/bayan/internal/score"
   "github.com/volodymyrprokopyuk/bayan/internal/site"
+)
+
+var (
+  catalogDir = "catalog"
+  bookFile = "books.yaml"
+  sourceDir = "source"
+  pieceDir = "piece"
+  bookDir = "book"
+  siteDir = "site"
 )
 
 var validPat = regexp.MustCompile(`^\^?\pL[-\pL,]*[^,]$`)
@@ -95,8 +105,8 @@ bayan engrave all --lint --optimize --meta=f`,
     },
     RunE: func (cmd *cobra.Command, args []string) error {
       ec := score.EngraveCommand{
-        CatalogDir: "catalog", BookFile: "books.yaml",
-        SourceDir: "source", PieceDir: "piece", BookDir: "book",
+        CatalogDir: catalogDir, BookFile: bookFile,
+        SourceDir: sourceDir, PieceDir: pieceDir, BookDir: bookDir,
         Catalog: catalog,
         All: len(args) == 1 && args[0] == "all",
         Book: book, Piece: piece,
@@ -170,8 +180,8 @@ bayan play all --query... --random --list`,
     },
     RunE: func (cmd *cobra.Command, args []string) error {
       pc := cat.PlayCommand{
-        CatalogDir: "catalog", BookFile: "books.yaml",
-        PieceDir: "piece", BookDir: "book",
+        CatalogDir: catalogDir, BookFile: bookFile,
+        PieceDir: pieceDir, BookDir: bookDir,
         Catalog: catalog,
         All: len(args) == 1 && args[0] == "all",
         Book: book, Random: random, List: list,
@@ -231,15 +241,16 @@ bayan publish all --query...`,
     },
     RunE: func(cmd *cobra.Command, args []string) error {
       pc := site.PublishCommand{
-        CatalogDir: "catalog", BookFile: "books.yaml",
-        PieceDir: "piece", BookDir: "book",
+        CatalogDir: catalogDir, BookFile: bookFile,
+        PieceDir: pieceDir, BookDir: bookDir,
         Catalog: catalog,
         Init: init,
         All: len(args) == 1 && args[0] == "all",
         Book: book,
         Queries: make(map[string]string, 10),
-        SiteDir: "site", TemplateDir: "site/template",
-        PublicDir: "site/public",
+        SiteDir: siteDir,
+        TemplateDir: filepath.Join(siteDir, "template"),
+        PublicDir: filepath.Join(siteDir, "public"),
         PageSize: 24,
       }
       if !pc.All {
