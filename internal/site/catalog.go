@@ -1,16 +1,16 @@
 package site
 
 import (
-	"fmt"
-	"path/filepath"
-	"slices"
-	"strconv"
-	"strings"
-	"text/template"
+  "fmt"
+  "path/filepath"
+  "slices"
+  "strconv"
+  "strings"
+  "text/template"
 
-	cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
-	"golang.org/x/text/collate"
-	"golang.org/x/text/language"
+  cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
+  "golang.org/x/text/collate"
+  "golang.org/x/text/language"
 )
 
 var tr = map[string]string{
@@ -36,30 +36,6 @@ func groupPieces(
     groups[key] = append(groups[key], piece)
   }
   return groups
-}
-
-func pageGroups(groups PieceGroups, pageSize int) PieceGroups {
-  pagedGroups := make(PieceGroups, 200)
-  for key, group := range groups {
-    i := 1
-    if len(group) <= pageSize {
-      pagedGroups[fmt.Sprintf("%v/%v", key, i)] = group
-      continue
-    }
-    pieces := make([]cat.Piece, 0, pageSize)
-    for _, piece := range group {
-      pieces = append(pieces, piece)
-      if len(pieces) == pageSize {
-        pagedGroups[fmt.Sprintf("%v/%v", key, i)] = pieces
-        pieces = make([]cat.Piece, 0, pageSize)
-        i++
-      }
-    }
-    if len(pieces) > 0 {
-      pagedGroups[fmt.Sprintf("%v/%v", key, i)] = pieces
-    }
-  }
-  return pagedGroups
 }
 
 func keyTit(piece cat.Piece) string {
@@ -108,34 +84,97 @@ func markAlphaPieces(groups PieceGroups) {
   }
 }
 
+func pageGroups(groups PieceGroups, pageSize int) PieceGroups {
+  pagedGroups := make(PieceGroups, 200)
+  for key, group := range groups {
+    i := 1
+    if len(group) <= pageSize {
+      pagedGroups[fmt.Sprintf("%v/%v", key, i)] = group
+      continue
+    }
+    pieces := make([]cat.Piece, 0, pageSize)
+    for _, piece := range group {
+      pieces = append(pieces, piece)
+      if len(pieces) == pageSize {
+        pagedGroups[fmt.Sprintf("%v/%v", key, i)] = pieces
+        pieces = make([]cat.Piece, 0, pageSize)
+        i++
+      }
+    }
+    if len(pieces) > 0 {
+      pagedGroups[fmt.Sprintf("%v/%v", key, i)] = pieces
+    }
+  }
+  return pagedGroups
+}
+
 type Link struct{
   URL, Title string
   Disabled bool
 }
 
-type CatalogData struct {
-  GroupLinks []Link
-  Title string
-  AlphaLinks []Link
-  Pieces []cat.Piece
-  PageLinks []Link
+func makeGroupLinksMap(
+  groupNames []string, groupURL string,
+) map[string][]Link {
+  glMap := make(map[string][]Link, len(groupNames))
+  for _, currentGroup := range groupNames {
+    links := make([]Link, 0, len(groupNames))
+    for _, groupName := range groupNames {
+      link := Link{
+        URL: filepath.Join(groupURL, groupName, "1"),
+        Title: tr[groupName],
+        Disabled: groupName == currentGroup,
+      }
+      links = append(links, link)
+    }
+    glMap[currentGroup] = links
+  }
+  return glMap
 }
 
-func makeGroupLinks(groupNames []string, currentGroup, groupURL string) []Link {
-  links := make([]Link, 0, len(groupNames))
+func makeAlphaLinksMap(
+  groupPages PieceGroups, groupNames []string, groupURL string,
+) map[string][]Link {
+  alMap := make(map[string][]Link, len(groupNames))
   for _, groupName := range groupNames {
-    link := Link{
-      URL: filepath.Join(groupURL, groupName, "1"),
-      Title: tr[groupName],
-      Disabled: groupName == currentGroup,
+    alphaPage := make(map[string]string, len(alphabet))
+    page := 1
+    for {
+      key := fmt.Sprintf("%v/%v", groupName, page)
+      pieces, in := groupPages[key]
+      if !in {
+        break
+      }
+      for _, piece := range pieces {
+        if len(piece.AlphaLink) > 0 {
+          alphaPage[piece.AlphaLink] = key
+        }
+      }
+      page++
     }
-    links = append(links, link)
+    links := make([]Link, 0, len(alphabet))
+    for _, alpha := range alphabet {
+      var link Link
+      if key, in := alphaPage[alpha]; in {
+        link = Link{
+          URL: filepath.Join(groupURL, key + "#" + alpha),
+          Title: alpha,
+        }
+      } else {
+        link = Link{
+          Title: alpha,
+          Disabled: true,
+        }
+      }
+      links = append(links, link)
+    }
+    alMap[groupName] = links
   }
-  return links
+  return alMap
 }
 
 func makePageLinks(
-  groups PieceGroups, currentGroup, currentPage, groupURL string,
+  groupPages PieceGroups, currentGroup, currentPage, groupURL string,
 ) []Link {
   currPage, _ := strconv.Atoi(currentPage)
   page := currPage - 2 // start page
@@ -144,7 +183,7 @@ func makePageLinks(
   }
   links := make([]Link, 0, 5)
   for range 5 { // at most 5 pages
-    if _, in := groups[fmt.Sprintf("%v/%v", currentGroup, page)]; !in {
+    if _, in := groupPages[fmt.Sprintf("%v/%v", currentGroup, page)]; !in {
       break
     }
     strPage := strconv.Itoa(page)
@@ -162,20 +201,29 @@ func makePageLinks(
   return links
 }
 
-func publishGroups(
-  tpl *template.Template, groups PieceGroups, groupNames []string,
+type CatalogData struct {
+  GroupLinks []Link
+  Title string
+  AlphaLinks []Link
+  Pieces []cat.Piece
+  PageLinks []Link
+}
+
+func publishGroupPages(
+  tpl *template.Template, groupPages PieceGroups, groupNames []string,
   groupDir, groupURL string,
 ) error {
-  for key, pieces := range groups {
+  groupLinksMap := makeGroupLinksMap(groupNames, groupURL)
+  alphaLinksMap := makeAlphaLinksMap(groupPages, groupNames, groupURL)
+  for key, pieces := range groupPages {
     slc := strings.Split(key, "/")
     currentGroup, currentPage := slc[0], slc[1]
     catalogDir := filepath.Join(groupDir, currentGroup)
-    groupLinks := makeGroupLinks(groupNames, currentGroup, groupURL)
-    pageLinks := makePageLinks(groups, currentGroup, currentPage, groupURL)
+    pageLinks := makePageLinks(groupPages, currentGroup, currentPage, groupURL)
     catalogData := CatalogData{
-      GroupLinks: groupLinks,
+      GroupLinks: groupLinksMap[currentGroup],
       Title: tr[currentGroup],
-      AlphaLinks: nil,
+      AlphaLinks: alphaLinksMap[currentGroup],
       Pieces: pieces,
       PageLinks: pageLinks,
     }
@@ -211,14 +259,14 @@ func publishByOrg(
 ) error {
   groupDir := filepath.Join(pc.PublicDir, "catalog", "origin")
   groupURL := "/catalog/origin"
-  groups := []string{
+  groupNames := []string{
     "ukrainian", "russian", "belarusian", "hungarian", "extra", "european",
   }
   piecesByOrg := groupPieces(pieces, keyByOrg)
   sortGroups(piecesByOrg)
   markAlphaPieces(piecesByOrg)
-  piecesByOrg = pageGroups(piecesByOrg, pc.PageSize)
-  return publishGroups(tpl, piecesByOrg, groups, groupDir, groupURL)
+  pagesByOrg := pageGroups(piecesByOrg, pc.PageSize)
+  return publishGroupPages(tpl, pagesByOrg, groupNames, groupDir, groupURL)
 }
 
 func keyBySty(piece cat.Piece) string {

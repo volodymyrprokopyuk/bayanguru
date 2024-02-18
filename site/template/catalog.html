@@ -37,6 +37,15 @@
     {{ end }}
   </div>
   <h2>{{ .Title }}</h2>
+  <div>
+    {{ range .AlphaLinks }}
+      {{ if .Disabled }}
+        <span>{{ .Title }}</span>
+      {{ else }}
+        <a href="{{ .URL }}">{{ .Title }}</a>
+      {{ end }}
+    {{ end }}
+  </div>
   <ul>
     {{ range .Pieces }}
       <li>{{ template "piece" . }}</li>
