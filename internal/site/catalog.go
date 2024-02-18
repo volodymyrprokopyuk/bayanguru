@@ -38,6 +38,16 @@ func groupPieces(
   return groups
 }
 
+func validateGroups(groups PieceGroups, groupNames []string) error {
+  for key := range groups {
+    groupName := strings.Split(key, "/")[0]
+    if slices.Index(groupNames, groupName) == -1 {
+      return fmt.Errorf("cannot publish unknown group %v", groupName)
+    }
+  }
+  return nil
+}
+
 func keyTit(piece cat.Piece) string {
   if piece.Gnr == "stu" {
     com := []rune(piece.Com)
@@ -263,6 +273,10 @@ func publishByOrg(
     "ukrainian", "russian", "belarusian", "hungarian", "extra", "european",
   }
   piecesByOrg := groupPieces(pieces, keyByOrg)
+  err := validateGroups(piecesByOrg, groupNames)
+  if err != nil {
+    return err
+  }
   sortGroups(piecesByOrg)
   markAlphaPieces(piecesByOrg)
   pagesByOrg := pageGroups(piecesByOrg, pc.PageSize)

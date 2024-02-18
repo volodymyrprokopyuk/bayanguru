@@ -147,7 +147,7 @@ pieces:
       org: ukr, sty: aut, gnr: stu, ton: ai, frm: [in3, fi1, rep], bss: stb, lvl: elb }
   - { id: zbvy, tit: Етюд D minor,
       com: К. Мясков, src: SB3NU1979,
-      org: ukr, sty: aut, gnr: stu, ton: di, frm: [scl, fi5, syn], bss: stb, lvl: elb }
+      org: ukr, sty: aut, gnr: stu, ton: di, frm: [scl, syn, fi1, fi5], bss: stb, lvl: elb }
   - { id: zeeh, tit: Песня веретена,
       com: А. Гедике, src: SB3NU1979,
       org: rus, sty: aut, gnr: stu, ton: di, frm: [scl, tri], bss: [stb, pub, scl, tri], lvl: elb }
