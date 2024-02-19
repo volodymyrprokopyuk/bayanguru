@@ -23,7 +23,7 @@ pieces:
       org: rus, sty: aut, gnr: pie, ton: ai, frm: vo2, bss: [frb, cr5], lvl: ela }
   - { id: ct44, tit: Русская протяжная,
       com: Ю. Щуровський, src: FBBSC1978,
-      org: rus, sty: aut, gnr: pie, ton: bi, frm: vo2, bss: [frb, jmp], lvl: elb }
+      org: rus, sty: aut, gnr: pie, ton: bi, frm: [vo2, dot], bss: [frb, jmp], lvl: elb }
   - { id: uvv4, tit: "Вниз по матушке, по Волге", sub: rusfs,
       src: FBBSC1978,
       org: rus, sty: flk, gnr: sng, ton: gi, frm: vo2, bss: [frb, in5], lvl: ela }

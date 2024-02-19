@@ -133,6 +133,10 @@ pieces:
   - { id: tg2x, tit: Ходила младешенька по борочку, sub: rusfs,
       src: B2AK1987,
       org: rus, sty: flk, gnr: sng, ton: [cj, ai], frm: [var, cr5], bss: stb, lvl: elc }
+  # SB3NU1979
+  - { id: zeeh, tit: Песня веретена,
+      com: А. Гедике, src: SB3NU1979,
+      org: rus, sty: aut, gnr: pie, ton: [di, gi], frm: [in3, tri], bss: [stb, pub, scl, tri], lvl: elb }
 
   # Free bass
   # Class

@@ -339,3 +339,6 @@ pieces:
       arr: М. Різоль, src: FBB3BZ1982,
       org: ukr, sty: flk, gnr: koz, ton: [dj, gj], frm: [vo2, acc], bss: [frb,
       in3, cr7], lvl: elc }
+  - { id: u5b8, tit: Горобчик,
+      com: А. Тихончук, src: FBB3BZ1982,
+      org: ukr, sty: aut, gnr: pie, ton: cj, frm: [mel, tri], bss: frb, lvl: elb }

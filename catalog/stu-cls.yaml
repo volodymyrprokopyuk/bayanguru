@@ -148,9 +148,6 @@ pieces:
   - { id: zbvy, tit: Етюд D minor,
       com: К. Мясков, src: SB3NU1979,
       org: ukr, sty: aut, gnr: stu, ton: di, frm: [scl, syn, fi1, fi5], bss: stb, lvl: elb }
-  - { id: zeeh, tit: Песня веретена,
-      com: А. Гедике, src: SB3NU1979,
-      org: rus, sty: aut, gnr: stu, ton: [di, gi], frm: [scl, tri], bss: [stb, pub, scl, tri], lvl: elb }
   - { id: egr1, tit: Етюд F major,
       com: К. Черні, src: SB3NU1979,
       org: aut, sty: cls, gnr: stu, ton: fj, frm: [arp, tu3, acc], bss: [stb], lvl: elb }
@@ -344,6 +341,3 @@ pieces:
   - { id: f0py, tit: Етюд C major,
       com: М. Різоль, src: FBB3BZ1982,
       org: ukr, sty: aut, gnr: stu, ton: cj, frm: [scl, in3, in8, dot], bss: [frb, vo2], lvl: elb }
-  - { id: u5b8, tit: Горобчик,
-      com: А. Тихончук, src: FBB3BZ1982,
-      org: ukr, sty: aut, gnr: stu, ton: cj, frm: [arp, tri], bss: [frb, arp], lvl: elb }

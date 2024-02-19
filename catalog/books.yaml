@@ -35,7 +35,9 @@ books:
         # B2AK1979
         jlp4, jquj, soth, 2n32, 923n, zk1t, nvek, eq9y, xzce, e1d4, 1hva, arni,
         # B2AK1987
-        tsio, tg2x
+        tsio, tg2x,
+        # SB3NU1979
+        zeeh
       ] }
 
   # Tutorial
@@ -127,7 +129,7 @@ books:
         # SB2NU1977
         mp9o, x2ii, vupt, zvjv, vdul,
         # SB3NU1979
-        ey1v, yc2l, t0ai, a7ra, zbvy, jq25, zeeh, 4efu,
+        ey1v, yc2l, t0ai, a7ra, zbvy, jq25, 4efu,
         # SB4NU1978
         4uih, j5us, 4k6c, 8sl6, b5q1, i4g9, rru6,
         # SB5NU1980
@@ -184,7 +186,7 @@ books:
       pieces: [
         # Class
         # FBB3BZ1982
-        ltfu, z16r, jclp, ekrs, nr36, yeld, onbv, s2hf, x6ez,
+        ltfu, z16r, jclp, ekrs, nr36, yeld, onbv, s2hf, x6ez, u5b8,
         # School
         # FBBSC1978
         39bh, c2ql, axyx, 1k22, 8w4m, z6yg, mq61, a6rk, 3aac, nele
@@ -209,7 +211,7 @@ books:
       ] },
       { tit: Арпеджіо, pieces: [ # Arpeggio
         # FBB3BZ1982
-        47p1, u5b8,
+        47p1,
         # FBBSC1978
         kbmk, g2e5
       ] },
