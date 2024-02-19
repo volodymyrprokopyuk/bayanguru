@@ -212,39 +212,85 @@ var (
   gnrParts = []string{
     `^sng|chd|lul|mil|pry|rmc|ves`,
     `|dnc|gop|koz|mrc|plk|tng|vls`,
-    `|pie|stu|gyp$`,
+    `|pie|gyp|stu$`,
   }
   validGnr = regexp.MustCompile(strings.Join(gnrParts, ""))
   validTon = regexp.MustCompile(`^[a-g](?:es|is)?[ij]$`)
   validLvl = regexp.MustCompile(`^(?:el|in|pr|vi)[a-c]$`)
+  validFrm = []*regexp.Regexp{
+    regexp.MustCompile(`^stb|pub|frb$`),
+    regexp.MustCompile(`^mel|var$`),
+    regexp.MustCompile(`^scl|arp|in[3-8]|cr[57]|vo[23]$`),
+    regexp.MustCompile(`^tu[356]|dot|syn$`),
+    regexp.MustCompile(`^rep|tre|acc|mor|gru|tri|gli$`),
+    regexp.MustCompile(`^fi1|fi5|jmp$`),
+  }
 )
 
-func validatePieces(pieces []Piece) error {
+func validateFrm(frms []string, frmName string) string {
+  frmSeq := "bss, mel, scl, arp, int, crd, pph, prh, orn, wrs"
+  i, j := 0, 0
+  for {
+    if i == len(frms) {
+      return ""
+    }
+    if j == len(validFrm) && i < len(frms) {
+      return fmt.Sprintf(
+        "* Invalid %v order, expected %v,\n  got %v",
+        frmName, frmSeq, strings.Join(frms, " "),
+      )
+    }
+    frm, re := frms[i], validFrm[j]
+    if re.MatchString(frm) {
+      i++
+    } else {
+      j++
+    }
+  }
+}
+
+func validatePieces(pieces []Piece, catalogFile string) error {
   for _, piece := range pieces {
     errors := make([]string, 0, 5)
     if !validID.MatchString(piece.ID) {
-      errors = append(errors, fmt.Sprintf("* Invalid id %v", piece.ID))
+      errors = append(errors, fmt.Sprintf(
+        "* Invalid id, expected [a-z0-9]{4}, got %v", piece.ID),
+      )
     }
     if !validOrg.MatchString(piece.Org) {
-      errors = append(errors, fmt.Sprintf("* Invalid org %v", piece.Org))
+      errors = append(errors, fmt.Sprintf(
+        "* Invalid org, expected 3-letter country code, got %v", piece.Org),
+      )
     }
     if !validSty.MatchString(piece.Sty) {
-      errors = append(errors, fmt.Sprintf("* Invalid sty %v", piece.Sty))
+      errors = append(errors, fmt.Sprintf(
+        "* Invalid sty, expected flk, aut, cls, got %v", piece.Sty),
+      )
     }
     if !validGnr.MatchString(piece.Gnr) {
-      errors = append(errors, fmt.Sprintf("* Invalid gnr %v", piece.Gnr))
+      errors = append(errors, fmt.Sprintf(
+        "* Invalid gnr, expected sng, dnc, pie, stu, got %v", piece.Gnr),
+      )
     }
     for _, ton := range piece.Ton {
       if !validTon.MatchString(ton) {
-        errors = append(errors, fmt.Sprintf("* Invalid ton %v", ton))
+        errors = append(errors, fmt.Sprintf(
+          "* Invalid ton, expected [a-g](es|is)?[ij], got %v", ton),
+        )
       }
     }
     if !validLvl.MatchString(piece.Lvl) {
-      errors = append(errors, fmt.Sprintf("* Invalid lvl %v", piece.Lvl))
+      errors = append(errors, fmt.Sprintf(
+        "* Invalid lvl, expected (el|in|pr|vi)[a-c], got %v", piece.Lvl),
+      )
+    }
+    if error := validateFrm(piece.Frm, "frm"); len(error) > 0 {
+      errors = append(errors, error)
     }
     if len(errors) > 0 {
       return fmt.Errorf(
-        "validation: piece %v\n%v", piece.ID, strings.Join(errors, "\n"),
+        "validation: file %v, piece %v\n%v",
+        catalogFile, piece.ID, strings.Join(errors, "\n"),
       )
     }
   }
@@ -252,7 +298,8 @@ func validatePieces(pieces []Piece) error {
 }
 
 func readCatalogFile(catDir, catFile string) ([]Piece, error) {
-  file, err := os.Open(filepath.Join(catDir, catFile))
+  catalogFile := filepath.Join(catDir, catFile)
+  file, err := os.Open(catalogFile)
   if err != nil {
     return nil, err
   }
@@ -263,7 +310,7 @@ func readCatalogFile(catDir, catFile string) ([]Piece, error) {
   if err != nil {
     return nil, err
   }
-  err = validatePieces(pieces.Pieces)
+  err = validatePieces(pieces.Pieces, catalogFile)
   if err != nil {
     return nil, err
   }

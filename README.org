@@ -66,21 +66,19 @@ meta:
     hrm: Гарм. = гармонізація = harmonization
   # ** Piece classification
   sty: [mandatory, single] style = group of genres
-    msc: різне (default) = miscellaneous
     flk: фолькльор = folk
+    aut: авторська п'єса = author piece
     cls: класика = classical
     jaz: джаз = jazz
-    aut: авторська п'єса = author piece
   gnr: [mandatory, single] gengre = specification of a style
-    pie: п'єса (default) = piece
-    sng: пісня (group) = song
+    sng: пісня = song
       chd: дитяча пісня, п'єса = child
       lul: колискова = lullaby
       ves: веснянка
       pry: припевки, частушки
       rmc: романс = romance
       mil: військова = military
-    dnc: танець (group) = dance
+    dnc: танець = dance
       plk: полька = polka
       mzr: мазурка = mazurka
       koz: козачок
@@ -88,6 +86,7 @@ meta:
       vls: вальс = valse
       tng: танго = tango
       mrc: марш = march
+    pie: п'єса = piece
       gyp: циганська = gypsy
     stu: етюд = study
   # ** Piece qualification
@@ -96,7 +95,7 @@ meta:
     [a-g](is|es)i: дієз/бемоль мінор = sharp/flat minor
   frm: [mandatory, multiple] права рука = right hand
     mel: мелодія (default) = melody
-    var: варіації = variation
+      var: варіації = variation
     scl: гами = scales
     arp: арпеджіо = arpeggio
     int: інтервали = invervals
@@ -114,6 +113,7 @@ meta:
     prh: поліритмія = polyrithm
       tu3: тріолі = triplet
       tu5: квінтолі = quintuplet
+      tu6: секстолі = sextuplet
       dot: пунктирний ритм = dotted rhythm
       syn: синкопа = syncopation
     orn: мелізми = ornamentation
