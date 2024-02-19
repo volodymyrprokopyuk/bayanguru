@@ -11,13 +11,13 @@ pieces:
       org: rus, sty: aut, gnr: chd, ton: ai, frm: vo2, bss: frb, lvl: ela }
   - { id: 8rvx, tit: Ивушка, sub: rusfs,
       arr: С. Чапкій, src: FBBSC1978,
-      org: rus, sty: flk, gnr: sng, ton: ei, frm: [vo2, dot], bss: [frb, dot], lvl: ela }
+      org: rus, sty: flk, gnr: sng, ton: ei, frm: [vo2, dot], bss: frb, lvl: ela }
   - { id: pouc, tit: То не ветер ветку клонит, sub: rusfs,
       arr: С. Чапкій, src: FBBSC1978,
       org: rus, sty: flk, gnr: sng, ton: ei, frm: vo2, bss: frb, lvl: ela }
   - { id: tq21, tit: Утушка луговая, sub: rusfs,
       arr: С. Чапкій, src: FBBSC1978,
-      org: rus, sty: flk, gnr: sng, ton: ai, frm: vo2, bss: frb, lvl: ela }
+      org: rus, sty: flk, gnr: sng, ton: ai, frm: vo2, bss: [frb, jmp], lvl: ela }
   - { id: h64c, tit: Мелодия,
       com: К. Михайлов, src: FBBSC1978,
       org: rus, sty: aut, gnr: pie, ton: ai, frm: vo2, bss: [frb, cr5], lvl: ela }

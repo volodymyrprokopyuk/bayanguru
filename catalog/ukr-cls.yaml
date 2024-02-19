@@ -273,10 +273,10 @@ pieces:
       org: ukr, sty: flk, gnr: sng, ton: ei, frm: mel, bss: stb, lvl: elb }
   - { id: plh0, tit: Танець ляльки,
       com: І. Беркович, src: B2AK1987,
-      org: ukr, sty: aut, gnr: chd, ton: ai, frm: crd, bss: stb, lvl: elb }
+      org: ukr, sty: aut, gnr: chd, ton: ai, frm: [in3, cr5], bss: stb, lvl: elb }
   - { id: i11j, tit: Бджілка,
       com: К. Мясков, src: B2AK1987,
-      org: ukr, sty: aut, gnr: chd, ton: gj, frm: [mel, jpm, acc], bss: stb, lvl: elb }
+      org: ukr, sty: aut, gnr: chd, ton: gj, frm: [mel, acc, jmp], bss: stb, lvl: elb }
   - { id: 9hwt, tit: Танець,
       com: І. Беркович, src: B2AK1987,
       org: ukr, sty: aut, gnr: dnc, ton: [bi, dj], frm: mel, bss: stb, lvl: elb }
@@ -297,7 +297,7 @@ pieces:
       org: ukr, sty: flk, gnr: sng, ton: gj, frm: [var, in3, cr5], bss: [stb, pub], lvl: elc }
   - { id: btcu, tit: Полька,
       com: М. Глинка, src: B2AK1987,
-      org: ukr, sty: flk, gnr: plk, ton: cj, frm: [mel, jmp, acc], bss: stb, lvl: elb }
+      org: ukr, sty: flk, gnr: plk, ton: cj, frm: [mel, acc, jmp], bss: stb, lvl: elb }
   - { id: nev4, tit: Вербовая дощечка, sub: ukrfs,
       src: B2AK1987,
       org: ukr, sty: flk, gnr: sng, ton: ei, frm: [var, cr5, vo3], bss: [stb, pub], lvl: elc }
@@ -328,7 +328,7 @@ pieces:
       org: ukr, sty: aut, gnr: lul, ton: ai, frm: [vo2, cr5], bss: frb, lvl: ela }
   - { id: yeld, tit: Сумна пісенька,
       com: К. Мясков, src: FBB3BZ1982,
-      org: ukr, sty: aut, gnr: chd, ton: gi, frm: [vo2, syn], bss: [frb, jpm], lvl: elb }
+      org: ukr, sty: aut, gnr: chd, ton: gi, frm: [vo2, syn], bss: [frb, jmp], lvl: elb }
   - { id: onbv, tit: Пісня,
       com: І. Яшкевич, src: FBB3BZ1982,
       org: ukr, sty: aut, gnr: sng, ton: ai, frm: [vo2, cr5], bss: frb, lvl: ela }

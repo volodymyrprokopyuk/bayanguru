@@ -236,7 +236,7 @@ func validateFrm(frms []string, frmName string) string {
     }
     if j == len(validFrm) && i < len(frms) {
       return fmt.Sprintf(
-        "* Invalid %v order, expected %v,\n  got %v",
+        "* Unordered or invalid %v, expected %v,\n  got %v",
         frmName, frmSeq, strings.Join(frms, " "),
       )
     }
@@ -285,6 +285,9 @@ func validatePieces(pieces []Piece, catalogFile string) error {
       )
     }
     if error := validateFrm(piece.Frm, "frm"); len(error) > 0 {
+      errors = append(errors, error)
+    }
+    if error := validateFrm(piece.Bss, "bss"); len(error) > 0 {
       errors = append(errors, error)
     }
     if len(errors) > 0 {
