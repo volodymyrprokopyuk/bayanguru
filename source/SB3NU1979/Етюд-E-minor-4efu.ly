@@ -10,6 +10,7 @@
   \time 2/4
   {{ template "t2" (w `b'='8(-\mf a) g` `g a b`) }}
   {{ template "t2" (w `c=''8( fis,) fis` `fis g a`) }}
+  \omit TupletNumber
   {{ template "t2" (w `a='8( fis) fis` `fis g a`) }}
   {{ template "t2" (w `b='8( e,) e` `e g b`) }}
   {{ template "t2" (w `d=''8(_\dCre c) b` `b c d`) }}
