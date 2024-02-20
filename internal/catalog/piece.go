@@ -201,6 +201,14 @@ func listCatalogFiles(catDir, catQuery string) ([]string, error) {
   return files, nil
 }
 
+func reCompile(reParts []string) []*regexp.Regexp {
+  res := make([]*regexp.Regexp, 0, len(reParts))
+  for _, re := range reParts {
+    res = append(res, regexp.MustCompile(re))
+  }
+  return res
+}
+
 var (
   validID = regexp.MustCompile(`^[a-z0-9]{4}$`)
   orgParts = []string{
@@ -217,14 +225,15 @@ var (
   validGnr = regexp.MustCompile(strings.Join(gnrParts, ""))
   validTon = regexp.MustCompile(`^[a-g](?:es|is)?[ij]$`)
   validLvl = regexp.MustCompile(`^(?:el|in|pr|vi)[a-c]$`)
-  validFrm = []*regexp.Regexp{
-    regexp.MustCompile(`^stb|pub|frb$`),
-    regexp.MustCompile(`^mel|var$`),
-    regexp.MustCompile(`^scl|arp|in[3-8]|cr[57]|vo[23]$`),
-    regexp.MustCompile(`^tu[356]|dot|syn$`),
-    regexp.MustCompile(`^rep|tre|acc|mor|gru|tri|gli$`),
-    regexp.MustCompile(`^fi1|fi5|jmp$`),
+  frmParts = []string{
+    `^stb|pub|frb$`,
+    `^mel|var$`,
+    `^scl|arp|in[3-8]|cr[57]|vo[23]$`,
+    `^tu[356]|dot|syn$`,
+    `^rep|tre|acc|mor|gru|tri|gli$`,
+    `^fi1|fi5|jmp$`,
   }
+  validFrm = reCompile(frmParts)
 )
 
 func validateFrm(frms []string, frmName string) string {
