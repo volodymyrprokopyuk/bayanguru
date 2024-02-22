@@ -7,10 +7,12 @@
 {{ end }}
 
 {{ define "rh1" }}
+  \omit TupletBracket
   {{ template "t2" (w .a `a b a` `g8)-.`) }}
   {{ template "t2" (w `d'=''16( e d` `c d c` `b8)-.`) }} |
   {{ template "t3" (w `b'=''16(\> c b` `a b a` `g a g`) }}
   {{ template "t3" (w `fis=''16 g fis` `e fis e` `d e \af 32.\! d`) }} |
+  \omit TupletNumber
   {{ template "t2" (w `c=''16 d c` `b c b` `a8)-.`) }}
   {{ template "t2" (w `fis'=''16( g fis` `e fis e` `d8)-.`) }} |
   {{ template "t3" (w `c'='''16( d c` `b c b` `a b a`) }}
