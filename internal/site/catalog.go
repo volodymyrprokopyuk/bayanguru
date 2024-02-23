@@ -30,7 +30,7 @@ func groupPieces(
   groups := make(PieceGroups, 20)
   for _, piece := range pieces {
     key := pieceKey(piece)
-    if _, in := groups[key]; !in {
+    if _, exists := groups[key]; !exists {
       groups[key] = make([]cat.Piece, 0, 300)
     }
     groups[key] = append(groups[key], piece)
@@ -151,8 +151,8 @@ func makeAlphaLinksMap(
     page := 1
     for {
       key := fmt.Sprintf("%v/%v", groupName, page)
-      pieces, in := groupPages[key]
-      if !in {
+      pieces, exists := groupPages[key]
+      if !exists {
         break
       }
       for _, piece := range pieces {
@@ -165,7 +165,7 @@ func makeAlphaLinksMap(
     links := make([]Link, 0, len(alphabet))
     for _, alpha := range alphabet {
       var link Link
-      if key, in := alphaPage[alpha]; in {
+      if key, exists := alphaPage[alpha]; exists {
         link = Link{
           URL: filepath.Join(groupURL, key + "#" + alpha),
           Title: alpha,
@@ -193,7 +193,8 @@ func makePageLinks(
   }
   links := make([]Link, 0, 5)
   for range 5 { // at most 5 pages
-    if _, in := groupPages[fmt.Sprintf("%v/%v", currentGroup, page)]; !in {
+    key := fmt.Sprintf("%v/%v", currentGroup, page)
+    if _, exists := groupPages[key]; !exists {
       break
     }
     strPage := strconv.Itoa(page)

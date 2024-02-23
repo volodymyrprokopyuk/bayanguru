@@ -333,7 +333,7 @@ func addMetaToPieces(pieces []Piece) {
   for i := range pieces {
     piece := &pieces[i]
     // sub
-    if sub, in := meta[piece.Sub]; in {
+    if sub, exists := meta[piece.Sub]; exists {
       piece.Sub = sub
     }
     // art

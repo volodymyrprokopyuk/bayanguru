@@ -59,7 +59,7 @@ func selectRawBooks(rawBooks []RawBook, bookIDs []string) ([]RawBook, error) {
   }
   selRawBooks := make([]RawBook, 0, 50)
   for _, bookID := range bookIDs {
-    if rawBook, in := rawBookMap[bookID]; in {
+    if rawBook, exists := rawBookMap[bookID]; exists {
       selRawBooks = append(selRawBooks, rawBook)
     } else {
       return nil, fmt.Errorf("invalid book %v", bookID)
