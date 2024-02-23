@@ -1,5 +1,5 @@
 {{ define "rh1" }}
-  {{ .a }} bes b c d c e \af 16\! f g\> f a g f e d \af 16\! c=' |
+  {{ .a }} b c d c e \af 16\! f g\> f a g f e d \af 16\! c=' |
 {{ end }}
 
 {{ define "rh2" }}
@@ -13,11 +13,11 @@
   \key f \major
   \time 4/4
   \repeat volta 2 {
-    {{ template "rh1" (w `a=16\pp\<_\aSta`) }}
-    {{ template "rh1" (w `a=16\<`) }}
+    {{ template "rh1" (w `a=16\pp\< bes_\aSta`) }}
+    {{ template "rh1" (w `a=16\< bes`) }}
     bes=16\< c e g b c g c, bes c e g b c g \af 16\! c, |
     a=16\> c f a b c gis a e f b, c a c bes \af 16\! d |
-    \rep 2 { {{ template "rh1" (w `a=16\<`) }} | }
+    \rep 2 { {{ template "rh1" (w `a=16\< bes`) }} | }
     ais=16\< b cis d fis g ais b cis d fis g ais b cis \af 16\! d |
     e='''16\> f d b g f d b c c' c, \af 16\! c,=' r4 |
   }
@@ -44,7 +44,7 @@
   f,=,8-\stBass r fM! r \rep 3 { f=,8 r fM r } |
   c'=8 r c7! r c r c7 r | f, r fM! r r2 |
   f=,8 r fM! r \rep 3 { f=,8 r fM r } |
-  g=,8 r g7! r g r g7 r | g r g7 r c+cM! r c= r |
+  g=,8 r g7! r g r g7 r | g r g7! r c+cM! r c= r |
 
   aes=,8 r aesM! r aes r aesM r | bes r ees@7! r8 bes r ees@7 r8 |
   ees=8 r ees7! r ees r ees7 r | aes, r aesM! r aes r aesM r |
