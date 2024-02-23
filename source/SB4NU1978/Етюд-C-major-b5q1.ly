@@ -17,7 +17,7 @@
     {{ template "t1" (w `c''=''1\(\p` `b16( c` `d2)\)`) }} r2 |
     {{ template "t1" (w `d=''1\(` `c16( d` `e2)\)`) }} r8 g,\( c e |
     \af 4. { \markupInsideSlur <>^\markup \dTurn \sharp } %
-    g=''2 a8 g f e | \acc { f=''8 } e d d4 \acc { e=''8 } d'4. c8\) |
+    g=''2 c8 g f e | \acc { f=''8 } e d d4 \acc { e=''8 } d'4. c8\) |
     b=''2\( \trill \acc { a=''16 b } d8 c a fis |
     a=''2-> \acc { gis=''16 a b a } g8\) fis( f d='') |
   }
