@@ -31,10 +31,19 @@
     {{ template "rh2a" (w `d=''8`) }}
     {{ template "rh3a" }} | g~ g16( d fis g) |
     {{ template "rh3a" }} | g=''2 |
+
+    bes,='8 \rest d,='8 g( bes | a4) g8-- g-- | a( bes a4) | <bes, g'>2 |
+    d='4 g8( bes | a4) g8-- g-- | a( bes a4) | <bes, g'>2 |
+    \rep 2 { a'='4-- g8-- g='-- | } a( bes <fis a>4) | g~ g8( bes) |
+    \rep 2 { \acc { bes='8 } a='4( g8) g=' | }
+    a='8( bes) \acc { bes='8 } <fis a>4 | <g,= g'>2 |
   } {
     {{ template "rh2b" (w `d''=''8~`) }} | bes8. r16 r4 |
     {{ template "rh2b" (w `d=''8~`) }} | bes4~ bes16 r r8 |
     \rep 2 { a='2 | a | d4( c) | bes='8. r16 r4 | }
+
+    s4 bes,=8 d | cis2 | c | s2 | r8 bes4 d8 | cis2 | c | s2 |
+    <g= cis>2~\f | 2 | c | bes4( <bes d>) | <g cis>2~ | 2 | c | r4 d='4 |
   }
 }
 {{ end }}
