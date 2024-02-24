@@ -45,6 +45,19 @@
     s4 bes,=8 d | cis2 | c | s2 | r8 bes4 d8 | cis2 | c | s2 |
     <g= cis>2~\f | 2 | c | bes4( <bes d>) | <g cis>2~ | 2 | c | r4 d='4 |
   }
+
+  r8\mf\< <a=' c d>8-- r \af 8\! <bes d g>-- |
+  r8\> <c='' d fis>8-- r \af 8\! <bes d g>-- |
+  r4\< r8 \af 8\! <c='' d fis a>8-- |
+  r8\> <d='' g bes>8[ <bes d g> \af 8\! <g bes d>] |
+  r8\p <a=' c d>8[ <bes d g> <d g bes>] | r <g, cis ees a> r <bes d g> |
+  r4 r8 <c='' d fis a>8 | r <d g bes>[ <bes d g> <d='' g bes>] |
+
+  \duo {
+    a''=''4( g8) g | a4( g8) g, | a( bes a4 | g4.) g8 |
+    \acc { bes'=''8 } a=''4( g8) g | a4(^\tRit g8) g, |
+    a='8(^\tATem bes a4 | g)\pp \stemDown <bes=' d g> \bar "|."
+  } { \rep 2 { <g'=' cis>2~ | 4. g8( | g4) fis=' | s2 | } | }
 }
 {{ end }}
 
