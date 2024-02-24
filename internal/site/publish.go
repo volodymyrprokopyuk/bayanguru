@@ -141,6 +141,10 @@ func indexPieces(siteDir, publicDir string) error {
   return pfCmd.Run()
 }
 
+func catError(format string, args ...any) error {
+  return fmt.Errorf("catalog: " + format, args...)
+}
+
 func siteError(format string, args ...any) error {
   return fmt.Errorf("site: " + format, args...)
 }
@@ -151,12 +155,12 @@ func Publish(pc PublishCommand) error {
   //   pc.BookFile, pc.Books, pc.Book, pc.All,
   // )
   // if err != nil {
-  //   return cat.CatError("%v", err)
+  //   return catError("%v", err)
   // }
   // if len(pc.Queries) > 0 {
   //   pieces, err = cat.QueryPieces(pieces, pc.Queries)
   //   if err != nil {
-  //     return cat.CatError("%v", err)
+  //     return catError("%v", err)
   //   }
   // }
   // cat.PrintStat(catLen, len(pieces))

@@ -95,7 +95,7 @@ func ReadPiecesAndBooks(
   return pieces, nil, len(pieceMap), nil
 }
 
-func CatError(format string, args ...any) error {
+func catError(format string, args ...any) error {
   return fmt.Errorf("catalog: " + format, args...)
 }
 
@@ -105,12 +105,12 @@ func Play(pc PlayCommand) error {
     pc.BookFile, pc.Books, pc.Book, pc.All,
   )
   if err != nil {
-    return CatError("%v", err)
+    return catError("%v", err)
   }
   if len(pc.Queries) > 0 {
     pieces, err = QueryPieces(pieces, pc.Queries)
     if err != nil {
-      return CatError("%v", err)
+      return catError("%v", err)
     }
   }
   PrintStat(catLen, len(pieces))
@@ -121,7 +121,7 @@ func Play(pc PlayCommand) error {
     if !pc.List {
       err := openPiece(pc.PieceDir, piece)
       if err != nil {
-        return CatError("%v", err)
+        return catError("%v", err)
       }
     }
   }
