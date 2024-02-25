@@ -74,9 +74,7 @@ func ReadPiecesAndBooks(
     }
     pieces := make([]Piece, 0, 1000)
     for _, book := range books {
-      for _, piece := range book.Pieces {
-        pieces = append(pieces, piece)
-      }
+      pieces = append(pieces, book.Pieces...)
     }
     return pieces, books, len(pieceMap), nil
   }

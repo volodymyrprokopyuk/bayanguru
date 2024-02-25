@@ -86,7 +86,7 @@ catalog metadata. Bayan publishes high quality PDF pieces on the web`,
 `bayan engrave [-c catalog] pieces... [--init]
 bayan engrave [-c catalog] -b books... [--piece]
 bayan engrave all --lint --optimize --meta=f`,
-    Args: func(cmd *cobra.Command, args []string) error {
+    Args: func(_ *cobra.Command, args []string) error {
       err := validateReq(catalog, args)
       if err != nil {
         return cmdError("%v", err)
@@ -103,7 +103,7 @@ bayan engrave all --lint --optimize --meta=f`,
       }
       return nil
     },
-    RunE: func (cmd *cobra.Command, args []string) error {
+    RunE: func (_ *cobra.Command, args []string) error {
       ec := score.EngraveCommand{
         CatalogDir: catalogDir, BookFile: bookFile,
         SourceDir: sourceDir, PieceDir: pieceDir, BookDir: bookDir,
@@ -167,7 +167,7 @@ bayan engrave all --lint --optimize --meta=f`,
 `bayan play [-c catalog] pieces...
 bayan play [-c catalog] -b books... [--query...]
 bayan play all --query... --random --list`,
-    Args: func(cmd *cobra.Command, args []string) error {
+    Args: func(_ *cobra.Command, args []string) error {
       err := validateReq(catalog, args)
       if err != nil {
         return cmdError("%v", err)
@@ -178,7 +178,7 @@ bayan play all --query... --random --list`,
       }
       return nil
     },
-    RunE: func (cmd *cobra.Command, args []string) error {
+    RunE: func (_ *cobra.Command, args []string) error {
       pc := cat.PlayCommand{
         CatalogDir: catalogDir, BookFile: bookFile,
         PieceDir: pieceDir, BookDir: bookDir,
@@ -228,7 +228,7 @@ a web site`,
 `bayan publish [-c catalog] pieces...
 bayan publish [-c catalog] -b books... [--query]
 bayan publish all --query...`,
-    Args: func(cmd *cobra.Command, args []string) error {
+    Args: func(_ *cobra.Command, args []string) error {
       err := validateReq(catalog, args)
       if err != nil {
         return cmdError("%v", err)
@@ -239,7 +239,7 @@ bayan publish all --query...`,
       }
       return nil
     },
-    RunE: func(cmd *cobra.Command, args []string) error {
+    RunE: func(_ *cobra.Command, args []string) error {
       pc := site.PublishCommand{
         CatalogDir: catalogDir, BookFile: bookFile,
         PieceDir: pieceDir, BookDir: bookDir,

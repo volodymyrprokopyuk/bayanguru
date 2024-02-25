@@ -93,9 +93,8 @@ func makeMatchStr(pattern string) (MatchStr, error) {
   match := func(str string) bool {
     if isNeg {
       return !re.MatchString(str)
-    } else {
-      return re.MatchString(str)
     }
+    return re.MatchString(str)
   }
   return match, nil
 }
@@ -293,11 +292,11 @@ func validatePieces(pieces []Piece, catalogFile string) error {
         "* Invalid lvl, expected (el|in|pr|vi)[a-c], got %v", piece.Lvl),
       )
     }
-    if error := validateFrm(piece.Frm, "frm"); len(error) > 0 {
-      errors = append(errors, error)
+    if err := validateFrm(piece.Frm, "frm"); len(err) > 0 {
+      errors = append(errors, err)
     }
-    if error := validateFrm(piece.Bss, "bss"); len(error) > 0 {
-      errors = append(errors, error)
+    if err := validateFrm(piece.Bss, "bss"); len(err) > 0 {
+      errors = append(errors, err)
     }
     if len(errors) > 0 {
       return fmt.Errorf(

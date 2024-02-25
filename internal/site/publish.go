@@ -130,7 +130,9 @@ func indexPieces(siteDir, publicDir string) error {
   if err != nil {
     return err
   }
-  defer os.Chdir(cwd)
+  defer func() {
+    _ = os.Chdir(cwd)
+  }()
   fmt.Printf(
     "%v %v\n", sty.Org("index"), sty.Lvl(filepath.Join(publicDir, "piece")),
   )

@@ -236,9 +236,7 @@ func engravePieces(pieces []cat.Piece, ec EngraveCommand) error {
   engPieces, engErrors := make(chan cat.Piece), make(chan error)
   for i := 0; i < min(len(pieces), runtime.GOMAXPROCS(0)); i++ {
     wg.Add(1)
-    go receiveAndEngravePieces(
-      ctx, &wg, engPieces, engErrors, &tplPool, ec,
-    )
+    go receiveAndEngravePieces(ctx, &wg, engPieces, engErrors, &tplPool, ec)
   }
   wg.Add(1)
   go func() {
@@ -253,12 +251,9 @@ func engravePieces(pieces []cat.Piece, ec EngraveCommand) error {
     close(engPieces)
   }()
   go func() {
-    for {
-      select {
-      case err = <- engErrors:
-        cancel()
-        return
-      }
+    for err = range engErrors {
+      cancel()
+      return
     }
   }()
   wg.Wait()

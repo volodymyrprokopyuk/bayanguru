@@ -108,9 +108,7 @@ func engraveBooks(books []cat.Book, ec EngraveCommand) error {
   engBooks, engErrors := make(chan cat.Book), make(chan error)
   for i := 0; i < min(len(books), runtime.GOMAXPROCS(0)); i++ {
     wg.Add(1)
-    go receiveAndEngraveBooks(
-      ctx, &wg, engBooks, engErrors, &tplPool, ec,
-    )
+    go receiveAndEngraveBooks(ctx, &wg, engBooks, engErrors, &tplPool, ec)
   }
   wg.Add(1)
   go func() {
@@ -125,12 +123,9 @@ func engraveBooks(books []cat.Book, ec EngraveCommand) error {
     close(engBooks)
   }()
   go func() {
-    for {
-      select {
-      case err = <- engErrors:
-        cancel()
-        return
-      }
+    for err = range engErrors {
+      cancel()
+      return
     }
   }()
   wg.Wait()
