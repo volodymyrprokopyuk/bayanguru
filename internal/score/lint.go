@@ -20,6 +20,7 @@ type Line struct {
 var excludeParts = []string{
   `^{{ define "\w+" }}$`,
   `^{{ end }}$`,
+  `^\\accidentalStyle [-\w]+$`,
   `^\\relative {$|^}$`,
   `^ +{{ template "\w+" }}$`,
   `^ +\\tempo (?:\w+|"[^"]+")$`,

@@ -16,19 +16,16 @@
 {{ end }}
 
 {{ define "lh1" }}
-  r8 {{ .a }} g8) | r a4( g8) | r {{ .b }} g8) | r d'4( g,=8) |
-{{ end }}
-
-{{ define "lh2" }}
   r16 {{ .a }} bes g bes ees bes g) | r e'( a, g a e' a, g) |
   r16 ees'=''16( a, g) r d'( a fis=') |
 {{ end }}
 
-{{ define "lh3b" }}
+{{ define "lh2b" }}
   r8 g=,8 r g | r g[ g g] | r g r g=, |
 {{ end }}
 
 {{ define "rightHand" }}
+\accidentalStyle modern
 \relative {
   \tempo Moderato
   \clef treble
@@ -75,25 +72,26 @@
 {{ end }}
 
 {{ define "leftHand" }}
+\accidentalStyle modern
 \relative {
   \clef bass
   \key g \minor
-  {{ template "lh1" (w `bes=4(-\frBass` `c4(`) }}
-  {{ template "lh1" (w `bes=4(` `cis4(`) }}
+  r8 bes=4(-\frBass g8) | r c4( g8) | r ees'4( g,8) | r d'4( g,8) |
+  r8 bes=4( g8) | r cis4( g8) | r e'4( g,8) | r d'4( g,8) |
   \duo {
-    r8 e'='4.~ | e8 ees4.~ | ees8 d~ d4 | bes8 d~ d4 |
+    r8 e'='4.(~ | e8 ees4.~ | ees8 d~ d4 | bes8) d~ d4 |
     r8 <bes= cis>4( a8) | r <a c>4( g8) |
     r8 fis=8[( c' d]) | r d[ bes( <bes= d>]) |
   } {
-    \rep 2 { r8 <g= a>8 r8 8 | } r4 <fis a>8 d | g4~ g8 f |
+    \rep 2 { r8 <g= a>8-. r8 8-. | } r4 <fis a>8 d | g4~ <g bes>8 f |
     e=4. r8 | ees4. r8 | d2 | g= |
   }
 
   \clef treble
-  {{ template "lh2" (w `ees''=''16(`) }} | r d'( g, a g a bes c) |
-  {{ template "lh2" (w `ees=''16(`) }} | r d'( g, fis g d' g, f) |
+  {{ template "lh1" (w `ees''=''16(`) }} | r d'( g, a g a bes c) |
+  {{ template "lh1" (w `ees=''16(`) }} | r d'( g, fis g d' g, f) |
   r16 cis'=''16( g e g cis g e) | r c'( g ees g c g ees) |
-  r16 c'=''16( fis, d fis a fis d) | r fis( g a bes8) r |
+  r16 c'=''16( fis, d fis a fis d) | r fis_( g a bes8) r |
   r16 cis=''16( g e cis e g cis) | r c( g ees c ees g c) |
   r16 c=''16( fis, d fis a fis d) | r a'( g d=' \clef bass a= bes a g=) |
 
@@ -101,8 +99,8 @@
     d=2 | e~ | e8 ees~ ees4~ | ees8 d~ d4 |
     r8 f=4.~ | f8 e4.~ | e8 ees~ ees4~ | ees8 d=4. |
   } {
-   g,=,8 r g g | {{ template "lh3b" }}
-   r8 g=,8 r g | {{ template "lh3b" }}
+    g,=,8 r g g | {{ template "lh2b" }}
+    r8 g=,8 r g | {{ template "lh2b" }}
   }
   \rep 2 { e,=,2( | ees) | d( | <g,=,, g'>) | }
 
