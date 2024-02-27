@@ -44,6 +44,12 @@ var catGroups = map[string][]string{
   "genre": {
     "song", "dance", "piece",
   },
+  "study-stb": {
+    "scale", "arpeggio", "interval", "chord", "polyphony", "left-hand",
+  },
+  "study-frb": {
+    "scale", "arpeggio", "interval", "chord", "polyphony",
+  },
   "composer": {
     "composer", "no-composer",
   },

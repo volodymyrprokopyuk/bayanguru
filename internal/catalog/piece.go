@@ -396,7 +396,7 @@ func Bss(bss []string, ID string) string {
   panic(err)
 }
 
-var studyType = regexp.MustCompile(`^(scl|arp|in|cr|vo|pub)\d?$`)
+var studyType = regexp.MustCompile(`^(scl|arp|in|cr|vo)\d?$`)
 
 func Stu(frmOrBss []string, ID string) string {
   for _, s := range frmOrBss {
@@ -414,7 +414,7 @@ func Stu(frmOrBss []string, ID string) string {
     }
   }
   err := fmt.Sprintf(
-    "catalog: piece %v missing study type, expected: scl, arp, in, cr, vo, pub",
+    "catalog: piece %v missing study type, expected: scl, arp, in, cr, vo",
     ID,
   )
   panic(err)

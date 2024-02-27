@@ -25,10 +25,17 @@ var tr = map[string]string{
   "folk": "Folk | Фолькльор",
   "author": "Author | Авторська п'єса",
   "classic": "Classic | Класика",
-  // rng
+  // gnr
   "song": "Song | Пісня",
   "dance": "Dance | Танець",
   "piece": "Piece | П'єса",
+  // stu
+  "scale": "Scale | Гами",
+  "arpeggio": "Arpeggio | Арпеджіо",
+  "interval": "Interval | Інтревали",
+  "chord": "Chord | Акорди",
+  "polyphony": "Polyphony | Поліфонія",
+  "left-hand": "Left hand | Ліва рука",
   // com
   "composer": "Composer | Композитор",
   "no-composer": "No composer | Без композитора",
@@ -338,18 +345,6 @@ func keyBySty(piece cat.Piece) string {
 }
 
 func keyByGnr(piece cat.Piece) string {
-  // if gnr == "stu" {
-  //   bss := cat.Bss(piece.Bss, piece.ID)
-  //   var stu string
-  //   if bss == "stb" {
-  //     stu = cat.Stu(piece.Frm, piece.ID)
-  //   } else if bss == "pub" {
-  //     stu = "lft"
-  //   } else {
-  //     stu = cat.Stu(piece.Bss, piece.ID)
-  //   }
-  //   return fmt.Sprintf("%v-%v", gnr, stu)
-  // }
   switch piece.Gnr {
   case "sng", "chd", "lul", "mil", "pry", "rmc", "ves":
     return "song"
@@ -359,6 +354,36 @@ func keyByGnr(piece cat.Piece) string {
     return "piece"
   default:
     return piece.Gnr
+  }
+}
+
+func keyByStu(piece cat.Piece) string {
+  var frm string
+  switch cat.Bss(piece.Bss, piece.ID) {
+  case "stb":
+    frm = cat.Stu(piece.Frm, piece.ID)
+  case "pub":
+    frm = "lft"
+  case "frb":
+    frm = cat.Stu(piece.Bss, piece.ID)
+  default:
+    frm = "unknown"
+  }
+  switch frm {
+  case "scl":
+    return "scale"
+  case "arp":
+    return "arpeggio"
+  case "int":
+    return "interval"
+  case "crd":
+    return "chord"
+  case "pph":
+    return "polyphony"
+  case "lft":
+    return "left-hand"
+  default:
+    return frm
   }
 }
 
@@ -429,14 +454,27 @@ func publishCatalog(tpl *template.Template, pc PublishCommand) error {
     return err
   }
 
-  // stuStbPieces := filterPieces(pieces, func(piece cat.Piece) bool {
-  //   bss := cat.Bss(piece.Bss, piece.ID)
-  //   return piece.Gnr == "stu" && (bss == "stb" || bss == "pub")
-  // })
-  // stuFrbPieces := filterPieces(pieces, func(piece cat.Piece) bool {
-  //   bss := cat.Bss(piece.Bss, piece.ID)
-  //   return piece.Gnr == "stu" && bss == "frb"
-  // })
+  stuStbPieces := filterPieces(pieces, func(piece cat.Piece) bool {
+    bss := cat.Bss(piece.Bss, piece.ID)
+    return piece.Gnr == "stu" && (bss == "stb" || bss == "pub")
+  })
+  err = publishGroup(
+    tpl, stuStbPieces, keyByStu, keyCom, "study-stb", catGroups["study-stb"], pc,
+  )
+  if err != nil {
+    return err
+  }
+
+  stuFrbPieces := filterPieces(pieces, func(piece cat.Piece) bool {
+    bss := cat.Bss(piece.Bss, piece.ID)
+    return piece.Gnr == "stu" && bss == "frb"
+  })
+  err = publishGroup(
+    tpl, stuFrbPieces, keyByStu, keyCom, "study-frb", catGroups["study-frb"], pc,
+  )
+  if err != nil {
+    return err
+  }
 
   // err = publishGroup(
   //   tpl, pieces, keyByCom, keyCom, "composer", catGroups["composer"], pc,
