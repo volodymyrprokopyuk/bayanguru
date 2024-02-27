@@ -25,6 +25,9 @@ var tr = map[string]string{
   "folk": "Folk | Фолькльор",
   "author": "Author | Авторська п'єса",
   "classic": "Classic | Класика",
+  // com
+  "composer": "Composer | Композитор",
+  "no-composer": "No composer | Без композитора",
   // bss
   "standard-bass": "Standard bass | Готовий аккорд",
   "pure-bass": "Pure bass | Чистий бас",
@@ -62,22 +65,29 @@ func validateGroups(groups PieceGroups, groupNames []string) error {
   return nil
 }
 
+func keyCom(piece cat.Piece) string {
+  if len(piece.Com) > 3 {
+    return string([]rune(piece.Com)[3:])
+  }
+  if len(piece.Arr) > 3 {
+    return string([]rune(piece.Arr)[3:])
+  }
+  return piece.Tit
+}
+
 func keyTit(piece cat.Piece) string {
   if piece.Gnr == "stu" {
-    com := []rune(piece.Com)
-    if len(com) > 3 {
-      return string(com[3:])
-    }
+    return keyCom(piece)
   }
   return piece.Tit
 }
 
 var collator = collate.New(language.Und)
 
-func sortGroups(groups PieceGroups) {
+func sortGroups(groups PieceGroups, sortKey func(piece cat.Piece) string) {
   for _, pieces := range groups {
     slices.SortStableFunc(pieces, func(a, b cat.Piece) int {
-      return collator.CompareString(keyTit(a), keyTit(b))
+      return collator.CompareString(sortKey(a), sortKey(b))
     })
   }
 }
@@ -92,12 +102,12 @@ func makeAlphabet() []string {
 
 var alphabet = makeAlphabet()
 
-func markAlphaPieces(groups PieceGroups) {
+func markAlphaPieces(groups PieceGroups, sortKey func(piece cat.Piece) string) {
   for _, pieces := range groups {
     i := 0
     for _, alpha := range alphabet {
       for j := i; j < len(pieces); j++ {
-        tit := keyTit(pieces[j])
+        tit := sortKey(pieces[j])
         if collator.CompareString(string([]rune(tit)[0:1]), alpha) == 0 {
           pieces[j].AlphaLink = alpha
           i = j + 1
@@ -318,11 +328,9 @@ func keyByGnr(piece cat.Piece) string {
 }
 
 func keyByCom(piece cat.Piece) string {
-  com := "noc"
-  if len(piece.Com) > 0 {
-    com = piece.Com
-  } else if len(piece.Arr) > 0 {
-    com = piece.Arr
+  com := "no-composer"
+  if len(piece.Com) > 0 || len(piece.Arr) > 0 {
+    com = "composer"
   }
   return com
 }
@@ -354,6 +362,7 @@ func keyByLvl(piece cat.Piece) string {
 func publishGroup(
   tpl *template.Template, pieces []cat.Piece,
   groupKey func(piece cat.Piece) string,
+  sortKey func(piece cat.Piece) string,
   group string, groupNames []string, pc PublishCommand,
 ) error {
   groupDir := filepath.Join(pc.PublicDir, "catalog", group)
@@ -363,8 +372,8 @@ func publishGroup(
   if err != nil {
     return err
   }
-  sortGroups(groups)
-  markAlphaPieces(groups)
+  sortGroups(groups, sortKey)
+  markAlphaPieces(groups, sortKey)
   groupPages := pageGroups(groups, pc.PageSize)
   return publishGroupPages(tpl, groupPages, groupNames, groupDir, groupURL)
 }
@@ -382,25 +391,36 @@ func publishCatalog(tpl *template.Template, pc PublishCommand) error {
   if err != nil {
     return err
   }
-  err = publishGroup(tpl, pieces, keyByOrg, "origin", catGroups["origin"], pc)
+  err = publishGroup(
+    tpl, pieces, keyByOrg, keyTit, "origin", catGroups["origin"], pc,
+  )
   if err != nil {
     return err
   }
-  err = publishGroup(tpl, pieces, keyBySty, "style", catGroups["style"], pc)
+  err = publishGroup(
+    tpl, pieces, keyBySty, keyTit, "style", catGroups["style"], pc,
+  )
   if err != nil {
     return err
   }
-  err = publishGroup(tpl, pieces, keyByBss, "bass", catGroups["bass"], pc)
+  // TODO gnr
+  err = publishGroup(
+    tpl, pieces, keyByCom, keyCom, "composer", catGroups["composer"], pc,
+  )
   if err != nil {
     return err
   }
-  err = publishGroup(tpl, pieces, keyByLvl, "level", catGroups["level"], pc)
+  err = publishGroup(
+    tpl, pieces, keyByBss, keyTit, "bass", catGroups["bass"], pc,
+  )
   if err != nil {
     return err
   }
-  // piecesByGnr := groupPieces(pieces, keyByGnr)
-  // piecesByCom := groupPieces(pieces, keyByCom)
-  // piecesByBss := groupPieces(pieces, keyByBss)
-  // piecesByLvl := groupPieces(pieces, keyByLvl)
+  err = publishGroup(
+    tpl, pieces, keyByLvl, keyTit, "level", catGroups["level"], pc,
+  )
+  if err != nil {
+    return err
+  }
   return nil
 }

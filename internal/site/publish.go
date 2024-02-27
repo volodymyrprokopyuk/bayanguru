@@ -41,6 +41,9 @@ var catGroups = map[string][]string{
   "style": {
     "folk", "author", "classic",
   },
+  "composer": {
+    "composer", "no-composer",
+  },
   "bass": {
     "standard-bass", "pure-bass", "free-bass",
   },
