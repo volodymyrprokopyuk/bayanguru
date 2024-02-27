@@ -431,19 +431,18 @@ func publishCatalog(tpl *template.Template, pc PublishCommand) error {
   if err != nil {
     return err
   }
-  // err = publishGroup(
-  //   tpl, pieces, keyByOrg, keyTit, "origin", catGroups["origin"], pc,
-  // )
-  // if err != nil {
-  //   return err
-  // }
-  // err = publishGroup(
-  //   tpl, pieces, keyBySty, keyTit, "style", catGroups["style"], pc,
-  // )
-  // if err != nil {
-  //   return err
-  // }
-
+  err = publishGroup(
+    tpl, pieces, keyByOrg, keyTit, "origin", catGroups["origin"], pc,
+  )
+  if err != nil {
+    return err
+  }
+  err = publishGroup(
+    tpl, pieces, keyBySty, keyTit, "style", catGroups["style"], pc,
+  )
+  if err != nil {
+    return err
+  }
   gnrPieces := filterPieces(pieces, func(piece cat.Piece) bool {
     return piece.Gnr != "stu"
   })
@@ -453,7 +452,6 @@ func publishCatalog(tpl *template.Template, pc PublishCommand) error {
   if err != nil {
     return err
   }
-
   stuStbPieces := filterPieces(pieces, func(piece cat.Piece) bool {
     bss := cat.Bss(piece.Bss, piece.ID)
     return piece.Gnr == "stu" && (bss == "stb" || bss == "pub")
@@ -464,7 +462,6 @@ func publishCatalog(tpl *template.Template, pc PublishCommand) error {
   if err != nil {
     return err
   }
-
   stuFrbPieces := filterPieces(pieces, func(piece cat.Piece) bool {
     bss := cat.Bss(piece.Bss, piece.ID)
     return piece.Gnr == "stu" && bss == "frb"
@@ -475,24 +472,23 @@ func publishCatalog(tpl *template.Template, pc PublishCommand) error {
   if err != nil {
     return err
   }
-
-  // err = publishGroup(
-  //   tpl, pieces, keyByCom, keyCom, "composer", catGroups["composer"], pc,
-  // )
-  // if err != nil {
-  //   return err
-  // }
-  // err = publishGroup(
-  //   tpl, pieces, keyByBss, keyTit, "bass", catGroups["bass"], pc,
-  // )
-  // if err != nil {
-  //   return err
-  // }
-  // err = publishGroup(
-  //   tpl, pieces, keyByLvl, keyTit, "level", catGroups["level"], pc,
-  // )
-  // if err != nil {
-  //   return err
-  // }
+  err = publishGroup(
+    tpl, pieces, keyByCom, keyCom, "composer", catGroups["composer"], pc,
+  )
+  if err != nil {
+    return err
+  }
+  err = publishGroup(
+    tpl, pieces, keyByBss, keyTit, "bass", catGroups["bass"], pc,
+  )
+  if err != nil {
+    return err
+  }
+  err = publishGroup(
+    tpl, pieces, keyByLvl, keyTit, "level", catGroups["level"], pc,
+  )
+  if err != nil {
+    return err
+  }
   return nil
 }
