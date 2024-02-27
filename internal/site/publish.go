@@ -42,6 +42,9 @@ func initSite(siteDir, publicDir string) error {
     "style": {
       "folk", "author", "classic",
     },
+    "bass": {
+      "standard-bass", "pure-bass", "free-bass",
+    },
   }
   dirs := make([]string, 0, 100)
   dirs = append(dirs, "image", "piece")

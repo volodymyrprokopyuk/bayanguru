@@ -25,6 +25,10 @@ var tr = map[string]string{
   "folk": "Folk | Фолькльор",
   "author": "Author | Авторська п'єса",
   "classic": "Classic | Класика",
+  // bss
+  "standard-bass": "Standard bass | Готовий аккорд",
+  "pure-bass": "Pure bass | Чистий бас",
+  "free-bass": "Free bass | Виборна система",
 }
 
 type PieceGroups map[string][]cat.Piece
@@ -355,7 +359,33 @@ func keyByCom(piece cat.Piece) string {
 }
 
 func keyByBss(piece cat.Piece) string {
-  return cat.Bss(piece.Bss, piece.ID)
+  bss := cat.Bss(piece.Bss, piece.ID)
+  switch bss {
+  case "stb":
+    bss = "standard-bass"
+  case "pub":
+    bss = "pure-bass"
+  case "frb":
+    bss = "free-bass"
+  }
+  return bss
+}
+
+func publishByBss(
+  tpl *template.Template, pieces []cat.Piece, pc PublishCommand,
+) error {
+  groupDir := filepath.Join(pc.PublicDir, "catalog", "bass")
+  groupURL := "/catalog/bass"
+  groupNames := []string{"standard-bass", "pure-bass", "free-bass"}
+  piecesByBss := groupPieces(pieces, keyByBss)
+  err := validateGroups(piecesByBss, groupNames)
+  if err != nil {
+    return err
+  }
+  sortGroups(piecesByBss)
+  markAlphaPieces(piecesByBss)
+  pagesByBss := pageGroups(piecesByBss, pc.PageSize)
+  return publishGroupPages(tpl, pagesByBss, groupNames, groupDir, groupURL)
 }
 
 func keyByLvl(piece cat.Piece) string {
@@ -383,7 +413,10 @@ func publishCatalog(tpl *template.Template, pc PublishCommand) error {
   if err != nil {
     return err
   }
-  // piecesBySty := groupPieces(pieces, keyBySty)
+  err = publishByBss(tpl, pieces, pc)
+  if err != nil {
+    return err
+  }
   // piecesByGnr := groupPieces(pieces, keyByGnr)
   // piecesByCom := groupPieces(pieces, keyByCom)
   // piecesByBss := groupPieces(pieces, keyByBss)
