@@ -29,6 +29,11 @@ var tr = map[string]string{
   "standard-bass": "Standard bass | Готовий аккорд",
   "pure-bass": "Pure bass | Чистий бас",
   "free-bass": "Free bass | Виборна система",
+  // lvl
+  "elementary-a": "Elementary A | Простий A",
+  "elementary-b": "Elementary B | Простий B",
+  "elementary-c": "Elementary C | Простий C",
+  "intermediary-a": "Intermediary A | Середній A",
 }
 
 type PieceGroups map[string][]cat.Piece
@@ -389,7 +394,34 @@ func publishByBss(
 }
 
 func keyByLvl(piece cat.Piece) string {
-  return piece.Lvl
+  lvl := piece.Lvl
+  switch lvl[:2] {
+  case "el":
+    lvl = "elementary-" + lvl[2:]
+  case "in":
+    lvl = "intermediary-" + lvl[2:]
+  }
+  return lvl
+}
+
+func publishByLvl(
+  tpl *template.Template, pieces []cat.Piece, pc PublishCommand,
+) error {
+  groupDir := filepath.Join(pc.PublicDir, "catalog", "level")
+  groupURL := "/catalog/level"
+  groupNames := []string{
+    "elementary-a", "elementary-b", "elementary-c",
+    "intermediary-a",
+  }
+  piecesByLvl := groupPieces(pieces, keyByLvl)
+  err := validateGroups(piecesByLvl, groupNames)
+  if err != nil {
+    return err
+  }
+  sortGroups(piecesByLvl)
+  markAlphaPieces(piecesByLvl)
+  pagesByLvl := pageGroups(piecesByLvl, pc.PageSize)
+  return publishGroupPages(tpl, pagesByLvl, groupNames, groupDir, groupURL)
 }
 
 func publishCatalog(tpl *template.Template, pc PublishCommand) error {
@@ -414,6 +446,10 @@ func publishCatalog(tpl *template.Template, pc PublishCommand) error {
     return err
   }
   err = publishByBss(tpl, pieces, pc)
+  if err != nil {
+    return err
+  }
+  err = publishByLvl(tpl, pieces, pc)
   if err != nil {
     return err
   }
