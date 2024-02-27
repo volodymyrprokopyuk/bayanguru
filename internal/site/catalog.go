@@ -14,12 +14,17 @@ import (
 )
 
 var tr = map[string]string{
+  // org
   "ukrainian": "Ukrainian | Українські",
   "russian": "Russian | Російські",
   "belarusian": "Belarusian | Білоруські",
   "hungaria": "Hungarian | Угорські",
   "extra": "Extra | Різне",
   "european": "European | Європейські",
+  // sty
+  "folk": "Folk | Фолькльор",
+  "author": "Author | Авторська п'єса",
+  "classic": "Classic | Класика",
 }
 
 type PieceGroups map[string][]cat.Piece
@@ -285,7 +290,33 @@ func publishByOrg(
 }
 
 func keyBySty(piece cat.Piece) string {
-  return piece.Sty
+  sty := piece.Sty
+  switch sty {
+  case "flk":
+    sty = "folk"
+  case "aut":
+    sty = "author"
+  case "cls":
+    sty = "classic"
+  }
+  return sty
+}
+
+func publishBySty(
+  tpl *template.Template, pieces []cat.Piece, pc PublishCommand,
+) error {
+  groupDir := filepath.Join(pc.PublicDir, "catalog", "style")
+  groupURL := "/catalog/style"
+  groupNames := []string{"folk", "author", "classic"}
+  piecesBySty := groupPieces(pieces, keyBySty)
+  err := validateGroups(piecesBySty, groupNames)
+  if err != nil {
+    return err
+  }
+  sortGroups(piecesBySty)
+  markAlphaPieces(piecesBySty)
+  pagesBySty := pageGroups(piecesBySty, pc.PageSize)
+  return publishGroupPages(tpl, pagesBySty, groupNames, groupDir, groupURL)
 }
 
 func keyByGnr(piece cat.Piece) string {
@@ -345,6 +376,10 @@ func publishCatalog(tpl *template.Template, pc PublishCommand) error {
     return err
   }
   err = publishByOrg(tpl, pieces, pc)
+  if err != nil {
+    return err
+  }
+  err = publishBySty(tpl, pieces, pc)
   if err != nil {
     return err
   }

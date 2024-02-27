@@ -7,9 +7,7 @@
 {{ define "piece" }}
   <div {{ if .AlphaLink }} id="{{ .AlphaLink }}" {{ end }}>
     <div>
-      <a href="/piece/{{ .File }}">
-        <span>{{ .Tit }}</span>
-      </a>
+      <a href="/piece/{{ .File }}"><span>{{ .Tit }}</span></a>
       <span>{{ .Com }}</span>
       <span>{{ .Art }} {{ .Arr }}</span>
     </div>

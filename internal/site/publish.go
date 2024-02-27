@@ -35,15 +35,22 @@ func engraveImage(siteDir, publicDir, image string) error {
 }
 
 func initSite(siteDir, publicDir string) error {
-  orgDirs := []string{
-    "ukrainian", "russian", "belarusian", "hungarian", "extra", "european",
-  }
-  for i, dir := range orgDirs {
-    orgDirs[i] = filepath.Join("catalog", "origin", dir)
+  catDirs := map[string][]string{
+    "origin": {
+      "ukrainian", "russian", "belarusian", "hungarian", "extra", "european",
+    },
+    "style": {
+      "folk", "author", "classic",
+    },
   }
   dirs := make([]string, 0, 100)
   dirs = append(dirs, "image", "piece")
-  dirs = append(dirs, orgDirs...)
+  // dirs = append(dirs, orgDirs...)
+  for key, groups := range catDirs {
+    for _, group := range groups {
+      dirs = append(dirs, filepath.Join("catalog", key, group))
+    }
+  }
   for _, dir := range dirs {
     d := filepath.Join(publicDir, dir)
     fmt.Printf("%v %v\n", sty.Org("init"), sty.Lvl(d))
@@ -166,12 +173,12 @@ func Publish(pc PublishCommand) error {
   //   }
   // }
   // cat.PrintStat(catLen, len(pieces))
-  // if pc.Init {
-  //   err := initSite(pc.SiteDir, pc.PublicDir)
-  //   if err != nil {
-  //     return siteError("%v", err)
-  //   }
-  // }
+  if pc.Init {
+    err := initSite(pc.SiteDir, pc.PublicDir)
+    if err != nil {
+      return siteError("%v", err)
+    }
+  }
   tpl, err := makeTemplate(pc.TemplateDir)
   if err != nil {
     return siteError("%v", err)

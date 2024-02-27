@@ -27,7 +27,7 @@ func validateReq(catalog string, args []string) error {
     return fmt.Errorf("valid pattern ukr-cls or ^rus,blr, got -c %v", catalog)
   }
   if len(args) == 0 {
-    return fmt.Errorf("at least one piece or book is required, got zero")
+    return fmt.Errorf("at least one piece or book is required, got none")
   }
   if len(args) > 1 && slices.Contains(args, "all") {
     return fmt.Errorf("either all or pieces and books, got %v", args)
