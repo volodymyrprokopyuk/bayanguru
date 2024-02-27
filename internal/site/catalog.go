@@ -279,25 +279,6 @@ func keyByOrg(piece cat.Piece) string {
   return org
 }
 
-func publishByOrg(
-  tpl *template.Template, pieces []cat.Piece, pc PublishCommand,
-) error {
-  groupDir := filepath.Join(pc.PublicDir, "catalog", "origin")
-  groupURL := "/catalog/origin"
-  groupNames := []string{
-    "ukrainian", "russian", "belarusian", "hungarian", "extra", "european",
-  }
-  piecesByOrg := groupPieces(pieces, keyByOrg)
-  err := validateGroups(piecesByOrg, groupNames)
-  if err != nil {
-    return err
-  }
-  sortGroups(piecesByOrg)
-  markAlphaPieces(piecesByOrg)
-  pagesByOrg := pageGroups(piecesByOrg, pc.PageSize)
-  return publishGroupPages(tpl, pagesByOrg, groupNames, groupDir, groupURL)
-}
-
 func keyBySty(piece cat.Piece) string {
   sty := piece.Sty
   switch sty {
@@ -309,23 +290,6 @@ func keyBySty(piece cat.Piece) string {
     sty = "classic"
   }
   return sty
-}
-
-func publishBySty(
-  tpl *template.Template, pieces []cat.Piece, pc PublishCommand,
-) error {
-  groupDir := filepath.Join(pc.PublicDir, "catalog", "style")
-  groupURL := "/catalog/style"
-  groupNames := []string{"folk", "author", "classic"}
-  piecesBySty := groupPieces(pieces, keyBySty)
-  err := validateGroups(piecesBySty, groupNames)
-  if err != nil {
-    return err
-  }
-  sortGroups(piecesBySty)
-  markAlphaPieces(piecesBySty)
-  pagesBySty := pageGroups(piecesBySty, pc.PageSize)
-  return publishGroupPages(tpl, pagesBySty, groupNames, groupDir, groupURL)
 }
 
 func keyByGnr(piece cat.Piece) string {
@@ -376,23 +340,6 @@ func keyByBss(piece cat.Piece) string {
   return bss
 }
 
-func publishByBss(
-  tpl *template.Template, pieces []cat.Piece, pc PublishCommand,
-) error {
-  groupDir := filepath.Join(pc.PublicDir, "catalog", "bass")
-  groupURL := "/catalog/bass"
-  groupNames := []string{"standard-bass", "pure-bass", "free-bass"}
-  piecesByBss := groupPieces(pieces, keyByBss)
-  err := validateGroups(piecesByBss, groupNames)
-  if err != nil {
-    return err
-  }
-  sortGroups(piecesByBss)
-  markAlphaPieces(piecesByBss)
-  pagesByBss := pageGroups(piecesByBss, pc.PageSize)
-  return publishGroupPages(tpl, pagesByBss, groupNames, groupDir, groupURL)
-}
-
 func keyByLvl(piece cat.Piece) string {
   lvl := piece.Lvl
   switch lvl[:2] {
@@ -404,24 +351,22 @@ func keyByLvl(piece cat.Piece) string {
   return lvl
 }
 
-func publishByLvl(
-  tpl *template.Template, pieces []cat.Piece, pc PublishCommand,
+func publishGroup(
+  tpl *template.Template, pieces []cat.Piece,
+  groupKey func(piece cat.Piece) string,
+  group string, groupNames []string, pc PublishCommand,
 ) error {
-  groupDir := filepath.Join(pc.PublicDir, "catalog", "level")
-  groupURL := "/catalog/level"
-  groupNames := []string{
-    "elementary-a", "elementary-b", "elementary-c",
-    "intermediary-a",
-  }
-  piecesByLvl := groupPieces(pieces, keyByLvl)
-  err := validateGroups(piecesByLvl, groupNames)
+  groupDir := filepath.Join(pc.PublicDir, "catalog", group)
+  groupURL := "/catalog/" + group
+  groups := groupPieces(pieces, groupKey)
+  err := validateGroups(groups, groupNames)
   if err != nil {
     return err
   }
-  sortGroups(piecesByLvl)
-  markAlphaPieces(piecesByLvl)
-  pagesByLvl := pageGroups(piecesByLvl, pc.PageSize)
-  return publishGroupPages(tpl, pagesByLvl, groupNames, groupDir, groupURL)
+  sortGroups(groups)
+  markAlphaPieces(groups)
+  groupPages := pageGroups(groups, pc.PageSize)
+  return publishGroupPages(tpl, groupPages, groupNames, groupDir, groupURL)
 }
 
 func publishCatalog(tpl *template.Template, pc PublishCommand) error {
@@ -437,19 +382,19 @@ func publishCatalog(tpl *template.Template, pc PublishCommand) error {
   if err != nil {
     return err
   }
-  err = publishByOrg(tpl, pieces, pc)
+  err = publishGroup(tpl, pieces, keyByOrg, "origin", catGroups["origin"], pc)
   if err != nil {
     return err
   }
-  err = publishBySty(tpl, pieces, pc)
+  err = publishGroup(tpl, pieces, keyBySty, "style", catGroups["style"], pc)
   if err != nil {
     return err
   }
-  err = publishByBss(tpl, pieces, pc)
+  err = publishGroup(tpl, pieces, keyByBss, "bass", catGroups["bass"], pc)
   if err != nil {
     return err
   }
-  err = publishByLvl(tpl, pieces, pc)
+  err = publishGroup(tpl, pieces, keyByLvl, "level", catGroups["level"], pc)
   if err != nil {
     return err
   }

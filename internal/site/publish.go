@@ -34,26 +34,26 @@ func engraveImage(siteDir, publicDir, image string) error {
   return lyCmd.Run()
 }
 
+var catGroups = map[string][]string{
+  "origin": {
+    "ukrainian", "russian", "belarusian", "hungarian", "extra", "european",
+  },
+  "style": {
+    "folk", "author", "classic",
+  },
+  "bass": {
+    "standard-bass", "pure-bass", "free-bass",
+  },
+  "level": {
+    "elementary-a", "elementary-b", "elementary-c",
+    "intermediary-a",
+  },
+}
+
 func initSite(siteDir, publicDir string) error {
-  catDirs := map[string][]string{
-    "origin": {
-      "ukrainian", "russian", "belarusian", "hungarian", "extra", "european",
-    },
-    "style": {
-      "folk", "author", "classic",
-    },
-    "bass": {
-      "standard-bass", "pure-bass", "free-bass",
-    },
-    "level": {
-      "elementary-a", "elementary-b", "elementary-c",
-      "intermediary-a",
-    },
-  }
   dirs := make([]string, 0, 100)
   dirs = append(dirs, "image", "piece")
-  // dirs = append(dirs, orgDirs...)
-  for key, groups := range catDirs {
+  for key, groups := range catGroups {
     for _, group := range groups {
       dirs = append(dirs, filepath.Join("catalog", key, group))
     }
