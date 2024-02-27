@@ -270,95 +270,6 @@ func publishGroupPages(
   return nil
 }
 
-func keyByOrg(piece cat.Piece) string {
-  org := piece.Org
-  switch org {
-  case "ukr":
-    org = "ukrainian"
-  case "rus":
-    org = "russian"
-  case "blr":
-    org = "belarusian"
-  case "hun":
-    org = "hungarian"
-  case "mda", "pol", "cze", "svk", "lva":
-    org = "extra"
-  case "aut", "deu", "dnk", "fra", "swe":
-    org = "european"
-  }
-  return org
-}
-
-func keyBySty(piece cat.Piece) string {
-  sty := piece.Sty
-  switch sty {
-  case "flk":
-    sty = "folk"
-  case "aut":
-    sty = "author"
-  case "cls":
-    sty = "classic"
-  }
-  return sty
-}
-
-func keyByGnr(piece cat.Piece) string {
-  gnr := piece.Gnr
-  if gnr == "stu" {
-    bss := cat.Bss(piece.Bss, piece.ID)
-    var stu string
-    if bss == "stb" {
-      stu = cat.Stu(piece.Frm, piece.ID)
-    } else if bss == "pub" {
-      stu = "lft"
-    } else {
-      stu = cat.Stu(piece.Bss, piece.ID)
-    }
-    return fmt.Sprintf("%v-%v", gnr, stu)
-  }
-  switch gnr {
-  case "chd", "lul", "mil", "pry", "rmc", "ves":
-    gnr = "sng"
-  case "gop", "koz", "mrc", "plk", "mzr", "tng", "vls":
-    gnr = "dnc"
-  case "gyp":
-    gnr = "pie"
-  }
-  return gnr
-}
-
-func keyByCom(piece cat.Piece) string {
-  com := "no-composer"
-  if len(piece.Com) > 0 || len(piece.Arr) > 0 {
-    com = "composer"
-  }
-  return com
-}
-
-func keyByBss(piece cat.Piece) string {
-  bss := cat.Bss(piece.Bss, piece.ID)
-  switch bss {
-  case "stb":
-    bss = "standard-bass"
-  case "pub":
-    bss = "pure-bass"
-  case "frb":
-    bss = "free-bass"
-  }
-  return bss
-}
-
-func keyByLvl(piece cat.Piece) string {
-  lvl := piece.Lvl
-  switch lvl[:2] {
-  case "el":
-    lvl = "elementary-" + lvl[2:]
-  case "in":
-    lvl = "intermediary-" + lvl[2:]
-  }
-  return lvl
-}
-
 func publishGroup(
   tpl *template.Template, pieces []cat.Piece,
   groupKey func(piece cat.Piece) string,
@@ -376,6 +287,94 @@ func publishGroup(
   markAlphaPieces(groups, sortKey)
   groupPages := pageGroups(groups, pc.PageSize)
   return publishGroupPages(tpl, groupPages, groupNames, groupDir, groupURL)
+}
+
+func keyByOrg(piece cat.Piece) string {
+  switch org := piece.Org; org {
+  case "ukr":
+    return "ukrainian"
+  case "rus":
+    return "russian"
+  case "blr":
+    return "belarusian"
+  case "hun":
+    return "hungarian"
+  case "mda", "pol", "cze", "svk", "lva":
+    return "extra"
+  case "aut", "deu", "dnk", "fra", "swe":
+    return "european"
+  default:
+    return org
+  }
+}
+
+func keyBySty(piece cat.Piece) string {
+  switch sty := piece.Sty; sty {
+  case "flk":
+    return "folk"
+  case "aut":
+    return "author"
+  case "cls":
+    return "classic"
+  default:
+    return sty
+  }
+}
+
+func keyByGnr(piece cat.Piece) string {
+  // if gnr == "stu" {
+  //   bss := cat.Bss(piece.Bss, piece.ID)
+  //   var stu string
+  //   if bss == "stb" {
+  //     stu = cat.Stu(piece.Frm, piece.ID)
+  //   } else if bss == "pub" {
+  //     stu = "lft"
+  //   } else {
+  //     stu = cat.Stu(piece.Bss, piece.ID)
+  //   }
+  //   return fmt.Sprintf("%v-%v", gnr, stu)
+  // }
+  switch gnr := piece.Gnr; gnr {
+  case "chd", "lul", "mil", "pry", "rmc", "ves":
+    return "song"
+  case "gop", "koz", "mrc", "plk", "mzr", "tng", "vls":
+    return "dance"
+  case "gyp":
+    return "piece"
+  default:
+    return gnr
+  }
+}
+
+func keyByCom(piece cat.Piece) string {
+  if len(piece.Com) > 0 || len(piece.Arr) > 0 {
+    return "composer"
+  }
+  return "no-composer"
+}
+
+func keyByBss(piece cat.Piece) string {
+  switch bss := cat.Bss(piece.Bss, piece.ID); bss {
+  case "stb":
+    return "standard-bass"
+  case "pub":
+    return "pure-bass"
+  case "frb":
+    return "free-bass"
+  default:
+    return bss
+  }
+}
+
+func keyByLvl(piece cat.Piece) string {
+  switch lvl := piece.Lvl; lvl[:2] {
+  case "el":
+    return "elementary-" + lvl[2:]
+  case "in":
+    return "intermediary-" + lvl[2:]
+  default:
+    return lvl
+  }
 }
 
 func publishCatalog(tpl *template.Template, pc PublishCommand) error {
@@ -403,7 +402,17 @@ func publishCatalog(tpl *template.Template, pc PublishCommand) error {
   if err != nil {
     return err
   }
-  // TODO gnr
+  // gnrPieces := filterPieces(pieces, func(piece cat.Piece) bool {
+  //   return piece.Gnr != "stu"
+  // })
+  // stuStbPieces := filterPieces(pieces, func(piece cat.Piece) bool {
+  //   bss := cat.Bss(piece.Bss, piece.ID)
+  //   return piece.Gnr == "stu" && (bss == "stb" || bss == "pub")
+  // })
+  // stuFrbPieces := filterPieces(pieces, func(piece cat.Piece) bool {
+  //   bss := cat.Bss(piece.Bss, piece.ID)
+  //   return piece.Gnr == "stu" && bss == "frb"
+  // })
   err = publishGroup(
     tpl, pieces, keyByCom, keyCom, "composer", catGroups["composer"], pc,
   )
