@@ -24,7 +24,7 @@
   g,=,8[-\stBass gm!] bes g@m | d8 d7! d7 d7 |
   bes=,8 g@m! g8 gm | a[ f@7! f78 f7] |
   bes=,8[ besM!] d bes@M | ees8 eesM! eesM eesM |
-  d=8[ d7!] gis, d@7 | g8[ gm!] c d@7! |
+  d=8[ d7!] fis, d@7 | g8[ gm!] c d@7! |
   bes=,8[ g@m! gm8 gm] | a f@7! f8 f7 |
   bes=,8 besM! besM besM | ees[ eesM!] c ees@M |
   d=8 d7! d7 d7 | ees[ eesM!] c cm! |
