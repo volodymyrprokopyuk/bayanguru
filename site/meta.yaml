@@ -1,0 +1,18 @@
+%YAML 1.1
+---
+meta:
+  - tit: { eng: Piece identification, ukr: Ідентифікація п'єси }
+    sec:
+      - tit: { name: id, eng: Piece ID, ukr: ID п'єси }
+      - tit: { name: org, eng: Piece country, ukr: Країна п'єси }
+      - tit: { name: com, eng: Piece composer, ukr: Композитор }
+      - tit: { name: arr, eng: Piece arranger, ukr: Обробка }
+      - tit: { name: art, eng: Arrangement type, ukr: Тип обробки }
+        sub:
+          - { name: arr, eng: Arrangement, ukr: Обробка }
+          - { name: ipr, eng: Interpretation, ukr: Переклад }
+          - { name: hrm, eng: Harmonization, ukr: Гармонізація }
+  - tit:
+      { eng: Piece classification, ukr: Класифікація п'єси }
+  - tit:
+      { eng: Piece qualification, ukr: Кваліфікація п'єси }

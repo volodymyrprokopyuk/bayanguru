@@ -17,4 +17,4 @@ pieces:
       org: ukr, sty: aut, gnr: stu, ton: cj, frm: [scl, dot], bss: [frb, scl, dot], lvl: ela }
   - { id: ja4a, tit: Етюд Bes major,
       com: К. Черні, src: FBBSC1978,
-      org: aut, sty: cls, gnr: stu, ton: besj, frm: scl, bss: [frb, cr5, cr7], lvl: elb }
+      org: aut, sty: cls, gnr: stu, ton: besj, frm: scl, bss: [frb, cr5], lvl: elb }

@@ -10,5 +10,29 @@
     <a href="/catalog/bass/standard-bass/1">By bass | За басом</a>
     <a href="/catalog/level/elementary-c/1">By level | За складністю</a>
   </div>
-  <h2>Meta search | Мета пошук</h2>
+
+  <h2>Catalog meta | Опис каталогу</h2>
+  <table>
+    {{ range .CatalogMeta }}
+      <tr>
+        <th></th>
+        <th>{{ .Tit.Eng }}</th>
+        <th>{{ .Tit.Ukr }}</th>
+      </tr>
+      {{ range .Sec }}
+        <tr>
+          <td>{{ .Tit.Name }}</td>
+          <td>{{ .Tit.Eng }}</td>
+          <td>{{ .Tit.Ukr }}</td>
+        </tr>
+        {{ range .Sub }}
+          <tr>
+            <td>{{ .Name }}</td>
+            <td>{{ .Eng }}</td>
+            <td>{{ .Ukr }}</td>
+          </tr>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  </table>
 {{ end }}

@@ -7,6 +7,7 @@ import (
   "path/filepath"
   "os"
   "os/exec"
+  "gopkg.in/yaml.v3"
   sty "github.com/volodymyrprokopyuk/bayan/internal/style"
   cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
 )
@@ -111,15 +112,51 @@ func publishFile(
   return tpl.ExecuteTemplate(w, "page.html", data)
 }
 
+type MetaEntry struct {
+  Name string `yaml:"name"`
+  Eng string `yaml:"eng"`
+  Ukr string `yaml:"ukr"`
+}
+
+type CatalogMeta struct {
+  Tit MetaEntry `yaml:"tit"`
+  Sec []struct {
+    Tit MetaEntry `yaml:"tit"`
+    Sub []MetaEntry `yaml:"sub"`
+  } `yaml:"sec"`
+}
+
+func readCatalogMeta(siteDir, metaFile string) ([]CatalogMeta, error) {
+  metaFile = filepath.Join(siteDir, metaFile)
+  file, err := os.Open(metaFile)
+  if err != nil {
+    return nil, err
+  }
+  defer file.Close()
+  dec := yaml.NewDecoder(file)
+  var meta struct { Meta []CatalogMeta `yaml:"meta"` }
+  err = dec.Decode(&meta)
+  if err != nil {
+    return nil, err
+  }
+  return meta.Meta, nil
+}
+
 func publishIndex(
-  tpl *template.Template, templateDir, publicDir string,
+  tpl *template.Template, siteDir, templateDir, publicDir string,
 ) error {
   indexFile := filepath.Join(templateDir, "index.html")
   _, err := tpl.ParseFiles(indexFile)
   if err != nil {
     return err
   }
-  indexData := struct{}{}
+  catalogMeta, err := readCatalogMeta(siteDir, "meta.yaml")
+  if err != nil {
+    return err
+  }
+  indexData := struct{CatalogMeta []CatalogMeta}{
+    CatalogMeta: catalogMeta,
+  }
   return publishFile(tpl, publicDir, "index.html", indexData)
 }
 
@@ -202,7 +239,7 @@ func Publish(pc PublishCommand) error {
   if err != nil {
     return siteError("%v", err)
   }
-  err = publishIndex(tpl, pc.TemplateDir, pc.PublicDir)
+  err = publishIndex(tpl, pc.SiteDir, pc.TemplateDir, pc.PublicDir)
   if err != nil {
     return siteError("%v", err)
   }
@@ -214,9 +251,9 @@ func Publish(pc PublishCommand) error {
   // if err != nil {
   //   return siteError("%v", err)
   // }
-  err = publishCatalog(tpl, pc)
-  if err != nil {
-    return siteError("%v", err)
-  }
+  // err = publishCatalog(tpl, pc)
+  // if err != nil {
+  //   return siteError("%v", err)
+  // }
   return nil
 }

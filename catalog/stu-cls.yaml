@@ -261,7 +261,7 @@ pieces:
       org: rus, sty: aut, gnr: stu, ton: [di, fj], frm: [scl, fi5], bss: stb, lvl: elb }
   - { id: h3xy, tit: Етюд A minor,
       com: А. Нечипоренко, src: SB5NU1980,
-      org: ukr, sty: aut, gnr: stu, ton: ai, frm: [scl, arp], bss: stb, lvl: elb }
+      org: ukr, sty: aut, gnr: stu, ton: ai, frm: [scl, arp, jmp], bss: stb, lvl: elb }
   - { id: 4s1u, tit: Етюд A minor,
       com: А. Холминов, src: SB5NU1980,
       org: rus, sty: aut, gnr: stu, ton: ai, frm: arp, bss: stb, lvl: elb }
