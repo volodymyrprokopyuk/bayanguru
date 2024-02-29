@@ -27,7 +27,6 @@ pieces:
   - { id: uvv4, tit: "Вниз по матушке, по Волге", sub: rusfs,
       src: FBBSC1978,
       org: rus, sty: flk, gnr: sng, ton: gi, frm: [vo2, in3], bss: [frb, in5], lvl: ela }
-  # p. 115
-  # - { id: 7nrq, tit: Вальс,
-  #     com: А. Грибоедов, arr: С. Чапкій, src: FBBSC1978,
-  #     org: rus, sty: aut, gnr: vls, ton: [ei, gj], frm: [vo2, cr5, jmp], bss: [frb, in3, cr5], lvl: elc }
+  - { id: 7nrq, tit: Вальс,
+      com: А. Грибоедов, arr: С. Чапкій, src: FBBSC1978,
+      org: rus, sty: aut, gnr: vls, ton: [ei, gj], frm: [vo2, cr5, jmp], bss: [frb, in3, cr5], lvl: elc }
