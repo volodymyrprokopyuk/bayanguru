@@ -71,5 +71,14 @@
 \relative {
   \clef bass
   \key e \minor
+  \duo {
+    r4 <g= b e>8 r8 8 r8 | r4 <g b>8 r8 8 r8 |
+    r4 <dis= fis b>8 r8 8 r8 | r4 <dis fis>8 r8 8 r8 |
+    r4 <b=, e>8 r8 8 r8 | r4 <e fis>8 r8 8 r8 |
+    r4 <e= g>8 r8 8 r8 | b=,4 \clef treble <e'=' g>8 r8 <dis=' fis>8 r8 |
+    \clef bass r4 <dis,= fis>8 r8 8 r8 | <e= g>2 %
+  } {
+    e=2.-\frBass | e | b | b | g | a | ais | s4 b'2 | b,2. | r4 e,=, %
+  } r4 |
 }
 {{ end }}
