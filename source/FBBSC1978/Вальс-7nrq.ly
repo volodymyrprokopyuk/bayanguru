@@ -80,5 +80,25 @@
   } {
     e=2.-\frBass | e | b | b | g | a | ais | s4 b'2 | b,2. | r4 e,=, %
   } r4 |
+
+  \rep 2 { g,=,4( <g'= b d>8) r8 8 r8 | }
+  \rep 2 { g,=,4( <g'= bes cis>8) r8 8 r8 | }
+  g,=,4( <g' a c>8) r8 8 r8 | g,4( <g' b d>8) r8 8 r8 |
+  c,=4_( <c c'>) <cis cis'> | <d= d'> %
+  \clef treble \duo { <g'=' bes>8 r <fis=' a> r | } { d'='2 | }
+  \clef bass c=4_( <c e a>) <d a' c> | \duo { <g= b>2 } { r4 g,=,4 } r4 |
+
+  \duo {
+    \rep 2 { r8 c'='8( g c g c) | }
+    r8 c='8( a c a c) | r c( aes c aes c) |
+    r8 c='8( g c g c) | r dis( c dis c dis) |
+    r8 e='8( c e c e) | r g,( c g c g) |
+    r8 g=8( c g d'~ <g,_( d'>) | <c,= g') c>4 %
+  } {
+    c=2~ c8 r | e2~ e8 r | f2~ f8 r | f2~ f8 r |
+    e=2~ e8 r | a2~ a8 r | g2~ g8 r | g,2 r4 | g=,2 r4 | s4 %
+  } r r | R2. |
+
+  a'=2 a4 | b2 b4 | c2 c4 | b2 b4 | a2 a4 | b2 b4 | c2 c4 | b2. | b=2 r4 |
 }
 {{ end }}
