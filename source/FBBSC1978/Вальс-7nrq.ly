@@ -89,7 +89,7 @@
   \clef bass c=4_( <c e a>) <d a' c> | \duo { <g= b>2 } { r4 g,=,4 } r4 |
 
   \duo {
-    \rep 2 { r8 c'='8( g c g c) | }
+    \rep 2 { r8 c'='8( g c g c=') | }
     r8 c='8( a c a c) | r c( aes c aes c) |
     r8 c='8( g c g c) | r dis( c dis c dis) |
     r8 e='8( c e c e) | r g,( c g c g) |
