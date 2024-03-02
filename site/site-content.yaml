@@ -1,0 +1,54 @@
+%YAML 1.1
+---
+content:
+  purpose:
+    - >
+      Bayan is an engraving and publishing system that produces the highest
+      quality sheet music in PDF for bayan. The system uses LilyPond for
+      engraving both the Stradella bass and the free bass pieces and books
+    - >
+      Purpose (the reason to exist, why?). To promote and support the art of
+      bayan music through the highest quality sheet music content for bayan
+    - >
+      Vision (the goal of the purpose, what?). Become the most complete and
+      comprehensive online sheet music library for bayan
+    - >
+      Mission (the path to the purpose, how?). Combine the community effort for
+      sheet music production with the best music engraving tool LilyPond
+    - >
+  userFeatures:
+    - { eng: The highest quality sheet music for bayan,
+        ukr: }
+    - { eng: Ideal source for bayan self-study,
+        ukr: }
+    - { eng: Ideal source for prima vista playing,
+        ukr: }
+    - { eng: Wide range of music styles and genres,
+        ukr: }
+    - { eng: Stradella bass and free bass pieces,
+        ukr: }
+    - { eng: Progressive fine-grained piece difficulty,
+        ukr: }
+    - { eng: Precise and easy to use piece search system,
+        ukr: }
+    - { eng: Comprehensive piece classification catalog,
+        ukr: }
+    - { eng: Flexible search and play system (CLI),
+        ukr: }
+    - { eng: Robust custom book engraving system(CLI),
+        ukr: }
+  contributorFeatures:
+    - { eng: Clean and maintainable code base,
+        ukr: }
+    - { eng: Fully automated score lining, engraving, and publishing,
+        ukr: }
+    - { eng: Concise and convenient LilyPond extension for Stradella bass,
+        ukr: }
+    - { eng: Flexible and easy to use score templating system,
+        ukr: }
+    - { eng: Comprehensive and consistent linting of score source code,
+        ukr: }
+    - { eng: Robust and optimized a piece/book engraving system,
+        ukr: }
+    - { eng: Fast and correct a web site publishing system,
+        ukr: }

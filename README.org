@@ -1,42 +1,10 @@
 * Sheet music library for bayan
 
-Bayan is an *engraving and publishing system* that produces the *highest quality
-sheet music* in PDF for bayan. The system uses [[https://lilypond.org/][LilyPond]] for engraving and
-supports the *Stradella bass* and the *free bass*
-
-*Purpose* (the reason to exist, why?). To promote and support the art of bayan
-music through the free and open source sheet music content of the highest
-quality
-
-*Vision* (the goal of the purpose, what?). Become the most complete and
-comprehensive sheet music library for bayan
-
-*Mission* (the path to the purpose, how?). Combine the community effort for
-sheet music production with the best music engraving tool [[https://lilypond.org/][LilyPond]]
-
-** Features
-
-- *Free and open source* sheet music content for bayan
-- *The highest quality* engraving sheet music for the Stradella system and the
-  free bass
-- *The most complete and comprehensive* bayan sheet music library
-- *Community effort* to sheet music production (curated list of verified and the
-  most wanted pieces)
-- *A platform* for distribution of the top quality sheet music *on the web*
-  (HTML) and *for print* (PDF)
-- An ideal source for *progressive self-education* to play bayan both the
-  Stradella bass and the free bass
-- *An indexed database* of individual sheet music pieces for browsing,
-  searching, and visualization of sheet music
-- *A flexible query language* that allows for dynamic construction of
-  fine-grained playlists for playing sheet music
-- *A built-in linter* to ensure source code quality and consistency
-- *A clean codebase* for easy maintenance and flexible extension
-
 ** Dependencies
 
 - [[https://lilypond.org/][LilyPond]] sheet music engraving system
 - [[https://go.dev/][Go]] programming language
+= [[https://tailwindcss.com/][TailwindCSS]] CSS framework
 
 #+BEGIN_SRC fish
 # engrave sheet music
@@ -44,8 +12,6 @@ yay -S ghostscript gsfonts fontforge t1utils texlive-{metapost,langcyrillic}
 # generate the web site
 yay -S caddy pagefind
 #+END_SRC
-
-** Meta
 
 Piece ID generation
 

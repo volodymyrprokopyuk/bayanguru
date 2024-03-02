@@ -150,11 +150,15 @@ func publishIndex(
   if err != nil {
     return err
   }
-  catalogMeta, err := readCatalogMeta(siteDir, "meta.yaml")
+  catalogMeta, err := readCatalogMeta(siteDir, "catalog-meta.yaml")
   if err != nil {
     return err
   }
-  indexData := struct{CatalogMeta []CatalogMeta}{
+  indexData := struct {
+    SiteContent string
+    CatalogMeta []CatalogMeta
+  }{
+    SiteContent: "",
     CatalogMeta: catalogMeta,
   }
   return publishFile(tpl, publicDir, "index.html", indexData)
