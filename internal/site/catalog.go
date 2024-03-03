@@ -7,6 +7,7 @@ import (
   "strconv"
   "strings"
   "text/template"
+  "os"
 
   cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
   "golang.org/x/text/collate"
@@ -273,7 +274,7 @@ func publishGroupPages(
       Pieces: pieces,
       PageLinks: pageLinks,
     }
-    err := publishFile(tpl, catalogDir, currentPage, catalogData)
+    err := publishFile(os.Stdout, tpl, catalogDir, currentPage, catalogData)
     if err != nil {
       return err
     }

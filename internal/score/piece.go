@@ -213,7 +213,7 @@ func receiveAndEngravePieces(
       fmt.Print(w.String())
       if err != nil {
         errors <- err
-        pieces = nil // do not process pieces after an error
+        pieces = nil // do not engrave pieces after an error
       }
     }
   }
@@ -234,7 +234,7 @@ func engravePieces(pieces []cat.Piece, ec EngraveCommand) error {
   ctx, cancel := context.WithCancel(context.Background())
   defer cancel()
   engPieces, engErrors := make(chan cat.Piece), make(chan error)
-  for i := 0; i < min(len(pieces), runtime.GOMAXPROCS(0)); i++ {
+  for range min(len(pieces), runtime.GOMAXPROCS(0)) {
     wg.Add(1)
     go receiveAndEngravePieces(ctx, &wg, engPieces, engErrors, &tplPool, ec)
   }
@@ -251,10 +251,9 @@ func engravePieces(pieces []cat.Piece, ec EngraveCommand) error {
     close(engPieces)
   }()
   go func() {
-    for err = range engErrors {
-      cancel()
-      return
-    }
+    err = <- engErrors // capture the first error
+    cancel()
+    for range engErrors { } // ignore other errors
   }()
   wg.Wait()
   close(engErrors)

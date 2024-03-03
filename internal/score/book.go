@@ -123,10 +123,9 @@ func engraveBooks(books []cat.Book, ec EngraveCommand) error {
     close(engBooks)
   }()
   go func() {
-    for err = range engErrors {
-      cancel()
-      return
-    }
+    err = <- engErrors // capture the first error
+    cancel()
+    for range engErrors { } // ignore other errors
   }()
   wg.Wait()
   close(engErrors)

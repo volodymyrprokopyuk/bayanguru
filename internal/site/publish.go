@@ -4,9 +4,12 @@ import (
   "fmt"
   "strings"
   "text/template"
+  "io"
   "path/filepath"
   "os"
   "os/exec"
+  "sync"
+  "context"
   "gopkg.in/yaml.v3"
   sty "github.com/volodymyrprokopyuk/bayan/internal/style"
   cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
@@ -101,10 +104,10 @@ func makeTemplate(templateDir string) (*template.Template, error) {
 }
 
 func publishFile(
-  tpl *template.Template, publicDir, publicFile string, data any,
+  w io.Writer, tpl *template.Template, publicDir, publicFile string, data any,
 ) error {
   file := filepath.Join(publicDir, publicFile)
-  fmt.Printf("%v %v\n", sty.Org("publish"), sty.Lvl(file))
+  fmt.Fprintf(w, "%v %v\n", sty.Org("publish"), sty.Lvl(file))
   w, err := os.Create(file) // overwrites an existing file
   if err != nil {
     return err
@@ -161,26 +164,87 @@ func publishIndex(
     SiteContent: "",
     CatalogMeta: catalogMeta,
   }
-  return publishFile(tpl, publicDir, "index.html", indexData)
+  return publishFile(os.Stdout, tpl, publicDir, "index.html", indexData)
+}
+
+func receiveAndPublishPieces(
+  ctx context.Context, wg *sync.WaitGroup,
+  pieces <-chan cat.Piece, errors chan<- error,
+  tplPool *sync.Pool, publicDir string,
+) {
+  defer wg.Done()
+  pieceDir := filepath.Join(publicDir, "piece")
+  var w strings.Builder
+  for {
+    select {
+    case <- ctx.Done():
+      return
+    case piece, open := <- pieces:
+      if !open {
+        return
+      }
+      w.Reset()
+      tpl := tplPool.Get().(*template.Template)
+      pieceData := struct { Piece cat.Piece }{piece}
+      err := publishFile(&w, tpl, pieceDir, piece.File, pieceData)
+      fmt.Print(w.String())
+      if err != nil {
+        errors <- err
+        pieces = nil // do not publish pieces after an error
+      }
+    }
+  }
 }
 
 func publishPieces(
-  tpl *template.Template, pieces []cat.Piece, templateDir, publicDir string,
+  pieces []cat.Piece, templateDir, publicDir string,
 ) error {
-  pieceFile := filepath.Join(templateDir, "piece.html")
-  _, err := tpl.ParseFiles(pieceFile)
+  tpl, err := makeTemplate(templateDir) // validate template
   if err != nil {
     return err
   }
-  piecesDir := filepath.Join(publicDir, "piece")
-  for _, piece := range pieces {
-    pieceData := struct { Piece cat.Piece }{piece}
-    err := publishFile(tpl, piecesDir, piece.File, pieceData)
-    if err != nil {
-      return err
-    }
+  pieceFile := filepath.Join(templateDir, "piece.html")
+  _, err = tpl.ParseFiles(pieceFile) // validate template
+  if err != nil {
+    return err
   }
-  return nil
+  var tplPool = sync.Pool{
+    New: func() any {
+      tpl, _ := makeTemplate(templateDir)
+      _, _ = tpl.ParseFiles(pieceFile)
+      return tpl
+    },
+  }
+  var wg sync.WaitGroup
+  ctx, cancel := context.WithCancel(context.Background())
+  defer cancel()
+  pubPieces, pubErrors := make(chan cat.Piece), make(chan error)
+  for range min(len(pieces), 8) {
+    wg.Add(1)
+    go receiveAndPublishPieces(
+      ctx, &wg, pubPieces, pubErrors, &tplPool, publicDir,
+    )
+  }
+  wg.Add(1)
+  go func() {
+    defer wg.Done()
+    pieces: for _, piece := range pieces {
+      select {
+      case <- ctx.Done():
+        break pieces
+      case pubPieces <- piece:
+      }
+    }
+    close(pubPieces)
+  }()
+  go func() {
+    err = <- pubErrors // capture the first error
+    cancel()
+    for range pubErrors { } // ignore other errors
+  }()
+  wg.Wait()
+  close(pubErrors)
+  return err
 }
 
 func indexPieces(siteDir, publicDir string) error {
@@ -219,20 +283,20 @@ func siteError(format string, args ...any) error {
 }
 
 func Publish(pc PublishCommand) error {
-  // pieces, _, catLen, err := cat.ReadPiecesAndBooks(
-  //   pc.CatalogDir, pc.Catalog, pc.Pieces,
-  //   pc.BookFile, pc.Books, pc.Book, pc.All,
-  // )
-  // if err != nil {
-  //   return catError("%v", err)
-  // }
-  // if len(pc.Queries) > 0 {
-  //   pieces, err = cat.QueryPieces(pieces, pc.Queries)
-  //   if err != nil {
-  //     return catError("%v", err)
-  //   }
-  // }
-  // cat.PrintStat(catLen, len(pieces))
+  pieces, _, catLen, err := cat.ReadPiecesAndBooks(
+    pc.CatalogDir, pc.Catalog, pc.Pieces,
+    pc.BookFile, pc.Books, pc.Book, pc.All,
+  )
+  if err != nil {
+    return catError("%v", err)
+  }
+  if len(pc.Queries) > 0 {
+    pieces, err = cat.QueryPieces(pieces, pc.Queries)
+    if err != nil {
+      return catError("%v", err)
+    }
+  }
+  cat.PrintStat(catLen, len(pieces))
   if pc.Init {
     err := initSite(pc.SiteDir, pc.PublicDir)
     if err != nil {
@@ -247,17 +311,17 @@ func Publish(pc PublishCommand) error {
   if err != nil {
     return siteError("%v", err)
   }
-  // err = publishPieces(tpl, pieces, pc.TemplateDir, pc.PublicDir)
-  // if err != nil {
-  //   return siteError("%v", err)
-  // }
-  // err = indexPieces(pc.SiteDir, pc.PublicDir)
-  // if err != nil {
-  //   return siteError("%v", err)
-  // }
-  // err = publishCatalog(tpl, pc)
-  // if err != nil {
-  //   return siteError("%v", err)
-  // }
+  err = publishPieces(pieces, pc.TemplateDir, pc.PublicDir)
+  if err != nil {
+    return siteError("%v", err)
+  }
+  err = indexPieces(pc.SiteDir, pc.PublicDir)
+  if err != nil {
+    return siteError("%v", err)
+  }
+  err = publishCatalog(tpl, pc)
+  if err != nil {
+    return siteError("%v", err)
+  }
   return nil
 }
