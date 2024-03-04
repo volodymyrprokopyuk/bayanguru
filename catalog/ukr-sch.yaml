@@ -33,10 +33,9 @@ pieces:
   - { id: nele, tit: Українська полька,
       arr: С. Чапкій, src: FBBSC1978,
       org: ukr, sty: flk, gnr: plk, ton: [ai, cj], frm: [var, tu3], bss: [frb, in8, cr5, cr7, fi5], lvl: elc }
-  # p. 90
-  # - { id: w6w8, tit: Женчичок-бренчичок, sub: ukrfs,
-  #     src: FBBSC1978,
-  #     org: ukr, sty: flk, gnr: sng, ton: gj, frm: vo2, bss: [frb, in3], lvl: elb }
+  - { id: w6w8, tit: Женчичок-бренчичок, sub: ukrfs,
+      src: FBBSC1978,
+      org: ukr, sty: flk, gnr: sng, ton: gj, frm: vo2, bss: [frb, in3], lvl: elb }
   # p. 104
   # - { id: lspg, tit: "Гей, не літав соколонько", sub: ukrfs,
   #     arr: Л. Вільчик, src: FBBSC1978,
