@@ -49,6 +49,7 @@ func engraveBook(
   }
   var bookScore strings.Builder
   err := tpl.ExecuteTemplate(&bookScore, "score.ly", book)
+  tplPool.Put(tpl)
   if err != nil {
     return err
   }

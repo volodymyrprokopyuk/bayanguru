@@ -10,6 +10,7 @@ import (
   "os/exec"
   "sync"
   "context"
+  "runtime"
   "gopkg.in/yaml.v3"
   sty "github.com/volodymyrprokopyuk/bayan/internal/style"
   cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
@@ -188,6 +189,7 @@ func receiveAndPublishPieces(
       pieceData := struct { Piece cat.Piece }{piece}
       err := publishFile(&w, tpl, pieceDir, piece.File, pieceData)
       fmt.Print(w.String())
+      tplPool.Put(tpl)
       if err != nil {
         errors <- err
         pieces = nil // do not publish pieces after an error
@@ -219,7 +221,7 @@ func publishPieces(
   ctx, cancel := context.WithCancel(context.Background())
   defer cancel()
   pubPieces, pubErrors := make(chan cat.Piece), make(chan error)
-  for range min(len(pieces), 8) {
+  for range min(len(pieces), runtime.GOMAXPROCS(0)) {
     wg.Add(1)
     go receiveAndPublishPieces(
       ctx, &wg, pubPieces, pubErrors, &tplPool, publicDir,

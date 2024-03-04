@@ -177,6 +177,7 @@ func engravePiece(
   }
   var pieceScore strings.Builder
   err = tpl.ExecuteTemplate(&pieceScore, "score.ly", piece)
+  tplPool.Put(tpl)
   if err != nil {
     return err
   }
