@@ -92,7 +92,7 @@
     \rep 2 { r8 c'='8( g c g c=') | }
     r8 c='8( a c a c) | r c( aes c aes c) |
     r8 c='8( g c g c) | r dis( c dis c dis) |
-    r8 e='8( c e c e) | r g,( c g c g) |
+    r8 e='8( c e c e) | r g,( c g d' g,) |
     r8 g=8( c g d'~ <g,_( d'>) | <c,= g') c>4 %
   } {
     c=2~ c8 r | e2~ e8 r | f2~ f8 r | f2~ f8 r |
