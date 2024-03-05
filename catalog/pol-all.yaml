@@ -33,7 +33,6 @@ pieces:
   - { id: 1wgi, tit: Словацька полька,
       src: B2AK1979,
       org: svk, sty: flk, gnr: plk, ton: aj, frm: [in3, syn], bss: stb, lvl: elb }
-
   # Tutorial
   # BTBC1936
   - { id: isnd, tit: Краков'як, sub: polfd,

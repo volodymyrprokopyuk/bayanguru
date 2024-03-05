@@ -10,7 +10,6 @@ pieces:
   - { id: v99z, tit: Янка, sub: blrfd,
       arr: М. Чайкін, src: B1AK1985,
       org: blr, sty: flk, gnr: dnc, ton: dj, frm: mel, bss: stb, lvl: ela }
-
   # Tutorial
   # BTBC1936
   - { id: 8ec9, tit: Перепілонька, sub: blrfs,
@@ -20,20 +19,17 @@ pieces:
   - { id: 2q9x, tit: Крижaчок, sub: blrfd,
       arr: А. Стоянов, src: BTB1989,
       org: blr, sty: flk, gnr: dnc, ton: cj, frm: var, bss: stb, lvl: elb }
-
   # Course
   # TYBC2B1971
   - { id: vhri, tit: Микита, sub: blrfd,
       src: TYBC2B1971,
       org: blr, sty: flk, gnr: dnc, ton: gj, frm: in3, bss: stb, lvl: ela }
-
   # Free bass
   # Class
   # FBB3BZ1982
   - { id: wnc5, tit: Прилетіли гуси, sub: blrfs,
       arr: А. Зубарев, src: FBB3BZ1982,
       org: blr, sty: flk, gnr: sng, ton: ai, frm: [vo2, in6], bss: [frb, in3], lvl: elb }
-
   # School
   # FBBSC1978
   - { id: bx7x, tit: Чому ж мені не співати, sub: blrfs,
