@@ -64,6 +64,7 @@ type Piece struct {
   Com string `yaml:"com"`
   Arr string `yaml:"arr"`
   Art string `yaml:"art"`
+  ArtUkr string
   Src string `yaml:"src"`
   Org string `yaml:"org"`
   Sty string `yaml:"sty"`
@@ -170,6 +171,10 @@ func makeMatchPiece(queries PieceQueries) (MatchPiece, error) {
         }
       case "arr":
         if !match(piece.Arr) {
+          return false
+        }
+      case "art":
+        if !match(piece.Art) {
           return false
         }
       default:
@@ -337,11 +342,10 @@ func addMetaToPieces(pieces []Piece) {
     }
     // art
     if len(piece.Arr) > 0 {
-      if len(piece.Art) > 0 {
-        piece.Art = meta[piece.Art]
-      } else {
-        piece.Art = meta["arr"] // default: arrangement
+      if len(piece.Art) == 0 {
+        piece.Art = "arr" // default: arrangement
       }
+      piece.ArtUkr = meta[piece.Art]
     }
     // file
     piece.File = scoreFile(piece.Tit, piece.ID)
@@ -422,7 +426,7 @@ func Stu(frmOrBss []string, ID string) string {
 
 func PrintPiece(w io.Writer, piece Piece) {
   tit := piece.Tit
-  com := fmt.Sprintf("%v %v%v", piece.Com, piece.Art, piece.Arr)
+  com := fmt.Sprintf("%v %v%v", piece.Com, piece.ArtUkr, piece.Arr)
   com = strings.TrimSpace(com)
   titLen, comLen := len([]rune(tit)), len([]rune(com))
   maxTit := 53 - comLen

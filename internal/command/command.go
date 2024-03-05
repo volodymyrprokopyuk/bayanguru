@@ -145,7 +145,7 @@ bayan engrave all --lint --optimize --meta=f`,
   )
 
   var random, list bool
-  var org, sty, gnr, ton, frm, bss, lvl, tit, com, arr string
+  var org, sty, gnr, ton, frm, bss, lvl, tit, com, arr, art string
   var queries = map[string]Query{
     "org": {"piece origin e.g. ukr,rus", &org},
     "sty": {"piece style e.g. flk,cls", &sty},
@@ -157,6 +157,7 @@ bayan engrave all --lint --optimize --meta=f`,
     "tit": {"piece title", &tit},
     "com": {"piece composer", &com},
     "arr": {"piece arranger", &arr},
+    "art": {"arrangement type", &art},
   }
   playCmd := &cobra.Command{
     Use: "play",

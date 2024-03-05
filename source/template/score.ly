@@ -259,7 +259,7 @@ tocSection = #(define-music-function
 \tocItem \markup {
   \caps id: "{{ .ID }}" "{{ .Tit }}"
   {{ if .Com }} \italic "{{ .Com }}" {{ end }}
-  {{ if .Arr }} \italic "{{ .Art }}{{ .Arr }}" {{ end }}
+  {{ if .Arr }} \italic "{{ .ArtUkr }}{{ .Arr }}" {{ end }}
 }
 {{ end }}
 
@@ -269,7 +269,7 @@ tocSection = #(define-music-function
     tit = "{{ .Tit }}"
     sub = "{{ .Sub }}"
     com = "{{ .Com }}"
-    arr = "{{ .Art }}{{ .Arr }}"
+    arr = "{{ .ArtUkr }}{{ .Arr }}"
     id = "{{ .ID }}"
     org = "{{ .Org }}"
     sty = "{{ .Sty }}"

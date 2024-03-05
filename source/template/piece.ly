@@ -3,9 +3,9 @@
 \header {
   pdftitle = "{{ .Tit }}"
   {{ if and .Com .Arr }}
-    pdfauthor = "{{ .Com }} {{ .Art }}{{ .Arr }}"
+    pdfauthor = "{{ .Com }} {{ .ArtUkr }}{{ .Arr }}"
   {{ else if .Arr }}
-    pdfauthor = "{{ .Art }}{{ .Arr }}"
+    pdfauthor = "{{ .ArtUkr }}{{ .Arr }}"
   {{ else }}
     pdfauthor = "{{ .Com }}"
   {{ end }}
