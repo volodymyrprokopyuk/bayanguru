@@ -2,7 +2,7 @@
   {{ with .Piece }}
     <title>{{ .Tit }}</title>
     <meta name="description"
-          content="{{ .Tit }} {{ .Sub }} {{ .Com }} {{ .Art }} {{ .Arr }}" />
+          content="{{ .Tit }} {{ .Sub }} {{ .Com }} {{ .ArtUkr }} {{ .Arr }}" />
   {{ end }}
 {{ end }}
 
@@ -16,6 +16,7 @@
              data-pagefind-filter="Composer | Копмозитор">{{ .Com }}</div>
         <div data-pagefind-meta="arr"
              data-pagefind-filter="Arranger | Обробка">{{ .Arr }}</div>
+        <div data-pagefind-meta="art">{{ .Art }}</div>
         <div data-pagefind-meta="org"
              data-pagefind-filter="Origin | Країна">{{ .Org }}</div>
         <div data-pagefind-meta="sty"
