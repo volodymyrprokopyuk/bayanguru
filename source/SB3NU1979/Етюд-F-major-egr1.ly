@@ -16,6 +16,7 @@
   \time 2/4
   \meter 1/8 2,2
   \set subdivideBeams = ##t
+  \omit TupletBracket
   \repeat volta 2 {
     {{ template "rh1" (w `f''=''16(\p\< g f`) }}
     \acc { c='''8 } bes-.\> g-. \acc { f='' } e-. c-. |
