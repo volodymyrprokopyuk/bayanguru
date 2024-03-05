@@ -5,13 +5,13 @@ pieces:
   # FBBSC1978
   - { id: 39bh, tit: П'єса,
       com: Д. Пшеничний, src: FBBSC1978,
-      org: ukr, sty: aut, gnr: pie, ton: ai, frm: vo2, bss: frb, lvl: ela }
+      org: ukr, sty: cus, gnr: pie, ton: ai, frm: vo2, bss: frb, lvl: ela }
   - { id: c2ql, tit: Осінній дощик,
       com: Л. Вільчик, src: FBBSC1978,
-      org: ukr, sty: aut, gnr: chd, ton: di, frm: vo2, bss: frb, lvl: ela }
+      org: ukr, sty: cus, gnr: chd, ton: di, frm: vo2, bss: frb, lvl: ela }
   - { id: axyx, tit: Будуєм дім,
       com: К. Мясков, src: FBBSC1978,
-      org: ukr, sty: aut, gnr: chd, ton: [fj, cj], frm: vo2, bss: frb, lvl: ela }
+      org: ukr, sty: cus, gnr: chd, ton: [fj, cj], frm: vo2, bss: frb, lvl: ela }
   - { id: 1k22, tit: "Ой при лужку, при лужку", sub: ukrfs,
       arr: С. Чапкій, src: FBBSC1978,
       org: ukr, sty: flk, gnr: sng, ton: ai, frm: vo2, bss: frb, lvl: ela }
@@ -26,10 +26,10 @@ pieces:
       org: ukr, sty: flk, gnr: sng, ton: ai, frm: vo2, bss: [frb, jmp], lvl: ela }
   - { id: a6rk, tit: На просторі,
       com: І. Поляруш, src: FBBSC1978,
-      org: ukr, sty: aut, gnr: pie, ton: bi, frm: vo2, bss: [frb, in3], lvl: elb }
+      org: ukr, sty: cus, gnr: pie, ton: bi, frm: vo2, bss: [frb, in3], lvl: elb }
   - { id: 3aac, tit: Танцювальна,
       com: К. Мясков, src: FBBSC1978,
-      org: ukr, sty: aut, gnr: pie, ton: ei, frm: [vo2, cr5], bss: frb, lvl: elb }
+      org: ukr, sty: cus, gnr: pie, ton: ei, frm: [vo2, cr5], bss: frb, lvl: elb }
   - { id: nele, tit: Українська полька,
       arr: С. Чапкій, src: FBBSC1978,
       org: ukr, sty: flk, gnr: plk, ton: [ai, cj], frm: [var, tu3], bss: [frb, in8, cr5, cr7, fi5], lvl: elc }
@@ -47,7 +47,7 @@ pieces:
   # p. 113
   # - { id: bjyu, tit: Реве на стогне Дніпр широкий,
   #     com: Д. Крижанівський, arr: С. Чапкій, src: FBBSC1978,
-  #     org: ukr, sty: aut, gnr: sng, ton: ei, frm: [vo2, in3, cr5], bss: frb, lvl: elc }
+  #     org: ukr, sty: cus, gnr: sng, ton: ei, frm: [vo2, in3, cr5], bss: frb, lvl: elc }
   # p. 124
   # - { id: rzwj, tit: Їхав козак за Дунай, sub: ukrfs,
   #     arr: С. Чапкій, src: FBBSC1978,

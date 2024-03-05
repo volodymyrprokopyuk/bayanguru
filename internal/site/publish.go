@@ -44,7 +44,7 @@ var catGroups = map[string][]string{
     "ukrainian", "russian", "belarusian", "hungarian", "extra", "european",
   },
   "style": {
-    "folk", "author", "classic",
+    "folk", "custom", "classic",
   },
   "genre": {
     "song", "dance", "piece",

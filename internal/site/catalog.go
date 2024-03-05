@@ -24,7 +24,7 @@ var tr = map[string]string{
   "european": "European | Європейські",
   // sty
   "folk": "Folk | Фолькльор",
-  "author": "Author | Авторська п'єса",
+  "custom": "Custom piece | Авторська п'єса",
   "classic": "Classic | Класика",
   // gnr
   "song": "Song | Пісня",
@@ -336,8 +336,8 @@ func keyBySty(piece cat.Piece) string {
   switch piece.Sty {
   case "flk":
     return "folk"
-  case "aut":
-    return "author"
+  case "cus":
+    return "custom"
   case "cls":
     return "classic"
   default:

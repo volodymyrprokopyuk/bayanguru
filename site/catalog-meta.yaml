@@ -17,7 +17,7 @@ meta:
       - tit: { name: sty, eng: Piece style, ukr: Стиль п'єси }
         sub:
           - { name: flk, eng: Folk music, ukr: Фолькльорна музика }
-          - { name: aut, eng: Author piece, ukr: Авторська п'єса }
+          - { name: cus, eng: Custom piece, ukr: Авторська п'єса }
           - { name: cls, eng: Classical music, ukr: Класична музика }
       - tit: { name: snr, eng: Piece genre, ukr: Жанр п'єси }
         sub:

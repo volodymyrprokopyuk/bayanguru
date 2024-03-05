@@ -215,7 +215,7 @@ var (
     `|aut|deu|dnk|fra|swe$`,
   }
   validOrg = regexp.MustCompile(strings.Join(orgParts, ""))
-  validSty = regexp.MustCompile(`^flk|aut|cls$`)
+  validSty = regexp.MustCompile(`^flk|cus|cls$`)
   gnrParts = []string{
     `^sng|chd|lul|mil|pry|rmc|ves`,
     `|dnc|gop|koz|mrc|plk|tng|vls`,
@@ -272,7 +272,7 @@ func validatePieces(pieces []Piece, catalogFile string) error {
     }
     if !validSty.MatchString(piece.Sty) {
       errors = append(errors, fmt.Sprintf(
-        "* Invalid sty, expected flk, aut, cls, got %v", piece.Sty),
+        "* Invalid sty, expected flk, cus, cls, got %v", piece.Sty),
       )
     }
     if !validGnr.MatchString(piece.Gnr) {
