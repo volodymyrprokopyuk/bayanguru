@@ -39,10 +39,9 @@ pieces:
   - { id: lspg, tit: "Гей, не літав соколонько", sub: ukrfs,
       arr: Л. Вільчик, src: FBBSC1978,
       org: ukr, sty: flk, gnr: sng, ton: emi, frm: [vo2, in3], bss: [frb, in3], lvl: elb }
-  # p. 108
-  # - { id: gahw, tit: Болить моя голівонька, sub: ukrfs,
-  #     arr: А. Лазаренко, src: FBBSC1978,
-  #     org: ukr, sty: flk, gnr: sng, ton: fi, frm: [vo2, in3], bss: frb, lvl: elb }
+  - { id: gahw, tit: Болить моя голівонька, sub: ukrfs,
+      arr: А. Лазаренко, src: FBBSC1978,
+      org: ukr, sty: flk, gnr: sng, ton: fmi, frm: [vo2, in3], bss: frb, lvl: elb }
   # p. 113
   # - { id: bjyu, tit: Реве на стогне Дніпр широкий,
   #     com: Д. Крижанівський, arr: С. Чапкій, src: FBBSC1978,
