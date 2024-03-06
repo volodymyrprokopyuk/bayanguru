@@ -227,7 +227,7 @@ var (
     `|pie|gyp|stu$`,
   }
   validGnr = regexp.MustCompile(strings.Join(gnrParts, ""))
-  validTon = regexp.MustCompile(`^[a-g](?:es|is)?[ij]$`)
+  validTon = regexp.MustCompile(`^[a-g](?:es|is)?m[ij]$`)
   validLvl = regexp.MustCompile(`^(?:el|in|pr|vi)[a-c]$`)
   frmParts = []string{
     `^stb|pub|frb$`,
@@ -288,7 +288,7 @@ func validatePieces(pieces []Piece, catalogFile string) error {
     for _, ton := range piece.Ton {
       if !validTon.MatchString(ton) {
         errors = append(errors, fmt.Sprintf(
-          "* Invalid ton, expected [a-g](es|is)?[ij], got %v", ton),
+          "* Invalid ton, expected [a-g](es|is)?m[ij], got %v", ton),
         )
       }
     }

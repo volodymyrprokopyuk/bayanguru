@@ -41,7 +41,7 @@ meta:
           - { name: stu, eng: Study, ukr: Етюд } # study
   - tit: { eng: Piece qualification, ukr: Кваліфікація п'єси }
     sec:
-      # [a-g](is|es)[ji]: sharp/flat major/minor, дієз/бемоль мажор/мінор
+      # [a-g](is|es)m[ji]: sharp/flat major/minor, дієз/бемоль мажор/мінор
       - tit: { name: ton, eng: Piece tonalities, ukr: Тональності п'єси } # multiple
       - tit: { name: frm, eng: Piece forms, ukr: Форми п'єси } # multiple
         sub:
