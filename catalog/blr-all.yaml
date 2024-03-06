@@ -5,36 +5,36 @@ pieces:
   # B0D1973
   - { id: bv2w, tit: Лявоніха, sub: blrfs,
       src: B0D1973,
-      org: blr, sty: flk, gnr: sng, ton: gj, frm: mel, bss: stb, lvl: ela }
+      org: blr, sty: flk, gnr: sng, ton: gmj, frm: mel, bss: stb, lvl: ela }
   # B1AK1985
   - { id: v99z, tit: Янка, sub: blrfd,
       arr: М. Чайкін, src: B1AK1985,
-      org: blr, sty: flk, gnr: dnc, ton: dj, frm: mel, bss: stb, lvl: ela }
+      org: blr, sty: flk, gnr: dnc, ton: dmj, frm: mel, bss: stb, lvl: ela }
   # Tutorial
   # BTBC1936
   - { id: 8ec9, tit: Перепілонька, sub: blrfs,
       arr: М. Чайкін, src: BTBC1936,
-      org: blr, sty: flk, gnr: sng, ton: ai, frm: vo2, bss: stb, lvl: elb }
+      org: blr, sty: flk, gnr: sng, ton: ami, frm: vo2, bss: stb, lvl: elb }
   # BTB1989
   - { id: 2q9x, tit: Крижaчок, sub: blrfd,
       arr: А. Стоянов, src: BTB1989,
-      org: blr, sty: flk, gnr: dnc, ton: cj, frm: var, bss: stb, lvl: elb }
+      org: blr, sty: flk, gnr: dnc, ton: cmj, frm: var, bss: stb, lvl: elb }
   # Course
   # TYBC2B1971
   - { id: vhri, tit: Микита, sub: blrfd,
       src: TYBC2B1971,
-      org: blr, sty: flk, gnr: dnc, ton: gj, frm: in3, bss: stb, lvl: ela }
+      org: blr, sty: flk, gnr: dnc, ton: gmj, frm: in3, bss: stb, lvl: ela }
   # Free bass
   # Class
   # FBB3BZ1982
   - { id: wnc5, tit: Прилетіли гуси, sub: blrfs,
       arr: А. Зубарев, src: FBB3BZ1982,
-      org: blr, sty: flk, gnr: sng, ton: ai, frm: [vo2, in6], bss: [frb, in3], lvl: elb }
+      org: blr, sty: flk, gnr: sng, ton: ami, frm: [vo2, in6], bss: [frb, in3], lvl: elb }
   # School
   # FBBSC1978
   - { id: bx7x, tit: Чому ж мені не співати, sub: blrfs,
       src: FBBSC1978,
-      org: blr, sty: flk, gnr: sng, ton: di, frm: vo2, bss: frb, lvl: ela }
+      org: blr, sty: flk, gnr: sng, ton: dmi, frm: vo2, bss: frb, lvl: ela }
   - { id: cyj2, tit: Перепілочка, sub: blrfs,
       arr: С. Чапкій, src: FBBSC1978,
-      org: blr, sty: flk, gnr: sng, ton: gi, frm: [vo2, cr5], bss: [frb, var, vo2, syn, jmp], lvl: elc }
+      org: blr, sty: flk, gnr: sng, ton: gmi, frm: [vo2, cr5], bss: [frb, var, vo2, syn, jmp], lvl: elc }

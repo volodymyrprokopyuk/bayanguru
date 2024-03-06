@@ -5,9 +5,9 @@ pieces:
   # B0DU1982
   - { id: mhjw, tit: Молдавський народний танець,
       src: B0DU1982,
-      org: mda, sty: flk, gnr: dnc, ton: [gj, gi], frm: mel, bss: stb, lvl: ela }
+      org: mda, sty: flk, gnr: dnc, ton: [gmj, gmi], frm: mel, bss: stb, lvl: ela }
   # Tutorial
   # BTBC1936
   - { id: epyc, tit: Молдовеняска, sub: mdafd,
       arr: М. Чайкін, art: ipr, src: BTBC1936,
-      org: mda, sty: flk, gnr: dnc, ton: [di, fj], frm: [var, dot, acc], bss: stb, lvl: elb }
+      org: mda, sty: flk, gnr: dnc, ton: [dmi, fmj], frm: [var, dot, acc], bss: stb, lvl: elb }

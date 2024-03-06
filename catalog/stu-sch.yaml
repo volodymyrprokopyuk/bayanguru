@@ -5,16 +5,16 @@ pieces:
   # FBBSC1978
   - { id: kbmk, tit: Етюд C major,
       com: К. Гурліт, src: FBBSC1978,
-      org: deu, sty: cls, gnr: stu, ton: cj, frm: scl, bss: [frb, arp], lvl: ela }
+      org: deu, sty: cls, gnr: stu, ton: cmj, frm: scl, bss: [frb, arp], lvl: ela }
   - { id: g2e5, tit: Етюд C major,
       com: С. Чапкій, src: FBBSC1978,
-      org: ukr, sty: cus, gnr: stu, ton: cj, frm: arp, bss: [frb, arp], lvl: ela }
+      org: ukr, sty: cus, gnr: stu, ton: cmj, frm: arp, bss: [frb, arp], lvl: ela }
   - { id: a4cg, tit: Етюд C major,
       com: С. Чапкій, src: FBBSC1978,
-      org: ukr, sty: cus, gnr: stu, ton: cj, frm: [scl, dot], bss: [frb, scl, dot], lvl: ela }
+      org: ukr, sty: cus, gnr: stu, ton: cmj, frm: [scl, dot], bss: [frb, scl, dot], lvl: ela }
   - { id: 4b2w, tit: Етюд C major,
       com: С. Чапкій, src: FBBSC1978,
-      org: ukr, sty: cus, gnr: stu, ton: cj, frm: [scl, dot], bss: [frb, scl, dot], lvl: ela }
+      org: ukr, sty: cus, gnr: stu, ton: cmj, frm: [scl, dot], bss: [frb, scl, dot], lvl: ela }
   - { id: ja4a, tit: Етюд Bes major,
       com: К. Черні, src: FBBSC1978,
-      org: aut, sty: cls, gnr: stu, ton: besj, frm: scl, bss: [frb, cr5], lvl: elb }
+      org: aut, sty: cls, gnr: stu, ton: besmj, frm: scl, bss: [frb, cr5], lvl: elb }
