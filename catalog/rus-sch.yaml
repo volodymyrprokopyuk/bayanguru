@@ -5,28 +5,28 @@ pieces:
   # FBBSC1978
   - { id: v2kv, tit: На горе-то калина, sub: rusfs,
       src: FBBSC1978,
-      org: rus, sty: flk, gnr: sng, ton: fj, frm: vo2, bss: frb, lvl: ela }
+      org: rus, sty: flk, gnr: sng, ton: fmj, frm: vo2, bss: frb, lvl: ela }
   - { id: b06y, tit: Солнышко не греет,
       com: К. Савцов, src: FBBSC1978,
-      org: rus, sty: cus, gnr: chd, ton: ai, frm: vo2, bss: frb, lvl: ela }
+      org: rus, sty: cus, gnr: chd, ton: ami, frm: vo2, bss: frb, lvl: ela }
   - { id: 8rvx, tit: Ивушка, sub: rusfs,
       arr: С. Чапкій, src: FBBSC1978,
-      org: rus, sty: flk, gnr: sng, ton: ei, frm: [vo2, dot], bss: frb, lvl: ela }
+      org: rus, sty: flk, gnr: sng, ton: emi, frm: [vo2, dot], bss: frb, lvl: ela }
   - { id: pouc, tit: То не ветер ветку клонит, sub: rusfs,
       arr: С. Чапкій, src: FBBSC1978,
-      org: rus, sty: flk, gnr: sng, ton: ei, frm: vo2, bss: frb, lvl: ela }
+      org: rus, sty: flk, gnr: sng, ton: emi, frm: vo2, bss: frb, lvl: ela }
   - { id: tq21, tit: Утушка луговая, sub: rusfs,
       arr: С. Чапкій, src: FBBSC1978,
-      org: rus, sty: flk, gnr: sng, ton: ai, frm: vo2, bss: [frb, jmp], lvl: ela }
+      org: rus, sty: flk, gnr: sng, ton: ami, frm: vo2, bss: [frb, jmp], lvl: ela }
   - { id: h64c, tit: Мелодия,
       com: К. Михайлов, src: FBBSC1978,
-      org: rus, sty: cus, gnr: pie, ton: ai, frm: vo2, bss: [frb, cr5], lvl: ela }
+      org: rus, sty: cus, gnr: pie, ton: ami, frm: vo2, bss: [frb, cr5], lvl: ela }
   - { id: ct44, tit: Русская протяжная,
       com: Ю. Щуровський, src: FBBSC1978,
-      org: rus, sty: cus, gnr: pie, ton: bi, frm: [vo2, dot], bss: [frb, jmp], lvl: elb }
+      org: rus, sty: cus, gnr: pie, ton: bmi, frm: [vo2, dot], bss: [frb, jmp], lvl: elb }
   - { id: uvv4, tit: "Вниз по матушке, по Волге", sub: rusfs,
       src: FBBSC1978,
-      org: rus, sty: flk, gnr: sng, ton: gi, frm: [vo2, in3], bss: [frb, in5], lvl: ela }
+      org: rus, sty: flk, gnr: sng, ton: gmi, frm: [vo2, in3], bss: [frb, in5], lvl: ela }
   - { id: 7nrq, tit: Вальс,
       com: А. Грибоедов, arr: С. Чапкій, src: FBBSC1978,
-      org: rus, sty: cus, gnr: vls, ton: [ei, gj], frm: [vo2, cr5, jmp], bss: [frb, in3, cr5, jmp], lvl: elc }
+      org: rus, sty: cus, gnr: vls, ton: [emi, gmj], frm: [vo2, cr5, jmp], bss: [frb, in3, cr5, jmp], lvl: elc }

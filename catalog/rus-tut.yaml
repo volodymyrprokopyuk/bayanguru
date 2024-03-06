@@ -4,111 +4,111 @@ pieces:
   # BTBC1936
   - { id: q6xh, tit: Одинокая гармонь,
       com: Б. Мокроусов, arr: А. Басурманов, art: ipr, src: BTBC1936,
-      org: rus, sty: cus, gnr: sng, ton: ei, frm: mel, bss: stb, lvl: ela }
+      org: rus, sty: cus, gnr: sng, ton: emi, frm: mel, bss: stb, lvl: ela }
   - { id: 87ko, tit: Яблочко, sub: rusfd,
       arr: М. Чайкін, src: BTBC1936,
-      org: rus, sty: flk, gnr: dnc, ton: di, frm: [mel, syn], bss: stb, lvl: ela }
+      org: rus, sty: flk, gnr: dnc, ton: dmi, frm: [mel, syn], bss: stb, lvl: ela }
   - { id: p7el, tit: Варяг, sub: rusfs,
       arr: М. Чайкін, art: ipr, src: BTBC1936,
-      org: rus, sty: flk, gnr: sng, ton: eesj, frm: dot, bss: stb, lvl: ela }
+      org: rus, sty: flk, gnr: sng, ton: eesmj, frm: dot, bss: stb, lvl: ela }
   - { id: 6u3l, tit: Ленинские горы,
       com: Ю. Милютин, arr: А. Басурманов, art: ipr, src: BTBC1936,
-      org: rus, sty: cus, gnr: pie, ton: gj, frm: [dot, syn], bss: [stb, syn], lvl: elb }
+      org: rus, sty: cus, gnr: pie, ton: gmj, frm: [dot, syn], bss: [stb, syn], lvl: elb }
   - { id: qt7k, tit: Есть на Волге утес, sub: rusfs,
       arr: А. Холминов, src: BTBC1936,
-      org: rus, sty: flk, gnr: sng, ton: di, frm: [in3, cr5, tu3, dot], bss: stb, lvl: elb }
+      org: rus, sty: flk, gnr: sng, ton: dmi, frm: [in3, cr5, tu3, dot], bss: stb, lvl: elb }
   - { id: oz1w, tit: При долине куст калины,
       com: А. Новиков, arr: Н. Речменский, art: ipr, src: BTBC1936,
-      org: rus, sty: flk, gnr: sng, ton: di, frm: in3, bss: stb, lvl: elb }
+      org: rus, sty: flk, gnr: sng, ton: dmi, frm: in3, bss: stb, lvl: elb }
   - { id: p26a, tit: Барыня, sub: rusfd,
       arr: М. Чайкін, src: BTBC1936,
-      org: rus, sty: flk, gnr: dnc, ton: cj, frm: [var, tu3, syn, acc], bss: stb, lvl: elb }
+      org: rus, sty: flk, gnr: dnc, ton: cmj, frm: [var, tu3, syn, acc], bss: stb, lvl: elb }
   - { id: frcu, tit: "Ах ты, ноченька", sub: rusfs,
       arr: М. Чайкін, src: BTBC1936,
-      org: rus, sty: flk, gnr: sng, ton: ei, frm: [dot, syn], bss: [stb, syn], lvl: ela }
+      org: rus, sty: flk, gnr: sng, ton: emi, frm: [dot, syn], bss: [stb, syn], lvl: ela }
   - { id: hjff, tit: Костры горят далекие,
       com: Б. Мокроусов, arr: А. Басурманов, art: ipr, src: BTBC1936,
-      org: rus, sty: cus, gnr: sng, ton: di, frm: in3, bss: stb, lvl: elb }
+      org: rus, sty: cus, gnr: sng, ton: dmi, frm: in3, bss: stb, lvl: elb }
   - { id: 7nax, tit: Ермак, sub: rusfs,
       arr: М. Чайкін, art: ipr, src: BTBC1936,
-      org: rus, sty: flk, gnr: sng, ton: ei, frm: [in3, dot], bss: stb, lvl: elb }
+      org: rus, sty: flk, gnr: sng, ton: emi, frm: [in3, dot], bss: stb, lvl: elb }
   - { id: 74jq, tit: Уральская рябинушка,
       com: Е. Родыгин, arr: А. Басурманов, art: ipr, src: BTBC1936,
-      org: rus, sty: cus, gnr: sng, ton: di, frm: [in3, dot], bss: stb, lvl: ela }
+      org: rus, sty: cus, gnr: sng, ton: dmi, frm: [in3, dot], bss: stb, lvl: ela }
   - { id: 7s64, tit: Жди солдата,
       com: Б. Мокроусов, arr: М. Чайкін, art: ipr, src: BTBC1936,
-      org: rus, sty: cus, gnr: mil, ton: di, frm: in3, bss: stb, lvl: elb }
+      org: rus, sty: cus, gnr: mil, ton: dmi, frm: in3, bss: stb, lvl: elb }
   - { id: blt6, tit: Родина, sub: rusfs,
       com: В. Смыслов, arr: М. Чайкін, art: hrm, src: BTBC1936,
-      org: rus, sty: flk, gnr: sng, ton: di, frm: in3, bss: stb, lvl: elb }
+      org: rus, sty: flk, gnr: sng, ton: dmi, frm: in3, bss: stb, lvl: elb }
   - { id: l1zm, tit: Лирическая,
       com: Н. Поликарпов, src: BTBC1936,
-      org: rus, sty: cus, gnr: pie, ton: dj, frm: [in3, dot, syn], bss: stb, lvl: elb }
+      org: rus, sty: cus, gnr: pie, ton: dmj, frm: [in3, dot, syn], bss: stb, lvl: elb }
   - { id: sqwg, tit: Уваровские частушки,
       arr: С. Аксюк, src: BTBC1936,
-      org: rus, sty: flk, gnr: pry, ton: fj, frm: [var, in3], bss: stb, lvl: elb }
+      org: rus, sty: flk, gnr: pry, ton: fmj, frm: [var, in3], bss: stb, lvl: elb }
   - { id: 9lu3, tit: Волжские припевки,
       com: Ю. Щекотов, arr: А. Басурманов, art: ipr, src: BTBC1936,
-      org: rus, sty: cus, gnr: pry, ton: dj, frm: [in3, cr5], bss: stb, lvl: elb }
+      org: rus, sty: cus, gnr: pry, ton: dmj, frm: [in3, cr5], bss: stb, lvl: elb }
   - { id: wkmw, tit: Не сама машина ходит, sub: Алтайские частушки,
       arr: Н. Кутузов, src: BTBC1936,
-      org: rus, sty: flk, gnr: pry, ton: di, frm: [in3, cr5, syn, jmp], bss: stb, lvl: elc }
+      org: rus, sty: flk, gnr: pry, ton: dmi, frm: [in3, cr5, syn, jmp], bss: stb, lvl: elc }
   - { id: ecde, tit: Мчатся гуси вереницей, sub: rusfs,
       com: У. Жук, arr: М. Чайкін, art: hrm, src: BTBC1936,
-      org: rus, sty: flk, gnr: sng, ton: di, frm: in3, bss: [stb, syn], lvl: elb }
+      org: rus, sty: flk, gnr: sng, ton: dmi, frm: in3, bss: [stb, syn], lvl: elb }
   - { id: vmd4, tit: "Цвети, наш край",
       com: С. Туликов, arr: А. Басурманов, art: ipr, src: BTBC1936,
-      org: rus, sty: cus, gnr: pie, ton: [eesj, ci], frm: in3, bss: [stb, syn], lvl: elb }
+      org: rus, sty: cus, gnr: pie, ton: [eesmj, cmi], frm: in3, bss: [stb, syn], lvl: elb }
   - { id: s31k, tit: "Где же вы теперь, друзья-однополчане",
       com: В. Соловьев-Седой, arr: А. Басурманов, art: ipr, src: BTBC1936,
-      org: rus, sty: cus, gnr: mil, ton: ei, frm: [in3, dot], bss: stb, lvl: elb }
+      org: rus, sty: cus, gnr: mil, ton: emi, frm: [in3, dot], bss: stb, lvl: elb }
   - { id: 1czf, tit: Карело-финская полька,
       arr: Б. Тихонов, src: BTBC1936,
-      org: rus, sty: flk, gnr: plk, ton: [ci, fi], frm: [var, tu3], bss: stb, lvl: elb }
+      org: rus, sty: flk, gnr: plk, ton: [cmi, fmi], frm: [var, tu3], bss: stb, lvl: elb }
   # BTB1978
   - { id: lknz, tit: "Ах ты, зимушка-зима", sub: rusfs,
       arr: Л. Захарова, art: ipr, src: BTB1978,
-      org: rus, sty: flk, gnr: sng, ton: ai, frm: mel, bss: stb, lvl: ela }
+      org: rus, sty: flk, gnr: sng, ton: ami, frm: mel, bss: stb, lvl: ela }
   - { id: od7f, tit: Ивушка,
       com: Г. Пономаренко, arr: Л. Захарова, art: ipr, src: BTB1978,
-      org: rus, sty: cus, gnr: pie, ton: cj, frm: [in3, dot], bss: stb, lvl: ela }
+      org: rus, sty: cus, gnr: pie, ton: cmj, frm: [in3, dot], bss: stb, lvl: ela }
   - { id: 2al1, tit: Песня о тревожной молодости,
       com: А. Пахмутова, arr: М. Чайкін, art: ipr, src: BTB1978,
-      org: rus, sty: cus, gnr: sng, ton: di, frm: [in3, dot], bss: stb, lvl: elb }
+      org: rus, sty: cus, gnr: sng, ton: dmi, frm: [in3, dot], bss: stb, lvl: elb }
   - { id: 8pvl, tit: Уральская плясовая,
       arr: Л. Захарова, art: ipr, src: BTB1978,
-      org: rus, sty: flk, gnr: dnc, ton: [aj, ej], frm: [mel, dot], bss: stb, lvl: ela }
+      org: rus, sty: flk, gnr: dnc, ton: [amj, emj], frm: [mel, dot], bss: stb, lvl: ela }
   - { id: 5rl3, tit: Барыня, sub: rusfd,
       arr: Л. Захарова, art: ipr, src: BTB1978,
-      org: rus, sty: flk, gnr: dnc, ton: gj, frm: [var, jmp], bss: stb, lvl: elb }
+      org: rus, sty: flk, gnr: dnc, ton: gmj, frm: [var, jmp], bss: stb, lvl: elb }
   - { id: jh3h, tit: Елечки-метелочки, sub: Сибирские народные припевки,
       arr: Л. Захарова, art: ipr, src: BTB1978,
-      org: rus, sty: flk, gnr: pry, ton: ei, frm: in3, bss: stb, lvl: elb }
+      org: rus, sty: flk, gnr: pry, ton: emi, frm: in3, bss: stb, lvl: elb }
   - { id: gm8m, tit: "С чего начинается родина?",
       com: В. Баснер, arr: А. Басурманов, art: ipr, src: BTB1978,
-      org: rus, sty: cus, gnr: sng, ton: ei, frm: [in3, syn], bss: [stb, syn], lvl: elb }
+      org: rus, sty: cus, gnr: sng, ton: emi, frm: [in3, syn], bss: [stb, syn], lvl: elb }
   - { id: al4t, tit: Марш коммунистических бригад,
       com: А. Новиков, src: BTB1978,
-      org: rus, sty: cus, gnr: mrc, ton: ei, frm: [cr5, cr5], bss: stb, lvl: elb }
+      org: rus, sty: cus, gnr: mrc, ton: emi, frm: [cr5, cr5], bss: stb, lvl: elb }
   - { id: 5h39, tit: А где мне взять такую песню,
       com: Г. Пономаренко, arr: Л. Захарова, art: ipr, src: BTB1978,
-      org: rus, sty: cus, gnr: rmc, ton: ai, frm: [cr5, dot, acc], bss: [stb, syn], lvl: elc }
+      org: rus, sty: cus, gnr: rmc, ton: ami, frm: [cr5, dot, acc], bss: [stb, syn], lvl: elc }
   - { id: 8wgj, tit: Я встретил вас, sub: Старинный романс,
       arr: М. Рожков, src: BTB1978,
-      org: rus, sty: cus, gnr: rmc, ton: ei, frm: [var, cr5, dot], bss: stb, lvl: elc }
+      org: rus, sty: cus, gnr: rmc, ton: emi, frm: [var, cr5, dot], bss: stb, lvl: elc }
   - { id: dizc, tit: Клен ты мой опавший,
       arr: А. Басурманов, art: ipr, src: BTB1978,
-      org: rus, sty: flk, gnr: sng, ton: bi, frm: [in3, cr5, dot], bss: [stb, syn], lvl: elc }
+      org: rus, sty: flk, gnr: sng, ton: bmi, frm: [in3, cr5, dot], bss: [stb, syn], lvl: elc }
   # BTB1989
   - { id: q7i3, tit: Деревенская полька,
       com: В. Ефимов, src: BTB1989,
-      org: rus, sty: flk, gnr: plk, ton: [ai, cj], frm: [var, syn], bss: stb, lvl: elb }
+      org: rus, sty: flk, gnr: plk, ton: [ami, cmj], frm: [var, syn], bss: stb, lvl: elb }
   - { id: up9h, tit: Над окошком месяц,
       com: Е. Попов, arr: А. Кисиленко, art: ipr, src: BTB1989,
-      org: rus, sty: cus, gnr: sng, ton: di, frm: cr5, bss: stb, lvl: elb }
+      org: rus, sty: cus, gnr: sng, ton: dmi, frm: cr5, bss: stb, lvl: elb }
   - { id: 6ocj, tit: Дождь идет, sub: Танго,
       arr: А. Басурманов, art: ipr, src: BTB1989,
-      org: fra, sty: cus, gnr: tng, ton: ci, frm: [in3, cr5, dot, syn], bss: stb, lvl: elc }
+      org: fra, sty: cus, gnr: tng, ton: cmi, frm: [in3, cr5, dot, syn], bss: stb, lvl: elc }
   - { id: nlmb, tit: Прощание славянки, sub: Старинный марш,
       com: В. Агапкин, src: BTB1989,
-      org: rus, sty: cus, gnr: mrc, ton: fi, frm: [cr5, dot, acc], bss: [stb, pub], lvl: elc }
+      org: rus, sty: cus, gnr: mrc, ton: fmi, frm: [cr5, dot, acc], bss: [stb, pub], lvl: elc }
