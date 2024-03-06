@@ -36,10 +36,9 @@ pieces:
   - { id: w6w8, tit: Женчичок-бренчичок, sub: ukrfs,
       src: FBBSC1978,
       org: ukr, sty: flk, gnr: sng, ton: gmj, frm: vo2, bss: [frb, in3], lvl: elb }
-  # p. 104
-  # - { id: lspg, tit: "Гей, не літав соколонько", sub: ukrfs,
-  #     arr: Л. Вільчик, src: FBBSC1978,
-  #     org: ukr, sty: flk, gnr: sng, ton: ei, frm: [vo2, in3], bss: [frb, in3], lvl: elb }
+  - { id: lspg, tit: "Гей, не літав соколонько", sub: ukrfs,
+      arr: Л. Вільчик, src: FBBSC1978,
+      org: ukr, sty: flk, gnr: sng, ton: emi, frm: [vo2, in3], bss: [frb, in3], lvl: elb }
   # p. 108
   # - { id: gahw, tit: Болить моя голівонька, sub: ukrfs,
   #     arr: А. Лазаренко, src: FBBSC1978,

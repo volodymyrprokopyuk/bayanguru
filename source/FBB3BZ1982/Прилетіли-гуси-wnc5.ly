@@ -31,6 +31,6 @@
   \clef bass a,=4 g f e | d c b a | <d a'>1 | <f a> |
   c=4 e a, b8 c | d4 c b a | e'( fis gis e | a=1) |
   \clef treble a'='2 e' | g4 fis f e | d1 | f | R1 |
-  a,='4 g f e | d c b a= | \clef bass e=2 <e b'> | <a= c>1 |
+  a,='4 g f e | d c b a= \clef bass | e=2 <e b'> | <a= c>1 |
 }
 {{ end }}
