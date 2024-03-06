@@ -4,29 +4,29 @@ pieces:
   # BTBC1936
   - { id: yq8y, tit: Українська полька,
       com: М. Чайкін, src: BTBC1936,
-      org: ukr, sty: flk, gnr: plk, ton: ai, frm: rep, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: plk, ton: ami, frm: rep, bss: stb, lvl: ela }
   - { id: cckj, tit: За городом качки пливуть, sub: ukrfs,
       arr: М. Чайкін, art: ipr, src: BTBC1936,
-      org: ukr, sty: flk, gnr: chd, ton: fj, frm: rep, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: chd, ton: fmj, frm: rep, bss: stb, lvl: ela }
   - { id: a3ew, tit: Ой піду я понад лугом, sub: ukrfs,
       arr: М. Чайкін, src: BTBC1936,
-      org: ukr, sty: flk, gnr: sng, ton: [fj, di], frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: sng, ton: [fmj, dmi], frm: mel, bss: stb, lvl: ela }
   - { id: isd6, tit: Гопак, sub: ukrfd,
       arr: М. Чайкін, src: BTBC1936,
-      org: ukr, sty: flk, gnr: gop, ton: [dj, gj], frm: [dot, syn], bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: gop, ton: [dmj, gmj], frm: [dot, syn], bss: stb, lvl: ela }
   - { id: vf9h, tit: Козачок, sub: ukrfd,
       arr: М. Різоль, src: BTBC1936,
-      org: ukr, sty: flk, gnr: koz, ton: [gj, dj, ei], frm: [var, cr5, dot, syn], bss: [stb, pub], lvl: elb }
+      org: ukr, sty: flk, gnr: koz, ton: [gmj, dmj, emi], frm: [var, cr5, dot, syn], bss: [stb, pub], lvl: elb }
   # BTB1978
   - { id: vwad, tit: "Чорнії брови, карії очі", sub: ukrfs,
       src: BTB1978,
-      org: ukr, sty: flk, gnr: rmc, ton: di, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: rmc, ton: dmi, frm: mel, bss: stb, lvl: ela }
   - { id: brku, tit: Стоїть гора високая, sub: ukrfs,
       src: BTB1978,
-      org: ukr, sty: flk, gnr: sng, ton: bi, frm: [in3, in6, fi1], bss: stb, lvl: elb }
+      org: ukr, sty: flk, gnr: sng, ton: bmi, frm: [in3, in6, fi1], bss: stb, lvl: elb }
   - { id: tzb9, tit: Черемшина,
       com: В. Михайлюк, arr: А. Басурманов, art: ipr, src: BTB1978,
-      org: ukr, sty: cus, gnr: sng, ton: ei, frm: [cr5, dot, syn, rep], bss: stb, lvl: elb }
+      org: ukr, sty: cus, gnr: sng, ton: emi, frm: [cr5, dot, syn, rep], bss: stb, lvl: elb }
   - { id: ndwb, tit: Реве та стогне Дніпр широкий,
       com: Д. Крижанівський, arr: А. Басурманов, art: ipr, src: BTB1978,
-      org: ukr, sty: cus, gnr: sng, ton: di, frm: [in3, cr5], bss: pub, lvl: elb }
+      org: ukr, sty: cus, gnr: sng, ton: dmi, frm: [in3, cr5], bss: pub, lvl: elb }
