@@ -23,6 +23,7 @@
   \rep 4 { R2 | }
   \duo { e'='2~ | e=' \clef bass | r8 b=16( cis~ <ais cis>8) <a= c> | }
   { r4 d'='4 | cis8( c b16 a g=8) \clef bass | e=2 | } <e g b>4 <e,=, e'>-- |
+
   \clef treble e'=8[( e' cis d] | cis c b16 a g8) | e( e' <c d>8) 8 |
   \duo { d'='4( dis=') | } { b=2 | }
   e,=8[( e' cis d] | <c e>) <b dis> b16( a g=8) \clef bass |
