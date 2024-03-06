@@ -48,6 +48,7 @@
     {{ template "rh1" (w `d''=''16(\f e) d-.`) }}
     {{ template "t4" (w `b='16( c) b-.` `g-. fis-. g-.`
        `a( b) a-.` `fis-. e-. d-.`) }}
+    \omit TupletNumber
     {{ template "rh1" (w `d'=''16( e) d-.`) }}
     {{ template "t3" (w `b='16( c) b-.` `g-. fis-. g-.`
        `a( e) fis-.` `g='8`) }}
@@ -87,6 +88,7 @@
 \relative {
   \clef bass
   \key g \major
+  \omit TupletBracket
   g+gM!8-\stBass e+em! a+am! d+d7! | \rep 2 { g+gM!8 e+em! a+am! d+d7! | }
   g+gM!8 e+em! {{ template "t1" (w `a+am!16[` `d@7!]`) }} g+gM!8 |
 
