@@ -184,7 +184,7 @@ pieces:
       org: ukr, sty: cus, gnr: stu, ton: ami, frm: scl, bss: stb, lvl: elb }
   - { id: yi1u, tit: Етюд D minor,
       com: В. Угринович, src: SB4NU1978,
-      org: ukr, sty: cus, gnr: stu, ton: dmi, frm: [arp, fi5], bss: stb, lvl: elb }
+      org: ukr, sty: cus, gnr: stu, ton: dmi, frm: [arp, fi5], bss: [stb, syn], lvl: elb }
   - { id: qt8h, tit: Етюд C minor,
       com: В. Хведченя, src: SB4NU1978,
       org: ukr, sty: cus, gnr: stu, ton: [cmi, eesmj], frm: [arp, fi5], bss: stb, lvl: elb }

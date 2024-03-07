@@ -40,7 +40,7 @@
   \clef treble
   \key f \minor
   \meter 1/4 1,1,1,1
-  {{ template "lh1" (w `des''=''4(`) }}
+  {{ template "lh1" (w `des''=''4(-\frBass`) }}
 
   \clef bass f='8( ees des c bes aes g f | ees bes' f g aes g f ees) |
   \duo { des=4 aes' bes,=, s4 | }
