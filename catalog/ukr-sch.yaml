@@ -42,10 +42,9 @@ pieces:
   - { id: gahw, tit: Болить моя голівонька, sub: ukrfs,
       arr: А. Лазаренко, src: FBBSC1978,
       org: ukr, sty: flk, gnr: sng, ton: fmi, frm: [vo2, in3], bss: frb, lvl: elb }
-  # p. 113
-  # - { id: bjyu, tit: Реве на стогне Дніпр широкий,
-  #     com: Д. Крижанівський, arr: С. Чапкій, src: FBBSC1978,
-  #     org: ukr, sty: cus, gnr: sng, ton: ei, frm: [vo2, in3, cr5], bss: frb, lvl: elc }
+  - { id: bjyu, tit: Реве на стогне Дніпр широкий,
+      com: Д. Крижанівський, arr: С. Чапкій, src: FBBSC1978,
+      org: ukr, sty: cus, gnr: sng, ton: emi, frm: [vo3, in3, cr5], bss: [frb, vo2], lvl: elc }
   # p. 124
   # - { id: rzwj, tit: Їхав козак за Дунай, sub: ukrfs,
   #     arr: С. Чапкій, src: FBBSC1978,
