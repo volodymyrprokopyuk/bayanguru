@@ -19,7 +19,7 @@
   \duo {
     <g'=' b>2( <fis a>4) | <e g>2( fis4 | <b, e>2.) |
     b'='4( e fis | g2 fis8 g) | e2( b8 c) | d2( c8 b | <c, a'>8)( e c b a g |
-    \time 4/4 fis=8^\tRit a c e r a~ <a c~> <a c e>) \fermata |
+    \time 4/4 fis=8^\tRit a c e r a~ <a c>~ <a c e>) \fermata |
     \time 3/4 <g=' b>2^\tATem a8( b) | <e, g>2^\tRit fis8( g=') |
   } {
     e'='2. | r4 cis dis | s2. | b'='2.~ | b8 e b e b4 |
@@ -34,5 +34,23 @@
 \relative {
   \clef bass
   \key e \minor
+  R2. | \duo {
+    \stemDown e=4\( g b | \stemUp c2 b4~ | b2 b4~ | b2 b4\) |
+    \stemDown c='4( b a | g2 fis4) | \stemUp b2( <a b>4) | r g b= |
+
+    d,=4 \rest \clef treble g'='4\( fis | e2 d4 | c2 gis4 | b= %
+    \clef bass \stemDown e,=4 fis8 g | g,4 \rest e'_~ \stemNeutral <a,=, e'>\) |
+  } {
+    s2.- \frBass | r4 e=4 r | r b r | r b r | s2. | s2. | r4 b2( | e=2.) |
+
+    \rep 4 { s2. | } \clef bass a=2. |
+  }
+
+  <a= c>2. | \duo { r4 cis'='4( c=') | } { g=2( a4) | }
+  b=4( ais <b, a'> | <e= g>2.) |
+  \clef treble r4 g'='4\( fis | e2 d4 | c2 gis8 a | b=4. %
+  \clef bass e,=8 fis[ gis] | a\) r r4 r |
+  \duo { r8 fis=8~ <fis a>[~ <fis a c>8]~ 2 \fermata | } { d=1 | }
+  g=4 r fis | b8 r r4 <b, fis' b> | e2.~ | e=4 r r |
 }
 {{ end }}
