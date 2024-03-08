@@ -39,7 +39,7 @@
     \stemDown c='4( b a | g2 fis4) | \stemUp b2( <a b>4) | r g b= |
 
     d,=4 \rest \clef treble g'='4\( fis | e2 d4 | c2 gis4 | b= %
-    \clef bass \stemDown e,=4 fis8 g | g,4 \rest e'_~ \stemNeutral <a,=, e'>\) |
+    \clef bass \stemDown e,=4 fis8 gis | g,4 \rest e'_~ \stemNeutral <a,=, e'>\) |
   } {
     s2.- \frBass | r4 e=4 r | r b r | r b r | s2. | s2. | r4 b2( | e=2.) |
 
@@ -48,7 +48,7 @@
 
   <a= c>2. | \duo { r4 cis'='4( c=') | } { g=2( a4) | }
   b=4( ais <b, a'> | <e= g>2.) |
-  \clef treble r4 g'='4\( fis | e2 d4 | c2 gis8 a | b=4. %
+  r4 \clef treble g'='4\( fis | e2 d4 | c2 gis8 a | b=4. %
   \clef bass e,=8 fis[ gis] | a\) r r4 r |
   \duo { r8 fis=8~ <fis a>[~ <fis a c>8]~ 2 \fermata | } { d=1 | }
   g=4 r fis | b8 r r4 <b, fis' b> | e2.~ | e=4 r r |
