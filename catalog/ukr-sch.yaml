@@ -45,7 +45,6 @@ pieces:
   - { id: bjyu, tit: Реве на стогне Дніпр широкий,
       com: Д. Крижанівський, arr: С. Чапкій, src: FBBSC1978,
       org: ukr, sty: cus, gnr: sng, ton: emi, frm: [vo2, in3, cr5], bss: [frb, vo2], lvl: elc }
-  # p. 124
-  # - { id: rzwj, tit: Їхав козак за Дунай, sub: ukrfs,
-  #     arr: С. Чапкій, src: FBBSC1978,
-  #     org: ukr, sty: flk, gnr: sng, ton: ai, frm: [var, in3, cr5, vo2], bss: [frb, var, in3, in8, cr5], lvl: elc }
+  - { id: rzwj, tit: Їхав козак за Дунай, sub: ukrfs,
+      arr: С. Чапкій, src: FBBSC1978,
+      org: ukr, sty: flk, gnr: sng, ton: ami, frm: [var, in3, cr5, vo2], bss: [frb, var, in3, in8, cr5], lvl: elc }
