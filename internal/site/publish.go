@@ -22,7 +22,7 @@ type PublishCommand struct {
   Init, All, Book bool
   Pieces, Books []string
   Queries cat.PieceQueries
-  SiteDir, TemplateDir, PublicDir string
+  SiteDir, TemplateDir, ContentDir, PublicDir string
   PageSize int
 }
 
@@ -146,15 +146,13 @@ func readCatalogMeta(siteDir, metaFile string) ([]CatalogMeta, error) {
   return meta.Meta, nil
 }
 
-func publishIndex(
-  tpl *template.Template, siteDir, templateDir, publicDir string,
-) error {
-  indexFile := filepath.Join(templateDir, "index.html")
+func publishIndex(tpl *template.Template, pc PublishCommand) error {
+  indexFile := filepath.Join(pc.TemplateDir, "index.html")
   _, err := tpl.ParseFiles(indexFile)
   if err != nil {
     return err
   }
-  catalogMeta, err := readCatalogMeta(siteDir, "catalog-meta.yaml")
+  catalogMeta, err := readCatalogMeta(pc.ContentDir, "catalog-meta.yaml")
   if err != nil {
     return err
   }
@@ -165,7 +163,7 @@ func publishIndex(
     SiteContent: "",
     CatalogMeta: catalogMeta,
   }
-  return publishFile(os.Stdout, tpl, publicDir, "index.html", indexData)
+  return publishFile(os.Stdout, tpl, pc.PublicDir, "index.html", indexData)
 }
 
 func receiveAndPublishPieces(
@@ -309,7 +307,7 @@ func Publish(pc PublishCommand) error {
   if err != nil {
     return siteError("%v", err)
   }
-  err = publishIndex(tpl, pc.SiteDir, pc.TemplateDir, pc.PublicDir)
+  err = publishIndex(tpl, pc)
   if err != nil {
     return siteError("%v", err)
   }

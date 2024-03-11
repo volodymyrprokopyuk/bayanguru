@@ -251,6 +251,7 @@ bayan publish all --query...`,
         Queries: make(map[string]string, 10),
         SiteDir: siteDir,
         TemplateDir: filepath.Join(siteDir, "template"),
+        ContentDir: filepath.Join(siteDir, "content"),
         PublicDir: filepath.Join(siteDir, "public"),
         PageSize: 24,
       }
