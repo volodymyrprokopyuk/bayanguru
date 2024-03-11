@@ -193,7 +193,7 @@ pieces:
       org: aut, sty: cls, gnr: stu, ton: fmj, frm: [arp, scl, fi5], bss: stb, lvl: elb }
   - { id: z04b, tit: Етюд Bes major,
       com: К. Черні, src: SB4NU1978,
-      org: aut, sty: cls, gnr: stu, ton: besmj, frm: [arp, fi5, jmp], bss: stb, lvl: elb }
+      org: aut, sty: cls, gnr: stu, ton: besmj, frm: [arp, fi1, fi5, jmp], bss: stb, lvl: elb }
   - { id: 8yil, tit: Етюд F minor,
       com: А. Нечипоренко, src: SB4NU1978,
       org: ukr, sty: cus, gnr: stu, ton: fmi, frm: [arp, rep, fi5, jmp], bss: stb, lvl: elb }
