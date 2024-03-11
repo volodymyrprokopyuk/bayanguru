@@ -11,6 +11,8 @@
 yay -S ghostscript gsfonts fontforge t1utils texlive-{metapost,langcyrillic}
 # generate the web site
 yay -S caddy pagefind
+# install TailwindCSS
+bun install --no-save tailwindcss
 #+END_SRC
 
 Piece ID generation

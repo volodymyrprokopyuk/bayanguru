@@ -274,6 +274,27 @@ func indexPieces(siteDir, publicDir string) error {
   return pfCmd.Run()
 }
 
+func publishStyle(siteDir, publicDir string) error {
+  cwd, err := os.Getwd()
+  if err != nil {
+    return err
+  }
+  err = os.Chdir(siteDir)
+  if err != nil {
+    return err
+  }
+  defer func() {
+    _ = os.Chdir(cwd)
+  }()
+  styleFile := filepath.Join(publicDir, "style.css")
+  fmt.Printf("%v %v\n", sty.Org("publish"), sty.Lvl(styleFile))
+  styleFile = strings.Join(strings.Split(styleFile, "/")[1:], "/")
+  twCmd := exec.Command("bunx", "tailwindcss", "-o", styleFile)
+  twCmd.Stdout = os.Stdout
+  twCmd.Stderr = os.Stderr
+  return twCmd.Run()
+}
+
 func catError(format string, args ...any) error {
   return fmt.Errorf("catalog: " + format, args...)
 }
@@ -320,6 +341,10 @@ func Publish(pc PublishCommand) error {
     return siteError("%v", err)
   }
   err = publishCatalog(tpl, pc)
+  if err != nil {
+    return siteError("%v", err)
+  }
+  err = publishStyle(pc.SiteDir, pc.PublicDir)
   if err != nil {
     return siteError("%v", err)
   }
