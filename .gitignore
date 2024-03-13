@@ -4,3 +4,4 @@ tr.fish
 piece/*.pdf
 book/*.pdf
 site/public/
+site/node_modules/

@@ -247,7 +247,7 @@ pieces:
       org: rus, sty: cus, gnr: stu, ton: besmi, frm: [in8, cr5, tu3, jmp], bss: [stb, pub, rep], lvl: elb }
   - { id: xkep, tit: Етюд F minor,
       com: Л. Шітте, src: SB4NU1978,
-      org: dnk, sty: cls, gnr: stu, ton: fmi, frm: arp, bss: [stb, pub, scl], lvl: elb }
+      org: dnk, sty: cls, gnr: stu, ton: fmi, frm: [arp, fi5, jmp], bss: [pub, scl, stb], lvl: elb }
   # p. 85
   # - { id: 1dyw, tit: Етюд Ees major,
   #     com: А. Лешгорн, src: SB4NU1978,
