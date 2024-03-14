@@ -31,7 +31,7 @@
         gis='8 b  e gis, | a c16 b a8[\) b='] \sSlur nf #'((wb . 1)) ( |
       }
       \volta 2 {
-        gis='8)^\tRit b  e gis, \sSlur nb #'((wb . 1.5) (ww . 3) (wh . 2)) ( |
+        gis='8)^\tRit b  e gis, \sSlur nb #'((wb . 1.5) (ww . 4.5) (wh . 2)) ( |
         \duo { a'='8[ c16( b]) a='8 } { e'='8[ f] e=' } %
       }
     } r8) \fermata
@@ -61,21 +61,38 @@
     \stemDown <d,=' gis b>8[-> <a' b f'>-> <a c e>-> <b d gis>]-> |
     \stemUp a'=''4. b8-> |
     c='''2~ | c2 | g(~ | g4.^\tRit gis8)-- |
-    {{ template "rh3a" (w `a=''2~`) }}
+    {{ template "rh3a" (w `a=''2~^\tATem`) }}
     \stemDown <d,=' gis b>8[-> <f a f'>-> <e a e'>-> <gis b d gis>]-> |
     <a=' c e a>4 \stemUp <b, f' g b>8 <d f g d'> |
+    c'=''2~ | c | g~ | g4. <e gis>8 | a2~ | <c,=' f a>8 %
   } {
-    {{ template "rh4b" (w `<c''=''~ e>4(`) }} s2 | r8 a4~ a8 |
+    {{ template "rh4b" (w `<c''=''~ e>4(`) }} s2 | r8 a4( b8) |
     {{ template "rh4b" (w `<c=''~ e>4(`) }} s2 | r4 <c' e>8 <d f> |
     r8 <e='' g>4.~\sf | 16 f( g8 f e) | d16( e d c b c d e | d e f8) e <d e> |
     {{ template "rh4b" (w `<c=''~ e>4(`) }} s2 | s2 |
+    r8 <c=' e>4~ 8 | e16( f g8) a( g) | f16( e d c b c d e | f e d8 c) b |
+    r8 <c='~ e>4( <c=' dis>16 e) | s8 %
   }
+  r8 \clef bass <e,,= a>4->^\tRit |
+  <dis= fis b>4-> <dis= a' c>-> \clef treble \barFermata |
+  \tempo Allegro
+  \omit TupletBracket
+  \tuplet 6/4 { gis=32(\f a b c d e } <a, f'>8) <a e'>-> <b d gis>-> |
+  \duo { r4 <c''='' e a>8 } { a'='4~ a8 } r8 \bar "|."
 }
 {{ end }}
 
 {{ define "leftHand" }}
 \relative {
-  \clef bass
+  \clef treble
   \key a \minor
+  <a= c>4\(-\frBass <b d> | <c e>2 | <b d>4 <c e> | <d f> <c e>8 <b d>\) |
+  <c=' e>4\( <d f> | <dis fis>2 | <d f>4 <c e>8 <b d> | <a c>4.\) <g d'>8( |
+  <c=' e>4) <d f> | <e g^~>2( | <f=' g>) |
+  \duo {
+    gis'='2\( | <c, e>4( <e g>) | fis fis | <d f> <c e>8 <b g> | <a= c>4\) %
+  } { e'='4. d8 | s2 | dis='2 | s2 | s4. } %
+  <g,= d'>8( | <d' f>4 <c e>8 <b d> | <a c> <gis d'> %
+  <a= c>8) r \fermata \clef bass |
 }
 {{ end }}
