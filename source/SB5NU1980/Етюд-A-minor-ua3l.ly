@@ -42,7 +42,9 @@
   \clef treble
   \key a \minor
   \time 4/4
-  {{ template "rh1" (w `e''=''8\(\p\< f e`) }} {{ template "rh2" }}
+  {{ template "rh1" (w `e''=''8\(\p\< f e`) }}
+  \omit TupletNumber
+  {{ template "rh2" }}
   {{ template "rh1" (w `e=''8\(\p\< f e`) }} {{ template "rh3" }}
 
   {{ template "t4" (w `g,=''8\(\p a g` `e f e` `f g f` `d e d`) }}
