@@ -113,7 +113,7 @@
 
   {{ template "lh2" }} <e=, e'>8.( fis'16 e fis gis a | b c d8 c <e, b'>) |
   {{ template "lh2" }} <e=, e'>8[-> d'-> c-> b]-> |
-  \duo { r8 <e= a c>4 \stemDown <g= b f'>8 | } { a,=,4. s8 | }
+  \duo { r8 <e= a c>4 \stemDown <g= b f'>8-> | } { a,=,4. s8 | }
   c'='8.( b16 a g a b) | c( d e8 d c) | b16( c b a g a b c | b c d8 c) <e, b'> |
   {{ template "lh2" }} <e=, e'>8[-> <d d'>-> <c c'>-> e]-> |
   <a,=,, a'>4 g'16( a b g) |
