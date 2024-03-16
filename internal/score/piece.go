@@ -10,7 +10,7 @@ import (
   "os"
   "sync"
   "context"
-  // "runtime"
+  "runtime"
   cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
   sty "github.com/volodymyrprokopyuk/bayan/internal/style"
 )
@@ -170,27 +170,27 @@ func engravePiece(
       return err
     }
   }
-  // tpl := tplPool.Get().(*template.Template)
-  // err := templatePiece(tpl, &piece, ec.SourceDir, ec.Meta)
-  // if err != nil {
-  //   return err
-  // }
-  // var pieceScore strings.Builder
-  // err = tpl.ExecuteTemplate(&pieceScore, "score.ly", piece)
-  // tplPool.Put(tpl)
-  // if err != nil {
-  //   return err
-  // }
-  // err = engraveScore(w, pieceScore.String(), piece.File, ec.PieceDir)
-  // if err != nil {
-  //   return err
-  // }
-  // if ec.Optimize {
-  //   err := optimizeScore(w, piece.File, ec.PieceDir)
-  //   if err != nil {
-  //     return err
-  //   }
-  // }
+  tpl := tplPool.Get().(*template.Template)
+  err := templatePiece(tpl, &piece, ec.SourceDir, ec.Meta)
+  if err != nil {
+    return err
+  }
+  var pieceScore strings.Builder
+  err = tpl.ExecuteTemplate(&pieceScore, "score.ly", piece)
+  tplPool.Put(tpl)
+  if err != nil {
+    return err
+  }
+  err = engraveScore(w, pieceScore.String(), piece.File, ec.PieceDir)
+  if err != nil {
+    return err
+  }
+  if ec.Optimize {
+    err := optimizeScore(w, piece.File, ec.PieceDir)
+    if err != nil {
+      return err
+    }
+  }
   return nil
 }
 
@@ -235,8 +235,7 @@ func engravePieces(pieces []cat.Piece, ec EngraveCommand) error {
   ctx, cancel := context.WithCancel(context.Background())
   defer cancel()
   engPieces, engErrors := make(chan cat.Piece), make(chan error)
-  // for range min(len(pieces), runtime.GOMAXPROCS(0)) {
-  for range min(len(pieces), 1) {
+  for range min(len(pieces), runtime.GOMAXPROCS(0)) {
     wg.Add(1)
     go receiveAndEngravePieces(ctx, &wg, engPieces, engErrors, &tplPool, ec)
   }

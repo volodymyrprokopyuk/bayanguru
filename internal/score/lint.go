@@ -258,7 +258,7 @@ func lintPiece(w io.Writer, piece cat.Piece, sourceDir string) error {
   }
   errors := lintClefOttavaOctaveCheck(lines)
   if len(errors) > 0 {
-    printErrors(w, "* Missing octave check around clef or ottava", errors)
+    printErrors(w, "* Missing octave checks around clef or ottava", errors)
     hasErrors = true
   }
   lines, err = cleanLines(pieceFile)
