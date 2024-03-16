@@ -17,6 +17,49 @@ type Line struct {
   Text string
 }
 
+func rawLines(pieceFile string) ([]Line, error) {
+  file, err := os.Open(pieceFile)
+  if err != nil {
+    return nil, err
+  }
+  defer file.Close()
+  lines := make([]Line, 0, 1000)
+  num := 1
+  scanner := bufio.NewScanner(file)
+  for scanner.Scan() {
+    line := Line{num, scanner.Text()}
+    lines = append(lines, line)
+    num++
+  }
+  if err := scanner.Err(); err != nil {
+    return nil, err
+  }
+  return lines, nil
+}
+
+var clefOttava = regexp.MustCompile(
+  `(\S*) (:?\\clef (:?treble|bass)|\\ottava #\d) (\S*)`,
+)
+var noteOrChord = regexp.MustCompile(`^<?[a-g]`)
+var chordEnd = regexp.MustCompile(`[a-g](:?es|is){0,2}[']*>`)
+
+func lintClefOttavaOctaveCheck(lines []Line) []Line {
+  errors := make([]Line, 0, 10)
+  for _, line := range lines {
+    cleanLine := strings.ReplaceAll(line.Text, " | ", " ")
+    matches := clefOttava.FindAllStringSubmatch(cleanLine, -1)
+    for _, groups := range matches {
+      left, all, right := groups[1], groups[0], groups[4]
+      if (noteOrChord.MatchString(left) && !strings.Contains(left, "=") &&
+        !chordEnd.MatchString(left)) ||
+        (noteOrChord.MatchString(right) && !strings.Contains(right, "=")) {
+        errors = append(errors, Line{line.Num, all})
+      }
+    }
+  }
+  return errors
+}
+
 var excludeParts = []string{
   `^{{ define "\w+" }}$`,
   `^{{ end }}$`,
@@ -89,7 +132,7 @@ var octaveParts = []string{
 var octaveCheck = regexp.MustCompile(strings.Join(octaveParts, "|"))
 
 func lintFirstNoteOctaveCheck(lines []Line) []Line {
-  errors := make([]Line, 0, 50)
+  errors := make([]Line, 0, 10)
   for _, line := range lines {
     fstNote := firstNote.FindString(line.Text)
     if len(fstNote) > 0 {
@@ -108,7 +151,7 @@ var newParts = []string{
 var newContext = regexp.MustCompile(strings.Join(newParts, "|"))
 
 func lintNewContextOctaveCheck(lines []Line) []Line {
-  errors := make([]Line, 0, 50)
+  errors := make([]Line, 0, 10)
   for _, line := range lines {
     fstNote := newContext.FindString(line.Text)
     if len(fstNote) > 0 {
@@ -127,7 +170,7 @@ var endParts = []string{
 var barCheck = regexp.MustCompile(strings.Join(endParts, "|"))
 
 func lintLineEndBarCheck(lines []Line) []Line {
-  errors := make([]Line, 0, 50)
+  errors := make([]Line, 0, 10)
   for _, line := range lines {
     if !barCheck.MatchString(line.Text) {
       suffix := 0
@@ -160,7 +203,7 @@ var compParts = []string{
 var noteComponents = regexp.MustCompile(strings.Join(compParts, "") + `$`)
 
 func lintNoteComponentOrder(lines []Line) []Line {
-  errors := make([]Line, 0, 50)
+  errors := make([]Line, 0, 10)
   for _, line := range lines {
     notes := noteChord.FindAllString(line.Text, -1)
     for _, note := range notes {
@@ -182,7 +225,7 @@ var durationParts = []string{
 var noteDuration = regexp.MustCompile(strings.Join(durationParts, "|"))
 
 func lintDurationAfterBoundChord(lines []Line) []Line {
-  errors := make([]Line, 0, 50)
+  errors := make([]Line, 0, 10)
   for _, line := range lines {
     chords := boundChord.FindAllStringIndex(line.Text, -1)
     for _, idx := range chords {
@@ -208,12 +251,21 @@ func printErrors(w io.Writer, title string, errors []Line) {
 func lintPiece(w io.Writer, piece cat.Piece, sourceDir string) error {
   pieceFile := filepath.Join(sourceDir, piece.Src, piece.File + ".ly")
   fmt.Fprintf(w, "%v %v\n", sty.Org("lint"), sty.Lvl(pieceFile))
-  lines, err := cleanLines(pieceFile)
+  hasErrors := false
+  lines, err := rawLines(pieceFile)
   if err != nil {
     return err
   }
-  hasErrors := false
-  errors := lintFirstNoteOctaveCheck(lines)
+  errors := lintClefOttavaOctaveCheck(lines)
+  if len(errors) > 0 {
+    printErrors(w, "* Missing octave check around clef or ottava", errors)
+    hasErrors = true
+  }
+  lines, err = cleanLines(pieceFile)
+  if err != nil {
+    return err
+  }
+  errors = lintFirstNoteOctaveCheck(lines)
   if len(errors) > 0 {
     printErrors(w, "* Missing first note octave check or duration", errors)
     hasErrors = true

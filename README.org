@@ -4,7 +4,7 @@
 
 - [[https://lilypond.org/][LilyPond]] sheet music engraving system
 - [[https://go.dev/][Go]] programming language
-= [[https://tailwindcss.com/][TailwindCSS]] CSS framework
+- [[https://tailwindcss.com/][TailwindCSS]] CSS framework
 
 #+BEGIN_SRC fish
 # engrave sheet music
