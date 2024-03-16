@@ -33,7 +33,7 @@
   f='''16(\> ees a, bes) c( bes fis g) aes( g d ees) f( ees a, \af 16\! bes) |
   b='16(\< c g bes c e g bes bes c des c d c e \af 16\! c) |
   g'='''16(\> f b, c) des( c g aes) bes( aes e f) g( f b, \af 16\! c) |
-  bes='16( d f aes bes d f aes f d b a f d b aes) |
+  bes='16( d f aes bes d f aes f d b aes f d b aes) |
   g='16( a bes b c\< d f ees) d( d ees e f g bes aes) |
   g=''16( aes a bes c d f \af 16\! ees) d(\f\> aes' f d bes a f \af 16\! d='') |
 
