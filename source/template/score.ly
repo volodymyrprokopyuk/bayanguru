@@ -19,6 +19,8 @@ aLeg = \markup \italic legato
 aNLeg = \markup \italic "non legato"
 aSta = \markup \italic staccato
 aDol = \markup \italic dolce
+aLAssai = \markup \italic "leggiero assai"
+aPes = \markup \italic pesante
 
 % Dynamic
 dCre = \markup \lower #3 \italic "cresc."
