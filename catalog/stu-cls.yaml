@@ -270,10 +270,9 @@ pieces:
   - { id: m8an, tit: Етюд F major,
       com: М. Магиденко, src: SB5NU1980,
       org: rus, sty: cus, gnr: stu, ton: fmj, frm: scl, bss: stb, lvl: elb }
-  # p. 72
-  # - { id: j4zh, tit: Етюд G major,
-  #     com: А. Соловьев–Г. Стадник, src: SB5NU1980,
-  #     org: rus, sty: aut, gnr: stu, ton: [gj, besj], frm: [scl, in3], bss: [stb, pub], lvl: elc }
+  - { id: j4zh, tit: Етюд G major,
+      com: А. Соловьев–Г. Стадник, src: SB5NU1980,
+      org: rus, sty: cus, gnr: stu, ton: [gmj, besmj], frm: in3, bss: [stb, pub, scl], lvl: elc }
   - { id: 31pw, tit: Етюд C major,
       com: О. Денисов, src: SB5NU1980,
       org: ukr, sty: cus, gnr: stu, ton: cmj, frm: [scl, in3, tu3, fi1], bss: [stb, syn], lvl: elb }
