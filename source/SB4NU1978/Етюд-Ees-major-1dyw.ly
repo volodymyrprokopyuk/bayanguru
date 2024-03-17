@@ -53,7 +53,7 @@
   ees='16( bes') bes( ees,) d( bes') bes( d,) |
   ees='16(_\aPes bes') bes( ees,) d( b') b( d,) d( c') c( d,) d( ces') ces( d,=') |
 
-  <d=' aes' bes>4 aes16 bes, d f aes d, f aes bes d f aes |
+  <d=' aes' bes>4 aes16( bes, d f aes d, f aes bes d f aes) |
   bes='16( d f aes bes d f aes bes8) r <f,,=' aes d>4(\ff |
   <g=' ees'>8) r <bes d f>-> r <bes ees g>-> r <f' aes bes d>-> r |
   <ees='' g bes ees>4\sf r r2 \bar "|."
@@ -79,7 +79,8 @@
     ees,=,8 eesM!-> r eesM g g7!-> r g7 |
     aes=,8 f@m!-> r8 fm bes=, bes7!-> r bes7 |
   }
-  \rep 3 { r8 ees+eesM! r8 bes+bes7! } r8 bes+bes7 r8 bes+bes7 | R1 |
+  \rep 3 { r8 ees+eesM! r8 bes+bes7! } r8 bes+bes7 r8 bes+bes7 |
+  bes,=,,8[( d16 f] aes8) r r2 |
   r2 r4 bes=,4( | ees,8) r bes'-> r ees,-> r bes'-> r | ees,=,4 r r2 |
 }
 {{ end }}
