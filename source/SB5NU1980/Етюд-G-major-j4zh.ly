@@ -42,6 +42,21 @@
   \keyCancelBarChange
   \key bes \major
   \acc { bes=''8 } <d, f>16(\ff \rep 5 { cis=''16 <d='' f> } cis) |
+  \acc { a'=''8 } <ees g>8-. <d f>-. <cis e>-. %
+  <d='' f>8-.\< <ees g>-. \af 8\! <f a>-. |
+  \acc { d'='''8 } <g, bes>16( \rep 5 { fis=''16 <g='' bes> } fis) |
+  \acc { d'='''8 } <a c>8-. <g bes>-. <a c>-. %
+  <bes='' d>8-.\< <c ees>-. \af 8\! <d f>-. |
+  \acc { f,=''8 } <c ees>-.\pp\< <b d>-. \af 8\! <c ees>-. %
+  <ees='' g>8-. <f, c'>-. <c' ees>-. |
+  \acc { ees=''8 } <bes d>-.\< <a cis>-. \af 8\! <bes d>-. %
+  <d='' f>8-. <bes d>-. <g bes>-. |
+  <fis=' d'>8->\f\< <g e'>-> \af 8\! <a fis'>-> %
+  \acc { a'=''8 } <b, g'>8->\> <a fis'>-> \af 8\! <g e'>-> |
+  <fis=' d'>8\> r r \af 4.\! r4. \bar "||"
+
+  \keyCancelBarChange
+  \key g \major
 }
 {{ end }}
 
