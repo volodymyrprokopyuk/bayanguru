@@ -37,6 +37,7 @@
   \time 2/4
   \repeat volta 2 { {{ template "rh3" (w `c'='16\mf` `_ \aLeg`) }} | }
 
+  \keyCancelBarChange
   \key c \major
   {{ template "rh1" (w `e'='''16\f`) }}
   c=''16 d e f g c d e | c-> b a g f e d c |

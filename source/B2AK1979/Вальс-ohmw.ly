@@ -32,6 +32,7 @@
     {{ template "rh1" (w `<f=' a>8(\p`) }} | d4) <d=' f d'>2 \fine |
 
     \volta 2
+    \keyCancelBarChange
     \key d \major
     \repeat volta 2 {
       <fis=' a>2(\mf b4 | <fis a>2.) |

@@ -63,7 +63,7 @@
     {{ template "rh3" (w `<g'=' b>8.`) }} \fine \bar "||"
 
     \volta 2
-    \keyCancelChangeBar
+    \keyCancelBarChange
     \key g \minor
     {{ template "rh4" (w `<g'=' bes>4->\f`) }}
     \acc { c'=''8 } bes16( a g fis g4)-- |

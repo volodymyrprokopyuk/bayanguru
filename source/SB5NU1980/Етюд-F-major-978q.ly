@@ -63,6 +63,7 @@
     <g'=' bes c>4 <g bes d> <g bes e> | <a c f> <f a c> f='-> \fine \bar "||"
 
     \volta 2
+    \keyCancelBarChange
     \key c \major
     \repeat volta 2 {
       {{ template "rh5" }} | r4 <c=' f g>4 4 | r4 <b d g>4 4 |

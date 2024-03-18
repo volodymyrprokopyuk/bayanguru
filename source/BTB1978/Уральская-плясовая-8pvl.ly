@@ -7,7 +7,7 @@
   b'='8\mf b e8. d16 | cis8 cis e8. cis16 |
   b='8 b e8. d16 | cis8( a) a4 |
   b='16( e, gis b) e8. d16 | cis( b cis d) e8. cis16 |
-  b='16( e, gis b) e8. d16 | cis( d cis b a='4) |
+  b='16( e, gis b) e8. d16 | cis( d cis b a='4) \bar "||"
 
   \key e \major
   fis='8 b, b'8. a16 | gis8 gis b8. gis16 |

@@ -43,6 +43,7 @@
       }
     }
 
+    \keyCancelBarChange
     \key a \minor
     \repeat volta 2 {
       <a='' e'>8-. r r4 <a a'>4~ | 8 r <a e'>-. r <a dis>-. r |

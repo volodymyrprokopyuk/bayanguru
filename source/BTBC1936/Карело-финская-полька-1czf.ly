@@ -26,6 +26,7 @@
   \key c \minor
   \time 2/4
   \meter 1/8 2,2
+  \omit TupletBracket
   \partial 8 { \tuplet 3/2 { g''=''16(\mf a b) } | }
   \repeat segno 2 {
     \volta 1
