@@ -51,7 +51,7 @@
     {{ template "rh3" (w `<b=' d>2.~`) }}
     r8 cis,='8[( d e f fis] | g) r g[\( a b c] | d[ e f fis a g] |
     fis=''8[\> g a^\tRal g fis \af 8\! g='']\) \bar "||"
-    \keyChangeBeforeBar
+    \keyCancelChangeBar
     \key c \major
   }
 }

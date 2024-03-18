@@ -46,7 +46,7 @@
         \volta 2 { <fis=' d'>4 \repeatTie a g=' \bar "||" }
       }
     }
-    \keyChangeBeforeBar
+    \keyCancelChangeBar
     \key d \minor
   }
 }

@@ -83,7 +83,7 @@
       }
     }
   }
-  \keyChangeBeforeBar
+  \keyCancelChangeBar
   \key c \minor
 }
 {{ end }}

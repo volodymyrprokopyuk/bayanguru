@@ -37,7 +37,7 @@
   r16^\tRit <b=' g'>16( \rep 2 { <d='' b'>16 <b=' g'> } %
   <d='' b'>16 <b=' g'>) \bar "||"
 
-  \keyChangeBeforeBar
+  \keyCancelChangeBar
   \key c \major
   {{ template "t1" (w `\mf^\tATem` `<g=' e'>16` `<c g'>`) }}
   {{ template "t3" (w `<f=' d'>16` `<a f'>`) }}

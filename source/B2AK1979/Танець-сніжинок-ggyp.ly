@@ -92,7 +92,7 @@
         }
       }
     }
-    \keyChangeBeforeBar
+    \keyCancelChangeBar
     \key f \major
   }
 }

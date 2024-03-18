@@ -72,7 +72,7 @@
     <c=' e a>4\mf r r | <b e g>_\dDim r r | <a e' fis> r r | <g b e> r r |
     {{ template "rh6" (w `<b= e g>4\p`) }}
     <c=' e a>2 r4 | r4 4 4 | <c g' bes c>2.~\sf | 4 c'='' c \bar "||"
-    \keyChangeBeforeBar
+    \keyCancelChangeBar
     \key f \major
   }
 }

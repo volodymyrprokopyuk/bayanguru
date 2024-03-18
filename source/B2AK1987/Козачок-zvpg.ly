@@ -63,13 +63,13 @@
     {{ template "rh3" (w `<g'=' b>8.`) }} \fine \bar "||"
 
     \volta 2
-    \keyChangeBeforeBar
+    \keyCancelChangeBar
     \key g \minor
     {{ template "rh4" (w `<g'=' bes>4->\f`) }}
     \acc { c'=''8 } bes16( a g fis g4)-- |
     {{ template "rh4" (w `<g=' bes>4->`) }}
     \acc { c'=''8 } bes16(\> a g fis \af 4\! g='4)-- \bar "||"
-    \keyChangeBeforeBar
+    \keyCancelChangeBar
     \key g \major
   }
 }
