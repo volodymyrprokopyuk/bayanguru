@@ -45,7 +45,7 @@ tSos = "sost."
 barFermata = \mark \markup \musicglyph #"scripts.ufermata"
 \defineBarLine "!!" #'("!!" "!!" "!!")
 
-keyChangeBeforeBar = \once {
+keyCancelChangeBar = \once {
   \override Score.BreakAlignment.break-align-orders =
   #(make-vector 3 '(
     left-edge
@@ -59,6 +59,26 @@ keyChangeBeforeBar = \once {
     key-cancellation
     key-signature
     staff-bar
+    time-signature
+    custos
+  ))
+  \override Staff.KeyCancellation.extra-spacing-width = #'(-1.5 . 0)
+}
+
+keyCancelBarChange = \once {
+  \override Score.BreakAlignment.break-align-orders =
+  #(make-vector 3 '(
+    left-edge
+    staff-ellipsis
+    cue-end-clef
+    ambitus
+    breathing-sign
+    signum-repetitionis
+    clef
+    cue-clef
+    key-cancellation
+    staff-bar
+    key-signature
     time-signature
     custos
   ))

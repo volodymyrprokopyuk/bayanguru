@@ -39,6 +39,7 @@
   <fis,=' a d>8-.\sf\< cis16( d fis \af 16\! a) bes( g fis g bes d) |
   ees=''16(_\dCre d c d ees f) g( f e f g a='') \bar "||"
 
+  \keyCancelBarChange
   \key bes \major
   \acc { bes=''8 } <d, f>16(\ff \rep 5 { cis=''16 <d='' f> } cis) |
 }
