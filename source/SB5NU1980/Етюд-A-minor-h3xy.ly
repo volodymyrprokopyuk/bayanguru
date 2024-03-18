@@ -19,7 +19,7 @@
 {{ define "rh5" }}
   {{ template "rh2" (w `gis='32` `\<` ` \af 32\!`) }}
   {{ template "rh1" (w `a=''32\mf` ``) }}
-  gis='32 a b c d e fis gis \ottava #1 %
+  gis='32 a b c d e fis gis='' \ottava #1 %
   a=''32\< b c d dis e fis \af 32\! gis |
   {{ template "rh1" (w `a='''32\f` ``) }}
   {{ template "rh2" (w `gis=''32` `` ``) }}
@@ -51,10 +51,10 @@
   {{ template "rh3" (w `gis,,,=32\p`) }}
   f='32 e d c b c e d c b a b c d dis e |
   g='32 fis f e d e f g a b c d dis e g fis |
-  f=''32 e d c b c e d c b a b c d e fis |
+  f=''32 e d c b c e d c b a b c d e fis='' |
   \ottava #1
   {{ template "rh3" (w `gis=''32\mf`) }}
-  f='''32 e d c b c e d c b a gis g fis f e |
+  f='''32 e d c b c e d c b a gis g fis f e='' |
   \ottava #0
   d=''32 c b a b c d e c b a b c d dis e |
   g=''32 fis f e dis e fis gis a b c e a='''8 |

@@ -29,7 +29,7 @@
   g=16\p fis e d c d e fis g a b c d_\dCre e fis g |
   \clef treble
   \rep 3 { a='16 g fis e d e fis g=' } a b c d e fis g a |
-  \rep 3 { b=''16 a g fis e fis g a='' } \ottava #1 b c d e fis g a b |
+  \rep 3 { b=''16 a g fis e fis g a='' } \ottava #1 b='' c d e fis g a b |
   \rep 3 { c=''''16 b a g fis g a b=''' } c b a g fis e d c=''' |
   \ottava #0 {{ template "rh2" }}
 
@@ -40,7 +40,7 @@
   \rep 3 { b=''16 c d e fis e d c=''' } b a g fis e d c b |
   a='16_\dDim b c d e d c b \rep 2 { a='16 b c d e d c b=' } a g fis e d c b a |
   g=16\p a_\dCre b c d c b a g a b c d c b a |
-  g=16 a b c d e fis g a b c d e fis g a |
+  g=16 a b c d e fis g a b c d e fis g a='' |
   \ottava #1 b=''16 c d e fis g a b g='''8\f \ottava #0 r8 g,,='8-. r \bar "|."
 }
 {{ end }}

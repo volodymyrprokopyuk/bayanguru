@@ -85,9 +85,9 @@
   <e='' gis cis>8\> <dis fis b> <cis e ais> |
   <b=' dis gis>8 <ais cis fis> <gis b e> %
   <fis=' ais dis>8 <e gis cis> <dis fis b> |
-  <cis=' e ais>8^\tRit <b dis gis> \af 16\! <ais cis fis> %
+  <cis=' e ais>8^\tRit <b dis gis> \af 16\! <ais= cis fis> %
   \clef bass <gis= b e>8 <fis ais dis> <e gis cis> |
-  <dis= fis b>8 <fis b dis>\< \clef treble <b dis fis> <dis fis b>-> %
+  <dis= fis b>8 <fis= b dis>\< \clef treble <b= dis fis> <dis fis b>-> %
   <fis=' b dis>8-> \af 8\! <b dis fis>-> |
   <dis='' fis b>4->\f r8 r4. \bar "|."
 }

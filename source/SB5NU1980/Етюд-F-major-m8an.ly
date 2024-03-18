@@ -43,8 +43,8 @@
   f=''16( g f g f d ees d bes c bes g) |
   f='16( g f g f d ees f g a bes c) |
   d=''16( ees d ees d bes c bes g a g ees) |
-  d='16( ees d ees d bes c bes \clef bass g a g ees) |
-  e=16( c d e f g a bes  \clef treble c d e f) |
+  d='16( ees d ees d bes c bes= \clef bass g= a g ees) |
+  e=16( c d e f g a bes= \clef treble c=' d e f) |
   e='16( c d e f^\tRit g a bes a g a bes=') |
 
   {{ template "rh1" (w `c=''16(\p^\tATem`) }}

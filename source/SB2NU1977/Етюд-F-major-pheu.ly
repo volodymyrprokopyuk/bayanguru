@@ -10,10 +10,10 @@
   \time 6/8
   \repeat volta 2 {
     a'='16(\p c_\aDol f a c a' f4 c8) | a,16( c f a c a' f4 c8) |
-    c,=''16( e g c \ottava #1 e c' bes4 g8) |
-    c=''''16( a f c a f \ottava #0 bes g e c bes g) |
+    c,=''16( e g c=''' \ottava #1 e=''' c' bes4 g8) |
+    c=''''16( a f c a f='' \ottava #0 bes='' g e c bes g) |
     a='16( c f a c a' f4_\dCre c8) |
-    c,=''16( e g c \ottava #1 e c' g4 e8) \ottava #0 |
+    c,=''16( e g c=''' \ottava #1 e=''' c' g4 e='''8) \ottava #0 |
     e='''16( c g e c e f d b g f d | c e g c g e c='8) r r |
   }
 
