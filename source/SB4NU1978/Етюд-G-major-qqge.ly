@@ -31,7 +31,7 @@
     {{ template "t1" (w `<b=' d>8(\> <a c> \af 8\! <g b>8` `8\< <a c> <b d>`
        `<e='' g>8 <fis a> <g b>8` `8 <fis a> \af 8\! <e g>`) }}
     {{ template "t1" (w `<d='' fis>8)\f \ottava #1 <fis'=''' a>( <e g>`
-       `<d=''' fis>8 <cis e> <b d>` `<a cis> <g b> <fis a> \ottava #0`
+       `<d=''' fis>8 <cis e> <b d>` `<a cis> <g b> <fis='' a> \ottava #0`
        `<e='' g>8 <d fis> <cis e>`) }}
     {{ template "t2" (w `d=''8)-.\> a'-. fis-.` `d-. a-. fis-.`
        ` \af 8\! d='8-.`) }}

@@ -45,7 +45,7 @@
   {{ template "t3" (w `<e=' c'>16` `<g e'>`) }}
   r16 <g=' e'>16( <c g'> <g e'>) r16 <c g'>( <e c'> <c g'>) |
   {{ template "t3" (w `<c='' a'>16` `<f c'>`) }}
-  r16 <e='' c'>16( <g e'> <e c'>) r16 <d b'>( <g d'> <d b'>) |
+  r16 <e='' c'>16( <g e'> <e c'>) r16 <d b'>( <g d'> <d='' b'>) |
   \ottava #1 r16 <e='' c'>16( <g e'> <c g'> <e=''' c'>4) \ottava #0 \bar "|."
 }
 {{ end }}

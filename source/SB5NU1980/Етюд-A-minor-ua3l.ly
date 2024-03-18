@@ -79,7 +79,7 @@
   {{ template "t4" (w `a='8( cis e` `g f e` `d f a` `d a f='')`) }}
   \ottava #1
   {{ template "t4" (w `e=''8( gis b` `d c b` `a c e` `a g f)`) }}
-  {{ template "t2" (w `e='''8(\f gis b` `d c b` `a) \ottava #0 r r4`) }}
+  {{ template "t2" (w `e='''8(\f gis b` `d c b` `a=''') \ottava #0 r r4`) }}
   {{ template "t2" (w `e,=''8(\p gis b` `d c b` `a) r r4`) }}
   <b,=' e gis>4\ff r <b e gis> r | <c='' e a> r r2 \bar "|."
 }

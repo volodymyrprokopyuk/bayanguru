@@ -26,7 +26,7 @@
         \time 9/8 \hSpace
         <fis'=' a>2.)~ 4 %
         \sSlur ub #'((wb . 2.5) (ww . 6.3) (wh . 2)) ( b,8)\( |
-        {{ template "rh1" }} b='2.~ | b4.\) %
+        {{ template "rh1" }} b='2.~ | b='4.\) %
         \ottava #1 <e='' c'>4 <g='' b>8(\> 4.~ | \af 8\! 8) \ottava #0 %
         r r r4. r4 \bar "|."
       }

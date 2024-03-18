@@ -26,7 +26,7 @@
     } { \autoBeamOff r8 <f'=' a>8 8 d \autoBeamOn c4 | b= } %
     <c=' c'>16( d' e f g a bes c) <d, f c'>8 <d f g> |
     \duo { bes''=''8 a16 g f4~ f=''8 } { <c''='' e>4 r8 <a=' c>8 8 } %
-    \ottava #1 <f='' c' e>8 <g c e> <a c e> | <c e>[ <bes d>] \ottava #0 %
+    \ottava #1 <f='' c' e>8 <g c e> <a c e> | <c e>[ <bes='' d>] \ottava #0 %
     <f='' a>4~ 8 8[ 8 <e g>] | <g bes>[ <f a>] %
     \duo { <d''=''_~ d'^~>4 8 } { r8 <f''='' a>8 8 } %
     <d='' f a>8 <c f a>8 8 |

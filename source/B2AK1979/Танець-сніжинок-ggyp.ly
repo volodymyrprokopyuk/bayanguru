@@ -67,7 +67,7 @@
       \alternative {
         \volta 1 { {{ template "rh2" }} }
         \volta 2 {
-          <a='' f'>2.~ | <a f'>8 r \ottava #1 %
+          <a='' f'>2.~ | <a='' f'>8 r \ottava #1 %
           aes'='''8-.\pp r <des,=''' des'>-. r |
         }
       }

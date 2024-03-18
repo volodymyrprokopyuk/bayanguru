@@ -23,7 +23,7 @@
          `<c='' c'>8 <des des'> <bes bes'>`) }}
       {{ template "t2" (w `<c='' c'>8 8 8` `8 8 8`) }}
       {{ template "t2" (w `<c='' c'>8 <a a'> <bes bes'>`
-         `<c='' c'>8 <des des'> <ees ees'>`) }}
+         `<c='' c'>8 <des des'> <ees='' ees'>`) }}
       \ottava #1
       {{ template "t2" (w `<f='' f'>8 8 8` `8 8 8`) }}
       {{ template "t2" (w `<bes='' bes'>8 <aes aes'> <ges ges'>`

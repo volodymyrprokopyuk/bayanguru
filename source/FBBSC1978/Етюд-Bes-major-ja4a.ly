@@ -9,7 +9,7 @@
     g=''16 f ees d c bes a bes | c8)-. r r4 |
     <c='' f>8[-. 8-. 8-. 8]-. | c'16( b d c ees d c bes |
     a=''16 g f ees d c bes c | d8)-. r r4 |
-    <d='' f>8[-. 8-. 8-. 8]-. | e16( f fis g gis a bes b |
+    <d='' f>8[-. 8-. 8-. 8]-. | e16( f fis g gis a bes b='' |
     \ottava #1 c='''16_\dCre cis d dis e f fis g | gis a bes b c b c cis) |
     e=''''16(->\p d_\aDol cis d bes8)-. g-. | d'16(-> c b c a8)-. f-. |
     c'=''''16( bes a bes a g f e | f8[)-. f-. f=''']-. \ottava #0 r |
