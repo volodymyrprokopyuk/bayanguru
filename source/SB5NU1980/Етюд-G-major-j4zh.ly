@@ -1,3 +1,9 @@
+{{ define "lh1" }}
+  {{ .a }} r r gM! r r | {{ .b }} r8 r g+gM! r r |
+  c=8 r r cM! r r | d r r g@M! r8 r |
+  fis,=,8 r r d@7! r8 r | g=, r r gM! r r |
+{{ end }}
+
 {{ define "rightHand" }}
 \relative {
   \tempo Scherzando
@@ -78,5 +84,20 @@
 \relative {
   \clef bass
   \key g \major
+  {{ template "lh1" (w `g,=,8-\stBass` `g+c@M!`) }}
+  a+d@M!8 r8 r a+a7! r r | d+dM! d'-> cis-> c-> b-> a=,-> |
+
+  {{ template "lh1" (w `g=,8` `g+c@m!`) }}
+  c+a@m!8 r8 r c+d@M! r8 r | b+g@M! r8 r e+e7! r r |
+  a+am!8 r8 r d+d7! r r | g+gM! d'-> b-> g=,-> r r |
+
+  e=,16(-\puBass dis e dis e dis e8)-> fis-> g-> | a-> b-> c-> d-> e-> fis-> |
+  g,=,16( fis g fis g fis g8)-> a-> bes-> | c-> d-> ees-> f-> g-> a-> |
+  r8 a,=,16( bes d f) ees8( eesM!) r | r8 b16( c e g) f8( fM!) r |
+  r8 cis=16( d fis a) g8( gm!) r | c,( cm!) r c[( f@7!) f,=,8] |
+
+  \key bes \major
+  bes+besM!8-\stBass r r f'= d bes | b+ees@M! r8 r bes+besM! r r |
+  g+gm!8 r r d bes g | g+c@m! r8 r g+gm! r r |
 }
 {{ end }}

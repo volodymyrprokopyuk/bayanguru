@@ -107,7 +107,7 @@ pieces:
       org: ukr, sty: cus, gnr: stu, ton: gmj, frm: [scl, syn, fi1, fi5, jmp], bss: stb, lvl: elb }
   - { id: tfnd, tit: Етюд C major,
       com: В. Иванов, src: SB2NU1977,
-      org: rus, sty: cus, gnr: stu, ton: [cmj, emi], frm: [in6, syn], bss: stb, lvl: elb }
+      org: rus, sty: cus, gnr: stu, ton: [cmj, emi], frm: [in6, syn, fi1, fi5], bss: stb, lvl: elb }
   - { id: yai7, tit: Етюд G minor,
       com: К. Мясков, src: SB2NU1977,
       org: ukr, sty: cus, gnr: stu, ton: gmi, frm: [cr5, tu3, syn], bss: [pub, tu3, syn], lvl: elc }
