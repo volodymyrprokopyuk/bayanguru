@@ -97,7 +97,14 @@
   r8 cis=16( d fis a) g8( gm!) r | c,( cm!) r c[( f@7!) f,=,8] |
 
   \key bes \major
-  bes+besM!8-\stBass r r f'= d bes | b+ees@M! r8 r bes+besM! r r |
+  bes+besM!8-\stBass r r f'= d bes | bes+ees@M! r8 r bes+besM! r r |
   g+gm!8 r r d bes g | g+c@m! r8 r g+gm! r r |
+  a=,8 r r f@7! r8 r | bes r r besM! r r |
+  a+d@M!8 r8 r a+a7! r r | d+dM! d-> cis-> c-> b-> a=,-> |
+
+  \key g \major
+  {{ template "lh1" (w `g=,8` `g+c@M!`) }}
+  r8 d'=4 r4. | R2. | R2. | r4 r8 \fermata r a-> aes-> |
+  g=,8-> r r g+gM!-> r r |
 }
 {{ end }}
