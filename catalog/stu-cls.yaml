@@ -291,10 +291,9 @@ pieces:
   - { id: 6zcy, tit: Етюд Aes major,
       com: О. Денисов, src: SB5NU1980,
       org: ukr, sty: cus, gnr: stu, ton: aesmj, frm: [scl, cr5], bss: pub, lvl: elc,}
-  # p. 101
-  # - { id: 2m7b, tit: Етюд Cis minor,
-  #     com: С. Титов, src: SB5NU1980,
-  #     org: rus, sty: aut, gnr: stu, ton: cisi, frm: [arp, vo2, fi1, fi5], bss: stb, lvl: elc }
+  - { id: 2m7b, tit: Етюд Cis minor,
+      com: С. Титов, src: SB5NU1980,
+      org: rus, sty: cus, gnr: stu, ton: cismi, frm: [arp, vo2, fi1, fi5], bss: stb, lvl: elc }
   # p. 106
   # - { id: mlem, tit: Етюд C major,
   #     com: К. Черні, src: SB5NU1980,
@@ -307,10 +306,6 @@ pieces:
   # - { id: l3i2, tit: Етюд E minor,
   #     com: А. Онуфрієнко, src: SB5NU1980,
   #     org: ukr, sty: aut, gnr: stu, ton: ei, frm: [scl, in8, fi1, fi5], bss: stb, lvl: elb }
-  # p. 122
-  # - { id: lpr2, tit: Етюд Bes minor,
-  #     com: Г. Тишкевич, src: SB5NU1980,
-  #     org: rus, sty: aut, gnr: stu, ton: besi, frm: [scl, in8, cr5, fi1, fi5], bss: [stb, pub, scl, rep], lvl: elb }
   # p. 126
   # - { id: f87r, tit: Етюд B minor,
   #     com: А. Салин, src: SB5NU1980,
