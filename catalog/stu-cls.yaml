@@ -214,7 +214,7 @@ pieces:
       org: ukr, sty: cus, gnr: stu, ton: gmi, frm: [scl, in3, dot, fi1], bss: stb, lvl: elb }
   - { id: qqge, tit: Етюд G major,
       com: К. Черні, src: SB4NU1978,
-      org: aut, sty: cus, gnr: stu, ton: gmj, frm: [scl, in3, tu3, fi1], bss: stb, lvl: elb }
+      org: aut, sty: cus, gnr: stu, ton: gmj, frm: [in3, tu3, fi1], bss: stb, lvl: elb }
   - { id: k402, tit: Етюд E minor,
       com: В. Иванов, src: SB4NU1978,
       org: rus, sty: cus, gnr: stu, ton: [emi, gmj], frm: [cr5, fi5], bss: stb, lvl: elc }
