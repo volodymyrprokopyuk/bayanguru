@@ -20,6 +20,16 @@
   \rep 4 { fis,='16 gis=' } |
 {{ end }}
 
+{{ define "lh1" }}
+  {{ .a }} r cism! r | dis r dis7! r | gis, r gis7! r | cis r {{ .b }} r |
+  fis,=,8 r fism! r |
+{{ end }}
+
+{{ define "lh2" }}
+  b=,8 r b7! r | e r eM! r | fis, r fism! r | gis r cis@m! r8 |
+  gis=,8 r gis7! r | cis= r {{ .a }} |
+{{ end }}
+
 {{ define "rightHand" }}
 \relative {
   \tempo Andante
@@ -60,5 +70,17 @@
 \relative {
   \clef bass
   \key cis \minor
+  {{ template "lh1" (w `cis=8-\stBass` `cism!`) }}
+  {{ template "lh1" (w `cis'=8` `cis7!`) }}
+  {{ template "lh2" (w `cism!8 r`) }}
+
+  \rep 2 { b=,8 r b7! r | e= r eM! r | }
+  \rep 2 { e=8 r e7! r | a, r aM! r | }
+  fis=,8 r fism! r | gis r cis@m! r8 | gis r gis7! r | cis r cism! r |
+  fis,=,8 r fism! r | gis r cis@m! r8 | dis' r dis7! r | gis,=, r gis7! r |
+
+  {{ template "lh1" (w `cis=8` `cism!`) }}
+  {{ template "lh1" (w `cis'=8` `cis7!`) }}
+  {{ template "lh2" (w `cism!4`) }}
 }
 {{ end }}
