@@ -294,10 +294,9 @@ pieces:
   - { id: 2m7b, tit: Етюд Cis minor,
       com: С. Титов, src: SB5NU1980,
       org: rus, sty: cus, gnr: stu, ton: cismi, frm: [arp, vo2, fi1, fi5], bss: stb, lvl: elc }
-  # p. 106
-  # - { id: mlem, tit: Етюд C major,
-  #     com: К. Черні, src: SB5NU1980,
-  #     org: aut, sty: cls, gnr: stu, ton: cj, frm: [vo2, scl, fi1, fi5], bss: stb, lvl: elb }
+  - { id: mlem, tit: Етюд C major,
+      com: К. Черні, src: SB5NU1980,
+      org: aut, sty: cls, gnr: stu, ton: cmj, frm: [vo2, scl, fi1, fi5], bss: stb, lvl: elb }
   # p. 113
   # - { id: n7j0, tit: Етюд B minor,
   #     com: М. Черемухин, src: SB5NU1980,

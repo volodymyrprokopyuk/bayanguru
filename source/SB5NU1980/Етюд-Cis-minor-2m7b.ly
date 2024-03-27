@@ -75,7 +75,7 @@
   {{ template "lh2" (w `cism!8 r`) }}
 
   \rep 2 { b=,8 r b7! r | e= r eM! r | }
-  \rep 2 { e=8 r e7! r | a, r aM! r | }
+  \rep 2 { e=8 r e7! r | a,=, r aM! r | }
   fis=,8 r fism! r | gis r cis@m! r8 | gis r gis7! r | cis r cism! r |
   fis,=,8 r fism! r | gis r cis@m! r8 | dis' r dis7! r | gis,=, r gis7! r |
 
