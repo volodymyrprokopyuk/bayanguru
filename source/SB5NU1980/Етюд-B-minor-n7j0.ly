@@ -17,7 +17,7 @@
 {{ end }}
 
 {{ define "rh2b" }}
-  b=4.~ b16 cis[_\dCre d cis d e] | fis4.~ fis16) b,[( cis d e fis] |
+  b=4.~ b16) cis[(_\dCre d cis d e] | fis4.~ fis16) b,[( cis d e fis] |
   g='4.~ g16) g[(_\dDim fis g fis e] | d4.~ d='16) %
 {{ end }}
 
@@ -55,10 +55,10 @@
     a='8) g[( fis] g4.~ | g8) fis[( eis] fis4.~ | fis='8) %
   } {
     d'='8( cis |
-    {{ template "rh1b" (w `a='8)\f`) }} b='8[( a] |
-    fis='4.~\> \af 8\! fis8) d[(\p fis] |
+    {{ template "rh1b" (w `a='8)\f`) }} b='8[(\> a] |
+    fis='4.~ \af 8\! fis8) d[(\p fis] |
     a='4.~ a8) g[( a] | b4.~ b8) a[(_\dCre g] |
-    fis='4.~ fis8) e[( d] | g4.~ g8) fis[( d] |
+    fis='4.~ fis8) e[( d] | g4.~ g8) fis[( e] |
     dis='4.~ dis8) g[(_\dDim fis] | e4.~ e8) e[( d] |
     cis='4.~ cis8) cis[( b] |
     ais=8 cis g' fis g fis e) d[(\p^\tATem cis='] |
@@ -69,15 +69,15 @@
     b='4.~ b8) a[(_\dCre g] | c4.~ c8) b[( a] |
     d=''4.~ d8) c[( b] | f'4.~ f8) e[( d] |
     c=''4.~ c8) b[( a] | ees'4.~ ees8) d[( c] |
-    b='4.~ b8) a[(\p g] | ais4.~ ais8) gis[( a] |
-    b='4.~ b8) ais[( b] | c4.~ c8) c[( b] |
+    b='4.~ b8) a[(\p g] | ais4.~ ais8) gis[( ais] |
+    b='4.~ b8) ais[( b] | cis4.~ cis8) cis[( b] |
     ais='8) g[( fis] e16_\dDim fis e d cis b |
     ais=16 cis e cis e g fis g fis e fis e d^\tRal e d cis) d(\p cis=' |
 
     {{ template "rh2b" }} e='16[( d cis d cis] |
-    {{ template "rh2b" }} b=16[( cis d e fis]) |
-    g='4.~ g8 fis[(\> e] | \af 4.\! fis4.~ fis16) b,[\< cis d e \af 16\! fis] |
-    g='4.~ g8 fis[(\> e] | \af 4.\! fis4.~ fis16) fis[( e fis e d] |
+    {{ template "rh2b" }} b=16[( cis d e fis] |
+    g='4.~ g8) fis[(\> e] | \af 4.\! fis4.~ fis16) b,[(\< cis d e \af 16\! fis] |
+    g='4.~ g8) fis[(\> e] | \af 4.\! fis4.~ fis16) fis[( e fis e d] |
     cis='4.~ cis8) b[(_\dDim cis] | d4.~ d16) fis[( e fis e d] |
     cis='4.~ cis8) b[(\p cis] | \rep 5 { d='4.~ d8) b[( cis='] | } d=') %
   }
