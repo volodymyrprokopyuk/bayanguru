@@ -21,6 +21,17 @@
   g='4.~ g16) g[(_\dDim fis g fis e] | d4.~ d='16) %
 {{ end }}
 
+{{ define "lh1" }}
+  {{ .a }} r r gm! r r | b r r bm! r r |
+  b=,8 r r e@m! r8 r | b r r bm! r r |
+  \rep 2 { b=,8 r r bm! r r | } a=,8 r r a7! r r |
+{{ end }}
+
+{{ define "lh2" }}
+  d=8 r r dM! r r | d r r d7! r r | g, r r gM! r r |
+  a=,8 r r d@7! r8 r | b=, r r g@M! r8 r |
+{{ end }}
+
 {{ define "rightHand" }}
 \relative {
   \tempo "Tranquillo caloroso"
@@ -89,5 +100,23 @@
 \relative {
   \clef bass
   \key b \minor
+  \partial 4 { r8 r | }
+  {{ template "lh1" (w `b,=,8-\stBass`) }}
+  {{ template "lh2" }} | b=,8 r r b7! r r | e r r em! r r |
+  fis=8 r r fis7! r r | fis=8 r r fis7! r r r4. |
+
+  {{ template "lh1" (w `b,=,8`) }} | R1*9/8 | {{ template "lh2" }}
+  e=8 r r e7! r r | a, r r am! r r |
+  d=8 r r d7! r r | g, r r gM! r r |
+  fis'=8 r r fis7! r r | g, r r gM! r r |
+  e'=8 r r em! r r | fis= r r r4. | R1*9/8 |
+
+  {{ template "lh1" (w `b,=,8`) }}
+  d=8 r r dM!16 r r8 r | e r r em! r r |
+  b=,8 r r bm!16 r r8 r | e r r em! r r |
+  b=,8 r r bm!16 r r8 r | b r r e@m! r8 r |
+  b=,8 r r bm! r r | b r r e@m! r8 r |
+  b=,8 r r bm! r r | \rep 2 { r4. b@m!8 r8 r | }
+  \rep 2 { r4. g@M!8 r8 r | } | R1*6/8 | r4. b=,8 r r |
 }
 {{ end }}
