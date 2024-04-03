@@ -16,6 +16,15 @@ yay -S caddy pagefind
 bun install --no-save tailwindcss
 #+END_SRC
 
+** Usage
+
+Fish completions
+
+#+BEGIN_SRC fish
+go install github.com/volodymyrprokopyuk/bayan
+./bayan completion fish > ~/.config/fish/completions/bayan.fish
+#+END_SRC
+
 Piece ID generation
 
 #+BEGIN_SRC fish

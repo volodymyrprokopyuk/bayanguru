@@ -48,12 +48,12 @@
 
       e='''4\ff d c g | e d c g | e' d c g | g g2 g4~ | g='8 %
     } {
-      g'='16 f e f g bes a f f g gis a bes a gis a |
+      g'='16 f e f g bes a g f g gis a bes a gis a |
       gis='16 a bes b d cis b cis d e d c b c b a |
       gis='16 e dis e f fis g gis a gis a b cis b cis a |
       d=''16 cis d a dis cisis dis a e' dis e b f' e f b, |
       c=''16 d c b c d b c a b g a f g e f |
-      d='16 e f fis g a f g e g d e c d b c |
+      d='16 e f fis g a f g e f d e c d b c |
       a=16 b c cis d e d c b c b a b c a b |
       c='16 g b c e c dis e g e fis g c g b c |
       b='16 ais b c cis d dis e f e d c b c a b |
