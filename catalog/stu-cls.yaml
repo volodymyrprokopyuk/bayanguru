@@ -300,10 +300,9 @@ pieces:
   - { id: n7j0, tit: Етюд B minor,
       com: М. Черемухин, src: SB5NU1980,
       org: rus, sty: cus, gnr: stu, ton: bmi, frm: [vo2, scl, fi1, fi5], bss: stb, lvl: elc }
-  # p. 120
-  # - { id: l3i2, tit: Етюд E minor,
-  #     com: А. Онуфрієнко, src: SB5NU1980,
-  #     org: ukr, sty: aut, gnr: stu, ton: ei, frm: [scl, in8, fi1, fi5], bss: stb, lvl: elb }
+  - { id: l3i2, tit: Етюд E minor,
+      com: А. Онуфрієнко, src: SB5NU1980,
+      org: ukr, sty: cus, gnr: stu, ton: emi, frm: [scl, in8, fi1, fi5], bss: stb, lvl: elb }
   # p. 126
   # - { id: f87r, tit: Етюд B minor,
   #     com: А. Салин, src: SB5NU1980,
