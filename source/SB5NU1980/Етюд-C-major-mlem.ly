@@ -63,7 +63,7 @@
 
       {{ template "rh2b" (w `c='''16`) }}
       {{ template "rh2b" (w `c=''16`) }}
-      {{ template "rh2b" (w `c'=''16`) }}
+      c'=''16 b a g fis g f g e g f e d f e d |
       c='16_\dDim e d c d f e d c e d c d f e d | c='8 %
     }
     e'='16\< g c, e g c e g c e g, c e \af 16\! c |
