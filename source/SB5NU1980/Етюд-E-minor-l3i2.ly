@@ -1,3 +1,10 @@
+{{ define "lh1" }}
+  {{ .a }} r em! r | b r e@m! r8 | g r e@m! r8 | a r am! r |
+  d=8 r d7! r | a r d@7! r8 | g r gM! r | d' r g@M! r8 |
+  a=,8 r am! r | fis r a@m! r8 | b r e@m! r8 | g r e@m! r8 |
+  a=,8 r am! r | b=, r b7! r |
+{{ end }}
+
 {{ define "rightHand" }}
 \relative {
   \tempo Allegro
@@ -43,7 +50,7 @@
   \duo { <d''='' d'>4 } { r8 fis''=''16 fis } <c='' c'>8 <a a'> |
   \duo { <b'=' b'>4 } { r8 <e''='' g>16 16 } <ais=' ais'>8 <b b'> |
   \duo { <cis''='' cis'>4 } { r8 <fis''='' ais> } <dis='' dis'>8 <fis fis'> |
-  <e='' g b e>4 <e a cis e> | <e='' g cis e> r \bar "|."
+  <e='' g b e>4 <e a cis e> | <e='' g b e> r \bar "|."
 }
 {{ end }}
 
@@ -51,5 +58,10 @@
 \relative {
   \clef bass
   \key e \minor
+  {{ template "lh1" (w `e=8-\stBass`) }} | e@m!4 b=,4 | e+em!8 r r4 |
+
+  {{ template "lh1" (w `e=8`) }} | e=8 r e7! r | gis, r e@7! r8 |
+  a=,8 r am! r | fis r a@m! r8 | b r e@m! r8 | a r am! r |
+  g=,8 r e@m! r8 | fis=, r b@7! r8 | e+em!4 a+aM! | e+em! r |
 }
 {{ end }}
