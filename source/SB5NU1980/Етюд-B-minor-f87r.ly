@@ -1,6 +1,6 @@
 {{ define "rh1" }}
   {{ .a }} <b b'> <cis cis'> <d d'> <e e'> \af 8\! <fis fis'> |
-  <g='b e g>4.-> <fis ais d fis>4->\> \af 8\! <e=' ais cis e>8-> |
+  <g='b e g>4.->\> <fis ais d fis>4-> \af 8\! <e=' ais cis e>8-> |
 {{ end }}
 
 {{ define "rh2" }}
@@ -24,9 +24,9 @@
   {{ template "rh2" }} {{ template "rh3" }}
   {{ template "rh1" (w `<d=' fis b d>8->\sf\<`) }}
   {{ template "rh2" }}
-  <b=' d g b>4.-> <a cis fis a>4->\> \af 8\! <g cis e g>8-> |
+  <b=' d g b>4.->\> <a cis fis a>4-> \af 8\! <g cis e g>8-> |
   <fis=' a d fis>8->\sf\< <d d'> <e e'> <fis fis'> <g g'> \af 8\! <a a'> |
-  <d='' fis b d>4.->\ff <cis eis ais cis>4-> <d e gis b>8-> |
+  <d='' fis b d>4.->\ff <cis eis ais cis>4-> <b eis gis b>8-> |
   <ais=' cis fis ais>8 <cis cis'> <b b'> <ais ais'> <gis gis'> <fis fis'> |
   <a=' cis g' a>8\> <cis cis'> <b b'> <a a'> <aes aes'> \af 8\! <g g'> |
   <fis=' d' fis>4.->\p\< <g d' g>-> | <gis d' gis>-> \af 4.\! <a=' d a'>-> |
@@ -40,7 +40,7 @@
   \duo { ees''=''4.\> ees | ees \af 4.\! ees='' | }
   {
     <ces''='' ces'>8^\accent <des des'> <ces ces'> <bes bes'>^\accent <ces ces'> <bes bes'> |
-    <a=' a'>8^\accent <bes bes'> <a a'> <aes aes'>^\accent <bes bes'> \af 8\! <aes=' aes'> |
+    <a=' a'>8^\accent <bes bes'> <a a'> <aes aes'>^\accent <a a'> \af 8\! <aes=' aes'> |
   }
   <ais=' ais'>8(-.\< <b b'>-. \af 8\! <cis cis'>-. <gis' gis'>-.\f <fis fis'>-. <dis dis'>-. |
   <cis='' cis'>8-.\> <b b'>-. \af 8\! <fis fis'>-. <dis dis'>-.\< <e e'>-. \af 8\! <fis fis'>)-. |
@@ -53,9 +53,23 @@
 
   \rep 2 {
     {{ template "rh2" }}
-    <g=' ais e' g>4.->\> <fis ais d fis>4-> \af 8\! <e ais cis e>8-> |
+    <g=' ais e' g>4.->\> <fis ais d fis>4-> \af 8\! <e=' ais cis e>8-> |
   }
   {{ template "rh2" }} {{ template "rh3" }} {{ template "rh2" }}
+  \rep 2 {
+    <g=' b e g>4.->\< <a d fis a>4-> \af 8\! <ais e' fis ais>8-> |
+    <b=' d fis b>8\sf\< <b, b'> <cis cis'> <d d'> <e e'> \af 8\! <fis=' fis'> |
+  }
+  <g=' b e g>8->\sf\> <b b'>-. <a a'>-. <g g'>-. <fis fis'>-. \af 8\! <e e'>-. |
+  <cis=' e a cis>8->\sf\< <a a'> <b b'> <cis cis'> <d d'> \af 8\! <e e'> |
+  <fis=' a d fis>8->\sf\> <a a'>-. <g g'>-. <fis fis'>-. <e e'>-. \af 8\! <d d'>-. |
+  <b= d g b>8->\sf\< <g g'> <a a'> <b b'> <cis cis'> \af 8\! <d d'> |
+  <e=' g b e>8-.\> <g g'>-. \af 8\! <fis fis'>-. <e e'>-.\< <d d'>-. \af 8\! <e e'>-. |
+  <fis=' b d fis>4.->\> <ais, e' fis ais>4~-> 16 \af 16\! <ais ais'>-> |
+  <b= d fis b>4.->\< <b e g b>4~-> 16 \af 16\! <cis cis'>-> |
+  <d=' fis b d>4.->\< <d g b d>4~-> 16 <e e'>-> |
+  <fis=' b d fis>4.-> <gis d' e gis>4~-> 16 \af 16\! <ais ais'>-> |
+  <b=' d fis b>8->\f r r <cis, e g b>8-> 8-> 8-> | <b= d fis b>-> r r r4. \bar "|."
 }
 {{ end }}
 
