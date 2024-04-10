@@ -13,6 +13,15 @@
   <ais= cis ais'>4.\< <b d b'>4 \af 8\! <cis=' e cis'>8 |
 {{ end }}
 
+{{ define "lh1" }}
+  {{ .a }} bm!8) r r | cis,=,(-> d-. e-. fis-. gis-. ais=,)-. |
+{{ end }}
+
+{{ define "lh2" }}
+  b=,4.(-> gm!8) r r | e-- g-. fis-. e-. d-. cis-. |
+  b=,8-> d-. cis-. b-. a-. g-. | fis-. g-. fis-. e-. d-. cis=,-. |
+{{ end }}
+
 {{ define "rightHand" }}
 \relative {
   \tempo Allegro
@@ -77,5 +86,27 @@
 \relative {
   \clef bass
   \key b \minor
+  {{ template "lh1" (w `b,=,4.(->-\puBass`) }}
+  {{ template "lh1" (w `b=,4.(->`) }} {{ template "lh2" }}
+  {{ template "lh1" (w `b'=,4.(->`) }}
+  b=,4.(-> gm!8) r r | e,(-. fis-. g-. a-. b-. cis)-. |
+  d=4.( dM!8) r r | gis,(-. a-. b-. cis-. dis-. eis)-. |
+  fis=4.( fisM!8) r r | e4.( a@7!8) r8 r |
+  d=8-. cis-. d-. e-. dis-. e-. | f-. e-. f-. fis-. eis-. fis=-. |
+
+  g=4.-> fis-> | f-> e-> |
+  ees=8-. d-. ees-. f-. e-. f-. | fis-. f-. fis-. g-. fis-. g-. |
+  aes=4.-> g-> ges-> f-> | e fis@M! | dis4. b@M! |
+  d=4. e@M! | cis4. a@M! | d4.-> a'-> | fis-> dis'-> |
+  e='4.-> cis-> | ais-> fis-> |
+  \rep 2 { b,=,4.(-> gm!8) r r | r fis(-. g-. gis-. a-. ais=,)-. | }
+  {{ template "lh2" }}
+  \rep 2 { b'=,4.(-> gm!8) r r | a'(-. g-. fis-. e-. d-. cis=)-. | }
+  b=,4.(-> gm!8) r r | e,-> g-. fis-. e-. fis-. g-. |
+  a=,4.(-> aM!8) r r | d,-> fis-. e-. d-. e-. fis-. |
+  g=,4.(-> aM!8) r r | cis-> e-. d-. cis-. b-. cis-. |
+  d=8-. e-. d-. cis-. d-. cis-. | b-> d-> cis-> b-> a-> g-> |
+  fis=,8-> b-> a-> g-> fis-> e-> | d-> g-> fis-> e-> d-> cis-> |
+  b=,,8-> r r a'-> g-> a-> | b=,-> r r r4. |
 }
 {{ end }}
