@@ -18,7 +18,7 @@
 {{ define "lh2" }}
   {{ .a }} b c d e f | g)-. r g,-. r g'-. r |
   f,=,8( e f g a b | c)-. r c-. r c-. r |
-  f,=,4 d@m! dm4 | f=, d@m dm4 |
+  f,=,4-\stBass d@m! dm4 | f=, d@m dm4 |
 {{ end }}
 
 {{ define "lh3" }}
@@ -62,8 +62,8 @@
   {{ template "lh1" (w `a=,4`) }}
   b=,4 e@m! em4 | b e@m em4 | b=, r b7! | e+em!2 r4 |
 
-  {{ template "lh2" (w `c=8(`) }} | fis4 d@7! d74 | g+gM! r r |
-  {{ template "lh2" (w `c'=8(`) }} | g=,8 r r4 g7!8 r | c+cM!2 r4 |
+  {{ template "lh2" (w `c=8(-\puBass`) }} | fis4 d@7! d74 | g+gM! r r |
+  {{ template "lh2" (w `c'=8(-\puBass`) }} | g=,8 r r4 g7!8 r | c+cM!2 r4 |
 
   \rep 2 { e'=8 r e7! r e7 r | e= r a@m! r8 am r | }
   c=4 a@m! am4 | d dm! dm | dis b@7! b74 | e+eM!8 r r4 r |

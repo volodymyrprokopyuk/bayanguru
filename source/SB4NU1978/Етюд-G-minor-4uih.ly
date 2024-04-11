@@ -57,9 +57,9 @@
   a=,8 r r4 c@m!8 r8 r4 | bes8 r r4 g@m!8 r8 r4 |
   c=8 r r4 d8 r r4 | d@7!8 r8 r4 g@m!8 r8 r4 |
 
-  g=8-> r r4 f8-> r r4 | e8-> r r4 ees8-> r r4 |
+  g=8->-\puBass r r4 f8-> r r4 | e8-> r r4 ees8-> r r4 |
   d=8-> r r4 c8-> r r4 | bes8-> r r4 a8-> r r4 |
-  g=,8 r f r ees r d r | ees@M!8 r8 \rep 3 { eesM8 r8 } |
+  g=,8 r f r ees r d r | ees@M!8-\stBass r8 \rep 3 { eesM8 r8 } |
   d+g@m!8 r8 r4 g@m!8 r8 r4 | g=,4 r g+gm! %
 }
 {{ end }}
