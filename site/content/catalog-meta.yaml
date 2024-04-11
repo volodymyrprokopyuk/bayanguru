@@ -19,7 +19,7 @@ meta:
           - { name: flk, eng: Folk music, ukr: Фолькльорна музика }
           - { name: cus, eng: Custom piece, ukr: Авторська п'єса }
           - { name: cls, eng: Classical music, ukr: Класична музика }
-      - tit: { name: snr, eng: Piece genre, ukr: Жанр п'єси }
+      - tit: { name: gnr, eng: Piece genre, ukr: Жанр п'єси }
         sub:
           - { name: sng, eng: Song, ukr: Пісня } # song
           - { name: chd, eng: Child piece, ukr: Дитяча п'єса }

@@ -15,7 +15,7 @@
 {{ end }}
 
 {{ define "lh2" }}
-  fis=,16(-> gis a gis fis8) r | b16(-> cis d cis b8) r |
+  {{ .a }} gis a gis fis8) r | b16(-> cis d cis b8) r |
   e,=,16(-> fis gis fis e8) r | a16(-> b cis b a8) r |
   fis=,16(-> gis a gis fis8) r | b16(-> cis d cis b=,8) r |
 {{ end }}
@@ -70,11 +70,12 @@
   {{ template "lh1" (w `a,=,8`) }}
   a=,8 r aM! r | d+b@m! r8 r4 | e8 r r e( | a)-> r a=,-> r |
 
-  {{ template "lh2" }} | e,=,16(-> fis gis fis e d' cis b |
-  a=,8) r a+aM! r | {{ template "lh2" }}
+  {{ template "lh2" (w `fis=,16(->-\puBass`) }}
+  e,=,16(-> fis gis fis e d' cis b | a8) r a+aM! r |
+  {{ template "lh2" (w `fis=,16(->`) }}
   e,=,16(-> fis gis fis e8) r | a=,8 r a+aM! r |
 
-  {{ template "lh1" (w `a=,8`) }}
+  {{ template "lh1" (w `a=,8-\stBass`) }}
   {{ template "lh3" }} | a, r aM! r |
   {{ template "lh3" }} | a, r aM! r |
   a=,8 r aM! r | b r bm! r | e r e7! r | a,=, r a+aM! r |

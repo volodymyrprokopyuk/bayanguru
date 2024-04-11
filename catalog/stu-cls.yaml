@@ -55,7 +55,7 @@ pieces:
       org: aut, sty: cls, gnr: stu, ton: gmj, frm: scl, bss: stb, lvl: ela }
   - { id: sdnn, tit: Етюд C major,
       com: К. Черні, src: SB1NU1979,
-      org: aut, sty: cls, gnr: stu, ton: cmj, frm: scl, bss: stb, lvl: ela }
+      org: aut, sty: cls, gnr: stu, ton: cmj, frm: [scl, rep], bss: stb, lvl: ela }
   - { id: m02e, tit: Етюд C major,
       com: Й. Ванхаль, src: SB1NU1979,
       org: cze, sty: cls, gnr: stu, ton: cmj, frm: arp, bss: stb, lvl: ela }
@@ -98,7 +98,7 @@ pieces:
       org: deu, sty: cls, gnr: stu, ton: dmj, frm: [scl, arp], bss: stb, lvl: elb }
   - { id: zvjv, tit: Етюд G major,
       com: А. Лешгорн, src: SB2NU1977,
-      org: deu, sty: cls, gnr: stu, ton: [gmj, emi], frm: scl, bss: stb, lvl: elb }
+      org: deu, sty: cls, gnr: stu, ton: gmj, frm: scl, bss: stb, lvl: elb }
   - { id: pheu, tit: Етюд F major,
       com: К. Черні, src: SB2NU1977,
       org: aut, sty: cls, gnr: stu, ton: fmj, frm: [arp, fi1, fi5, jmp], bss: stb, lvl: elb }
@@ -114,7 +114,7 @@ pieces:
   # SB3NU1979
   - { id: ey1v, tit: Етюд C major,
       com: Г. Беренс, src: SB3NU1979,
-      org: swe, sty: cls, gnr: stu, ton: cmj, frm: scl, bss: stb, lvl: ela }
+      org: swe, sty: cls, gnr: stu, ton: [gmj, cmj], frm: scl, bss: stb, lvl: ela }
   - { id: yc2l, tit: Етюд D minor,
       com: А. Нечипоренко, src: SB3NU1979,
       org: ukr, sty: cus, gnr: stu, ton: [dmi, fmj], frm: [scl, fi5], bss: stb, lvl: elb }
