@@ -34,16 +34,16 @@ pieces:
       org: ukr, sty: cus, gnr: stu, ton: gmj, frm: arp, bss: stb, lvl: ela }
   - { id: h8lm, tit: Етюд C major,
       com: К. Черні–Г. Гермер, src: SB1NU1979,
-      org: aut, sty: cls, gnr: stu, ton: cmj, frm: arp, bss: stb, lvl: ela }
+      org: aut, sty: cls, gnr: stu, ton: cmj, frm: [arp, brk], bss: stb, lvl: ela }
   - { id: 09ok, tit: Етюд G minor,
       com: С. Аксюк, src: SB1NU1979,
       org: rus, sty: cus, gnr: stu, ton: gmi, frm: [arp, fi5, jmp], bss: [stb, jmp], lvl: ela }
   - { id: ktnb, tit: Етюд A minor,
       com: К. Мясков, src: SB1NU1979,
-      org: ukr, sty: cus, gnr: stu, ton: ami, frm: [arp, syn, fi5], bss: stb, lvl: ela }
+      org: ukr, sty: cus, gnr: stu, ton: ami, frm: [arp, brk, syn, fi5], bss: stb, lvl: ela }
   - { id: ri7i, tit: Етюд F major,
       com: Л. Шітте, src: SB1NU1979,
-      org: dnk, sty: cls, gnr: stu, ton: fmj, frm: arp, bss: stb, lvl: ela }
+      org: dnk, sty: cls, gnr: stu, ton: fmj, frm: [arp, brk], bss: stb, lvl: ela }
   - { id: 67ka, tit: Етюд C major,
       com: І. Беркович, src: SB1NU1979,
       org: ukr, sty: cus, gnr: stu, ton: cmj, frm: arp, bss: stb, lvl: ela }
@@ -92,7 +92,7 @@ pieces:
       org: aut, sty: cls, gnr: stu, ton: besmj, frm: [arp, dot, jmp], bss: stb, lvl: ela }
   - { id: 5071, tit: Етюд C major,
       com: А. Гедике, src: SB2NU1977,
-      org: rus, sty: cus, gnr: stu, ton: [gmj, gmi], frm: [arp, vo2], bss: pub, lvl: ela }
+      org: rus, sty: cus, gnr: stu, ton: [gmj, gmi], frm: arp, bss: pub, lvl: ela }
   - { id: vupt, tit: Етюд D major,
       com: Г. Вольфарт, src: SB2NU1977,
       org: deu, sty: cls, gnr: stu, ton: dmj, frm: [scl, arp], bss: stb, lvl: elb }
@@ -101,7 +101,7 @@ pieces:
       org: deu, sty: cls, gnr: stu, ton: gmj, frm: scl, bss: stb, lvl: elb }
   - { id: pheu, tit: Етюд F major,
       com: К. Черні, src: SB2NU1977,
-      org: aut, sty: cls, gnr: stu, ton: fmj, frm: [arp, fi1, fi5, jmp], bss: stb, lvl: elb }
+      org: aut, sty: cls, gnr: stu, ton: fmj, frm: [arp, lng, fi1, fi5, jmp], bss: stb, lvl: elb }
   - { id: vdul, tit: Етюд G major,
       com: К. Мясков, src: SB2NU1977,
       org: ukr, sty: cus, gnr: stu, ton: gmj, frm: [scl, syn, fi1, fi5, jmp], bss: stb, lvl: elb }
@@ -120,25 +120,25 @@ pieces:
       org: ukr, sty: cus, gnr: stu, ton: [dmi, fmj], frm: [scl, fi5], bss: stb, lvl: elb }
   - { id: t0ai, tit: Етюд A major,
       com: С. Чапкій, src: SB3NU1979,
-      org: ukr, sty: cus, gnr: stu, ton: amj, frm: [scl, cr7], bss: [stb, pub, scl], lvl: elb }
+      org: ukr, sty: cus, gnr: stu, ton: amj, frm: [scl, cr7], bss: [stb, pub, scl, seq], lvl: elb }
   - { id: vk0o, tit: Етюд C major,
       com: К. Дюрінг, src: SB3NU1979,
-      org: swe, sty: cls, gnr: stu, ton: cmj, frm: [arp, syn], bss: stb, lvl: elb }
+      org: swe, sty: cls, gnr: stu, ton: cmj, frm: [arp, srt, syn], bss: stb, lvl: elb }
   - { id: m1je, tit: Етюд D minor,
       com: Г. Гембера, src: SB3NU1979,
-      org: ukr, sty: cus, gnr: stu, ton: dmi, frm: [arp, fi5], bss: stb, lvl: elb }
+      org: ukr, sty: cus, gnr: stu, ton: dmi, frm: [arp, brk, scl, fi5], bss: stb, lvl: elb }
   - { id: x745, tit: Етюд A minor,
       com: К. Мясков, src: SB3NU1979,
-      org: ukr, sty: cus, gnr: stu, ton: ami, frm: [arp, in3, syn, fi5], bss: stb, lvl: elb }
+      org: ukr, sty: cus, gnr: stu, ton: ami, frm: [arp, brk, in3, syn, fi5], bss: stb, lvl: elb }
   - { id: ckjo, tit: Етюд F major,
       com: Г. Беренс, src: SB3NU1979,
-      org: swe, sty: cls, gnr: stu, ton: fmj, frm: [arp, fi5], bss: stb, lvl: elb }
+      org: swe, sty: cls, gnr: stu, ton: fmj, frm: [arp, scl, fi5], bss: stb, lvl: elb }
   - { id: ov1p, tit: Етюд E minor,
       com: К. Черні, src: SB3NU1979,
-      org: aut, sty: cls, gnr: stu, ton: [emi, gmj], frm: [arp, cr5], bss: [stb, pub, scl], lvl: elb }
+      org: aut, sty: cls, gnr: stu, ton: [emi, gmj], frm: [arp, scl, seq, cr5], bss: [stb, pub, scl], lvl: elb }
   - { id: 9zx1, tit: Етюд C major,
       com: А. Лемуан, src: SB3NU1979,
-      org: fra, sty: cls, gnr: stu, ton: [cmj, gmj], frm: [arp, fi5], bss: [stb, pub, syn], lvl: elb }
+      org: fra, sty: cls, gnr: stu, ton: [cmj, gmj], frm: [arp, brk, fi5], bss: [stb, pub, syn], lvl: elb }
   - { id: a7ra, tit: Етюд F major,
       com: А. Гедике, src: SB3NU1979,
       org: rus, sty: cus, gnr: stu, ton: fmj, frm: scl, bss: stb, lvl: elb }
@@ -147,7 +147,7 @@ pieces:
       org: ukr, sty: cus, gnr: stu, ton: ami, frm: [in3, rep, fi1], bss: stb, lvl: elb }
   - { id: zbvy, tit: Етюд D minor,
       com: К. Мясков, src: SB3NU1979,
-      org: ukr, sty: cus, gnr: stu, ton: dmi, frm: [scl, vo2, syn, fi1, fi5], bss: stb, lvl: elb }
+      org: ukr, sty: cus, gnr: stu, ton: dmi, frm: [scl, seq, vo2, syn, rep, fi1, fi5], bss: stb, lvl: elb }
   - { id: egr1, tit: Етюд F major,
       com: К. Черні, src: SB3NU1979,
       org: aut, sty: cls, gnr: stu, ton: fmj, frm: [arp, tu3, acc], bss: [stb], lvl: elb }
@@ -175,13 +175,13 @@ pieces:
   # SB4NU1978
   - { id: 4uih, tit: Етюд G minor,
       com: В. Логачов, src: SB4NU1978,
-      org: rus, sty: cus, gnr: stu, ton: gmi, frm: [scl, fi5], bss: stb, lvl: elb }
+      org: rus, sty: cus, gnr: stu, ton: gmi, frm: [scl, seq, fi5], bss: stb, lvl: elb }
   - { id: j5us, tit: Етюд G major,
       com: Є. Юцевич, src: SB4NU1978,
       org: ukr, sty: cus, gnr: stu, ton: gmj, frm: scl, bss: [stb, jmp], lvl: elb }
   - { id: 4k6c, tit: Етюд A minor,
       com: К. Мясков, src: SB4NU1978,
-      org: ukr, sty: cus, gnr: stu, ton: ami, frm: scl, bss: stb, lvl: elb }
+      org: ukr, sty: cus, gnr: stu, ton: ami, frm: [scl, seq], bss: stb, lvl: elb }
   - { id: yi1u, tit: Етюд D minor,
       com: В. Угринович, src: SB4NU1978,
       org: ukr, sty: cus, gnr: stu, ton: dmi, frm: [arp, fi5], bss: [stb, syn], lvl: elb }
@@ -202,7 +202,7 @@ pieces:
       org: deu, sty: cls, gnr: stu, ton: dmj, frm: [arp, fi5], bss: stb, lvl: elb }
   - { id: 8sl6, tit: Етюд G major,
       com: Т. Лак, src: SB4NU1978,
-      org: fra, sty: cls, gnr: stu, ton: gmj, frm: [scl, arp, tu3, fi5, jmp], bss: stb, lvl: elb }
+      org: fra, sty: cls, gnr: stu, ton: gmj, frm: [scl, seq, arp, tu3, fi5, jmp], bss: stb, lvl: elb }
   - { id: lzbk, tit: Етюд E minor,
       com: М. Чайкін, src: SB4NU1978,
       org: ukr, sty: cus, gnr: stu, ton: emi, frm: [arp, tre, tri], bss: stb, lvl: elb }
@@ -260,7 +260,7 @@ pieces:
       org: rus, sty: cus, gnr: stu, ton: [dmi, fmj], frm: [scl, fi5], bss: stb, lvl: elb }
   - { id: h3xy, tit: Етюд A minor,
       com: А. Нечипоренко, src: SB5NU1980,
-      org: ukr, sty: cus, gnr: stu, ton: ami, frm: [scl, arp, jmp], bss: stb, lvl: elb }
+      org: ukr, sty: cus, gnr: stu, ton: ami, frm: [scl, seq, arp, srt, jmp], bss: stb, lvl: elb }
   - { id: 4s1u, tit: Етюд A minor,
       com: А. Холминов, src: SB5NU1980,
       org: rus, sty: cus, gnr: stu, ton: ami, frm: arp, bss: stb, lvl: elb }

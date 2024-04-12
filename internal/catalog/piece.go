@@ -232,7 +232,7 @@ var (
   frmParts = []string{
     `^stb|pub|frb$`,
     `^mel|var$`,
-    `^scl|arp|in[3-8]|cr[57]|vo[23]$`,
+    `^scl|seq|arp|lng|srt|brk|in[3-8]|cr[57]|vo[23]$`,
     `^tu[356]|dot|syn$`,
     `^rep|tre|acc|mor|gru|tri|gli$`,
     `^fi1|fi5|jmp$`,

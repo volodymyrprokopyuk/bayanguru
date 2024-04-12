@@ -50,6 +50,6 @@
 
   e=,4 c@M!8 r8 cM r cM r | f4 fM!8 r d'4 f@M8 r8 |
   g,=,4 c@M!8 r8 cM r cM r | g4 g7!8 r g7 r g7 r |
-  c=2 aes | c aes | c4 r g r | c=1 \fermata |
+  c=2-\puBass aes | c aes | c4 r g r | c=1 \fermata |
 }
 {{ end }}

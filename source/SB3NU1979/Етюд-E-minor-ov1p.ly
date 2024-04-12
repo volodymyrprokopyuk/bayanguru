@@ -40,8 +40,8 @@
   \clef bass
   \key e \minor
   {{ template "lh1" (w `e=8[-\stBass`) }} e[ r em] r |
-  a,=,8[-. r b]-. r c[-. r b]-. r | a[-. r ais]-. r b-. r r4 |
-  {{ template "lh1" (w `e=8[`) }} g,[ r e@m] r8 |
+  a,=,8[-.-\puBass r b]-. r c[-. r b]-. r | a[-. r ais]-. r b-. r r4 |
+  {{ template "lh1" (w `e=8[-\stBass`) }} g,[ r e@m] r8 |
   a=,8[-. r am!]-. r b[-. r b7!]-. r | e[-. r em!]-. r e=-. r r4 |
 
   g,=,16-\puBass a_\aNLeg b c d c b a g a b c d e fis g |
