@@ -147,7 +147,7 @@ pieces:
       org: ukr, sty: cus, gnr: stu, ton: ami, frm: [in3, rep, fi1], bss: stb, lvl: elb }
   - { id: zbvy, tit: Етюд D minor,
       com: К. Мясков, src: SB3NU1979,
-      org: ukr, sty: cus, gnr: stu, ton: dmi, frm: [scl, seq, vo2, syn, rep, fi1, fi5], bss: stb, lvl: elb }
+      org: ukr, sty: cus, gnr: stu, ton: dmi, frm: [vo2, scl, seq, syn, rep, fi1, fi5], bss: stb, lvl: elb }
   - { id: egr1, tit: Етюд F major,
       com: К. Черні, src: SB3NU1979,
       org: aut, sty: cls, gnr: stu, ton: fmj, frm: [arp, tu3, acc], bss: [stb], lvl: elb }
