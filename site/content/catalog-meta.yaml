@@ -68,7 +68,6 @@ meta:
           # prh: polyrhythm, поліритмія
           - { name: tu3, eng: Trilets, ukr: Тріолі }
           - { name: tu5, eng: Quintuplets, ukr: Квінтолі }
-          - { name: tu6, eng: Sextuplets, ukr: Секстолі }
           - { name: dot, eng: Dotted rhythm, ukr: Пунктирний ритм }
           - { name: syn, eng: Syncopation, ukr: Синкопа }
           # orn: ornamentation, мелізми

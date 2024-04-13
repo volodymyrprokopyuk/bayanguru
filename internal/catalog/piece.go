@@ -233,7 +233,7 @@ var (
     `^stb|pub|frb$`,
     `^mel|var$`,
     `^scl|seq|arp|lng|srt|brk|in[3-8]|cr[57]|vo[23]$`,
-    `^tu[356]|dot|syn$`,
+    `^tu[35]|dot|syn$`,
     `^rep|tre|acc|mor|gru|tri|gli$`,
     `^fi1|fi5|jmp$`,
   }
