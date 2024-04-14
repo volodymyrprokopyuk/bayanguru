@@ -22,6 +22,7 @@
     {{ template "rh1" (w `<b'=' d>8(\p <a c> <g b>8`) }}
     {{ template "t1" (w `<b=' d>8(\> <a c> \af 8\! <g b>8` `8\< <a c> <b d>`
        `<c='' e>8 <d fis> <e g>8` `8 <d fis> \af 8\! <c e>`) }}
+    \omit TupletNumber
     {{ template "t1" (w `<b=' d>8) <g b>( <a c>` `<b d>\> <c e> <b d>`
        `<a=' c>8 <b d> <a c>` `<g b> <a c> <g b>`) }}
     {{ template "t1" (w `<fis=' a>8 <eis gis> <fis a>`
