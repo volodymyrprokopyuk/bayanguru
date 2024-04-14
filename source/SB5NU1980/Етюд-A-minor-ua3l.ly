@@ -100,10 +100,10 @@
   r4 g@7!4(-> c@M!8) r8 r4 | r4 e@7!4(-> a@m!8) r8 r4 |
   r4 c@7!4(-> f@M!8) r8 r4 | r4 a@7!4(-> d@m!8) r8 r4 |
 
-  r4 d=8 r r4 e8 r | r4 f,8 r r4 g8 r |
+  r4 d=8-\puBass r r4 e8 r | r4 f,8 r r4 g8 r |
   r4 a=,8 r r4 b8 r | r4 c8 r r4 d=8 r |
 
-  e+e7!8 r r4 d@m!2( | e@M!8)-. r8 r4 d@m!2( |
+  e+e7!8-\stBass r r4 d@m!2( | e@M!8)-. r8 r4 d@m!2( |
   e@M!8)-. r8 r4 f+d@m!8[ r8 d+dm] r | e+eM!8[ r d] r c[ r b=,] r |
 
   {{ template "lh1" (w `a=,8[`) }} {{ template "lh2" }}

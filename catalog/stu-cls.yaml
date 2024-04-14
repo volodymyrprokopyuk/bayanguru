@@ -238,7 +238,7 @@ pieces:
       org: aut, sty: cls, gnr: stu, ton: fmj, frm: [scl, arp, jmp], bss: stb, lvl: elb }
   - { id: uoxw, tit: Етюд A minor,
       com: К. Бурындин, src: SB4NU1978,
-      org: rus, sty: cus, gnr: stu, ton: ami, frm: [arp, dot], bss: stb, lvl: elb }
+      org: rus, sty: cus, gnr: stu, ton: ami, frm: [arp, brk, dot], bss: stb, lvl: elb }
   - { id: rru6, tit: Етюд A minor,
       com: А. Дювернуа, src: SB4NU1978,
       org: fra, sty: cus, gnr: stu, ton: ami, frm: scl, bss: [stb, pub, scl], lvl: elb }
@@ -247,10 +247,10 @@ pieces:
       org: rus, sty: cus, gnr: stu, ton: besmi, frm: [in8, cr5, tu3, jmp], bss: [stb, pub, rep], lvl: elb }
   - { id: xkep, tit: Етюд F minor,
       com: Л. Шітте, src: SB4NU1978,
-      org: dnk, sty: cls, gnr: stu, ton: fmi, frm: [arp, fi5, jmp], bss: [pub, stb, scl], lvl: elb }
+      org: dnk, sty: cls, gnr: stu, ton: [fmi, aesmj], frm: [arp, brk, syn, fi5, jmp], bss: [stb, pub, scl], lvl: elb }
   - { id: 1dyw, tit: Етюд Ees major,
       com: А. Лешгорн, src: SB4NU1978,
-      org: deu, sty: cus, gnr: stu, ton: eesmj, frm: arp, bss: stb, lvl: elc }
+      org: deu, sty: cus, gnr: stu, ton: eesmj, frm: [arp, lng, brk, syn, rep], bss: stb, lvl: elc }
   # SB5NU1980
   - { id: hwwc, tit: Етюд F major,
       com: О. Денисов, src: SB5NU1980,
@@ -263,10 +263,10 @@ pieces:
       org: ukr, sty: cus, gnr: stu, ton: ami, frm: [scl, seq, arp, srt, jmp], bss: stb, lvl: elb }
   - { id: 4s1u, tit: Етюд A minor,
       com: А. Холминов, src: SB5NU1980,
-      org: rus, sty: cus, gnr: stu, ton: ami, frm: arp, bss: stb, lvl: elb }
+      org: rus, sty: cus, gnr: stu, ton: ami, frm: [arp, srt], bss: stb, lvl: elb }
   - { id: ua3l, tit: Етюд A minor,
       com: Т. Лак, src: SB5NU1980,
-      org: fra, sty: cls, gnr: stu, ton: ami, frm: [arp, tu3], bss: stb, lvl: elb }
+      org: fra, sty: cls, gnr: stu, ton: ami, frm: [arp, scl, seq, tu3], bss: stb, lvl: elb }
   - { id: m8an, tit: Етюд F major,
       com: М. Магиденко, src: SB5NU1980,
       org: rus, sty: cus, gnr: stu, ton: fmj, frm: scl, bss: stb, lvl: elb }

@@ -69,18 +69,18 @@
 
   g=,8 r r4 r g7!8 r | c r cm! r r2 | f,8 r r4 r f7!8 r | bes=, r besm! r r2 |
 
-  ges=,4( f ees f) | ges( f ees aes)-> | des( ges, c, f)-> |
+  ges=,4(-\puBass f ees f) | ges( f ees aes)-> | des( ges, c, f)-> |
   bes=,8 r b r c r des= r |
 
   \meter 1/8 1,1,1,1,1,1,1,1
-  d=8 r r4 bes8 r bes7! r | {{ template "lh1" }}
+  d=8-\stBass r r4 bes8 r bes7! r | {{ template "lh1" }}
 
   \rep 2 {
     ees,=,8 eesM!-> r eesM g g7!-> r g7 |
     aes=,8 f@m!-> r8 fm bes=, bes7!-> r bes7 |
   }
   \rep 3 { r8 ees+eesM! r8 bes+bes7! } r8 bes+bes7 r8 bes+bes7 |
-  bes,=,,8[( d16 f] aes8) r r2 |
+  bes,=,,8[(-\puBass d16 f] aes8) r r2 |
   r2 r4 bes=,4( | ees,8) r bes'-> r ees,-> r bes'-> r | ees,=,4 r r2 |
 }
 {{ end }}
