@@ -88,10 +88,10 @@
   {{ template "lh3" }} {{ template "lh3" }}
   {{ template "lh4" }} {{ template "lh4" }}
 
-  g,=,4.( cis | fis, e') | dis( d | cis2.) | cis( |
+  g,=,4.(-\puBass cis | fis, e') | dis( d | cis2.) | cis( |
   fis,=,4) cis'8 fis,=, r r | R2. | R2. |
 
-  {{ template "lh1" (w `b+bm!8` `r4.`) }}
+  {{ template "lh1" (w `b+bm!8-\stBass` `r4.`) }}
   {{ template "lh1" (w `b+bm!8` `b+bm8 r r`) }}
 }
 {{ end }}

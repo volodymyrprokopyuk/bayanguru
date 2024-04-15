@@ -21,6 +21,8 @@
   \key g \minor
   \time 4/4
   {{ template "rh1" (w `<c'=' ees g>8-.\mf` `\p` `\f` `\p`) }}
+  \omit TupletBracket
+  \omit TupletNumber
   {{ template "rh1" (w `<c=' ees g>8-.\p` `` `\mp` ``) }}
   {{ template "t1" (w `<b= f' aes>8-.\mf`) }} <b f' g>-.-> r %
   {{ template "t1" (w `<f'=' g ees'>8-.`) }} <f g d'>-.-> r |
@@ -76,6 +78,8 @@
   r4 \tuplet 3/2 { r8 d,=,(-\puBass a') } %
   r4 \tuplet 3/2 { r8 d,=,( a') } |
   {{ template "lh1" (w `g=,8` `d'` `g,` `d'=`) }}
+  \omit TupletBracket
+  \omit TupletNumber
   {{ template "lh1" (w `d,=,8` `a'` `d,` `a'=,`) }} |
   {{ template "lh1" (w `g=,8` `d'` `g,` `d'=`) }}
   {{ template "lh1" (w `d,=,8` `g` `d` `g=,`) }} |

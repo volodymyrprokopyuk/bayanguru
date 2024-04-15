@@ -22,6 +22,7 @@
   \time 4/4
   \repeat segno 2 {
     {{ template "rh1" (w `<c'=' ees g>8\mp\< 8 8`) }}
+    \omit TupletNumber
     {{ template "t4" (w `<b= f' g>8\< 8 8` `<b= f' aes>8 8 8`
        `<b= f' bes>8 8 8` `<b= f' b>8 8 8`) }}
     {{ template "t4" (w `<d=' aes' cis>8 8 8` `<d=' aes' d>8 8 \af 16\! 8`
