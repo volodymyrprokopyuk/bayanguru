@@ -15,6 +15,7 @@
   \time 2/4
   \duo {
     {{ template "rh1" (w `g'='8\mf ees'_\aLeg c`) }}
+    \omit TupletNumber
     {{ template "t1" (w `f,='8 c' aes` `ees c' aes`) }}
     {{ template "t1" (w `g='8 g' ees` `d ees c`) }}
     {{ template "t1" (w `ees,='8 c' g` `fis c' g`) }}
@@ -38,6 +39,7 @@
 
     g='2 | aes4 g | bes aes | g2 | ees4 c | aes c | ees d | c='2 |
 
+    \omit TupletNumber
     {{ template "t1" (w `b'='8 f g` `b f g`) }}
     {{ template "t1" (w `c=''8 ees, g` `c ees, g`) }}
     {{ template "t1" (w `d'=''8 f, g` `d' f, g`) }}

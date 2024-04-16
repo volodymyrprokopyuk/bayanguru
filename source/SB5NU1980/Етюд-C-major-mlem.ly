@@ -87,7 +87,7 @@
 
   \rep 3 { c+cM!8 r g+gM! r c+cM! r g+g7! r | }
   c+cM!8 r g+g7! r c+cM! r g+g7! r |
-  c+cM!8 c,=,16[ e] g c e g c,, e g c e g c g |
+  c+cM!8 c,=,16[-\puBass e] g c e g c,, e g c e g c g |
   e=16 c g e c g' e c c=,8-. r r4 |
 }
 {{ end }}
