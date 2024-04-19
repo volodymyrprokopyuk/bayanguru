@@ -37,4 +37,4 @@ pieces:
       org: blr, sty: flk, gnr: sng, ton: dmi, frm: vo2, bss: frb, lvl: ela }
   - { id: cyj2, tit: Перепілочка, sub: blrfs,
       arr: С. Чапкій, src: FBBSC1978,
-      org: blr, sty: flk, gnr: sng, ton: gmi, frm: [vo2, cr5], bss: [frb, var, vo2, syn, jmp], lvl: elc }
+      org: blr, sty: flk, gnr: sng, ton: gmi, frm: [vo2, cr5], bss: [vo2, frb, var, syn, jmp], lvl: elc }

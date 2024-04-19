@@ -241,7 +241,7 @@ var (
 )
 
 func validateFrm(frms []string, frmName string) string {
-  frmSeq := "bss, mel, scl, arp, int, crd, pph, prh, orn, wrs"
+  frmSeq := "pph, bss, mel, scl, arp, int, crd, prh, orn, wrs"
   i, j := 0, 0
   for {
     if i == len(frms) {

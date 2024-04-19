@@ -104,7 +104,7 @@ pieces:
       org: rus, sty: flk, gnr: sng, ton: ami, frm: [in3, in6], bss: stb, lvl: elb }
   - { id: 923n, tit: Лирическая протяжная,
       com: Н. Речменский, src: B2AK1979,
-      org: rus, sty: cus, gnr: pie, ton: fismi, frm: [in3, vo2], bss: stb, lvl: elc }
+      org: rus, sty: cus, gnr: pie, ton: fismi, frm: [vo2, in3], bss: stb, lvl: elc }
   - { id: zk1t, tit: Щебетала пташечка,
       com: Н. Руднев, src: B2AK1979,
       org: rus, sty: flk, gnr: sng, ton: gmi, frm: vo2, bss: pub, lvl: elb }
