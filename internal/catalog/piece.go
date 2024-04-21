@@ -400,30 +400,6 @@ func Bss(bss []string, ID string) string {
   panic(err)
 }
 
-var studyType = regexp.MustCompile(`^(scl|arp|in|cr|vo)\d?$`)
-
-func Stu(frmOrBss []string, ID string) string {
-  for _, s := range frmOrBss {
-    if m := studyType.FindStringSubmatch(s); m != nil {
-      switch m[1] {
-      case "in":
-        return "int"
-      case "cr":
-        return "crd"
-      case "vo":
-        return "pph"
-      default:
-        return m[1]
-      }
-    }
-  }
-  err := fmt.Sprintf(
-    "catalog: piece %v missing study type, expected: scl, arp, in, cr, vo",
-    ID,
-  )
-  panic(err)
-}
-
 func PrintPiece(w io.Writer, piece Piece) {
   tit := piece.Tit
   com := fmt.Sprintf("%v %v%v", piece.Com, piece.ArtUkr, piece.Arr)

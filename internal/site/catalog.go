@@ -368,35 +368,39 @@ func keyByGnr(piece cat.Piece) []string {
 }
 
 func keyByStu(piece cat.Piece) []string {
-  var frm string
+  var stuFrm []string
   switch cat.Bss(piece.Bss, piece.ID) {
-  case "stb":
-    frm = cat.Stu(piece.Frm, piece.ID)
-  case "pub":
-    frm = "lft"
+  case "stb", "pub":
+    stuFrm = piece.Frm
   case "frb":
-    frm = cat.Stu(piece.Bss, piece.ID)
-  default:
-    frm = "unknown"
+    stuFrm = piece.Bss
   }
-  var key string
-  switch frm {
-  case "scl":
-    key = "scale"
-  case "arp":
-    key = "arpeggio"
-  case "int":
-    key = "interval"
-  case "crd":
-    key = "chord"
-  case "pph":
-    key = "polyphony"
-  case "lft":
-    key = "left-hand"
-  default:
-    key = frm
+  keys := make([]string, 0, 5)
+  if stuFrm[0] == "pub" {
+    keys = append(keys, "left-hand")
   }
-  return []string{key}
+  for _, frm := range stuFrm {
+    switch frm {
+    case "scl":
+      keys = append(keys, "scale")
+    case "arp":
+      keys = append(keys, "arpeggio")
+    case "in3", "in4", "in5", "in6", "in8":
+      keys = append(keys, "interval")
+    case "cr5", "cr7":
+      keys = append(keys, "chord")
+    case "vo2", "vo3":
+      keys = append(keys, "polyphony")
+    }
+  }
+  if len(keys) == 0 {
+    err := fmt.Sprintf(
+      "catalog: piece %v missing study type, expected scl, arp, int, crd, voc, pub",
+      piece.ID,
+    )
+    panic(err)
+  }
+  return keys
 }
 
 func keyByCom(piece cat.Piece) []string {

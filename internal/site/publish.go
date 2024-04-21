@@ -53,7 +53,7 @@ var catGroups = map[string][]string{
     "scale", "arpeggio", "interval", "chord", "polyphony", "left-hand",
   },
   "study-frb": {
-    "scale", "arpeggio", /*"interval",*/ "chord", //"polyphony",
+    "scale", "arpeggio", "interval", "chord", //"polyphony",
   },
   "composer": {
     "composer", "no-composer",
