@@ -11,7 +11,7 @@ pieces:
       org: ukr, sty: cus, gnr: stu, ton: cmj, frm: arp, bss: [frb, arp], lvl: ela }
   - { id: a4cg, tit: Етюд C major,
       com: С. Чапкій, src: FBBSC1978,
-      org: ukr, sty: cus, gnr: stu, ton: cmj, frm: [scl, dot], bss: [frb, scl, dot], lvl: ela }
+      org: ukr, sty: cus, gnr: stu, ton: cmj, frm: [arp, dot], bss: [frb, arp, dot], lvl: ela }
   - { id: 4b2w, tit: Етюд C major,
       com: С. Чапкій, src: FBBSC1978,
       org: ukr, sty: cus, gnr: stu, ton: cmj, frm: [scl, dot], bss: [frb, scl, dot], lvl: ela }

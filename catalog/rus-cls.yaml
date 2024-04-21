@@ -142,7 +142,7 @@ pieces:
   # FBB3BZ1982
   - { id: 3hw7, tit: Полифоническая пьеса,
       com: М. Глинка, src: FBB3BZ1982,
-      org: rus, sty: cus, gnr: pie, ton: dmi, frm: vo2, bss: frb, lvl: ela }
+      org: rus, sty: cus, gnr: pie, ton: dmi, frm: mel, bss: frb, lvl: ela }
   - { id: w7lt, tit: Ничто в полюшке не колышется, sub: rusfs,
       arr: А. Зубарев, src: FBB3BZ1982,
-      org: rus, sty: flk, gnr: sng, ton: emi, frm: [vo2, in3], bss: frb, lvl: elb }
+      org: rus, sty: flk, gnr: sng, ton: emi, frm: [mel, in3], bss: frb, lvl: elb }

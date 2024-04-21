@@ -208,25 +208,22 @@ books:
       sections: [
       { tit: Гами, pieces: [ # Scale
         # FBB3BZ1982
-        zp6s, zkl0,
+        iwqa, zp6s, zkl0, f0py,
         # FBBSC1978
-        a4cg, 4b2w
+        4b2w
       ] },
       { tit: Арпеджіо, pieces: [ # Arpeggio
         # FBB3BZ1982
-        47p1,
+        47p1, xe0v,
         # FBBSC1978
-        kbmk, g2e5
+        kbmk, a4cg, g2e5
       ] },
-      { tit: Інтервали, pieces: [ # Intervals
-        # FBB3BZ1982
-        f0py
-      ] },
+      # { tit: Інтервали, pieces: [ # Intervals
+      # ] },
       { tit: Акорди, pieces: [ # Chords
         # FBB3BZ1982
         6ky7, ja4a
       ] },
-      { tit: Поліфонія, pieces: [ # Polyphone
-        # FBB3BZ1982
-        iwqa, xe0v
-      ] } ] }
+      # { tit: Поліфонія, pieces: [ # Polyphone
+      # ] }
+      ] }
