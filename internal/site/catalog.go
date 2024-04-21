@@ -53,16 +53,18 @@ var tr = map[string]string{
 type PieceGroups map[string][]cat.Piece
 
 func groupPieces(
-  pieces []cat.Piece, pieceKey func(piece cat.Piece) string,
+  pieces []cat.Piece, pieceKey func(piece cat.Piece) []string,
 ) PieceGroups {
   groups := make(PieceGroups, 20)
   for _, piece := range pieces {
-    key := pieceKey(piece)
-    if _, exists := groups[key]; !exists {
-      groups[key] = make([]cat.Piece, 0, 300)
+    for _, key := range pieceKey(piece) {
+      if _, exists := groups[key]; !exists {
+        groups[key] = make([]cat.Piece, 0, 300)
+      }
+      groups[key] = append(groups[key], piece)
     }
-    groups[key] = append(groups[key], piece)
   }
+
   return groups
 }
 
@@ -70,7 +72,9 @@ func validateGroups(groups PieceGroups, groupNames []string) error {
   for key := range groups {
     groupName := strings.Split(key, "/")[0]
     if slices.Index(groupNames, groupName) == -1 {
-      return fmt.Errorf("cannot publish unknown group %v", groupName)
+      return fmt.Errorf(
+        "cannot publish unknown group %v for %v", groupName, groupNames,
+      )
     }
   }
   return nil
@@ -295,7 +299,7 @@ func filterPieces(
 
 func publishGroup(
   tpl *template.Template, pieces []cat.Piece,
-  groupKey func(piece cat.Piece) string,
+  groupKey func(piece cat.Piece) []string,
   sortKey func(piece cat.Piece) string,
   group string, groupNames []string, pc PublishCommand,
 ) error {
@@ -312,52 +316,58 @@ func publishGroup(
   return publishGroupPages(tpl, groupPages, groupNames, groupDir, groupURL)
 }
 
-func keyByOrg(piece cat.Piece) string {
+func keyByOrg(piece cat.Piece) []string {
+  var key string
   switch piece.Org {
   case "ukr":
-    return "ukrainian"
+    key = "ukrainian"
   case "rus":
-    return "russian"
+    key = "russian"
   case "blr":
-    return "belarusian"
+    key = "belarusian"
   case "hun":
-    return "hungarian"
+    key = "hungarian"
   case "mda", "pol", "cze", "svk", "lva":
-    return "extra"
+    key = "extra"
   case "aut", "deu", "dnk", "fra", "swe":
-    return "european"
+    key = "european"
   default:
-    return piece.Org
+    key = piece.Org
   }
+  return []string{key}
 }
 
-func keyBySty(piece cat.Piece) string {
+func keyBySty(piece cat.Piece) []string {
+  var key string
   switch piece.Sty {
   case "flk":
-    return "folk"
+    key = "folk"
   case "cus":
-    return "custom"
+    key = "custom"
   case "cls":
-    return "classic"
+    key = "classic"
   default:
-    return piece.Sty
+    key = piece.Sty
   }
+  return []string{key}
 }
 
-func keyByGnr(piece cat.Piece) string {
+func keyByGnr(piece cat.Piece) []string {
+  var key string
   switch piece.Gnr {
   case "sng", "chd", "lul", "mil", "pry", "rmc", "ves":
-    return "song"
+    key = "song"
   case "dnc", "gop", "koz", "mrc", "plk", "mzr", "tng", "vls":
-    return "dance"
+    key = "dance"
   case "pie", "gyp":
-    return "piece"
+    key = "piece"
   default:
-    return piece.Gnr
+    key = piece.Gnr
   }
+  return []string{key}
 }
 
-func keyByStu(piece cat.Piece) string {
+func keyByStu(piece cat.Piece) []string {
   var frm string
   switch cat.Bss(piece.Bss, piece.ID) {
   case "stb":
@@ -369,53 +379,60 @@ func keyByStu(piece cat.Piece) string {
   default:
     frm = "unknown"
   }
+  var key string
   switch frm {
   case "scl":
-    return "scale"
+    key = "scale"
   case "arp":
-    return "arpeggio"
+    key = "arpeggio"
   case "int":
-    return "interval"
+    key = "interval"
   case "crd":
-    return "chord"
+    key = "chord"
   case "pph":
-    return "polyphony"
+    key = "polyphony"
   case "lft":
-    return "left-hand"
+    key = "left-hand"
   default:
-    return frm
+    key = frm
   }
+  return []string{key}
 }
 
-func keyByCom(piece cat.Piece) string {
+func keyByCom(piece cat.Piece) []string {
+  var key string
   if len(piece.Com) > 0 || len(piece.Arr) > 0 {
-    return "composer"
+    key = "composer"
+  } else {
+    key = "no-composer"
   }
-  return "no-composer"
+  return []string{key}
 }
 
-func keyByBss(piece cat.Piece) string {
-  switch bss := cat.Bss(piece.Bss, piece.ID); bss {
-  case "stb":
-    return "standard-bass"
-  case "pub":
-    return "pure-bass"
-  case "frb":
-    return "free-bass"
-  default:
-    return bss
+func keyByBss(piece cat.Piece) []string {
+  keys := make([]string, 0, 3)
+  for _, bss := range piece.Bss {
+    switch bss {
+    case "stb":
+      keys = append(keys, "standard-bass")
+    case "pub":
+      keys = append(keys, "pure-bass")
+    case "frb":
+      keys = append(keys, "free-bass")
+    }
   }
+  return keys
 }
 
-func keyByLvl(piece cat.Piece) string {
+func keyByLvl(piece cat.Piece) []string {
+  var key string
   switch lvl := piece.Lvl; lvl[:2] {
   case "el":
-    return "elementary-" + lvl[2:]
-  case "in":
-    return "intermediary-" + lvl[2:]
+    key = "elementary-" + lvl[2:]
   default:
-    return lvl
+    key = lvl
   }
+  return []string{key}
 }
 
 func publishCatalog(tpl *template.Template, pc PublishCommand) error {
@@ -453,8 +470,11 @@ func publishCatalog(tpl *template.Template, pc PublishCommand) error {
     return err
   }
   stuStbPieces := filterPieces(pieces, func(piece cat.Piece) bool {
-    bss := cat.Bss(piece.Bss, piece.ID)
-    return piece.Gnr == "stu" && (bss == "stb" || bss == "pub")
+    return piece.Gnr == "stu" && slices.ContainsFunc(
+      piece.Bss, func(bss string) bool {
+        return bss == "stb" || bss == "pub"
+      },
+    )
   })
   err = publishGroup(
     tpl, stuStbPieces, keyByStu, keyCom, "study-stb", catGroups["study-stb"], pc,
@@ -463,8 +483,7 @@ func publishCatalog(tpl *template.Template, pc PublishCommand) error {
     return err
   }
   stuFrbPieces := filterPieces(pieces, func(piece cat.Piece) bool {
-    bss := cat.Bss(piece.Bss, piece.ID)
-    return piece.Gnr == "stu" && bss == "frb"
+    return piece.Gnr == "stu" && slices.Contains(piece.Bss, "frb")
   })
   err = publishGroup(
     tpl, stuFrbPieces, keyByStu, keyCom, "study-frb", catGroups["study-frb"], pc,
