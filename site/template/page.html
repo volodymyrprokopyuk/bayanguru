@@ -27,7 +27,7 @@
     <script src="/pagefind/pagefind-ui.js"></script>
     <script>
       const translations = {
-        placeholder: "Search pieces | Пошук п'єс",
+        placeholder: "Search pieces | Пошук п'єс ukr flk sng vo2 frb",
         searching: "Searching for | В процесі пошуку для [SEARCH_TERM]...",
         clear_search: "Clear | Очистити",
         zero_results: "Nothing found for | Нічого не знайдено для [SEARCH_TERM]",
@@ -38,10 +38,11 @@
       window.addEventListener("DOMContentLoaded", (event) => {
         new PagefindUI({
           element: "#search",
+          autofocus: true,
           pageSize: 7, // number of results before Show more
           showSubResults: false, // a single result per page
           showEmptyFilters: true, // always show filters
-          sort: { lvl: "desc", tit: "asc" },
+          sort: { lvl: "desc" },
           resetStyles: false, // inherit CSS from the site
           translations
         })

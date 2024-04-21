@@ -344,9 +344,9 @@ func Publish(pc PublishCommand) error {
   if err != nil {
     return siteError("%v", err)
   }
-  err = publishStyle(pc.SiteDir, pc.PublicDir)
-  if err != nil {
-    return siteError("%v", err)
-  }
+  // err = publishStyle(pc.SiteDir, pc.PublicDir)
+  // if err != nil {
+  //   return siteError("%v", err)
+  // }
   return nil
 }
