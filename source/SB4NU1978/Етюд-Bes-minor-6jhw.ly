@@ -66,7 +66,7 @@
   bes=,4 besm! | d+bes@7! bes+bes7!4 | ees eesm! | ees+eesm! ges+ees@m! |
   f,=,4 bes@m! | f4 f7! | bes+besm! f+f7! | bes+besm! r |
 
-  {{ template "t2" (w `des'=8 8 8` `8 8 8`) }}
+  {{ template "t2" (w `des'=8-\puBass 8 8` `8 8 8`) }}
   {{ template "t2" (w `des=8 c bes` `aes ges f`) }}
   \omit TupletNumber
   {{ template "t2" (w `ees=,8 8 8` `8 8 8`) }}
