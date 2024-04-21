@@ -48,7 +48,6 @@ var tr = map[string]string{
   "elementary-a": "Elementary A | Простий A",
   "elementary-b": "Elementary B | Простий B",
   "elementary-c": "Elementary C | Простий C",
-  "intermediary-a": "Intermediary A | Середній A",
 }
 
 type PieceGroups map[string][]cat.Piece
