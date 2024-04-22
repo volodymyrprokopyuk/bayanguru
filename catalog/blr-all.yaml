@@ -29,12 +29,12 @@ pieces:
   # FBB3BZ1982
   - { id: wnc5, tit: Прилетіли гуси, sub: blrfs,
       arr: А. Зубарев, src: FBB3BZ1982,
-      org: blr, sty: flk, gnr: sng, ton: ami, frm: [vo2, in6], bss: [frb, in3], lvl: elb }
+      org: blr, sty: flk, gnr: sng, ton: ami, frm: [mel, in6], bss: [frb, in3, in5], lvl: elb }
   # School
   # FBBSC1978
   - { id: bx7x, tit: Чому ж мені не співати, sub: blrfs,
       src: FBBSC1978,
-      org: blr, sty: flk, gnr: sng, ton: dmi, frm: vo2, bss: frb, lvl: ela }
+      org: blr, sty: flk, gnr: sng, ton: dmi, frm: mel, bss: frb, lvl: ela }
   - { id: cyj2, tit: Перепілочка, sub: blrfs,
       arr: С. Чапкій, src: FBBSC1978,
       org: blr, sty: flk, gnr: sng, ton: gmi, frm: [vo2, cr5], bss: [vo2, frb, var, syn, jmp], lvl: elc }
