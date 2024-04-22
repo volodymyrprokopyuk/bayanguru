@@ -21,10 +21,9 @@ pieces:
   - { id: hykn, tit: Етюд C major,
       com: С. Чапкій, src: FBBSC1978,
       org: ukr, sty: cus, gnr: stu, ton: cmj, frm: scl, bss: [frb, in3, cr5], lvl: ela }
-  # p. 132
-  # - { id: 87sj, tit: Етюд C major,
-  #     com: С. Чапкій, src: FBBSC1978,
-  #     org: ukr, sty: cus, gnr: stu, ton: cmj, frm: scl, bss: [frb, scl], lvl: elb }
+  - { id: 87sj, tit: Етюд C major,
+      com: С. Чапкій, src: FBBSC1978,
+      org: ukr, sty: cus, gnr: stu, ton: cmj, frm: scl, bss: [frb, scl], lvl: elb }
   # p. 132
   # - { id: jytx, tit: Етюд C major,
   #     com: С. Чапкій, src: FBBSC1978,
