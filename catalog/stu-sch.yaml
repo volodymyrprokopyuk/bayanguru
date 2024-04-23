@@ -24,7 +24,6 @@ pieces:
   - { id: 87sj, tit: Етюд C major,
       com: С. Чапкій, src: FBBSC1978,
       org: ukr, sty: cus, gnr: stu, ton: cmj, frm: scl, bss: [frb, scl], lvl: elb }
-  # p. 132
-  # - { id: jytx, tit: Етюд C major,
-  #     com: С. Чапкій, src: FBBSC1978,
-  #     org: ukr, sty: cus, gnr: stu, ton: [ami, cmj], frm: [arp, in6, rep], bss: [frb, in3, cr5], lvl: elb }
+  - { id: jytx, tit: Етюд A minor,
+      com: С. Чапкій, src: FBBSC1978,
+      org: ukr, sty: cus, gnr: stu, ton: [ami, cmj], frm: [arp, in6, rep], bss: [frb, in3, cr5], lvl: elb }
