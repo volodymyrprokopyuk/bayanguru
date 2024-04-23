@@ -31,5 +31,16 @@
 \relative {
   \clef bass
   \key c \major
+  c'='16(-\frBass d c d e8) e | c16( d c d e8) c |
+  f='16( e d c <g b>8) c16( d | c d c d c4) |
+  c='16 d c d c='4 \sSlur nb #'((wb . 4) (ww . 4)) ( |
+
+  g=16)( a b c d8) d | c16( d c d c4) |
+  g=16( a b c d8) d | c16( d e d c4) |
+  e,=16( f gis a b8) b | a16( b a b a b c a) |
+  d,=16( e d e fis8) a | g d g4 |
+  \rep 2 { c='16( d c d c d e='8) | }
+  f='16( e d c <g b>8 c16 d | c d c d c4) |
+  c='8 \sSlur nb #'((wb . 4)) ( g)-> <c,= g' c>4-> |
 }
 {{ end }}
