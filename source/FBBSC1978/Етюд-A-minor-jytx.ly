@@ -46,5 +46,21 @@
 \relative {
   \clef bass
   \key a \minor
+  a,=,8-\frBass <a' c> e <gis b> | a, <a' c> d, <f a d> |
+  e=8 <a c> e <gis b> | a, <e' a c> <e gis b> <e= gis d'> |
+
+  a=4( gis | g f) | \duo { e=4 e= | } { e=8 <a c> e <gis= b> | }
+  <a= c e>8 <e= b' e> \clef treble <a= e' a>8 r |
+
+  <e'=' g c>8 r <g b d> r | <g c e> <e g c> <g b d> r |
+  <e=' g c>8 r <g b> r | <g b> <d a' d> <g,= d' g> r \clef bass |
+
+  \rep 3 { c,=8( <e g c>) <g= b d> r | } | <g b d> <d a' d> g= r \clef treble |
+
+  \duo { a'='4( gis | a~ a8) d='' \rest | } { s2 | a'='8 g f='4 | } \clef bass |
+  \duo { e'='2~ | e8~ <c=' e> s8 } { r8 <a= c>8 e b' | a4 <e= b' e>8 } r8 |
+
+  a=4( gis | a8 g d4) | e8( <a c>) e( <gis d'>) |
+  <e= a c>8-> <e gis b>-> <a,=, e' a c>-> r |
 }
 {{ end }}
