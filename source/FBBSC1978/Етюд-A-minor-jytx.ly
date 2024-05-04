@@ -18,7 +18,7 @@
   <c'=' a'>16(\mf e) e a <d, b'>( e) e b' |
   <e,=' c'>16( a) a c <f, d'>( b) b d |
   <e,=' c'>16( a) a c <d, b'>( gis) <d gis> b' |
-  <c,=' a'>16-. b'-. <e, c'>-. a-. <d, gis b>8 <e=' d'> |
+  <c,=' a'>16-. b'-. <e, c'>-. a-. <d, gis b>8 <e=' e'> |
 
   {{ template "rh2" (w `f='4`) }}
   <e=' c'>16( e') e( <c a'>) <c a'>( gis') <b, d gis>-. b'-. |
@@ -60,7 +60,7 @@
   \duo { a'='4( gis | a~ a8) d='' \rest | } { s2 | a'='8 g f='4 | } \clef bass |
   \duo { e'='2~ | e8~ <c=' e> s8 } { r8 <a= c>8 e b' | a4 <e= b' e>8 } r8 |
 
-  a=4( gis | a8 g d4) | e8( <a c>) e( <gis d'>) |
+  a=4( gis | a8 g f4) | e8( <a c>) e( <gis d'>) |
   <e= a c>8-> <e gis b>-> <a,=, e' a c>-> r |
 }
 {{ end }}
