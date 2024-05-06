@@ -30,8 +30,7 @@ pieces:
   - { id: 0lly, tit: Етюд D minor,
       com: А. Гедике, src: FBBSC1978,
       org: rus, sty: cus, gnr: stu, ton: dmi, frm: [arp, brk, dot], bss: [frb, arp, brk, dot, jmp], lvl: elb }
-  # p. 139
-  # - { id: ir64, tit: Етюд A minor,
-  #     com: Г. Салов, src: FBBSC1978,
-  #     org: rus, sty: cus, gnr: stu, ton: [ami, cmj], frm: scl, bss: [frb, cr5], lvl: elb }
+  - { id: ir64, tit: Етюд A minor,
+      com: Г. Салов, src: FBBSC1978,
+      org: rus, sty: cus, gnr: stu, ton: [ami, cmj], frm: scl, bss: [frb, cr5], lvl: elb }
   # p. 140 TODO

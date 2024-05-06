@@ -222,7 +222,9 @@ books:
       # ] },
       { tit: Акорди, pieces: [ # Chords
         # FBB3BZ1982
-        6ky7, ja4a
+        6ky7, ja4a,
+        # FBBSC1978
+        ir64
       ] },
       # { tit: Поліфонія, pieces: [ # Polyphone
       # ] }
