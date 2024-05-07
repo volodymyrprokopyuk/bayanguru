@@ -194,18 +194,36 @@ func engravePiece(
   return nil
 }
 
+func fanIn(ins []chan error) <-chan error {
+  out := make(chan error)
+  var wg sync.WaitGroup
+  for _, in := range ins {
+    wg.Add(1)
+    go func() {
+      defer wg.Done()
+      for val := range in {
+        out <- val
+      }
+    }()
+  }
+  go func() {
+    wg.Wait()
+    close(out)
+  }()
+  return out
+}
+
 func receiveAndEngravePieces(
-  ctx context.Context, wg *sync.WaitGroup,
-  pieces <-chan cat.Piece, errors chan<- error,
+  ctx context.Context, pieceCh <-chan cat.Piece, errorCh chan<- error,
   tplPool *sync.Pool, ec EngraveCommand,
 ) {
-  defer wg.Done()
+  defer close(errorCh)
   var w strings.Builder
   for {
     select {
     case <- ctx.Done():
       return
-    case piece, open := <- pieces:
+    case piece, open := <- pieceCh:
       if !open {
         return
       }
@@ -213,8 +231,8 @@ func receiveAndEngravePieces(
       err := engravePiece(&w, tplPool, piece, ec)
       fmt.Print(w.String())
       if err != nil {
-        errors <- err
-        pieces = nil // do not engrave pieces after an error
+        errorCh <- err
+        pieceCh = nil // do not engrave pieces after an error
       }
     }
   }
@@ -231,32 +249,32 @@ func engravePieces(pieces []cat.Piece, ec EngraveCommand) error {
       return tpl
     },
   }
-  var wg sync.WaitGroup
   ctx, cancel := context.WithCancel(context.Background())
   defer cancel()
-  engPieces, engErrors := make(chan cat.Piece), make(chan error)
-  for range min(len(pieces), runtime.GOMAXPROCS(0)) {
-    wg.Add(1)
-    go receiveAndEngravePieces(ctx, &wg, engPieces, engErrors, &tplPool, ec)
+  n := min(len(pieces), runtime.GOMAXPROCS(0))
+  pieceCh := make(chan cat.Piece)
+  errorChs := make([]chan error, n)
+  for i := range n { // fan-out pieces
+    errorChs[i] = make(chan error)
+    go receiveAndEngravePieces(ctx, pieceCh, errorChs[i], &tplPool, ec)
   }
-  wg.Add(1)
+  errorCh := fanIn(errorChs) // fan-in pieces
   go func() {
-    defer wg.Done()
     pieces: for _, piece := range pieces {
       select {
       case <- ctx.Done():
         break pieces
-      case engPieces <- piece:
+      case pieceCh <- piece:
       }
     }
-    close(engPieces)
+    close(pieceCh)
   }()
-  go func() {
-    err = <- engErrors // capture the first error
-    cancel()
-    for range engErrors { } // ignore other errors
-  }()
-  wg.Wait()
-  close(engErrors)
-  return err
+  var firstErr error
+  for err := range errorCh {
+    if firstErr == nil {
+      cancel()
+      firstErr = err // capture the first error
+    }
+  }
+  return firstErr
 }
