@@ -309,6 +309,11 @@ pieces:
       org: ukr, sty: cus, gnr: pie, ton: emi, frm: in3, bss: stb, lvl: elb }
   # Free bass
   # Class
+  # FBB1BZ1980
+  # p. 19
+  # - { id: lzsv, tit: Роздум,
+  #     com: В. Стеценко, src: FBB1BZ1980,
+  #     org: ukr, sty: cus, gnr: pie, ton: ami, frm: mel, bss: frb, lvl: ela }
   # FBB3BZ1982
   - { id: ltfu, tit: Поліфонічна п'єса,
       com: Ю. Щуровський, src: FBB3BZ1982,
