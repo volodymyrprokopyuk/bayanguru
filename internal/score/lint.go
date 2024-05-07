@@ -1,15 +1,16 @@
 package score
 
 import (
-  "fmt"
-  "strings"
-  "regexp"
-  "io"
-  "bufio"
-  "path/filepath"
-  "os"
-  cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
-  sty "github.com/volodymyrprokopyuk/bayan/internal/style"
+	"bufio"
+	"fmt"
+	"io"
+	"os"
+	"path/filepath"
+	"regexp"
+	"strings"
+
+	cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
+	sty "github.com/volodymyrprokopyuk/bayan/internal/style"
 )
 
 type Line struct {

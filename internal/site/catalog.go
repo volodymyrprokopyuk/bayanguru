@@ -1,17 +1,17 @@
 package site
 
 import (
-  "fmt"
-  "path/filepath"
-  "slices"
-  "strconv"
-  "strings"
-  "text/template"
-  "os"
+	"fmt"
+	"os"
+	"path/filepath"
+	"slices"
+	"strconv"
+	"strings"
+	"text/template"
 
-  cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
-  "golang.org/x/text/collate"
-  "golang.org/x/text/language"
+	cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
+	"golang.org/x/text/collate"
+	"golang.org/x/text/language"
 )
 
 var tr = map[string]string{

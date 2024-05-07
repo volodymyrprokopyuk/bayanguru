@@ -1,18 +1,19 @@
 package score
 
 import (
-  "fmt"
-  "strings"
-  "regexp"
-  "text/template"
-  "io"
-  "path/filepath"
-  "os"
-  "sync"
-  "context"
-  "runtime"
-  cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
-  sty "github.com/volodymyrprokopyuk/bayan/internal/style"
+	"context"
+	"fmt"
+	"io"
+	"os"
+	"path/filepath"
+	"regexp"
+	"runtime"
+	"strings"
+	"sync"
+	"text/template"
+
+	cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
+	sty "github.com/volodymyrprokopyuk/bayan/internal/style"
 )
 
 var chordNames = map[string]string{"M": "Б", "m": "М", "7": "7", "d": "У"}
@@ -194,25 +195,6 @@ func engravePiece(
   return nil
 }
 
-func fanIn(ins []chan error) <-chan error {
-  out := make(chan error)
-  var wg sync.WaitGroup
-  for _, in := range ins {
-    wg.Add(1)
-    go func() {
-      defer wg.Done()
-      for val := range in {
-        out <- val
-      }
-    }()
-  }
-  go func() {
-    wg.Wait()
-    close(out)
-  }()
-  return out
-}
-
 func receiveAndEngravePieces(
   ctx context.Context, pieceCh <-chan cat.Piece, errorCh chan<- error,
   tplPool *sync.Pool, ec EngraveCommand,
@@ -258,7 +240,7 @@ func engravePieces(pieces []cat.Piece, ec EngraveCommand) error {
     errorChs[i] = make(chan error)
     go receiveAndEngravePieces(ctx, pieceCh, errorChs[i], &tplPool, ec)
   }
-  errorCh := fanIn(errorChs) // fan-in pieces
+  errorCh := cat.FanIn(errorChs) // fan-in pieces
   go func() {
     pieces: for _, piece := range pieces {
       select {

@@ -1,14 +1,15 @@
 package score
 
 import (
-  "fmt"
-  "strings"
-  "text/template"
-  "io"
-  "sync"
-  "context"
-  "runtime"
-  cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
+	"context"
+	"fmt"
+	"io"
+	"runtime"
+	"strings"
+	"sync"
+	"text/template"
+
+	cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
 )
 
 func bookPieces(book cat.Book) []*cat.Piece {
@@ -85,7 +86,7 @@ func receiveAndEngraveBooks(
       fmt.Print(w.String())
       if err != nil {
         errorCh <- err
-        bookCh = nil // do not process books after an error
+        bookCh = nil // do not engrave books after an error
       }
     }
   }
@@ -111,7 +112,7 @@ func engraveBooks(books []cat.Book, ec EngraveCommand) error {
     errorChs[i] = make(chan error)
     go receiveAndEngraveBooks(ctx, bookCh, errorChs[i], &tplPool, ec)
   }
-  errorCh := fanIn(errorChs) // fan-in books
+  errorCh := cat.FanIn(errorChs) // fan-in books
   go func() {
     books: for _, book := range books {
       select {

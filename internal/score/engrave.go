@@ -1,15 +1,16 @@
 package score
 
 import (
-  "fmt"
-  "strings"
-  "text/template"
-  "path/filepath"
-  "io"
-  "os/exec"
-  pdf "github.com/pdfcpu/pdfcpu/pkg/api"
-  sty "github.com/volodymyrprokopyuk/bayan/internal/style"
-  cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
+	"fmt"
+	"io"
+	"os/exec"
+	"path/filepath"
+	"strings"
+	"text/template"
+
+	pdf "github.com/pdfcpu/pdfcpu/pkg/api"
+	cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
+	sty "github.com/volodymyrprokopyuk/bayan/internal/style"
 )
 
 type EngraveCommand struct {

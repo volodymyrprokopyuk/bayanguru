@@ -1,12 +1,13 @@
 package catalog
 
 import (
-  "fmt"
-  "path/filepath"
-  "io"
-  "os"
-  "gopkg.in/yaml.v3"
-  sty "github.com/volodymyrprokopyuk/bayan/internal/style"
+	"fmt"
+	"io"
+	"os"
+	"path/filepath"
+
+	sty "github.com/volodymyrprokopyuk/bayan/internal/style"
+	"gopkg.in/yaml.v3"
 )
 
 type RawSection struct {

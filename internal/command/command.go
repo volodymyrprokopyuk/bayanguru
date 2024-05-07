@@ -1,14 +1,15 @@
 package internal
 
 import (
-  "fmt"
-  "regexp"
-  "slices"
-  "path/filepath"
-  "github.com/spf13/cobra"
-  cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
-  "github.com/volodymyrprokopyuk/bayan/internal/score"
-  "github.com/volodymyrprokopyuk/bayan/internal/site"
+	"fmt"
+	"path/filepath"
+	"regexp"
+	"slices"
+
+	"github.com/spf13/cobra"
+	cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
+	"github.com/volodymyrprokopyuk/bayan/internal/score"
+	"github.com/volodymyrprokopyuk/bayan/internal/site"
 )
 
 var (

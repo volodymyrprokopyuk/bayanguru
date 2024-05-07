@@ -1,14 +1,15 @@
 package catalog
 
 import (
-  "fmt"
-  "strings"
-  "regexp"
-  "math/rand"
-  "path/filepath"
-  "os"
-  "os/exec"
-  sty "github.com/volodymyrprokopyuk/bayan/internal/style"
+	"fmt"
+	"math/rand"
+	"os"
+	"os/exec"
+	"path/filepath"
+	"regexp"
+	"strings"
+
+	sty "github.com/volodymyrprokopyuk/bayan/internal/style"
 )
 
 type PieceQueries map[string]string

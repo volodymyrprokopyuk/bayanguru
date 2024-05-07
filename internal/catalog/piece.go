@@ -1,15 +1,36 @@
 package catalog
 
 import (
-  "fmt"
-  "strings"
-  "regexp"
-  "io"
-  "path/filepath"
-  "os"
-  "gopkg.in/yaml.v3"
-  sty "github.com/volodymyrprokopyuk/bayan/internal/style"
+	"fmt"
+	"io"
+	"os"
+	"path/filepath"
+	"regexp"
+	"strings"
+	"sync"
+
+	sty "github.com/volodymyrprokopyuk/bayan/internal/style"
+	"gopkg.in/yaml.v3"
 )
+
+func FanIn(ins []chan error) <-chan error {
+  out := make(chan error)
+  var wg sync.WaitGroup
+  for _, in := range ins {
+    wg.Add(1)
+    go func() {
+      defer wg.Done()
+      for val := range in {
+        out <- val
+      }
+    }()
+  }
+  go func() {
+    wg.Wait()
+    close(out)
+  }()
+  return out
+}
 
 var meta = map[string]string{
   // Piece subtitle (sub)
