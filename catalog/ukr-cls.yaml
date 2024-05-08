@@ -310,10 +310,9 @@ pieces:
   # Free bass
   # Class
   # FBB1BZ1980
-  # p. 19
-  # - { id: lzsv, tit: Роздум,
-  #     com: В. Стеценко, src: FBB1BZ1980,
-  #     org: ukr, sty: cus, gnr: pie, ton: ami, frm: mel, bss: frb, lvl: ela }
+  - { id: lzsv, tit: Роздум,
+      com: В. Стеценко, src: FBB1BZ1980,
+      org: ukr, sty: cus, gnr: pie, ton: ami, frm: mel, bss: frb, lvl: ela }
   # p. 21
   # - { id: jm50, tit: Українська жартівлива пісня,
   #     arr: В. Подгорний, src: FBB1BZ1980,
