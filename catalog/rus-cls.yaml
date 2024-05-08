@@ -138,7 +138,15 @@ pieces:
       com: А. Гедике, src: SB3NU1979,
       org: rus, sty: cus, gnr: pie, ton: [dmi, gmi], frm: [in3, tri], bss: [stb, pub, scl, tri], lvl: elb }
   # Free bass
-  # Class
+  # FBB1BZ1980
+  # p. 23
+  # - { id: wo9y, tit: Кукла,
+  #     com: С. Сароян, src: FBB1BZ1980,
+  #     org: rus, sty: cus, gnr: chd, ton: dmi, frm: mel, bss: frb, lvl: ela }
+  # p. 26
+  # - { id: 7ev9, tit: Родной напев,
+  #     com: И. Шестериков, src: FBB1BZ1980,
+  #     org: rus, sty: cus, gnr: pie, ton: dmi, frm: mel, bss: frb, lvl: ela }
   # FBB3BZ1982
   - { id: 3hw7, tit: Полифоническая пьеса,
       com: М. Глинка, src: FBB3BZ1982,
