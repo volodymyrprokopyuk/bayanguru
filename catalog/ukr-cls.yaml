@@ -316,10 +316,9 @@ pieces:
   - { id: jm50, tit: Українська жартівлива пісня,
       arr: В. Подгорний, src: FBB1BZ1980,
       org: ukr, sty: flk, gnr: chd, ton: cmj, frm: mel, bss: frb, lvl: ela }
-  # p. 27
-  # - { id: fs3v, tit: Українська танцювальна,
-  #     arr: В. Власов, src: FBB1BZ1980,
-  #     org: ukr, sty: cus, gnr: dnc, ton: gmi, frm: mel, bss: frb, lvl: ela }
+  - { id: fs3v, tit: Українська танцювальна,
+      com: В. Власов, src: FBB1BZ1980,
+      org: ukr, sty: cus, gnr: dnc, ton: gmi, frm: mel, bss: frb, lvl: ela }
   # p. 33
   # - { id: clcs, tit: Колискова,
   #     arr: Є. Юцевич, src: FBB1BZ1980,
