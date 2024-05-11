@@ -321,12 +321,20 @@ pieces:
       org: ukr, sty: cus, gnr: dnc, ton: gmi, frm: mel, bss: frb, lvl: ela }
   # p. 33
   # - { id: clcs, tit: Колискова,
-  #     arr: Є. Юцевич, src: FBB1BZ1980,
+  #     com: Є. Юцевич, src: FBB1BZ1980,
   #     org: ukr, sty: cus, gnr: lul, ton: emi, frm: mel, bss: frb, lvl: ela }
   # p. 34
   # - { id: zwy7, tit: Гойдалка,
-  #     arr: М. Чайкін, src: FBB1BZ1980,
+  #     com: М. Чайкін, src: FBB1BZ1980,
   #     org: ukr, sty: cus, gnr: chd, ton: emi, frm: mel, bss: frb, lvl: ela }
+  # p. 37
+  # - { id: pye7, tit: У народному дусі,
+  #     com: Ю. Щуровський, src: FBB1BZ1980,
+  #     org: ukr, sty: cus, gnr: pie, ton: dmj, frm: [mel, dot], bss: frb, lvl: ela }
+  # p. 41
+  # - { id: o9do, tit: На сонячній галявинці,
+  #     com: Ю. Щуровський, src: FBB1BZ1980,
+  #     org: ukr, sty: cus, gnr: pie, ton: dmi, frm: mel, bss: frb, lvl: ela }
   # FBB3BZ1982
   - { id: ltfu, tit: Поліфонічна п'єса,
       com: Ю. Щуровський, src: FBB3BZ1982,
