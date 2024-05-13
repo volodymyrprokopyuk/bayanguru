@@ -332,6 +332,10 @@ pieces:
   # - { id: o9do, tit: На сонячній галявинці,
   #     com: Ю. Щуровський, src: FBB1BZ1980,
   #     org: ukr, sty: cus, gnr: pie, ton: dmi, frm: mel, bss: frb, lvl: ela }
+  # p. 49
+  # - { id: wape, tit: Пісня за селом,
+  #     com: Ю. Щуровський, src: FBB1BZ1980,
+  #     org: ukr, sty: cus, gnr: sng, ton: emi, frm: [mel, dot], bss: frb, lvl: ela }
   # FBB3BZ1982
   - { id: ltfu, tit: Поліфонічна п'єса,
       com: Ю. Щуровський, src: FBB3BZ1982,
