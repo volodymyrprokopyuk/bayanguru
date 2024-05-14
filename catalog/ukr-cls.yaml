@@ -334,6 +334,13 @@ pieces:
   - { id: wape, tit: Пісня за селом,
       com: Ю. Щуровський, src: FBB1BZ1980,
       org: ukr, sty: cus, gnr: sng, ton: emi, frm: [mel, dot], bss: frb, lvl: ela }
+  - { id: dsj8, tit: Полечка,
+      com: В. Власов, src: FBB1BZ1980,
+      org: ukr, sty: flk, gnr: plk, ton: dmi, frm: mel, bss: frb, lvl: ela }
+  # p. 56
+  # - { id: c1dx, tit: "Ой не ходи, Грицю",
+  #     arr: М. Різоль, src: FBB1BZ1980,
+  #     org: ukr, sty: flk, gnr: sng, ton: ami, frm: [mel, dot], bss: [frb, dot], lvl: ela }
   # FBB3BZ1982
   - { id: ltfu, tit: Поліфонічна п'єса,
       com: Ю. Щуровський, src: FBB3BZ1982,
