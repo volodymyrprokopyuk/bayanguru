@@ -151,6 +151,10 @@ pieces:
   # - { id: 6uzu, tit: "На горе-то калина", sub: rufs,
   #     arr: В. Подгорний, src: FBB1BZ1980,
   #     org: rus, sty: flk, gnr: sng, ton: cmj, frm: mel, bss: frb, lvl: ela }
+  # p. 58
+  # - { id: c3bd, tit: Largo,
+  #     com: И. Шестериков, src: FBB1BZ1980,
+  #     org: rus, sty: cus, gnr: pie, ton: dmi, frm: vo2, bss: frb, lvl: ela }
   # FBB3BZ1982
   - { id: 3hw7, tit: Полифоническая пьеса,
       com: М. Глинка, src: FBB3BZ1982,

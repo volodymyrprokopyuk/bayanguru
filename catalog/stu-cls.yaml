@@ -308,6 +308,11 @@ pieces:
       org: rus, sty: cus, gnr: stu, ton: bmi, frm: [in8, cr7, fi1, fi5], bss: [pub, scl], lvl: elc }
 
   # Free bass
+  # FBB1BZ1980
+  # p. 74
+  # - { id: ksld, tit: Етюд E minor,
+  #     com: М. Чайкін, src: FBB1BZ1980,
+  #     org: ukr, sty: cus, gnr: stu, ton: emi, frm: [in3, in4], bss: frb, lvl: ela }
   # FBB3BZ1982
   - { id: iwqa, tit: Етюд A minor,
       com: А. Зубарев, src: FBB3BZ1982,
