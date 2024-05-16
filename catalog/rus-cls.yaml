@@ -139,10 +139,9 @@ pieces:
       org: rus, sty: cus, gnr: pie, ton: [dmi, gmi], frm: [in3, tri], bss: [stb, pub, scl, tri], lvl: elb }
   # Free bass
   # FBB1BZ1980
-  # p. 23
-  # - { id: wo9y, tit: Кукла,
-  #     com: С. Сароян, src: FBB1BZ1980,
-  #     org: rus, sty: cus, gnr: chd, ton: dmi, frm: mel, bss: frb, lvl: ela }
+  - { id: wo9y, tit: Кукла,
+      com: С. Сароян, src: FBB1BZ1980,
+      org: rus, sty: cus, gnr: chd, ton: dmi, frm: mel, bss: frb, lvl: ela }
   # p. 26
   # - { id: 7ev9, tit: Родной напев,
   #     com: И. Шестериков, src: FBB1BZ1980,
