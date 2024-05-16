@@ -22,7 +22,7 @@
 \relative {
   \clef bass
   \key e \minor
-  e=2~-\frBass e8 fis( g a) | b2~ b8 g( a b) | c4( b a2 | d, e) |
+  e=2~-\frBass e8 fis( g a) | b2~ b8 g( a b) | c4( b a2 | d, g) |
   {{ template "lh1" }} | f e) | {{ template "lh1" }} | d e=) |
 }
 {{ end }}
