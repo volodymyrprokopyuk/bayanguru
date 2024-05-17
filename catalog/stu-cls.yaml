@@ -312,7 +312,11 @@ pieces:
   # p. 74
   # - { id: ksld, tit: Етюд E minor,
   #     com: М. Чайкін, src: FBB1BZ1980,
-  #     org: ukr, sty: cus, gnr: stu, ton: emi, frm: [in3, in4], bss: frb, lvl: ela }
+  #     org: ukr, sty: cus, gnr: stu, ton: emi, frm: [in3, in4], bss: [frb, scl], lvl: ela }
+  # p. 79
+  # - { id: 8kpq, tit: Етюд F major,
+  #     com: Л. Шітте, src: FBB1BZ1980,
+  #     org: dnk, sty: cls, gnr: stu, ton: fmj, frm: [arp, brk], bss: [frb, arp], lvl: ela }
   # FBB3BZ1982
   - { id: iwqa, tit: Етюд A minor,
       com: А. Зубарев, src: FBB3BZ1982,

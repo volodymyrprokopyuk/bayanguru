@@ -145,10 +145,9 @@ pieces:
   - { id: 7ev9, tit: Родной напев,
       com: И. Шестериков, src: FBB1BZ1980,
       org: rus, sty: cus, gnr: pie, ton: dmi, frm: mel, bss: frb, lvl: ela }
-  # p. 49
-  # - { id: 6uzu, tit: "На горе-то калина", sub: rufs,
-  #     arr: В. Подгорний, src: FBB1BZ1980,
-  #     org: rus, sty: flk, gnr: sng, ton: cmj, frm: mel, bss: frb, lvl: ela }
+  - { id: 6uzu, tit: "На горе-то калина", sub: rusfs,
+      arr: В. Подгорний, src: FBB1BZ1980,
+      org: rus, sty: flk, gnr: sng, ton: cmj, frm: mel, bss: frb, lvl: ela }
   # p. 58
   # - { id: c3bd, tit: Largo,
   #     com: И. Шестериков, src: FBB1BZ1980,
