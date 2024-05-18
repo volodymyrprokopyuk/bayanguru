@@ -15,7 +15,7 @@
   {{ template "rh1" (w `a'='8(\mp`) }}
   d'=''8( a f g a bes | c4) c c | bes( a g) | a2(-> f4)-. |
   {{ template "rh1" (w `a='8(`) }}
-  f='8( e f g a f) | c( d e f g a) | bes4( a g | f2.) \bar "|."
+  f='8( e f g a f) | c( d e f g a) | bes4( a g | f='2.) \bar "|."
 }
 {{ end }}
 
