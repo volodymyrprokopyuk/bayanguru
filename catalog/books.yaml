@@ -211,6 +211,8 @@ books:
   - { id: sfr1, tit: Вибрані етюди, sub: для готово-виборного баяна,
       sections: [
       { tit: Гами, pieces: [ # Scale
+        # FBB1BZ1980
+        ksld,
         # FBB3BZ1982
         iwqa, zp6s, zkl0, f0py,
         # FBBSC1978
