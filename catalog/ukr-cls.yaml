@@ -341,6 +341,10 @@ pieces:
       arr: М. Різоль, src: FBB1BZ1980,
       org: ukr, sty: flk, gnr: sng, ton: ami, frm: [mel, dot], bss: [frb, dot], lvl: ela }
   # FBB2BZ1981
+  # p. 23
+  # - { id: qxub, tit: Танець урожаю,
+  #     arr: Т. Шутенко, src: FBB2BZ1981,
+  #     org: ukr, sty: cus, gnr: dnc, ton: [cmj, ami], frm: mel, bss: frb, lvl: ela }
   # FBB3BZ1982
   - { id: ltfu, tit: Поліфонічна п'єса,
       com: Ю. Щуровський, src: FBB3BZ1982,
