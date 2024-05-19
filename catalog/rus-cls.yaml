@@ -152,10 +152,9 @@ pieces:
       com: И. Шестериков, src: FBB1BZ1980,
       org: rus, sty: cus, gnr: pie, ton: dmi, frm: vo2, bss: frb, lvl: ela }
   # FBB2BZ1981
-  # p. 9
-  # - { id: g7mu, tit: Колыбельная,
-  #     com: Т. Назарова, src: FBB2BZ1981,
-  #     org: rus, sty: cus, gnr: lul, ton: gmj, frm: mel, bss: [frb, in3], lvl: ela }
+  - { id: g7mu, tit: Колыбельная,
+      com: Т. Назарова, src: FBB2BZ1981,
+      org: rus, sty: cus, gnr: lul, ton: gmj, frm: mel, bss: [frb, in3], lvl: ela }
   # p. 25
   # - { id: t67o, tit: Песня,
   #     com: М. Глинка, src: FBB2BZ1981,
