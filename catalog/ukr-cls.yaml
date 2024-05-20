@@ -341,10 +341,21 @@ pieces:
       arr: М. Різоль, src: FBB1BZ1980,
       org: ukr, sty: flk, gnr: sng, ton: ami, frm: [mel, dot], bss: [frb, dot], lvl: ela }
   # FBB2BZ1981
-  # p. 23
-  # - { id: qxub, tit: Танець урожаю,
-  #     arr: Т. Шутенко, src: FBB2BZ1981,
-  #     org: ukr, sty: cus, gnr: dnc, ton: [cmj, ami], frm: mel, bss: frb, lvl: ela }
+  - { id: qxub, tit: Танець урожаю,
+      com: Т. Шутенко, src: FBB2BZ1981,
+      org: ukr, sty: cus, gnr: dnc, ton: [cmj, ami], frm: mel, bss: frb, lvl: ela }
+  # p. 30
+  # - { id: 1se4, tit: Пливе човен, sub: ukrfs,
+  #     arr: М. Леонтович, src: FBB2BZ1981,
+  #     org: ukr, sty: flk, gnr: sng, ton: gmi, frm: [vo2, in3], bss: frb, lvl: ela }
+  # p. 30
+  # - { id: 2j90, tit: Тиха вода, sub: ukrfs,
+  #     arr: М. Леонтович, src: FBB2BZ1981,
+  #     org: ukr, sty: flk, gnr: sng, ton: fmj, frm: in3, bss: frb, lvl: ela }
+  # p. 32
+  # - { id: a5cv, tit: Полька,
+  #     arr: Г. Шевчук, src: FBB2BZ1981,
+  #     org: ukr, sty: cus, gnr: plk, ton: cmj, frm: [mel, jmp], bss: [frb, in3], lvl: elb }
   # FBB3BZ1982
   - { id: ltfu, tit: Поліфонічна п'єса,
       com: Ю. Щуровський, src: FBB3BZ1982,
