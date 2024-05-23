@@ -347,10 +347,9 @@ pieces:
   - { id: 1se4, tit: Пливе човен, sub: ukrfs,
       arr: М. Леонтович, src: FBB2BZ1981,
       org: ukr, sty: flk, gnr: sng, ton: gmi, frm: [vo2, in3], bss: frb, lvl: ela }
-  # p. 30
-  # - { id: 2j90, tit: Тиха вода, sub: ukrfs,
-  #     arr: М. Леонтович, src: FBB2BZ1981,
-  #     org: ukr, sty: flk, gnr: sng, ton: fmj, frm: in3, bss: frb, lvl: ela }
+  - { id: 2j90, tit: Тиха вода, sub: ukrfs,
+      arr: М. Леонтович, src: FBB2BZ1981,
+      org: ukr, sty: flk, gnr: sng, ton: fmj, frm: in3, bss: frb, lvl: ela }
   # p. 32
   # - { id: a5cv, tit: Полька,
   #     com: Г. Шевчук, src: FBB2BZ1981,
@@ -359,6 +358,10 @@ pieces:
   # - { id: y632, tit: Ніч яка місячна,
   #     arr: М. Різоль, src: FBB2BZ1981,
   #     org: ukr, sty: flk, gnr: sng, ton: emj, frm: [mel, in3], bss: frb, lvl: elb }
+  # p. 39
+  # - { id: 8o6w, tit: "Ой у полі, ой у полі",
+  #     arr: М. Різоль, src: FBB2BZ1981,
+  #     org: ukr, sty: flk, gnr: sng, ton: ami, frm: [in3, cr5, dot], bss: frb, lvl: ela }
   # FBB3BZ1982
   - { id: ltfu, tit: Поліфонічна п'єса,
       com: Ю. Щуровський, src: FBB3BZ1982,
