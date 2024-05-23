@@ -350,10 +350,9 @@ pieces:
   - { id: 2j90, tit: Тиха вода, sub: ukrfs,
       arr: М. Леонтович, src: FBB2BZ1981,
       org: ukr, sty: flk, gnr: sng, ton: fmj, frm: in3, bss: frb, lvl: ela }
-  # p. 32
-  # - { id: a5cv, tit: Полька,
-  #     com: Г. Шевчук, src: FBB2BZ1981,
-  #     org: ukr, sty: cus, gnr: plk, ton: cmj, frm: [mel, jmp], bss: [frb, in3], lvl: elb }
+  - { id: a5cv, tit: Полька,
+      com: Г. Шевчук, src: FBB2BZ1981,
+      org: ukr, sty: cus, gnr: plk, ton: cmj, frm: [mel, jmp], bss: [frb, in3], lvl: elb }
   # p. 35
   # - { id: y632, tit: Ніч яка місячна,
   #     arr: М. Різоль, src: FBB2BZ1981,
