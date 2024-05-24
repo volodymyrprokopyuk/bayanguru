@@ -301,13 +301,55 @@ tocSection = #(define-music-function
     bss = "{{ .Bss | join ` ` }}"
     lvl = "{{ .Lvl }}"
   }
+  <<
+    \new Voice = vocal {
+      \relative { c'='2 | d | e | f | }
+    }
+
   \new PianoStaff = bayan {
     <<
       \new Staff = rightHand { {{ .RightHand }} }
       \new Staff = leftHand { {{ .LeftHand }} }
     >>
   }
+
+  >>
 }
+
+\markup {
+  \column {
+    \fill-line { \null \right-align \italic "С. Гирцюк" }
+    \fill-line {
+      \hspace #10
+      \column {
+        \left-align {
+          "А вовчок-сірячок"
+          "З лісу виглядає"
+          "Та на біле козенятко"
+          "Скоса поглядає"
+        }
+      }
+      \column {
+        \left-align {
+          "А вовчок-сірячок"
+          "З лісу виглядає"
+          "Та на біле козенятко"
+          "Скоса поглядає"
+        }
+      }
+      \column {
+        \left-align {
+          "А вовчок-сірячок"
+          "З лісу виглядає"
+          "Та на біле козенятко"
+          "Скоса поглядає"
+        }
+      }
+      \hspace #10
+    }
+  }
+}
+
 {{ end }}
 
 {{ block "piece" . }} {{ end }}
