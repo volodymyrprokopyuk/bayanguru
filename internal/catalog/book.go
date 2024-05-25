@@ -44,9 +44,8 @@ func readBookFile(catDir, bookFile string) ([]RawBook, error) {
     return nil, err
   }
   defer file.Close()
-  dec := yaml.NewDecoder(file)
   var books struct { Books []RawBook `yaml:"books"` }
-  err = dec.Decode(&books)
+  err = yaml.NewDecoder(file).Decode(&books)
   if err != nil {
     return nil, err
   }

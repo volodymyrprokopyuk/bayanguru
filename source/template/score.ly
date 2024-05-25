@@ -302,17 +302,20 @@ tocSection = #(define-music-function
     lvl = "{{ .Lvl }}"
   }
   <<
-    \new Voice = vocal {
-      \relative { c'='2 | d | e | f | }
-    }
+    \new ChoirStaff = choir <<
+      \override ChoirStaff.SystemStartBracket.collapse-height = #4
+      \new Staff = vocala {
+        \relative { c'='2 | d | e | f | }
+      }
+      % \new Staff = vocalb {
+      %   \relative { c'='2 | d | e | f | }
+      % }
+    >>
 
-  \new PianoStaff = bayan {
-    <<
+    \new PianoStaff = bayan <<
       \new Staff = rightHand { {{ .RightHand }} }
       \new Staff = leftHand { {{ .LeftHand }} }
     >>
-  }
-
   >>
 }
 

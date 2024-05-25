@@ -86,7 +86,9 @@ type Piece struct {
   Arr string `yaml:"arr"`
   Art string `yaml:"art"`
   ArtUkr string
+  Aut string `yaml:"aut"`
   Src string `yaml:"src"`
+  Lcs string `yaml:"lcs"`
   Org string `yaml:"org"`
   Sty string `yaml:"sty"`
   Gnr string `yaml:"gnr"`
@@ -94,6 +96,8 @@ type Piece struct {
   Frm StrSlice `yaml:"frm"`
   Bss StrSlice `yaml:"bss"`
   Lvl string `yaml:"lvl"`
+  Ens string `yaml:"ens"`
+  Lyr bool `yaml:"lyr"`
   File string
   Meta bool
   RightHand, LeftHand string
@@ -236,6 +240,8 @@ func reCompile(reParts []string) []*regexp.Regexp {
 
 var (
   validID = regexp.MustCompile(`^[a-z0-9]{4}$`)
+  validArt = regexp.MustCompile(`^arr|ipr|hrm$`)
+  validLcs = regexp.MustCompile(`^cpl|cpr$`)
   orgParts = []string{
     `^ukr|rus|blr|hun|mda|pol|cze|svk|lva`,
     `|aut|deu|dnk|fra|swe$`,
@@ -249,7 +255,6 @@ var (
   }
   validGnr = regexp.MustCompile(strings.Join(gnrParts, ""))
   validTon = regexp.MustCompile(`^[a-g](?:es|is)?m[ij]$`)
-  validLvl = regexp.MustCompile(`^(?:el|in|pr|vi)[a-c]$`)
   frmParts = []string{
     `^vo[23]|stb|pub|frb$`,
     `^mel|var$`,
@@ -259,6 +264,8 @@ var (
     `^fi1|fi5|jmp$`,
   }
   validFrm = reCompile(frmParts)
+  validLvl = regexp.MustCompile(`^(?:el|in|pr|vi)[a-c]$`)
+  validEns = regexp.MustCompile(`^sol|duo|vos|vod$`)
 )
 
 func validateFrm(frms []string, frmName string) string {
@@ -291,6 +298,16 @@ func validatePieces(pieces []Piece, catalogFile string) error {
         "* Invalid id, expected [a-z0-9]{4}, got %v", piece.ID),
       )
     }
+    if len(piece.Art) > 0 && !validArt.MatchString(piece.Art) {
+      errors = append(errors, fmt.Sprintf(
+        "* Invalid art, expected arr, ipr, hrm, got %v", piece.Art),
+      )
+    }
+    if !validLcs.MatchString(piece.Lcs) {
+      errors = append(errors, fmt.Sprintf(
+        "* Invalid lcs, expected cpl, cpr, got %v", piece.Lcs),
+      )
+    }
     if !validOrg.MatchString(piece.Org) {
       errors = append(errors, fmt.Sprintf(
         "* Invalid org, expected 3-letter country code, got %v", piece.Org),
@@ -313,16 +330,21 @@ func validatePieces(pieces []Piece, catalogFile string) error {
         )
       }
     }
-    if !validLvl.MatchString(piece.Lvl) {
-      errors = append(errors, fmt.Sprintf(
-        "* Invalid lvl, expected (el|in|pr|vi)[a-c], got %v", piece.Lvl),
-      )
-    }
     if err := validateFrm(piece.Frm, "frm"); len(err) > 0 {
       errors = append(errors, err)
     }
     if err := validateFrm(piece.Bss, "bss"); len(err) > 0 {
       errors = append(errors, err)
+    }
+    if !validLvl.MatchString(piece.Lvl) {
+      errors = append(errors, fmt.Sprintf(
+        "* Invalid lvl, expected (el|in|pr|vi)[a-c], got %v", piece.Lvl),
+      )
+    }
+    if !validEns.MatchString(piece.Ens) {
+      errors = append(errors, fmt.Sprintf(
+        "* Invalid ens, expected sol, duo, vos, vod, got %v", piece.Ens),
+      )
     }
     if len(errors) > 0 {
       return fmt.Errorf(
@@ -341,12 +363,12 @@ func readCatalogFile(catDir, catFile string) ([]Piece, error) {
     return nil, err
   }
   defer file.Close()
-  dec := yaml.NewDecoder(file)
   var pieces struct { Pieces []Piece `yaml:"pieces"` }
-  err = dec.Decode(&pieces)
+  err = yaml.NewDecoder(file).Decode(&pieces)
   if err != nil {
     return nil, err
   }
+  fmt.Printf("%+v\n", pieces.Pieces[0])
   err = validatePieces(pieces.Pieces, catalogFile)
   if err != nil {
     return nil, err
@@ -367,6 +389,14 @@ func addMetaToPieces(pieces []Piece) {
         piece.Art = "arr" // default: arrangement
       }
       piece.ArtUkr = meta[piece.Art]
+    }
+    // cls
+    if len(piece.Lcs) == 0 {
+      piece.Lcs = "cpl" // default: copyleft
+    }
+    // ens
+    if len(piece.Ens) == 0 {
+      piece.Ens = "sol" // default: solo
     }
     // file
     piece.File = scoreFile(piece.Tit, piece.ID)

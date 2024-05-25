@@ -5,6 +5,8 @@ meta:
     sec:
       - tit: { name: id, eng: Piece ID, ukr: ID п'єси }
       - tit: { name: org, eng: Piece country, ukr: Країна п'єси }
+      - tit: { name: tit, eng: Piece title, ukr: Назва п'єси }
+      - tit: { name: sub, eng: Piece subtitle, ukr: Підзаголовок п'єси } # optional
       - tit: { name: com, eng: Piece composer, ukr: Композитор } # optional
       - tit: { name: arr, eng: Piece arranger, ukr: Обробка } # optional
       - tit: { name: art, eng: Arrangement type, ukr: Тип обробки } # optional
@@ -12,6 +14,11 @@ meta:
           - { name: arr, eng: Arrangement, ukr: Обробка }
           - { name: ipr, eng: Interpretation, ukr: Переклад }
           - { name: hrm, eng: Harmonization, ukr: Гармонізація }
+      - tit: { name: aut, eng: Lyrics author, ukr: Автор слів } # optional
+      - tit: { name: lcs, eng: License, ukr: Ліцензія } # optional
+        sub:
+          - { name: cpl, eng: Copyleft, ukr: Захисна ліцензія }
+          - { name: cpr, eng: Copyright, ukr: Авторські права }
   - tit: { eng: Piece classification, ukr: Класифікація п'єси }
     sec:
       - tit: { name: sty, eng: Piece style, ukr: Стиль п'єси }
@@ -93,3 +100,10 @@ meta:
           - { name: "in[a-c]", eng: Intermediate A-C, ukr: Середній A-C }
           - { name: "pr[a-c]", eng: Proficient A-C, ukr: Складний A-C }
           - { name: "vi[a-c]", eng: Virtuoso A-C, ukr: Віртуозний A-C }
+      - tit: { name: ens, eng: Ensemble type, ukr: Тип ансамблю } # optional
+        sub:
+          - { name: sol, eng: Bayan solo, ukr: Баян соло }
+          - { name: duo, eng: Bayan duo, ukr: Баян дует }
+          - { name: vos, eng: Vocal solo with bayan, ukr: Голос соло з баяном }
+          - { name: vod, eng: Vocal duo with bayan, ukr: Голос дует з баяном }
+      - tit: { name: lyr, eng: Lyrics, ukr: Слова пісні } # optional
