@@ -212,6 +212,53 @@ markupInsideSlur = {
   #}
 ))
 
+% Lyrics
+#(define-markup-command (lyrOne layout props a aa)
+  (markup? markup?)
+  (interpret-markup layout props
+  #{
+    \markup {
+      \vspace #1.5
+      \fill-line {
+        \null
+        \column { \line { #a #aa } }
+        \null
+      }
+    }
+  #}
+))
+#(define-markup-command (lyrTwo layout props a aa b bb)
+  (markup? markup? markup? markup?)
+  (interpret-markup layout props
+  #{
+    \markup {
+      \vspace #1.5
+      \fill-line {
+        \null
+        \column { \line { #a #aa } }
+        \column { \line { #b #bb } }
+        \null
+      }
+    }
+  #}
+))
+#(define-markup-command (lyrThree layout props a aa b bb c cc)
+  (markup? markup? markup? markup? markup? markup?)
+  (interpret-markup layout props
+  #{
+    \markup {
+      \vspace #1.5
+      \fill-line {
+        \null
+        \column { \line { #a #aa } }
+        \column { \line { #b #bb } }
+        \column { \line { #c #cc } }
+        \null
+      }
+    }
+  #}
+))
+
 % TOC
 tocSection = #(define-music-function
   (label text) (symbol-list-or-symbol? markup?)
@@ -344,40 +391,12 @@ tocSection = #(define-music-function
     >>
   {{ end }}
 }
-
 {{ if .Lyr }}
-\markup {
-  \column {
-    \fill-line { \null \right-align \italic "С. Гирцюк" }
-    \fill-line {
-      \hspace #10
-      \column {
-        \left-align {
-          "А вовчок-сірячок"
-          "З лісу виглядає"
-          "Та на біле козенятко"
-          "Скоса поглядає"
-        }
-      }
-      \column {
-        \left-align {
-          "А вовчок-сірячок"
-          "З лісу виглядає"
-          "Та на біле козенятко"
-          "Скоса поглядає"
-        }
-      }
-      \column {
-        \left-align {
-          "А вовчок-сірячок"
-          "З лісу виглядає"
-          "Та на біле козенятко"
-          "Скоса поглядає"
-        }
-      }
-      \hspace #10
-    }
-  }
+\markup \column {
+  {{ if .Aut }}
+    \fill-line { \null \italic "{{ .Aut }}" }
+  {{ end }}
+  {{ .Lyrics }}
 }
 {{ end }}
 {{ end }}
