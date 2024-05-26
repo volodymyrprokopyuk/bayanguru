@@ -94,7 +94,7 @@ meta:
           - { name: stb, eng: Stradella bass, ukr: Готовий акорд }
           - { name: pub, eng: Pure bass, ukr: Чистий бас }
           - { name: frb, eng: Free bass, ukr: Виборна система }
-      - tit: { name: lvl, eng: Diffiuclty level, ukr: Рівень складності } # multiple
+      - tit: { name: lvl, eng: Diffiuclty level, ukr: Рівень складності }
         sub:
           - { name: "el[a-c]", eng: Elementary A-C, ukr: Простий A-C }
           - { name: "in[a-c]", eng: Intermediate A-C, ukr: Середній A-C }
@@ -104,6 +104,6 @@ meta:
         sub:
           - { name: sol, eng: Bayan solo, ukr: Баян соло }
           - { name: duo, eng: Bayan duo, ukr: Баян дует }
-          - { name: vos, eng: Vocal solo with bayan, ukr: Голос соло з баяном }
-          - { name: vod, eng: Vocal duo with bayan, ukr: Голос дует з баяном }
+          - { name: vc1, eng: Vocal one with bayan, ukr: Один голос з баяном }
+          - { name: vc2, eng: Vocal two with bayan, ukr: Два голоси з баяном }
       - tit: { name: lyr, eng: Lyrics, ukr: Слова пісні } # optional

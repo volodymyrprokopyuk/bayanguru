@@ -301,24 +301,51 @@ tocSection = #(define-music-function
     bss = "{{ .Bss | join ` ` }}"
     lvl = "{{ .Lvl }}"
   }
-  <<
-    \new ChoirStaff = choir <<
-      \override ChoirStaff.SystemStartBracket.collapse-height = #4
-      \new Staff = vocala {
-        \relative { c'='2 | d | e | f | }
-      }
-      % \new Staff = vocalb {
-      %   \relative { c'='2 | d | e | f | }
-      % }
-    >>
-
+  {{ if eq .Ens "sol" }}
     \new PianoStaff = bayan <<
       \new Staff = rightHand { {{ .RightHand }} }
       \new Staff = leftHand { {{ .LeftHand }} }
     >>
-  >>
+  {{ end }}
+  {{ if eq .Ens "duo" }}
+    <<
+      \new PianoStaff = bayanOne <<
+        \new Staff = rightHandOne { {{ .RightHandOne }} }
+        \new Staff = leftHandOne { {{ .LeftHandOne }} }
+      >>
+      \new PianoStaff = bayanTwo <<
+        \new Staff = rightHandTwo { {{ .RightHandTwo }} }
+        \new Staff = leftHandTwo { {{ .LeftHandTwo }} }
+      >>
+    >>
+  {{ end }}
+  {{ if eq .Ens "vc1" }}
+    <<
+      \new ChoirStaff = choir <<
+        \override ChoirStaff.SystemStartBracket.collapse-height = #4
+        \new Staff = vocal { {{ .Vocal }} }
+      >>
+      \new PianoStaff = bayan <<
+        \new Staff = rightHand { {{ .RightHand }} }
+        \new Staff = leftHand { {{ .LeftHand }} }
+      >>
+    >>
+  {{ end }}
+  {{ if eq .Ens "vc2" }}
+    <<
+      \new ChoirStaff = choir <<
+        \new Staff = vocalOne { {{ .VocalOne }} }
+        \new Staff = vocalTwo { {{ .VocalTwo }} }
+      >>
+      \new PianoStaff = bayan <<
+        \new Staff = rightHand { {{ .RightHand }} }
+        \new Staff = leftHand { {{ .LeftHand }} }
+      >>
+    >>
+  {{ end }}
 }
 
+{{ if .Lyr }}
 \markup {
   \column {
     \fill-line { \null \right-align \italic "С. Гирцюк" }
@@ -352,7 +379,7 @@ tocSection = #(define-music-function
     }
   }
 }
-
+{{ end }}
 {{ end }}
 
 {{ block "piece" . }} {{ end }}

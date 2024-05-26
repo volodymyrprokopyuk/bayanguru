@@ -100,7 +100,17 @@ type Piece struct {
   Lyr bool `yaml:"lyr"`
   File string
   Meta bool
+  // ens: sol
   RightHand, LeftHand string
+  // ens: duo
+  RightHandOne, LeftHandOne string
+  RightHandTwo, LeftHandTwo string
+  // ens: vc1
+  Vocal string
+  Lyrics string
+  // ens: vc2
+  VocalOne, VocalTwo string
+  // publish
   AlphaLink string
 }
 
@@ -230,6 +240,47 @@ func listCatalogFiles(catDir, catQuery string) ([]string, error) {
   return files, nil
 }
 
+func readCatalogFile(catalogFile string) ([]Piece, error) {
+  file, err := os.Open(catalogFile)
+  if err != nil {
+    return nil, err
+  }
+  defer file.Close()
+  var pieces struct { Pieces []Piece `yaml:"pieces"` }
+  err = yaml.NewDecoder(file).Decode(&pieces)
+  if err != nil {
+    return nil, err
+  }
+  return pieces.Pieces, nil
+}
+
+func addMetaToPieces(pieces []Piece) {
+  for i := range pieces {
+    piece := &pieces[i]
+    // sub
+    if sub, exists := meta[piece.Sub]; exists {
+      piece.Sub = sub
+    }
+    // art
+    if len(piece.Arr) > 0 {
+      if len(piece.Art) == 0 {
+        piece.Art = "arr" // default: arrangement
+      }
+      piece.ArtUkr = meta[piece.Art]
+    }
+    // cls
+    if len(piece.Lcs) == 0 {
+      piece.Lcs = "cpl" // default: copyleft
+    }
+    // ens
+    if len(piece.Ens) == 0 {
+      piece.Ens = "sol" // default: solo
+    }
+    // file
+    piece.File = scoreFile(piece.Tit, piece.ID)
+  }
+}
+
 func reCompile(reParts []string) []*regexp.Regexp {
   res := make([]*regexp.Regexp, 0, len(reParts))
   for _, re := range reParts {
@@ -265,7 +316,7 @@ var (
   }
   validFrm = reCompile(frmParts)
   validLvl = regexp.MustCompile(`^(?:el|in|pr|vi)[a-c]$`)
-  validEns = regexp.MustCompile(`^sol|duo|vos|vod$`)
+  validEns = regexp.MustCompile(`^sol|duo|vc1|vc2$`)
 )
 
 func validateFrm(frms []string, frmName string) string {
@@ -356,53 +407,6 @@ func validatePieces(pieces []Piece, catalogFile string) error {
   return nil
 }
 
-func readCatalogFile(catDir, catFile string) ([]Piece, error) {
-  catalogFile := filepath.Join(catDir, catFile)
-  file, err := os.Open(catalogFile)
-  if err != nil {
-    return nil, err
-  }
-  defer file.Close()
-  var pieces struct { Pieces []Piece `yaml:"pieces"` }
-  err = yaml.NewDecoder(file).Decode(&pieces)
-  if err != nil {
-    return nil, err
-  }
-  fmt.Printf("%+v\n", pieces.Pieces[0])
-  err = validatePieces(pieces.Pieces, catalogFile)
-  if err != nil {
-    return nil, err
-  }
-  return pieces.Pieces, nil
-}
-
-func addMetaToPieces(pieces []Piece) {
-  for i := range pieces {
-    piece := &pieces[i]
-    // sub
-    if sub, exists := meta[piece.Sub]; exists {
-      piece.Sub = sub
-    }
-    // art
-    if len(piece.Arr) > 0 {
-      if len(piece.Art) == 0 {
-        piece.Art = "arr" // default: arrangement
-      }
-      piece.ArtUkr = meta[piece.Art]
-    }
-    // cls
-    if len(piece.Lcs) == 0 {
-      piece.Lcs = "cpl" // default: copyleft
-    }
-    // ens
-    if len(piece.Ens) == 0 {
-      piece.Ens = "sol" // default: solo
-    }
-    // file
-    piece.File = scoreFile(piece.Tit, piece.ID)
-  }
-}
-
 func readPieces(catDir, catQuery string) (PieceMap, []string, error) {
   catFiles, err := listCatalogFiles(catDir, catQuery)
   if err != nil {
@@ -411,11 +415,16 @@ func readPieces(catDir, catQuery string) (PieceMap, []string, error) {
   pieceMap := make(PieceMap, 1000)
   pieceIDs := make([]string, 0, 1000) // ordered pieces for all
   for _, catFile := range catFiles {
-    pieces, err := readCatalogFile(catDir, catFile)
+    catalogFile := filepath.Join(catDir, catFile)
+    pieces, err := readCatalogFile(catalogFile)
     if err != nil {
       return nil, nil, err
     }
     addMetaToPieces(pieces)
+    err = validatePieces(pieces, catalogFile)
+    if err != nil {
+      return nil, nil, err
+    }
     for _, piece := range pieces {
       pieceMap[piece.ID] = piece
       pieceIDs = append(pieceIDs, piece.ID)

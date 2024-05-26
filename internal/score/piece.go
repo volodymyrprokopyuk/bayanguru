@@ -128,7 +128,18 @@ func initPiece(pieces []cat.Piece, sourceDir string) error {
   if err != nil {
     return err
   }
-  initFile := filepath.Join(sourceDir, "template", "init.ly")
+  var initFile string
+  switch piece.Ens {
+  case "sol":
+    initFile = "initSol.ly"
+  case "duo":
+    initFile = "initDuo.ly"
+  case "vc1":
+    initFile = "initVc1.ly"
+  case "vc2":
+    initFile = "initVc2.ly"
+  }
+  initFile = filepath.Join(sourceDir, "template", initFile)
   _, err = copyFile(initFile, pieceFile)
   if err != nil {
     return err
@@ -146,18 +157,103 @@ func templatePiece(
   if err != nil {
     return err
   }
-  var rightHand strings.Builder
-  err = tpl.ExecuteTemplate(&rightHand, "rightHand", piece)
-  if err != nil {
-    return err
+  var w strings.Builder
+  switch piece.Ens {
+  case "sol":
+    w.Reset()
+    err = tpl.ExecuteTemplate(&w, "rightHand", piece)
+    if err != nil {
+      return err
+    }
+    piece.RightHand = w.String()
+    w.Reset()
+    err = tpl.ExecuteTemplate(&w, "leftHand", piece)
+    if err != nil {
+      return err
+    }
+    piece.LeftHand = w.String()
+  case "duo":
+    w.Reset()
+    err = tpl.ExecuteTemplate(&w, "rightHandOne", piece)
+    if err != nil {
+      return err
+    }
+    piece.RightHandOne = w.String()
+    w.Reset()
+    err = tpl.ExecuteTemplate(&w, "leftHandOne", piece)
+    if err != nil {
+      return err
+    }
+    piece.LeftHandOne = w.String()
+    w.Reset()
+    err = tpl.ExecuteTemplate(&w, "rightHandTwo", piece)
+    if err != nil {
+      return err
+    }
+    piece.RightHandTwo = w.String()
+    w.Reset()
+    err = tpl.ExecuteTemplate(&w, "leftHandTwo", piece)
+    if err != nil {
+      return err
+    }
+    piece.LeftHandTwo = w.String()
+  case "vc1":
+    w.Reset()
+    err = tpl.ExecuteTemplate(&w, "vocal", piece)
+    if err != nil {
+      return err
+    }
+    piece.Vocal = w.String()
+    w.Reset()
+    err = tpl.ExecuteTemplate(&w, "rightHand", piece)
+    if err != nil {
+      return err
+    }
+    piece.RightHand = w.String()
+    w.Reset()
+    err = tpl.ExecuteTemplate(&w, "leftHand", piece)
+    if err != nil {
+      return err
+    }
+    piece.LeftHand = w.String()
+    w.Reset()
+    err = tpl.ExecuteTemplate(&w, "lyrics", piece)
+    if err != nil {
+      return err
+    }
+    piece.Lyrics = w.String()
+  case "vc2":
+    w.Reset()
+    err = tpl.ExecuteTemplate(&w, "vocalOne", piece)
+    if err != nil {
+      return err
+    }
+    piece.VocalOne = w.String()
+    w.Reset()
+    err = tpl.ExecuteTemplate(&w, "vocalTwo", piece)
+    if err != nil {
+      return err
+    }
+    piece.VocalTwo = w.String()
+    w.Reset()
+    err = tpl.ExecuteTemplate(&w, "rightHand", piece)
+    if err != nil {
+      return err
+    }
+    piece.RightHand = w.String()
+    w.Reset()
+    err = tpl.ExecuteTemplate(&w, "leftHand", piece)
+    if err != nil {
+      return err
+    }
+    piece.LeftHand = w.String()
+    w.Reset()
+    err = tpl.ExecuteTemplate(&w, "lyrics", piece)
+    if err != nil {
+      return err
+    }
+    piece.Lyrics = w.String()
   }
-  piece.RightHand = rightHand.String()
-  var leftHand strings.Builder
-  err = tpl.ExecuteTemplate(&leftHand, "leftHand", piece)
-  if err != nil {
-    return err
-  }
-  piece.LeftHand = stradella(leftHand.String())
   return nil
 }
 
