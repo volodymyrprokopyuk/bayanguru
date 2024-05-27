@@ -217,13 +217,8 @@ markupInsideSlur = {
   (markup? markup?)
   (interpret-markup layout props
   #{
-    \markup {
-      \vspace #1.5
-      \fill-line {
-        \null
-        \column { \line { #a #aa } }
-        \null
-      }
+    \markup \fill-line {
+      \null \column { \line { \vspace #1.5 #a #aa } } \null
     }
   #}
 ))
@@ -231,32 +226,76 @@ markupInsideSlur = {
   (markup? markup? markup? markup?)
   (interpret-markup layout props
   #{
-    \markup {
-      \vspace #1.5
-      \fill-line {
-        \null
-        \column { \line { #a #aa } }
-        \hspace #1
-        \column { \line { #b #bb } }
-        \null
+    \markup \fill-line {
+      \column {
+        \override #'(padding . 10)
+        \table #`(,LEFT ,LEFT) {
+          \line { \vspace #1.5 #a #aa }
+          \line { \vspace #1.5 #b #bb }
+        }
       }
     }
   #}
 ))
-#(define-markup-command (lyrThree layout props a aa b bb c cc)
-  (markup? markup? markup? markup? markup? markup?)
+#(define-markup-command (lyrFour layout props a aa b bb c cc d dd)
+  (markup? markup? markup? markup?
+   markup? markup? markup? markup?)
   (interpret-markup layout props
   #{
-    \markup {
-      \vspace #1.5
-      \fill-line {
-        \null
-        \column { \line { #a #aa } }
-        \hspace #1
-        \column { \line { #b #bb } }
-        \hspace #1
-        \column { \line { #c #cc } }
-        \null
+    \markup \fill-line {
+      \column {
+        \override #'(padding . 10)
+        \table #`(,LEFT ,LEFT) {
+          \line { \vspace #1.5 #a #aa }
+          \line { \vspace #1.5 #c #cc }
+          \line { \vspace #1.5 #b #bb }
+          \line { \vspace #1.5 #d #dd }
+        }
+      }
+    }
+  #}
+))
+#(define-markup-command (lyrSix layout props a aa b bb c cc d dd e ee f ff)
+  (markup? markup? markup? markup?
+   markup? markup? markup? markup?
+   markup? markup? markup? markup?)
+  (interpret-markup layout props
+  #{
+    \markup \fill-line {
+      \column {
+        \override #'(padding . 10)
+        \table #`(,LEFT ,LEFT) {
+          \line { \vspace #1.5 #a #aa }
+          \line { \vspace #1.5 #d #dd }
+          \line { \vspace #1.5 #b #bb }
+          \line { \vspace #1.5 #e #ee }
+          \line { \vspace #1.5 #c #cc }
+          \line { \vspace #1.5 #f #ff }
+        }
+      }
+    }
+  #}
+))
+#(define-markup-command (lyrEight layout props a aa b bb c cc d dd e ee f ff g gg h hh)
+  (markup? markup? markup? markup?
+   markup? markup? markup? markup?
+   markup? markup? markup? markup?
+   markup? markup? markup? markup?)
+  (interpret-markup layout props
+  #{
+    \markup \fill-line {
+      \column {
+        \override #'(padding . 10)
+        \table #`(,LEFT ,LEFT) {
+          \line { \vspace #1.5 #a #aa }
+          \line { \vspace #1.5 #e #ee }
+          \line { \vspace #1.5 #b #bb }
+          \line { \vspace #1.5 #f #ff }
+          \line { \vspace #1.5 #c #cc }
+          \line { \vspace #1.5 #g #gg }
+          \line { \vspace #1.5 #d #dd }
+          \line { \vspace #1.5 #h #hh }
+        }
       }
     }
   #}
