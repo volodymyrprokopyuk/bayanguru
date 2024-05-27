@@ -1,0 +1,8 @@
+%YAML 1.1
+---
+pieces:
+  # IIDBF2021, lcs: cpr
+  - { id: gzmy, tit: "Вишеньки-черешеньки",
+      com: Я. Степовий, aut: Л. Українка, src: IIDBF2021, lcs: cpr,
+      org: ukr, sty: cus, gnr: chd, ton: dmj, frm: in3, bss: stb,
+      lvl: elb, ens: vc1, lyr: true }

@@ -236,6 +236,7 @@ markupInsideSlur = {
       \fill-line {
         \null
         \column { \line { #a #aa } }
+        \hspace #1
         \column { \line { #b #bb } }
         \null
       }
@@ -251,7 +252,9 @@ markupInsideSlur = {
       \fill-line {
         \null
         \column { \line { #a #aa } }
+        \hspace #1
         \column { \line { #b #bb } }
+        \hspace #1
         \column { \line { #c #cc } }
         \null
       }

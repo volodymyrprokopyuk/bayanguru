@@ -390,7 +390,7 @@ pieces:
       org: ukr, sty: cus, gnr: chd, ton: gmi, frm: [mel, jmp], bss: [frb, jmp], lvl: elb }
   - { id: onbv, tit: Пісня,
       com: І. Яшкевич, src: FBB3BZ1982,
-      org: ukr, sty: cus, gnr: sng, ton: ami, frm: [mel, cr5], bss: frb, lvl: ela }
+      org: ukr, sty: cus, gnr: sng, ton: ami, frm: [vo2, cr5], bss: frb, lvl: ela }
   - { id: s2hf, tit: Ой зав'ю вінки, sub: ukrfs,
       arr: А. Должиков, src: FBB3BZ1982,
       org: ukr, sty: flk, gnr: sng, ton: fismi, frm: mel, bss: [frb, in3], lvl: elb }

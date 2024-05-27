@@ -241,3 +241,11 @@ books:
       # { tit: Поліфонія, pieces: [ # Polyphone
       # ] }
       ] }
+
+  # Lyrics
+  - { id: uly1, tit: Українські пісні, sub: в супроводі баяна,
+      sections: [
+      { tit: Пісні для дітей, pieces: [
+        # IIDBF2021
+        gzmy
+      ] } ] }

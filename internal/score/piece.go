@@ -171,7 +171,7 @@ func templatePiece(
     if err != nil {
       return err
     }
-    piece.LeftHand = w.String()
+    piece.LeftHand = stradella(w.String())
   case "duo":
     w.Reset()
     err = tpl.ExecuteTemplate(&w, "rightHandOne", piece)
@@ -184,7 +184,7 @@ func templatePiece(
     if err != nil {
       return err
     }
-    piece.LeftHandOne = w.String()
+    piece.LeftHandOne = stradella(w.String())
     w.Reset()
     err = tpl.ExecuteTemplate(&w, "rightHandTwo", piece)
     if err != nil {
@@ -196,7 +196,7 @@ func templatePiece(
     if err != nil {
       return err
     }
-    piece.LeftHandTwo = w.String()
+    piece.LeftHandTwo = stradella(w.String())
   case "vc1":
     w.Reset()
     err = tpl.ExecuteTemplate(&w, "vocal", piece)
@@ -215,7 +215,7 @@ func templatePiece(
     if err != nil {
       return err
     }
-    piece.LeftHand = w.String()
+    piece.LeftHand = stradella(w.String())
     w.Reset()
     err = tpl.ExecuteTemplate(&w, "lyrics", piece)
     if err != nil {
@@ -246,7 +246,7 @@ func templatePiece(
     if err != nil {
       return err
     }
-    piece.LeftHand = w.String()
+    piece.LeftHand = stradella(w.String())
     w.Reset()
     err = tpl.ExecuteTemplate(&w, "lyrics", piece)
     if err != nil {
