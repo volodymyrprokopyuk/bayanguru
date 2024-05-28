@@ -20,6 +20,6 @@
   \rep 2 { d=8 r <f= a d> r | } \rep 2 { g=8 r <b= d> r | }
   \rep 4 { c,=8 r <e= g c> r | }
   \rep 2 { d=8 r <f= a d> r | } \rep 2 { g=8 r <b= d> r | }
-  <c,,=, e g>8 r r4 | 4 r |
+  <c,= e g>8 r r4 | 4 r |
 }
 {{ end }}
