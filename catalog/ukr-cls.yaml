@@ -353,10 +353,9 @@ pieces:
   - { id: a5cv, tit: Полька,
       com: Г. Шевчук, src: FBB2BZ1981,
       org: ukr, sty: cus, gnr: plk, ton: cmj, frm: [mel, jmp], bss: [frb, in3, jmp], lvl: elb }
-  # p. 35
-  # - { id: y632, tit: Ніч яка місячна,
-  #     arr: М. Різоль, src: FBB2BZ1981,
-  #     org: ukr, sty: flk, gnr: sng, ton: emj, frm: [mel, in3], bss: frb, lvl: elb }
+  - { id: y632, tit: Ніч яка місячна,
+      arr: М. Різоль, src: FBB2BZ1981,
+      org: ukr, sty: flk, gnr: sng, ton: emi, frm: [mel, in3], bss: frb, lvl: elb }
   # p. 39
   # - { id: 8o6w, tit: "Ой у полі, ой у полі",
   #     arr: М. Різоль, src: FBB2BZ1981,

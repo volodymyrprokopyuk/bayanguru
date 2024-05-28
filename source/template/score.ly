@@ -40,6 +40,7 @@ tRal = "rall."
 tATem = "a tempo"
 tAcc = "accel."
 tSos = "sost."
+tTen = "ten."
 
 % Bars
 barFermata = \mark \markup \musicglyph #"scripts.ufermata"
