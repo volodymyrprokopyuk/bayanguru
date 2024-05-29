@@ -356,10 +356,9 @@ pieces:
   - { id: y632, tit: Ніч яка місячна,
       arr: М. Різоль, src: FBB2BZ1981,
       org: ukr, sty: flk, gnr: sng, ton: emi, frm: [mel, in3], bss: frb, lvl: elb }
-  # p. 39
-  # - { id: 8o6w, tit: "Ой у полі, ой у полі",
-  #     arr: М. Різоль, src: FBB2BZ1981,
-  #     org: ukr, sty: flk, gnr: sng, ton: ami, frm: [in3, cr5, dot], bss: frb, lvl: ela }
+  - { id: 8o6w, tit: "Ой у полі, ой у полі",
+      arr: М. Різоль, src: FBB2BZ1981,
+      org: ukr, sty: flk, gnr: sng, ton: ami, frm: [in3, cr5, dot], bss: frb, lvl: ela }
   # p. 59
   # - { id: zbgg, tit: Ніч яка місячна,
   #     arr: Т. Мурзина, src: FBB2BZ1981,
