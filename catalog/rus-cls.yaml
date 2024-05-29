@@ -158,6 +158,14 @@ pieces:
   - { id: t67o, tit: Песня,
       com: М. Глинка, src: FBB2BZ1981,
       org: rus, sty: cus, gnr: sng, ton: gmi, frm: mel, bss: [frb, in3], lvl: elb }
+  # p. 70
+  # - { id: 2lhn, tit: Русская хороводная,
+  #     com: В. Подгорний, src: FBB2BZ1981,
+  #     org: rus, sty: cus, gnr: dnc, ton: gmi, frm: [vo2, in3], bss: [frb, vo2, in3], lvl: elb }
+  # p. 75
+  # - { id: p8u5, tit: Танец,
+  #     com: Ю. Филлер, src: FBB2BZ1981,
+  #     org: rus, sty: cus, gnr: dnc, ton: ami, frm: [in3, in6, syn], bss: [frb, syn, jmp], lvl: elb }
   # FBB3BZ1982
   - { id: 3hw7, tit: Полифоническая пьеса,
       com: М. Глинка, src: FBB3BZ1982,

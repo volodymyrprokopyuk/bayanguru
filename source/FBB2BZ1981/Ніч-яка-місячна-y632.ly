@@ -28,5 +28,12 @@
 \relative {
   \clef bass
   \key e \minor
+  R2. | b=2\(-\frBass a4 | g a g | fis e dis\) |
+  r4 b'=2\( | a2 g4 | a b2 | a4 g fis\) |
+  e=2( d4 | c) c( g | g gis2 | a4 b c) |
+  r4 b=,4(-> a) | r a(-> g) | a( b2 | a4 g fis) |
+  e=,2( d4 | c8 e g c e4) | e,( fis gis | a b c) |
+  r4 b=,4(-> a) | r a(-> g)^\tTen | b8( c cis4 dis | e2.) |
+  a,=,4( g fis | e=,2.) |
 }
 {{ end }}
