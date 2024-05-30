@@ -57,13 +57,16 @@ var catGroups = map[string][]string{
     "scale", "arpeggio", "interval", "chord", //"polyphony",
   },
   "composer": {
-    "composer", "no-composer",
+    "composer",
   },
   "bass": {
     "standard-bass", "pure-bass", "free-bass",
   },
   "level": {
     "elementary-a", "elementary-b", "elementary-c",
+  },
+  "lyrics": {
+    "lyrics",
   },
 }
 

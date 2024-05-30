@@ -39,7 +39,6 @@ var tr = map[string]string{
   "left-hand": "Left hand | Ліва рука",
   // com
   "composer": "Composer | Композитор",
-  "no-composer": "No composer | Без композитора",
   // bss
   "standard-bass": "Standard bass | Готовий аккорд",
   "pure-bass": "Pure bass | Чистий бас",
@@ -48,6 +47,8 @@ var tr = map[string]string{
   "elementary-a": "Elementary A | Простий A",
   "elementary-b": "Elementary B | Простий B",
   "elementary-c": "Elementary C | Простий C",
+  // ens
+  "lyrics": "Lyrics | Пісні",
 }
 
 type PieceGroups map[string][]cat.Piece
@@ -404,13 +405,7 @@ func keyByStu(piece cat.Piece) []string {
 }
 
 func keyByCom(piece cat.Piece) []string {
-  var key string
-  if len(piece.Com) > 0 || len(piece.Arr) > 0 {
-    key = "composer"
-  } else {
-    key = "no-composer"
-  }
-  return []string{key}
+  return []string{"composer"}
 }
 
 func keyByBss(piece cat.Piece) []string {
@@ -437,6 +432,10 @@ func keyByLvl(piece cat.Piece) []string {
     key = lvl
   }
   return []string{key}
+}
+
+func keyByLyr(piece cat.Piece) []string {
+  return []string{"lyrics"}
 }
 
 func publishCatalog(tpl *template.Template, pc PublishCommand) error {
@@ -495,8 +494,11 @@ func publishCatalog(tpl *template.Template, pc PublishCommand) error {
   if err != nil {
     return err
   }
+  comPieces := filterPieces(pieces, func(piece cat.Piece) bool {
+    return len(piece.Com) > 0 || len(piece.Arr) > 0
+  })
   err = publishGroup(
-    tpl, pieces, keyByCom, keyCom, "composer", catGroups["composer"], pc,
+    tpl, comPieces, keyByCom, keyCom, "composer", catGroups["composer"], pc,
   )
   if err != nil {
     return err
@@ -509,6 +511,15 @@ func publishCatalog(tpl *template.Template, pc PublishCommand) error {
   }
   err = publishGroup(
     tpl, pieces, keyByLvl, keyTit, "level", catGroups["level"], pc,
+  )
+  if err != nil {
+    return err
+  }
+  lyrPieces := filterPieces(pieces, func(piece cat.Piece) bool {
+    return piece.Ens == "vc1" || piece.Ens == "vc2"
+  })
+  err = publishGroup(
+    tpl, lyrPieces, keyByLyr, keyTit, "lyrics", catGroups["lyrics"], pc,
   )
   if err != nil {
     return err
