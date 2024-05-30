@@ -434,7 +434,7 @@ tocSection = #(define-music-function
     >>
   {{ end }}
 }
-{{ if .Lyr }}
+{{ if eq .Lyr "lyr" }}
 \markup \column {
   {{ if .Aut }}
     \fill-line { \null \italic "{{ .Aut }}" }

@@ -300,7 +300,7 @@ pieces:
       org: ukr, sty: flk, gnr: plk, ton: cmj, frm: [mel, acc, jmp], bss: stb, lvl: elb }
   - { id: nev4, tit: Вербовая дощечка, sub: ukrfs,
       src: B2AK1987,
-      org: ukr, sty: flk, gnr: sng, ton: emi, frm: [vo3, var, cr5], bss: [stb, pub], lvl: elc }
+      org: ukr, sty: flk, gnr: sng, ton: emi, frm: [vo2, var, cr5], bss: [stb, pub], lvl: elc }
   - { id: foaz, tit: Зимонька,
       com: К. Мясков, src: B2AK1987,
       org: ukr, sty: cus, gnr: chd, ton: gmj, frm: [mel, acc], bss: stb, lvl: elb }

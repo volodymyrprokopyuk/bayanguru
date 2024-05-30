@@ -64,7 +64,6 @@ var catGroups = map[string][]string{
   },
   "level": {
     "elementary-a", "elementary-b", "elementary-c",
-    "intermediary-a",
   },
 }
 

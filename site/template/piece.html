@@ -10,7 +10,7 @@
   {{ with .Piece }}
     <main data-pagefind-body>
       <div class="piece-meta">
-        <h1 data-pagefind-meta="title" data-pagefind-sort="tit">{{ .Tit }}</h1>
+        <h1 data-pagefind-meta="title">{{ .Tit }}</h1>
         <div data-pagefind-meta="id">{{ .ID }}</div>
         <div data-pagefind-meta="com"
              data-pagefind-filter="Composer | Копмозитор">{{ .Com }}</div>
@@ -38,6 +38,10 @@
         <div data-pagefind-meta="lvl"
              data-pagefind-filter="Level | Складність"
              data-pagefind-sort="lvl">{{ .Lvl }}</div>
+        <div data-pagefind-meta="ens"
+             data-pagefind-filter="Ensemble | Ансамбль">{{ .Ens }}</div>
+        <div data-pagefind-meta="lyr"
+             data-pagefind-filter="Lyrics | Пісні">{{ .Lyr }}</div>
       </div>
       <object type="application/pdf" data="/score/{{ .File }}.pdf"
               width="1000" height="800">{{ .Tit }}</object>

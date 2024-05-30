@@ -19,7 +19,7 @@ var tr = map[string]string{
   "ukrainian": "Ukrainian | Українські",
   "russian": "Russian | Російські",
   "belarusian": "Belarusian | Білоруські",
-  "hungaria": "Hungarian | Угорські",
+  "hungarian": "Hungarian | Угорські",
   "extra": "Extra | Різне",
   "european": "European | Європейські",
   // sty

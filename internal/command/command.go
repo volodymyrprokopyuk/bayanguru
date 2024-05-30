@@ -146,19 +146,21 @@ bayan engrave all --lint --optimize --meta=f`,
   )
 
   var random, list bool
-  var org, sty, gnr, ton, frm, bss, lvl, tit, com, arr, art string
+  var tit, com, arr, art, org, sty, gnr, ton, frm, bss, lvl, ens, lyr string
   var queries = map[string]Query{
-    "org": {"piece origin e.g. ukr,rus", &org},
-    "sty": {"piece style e.g. flk,cls", &sty},
-    "gnr": {"piece genre e.g. sng,stu", &gnr},
-    "ton": {"piece tonality e.g. cj,ai", &ton},
-    "frm": {"piece form e.g. mel,var", &frm},
-    "bss": {"piece bass e.g. stb,frb", &bss},
-    "lvl": {"piece level e.g. ela,inb", &lvl},
     "tit": {"piece title", &tit},
     "com": {"piece composer", &com},
     "arr": {"piece arranger", &arr},
     "art": {"arrangement type", &art},
+    "org": {"piece origin e.g. ukr,rus", &org},
+    "sty": {"piece style e.g. flk,cls", &sty},
+    "gnr": {"piece genre e.g. sng,stu", &gnr},
+    "ton": {"piece tonality e.g. cmj,ami", &ton},
+    "frm": {"piece form e.g. mel,var", &frm},
+    "bss": {"piece bass e.g. stb,frb", &bss},
+    "lvl": {"piece level e.g. ela,inb", &lvl},
+    "ens": {"piece ensemble e.g. duo,vc1", &ens},
+    "lyr": {"piece lyrics e.g. lyr", &lyr},
   }
   playCmd := &cobra.Command{
     Use: "play",

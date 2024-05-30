@@ -82,22 +82,28 @@ type Piece struct {
   ID string `yaml:"id"`
   Tit string `yaml:"tit"`
   Sub string `yaml:"sub"`
+
   Com string `yaml:"com"`
   Arr string `yaml:"arr"`
   Art string `yaml:"art"`
   ArtUkr string
   Aut string `yaml:"aut"`
+
   Src string `yaml:"src"`
   Lcs string `yaml:"lcs"`
+
   Org string `yaml:"org"`
   Sty string `yaml:"sty"`
   Gnr string `yaml:"gnr"`
+
   Ton StrSlice `yaml:"ton"`
   Frm StrSlice `yaml:"frm"`
   Bss StrSlice `yaml:"bss"`
+
   Lvl string `yaml:"lvl"`
   Ens string `yaml:"ens"`
-  Lyr bool `yaml:"lyr"`
+  Lyr string `yaml:"lyr"`
+
   File string
   Meta bool
   // ens: sol
@@ -165,6 +171,22 @@ func makeMatchPiece(queries PieceQueries) (MatchPiece, error) {
   matchPiece := func(piece Piece) bool {
     for opt, match := range matches {
       switch opt {
+      case "tit":
+        if !match(piece.Tit) {
+          return false
+        }
+      case "com":
+        if !match(piece.Com) {
+          return false
+        }
+      case "arr":
+        if !match(piece.Arr) {
+          return false
+        }
+      case "art":
+        if !match(piece.Art) {
+          return false
+        }
       case "org":
         if !match(piece.Org) {
           return false
@@ -196,20 +218,12 @@ func makeMatchPiece(queries PieceQueries) (MatchPiece, error) {
         if !match(piece.Lvl) {
           return false
         }
-      case "tit":
-        if !match(piece.Tit) {
+      case "ens":
+        if !match(piece.Ens) {
           return false
         }
-      case "com":
-        if !match(piece.Com) {
-          return false
-        }
-      case "arr":
-        if !match(piece.Arr) {
-          return false
-        }
-      case "art":
-        if !match(piece.Art) {
+      case "lyr":
+        if !match(piece.Lyr) {
           return false
         }
       default:
