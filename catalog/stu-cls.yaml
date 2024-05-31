@@ -316,6 +316,18 @@ pieces:
       com: Л. Шітте, src: FBB1BZ1980,
       org: dnk, sty: cls, gnr: stu, ton: fmj, frm: [arp, brk], bss: [frb, arp], lvl: ela }
   # FBB2BZ1981
+  # p. 88
+  # - { id: qio4, tit: Етюд A minor,
+  #     com: К. Ошлаков, src: FBB2BZ1981,
+  #     org: rus, sty: cus, gnr: stu, ton: ami, frm: [arp, brk], bss: [frb, arp, scl], lvl: ela }
+  # p. 95
+  # - { id: ibmb, tit: Етюд C major,
+  #     com: А. Зубарев, src: FBB2BZ1981,
+  #     org: rus, sty: cus, gnr: stu, ton: cmj, frm: scl, bss: [frb, scl, in3], lvl: ela }
+  # p. 96
+  # - { id: y4zx, tit: Етюд A minor,
+  #     com: Г. Шевчук, src: FBB2BZ1981,
+  #     org: ukr, sty: cus, gnr: stu, ton: ami, frm: apr, bss: [frb, in3, in5], lvl: ela }
   # FBB3BZ1982
   - { id: iwqa, tit: Етюд A minor,
       com: А. Зубарев, src: FBB3BZ1982,
