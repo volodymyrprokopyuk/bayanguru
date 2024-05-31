@@ -24,9 +24,9 @@
   \clef bass
   \key g \minor
   \duo {
-    d'='2.~-\frBass | d | d2 4 | 4( a fis) |
+    d'='2.~ | d | d2 4 | 4( a fis) |
     fis=4( a c | r d2) | r4 <bes ees>4 <bes= d>4 | 2. |
-  } { g=2.~ | g | fis~ | fis4 r r | fis2. | fis | g~ | g= | }
+  } { g=2.~-\frBass | g | fis~ | fis4 r r | fis2. | fis | g~ | g= | }
   g=2.\( | g4 a bes | <ees, c'>2. | ees4 d c\) |
   <d= bes'>2. | <d c'> | \duo { r4 bes=4( c=' | bes=2.) | } { g=2.~ | g= | }
 }
