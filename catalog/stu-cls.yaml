@@ -328,6 +328,14 @@ pieces:
   # - { id: y4zx, tit: Етюд A minor,
   #     com: Г. Шевчук, src: FBB2BZ1981,
   #     org: ukr, sty: cus, gnr: stu, ton: ami, frm: apr, bss: [frb, in3, in5], lvl: ela }
+  # p. 100
+  # - { id: spcw, tit: Етюд D major,
+  #     com: Ю. Акимов, src: FBB2BZ1981,
+  #     org: rus, sty: cls, gnr: stu, ton: dmj, frm: [apr, brk, in3], bss: [frb, arp, brk, in3], lvl: elb }
+  # p. 104
+  # - { id: y8qb, tit: Етюд C major,
+  #     com: В. Хаперський, src: FBB2BZ1981,
+  #     org: ukr, sty: cus, gnr: stu, ton: cmj, frm: scl, bss: [frb, scl], lvl: elb }
   # FBB3BZ1982
   - { id: iwqa, tit: Етюд A minor,
       com: А. Зубарев, src: FBB3BZ1982,
