@@ -45,5 +45,19 @@
 \relative {
   \clef bass
   \key a \minor
+  a=8[-\frBass e' g, d'] | f, c' e, b' | a[ e' a, e'] | a, dis e, d' |
+  a=8[ e' g, d'] | f, c' e, b' | <f dis'>4. 8 | <e d'>8-. 8-. <a= c>4-- \clef treble |
+  \duo {
+    a'='2 | a4 gis | g2 | fis4 f=' \clef bass | e='2 | f4 fis | g f=' |
+  } {
+    a'='8 a,4 a8 | a' a, gis' a, | g' a,4 a8 | fis' a, f' a,= |
+    e'='8 a,4 a8 | f' a, fis' a, | g' a, f' a,= |
+  }
+  e'='8-. e,-. <a= c>4 |
+
+  c,=8 4 8 | f4( g8 g,) | c8 4 8 | f4( g) |
+  c,=8 4 8 | f4( g8 g,) | a8 4 8 | d( g c,=4) |
+  c'='8 4 b8 | a16( g f8 g8 g) | c8 4 b8 | a16( b c8 d4) |
+  c='8 4 b8 | a16( g f8 g8 g) | a8 4 g8 | f16( e d8 e=4) \fermata |
 }
 {{ end }}
