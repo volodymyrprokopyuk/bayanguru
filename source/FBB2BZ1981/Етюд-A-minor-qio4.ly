@@ -8,7 +8,7 @@
   a'='8(\mf e' d e c d b c | f, c' b c a b gis gis) |
   a='8(\> e d e c e b \af 8\! e | a,\< c e gis a c^\tRit e \af 8\! a) |
   g=''8(\mf^\tATem a f g e f d e | c d b c a b gis4) |
-  a='8(\> e d e c e b \af 8\! e | a, c e gis a='4) r \bar "|."
+  a='8^(\> e d e c e b \af 8\! e | a, c e gis a='4) r \bar "|."
 }
 {{ end }}
 
