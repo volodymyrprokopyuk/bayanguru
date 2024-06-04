@@ -30,3 +30,8 @@ pieces:
   - { id: 7nrq, tit: Вальс,
       com: А. Грибоедов, arr: С. Чапкій, src: FBBSC1978,
       org: rus, sty: cus, gnr: vls, ton: [emi, gmj], frm: [vo2, cr5, jmp], bss: [vo2, frb, in3, cr5, jmp], lvl: elc }
+  # BSA1983
+  # p. 114
+  # - { id: o54m, tit: Вдоль по Питерской, sub: rusfs,
+  #     arr: А. Шалаев, src: BSA1983,
+  #     org: rus, sty: flk, gnr: sng, ton: cmj, frm: [var, cr5, cr7, acc], bss: [vo2, frb, var, in3, stb, pub], lvl: elc }
