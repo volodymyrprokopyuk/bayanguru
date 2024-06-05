@@ -30,5 +30,14 @@
 \relative {
   \clef bass
   \key e \minor
+  e=2\(-\puBass d | c b | a fis | b1\) | e2\( d | c b | a fis | b=,1\) |
+  R1 \clef treble e'='1---\frBass | R1 | c-- | r2 e | dis( b=) \clef bass |
+  e,=2(_~ <e a>_~ <e= g>1) |
+
+  r4 a=4-.-\puBass g-. fis-. | e-. d-. c-. b-. | a-. g-. fis-. a-. | b( c b2) |
+  r4 a'=4-. g-. fis-. | e-. d-. c-. b-. | a-. g-. fis-. e-. | dis( cis b=,,2) \clef treble |
+  r4 d'''=''4(-\frBass c b | a g a2) | r4 b( a g | fis e fis2) |
+  r4 fis='4-. e-. fis-. | dis-. b-. cis-. dis-. | e-. b-. a-. b=-. \clef bass |
+  g=4-. fis-. e2-- | r4 b-\puBass a b | g fis e=,2 \fermata |
 }
 {{ end }}
