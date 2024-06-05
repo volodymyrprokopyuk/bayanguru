@@ -35,3 +35,6 @@ pieces:
   # - { id: o54m, tit: Вдоль по Питерской, sub: rusfs,
   #     arr: А. Шалаев, src: BSA1983,
   #     org: rus, sty: flk, gnr: sng, ton: cmj, frm: [var, cr5, cr7, acc], bss: [vo2, frb, var, in3, stb, pub], lvl: elc }
+  - { id: 8gf7, tit: Осенью,
+      com: С. Майкапар, src: BSA1983,
+      org: rus, sty: cus, gnr: pie, ton: emj, frm: cr5, bss: [frb, pub], lvl: elb }
