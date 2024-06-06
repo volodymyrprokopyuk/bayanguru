@@ -328,10 +328,9 @@ pieces:
   - { id: spcw, tit: Етюд D major,
       com: Ю. Акимов, src: FBB2BZ1981,
       org: rus, sty: cls, gnr: stu, ton: dmj, frm: [arp, brk, in3], bss: [frb, arp, brk, in3], lvl: elb }
-  # p. 104
-  # - { id: y8qb, tit: Етюд C major,
-  #     com: В. Хаперський, src: FBB2BZ1981,
-  #     org: ukr, sty: cus, gnr: stu, ton: cmj, frm: scl, bss: [frb, scl], lvl: elb }
+  - { id: y8qb, tit: Етюд C major,
+      com: В. Хаперський, src: FBB2BZ1981,
+      org: ukr, sty: cus, gnr: stu, ton: cmj, frm: scl, bss: [frb, scl], lvl: elb }
   # p. 106
   # - { id: 1fcl, tit: Етюд A minor,
   #     com: К. Мясков, src: FBB2BZ1981,
