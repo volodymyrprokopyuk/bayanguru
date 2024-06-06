@@ -6,6 +6,14 @@
   {{ .a }} <b e>-. <a e'>-. <d e>-. | <cis e>-. <d e>-. <cis e>-. {{ .b }} |
 {{ end }}
 
+{{ define "lh1" }}
+  {{ .a }} <d g>-. <d fis>-. <d e>-. | d-. <a cis>-. {{ .b }} |
+{{ end }}
+
+{{ define "lh2" }}
+  cis='16( e d e cis e b e | a, e' gis, e'=' %
+{{ end }}
+
 {{ define "rightHand" }}
 \relative {
   \tempo Andante
@@ -23,7 +31,12 @@
 
 {{ define "leftHand" }}
 \relative {
-  \clef bass
+  \clef treble
   \key d \major
+  {{ template "lh1" (w `<d'=' fis>8-.-\frBass` `d='-. r`) }}
+  {{ template "lh1" (w `<d=' fis>8-.` `d='-. r`) }}
+  {{ template "lh2" }} a,=16 b cis d) | {{ template "lh2" }} a, g' fis e) |
+  {{ template "lh1" (w `<d=' fis>8-.` `d='-. r`) }}
+  {{ template "lh1" (w `<d=' fis>8-.` `d='4--`) }}
 }
 {{ end }}
