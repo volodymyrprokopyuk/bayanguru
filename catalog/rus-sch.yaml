@@ -37,4 +37,8 @@ pieces:
   #     org: rus, sty: flk, gnr: sng, ton: cmj, frm: [var, cr5, cr7, acc], bss: [vo2, frb, var, in3, stb, pub], lvl: elc }
   - { id: 8gf7, tit: Осенью,
       com: С. Майкапар, src: BSA1983,
-      org: rus, sty: cus, gnr: pie, ton: emj, frm: cr5, bss: [frb, pub], lvl: elb }
+      org: rus, sty: cus, gnr: pie, ton: emi, frm: cr5, bss: [frb, pub], lvl: elb }
+  # PBS1AG1970
+  - { id: dc3s, tit: Песня,
+      com: Л. Гаврилов, src: PBS1AG1970,
+      org: rus, sty: cus, gnr: sng, ton: emi, frm: [mel, dot], bss: frb, lvl: ela }

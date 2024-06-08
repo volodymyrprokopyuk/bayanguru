@@ -214,7 +214,9 @@ books:
         # FBBSC1978
         v2kv, b06y, 8rvx, pouc, tq21, h64c, ct44, uvv4, 7nrq,
         # BSA1983
-        8gf7
+        8gf7,
+        # PBS1AG1970
+        dc3s
       ] }
   - { id: sfr1, tit: Вибрані етюди, sub: для готово-виборного баяна,
       sections: [
