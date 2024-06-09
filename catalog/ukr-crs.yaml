@@ -1,6 +1,6 @@
 %YAML 1.1
 ---
-pieces: []
+pieces:
   # TYBC1B1970
   # p. 70
   # - { id: 6nv7, tit: Місяцю ясний,
@@ -27,7 +27,6 @@ pieces: []
 
   # Free bass
   # CLFBBS1979
-  # p. 19
-  # - { id: hk7t, tit: Курочка,
-  #     com: М. Любарський, src: CLFBBS1979,
-  #     org: ukr, sty: cus, gnr: pie, ton: gmi, frm: mel, bss: frb, lvl: ela }
+  - { id: hk7t, tit: Курочка,
+      com: М. Любарський, src: CLFBBS1979,
+      org: ukr, sty: cus, gnr: pie, ton: gmi, frm: mel, bss: frb, lvl: ela }
