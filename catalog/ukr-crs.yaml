@@ -24,3 +24,10 @@ pieces: []
   # - { id: h940, tit: "Віють вітри, віють буйні", sub: ukrfs,
   #     src: TYBC2B1971,
   #     org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
+
+  # Free bass
+  # CLFBBS1979
+  # p. 19
+  # - { id: hk7t, tit: Курочка,
+  #     com: М. Любарський, src: CLFBBS1979,
+  #     org: ukr, sty: cus, gnr: pie, ton: gmi, frm: mel, bss: frb, lvl: ela }
