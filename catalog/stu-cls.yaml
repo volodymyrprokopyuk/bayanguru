@@ -331,10 +331,9 @@ pieces:
   - { id: y8qb, tit: Етюд C major,
       com: В. Хаперський, src: FBB2BZ1981,
       org: ukr, sty: cus, gnr: stu, ton: cmj, frm: scl, bss: [frb, scl], lvl: elb }
-  # p. 106
-  # - { id: 1fcl, tit: Етюд A minor,
-  #     com: К. Мясков, src: FBB2BZ1981,
-  #     org: ukr, sty: cus, gnr: stu, ton: ami, frm: [arp, seq], bss: [frb, scl], lvl: elb }
+  - { id: 1fcl, tit: Етюд A minor,
+      com: К. Мясков, src: FBB2BZ1981,
+      org: ukr, sty: cus, gnr: stu, ton: ami, frm: [arp, seq], bss: [frb, scl], lvl: elb }
   # p. 108
   # - { id: 5x1m, tit: Етюд A minor,
   #     com: К. Мясков, src: FBB2BZ1981,
