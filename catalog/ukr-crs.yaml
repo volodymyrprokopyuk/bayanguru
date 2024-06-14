@@ -30,3 +30,6 @@ pieces:
   - { id: hk7t, tit: Курочка,
       com: М. Любарський, src: CLFBBS1979,
       org: ukr, sty: cus, gnr: pie, ton: gmi, frm: mel, bss: frb, lvl: ela }
+  - { id: 1jj6, tit: Мандрівник, sub: Закарпатська пісня,
+      com: С. Стемпенський, src: CLFBBS1979,
+      org: ukr, sty: flk, gnr: sng, ton: gmi, frm: [vo2, in3], bss: frb, lvl: elb }
