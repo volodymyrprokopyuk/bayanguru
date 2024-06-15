@@ -3,7 +3,10 @@
 pieces:
   # Free bass
   # CLFBBS1979
-  # p. 86
-  # - { id: 5zzk, tit: Етюд B minor,
-  #     com: А. Судариков, src: CLFBBS1979,
-  #     org: dnk, sty: cus, gnr: stu, ton: [bmi, amj], frm: [vo2, in3], bss: [frb, scl, in3], lvl: elb }
+  - { id: 5zzk, tit: Етюд B minor,
+      com: А. Судариков, src: CLFBBS1979,
+      org: dnk, sty: cus, gnr: stu, ton: [bmi, amj], frm: [vo2, in3], bss: [frb, scl, in3], lvl: elb }
+  # p. 90
+  # - { id: auxu, tit: Етюд C major,
+  #     com: А. Гедике, src: CLFBBS1979,
+  #     org: rus, sty: cus, gnr: stu, ton: cmj, frm: [in3, in4, in5], bss: [frb, scl], lvl: elb }
