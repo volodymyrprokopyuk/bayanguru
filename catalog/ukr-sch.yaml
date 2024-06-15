@@ -48,3 +48,8 @@ pieces:
   - { id: rzwj, tit: Їхав козак за Дунай, sub: ukrfs,
       arr: С. Чапкій, src: FBBSC1978,
       org: ukr, sty: flk, gnr: sng, ton: ami, frm: [vo2, var, cr5], bss: [frb, var, in3, in8, cr5], lvl: elc }
+  # BSN1985
+  # p. 30
+  # - { id: 55kn, tit: "Ой за гаєм, гаєм", sub: ukrfs,
+  #     src: BSN1985,
+  #     org: ukr, sty: flk, gnr: sng, ton: cmj, frm: mel, bss: frb, lvl: ela }
