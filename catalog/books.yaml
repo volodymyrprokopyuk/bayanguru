@@ -221,7 +221,9 @@ books:
         # BSA1983
         8gf7,
         # PBS1AG1970
-        dc3s
+        dc3s,
+        # BSN1985
+        p41m
       ] }
   - { id: sfr1, tit: Вибрані етюди, sub: для готово-виборного баяна,
       sections: [
