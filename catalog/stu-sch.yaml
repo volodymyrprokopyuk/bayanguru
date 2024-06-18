@@ -35,10 +35,9 @@ pieces:
       org: rus, sty: cus, gnr: stu, ton: [ami, cmj], frm: scl, bss: [frb, cr5], lvl: elb }
   # p. 140 TODO
   # BSN1985
-  # p. 52
-  # - { id: g2f2, tit: Етюд C major,
-  #     com: Д. Левидова, src: BSN1985,
-  #     org: rus, sty: cus, gnr: stu, ton: cmj, frm: arp, bss: [frb, scl], lvl: ela }
+  - { id: g2f2, tit: Етюд C major,
+      com: Д. Левидова, src: BSN1985,
+      org: rus, sty: cus, gnr: stu, ton: cmj, frm: arp, bss: [frb, scl], lvl: ela }
   # p. 58
   # - { id: pmhy, tit: Етюд A minor,
   #     com: Г. Ковтун, src: BSN1985,
