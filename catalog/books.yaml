@@ -251,8 +251,10 @@ books:
         # FBBSC1978
         kbmk, a4cg, g2e5, jytx, 0lly
       ] },
-      # { tit: Інтервали, pieces: [ # Intervals
-      # ] },
+      { tit: Інтервали, pieces: [ # Intervals
+        # BSN1985
+        pmhy
+      ] },
       { tit: Акорди, pieces: [ # Chords
         # FBB2BZ1981
         y4zx,

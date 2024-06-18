@@ -38,7 +38,6 @@ pieces:
   - { id: g2f2, tit: Етюд C major,
       com: Д. Левидова, src: BSN1985,
       org: rus, sty: cus, gnr: stu, ton: cmj, frm: arp, bss: [frb, scl], lvl: ela }
-  # p. 58
-  # - { id: pmhy, tit: Етюд A minor,
-  #     com: Г. Ковтун, src: BSN1985,
-  #     org: rus, sty: cus, gnr: stu, ton: ami, frm: [scl, tu3], bss: [frb, in5, in6], lvl: ela }
+  - { id: pmhy, tit: Етюд A minor,
+      com: Г. Ковтун, src: BSN1985,
+      org: rus, sty: cus, gnr: stu, ton: ami, frm: [scl, tu3], bss: [frb, in5, in6], lvl: ela }
