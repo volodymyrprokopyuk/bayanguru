@@ -43,6 +43,6 @@ pieces:
       com: Л. Гаврилов, src: PBS1AG1970,
       org: rus, sty: cus, gnr: sng, ton: emi, frm: [mel, dot], bss: frb, lvl: ela }
   # BSN1985
-  - { id: p41m, tit: Русская песня, sub: rusfs,
+  - { id: p41m, tit: Русская песня,
       com: Т. Салютринская, src: BSN1985,
       org: rus, sty: cus, gnr: sng, ton: ami, frm: mel, bss: frb, lvl: ela }

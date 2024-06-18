@@ -52,7 +52,7 @@
 
   e='4 e e | a2 a4 | gis gis gis | cis2 cis4 |
   d=''4 b a | b gis fis | ais2. | b4 a fis |
-  e='2. | a4 fis e | fis2 gis4 | a fis e | gis fis gis | a='2. |
+  e='2. | a4 fis e | fis2 gis4 | a fis e | gis fis gis | a='2. \clef bass |
   \keyCancelChangeBar
   \key b \minor
 }

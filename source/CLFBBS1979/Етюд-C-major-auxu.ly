@@ -30,6 +30,6 @@
   c=8( d e f g4) | cis,8( d e d cis4) |
   d=8( e fis g a4) | dis,8( e fis e dis4) |
   e=8( fis gis a b4) | a8( b cis d e4) |
-  d='8( e f4)-. <g, f'>-. | <a= c>2. |
+  d='8( e f4)-. <g, f'>-. | <c=' e>2. |
 }
 {{ end }}
