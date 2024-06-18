@@ -55,7 +55,6 @@ pieces:
   - { id: b8ah, tit: Ой сад-виноград, sub: ukrfs,
       src: BSN1985,
       org: ukr, sty: flk, gnr: sng, ton: gmj, frm: mel, bss: frb, lvl: ela }
-  # p. 49
-  # - { id: 0q92, tit: Мій метелик, sub: ukrfs,
-  #     src: BSN1985,
-  #     org: ukr, sty: flk, gnr: sng, ton: cmj, frm: mel, bss: frb, lvl: ela }
+  - { id: 0q92, tit: Мій метелик, sub: ukrfs,
+      src: BSN1985,
+      org: ukr, sty: flk, gnr: sng, ton: cmj, frm: mel, bss: frb, lvl: ela }
