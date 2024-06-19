@@ -23,7 +23,7 @@
   \clef bass
   \key g \major
   g=8-\frBass <b d>8 8 g | b a g b | \rep 2 { e,=8 <g c> c, <g' c> | b a g b= | }
-  c='8 cis d c | <g b> d <g b> f= | e <a c>8 8 e | d <g b>8 8 d |
+  c='8 cis d c | <g b> d <g b> f | e <a c>8 8 e | d <g b>8 8 d |
   fis=8 <c' d> d, <c' d> | d, <g b>8 8 f | g-> <b d>-> <g= b d>4-> |
 }
 {{ end }}
