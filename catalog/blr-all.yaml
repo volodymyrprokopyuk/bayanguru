@@ -43,7 +43,6 @@ pieces:
       arr: А. Талакин, src: BSA1983,
       org: blr, sty: flk, gnr: sng, ton: gmi, frm: [vo2, in3], bss: [frb, stb], lvl: elb }
   # BSN1985
-  # p. 63
-  # - { id: f3gw, tit: Крижачок, sub: blrfs,
-  #     arr: В. Накапкин, src: BSN1985,
-  #     org: blr, sty: flk, gnr: sng, ton: gmj, frm: mel, bss: [frb, in3], lvl: elb }
+  - { id: f3gw, tit: Крижачок, sub: blrfd,
+      arr: В. Накапкин, src: BSN1985,
+      org: blr, sty: flk, gnr: sng, ton: gmj, frm: mel, bss: [frb, in3], lvl: elb }
