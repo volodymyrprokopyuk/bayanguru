@@ -46,3 +46,6 @@ pieces:
   - { id: p41m, tit: Русская песня,
       com: Т. Салютринская, src: BSN1985,
       org: rus, sty: cus, gnr: sng, ton: ami, frm: mel, bss: frb, lvl: ela }
+  - { id: hzh3, tit: Как под яблонькой, sub: rusfs,
+      src: BSN1985,
+      org: rus, sty: flk, gnr: sng, ton: gmj, frm: mel, bss: frb, lvl: ela }
