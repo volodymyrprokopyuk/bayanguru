@@ -1,6 +1,19 @@
 %YAML 1.1
 ---
 pieces:
+  # BSN1985
+  # p. 79
+  # - { id: tezj, tit: Танец,
+  #     com: В. Куканов, src: BSN1985,
+  #     org: rus, sty: cus, gnr: dnc, ton: ami, frm: [mel, dot], bss: stb, lvl: ela }
+  # p. 79
+  # - { id: b8nm, tit: Пьеса,
+  #     com: Р. Шайхутдинов, src: BSN1985,
+  #     org: rus, sty: cus, gnr: pie, ton: fmj, frm: [mel, dot], bss: stb, lvl: ela }
+  # p. 81
+  # - { id: kg0e, tit: Пьеса,
+  #     src: BSN1985,
+  #     org: rus, sty: cus, gnr: pie, ton: emi, frm: mel, bss: stb, lvl: ela }
   # Free bass
   # FBBSC1978
   - { id: v2kv, tit: На горе-то калина, sub: rusfs,
