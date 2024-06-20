@@ -44,7 +44,6 @@ pieces:
   - { id: bmtx, tit: Етюд G major,
       com: М. Любарський, src: BSN1985,
       org: ukr, sty: cus, gnr: stu, ton: gmj, frm: scl, bss: [frb, scl], lvl: ela }
-  # p. 71
-  # - { id: 13ny, tit: Етюд D minor,
-  #     com: В. Москвичев, src: BSN1985,
-  #     org: rus, sty: cus, gnr: stu, ton: dmi, frm: scl, bss: [frb, cr5], lvl: elb }
+  - { id: 13ny, tit: Етюд D minor,
+      com: В. Москвичев, src: BSN1985,
+      org: rus, sty: cus, gnr: stu, ton: dmi, frm: scl, bss: [frb, cr5], lvl: elb }
