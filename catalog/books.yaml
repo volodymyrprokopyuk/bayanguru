@@ -225,7 +225,7 @@ books:
         # PBS1AG1970
         dc3s,
         # BSN1985
-        p41m, hzh3, 1s8b,
+        p41m, hzh3, 1s8b, sxsn,
       ] }
   - { id: sfr1, tit: Вибрані етюди, sub: для готово-виборного баяна,
       sections: [

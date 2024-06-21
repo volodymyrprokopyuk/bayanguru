@@ -38,3 +38,9 @@ pieces:
   - { id: isnd, tit: Краков'як, sub: polfd,
       arr: М. Чайкін, src: BTBC1936,
       org: pol, sty: flk, gnr: dnc, ton: gmj, frm: [dot, syn], bss: stb, lvl: ela }
+  # School
+  # BSN1985
+  # p. 94
+  # - { id: l6mm, tit: На добраніч, sub: czefs,
+  #     arr: В. Куканов, src: BSN1985,
+  #     org: cze, sty: flk, gnr: lul, ton: gmi, frm: [cr5, syn], bss: [stb, pub], lvl: elb }

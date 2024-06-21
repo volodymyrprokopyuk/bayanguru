@@ -1,12 +1,14 @@
 %YAML 1.1
 ---
 pieces:
+  # School
   # BSN1985
   # p. 92
   # - { id: w1pp, tit: Етюд C major,
   #     com: Л. Шітте, src: BSN1985,
   #     org: dnk, sty: cls, gnr: stu, ton: cmj, frm: scl, bss: stb, lvl: ela }
   # Free bass
+  # School
   # FBBSC1978
   - { id: kbmk, tit: Етюд C major,
       com: К. Гурліт, src: FBBSC1978,
