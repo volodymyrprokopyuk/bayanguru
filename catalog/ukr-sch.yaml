@@ -58,10 +58,9 @@ pieces:
   - { id: 0q92, tit: Мій метелик, sub: ukrfs,
       src: BSN1985,
       org: ukr, sty: flk, gnr: sng, ton: cmj, frm: mel, bss: frb, lvl: ela }
-  # p. 83
-  # - { id: 9shc, tit: Дідусева оповідь,
-  #     com: М. Любарський, src: BSN1985,
-  #     org: ukr, sty: cus, gnr: pie, ton: ami, frm: mel, bss: frb, lvl: ela }
+  - { id: 9shc, tit: Дідусева оповідь,
+      com: М. Любарський, src: BSN1985,
+      org: ukr, sty: cus, gnr: pie, ton: ami, frm: mel, bss: frb, lvl: ela }
   # p. 102
   # - { id: 8fvz, tit: Інвенція,
   #     com: Ю. Щуровський, src: BSN1985,
