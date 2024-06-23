@@ -72,7 +72,6 @@ pieces:
   - { id: sxsn, tit: Ивушка, sub: rusfs,
       arr: В. Павленко, src: BSN1985,
       org: rus, sty: flk, gnr: sng, ton: emi, frm: mel, bss: frb, lvl: ela }
-  # p. 90
-  # - { id: ok2r, tit: Напев,
-  #     com: П. Лондонов, src: BSN1985,
-  #     org: rus, sty: cus, gnr: pie, ton: emi, frm: mel, bss: frb, lvl: ela }
+  - { id: ok2r, tit: Напев,
+      com: П. Лондонов, src: BSN1985,
+      org: rus, sty: cus, gnr: pie, ton: emi, frm: mel, bss: frb, lvl: ela }
