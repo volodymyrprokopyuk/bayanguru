@@ -10,7 +10,7 @@
 
 {{ define "rightHand" }}
 \relative {
-  \tempo "Tempo di valzer"
+  \tempo "Tempo di valse"
   \clef treble
   \key c \major
   \time 3/4
