@@ -65,3 +65,7 @@ pieces:
   # - { id: 8fvz, tit: Інвенція,
   #     com: Ю. Щуровський, src: BSN1985,
   #     org: ukr, sty: cus, gnr: pie, ton: emi, frm: mel, bss: frb, lvl: elb }
+  # p. 104
+  # - { id: sgu3, tit: Вальс,
+  #     com: А. Онуфрієнко, src: BSN1985,
+  #     org: ukr, sty: cus, gnr: vls, ton: amj, frm: mel, bss: frb, lvl: elb }
