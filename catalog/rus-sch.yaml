@@ -79,3 +79,7 @@ pieces:
   - { id: ok2r, tit: Напев,
       com: П. Лондонов, src: BSN1985,
       org: rus, sty: cus, gnr: pie, ton: emi, frm: mel, bss: frb, lvl: ela }
+  # p. 111
+  # - { id: 9lr9, tit: Грустное настроение,
+  #     com: В. Темнов, src: BSN1985,
+  #     org: rus, sty: cus, gnr: pie, ton: [gmi, dmi], frm: cr5, bss: frb, lvl: elb }

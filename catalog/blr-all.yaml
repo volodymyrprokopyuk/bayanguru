@@ -19,6 +19,12 @@ pieces:
   - { id: 2q9x, tit: Крижaчок, sub: blrfd,
       arr: А. Стоянов, src: BTB1989,
       org: blr, sty: flk, gnr: dnc, ton: cmj, frm: var, bss: stb, lvl: elb }
+  # School
+  # BSN1985
+  # p. 122
+  # - { id: i349, tit: А у саді річенька, sub: blrfd,
+  #     arr: В. Бухвостов, src: BSN1985,
+  #     org: blr, sty: flk, gnr: sng, ton: gmi, frm: [vo2, var, in6], bss: stb, lvl: elc }
   # Course
   # TYBC2B1971
   - { id: vhri, tit: Микита, sub: blrfd,
