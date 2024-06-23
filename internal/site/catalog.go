@@ -358,7 +358,7 @@ func keyByGnr(piece cat.Piece) []string {
   switch piece.Gnr {
   case "sng", "chd", "lul", "mil", "pry", "rmc", "ves":
     key = "song"
-  case "dnc", "gop", "koz", "mrc", "plk", "mzr", "tng", "vls":
+  case "dnc", "gop", "koz", "mrc", "plk", "mzr", "qdr", "tng", "vls":
     key = "dance"
   case "pie", "gyp":
     key = "piece"

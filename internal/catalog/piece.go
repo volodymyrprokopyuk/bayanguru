@@ -315,7 +315,7 @@ var (
   validSty = regexp.MustCompile(`^flk|cus|cls$`)
   gnrParts = []string{
     `^sng|chd|lul|mil|pry|rmc|ves`,
-    `|dnc|gop|koz|mrc|plk|tng|vls`,
+    `|dnc|gop|koz|mrc|plk|mzr|qdr|tng|vls`,
     `|pie|gyp|stu$`,
   }
   validGnr = regexp.MustCompile(strings.Join(gnrParts, ""))

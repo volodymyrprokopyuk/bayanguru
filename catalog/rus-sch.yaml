@@ -18,6 +18,10 @@ pieces:
   # - { id: p93x, tit: Полька-шутка,
   #     com: В. Накапкин, src: BSN1985,
   #     org: rus, sty: cus, gnr: plk, ton: fmi, frm: [mel, acc], bss: stb, lvl: elb }
+  # p. 111
+  # - { id: b0pe, tit: Веселая кадриль,
+  #     com: В. Накапкин, src: BSN1985,
+  #     org: rus, sty: cus, gnr: qdr, ton: [eesmj, cmi], frm: [in3, in6, tri], bss: stb, lvl: elb }
   # Free bass
   # FBBSC1978
   - { id: v2kv, tit: На горе-то калина, sub: rusfs,
