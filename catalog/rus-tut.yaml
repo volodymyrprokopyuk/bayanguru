@@ -7,7 +7,7 @@ pieces:
       org: rus, sty: cus, gnr: sng, ton: emi, frm: mel, bss: stb, lvl: ela }
   - { id: 87ko, tit: Яблочко, sub: rusfd,
       arr: М. Чайкін, src: BTBC1936,
-      org: rus, sty: flk, gnr: dnc, ton: dmi, frm: [mel, syn], bss: stb, lvl: ela }
+      org: rus, sty: flk, gnr: dnc, ton: dmi, frm: syn, bss: stb, lvl: ela }
   - { id: p7el, tit: Варяг, sub: rusfs,
       arr: М. Чайкін, art: ipr, src: BTBC1936,
       org: rus, sty: flk, gnr: sng, ton: eesmj, frm: dot, bss: stb, lvl: ela }
@@ -77,7 +77,7 @@ pieces:
       org: rus, sty: cus, gnr: sng, ton: dmi, frm: [in3, dot], bss: stb, lvl: elb }
   - { id: 8pvl, tit: Уральская плясовая,
       arr: Л. Захарова, art: ipr, src: BTB1978,
-      org: rus, sty: flk, gnr: dnc, ton: [amj, emj], frm: [mel, dot], bss: stb, lvl: ela }
+      org: rus, sty: flk, gnr: dnc, ton: [amj, emj], frm: dot, bss: stb, lvl: ela }
   - { id: 5rl3, tit: Барыня, sub: rusfd,
       arr: Л. Захарова, art: ipr, src: BTB1978,
       org: rus, sty: flk, gnr: dnc, ton: gmj, frm: [var, jmp], bss: stb, lvl: elb }

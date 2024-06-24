@@ -13,7 +13,7 @@ pieces:
       org: rus, sty: cus, gnr: chd, ton: gmj, frm: mel, bss: stb, lvl: ela }
   - { id: b383, tit: При долинушке калинушка стоит, sub: rusfs,
       src: B0D1973,
-      org: rus, sty: flk, gnr: sng, ton: cmj, frm: [mel, jmp], bss: stb, lvl: ela }
+      org: rus, sty: flk, gnr: sng, ton: cmj, frm: jmp, bss: stb, lvl: ela }
   - { id: vt18, tit: На горе-то калина, sub: rusfs,
       src: B0D1973,
       org: rus, sty: flk, gnr: sng, ton: gmj, frm: mel, bss: stb, lvl: ela }
@@ -170,4 +170,4 @@ pieces:
       org: rus, sty: cus, gnr: pie, ton: dmi, frm: mel, bss: frb, lvl: ela }
   - { id: w7lt, tit: Ничто в полюшке не колышется, sub: rusfs,
       arr: А. Зубарев, src: FBB3BZ1982,
-      org: rus, sty: flk, gnr: sng, ton: emi, frm: [mel, in3], bss: frb, lvl: elb }
+      org: rus, sty: flk, gnr: sng, ton: emi, frm: in3, bss: frb, lvl: elb }

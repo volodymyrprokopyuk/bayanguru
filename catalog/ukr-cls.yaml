@@ -7,19 +7,19 @@ pieces:
       org: ukr, sty: flk, gnr: sng, ton: ami, frm: mel, bss: stb, lvl: ela }
   - { id: 4ha8, tit: На вулиці скрипка грає, sub: ukrfs,
       src: B0D1973,
-      org: ukr, sty: flk, gnr: sng, ton: ami, frm: [mel, rep], bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: sng, ton: ami, frm: rep, bss: stb, lvl: ela }
   - { id: 7n13, tit: Веселі гуси, sub: ukrfs,
       src: B0D1973,
       org: ukr, sty: flk, gnr: chd, ton: cmj, frm: mel, bss: stb, lvl: ela }
   - { id: jnuj, tit: За городом качки пливуть, sub: ukrfs,
       src: B0D1973,
-      org: ukr, sty: flk, gnr: chd, ton: cmj, frm: [mel, rep], bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: chd, ton: cmj, frm: rep, bss: stb, lvl: ela }
   - { id: j6sq, tit: Грибок, sub: 'із збірника \"Гусельки\"',
       src: B0D1973,
       org: ukr, sty: flk, gnr: chd, ton: cmj, frm: mel, bss: stb, lvl: ela }
   - { id: fywu, tit: "Здрастуй, новий рік",
       com: М. Дремлюга, src: B0D1973,
-      org: ukr, sty: cus, gnr: chd, ton: cmj, frm: [mel, jmp], bss: stb, lvl: ela }
+      org: ukr, sty: cus, gnr: chd, ton: cmj, frm: jmp, bss: stb, lvl: ela }
   - { id: 1sxc, tit: Казав мені батько, sub: ukrfs,
       src: B0D1973,
       org: ukr, sty: flk, gnr: sng, ton: cmj, frm: mel, bss: stb, lvl: ela }
@@ -31,7 +31,7 @@ pieces:
       org: ukr, sty: flk, gnr: chd, ton: ami, frm: mel, bss: stb, lvl: ela }
   - { id: kakw, tit: Дощик, sub: ukrfs,
       src: B0D1973,
-      org: ukr, sty: flk, gnr: sng, ton: emi, frm: [mel, rep], bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: sng, ton: emi, frm: rep, bss: stb, lvl: ela }
   - { id: 6msd, tit: У сусіда хата біла, sub: ukrfs,
       src: B0D1973,
       org: ukr, sty: flk, gnr: sng, ton: emi, frm: mel, bss: stb, lvl: ela }
@@ -40,7 +40,7 @@ pieces:
       org: ukr, sty: flk, gnr: sng, ton: [gmj, emi], frm: mel, bss: stb, lvl: ela }
   - { id: xi84, tit: Їхав козак за Дунай, sub: ukrfs,
       src: B0D1973,
-      org: ukr, sty: flk, gnr: sng, ton: ami, frm: [mel, rep], bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: sng, ton: ami, frm: rep, bss: stb, lvl: ela }
   - { id: iyb2, tit: Настала зима,
       com: М. Дремлюга, src: B0D1973,
       org: ukr, sty: cus, gnr: chd, ton: cmj, frm: mel, bss: stb, lvl: ela }
@@ -49,7 +49,7 @@ pieces:
       org: ukr, sty: flk, gnr: sng, ton: ami, frm: mel, bss: stb, lvl: ela }
   - { id: f9yf, tit: "По дорозі жук, жук", sub: ukrfs,
       src: B0D1973,
-      org: ukr, sty: flk, gnr: chd, ton: fmj, frm: [mel, rep], bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: chd, ton: fmj, frm: rep, bss: stb, lvl: ela }
   - { id: 41tf, tit: Ой під горою, sub: ukrfs,
       src: B0D1973,
       org: ukr, sty: flk, gnr: sng, ton: fmj, frm: mel, bss: stb, lvl: ela }
@@ -79,7 +79,7 @@ pieces:
       org: ukr, sty: cus, gnr: dnc, ton: [cmj, ami], frm: mel, bss: stb, lvl: ela }
   - { id: rrag, tit: Курочка,
       com: М. Любарський, src: B0D1973,
-      org: ukr, sty: cus, gnr: chd, ton: ami, frm: [mel, jmp], bss: [stb, pub], lvl: ela }
+      org: ukr, sty: cus, gnr: chd, ton: ami, frm: jmp, bss: [stb, pub], lvl: ela }
   # B0DU1982
   - { id: zo21, tit: Ой лопнув обруч, sub: ukrfs,
       src: B0DU1982,
@@ -95,7 +95,7 @@ pieces:
       org: ukr, sty: flk, gnr: koz, ton: cmj, frm: mel, bss: stb, lvl: ela }
   - { id: ry3w, tit: Гуцульський танець,
       com: К. Домінчен, src: B0DU1982,
-      org: ukr, sty: flk, gnr: dnc, ton: ami, frm: [mel, rep], bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: dnc, ton: ami, frm: rep, bss: stb, lvl: ela }
   - { id: m6m8, tit: Козачок,
       com: Л. Ревуцький, src: B0DU1982,
       org: ukr, sty: flk, gnr: koz, ton: ami, frm: mel, bss: stb, lvl: ela }
@@ -108,34 +108,34 @@ pieces:
   # B1AK1979
   - { id: 8mwk, tit: Лисичка,
       com: М. Лисенко, src: B1AK1979,
-      org: ukr, sty: flk, gnr: chd, ton: cmj, frm: [mel, rep], bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: chd, ton: cmj, frm: rep, bss: stb, lvl: ela }
   - { id: tonl, tit: "Ви музики, хлопці добрі", sub: ukrfs,
       src: B1AK1979,
-      org: ukr, sty: flk, gnr: sng, ton: [cmj, ami], frm: [mel, rep], bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: sng, ton: [cmj, ami], frm: rep, bss: stb, lvl: ela }
   - { id: a0xs, tit: "Ой Василю, Василечку",
       com: В. Верховинець, src: B1AK1979,
-      org: ukr, sty: flk, gnr: sng, ton: fmj, frm: [mel, rep], bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: sng, ton: fmj, frm: rep, bss: stb, lvl: ela }
   - { id: 11a0, tit: Соловейко,
       com: А. Філіпенко, src: B1AK1979,
       org: ukr, sty: flk, gnr: chd, ton: gmj, frm: mel, bss: stb, lvl: ela }
   - { id: 79hk, tit: Галя по садочку ходила, sub: ukrfs,
       src: B1AK1979,
-      org: ukr, sty: flk, gnr: chd, ton: gmj, frm: [mel, rep], bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: chd, ton: gmj, frm: rep, bss: stb, lvl: ela }
   - { id: angm, tit: "По дорозі жук, жук", sub: ukrfs,
       src: B1AK1979,
-      org: ukr, sty: flk, gnr: chd, ton: fmj, frm: [mel, rep], bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: chd, ton: fmj, frm: rep, bss: stb, lvl: ela }
   - { id: qmvs, tit: Пісенька,
       com: К. Мясков, src: B1AK1979,
-      org: ukr, sty: cus, gnr: chd, ton: besmj, frm: [mel, rep], bss: stb, lvl: ela }
+      org: ukr, sty: cus, gnr: chd, ton: besmj, frm: rep, bss: stb, lvl: ela }
   - { id: 59gv, tit: Пісня рака, sub: 'з дитячої опери \"Коза-дереза\"',
       com: М. Лисенко, src: B1AK1979,
-      org: ukr, sty: flk, gnr: chd, ton: besmj, frm: [mel, rep], bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: chd, ton: besmj, frm: rep, bss: stb, lvl: ela }
   - { id: yn16, tit: "Ой джигуне, джигуне", sub: ukrfs,
       src: B1AK1979,
       org: ukr, sty: flk, gnr: sng, ton: dmi, frm: mel, bss: stb, lvl: ela }
   - { id: c1z5, tit: "Ой за гаєм, гаєм", sub: ukrfs,
       src: B1AK1979,
-      org: ukr, sty: flk, gnr: sng, ton: dmj, frm: [mel, rep], bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: sng, ton: dmj, frm: rep, bss: stb, lvl: ela }
   - { id: tx5o, tit: Полька,
       com: А. Иванов, src: B1AK1979,
       org: ukr, sty: flk, gnr: plk, ton: cmj, frm: mel, bss: stb, lvl: ela }
@@ -144,7 +144,7 @@ pieces:
       org: ukr, sty: flk, gnr: chd, ton: gmj, frm: mel, bss: stb, lvl: ela }
   - { id: 6kce, tit: Пісня вовчика, sub: 'з дитячої опери \"Коза-дереза\"',
       com: М. Лисенко, src: B1AK1979,
-      org: ukr, sty: flk, gnr: chd, ton: fmj, frm: [mel, jmp], bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: chd, ton: fmj, frm: jmp, bss: stb, lvl: ela }
   - { id: x880, tit: Будемо космонавтами,
       com: К. Мясков, src: B1AK1979,
       org: ukr, sty: cus, gnr: chd, ton: gmj, frm: mel, bss: stb, lvl: ela }
@@ -171,7 +171,7 @@ pieces:
       org: ukr, sty: flk, gnr: sng, ton: cmj, frm: mel, bss: stb, lvl: ela }
   - { id: z48n, tit: На вулиці скрипка грає, sub: ukrfs,
       src: B1AK1979,
-      org: ukr, sty: flk, gnr: sng, ton: dmi, frm: [mel, rep], bss: stb, lvl: ela }
+      org: ukr, sty: flk, gnr: sng, ton: dmi, frm: rep, bss: stb, lvl: ela }
   - { id: 5e6l, tit: Полька,
       src: B1AK1979,
       org: ukr, sty: flk, gnr: plk, ton: besmj, frm: in3, bss: stb, lvl: ela }
@@ -212,7 +212,7 @@ pieces:
       org: ukr, sty: flk, gnr: sng, ton: [gmj, emi], frm: in3, bss: stb, lvl: elb }
   - { id: oz96, tit: Сумна пісенька,
       com: К. Мясков, src: B2AK1979,
-      org: ukr, sty: cus, gnr: chd, ton: gmi, frm: [mel, jmp], bss: stb, lvl: elb }
+      org: ukr, sty: cus, gnr: chd, ton: gmi, frm: jmp, bss: stb, lvl: elb }
   - { id: zieh, tit: Жартівлива пісенька,
       com: К. Мясков, src: B2AK1979,
       org: ukr, sty: cus, gnr: chd, ton: fmj, frm: in3, bss: stb, lvl: elb }
@@ -267,7 +267,7 @@ pieces:
       org: ukr, sty: flk, gnr: sng, ton: ami, frm: var, bss: stb, lvl: elb }
   - { id: v8ec, tit: Ведмідь,
       com: К. Мясков, src: B2AK1987,
-      org: ukr, sty: cus, gnr: chd, ton: cmi, frm: [mel, acc], bss: pub, lvl: elb }
+      org: ukr, sty: cus, gnr: chd, ton: cmi, frm: acc, bss: pub, lvl: elb }
   - { id: w5ba, tit: Дивлюсь я на небо, sub: ukrfs,
       arr: А. Иванов, src: B2AK1987,
       org: ukr, sty: flk, gnr: sng, ton: emi, frm: mel, bss: stb, lvl: elb }
@@ -276,7 +276,7 @@ pieces:
       org: ukr, sty: cus, gnr: chd, ton: ami, frm: [in3, cr5], bss: stb, lvl: elb }
   - { id: i11j, tit: Бджілка,
       com: К. Мясков, src: B2AK1987,
-      org: ukr, sty: cus, gnr: chd, ton: gmj, frm: [mel, acc, jmp], bss: stb, lvl: elb }
+      org: ukr, sty: cus, gnr: chd, ton: gmj, frm: [acc, jmp], bss: stb, lvl: elb }
   - { id: 9hwt, tit: Танець,
       com: І. Беркович, src: B2AK1987,
       org: ukr, sty: cus, gnr: dnc, ton: [bmi, dmj], frm: mel, bss: stb, lvl: elb }
@@ -285,7 +285,7 @@ pieces:
       org: ukr, sty: flk, gnr: koz, ton: [gmj, gmi], frm: [var, in3, acc], bss: stb, lvl: elb }
   - { id: mf7s, tit: Дитяча полька,
       com: М. Глинка, src: B2AK1987,
-      org: ukr, sty: flk, gnr: plk, ton: [gmi, fmj, besmj], frm: [mel, jmp], bss: stb, lvl: elb }
+      org: ukr, sty: flk, gnr: plk, ton: [gmi, fmj, besmj], frm: jmp, bss: stb, lvl: elb }
   - { id: zykv, tit: Зайчик, sub: ukrfs,
       src: B2AK1987,
       org: ukr, sty: flk, gnr: chd, ton: amj, frm: [vo2, var, in3], bss: stb, lvl: elc }
@@ -297,13 +297,13 @@ pieces:
       org: ukr, sty: flk, gnr: sng, ton: gmj, frm: [var, in3, cr5], bss: [stb, pub], lvl: elc }
   - { id: btcu, tit: Полька,
       com: М. Глинка, src: B2AK1987,
-      org: ukr, sty: flk, gnr: plk, ton: cmj, frm: [mel, acc, jmp], bss: stb, lvl: elb }
+      org: ukr, sty: flk, gnr: plk, ton: cmj, frm: [acc, jmp], bss: stb, lvl: elb }
   - { id: nev4, tit: Вербовая дощечка, sub: ukrfs,
       src: B2AK1987,
       org: ukr, sty: flk, gnr: sng, ton: emi, frm: [vo2, var, cr5], bss: [stb, pub], lvl: elc }
   - { id: foaz, tit: Зимонька,
       com: К. Мясков, src: B2AK1987,
-      org: ukr, sty: cus, gnr: chd, ton: gmj, frm: [mel, acc], bss: stb, lvl: elb }
+      org: ukr, sty: cus, gnr: chd, ton: gmj, frm: acc, bss: stb, lvl: elb }
   - { id: f45r, tit: Прелюд,
       com: К. Мясков, src: B2AK1987,
       org: ukr, sty: cus, gnr: pie, ton: emi, frm: in3, bss: stb, lvl: elb }
@@ -327,19 +327,19 @@ pieces:
       org: ukr, sty: cus, gnr: chd, ton: emi, frm: mel, bss: frb, lvl: ela }
   - { id: pye7, tit: У народному дусі,
       com: Ю. Щуровський, src: FBB1BZ1980,
-      org: ukr, sty: cus, gnr: pie, ton: dmj, frm: [mel, dot], bss: frb, lvl: ela }
+      org: ukr, sty: cus, gnr: pie, ton: dmj, frm: dot, bss: frb, lvl: ela }
   - { id: o9do, tit: На сонячній галявинці,
       com: Ю. Щуровський, src: FBB1BZ1980,
       org: ukr, sty: cus, gnr: pie, ton: dmi, frm: mel, bss: frb, lvl: ela }
   - { id: wape, tit: Пісня за селом,
       com: Ю. Щуровський, src: FBB1BZ1980,
-      org: ukr, sty: cus, gnr: sng, ton: emi, frm: [mel, dot], bss: frb, lvl: ela }
+      org: ukr, sty: cus, gnr: sng, ton: emi, frm: dot, bss: frb, lvl: ela }
   - { id: dsj8, tit: Полечка,
       com: В. Власов, src: FBB1BZ1980,
       org: ukr, sty: flk, gnr: plk, ton: dmi, frm: mel, bss: frb, lvl: ela }
   - { id: c1dx, tit: "Ой не ходи, Грицю",
       arr: М. Різоль, src: FBB1BZ1980,
-      org: ukr, sty: flk, gnr: sng, ton: ami, frm: [mel, dot], bss: [frb, dot], lvl: ela }
+      org: ukr, sty: flk, gnr: sng, ton: ami, frm: dot, bss: [frb, dot], lvl: ela }
   # FBB2BZ1981
   - { id: qxub, tit: Танець урожаю,
       com: Т. Шутенко, src: FBB2BZ1981,
@@ -352,10 +352,10 @@ pieces:
       org: ukr, sty: flk, gnr: sng, ton: fmj, frm: in3, bss: frb, lvl: ela }
   - { id: a5cv, tit: Полька,
       com: Г. Шевчук, src: FBB2BZ1981,
-      org: ukr, sty: cus, gnr: plk, ton: cmj, frm: [mel, jmp], bss: [frb, in3, jmp], lvl: elb }
+      org: ukr, sty: cus, gnr: plk, ton: cmj, frm: jmp, bss: [frb, in3, jmp], lvl: elb }
   - { id: y632, tit: Ніч яка місячна,
       arr: М. Різоль, src: FBB2BZ1981,
-      org: ukr, sty: flk, gnr: sng, ton: emi, frm: [mel, in3], bss: frb, lvl: elb }
+      org: ukr, sty: flk, gnr: sng, ton: emi, frm: in3, bss: frb, lvl: elb }
   - { id: 8o6w, tit: "Ой у полі, ой у полі",
       arr: М. Різоль, src: FBB2BZ1981,
       org: ukr, sty: flk, gnr: sng, ton: ami, frm: [in3, cr5, dot], bss: frb, lvl: ela }
@@ -383,7 +383,7 @@ pieces:
       org: ukr, sty: cus, gnr: lul, ton: ami, frm: [vo2, cr5], bss: frb, lvl: ela }
   - { id: yeld, tit: Сумна пісенька,
       com: К. Мясков, src: FBB3BZ1982,
-      org: ukr, sty: cus, gnr: chd, ton: gmi, frm: [mel, jmp], bss: [frb, jmp], lvl: elb }
+      org: ukr, sty: cus, gnr: chd, ton: gmi, frm: jmp, bss: [frb, jmp], lvl: elb }
   - { id: onbv, tit: Пісня,
       com: І. Яшкевич, src: FBB3BZ1982,
       org: ukr, sty: cus, gnr: sng, ton: ami, frm: [vo2, cr5], bss: frb, lvl: ela }
@@ -395,4 +395,4 @@ pieces:
       org: ukr, sty: flk, gnr: koz, ton: [dmj, gmj], frm: [var, acc], bss: [vo2, frb, var, cr7], lvl: elc }
   - { id: u5b8, tit: Горобчик,
       com: А. Тихончук, src: FBB3BZ1982,
-      org: ukr, sty: cus, gnr: pie, ton: cmj, frm: [mel, tri], bss: frb, lvl: elb }
+      org: ukr, sty: cus, gnr: pie, ton: cmj, frm: tri, bss: frb, lvl: elb }

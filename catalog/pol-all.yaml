@@ -18,7 +18,7 @@ pieces:
       org: pol, sty: flk, gnr: dnc, ton: gmj, frm: mel, bss: stb, lvl: ela }
   - { id: 4zsm, tit: Чеський народний танець,
       src: B1AK1979,
-      org: cze, sty: flk, gnr: dnc, ton: gmj, frm: [mel, dot], bss: stb, lvl: ela }
+      org: cze, sty: flk, gnr: dnc, ton: gmj, frm: dot, bss: stb, lvl: ela }
   - { id: ipw4, tit: Маленька рибка, sub: czefs,
       src: B1AK1979,
       org: cze, sty: flk, gnr: sng, ton: dmj, frm: in3, bss: stb, lvl: ela }

@@ -5,11 +5,11 @@ pieces:
   # p. 79
   # - { id: tezj, tit: Танец,
   #     com: В. Куканов, src: BSN1985,
-  #     org: rus, sty: cus, gnr: dnc, ton: ami, frm: [mel, dot], bss: stb, lvl: ela }
+  #     org: rus, sty: cus, gnr: dnc, ton: ami, frm: dot, bss: stb, lvl: ela }
   # p. 79
   # - { id: b8nm, tit: Пьеса,
   #     com: Р. Шайхутдинов, src: BSN1985,
-  #     org: rus, sty: cus, gnr: pie, ton: fmj, frm: [mel, dot], bss: stb, lvl: ela }
+  #     org: rus, sty: cus, gnr: pie, ton: fmj, frm: dot, bss: stb, lvl: ela }
   # p. 81
   # - { id: kg0e, tit: Пьеса,
   #     src: BSN1985,
@@ -17,7 +17,7 @@ pieces:
   # p. 81
   # - { id: p93x, tit: Полька-шутка,
   #     com: В. Накапкин, src: BSN1985,
-  #     org: rus, sty: cus, gnr: plk, ton: fmi, frm: [mel, acc], bss: stb, lvl: elb }
+  #     org: rus, sty: cus, gnr: plk, ton: fmi, frm: acc, bss: stb, lvl: elb }
   # p. 111
   # - { id: b0pe, tit: Веселая кадриль,
   #     com: В. Накапкин, src: BSN1985,
@@ -32,7 +32,7 @@ pieces:
       org: rus, sty: cus, gnr: chd, ton: ami, frm: mel, bss: frb, lvl: ela }
   - { id: 8rvx, tit: Ивушка, sub: rusfs,
       arr: С. Чапкій, src: FBBSC1978,
-      org: rus, sty: flk, gnr: sng, ton: emi, frm: [mel, dot], bss: frb, lvl: ela }
+      org: rus, sty: flk, gnr: sng, ton: emi, frm: dot, bss: frb, lvl: ela }
   - { id: pouc, tit: То не ветер ветку клонит, sub: rusfs,
       arr: С. Чапкій, src: FBBSC1978,
       org: rus, sty: flk, gnr: sng, ton: emi, frm: mel, bss: frb, lvl: ela }
@@ -47,7 +47,7 @@ pieces:
       org: rus, sty: cus, gnr: pie, ton: bmi, frm: mel, bss: [frb, jmp], lvl: elb }
   - { id: uvv4, tit: "Вниз по матушке, по Волге", sub: rusfs,
       src: FBBSC1978,
-      org: rus, sty: flk, gnr: sng, ton: gmi, frm: [mel, in3], bss: [frb, in5], lvl: ela }
+      org: rus, sty: flk, gnr: sng, ton: gmi, frm: in3, bss: [frb, in5], lvl: ela }
   - { id: 7nrq, tit: Вальс,
       com: А. Грибоедов, arr: С. Чапкій, src: FBBSC1978,
       org: rus, sty: cus, gnr: vls, ton: [emi, gmj], frm: [vo2, cr5, jmp], bss: [vo2, frb, in3, cr5, jmp], lvl: elc }
@@ -62,7 +62,7 @@ pieces:
   # PBS1AG1970
   - { id: dc3s, tit: Песня,
       com: Л. Гаврилов, src: PBS1AG1970,
-      org: rus, sty: cus, gnr: sng, ton: emi, frm: [mel, dot], bss: frb, lvl: ela }
+      org: rus, sty: cus, gnr: sng, ton: emi, frm: dot, bss: frb, lvl: ela }
   # BSN1985
   - { id: p41m, tit: Русская песня,
       com: Т. Салютринская, src: BSN1985,
@@ -83,3 +83,8 @@ pieces:
   # - { id: 9lr9, tit: Грустное настроение,
   #     com: В. Темнов, src: BSN1985,
   #     org: rus, sty: cus, gnr: pie, ton: [gmi, dmi], frm: cr5, bss: frb, lvl: elb }
+  # p. 124
+  # - { id: fcch, tit: Ходила младешенька за водой, sub: rusfs,
+  #     arr: Н. Канаев, src: BSN1985,
+  #     org: rus, sty: flk, gnr: sng, ton: cismi, frm: [vo2, var], bss: [frb, var, pub], lvl: elc }
+  # p. 125 TODO
