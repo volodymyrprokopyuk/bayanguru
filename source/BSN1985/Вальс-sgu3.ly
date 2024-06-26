@@ -1,3 +1,7 @@
+{{ define "rh1" }}
+  r4 r {{ .a }} | r r <a b d>-- | b e,=,2 |
+{{ end }}
+
 {{ define "rightHand" }}
 \relative {
   \tempo "Tempo di valse"
@@ -25,5 +29,14 @@
 \relative {
   \clef bass
   \key a \major
+  {{ template "rh1" (w `<a,=, cis e>4---\frBass`) }} | a4.( b8 cis4) |
+  {{ template "rh1" (w `<a=, cis e>4--`) }} | cis'4( b cis=) |
+
+  d=4.( cis8 b4) | cis4.( b8 a4) | d e,2 | e'4 a,2 |
+  d=2( b4) | cis2( a4) | e'2( b4) | d'( cis b=) |
+
+  a=4 r <a cis e> | r r <a b d> | b e,2 | a4. b8 cis4 |
+  \duo { r4 <cis'=' e>4 4 | r <b d>4 4 | s2. | r4 <cis=' e>2 | }
+  { a=2. | a= | b4 e,2 | a=2. | }
 }
 {{ end }}
