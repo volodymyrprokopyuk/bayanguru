@@ -274,25 +274,30 @@ func indexPieces(siteDir, publicDir string) error {
   return pfCmd.Run()
 }
 
-func publishStyle(siteDir, publicDir string) error {
-  cwd, err := os.Getwd()
-  if err != nil {
-    return err
-  }
-  err = os.Chdir(siteDir)
-  if err != nil {
-    return err
-  }
-  defer func() {
-    _ = os.Chdir(cwd)
-  }()
-  styleFile := filepath.Join(publicDir, "style.css")
-  fmt.Printf("%v %v\n", sty.Org("publish"), sty.Lvl(styleFile))
-  styleFile = strings.Join(strings.Split(styleFile, "/")[1:], "/")
-  twCmd := exec.Command("bunx", "tailwindcss", "-o", styleFile)
+func publishStyle(siteDir, templateDir, publicDir string) error {
+  twConfig := filepath.Join(siteDir, "tailwind.config.js")
+  inStyle := filepath.Join(templateDir, "style.css")
+  outStyle := filepath.Join(publicDir, "tw.css")
+  fmt.Printf("%v %v\n", sty.Org("publish"), sty.Lvl(outStyle))
+  twCmd := exec.Command(
+    "bunx", "tailwindcss", "--config", twConfig,
+    "--input", inStyle, "--output", outStyle,
+  )
   twCmd.Stdout = os.Stdout
   twCmd.Stderr = os.Stderr
-  return twCmd.Run()
+  err := twCmd.Run()
+  if err != nil {
+    return err
+  }
+  minArgs := fmt.Sprintf(
+    "%[1]v/index.html %[1]v/tw.css %[1]v/piece/* %[1]v/catalog/*/*/*",
+    publicDir,
+  )
+  fmt.Printf("%v %v\n", sty.Org("minify"), sty.Lvl(minArgs))
+  minCmd := exec.Command("bash", "-c", "minify-html " + minArgs)
+  minCmd.Stdout = os.Stdout
+  minCmd.Stderr = os.Stderr
+  return minCmd.Run()
 }
 
 func catError(format string, args ...any) error {
@@ -344,9 +349,9 @@ func Publish(pc PublishCommand) error {
   if err != nil {
     return siteError("%v", err)
   }
-  // err = publishStyle(pc.SiteDir, pc.PublicDir)
-  // if err != nil {
-  //   return siteError("%v", err)
-  // }
+  err = publishStyle(pc.SiteDir, pc.TemplateDir, pc.PublicDir)
+  if err != nil {
+    return siteError("%v", err)
+  }
   return nil
 }
