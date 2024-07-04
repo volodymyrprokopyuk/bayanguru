@@ -369,29 +369,31 @@ func keyByGnr(piece cat.Piece) []string {
 }
 
 func keyByStu(piece cat.Piece) []string {
-  var stuFrm []string
-  switch cat.Bss(piece.Bss, piece.ID) {
-  case "stb", "pub":
-    stuFrm = piece.Frm
-  case "frb":
-    stuFrm = piece.Bss
-  }
   keys := make([]string, 0, 5)
-  if stuFrm[0] == "pub" {
-    keys = append(keys, "left-hand")
-  }
-  for _, frm := range stuFrm {
-    switch frm {
-    case "scl":
-      keys = append(keys, "scale")
-    case "arp":
-      keys = append(keys, "arpeggio")
-    case "in3", "in4", "in5", "in6", "in8":
-      keys = append(keys, "interval")
-    case "cr5", "cr7":
-      keys = append(keys, "chord")
-    case "vo2", "vo3":
-      keys = append(keys, "polyphony")
+  for _, bss := range piece.Bss {
+    var stuFrm []string
+    switch bss {
+    case "stb":
+      stuFrm = piece.Frm
+    case "pub":
+      stuFrm = piece.Frm
+      keys = append(keys, "left-hand")
+    case "frb":
+      stuFrm = piece.Bss
+    }
+    for _, frm := range stuFrm {
+      switch frm {
+      case "scl":
+        keys = append(keys, "scale")
+      case "arp":
+        keys = append(keys, "arpeggio")
+      case "in3", "in4", "in5", "in6", "in8":
+        keys = append(keys, "interval")
+      case "cr5", "cr7":
+        keys = append(keys, "chord")
+      case "vo2", "vo3":
+        keys = append(keys, "polyphony")
+      }
     }
   }
   if len(keys) == 0 {
