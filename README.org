@@ -14,6 +14,8 @@ yay -S ghostscript gsfonts fontforge t1utils texlive-{metapost,langcyrillic}
 yay -S caddy pagefind
 # install TailwindCSS
 bun install --no-save tailwindcss
+# Install HTML/CSS minifier
+yay -S minify-html-bin
 #+END_SRC
 
 ** Usage

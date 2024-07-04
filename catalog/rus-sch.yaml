@@ -22,6 +22,27 @@ pieces:
   # - { id: b0pe, tit: Веселая кадриль,
   #     com: В. Накапкин, src: BSN1985,
   #     org: rus, sty: cus, gnr: qdr, ton: [eesmj, cmi], frm: [in3, in6, tri], bss: stb, lvl: elb }
+  # BSO1981
+  # p. 27
+  # - { id: li0p, tit: Русская плясовая,
+  #     src: BSO1981,
+  #     org: rus, sty: flk, gnr: dnc, ton: cmj, frm: mel, bss: stb, lvl: ela }
+  # p. 34
+  # - { id: rrd4, tit: Лебедушка, sub: rusfs,
+  #     src: BSO1981,
+  #     org: rus, sty: flk, gnr: sng, ton: ami, frm: mel, bss: stb, lvl: ela }
+  # p. 34
+  # - { id: sssn, tit: "Ты поди, моя коровушка, домой", sub: rusfs,
+  #     src: BSO1981,
+  #     org: rus, sty: flk, gnr: sng, ton: ami, frm: mel, bss: stb, lvl: ela }
+  # p. 38
+  # - { id: wbhy, tit: "Как в лесу, лесу, лесочке", sub: rusfs,
+  #     src: BSO1981,
+  #     org: rus, sty: flk, gnr: sng, ton: dmi, frm: var, bss: stb, lvl: ela }
+  # p. 43
+  # - { id: o7ao, tit: На горе-то калина, sub: rusfs,
+  #     src: BSO1981,
+  #     org: rus, sty: flk, gnr: sng, ton: cmj, frm: var, bss: stb, lvl: ela }
   # Free bass
   # FBBSC1978
   - { id: v2kv, tit: На горе-то калина, sub: rusfs,
