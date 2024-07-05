@@ -10,17 +10,20 @@
             content="Sheet music library for bayan | Бібліотека нот для баяна" />
     {{ end }}
     <link type="image/svg+xml" href="/image/icon.svg" rel="icon" />
-    <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+    <!-- <link href="/pagefind/pagefind-ui.css" rel="stylesheet" /> -->
     <link href="/tw.css" rel="stylesheet" />
   </head>
   <body class="text-base font-light">
-    {{ block "header" . }}
-      <a href="/"><img src="/image/logo.svg" /></a>
-      <h1>Sheet music for bayan | Ноти для баяна</h1>
-      <search id="search"></search>
-    {{ end }}
-    {{ block "body" . }} {{ end }}
-    {{ block "footer" . }} {{ end }}
+    <main class="m-2">
+      {{ block "header" . }}
+        <a href="/"><img src="/image/logo.svg" class="mx-auto" /></a>
+        <h1 class="head1 text-center">Selected sheet music for bayan</h1>
+        <h1 class="head1 text-center">Вибрані ноти для баяна</h1>
+        <search id="search"></search>
+      {{ end }}
+      {{ block "body" . }} {{ end }}
+      {{ block "footer" . }} {{ end }}
+    </main>
     <script src="/pagefind/pagefind-ui.js"></script>
     <script>
       const translations = {
@@ -38,7 +41,6 @@
           autofocus: true,
           pageSize: 7, // number of results before Show more
           showSubResults: false, // a single result per page
-          showEmptyFilters: true, // always show filters
           sort: { lvl: "desc" },
           resetStyles: false, // inherit CSS from the site
           translations

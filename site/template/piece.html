@@ -12,39 +12,21 @@
       <div class="hidden">
         <h1 data-pagefind-meta="title">{{ .Tit }}</h1>
         <div data-pagefind-meta="id">{{ .ID }}</div>
-        <div data-pagefind-meta="com"
-             data-pagefind-filter="Composer | Копмозитор">{{ .Com }}</div>
-        <div data-pagefind-meta="arr"
-             data-pagefind-filter="Arranger | Обробка">{{ .Arr }}</div>
+        <div data-pagefind-meta="com">{{ .Com }}</div>
+        <div data-pagefind-meta="arr">{{ .Arr }}</div>
         <div data-pagefind-meta="art">{{ .Art }}</div>
-        <div data-pagefind-meta="org"
-             data-pagefind-filter="Origin | Країна">{{ .Org }}</div>
-        <div data-pagefind-meta="sty"
-             data-pagefind-filter="Style | Стиль">{{ .Sty }}</div>
-        <div data-pagefind-meta="gnr"
-             data-pagefind-filter="Genre | Жанр">{{ .Gnr }}</div>
+        <div data-pagefind-meta="org">{{ .Org }}</div>
+        <div data-pagefind-meta="sty">{{ .Sty }}</div>
+        <div data-pagefind-meta="gnr">{{ .Gnr }}</div>
         <div data-pagefind-meta="ton">{{ .Ton | join ` ` }}</div>
-        {{ range .Ton }}
-          <div data-pagefind-filter="Tonality | Тональність">{{ . }}</div>
-        {{ end }}
         <div data-pagefind-meta="frm">{{ .Frm | join ` ` }}</div>
-        {{ range .Frm }}
-          <div data-pagefind-filter="Form | Форма">{{ . }}</div>
-        {{ end }}
         <div data-pagefind-meta="bss">{{ .Bss | join ` ` }}</div>
-        {{ range .Bss }}
-          <div data-pagefind-filter="Bass | Бас">{{ . }}</div>
-        {{ end }}
-        <div data-pagefind-meta="lvl"
-             data-pagefind-filter="Level | Складність"
-             data-pagefind-sort="lvl">{{ .Lvl }}</div>
-        <div data-pagefind-meta="ens"
-             data-pagefind-filter="Ensemble | Ансамбль">{{ .Ens }}</div>
-        <div data-pagefind-meta="lyr"
-             data-pagefind-filter="Lyrics | Пісні">{{ .Lyr }}</div>
+        <div data-pagefind-meta="lvl" data-pagefind-sort="lvl">{{ .Lvl }}</div>
+        <div data-pagefind-meta="ens">{{ .Ens }}</div>
+        <div data-pagefind-meta="lyr">{{ .Lyr }}</div>
       </div>
-      <object type="application/pdf" data="/score/{{ .File }}.pdf"
-              width="1000" height="800">{{ .Tit }}</object>
+      <object id="score" type="application/pdf" data="/score/{{ .File }}.pdf"
+              class="w-full min-h-screen">{{ .Tit }}</object>
     </main>
   {{ end }}
 {{ end }}

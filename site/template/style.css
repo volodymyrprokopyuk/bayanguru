@@ -10,12 +10,9 @@
 
 @layer components {
   .head1 {
-    @apply text-2xl font-semibold
+    @apply text-xl font-semibold
   }
   .head2 {
-    @apply text-xl font-medium
-  }
-  .head3 {
     @apply text-lg font-medium
   }
   .link {
@@ -36,4 +33,31 @@
   .details {
     @apply font-normal px-2 py-1 rounded-lg border border-rose-600 bg-yellow-100
   }
+}
+
+.pagefind-ui__search-input {
+  display: block;
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 3px;
+}
+.pagefind-ui__search-input::placeholder {
+  color: gray;
+}
+.pagefind-ui__search-clear {
+  display: none;
+}
+.pagefind-ui__result-title {
+  font-weight: 500;
+}
+.pagefind-ui__result-excerpt {
+  display: none;
+}
+.pagefind-ui__result-tag {
+  display: inline-block;
+  font-size: 0.9rem;
+  background-color: lightyellow;
+  margin: 2px;
+  padding: 0px 4px;
+  border-radius: 10px;
 }
