@@ -338,10 +338,10 @@ func Publish(pc PublishCommand) error {
   if err != nil {
     return siteError("%v", err)
   }
-  err = publishPieces(pieces, pc.TemplateDir, pc.PublicDir)
-  if err != nil {
-    return siteError("%v", err)
-  }
+  // err = publishPieces(pieces, pc.TemplateDir, pc.PublicDir)
+  // if err != nil {
+  //   return siteError("%v", err)
+  // }
   // err = indexPieces(pc.SiteDir, pc.PublicDir)
   // if err != nil {
   //   return siteError("%v", err)

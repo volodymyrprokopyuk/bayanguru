@@ -1,52 +1,42 @@
 {{ define "body" }}
-  <h2 class="head2 text-center">Browse catalog | Перегляд каталогу</h2>
-  <ul>
-    <li class="link text-center">
-      <a href="/catalog/origin/ukrainian/1">By origin | За країною</a>
-    </li>
-    <li class="link text-center">
-      <a href="/catalog/style/folk/1">By style | За стилем</a>
-    </li>
-    <li class="link text-center">
-      <a href="/catalog/genre/song/1">By genre | За жанром</a>
-    </li>
-    <li class="link text-center">
-      <a href="/catalog/composer/composer/1">By composer | За композитором</a>
-    </li>
-    <li class="link text-center">
-      <a href="/catalog/study-stb/scale/1">Study STB | Етюди STB</a>
-    </li>
-    <li class="link text-center">
-      <a href="/catalog/study-frb/scale/1">Study FRB | Етюди FRB</a>
-    </li>
-    <li class="link text-center">
-      <a href="/catalog/bass/standard-bass/1">By bass | За басом</a>
-    </li>
-    <li class="link text-center">
-      <a href="/catalog/level/elementary-c/1">By level | За складністю</a>
-    </li>
-    <li class="link text-center">
-      <a href="/catalog/lyrics/lyrics/1">Lyrics | Пісні</a>
-    </li>
-  </ul>
-
-  <h2 class="head2 text-center">Catalog meta | Опис каталогу</h2>
-  <table class="text-sm">
+  <h2 class="head2">Browse catalog | Перегляд каталогу</h2>
+  <div>
+      <a href="/catalog/origin/ukrainian/1"
+         class="link inline-block min-w-72">By origin | За країною</a>
+      <a href="/catalog/style/folk/1"
+         class="link inline-block min-w-72">By style | За стилем</a>
+      <a href="/catalog/genre/song/1"
+         class="link inline-block min-w-72">By genre | За жанром</a>
+      <a href="/catalog/composer/composer/1"
+         class="link inline-block min-w-72">By compos. | За композ.</a>
+      <a href="/catalog/study-stb/scale/1"
+         class="link inline-block min-w-72">Study stb | Етюди stb</a>
+      <a href="/catalog/study-frb/scale/1"
+         class="link inline-block min-w-72">Study frb | Етюди frb</a>
+      <a href="/catalog/bass/standard-bass/1"
+         class="link inline-block min-w-72">By bass | За басом</a>
+      <a href="/catalog/level/elementary-c/1"
+         class="link inline-block min-w-72">By level | За складністю</a>
+      <a href="/catalog/lyrics/lyrics/1"
+         class="link inline-block min-w-72">Lyrics | Пісні</a>
+  </div>
+  <h2 class="head2">Catalog meta | Опис каталогу</h2>
+  <table>
     {{ range .CatalogMeta }}
-      <tr>
+      <tr class="bg-yellow-100">
         <th></th>
-        <th>{{ .Tit.Eng }}</th>
-        <th>{{ .Tit.Ukr }}</th>
+        <th class="font-medium">{{ .Tit.Eng }}</th>
+        <th class="font-medium">{{ .Tit.Ukr }}</th>
       </tr>
       {{ range .Sec }}
-        <tr>
-          <td>{{ .Tit.Name }}</td>
+        <tr class="even:bg-blue-100">
+          <td><span class="tag font-medium">{{ .Tit.Name }}<span></td>
           <td>{{ .Tit.Eng }}</td>
           <td>{{ .Tit.Ukr }}</td>
         </tr>
         {{ range .Sub }}
-          <tr>
-            <td>{{ .Name }}</td>
+          <tr class="even:bg-blue-100">
+            <td class="pl-6"><span class="tag">{{ .Name }}<span></td>
             <td>{{ .Eng }}</td>
             <td>{{ .Ukr }}</td>
           </tr>
