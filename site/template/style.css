@@ -18,6 +18,9 @@
   .link {
     @apply text-lg font-medium text-blue-700
   }
+  .cat-group {
+    @apply inline-block min-w-72
+  }
   .tag {
     @apply px-1 rounded-md bg-yellow-100
   }

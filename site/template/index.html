@@ -1,32 +1,19 @@
 {{ define "body" }}
   <h2 class="head2">Browse catalog | Перегляд каталогу</h2>
   <div>
-      <a href="/catalog/origin/ukrainian/1"
-         class="link inline-block min-w-72">By origin | За країною</a>
-      <a href="/catalog/style/folk/1"
-         class="link inline-block min-w-72">By style | За стилем</a>
-      <a href="/catalog/genre/song/1"
-         class="link inline-block min-w-72">By genre | За жанром</a>
-      <a href="/catalog/composer/composer/1"
-         class="link inline-block min-w-72">By compos. | За композ.</a>
-      <a href="/catalog/study-stb/scale/1"
-         class="link inline-block min-w-72">Study stb | Етюди stb</a>
-      <a href="/catalog/study-frb/scale/1"
-         class="link inline-block min-w-72">Study frb | Етюди frb</a>
-      <a href="/catalog/bass/standard-bass/1"
-         class="link inline-block min-w-72">By bass | За басом</a>
-      <a href="/catalog/level/elementary-c/1"
-         class="link inline-block min-w-72">By level | За складністю</a>
-      <a href="/catalog/lyrics/lyrics/1"
-         class="link inline-block min-w-72">Lyrics | Пісні</a>
+    {{ range .CatalogGroups }}
+      <a href="{{ .URL }}" class="link cat-group">{{ .Title }}</a>
+    {{ end }}
   </div>
   <h2 class="head2">Catalog meta | Опис каталогу</h2>
+  <p>Learn how to search pieces quickly and efficiently</p>
+  <p>Допоможе шукати п'єси швидко і ефективно</p>
   <table>
     {{ range .CatalogMeta }}
       <tr class="bg-yellow-100">
         <th></th>
-        <th class="font-medium">{{ .Tit.Eng }}</th>
-        <th class="font-medium">{{ .Tit.Ukr }}</th>
+        <th class="font-medium text-left">{{ .Tit.Eng }}</th>
+        <th class="font-medium text-left">{{ .Tit.Ukr }}</th>
       </tr>
       {{ range .Sec }}
         <tr class="even:bg-blue-100">

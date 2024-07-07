@@ -7,19 +7,18 @@
 {{ define "piece" }}
   <div {{ if .AlphaLink }} id="{{ .AlphaLink }}" {{ end }}>
     <div>
-      <a href="/piece/{{ .File }}"><span>{{ .Tit }}</span></a>
-      <span>{{ .Com }}</span>
-      <span>{{ .ArtUkr }} {{ .Arr }}</span>
+      <a href="/piece/{{ .File }}" class="link">{{ .Tit }}</a>
+      <span class="text-lg italic">{{ .Com }}{{ .ArtUkr }} {{ .Arr }}</span>
     </div>
     <div>
-      <span>id: </span><span>{{ .ID }}</span>
-      <span>org: </span><span>{{ .Org }}</span>
-      <span>sty: </span><span>{{ .Sty }}</span>
-      <span>gnr: </span><span>{{ .Gnr }}</span>
-      <span>ton: </span><span>{{ .Ton | join ` ` }}</span>
-      <span>frm: </span><span>{{ .Frm | join ` ` }}</span>
-      <span>bss: </span><span>{{ .Bss | join ` ` }}</span>
-      <span>lvl: </span><span>{{ .Lvl }}</span>
+      <span class="tag">id: {{ .ID }}</span>
+      <span class="tag">org: {{ .Org }}</span>
+      <span class="tag">sty: {{ .Sty }}</span>
+      <span class="tag">gnr: {{ .Gnr }}</span>
+      <span class="tag">ton: {{ .Ton | join ` ` }}</span>
+      <span class="tag">frm: {{ .Frm | join ` ` }}</span>
+      <span class="tag">bss: {{ .Bss | join ` ` }}</span>
+      <span class="tag">lvl: {{ .Lvl }}</span>
     </div>
   </div>
 {{ end }}
@@ -28,19 +27,19 @@
   <div>
     {{ range .GroupLinks }}
       {{ if .Disabled }}
-        <span>{{ .Title }}</span>
+        <span class="cat-group text-lg font-medium">{{ .Title }}</span>
       {{ else }}
-        <a href="{{ .URL }}">{{ .Title }}</a>
+        <a href="{{ .URL }}" class="link cat-group">{{ .Title }}</a>
       {{ end }}
     {{ end }}
   </div>
-  <h2>{{ .Title }}</h2>
+  <h2 class="head2">{{ .Title }}</h2>
   <div>
     {{ range .AlphaLinks }}
       {{ if .Disabled }}
-        <span>{{ .Title }}</span>
+        <span class="text-lg">{{ .Title }}</span>
       {{ else }}
-        <a href="{{ .URL }}">{{ .Title }}</a>
+        <a href="{{ .URL }}" class="link mx-0.5">{{ .Title }}</a>
       {{ end }}
     {{ end }}
   </div>
@@ -49,12 +48,12 @@
       <li>{{ template "piece" . }}</li>
     {{ end }}
   </ul>
-  <div>
+  <div class="my-4">
     {{ range .PageLinks }}
       {{ if .Disabled }}
-        <span>{{ .Title }}</span>
+        <span class="text-lg px-2 py-1 bg-blue-100">{{ .Title }}</span>
       {{ else }}
-        <a href="{{ .URL }}">{{ .Title }}</a>
+        <a href="{{ .URL }}" class="link px-2 py-1 bg-blue-100">{{ .Title }}</a>
       {{ end }}
     {{ end }}
   </div>

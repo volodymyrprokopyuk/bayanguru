@@ -159,12 +159,22 @@ func publishIndex(tpl *template.Template, pc PublishCommand) error {
   if err != nil {
     return err
   }
+  catalogGroups := []Link{
+    {URL: "/catalog/origin/ukrainian/1", Title: "By origin | За країною"},
+    {URL: "/catalog/style/folk/1", Title: "By style | За стилем"},
+    {URL: "/catalog/genre/song/1", Title: "By genre | За жанром"},
+    {URL: "/catalog/composer/composer/1", Title: "By compos. | За композ."},
+    {URL: "/catalog/study-stb/scale/1", Title: "Study stb | Етюди stb"},
+    {URL: "/catalog/study-frb/scale/1", Title: "Study frb | Етюди frb"},
+    {URL: "/catalog/bass/standard-bass/1", Title: "By bass | За басом"},
+    {URL: "/catalog/level/elementary-c/1", Title: "By level | За складністю"},
+    // {URL: "/catalog/lyrics/lyrics/1", Title: "Lyrics | Пісні"},
+  }
   indexData := struct {
-    SiteContent string
+    CatalogGroups []Link
     CatalogMeta []CatalogMeta
   }{
-    SiteContent: "",
-    CatalogMeta: catalogMeta,
+    CatalogGroups: catalogGroups, CatalogMeta: catalogMeta,
   }
   return publishFile(os.Stdout, tpl, pc.PublicDir, "index.html", indexData)
 }
@@ -342,14 +352,14 @@ func Publish(pc PublishCommand) error {
   if err != nil {
     return siteError("%v", err)
   }
-  // err = indexPieces(pc.SiteDir, pc.PublicDir)
-  // if err != nil {
-  //   return siteError("%v", err)
-  // }
-  // err = publishCatalog(tpl, pc)
-  // if err != nil {
-  //   return siteError("%v", err)
-  // }
+  err = indexPieces(pc.SiteDir, pc.PublicDir)
+  if err != nil {
+    return siteError("%v", err)
+  }
+  err = publishCatalog(tpl, pc)
+  if err != nil {
+    return siteError("%v", err)
+  }
   err = publishStyle(pc.SiteDir, pc.TemplateDir, pc.PublicDir)
   if err != nil {
     return siteError("%v", err)
