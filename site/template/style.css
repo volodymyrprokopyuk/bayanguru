@@ -21,6 +21,10 @@
   .tag {
     @apply px-1 rounded-md bg-yellow-100
   }
+  .score {
+    @apply w-full min-h-screen my-4 lg:w-[80%] lg:mx-[10%]
+      shadow-[0_0_0.75rem_rgb(96,165,250)]
+  }
 }
 
 .pagefind-ui__search-input {
@@ -34,7 +38,7 @@
 .pagefind-ui__search-input:focus {
   outline: none;
   border: 2px solid rgb(96 165 250);
-  box-shadow: 0 0 0.25rem rgb(96 165 250)
+  box-shadow: 0 0 0.25rem rgb(96 165 250);
 }
 .pagefind-ui__search-input::placeholder {
   color: gray;
