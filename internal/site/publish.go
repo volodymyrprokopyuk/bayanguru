@@ -125,6 +125,27 @@ type MetaEntry struct {
   Ukr string `yaml:"ukr"`
 }
 
+type SiteContent struct {
+  Purpose []MetaEntry `yaml:"purpose"`
+  UserFeatures []MetaEntry `yaml:"userFeatures"`
+  ContribFeatures []MetaEntry `yaml:"contribFeatures"`
+}
+
+func readSiteContent(contentDir, contentFile string) (SiteContent, error) {
+  contentFile = filepath.Join(contentDir, contentFile)
+  file, err := os.Open(contentFile)
+  if err != nil {
+    return SiteContent{}, err
+  }
+  defer file.Close()
+  var content SiteContent
+  err = yaml.NewDecoder(file).Decode(&content)
+  if err != nil {
+    return SiteContent{}, err
+  }
+  return content, nil
+}
+
 type CatalogMeta struct {
   Tit MetaEntry `yaml:"tit"`
   Sec []struct {
@@ -133,16 +154,15 @@ type CatalogMeta struct {
   } `yaml:"sec"`
 }
 
-func readCatalogMeta(siteDir, metaFile string) ([]CatalogMeta, error) {
-  metaFile = filepath.Join(siteDir, metaFile)
+func readCatalogMeta(contentDir, metaFile string) ([]CatalogMeta, error) {
+  metaFile = filepath.Join(contentDir, metaFile)
   file, err := os.Open(metaFile)
   if err != nil {
     return nil, err
   }
   defer file.Close()
-  dec := yaml.NewDecoder(file)
   var meta struct { Meta []CatalogMeta `yaml:"meta"` }
-  err = dec.Decode(&meta)
+  err = yaml.NewDecoder(file).Decode(&meta)
   if err != nil {
     return nil, err
   }
@@ -152,6 +172,10 @@ func readCatalogMeta(siteDir, metaFile string) ([]CatalogMeta, error) {
 func publishIndex(tpl *template.Template, pc PublishCommand) error {
   indexFile := filepath.Join(pc.TemplateDir, "index.html")
   _, err := tpl.ParseFiles(indexFile)
+  if err != nil {
+    return err
+  }
+  siteContent, err := readSiteContent(pc.ContentDir, "site-content.yaml")
   if err != nil {
     return err
   }
@@ -172,10 +196,9 @@ func publishIndex(tpl *template.Template, pc PublishCommand) error {
   }
   indexData := struct {
     CatalogGroups []Link
+    SiteContent SiteContent
     CatalogMeta []CatalogMeta
-  }{
-    CatalogGroups: catalogGroups, CatalogMeta: catalogMeta,
-  }
+  }{catalogGroups, siteContent, catalogMeta}
   return publishFile(os.Stdout, tpl, pc.PublicDir, "index.html", indexData)
 }
 
