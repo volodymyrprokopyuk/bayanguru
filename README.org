@@ -32,3 +32,7 @@ Piece ID generation
 #+BEGIN_SRC fish
 tr -dc a-z0-9 </dev/urandom | head -c 4
 #+END_SRC
+
+** License
+
+[[https://www.gnu.org/licenses/gpl-3.0.html][GPLv3 GNU General Public License v3.0]]
