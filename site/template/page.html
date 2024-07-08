@@ -13,25 +13,33 @@
     <link href="/tw.css" rel="stylesheet" />
   </head>
   <body class="text-base font-light">
+
     <main class="m-2 lg:mx-[10%]">
       {{ block "header" . }}
         <a href="/"><img src="/image/logo.svg" class="mx-auto" /></a>
-        <h1 class="head1 text-center">Selected sheet music for bayan</h1>
-        <h1 class="head1 text-center">Вибрані ноти для баяна</h1>
+        <a href="/">
+          <h1 class="head1 text-center">Selected sheet music for bayan</h1>
+        </a>
+        <a href="/">
+          <h1 class="head1 text-center">Вибрані ноти для баяна</h1>
+        </a>
         <search id="search"></search>
       {{ end }}
+
       {{ block "body" . }} {{ end }}
+
       {{ block "footer" . }}
-        <div>
+        <div class="my-10">
           <a href="https://www.gnu.org/licenses/gpl.html" target="_blank"
-             class="link cat-group">License | Ліцензія</a>
+             class="link link-block">License | Ліцензія</a>
           <a href="https://github.com/volodymyrprokopyuk/bayan/discussions" target="_blank"
-             class="link cat-group">Discussions | Обговорення</a>
+             class="link link-block">Discussions | Обговорення</a>
           <a href="https://github.com/volodymyrprokopyuk/bayan/issues" target="_blank"
-             class="link cat-group">Issues | Корекція помилок</a>
+             class="link link-block">Issues | Корекція помилок</a>
         </div>
       {{ end }}
     </main>
+
     <script src="/pagefind/pagefind-ui.js"></script>
     <script>
       const translations = {

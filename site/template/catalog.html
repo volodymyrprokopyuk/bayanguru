@@ -27,33 +27,33 @@
   <div>
     {{ range .GroupLinks }}
       {{ if .Disabled }}
-        <span class="cat-group text-lg font-medium">{{ .Title }}</span>
+        <span class="link-block text-lg font-medium">{{ .Title }}</span>
       {{ else }}
-        <a href="{{ .URL }}" class="link cat-group">{{ .Title }}</a>
+        <a href="{{ .URL }}" class="link link-block">{{ .Title }}</a>
       {{ end }}
     {{ end }}
   </div>
   <h2 class="head2">{{ .Title }}</h2>
-  <div>
+  <div class="mt-4">
     {{ range .AlphaLinks }}
       {{ if .Disabled }}
-        <span class="text-lg">{{ .Title }}</span>
+        <span class="text-lg link-button bg-blue-50">{{ .Title }}</span>
       {{ else }}
-        <a href="{{ .URL }}" class="link mx-0.5">{{ .Title }}</a>
+        <a href="{{ .URL }}" class="link link-button">{{ .Title }}</a>
       {{ end }}
     {{ end }}
   </div>
   <ul>
     {{ range .Pieces }}
-      <li>{{ template "piece" . }}</li>
+      <li class="mt-2">{{ template "piece" . }}</li>
     {{ end }}
   </ul>
-  <div class="my-4">
+  <div class="mt-4">
     {{ range .PageLinks }}
       {{ if .Disabled }}
-        <span class="text-lg px-2 py-1 bg-blue-100">{{ .Title }}</span>
+        <span class="text-lg link-button bg-yellow-100">{{ .Title }}</span>
       {{ else }}
-        <a href="{{ .URL }}" class="link px-2 py-1 bg-blue-100">{{ .Title }}</a>
+        <a href="{{ .URL }}" class="link link-button">{{ .Title }}</a>
       {{ end }}
     {{ end }}
   </div>

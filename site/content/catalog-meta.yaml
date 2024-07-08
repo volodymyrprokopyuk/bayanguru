@@ -1,8 +1,8 @@
 %YAML 1.1
 ---
 purpose:
-  eng: Learn how to search pieces quickly and efficiently
-  ukr: Допоможе шукати п'єси швидко і ефективно
+  eng: Meta data help to search pieces quickly and efficiently
+  ukr: Мета дані допоможуть шукати п'єси швидко і ефективно
 meta:
   - tit: { eng: Piece identification, ukr: Ідентифікація п'єси }
     sec:
