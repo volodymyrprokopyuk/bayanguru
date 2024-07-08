@@ -25,7 +25,7 @@
     @apply inline-block min-w-72
   }
   .tag {
-    @apply px-1 rounded-md bg-yellow-100
+    @apply px-1 rounded-md border border-gray-400 bg-yellow-100
   }
   .score {
     @apply w-full min-h-screen my-4 lg:w-[80%] lg:mx-[10%]
@@ -66,6 +66,7 @@
   margin: 0.2rem;
   padding: 0rem 0.25rem;
   border-radius: 0.375rem;
+  border: 1px solid lightgray;
 }
 .pagefind-ui__result-tag:first-letter {
   text-transform: lowercase;

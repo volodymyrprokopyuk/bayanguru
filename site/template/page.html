@@ -21,7 +21,16 @@
         <search id="search"></search>
       {{ end }}
       {{ block "body" . }} {{ end }}
-      {{ block "footer" . }} {{ end }}
+      {{ block "footer" . }}
+        <div>
+          <a href="https://www.gnu.org/licenses/gpl.html" target="_blank"
+             class="link cat-group">License | Ліцензія</a>
+          <a href="https://github.com/volodymyrprokopyuk/bayan/discussions" target="_blank"
+             class="link cat-group">Discussions | Обговорення</a>
+          <a href="https://github.com/volodymyrprokopyuk/bayan/issues" target="_blank"
+             class="link cat-group">Issues | Корекція помилок</a>
+        </div>
+      {{ end }}
     </main>
     <script src="/pagefind/pagefind-ui.js"></script>
     <script>
