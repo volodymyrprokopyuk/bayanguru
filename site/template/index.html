@@ -5,30 +5,49 @@
       <a href="{{ .URL }}" class="link cat-group">{{ .Title }}</a>
     {{ end }}
   </div>
-  <h2 class="head2">Catalog meta | Опис каталогу</h2>
-  <p>Learn how to search pieces quickly and efficiently</p>
-  <p>Допоможе шукати п'єси швидко і ефективно</p>
-  <table>
-    {{ range .CatalogMeta }}
-      <tr class="bg-yellow-100">
-        <th></th>
-        <th class="font-medium text-left">{{ .Tit.Eng }}</th>
-        <th class="font-medium text-left">{{ .Tit.Ukr }}</th>
-      </tr>
-      {{ range .Sec }}
-        <tr class="even:bg-blue-100">
-          <td><span class="tag font-medium">{{ .Tit.Name }}<span></td>
-          <td>{{ .Tit.Eng }}</td>
-          <td>{{ .Tit.Ukr }}</td>
+  {{ with .SiteContent }}
+    <h2 class="head2">Purpose | Мета сайту</h2>
+    {{ range .Purpose }}
+      <p class="mt-2">{{ .Eng }}</p> <p>{{ .Eng }}</p>
+    {{ end }}
+    <h2 class="head2">User features | Можливості користувача</h2>
+    <ul class="list">
+      {{ range .UserFeatures }}
+        <li><p>{{ .Eng }}</p> <p>{{ .Eng }}</p></li>
+      {{ end }}
+    </ul>
+    <h2 class="head2">Features for contributors | Можливості для дописувачів</h2>
+    <ul class="list">
+      {{ range .ContribFeatures }}
+        <li><p>{{ .Eng }}</p> <p>{{ .Eng }}</p></li>
+      {{ end }}
+    </ul>
+  {{ end }}
+  {{ with .CatalogMeta }}
+    <h2 class="head2">Catalog meta | Опис каталогу</h2>
+    <p>{{ .Purpose.Eng }}</p> <p>{{ .Purpose.Ukr }}</p>
+    <table>
+      {{ range .Meta }}
+        <tr class="bg-yellow-100">
+          <th></th>
+          <th class="font-medium text-left">{{ .Tit.Eng }}</th>
+          <th class="font-medium text-left">{{ .Tit.Ukr }}</th>
         </tr>
-        {{ range .Sub }}
+        {{ range .Sec }}
           <tr class="even:bg-blue-100">
-            <td class="pl-6"><span class="tag">{{ .Name }}<span></td>
-            <td>{{ .Eng }}</td>
-            <td>{{ .Ukr }}</td>
+            <td><span class="tag font-medium">{{ .Tit.Name }}<span></td>
+            <td>{{ .Tit.Eng }}</td>
+            <td>{{ .Tit.Ukr }}</td>
           </tr>
+          {{ range .Sub }}
+            <tr class="even:bg-blue-100">
+              <td class="pl-6"><span class="tag">{{ .Name }}<span></td>
+              <td>{{ .Eng }}</td>
+              <td>{{ .Ukr }}</td>
+            </tr>
+          {{ end }}
         {{ end }}
       {{ end }}
-    {{ end }}
-  </table>
+    </table>
+  {{ end }}
 {{ end }}

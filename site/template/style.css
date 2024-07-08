@@ -18,6 +18,9 @@
   .link {
     @apply text-lg font-medium text-blue-700
   }
+  .list {
+    @apply list-disc list-outside ml-4
+  }
   .cat-group {
     @apply inline-block min-w-72
   }

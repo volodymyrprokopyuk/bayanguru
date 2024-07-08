@@ -147,26 +147,29 @@ func readSiteContent(contentDir, contentFile string) (SiteContent, error) {
 }
 
 type CatalogMeta struct {
-  Tit MetaEntry `yaml:"tit"`
-  Sec []struct {
+  Purpose MetaEntry `yaml:"purpose"`
+  Meta []struct{
     Tit MetaEntry `yaml:"tit"`
-    Sub []MetaEntry `yaml:"sub"`
-  } `yaml:"sec"`
+    Sec []struct {
+      Tit MetaEntry `yaml:"tit"`
+      Sub []MetaEntry `yaml:"sub"`
+    } `yaml:"sec"`
+  } `yaml:"meta"`
 }
 
-func readCatalogMeta(contentDir, metaFile string) ([]CatalogMeta, error) {
+func readCatalogMeta(contentDir, metaFile string) (CatalogMeta, error) {
   metaFile = filepath.Join(contentDir, metaFile)
   file, err := os.Open(metaFile)
   if err != nil {
-    return nil, err
+    return CatalogMeta{}, err
   }
   defer file.Close()
-  var meta struct { Meta []CatalogMeta `yaml:"meta"` }
+  var meta CatalogMeta
   err = yaml.NewDecoder(file).Decode(&meta)
   if err != nil {
-    return nil, err
+    return CatalogMeta{}, err
   }
-  return meta.Meta, nil
+  return meta, nil
 }
 
 func publishIndex(tpl *template.Template, pc PublishCommand) error {
@@ -192,12 +195,12 @@ func publishIndex(tpl *template.Template, pc PublishCommand) error {
     {URL: "/catalog/study-frb/scale/1", Title: "Study frb | Етюди frb"},
     {URL: "/catalog/bass/standard-bass/1", Title: "By bass | За басом"},
     {URL: "/catalog/level/elementary-c/1", Title: "By level | За складністю"},
-    // {URL: "/catalog/lyrics/lyrics/1", Title: "Lyrics | Пісні"},
+    {URL: "/catalog/lyrics/lyrics/1", Title: "Lyrics | Пісні"},
   }
   indexData := struct {
     CatalogGroups []Link
     SiteContent SiteContent
-    CatalogMeta []CatalogMeta
+    CatalogMeta CatalogMeta
   }{catalogGroups, siteContent, catalogMeta}
   return publishFile(os.Stdout, tpl, pc.PublicDir, "index.html", indexData)
 }
@@ -371,18 +374,18 @@ func Publish(pc PublishCommand) error {
   if err != nil {
     return siteError("%v", err)
   }
-  err = publishPieces(pieces, pc.TemplateDir, pc.PublicDir)
-  if err != nil {
-    return siteError("%v", err)
-  }
-  err = indexPieces(pc.SiteDir, pc.PublicDir)
-  if err != nil {
-    return siteError("%v", err)
-  }
-  err = publishCatalog(tpl, pc)
-  if err != nil {
-    return siteError("%v", err)
-  }
+  // err = publishPieces(pieces, pc.TemplateDir, pc.PublicDir)
+  // if err != nil {
+  //   return siteError("%v", err)
+  // }
+  // err = indexPieces(pc.SiteDir, pc.PublicDir)
+  // if err != nil {
+  //   return siteError("%v", err)
+  // }
+  // err = publishCatalog(tpl, pc)
+  // if err != nil {
+  //   return siteError("%v", err)
+  // }
   err = publishStyle(pc.SiteDir, pc.TemplateDir, pc.PublicDir)
   if err != nil {
     return siteError("%v", err)
