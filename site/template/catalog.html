@@ -8,7 +8,7 @@
   <div {{ if .AlphaLink }} id="{{ .AlphaLink }}" {{ end }}>
     <div>
       <a href="/piece/{{ .File }}" class="link">{{ .Tit }}</a>
-      <span class="text-lg italic">{{ .Com }}{{ .ArtUkr }} {{ .Arr }}</span>
+      <span class="text-lg italic">{{ .Com }} {{ .ArtUkr }} {{ .Arr }} {{ .Aut }}</span>
     </div>
     <div>
       <span class="tag">id: {{ .ID }}</span>
@@ -19,6 +19,9 @@
       <span class="tag">frm: {{ .Frm | join ` ` }}</span>
       <span class="tag">bss: {{ .Bss | join ` ` }}</span>
       <span class="tag">lvl: {{ .Lvl }}</span>
+      {{ if ne .Ens "sol" }}<span class="tag">ens: {{ .Ens }}</span>{{ end }}
+      {{ if .Lyr }}<span class="tag">lyr: {{ .Lyr }}</span>{{ end }}
+      {{ if ne .Lcs "cpl" }}<span class="tag">lcs: {{ .Lcs }}</span>{{ end }}
     </div>
   </div>
 {{ end }}

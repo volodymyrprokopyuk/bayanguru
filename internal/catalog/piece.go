@@ -282,7 +282,7 @@ func addMetaToPieces(pieces []Piece) {
       }
       piece.ArtUkr = meta[piece.Art]
     }
-    // cls
+    // lcs
     if len(piece.Lcs) == 0 {
       piece.Lcs = "cpl" // default: copyleft
     }

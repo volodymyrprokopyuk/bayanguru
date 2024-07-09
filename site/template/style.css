@@ -60,6 +60,9 @@ a {
 .pagefind-ui__search-clear {
   display: none;
 }
+.pagefind-ui__drawer {
+  margin-bottom: 1rem;
+}
 .pagefind-ui__result-title {
   margin-top: 0.4rem;
   font-size: 1.125rem;

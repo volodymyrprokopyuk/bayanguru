@@ -340,15 +340,16 @@ func publishStyle(siteDir, templateDir, publicDir string) error {
   if err != nil {
     return err
   }
-  minArgs := fmt.Sprintf(
-    "%[1]v/index.html %[1]v/piece/* %[1]v/catalog/*/*/*",
-    publicDir,
-  )
-  fmt.Printf("%v %v\n", sty.Org("minify"), sty.Lvl(minArgs))
-  minCmd := exec.Command("bash", "-c", "minify-html " + minArgs)
-  minCmd.Stdout = os.Stdout
-  minCmd.Stderr = os.Stderr
-  return minCmd.Run()
+  return nil
+  // minArgs := fmt.Sprintf(
+  //   "%[1]v/index.html %[1]v/piece/* %[1]v/catalog/*/*/*",
+  //   publicDir,
+  // )
+  // fmt.Printf("%v %v\n", sty.Org("minify"), sty.Lvl(minArgs))
+  // minCmd := exec.Command("bash", "-c", "minify-html " + minArgs)
+  // minCmd.Stdout = os.Stdout
+  // minCmd.Stderr = os.Stderr
+  // return minCmd.Run()
 }
 
 func catError(format string, args ...any) error {
