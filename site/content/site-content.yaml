@@ -7,56 +7,64 @@ purpose:
       [LilyPond](https://lilypond.org/) for engraving **Stradella bass** and
       **free bass** pieces, lyrics, and books
     ukr: >
-      Баян – це система для цифрового набору та публікації **нот найвищої якості
-      для баяна** у форматі PDF. Система використовує
-      [LilyPond](https://lilypond.org/) для набору п'єс, пісень з словами та
-      нотних книжок для **готового акорду** і **виборної системи**
+      Баян – це система для цифрового гравірування та публікації **нот найвищої
+      якості для баяна** у форматі PDF. Система використовує
+      [LilyPond](https://lilypond.org/) для гравірування п'єс, пісень з словами
+      та нотних книжок для **готового акорду** і **виборної системи**
   - eng: >
       **Purpose** (the reason to exist, why?). To promote and support the art of
-      bayan music through the highest quality sheet music for bayan
-    ukr:
+      bayan music through production of the highest quality sheet music for
+      bayan
+    ukr: >
+      **Мета** (причини створення сайту, чому?). Просувати та підтимувати баянне
+      мистецтво шляхом створення нот найвищої якості для баяна
   - eng: >
       **Vision** (the goal of the purpose, what?). Become the most complete and
       comprehensive online sheet music library for bayan
-    ukr:
+    ukr: >
+      **Бачення** (сутність мети, що?). Стати найповнішою та всеосяжною цифровою
+      бібліотекою нот для баяна
   - eng: >
       **Mission** (the path to the purpose, how?). Combine the community effort
       for sheet music production with the best music engraving tool
       [LilyPond](https://lilypond.org/)
-    ukr:
+    ukr: >
+      **Місія** (шлях досягнення мети, як?). Поєданти зусилля спільноти з
+      гравірування нот з найкращою програмою для гавірування нот
+      [LilyPond](https://lilypond.org/)
 userFeatures:
   - eng: The highest quality sheet music for bayan
-    ukr:
-  - eng: Ideal learning source for bayan self-study
-    ukr:
-  - eng: Ideal sheet music source for prima vista playing
-    ukr:
+    ukr: Ноти найвищої якості для баяна
+  - eng: Ideal learning resource for bayan self-study
+    ukr: Ідеальний навчальний ресурс для самостійного вивчення гри на баяні
+  - eng: Ideal source of sheet music of varying difficulty for prima vista playing
+    ukr: Ідеальне джерело нот різної складності для читки з листа
   - eng: Wide range of music styles and genres
-    ukr:
+    ukr: Широкий вибір музичних стилів і жанрів
   - eng: Stradella bass and free bass pieces and lyrics
-    ukr:
+    ukr: П'єси на пісні з словами для готового акорду і виборної системи
   - eng: Progressive fine-grained piece difficulty
-    ukr:
-  - eng: Precise and easy to use piece search system
-    ukr:
+    ukr: Прогресивно зростаюча складність п'єс
+  - eng: Precise, quick, and easy to use piece search system
+    ukr: Точна, швидка і проста у використанні система пошуку п'єс
   - eng: Comprehensive piece classification catalog
-    ukr:
-  - eng: Flexible search and play system (CLI)
-    ukr:
+    ukr: Комплексний каталог класифікації п'єс
+  - eng: Flexible search and automatic play system (CLI)
+    ukr: Гнучка система пошуку і автоматичної візуалізації п'єс (CLI)
   - eng: Robust custom book engraving system (CLI)
-    ukr:
+    ukr: Надійна система гравірування нотних книжок (CLI)
 contribFeatures:
   - eng: Clean and maintainable code base
-    ukr:
-  - eng: Fully automated score lining engraving, and publishing,
-    ukr:
+    ukr: Чистий на зручний в розширенні програмний код
+  - eng: Fully automated score lining, engraving, and publishing
+    ukr: Повністю автоматизована система перевірки, гравірування та публікації нот
   - eng: Concise and convenient LilyPond extension for Stradella bass
-    ukr:
+    ukr: Лаконічне на зручне розширення LilyPond для гравірування готового акорду
   - eng: Flexible and easy to use score templating system
-    ukr:
+    ukr: Гнучка і проста у використанні система шаблонів для гравірування нот
   - eng: Comprehensive and consistent linting of score source code
-    ukr:
+    ukr: Комплексна і послідовна система автоматичної перевірки програмного коду п'єс
   - eng: Robust and optimized the piece/book engraving system
-    ukr:
-  - eng: Fast and correct the web site publishing system
-    ukr:
+    ukr: Надійна та опримізована система гравірування п'єс на нотних книжок
+  - eng: Automated, fast, and correct the web site publishing system
+    ukr: Автоматична, швидка на корекнта система публікації веб сайту

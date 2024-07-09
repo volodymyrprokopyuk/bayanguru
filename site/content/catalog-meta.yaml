@@ -35,7 +35,7 @@ meta:
           - { name: chd, eng: Child piece, ukr: Дитяча п'єса }
           - { name: lul, eng: Lulaby, ukr: Колискова }
           - { name: ves, eng: Vesnianka, ukr: Веснянка }
-          - { name: pry, eng: Prypevky or chastushky, ukr: Припевки або частушки }
+          - { name: pry, eng: "Prypevky, chastushky", ukr: "Приспівки, коломийки" }
           - { name: rmc, eng: Romance, ukr: Романс }
           - { name: mil, eng: Military song, ukr: Військова пісня }
           - { name: dnc, eng: Dance, ukr: Танець } # dance

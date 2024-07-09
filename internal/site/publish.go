@@ -340,16 +340,15 @@ func publishStyle(siteDir, templateDir, publicDir string) error {
   if err != nil {
     return err
   }
-  return nil
-  // minArgs := fmt.Sprintf(
-  //   "%[1]v/index.html %[1]v/piece/* %[1]v/catalog/*/*/*",
-  //   publicDir,
-  // )
-  // fmt.Printf("%v %v\n", sty.Org("minify"), sty.Lvl(minArgs))
-  // minCmd := exec.Command("bash", "-c", "minify-html " + minArgs)
-  // minCmd.Stdout = os.Stdout
-  // minCmd.Stderr = os.Stderr
-  // return minCmd.Run()
+  minArgs := fmt.Sprintf(
+    "%[1]v/index.html %[1]v/piece/* %[1]v/catalog/*/*/*",
+    publicDir,
+  )
+  fmt.Printf("%v %v\n", sty.Org("minify"), sty.Lvl(minArgs))
+  minCmd := exec.Command("bash", "-c", "minify-html " + minArgs)
+  minCmd.Stdout = os.Stdout
+  minCmd.Stderr = os.Stderr
+  return minCmd.Run()
 }
 
 func catError(format string, args ...any) error {
@@ -389,18 +388,18 @@ func Publish(pc PublishCommand) error {
   if err != nil {
     return siteError("%v", err)
   }
-  // err = publishPieces(pieces, pc.TemplateDir, pc.PublicDir)
-  // if err != nil {
-  //   return siteError("%v", err)
-  // }
-  // err = indexPieces(pc.SiteDir, pc.PublicDir)
-  // if err != nil {
-  //   return siteError("%v", err)
-  // }
-  // err = publishCatalog(tpl, pc)
-  // if err != nil {
-  //   return siteError("%v", err)
-  // }
+  err = publishPieces(pieces, pc.TemplateDir, pc.PublicDir)
+  if err != nil {
+    return siteError("%v", err)
+  }
+  err = indexPieces(pc.SiteDir, pc.PublicDir)
+  if err != nil {
+    return siteError("%v", err)
+  }
+  err = publishCatalog(tpl, pc)
+  if err != nil {
+    return siteError("%v", err)
+  }
   err = publishStyle(pc.SiteDir, pc.TemplateDir, pc.PublicDir)
   if err != nil {
     return siteError("%v", err)

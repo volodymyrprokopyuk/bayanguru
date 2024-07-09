@@ -13,13 +13,13 @@
     <h2 class="head2">User features | Можливості користувача</h2>
     <ul class="list mt-2">
       {{ range .UserFeatures }}
-        <li><p>{{ .Eng }}</p> <p>{{ .Eng }}</p></li>
+        <li class="mt-2"><p>{{ .Eng }}</p> <p>{{ .Ukr }}</p></li>
       {{ end }}
     </ul>
     <h2 class="head2">Features for contributors | Можливості для розробників</h2>
     <ul class="list mt-2">
       {{ range .ContribFeatures }}
-        <li><p>{{ .Eng }}</p> <p>{{ .Eng }}</p></li>
+        <li class="mt-2"><p>{{ .Eng }}</p> <p>{{ .Ukr }}</p></li>
       {{ end }}
     </ul>
   {{ end }}
@@ -31,19 +31,19 @@
         <tr class="bg-yellow-100">
           <th></th>
           <th class="font-medium text-left">{{ .Tit.Eng }}</th>
-          <th class="font-medium text-left">{{ .Tit.Ukr }}</th>
+          <th class="font-medium text-left pl-4">{{ .Tit.Ukr }}</th>
         </tr>
         {{ range .Sec }}
           <tr class="even:bg-blue-50">
             <td><span class="tag font-medium">{{ .Tit.Name }}<span></td>
             <td>{{ .Tit.Eng }}</td>
-            <td>{{ .Tit.Ukr }}</td>
+            <td class="pl-4">{{ .Tit.Ukr }}</td>
           </tr>
           {{ range .Sub }}
             <tr class="even:bg-blue-50">
               <td class="pl-6"><span class="tag">{{ .Name }}<span></td>
               <td>{{ .Eng }}</td>
-              <td>{{ .Ukr }}</td>
+              <td class="pl-4">{{ .Ukr }}</td>
             </tr>
           {{ end }}
         {{ end }}
