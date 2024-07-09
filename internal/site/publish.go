@@ -210,7 +210,7 @@ func publishIndex(tpl *template.Template, pc PublishCommand) error {
     {URL: "/catalog/study-frb/scale/1", Title: "Study frb | Етюди frb"},
     {URL: "/catalog/bass/standard-bass/1", Title: "By bass | За басом"},
     {URL: "/catalog/level/elementary-c/1", Title: "By level | За складністю"},
-    {URL: "/catalog/lyrics/lyrics/1", Title: "Lyrics | Пісні"},
+    // {URL: "/catalog/lyrics/lyrics/1", Title: "Lyrics | Пісні"},
   }
   indexData := struct {
     CatalogGroups []Link
@@ -368,6 +368,7 @@ func Publish(pc PublishCommand) error {
   if err != nil {
     return catError("%v", err)
   }
+  pc.Queries["lcs"] = "^cpr" // exclude lcs: cpr pieces
   if len(pc.Queries) > 0 {
     pieces, err = cat.QueryPieces(pieces, pc.Queries)
     if err != nil {
@@ -407,3 +408,6 @@ func Publish(pc PublishCommand) error {
   }
   return nil
 }
+
+// rclone copy piece/Largo-c3bd.pdf vladpcloud:/bayan/piece/
+// rclone link vladpcloud:/bayan/piece/Largo-c3bd.pdf

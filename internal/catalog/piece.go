@@ -187,6 +187,14 @@ func makeMatchPiece(queries PieceQueries) (MatchPiece, error) {
         if !match(piece.Art) {
           return false
         }
+      case "aut":
+        if !match(piece.Aut) {
+          return false
+        }
+      case "lcs":
+        if !match(piece.Lcs) {
+          return false
+        }
       case "org":
         if !match(piece.Org) {
           return false

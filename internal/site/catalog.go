@@ -306,6 +306,9 @@ func publishGroup(
 ) error {
   groupDir := filepath.Join(pc.PublicDir, "catalog", group)
   groupURL := "/catalog/" + group
+  if len(pieces) == 0 {
+    return fmt.Errorf("no pieces for %v", groupURL)
+  }
   groups := groupPieces(pieces, groupKey)
   err := validateGroups(groups, groupNames)
   if err != nil {
@@ -447,6 +450,13 @@ func publishCatalog(tpl *template.Template, pc PublishCommand) error {
   if err != nil {
     return err
   }
+  pc.Queries["lcs"] = "^cpr" // exclude lcs: cpr pieces
+  if len(pc.Queries) > 0 {
+    pieces, err = cat.QueryPieces(pieces, pc.Queries)
+    if err != nil {
+      return err
+    }
+  }
   cat.PrintStat(catLen, len(pieces))
   catalogFile := filepath.Join(pc.TemplateDir, "catalog.html")
   _, err = tpl.ParseFiles(catalogFile)
@@ -517,14 +527,14 @@ func publishCatalog(tpl *template.Template, pc PublishCommand) error {
   if err != nil {
     return err
   }
-  lyrPieces := filterPieces(pieces, func(piece cat.Piece) bool {
-    return piece.Ens == "vc1" || piece.Ens == "vc2"
-  })
-  err = publishGroup(
-    tpl, lyrPieces, keyByLyr, keyTit, "lyrics", catGroups["lyrics"], pc,
-  )
-  if err != nil {
-    return err
-  }
+  // lyrPieces := filterPieces(pieces, func(piece cat.Piece) bool {
+  //   return piece.Ens == "vc1" || piece.Ens == "vc2"
+  // })
+  // err = publishGroup(
+  //   tpl, lyrPieces, keyByLyr, keyTit, "lyrics", catGroups["lyrics"], pc,
+  // )
+  // if err != nil {
+  //   return err
+  // }
   return nil
 }

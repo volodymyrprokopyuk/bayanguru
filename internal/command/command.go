@@ -146,12 +146,14 @@ bayan engrave all --lint --optimize --meta=f`,
   )
 
   var random, list bool
-  var tit, com, arr, art, org, sty, gnr, ton, frm, bss, lvl, ens, lyr string
+  var tit, com, arr, art, aut, lcs, org, sty, gnr, ton, frm, bss, lvl, ens, lyr string
   var queries = map[string]Query{
     "tit": {"piece title", &tit},
     "com": {"piece composer", &com},
     "arr": {"piece arranger", &arr},
     "art": {"arrangement type", &art},
+    "aut": {"lyrics author", &aut},
+    "lcs": {"piece license e.g. cpl,cpr", &lcs},
     "org": {"piece origin e.g. ukr,rus", &org},
     "sty": {"piece style e.g. flk,cls", &sty},
     "gnr": {"piece genre e.g. sng,stu", &gnr},

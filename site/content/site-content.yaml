@@ -16,8 +16,8 @@ purpose:
       bayan music through production of the highest quality sheet music for
       bayan
     ukr: >
-      **Мета** (причини створення сайту, чому?). Просувати та підтимувати баянне
-      мистецтво шляхом створення нот найвищої якості для баяна
+      **Мета** (причини створення сайту, чому?). Сприяти розвитку та підтимувати
+      баянне мистецтво шляхом створення нот найвищої якості для баяна
   - eng: >
       **Vision** (the goal of the purpose, what?). Become the most complete and
       comprehensive online sheet music library for bayan
@@ -30,7 +30,7 @@ purpose:
       [LilyPond](https://lilypond.org/)
     ukr: >
       **Місія** (шлях досягнення мети, як?). Поєданти зусилля спільноти з
-      гравірування нот з найкращою програмою для гавірування нот
+      гравірування нот з найкращою програмою для гравірування нот
       [LilyPond](https://lilypond.org/)
 userFeatures:
   - eng: The highest quality sheet music for bayan
@@ -42,7 +42,7 @@ userFeatures:
   - eng: Wide range of music styles and genres
     ukr: Широкий вибір музичних стилів і жанрів
   - eng: Stradella bass and free bass pieces and lyrics
-    ukr: П'єси на пісні з словами для готового акорду і виборної системи
+    ukr: П'єси та пісні з словами для готового акорду і виборної системи
   - eng: Progressive fine-grained piece difficulty
     ukr: Прогресивно зростаюча складність п'єс
   - eng: Precise, quick, and easy to use piece search system
@@ -65,6 +65,6 @@ contribFeatures:
   - eng: Comprehensive and consistent linting of score source code
     ukr: Комплексна і послідовна система автоматичної перевірки програмного коду п'єс
   - eng: Robust and optimized the piece/book engraving system
-    ukr: Надійна та опримізована система гравірування п'єс на нотних книжок
+    ukr: Надійна та опримізована система гравірування п'єс та нотних книжок
   - eng: Automated, fast, and correct the web site publishing system
-    ukr: Автоматична, швидка на корекнта система публікації веб сайту
+    ukr: Автоматична, швидка та коректна система публікації веб сайту
