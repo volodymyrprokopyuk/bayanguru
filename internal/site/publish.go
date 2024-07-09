@@ -26,7 +26,7 @@ type PublishCommand struct {
   Init, All, Book bool
   Pieces, Books []string
   Queries cat.PieceQueries
-  SiteDir, TemplateDir, ContentDir, PublicDir string
+  SiteDir, TemplateDir, ContentDir, PublicDir, StorageURL string
   PageSize int
 }
 
@@ -220,9 +220,16 @@ func publishIndex(tpl *template.Template, pc PublishCommand) error {
   return publishFile(os.Stdout, tpl, pc.PublicDir, "index.html", indexData)
 }
 
+// rclone copy piece/Largo-c3bd.pdf vladpcloud:/bayan/piece/
+// rclone link vladpcloud:/bayan/piece/Largo-c3bd.pdf
+
+func uploadPiece(piece cat.Piece, storageURL string) (string, error) {
+  return "link", nil
+}
+
 func receiveAndPublishPieces(
   ctx context.Context, pieceCh <-chan cat.Piece, errorCh chan<- error,
-  tplPool *sync.Pool, publicDir string,
+  tplPool *sync.Pool, publicDir, storageURL string,
 ) {
   defer close(errorCh)
   pieceDir := filepath.Join(publicDir, "piece")
@@ -235,10 +242,16 @@ func receiveAndPublishPieces(
       if !open {
         return
       }
+      pieceURL, err := uploadPiece(piece, storageURL)
+      if err != nil {
+        errorCh <- err
+        pieceCh = nil
+      }
+      piece.URL = pieceURL
       w.Reset()
       tpl := tplPool.Get().(*template.Template)
       pieceData := struct { Piece cat.Piece }{piece}
-      err := publishFile(&w, tpl, pieceDir, piece.File, pieceData)
+      err = publishFile(&w, tpl, pieceDir, piece.File, pieceData)
       fmt.Print(w.String())
       tplPool.Put(tpl)
       if err != nil {
@@ -250,7 +263,7 @@ func receiveAndPublishPieces(
 }
 
 func publishPieces(
-  pieces []cat.Piece, templateDir, publicDir string,
+  pieces []cat.Piece, templateDir, publicDir, storageURL string,
 ) error {
   tpl, err := makeTemplate(templateDir) // validate template
   if err != nil {
@@ -275,7 +288,9 @@ func publishPieces(
   errorChs := make([]chan error, n)
   for i := range n { // fan-out pieces
     errorChs[i] = make(chan error)
-    go receiveAndPublishPieces(ctx, pieceCh, errorChs[i], &tplPool, publicDir)
+    go receiveAndPublishPieces(
+      ctx, pieceCh, errorChs[i], &tplPool, publicDir, storageURL,
+    )
   }
   errorCh := cat.FanIn(errorChs) // fan-in pieces
   go func() {
@@ -390,7 +405,7 @@ func Publish(pc PublishCommand) error {
   if err != nil {
     return siteError("%v", err)
   }
-  err = publishPieces(pieces, pc.TemplateDir, pc.PublicDir)
+  err = publishPieces(pieces, pc.TemplateDir, pc.PublicDir, pc.StorageURL)
   if err != nil {
     return siteError("%v", err)
   }
@@ -408,6 +423,3 @@ func Publish(pc PublishCommand) error {
   }
   return nil
 }
-
-// rclone copy piece/Largo-c3bd.pdf vladpcloud:/bayan/piece/
-// rclone link vladpcloud:/bayan/piece/Largo-c3bd.pdf

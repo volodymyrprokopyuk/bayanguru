@@ -105,6 +105,7 @@ type Piece struct {
   Lyr string `yaml:"lyr"`
 
   File string
+  URL string
   Meta bool
   // ens: sol
   RightHand, LeftHand string

@@ -258,6 +258,7 @@ bayan publish all --query...`,
         TemplateDir: filepath.Join(siteDir, "template"),
         ContentDir: filepath.Join(siteDir, "content"),
         PublicDir: filepath.Join(siteDir, "public"),
+        StorageURL: "vladpcloud:/bayan/piece",
         PageSize: 24,
       }
       if !pc.All {
