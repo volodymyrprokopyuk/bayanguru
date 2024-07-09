@@ -8,7 +8,7 @@
   {{ with .SiteContent }}
     <h2 class="head2">Purpose | Мета сайту</h2>
     {{ range .Purpose }}
-      <p class="mt-2">{{ .Eng }}</p> <p>{{ .Eng }}</p>
+      <p class="mt-2">{{ .Eng | md }}</p> <p>{{ .Ukr | md }}</p>
     {{ end }}
     <h2 class="head2">User features | Можливості користувача</h2>
     <ul class="list mt-2">

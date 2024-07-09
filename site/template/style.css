@@ -37,6 +37,10 @@
   }
 }
 
+a {
+  font-weight: 500;
+  color: rgb(29 78 216);
+}
 .pagefind-ui__search-input {
   display: block;
   width: 100%;

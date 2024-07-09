@@ -2,22 +2,27 @@
 ---
 purpose:
   - eng: >
-      Bayan is an engraving and publishing system that produces the highest
-      quality sheet music in PDF for bayan. The system uses LilyPond for
-      engraving both the Stradella bass and the free bass pieces, lyrics, and
-      books
+      Bayan is the engraving and publishing system that produces the **highest
+      quality sheet music for bayan** in PDF. The system uses
+      [LilyPond](https://lilypond.org/) for engraving **Stradella bass** and
+      **free bass** pieces, lyrics, and books
+    ukr: >
+      Баян – це система для цифрового набору та публікації **нот найвищої якості
+      для баяна** у форматі PDF. Система використовує
+      [LilyPond](https://lilypond.org/) для набору п'єс, пісень з словами та
+      нотних книжок для **готового акорду** і **виборної системи**
+  - eng: >
+      **Purpose** (the reason to exist, why?). To promote and support the art of
+      bayan music through the highest quality sheet music for bayan
     ukr:
   - eng: >
-      Purpose (the reason to exist, why?). To promote and support the art of
-      bayan music through the highest quality sheet music content for bayan
-    ukr:
-  - eng: >
-      Vision (the goal of the purpose, what?). Become the most complete and
+      **Vision** (the goal of the purpose, what?). Become the most complete and
       comprehensive online sheet music library for bayan
     ukr:
   - eng: >
-      Mission (the path to the purpose, how?). Combine the community effort for
-      sheet music production with the best music engraving tool LilyPond
+      **Mission** (the path to the purpose, how?). Combine the community effort
+      for sheet music production with the best music engraving tool
+      [LilyPond](https://lilypond.org/)
     ukr:
 userFeatures:
   - eng: The highest quality sheet music for bayan

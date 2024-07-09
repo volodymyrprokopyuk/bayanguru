@@ -1,12 +1,14 @@
 package site
 
 import (
+	"bytes"
 	"context"
 	"fmt"
 	"io"
 	"os"
 	"os/exec"
 	"path/filepath"
+	"regexp"
 	"runtime"
 	"strings"
 	"sync"
@@ -14,6 +16,7 @@ import (
 
 	cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
 	sty "github.com/volodymyrprokopyuk/bayan/internal/style"
+	"github.com/yuin/goldmark"
 	"gopkg.in/yaml.v3"
 )
 
@@ -96,13 +99,25 @@ func initSite(siteDir, publicDir string) error {
   return nil
 }
 
+var reRemovePar = regexp.MustCompile(`<p>|</p>`)
+
+var tplFuncs = template.FuncMap{
+  "join": func(sep string, slc []string) string {
+    return strings.Join(slc, sep)
+  },
+  "md": func(md string) string {
+    var htmlBuf bytes.Buffer
+    err := goldmark.Convert([]byte(md), &htmlBuf)
+    if err != nil {
+      panic(err)
+    }
+    return reRemovePar.ReplaceAllString(htmlBuf.String(), "")
+  },
+}
+
 func makeTemplate(templateDir string) (*template.Template, error) {
   tpl := template.New("page")
-  tpl.Funcs(template.FuncMap{
-    "join": func(sep string, slc []string) string {
-      return strings.Join(slc, sep)
-    },
-  })
+  tpl.Funcs(tplFuncs)
   pageFile := filepath.Join(templateDir, "page.html")
   return tpl.ParseFiles(pageFile)
 }
