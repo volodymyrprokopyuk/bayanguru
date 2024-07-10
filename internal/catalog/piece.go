@@ -301,8 +301,6 @@ func addMetaToPieces(pieces []Piece) {
     }
     // file
     piece.File = scoreFile(piece.Tit, piece.ID)
-    // URL
-    piece.URL = fmt.Sprintf("/score/%v.pdf", piece.File)
   }
 }
 

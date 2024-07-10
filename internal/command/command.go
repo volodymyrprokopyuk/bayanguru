@@ -260,7 +260,8 @@ bayan publish all --query...`,
         TemplateDir: filepath.Join(siteDir, "template"),
         ContentDir: filepath.Join(siteDir, "content"),
         PublicDir: filepath.Join(siteDir, "public"),
-        StorageURL: "vladpcloud:/bayan/score",
+        UploadURL: "bayanr2:bayan-score",
+        ScoreURL: "https://pub-35182323feb54a86b46b94ec62029229.r2.dev",
         PageSize: 24,
       }
       if !pc.All {

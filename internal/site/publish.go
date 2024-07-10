@@ -26,7 +26,8 @@ type PublishCommand struct {
   Init, All, Book, Local bool
   Pieces, Books []string
   Queries cat.PieceQueries
-  SiteDir, TemplateDir, ContentDir, PublicDir, StorageURL string
+  SiteDir, TemplateDir, ContentDir, PublicDir string
+  UploadURL, ScoreURL string
   PageSize int
 }
 
@@ -68,9 +69,9 @@ var catGroups = map[string][]string{
   "level": {
     "elementary-a", "elementary-b", "elementary-c",
   },
-  "lyrics": {
-    "lyrics",
-  },
+  // "lyrics": {
+  //   "lyrics",
+  // },
 }
 
 func initSite(siteDir, publicDir string) error {
@@ -220,38 +221,23 @@ func publishIndex(tpl *template.Template, pc PublishCommand) error {
   return publishFile(os.Stdout, tpl, pc.PublicDir, "index.html", indexData)
 }
 
-func uploadPiece(w io.Writer, pieceFile, storageURL string) (string, error) {
+func uploadPiece(w io.Writer, pieceFile, uploadURL string) error {
   file := fmt.Sprintf("piece/%v.pdf", pieceFile)
   fmt.Fprintf(w, "%v %v\n", sty.Org("upload"), sty.Lvl(file))
   copyCmd := exec.Command(
-    "rclone", "copy", file, fmt.Sprintf("%v/", storageURL),
+    "rclone", "copy", "--s3-no-check-bucket", file, uploadURL,
   )
   copyCmd.Stdout = os.Stdout
   copyCmd.Stderr = os.Stderr
-  err := copyCmd.Run()
-  if err != nil {
-    return "", err
-  }
-  linkCmd := exec.Command(
-    "rclone", "link", fmt.Sprintf("%v/%v.pdf", storageURL, pieceFile),
-  )
-  var buf strings.Builder
-  linkCmd.Stdout = &buf
-  linkCmd.Stderr = os.Stderr
-  err = linkCmd.Run()
-  if err != nil {
-    return "", err
-  }
-  link := strings.TrimRight(buf.String(), "\n")
-  return link, nil
+  return copyCmd.Run()
 }
 
 func receiveAndPublishPieces(
   ctx context.Context, pieceCh <-chan cat.Piece, errorCh chan<- error,
-  tplPool *sync.Pool, publicDir, storageURL string, local bool,
+  tplPool *sync.Pool, pc PublishCommand,
 ) {
   defer close(errorCh)
-  pieceDir := filepath.Join(publicDir, "piece")
+  pieceDir := filepath.Join(pc.PublicDir, "piece")
   var w strings.Builder
   for {
     select {
@@ -262,13 +248,16 @@ func receiveAndPublishPieces(
         return
       }
       w.Reset()
-      if !local {
-        pieceURL, err := uploadPiece(&w, piece.File, storageURL)
+      if pc.Local {
+        piece.URL = fmt.Sprintf("/score/%v.pdf", piece.File)
+      } else {
+        err := uploadPiece(&w, piece.File, pc.UploadURL)
         if err != nil {
           errorCh <- err
           pieceCh = nil
+          break;
         }
-        piece.URL = pieceURL
+        piece.URL = fmt.Sprintf("%v/%v.pdf", pc.ScoreURL, piece.File)
       }
       tpl := tplPool.Get().(*template.Template)
       pieceData := struct { Piece cat.Piece }{piece}
@@ -283,21 +272,19 @@ func receiveAndPublishPieces(
   }
 }
 
-func publishPieces(
-  pieces []cat.Piece, templateDir, publicDir, storageURL string, local bool,
-) error {
-  tpl, err := makeTemplate(templateDir) // validate template
+func publishPieces(pieces []cat.Piece, pc PublishCommand) error {
+  tpl, err := makeTemplate(pc.TemplateDir) // validate template
   if err != nil {
     return err
   }
-  pieceFile := filepath.Join(templateDir, "piece.html")
+  pieceFile := filepath.Join(pc.TemplateDir, "piece.html")
   _, err = tpl.ParseFiles(pieceFile) // validate template
   if err != nil {
     return err
   }
   var tplPool = sync.Pool{
     New: func() any {
-      tpl, _ := makeTemplate(templateDir)
+      tpl, _ := makeTemplate(pc.TemplateDir)
       _, _ = tpl.ParseFiles(pieceFile)
       return tpl
     },
@@ -309,9 +296,7 @@ func publishPieces(
   errorChs := make([]chan error, n)
   for i := range n { // fan-out pieces
     errorChs[i] = make(chan error)
-    go receiveAndPublishPieces(
-      ctx, pieceCh, errorChs[i], &tplPool, publicDir, storageURL, local,
-    )
+    go receiveAndPublishPieces(ctx, pieceCh, errorChs[i], &tplPool, pc)
   }
   errorCh := cat.FanIn(errorChs) // fan-in pieces
   go func() {
@@ -372,20 +357,7 @@ func publishStyle(siteDir, templateDir, publicDir string) error {
   )
   twCmd.Stdout = os.Stdout
   twCmd.Stderr = os.Stderr
-  err := twCmd.Run()
-  if err != nil {
-    return err
-  }
-  return nil
-  // minArgs := fmt.Sprintf(
-  //   "%[1]v/index.html %[1]v/piece/* %[1]v/catalog/*/*/*",
-  //   publicDir,
-  // )
-  // fmt.Printf("%v %v\n", sty.Org("minify"), sty.Lvl(minArgs))
-  // minCmd := exec.Command("bash", "-c", "minify-html " + minArgs)
-  // minCmd.Stdout = os.Stdout
-  // minCmd.Stderr = os.Stderr
-  // return minCmd.Run()
+  return twCmd.Run()
 }
 
 func catError(format string, args ...any) error {
@@ -426,23 +398,21 @@ func Publish(pc PublishCommand) error {
   if err != nil {
     return siteError("%v", err)
   }
-  err = publishPieces(
-    pieces, pc.TemplateDir, pc.PublicDir, pc.StorageURL, pc.Local,
-  )
+  err = publishPieces(pieces, pc)
   if err != nil {
     return siteError("%v", err)
   }
-  // err = indexPieces(pc.SiteDir, pc.PublicDir)
-  // if err != nil {
-  //   return siteError("%v", err)
-  // }
-  // err = publishCatalog(tpl, pc)
-  // if err != nil {
-  //   return siteError("%v", err)
-  // }
-  // err = publishStyle(pc.SiteDir, pc.TemplateDir, pc.PublicDir)
-  // if err != nil {
-  //   return siteError("%v", err)
-  // }
+  err = indexPieces(pc.SiteDir, pc.PublicDir)
+  if err != nil {
+    return siteError("%v", err)
+  }
+  err = publishCatalog(tpl, pc)
+  if err != nil {
+    return siteError("%v", err)
+  }
+  err = publishStyle(pc.SiteDir, pc.TemplateDir, pc.PublicDir)
+  if err != nil {
+    return siteError("%v", err)
+  }
   return nil
 }
