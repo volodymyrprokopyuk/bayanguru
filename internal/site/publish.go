@@ -135,6 +135,23 @@ func publishFile(
   return tpl.ExecuteTemplate(w, "page.html", data)
 }
 
+func publishDirIndex(
+  w io.Writer, tpl *template.Template, publicDir, publicFile string, data any,
+) error {
+  dir := filepath.Join(publicDir, publicFile)
+  fmt.Fprintf(w, "%v %v\n", sty.Org("publish"), sty.Lvl(dir))
+  err := os.MkdirAll(dir, 0755)
+  if err != nil {
+    return err
+  }
+  file := filepath.Join(dir, "index.html")
+  f, err := os.Create(file) // overwrites an existing file
+  if err != nil {
+    return err
+  }
+  return tpl.ExecuteTemplate(f, "page.html", data)
+}
+
 type MetaEntry struct {
   Name string `yaml:"name"`
   Eng string `yaml:"eng"`
@@ -261,7 +278,7 @@ func receiveAndPublishPieces(
       }
       tpl := tplPool.Get().(*template.Template)
       pieceData := struct { Piece cat.Piece }{piece}
-      err := publishFile(&w, tpl, pieceDir, piece.File, pieceData)
+      err := publishDirIndex(&w, tpl, pieceDir, piece.File, pieceData)
       fmt.Print(w.String())
       tplPool.Put(tpl)
       if err != nil {

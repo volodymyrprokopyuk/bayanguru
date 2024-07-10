@@ -278,7 +278,7 @@ func publishGroupPages(
       Pieces: pieces,
       PageLinks: pageLinks,
     }
-    err := publishFile(os.Stdout, tpl, catalogDir, currentPage, catalogData)
+    err := publishDirIndex(os.Stdout, tpl, catalogDir, currentPage, catalogData)
     if err != nil {
       return err
     }
