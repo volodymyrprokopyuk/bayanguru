@@ -1,12 +1,14 @@
 \version "2.25.17"
 
 % Logo
-bayanURL = "https://bayan-music.org"
+bayanURL = "https://bayan.pages.dev"
 bayanLogo = \markup \serif \bold \concat {
   \magnify #0.75 \musicglyph "clefs.G"
   \magnify #1.45 { \rotate #30 Б \lower #0.35 а \raise #0.35 я \rotate #-30 Н }
 }
-logoURL = \markup { \bayanLogo \fontsize #1 \with-url \bayanURL \bayanURL }
+logoURL = \markup {
+  \with-url \bayanURL \bayanLogo \fontsize #1 \with-url \bayanURL \bayanURL
+}
 
 % Bass
 stBass = \markup \larger \box Г % Готовий бас = standard (Stradella) bass

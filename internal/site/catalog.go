@@ -48,7 +48,7 @@ var tr = map[string]string{
   "elementary-b": "Elementary B | Простий B",
   "elementary-c": "Elementary C | Простий C",
   // ens
-  "lyrics": "Lyrics | Пісні",
+  // "lyrics": "Lyrics | Пісні",
 }
 
 type PieceGroups map[string][]cat.Piece
