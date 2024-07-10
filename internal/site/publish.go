@@ -23,7 +23,7 @@ import (
 type PublishCommand struct {
   CatalogDir, BookFile, PieceDir, BookDir string
   Catalog string
-  Init, All, Book bool
+  Init, All, Book, Local bool
   Pieces, Books []string
   Queries cat.PieceQueries
   SiteDir, TemplateDir, ContentDir, PublicDir, StorageURL string
@@ -220,16 +220,35 @@ func publishIndex(tpl *template.Template, pc PublishCommand) error {
   return publishFile(os.Stdout, tpl, pc.PublicDir, "index.html", indexData)
 }
 
-// rclone copy piece/Largo-c3bd.pdf vladpcloud:/bayan/piece/
-// rclone link vladpcloud:/bayan/piece/Largo-c3bd.pdf
-
-func uploadPiece(piece cat.Piece, storageURL string) (string, error) {
-  return "link", nil
+func uploadPiece(w io.Writer, pieceFile, storageURL string) (string, error) {
+  file := fmt.Sprintf("piece/%v.pdf", pieceFile)
+  fmt.Fprintf(w, "%v %v\n", sty.Org("upload"), sty.Lvl(file))
+  copyCmd := exec.Command(
+    "rclone", "copy", file, fmt.Sprintf("%v/", storageURL),
+  )
+  copyCmd.Stdout = os.Stdout
+  copyCmd.Stderr = os.Stderr
+  err := copyCmd.Run()
+  if err != nil {
+    return "", err
+  }
+  linkCmd := exec.Command(
+    "rclone", "link", fmt.Sprintf("%v/%v.pdf", storageURL, pieceFile),
+  )
+  var buf strings.Builder
+  linkCmd.Stdout = &buf
+  linkCmd.Stderr = os.Stderr
+  err = linkCmd.Run()
+  if err != nil {
+    return "", err
+  }
+  link := strings.TrimRight(buf.String(), "\n")
+  return link, nil
 }
 
 func receiveAndPublishPieces(
   ctx context.Context, pieceCh <-chan cat.Piece, errorCh chan<- error,
-  tplPool *sync.Pool, publicDir, storageURL string,
+  tplPool *sync.Pool, publicDir, storageURL string, local bool,
 ) {
   defer close(errorCh)
   pieceDir := filepath.Join(publicDir, "piece")
@@ -242,16 +261,18 @@ func receiveAndPublishPieces(
       if !open {
         return
       }
-      pieceURL, err := uploadPiece(piece, storageURL)
-      if err != nil {
-        errorCh <- err
-        pieceCh = nil
-      }
-      piece.URL = pieceURL
       w.Reset()
+      if !local {
+        pieceURL, err := uploadPiece(&w, piece.File, storageURL)
+        if err != nil {
+          errorCh <- err
+          pieceCh = nil
+        }
+        piece.URL = pieceURL
+      }
       tpl := tplPool.Get().(*template.Template)
       pieceData := struct { Piece cat.Piece }{piece}
-      err = publishFile(&w, tpl, pieceDir, piece.File, pieceData)
+      err := publishFile(&w, tpl, pieceDir, piece.File, pieceData)
       fmt.Print(w.String())
       tplPool.Put(tpl)
       if err != nil {
@@ -263,7 +284,7 @@ func receiveAndPublishPieces(
 }
 
 func publishPieces(
-  pieces []cat.Piece, templateDir, publicDir, storageURL string,
+  pieces []cat.Piece, templateDir, publicDir, storageURL string, local bool,
 ) error {
   tpl, err := makeTemplate(templateDir) // validate template
   if err != nil {
@@ -289,7 +310,7 @@ func publishPieces(
   for i := range n { // fan-out pieces
     errorChs[i] = make(chan error)
     go receiveAndPublishPieces(
-      ctx, pieceCh, errorChs[i], &tplPool, publicDir, storageURL,
+      ctx, pieceCh, errorChs[i], &tplPool, publicDir, storageURL, local,
     )
   }
   errorCh := cat.FanIn(errorChs) // fan-in pieces
@@ -405,21 +426,23 @@ func Publish(pc PublishCommand) error {
   if err != nil {
     return siteError("%v", err)
   }
-  err = publishPieces(pieces, pc.TemplateDir, pc.PublicDir, pc.StorageURL)
+  err = publishPieces(
+    pieces, pc.TemplateDir, pc.PublicDir, pc.StorageURL, pc.Local,
+  )
   if err != nil {
     return siteError("%v", err)
   }
-  err = indexPieces(pc.SiteDir, pc.PublicDir)
-  if err != nil {
-    return siteError("%v", err)
-  }
-  err = publishCatalog(tpl, pc)
-  if err != nil {
-    return siteError("%v", err)
-  }
-  err = publishStyle(pc.SiteDir, pc.TemplateDir, pc.PublicDir)
-  if err != nil {
-    return siteError("%v", err)
-  }
+  // err = indexPieces(pc.SiteDir, pc.PublicDir)
+  // if err != nil {
+  //   return siteError("%v", err)
+  // }
+  // err = publishCatalog(tpl, pc)
+  // if err != nil {
+  //   return siteError("%v", err)
+  // }
+  // err = publishStyle(pc.SiteDir, pc.TemplateDir, pc.PublicDir)
+  // if err != nil {
+  //   return siteError("%v", err)
+  // }
   return nil
 }

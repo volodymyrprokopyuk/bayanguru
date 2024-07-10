@@ -8,7 +8,7 @@
 
 {{ define "body" }}
   {{ with .Piece }}
-    <main data-pagefind-body>
+    <div data-pagefind-body>
       <div class="hidden">
         <h1 data-pagefind-meta="title">{{ .Tit }}</h1>
         <div data-pagefind-meta="id">{{ .ID }}</div>
@@ -27,8 +27,8 @@
         <div data-pagefind-meta="ens">{{ .Ens }}</div>
         <div data-pagefind-meta="lyr">{{ .Lyr }}</div>
       </div>
-      <object id="score" type="application/pdf" data="/score/{{ .File }}.pdf"
-              class="score">{{ .Tit }}</object>
-    </main>
+      <object id="score" type="application/pdf" data="{{ .URL }}" class="score">
+        {{ .Tit }}</object>
+    </div>
   {{ end }}
 {{ end }}

@@ -224,6 +224,7 @@ bayan play all --query... --random --list`,
     playCmd.Flags().StringVarP(query.varp, opt, "", "", query.short)
   }
 
+  var local bool
   publishCmd := &cobra.Command{
     Use: "publish",
     Short: "Publish pieces on the web",
@@ -231,7 +232,7 @@ bayan play all --query... --random --list`,
 `Publish command uploads PDF pieces to a cloud storage, generates and publishes
 a web site`,
     Example:
-`bayan publish [-c catalog] pieces...
+`bayan publish [-c catalog] [--local] pieces...
 bayan publish [-c catalog] -b books... [--query]
 bayan publish all --query...`,
     Args: func(_ *cobra.Command, args []string) error {
@@ -253,12 +254,13 @@ bayan publish all --query...`,
         Init: init,
         All: len(args) == 1 && args[0] == "all",
         Book: book,
+        Local: local,
         Queries: make(map[string]string, 10),
         SiteDir: siteDir,
         TemplateDir: filepath.Join(siteDir, "template"),
         ContentDir: filepath.Join(siteDir, "content"),
         PublicDir: filepath.Join(siteDir, "public"),
-        StorageURL: "vladpcloud:/bayan/piece",
+        StorageURL: "vladpcloud:/bayan/score",
         PageSize: 24,
       }
       if !pc.All {
@@ -284,6 +286,9 @@ bayan publish all --query...`,
   )
   publishCmd.Flags().BoolVarP(
     &book, "book", "b", false, "publish pieces from books",
+  )
+  publishCmd.Flags().BoolVarP(
+    &local, "local", "", false, "publish pieces to serve scores locally",
   )
   for opt, query := range queries {
     publishCmd.Flags().StringVarP(query.varp, opt, "", "", query.short)
