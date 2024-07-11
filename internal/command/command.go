@@ -260,8 +260,9 @@ bayan publish all --query...`,
         TemplateDir: filepath.Join(siteDir, "template"),
         ContentDir: filepath.Join(siteDir, "content"),
         PublicDir: filepath.Join(siteDir, "public"),
-        UploadURL: "bayan:bayan",
-        ScoreURL: "https://pub-8b87d8b5f2d84726be4b867edf548806.r2.dev",
+        UploadURL: "bayanguru:bayanguru/score",
+        ScoreURL: "https://pub-4349fcacaeee4aba9320501506f5a601.r2.dev/score",
+        // ScoreURL: "https://4a1b5a6698ddb2b7ab489f9934e289ee.r2.cloudflarestorage.com",
         PageSize: 24,
       }
       if !pc.All {
