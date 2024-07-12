@@ -113,7 +113,6 @@ pieces:
   #     org: rus, sty: flk, gnr: sng, ton: cismi, frm: [vo2, var], bss: [frb, var, pub], lvl: elc }
   # p. 125 TODO
   # BSO1981
-  # p. 98
-  # - { id: oow8, tit: Полька,
-  #     com: А. Онегин, src: BSO1981,
-  #     org: rus, sty: cus, gnr: plk, ton: cmj, frm: [var, cr5], bss: [frb, cr5, stb], lvl: elb }
+  - { id: oow8, tit: Полька,
+      com: А. Онегин, src: BSO1981,
+      org: rus, sty: cus, gnr: plk, ton: cmj, frm: [var, cr5], bss: [frb, stb, cr5], lvl: elb }
