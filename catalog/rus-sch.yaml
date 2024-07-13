@@ -47,6 +47,10 @@ pieces:
   # - { id: 59uu, tit: Песенка,
   #     com: Е. Дербенко, src: BSO1981,
   #     org: rus, sty: cus, gnr: sng, ton: dmi, frm: dot, bss: stb, lvl: ela }
+  # p. 107
+  # - { id: vg9l, tit: Лебедушка, sub: rusfs,
+  #     arr: Е. Кузнецов, src: BSO1981,
+  #     org: rus, sty: flk, gnr: sng, ton: [dmi, ami], frm: cr5, bss: stb, lvl: elb }
   # Free bass
   # FBBSC1978
   - { id: v2kv, tit: На горе-то калина, sub: rusfs,
@@ -116,3 +120,7 @@ pieces:
   - { id: oow8, tit: Полька,
       com: А. Онегин, src: BSO1981,
       org: rus, sty: cus, gnr: plk, ton: cmj, frm: [var, cr5], bss: [frb, stb, cr5], lvl: elb }
+  # p. 100
+  # - { id: ru80, tit: Маленький романс,
+  #     com: А. Онегин, src: BSO1981,
+  #     org: rus, sty: cus, gnr: rmc, ton: ami, frm: syn, bss: [stb, frb, in3], lvl: elb }
