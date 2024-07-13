@@ -12,7 +12,7 @@
 {{ define "rh3" }}
   {{ .a }} e16 g g,8 c16 e | \rep 2 { g,=8 <b= f' g>-> } |
   g=8 d'16 f g,8 b16 d | \rep 2 { g,=8 <c=' e g>-> } |
-  c='16\< g c e g e c \af 16\! d | \rep 2 { g,=8 <b= f' g>-> } |
+  c='16\< g c e g e c \af 16\! e | \rep 2 { g,=8 <b= f' g>-> } |
   b=16 g b d f d b d=' |
 {{ end }}
 
@@ -32,12 +32,12 @@
   \time 2/4
   {{ template "rh3" (w `c'='8\f`) }} | c='16 b c d e d c b= |
 
-  {{ template "rh2" (w `a=8\p`) }} | a=16\< b c d dis e f \af 16\! fis=' |
+  {{ template "rh2" (w `a=8\p`) }} | a=16\< b c d dis e f \af 32.\! fis=' |
 
   \repeat volta 2 {
     \rep 2 { g='16 a g fis g a g fis=' | } | g\< a b c d e f d |
     \alternative {
-      \volta 1 { g=''16\> f e d c b a \af 16\! gis=' | }
+      \volta 1 { g=''16\> f e d c b a \af 32.\! gis=' | }
       \volta 2 { e'=''16\> f e d c b c \af 16\! d='' | }
     }
   }
