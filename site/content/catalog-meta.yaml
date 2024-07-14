@@ -1,8 +1,22 @@
 %YAML 1.1
 ---
 purpose:
-  eng: Meta data help to search pieces quickly and efficiently
-  ukr: Мета дані допоможуть шукати п'єси швидко і ефективно
+  eng: >
+    **Metadata search tags** help to search pieces quickly and efficiently. For
+    example: enter into the main search box **ukr flk sng ami vo2 frb elc** to
+    search for ukrainian folk songs in A minor with two voices, free bass, and
+    the elementary C difficulty level. The table below describes all supported
+    **search tags** that can be used along with a **piece title** and a
+    **composer or arranger last name** in the main search box to find pieces
+    that match the search criteria
+  ukr: >
+    **Ключові слова пошуку** допоможуть шукати п'єси швидко і ефективно.
+    Наприклад: введіть **ukr flk sng ami vo2 frb elc** в головне вікно пошуку,
+    щоб здійснити пошук українських народних пісень в ля мінорі з двоголоссям,
+    виборною системою і елементарним C рівнем складності. Нижще приведена
+    таблиця подає всі можливі **слова пошуку**, які можна використовувати на
+    рівні з **назвою п'єси** та **прізвищем комозитора чи аранжувальника** для
+    пошуку п'єс, що задовольняють критеріям пошуку
 meta:
   - tit: { eng: Piece identification, ukr: Ідентифікація п'єси }
     sec:

@@ -6,7 +6,7 @@
     {{ end }}
   </div>
   {{ with .SiteContent }}
-    <h2 class="head2">Purpose | Мета сайту</h2>
+    <h2 class="head2">Purpose | Мета пректу</h2>
     {{ range .Purpose }}
       <p class="mt-2">{{ .Eng | md }}</p> <p>{{ .Ukr | md }}</p>
     {{ end }}
@@ -24,8 +24,9 @@
     </ul>
   {{ end }}
   {{ with .CatalogMeta }}
-    <h2 class="head2">Catalog meta | Опис каталогу</h2>
-    <p class="mt-2">{{ .Purpose.Eng }}</p> <p>{{ .Purpose.Ukr }}</p>
+    <h2 class="head2">Advanced search | Розширений пошук</h2>
+    <p class="mt-2">{{ .Purpose.Eng | md }}</p>
+    <p class="mt-2">{{ .Purpose.Ukr | md }}</p>
     <table class="mt-2 text-sm lg:text-base">
       {{ range .Meta }}
         <tr class="bg-yellow-100">

@@ -2,36 +2,35 @@
 ---
 purpose:
   - eng: >
-      Bayan is the engraving and publishing system that produces the **highest
+      **Bayanguru** is an engraving and publishing system that produces **high
       quality sheet music for bayan** in PDF. The system uses
       [LilyPond](https://lilypond.org/) for engraving **Stradella bass** and
       **free bass** pieces, lyrics, and books
     ukr: >
-      Баян – це система для цифрового гравірування та публікації **нот найвищої
-      якості для баяна** у форматі PDF. Система використовує
+      **Bayanguru** – це система для цифрового гравірування та публікації **нот
+      високої якості для баяна** у форматі PDF. Система використовує
       [LilyPond](https://lilypond.org/) для гравірування п'єс, пісень з словами
       та нотних книжок для **готового акорду** і **виборної системи**
   - eng: >
       **Purpose** (the reason to exist, why?). To promote and support the art of
-      bayan music through production of the highest quality sheet music for
-      bayan
+      bayan music through production of the high quality sheet music for bayan
     ukr: >
-      **Мета** (причини створення сайту, чому?). Сприяти розвитку та підтимувати
-      баянне мистецтво шляхом створення нот найвищої якості для баяна
+      **Мета** (причини створення проекту, для чого?). Сприяти розвитку та
+      підтимувати баянне мистецтво шляхом створення нот високої якості для баяна
   - eng: >
       **Vision** (the goal of the purpose, what?). Become the most complete and
       comprehensive online sheet music library for bayan
     ukr: >
-      **Бачення** (сутність мети, що?). Стати найповнішою та всеосяжною цифровою
-      бібліотекою нот для баяна
+      **Перспектива** (сутність мети, що?). Стати найповнішою та всеосяжною
+      цифровою бібліотекою нот для баяна
   - eng: >
       **Mission** (the path to the purpose, how?). Combine the community effort
-      for sheet music production with the best music engraving tool
-      [LilyPond](https://lilypond.org/)
+      for sheet music production with the [LilyPond](https://lilypond.org/)
+      engraving program
     ukr: >
-      **Місія** (шлях досягнення мети, як?). Поєданти зусилля спільноти з
-      гравірування нот з найкращою програмою для гравірування нот
-      [LilyPond](https://lilypond.org/)
+      **Місія** (шлях досягнення мети, як?). Поєднати зусилля спільноти за
+      створенням нот з програмою [LilyPond](https://lilypond.org/) для
+      гравірування нот
 userFeatures:
   - eng: The highest quality sheet music for bayan
     ukr: Ноти найвищої якості для баяна
