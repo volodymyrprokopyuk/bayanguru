@@ -5,12 +5,16 @@ purpose:
       **Bayanguru** is an engraving and publishing system that produces **high
       quality sheet music for bayan** in PDF. The system uses
       [LilyPond](https://lilypond.org/) for engraving **Stradella bass** and
-      **free bass** pieces, lyrics, and books
+      **free bass** pieces, lyrics, and books. Bayanguru features a precise,
+      quick, and easy to use **piece search system**, as well as a comprehensive
+      and fine-grained **piece classification catalog**
     ukr: >
       **Bayanguru** – це система для цифрового гравірування та публікації **нот
       високої якості для баяна** у форматі PDF. Система використовує
       [LilyPond](https://lilypond.org/) для гравірування п'єс, пісень з словами
-      та нотних збірників для **готового акорду** і **виборної системи**
+      та нотних збірників для **готового акорду** і **виборної системи**.
+      Bayanguru має точну, швидку і просту у використанні систему пошуку п'єс,
+      а також представляє комлекстний і деталізований каталог класифікації п'єс
   - eng: >
       **Purpose** (the reason to exist, why?). To promote and support the art of
       bayan music through production of high quality sheet music for bayan
@@ -46,8 +50,8 @@ userFeatures:
     ukr: Прогресивно зростаюча складність п'єс
   - eng: Precise, quick, and easy to use piece search system
     ukr: Точна, швидка і проста у використанні система пошуку п'єс
-  - eng: Comprehensive piece classification catalog
-    ukr: Комплексний каталог класифікації п'єс
+  - eng: Comprehensive and fine-grained piece classification catalog
+    ukr: Комплексний і деталізований каталог класифікації п'єс
   - eng: Flexible search and automatic play system (CLI)
     ukr: Гнучка система пошуку і автоматичної візуалізації п'єс (CLI)
   - eng: Robust custom book engraving system (CLI)
