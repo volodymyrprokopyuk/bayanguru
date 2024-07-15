@@ -10,25 +10,25 @@ purpose:
       **Bayanguru** – це система для цифрового гравірування та публікації **нот
       високої якості для баяна** у форматі PDF. Система використовує
       [LilyPond](https://lilypond.org/) для гравірування п'єс, пісень з словами
-      та нотних книжок для **готового акорду** і **виборної системи**
+      та нотних збірників для **готового акорду** і **виборної системи**
   - eng: >
       **Purpose** (the reason to exist, why?). To promote and support the art of
-      bayan music through production of the high quality sheet music for bayan
+      bayan music through production of high quality sheet music for bayan
     ukr: >
-      **Мета** (причини створення проекту, для чого?). Сприяти розвитку та
+      **Призначення** (причини створення, для чого?). Сприяти розвитку та
       підтимувати баянне мистецтво шляхом створення нот високої якості для баяна
   - eng: >
       **Vision** (the goal of the purpose, what?). Become the most complete and
       comprehensive online sheet music library for bayan
     ukr: >
-      **Перспектива** (сутність мети, що?). Стати найповнішою та всеосяжною
-      цифровою бібліотекою нот для баяна
+      **Мета** (ціль призначення, що?). Стати найповнішою та всеосяжною цифровою
+      бібліотекою нот для баяна
   - eng: >
-      **Mission** (the path to the purpose, how?). Combine the community effort
+      **Mission** (the path to the vision, how?). Combine the community effort
       for sheet music production with the [LilyPond](https://lilypond.org/)
       engraving program
     ukr: >
-      **Місія** (шлях досягнення мети, як?). Поєднати зусилля спільноти за
+      **Спосіб** (шлях досягнення мети, як?). Поєднати зусилля спільноти за
       створенням нот з програмою [LilyPond](https://lilypond.org/) для
       гравірування нот
 userFeatures:
