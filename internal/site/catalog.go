@@ -372,7 +372,7 @@ func keyByGnr(piece cat.Piece) []string {
 }
 
 func keyByStu(piece cat.Piece) []string {
-  keys := make([]string, 0, 5)
+  keys := make(map[string]bool, 5)
   for _, bss := range piece.Bss {
     var stuFrm []string
     switch bss {
@@ -380,22 +380,22 @@ func keyByStu(piece cat.Piece) []string {
       stuFrm = piece.Frm
     case "pub":
       stuFrm = piece.Frm
-      keys = append(keys, "left-hand")
+      keys["left-hand"] = true
     case "frb":
       stuFrm = piece.Bss
     }
     for _, frm := range stuFrm {
       switch frm {
       case "scl":
-        keys = append(keys, "scale")
+        keys["scale"] = true
       case "arp":
-        keys = append(keys, "arpeggio")
+        keys["arpeggio"] = true
       case "in3", "in4", "in5", "in6", "in8":
-        keys = append(keys, "interval")
+        keys["interval"] = true
       case "cr5", "cr7":
-        keys = append(keys, "chord")
+        keys["chord"] = true
       case "vo2", "vo3":
-        keys = append(keys, "polyphony")
+        keys["polyphony"] = true
       }
     }
   }
@@ -406,7 +406,11 @@ func keyByStu(piece cat.Piece) []string {
     )
     panic(err)
   }
-  return keys
+  unique := make([]string, 0, len(keys))
+  for key := range keys {
+    unique = append(unique, key)
+  }
+  return unique
 }
 
 func keyByCom(piece cat.Piece) []string {
@@ -414,18 +418,22 @@ func keyByCom(piece cat.Piece) []string {
 }
 
 func keyByBss(piece cat.Piece) []string {
-  keys := make([]string, 0, 3)
+  keys := make(map[string]bool, 3)
   for _, bss := range piece.Bss {
     switch bss {
     case "stb":
-      keys = append(keys, "standard-bass")
+      keys["standard-bass"] = true
     case "pub":
-      keys = append(keys, "pure-bass")
+      keys["pure-bass"] = true
     case "frb":
-      keys = append(keys, "free-bass")
+      keys["free-bass"] = true
     }
   }
-  return keys
+  unique := make([]string, 0, len(keys))
+  for key := range keys {
+    unique = append(unique, key)
+  }
+  return unique
 }
 
 func keyByLvl(piece cat.Piece) []string {

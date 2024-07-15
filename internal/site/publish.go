@@ -23,7 +23,7 @@ import (
 type PublishCommand struct {
   CatalogDir, BookFile, PieceDir, BookDir string
   Catalog string
-  Init, All, Book, Local bool
+  Init, All, Book, Upload bool
   Pieces, Books []string
   Queries cat.PieceQueries
   SiteDir, TemplateDir, ContentDir, PublicDir string
@@ -265,17 +265,15 @@ func receiveAndPublishPieces(
         return
       }
       w.Reset()
-      if pc.Local {
-        piece.URL = fmt.Sprintf("/score/%v.pdf", piece.File)
-      } else {
+      if pc.Upload {
         err := uploadPiece(&w, piece.File, pc.UploadURL)
         if err != nil {
           errorCh <- err
           pieceCh = nil
           break;
         }
-        piece.URL = fmt.Sprintf("%v/%v.pdf", pc.ScoreURL, piece.File)
       }
+      piece.URL = fmt.Sprintf("%v/%v.pdf", pc.ScoreURL, piece.File)
       tpl := tplPool.Get().(*template.Template)
       pieceData := struct { Piece cat.Piece }{piece}
       err := publishDirIndex(&w, tpl, pieceDir, piece.File, pieceData)
