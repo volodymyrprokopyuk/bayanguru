@@ -261,7 +261,7 @@ bayan publish all --query...`,
         ContentDir: filepath.Join(siteDir, "content"),
         PublicDir: filepath.Join(siteDir, "public"),
         UploadURL: "bayanguru:bayanguru/score",
-        ScoreURL: "https://pub-4349fcacaeee4aba9320501506f5a601.r2.dev/score",
+        ScoreURL: "https://score.bayanguru.org/score",
         PageSize: 24,
       }
       if !pc.All {
