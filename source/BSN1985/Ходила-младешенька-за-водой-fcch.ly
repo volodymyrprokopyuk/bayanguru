@@ -48,5 +48,20 @@
 \relative {
   \clef bass
   \key cis \minor
+  r8 e'='8[-\frBass r dis] | r cis[ r bis] | r ais[ r a] | r gis fis( e~ |
+  e=4) dis | e fis8( dis) | cis4( bis | cis4.) dis8 |
+  e=4 fis | gis a | ais bis | cis4. dis='8 |
+
+  e='8 cis a fis | e cis dis fis | gis b e( dis) | r dis cis b |
+  a=8-- gis-- fis-- dis-- | e-- e-- fis4-- |
+  gis=8-- a-- ais=4 | r8 \clef treble dis='8( cis16 dis e fis |
+  a='16 gis fis e gis fis e dis | e dis cis b= \clef bass a= gis fis dis |
+  e=16 dis e fis gis a ais bis= \clef treble cis=' dis cis bis cis dis e fis=') |
+
+  gis='8 gis fis fis | gis16 fis gis8 fis16 e dis8 |
+  e='8 gis gis fis | cis cis cis=' r \clef bass |
+  \duo { cis=8 a' dis, bis' | e, gis fis a= | } { cis=4 dis | e fis= | }
+  gis=16( a ais b bis cis cisis dis | e8) dis cis=' \noBeam gis,=,-\puBass |
+  cis=4 dis | e fis, | gis a | gis8 fis cis'= r |
 }
 {{ end }}
