@@ -7,9 +7,9 @@ import (
 	"slices"
 
 	"github.com/spf13/cobra"
-	cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
-	"github.com/volodymyrprokopyuk/bayan/internal/score"
-	"github.com/volodymyrprokopyuk/bayan/internal/site"
+	cat "github.com/volodymyrprokopyuk/bayanguru/internal/catalog"
+	"github.com/volodymyrprokopyuk/bayanguru/internal/score"
+	"github.com/volodymyrprokopyuk/bayanguru/internal/site"
 )
 
 var (
@@ -64,13 +64,14 @@ func cmdError(format string, args ...any) error {
 
 func Execute() error {
   bayanCmd := &cobra.Command{
-    Use: "bayan",
+    Use: "bayanguru",
     Short: "Engrave, play and publish bayan sheet music",
     Long:
-`Bayan engraves pieces and books of sheet music for bayan. Bayan selectively
-plays pieces from a catalog using a classification and search system based on
-catalog metadata. Bayan publishes high quality PDF pieces on the web`,
-    Example: `bayan engrave | play | publish pieces... | books... [flags]`,
+`Bayanguru engraves pieces and books of sheet music for bayan. Bayanguru
+selectively plays pieces from a catalog using a classification and search system
+based on catalog metadata. Bayanguru publishes high quality PDF pieces, lyrics,
+and books on the web`,
+    Example: `bayanguru engrave | play | publish pieces... | books... [flags]`,
     Version: "0.1.0",
     SilenceUsage: true,
     SilenceErrors: true,
@@ -84,9 +85,9 @@ catalog metadata. Bayan publishes high quality PDF pieces on the web`,
     Long:
 `Engrave command initializes, lints, engraves, and optimizes pieces and books`,
     Example:
-`bayan engrave [-c catalog] pieces... [--init]
-bayan engrave [-c catalog] -b books... [--piece]
-bayan engrave all --lint --optimize --meta=f`,
+`bayanguru engrave [-c catalog] pieces... [--init]
+bayanguru engrave [-c catalog] -b books... [--piece]
+bayanguru engrave all --lint --optimize --meta=f`,
     Args: func(_ *cobra.Command, args []string) error {
       err := validateReq(catalog, args)
       if err != nil {
@@ -170,9 +171,9 @@ bayan engrave all --lint --optimize --meta=f`,
     Long:
 `Play command searches, lists, and plays pieces from a catalog or a book`,
     Example:
-`bayan play [-c catalog] pieces...
-bayan play [-c catalog] -b books... [--query...]
-bayan play all --query... --random --list`,
+`bayanguru play [-c catalog] pieces...
+bayanguru play [-c catalog] -b books... [--query...]
+bayanguru play all --query... --random --list`,
     Args: func(_ *cobra.Command, args []string) error {
       err := validateReq(catalog, args)
       if err != nil {
@@ -232,9 +233,9 @@ bayan play all --query... --random --list`,
 `Publish command uploads PDF pieces to a cloud storage, generates and publishes
 a web site`,
     Example:
-`bayan publish [-c catalog] [--upload] pieces...
-bayan publish [-c catalog] -b books... [--query]
-bayan publish all --query...`,
+`bayanguru publish [-c catalog] [--upload] pieces...
+bayanguru publish [-c catalog] -b books... [--query]
+bayanguru publish all --query...`,
     Args: func(_ *cobra.Command, args []string) error {
       err := validateReq(catalog, args)
       if err != nil {

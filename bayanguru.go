@@ -3,8 +3,8 @@ package main
 import (
   "fmt"
   "os"
-  sty "github.com/volodymyrprokopyuk/bayan/internal/style"
-  cmd "github.com/volodymyrprokopyuk/bayan/internal/command"
+  sty "github.com/volodymyrprokopyuk/bayanguru/internal/style"
+  cmd "github.com/volodymyrprokopyuk/bayanguru/internal/command"
 )
 
 func main() {

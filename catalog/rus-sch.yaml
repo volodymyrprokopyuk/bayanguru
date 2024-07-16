@@ -115,9 +115,9 @@ pieces:
   - { id: 9lr9, tit: Грустное настроение,
       com: В. Темнов, src: BSN1985,
       org: rus, sty: cus, gnr: pie, ton: [gmi, dmi], frm: cr5, bss: frb, lvl: elb }
-  # - { id: fcch, tit: Ходила младешенька за водой, sub: rusfs,
-  #     arr: Н. Канаев, src: BSN1985,
-  #     org: rus, sty: flk, gnr: sng, ton: cismi, frm: [vo2, var], bss: [frb, pub, var], lvl: elc }
+  - { id: fcch, tit: Ходила младешенька за водой, sub: rusfs,
+      arr: Н. Канаев, src: BSN1985,
+      org: rus, sty: flk, gnr: sng, ton: cismi, frm: [vo2, var], bss: [frb, pub, var], lvl: elc }
   # p. 125 TODO
   # BSO1981
   - { id: oow8, tit: Полька,

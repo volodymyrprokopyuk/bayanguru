@@ -9,7 +9,7 @@ import (
 	"strings"
 	"text/template"
 
-	cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
+	cat "github.com/volodymyrprokopyuk/bayanguru/internal/catalog"
 	"golang.org/x/text/collate"
 	"golang.org/x/text/language"
 )

@@ -1,4 +1,4 @@
-\version "2.25.17"
+\version "2.25.18"
 
 \paper {
   #(set-paper-size '(cons (* 48 mm) (* 23 mm)))

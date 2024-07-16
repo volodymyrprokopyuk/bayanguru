@@ -6,7 +6,7 @@ import (
 	"os"
 	"path/filepath"
 
-	sty "github.com/volodymyrprokopyuk/bayan/internal/style"
+	sty "github.com/volodymyrprokopyuk/bayanguru/internal/style"
 	"gopkg.in/yaml.v3"
 )
 

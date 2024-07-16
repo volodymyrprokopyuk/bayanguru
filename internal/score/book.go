@@ -9,7 +9,7 @@ import (
 	"sync"
 	"text/template"
 
-	cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
+	cat "github.com/volodymyrprokopyuk/bayanguru/internal/catalog"
 )
 
 func bookPieces(book cat.Book) []*cat.Piece {

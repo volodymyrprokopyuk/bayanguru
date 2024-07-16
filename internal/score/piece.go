@@ -12,8 +12,8 @@ import (
 	"sync"
 	"text/template"
 
-	cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
-	sty "github.com/volodymyrprokopyuk/bayan/internal/style"
+	cat "github.com/volodymyrprokopyuk/bayanguru/internal/catalog"
+	sty "github.com/volodymyrprokopyuk/bayanguru/internal/style"
 )
 
 var chordNames = map[string]string{"M": "Б", "m": "М", "7": "7", "d": "У"}

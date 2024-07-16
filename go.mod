@@ -1,4 +1,4 @@
-module github.com/volodymyrprokopyuk/bayan
+module github.com/volodymyrprokopyuk/bayanguru
 
 go 1.22.0
 

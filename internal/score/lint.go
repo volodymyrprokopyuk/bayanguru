@@ -9,8 +9,8 @@ import (
 	"regexp"
 	"strings"
 
-	cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
-	sty "github.com/volodymyrprokopyuk/bayan/internal/style"
+	cat "github.com/volodymyrprokopyuk/bayanguru/internal/catalog"
+	sty "github.com/volodymyrprokopyuk/bayanguru/internal/style"
 )
 
 type Line struct {

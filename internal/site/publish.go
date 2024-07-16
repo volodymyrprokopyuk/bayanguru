@@ -14,8 +14,8 @@ import (
 	"sync"
 	"text/template"
 
-	cat "github.com/volodymyrprokopyuk/bayan/internal/catalog"
-	sty "github.com/volodymyrprokopyuk/bayan/internal/style"
+	cat "github.com/volodymyrprokopyuk/bayanguru/internal/catalog"
+	sty "github.com/volodymyrprokopyuk/bayanguru/internal/style"
 	"github.com/yuin/goldmark"
 	"gopkg.in/yaml.v3"
 )

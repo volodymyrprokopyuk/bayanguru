@@ -9,7 +9,7 @@ import (
 	"regexp"
 	"strings"
 
-	sty "github.com/volodymyrprokopyuk/bayan/internal/style"
+	sty "github.com/volodymyrprokopyuk/bayanguru/internal/style"
 )
 
 type PieceQueries map[string]string
