@@ -1,3 +1,7 @@
+{{ define "lh1" }}
+  bes=,8 besM! bes ees@M! | bes8 besM! f fM! | g gm! d'= d7! |
+{{ end }}
+
 {{ define "rightHand" }}
 \relative {
   \tempo Moderato
@@ -51,5 +55,17 @@
 \relative {
   \clef bass
   \key g \minor
+  g,=,8-\stBass gm! g gm | d' d7! g, gm! | g c@m! g8 gm! | d' d7! g, gm! |
+  {{ template "lh1" }} | g, gm! g f |
+  {{ template "lh1" }} | g, d'= g@m!4 |
+
+  g,=,8 gm! e g@m! | fis8 d@7! g8 gm! | d' g@m! g,8 gm! | d' d7! g, gm! |
+  bes=,8 besM! aes bes@M! | g8 bes@M! a8 f@M! | g8 gm! d' d7! | ees c@m! f8 f7! |
+  bes,=,8 besM! bes ees@M! | bes8 besM! a f@M! | g8 gm! d' d7! | g, d'= g@m!4 |
+
+  g=8 f e ees | d c bes g@m! | ees@M!4 g@m!4 | d@M!8[ d@7!8] g@m!8[ c@m!8] |
+  bes=,8 a aes g | aes bes f fM! | g@m![ c@m!8] a@M!8[ d@7!8] |
+  g@m!8[ c@m!8] bes@M!8[ f@7!8] | bes=,8 a aes g | aes16 a bes8 c cis |
+  d=8 dis e16 ees dis8 | g, d'= \duo { s4 \fermata | } { g@m!4 | }
 }
 {{ end }}
