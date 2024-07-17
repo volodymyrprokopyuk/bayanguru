@@ -9,7 +9,7 @@ pieces:
   # p. 123
   # - { id: zgec, tit: Чабан, sub: Пастуший мотив і танок,
   #     arr: А. Онегин, src: BSO1981,
-  #     org: ukr, sty: flk, gnr: dnc, ton: emi, frm: [var, tu6, acc, tri], bss: stb, lvl: elb }
+  #     org: ukr, sty: flk, gnr: dnc, ton: emi, frm: [var, tu6, acc, tri, cad], bss: stb, lvl: elb }
   # Free bass
   # FBBSC1978
   - { id: 39bh, tit: П'єса,

@@ -107,6 +107,7 @@ meta:
           - { name: gru, eng: Gruppetto, ukr: Групето }
           - { name: tri, eng: Trills, ukr: Трелі }
           - { name: gli, eng: Glissando, ukr: Глісандо }
+          - { name: cad, eng: Cadenza, ukr: Каденція }
           # wrs: wrist movements, повороти кисті
           - { name: fi1, eng: First finger, ukr: Перший палець }
           - { name: fi5, eng: Fifth finger, ukr: П'ятий палець }
