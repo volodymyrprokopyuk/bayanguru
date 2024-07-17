@@ -61,7 +61,8 @@
 
   g,=,8 gm! e g@m! | fis8 d@7! g8 gm! | d' g@m! g,8 gm! | d' d7! g, gm! |
   bes=,8 besM! aes bes@M! | g8 bes@M! a8 f@M! | g8 gm! d' d7! | ees c@m! f8 f7! |
-  bes,=,8 besM! bes ees@M! | bes8 besM! a f@M! | g8 gm! d' d7! | g, d'= g@m!4 |
+  bes,=,8 besM! bes ees@M! | bes8 besM! a f@M! | g8 gm! d' d7! |
+  g,=,8 d'= \duo { s4 \fermata | } { g@m!4 | }
 
   g=8 f e ees | d c bes g@m! | ees@M!4 g@m!4 | d@M!8[ d@7!8] g@m!8[ c@m!8] |
   bes=,8 a aes g | aes bes f fM! | g@m![ c@m!8] a@M!8[ d@7!8] |
