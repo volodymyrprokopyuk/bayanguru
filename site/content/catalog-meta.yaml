@@ -49,7 +49,7 @@ meta:
           - { name: chd, eng: Child piece, ukr: Дитяча п'єса }
           - { name: lul, eng: Lulaby, ukr: Колискова }
           - { name: ves, eng: Vesnianka, ukr: Веснянка }
-          - { name: pry, eng: "Prypevky, chastushky", ukr: "Приспівки, коломийки" }
+          - { name: pry, eng: "Pryspivky, kolomyjky", ukr: "Приспівки, коломийки" }
           - { name: rmc, eng: Romance, ukr: Романс }
           - { name: mil, eng: Military song, ukr: Військова пісня }
           - { name: dnc, eng: Dance, ukr: Танець } # dance
@@ -68,6 +68,9 @@ meta:
     sec:
       # [a-g](is|es)m[ji]: sharp/flat major/minor, дієз/бемоль мажор/мінор
       - tit: { name: ton, eng: Piece tonalities, ukr: Тональності п'єси } # multiple
+        sub:
+          - { name: "[a-g]mj", eng: A-G major, ukr: A-G мажор }
+          - { name: "[a-g]mi", eng: A-G minor, ukr: A-G мінор }
       - tit: { name: frm, eng: Piece forms, ukr: Форми п'єси } # multiple
         sub:
           - { name: mel, eng: Melody, ukr: Мелодія }
@@ -91,8 +94,9 @@ meta:
           - { name: vo2, eng: Two voices, ukr: Двоголосся }
           - { name: vo3, eng: Three voices, ukr: Триголосся }
           # prh: polyrhythm, поліритмія
-          - { name: tu3, eng: Trilets, ukr: Тріолі }
+          - { name: tu3, eng: Triplets, ukr: Тріолі }
           - { name: tu5, eng: Quintuplets, ukr: Квінтолі }
+          - { name: tu6, eng: Sextuplets, ukr: Секстолі }
           - { name: dot, eng: Dotted rhythm, ukr: Пунктирний ритм }
           - { name: syn, eng: Syncopation, ukr: Синкопа }
           # orn: ornamentation, мелізми
