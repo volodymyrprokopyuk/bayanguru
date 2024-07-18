@@ -230,7 +230,7 @@ pieces:
       org: ukr, sty: flk, gnr: sng, ton: emi, frm: var, bss: stb, lvl: elb }
   - { id: dvki, tit: Гопак, sub: 'з опери \"Сорочинский ярмарок\"',
       com: М. Мусоргский, src: B2AK1979,
-      org: ukr, sty: flk, gnr: gop, ton: gmj, frm: cr5, bss: [stb, pub], lvl: elb }
+      org: ukr, sty: flk, gnr: gop, ton: gmj, frm: [cr5, dot, syn], bss: [stb, pub], lvl: elb }
   - { id: izth, tit: Прогулянка,
       com: К. Мясков, src: B2AK1979,
       org: ukr, sty: cus, gnr: pie, ton: dmj, frm: [in3, dot, rep], bss: stb, lvl: elb }

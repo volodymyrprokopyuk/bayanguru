@@ -49,7 +49,7 @@ pieces:
       org: rus, sty: flk, gnr: pry, ton: fmj, frm: [var, in3], bss: stb, lvl: elb }
   - { id: 9lu3, tit: Волжские припевки,
       com: Ю. Щекотов, arr: А. Басурманов, art: ipr, src: BTBC1936,
-      org: rus, sty: cus, gnr: pry, ton: dmj, frm: [in3, cr5], bss: stb, lvl: elb }
+      org: rus, sty: cus, gnr: pry, ton: dmj, frm: [in3, cr5], bss: [stb, syn], lvl: elb }
   - { id: wkmw, tit: Не сама машина ходит, sub: Алтайские частушки,
       arr: Н. Кутузов, src: BTBC1936,
       org: rus, sty: flk, gnr: pry, ton: dmi, frm: [in3, cr5, syn, jmp], bss: stb, lvl: elc }
