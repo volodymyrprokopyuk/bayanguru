@@ -154,7 +154,7 @@ pieces:
   # FBB2BZ1981
   - { id: g7mu, tit: Колыбельная,
       com: Т. Назарова, src: FBB2BZ1981,
-      org: rus, sty: cus, gnr: lul, ton: gmj, frm: mel, bss: [frb, in3], lvl: ela }
+      org: rus, sty: cus, gnr: lul, ton: gmj, frm: mel, bss: [frb, in3, in5], lvl: ela }
   - { id: t67o, tit: Песня,
       com: М. Глинка, src: FBB2BZ1981,
       org: rus, sty: cus, gnr: sng, ton: gmi, frm: mel, bss: [frb, in3], lvl: elb }
