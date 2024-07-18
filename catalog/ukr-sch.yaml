@@ -2,14 +2,12 @@
 ---
 pieces:
   # BSO1981
-  # p. 40
-  # - { id: xd0h, tit: "Вийди, вийди, Іваночку",
-  #     src: BSO1981,
-  #     org: ukr, sty: flk, gnr: ves, ton: [ami, dmi], frm: syn, bss: stb, lvl: ela }
-  # p. 123
-  # - { id: zgec, tit: Чабан, sub: Пастуший мотив і танок,
-  #     arr: А. Онегин, src: BSO1981,
-  #     org: ukr, sty: flk, gnr: dnc, ton: emi, frm: [var, tu6, acc, tri, cad], bss: stb, lvl: elb }
+  - { id: xd0h, tit: "Вийди, вийди, Іваночку",
+      src: BSO1981,
+      org: ukr, sty: flk, gnr: ves, ton: [ami, dmi], frm: syn, bss: stb, lvl: ela }
+  - { id: zgec, tit: Чабан, sub: Пастуший мотив і танок,
+      arr: А. Онегин, src: BSO1981,
+      org: ukr, sty: flk, gnr: dnc, ton: emi, frm: [var, tu6, acc, tri, cad], bss: stb, lvl: elb }
   # Free bass
   # FBBSC1978
   - { id: 39bh, tit: П'єса,

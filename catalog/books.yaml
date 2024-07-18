@@ -40,16 +40,20 @@ books:
         zeeh
       ] }
 
-  # Tutorial
   - { id: utu1, tit: Українські народні пісні і танці, sub: для готового баяна,
       pieces: [
+        # Tutorial
         # BTBC1936
         yq8y, cckj, a3ew, isd6, vf9h,
         # BTB1978
-        vwad, brku, tzb9, ndwb
+        vwad, brku, tzb9, ndwb,
+        # School
+        # BSO1981
+        xd0h, zgec
       ] }
   - { id: rtu1, tit: Російські народні пісні і танці, sub: для готового баяна,
       pieces: [
+        # Tutorial
         # BTBC1936
         q6xh, 87ko, p7el, 6u3l, qt7k, oz1w, p26a, frcu, hjff, 7nax, 74jq, 7s64,
         blt6, l1zm, sqwg, 9lu3, wkmw, ecde, vmd4, s31k, 1czf,
