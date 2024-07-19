@@ -40,7 +40,7 @@
   {{ template "lh1" (w `g@m!2-\stBass`) }}
   {{ template "lh1" (w `g@m!2`) }}
   g,=,4( a | bes2) | c4 f@7! | bes4( a) |
-  g=,4 gm! | a d@m! | d4 d7! | g,=, gm! |
+  g=,4 gm! | a c@m! | d4 d7! | g,=, gm! |
 
   d'=4-\puBass ees8 d | c4 d8 c | bes4 a | g2 |
   d'=4 ees8 d | c4 d8 c | bes4 a | g f=, |

@@ -321,7 +321,7 @@ pieces:
       org: ukr, sty: cus, gnr: dnc, ton: gmi, frm: mel, bss: frb, lvl: ela }
   - { id: clcs, tit: Колискова,
       com: Є. Юцевич, src: FBB1BZ1980,
-      org: ukr, sty: cus, gnr: lul, ton: emi, frm: mel, bss: frb, lvl: ela }
+      org: ukr, sty: cus, gnr: lul, ton: emi, frm: mel, bss: [frb, in3, jmp], lvl: ela }
   - { id: zwy7, tit: Гойдалка,
       com: М. Чайкін, src: FBB1BZ1980,
       org: ukr, sty: cus, gnr: chd, ton: emi, frm: mel, bss: frb, lvl: ela }
