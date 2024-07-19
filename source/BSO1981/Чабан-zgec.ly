@@ -20,6 +20,10 @@
   e=''8 \rep 3 { \acc { dis'='''8 } e='''8 } |
 {{ end }}
 
+{{ define "lh1" }}
+  d=8 dm! f, d@m | e'=8[ eM! eM eM] |
+{{ end }}
+
 {{ define "rightHand" }}
 \relative {
   \tempo Rubato
@@ -66,7 +70,7 @@
 
   \repeat volta 2 {
     \rep 2 { c'='''4. \trill d16( e) | } \rep 2 { c='''8 \trill d16( e=''') } |
-    \rep 2 { c='''4. \trill e8 | c16( dis) dis( c) c( b) b( a='') | }
+    \rep 2 { c='''4. \trill e8 | e16( dis) dis( c) c( b) b( a='') | }
     a=''2 | {{ template "rh4" (w `a=''8.`) }} | {{ template "rh5" }}
     {{ template "rh4" (w `a,=''8.`) }} | e8 r <e='' gis b e>4 |
   }
@@ -78,5 +82,13 @@
   \clef bass
   \key c \major
   \acc { e=8 } e=1-\stBass | \rep 14 { e=1~ | } | e= \fermata |
+
+  e=8[ eM! eM eM] | e eM! gis, e@M | a8 am! c a@m | e=8[ eM! eM eM] |
+
+  \rep 2 { {{ template "lh1" }} } | e r eM!4 |
+
+  c=8[ cM! cM cM] | e[ eM! eM eM] | c cM! c cM |
+  \rep 2 { c=8[ cM! cM cM] | a=,8 am! c a@m | } a8 am! c a@m |
+  \rep 3 { {{ template "lh1" }} } | d=8 dm! f, d@m | e'=8 eM!4. |
 }
 {{ end }}
