@@ -85,7 +85,7 @@
 
   e=8[ eM! eM eM] | e eM! gis, e@M | a8 am! c a@m | e=8[ eM! eM eM] |
 
-  \rep 2 { {{ template "lh1" }} } | e r eM!4 |
+  \rep 2 { {{ template "lh1" }} } | e= r eM!4 |
 
   c=8[ cM! cM cM] | e[ eM! eM eM] | c cM! c cM |
   \rep 2 { c=8[ cM! cM cM] | a=,8 am! c a@m | } a8 am! c a@m |
