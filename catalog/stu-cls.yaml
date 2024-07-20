@@ -306,7 +306,6 @@ pieces:
   - { id: f87r, tit: Етюд B minor,
       com: А. Салин, src: SB5NU1980,
       org: rus, sty: cus, gnr: stu, ton: bmi, frm: [in8, cr7, fi1, fi5], bss: [pub, scl], lvl: elc }
-
   # Free bass
   # FBB1BZ1980
   - { id: ksld, tit: Етюд E minor,
