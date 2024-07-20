@@ -11,6 +11,13 @@
   {{ .a }} \af 8\! f'8) r e d | c8.\> \prall \af 16\! b16 a4 r8 {{ .b }} |
 {{ end }}
 
+{{ define "rh4" }}
+  {{ .a }} r <a, c e a>2->\mf | f'8\p r <a, b d f>2->\mf |
+  b='4 e4.(-> d8) | c8. \prall b16 c4 a |
+  a'=''8\mf r \acc { e=''8 } a2\pp | f8\mf r \acc { d=''8 } f2\pp |
+  b,='4^\tRal <e, c' e>4.( <d gis>8) | <c=' a'>2 r4 \bar "||"
+{{ end }}
+
 {{ define "rightHand" }}
 \relative {
   \tempo Allegro
@@ -43,16 +50,19 @@
       \afterGrace 11/16 \af 2.\! e2._(\< \trill { dis=''16 e='') } |
     }
 
-    % \alternative {
-    %   \volta 1 {
-    %     %
-    %   }
+    {{ template "rh4" (w `a=''8\p`) }}
 
-    %   \volta 2 { \section \sectionLabel "Coda" } %
-    % }
+    \alternative {
+      \volta 1 { {{ template "rh4" (w `a''=''8\p`) }} | }
+
+      \volta 2 { \section \sectionLabel "Coda" } %
+    }
   }
 
-  % Coda
+  \duo { s4\f a''=''2\p | s4\f f=''2\p | }
+  { a''=''8 r <a, c e>4 r | f'8 r <bes,=' d>4 r | }
+  b'='4 e4. d8 | \acc { c=''16 d } c8. b16 c4 a | a'8 r a2 | f8 r f2 |
+  b,='16 ais b c cis d dis e f fis g gis | a8\ff r <a,=' c e a>4 r \bar "|."
 }
 {{ end }}
 

@@ -12,10 +12,6 @@ pieces:
   #     com: В. Гусев, src: BSN1985,
   #     org: rus, sty: cus, gnr: stu, ton: [amj, fismi], frm: [vo2, in3, in4, syn], bss: stb, lvl: elb }
   # BSO1981
-  # p. 47
-  # - { id: li0p, tit: Етюд G major,
-  #     com: Г. Беренс, src: BSO1981,
-  #     org: swe, sty: cls, gnr: stu, ton: gmj, frm: arp, bss: stb, lvl: ela }
   # p. 53
   # - { id: uuc1, tit: Етюд D minor,
   #     com: Л. Шітте, src: BSO1981,
