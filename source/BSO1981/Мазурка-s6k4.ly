@@ -73,7 +73,7 @@
   \rep 4 { R2. | }
   a,=,4-\stBass am! b@7! | a4 e@7! e74 \fermata |
   a=,4 am! b@7! | e'4 eM! eM \fermata |
-  a,=,4 am! b@7! | a4 e@7! e74 \fermata |
+  a,=,4 am! b@7! | a4 e@7! e74 |
   a=,4 am! b@7! | e'=4 eM!2 \fermata |
 
   \rep 3 { g,=,4 g7! g7 | c cM! cM | } | g4 g7! g7 | c= cM! r |
@@ -81,7 +81,12 @@
   e=4 e7! e7 | a, am! am | d dm! \fermata dm | a am! am |
   e'=4 e7! e7 | a, am! am | b=, b7! b7 | e+eM! r r |
 
-  a=,8 r a@m!2 | d8 r dm!2 | e4 e7! e7 | a, am! am |
-  c=8 r a@m!4 r4 | d8 r dm!4 r | e r e | am! a,=, r |
+  \rep 2 {
+    c=8 r a@m!2 | d8 r dm!2 | e4 e7! e7 | a, am! am |
+    c=8 r a@m!4 r4 | d8 r dm!4 r | e r e | a@m! a,=,4 r |
+  }
+
+  a=,8 r am!4 r | d8 r bes@M!4 r4 | e e7! e7 | a, am! am |
+  c=8 r a@m!4 r4 | d8 r dm!4 r | e+e7! r e+e7! | a+am!8 r a+am4 r |
 }
 {{ end }}
