@@ -19,8 +19,8 @@
   \clef bass
   \key d \minor
   \partial 4 { r4 | }
-  d+dm!4-.-\stBass d+dm-. | a+a7!4-. a+a7-. |
-  d+dm!4_\aSim d+dm | \rep 2 { d+dm!4 d+dm | }
+  d+dm!4-\stBass d+dm_\aSta | a+a7!4 a+a7 |
+  d+dm!4 d+dm | \rep 2 { d+dm!4 d+dm | }
   a+a7!4 a+a7 | d+dm!4 d+dm | d+dm! c+d7! |
   \rep 2 { f+fM!4 f+fM | } bes+besM!4 bes+g@m! |
   bes+g@m!4 e+g@m4 | f+d@m!4 f+dm4 | g+gm!4 a+a7! |
