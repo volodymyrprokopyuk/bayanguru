@@ -45,7 +45,7 @@
       d=''8(\< \af 8\! f) \acc { f=''8 } a4.(\f\> \fermata \af 8\! f8) |
       e=''8.( \prall dis16 e4 c) |
       {{ template "rh3" (w `e,='4(\p\<` `ais='`) }}
-      ais='8( b) \acc { b='16 dis } cis8 b cis dis |
+      ais='8[( b) \acc { b='16 dis } cis8 b cis dis] |
       \acc { dis=''16 e f } %
       \afterGrace 11/16 \af 2.\! e2._(\< \trill { dis=''16 e='') } |
     }
@@ -70,5 +70,18 @@
 \relative {
   \clef bass
   \key a \minor
+  \rep 4 { R2. | }
+  a,=,4-\stBass am! b@7! | a4 e@7! e74 \fermata |
+  a=,4 am! b@7! | e'4 eM! eM \fermata |
+  a,=,4 am! b@7! | a4 e@7! e74 \fermata |
+  a=,4 am! b@7! | e'=4 eM!2 \fermata |
+
+  \rep 3 { g,=,4 g7! g7 | c cM! cM | } | g4 g7! g7 | c= cM! r |
+
+  e=4 e7! e7 | a, am! am | d dm! \fermata dm | a am! am |
+  e'=4 e7! e7 | a, am! am | b=, b7! b7 | e+eM! r r |
+
+  a=,8 r a@m!2 | d8 r dm!2 | e4 e7! e7 | a, am! am |
+  c=8 r a@m!4 r4 | d8 r dm!4 r | e r e | am! a,=, r |
 }
 {{ end }}
