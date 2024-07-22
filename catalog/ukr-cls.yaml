@@ -221,7 +221,7 @@ pieces:
       org: ukr, sty: cus, gnr: pie, ton: dmj, frm: [var cr5], bss: [stb, pub, rep], lvl: elb }
   - { id: ohmw, tit: Вальс,
       com: М. Чайкін, src: B2AK1979,
-      org: ukr, sty: cus, gnr: vls, ton: [dmi, fmj, dmj], frm: in3, bss: stb, lvl: elb }
+      org: ukr, sty: cus, gnr: vls, ton: [dmi, fmj, dmj], frm: [in3, in6], bss: stb, lvl: elb }
   - { id: stil, tit: Сусідка, sub: ukrfs,
       arr: М. Чайкін, src: B2AK1979,
       org: ukr, sty: flk, gnr: sng, ton: [ami, cmj], frm: cr5, bss: stb, lvl: elb }
