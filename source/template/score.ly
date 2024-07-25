@@ -44,6 +44,16 @@ tAcc = "accel."
 tSos = "sost."
 tTen = "ten."
 
+% Segno
+pTrio = \markup { \fontsize #2 "Trio" }
+segnoy = #(define-music-function (a b) (markup? markup?)
+  #{
+    \tweak direction #DOWN \textEndMark \markup {
+      \italic \right-column { #a #b }
+    }
+  #}
+)
+
 % Bars
 barFermata = \mark \markup \musicglyph #"scripts.ufermata"
 \defineBarLine "!!" #'("!!" "!!" "!!")
