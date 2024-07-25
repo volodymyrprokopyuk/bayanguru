@@ -44,9 +44,9 @@ tAcc = "accel."
 tSos = "sost."
 tTen = "ten."
 
-% Segno
-pTrio = \markup { \fontsize #2 "Trio" }
-segnoy = #(define-music-function (a b) (markup? markup?)
+% Segno section
+sTrio = \markup { \fontsize #2 "Trio" }
+sRep = #(define-music-function (a b) (markup? markup?)
   #{
     \tweak direction #DOWN \textEndMark \markup {
       \italic \right-column { #a #b }
