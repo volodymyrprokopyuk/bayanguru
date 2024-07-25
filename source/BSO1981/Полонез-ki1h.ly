@@ -11,6 +11,14 @@
   \acc { b=''8 } a=''16-. gis-. c-. b-. <d, e gis b>4( <c='' e a>8) r |
 {{ end }}
 
+{{ define "lh1" }}
+  {{ .a }} am!16 am am8 r r4 | e'8 e7!16 e7 e78 r r4 |
+  c=8 cm!16 cm cm8 r r4 | g8 g7!16 g7 g78 r r4 |
+  c=8.[ b16( c8 d c b]) | a am!16 am am8 am am am |
+  e'=8 e7!16 e7 e78 e7 e7 e7 | a, am! am am am am |
+  e'=8 e7!16 e7 e78 e7 e7 e7 | a+am! r r e+e7!-> \noBeam a+am! r |
+{{ end }}
+
 {{ define "rightHand" }}
 \relative {
   \tempo "Tempo di pollaca"
@@ -59,5 +67,22 @@
 \relative {
   \clef bass
   \key a \minor
+  a,=,8 am!16 am am8 am am am | a am!16 am am8 am am am |
+  a=,8 am! a a7!16 a7 a78 a7 | d dm! dm dm dm dm |
+  e,=,8 e7! e7 e7 e7 e7 | a am! am am am am |
+  d=8 dm! dm dm e,[ e7!] | a am! am am am am |
+  d=8 dm! dm dm e,=,[ e7!] | e+e7!4 r8 e+e78-> \noBeam a+aM! r |
+
+  e=,8 e7! e7 e7 e7 e7 | a am!16 am am8 am am am |
+  e=,8 e7! e7 e7 e7 e7 | a am! am am am am |
+  e+e7!8 r r4 r | R2. | e'=8 f e d c b | a c b a e'=4 |
+
+  {{ template "lh1" (w `a,=,8`) }}
+
+  \rep 2 { c=8 16 16 8 8 g16 a b g=, | }
+  c=8 16 16 8 8 gis16 a b gis |
+  \rep 3 { a=,8 16 16 8 8 gis16 a b e,=, | }
+
+  {{ template "lh1" (w `a=,8`) }}
 }
 {{ end }}
