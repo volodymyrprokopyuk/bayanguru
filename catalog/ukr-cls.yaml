@@ -307,8 +307,7 @@ pieces:
   - { id: f45r, tit: Прелюд,
       com: К. Мясков, src: B2AK1987,
       org: ukr, sty: cus, gnr: pie, ton: emi, frm: in3, bss: stb, lvl: elb }
-  # Free bass
-  # Class
+  # * Free bass
   # FBB1BZ1980
   - { id: lzsv, tit: Роздум,
       com: В. Стеценко, src: FBB1BZ1980,

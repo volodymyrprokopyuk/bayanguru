@@ -67,7 +67,7 @@ pieces:
   # - { id: y4wa, tit: Подмосковные вечера,
   #     com: В. Соловьев-Седой, arr: В. Клиберн, art: hrm, src: BSO1981,
   #     org: rus, sty: cus, gnr: pie, ton: cmi, frm: [cr5, cr7], bss: stb, lvl: elc }
-  # Free bass
+  # * Free bass
   # FBBSC1978
   - { id: v2kv, tit: На горе-то калина, sub: rusfs,
       src: FBBSC1978,

@@ -137,7 +137,7 @@ pieces:
   - { id: zeeh, tit: Песня веретена,
       com: А. Гедике, src: SB3NU1979,
       org: rus, sty: cus, gnr: pie, ton: [dmi, gmi], frm: [in3, tri], bss: [stb, pub, scl, tri], lvl: elb }
-  # Free bass
+  # * Free bass
   # FBB1BZ1980
   - { id: wo9y, tit: Кукла,
       com: С. Сароян, src: FBB1BZ1980,

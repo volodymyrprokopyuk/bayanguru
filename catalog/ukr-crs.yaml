@@ -25,7 +25,7 @@ pieces:
   #     src: TYBC2B1971,
   #     org: ukr, sty: flk, gnr: sng, frm: mel, bss: stb, lvl: elm }
 
-  # Free bass
+  # * Free bass
   # CLFBBS1979
   - { id: hk7t, tit: Курочка,
       com: М. Любарський, src: CLFBBS1979,

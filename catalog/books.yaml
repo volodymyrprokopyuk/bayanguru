@@ -198,7 +198,7 @@ books:
       ] },
       { tit: Ліва рука, pieces: [ # Left hand
       ] } ] }
-  # Free bass
+  # * Free bass
   - { id: ufr1, tit: Українські народні пісні і танці,
       sub: для готово-виборного баяна,
       pieces: [
