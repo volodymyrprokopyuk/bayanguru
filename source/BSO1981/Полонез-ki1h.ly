@@ -13,7 +13,7 @@
 
 {{ define "lh1" }}
   {{ .a }} am!16 am am8 r r4 | e'8 e7!16 e7 e78 r r4 |
-  c=8 cm!16 cm cm8 r r4 | g8 g7!16 g7 g78 r r4 |
+  c=8 cM!16 cM cM8 r r4 | g8 g7!16 g7 g78 r r4 |
   c=8.[ b16( c8 d c b]) | a am!16 am am8 am am am |
   e'=8 e7!16 e7 e78 e7 e7 e7 | a, am! am am am am |
   e'=8 e7!16 e7 e78 e7 e7 e7 | a+am! r r e+e7!-> \noBeam a+am! r |
@@ -71,7 +71,7 @@
   a=,8 am! a a7!16 a7 a78 a7 | d dm! dm dm dm dm |
   e,=,8 e7! e7 e7 e7 e7 | a am! am am am am |
   d=8 dm! dm dm e,[ e7!] | a am! am am am am |
-  d=8 dm! dm dm e,=,[ e7!] | e+e7!4 r8 e+e78-> \noBeam a+aM! r |
+  d=8 dm! dm dm e,=,[ e7!] | e+e7!4 r8 e+e78-> \noBeam a+am! r |
 
   e=,8 e7! e7 e7 e7 e7 | a am!16 am am8 am am am |
   e=,8 e7! e7 e7 e7 e7 | a am! am am am am |
