@@ -375,16 +375,6 @@ func publishStyle(siteDir, templateDir, publicDir string) error {
   return twCmd.Run()
 }
 
-func createArchive(publicDir, archive string) error {
-  cmd := fmt.Sprintf(
-    "cd %v && zip -r bayanguru.zip . && mv bayanguru.zip ../..", publicDir,
-  )
-  zipCmd := exec.Command("bash", "-c", cmd)
-  zipCmd.Stdout = os.Stdout
-  zipCmd.Stderr = os.Stderr
-  return zipCmd.Run()
-}
-
 func catError(format string, args ...any) error {
   return fmt.Errorf("catalog: " + format, args...)
 }
@@ -439,10 +429,6 @@ func Publish(pc PublishCommand) error {
   if err != nil {
     return siteError("%v", err)
   }
-  // err = createArchive(pc.PublicDir, "bayanguru.zip")
-  // if err != nil {
-  //   return siteError("%v", err)
-  // }
   return nil
 }
 
