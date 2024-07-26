@@ -16,6 +16,9 @@ yay -S caddy pagefind
 bun install --no-save tailwindcss
 # install rclone
 yay -S rclone
+# deploy to Cloudflare Pages
+npm install --save-dev wrangler
+npx wrangler pages deploy site/public --project-name bayanguru --branch main
 #+END_SRC
 
 ** Usage
@@ -23,8 +26,7 @@ yay -S rclone
 Fish completions
 
 #+BEGIN_SRC fish
-go install github.com/volodymyrprokopyuk/bayan
-./bayan completion fish > ~/.config/fish/completions/bayan.fish
+./bayanguru completion fish > ~/.config/fish/completions/bayanguru.fish
 #+END_SRC
 
 Piece ID generation
