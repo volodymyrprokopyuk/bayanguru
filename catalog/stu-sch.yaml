@@ -3,10 +3,9 @@
 pieces:
   # School
   # BSN1985
-  # p. 92
-  # - { id: w1pp, tit: Етюд C major,
-  #     com: Л. Шітте, src: BSN1985,
-  #     org: dnk, sty: cls, gnr: stu, ton: cmj, frm: scl, bss: stb, lvl: ela }
+  - { id: w1pp, tit: Етюд C major,
+      com: Л. Шітте, src: BSN1985,
+      org: dnk, sty: cls, gnr: stu, ton: cmj, frm: scl, bss: stb, lvl: ela }
   # p. 103
   # - { id: i9ti, tit: Етюд A major,
   #     com: В. Гусев, src: BSN1985,

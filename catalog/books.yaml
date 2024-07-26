@@ -1,8 +1,7 @@
 %YAML 1.1
 ---
 books:
-  # Class
-  - { id: ucl1, tit: Українські народні пісні і танці, sub: для готового баяна,
+  - { id: ukr1, tit: Українські народні пісні і танці, sub: для готового баяна,
       pieces: [
         # B0D1973
         1kae, 4ha8, 7n13, jnuj, j6sq, fywu, 1sxc, hv2p, siv0, kakw, 6msd, iso2,
@@ -22,7 +21,16 @@ books:
         e3u3, ucue, fngd, cpdc, 9k9u, 0r9e, v8ec, w5ba, plh0, i11j, 9hwt, zvpg,
         mf7s, zykv, 26qx, di18, btcu, nev4, foaz, f45r
       ] }
-  - { id: rcl1, tit: Російські народні пісні і танці, sub: для готового баяна,
+  - { id: ukr2, tit: Українські народні пісні і танці, sub: для готового баяна,
+      pieces: [
+        # BTBC1936
+        yq8y, cckj, a3ew, isd6, vf9h,
+        # BTB1978
+        vwad, brku, tzb9, ndwb,
+        # BSO1981
+        xd0h, zgec
+      ] }
+  - { id: rus1, tit: Російські народні пісні і танці, sub: для готового баяна,
       pieces: [
         # B0D1973
         drrh, xwt6, bj88, b383, vt18, 8fs0, 0mdf, bspm, kkks,
@@ -39,21 +47,8 @@ books:
         # SB3NU1979
         zeeh
       ] }
-
-  - { id: utu1, tit: Українські народні пісні і танці, sub: для готового баяна,
+  - { id: rus2, tit: Російські народні пісні і танці, sub: для готового баяна,
       pieces: [
-        # Tutorial
-        # BTBC1936
-        yq8y, cckj, a3ew, isd6, vf9h,
-        # BTB1978
-        vwad, brku, tzb9, ndwb,
-        # School
-        # BSO1981
-        xd0h, zgec
-      ] }
-  - { id: rtu1, tit: Російські народні пісні і танці, sub: для готового баяна,
-      pieces: [
-        # Tutorial
         # BTBC1936
         q6xh, 87ko, p7el, 6u3l, qt7k, oz1w, p26a, frcu, hjff, 7nax, 74jq, 7s64,
         blt6, l1zm, sqwg, 9lu3, wkmw, ecde, vmd4, s31k, 1czf,
@@ -62,27 +57,22 @@ books:
         # BTB1989
         q7i3, up9h, 6ocj, nlmb
       ] }
-
-  # All
-  - { id: byal, tit: Білоруські народні пісні і танці,
+  - { id: blr1, tit: Білоруські народні пісні і танці,
       sub: для готового і готово-виборного баяна,
       sections: [
       { tit: Готовий баян, pieces: [ # Stradella bass
-        # Class
         # B0D1973
         bv2w,
         # B1AK1985
         v99z,
-        # School
-        # BSN1985
-        i349,
-        # Tutorial
         # BTBC1936
         8ec9,
         # BTB1989
         2q9x,
         # TYBCB21971
-        vhri
+        vhri,
+        # BSN1985
+        i349
       ] },
       { tit: Готово-виборний баян, pieces: [ # Free bass
         # FBB3BZ1982
@@ -94,10 +84,9 @@ books:
         # BSN1985
         f3gw
       ] } ] }
-  - { id: hual, tit: Угорські народні пісні і танці,
+  - { id: hun1, tit: Угорські народні пісні і танці,
       sub: для готового і готово-виборного баяна,
       pieces: [
-        # Class
         # B1AK1979
         1rua, 9htb,
         # B2AK1979
@@ -105,39 +94,32 @@ books:
         # BTB1978
         lz9e
       ] }
-  - { id: mdal, tit: Молдавські народні пісні і танці,
+  - { id: mda1, tit: Молдавські народні пісні і танці,
       sub: для готового і готово-виборного баяна,
       pieces: [
-        # Class
         # B0DU1982
         mhjw,
-        # Tutorial
         # BTBC1936
         epyc
       ] }
-  - { id: plal, tit: Польські народні пісні і танці,
+  - { id: pol1, tit: Польські народні пісні і танці,
       sub: для готового і готово-виборного баяна,
       pieces: [
-        # Class
         # B0D1973
         v2x4, d2md, 41bl, busq, 4zsm, ipw4,
         # B1AK1985
         x378,
         # B2AK1979
         p1vc, 1wgi,
-        # Tutorial
         # BTBC1936
         isnd,
-        # School
         # BSN1985
         l6mm,
         # BSO1981
         s6k4, ki1h
       ] }
-
-  # Study
-  # Class
-  - { id: scl1, tit: Вибрані етюди, sub: для готового баяна,
+  # Study class
+  - { id: stu1, tit: Вибрані етюди, sub: для готового баяна,
       sections: [
       { tit: Гами, pieces: [ # Scale
         # SB1NU1979
@@ -163,7 +145,7 @@ books:
         # SB5NU1980
         4s1u, ua3l
       ] } ] }
-  - { id: scl2, tit: Вибрані етюди, sub: для готового баяна,
+  - { id: stu2, tit: Вибрані етюди, sub: для готового баяна,
       sections: [
       { tit: Інтервали, pieces: [ # Intervals
         # SB2NU1977
@@ -197,39 +179,52 @@ books:
         # SB2NU1977
         4upq
       ] } ] }
-
+  # Study all
+  - { id: stu3, tit: Вибрані етюди, sub: для готового баяна,
+      sections: [
+      { tit: Гами, pieces: [ # Scale
+        # BSN1985
+        w1pp
+      ] },
+      { tit: Арпеджіо, pieces: [ # Arpeggio
+      ] } ] }
+  - { id: stu4, tit: Вибрані етюди, sub: для готового баяна,
+      sections: [
+      { tit: Інтервали, pieces: [ # Intervals
+      ] },
+      { tit: Акорди, pieces: [ # Chords
+      ] },
+      { tit: Поліфонія, pieces: [ # Polyphone
+      ] },
+      { tit: Ліва рука, pieces: [ # Left hand
+      ] } ] }
   # Free bass
   - { id: ufr1, tit: Українські народні пісні і танці,
       sub: для готово-виборного баяна,
       pieces: [
-        # Class
         # FBB1BZ1980
         lzsv, jm50, fs3v, clcs, zwy7, pye7, o9do, wape, dsj8, c1dx,
         # FBB2BZ1981
         qxub, 1se4, 2j90, a5cv, y632, 8o6w, zbgg, 27p8,
         # FBB3BZ1982
         ltfu, z16r, jclp, ekrs, nr36, yeld, onbv, s2hf, x6ez, u5b8,
-        # School
         # FBBSC1978
         39bh, c2ql, axyx, 1k22, 8w4m, z6yg, mq61, a6rk, 3aac, nele, w6w8, lspg,
         gahw, bjyu, rzwj,
         # BSN1985
         55kn, b8ah, 0q92, 9shc, 8fvz, sgu3,
-        # Course
         # CLFBBS1979
         hk7t, 1jj6
       ] }
   - { id: rfr1, tit: Російські народні пісні і танці,
       sub: для готово-виборного баяна,
       pieces: [
-        # Class
         # FBB1BZ1980
         wo9y, 7ev9, 6uzu, c3bd,
         # FBB2BZ1981
         g7mu, t67o, 2lhn, p8u5,
         # FBB3BZ1982
         3hw7, w7lt,
-        # School
         # FBBSC1978
         v2kv, b06y, 8rvx, pouc, tq21, h64c, ct44, uvv4, 7nrq,
         # BSA1983
@@ -281,10 +276,9 @@ books:
         # BSN1985
         13ny
       ] },
-      # { tit: Поліфонія, pieces: [ # Polyphone
-      # ] }
+      { tit: Поліфонія, pieces: [ # Polyphone
       ] }
-
+      ] }
   # Lyrics
   - { id: uly1, tit: Українські пісні, sub: в супроводі баяна,
       sections: [
