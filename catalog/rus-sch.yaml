@@ -6,10 +6,6 @@ pieces:
   # - { id: tezj, tit: Танец,
   #     com: В. Куканов, src: BSN1985,
   #     org: rus, sty: cus, gnr: dnc, ton: ami, frm: dot, bss: stb, lvl: ela }
-  # p. 79
-  # - { id: b8nm, tit: Пьеса,
-  #     com: Р. Шайхутдинов, src: BSN1985,
-  #     org: rus, sty: cus, gnr: pie, ton: fmj, frm: dot, bss: stb, lvl: ela }
   # p. 81
   # - { id: kg0e, tit: Пьеса,
   #     src: BSN1985,

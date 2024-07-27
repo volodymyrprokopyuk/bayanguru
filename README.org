@@ -26,6 +26,7 @@ npx wrangler pages deploy site/public --project-name bayanguru --branch main
 Fish completions
 
 #+BEGIN_SRC fish
+go install github.com/volodymyrprokopyuk/bayanguru
 ./bayanguru completion fish > ~/.config/fish/completions/bayanguru.fish
 #+END_SRC
 
