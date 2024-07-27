@@ -18,7 +18,7 @@
   } {
     a=2 | b | cis | d | e | fis | gis | a=' |
 
-    r16 <cis='' fis>16 16 16 <bis gis'> <cis fis> <dis fis> <cis fis> |
+    r16 <cis='' fis>16 16 16 <bis fis'> <cis fis> <dis fis> <cis fis> |
     r16 <cis='' e>16 16 16 <bis e> <cis e> <dis e> <cis e> |
     r16_ \dDim <a=' d>16 16 16 <gis d'> <a d> <b d> <a d> |
     r16 <ais=' cis>16 16 16 <gis cis> <ais cis> <b cis> <ais cis> |
