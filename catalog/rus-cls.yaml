@@ -51,7 +51,7 @@ pieces:
       org: rus, sty: cus, gnr: chd, ton: dmj, frm: mel, bss: stb, lvl: ela }
   - { id: sgyu, tit: Новогодняя полька,
       com: А. Александров, src: B1AK1979,
-      org: rus, sty: flk, gnr: plk, ton: amj, frm: mel, bss: stb, lvl: ela }
+      org: rus, sty: cus, gnr: plk, ton: amj, frm: mel, bss: stb, lvl: ela }
   - { id: ca30, tit: Физкультурный марш,
       com: М. Раухвергер, src: B1AK1979,
       org: rus, sty: cus, gnr: mrc, ton: dmj, frm: in3, bss: stb, lvl: ela }

@@ -4,7 +4,7 @@ pieces:
   # BTBC1936
   - { id: yq8y, tit: Українська полька,
       com: М. Чайкін, src: BTBC1936,
-      org: ukr, sty: flk, gnr: plk, ton: ami, frm: rep, bss: stb, lvl: ela }
+      org: ukr, sty: cus, gnr: plk, ton: ami, frm: rep, bss: stb, lvl: ela }
   - { id: cckj, tit: За городом качки пливуть, sub: ukrfs,
       arr: М. Чайкін, art: ipr, src: BTBC1936,
       org: ukr, sty: flk, gnr: chd, ton: fmj, frm: rep, bss: stb, lvl: ela }

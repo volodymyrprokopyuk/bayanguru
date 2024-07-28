@@ -73,7 +73,7 @@ pieces:
       org: ukr, sty: flk, gnr: dnc, ton: ami, frm: mel, bss: [stb, pub], lvl: ela }
   - { id: jmy7, tit: Полька,
       com: А. Тихончук, src: B0D1973,
-      org: ukr, sty: flk, gnr: plk, ton: cmj, frm: mel, bss: stb, lvl: ela }
+      org: ukr, sty: cus, gnr: plk, ton: cmj, frm: mel, bss: stb, lvl: ela }
   - { id: n482, tit: Танець урожаю,
       com: Т. Шутенко, src: B0D1973,
       org: ukr, sty: cus, gnr: dnc, ton: [cmj, ami], frm: mel, bss: stb, lvl: ela }
@@ -138,7 +138,7 @@ pieces:
       org: ukr, sty: flk, gnr: sng, ton: dmj, frm: rep, bss: stb, lvl: ela }
   - { id: tx5o, tit: Полька,
       com: А. Иванов, src: B1AK1979,
-      org: ukr, sty: flk, gnr: plk, ton: cmj, frm: mel, bss: stb, lvl: ela }
+      org: rus, sty: cus, gnr: plk, ton: cmj, frm: mel, bss: stb, lvl: ela }
   - { id: afgp, tit: Пісня котика, sub: 'з дитячої опери \"Лисичка, котик і півник\"',
       com: К. Стеценко, src: B1AK1979,
       org: ukr, sty: flk, gnr: chd, ton: gmj, frm: mel, bss: stb, lvl: ela }
@@ -196,7 +196,7 @@ pieces:
       org: ukr, sty: flk, gnr: sng, ton: dmi, frm: mel, bss: stb, lvl: ela }
   - { id: lhc0, tit: Полька,
       com: М. Глинка, src: B1AK1985,
-      org: ukr, sty: cus, gnr: plk, ton: dmi, frm: mel, bss: stb, lvl: ela }
+      org: rus, sty: cus, gnr: plk, ton: dmi, frm: mel, bss: stb, lvl: ela }
   - { id: lyc5, tit: Прогулянка на автомобілі,
       com: К. Мясков, src: B1AK1985,
       org: ukr, sty: cus, gnr: chd, ton: gmj, frm: mel, bss: stb, lvl: ela }
@@ -285,7 +285,7 @@ pieces:
       org: ukr, sty: flk, gnr: koz, ton: [gmj, gmi], frm: [var, in3, acc], bss: stb, lvl: elb }
   - { id: mf7s, tit: Дитяча полька,
       com: М. Глинка, src: B2AK1987,
-      org: ukr, sty: flk, gnr: plk, ton: [gmi, fmj, besmj], frm: jmp, bss: stb, lvl: elb }
+      org: rus, sty: cus, gnr: plk, ton: [gmi, fmj, besmj], frm: jmp, bss: stb, lvl: elb }
   - { id: zykv, tit: Зайчик, sub: ukrfs,
       src: B2AK1987,
       org: ukr, sty: flk, gnr: chd, ton: amj, frm: [vo2, var, in3], bss: stb, lvl: elc }
@@ -297,7 +297,7 @@ pieces:
       org: ukr, sty: flk, gnr: sng, ton: gmj, frm: [var, in3, cr5], bss: [stb, pub], lvl: elc }
   - { id: btcu, tit: Полька,
       com: М. Глинка, src: B2AK1987,
-      org: ukr, sty: flk, gnr: plk, ton: cmj, frm: [acc, jmp], bss: stb, lvl: elb }
+      org: rus, sty: cus, gnr: plk, ton: cmj, frm: [acc, jmp], bss: stb, lvl: elb }
   - { id: nev4, tit: Вербовая дощечка, sub: ukrfs,
       src: B2AK1987,
       org: ukr, sty: flk, gnr: sng, ton: emi, frm: [vo2, var, cr5], bss: [stb, pub], lvl: elc }
@@ -335,7 +335,7 @@ pieces:
       org: ukr, sty: cus, gnr: sng, ton: emi, frm: dot, bss: frb, lvl: ela }
   - { id: dsj8, tit: Полечка,
       com: В. Власов, src: FBB1BZ1980,
-      org: ukr, sty: flk, gnr: plk, ton: dmi, frm: mel, bss: frb, lvl: ela }
+      org: ukr, sty: cus, gnr: plk, ton: dmi, frm: mel, bss: frb, lvl: ela }
   - { id: c1dx, tit: "Ой не ходи, Грицю",
       arr: М. Різоль, src: FBB1BZ1980,
       org: ukr, sty: flk, gnr: sng, ton: ami, frm: dot, bss: [frb, dot], lvl: ela }
