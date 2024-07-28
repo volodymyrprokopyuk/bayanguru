@@ -67,7 +67,7 @@
 \relative {
   \clef bass
   \key a \minor
-  a,=,8 am!16 am am8 am am am | a am!16 am am8 am am am |
+  a,=,8-\stBass am!16 am am8 am am am | a am!16 am am8 am am am |
   a=,8 am! a a7!16 a7 a78 a7 | d dm! dm dm dm dm |
   e,=,8 e7! e7 e7 e7 e7 | a am! am am am am |
   d=8 dm! dm dm e,[ e7!] | a am! am am am am |
@@ -79,10 +79,11 @@
 
   {{ template "lh1" (w `a,=,8`) }}
 
-  \rep 2 { c=8 16 16 8 8 g16 a b g=, | }
+  % \rep 2 { c=8 16 16 8 8 g16 a b g=, | }
+  c=8-\puBass 16 16 8 8 g16 a b g | c8 16 16 8 8 g16 a b g |
   c=8 16 16 8 8 gis16 a b gis |
   \rep 3 { a=,8 16 16 8 8 gis16 a b e,=, | }
 
-  {{ template "lh1" (w `a=,8`) }}
+  {{ template "lh1" (w `a=,8-\stBass`) }}
 }
 {{ end }}

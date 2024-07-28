@@ -46,7 +46,7 @@ pieces:
   # BSO1981
   - { id: s6k4, tit: Мазурка,
       com: Г. Венявський, src: BSO1981,
-      org: pol, sty: flk, gnr: dnc, ton: [ami, cmj], frm: [cr5, dot, acc, tri, mor], bss: stb, lvl: elb }
+      org: pol, sty: cus, gnr: dnc, ton: [ami, cmj], frm: [cr5, dot, acc, tri, mor], bss: stb, lvl: elb }
   - { id: ki1h, tit: Полонез,
       com: М. Огінський, src: BSO1981,
-      org: pol, sty: flk, gnr: dnc, ton: [ami, emi], frm: [cr5, dot, acc, jmp], bss: [stb, pub, syn], lvl: elb }
+      org: pol, sty: cus, gnr: dnc, ton: ami, frm: [cr5, dot, acc, jmp], bss: [stb, pub, syn], lvl: elb }
