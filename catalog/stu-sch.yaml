@@ -9,10 +9,9 @@ pieces:
       com: В. Гусев, src: BSN1985,
       org: rus, sty: cus, gnr: stu, ton: [amj, fismi], frm: [vo2, in3, in4, syn], bss: stb, lvl: elb }
   # BSO1981
-  # p. 53
-  # - { id: uuc1, tit: Етюд D minor,
-  #     com: Л. Шітте, src: BSO1981,
-  #     org: dnk, sty: cus, gnr: stu, ton: dmi, frm: [scl, tu3], bss: stb, lvl: ela }
+  - { id: uuc1, tit: Етюд D minor,
+      com: Л. Шітте, src: BSO1981,
+      org: dnk, sty: cus, gnr: stu, ton: dmi, frm: [scl, tu3], bss: stb, lvl: ela }
   # * Free bass
   # FBBSC1978
   - { id: kbmk, tit: Етюд C major,

@@ -184,7 +184,9 @@ books:
       sections: [
       { tit: Гами, pieces: [ # Scale
         # BSN1985
-        w1pp
+        w1pp,
+        # BSO1981
+        uuc1
       ] },
       { tit: Арпеджіо, pieces: [ # Arpeggio
       ] } ] }
