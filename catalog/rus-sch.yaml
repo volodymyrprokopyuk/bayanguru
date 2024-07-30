@@ -2,14 +2,12 @@
 ---
 pieces:
   # BSN1985
-  # p. 79
-  # - { id: tezj, tit: Танец,
-  #     com: В. Куканов, src: BSN1985,
-  #     org: rus, sty: cus, gnr: dnc, ton: ami, frm: dot, bss: stb, lvl: ela }
-  # p. 81
-  # - { id: kg0e, tit: Пьеса,
-  #     src: BSN1985,
-  #     org: rus, sty: cus, gnr: pie, ton: emi, frm: mel, bss: stb, lvl: ela }
+  - { id: tezj, tit: Танец,
+      com: В. Куканов, src: BSN1985,
+      org: rus, sty: cus, gnr: dnc, ton: ami, frm: dot, bss: stb, lvl: ela }
+  - { id: kg0e, tit: Пьеса,
+      src: BSN1985,
+      org: rus, sty: cus, gnr: pie, ton: emi, frm: mel, bss: stb, lvl: ela }
   # p. 81
   # - { id: p93x, tit: Полька-шутка,
   #     com: В. Накапкин, src: BSN1985,

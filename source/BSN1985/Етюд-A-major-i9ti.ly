@@ -35,7 +35,7 @@
   \clef bass
   \key a \major
   \meter 1/2 #'(1)
-  a,=,8( aM!) aM aM | gis[( e@M!) eM8 eM] |
+  a,=,8(-\stBass aM!) aM aM | gis[( e@M!) eM8 eM] |
   g=,8[_\aSim a@M! aM8 aM] | fis( d@M!) f8( d@m!) |
   e'=8[ a@M! aM8 aM] | dis[ b@7! b78 b7] |
   e=8 e7! e7 e7 | a,=,( aM!) f@7![ a@M!8] |
