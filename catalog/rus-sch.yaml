@@ -11,10 +11,9 @@ pieces:
   - { id: p93x, tit: Полька-шутка,
       com: В. Накапкин, src: BSN1985,
       org: rus, sty: cus, gnr: plk, ton: fmi, frm: acc, bss: stb, lvl: elb }
-  # p. 111
-  # - { id: b0pe, tit: Веселая кадриль,
-  #     com: В. Накапкин, src: BSN1985,
-  #     org: rus, sty: cus, gnr: qdr, ton: [eesmj, cmi], frm: [in3, in6, tri], bss: stb, lvl: elb }
+  - { id: b0pe, tit: Веселая кадриль,
+      com: В. Накапкин, src: BSN1985,
+      org: rus, sty: cus, gnr: qdr, ton: [eesmj, cmi], frm: [in3, in6, tri], bss: stb, lvl: elb }
   # BSO1981
   # p. 34
   # - { id: rrd4, tit: Лебедушка, sub: rusfs,

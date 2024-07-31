@@ -46,6 +46,7 @@ tTen = "ten."
 
 % Segno section
 sTrio = \markup { \fontsize #2 "Trio" }
+sCoda = \markup { \fontsize #2 "Coda" }
 sRep = #(define-music-function (a b) (markup? markup?)
   #{
     \tweak direction #DOWN \textEndMark \markup {
