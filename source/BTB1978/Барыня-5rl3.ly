@@ -13,7 +13,7 @@
   b='8 g g g'16 fis | g8 d e c |
   b='8 g4 a8 | b g c a | b g4 a8 | b g c=''4 \bar "||"
 
-  \tempo "Più Mosso"
+  \tempo "Più mosso"
   \rep 2 { b='8 g16 fis g8 g'16 fis | g8 d16 e f e d c='' | }
   {{ template "rh1" }} c=''8 a | {{ template "rh1" }} c=''4 \bar "||"
 

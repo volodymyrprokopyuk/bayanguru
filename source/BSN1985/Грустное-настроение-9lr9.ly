@@ -24,7 +24,7 @@
     \keyCancelBarChange
     \key d \minor
     \repeat volta 2 {
-      \tempo "Più Mosso"
+      \tempo "Più mosso"
       f'='16(\mf\< e f d g f e \af 16\! d a'4. <e g>8) |
       f='16( e f d g f e d <a' c>4.\< \af 8\! <fis a>8) |
       bes='16( a bes d c8.) bes16( a\> gis a c bes8.) \af 16\! a16( |

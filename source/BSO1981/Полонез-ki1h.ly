@@ -47,7 +47,7 @@
 
     {{ template "rh1" (w ` \acc { a,='8 } a'=''4~\mf^\sTrio`) }}
 
-    \tempo "Piu mosso"
+    \tempo "Più mosso"
     \meter 1/4 1,1,1
     \repeat volta 2 {
       <e,=' g c>8\ff 16_ \aSta 16 8 8 <g b d>8 8 |
