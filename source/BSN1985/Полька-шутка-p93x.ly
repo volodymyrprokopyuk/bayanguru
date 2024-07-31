@@ -30,7 +30,7 @@
   \key f \major
   \grace { s16 s }
   {{ template "lh1" (w `f,=,8[-\stBass`) }} | a=,8 f@M! g8 c@7! |
-  f=,8 fM! c' f@M | bes8 g@m! d8 g@m | g,8[ gm! gm] r | c[ bes a f=,] |
+  f=,8 fM! c' f@M | bes8 g@m! d8 g@m | g,8[ gm! gm] r | c[ bes a g=,] |
 
   {{ template "lh1" (w `f=,8[`) }} | a=,8[ f@M! fM8] r |
   g=,8 gm! bes g@m | c8 f@M! c8 f@M | c8 c7! g c@7 | f8 fM! f=, r |
