@@ -70,7 +70,7 @@ pieces:
       org: ukr, sty: cus, gnr: pie, ton: ami, frm: mel, bss: frb, lvl: ela }
   - { id: 8fvz, tit: Інвенція,
       com: Ю. Щуровський, src: BSN1985,
-      org: ukr, sty: cus, gnr: pie, ton: emi, frm: mel, bss: frb, lvl: elb }
+      org: ukr, sty: cls, gnr: inv, ton: emi, frm: mel, bss: frb, lvl: ela }
   - { id: sgu3, tit: Вальс,
       com: А. Онуфрієнко, src: BSN1985,
       org: ukr, sty: cus, gnr: vls, ton: amj, frm: [mel, mor], bss: frb, lvl: elb }

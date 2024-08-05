@@ -363,7 +363,7 @@ func keyByGnr(piece cat.Piece) []string {
     key = "song"
   case "dnc", "gop", "koz", "mrc", "plk", "mzr", "qdr", "tng", "vls":
     key = "dance"
-  case "pie", "gyp":
+  case "pie", "pre", "inv", "gyp":
     key = "piece"
   default:
     key = piece.Gnr
