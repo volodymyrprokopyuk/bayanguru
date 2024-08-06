@@ -82,20 +82,20 @@ func validateGroups(groups PieceGroups, groupNames []string) error {
 }
 
 func keyCom(piece cat.Piece) string {
+  var keyCom string
   if len(piece.Com) > 3 {
-    return string([]rune(piece.Com)[3:])
+    keyCom = string([]rune(piece.Com)[3:])
+  } else if len(piece.Arr) > 3 {
+    keyCom = string([]rune(piece.Arr)[3:])
   }
-  if len(piece.Arr) > 3 {
-    return string([]rune(piece.Arr)[3:])
-  }
-  return piece.Tit
+  return keyCom + piece.Tit
 }
 
 func keyTit(piece cat.Piece) string {
   if piece.Gnr == "stu" {
     return keyCom(piece)
   }
-  return piece.Tit
+  return piece.Tit + keyCom(piece)
 }
 
 var collator = collate.New(language.Und)

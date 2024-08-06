@@ -62,6 +62,8 @@ meta:
           - { name: tng, eng: Tango, ukr: Танго }
           - { name: mrc, eng: March, ukr: Марш }
           - { name: pie, eng: Piece, ukr: П'єса } # piece
+          - { name: pre, eng: Prelude, ukr: Прелюдія }
+          - { name: inv, eng: Invention, ukr: Інвенція }
           - { name: gyp, eng: Gypsy piece, ukr: Циганська п'єса }
           - { name: stu, eng: Study, ukr: Етюд } # study
   - tit: { eng: Piece qualification, ukr: Кваліфікація п'єси }

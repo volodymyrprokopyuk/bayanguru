@@ -325,7 +325,7 @@ var (
   gnrParts = []string{
     `^sng|chd|lul|mil|pry|rmc|ves`,
     `|dnc|gop|koz|mrc|plk|mzr|qdr|tng|vls`,
-    `|pie|pre|inv|stu|gyp$`,
+    `|pie|pre|inv|gyp|stu$`,
   }
   validGnr = regexp.MustCompile(strings.Join(gnrParts, ""))
   validTon = regexp.MustCompile(`^[a-g](?:es|is)?m[ij]$`)
