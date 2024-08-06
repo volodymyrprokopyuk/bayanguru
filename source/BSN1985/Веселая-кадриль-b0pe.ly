@@ -2,6 +2,14 @@
   {{ .a }} bes ees g f8 \trill ees | ees,16 g bes ees d8 \trill c='' |
 {{ end }}
 
+{{ define "lh1" }}
+  {{ .a }} eesM! bes ees@M | g8 ees@M! bes=,8 ees@M |
+{{ end }}
+
+{{ define "lh2" }}
+  c=8 cm! g c@m! | aes8 f@m! c=8 f@m |
+{{ end }}
+
 {{ define "rightHand" }}
 \relative {
   \tempo Allegretto
@@ -47,5 +55,13 @@
 \relative {
   \clef bass
   \key ees \major
+  {{ template "lh1" (w `ees=8-\stBass`) }}
+  f=,8 fm! bes ees@M! | d8 bes@7! f,8 bes@7 |
+  {{ template "lh1" (w `ees'=8`) }}
+  f=,8 fm! bes bes7! | ees eesM! f, bes@7! | ees'8 eesM! d= g@7! |
+
+  {{ template "lh2" }} aes=,8 f@m! c=8 f@m | g8 c@m! ees'8 c@m |
+  {{ template "lh2" }} aes=,8 f@m! g8 g7! | c cm! d g@7! |
+  c=8 cm! bes bes7! | ees eesM! ees= r |
 }
 {{ end }}
