@@ -50,4 +50,4 @@ pieces:
   # BSN1985
   - { id: f3gw, tit: Крижачок, sub: blrfd,
       arr: В. Накапкин, src: BSN1985,
-      org: blr, sty: flk, gnr: sng, ton: gmj, frm: mel, bss: [frb, in3], lvl: elb }
+      org: blr, sty: flk, gnr: dnc, ton: gmj, frm: mel, bss: [frb, in3], lvl: elb }

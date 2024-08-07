@@ -89,7 +89,7 @@ pieces:
       org: rus, sty: cus, gnr: sng, ton: emi, frm: [in3, syn], bss: [stb, syn], lvl: elb }
   - { id: al4t, tit: Марш коммунистических бригад,
       com: А. Новиков, src: BTB1978,
-      org: rus, sty: cus, gnr: mrc, ton: emi, frm: [cr5, cr5], bss: stb, lvl: elb }
+      org: rus, sty: cus, gnr: mrc, ton: emi, frm: [in3, cr5, dot], bss: stb, lvl: elb }
   - { id: 5h39, tit: А где мне взять такую песню,
       com: Г. Пономаренко, arr: Л. Захарова, art: ipr, src: BTB1978,
       org: rus, sty: cus, gnr: rmc, ton: ami, frm: [cr5, dot, acc], bss: [stb, syn], lvl: elc }

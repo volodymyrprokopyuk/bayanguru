@@ -36,7 +36,7 @@ pieces:
       org: ukr, sty: cus, gnr: pie, ton: bmi, frm: mel, bss: [frb, in3], lvl: elb }
   - { id: 3aac, tit: Танцювальна,
       com: К. Мясков, src: FBBSC1978,
-      org: ukr, sty: cus, gnr: pie, ton: emi, frm: cr5, bss: frb, lvl: elb }
+      org: ukr, sty: cus, gnr: dnc, ton: emi, frm: cr5, bss: frb, lvl: elb }
   - { id: nele, tit: Українська полька,
       arr: С. Чапкій, src: FBBSC1978,
       org: ukr, sty: flk, gnr: plk, ton: [ami, cmj], frm: [var, in8, tu3], bss: [frb, in8, cr5, cr7, fi5], lvl: elc }
