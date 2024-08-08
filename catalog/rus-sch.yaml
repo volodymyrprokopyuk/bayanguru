@@ -118,4 +118,4 @@ pieces:
   # BSO1981
   - { id: oow8, tit: Полька,
       com: А. Онегин, src: BSO1981,
-      org: rus, sty: cus, gnr: plk, ton: cmj, frm: [var, cr5], bss: [frb, stb, cr5], lvl: elb }
+      org: rus, sty: cus, gnr: plk, ton: [cmj, ami], frm: [var, cr5], bss: [frb, stb, cr5, syn], lvl: elb }
