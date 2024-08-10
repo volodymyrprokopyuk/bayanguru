@@ -37,7 +37,7 @@ pieces:
       org: ukr, sty: cus, gnr: stu, ton: cmj, frm: scl, bss: [frb, scl], lvl: elb }
   - { id: jytx, tit: Етюд A minor,
       com: С. Чапкій, src: FBBSC1978,
-      org: ukr, sty: cus, gnr: stu, ton: [ami, cmj], frm: [arp, in6, rep], bss: [frb, in3, cr5], lvl: elb }
+      org: ukr, sty: cus, gnr: stu, ton: [ami, cmj], frm: [arp, in6, rep], bss: [frb, in3, cr5], lvl: elc }
   - { id: 0lly, tit: Етюд D minor,
       com: А. Гедике, src: FBBSC1978,
       org: rus, sty: cus, gnr: stu, ton: dmi, frm: [arp, brk, dot], bss: [frb, arp, brk, dot, jmp], lvl: elb }
