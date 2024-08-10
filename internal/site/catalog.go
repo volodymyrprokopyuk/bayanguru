@@ -447,9 +447,9 @@ func keyByLvl(piece cat.Piece) []string {
   return []string{key}
 }
 
-func keyByLyr(piece cat.Piece) []string {
-  return []string{"lyrics"}
-}
+// func keyByLyr(_ cat.Piece) []string {
+//   return []string{"lyrics"}
+// }
 
 func publishCatalog(tpl *template.Template, pc PublishCommand) error {
   pieces, _, catLen, err := cat.ReadPiecesAndBooks(
