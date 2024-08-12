@@ -21,10 +21,9 @@ pieces:
   - { id: sssn, tit: "Ты поди, моя коровушка, домой", sub: rusfs,
       src: BSO1981,
       org: rus, sty: flk, gnr: sng, ton: ami, frm: mel, bss: stb, lvl: ela }
-  # p. 43
-  # - { id: o7ao, tit: На горе-то калина, sub: rusfs,
-  #     src: BSO1981,
-  #     org: rus, sty: flk, gnr: sng, ton: cmj, frm: var, bss: stb, lvl: ela }
+  - { id: o7ao, tit: На горе-то калина, sub: rusfs,
+      src: BSO1981,
+      org: rus, sty: flk, gnr: sng, ton: cmj, frm: var, bss: stb, lvl: ela }
   # p. 61
   # - { id: 59uu, tit: Песенка,
   #     com: Е. Дербенко, src: BSO1981,
