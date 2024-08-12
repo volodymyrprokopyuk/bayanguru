@@ -15,10 +15,9 @@ pieces:
       com: В. Накапкин, src: BSN1985,
       org: rus, sty: cus, gnr: qdr, ton: [eesmj, cmi], frm: [in3, in6, tri], bss: stb, lvl: elb }
   # BSO1981
-  # p. 34
-  # - { id: rrd4, tit: Лебедушка, sub: rusfs,
-  #     src: BSO1981,
-  #     org: rus, sty: flk, gnr: sng, ton: ami, frm: mel, bss: stb, lvl: ela }
+  - { id: rrd4, tit: Лебедушка, sub: rusfs,
+      src: BSO1981,
+      org: rus, sty: flk, gnr: sng, ton: ami, frm: mel, bss: stb, lvl: ela }
   # p. 34
   # - { id: sssn, tit: "Ты поди, моя коровушка, домой", sub: rusfs,
   #     src: BSO1981,
