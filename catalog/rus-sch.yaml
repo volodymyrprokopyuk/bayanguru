@@ -27,10 +27,9 @@ pieces:
   - { id: 59uu, tit: Песенка,
       com: Е. Дербенко, src: BSO1981,
       org: rus, sty: cus, gnr: sng, ton: dmi, frm: dot, bss: stb, lvl: elb }
-  # p. 107
-  # - { id: vg9l, tit: Лебедушка, sub: rusfs,
-  #     arr: Е. Кузнецов, src: BSO1981,
-  #     org: rus, sty: flk, gnr: sng, ton: [dmi, ami], frm: cr5, bss: stb, lvl: elb }
+  - { id: vg9l, tit: Лебедушка, sub: rusfs,
+      arr: Е. Кузнецов, src: BSO1981,
+      org: rus, sty: flk, gnr: sng, ton: [dmi, ami], frm: cr5, bss: stb, lvl: elb }
   # p. 108
   # - { id: ajrp, tit: В темном лесе, sub: rusfs,
   #     arr: А. Онегин, src: BSO1981,
