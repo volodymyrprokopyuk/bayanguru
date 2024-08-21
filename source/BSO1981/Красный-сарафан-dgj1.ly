@@ -23,8 +23,9 @@
 
   \duo {
     \mergeDifferentlyDottedOn
-    g''=''8(\pp g fis e | d'4 c8 c) | fis,\( fis b8. a16 | a4 g | b8 b a g |
-    g=''4 fis8 fis\) | b, b'='' \ottava #1 g'='''8. fis16 | e='''4 s8 \ottava #0 %
+    g''=''8(\pp g fis e | d'4 c8 c) | fis,\( fis b8. * 10/9 a16 * 6/9 |
+    a=''4 g | b8 b a g | g4 fis8 fis\) |
+    b,='8 b'='' \ottava #1 g'='''8. * 10/9 fis16 * 6/9 | e='''4 s8 \ottava #0 %
   } {
     \meter Voice 1/8 1,1,1,1
     {{ template "t4" (w `g''=''16 b, g` `g' b, g` `fis' b, g` `e' b g`) }}
