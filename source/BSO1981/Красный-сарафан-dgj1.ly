@@ -1,0 +1,41 @@
+{{ define "t4" }}
+  \tuplet 3/2 { {{ .a }} } \tuplet 3/2 { {{ .b }} } %
+  \tuplet 3/2 { {{ .c }} } \tuplet 3/2 { {{ .d }} } |
+{{ end }}
+
+{{ define "rightHand" }}
+\relative {
+  \tempo "Allegro moderato"
+  \clef treble
+  \key g \major
+  \time 2/4
+  <b= d>8(\p <d b'> <cis b'> <c a'>) |
+  \duo { g'='8 fis16 e d8 e16 fis=' | } { b=4 c=' | }
+  <b= g'>8( <d b'> <e c'> <d b'>) | <c a'>4( <c e>) |
+  <c=' e>8( <e c'> <dis c'> <d b'>) |
+  \duo { b'='8( a g e | <b d> <b g'> <c a'> <d fis b> | <b= d g>4) } %
+  { <c'=' e>4 bes= | s2 | s4 } r4 |
+
+  <g=' b g'>8( 8 <g b fis'> <g b e> | <d' a' d>4 <c a' c>8 8) |
+  <b=' dis fis>8 8 <b dis b'>8. <a dis a'>16 | <a e' a>4( <g e' g>) |
+  <b=' e b'>8 8 <b e a> <b e g> | <a c g'>4 <a c fis>8 8 |
+  <g=' b>8 <g b e> <b dis g>8. <a b fis'>16 | <g=' b e>4. r8 |
+
+  \duo {
+    g''=''8(\pp g fis e | d'4 c8 c) | fis,\( fis b8. a16 | a4 g | b8 b a g |
+    g=''4 fis8 fis\) | b, b'='' \ottava #1 g'='''8. fis16 | e='''4 s8 \ottava #0 %
+  } {
+    \meter Voice 1/8 1,1,1,1
+    {{ template "t4" (w `g''=''16 b, g` `g' b, g` `fis' b, g` `e' b g`) }}
+    \omit TupletNumber
+    {{ template "t4" (w `d''='''16 a fis` `c fis a` `c a fis` `c' e, c`) }}
+  } r8 |
+}
+{{ end }}
+
+{{ define "leftHand" }}
+\relative {
+  \clef bass
+  \key g \major
+}
+{{ end }}
