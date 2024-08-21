@@ -22,6 +22,7 @@
   <g=' b>8 <g b e> <b dis g>8. <a b fis'>16 | <g=' b e>4. r8 |
 
   \duo {
+    \mergeDifferentlyDottedOn
     g''=''8(\pp g fis e | d'4 c8 c) | fis,\( fis b8. a16 | a4 g | b8 b a g |
     g=''4 fis8 fis\) | b, b'='' \ottava #1 g'='''8. fis16 | e='''4 s8 \ottava #0 %
   } {
@@ -29,6 +30,12 @@
     {{ template "t4" (w `g''=''16 b, g` `g' b, g` `fis' b, g` `e' b g`) }}
     \omit TupletNumber
     {{ template "t4" (w `d''='''16 a fis` `c fis a` `c a fis` `c' e, c`) }}
+    {{ template "t4" (w `fis=''16 dis b` `fis' b, dis` `b' fis dis` `b dis a'`) }}
+    {{ template "t4" (w `a=''16 e c` `g c e` `g e c` `g c e`) }}
+    {{ template "t4" (w `b'=''16 e, b` `b' e, b` `a' e b` `g' e b`) }}
+    {{ template "t4" (w `g'=''16 e c` `a c e` `fis c a` `fis' e c`) }}
+    {{ template "t4" (w `b='16 e g` `b dis e='''` `\ottava #1 g=''' a, b` `dis b fis'`) }}
+    \tuplet 3/2 { e='''16 g, b } \tuplet 3/2 { e g b } e=''''8 \ottava #0 %
   } r8 |
 }
 {{ end }}
