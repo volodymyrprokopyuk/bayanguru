@@ -32,7 +32,7 @@ pieces:
       org: rus, sty: flk, gnr: sng, ton: [dmi, ami], frm: cr5, bss: stb, lvl: elb }
   - { id: dgj1, tit: Красный сарафан,
       com: А. Варламов, src: BSO1981,
-      org: rus, sty: cus, gnr: pie, ton: gmj, frm: [vo2, var, in6, cr5, tu3], bss: stb, lvl: elc }
+      org: rus, sty: cus, gnr: pie, ton: [gmj, emi], frm: [vo2, var, in6, cr5, tu3], bss: stb, lvl: elc }
   # p. 139
   # - { id: kk1x, tit: Соловей,
   #     com: А. Алябьев, src: BSO1981,
