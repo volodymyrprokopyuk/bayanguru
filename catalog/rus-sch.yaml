@@ -33,10 +33,9 @@ pieces:
   - { id: dgj1, tit: Красный сарафан,
       com: А. Варламов, src: BSO1981,
       org: rus, sty: cus, gnr: pie, ton: [gmj, emi], frm: [vo2, var, in6, cr5, tu3], bss: stb, lvl: elc }
-  # p. 139
-  # - { id: kk1x, tit: Соловей,
-  #     com: А. Алябьев, src: BSO1981,
-  #     org: rus, sty: cus, gnr: pie, ton: dmi, frm: [cr5, acc, tri, jmp], bss: stb, lvl: elc }
+  - { id: kk1x, tit: Соловей,
+      com: А. Алябьев, src: BSO1981,
+      org: rus, sty: cus, gnr: pie, ton: dmi, frm: [cr5, acc, tri, jmp], bss: stb, lvl: elc }
   # p. 144
   # - { id: y4wa, tit: Подмосковные вечера,
   #     com: В. Соловьев-Седой, arr: В. Клиберн, art: hrm, src: BSO1981,
