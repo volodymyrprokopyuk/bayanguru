@@ -20,6 +20,7 @@ aSim = \markup \italic simile
 aLeg = \markup \italic legato
 aNLeg = \markup \italic "non legato"
 aSta = \markup \italic staccato
+aTen = \markup \italic \center-align "ten."
 aDol = \markup \italic dolce
 aLAssai = \markup \italic "leggiero assai"
 aPes = \markup \italic pesante

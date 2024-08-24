@@ -27,6 +27,12 @@
   \acc { a,='32 d f } a=''4.-> gis16( bes) | \rep 2 { a=''8-> gis16( bes='') } |
   a=''8 d4-> a8 | a16( bes) g4-> g8 | g16( a) f4-> f8 |
   f=''16(-> g) e8 e16(-> f) d8 | d4 \acc { cis'='''8 } d='''8 r \fermata |
+
+  \tempo Andante
+  f,=''8( a)-> e( a)-. | d,( e32[ d cis d] f8 e) |
+  a,='8( a') b,( cis | d) <a f'>[( <g cis> <f d'>]) |
+  c'=''8( d32[ c b c]) d'8-.->^\aTen \hSpace c-.^\aTen |
+  a,='8( bes32[ a gis a]) bes'8-.->^\aTen \hSpace a-.^\aTen |
 }
 {{ end }}
 
