@@ -9,7 +9,7 @@ import (
 	"strings"
 	"sync"
 
-	sty "github.com/volodymyrprokopyuk/bayanguru/internal/style"
+	"github.com/volodymyrprokopyuk/bayanguru/cli/style"
 	"gopkg.in/yaml.v3"
 )
 
@@ -496,9 +496,9 @@ func PrintPiece(w io.Writer, piece Piece) {
   spaceLen := 53 - titLen - comLen
   fmt.Fprintf(
     w, "%v %v %v %v %v %v %v %v %v\n",
-    sty.ID(piece.ID), sty.Tit(tit),
-    strings.Repeat(" ", spaceLen), sty.Com(com),
-    sty.Org(piece.Org), sty.Org(piece.Sty), sty.Org(piece.Gnr),
-    sty.Bss(Bss(piece.Bss, piece.ID)), sty.Lvl(piece.Lvl),
+    style.ID(piece.ID), style.Tit(tit),
+    strings.Repeat(" ", spaceLen), style.Com(com),
+    style.Org(piece.Org), style.Org(piece.Sty), style.Org(piece.Gnr),
+    style.Bss(Bss(piece.Bss, piece.ID)), style.Lvl(piece.Lvl),
   )
 }

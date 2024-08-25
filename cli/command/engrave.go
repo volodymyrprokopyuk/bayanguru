@@ -6,7 +6,7 @@ import (
 	"slices"
 
 	"github.com/spf13/cobra"
-	"github.com/volodymyrprokopyuk/bayanguru/internal/score"
+	"github.com/volodymyrprokopyuk/bayanguru/cli/score"
 )
 
 var (
@@ -62,7 +62,7 @@ and books on the web`,
 }
 
 func engraveCmd() *cobra.Command {
-  var catalog string
+  var cat string
   var book, piece, init, lint, optimize, meta bool
   cmd := &cobra.Command{
     Use: "engrave",
@@ -74,7 +74,7 @@ func engraveCmd() *cobra.Command {
 bayanguru engrave [-c catalog] -b books... [--piece]
 bayanguru engrave all --lint --optimize --meta=f`,
     Args: func(_ *cobra.Command, args []string) error {
-      err := validateReq(catalog, args)
+      err := validateReq(cat, args)
       if err != nil {
         return cmdError("%v", err)
       }
@@ -94,7 +94,7 @@ bayanguru engrave all --lint --optimize --meta=f`,
       ec := score.EngraveCommand{
         CatalogDir: catalogDir, BookFile: bookFile,
         SourceDir: sourceDir, PieceDir: pieceDir, BookDir: bookDir,
-        Catalog: catalog,
+        Catalog: cat,
         All: len(args) == 1 && args[0] == "all",
         Book: book, Piece: piece,
         Init: init, Lint: lint, Optimize: optimize, Meta: meta,
@@ -110,7 +110,7 @@ bayanguru engrave all --lint --optimize --meta=f`,
     },
   }
   cmd.Flags().StringVarP(
-    &catalog, "catalog", "c", "", "read catalog files e.g. ukr,rus, ^stu,sch",
+    &cat, "catalog", "c", "", "read catalog files e.g. ukr,rus, ^stu,sch",
   )
   cmd.Flags().BoolVarP(
     &book, "book", "b", false, "engrave books or pieces from books",

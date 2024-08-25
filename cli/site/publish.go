@@ -14,10 +14,10 @@ import (
 	"sync"
 	"text/template"
 
-	cat "github.com/volodymyrprokopyuk/bayanguru/internal/catalog"
-	sty "github.com/volodymyrprokopyuk/bayanguru/internal/style"
 	"github.com/yuin/goldmark"
 	"gopkg.in/yaml.v3"
+	"github.com/volodymyrprokopyuk/bayanguru/cli/catalog"
+	"github.com/volodymyrprokopyuk/bayanguru/cli/style"
 )
 
 type PublishCommand struct {
@@ -25,7 +25,7 @@ type PublishCommand struct {
   Catalog string
   Init, All, Book, Upload bool
   Pieces, Books []string
-  Queries cat.PieceQueries
+  Queries catalog.PieceQueries
   SiteDir, TemplateDir, ContentDir, PublicDir string
   UploadURL, ScoreURL string
   PageSize int
@@ -34,7 +34,7 @@ type PublishCommand struct {
 func engraveImage(siteDir, publicDir, image string) error {
   lyImage := filepath.Join(siteDir, image + ".ly")
   svgImage := filepath.Join(publicDir, image)
-  fmt.Printf("%v %v\n", sty.Org("engrave"), sty.Lvl(svgImage + ".svg"))
+  fmt.Printf("%v %v\n", style.Org("engrave"), style.Lvl(svgImage + ".svg"))
   lyCmd := exec.Command(
     "lilypond", "-d", "backend=cairo", "-l", "WARN", "-f", "svg",
     "-o", svgImage, lyImage,
@@ -84,7 +84,7 @@ func initSite(siteDir, publicDir string) error {
   }
   for _, dir := range dirs {
     d := filepath.Join(publicDir, dir)
-    fmt.Printf("%v %v\n", sty.Org("init"), sty.Lvl(d))
+    fmt.Printf("%v %v\n", style.Org("init"), style.Lvl(d))
     err := os.MkdirAll(d, 0755)
     if err != nil {
       return err
@@ -127,7 +127,7 @@ func publishFile(
   w io.Writer, tpl *template.Template, publicDir, publicFile string, data any,
 ) error {
   file := filepath.Join(publicDir, publicFile)
-  fmt.Fprintf(w, "%v %v\n", sty.Org("publish"), sty.Lvl(file))
+  fmt.Fprintf(w, "%v %v\n", style.Org("publish"), style.Lvl(file))
   w, err := os.Create(file) // overwrites an existing file
   if err != nil {
     return err
@@ -139,7 +139,7 @@ func publishDirIndex(
   w io.Writer, tpl *template.Template, publicDir, publicFile string, data any,
 ) error {
   dir := filepath.Join(publicDir, publicFile)
-  fmt.Fprintf(w, "%v %v\n", sty.Org("publish"), sty.Lvl(dir))
+  fmt.Fprintf(w, "%v %v\n", style.Org("publish"), style.Lvl(dir))
   err := os.MkdirAll(dir, 0755)
   if err != nil {
     return err
@@ -240,7 +240,7 @@ func publishIndex(tpl *template.Template, pc PublishCommand) error {
 
 func uploadPiece(w io.Writer, pieceFile, uploadURL string) error {
   file := fmt.Sprintf("piece/%v.pdf", pieceFile)
-  fmt.Fprintf(w, "%v %v\n", sty.Org("upload"), sty.Lvl(file))
+  fmt.Fprintf(w, "%v %v\n", style.Org("upload"), style.Lvl(file))
   copyCmd := exec.Command(
     "rclone", "copy", "--s3-no-check-bucket", file, uploadURL,
   )
@@ -250,7 +250,7 @@ func uploadPiece(w io.Writer, pieceFile, uploadURL string) error {
 }
 
 func receiveAndPublishPieces(
-  ctx context.Context, pieceCh <-chan cat.Piece, errorCh chan<- error,
+  ctx context.Context, pieceCh <-chan catalog.Piece, errorCh chan<- error,
   tplPool *sync.Pool, pc PublishCommand,
 ) {
   defer close(errorCh)
@@ -275,7 +275,7 @@ func receiveAndPublishPieces(
       }
       piece.URL = fmt.Sprintf("%v/%v.pdf", pc.ScoreURL, piece.File)
       tpl := tplPool.Get().(*template.Template)
-      pieceData := struct { Piece cat.Piece }{piece}
+      pieceData := struct { Piece catalog.Piece }{piece}
       err := publishDirIndex(&w, tpl, pieceDir, piece.File, pieceData)
       fmt.Print(w.String())
       tplPool.Put(tpl)
@@ -287,7 +287,7 @@ func receiveAndPublishPieces(
   }
 }
 
-func publishPieces(pieces []cat.Piece, pc PublishCommand) error {
+func publishPieces(pieces []catalog.Piece, pc PublishCommand) error {
   tpl, err := makeTemplate(pc.TemplateDir) // validate template
   if err != nil {
     return err
@@ -307,13 +307,13 @@ func publishPieces(pieces []cat.Piece, pc PublishCommand) error {
   ctx, cancel := context.WithCancel(context.Background())
   defer cancel()
   n := min(len(pieces), runtime.GOMAXPROCS(0))
-  pieceCh := make(chan cat.Piece)
+  pieceCh := make(chan catalog.Piece)
   errorChs := make([]chan error, n)
   for i := range n { // fan-out pieces
     errorChs[i] = make(chan error)
     go receiveAndPublishPieces(ctx, pieceCh, errorChs[i], &tplPool, pc)
   }
-  errorCh := cat.FanIn(errorChs) // fan-in pieces
+  errorCh := catalog.FanIn(errorChs) // fan-in pieces
   go func() {
     pieces: for _, piece := range pieces {
       select {
@@ -352,7 +352,7 @@ func indexPieces(siteDir, publicDir string) error {
     _ = os.Chdir(cwd)
   }()
   fmt.Printf(
-    "%v %v\n", sty.Org("index"), sty.Lvl(filepath.Join(publicDir, "piece")),
+    "%v %v\n", style.Org("index"), style.Lvl(filepath.Join(publicDir, "piece")),
   )
   pfFile := filepath.Join(cwd, "pagefind")
   pfCmd := exec.Command(pfFile)
@@ -365,7 +365,7 @@ func publishStyle(siteDir, templateDir, publicDir string) error {
   twConfig := filepath.Join(siteDir, "tailwind.config.js")
   inStyle := filepath.Join(templateDir, "style.css")
   outStyle := filepath.Join(publicDir, "tw.css")
-  fmt.Printf("%v %v\n", sty.Org("publish"), sty.Lvl(outStyle))
+  fmt.Printf("%v %v\n", style.Org("publish"), style.Lvl(outStyle))
   twCmd := exec.Command(
     "bunx", "tailwindcss", "--config", twConfig,
     "--input", inStyle, "--output", outStyle, "--minify",
@@ -384,7 +384,7 @@ func siteError(format string, args ...any) error {
 }
 
 func Publish(pc PublishCommand) error {
-  pieces, _, catLen, err := cat.ReadPiecesAndBooks(
+  pieces, _, catLen, err := catalog.ReadPiecesAndBooks(
     pc.CatalogDir, pc.Catalog, pc.Pieces,
     pc.BookFile, pc.Books, pc.Book, pc.All,
   )
@@ -393,12 +393,12 @@ func Publish(pc PublishCommand) error {
   }
   pc.Queries["lcs"] = "^cpr" // exclude lcs: cpr pieces
   if len(pc.Queries) > 0 {
-    pieces, err = cat.QueryPieces(pieces, pc.Queries)
+    pieces, err = catalog.QueryPieces(pieces, pc.Queries)
     if err != nil {
       return catError("%v", err)
     }
   }
-  cat.PrintStat(catLen, len(pieces))
+  catalog.PrintStat(catLen, len(pieces))
   if pc.Init {
     err := initSite(pc.SiteDir, pc.PublicDir)
     if err != nil {

@@ -1,17 +1,31 @@
 package command
 
 import (
-	"path/filepath"
-
 	"github.com/spf13/cobra"
-	"github.com/volodymyrprokopyuk/bayanguru/internal/site"
+	"github.com/volodymyrprokopyuk/bayanguru/cli/catalog"
 )
 
-func publishCmd() *cobra.Command {
-  var catalog string
-  var init, book, upload bool
+type query struct {
+  short string; varp *string
+}
+
+func validateQueries(queries map[string]query) error {
+  for opt, query := range queries {
+    val := *query.varp
+    if len(val) > 0 && !validPat.MatchString(val) {
+      return cmdError(
+        "valid pattern ukr,stu or ^rus,blr, got --%v %v", opt, val,
+      )
+    }
+  }
+  return nil
+}
+
+func playCmd() *cobra.Command {
+  var cat string
+  var book, random, list bool
   var tit, com, arr, art, aut, lcs, org, sty, gnr, ton, frm, bss, lvl, ens, lyr string
-  var queries = map[string]Query{
+  var queries = map[string]query{
     "tit": {"piece title", &tit},
     "com": {"piece composer", &com},
     "arr": {"piece arranger", &arr},
@@ -29,17 +43,16 @@ func publishCmd() *cobra.Command {
     "lyr": {"piece lyrics e.g. lyr", &lyr},
   }
   cmd := &cobra.Command{
-    Use: "publish",
-    Short: "Publish pieces on the web",
+    Use: "play",
+    Short: "Play pieces from a catalog or a book",
     Long:
-`Publish command uploads PDF pieces to a cloud storage, generates and publishes
-a web site`,
+`Play command searches, lists, and plays pieces from a catalog or a book`,
     Example:
-`bayanguru publish [-c catalog] [--upload] pieces...
-bayanguru publish [-c catalog] -b books... [--query]
-bayanguru publish all --query...`,
+`bayanguru play [-c catalog] pieces...
+bayanguru play [-c catalog] -b books... [--query...]
+bayanguru play all --query... --random --list`,
     Args: func(_ *cobra.Command, args []string) error {
-      err := validateReq(catalog, args)
+      err := validateReq(cat, args)
       if err != nil {
         return cmdError("%v", err)
       }
@@ -49,23 +62,14 @@ bayanguru publish all --query...`,
       }
       return nil
     },
-    RunE: func(_ *cobra.Command, args []string) error {
-      pc := site.PublishCommand{
+    RunE: func (_ *cobra.Command, args []string) error {
+      pc := catalog.PlayCommand{
         CatalogDir: catalogDir, BookFile: bookFile,
         PieceDir: pieceDir, BookDir: bookDir,
-        Catalog: catalog,
-        Init: init,
+        Catalog: cat,
         All: len(args) == 1 && args[0] == "all",
-        Book: book,
-        Upload: upload,
+        Book: book, Random: random, List: list,
         Queries: make(map[string]string, 10),
-        SiteDir: siteDir,
-        TemplateDir: filepath.Join(siteDir, "template"),
-        ContentDir: filepath.Join(siteDir, "content"),
-        PublicDir: filepath.Join(siteDir, "public"),
-        UploadURL: "bayanguru:bayanguru/score",
-        ScoreURL: "https://score.bayanguru.org/score",
-        PageSize: 24,
       }
       if !pc.All {
         if book {
@@ -79,20 +83,20 @@ bayanguru publish all --query...`,
           pc.Queries[opt] = *query.varp
         }
       }
-      return site.Publish(pc)
+      return catalog.Play(pc)
     },
   }
   cmd.Flags().StringVarP(
-    &catalog, "catalog", "c", "", "read catalog files e.g. ukr,rus, ^stu,sch",
+    &cat, "catalog", "c", "", "read catalog files e.g. ukr,rus, ^stu,sch",
   )
   cmd.Flags().BoolVarP(
-    &init, "init", "i", false, "initialize the site",
+    &book, "book", "b", false, "play pieces from books",
   )
   cmd.Flags().BoolVarP(
-    &book, "book", "b", false, "publish pieces from books",
+    &random, "random", "r", false, "play pieces in a random order",
   )
   cmd.Flags().BoolVarP(
-    &upload, "upload", "u", false, "upload pieces to cloud storage",
+    &list, "list", "l", false, "list pieces without playing",
   )
   for opt, query := range queries {
     cmd.Flags().StringVarP(query.varp, opt, "", "", query.short)

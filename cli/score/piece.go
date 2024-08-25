@@ -12,8 +12,8 @@ import (
 	"sync"
 	"text/template"
 
-	cat "github.com/volodymyrprokopyuk/bayanguru/internal/catalog"
-	sty "github.com/volodymyrprokopyuk/bayanguru/internal/style"
+	"github.com/volodymyrprokopyuk/bayanguru/cli/catalog"
+	"github.com/volodymyrprokopyuk/bayanguru/cli/style"
 )
 
 var chordNames = map[string]string{"M": "Б", "m": "М", "7": "7", "d": "У"}
@@ -113,7 +113,7 @@ func copyFile(src, dst string) (int64, error) {
   return io.Copy(dstFile, srcFile)
 }
 
-func initPiece(pieces []cat.Piece, sourceDir string) error {
+func initPiece(pieces []catalog.Piece, sourceDir string) error {
   if len(pieces) == 0 {
     return fmt.Errorf("no piece to initialize")
   }
@@ -144,12 +144,12 @@ func initPiece(pieces []cat.Piece, sourceDir string) error {
   if err != nil {
     return err
   }
-  fmt.Printf("%v %v\n", sty.Org("init"), sty.Lvl(pieceFile))
+  fmt.Printf("%v %v\n", style.Org("init"), style.Lvl(pieceFile))
   return nil
 }
 
 func templatePiece(
-  tpl *template.Template, piece *cat.Piece, sourceDir string, meta bool,
+  tpl *template.Template, piece *catalog.Piece, sourceDir string, meta bool,
 ) error {
   piece.Meta = meta
   pieceFile := filepath.Join(sourceDir, piece.Src, piece.File + ".ly")
@@ -258,9 +258,9 @@ func templatePiece(
 }
 
 func engravePiece(
-  w io.Writer, tplPool *sync.Pool, piece cat.Piece, ec EngraveCommand,
+  w io.Writer, tplPool *sync.Pool, piece catalog.Piece, ec EngraveCommand,
 ) error {
-  cat.PrintPiece(w, piece)
+  catalog.PrintPiece(w, piece)
   if ec.Lint {
     err := lintPiece(w, piece, ec.SourceDir)
     if err != nil {
@@ -292,7 +292,7 @@ func engravePiece(
 }
 
 func receiveAndEngravePieces(
-  ctx context.Context, pieceCh <-chan cat.Piece, errorCh chan<- error,
+  ctx context.Context, pieceCh <-chan catalog.Piece, errorCh chan<- error,
   tplPool *sync.Pool, ec EngraveCommand,
 ) {
   defer close(errorCh)
@@ -316,7 +316,7 @@ func receiveAndEngravePieces(
   }
 }
 
-func engravePieces(pieces []cat.Piece, ec EngraveCommand) error {
+func engravePieces(pieces []catalog.Piece, ec EngraveCommand) error {
   _, err := makeTemplate(ec.SourceDir, "piece.ly") // validate template
   if err != nil {
     return err
@@ -330,13 +330,13 @@ func engravePieces(pieces []cat.Piece, ec EngraveCommand) error {
   ctx, cancel := context.WithCancel(context.Background())
   defer cancel()
   n := min(len(pieces), runtime.GOMAXPROCS(0))
-  pieceCh := make(chan cat.Piece)
+  pieceCh := make(chan catalog.Piece)
   errorChs := make([]chan error, n)
   for i := range n { // fan-out pieces
     errorChs[i] = make(chan error)
     go receiveAndEngravePieces(ctx, pieceCh, errorChs[i], &tplPool, ec)
   }
-  errorCh := cat.FanIn(errorChs) // fan-in pieces
+  errorCh := catalog.FanIn(errorChs) // fan-in pieces
   go func() {
     pieces: for _, piece := range pieces {
       select {

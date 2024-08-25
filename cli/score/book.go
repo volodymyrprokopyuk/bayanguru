@@ -9,13 +9,13 @@ import (
 	"sync"
 	"text/template"
 
-	cat "github.com/volodymyrprokopyuk/bayanguru/internal/catalog"
+	"github.com/volodymyrprokopyuk/bayanguru/cli/catalog"
 )
 
-func bookPieces(book cat.Book) []*cat.Piece {
-  pieces := make([]*cat.Piece, 0, 200)
+func bookPieces(book catalog.Book) []*catalog.Piece {
+  pieces := make([]*catalog.Piece, 0, 200)
   if len(book.Sections) > 0 {
-    nextPiece, piece := cat.SectionPieces(book)
+    nextPiece, piece := catalog.SectionPieces(book)
     for nextPiece() {
       pieces = append(pieces, piece())
     }
@@ -28,9 +28,9 @@ func bookPieces(book cat.Book) []*cat.Piece {
 }
 
 func engraveBook(
-  w io.Writer, tplPool *sync.Pool, book cat.Book, ec EngraveCommand,
+  w io.Writer, tplPool *sync.Pool, book catalog.Book, ec EngraveCommand,
 ) error {
-  cat.PrintBook(w, book)
+  catalog.PrintBook(w, book)
   if ec.Lint {
     for _, piece := range book.Pieces {
       err := lintPiece(w, piece, ec.SourceDir)
@@ -68,7 +68,7 @@ func engraveBook(
 }
 
 func receiveAndEngraveBooks(
-  ctx context.Context, bookCh <-chan cat.Book, errorCh chan<- error,
+  ctx context.Context, bookCh <-chan catalog.Book, errorCh chan<- error,
   tplPool *sync.Pool, ec EngraveCommand,
 ) {
   defer close(errorCh)
@@ -92,7 +92,7 @@ func receiveAndEngraveBooks(
   }
 }
 
-func engraveBooks(books []cat.Book, ec EngraveCommand) error {
+func engraveBooks(books []catalog.Book, ec EngraveCommand) error {
   _, err := makeTemplate(ec.SourceDir, "book.ly") // validate template
   if err != nil {
     return err
@@ -106,13 +106,13 @@ func engraveBooks(books []cat.Book, ec EngraveCommand) error {
   var ctx, cancel = context.WithCancel(context.Background())
   defer cancel()
   n := min(len(books), runtime.GOMAXPROCS(0))
-  bookCh := make(chan cat.Book)
+  bookCh := make(chan catalog.Book)
   errorChs := make([]chan error, n)
   for i := range n { // fan-out books
     errorChs[i] = make(chan error)
     go receiveAndEngraveBooks(ctx, bookCh, errorChs[i], &tplPool, ec)
   }
-  errorCh := cat.FanIn(errorChs) // fan-in books
+  errorCh := catalog.FanIn(errorChs) // fan-in books
   go func() {
     books: for _, book := range books {
       select {

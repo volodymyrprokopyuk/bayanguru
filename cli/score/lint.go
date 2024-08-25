@@ -9,8 +9,8 @@ import (
 	"regexp"
 	"strings"
 
-	cat "github.com/volodymyrprokopyuk/bayanguru/internal/catalog"
-	sty "github.com/volodymyrprokopyuk/bayanguru/internal/style"
+	"github.com/volodymyrprokopyuk/bayanguru/cli/catalog"
+	"github.com/volodymyrprokopyuk/bayanguru/cli/style"
 )
 
 type Line struct {
@@ -244,16 +244,16 @@ func lintDurationAfterBoundChord(lines []Line) []Line {
 }
 
 func printErrors(w io.Writer, title string, errors []Line) {
-  fmt.Fprintf(w, "%v\n", sty.Com(title))
+  fmt.Fprintf(w, "%v\n", style.Com(title))
   for _, error := range errors {
     err := strings.ReplaceAll(error.Text, "%", "%%")
-    fmt.Fprintf(w, "%v %v\n", sty.Lvl("%3v:", error.Num), sty.Bss(err))
+    fmt.Fprintf(w, "%v %v\n", style.Lvl("%3v:", error.Num), style.Bss(err))
   }
 }
 
-func lintPiece(w io.Writer, piece cat.Piece, sourceDir string) error {
+func lintPiece(w io.Writer, piece catalog.Piece, sourceDir string) error {
   pieceFile := filepath.Join(sourceDir, piece.Src, piece.File + ".ly")
-  fmt.Fprintf(w, "%v %v\n", sty.Org("lint"), sty.Lvl(pieceFile))
+  fmt.Fprintf(w, "%v %v\n", style.Org("lint"), style.Lvl(pieceFile))
   hasErrors := false
   lines, err := rawLines(pieceFile)
   if err != nil {

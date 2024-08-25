@@ -9,9 +9,9 @@ import (
 	"strings"
 	"text/template"
 
-	cat "github.com/volodymyrprokopyuk/bayanguru/internal/catalog"
 	"golang.org/x/text/collate"
 	"golang.org/x/text/language"
+	"github.com/volodymyrprokopyuk/bayanguru/cli/catalog"
 )
 
 var tr = map[string]string{
@@ -51,16 +51,16 @@ var tr = map[string]string{
   // "lyrics": "Lyrics | Пісні",
 }
 
-type PieceGroups map[string][]cat.Piece
+type PieceGroups map[string][]catalog.Piece
 
 func groupPieces(
-  pieces []cat.Piece, pieceKey func(piece cat.Piece) []string,
+  pieces []catalog.Piece, pieceKey func(piece catalog.Piece) []string,
 ) PieceGroups {
   groups := make(PieceGroups, 20)
   for _, piece := range pieces {
     for _, key := range pieceKey(piece) {
       if _, exists := groups[key]; !exists {
-        groups[key] = make([]cat.Piece, 0, 300)
+        groups[key] = make([]catalog.Piece, 0, 300)
       }
       groups[key] = append(groups[key], piece)
     }
@@ -81,7 +81,7 @@ func validateGroups(groups PieceGroups, groupNames []string) error {
   return nil
 }
 
-func keyCom(piece cat.Piece) string {
+func keyCom(piece catalog.Piece) string {
   var keyCom string
   if len(piece.Com) > 3 {
     keyCom = string([]rune(piece.Com)[3:])
@@ -91,7 +91,7 @@ func keyCom(piece cat.Piece) string {
   return keyCom + piece.Tit
 }
 
-func keyTit(piece cat.Piece) string {
+func keyTit(piece catalog.Piece) string {
   if piece.Gnr == "stu" {
     return keyCom(piece)
   }
@@ -100,9 +100,9 @@ func keyTit(piece cat.Piece) string {
 
 var collator = collate.New(language.Und)
 
-func sortGroups(groups PieceGroups, sortKey func(piece cat.Piece) string) {
+func sortGroups(groups PieceGroups, sortKey func(piece catalog.Piece) string) {
   for _, pieces := range groups {
-    slices.SortStableFunc(pieces, func(a, b cat.Piece) int {
+    slices.SortStableFunc(pieces, func(a, b catalog.Piece) int {
       return collator.CompareString(sortKey(a), sortKey(b))
     })
   }
@@ -118,7 +118,7 @@ func makeAlphabet() []string {
 
 var alphabet = makeAlphabet()
 
-func markAlphaPieces(groups PieceGroups, sortKey func(piece cat.Piece) string) {
+func markAlphaPieces(groups PieceGroups, sortKey func(piece catalog.Piece) string) {
   for _, pieces := range groups {
     i := 0
     for _, alpha := range alphabet {
@@ -142,12 +142,12 @@ func pageGroups(groups PieceGroups, pageSize int) PieceGroups {
       pagedGroups[fmt.Sprintf("%v/%v", key, i)] = group
       continue
     }
-    pieces := make([]cat.Piece, 0, pageSize)
+    pieces := make([]catalog.Piece, 0, pageSize)
     for _, piece := range group {
       pieces = append(pieces, piece)
       if len(pieces) == pageSize {
         pagedGroups[fmt.Sprintf("%v/%v", key, i)] = pieces
-        pieces = make([]cat.Piece, 0, pageSize)
+        pieces = make([]catalog.Piece, 0, pageSize)
         i++
       }
     }
@@ -256,7 +256,7 @@ type CatalogData struct {
   GroupLinks []Link
   Title string
   AlphaLinks []Link
-  Pieces []cat.Piece
+  Pieces []catalog.Piece
   PageLinks []Link
 }
 
@@ -287,9 +287,9 @@ func publishGroupPages(
 }
 
 func filterPieces(
-  pieces []cat.Piece, include func(piece cat.Piece) bool,
-) []cat.Piece {
-  filtered := make([]cat.Piece, 0, len(pieces))
+  pieces []catalog.Piece, include func(piece catalog.Piece) bool,
+) []catalog.Piece {
+  filtered := make([]catalog.Piece, 0, len(pieces))
   for _, piece := range pieces {
     if include(piece) {
       filtered = append(filtered, piece)
@@ -299,9 +299,9 @@ func filterPieces(
 }
 
 func publishGroup(
-  tpl *template.Template, pieces []cat.Piece,
-  groupKey func(piece cat.Piece) []string,
-  sortKey func(piece cat.Piece) string,
+  tpl *template.Template, pieces []catalog.Piece,
+  groupKey func(piece catalog.Piece) []string,
+  sortKey func(piece catalog.Piece) string,
   group string, groupNames []string, pc PublishCommand,
 ) error {
   groupDir := filepath.Join(pc.PublicDir, "catalog", group)
@@ -320,7 +320,7 @@ func publishGroup(
   return publishGroupPages(tpl, groupPages, groupNames, groupDir, groupURL)
 }
 
-func keyByOrg(piece cat.Piece) []string {
+func keyByOrg(piece catalog.Piece) []string {
   var key string
   switch piece.Org {
   case "ukr":
@@ -341,7 +341,7 @@ func keyByOrg(piece cat.Piece) []string {
   return []string{key}
 }
 
-func keyBySty(piece cat.Piece) []string {
+func keyBySty(piece catalog.Piece) []string {
   var key string
   switch piece.Sty {
   case "flk":
@@ -356,7 +356,7 @@ func keyBySty(piece cat.Piece) []string {
   return []string{key}
 }
 
-func keyByGnr(piece cat.Piece) []string {
+func keyByGnr(piece catalog.Piece) []string {
   var key string
   switch piece.Gnr {
   case "sng", "chd", "lul", "mil", "pry", "rmc", "ves":
@@ -371,7 +371,7 @@ func keyByGnr(piece cat.Piece) []string {
   return []string{key}
 }
 
-func keyByStu(piece cat.Piece) []string {
+func keyByStu(piece catalog.Piece) []string {
   keys := make(map[string]bool, 5)
   for _, bss := range piece.Bss {
     var stuFrm []string
@@ -413,11 +413,11 @@ func keyByStu(piece cat.Piece) []string {
   return unique
 }
 
-func keyByCom(piece cat.Piece) []string {
+func keyByCom(piece catalog.Piece) []string {
   return []string{"composer"}
 }
 
-func keyByBss(piece cat.Piece) []string {
+func keyByBss(piece catalog.Piece) []string {
   keys := make(map[string]bool, 3)
   for _, bss := range piece.Bss {
     switch bss {
@@ -436,7 +436,7 @@ func keyByBss(piece cat.Piece) []string {
   return unique
 }
 
-func keyByLvl(piece cat.Piece) []string {
+func keyByLvl(piece catalog.Piece) []string {
   var key string
   switch lvl := piece.Lvl; lvl[:2] {
   case "el":
@@ -447,12 +447,12 @@ func keyByLvl(piece cat.Piece) []string {
   return []string{key}
 }
 
-// func keyByLyr(_ cat.Piece) []string {
+// func keyByLyr(_ catalog.Piece) []string {
 //   return []string{"lyrics"}
 // }
 
 func publishCatalog(tpl *template.Template, pc PublishCommand) error {
-  pieces, _, catLen, err := cat.ReadPiecesAndBooks(
+  pieces, _, catLen, err := catalog.ReadPiecesAndBooks(
     pc.CatalogDir, "", nil, pc.BookFile, nil, false, true,
   )
   if err != nil {
@@ -460,12 +460,12 @@ func publishCatalog(tpl *template.Template, pc PublishCommand) error {
   }
   pc.Queries["lcs"] = "^cpr" // exclude lcs: cpr pieces
   if len(pc.Queries) > 0 {
-    pieces, err = cat.QueryPieces(pieces, pc.Queries)
+    pieces, err = catalog.QueryPieces(pieces, pc.Queries)
     if err != nil {
       return err
     }
   }
-  cat.PrintStat(catLen, len(pieces))
+  catalog.PrintStat(catLen, len(pieces))
   catalogFile := filepath.Join(pc.TemplateDir, "catalog.html")
   _, err = tpl.ParseFiles(catalogFile)
   if err != nil {
@@ -483,7 +483,7 @@ func publishCatalog(tpl *template.Template, pc PublishCommand) error {
   if err != nil {
     return err
   }
-  gnrPieces := filterPieces(pieces, func(piece cat.Piece) bool {
+  gnrPieces := filterPieces(pieces, func(piece catalog.Piece) bool {
     return piece.Gnr != "stu"
   })
   err = publishGroup(
@@ -492,7 +492,7 @@ func publishCatalog(tpl *template.Template, pc PublishCommand) error {
   if err != nil {
     return err
   }
-  stuStbPieces := filterPieces(pieces, func(piece cat.Piece) bool {
+  stuStbPieces := filterPieces(pieces, func(piece catalog.Piece) bool {
     return piece.Gnr == "stu" && slices.ContainsFunc(
       piece.Bss, func(bss string) bool {
         return bss == "stb" || bss == "pub"
@@ -505,7 +505,7 @@ func publishCatalog(tpl *template.Template, pc PublishCommand) error {
   if err != nil {
     return err
   }
-  stuFrbPieces := filterPieces(pieces, func(piece cat.Piece) bool {
+  stuFrbPieces := filterPieces(pieces, func(piece catalog.Piece) bool {
     return piece.Gnr == "stu" && slices.Contains(piece.Bss, "frb")
   })
   err = publishGroup(
@@ -514,7 +514,7 @@ func publishCatalog(tpl *template.Template, pc PublishCommand) error {
   if err != nil {
     return err
   }
-  comPieces := filterPieces(pieces, func(piece cat.Piece) bool {
+  comPieces := filterPieces(pieces, func(piece catalog.Piece) bool {
     return len(piece.Com) > 0 || len(piece.Arr) > 0
   })
   err = publishGroup(
@@ -535,7 +535,7 @@ func publishCatalog(tpl *template.Template, pc PublishCommand) error {
   if err != nil {
     return err
   }
-  // lyrPieces := filterPieces(pieces, func(piece cat.Piece) bool {
+  // lyrPieces := filterPieces(pieces, func(piece catalog.Piece) bool {
   //   return piece.Ens == "vc1" || piece.Ens == "vc2"
   // })
   // err = publishGroup(

@@ -1,17 +1,18 @@
 package main
 
 import (
-  "fmt"
-  "os"
-  sty "github.com/volodymyrprokopyuk/bayanguru/internal/style"
-  cmd "github.com/volodymyrprokopyuk/bayanguru/internal/command"
+	"fmt"
+	"os"
+
+	"github.com/volodymyrprokopyuk/bayanguru/cli/command"
+	"github.com/volodymyrprokopyuk/bayanguru/cli/style"
 )
 
 func main() {
-  bayanguruCmd := cmd.BayanguruCmd()
+  bayanguruCmd := command.BayanguruCmd()
   err := bayanguruCmd.Execute()
   if err != nil {
-    fmt.Println(sty.Err("%v", err))
+    fmt.Println(style.Err("%v", err))
     os.Exit(1)
   }
 }

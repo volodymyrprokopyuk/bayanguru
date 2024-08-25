@@ -9,8 +9,8 @@ import (
 	"text/template"
 
 	pdf "github.com/pdfcpu/pdfcpu/pkg/api"
-	cat "github.com/volodymyrprokopyuk/bayanguru/internal/catalog"
-	sty "github.com/volodymyrprokopyuk/bayanguru/internal/style"
+	"github.com/volodymyrprokopyuk/bayanguru/cli/catalog"
+	"github.com/volodymyrprokopyuk/bayanguru/cli/style"
 )
 
 type EngraveCommand struct {
@@ -46,7 +46,7 @@ func makeTemplate(sourceDir, targetFile string) (*template.Template, error) {
 
 func engraveScore(w io.Writer, score, scoreFile, scoreDir string) error {
   scorePDF := filepath.Join(scoreDir, scoreFile)
-  fmt.Fprintf(w, "%v %v\n", sty.Org("engrave"), sty.Lvl(scorePDF + ".pdf"))
+  fmt.Fprintf(w, "%v %v\n", style.Org("engrave"), style.Lvl(scorePDF + ".pdf"))
   lyCmd := exec.Command(
     "lilypond", "-d", "backend=cairo", "-l", "WARN",
     "-f", "pdf", "-o", scorePDF, "-",
@@ -59,7 +59,7 @@ func engraveScore(w io.Writer, score, scoreFile, scoreDir string) error {
 
 func optimizeScore(w io.Writer, scoreFile, scoreDir  string) error {
   scorePDF := filepath.Join(scoreDir, scoreFile + ".pdf")
-  fmt.Fprintf(w, "%v %v\n", sty.Org("optimize"), sty.Lvl(scorePDF))
+  fmt.Fprintf(w, "%v %v\n", style.Org("optimize"), style.Lvl(scorePDF))
   return pdf.OptimizeFile(scorePDF, scorePDF, nil)
 }
 
@@ -72,7 +72,7 @@ func scoreError(format string, args ...any) error {
 }
 
 func Engrave (ec EngraveCommand) error {
-  pieces, books, catLen, err := cat.ReadPiecesAndBooks(
+  pieces, books, catLen, err := catalog.ReadPiecesAndBooks(
     ec.CatalogDir, ec.Catalog, ec.Pieces,
     ec.BookFile, ec.Books, ec.Book, ec.All,
   )
@@ -86,7 +86,7 @@ func Engrave (ec EngraveCommand) error {
     }
     return nil
   }
-  cat.PrintStat(catLen, len(pieces))
+  catalog.PrintStat(catLen, len(pieces))
   if ec.Book {
     if ec.Piece {
       goto pieces
