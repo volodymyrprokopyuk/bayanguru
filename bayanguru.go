@@ -8,7 +8,8 @@ import (
 )
 
 func main() {
-  err := cmd.Execute()
+  bayanguruCmd := cmd.BayanguruCmd()
+  err := bayanguruCmd.Execute()
   if err != nil {
     fmt.Println(sty.Err("%v", err))
     os.Exit(1)
