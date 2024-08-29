@@ -12,6 +12,11 @@ pieces:
   - { id: uuc1, tit: Етюд D minor,
       com: Л. Шітте, src: BSO1981,
       org: dnk, sty: cus, gnr: stu, ton: dmi, frm: [scl, tu3], bss: stb, lvl: ela }
+  # PBS1AG1970
+  # p. 59
+  # - { id: zizx, tit: Етюд F major,
+  #     com: А. Салин, src: PBS1AG1970,
+  #     org: rus, sty: cus, gnr: stu, ton: fmj, frm: arp, bss: stb, lvl: elb }
   # * Free bass
   # FBBSC1978
   - { id: kbmk, tit: Етюд C major,

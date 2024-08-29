@@ -8,6 +8,11 @@ pieces:
   - { id: zgec, tit: Чабан, sub: Пастуший мотив і танок,
       arr: А. Онегин, src: BSO1981,
       org: ukr, sty: flk, gnr: dnc, ton: cmj, frm: [var, tu5, tu6, rep, acc, tri, cad], bss: stb, lvl: elb }
+  # PBS1AG1970
+  # p. 63
+  # - { id: dmf9, tit: Серенада,
+  #     com: М. Чайкін, src: PBS1AG1970,
+  #     org: ukr, sty: cus, gnr: pie, ton: [ami, cmj], frm: dot, bss: stb, lvl: elb }
   # * Free bass
   # FBBSC1978
   - { id: 39bh, tit: П'єса,
