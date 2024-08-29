@@ -58,5 +58,17 @@
 \relative {
   \clef bass
   \key d \minor
+  \meter 1/2 #'(1)
+  d=4-\stBass a8 a | d4 r | d8 dm! e[ a@7!] | f,8 d@m! g8 gm! |
+  a=,8 d@m! a8 a7! | d+dm! r r4 | e'8[ c@7! c78 c7] | f, fM! fM fM |
+  c'=8 c7! c7 c7 | f+fM! r r4 | a8 a7! a7 a7 | d dm! dm dm |
+  g,=,8 g7! g7 g7 | c cM! cM cM | d4 e= | a+am!2 | a+aM! | d+dm! \fermata |
+
+  \rep 2 { a+a7!8 a+a7 a+a7 a+a7 | d+dm! d+dm d+dm d+dm | }
+  d=8 dm! e[ c@7!] | f,8 d@m! g8 gm! | a d@m! a8 a7! | d dm! dm dm |
+  \rep 2 { a+a7!8 a+a7 a+a7 a+a7 | d+dm! d+dm d+dm d+dm | }
+  f+d@m![ f+dm8 f+dm f+dm] | g+gm! g+gm g+gm g+gm | d@m![ dm8] a+a7! \fermata a+a7 |
+  \rep 4 { d+dm!8 d+dm d+dm d+dm | } d+g@m![ gm8 gm gm] | d+dm! d+dm d+dm d+dm |
+  cis=8 a@M! a8 r | d=[ dm!] d+dm r \fermata |
 }
 {{ end }}
