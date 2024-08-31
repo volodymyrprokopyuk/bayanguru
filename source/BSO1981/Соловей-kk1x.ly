@@ -5,6 +5,19 @@
   f=''16(-> g) e8 e16(-> f) d8 | d4 \acc { cis'='''8 } d='''8 r \fermata |
 {{ end }}
 
+{{ define "lh1" }}
+  d=8 dm! e[ a@7!] | f,8 d@m! g8 gm! | a=,8 d@m! a8 a7! | d+dm! r r4 |
+  e'=8[ c@7! c78 c7] | f, fM! fM fM | c'=8 c7! c7 c7 | f+fM! r r4 |
+{{ end }}
+
+{{ define "lh2" }}
+  \rep 2 { a+a7!8 a+a7 a+a7 a+a7 | d+dm! d+dm d+dm d+dm | }
+  f+d@m![ f+dm8 f+dm f+dm] | g+gm! g+gm g+gm g+gm |
+  a+d@m![ a+dm8] a+a7! \fermata a+a7 |
+  \rep 4 { d+dm!8 d+dm d+dm d+dm | } d+g@m![ gm8 gm gm] | d+dm! d+dm d+dm d+dm |
+  cis=8 a@M! a8 r | d=[ dm!] d+dm r \fermata |
+{{ end }}
+
 {{ define "rightHand" }}
 \relative {
   \tempo Moderato
@@ -13,8 +26,8 @@
   \time 2/4
   <d'=' f a d>4\sf \duo { <d''='' e>8\p <e='' a> | } { a'='8 <g=' cis> | }
   <f=' d' a'>4 \arpeggio r4 | f'4 e | d f8( e) |
-  a,='8( b32[ a gis a]) <gis b>8 <g cis> |
-  <f=' d'>8 <a f'>[( <g cis>-> <f d'>] | c'4) d8(-> c) | a4 d8( c) |
+  a,='8( bes32[ a gis a]) <gis b>8 <g cis> |
+  <f=' d'>8 <a f'>[( <g cis>-> <f d'>] | c'4) d8(-> c) | a4 d8(-> c) |
   g='8( a16 bes a8 g | f) <c' a'>[( <bes e> <a f'>]) |
   a='4( b8 cis | d4) e8(\< \af 8\! f | g, f' e d | c4) r4 |
   \trio { b'='8(\p c16 d c8 b | <c,=' e a>4.) } %
@@ -39,7 +52,7 @@
   g,='8( a16 bes) a8( g | f) <c' a'>[( <bes e>\sf <a f'>]) |
   a='4(\p b8 cis) | d( e32[ d cis d]) e8 f |
   g,='16( a' g fis f e) \acc { g=''8 } f16( d | c4) r |
-  \trio { <f'=' b>8 c'16 d c8 b=' | } { d'='2 | } { s4 cis'=' | }
+  \trio { b'='8\p c16 d c8 b | } { f'='4 gis=' | } { d'='2 | }
   <c,=' e a>8 r a'' r | \acc { bes=''8 } a8-.^\tSos a-. a-. a-. |
   \acc { bes=''8 } a4. \trill gis16.^\aTen \hSpace a32 | d8 d,='' r4 \fermata |
 
@@ -59,16 +72,20 @@
   \clef bass
   \key d \minor
   \meter 1/2 #'(1)
-  d=4-\stBass a8 a | d4 r | d8 dm! e[ a@7!] | f,8 d@m! g8 gm! |
-  a=,8 d@m! a8 a7! | d+dm! r r4 | e'8[ c@7! c78 c7] | f, fM! fM fM |
-  c'=8 c7! c7 c7 | f+fM! r r4 | a8 a7! a7 a7 | d dm! dm dm |
-  g,=,8 g7! g7 g7 | c cM! cM cM | d4 e= | a+am!2 | a+aM! | d+dm! \fermata |
+  d=4-\stBass a8 a | d4 r | {{ template "lh1" }}
+  a=,8 a7! a7 a7 | d dm! dm dm | g,=,8 g7! g7 g7 | c cM! cM cM | d4 e= |
+  a+am!2 | a+aM! | d+dm! \fermata |
 
   \rep 2 { a+a7!8 a+a7 a+a7 a+a7 | d+dm! d+dm d+dm d+dm | }
   d=8 dm! e[ c@7!] | f,8 d@m! g8 gm! | a d@m! a8 a7! | d dm! dm dm |
+  {{ template "lh2" }}
+
+  {{ template "lh1" }}
+  a=,8 a7! a7 a7 | d dm! dm dm | g,[ g7! f@M! g@7!8] | c8[ cM! a@m! c@M!8] |
+  d=4 e | a+am!2 | a+aM!4 r | a+aM! r | d+dm! r \fermata |
   \rep 2 { a+a7!8 a+a7 a+a7 a+a7 | d+dm! d+dm d+dm d+dm | }
-  f+d@m![ f+dm8 f+dm f+dm] | g+gm! g+gm g+gm g+gm | d@m![ dm8] a+a7! \fermata a+a7 |
-  \rep 4 { d+dm!8 d+dm d+dm d+dm | } d+g@m![ gm8 gm gm] | d+dm! d+dm d+dm d+dm |
-  cis=8 a@M! a8 r | d=[ dm!] d+dm r \fermata |
+  d+dm!8 d+dm e+c@M![ e+cM8] | f+d@m![ f+dm8] g+gm!8 g+gm |
+  a+d@m!8[ a+dm8] a+a7! a+a7 | d+dm! d+dm d+dm d+dm |
+  {{ template "lh2" }}
 }
 {{ end }}

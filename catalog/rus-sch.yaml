@@ -36,10 +36,9 @@ pieces:
   - { id: kk1x, tit: Соловей,
       com: А. Алябьев, src: BSO1981,
       org: rus, sty: cus, gnr: pie, ton: dmi, frm: [cr5, acc, tri, jmp], bss: stb, lvl: elc }
-  # p. 144
-  # - { id: y4wa, tit: Подмосковные вечера,
-  #     com: В. Соловьев-Седой, arr: В. Клиберн, art: hrm, src: BSO1981,
-  #     org: rus, sty: cus, gnr: pie, ton: cmi, frm: [cr5, cr7], bss: stb, lvl: elc }
+  - { id: y4wa, tit: Подмосковные вечера,
+      com: В. Соловьев-Седой, arr: В. Клиберн, art: hrm, src: BSO1981,
+      org: rus, sty: cus, gnr: pie, ton: cmi, frm: [cr5, cr7], bss: stb, lvl: elc }
   # PBS1AG1970
   # p. 51
   # - { id: fovi, tit: Про Петю,
