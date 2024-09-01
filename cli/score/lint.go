@@ -223,7 +223,7 @@ func lintNoteComponentOrder(lines []Line) []Line {
 var boundChord = regexp.MustCompile(`@[Mm7d]\S+ `)
 var durationParts = []string{
   `^\S+[123468]`, // next note with duration
-  `^\.[a-g]`, // {{ .a }}
+  `^[\.<][a-g]`, // skip {{ .a }}, <c e>8
 }
 var noteDuration = regexp.MustCompile(strings.Join(durationParts, "|"))
 
