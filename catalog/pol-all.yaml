@@ -50,3 +50,7 @@ pieces:
   - { id: ki1h, tit: Полонез,
       com: М. Огінський, src: BSO1981,
       org: pol, sty: cus, gnr: dnc, ton: ami, frm: [cr5, dot, acc, jmp], bss: [stb, pub, syn], lvl: elb }
+  # FBBMS4NP1974
+  - { id: 3uhy, tit: "Я дівчина, як розочка", sub: Латиська народна пісня,
+      arr: В. Накапкин, src: FBBMS4NP1974,
+      org: lva, sty: flk, gnr: sng, ton: amj, frm: [var, in3], bss: [stb, frb], lvl: elb }

@@ -120,7 +120,9 @@ books:
         # BSN1985
         l6mm,
         # BSO1981
-        s6k4, ki1h
+        s6k4, ki1h,
+        # FBBMS4NP1974
+        3uhy
       ] }
   # Study class
   - { id: stu1, tit: Вибрані етюди, sub: для готового баяна,
