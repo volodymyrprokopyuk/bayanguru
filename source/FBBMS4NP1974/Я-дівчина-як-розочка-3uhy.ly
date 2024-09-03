@@ -52,7 +52,7 @@
   b=,8 bm! e e7! | a, g fis fis7! | b bm! e e7! | a,-. e'-. a,=,4-- \clef treble |
 
   \meter 1/2 #'(1)
-  {{ template "lh1" (w `b''='8`) }} | a='8 a cis a |
+  {{ template "lh1" (w `b''='8-\frBass`) }} | a='8 a cis a |
   {{ template "lh1" (w `b='8`) }} | a='8-. e-. a,=4-> |
 }
 {{ end }}
