@@ -40,10 +40,9 @@ pieces:
       com: В. Соловьев-Седой, arr: В. Клиберн, art: hrm, src: BSO1981,
       org: rus, sty: cus, gnr: pie, ton: cmi, frm: [cr5, cr7], bss: stb, lvl: elc }
   # PBS1AG1970
-  # p. 51
-  # - { id: fovi, tit: Про Петю,
-  #     com: Д. Кабалевский, src: PBS1AG1970,
-  #     org: rus, sty: cus, gnr: pie, ton: cmj, frm: mel, bss: stb, lvl: ela }
+  - { id: fovi, tit: Про Петю,
+      com: Д. Кабалевский, src: PBS1AG1970,
+      org: rus, sty: cus, gnr: pie, ton: cmj, frm: mel, bss: stb, lvl: ela }
   # p. 51
   # - { id: cf7n, tit: Песенка,
   #     com: П. Гвоздев, src: PBS1AG1970,
