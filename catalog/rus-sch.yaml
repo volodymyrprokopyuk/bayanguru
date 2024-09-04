@@ -43,10 +43,9 @@ pieces:
   - { id: fovi, tit: Про Петю,
       com: Д. Кабалевский, src: PBS1AG1970,
       org: rus, sty: cus, gnr: pie, ton: cmj, frm: mel, bss: stb, lvl: ela }
-  # p. 51
-  # - { id: cf7n, tit: Песенка,
-  #     com: П. Гвоздев, src: PBS1AG1970,
-  #     org: rus, sty: cus, gnr: pie, ton: cmj, frm: mel, bss: stb, lvl: ela }
+  - { id: cf7n, tit: Песенка,
+      com: П. Гвоздев, src: PBS1AG1970,
+      org: rus, sty: cus, gnr: pie, ton: cmj, frm: mel, bss: stb, lvl: ela }
   # p. 68
   # - { id: d1vq, tit: "Полноте, ребята", sub: rusfs,
   #     arr: В. Накапкин, src: PBS1AG1970,
