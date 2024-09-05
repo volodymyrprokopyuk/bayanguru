@@ -139,7 +139,9 @@ func publishDirIndex(
   w io.Writer, tpl *template.Template, publicDir, publicFile string, data any,
 ) error {
   dir := filepath.Join(publicDir, publicFile)
-  fmt.Fprintf(w, "%v %v\n", style.Org("publish"), style.Lvl(dir))
+  if strings.Index(dir, "/catalog/") == -1 {
+    fmt.Fprintf(w, "%v %v\n", style.Org("publish"), style.Lvl(dir))
+  }
   err := os.MkdirAll(dir, 0755)
   if err != nil {
     return err
@@ -335,6 +337,9 @@ func publishPieces(pieces []catalog.Piece, pc PublishCommand) error {
 }
 
 func indexPieces(siteDir, publicDir string) error {
+  fmt.Printf(
+    "%v %v\n", style.Org("index"), style.Lvl(publicDir + "/piece/..."),
+  )
   pfDir := filepath.Join(publicDir, "pagefind")
   err := os.RemoveAll(pfDir) // removes an existing index
   if err != nil {
@@ -351,13 +356,10 @@ func indexPieces(siteDir, publicDir string) error {
   defer func() {
     _ = os.Chdir(cwd)
   }()
-  fmt.Printf(
-    "%v %v\n", style.Org("index"), style.Lvl(filepath.Join(publicDir, "piece")),
-  )
   pfFile := filepath.Join(cwd, "pagefind")
   pfCmd := exec.Command(pfFile)
-  pfCmd.Stdout = os.Stdout
-  pfCmd.Stderr = os.Stderr
+  // pfCmd.Stdout = os.Stdout
+  // pfCmd.Stderr = os.Stderr
   return pfCmd.Run()
 }
 
@@ -370,8 +372,8 @@ func publishStyle(siteDir, templateDir, publicDir string) error {
     "bunx", "tailwindcss", "--config", twConfig,
     "--input", inStyle, "--output", outStyle, "--minify",
   )
-  twCmd.Stdout = os.Stdout
-  twCmd.Stderr = os.Stderr
+  // twCmd.Stdout = os.Stdout
+  // twCmd.Stderr = os.Stderr
   return twCmd.Run()
 }
 

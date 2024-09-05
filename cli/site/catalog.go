@@ -9,9 +9,10 @@ import (
 	"strings"
 	"text/template"
 
+	"github.com/volodymyrprokopyuk/bayanguru/cli/catalog"
+	"github.com/volodymyrprokopyuk/bayanguru/cli/style"
 	"golang.org/x/text/collate"
 	"golang.org/x/text/language"
-	"github.com/volodymyrprokopyuk/bayanguru/cli/catalog"
 )
 
 var tr = map[string]string{
@@ -452,6 +453,9 @@ func keyByLvl(piece catalog.Piece) []string {
 // }
 
 func publishCatalog(tpl *template.Template, pc PublishCommand) error {
+  fmt.Printf(
+    "%v %v\n", style.Org("publish"), style.Lvl(pc.PublicDir + "/catalog/..."),
+  )
   pieces, _, catLen, err := catalog.ReadPiecesAndBooks(
     pc.CatalogDir, "", nil, pc.BookFile, nil, false, true,
   )
