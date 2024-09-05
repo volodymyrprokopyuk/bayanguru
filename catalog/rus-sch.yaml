@@ -49,6 +49,10 @@ pieces:
   - { id: d1vq, tit: "Полноте, ребята", sub: rusfs,
       arr: В. Накапкин, src: PBS1AG1970,
       org: rus, sty: flk, gnr: sng, ton: amj, frm: [vo2, var], bss: stb, lvl: elb }
+  # p. 71
+  # - { id: 4e0q, tit: Вальс,
+  #     com: В. Иванов, src: PBS1AG1970,
+  #     org: rus, sty: cus, gnr: vls, ton: [gmj, emi], frm: [dot, syn], bss: stb, lvl: elb }
   # * Free bass
   # FBBSC1978
   - { id: v2kv, tit: На горе-то калина, sub: rusfs,
