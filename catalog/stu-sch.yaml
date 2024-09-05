@@ -49,7 +49,6 @@ pieces:
   - { id: ir64, tit: Етюд A minor,
       com: Г. Салов, src: FBBSC1978,
       org: rus, sty: cus, gnr: stu, ton: [ami, cmj], frm: scl, bss: [frb, cr5], lvl: elb }
-  # p. 140 TODO
   # BSN1985
   - { id: g2f2, tit: Етюд C major,
       com: Д. Левидова, src: BSN1985,
