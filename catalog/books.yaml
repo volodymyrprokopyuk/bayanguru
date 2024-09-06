@@ -197,6 +197,8 @@ books:
         uuc1
       ] },
       { tit: Арпеджіо, pieces: [ # Arpeggio
+        # PBS1AG1970
+        zizx
       ] } ] }
   - { id: stu4, tit: Вибрані етюди, sub: для готового баяна,
       sections: [
