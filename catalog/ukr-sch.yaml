@@ -80,10 +80,9 @@ pieces:
       com: А. Онуфрієнко, src: BSN1985,
       org: ukr, sty: cus, gnr: vls, ton: amj, frm: mor, bss: [frb, cr5, dot], lvl: elb }
   # FBBMS4NP1974
-  # p. 28
-  # - { id: hq9a, tit: Україснька пісня,
-  #     com: А. Дроздов, src: FBBMS4NP1974,
-  #     org: ukr, sty: cus, gnr: sng, ton: ami, frm: mel, bss: frb, lvl: elb }
+  - { id: hq9a, tit: Україснька пісня,
+      com: А. Дроздов, src: FBBMS4NP1974,
+      org: ukr, sty: cus, gnr: sng, ton: emi, frm: mel, bss: frb, lvl: elb }
   # p. 35
   # - { id: 0s2r, tit: Прилетіла перепілонька, sub: ukrfs,
   #     arr: А. Талакин, src: FBBMS4NP1974,

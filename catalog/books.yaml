@@ -228,7 +228,9 @@ books:
         # BSN1985
         55kn, b8ah, 0q92, 9shc, 8fvz, sgu3,
         # CLFBBS1979
-        hk7t, 1jj6
+        hk7t, 1jj6,
+        # FBBMS4NP1974
+        hq9a
       ] }
   - { id: rfr1, tit: Російські народні пісні і танці,
       sub: для готово-виборного баяна,
