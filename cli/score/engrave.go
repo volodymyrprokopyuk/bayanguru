@@ -48,7 +48,8 @@ func engraveScore(w io.Writer, score, scoreFile, scoreDir string) error {
   scorePDF := filepath.Join(scoreDir, scoreFile)
   fmt.Fprintf(w, "%v %v\n", style.Org("engrave"), style.Lvl(scorePDF + ".pdf"))
   lyCmd := exec.Command(
-    "lilypond", "-d", "backend=cairo", "-l", "WARN",
+    // "lilypond", "-d", "backend=cairo", "-l", "WARN",
+    "lilypond", "-l", "WARN",
     "-f", "pdf", "-o", scorePDF, "-",
   )
   lyCmd.Stdin = strings.NewReader(score)
