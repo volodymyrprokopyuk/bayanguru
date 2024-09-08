@@ -2,6 +2,12 @@
   {{ .a }} b-> | c8( a) b4-> | e16( fis e8) b-. b-. | c( a) b='4-> |
 {{ end }}
 
+{{ define "rh2" }}
+  r8 e=''8-. fis16( e fis8) | g( b) a16( b a8) | g-. g-. fis16( g fis8) |
+  e=''4 \duo { \parenthesize \tweak font-size -2 e'''='''4^\pOss | }
+  { e''=''4 {{ .a }} | }
+{{ end }}
+
 {{ define "lh1" }}
   {{ .a }} fis g e]) | r <e fis> r <e g> | r8 e[( g e]) | r <e fis>4( dis='8) |
 {{ end }}
@@ -14,14 +20,12 @@
   \time 2/4
   {{ template "rh1" (w `e''=''4->\f`) }}
   r8 e=''8-. r b-. | g( b) a16( b a8) | g-. g-. fis16( g fis8) | r g[( a c]) |
-  r8 e=''8-. fis16( e fis8) | g( b) a16( b a8) |
-  g=''8-. g-. fis16( g fis8) | e4 <e='' e'> |
+  {{ template "rh2" (w ``) }}
 
   e=''4( g) | <b, d>8-. d16( c d8 b) | c4( e) | <g, b>8-. b16( a <g b>4) |
   a='8( c) c( g) | a-. c16( b c4) | r8 a[ a( c]) | b^\tRit b16( a b4) |
   {{ template "rh1" (w `e=''4->^\tATem`) }}
-  r8 e=''8-. fis16( e fis8) | g( b) a16( b a8) |
-  g=''8-. g-. fis16( g fis8) | e4 <e='' e'>\sf \bar "|."
+  {{ template "rh2" (w `\sf`) }} \bar "|."
 }
 {{ end }}
 

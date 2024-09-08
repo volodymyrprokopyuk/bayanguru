@@ -79,6 +79,7 @@ var excludeParts = []string{
   `^ +\\(?:duo|trio) {$|^ +} {$`,
   `^ +\\set \w`,
   `^ +\\[-\w]+$`,
+  `font-size`,
 }
 var excludeLine = regexp.MustCompile(strings.Join(excludeParts, "|"))
 var removeParts = []string{

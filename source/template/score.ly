@@ -15,6 +15,9 @@ stBass = \markup \larger \box Г % Готовий бас = standard (Stradella) 
 puBass = \markup \larger \box Б % Чистий бас = pure bass
 frBass = \markup \larger \box В % Виборна система = free bass
 
+% Pitch
+pOss = \markup \italic ossia
+
 % Articulation
 aSim = \markup \italic simile
 aLeg = \markup \italic legato
