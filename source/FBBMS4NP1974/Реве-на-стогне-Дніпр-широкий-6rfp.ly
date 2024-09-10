@@ -23,5 +23,13 @@
 \relative {
   \clef bass
   \key d \minor
+  bes=8-\frBass a_\aNLeg bes a bes a | \rep 2 { bes=8 a bes a g f= | }
+  bes=8 a bes a d a | c bes bes a bes a | bes a bes a b cis |
+  d='8 cis d cis d e | f e d a c bes | a bes a bes a g | f bes d f e f=' \clef treble |
+  a='8 g f e d cis | a' bes a bes g4 | f8 g f g f4 | fis8 g fis g fis4 |
+  g='4 d c | bes g e | r4 a2 | r4 a=2 | r4 \clef bass d,= f |
+  a=8 g f e d cis | d f g a g4 | f8 a f e d4~ | d8 cis d e fis4 |
+  g=4 d= \clef treble bes'=~ | bes d8 e f e~ | e4 d bes~ |
+  bes=8 a bes a bes a= \clef bass d,=( a bes a bes4 \fermata | d,=,2.) |
 }
 {{ end }}
