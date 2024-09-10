@@ -28,7 +28,9 @@ books:
         # BTB1978
         vwad, brku, tzb9, ndwb,
         # BSO1981
-        xd0h, zgec
+        xd0h, zgec,
+        # PBS1AG1970
+        dmf9
       ] }
   - { id: rus1, tit: Російські народні пісні і танці, sub: для готового баяна,
       pieces: [
