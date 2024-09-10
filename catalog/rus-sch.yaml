@@ -10,7 +10,7 @@ pieces:
       org: rus, sty: cus, gnr: pie, ton: emi, frm: mel, bss: stb, lvl: ela }
   - { id: p93x, tit: Полька-шутка,
       com: В. Накапкин, src: BSN1985,
-      org: rus, sty: cus, gnr: plk, ton: fmi, frm: acc, bss: stb, lvl: elb }
+      org: rus, sty: cus, gnr: plk, ton: fmj, frm: acc, bss: stb, lvl: elb }
   - { id: b0pe, tit: Веселая кадриль,
       com: В. Накапкин, src: BSN1985,
       org: rus, sty: cus, gnr: qdr, ton: [eesmj, cmi], frm: [in3, in6, tri], bss: stb, lvl: elb }
