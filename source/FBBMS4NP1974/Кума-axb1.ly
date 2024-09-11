@@ -40,5 +40,17 @@
 \relative {
   \clef bass
   \key g \major
+  r4 <g,=, d'>4(-\frBass | <c e> <d fis> | <e g>2) |
+  r4 <b=, fis'>4( | <c e> <d fis> | <e g>2) |
+  \duo { r4 a=4( | fis a | b a8 b | c4) a( | fis a | b=2) | }
+  { \rep 2 { R2 | b,=,2 | e= | } } |
+
+  \rep 2 { d'='4.( b8 | e4 d8 c | b4 g=) | }
+  a=8[( g fis e] | d4 e8 fis | g4 g) | a8[( g fis e] | d4 e8 fis | g=2) |
+
+  \meter 1/2 #'(1)
+  b=8_\aSta a b g | c g b a | g a b c | b a b g | c g b a | g fis e d |
+  <c= e>4 a'8 g | <c, fis>( e) fis d | b d g fis |
+  <c= e>4 a'8 g | <c, fis>( e) fis d | <g,=, d'>2 |
 }
 {{ end }}
