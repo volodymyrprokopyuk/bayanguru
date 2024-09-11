@@ -252,7 +252,9 @@ books:
         # BSN1985
         p41m, hzh3, 1s8b, sxsn, ok2r, 9lr9, fcch,
         # BSO1981
-        oow8
+        oow8,
+        # FBBMS4NP1974
+        axb1
       ] }
   - { id: sfr1, tit: Вибрані етюди, sub: для готово-виборного баяна,
       sections: [
