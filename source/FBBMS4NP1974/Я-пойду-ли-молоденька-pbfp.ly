@@ -46,7 +46,7 @@
 
   \clef bass
   b=8( d) d4 | e16( d cis b a4) | g( fis | e8 a <d, a'>4) |
-  e=4( fis | g8 fis16 e d8 cis) | d4( fis) | <d g>8( <cis fis~> <b fis'>4) |
+  e=4( fis | g8 fis16 e d8 cis) | d4( fis) | <d g>8( <cis fis~> <b=, fis'>4) |
 
   b=,8-\puBass d e fis | g e fis a, | b d e fis | g e a, cis |
   d=8 b cis a | g fis e cis' | b16 cis d8 e e | \duo { fis=2 | } { b,=,2 | }
