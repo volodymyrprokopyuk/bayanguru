@@ -124,10 +124,9 @@ pieces:
   - { id: axb1, tit: Кума, sub: rusfs,
       arr: А. Александров, src: FBBMS4NP1974,
       org: rus, sty: flk, gnr: sng, ton: gmj, frm: vo2, bss: [frb, var, in3], lvl: elb }
-  # p. 42
-  # - { id: pbfp, tit: "Я пойду ли, молоденька", sub: rusfs,
-  #     arr: В. Платонов, src: FBBMS4NP1974,
-  #     org: rus, sty: flk, gnr: sng, ton: bmi, frm: [var, in3, cr5, syn], bss: [vo2, frb, pub], lvl: elc }
+  - { id: pbfp, tit: "Я пойду ли, молоденька", sub: rusfs,
+      arr: В. Платонов, src: FBBMS4NP1974,
+      org: rus, sty: flk, gnr: sng, ton: bmi, frm: [var, in3, cr5, syn], bss: [vo2, frb, pub], lvl: elc }
   # p. 44
   # - { id: l23q, tit: "Что же вы, ребята, приуныли", sub: rusfs,
   #     arr: В. Платонов, src: FBBMS4NP1974,
