@@ -254,7 +254,7 @@ books:
         # BSO1981
         oow8,
         # FBBMS4NP1974
-        axb1, pbfp
+        axb1, pbfp, l23q
       ] }
   - { id: sfr1, tit: Вибрані етюди, sub: для готово-виборного баяна,
       sections: [
