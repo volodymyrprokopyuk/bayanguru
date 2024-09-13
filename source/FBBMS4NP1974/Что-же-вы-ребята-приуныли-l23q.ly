@@ -30,5 +30,20 @@
 \relative {
   \clef bass
   \key aes \major
+  r2 aes=4(-\frBass f' | ees8 c des[ bes] aes g16 f ees4) |
+  aes=4( bes8 c des4 aes | f'4. ees16 des) ees4( f8 des |
+  c='4 des8 bes aes[ f] ees4) | aes( des,8 ees aes,=,2) \clef treble |
+
+  des'='8 ees f4 c bes | f'8( des bes g aes c ees ges) |
+  \duo {
+    aes'='4(~ aes8 ges <des f>4 <bes des>) | c( des ees f) |
+    ees='1(~ | ees2. des='4) |
+  } { f'='8 e ees4 s2 | aes,1 | ees'4 des c2 | bes4 aes bes ees,= | }
+
+  \clef bass
+  r8 c,='8-> des[ bes] c aes bes[ ees,] |
+  f=8 aes g[ ees] aes,4 c8 ees | aes4 bes8 c des4 c8 bes |
+  c='4 bes8 des aes[ c] g bes | <f aes>4 <ees g> <des f> <bes des> |
+  <c= ees>4 <bes f'>8 <ees g> <aes,=, ees' aes>2 \fermata |
 }
 {{ end }}
