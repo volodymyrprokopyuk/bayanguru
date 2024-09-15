@@ -7,7 +7,7 @@ pieces:
       org: ukr, sty: flk, gnr: ves, ton: [ami, dmi], frm: syn, bss: stb, lvl: ela }
   - { id: zgec, tit: Чабан, sub: Пастуший мотив і танок,
       arr: А. Онегин, src: BSO1981,
-      org: ukr, sty: flk, gnr: dnc, ton: cmj, frm: [var, tu5, tu6, rep, acc, tri, cad], bss: stb, lvl: elb }
+      org: ukr, sty: flk, gnr: dnc, ton: ami, frm: [var, tu5, tu6, rep, acc, tri, cad], bss: stb, lvl: elb }
   # PBS1AG1970
   - { id: dmf9, tit: Серенада,
       com: М. Чайкін, src: PBS1AG1970,
