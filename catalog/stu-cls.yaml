@@ -58,7 +58,7 @@ pieces:
       org: aut, sty: cls, gnr: stu, ton: cmj, frm: [scl, rep], bss: stb, lvl: ela }
   - { id: m02e, tit: Етюд C major,
       com: Й. Ванхаль, src: SB1NU1979,
-      org: cze, sty: cls, gnr: stu, ton: cmj, frm: arp, bss: stb, lvl: ela }
+      org: cze, sty: cls, gnr: stu, ton: cmj, frm: [scl, arp], bss: stb, lvl: ela }
   - { id: 7yb4, tit: Етюд C major,
       com: В. Белов, src: SB1NU1979,
       org: rus, sty: cus, gnr: stu, ton: cmj, frm: arp, bss: stb, lvl: ela }
