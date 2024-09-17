@@ -140,10 +140,9 @@ pieces:
   - { id: 3ie2, tit: Грустная песенка,
       com: А. Холминов, src: FBBMS6N1975,
       org: rus, sty: cus, gnr: sng, ton: emi, frm: [vo2, in6], bss: [vo2, frb], lvl: ela }
-  # p. 5
-  # - { id: q4m2, tit: Маленький канон,
-  #     com: В. Несторов, src: FBBMS6N1975,
-  #     org: rus, sty: cus, gnr: pie, ton: cmi, frm: mel, bss: frb, lvl: ela }
+  - { id: q4m2, tit: Маленький канон,
+      com: В. Несторов, src: FBBMS6N1975,
+      org: rus, sty: cus, gnr: pie, ton: cmi, frm: mel, bss: frb, lvl: ela }
   # p. 16
   # - { id: fo1x, tit: Колыбельная,
   #     com: А. Холминов, src: FBBMS6N1975,
