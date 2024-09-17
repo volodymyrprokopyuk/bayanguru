@@ -64,6 +64,7 @@ meta:
           - { name: pie, eng: Piece, ukr: П'єса } # piece
           - { name: pre, eng: Prelude, ukr: Прелюдія }
           - { name: inv, eng: Invention, ukr: Інвенція }
+          - { name: can, eng: Canon, ukr: Канон }
           - { name: gyp, eng: Gypsy piece, ukr: Циганська п'єса }
           - { name: stu, eng: Study, ukr: Етюд } # study
   - tit: { eng: Piece qualification, ukr: Кваліфікація п'єси }
