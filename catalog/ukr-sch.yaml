@@ -89,7 +89,6 @@ pieces:
       com: Д. Крижанівський, arr: В. Накапкин, src: FBBMS4NP1974,
       org: ukr, sty: cus, gnr: sng, ton: dmi, frm: mel, bss: frb, lvl: elb }
   # FBBMS6N1975
-  # p. 17
-  # - { id: i8pf, tit: "Люблю, мати, Петруся", sub: ukrfs,
-  #     arr: В. Гречев, src: FBBMS6N1975,
-  #     org: ukr, sty: flk, gnr: sng, ton: gmj, frm: dot, bss: frb, lvl: elb }
+  - { id: i8pf, tit: "Люблю, мати, Петруся", sub: ukrfs,
+      arr: В. Гречев, src: FBBMS6N1975,
+      org: ukr, sty: flk, gnr: sng, ton: gmj, frm: dot, bss: frb, lvl: elb }
