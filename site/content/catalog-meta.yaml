@@ -89,6 +89,7 @@ meta:
           - { name: in4, eng: Forths, ukr: Кварти }
           - { name: in5, eng: Fifths, ukr: Квінти }
           - { name: in6, eng: Sixths, ukr: Сексти }
+          - { name: in7, eng: Sevenths, ukr: Септіми }
           - { name: in8, eng: Eighths, ukr: Октави }
           # crd: chords, акорди
           - { name: cr5, eng: triads, ukr: Тризвуки }

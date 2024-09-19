@@ -90,5 +90,10 @@ pieces:
       org: ukr, sty: cus, gnr: sng, ton: dmi, frm: mel, bss: frb, lvl: elb }
   # FBBMS6N1975
   - { id: i8pf, tit: "Люблю, мати, Петруся", sub: ukrfs,
-      arr: В. Гречев, src: FBBMS6N1975,
+      arr: В. Грачев, src: FBBMS6N1975,
       org: ukr, sty: flk, gnr: sng, ton: gmj, frm: dot, bss: frb, lvl: elb }
+  # p. 32
+  # - { id: mcz2, tit: "Жито, мати, жито", sub: ukrfs,
+  #     arr: В. Накапкин, src: FBBMS6N1975,
+  #     org: ukr, sty: flk, gnr: sng, ton: ami, frm: [vo2, acc, syn], bss: [frb,
+  #     cr5, syn], lvl: elb }

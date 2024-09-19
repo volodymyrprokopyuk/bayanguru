@@ -391,7 +391,7 @@ func keyByStu(piece catalog.Piece) []string {
         keys["scale"] = true
       case "arp":
         keys["arpeggio"] = true
-      case "in3", "in4", "in5", "in6", "in8":
+      case "in3", "in4", "in5", "in6", "in7", "in8":
         keys["interval"] = true
       case "cr5", "cr7":
         keys["chord"] = true
