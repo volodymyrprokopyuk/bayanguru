@@ -22,5 +22,14 @@
 \relative {
   \clef bass
   \key a \minor
+  r8 <a e'>4.-\frBass | r8 e[ fis g] | r <f c'>8[ r8 8] | r b[ c b] |
+  a=4.( c8 | b a g4) | e gis8 e | a4 a,=, |
+  r8 <g'= a c>8[ r8 8] | r <f a d>[ r <g b d>] |
+  r8 <gis= c f>8[ r <gis d' e>] | r <a c f>[ r <a= c e>] |
+
+  a=8 b c a | g4 e | c8 b a c | b4 e |
+  c'='8 e e e | d d b g | e' d c b | a4 a,16 e' a8 |
+  <b= c e>8 8 <bes c e>8 8 | <a c fis>8 8 <g b f'>8 8 |
+  <gis= c f>8 8 <gis d' e>8 8 | <a c e> e a,=,4-- |
 }
 {{ end }}
