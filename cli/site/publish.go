@@ -139,7 +139,7 @@ func publishDirIndex(
   w io.Writer, tpl *template.Template, publicDir, publicFile string, data any,
 ) error {
   dir := filepath.Join(publicDir, publicFile)
-  if strings.Index(dir, "/catalog/") == -1 {
+  if !strings.Contains(dir, "/catalog/") {
     fmt.Fprintf(w, "%v %v\n", style.Org("publish"), style.Lvl(dir))
   }
   err := os.MkdirAll(dir, 0755)
