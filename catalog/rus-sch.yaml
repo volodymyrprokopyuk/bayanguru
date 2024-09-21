@@ -149,3 +149,7 @@ pieces:
   - { id: 5tcn, tit: Отдавали молоду, sub: rusfs,
       arr: В. Грачев, src: FBBMS6N1975,
       org: rus, sty: flk, gnr: sng, ton: ami, frm: mel, bss: [frb, in7], lvl: ela }
+  # FBBMS7PT1975
+  - { id: 6hch, tit: Ночка темная, sub: rusfs,
+      arr: В. Платонов, src: FBBMS7PT1975,
+      org: rus, sty: flk, gnr: sng, ton: emi, frm: [vo2, var, in3], bss: [vo2, frb, in3, cr5], lvl: elc }
