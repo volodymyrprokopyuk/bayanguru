@@ -52,14 +52,17 @@ pieces:
   - { id: 4e0q, tit: Вальс,
       com: В. Иванов, src: PBS1AG1970,
       org: rus, sty: cus, gnr: vls, ton: [gmj, emi], frm: [dot, syn], bss: stb, lvl: elb }
-  # p. 72
-  # - { id: ys7w, tit: Во лесочке комарочков, sub: rusfs,
-  #     arr: А. Суханов, src: PBS1AG1970,
-  #     org: rus, sty: flk, gnr: sng, ton: amj, frm: [vo2, var], bss: stb, lvl: elb }
+  - { id: ys7w, tit: Во лесочке комарочков, sub: rusfs,
+      arr: А. Суханов, src: PBS1AG1970,
+      org: rus, sty: flk, gnr: sng, ton: amj, frm: [vo2, var], bss: stb, lvl: elb }
   # p. 75
   # - { id: b3lm, tit: Что пониже было города Саратова, sub: rusfs,
   #     arr: В. Накапкин, src: PBS1AG1970,
   #     org: rus, sty: flk, gnr: sng, ton: fmj, frm: vo2, bss: pub, lvl: elb }
+  # p. 75
+  # - { id: 8daj, tit: "Ах ты, Ванюшка, Иван", sub: rusfs,
+  #     arr: С. Павин, src: PBS1AG1970,
+  #     org: rus, sty: flk, gnr: sng, ton: ami, frm: [vo2, in3], bss: stb, lvl: elb }
   # * Free bass
   # FBBSC1978
   - { id: v2kv, tit: На горе-то калина, sub: rusfs,
