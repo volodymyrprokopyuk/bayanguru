@@ -31,5 +31,18 @@
 \relative {
   \clef bass
   \key a \major
+  a@M!8-\stBass r8 r e@7! | a@M!8 r8 r e@7! |
+  \rep 2 { a@M!8[ b@m!8] a@M!8[ e@7!8] | }
+  a@M!8 r8 r cis@7! | fis@m!8 r8 r a@M! |
+  e@M!8[ fis@m!8] e@M!8[ fis@m!8] | e@M!8[ a@M!8] e@M!8[ e@M!8] |
+  e=8 eM! d e@M! | cis8 a@M! b8 e@7! | a8 aM! gis e@M! | fis8 a@M! e8 e7! |
+  a=,8 aM! gis cis@7! | fis8 fism! e fis@m! | dis8 b@7! b'8 b7! | e d cis b=, |
+
+  \meter 1/2 #'(1)
+  \rep 3 { a=,8 aM! aM e'= | } a, aM! aM gis | cis cis7! cis7 cis |
+  fis,=,8 fism! fism fis | b b7! b7 b |
+  \meter 1/4 1,1
+  e=8 d cis b | cis b a gis | fis e dis=, r \fermata |
+  b+b7!2 | r8 b+b7!8 e+eM! r |
 }
 {{ end }}
