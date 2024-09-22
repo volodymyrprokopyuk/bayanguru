@@ -49,6 +49,7 @@ meta:
           - { name: chd, eng: Child piece, ukr: Дитяча п'єса }
           - { name: lul, eng: Lulaby, ukr: Колискова }
           - { name: ves, eng: Vesnianka, ukr: Веснянка }
+          - { name: kol, eng: Koliada, ukr: Колядка, щедрівка }
           - { name: pry, eng: "Pryspivky, kolomyjky", ukr: "Приспівки, коломийки" }
           - { name: rmc, eng: Romance, ukr: Романс }
           - { name: mil, eng: Military song, ukr: Військова пісня }

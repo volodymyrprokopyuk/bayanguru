@@ -323,7 +323,7 @@ var (
   validOrg = regexp.MustCompile(strings.Join(orgParts, ""))
   validSty = regexp.MustCompile(`^flk|cus|cls$`)
   gnrParts = []string{
-    `^sng|chd|lul|mil|pry|rmc|ves`,
+    `^sng|chd|lul|ves|kol|pry|rmc|mil`,
     `|dnc|gop|koz|mrc|plk|mzr|qdr|tng|vls`,
     `|pie|pre|inv|can|gyp|stu$`,
   }

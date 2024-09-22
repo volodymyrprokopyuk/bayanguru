@@ -360,7 +360,7 @@ func keyBySty(piece catalog.Piece) []string {
 func keyByGnr(piece catalog.Piece) []string {
   var key string
   switch piece.Gnr {
-  case "sng", "chd", "lul", "mil", "pry", "rmc", "ves":
+  case "sng", "chd", "lul", "ves", "kol", "pry", "rmc", "mil":
     key = "song"
   case "dnc", "gop", "koz", "mrc", "plk", "mzr", "qdr", "tng", "vls":
     key = "dance"
