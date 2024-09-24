@@ -96,7 +96,10 @@ pieces:
       arr: В. Накапкин, src: FBBMS6N1975,
       org: ukr, sty: flk, gnr: sng, ton: ami, frm: [vo2, syn, acc], bss: [frb, cr5, syn], lvl: elb }
   # FBBMS7PT1975
-  # p. 18
-  # - { id: yevq, tit: Щедрик,
-  #     com: М. Леонтович, src: FBBMS7PT1975,
-  #     org: ukr, sty: cus, gnr: sng, ton: gmi, frm: vo2, bss: [vo2, frb, in3, in5, cr5], lvl: elb }
+  - { id: yevq, tit: Щедрик,
+      com: М. Леонтович, src: FBBMS7PT1975,
+      org: ukr, sty: cus, gnr: sng, ton: gmi, frm: vo2, bss: [vo2, frb, in3, in5, cr5], lvl: elb }
+  # p. 20
+  # - { id: wzhz, tit: Ой з-за гори кам'яної, sub: ukrfs,
+  #     arr: М. Леонтович, src: FBBMS7PT1975,
+  #     org: ukr, sty: flk, gnr: sng, ton: fmi, frm: vo2, bss: [vo2, frb], lvl: elb }

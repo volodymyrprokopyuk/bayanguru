@@ -234,7 +234,9 @@ books:
         # FBBMS4NP1974
         hq9a, 0s2r, 6rfp,
         # FBBMS6N1975
-        i8pf, mcz2
+        i8pf, mcz2,
+        # FBBMS7PT1975
+        yevq
       ] }
   - { id: rfr1, tit: Російські народні пісні і танці,
       sub: для готово-виборного баяна,
