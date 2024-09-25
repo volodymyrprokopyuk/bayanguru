@@ -23,7 +23,6 @@
     \once \override MultiMeasureRest.staff-position = #0 %
     R2.\mf | c=''8\< e g4 f8 e | f( c bes aes g f |
     g='8\> aes \af 4\! f4) aes \rest |
-
     \rep 2 { {{ template "rh1a" }} } \bar "|."
   } {
     s2. | c'='8( e g4 f8 e) | f2.~ | f2 s4 |
