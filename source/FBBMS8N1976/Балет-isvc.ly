@@ -1,7 +1,16 @@
 {{ define "rh1" }}
   <d='' a'>8[)-. 8-. 8-. <d b'>]-. | <d a'>4 {{ .a }} |
-  <d='' fis>8 <b g'> \duo { <a'=' e'>4 | } { d''=''8 cis='' | }
-  \af 4.\! <a=' d>4. %
+  <d='' fis>8-. <b g'>-. \duo { <a'=' e'>4 | } { d''=''8( cis='') | }
+  \af 4\! <a=' d>4. %
+{{ end }}
+
+{{ define "lh1" }}
+  <d'=' fis>8[-. {{ .a }} 8-. 8-. <d g>]-. | <d fis>4 {{ .b }} |
+  b,=8 g a4 | d4( d,=8) %
+{{ end }}
+
+{{ define "lh2" }}
+  e='8[-. d-. cis-. b]-. | {{ .a }} | <b fis'>8[-. a-. b-. cis]-. | d='4. %
 {{ end }}
 
 {{ define "rightHand" }}
@@ -24,7 +33,12 @@
 
 {{ define "leftHand" }}
 \relative {
-  \clef bass
+  \clef treble
   \key d \major
+  \partial 8 { r8 | }
+  {{ template "lh1" (w `- \frBass` `fis='8-. g-.`) }} r |
+  {{ template "lh1" (w `` `g='4`) }} fis'->-. |
+  {{ template "lh2" (w `a=4 r`) }} fis8->-. |
+  {{ template "lh2" (w `a=4. fis8`) }} e,8-. | fis-. g-. a4 | d,=2 |
 }
 {{ end }}
