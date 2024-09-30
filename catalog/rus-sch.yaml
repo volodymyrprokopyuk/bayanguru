@@ -170,10 +170,9 @@ pieces:
   - { id: isvc, tit: Балет,
       com: А. Александров, src: FBBMS8N1976,
       org: rus, sty: cls, gnr: dnc, ton: dmj, frm: [in5, dot], bss: frb, lvl: elb }
-  # p. 11
-  # - { id: rhla, tit: Ласковый котенок,
-  #     com: А. Холминов, src: FBBMS8N1976,
-  #     org: rus, sty: cus, gnr: chd, ton: besmj, frm: mel, bss: [frb, in3], lvl: elb }
+  - { id: rhla, tit: Ласковый котенок,
+      com: А. Холминов, src: FBBMS8N1976,
+      org: rus, sty: cus, gnr: chd, ton: besmj, frm: mel, bss: [frb, in3], lvl: elb }
   # p. 25
   # - { id: ozvl, tit: Танец,
   #     com: А. Гедике, src: FBBMS8N1976,
