@@ -174,3 +174,7 @@ pieces:
   # - { id: rhla, tit: Ласковый котенок,
   #     com: А. Холминов, src: FBBMS8N1976,
   #     org: rus, sty: cus, gnr: chd, ton: besmj, frm: mel, bss: [frb, in3], lvl: elb }
+  # p. 25
+  # - { id: ozvl, tit: Танец,
+  #     com: А. Гедике, src: FBBMS8N1976,
+  #     org: rus, sty: cus, gnr: dnc, ton: emi, frm: rep, bss: [frb, in3, in5], lvl: elb }
