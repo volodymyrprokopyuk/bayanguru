@@ -176,7 +176,10 @@ pieces:
   - { id: ozvl, tit: Танец,
       com: А. Гедике, src: FBBMS8N1976,
       org: rus, sty: cus, gnr: dnc, ton: emi, frm: rep, bss: [frb, in3, in5], lvl: elb }
-  # p. 26
-  # - { id: 3kj1, tit: Как у нас на улице, sub: rusfs,
+  - { id: 3kj1, tit: Как у нас на улице, sub: rusfs,
+      arr: В. Накапкин, src: FBBMS8N1976,
+      org: rus, sty: flk, gnr: sng, ton: [cmi, eesmj], frm: [var, in3, cr5], bss: [frb, stb], lvl: elb }
+  # p. 28
+  # - { id: ufhc, tit: "Ах во саду, саду", sub: rusfs,
   #     arr: В. Накапкин, src: FBBMS8N1976,
-  #     org: rus, sty: flk, gnr: sng, ton: [cmi, eesmj], frm: [var, in3, cr5], bss: [frb, stb], lvl: elb }
+  #     org: rus, sty: flk, gnr: sng, ton: [cmi, cmi], frm: [var, cr5], bss: [frb, stb, syn], lvl: elb }

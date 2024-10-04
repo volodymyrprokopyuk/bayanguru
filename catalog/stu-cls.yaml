@@ -332,7 +332,7 @@ pieces:
       org: ukr, sty: cus, gnr: stu, ton: cmj, frm: scl, bss: [frb, scl], lvl: elb }
   - { id: 1fcl, tit: Етюд A minor,
       com: К. Мясков, src: FBB2BZ1981,
-      org: ukr, sty: cus, gnr: stu, ton: ami, frm: [arp, seq], bss: [frb, scl], lvl: elb }
+      org: ukr, sty: cus, gnr: stu, ton: ami, frm: [arp, seq, syn], bss: [frb, scl], lvl: elb }
   - { id: 5x1m, tit: Етюд A minor,
       com: К. Мясков, src: FBB2BZ1981,
       org: ukr, sty: cus, gnr: stu, ton: ami, frm: arp, bss: [frb, arp], lvl: elb }
