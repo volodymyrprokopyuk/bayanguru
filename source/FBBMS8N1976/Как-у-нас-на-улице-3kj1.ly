@@ -37,7 +37,7 @@
   g'='4\(-\frBass c | c c | e e | d8 c b a\) | g4\( b | d g, | e' d | c=''2\) |
 
   \key ees \major
-  g='4\( c | d8 b c d | ees4 ees8 d | c g c ees\) |
+  g='4\( c | c8 b c d | ees4 ees8 d | c g c ees\) |
   d=''4\( d8 c | b g b g | c g b4 | c8 g c,='4\) |
   g=4\( c | c c | ees ees | d c\) | b8\( c d4 | d g, | ees' d |
   c='8 g' c=''4\) \fermata \clef bass |
