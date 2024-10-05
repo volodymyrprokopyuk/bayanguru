@@ -179,7 +179,6 @@ pieces:
   - { id: 3kj1, tit: Как у нас на улице, sub: rusfs,
       arr: В. Накапкин, src: FBBMS8N1976,
       org: rus, sty: flk, gnr: sng, ton: [cmi, eesmj], frm: [var, in3, cr5], bss: [frb, stb], lvl: elb }
-  # p. 28
-  # - { id: ufhc, tit: "Ах во саду, саду", sub: rusfs,
-  #     arr: В. Накапкин, src: FBBMS8N1976,
-  #     org: rus, sty: flk, gnr: sng, ton: [cmi, cmi], frm: [var, cr5], bss: [frb, stb, syn], lvl: elb }
+  - { id: ufhc, tit: "Ах во саду, саду", sub: rusfs,
+      arr: В. Накапкин, src: FBBMS8N1976,
+      org: rus, sty: flk, gnr: sng, ton: [cmj, cmi], frm: [var, cr5], bss: [stb, pub, frb, syn], lvl: elb }
