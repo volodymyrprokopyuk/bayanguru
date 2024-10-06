@@ -4,7 +4,7 @@
   \clef treble
   \key a \minor
   \time 2/4
-  \partial 4 { b'='16\mf c d dis | }
+  \partial 4 { b'='16\mf c d dis \bar "||" }
   \repeat segno 2 {
     e=''16\< c b a f' c b \af 16\! a | e'\> c b a~ a g a \af 16\! e |
     g='16 f e d~ d c b e | a,\< c e \af 32.\! a b\> c d \af 16\! dis='' \bar "||"
