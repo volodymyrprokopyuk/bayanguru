@@ -200,7 +200,7 @@ books:
       ] },
       { tit: Арпеджіо, pieces: [ # Arpeggio
         # PBS1AG1970
-        zizx
+        zizx, vq40
       ] } ] }
   - { id: stu4, tit: Вибрані етюди, sub: для готового баяна,
       sections: [

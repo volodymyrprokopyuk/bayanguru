@@ -16,10 +16,9 @@ pieces:
   - { id: zizx, tit: Етюд F major,
       com: А. Салин, src: PBS1AG1970,
       org: rus, sty: cus, gnr: stu, ton: fmj, frm: arp, bss: stb, lvl: elb }
-  # p. 93
-  # - { id: vq40, tit: Етюд A minor,
-  #     com: Н. Горлов, src: PBS1AG1970,
-  #     org: rus, sty: cus, gnr: stu, ton: ami, frm: [arp, rep, jmp], bss: stb, lvl: elb }
+  - { id: vq40, tit: Етюд A minor,
+      com: Н. Горлов, src: PBS1AG1970,
+      org: rus, sty: cus, gnr: stu, ton: ami, frm: [arp, rep, jmp], bss: stb, lvl: elb }
   # * Free bass
   # FBBSC1978
   - { id: kbmk, tit: Етюд C major,
