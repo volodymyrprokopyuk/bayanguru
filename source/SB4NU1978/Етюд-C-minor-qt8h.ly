@@ -19,7 +19,7 @@
       {{ template "rh1" }}
       \alternative {
         \volta 1 { c=''16 ees, g c g c ees g, c8\) r g='4 | }
-        \volta 2 { c=''16( g ees' c g' c, ees g c='''8) r r4 | }
+        \volta 2 { c=''16( g ees' c g' c, ees g c='''8) r r4 \bar "||" }
       }
     }
 

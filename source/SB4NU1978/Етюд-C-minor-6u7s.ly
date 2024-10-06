@@ -27,7 +27,7 @@
        `<b= f' bes>8 8 8` `<b= f' b>8 8 8`) }}
     {{ template "t4" (w `<d=' aes' cis>8 8 8` `<d=' aes' d>8 8 \af 16\! 8`
        `<aes'=' d g>8\f\> 8 8` ` <aes=' d f>8 8 \af 16\! <g d' f>`) }}
-    {{ template "rh1" (w `<c,=' ees g>8\< 8 8`) }}
+    {{ template "rh1" (w `<c,=' ees g>8\< 8 8`) }} \bar "||"
 
     \alternative {
       \volta 1 {
