@@ -7,7 +7,8 @@
   \partial 4 { b'='16\mf c d dis | }
   \repeat segno 2 {
     e=''16\< c b a f' c b \af 16\! a | e'\> c b a~ a g a \af 16\! e |
-    g='16 f e d~ d c b e | a,\< c e \af 32.\! a b\> c d \af 16\! dis \bar "||"
+    g='16 f e d~ d c b e | a,\< c e \af 32.\! a b\> c d \af 16\! dis='' \bar "||"
+
     \alternative {
       \volta 1 {
         e=''16-- c b a f'-- c b a | g'-- c, b a  a'-- g a ais |
@@ -34,5 +35,14 @@
 \relative {
   \clef bass
   \key a \minor
+  \partial 4 { f=8-\stBass b@7! | }
+  e=8 a@m! d8 dm! | c a@m! cis8 a@7! | d8 dm! e e7! | a, am! g=, g7! |
+
+  c=8 cM! d dm! | e a@m! c8 c7! | b e@M! b8 b7! | e d c16 e g f |
+  f=16 e e d d8 g@7! | c8 cM! cis16 e a g | g f f e e8 a@7! |
+  d=8 dm! f d@m! | \rep 2 { bM!8 b,=, f' d@m! | }
+  bM!8 b,=, d@m![ b8] | e7! e f= b@7! |
+
+  c=8 cM! d dm! | dis-> r e a@m! | e7!8 e a, e'= | a+am!2 |
 }
 {{ end }}
