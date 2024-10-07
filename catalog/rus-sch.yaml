@@ -125,7 +125,7 @@ pieces:
       org: rus, sty: cus, gnr: pie, ton: emi, frm: mel, bss: frb, lvl: ela }
   - { id: 9lr9, tit: Грустное настроение,
       com: В. Темнов, src: BSN1985,
-      org: rus, sty: cus, gnr: pie, ton: [gmi, dmi], frm: cr5, bss: frb, lvl: elb }
+      org: rus, sty: cus, gnr: pie, ton: [gmi, dmi], frm: cr5, bss: frb, lvl: elc }
   - { id: fcch, tit: Ходила младешенька за водой, sub: rusfs,
       arr: Н. Канаев, src: BSN1985,
       org: rus, sty: flk, gnr: sng, ton: cismi, frm: [vo2, var], bss: [frb, pub, var], lvl: elc }
