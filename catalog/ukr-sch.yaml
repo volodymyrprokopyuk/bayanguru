@@ -46,7 +46,7 @@ pieces:
       org: ukr, sty: flk, gnr: plk, ton: [ami, cmj], frm: [var, in8, tu3], bss: [frb, in8, cr5, cr7, fi5], lvl: elc }
   - { id: w6w8, tit: Женчичок-бренчичок, sub: ukrfs,
       src: FBBSC1978,
-      org: ukr, sty: flk, gnr: sng, ton: gmj, frm: mel, bss: [frb, in3], lvl: elb }
+      org: ukr, sty: flk, gnr: sng, ton: gmj, frm: rep, bss: [frb, in3], lvl: elb }
   - { id: lspg, tit: "Гей, не літав соколонько", sub: ukrfs,
       arr: Л. Вільчик, src: FBBSC1978,
       org: ukr, sty: flk, gnr: sng, ton: emi, frm: in3, bss: [vo2, frb, in3], lvl: elb }
@@ -102,3 +102,4 @@ pieces:
   - { id: wzhz, tit: Ой з-за гори кам'яної, sub: ukrfs,
       arr: М. Леонтович, src: FBBMS7PT1975,
       org: ukr, sty: flk, gnr: sng, ton: fmi, frm: vo2, bss: [vo2, frb], lvl: elb }
+  # FBBMS9P1976
