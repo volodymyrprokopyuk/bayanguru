@@ -103,3 +103,6 @@ pieces:
       arr: М. Леонтович, src: FBBMS7PT1975,
       org: ukr, sty: flk, gnr: sng, ton: fmi, frm: vo2, bss: [vo2, frb], lvl: elb }
   # FBBMS9P1976
+  - { id: md2i, tit: Пливе човен, sub: ukrfs,
+      arr: М. Лисенко, src: FBBMS9P1976,
+      org: ukr, sty: flk, gnr: sng, ton: ami, frm: [vo2, in3], bss: [vo2, frb], lvl: elc }
