@@ -24,6 +24,7 @@ aLeg = \markup \italic legato
 aNLeg = \markup \italic "non legato"
 aSta = \markup \italic staccato
 aTen = \markup \italic \center-align "ten."
+aMar = \markup \italic marcato
 aDol = \markup \italic dolce
 aEsp = \markup \italic espressivo
 aLAssai = \markup \italic "leggiero assai"
