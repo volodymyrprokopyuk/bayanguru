@@ -51,3 +51,7 @@ pieces:
   - { id: f3gw, tit: Крижачок, sub: blrfd,
       arr: В. Накапкин, src: BSN1985,
       org: blr, sty: flk, gnr: dnc, ton: gmj, frm: mel, bss: [frb, in3], lvl: elb }
+  # FBBMS9P1976
+  - { id: ghle, tit: Ой у полі верба, sub: blrfs,
+      arr: В. Платонов, src: FBBMS9P1976,
+      org: blr, sty: flk, gnr: sng, ton: emi, frm: [vo2, var, in3, cr5], bss: [frb, stb], lvl: elb }
