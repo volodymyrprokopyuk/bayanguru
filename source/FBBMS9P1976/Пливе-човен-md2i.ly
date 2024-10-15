@@ -15,7 +15,7 @@
   \duo { c''=''4(\mp b c16 b a8) | c4(_\dCre b8 d c16 b a8) | }
   { \rep 2 { a'='8 e~ e e~ e e=' | } } |
   <gis=' b>8(\< 8 8 \af 16.\! <a c> <b d>\> \af 8\! <a c>) |
-  \duo { <gis'=' b>8(\< 8 8 \af 16.\! <a c> d c16 b) | e4( f8 e d c16 d='') | }
+  \duo { <gis'=' b>8(\< 8 8 \af 16.\! <a c> d c16 d) | e4( f8 e d c16 d='') | }
   { s2 b'='8 a | a4 a='2 | }
   <gis=' e'>4(\> \af 2\! a='2) |
 
