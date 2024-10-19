@@ -18,7 +18,7 @@
   e=''8(\p d c d c b) | f'( e d e d c) | a'( g f g f e | f e d e4.) |
   e=''8(_\dCre d c d c b) | c( b a g fis e) | b'( a g fis e dis | e g b e=''4) r8 |
 
-  {{ template "rh1" (w `e,='8(\f`) }} | f'=''8( e d c b a | e a cis a='4) r8 \bar "|."
+  {{ template "rh1" (w `e,='8(\f`) }} | f'=''8( e d c b a | e a gis a='4) r8 \bar "|."
 }
 {{ end }}
 
