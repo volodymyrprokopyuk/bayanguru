@@ -17,8 +17,8 @@ bun install --no-save tailwindcss
 # install rclone
 yay -S rclone
 # deploy to Cloudflare Pages
-npm install --save-dev wrangler
-npx wrangler pages deploy site/public --project-name bayanguru --branch main
+bun install --no-save wrangler
+bunx wrangler pages deploy site/public --project-name bayanguru --branch main
 #+END_SRC
 
 ** Usage
