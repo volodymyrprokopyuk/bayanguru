@@ -66,5 +66,5 @@ pieces:
       org: rus, sty: cus, gnr: stu, ton: dmi, frm: scl, bss: [frb, cr5], lvl: elb }
   # FBBMS9P1976
   - { id: s77j, tit: Етюд A minor,
-      arr: А. Гедике, src: FBBMS9P1976,
-      org: rus, sty: cus, gnr: stu, ton: ami, frm: scl, bss: [frb, scl, in6], lvl: elb }
+      com: А. Гедике, src: FBBMS9P1976,
+      org: rus, sty: cus, gnr: stu, ton: ami, frm: [scl, seq], bss: [frb, scl, in6], lvl: elb }
