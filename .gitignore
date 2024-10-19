@@ -3,5 +3,6 @@ pagefind
 piece/*.pdf
 book/*.pdf
 site/public/
-site/node_modules/
+package.json
+bun.lockb
 .wrangler/
