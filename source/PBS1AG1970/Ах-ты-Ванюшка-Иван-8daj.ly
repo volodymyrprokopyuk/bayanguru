@@ -25,7 +25,7 @@
   b+b7!4 e+e7! | a+am! g=, | f+f7! r8 e+e7!8 | a=, am! r am |
 
   a=,8 am! r am | a d@m! r8 dm | a e@7! r8 e7 | a am! g g7! |
-  c=8 b a g | fis d@M! f8 d@m! | e'8 e7! r e7 | d g@M! r8 gM |
+  c=8 b a g | fis d@M! f8 d@m! | e'8 e7! r e7 | d f@M! r8 gM |
   b+b7!4 e+e7! | b+b7! r | f, e | a=,2 |
 }
 {{ end }}
