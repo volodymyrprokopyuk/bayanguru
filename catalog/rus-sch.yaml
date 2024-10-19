@@ -58,18 +58,21 @@ pieces:
   - { id: b3lm, tit: Что пониже было города Саратова, sub: rusfs,
       arr: В. Накапкин, src: PBS1AG1970,
       org: rus, sty: flk, gnr: sng, ton: fmj, frm: vo2, bss: pub, lvl: elb }
-  # p. 75
-  # - { id: 8daj, tit: "Ах ты, Ванюшка, Иван", sub: rusfs,
-  #     arr: С. Павин, src: PBS1AG1970,
-  #     org: rus, sty: flk, gnr: sng, ton: ami, frm: [vo2, in3], bss: stb, lvl: elb }
+  - { id: 8daj, tit: "Ах ты, Ванюшка, Иван", sub: rusfs,
+      arr: С. Павин, src: PBS1AG1970,
+      org: rus, sty: flk, gnr: sng, ton: ami, frm: [vo2, in3], bss: stb, lvl: elb }
   # p. 85
   # - { id: ngm2, tit: "У зори-то, у зореньки", sub: rusfs,
   #     arr: А. Суханов, src: PBS1AG1970,
   #     org: rus, sty: flk, gnr: sng, ton: ami, frm: [vo2, in3], bss: [stb, syn], lvl: elc }
   # p. 90
   # - { id: zxjv, tit: Пьеса,
-  #     arr: С. Ляпунов, src: PBS1AG1970,
+  #     com: С. Ляпунов, src: PBS1AG1970,
   #     org: rus, sty: cus, gnr: pie, ton: fismi, frm: dot, bss: [pub, dot], lvl: elc }
+  # p. 94
+  # - { id: jwdy, tit: Полифоническая пьеса,
+  #     com: В. Мотов, src: PBS1AG1970,
+  #     org: rus, sty: cus, gnr: pie, ton: emi, frm: [vo2, acc], bss: pub, lvl: elc }
   # * Free bass
   # FBBSC1978
   - { id: v2kv, tit: На горе-то калина, sub: rusfs,
