@@ -286,7 +286,9 @@ books:
         # CLFBBS1979
         5zzk, auxu,
         # BSN1985
-        g2f2, bmtx
+        g2f2, bmtx,
+        # FBBMS9P1976
+        s77j
       ] },
       { tit: Арпеджіо, pieces: [ # Arpeggio
         # FBB1BZ1980
