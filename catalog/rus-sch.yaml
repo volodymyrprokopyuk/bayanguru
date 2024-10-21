@@ -67,10 +67,9 @@ pieces:
   - { id: zxjv, tit: Пьеса,
       com: С. Ляпунов, src: PBS1AG1970,
       org: rus, sty: cus, gnr: pie, ton: fismi, frm: dot, bss: [pub, dot], lvl: elc }
-  # p. 94
-  # - { id: jwdy, tit: Полифоническая пьеса,
-  #     com: В. Мотов, src: PBS1AG1970,
-  #     org: rus, sty: cus, gnr: pie, ton: emi, frm: [vo2, acc], bss: pub, lvl: elc }
+  - { id: jwdy, tit: Полифоническая пьеса,
+      com: В. Мотов, src: PBS1AG1970,
+      org: rus, sty: cus, gnr: pie, ton: emi, frm: [vo2, acc], bss: pub, lvl: elc }
   # * Free bass
   # FBBSC1978
   - { id: v2kv, tit: На горе-то калина, sub: rusfs,
