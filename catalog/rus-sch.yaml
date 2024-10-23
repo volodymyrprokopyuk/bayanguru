@@ -77,6 +77,9 @@ pieces:
   - { id: ip9o, tit: Как вечор тоска нападала, sub: rusfs,
       src: BSA1983,
       org: rus, sty: flk, gnr: sng, ton: ami, frm: mel, bss: stb, lvl: ela }
+  - { id: 5cmj, tit: "Как по полю, полю", sub: rusfs,
+      src: BSA1983,
+      org: rus, sty: flk, gnr: sng, ton: ami, frm: mel, bss: stb, lvl: ela }
   # * Free bass
   # FBBSC1978
   - { id: v2kv, tit: На горе-то калина, sub: rusfs,
