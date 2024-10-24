@@ -16,6 +16,9 @@ pieces:
   - { id: v991, tit: "Сніжок іде, метелиця мете", sub: ukrfs,
       src: BSA1983,
       org: ukr, sty: flk, gnr: sng, ton: ami, frm: mel, bss: stb, lvl: ela }
+  - { id: 35xf, tit: Ой під вишнею, sub: ukrfs,
+      src: BSA1983,
+      org: ukr, sty: flk, gnr: sng, ton: ami, frm: mel, bss: stb, lvl: ela }
   # * Free bass
   # FBBSC1978
   - { id: 39bh, tit: П'єса,
