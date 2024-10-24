@@ -19,6 +19,10 @@ pieces:
   - { id: 35xf, tit: Ой під вишнею, sub: ukrfs,
       src: BSA1983,
       org: ukr, sty: flk, gnr: sng, ton: ami, frm: mel, bss: stb, lvl: ela }
+  # p. 101
+  # - { id: p93u, tit: Доля, sub: ukrfs,
+  #     src: BSA1983,
+  #     org: ukr, sty: flk, gnr: sng, ton: gmi, frm: mel, bss: stb, lvl: elb }
   # * Free bass
   # FBBSC1978
   - { id: 39bh, tit: П'єса,
