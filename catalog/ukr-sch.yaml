@@ -12,6 +12,10 @@ pieces:
   - { id: dmf9, tit: Серенада,
       com: М. Чайкін, src: PBS1AG1970,
       org: ukr, sty: cus, gnr: pie, ton: [ami, cmj], frm: dot, bss: stb, lvl: elb }
+  # BSA1983
+  - { id: v991, tit: "Сніжок іде, метелиця мете", sub: ukrfs,
+      src: BSA1983,
+      org: ukr, sty: flk, gnr: sng, ton: ami, frm: mel, bss: stb, lvl: ela }
   # * Free bass
   # FBBSC1978
   - { id: 39bh, tit: П'єса,

@@ -30,7 +30,9 @@ books:
         # BSO1981
         xd0h, zgec,
         # PBS1AG1970
-        dmf9
+        dmf9,
+        # BSA1983
+        v991
       ] }
   - { id: rus1, tit: Російські народні пісні і танці, sub: для готового баяна,
       pieces: [

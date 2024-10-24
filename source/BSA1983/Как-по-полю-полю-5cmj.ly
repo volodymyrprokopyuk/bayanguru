@@ -6,7 +6,6 @@
   {{ .a }} cM! g c@M | d'8 g@7! g,=,8 g7 |
 {{ end }}
 
-
 {{ define "rightHand" }}
 \relative {
   \tempo Allegro
