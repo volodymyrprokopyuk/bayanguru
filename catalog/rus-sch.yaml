@@ -177,10 +177,9 @@ pieces:
   - { id: 6hch, tit: Ночка темная, sub: rusfs,
       arr: В. Платонов, src: FBBMS7PT1975,
       org: rus, sty: flk, gnr: sng, ton: emi, frm: [vo2, var, in3], bss: [vo2, frb, in3, cr5], lvl: elc }
-  # p. 17
-  # - { id: t7kr, tit: Ай во поле липонька, sub: rusfs,
-  #     arr: В. Платонов, src: FBBMS7PT1975,
-  #     org: rus, sty: flk, gnr: sng, ton: besmj, frm: vo2, bss: [vo2, frb, in5], lvl: elc }
+  - { id: t7kr, tit: Ай во поле липонька, sub: rusfs,
+      arr: В. Платонов, src: FBBMS7PT1975,
+      org: rus, sty: flk, gnr: sng, ton: besmj, frm: vo2, bss: [vo2, frb, in5], lvl: elc }
   # FBBMS8N1976
   - { id: 1zq7, tit: Колыбельная,
       com: И. Зикс, src: FBBMS8N1976,
