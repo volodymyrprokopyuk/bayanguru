@@ -13,9 +13,9 @@
     <e=' c' e>4 2) <b' d>8( <a c> | <g b>4 <fis a>8 e %
     \duo { d''=''8[ c=''] } { fis'='4  } <g b>8 <fis a> |
     \alternative {
-      \volta 1 { <e=' e'>2.) b'8 \sSlur nf #'((wb . 1) (ww . 2)) ( b) | }
+      \volta 1 { <e=' e'>2.) b'8 \sSlur nf #'((wb . 1) (ww . 1.5)) ( b) | }
       \volta 2 {
-        <e,=' e'>2~ \sSlur nb #'((wb . 3) (ws . 7) (ww . 3) (wh . 1.5)) ( 4) \bar "|."
+        <e,=' e'>2~ \sSlur nb #'((wb . 3) (ws . 9.5) (ww . 3.5) (wh . 1.5)) ( 4) \bar "|."
       }
     }
   }
