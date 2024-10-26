@@ -30,7 +30,7 @@
   e=8( em!) em em c( a@m!) b8( b7!) | e( em!) em em e( am) r4 |
   d=8[_\aSim g@M! gM8 gM] d d7! d7 d7 | g, gM! gM gM g gM g[( fis]) |
   e'=8 em! em em b b7! b7 b7 | c cM! cM b( a[ g] fis) a@m! |
-  b=,8 e@m! em8 em a[ am!] b b7! | e em! em em e[ em ]g,( fis) |
+  b=,8[ e@m! em8 em] a[ am!] b b7! | e em! em em e[ em ]g,( fis) |
   e'=8 em! em em em4 %
 }
 {{ end }}
