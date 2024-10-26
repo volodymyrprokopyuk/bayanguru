@@ -86,10 +86,9 @@ pieces:
   - { id: cz6l, tit: Как пойду я на быструю речку, sub: rusfs,
       src: BSA1983,
       org: rus, sty: flk, gnr: sng, ton: emi, frm: in3, bss: stb, lvl: elb }
-  # p. 104
-  # - { id: ghoy, tit: Я в садочке была, sub: rusfs,
-  #     arr: П. Лондонов, src: BSA1983,
-  #     org: rus, sty: flk, gnr: sng, ton: fismi, frm: [in3, in6], bss: stb, lvl: elb }
+  - { id: ghoy, tit: Я в садочке была, sub: rusfs,
+      arr: П. Лондонов, src: BSA1983,
+      org: rus, sty: flk, gnr: sng, ton: fismi, frm: [in3, in6], bss: stb, lvl: elb }
   # * Free bass
   # FBBSC1978
   - { id: v2kv, tit: На горе-то калина, sub: rusfs,
