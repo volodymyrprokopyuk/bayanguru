@@ -33,5 +33,16 @@
 \relative {
   \clef bass
   \key fis \minor
+  \partial 4 { r4 | }
+  b,=,8[-\stBass bm! bm bm] e eM! | a,[ fis@m! fism8] cis( b a) |
+  gis=,8 b@m! a8 fis@m! cis8 cism! | fis, fism! fism4 \fermata r4 |
+  b=,8 bm! fis[ fism!] b bm! | fis[ fism! fism] fis( gis a) |
+  b=,8 bm! cis[ fis@m!] cis8 cism! | fis,[ fism! fism fism] fism r |
+  b=,8 bm! fis[ fism!] b bm! | fis fism! fis4( gis8 a) |
+  b=,8 bm! cis[ fis@m!] cis8 cism! | fis,[ fism! fism fism] e' e7! |
+  a,=,8[ aM! aM aM] e@7![ e78] | a aM! aM aM r4 |
+  ais=,8[ fis@7! fis78 fis7] fis fis7 | b bm! bm bm bm4 |
+  gis=,8[ b@m! bm8 bm] bm4 | cis8[ fis@m! fism8 fism] fism fism |
+  b=,8 bm! cis[ fis@m!] e8 eM! | fis,=, fism! fism4 %
 }
 {{ end }}
