@@ -52,7 +52,7 @@ pieces:
   - { id: 4e0q, tit: Вальс,
       com: В. Иванов, src: PBS1AG1970,
       org: rus, sty: cus, gnr: vls, ton: [gmj, emi], frm: [dot, syn], bss: stb, lvl: elb }
-  - { id: ys7w, tit: Во лесочке комарочков, sub: rusfs,
+  - { id: ys7w, tit: Во лесочке комарочков много угодилося, sub: rusfs,
       arr: А. Суханов, src: PBS1AG1970,
       org: rus, sty: flk, gnr: sng, ton: amj, frm: [vo2, var], bss: stb, lvl: elb }
   - { id: b3lm, tit: Что пониже было города Саратова, sub: rusfs,
@@ -89,6 +89,10 @@ pieces:
   - { id: ghoy, tit: Я в садочке была, sub: rusfs,
       arr: П. Лондонов, src: BSA1983,
       org: rus, sty: flk, gnr: sng, ton: fismi, frm: [in3, in6], bss: stb, lvl: elb }
+  # p. 106
+  # - { id: m55u, tit: "За рекою, за быстрою", sub: rusfs,
+  #     arr: Ю. Акимов, src: BSA1983,
+  #     org: rus, sty: flk, gnr: sng, ton: amj, frm: [vo2, var, in3], bss: stb, lvl: elb }
   # * Free bass
   # FBBSC1978
   - { id: v2kv, tit: На горе-то калина, sub: rusfs,
