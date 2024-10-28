@@ -96,6 +96,10 @@ pieces:
   # - { id: 9xrq, tit: Лучинушка, sub: rusfs,
   #     arr: А. Талакин, src: BSA1983,
   #     org: rus, sty: flk, gnr: sng, ton: ami, frm: [vo2, in3, cr7], bss: [stb, pub], lvl: elc }
+  # p. 111
+  # - { id: i8cz, tit: Плещут холодные волны, sub: rusfs,
+  #     arr: П. Лондонов, src: BSA1983,
+  #     org: rus, sty: flk, gnr: sng, ton: emi, frm: [vo2, in3, cr5, cr7, dot], bss: [stb, pub, dot], lvl: elc }
   # * Free bass
   # FBBSC1978
   - { id: v2kv, tit: На горе-то калина, sub: rusfs,
