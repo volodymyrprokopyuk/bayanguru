@@ -41,6 +41,6 @@
   \duo { r4 eM! | } { e,=,2-- | }
 
   a=,4 aM! | a e@7! | a4 b@m! | a4 aM! | a e@7! | a4 aM! | gis a@M! |
-  fis'=4 e | d dM! | a aM! | b fis@m! | a+aM!2 \fermata |
+  fis'=4 e | d dM! | a aM! | b fis@m! | e+eM!2 \fermata |
 }
 {{ end }}
