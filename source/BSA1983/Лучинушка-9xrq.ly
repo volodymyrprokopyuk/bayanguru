@@ -33,7 +33,7 @@
     r4 b='4 a | r4 <g, cis f> <a e'> | r4 e' d | r4 fis f |
     e='2. | a4 g f | <dis a'>2. | <d=' gis> |
   }
-  <dis='_( g_~ a^~ d^(>2. | <d=') g a dis)> |
+  <dis='~ g_~ a^~ d^(>2. | <dis=' g a dis)> |
 
   \tempo Largo
   <e=' a c e>2\f <d d'>4 | <e gis b e>2 <d d'>4 |
@@ -55,7 +55,7 @@
     <c=' e>2.~ | 2.~^\tRit | \af 2.\! 2.\> \fermata \bar "|."
   } {
     <g'='b>2. | <g c> | <a c>2. | 2. | <a, c>2. | 2. | <a b dis>2.~ | 2. |
-    <a= bes d>2.~ | \af 2.\! 2.\> | <gis c>2. | <a c>2 gis4 | fis2 a4 | gis=2. |
+    <a= bes d>2.~ | \af 2.\! 2.\> | <gis c>2. | a2 gis4 | fis2 a4 | gis=2. |
   }
 }
 {{ end }}
