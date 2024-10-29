@@ -27,7 +27,7 @@
   \duo {
     e'='2.\mf | r4 <d~ f>( <d e>) | r4 c d | e <d f> <e g> |
     r4 <d'='' f>4 <e g> | <f a>2. | <c e> | g | <f a> | <g b> |
-    c=''4 d c | <a,= ees' b'>2. | b'2 d4 | c2 b='4 |
+    c=''4 d c | <a, ees' b'>2. | b'2 d4 | c2 b='4 |
   } {
     r4 <b= c>4( <a c>) | gis2. | a~ | a | a' | r4 e'4 d |
     r4 b='4 a | r4 <g, cis f> <a e'> | r4 e' d | r4 fis f |
@@ -64,5 +64,28 @@
 \relative {
   \clef bass
   \key a \minor
+  \partial 4 { r4 | } | R2. | f@M!2.-\stBass | d@7!2.~ | d@7!2. |
+  fis,=,4 f2~ | f4 e=,2 \fermata |
+
+  a=,4( am!) r | b( e@7!) r4 | c_\aSim a@m! r4 | f2( e4) |
+  d=4 dm! r | g, g7! r | r c( b) | bes g@m! a+a7!4 |
+  d=4 dm! r | f, d@m! r4 | e' a@m! f4 | g( f e) |
+  d=4 dm! r | e e7! r | a, am! b | c( bes a) |
+  d=4( dm!) dm | g,( g7!) g7 | c_\aSim cM! cM | f, f7! f7 |
+  fis=,4 b@7! f4 | e e7!2 | a4 am! e' | d=2 f@M!4 |
+
+  a=,4-- am!-- r | b-- e@7!-- r4 | c-- a@m!-- b4-- | c2_\aSim cis4 |
+  d=2 c4 | b2 g@7!4 | c4 cM! r | cis2. | d4 dm! r | g, gM! r |
+  c=4 cM! r | f, f7! r | c' f@7! b4 | e e7! r | b2( d4 | c2 b=,4) |
+
+  a=,4( am!) a-- | b( e@7!) b4-- | c_\aSim a@m! c4 | cis a@7! cis4 |
+  d=4 dm! d | g,( f@M! g@7!4) | c4 cM! b | bes g@m! a4 |
+  d=4 dm! dm | g, d@m! g@7!4 | c4( d e) | f, f7! f7 |
+  fis=,4 b@7! f4 | e' e7! e7 | a, am! gis | g( f' e) |
+  d=4( dm!) r | g,( g7!) r | c( cM!) r | f,( f7!) f7 | fis f2~ | f4 e=,2 \fermata |
+
+  g@7!4 g74 g7 | c@M! cM4 cM | \rep 2 { f@M! fM4 fM | }
+  gis=,4 gis gis | g g g | \rep 2 { fis=,4 fis fis=, | }
+  \rep 2 { f=,4 f f=, | } | e' e d | c c b | a2.~ | a=, \fermata |
 }
 {{ end }}
