@@ -4,9 +4,9 @@ go 1.23.0
 
 require (
 	github.com/gookit/color v1.5.4
-	github.com/pdfcpu/pdfcpu v0.8.1
+	github.com/pdfcpu/pdfcpu v0.9.1
 	github.com/spf13/cobra v1.8.1
-	github.com/yuin/goldmark v1.7.4
+	github.com/yuin/goldmark v1.7.8
 	golang.org/x/text v0.19.0
 	gopkg.in/yaml.v3 v3.0.1
 )

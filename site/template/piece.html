@@ -1,8 +1,8 @@
 {{ define "meta" }}
   {{ with .Piece }}
-    <title>{{ .Tit }}</title>
+    <title>{{ .Tit }} {{ .Com }} {{ .ArtUkr }}{{ .Arr }}</title>
     <meta name="description"
-          content="{{ .Tit }} {{ .Sub }} {{ .Com }} {{ .ArtUkr }} {{ .Arr }}" />
+          content="{{ .Tit }} {{ .Com }} {{ .ArtUkr }}{{ .Arr }}" />
   {{ end }}
 {{ end }}
 
