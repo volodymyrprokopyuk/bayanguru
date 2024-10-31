@@ -9,8 +9,14 @@
 {{ define "body" }}
   {{ with .Piece }}
     <div data-pagefind-body>
+      <h1 data-pagefind-meta="title" class="head1 text-center">
+        {{ .Tit }} {{ .Com }} {{ .ArtUkr }}{{ .Arr }}
+      </h1>
+      <p class="text-center text-lg">
+        Downlaod | Заватнажити
+        <a href="{{ .URL }}">{{ .Tit }} {{ .Com }} {{ .ArtUkr }}{{ .Arr }}</a>
+      </p>
       <div class="hidden">
-        <h1 data-pagefind-meta="title">{{ .Tit }}</h1>
         <div data-pagefind-meta="id">{{ .ID }}</div>
         <div data-pagefind-meta="com">{{ .Com }}</div>
         <div data-pagefind-meta="arr">{{ .Arr }}</div>
@@ -28,7 +34,7 @@
         <div data-pagefind-meta="lyr">{{ .Lyr }}</div>
       </div>
       <object id="score" type="application/pdf" data="{{ .URL }}" class="score">
-        {{ .Tit }}</object>
+        {{ .Tit }} {{ .Com }} {{ .ArtUkr }}{{ .Arr }}</object>
     </div>
   {{ end }}
   <p class="text-red-700">Note: the <strong>Firefox web brower</strong> is

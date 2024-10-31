@@ -98,6 +98,10 @@ pieces:
   - { id: i8cz, tit: Плещут холодные волны, sub: rusfs,
       arr: П. Лондонов, src: BSA1983,
       org: rus, sty: flk, gnr: sng, ton: emi, frm: [vo2, in3, cr5, cr7, dot], bss: [stb, pub, dot], lvl: elc }
+  # p. 122
+  # - { id: 6yoh, tit: Вдоль по улице метелица метет,
+  #     com: А. Варламов, src: BSA1983,
+  #     org: rus, sty: cus, gnr: sng, ton: ami, frm: in3, bss: stb, lvl: elb }
   # * Free bass
   # FBBSC1978
   - { id: v2kv, tit: На горе-то калина, sub: rusfs,
