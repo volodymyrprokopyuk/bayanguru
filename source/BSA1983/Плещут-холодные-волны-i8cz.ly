@@ -16,7 +16,7 @@
   \duo {
     \stemDown <a'=' c>8( 8. <g d'>16 \stemUp <c e>8 <b d> <c e> | b='2.) |
   } { s4. fis'='4. | g8( d8. e16 f8 e d=') | }
-  <c=' e a>8(_\dCre 8. <g' b>16 <a c>8 <g b> <fis a> | <e g>4. <e g c>) |
+  <c=' e a>8(_\dCre 8. <g' b>16 <a c>8 <g b> <fis a> | <e g>4. <e g b>) |
   \duo {
     fis'='8( fis8. g16 <cis, a'>8 <b g'>8. <a fis'>16 | <g_( e'~>4.) <gis) e'> |
     a'='8( a8. b16 <a c>8 <g b> <fis a> | <e g>4. <b b'>) |
@@ -35,7 +35,7 @@
     fis=''8( fis8. g16 a8 g fis) | \af 2.\! <d e>2.\> | e~\p | e8 e8. d16 b4. |
     fis='8( fis8. g16 a8 g8. fis16 | \af 2.\! <b,= e>2.)\> |
   } {
-    <b'=' d>4. <e g> | a,8( a8. b16) c8( b a) | d4. b | c cis |
+    <b'=' dis>4. <e g> | a,8( a8. b16) c8( b a) | d4. b | c cis |
     gis='8( gis8. a16 b8 a gis) | <fis a>8( 8. <g b>16 <a c>8 <g b> <fis a> |
     <e=' g>4. <dis a'>) | <c e> <ais e'>8~ 8. <b dis>16 | a4.( g=) |
   }
