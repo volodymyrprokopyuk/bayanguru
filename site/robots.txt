@@ -1,0 +1,9 @@
+User-agent: Googlebot
+Disallow: /catalog/
+Allow: /piece/
+
+User-agent: *
+Disallow: /catalog/
+Allow: /piece/
+
+Sitemap: https://bayanguru.org/sitemap.xml

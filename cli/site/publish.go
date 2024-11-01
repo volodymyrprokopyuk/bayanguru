@@ -31,6 +31,20 @@ type PublishCommand struct {
   PageSize int
 }
 
+func copyFile(src, dst string) (int64, error) {
+  srcFile, err := os.Open(src)
+  if err != nil {
+    return 0, err
+  }
+  defer srcFile.Close()
+  dstFile, err := os.Create(dst)
+  if err != nil {
+    return 0, err
+  }
+  defer dstFile.Close()
+  return io.Copy(dstFile, srcFile)
+}
+
 func engraveImage(siteDir, publicDir, image string) error {
   lyImage := filepath.Join(siteDir, image + ".ly")
   svgImage := filepath.Join(publicDir, image)
@@ -377,6 +391,13 @@ func publishStyle(siteDir, templateDir, publicDir string) error {
   return twCmd.Run()
 }
 
+func publishSEO(pc PublishCommand) error {
+  src := filepath.Join(pc.SiteDir, "robots.txt")
+  dst := filepath.Join(pc.PublicDir, "robots.txt")
+  _, err := copyFile(src, dst)
+  return err
+}
+
 func catError(format string, args ...any) error {
   return fmt.Errorf("catalog: " + format, args...)
 }
@@ -428,6 +449,10 @@ func Publish(pc PublishCommand) error {
     return siteError("%v", err)
   }
   err = publishStyle(pc.SiteDir, pc.TemplateDir, pc.PublicDir)
+  if err != nil {
+    return siteError("%v", err)
+  }
+  err = publishSEO(pc)
   if err != nil {
     return siteError("%v", err)
   }

@@ -17,7 +17,7 @@
         Downlaod | Заватнажити
         <a href="{{ .URL }}">{{ .Tit }} {{ .Com }} {{ .ArtUkr }}{{ .Arr }}</a>
       </p>
-      <div class="hidden">
+      <div data-nosnippet class="hidden">
         <div data-pagefind-meta="id">{{ .ID }}</div>
         <div data-pagefind-meta="com">{{ .Com }}</div>
         <div data-pagefind-meta="arr">{{ .Arr }}</div>
@@ -38,11 +38,13 @@
         {{ .Tit }} {{ .Com }} {{ .ArtUkr }}{{ .Arr }}</object>
     </div>
   {{ end }}
-  <p class="text-red-700">Note: the <strong>Firefox web brower</strong> is
-  recommended on mobile devices to directly preview a piece PDF. Other browsers
-  on mobile devices may lack native support for direct PDF preview</p>
-  <p class="mt-2 text-red-700">Примітка: для корректної візуалізації PDF п'єси
-  на мобільних пристроях рекомендується <strong>Firefox веб браузер</strong>.
-  Інші веб браузери для мобільних пристроїв можуть не підтримувати
-  безпосередньої візуалізації PDF</p>
+  <div data-nosnippet>
+    <p class="text-red-700">Note: the <strong>Firefox web brower</strong> is
+    recommended on mobile devices to directly preview a piece PDF. Other browsers
+    on mobile devices may lack native support for direct PDF preview</p>
+    <p class="mt-2 text-red-700">Примітка: для корректної візуалізації PDF п'єси
+    на мобільних пристроях рекомендується <strong>Firefox веб браузер</strong>.
+    Інші веб браузери для мобільних пристроїв можуть не підтримувати
+    безпосередньої візуалізації PDF</p>
+  </div>
 {{ end }}

@@ -16,7 +16,7 @@
     @apply mt-6 text-xl font-semibold
   }
   .tagline {
-    @apply text-lg text-center italic
+    @apply text-center italic
   }
   .link {
     @apply text-lg font-medium text-blue-700

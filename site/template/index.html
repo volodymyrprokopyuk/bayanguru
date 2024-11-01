@@ -1,6 +1,6 @@
 {{ define "body" }}
   <h2 class="head2">Browse catalog | Перегляд каталогу</h2>
-  <div class="mt-2">
+  <div data-nosnippet class="mt-2">
     {{ range .CatalogGroups }}
       <a href="{{ .URL }}" class="link link-block">{{ .Title }}</a>
     {{ end }}
@@ -27,7 +27,7 @@
     <h2 class="head2">Advanced search | Розширений пошук</h2>
     <p class="mt-2">{{ .Purpose.Eng | md }}</p>
     <p class="mt-2">{{ .Purpose.Ukr | md }}</p>
-    <table class="mt-2 text-sm lg:text-base">
+    <table data-nosnippet class="mt-2 text-sm lg:text-base">
       {{ range .Meta }}
         <tr class="bg-yellow-100">
           <th></th>
