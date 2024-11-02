@@ -65,6 +65,7 @@ bayanguru publish all --query...`,
         PublicDir: filepath.Join(siteDir, "public"),
         UploadURL: "bayanguru:bayanguru/score",
         ScoreURL: "https://score.bayanguru.org/score",
+        PieceURL: "https://bayanguru.org/piece",
         PageSize: 24,
       }
       if !pc.All {

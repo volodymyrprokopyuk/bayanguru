@@ -14,10 +14,10 @@ import (
 	"sync"
 	"text/template"
 
-	"github.com/yuin/goldmark"
-	"gopkg.in/yaml.v3"
 	"github.com/volodymyrprokopyuk/bayanguru/cli/catalog"
 	"github.com/volodymyrprokopyuk/bayanguru/cli/style"
+	"github.com/yuin/goldmark"
+	"gopkg.in/yaml.v3"
 )
 
 type PublishCommand struct {
@@ -27,7 +27,7 @@ type PublishCommand struct {
   Pieces, Books []string
   Queries catalog.PieceQueries
   SiteDir, TemplateDir, ContentDir, PublicDir string
-  UploadURL, ScoreURL string
+  UploadURL, ScoreURL, PieceURL string
   PageSize int
 }
 
@@ -391,13 +391,6 @@ func publishStyle(siteDir, templateDir, publicDir string) error {
   return twCmd.Run()
 }
 
-func publishSEO(pc PublishCommand) error {
-  src := filepath.Join(pc.SiteDir, "robots.txt")
-  dst := filepath.Join(pc.PublicDir, "robots.txt")
-  _, err := copyFile(src, dst)
-  return err
-}
-
 func catError(format string, args ...any) error {
   return fmt.Errorf("catalog: " + format, args...)
 }
@@ -449,10 +442,6 @@ func Publish(pc PublishCommand) error {
     return siteError("%v", err)
   }
   err = publishStyle(pc.SiteDir, pc.TemplateDir, pc.PublicDir)
-  if err != nil {
-    return siteError("%v", err)
-  }
-  err = publishSEO(pc)
   if err != nil {
     return siteError("%v", err)
   }

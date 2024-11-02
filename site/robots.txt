@@ -6,4 +6,4 @@ User-agent: *
 Disallow: /catalog/
 Allow: /piece/
 
-Sitemap: https://bayanguru.org/sitemap.xml
+Sitemap: https://bayanguru.org/sitemap.txt

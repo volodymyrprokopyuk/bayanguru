@@ -1,6 +1,7 @@
 package site
 
 import (
+	"bytes"
 	"fmt"
 	"os"
 	"path/filepath"
@@ -452,6 +453,27 @@ func keyByLvl(piece catalog.Piece) []string {
 //   return []string{"lyrics"}
 // }
 
+func publishRobots(pc PublishCommand) error {
+  file := "robots.txt"
+  src := filepath.Join(pc.SiteDir, file)
+  dst := filepath.Join(pc.PublicDir, file)
+  fmt.Printf("%v %v\n", style.Org("publish"), style.Lvl(dst))
+  _, err := copyFile(src, dst)
+  return err
+}
+
+func publishSitemap(pieces []catalog.Piece, pc PublishCommand) error {
+  file := "sitemap.txt"
+  path := filepath.Join(pc.PublicDir, file)
+  fmt.Printf("%v %v\n", style.Org("publish"), style.Lvl(path))
+  var buf bytes.Buffer
+  for _, piece := range pieces {
+    pieceURL := fmt.Sprintf("%v/%v/\n", pc.PieceURL, piece.File)
+    buf.WriteString(pieceURL)
+  }
+  return os.WriteFile(path, buf.Bytes(), 0644)
+}
+
 func publishCatalog(tpl *template.Template, pc PublishCommand) error {
   fmt.Printf(
     "%v %v\n", style.Org("publish"), style.Lvl(pc.PublicDir + "/catalog/..."),
@@ -462,7 +484,13 @@ func publishCatalog(tpl *template.Template, pc PublishCommand) error {
   if err != nil {
     return err
   }
-  pc.Queries["lcs"] = "^cpr" // exclude lcs: cpr pieces
+  queries := make(catalog.PieceQueries, len(pieces))
+  queries["lcs"] = "^cpr" // exclude lcs: cpr pieces
+  pieces, err = catalog.QueryPieces(pieces, queries)
+  if err != nil {
+    return err
+  }
+  allPieces := slices.Clone(pieces)
   if len(pc.Queries) > 0 {
     pieces, err = catalog.QueryPieces(pieces, pc.Queries)
     if err != nil {
@@ -548,5 +576,13 @@ func publishCatalog(tpl *template.Template, pc PublishCommand) error {
   // if err != nil {
   //   return err
   // }
+  err = publishRobots(pc)
+  if err != nil {
+    return err
+  }
+  err = publishSitemap(allPieces, pc)
+  if err != nil {
+    return err
+  }
   return nil
 }
