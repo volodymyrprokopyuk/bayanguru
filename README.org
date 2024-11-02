@@ -6,6 +6,7 @@
 - [[https://go.dev/][Go]] programming language
 - [[https://tailwindcss.com/][TailwindCSS]] CSS framework
 - [[https://pagefind.app/][PageFind]] static full-text search
+- [[https://html-validate.org/][HTML validate]] offline HTML validation
 
 #+BEGIN_SRC fish
 # engrave sheet music
@@ -13,12 +14,18 @@ yay -S ghostscript gsfonts fontforge t1utils texlive-{metapost,langcyrillic}
 # generate the web site
 yay -S caddy pagefind
 # install TailwindCSS
-bun install --no-save tailwindcss
+bun install tailwindcss
 # install rclone
 yay -S rclone
 # deploy to Cloudflare Pages
-bun install --no-save wrangler
+bun install wrangler
 bunx wrangler pages deploy site/public --project-name bayanguru --branch main
+# offline HTML validation
+bun install html-validate
+bunx html-validate --formatter codeframe site/public/index.html
+bunx html-validate --formatter codeframe site/public/index.html \
+  site/public/piece/Largo-c3bd/index.html \
+  site/public/catalog/level/elementary-a/1/index.html
 #+END_SRC
 
 ** Usage
