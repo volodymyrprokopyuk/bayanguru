@@ -22,7 +22,6 @@ bun install wrangler
 bunx wrangler pages deploy site/public --project-name bayanguru --branch main
 # offline HTML validation
 bun install html-validate
-bunx html-validate --formatter codeframe site/public/index.html
 bunx html-validate --formatter codeframe site/public/index.html \
   site/public/piece/Largo-c3bd/index.html \
   site/public/catalog/level/elementary-a/1/index.html
