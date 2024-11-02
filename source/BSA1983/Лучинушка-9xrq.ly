@@ -85,7 +85,7 @@
   d=4( dm!) r | g,( g7!) r | c( cM!) r | f,( f7!) f7 | fis f2~ | f4 e=,2 \fermata |
 
   g@7!4 g74 g7 | c@M! cM4 cM | \rep 2 { f@M! fM4 fM | }
-  gis=,4 gis gis | g g g | \rep 2 { fis=,4 fis fis=, | }
+  gis=,4-\puBass gis gis | g g g | \rep 2 { fis=,4 fis fis=, | }
   \rep 2 { f=,4 f f=, | } | e' e d | c c b | a2.~ | a=, \fermata |
 }
 {{ end }}
