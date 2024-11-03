@@ -1,4 +1,4 @@
 site: public
-glob: piece/*/index.html
+glob: piece/*.html
 root_selector: main
 verbose: true

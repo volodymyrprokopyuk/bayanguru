@@ -280,7 +280,7 @@ func publishGroupPages(
       Pieces: pieces,
       PageLinks: pageLinks,
     }
-    err := publishDirIndex(os.Stdout, tpl, catalogDir, currentPage, catalogData)
+    err := publishFile(os.Stdout, tpl, catalogDir, currentPage, catalogData)
     if err != nil {
       return err
     }
@@ -468,7 +468,7 @@ func publishSitemap(pieces []catalog.Piece, pc PublishCommand) error {
   fmt.Printf("%v %v\n", style.Org("publish"), style.Lvl(path))
   var buf bytes.Buffer
   for _, piece := range pieces {
-    pieceURL := fmt.Sprintf("%v/%v/\n", pc.PieceURL, piece.File)
+    pieceURL := fmt.Sprintf("%v/%v\n", pc.PieceURL, piece.File)
     buf.WriteString(pieceURL)
   }
   return os.WriteFile(path, buf.Bytes(), 0644)

@@ -1,10 +1,8 @@
 # -*- mode: conf -*-
 # caddy run --config site/Caddyfile
 :7512 {
-  handle_path /score/* {
-    root piece
-  }
   root site/public
+  try_files {path}.html
   file_server
   handle_errors {
     respond "{err.status_code} {err.status_text}"

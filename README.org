@@ -9,22 +9,25 @@
 - [[https://html-validate.org/][HTML validate]] offline HTML validation
 
 #+BEGIN_SRC fish
-# engrave sheet music
+# Engrave pieces with LilyPond
 yay -S ghostscript gsfonts fontforge t1utils texlive-{metapost,langcyrillic}
-# generate the web site
-yay -S caddy pagefind
-# install TailwindCSS
-bun install tailwindcss
-# install rclone
+# Upload scores to Cloudflare R2 object store with rclone
 yay -S rclone
-# deploy to Cloudflare Pages
-bun install wrangler
-bunx wrangler pages deploy site/public --project-name bayanguru --branch main
-# offline HTML validation
+# Style the website with TailwindCSS
+bun install tailwindcss
+# Index the website for searching with pagefind
+yay -S pagefind
+# Validate the website HTML locally with html-validate
 bun install html-validate
 bunx html-validate --formatter codeframe site/public/index.html \
   site/public/piece/Largo-c3bd/index.html \
   site/public/catalog/level/elementary-a/1/index.html
+# Serve the website locally with Caddy
+yay -S caddy
+caddy run --config site/Caddyfile
+# Deploy the website to Cloudflare Pages with wrangler
+bun install wrangler
+bunx wrangler pages deploy site/public --project-name bayanguru --branch main
 #+END_SRC
 
 ** Usage

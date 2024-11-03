@@ -140,32 +140,15 @@ func makeTemplate(templateDir string) (*template.Template, error) {
 func publishFile(
   w io.Writer, tpl *template.Template, publicDir, publicFile string, data any,
 ) error {
-  file := filepath.Join(publicDir, publicFile)
-  fmt.Fprintf(w, "%v %v\n", style.Org("publish"), style.Lvl(file))
+  file := filepath.Join(publicDir, publicFile + ".html")
+  if !strings.Contains(file, "/catalog/") {
+    fmt.Fprintf(w, "%v %v\n", style.Org("publish"), style.Lvl(file))
+  }
   w, err := os.Create(file) // overwrites an existing file
   if err != nil {
     return err
   }
   return tpl.ExecuteTemplate(w, "page.html", data)
-}
-
-func publishDirIndex(
-  w io.Writer, tpl *template.Template, publicDir, publicFile string, data any,
-) error {
-  dir := filepath.Join(publicDir, publicFile)
-  if !strings.Contains(dir, "/catalog/") {
-    fmt.Fprintf(w, "%v %v\n", style.Org("publish"), style.Lvl(dir))
-  }
-  err := os.MkdirAll(dir, 0755)
-  if err != nil {
-    return err
-  }
-  file := filepath.Join(dir, "index.html")
-  f, err := os.Create(file) // overwrites an existing file
-  if err != nil {
-    return err
-  }
-  return tpl.ExecuteTemplate(f, "page.html", data)
 }
 
 type MetaEntry struct {
@@ -251,7 +234,7 @@ func publishIndex(tpl *template.Template, pc PublishCommand) error {
     SiteContent SiteContent
     CatalogMeta CatalogMeta
   }{catalogGroups, siteContent, catalogMeta}
-  return publishFile(os.Stdout, tpl, pc.PublicDir, "index.html", indexData)
+  return publishFile(os.Stdout, tpl, pc.PublicDir, "index", indexData)
 }
 
 func uploadPiece(w io.Writer, pieceFile, uploadURL string) error {
@@ -292,7 +275,7 @@ func receiveAndPublishPieces(
       piece.URL = fmt.Sprintf("%v/%v.pdf", pc.ScoreURL, piece.File)
       tpl := tplPool.Get().(*template.Template)
       pieceData := struct { Piece catalog.Piece }{piece}
-      err := publishDirIndex(&w, tpl, pieceDir, piece.File, pieceData)
+      err := publishFile(&w, tpl, pieceDir, piece.File, pieceData)
       fmt.Print(w.String())
       tplPool.Put(tpl)
       if err != nil {
