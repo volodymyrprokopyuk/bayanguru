@@ -41,7 +41,7 @@
 {{ end }}
 
 {{ define "lyrics" }}
-\lyrSix
+\lyrTwoColSix
 "1." \column {
   "Поблискують черешеньки"
   "В листі зелененькім,"

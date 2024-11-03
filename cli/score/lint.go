@@ -66,7 +66,7 @@ var excludeParts = []string{
   `^{{ end }}$`,
   `^\\accidentalStyle [-\w]+$`,
   `^\\relative {$|^}$`,
-  `^\\lyr(:?One|Two|Three)$`,
+  `^\\lyr(:?One|Two|Three)Col`,
   `^ +{{ template "\w+" }}$`,
   `^ +\\tempo (?:\w+|"[^"]+")$`,
   `^ +\\clef (?:treble|bass)$`,

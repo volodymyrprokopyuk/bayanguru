@@ -233,16 +233,52 @@ markupInsideSlur = {
 ))
 
 % Lyrics
-#(define-markup-command (lyrOne layout props a aa)
+#(define-markup-command (lyrOneColOne layout props a aa)
   (markup? markup?)
   (interpret-markup layout props
   #{
     \markup \fill-line {
-      \null \column { \line { \vspace #1.5 #a #aa } } \null
+      \column {
+        \override #'(padding . 10)
+        \table #`(,LEFT) {
+          \line { \vspace #1.5 #a #aa }
+        }
+      }
     }
   #}
 ))
-#(define-markup-command (lyrTwo layout props a aa b bb)
+#(define-markup-command (lyrOneColTwo layout props a aa b bb)
+  (markup? markup? markup? markup?)
+  (interpret-markup layout props
+  #{
+    \markup \fill-line {
+      \column {
+        \override #'(padding . 10)
+        \table #`(,LEFT) {
+          \line { \vspace #1.5 #a #aa }
+          \line { \vspace #1.5 #b #bb }
+        }
+      }
+    }
+  #}
+))
+#(define-markup-command (lyrOneColThree layout props a aa b bb c cc)
+  (markup? markup? markup? markup? markup? markup?)
+  (interpret-markup layout props
+  #{
+    \markup \fill-line {
+      \column {
+        \override #'(padding . 10)
+        \table #`(,LEFT) {
+          \line { \vspace #1.5 #a #aa }
+          \line { \vspace #1.5 #b #bb }
+          \line { \vspace #1.5 #c #cc }
+        }
+      }
+    }
+  #}
+))
+#(define-markup-command (lyrTwoColTwo layout props a aa b bb)
   (markup? markup? markup? markup?)
   (interpret-markup layout props
   #{
@@ -257,7 +293,7 @@ markupInsideSlur = {
     }
   #}
 ))
-#(define-markup-command (lyrFour layout props a aa b bb c cc d dd)
+#(define-markup-command (lyrTwoColFour layout props a aa b bb c cc d dd)
   (markup? markup? markup? markup?
    markup? markup? markup? markup?)
   (interpret-markup layout props
@@ -275,7 +311,7 @@ markupInsideSlur = {
     }
   #}
 ))
-#(define-markup-command (lyrSix layout props a aa b bb c cc d dd e ee f ff)
+#(define-markup-command (lyrTwoColSix layout props a aa b bb c cc d dd e ee f ff)
   (markup? markup? markup? markup?
    markup? markup? markup? markup?
    markup? markup? markup? markup?)
@@ -296,7 +332,7 @@ markupInsideSlur = {
     }
   #}
 ))
-#(define-markup-command (lyrEight layout props a aa b bb c cc d dd e ee f ff g gg h hh)
+#(define-markup-command (lyrTowColEight layout props a aa b bb c cc d dd e ee f ff g gg h hh)
   (markup? markup? markup? markup?
    markup? markup? markup? markup?
    markup? markup? markup? markup?
