@@ -101,10 +101,9 @@ pieces:
   - { id: 6yoh, tit: Вдоль по улице метелица метет,
       com: А. Варламов, src: BSA1983,
       org: rus, sty: cus, gnr: sng, ton: ami, frm: in3, bss: stb, lvl: elb }
-  # p. 128
-  # - { id: cd1c, tit: Колыбельная,
-  #     com: Г. Шендерев, src: BSA1983,
-  #     org: rus, sty: cus, gnr: lul, ton: cmj, frm: [in3, in4, in5], bss: stb, lvl: elb }
+  - { id: cd1c, tit: Колыбельная,
+      com: Г. Шендерев, src: BSA1983,
+      org: rus, sty: cus, gnr: lul, ton: cmj, frm: [in3, in4, in5], bss: stb, lvl: elb }
   # p. 145
   # - { id: nclg, tit: Вечереет,
   #     com: Ю. Акимов, src: BSA1983,
