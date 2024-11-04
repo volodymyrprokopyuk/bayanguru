@@ -2,6 +2,14 @@
 ---
 pieces:
   # IIDBF2021, lcs: cpr
+  # - { id: 1737, tit: "Диби-диби", sub: ukrfs,
+  #     arr: О. Бубнов, art: hrm, aut: Слова народні, src: IIDBF2021, lcs: cpr,
+  #     org: ukr, sty: flk, gnr: chd, ton: dmj, frm: [vo2, in3, cr5], bss: stb,
+  #     lvl: elb, ens: vc1, lyr: lyr }
+  # - { id: pd1j, tit: Калачі,
+  #     com: А. Філіпенко, aut: Г. Демченко, src: IIDBF2021, lcs: cpr,
+  #     org: ukr, sty: cus, gnr: chd, ton: dmj, frm: [in3, cr5], bss: stb,
+  #     lvl: elb, ens: vc1, lyr: lyr }
   - { id: tjzc, tit: Пісня про школу,
       com: М. Дремлюга, aut: Т. Масенко, src: IIDBF2021, lcs: cpr,
       org: ukr, sty: cus, gnr: chd, ton: eesmj, frm: mel, bss: stb,
