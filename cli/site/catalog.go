@@ -466,6 +466,9 @@ func publishSitemap(pieces []catalog.Piece, pc PublishCommand) error {
   file := "sitemap.txt"
   path := filepath.Join(pc.PublicDir, file)
   fmt.Printf("%v %v\n", style.Org("publish"), style.Lvl(path))
+  slices.SortStableFunc(pieces, func(a, b catalog.Piece) int {
+    return collator.CompareString(a.Tit, b.Tit)
+  })
   var buf bytes.Buffer
   for _, piece := range pieces {
     pieceURL := fmt.Sprintf("%v/%v\n", pc.PieceURL, piece.File)
