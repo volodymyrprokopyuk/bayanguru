@@ -427,6 +427,7 @@ tocSection = #(define-music-function
   \caps id: "{{ .ID }}" "{{ .Tit }}"
   {{ if .Com }} \italic "{{ .Com }}" {{ end }}
   {{ if .Arr }} \italic "{{ .ArtUkr }}{{ .Arr }}" {{ end }}
+  {{ if .Aut }} \italic "{{ .Aut }}" {{ end }}
 }
 {{ end }}
 

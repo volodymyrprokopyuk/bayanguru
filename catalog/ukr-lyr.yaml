@@ -2,11 +2,11 @@
 ---
 pieces:
   # IIDBF2021, lcs: cpr
-  - { id: gzmy, tit: "Вишеньки-черешеньки",
-      com: Я. Степовий, aut: Л. Українка, src: IIDBF2021, lcs: cpr,
-      org: ukr, sty: cus, gnr: chd, ton: dmj, frm: in3, bss: stb,
-      lvl: ela, ens: vc1, lyr: lyr }
   - { id: tjzc, tit: Пісня про школу,
       com: М. Дремлюга, aut: Т. Масенко, src: IIDBF2021, lcs: cpr,
       org: ukr, sty: cus, gnr: chd, ton: eesmj, frm: mel, bss: stb,
+      lvl: ela, ens: vc1, lyr: lyr }
+  - { id: gzmy, tit: "Вишеньки-черешеньки",
+      com: Я. Степовий, aut: Л. Українка, src: IIDBF2021, lcs: cpr,
+      org: ukr, sty: cus, gnr: chd, ton: dmj, frm: in3, bss: stb,
       lvl: ela, ens: vc1, lyr: lyr }
