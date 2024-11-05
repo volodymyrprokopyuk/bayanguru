@@ -10,6 +10,10 @@ pieces:
   #     com: А. Філіпенко, aut: Г. Демченко, src: IIDBF2021, lcs: cpr,
   #     org: ukr, sty: cus, gnr: chd, ton: dmj, frm: [in3, cr5], bss: stb,
   #     lvl: elb, ens: vc1, lyr: lyr }
+  # - { id: onsj, tit: "Хлопці, хлопці!",
+  #     com: Ф. Колеса, arr: О. Бубнов, aut: Г. Лепкий, src: IIDBF2021, lcs: cpr,
+  #     org: ukr, sty: cus, gnr: chd, ton: cmj, frm: [var, in3, cr5], bss: stb,
+  #     lvl: elb, ens: vc1, lyr: lyr }
   - { id: tjzc, tit: Пісня про школу,
       com: М. Дремлюга, aut: Т. Масенко, src: IIDBF2021, lcs: cpr,
       org: ukr, sty: cus, gnr: chd, ton: eesmj, frm: mel, bss: stb,
