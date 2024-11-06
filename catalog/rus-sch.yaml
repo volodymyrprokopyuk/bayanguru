@@ -108,6 +108,10 @@ pieces:
   # - { id: nclg, tit: Вечереет,
   #     com: Ю. Акимов, src: BSA1983,
   #     org: rus, sty: cus, gnr: pie, ton: dmi, frm: [vo2, in3, in5, dot], bss: pub, lvl: elb }
+  # p. 188
+  # - { id: u58z, tit: Птичка,
+  #     com: В. Мотов, src: BSA1983,
+  #     org: rus, sty: cus, gnr: pie, ton: gmj, frm: cr5, bss: [stb, pub], lvl: elb }
   # * Free bass
   # FBBSC1978
   - { id: v2kv, tit: На горе-то калина, sub: rusfs,

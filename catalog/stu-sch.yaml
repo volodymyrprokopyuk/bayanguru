@@ -12,6 +12,11 @@ pieces:
   - { id: uuc1, tit: Етюд D minor,
       com: Л. Шітте, src: BSO1981,
       org: dnk, sty: cus, gnr: stu, ton: dmi, frm: [scl, tu3], bss: stb, lvl: ela }
+  # BSA1983
+  # p. 187
+  # - { id: 0jom, tit: Етюд C major,
+  #     com: А. Талакин, src: BSA1983,
+  #     org: rus, sty: cus, gnr: stu, ton: cmj, frm: scl, bss: stb, lvl: ela }
   # PBS1AG1970
   - { id: zizx, tit: Етюд F major,
       com: А. Салин, src: PBS1AG1970,
