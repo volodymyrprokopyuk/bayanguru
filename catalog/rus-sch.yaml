@@ -109,9 +109,13 @@ pieces:
   #     com: Ю. Акимов, src: BSA1983,
   #     org: rus, sty: cus, gnr: pie, ton: dmi, frm: [vo2, in3, in5, dot], bss: pub, lvl: elb }
   # p. 188
-  # - { id: u58z, tit: Птичка,
+  # - { id: u58z, tit: Птичка, sub: stu,
   #     com: В. Мотов, src: BSA1983,
-  #     org: rus, sty: cus, gnr: pie, ton: gmj, frm: cr5, bss: [stb, pub], lvl: elb }
+  #     org: rus, sty: cus, gnr: pie, ton: gmj, frm: [scl, cr5, rep], bss: [stb, pub, scl], lvl: elb }
+  # p. 190
+  # - { id: ktnp, tit: Танец белых клавиш, sub: stu,
+  #     com: А. Судариков, src: BSA1983,
+  #     org: rus, sty: cus, gnr: pie, ton: cmj, frm: [arp, in3], bss: stb, lvl: elb }
   # * Free bass
   # FBBSC1978
   - { id: v2kv, tit: На горе-то калина, sub: rusfs,

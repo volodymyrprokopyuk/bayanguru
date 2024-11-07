@@ -134,9 +134,9 @@ pieces:
       src: B2AK1987,
       org: rus, sty: flk, gnr: sng, ton: [cmj, ami], frm: [var, cr5], bss: stb, lvl: elc }
   # SB3NU1979
-  - { id: zeeh, tit: Песня веретена,
+  - { id: zeeh, tit: Песня веретена, sub: stu,
       com: А. Гедике, src: SB3NU1979,
-      org: rus, sty: cus, gnr: pie, ton: [dmi, gmi], frm: [in3, tri], bss: [stb, pub, scl, tri], lvl: elb }
+      org: rus, sty: cus, gnr: pie, ton: [dmi, gmi], frm: [scl, in3, rep, tri], bss: [stb, pub, scl, rep, tri], lvl: elb }
   # * Free bass
   # FBB1BZ1980
   - { id: wo9y, tit: Кукла,

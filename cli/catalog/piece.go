@@ -54,6 +54,7 @@ var meta = map[string]string{
   "czefd": "Чеський народний танець",
   "svkfs": "Словацька народна пісня",
   "svkfd": "Словацький народний танець",
+  "stu": "Етюд",
   // Piece arrangment type (art)
   "arr": "Обр. ", // обробка = arrangment (default)
   "ipr": "Пер. ", // переклад = interpratation
