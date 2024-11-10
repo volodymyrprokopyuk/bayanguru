@@ -106,11 +106,10 @@ pieces:
       org: rus, sty: cus, gnr: lul, ton: cmj, frm: [in3, in4, in5], bss: stb, lvl: elb }
   - { id: nclg, tit: Вечереет,
       com: Ю. Акимов, src: BSA1983,
-      org: rus, sty: cus, gnr: pie, ton: dmi, frm: [vo2, in3, in5, dot], bss: pub, lvl: elb }
-  # p. 188
-  # - { id: u58z, tit: Птичка, sub: stu,
-  #     com: В. Мотов, src: BSA1983,
-  #     org: rus, sty: cus, gnr: pie, ton: gmj, frm: [scl, cr5, rep], bss: [stb, pub, scl], lvl: elb }
+      org: rus, sty: cus, gnr: pie, ton: dmi, frm: [vo2, in3, in5, dot], bss: pub, lvl: elc }
+  - { id: u58z, tit: Птичка, sub: stu,
+      com: В. Мотов, src: BSA1983,
+      org: rus, sty: cus, gnr: pie, ton: gmj, frm: [scl, cr5, rep], bss: [stb, pub, scl], lvl: elb }
   # p. 190
   # - { id: ktnp, tit: Танец белых клавиш, sub: stu,
   #     com: А. Судариков, src: BSA1983,
