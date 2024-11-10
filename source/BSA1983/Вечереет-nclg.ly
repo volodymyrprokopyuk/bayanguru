@@ -16,7 +16,7 @@
   } { f'='4 | d2. | s4 e4 | d2~ | d4 f | d8( c16 d bes2.) | s4 e='4 | s2 | s4 } %
   d='16\(\< e f \af 16\! g=' |
 
-  \time 3/4 a='4.\mf\< \af 8\! e'8\f d c16 bes |
+  \time 3/4 a='4.\mf e'8\f d c16 bes |
   \time 2/4 a='8. f16 a\> g e \af 16\! f | d4\) f8^\(\< d |
   \time 3/4 g='4 <d a'> <g bes>8 \af 8\! <f d'> |
   \time 2/4 \duo { <a'=' c>8\mf <bes d> <d, f> <e=' g> | } { e'='4 bes= | }
@@ -40,5 +40,13 @@
 \relative {
   \clef bass
   \key d \minor
+  \partial 4 { r4 | } | R2. | R2 | R2 |
+  bes,=,4-\puBass a g | c d8( e | f e d4) | g,4.( a8 bes4 | a4.) a8 |
+  c=8( bes a g | f e d4) | bes'8( a g2.) | f4 c'8( a) | d4 f8( e | d=4) r4 |
+
+  R2. | R2 | d=8( c bes a | bes c bes[ a] g4) | c d8( c) | f( e d4) |
+  g,=,4.( a8 bes4) | a8( bes c4) | bes8( c16 bes) a8( g | f' e d c |
+  bes=,8 a) g( f16 g) e8( f16 g) | f4 c'8( a) | bes( a16 g f8 g |
+  d'=2) \fermata | R2. | f4-- e-- | d=2-- \fermata |
 }
 {{ end }}
