@@ -104,10 +104,9 @@ pieces:
   - { id: cd1c, tit: Колыбельная,
       com: Г. Шендерев, src: BSA1983,
       org: rus, sty: cus, gnr: lul, ton: cmj, frm: [in3, in4, in5], bss: stb, lvl: elb }
-  # p. 145
-  # - { id: nclg, tit: Вечереет,
-  #     com: Ю. Акимов, src: BSA1983,
-  #     org: rus, sty: cus, gnr: pie, ton: dmi, frm: [vo2, in3, in5, dot], bss: pub, lvl: elb }
+  - { id: nclg, tit: Вечереет,
+      com: Ю. Акимов, src: BSA1983,
+      org: rus, sty: cus, gnr: pie, ton: dmi, frm: [vo2, in3, in5, dot], bss: pub, lvl: elb }
   # p. 188
   # - { id: u58z, tit: Птичка, sub: stu,
   #     com: В. Мотов, src: BSA1983,
