@@ -17,6 +17,10 @@ pieces:
   # - { id: 0jom, tit: Етюд C major,
   #     com: А. Талакин, src: BSA1983,
   #     org: rus, sty: cus, gnr: stu, ton: cmj, frm: scl, bss: stb, lvl: ela }
+  # p. 190
+  # - { id: 0wbg, tit: Етюд C major,
+  #     com: М. Різоль, src: BSA1983,
+  #     org: ukr, sty: cus, gnr: stu, ton: cmj, frm: [in3, syn], bss: [stb, syn], lvl: elb }
   # PBS1AG1970
   - { id: zizx, tit: Етюд F major,
       com: А. Салин, src: PBS1AG1970,
