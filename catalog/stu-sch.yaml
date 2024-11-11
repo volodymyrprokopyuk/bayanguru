@@ -13,10 +13,9 @@ pieces:
       com: Л. Шітте, src: BSO1981,
       org: dnk, sty: cus, gnr: stu, ton: dmi, frm: [scl, tu3], bss: stb, lvl: ela }
   # BSA1983
-  # p. 187
-  # - { id: 0jom, tit: Етюд C major,
-  #     com: А. Талакин, src: BSA1983,
-  #     org: rus, sty: cus, gnr: stu, ton: cmj, frm: scl, bss: stb, lvl: ela }
+  - { id: 0jom, tit: Етюд C major,
+      com: А. Талакин, src: BSA1983,
+      org: rus, sty: cus, gnr: stu, ton: cmj, frm: scl, bss: stb, lvl: ela }
   # p. 190
   # - { id: 0wbg, tit: Етюд C major,
   #     com: М. Різоль, src: BSA1983,

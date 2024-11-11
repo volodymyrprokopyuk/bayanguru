@@ -203,7 +203,9 @@ books:
         # BSN1985
         w1pp,
         # BSO1981
-        uuc1
+        uuc1,
+        # BSA1983
+        0jom
       ] },
       { tit: Арпеджіо, pieces: [ # Arpeggio
         # PBS1AG1970
