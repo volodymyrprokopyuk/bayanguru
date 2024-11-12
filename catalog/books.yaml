@@ -214,6 +214,7 @@ books:
   - { id: stu4, tit: Вибрані етюди, sub: для готового баяна,
       sections: [
       { tit: Інтервали, pieces: [ # Intervals
+        0wbg
       ] },
       { tit: Акорди, pieces: [ # Chords
       ] },
