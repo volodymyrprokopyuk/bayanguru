@@ -236,7 +236,7 @@ func lintDurationAfterBoundChord(lines []Line) []Line {
     for _, idx := range chords {
       chord := line.Text[idx[0]:idx[1]]
       nextNote := line.Text[idx[1]:]
-      nextNote = strings.TrimLeft(nextNote, " {|}")
+      nextNote = strings.TrimLeft(nextNote, " {|}%")
       if len(nextNote) > 0 && !noteDuration.MatchString(nextNote) {
         errors = append(errors, Line{line.Num, chord})
       }
