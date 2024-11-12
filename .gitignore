@@ -3,6 +3,7 @@ pagefind
 piece/*.pdf
 book/*.pdf
 site/public/
+.played
 package.json
 bun.lockb
 .wrangler/

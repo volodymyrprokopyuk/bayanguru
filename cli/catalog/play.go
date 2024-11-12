@@ -1,6 +1,7 @@
 package catalog
 
 import (
+	"bufio"
 	"fmt"
 	"math/rand"
 	"os"
@@ -94,6 +95,39 @@ func ReadPiecesAndBooks(
   return pieces, nil, len(pieceMap), nil
 }
 
+func addToPlayed(pieceID string, fileName string) error {
+  file, err := os.OpenFile(
+    fileName, os.O_CREATE | os.O_WRONLY | os.O_APPEND, 0644,
+  )
+  if err != nil {
+    return err
+  }
+  defer file.Close()
+  _, err = file.WriteString(pieceID + "\n")
+  return err
+}
+
+func filterPlayed(allPieces []Piece, fileName string) ([]Piece, error) {
+  file, err := os.OpenFile(fileName, os.O_CREATE | os.O_RDONLY, 0644)
+  if err != nil {
+    return nil, err
+  }
+  defer file.Close()
+  played := make(map[string]bool, 100)
+  scanner := bufio.NewScanner(file)
+  for scanner.Scan() {
+    pieceID := scanner.Text()
+    played[pieceID] = true
+  }
+  pieces := make([]Piece, 0, len(allPieces))
+  for _, piece := range allPieces {
+    if !played[piece.ID] {
+      pieces = append(pieces, piece)
+    }
+  }
+  return pieces, nil
+}
+
 func catError(format string, args ...any) error {
   return fmt.Errorf("catalog: " + format, args...)
 }
@@ -112,6 +146,11 @@ func Play(pc PlayCommand) error {
       return catError("%v", err)
     }
   }
+  played := ".played"
+  pieces, err = filterPlayed(pieces, played)
+  if err != nil {
+    return catError("%v", err)
+  }
   PrintStat(catLen, len(pieces))
   indices := arrangePieces(len(pieces), pc.Random)
   for _, i := range indices {
@@ -119,6 +158,10 @@ func Play(pc PlayCommand) error {
     PrintPiece(os.Stdout, piece)
     if !pc.List {
       err := openPiece(pc.PieceDir, piece)
+      if err != nil {
+        return catError("%v", err)
+      }
+      err = addToPlayed(piece.ID, played)
       if err != nil {
         return catError("%v", err)
       }

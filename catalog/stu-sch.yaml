@@ -20,7 +20,7 @@ pieces:
   # - { id: 0wbg, tit: Етюд C major,
   #     com: М. Різоль, src: BSA1983,
   #     org: ukr, sty: cus, gnr: stu, ton: cmj, frm: [in3, syn], bss: [stb, syn], lvl: elb }
-  # p. 191
+  # p. 191 NO
   # - { id: mn05, tit: Етюд D major,
   #     com: І. Яшкевич, src: BSA1983,
   #     org: ukr, sty: cus, gnr: stu, ton: dmj, frm: [scl, syn, jmp], bss: stb, lvl: elb }
