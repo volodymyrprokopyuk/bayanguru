@@ -12,6 +12,7 @@
     \rep 2 { R1 | }
   }
 }
+\noPageBreak
 {{ end }}
 
 {{ define "rightHand" }}

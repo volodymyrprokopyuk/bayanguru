@@ -5,6 +5,7 @@
   \key _
   \time _
 }
+\noPageBreak
 {{ end }}
 
 {{ define "rightHand" }}

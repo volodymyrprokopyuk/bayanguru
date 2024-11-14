@@ -41,7 +41,6 @@
 \relative {
   \clef bass
   \key f \minor
-  \time 3/4
   \meter 1/4 1,1,1
   \partial 4 { aes,=,8---\stBass f@m!-. | }
   g=,8-- c@7!-. c78-. c7-. e-- c@7-. | f8-- am!-. am-. am-. aes-- f@m-. |

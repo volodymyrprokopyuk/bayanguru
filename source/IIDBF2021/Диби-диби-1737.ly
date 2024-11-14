@@ -8,6 +8,7 @@
   d'='8 d e e | fis fis g4 | fis8 fis e e | d d d4 |
   a'='4 a | g8 g g g | fis fis e e | d4 d='4 \bar "|."
 }
+\noPageBreak
 {{ end }}
 
 {{ define "rightHand" }}
