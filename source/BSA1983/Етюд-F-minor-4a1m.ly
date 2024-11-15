@@ -13,6 +13,11 @@
   {{ template "t1" (w `c=''8 aes f='`) }}
 {{ end }}
 
+{{ define "lh1" }}
+  {{ .a }} f@7! f78 f7 f7 f7 | bes besm! besm besm besm besm |
+  ees=8 ees7! ees7 ees7 ees7 ees7 | aes,=, aesM! aesM aesM des+bes@m! r8 |
+{{ end }}
+
 {{ define "rightHand" }}
 \relative {
   \tempo Andante
@@ -87,7 +92,11 @@
   \key f \minor
   \meter 1/4 1,1,1
   \partial 4 { aes,=,8---\stBass f@m!-. | }
-  g=,8-- c@7!-. c78-. c7-. e-- c@7-. | f8-- am!-. am-. am-. aes-- f@m-. |
-  a=,8_\aSim f@7! f78 f7 f7 f7 |
+  g=,8-- c@7!-. c78-. c7-. e-- c@7-. | f8-- fm!-. fm-. fm-. aes-- f@m-. |
+  {{ template "lh1" (w `a=,8_\aSim`) }} | r4 c+f@m!8 r8 c+c7! r | f+fm! r r4 r |
+
+  g=,8 ees@7! ees78 ees7 ees7 ees7 | aes aesM! aesM aesM aesM aesM |
+  {{ template "lh1" (w `a=,8`) }} | r4 c+f@m!8 r8 r4 |
+  bes=,4-- b-- c-- | \duo { r4 fm!8 fm fm4 | } { f,=,2. | }
 }
 {{ end }}
