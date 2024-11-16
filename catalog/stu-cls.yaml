@@ -307,10 +307,9 @@ pieces:
       com: А. Салин, src: SB5NU1980,
       org: rus, sty: cus, gnr: stu, ton: bmi, frm: [in8, cr7, fi1, fi5], bss: [pub, scl], lvl: elc }
   # B1AK1979
-  # p. 91
-  # - { id: 5ufd, tit: Етюд D major,
-  #     com: М. Любарський, src: B1AK1979,
-  #     org: ukr, sty: cus, gnr: stu, ton: dmj, frm: [scl, arp], bss: stb, lvl: ela }
+  - { id: 5ufd, tit: Етюд D major,
+      com: М. Любарський, src: B1AK1979,
+      org: ukr, sty: cus, gnr: stu, ton: dmj, frm: [scl, arp], bss: stb, lvl: ela }
   # p. 91
   # - { id: zoab, tit: Етюд G major,
   #     com: Л. Шітте, src: B1AK1979,
@@ -319,6 +318,11 @@ pieces:
   # - { id: k51l, tit: Етюд F major,
   #     com: Г. Вольфарт, src: B1AK1979,
   #     org: deu, sty: cls, gnr: stu, ton: fmj, frm: arp, bss: stb, lvl: ela }
+  # B1AK1985
+  # p. 116
+  # - { id: 27xh, tit: Етюд A minor,
+  #     com: В. Мотов, src: B1AK1985,
+  #     org: rus, sty: cus, gnr: stu, ton: [ami, cmj], frm: arp, bss: stb, lvl: ela }
   # * Free bass
   # FBB1BZ1980
   - { id: ksld, tit: Етюд E minor,
