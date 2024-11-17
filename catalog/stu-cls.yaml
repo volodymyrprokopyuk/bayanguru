@@ -320,6 +320,15 @@ pieces:
   - { id: 27xh, tit: Етюд A minor,
       com: В. Мотов, src: B1AK1985,
       org: rus, sty: cus, gnr: stu, ton: [ami, cmj], frm: arp, bss: stb, lvl: ela }
+  # B2AK1979
+  # p. 103
+  # - { id: 40gw, tit: Етюд G major,
+  #     com: Л. Шітте, src: B2AK1979,
+  #     org: dnk, sty: cls, gnr: stu, ton: gmj, frm: scl, bss: stb, lvl: ela }
+  # p. 108
+  # - { id: 42o7, tit: Етюд D major,
+  #     com: К. Черні, src: B2AK1979,
+  #     org: aut, sty: cls, gnr: stu, ton: dmj, frm: [arb, brk], bss: stb, lvl: elb }
   # * Free bass
   # FBB1BZ1980
   - { id: ksld, tit: Етюд E minor,

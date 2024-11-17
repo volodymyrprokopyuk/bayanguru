@@ -34,7 +34,7 @@
   c=4 a@m! am4 | e eM! eM | a,=, am! am | a+am!2. |
 
   c=4 cM! cM | e c@M! cM4 | \rep 2 { b=,4 g@M! gM4 | g=, gM! gM | }
-  c=4 cM! cM | g c@M! cM4 | c cM! cM | e c@M! cM4 | d dM! dM |
+  c=4 cM! cM | g c@M! cM4 | c cM! cM | e c@M! cM4 | d dm! dm |
   f=4 d@m! dm4 | a, am! am | d dm! dm | e eM! eM | e= eM! eM |
 }
 {{ end }}
