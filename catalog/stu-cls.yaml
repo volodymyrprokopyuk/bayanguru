@@ -317,10 +317,9 @@ pieces:
       com: Г. Вольфарт, src: B1AK1979,
       org: deu, sty: cls, gnr: stu, ton: fmj, frm: arp, bss: stb, lvl: ela }
   # B1AK1985
-  # p. 116
-  # - { id: 27xh, tit: Етюд A minor,
-  #     com: В. Мотов, src: B1AK1985,
-  #     org: rus, sty: cus, gnr: stu, ton: [ami, cmj], frm: arp, bss: stb, lvl: ela }
+  - { id: 27xh, tit: Етюд A minor,
+      com: В. Мотов, src: B1AK1985,
+      org: rus, sty: cus, gnr: stu, ton: [ami, cmj], frm: arp, bss: stb, lvl: ela }
   # * Free bass
   # FBB1BZ1980
   - { id: ksld, tit: Етюд E minor,
