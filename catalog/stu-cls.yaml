@@ -313,10 +313,9 @@ pieces:
   - { id: zoab, tit: Етюд G major,
       com: Л. Шітте, src: B1AK1979,
       org: dnk, sty: cls, gnr: stu, ton: gmj, frm: [scl, arp], bss: stb, lvl: ela }
-  # p. 92
-  # - { id: k51l, tit: Етюд F major,
-  #     com: Г. Вольфарт, src: B1AK1979,
-  #     org: deu, sty: cls, gnr: stu, ton: fmj, frm: arp, bss: stb, lvl: ela }
+  - { id: k51l, tit: Етюд F major,
+      com: Г. Вольфарт, src: B1AK1979,
+      org: deu, sty: cls, gnr: stu, ton: fmj, frm: arp, bss: stb, lvl: ela }
   # B1AK1985
   # p. 116
   # - { id: 27xh, tit: Етюд A minor,
