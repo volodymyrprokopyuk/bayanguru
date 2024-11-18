@@ -327,7 +327,15 @@ pieces:
   # p. 108
   # - { id: 42o7, tit: Етюд D major,
   #     com: К. Черні, src: B2AK1979,
-  #     org: aut, sty: cls, gnr: stu, ton: dmj, frm: [arb, brk], bss: stb, lvl: elb }
+  #     org: aut, sty: cls, gnr: stu, ton: dmj, frm: [arp, brk], bss: stb, lvl: elb }
+  # p. 113
+  # - { id: skbs, tit: Етюд E minor,
+  #     com: Г. Тишкевич, src: B2AK1979,
+  #     org: rus, sty: cus, gnr: stu, ton: emi, frm: arp, bss: stb, lvl: elb }
+  # p. 123
+  # - { id: iunc, tit: Етюд G major,
+  #     com: О. Денисов, src: B2AK1979,
+  #     org: ukr, sty: cus, gnr: stu, ton: [gmj, bmi], frm: [scl, rep], bss: stb, lvl: elb }
   # * Free bass
   # FBB1BZ1980
   - { id: ksld, tit: Етюд E minor,

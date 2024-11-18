@@ -23,7 +23,7 @@
     c'='''4.(\p a8 | f4. ees8) | {{ template "rh1" }}
     ees='''4.(\p c8) | ees[( c a ees]) | {{ template "rh1" }}
     bes,=''4.(\p f8 | d'[ c bes a]) | c[(\< bes a \af 8\! g] |
-    fis=''8 g ees c) | f4 f, | f'(~ f16 ees c a) |
+    fis=''8[ g ees c]) | f4 f, | f'(~ f16 ees c a) |
     bes='8-.\> f16( d' bes8)-. f16( \af 16\! d' |
     bes='16 d f d bes='8) r |
   }
