@@ -324,10 +324,9 @@ pieces:
   - { id: 40gw, tit: Етюд G major,
       com: Л. Шітте, src: B2AK1979,
       org: dnk, sty: cls, gnr: stu, ton: gmj, frm: scl, bss: stb, lvl: ela }
-  # p. 108
-  # - { id: 42o7, tit: Етюд D major,
-  #     com: К. Черні, src: B2AK1979,
-  #     org: aut, sty: cls, gnr: stu, ton: dmj, frm: [arp, brk], bss: stb, lvl: elb }
+  - { id: 42o7, tit: Етюд D major,
+      com: К. Черні, src: B2AK1979,
+      org: aut, sty: cls, gnr: stu, ton: dmj, frm: [arp, brk], bss: stb, lvl: elb }
   # p. 113
   # - { id: skbs, tit: Етюд E minor,
   #     com: Г. Тишкевич, src: B2AK1979,
