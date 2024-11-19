@@ -34,6 +34,9 @@
     @apply inline-block mx-0.5 my-0.5 px-1 py-0.5
     rounded-md border border-neutral-400 bg-yellow-100
   }
+  .tag-value {
+    @apply font-medium
+  }
   .score {
     @apply w-full min-h-screen my-8 lg:w-[80%] lg:mx-[10%]
       shadow-[0_0_0.75rem_rgb(96,165,250)]

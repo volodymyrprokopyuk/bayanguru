@@ -403,14 +403,14 @@ tocSection = #(define-music-function
     {{ if .Meta }}
       \fill-line {
         \line {
-          \caps id: \concat { \fromproperty #'header:id "," }
-          \caps org: \concat { \fromproperty #'header:org "," }
-          \caps sty: \concat { \fromproperty #'header:sty "," }
-          \caps gnr: \concat { \fromproperty #'header:gnr "," }
-          \caps ton: \concat { \fromproperty #'header:ton "," }
-          \caps frm: \concat { \fromproperty #'header:frm "," }
-          \caps bss: \concat { \fromproperty #'header:bss "," }
-          \caps lvl: \fromproperty #'header:lvl
+          \caps id: \bold \concat { \fromproperty #'header:id "," }
+          \caps org: \bold \concat { \fromproperty #'header:org "," }
+          \caps sty: \bold \concat { \fromproperty #'header:sty "," }
+          \caps gnr: \bold \concat { \fromproperty #'header:gnr "," }
+          \caps ton: \bold \concat { \fromproperty #'header:ton "," }
+          \caps frm: \bold \concat { \fromproperty #'header:frm "," }
+          \caps bss: \bold \concat { \fromproperty #'header:bss "," }
+          \caps lvl: \bold \fromproperty #'header:lvl
         }
       }
       \vspace #0.2

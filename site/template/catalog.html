@@ -12,17 +12,31 @@
       <span class="text-lg italic">{{ .Com }} {{ .ArtUkr }} {{ .Arr }} {{ .Aut }}</span>
     </div>
     <div data-nosnippet>
-      <span class="tag">id: {{ .ID }}</span>
-      <span class="tag">org: {{ .Org }}</span>
-      <span class="tag">sty: {{ .Sty }}</span>
-      <span class="tag">gnr: {{ .Gnr }}</span>
-      <span class="tag">ton: {{ .Ton | join ` ` }}</span>
-      <span class="tag">frm: {{ .Frm | join ` ` }}</span>
-      <span class="tag">bss: {{ .Bss | join ` ` }}</span>
-      <span class="tag">lvl: {{ .Lvl }}</span>
-      {{ if ne .Ens "sol" }}<span class="tag">ens: {{ .Ens }}</span>{{ end }}
-      {{ if .Lyr }}<span class="tag">lyr: {{ .Lyr }}</span>{{ end }}
-      {{ if ne .Lcs "cpl" }}<span class="tag">lcs: {{ .Lcs }}</span>{{ end }}
+      <!-- <span class="tag">id: {{ .ID }}</span>
+           <span class="tag">org: {{ .Org }}</span>
+           <span class="tag">sty: {{ .Sty }}</span>
+           <span class="tag">gnr: {{ .Gnr }}</span>
+           <span class="tag">ton: {{ .Ton | join ` ` }}</span>
+           <span class="tag">frm: {{ .Frm | join ` ` }}</span>
+           <span class="tag">bss: {{ .Bss | join ` ` }}</span>
+           <span class="tag">lvl: {{ .Lvl }}</span> -->
+      <div class="tag">id: <span class="tag-value">{{ .ID }}</span></div>
+      <div class="tag">org: <span class="tag-value">{{ .Org }}</span></div>
+      <div class="tag">sty: <span class="tag-value">{{ .Sty }}</span></div>
+      <div class="tag">gnr: <span class="tag-value">{{ .Gnr }}</span></div>
+      <div class="tag">ton: <span class="tag-value">{{ .Ton | join ` ` }}</span></div>
+      <div class="tag">frm: <span class="tag-value">{{ .Frm | join ` ` }}</span></div>
+      <div class="tag">bss: <span class="tag-value">{{ .Bss | join ` ` }}</span></div>
+      <div class="tag">lvl: <span class="tag-value">{{ .Lvl }}</span></div>
+      {{ if ne .Ens "sol" }}
+        <div class="tag">ens: <span class="tag-value">{{ .Ens }}</span></div>
+      {{ end }}
+      {{ if .Lyr }}
+        <div class="tag">lyr: <span class="tag-value">{{ .Lyr }}</span></div>
+      {{ end }}
+      {{ if ne .Lcs "cpl" }}
+        <div class="tag">lcs: <span class="tag-value">{{ .Lcs }}</span></div>
+      {{ end }}
     </div>
   </div>
 {{ end }}
