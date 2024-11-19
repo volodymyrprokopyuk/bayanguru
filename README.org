@@ -20,8 +20,8 @@ yay -S pagefind
 # Validate the website HTML locally with html-validate
 bun install html-validate
 bunx html-validate --formatter codeframe site/public/index.html \
-  site/public/piece/Largo-c3bd/index.html \
-  site/public/catalog/level/elementary-a/1/index.html
+  site/public/piece/Largo-c3bd.html \
+  site/public/catalog/level/elementary-a/1.html
 # Serve the website locally with Caddy
 yay -S caddy
 caddy run --config site/Caddyfile

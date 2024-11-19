@@ -335,6 +335,10 @@ pieces:
   # - { id: iunc, tit: Етюд G major,
   #     com: О. Денисов, src: B2AK1979,
   #     org: ukr, sty: cus, gnr: stu, ton: [gmj, bmi], frm: [scl, rep], bss: stb, lvl: elb }
+  # p. 126
+  # - { id: 99n2, tit: Етюд A major,
+  #     com: Г. Тишкевич, src: B2AK1979,
+  #     org: rus, sty: cus, gnr: stu, ton: [amj, dmj], frm: [arp, brk], bss: stb, lvl: elb }
   # * Free bass
   # FBB1BZ1980
   - { id: ksld, tit: Етюд E minor,
