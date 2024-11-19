@@ -170,7 +170,7 @@ books:
         # B1AK1985
         27xh,
         # B2AK1979
-        42o7
+        42o7, skbs
       ] } ] }
   - { id: stu2, tit: Вибрані етюди, sub: для готового баяна,
       sections: [
