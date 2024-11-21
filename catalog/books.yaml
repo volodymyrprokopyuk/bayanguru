@@ -152,7 +152,9 @@ books:
         # B1AK1979
         5ufd, zoab,
         # B2AK1979
-        40gw, iunc
+        40gw, iunc,
+        # B2AK1987
+        mh2x
       ] },
       { tit: Арпеджіо, pieces: [ # Arpeggio
         # SB1NU1979
