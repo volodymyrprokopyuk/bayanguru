@@ -333,7 +333,7 @@ var (
   frmParts = []string{
     `^vo[23]|stb|pub|frb$`,
     `^mel|var$`,
-    `^scl|seq|arp|lng|srt|brk|in[3-8]|cr[57]$`,
+    `^scl|seq|cro|arp|lng|srt|brk|in[3-8]|cr[57]$`,
     `^tu[356]|dot|syn$`,
     `^rep|tre|acc|mor|gru|tri|gli|cad$`,
     `^fi1|fi5|jmp$`,

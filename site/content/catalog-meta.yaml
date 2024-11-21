@@ -81,6 +81,7 @@ meta:
           - { name: var, eng: Variations, ukr: Варіації }
           - { name: scl, eng: Scales, ukr: Гами }
           - { name: seq, eng: Sequences, ukr: Секвенції }
+          - { name: cro, eng: Chromatic, ukr: Хроматична }
           - { name: arp, eng: Arpeggio, ukr: Арпеджіо }
           - { name: lng, eng: Long arpeggio, ukr: Довге арпеджіо }
           - { name: srt, eng: Short arpeggio, ukr: Коротке арпеджіо }
