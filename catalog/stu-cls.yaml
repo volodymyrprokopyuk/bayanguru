@@ -340,10 +340,9 @@ pieces:
   - { id: mh2x, tit: Етюд G minor,
       com: М. Корецький, src: B2AK1987,
       org: ukr, sty: cus, gnr: stu, ton: gmi, frm: [scl, seq], bss: stb, lvl: elb }
-  # p. 115
-  # - { id: 5t75, tit: Етюд F major,
-  #     com: К. Черні, src: B2AK1987,
-  #     org: aut, sty: cls, gnr: stu, ton: fmj, frm: [scl, cro], bss: stb, lvl: elb }
+  - { id: 5t75, tit: Етюд F major,
+      com: К. Черні, src: B2AK1987,
+      org: aut, sty: cls, gnr: stu, ton: fmj, frm: [scl, cro], bss: stb, lvl: elb }
   # * Free bass
   # FBB1BZ1980
   - { id: ksld, tit: Етюд E minor,
