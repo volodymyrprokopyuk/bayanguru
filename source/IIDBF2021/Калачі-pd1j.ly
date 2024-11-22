@@ -8,7 +8,6 @@
   \rep 2 { a'='8 fis g e | d d d='4 | }
   e='4 e8 g | fis e d4 | e8 e a g | fis e d='4 \bar "|."
 }
-\noPageBreak
 {{ end }}
 
 {{ define "rightHand" }}

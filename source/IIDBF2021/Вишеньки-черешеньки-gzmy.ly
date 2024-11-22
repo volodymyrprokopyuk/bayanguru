@@ -15,7 +15,6 @@
     }
   }
 }
-\noPageBreak
 {{ end }}
 
 {{ define "rightHand" }}

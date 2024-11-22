@@ -497,6 +497,7 @@ tocSection = #(define-music-function
   {{ end }}
   {{ .Lyrics }}
 }
+\pageBreak
 {{ end }}
 {{ end }}
 

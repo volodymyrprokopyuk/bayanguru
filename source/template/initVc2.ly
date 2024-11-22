@@ -5,7 +5,6 @@
   \key _
   \time _
 }
-\noPageBreak
 {{ end }}
 
 {{ define "vocalTwo" }}
