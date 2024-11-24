@@ -242,3 +242,8 @@ pieces:
   - { id: 6g7e, tit: "Ах реченьки, реченьки", sub: rusfs,
       arr: В. Накапкин, src: FBBMS10N1977,
       org: rus, sty: flk, gnr: sng, ton: ami, frm: var, bss: [stb, frb], lvl: elb }
+  # FBBMS11P1977
+  # p. 6
+  # - { id: dgcf, tit: Канон,
+  #     arr: С. Майкапар, src: FBBMS11P1977,
+  #     org: rus, sty: cus, gnr: can, ton: gmi, frm: mel, bss: frb, lvl: elb }
