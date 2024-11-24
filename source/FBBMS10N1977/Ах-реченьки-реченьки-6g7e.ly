@@ -1,5 +1,9 @@
 {{ define "lh1" }}
-  r8 e@M!8 r8 eM r a@m! r8 am | r8 d@m!8 r8 e@7! %
+  r8 {{ .a }} r8 eM r a@m! r8 am | r8 d@m!8 r8 e@7! %
+{{ end }}
+
+{{ define "lh2" }}
+  {{ .a }} eM!] d e@M c8 a@m! a8 am | d[ dm!] e= e7! %
 {{ end }}
 
 {{ define "rightHand" }}
@@ -30,12 +34,18 @@
 \relative {
   \clef bass
   \key a \minor
-  \rep 4 { R1 | } | {{ template "lh1" }} r8 a@m![ f@M!8 a@m!8] |
-  {{ template "lh1" }} a@m!8[ d@m!8 a@m!8 g@7!8] |
+  \rep 4 { R1 | } |
+  {{ template "lh1" (w `e@M!8-\stBass`) }} r8 a@m![ f@M!8 a@m!8] |
+  {{ template "lh1" (w `e@M!8`) }} a@m!8[ d@m!8 a@m!8 g@7!8] |
 
   c@M!8[ cM8 cM cM] f@M!8[ d@m!8 f@M!8 d@m!8] |
   f@M!8[ g@7!8 f@M!8 g@7!8] c@M!8[ cM8 cM cM] |
   a@m!8[ am8 am am] d@m!8[ dm8 dm dm] |
   e@M![ eM8 e@7! e78] a@m![ am8 am am] |
+  {{ template "lh2" (w `e=8[`) }} a,=,8 am! am am |
+  {{ template "lh2" (w `e'=8[`) }} a,=,2 \clef treble |
+
+  e''='4(-\frBass c d f | e8 d c b a2) | c4( c d e8 f | e d c b a2) |
+  gis'='4( e a c~ | c8 b a gis a2) | gis4( e a b8 c | c b a gis a='2) \fermata |
 }
 {{ end }}
