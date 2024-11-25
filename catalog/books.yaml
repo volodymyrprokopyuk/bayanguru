@@ -92,7 +92,9 @@ books:
         # TYBCB21971
         vhri,
         # BSN1985
-        i349
+        i349,
+        # FBBMS11P1977
+        ltm8
       ] },
       { tit: Готово-виборний баян, pieces: [ # Free bass
         # FBB3BZ1982
