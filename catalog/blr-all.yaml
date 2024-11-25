@@ -56,6 +56,6 @@ pieces:
       arr: В. Платонов, src: FBBMS9P1976,
       org: blr, sty: flk, gnr: sng, ton: emi, frm: [vo2, var, in3, cr5], bss: [frb, stb], lvl: elb }
   # FBBMS11P1977
-  - { id: ltm8, tit: "Кума моя, кумонька",
+  - { id: ltm8, tit: "Кума моя, кумонька", sub: blrfs,
       arr: В. Платонов, src: FBBMS11P1977,
       org: blr, sty: flk, gnr: sng, ton: dmi, frm: [vo2, in3, cr5], bss: [frb, stb], lvl: elc }

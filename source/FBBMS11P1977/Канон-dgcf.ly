@@ -21,7 +21,7 @@
   a='8 bes c c d \af 8\! ees | ees4 a,8 c4 fis,8 | fis4 d8 d'=''4.\) |
 
   R2. | {{ template "rh1" (w `g,='8(\mf\<` `g='4 \af 8\! r8)`) }}
-  d'=''4.\p( g~ | g='') r4 r8 \fermata \bar "|."
+  d'=''4.(\p g~ | g='') r4 r8 \fermata \bar "|."
 }
 {{ end }}
 
