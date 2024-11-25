@@ -219,14 +219,14 @@ func publishIndex(tpl *template.Template, pc PublishCommand) error {
     return err
   }
   catalogGroups := []Link{
-    {URL: "/catalog/origin/ukrainian/1", Title: "By origin | За країною"},
-    {URL: "/catalog/style/folk/1", Title: "By style | За стилем"},
-    {URL: "/catalog/genre/song/1", Title: "By genre | За жанром"},
-    {URL: "/catalog/composer/composer/1", Title: "By compos. | За композ."},
+    {URL: "/catalog/origin/ukrainian/1", Title: "Origin | Країна"},
+    {URL: "/catalog/style/folk/1", Title: "Style | Стиль"},
+    {URL: "/catalog/genre/song/1", Title: "Genre | Жанр"},
+    {URL: "/catalog/composer/composer/1", Title: "Composer | Композитор"},
     {URL: "/catalog/study-stb/scale/1", Title: "Study stb | Етюди stb"},
     {URL: "/catalog/study-frb/scale/1", Title: "Study frb | Етюди frb"},
-    {URL: "/catalog/bass/standard-bass/1", Title: "By bass | За басом"},
-    {URL: "/catalog/level/elementary-c/1", Title: "By level | За складністю"},
+    {URL: "/catalog/bass/standard-bass/1", Title: "Bass | Бас"},
+    {URL: "/catalog/level/elementary-c/1", Title: "Level | Рівень"},
     // {URL: "/catalog/lyrics/lyrics/1", Title: "Lyrics | Пісні"},
   }
   indexData := struct {
