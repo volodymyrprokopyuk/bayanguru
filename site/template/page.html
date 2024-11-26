@@ -48,7 +48,7 @@
     <script src="/pagefind/pagefind-ui.js"></script>
     <script>
       const translations = {
-        placeholder: "Search pieces e.g. | Пошук п'єс пр. ukr flk sng ami vo2 frb elc",
+        placeholder: "Alt-L Search pieces e.g. | Пошук п'єс пр. ukr flk sng ami vo2 frb elc",
         searching: "Searching for | В процесі пошуку для [SEARCH_TERM]...",
         clear_search: "Clear | Очистити",
         zero_results: "Nothing found for | Нічого не знайдено для [SEARCH_TERM]",
@@ -56,7 +56,7 @@
         many_results: "[COUNT] pieces for | п'єс для [SEARCH_TERM]",
         load_more: "Show more pieces | Показати більше п'єс",
       }
-      window.addEventListener("DOMContentLoaded", (event) => {
+      window.addEventListener("DOMContentLoaded", event => {
         new PagefindUI({
           element: "#search",
           autofocus: false,
@@ -67,6 +67,12 @@
           translations
         })
       })
+     document.onkeyup = event => {
+       if (event.code === "KeyL" && event.altKey) {
+         document.getElementById("search")
+            .getElementsByClassName("pagefind-ui__search-input")[0].focus();
+       }
+     }
     </script>
   </body>
 </html>
