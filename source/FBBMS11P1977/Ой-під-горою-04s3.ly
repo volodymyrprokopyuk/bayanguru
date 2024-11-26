@@ -24,7 +24,7 @@
   } {
     s4 b'='4 a | g2 a4 | g fis f | e a8 g fis4 | <g b> s2 |
     b,=8 d g4 fis | g2 f4 | e g d'8 c | b4 g8 e d4 |
-    c='4 d dis | d2 e4 | cis b b | b dis8 e fis g |
+    c='4 e dis | d2 e4 | cis b b | b dis8 e fis g |
     e='4 g fis | d fis f=' | s2. |
   }
   <b,= g'>2-- <b= d g>4-- \bar "|."
