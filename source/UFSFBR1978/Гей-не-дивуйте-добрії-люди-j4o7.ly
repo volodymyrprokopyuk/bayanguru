@@ -19,5 +19,11 @@
 \relative {
   \clef bass
   \key d \minor
+  d+dm!4-\stBass r | r a+am! | d+dm!4 r | r a+am! |
+  d+dm!4 r | r f+d@m! | r4 e+d7! | a+am! c+c7!-> |
+  f+fM!4-> f+fM | f+fM! bes+besM! | f+fM! f+fM | c+cM! cis |
+  d+dm! f+d@m! | g+gm!4 e+g@m! | r4 a+a7! | d+dm! c+c7!-> |
+  f,=,8[ fM! fM fM] | f fM! bes besM! | f[ fM! fM fM] | c' cM! cis a@7! |
+  d=8 dm! f, d@m! | e=,8[ g@m! gm8 gm] | r4 a+a7! | d+dm! r |
 }
 {{ end }}
