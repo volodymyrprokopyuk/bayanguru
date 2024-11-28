@@ -78,3 +78,11 @@ pieces:
   - { id: s77j, tit: Етюд A minor,
       com: А. Гедике, src: FBBMS9P1976,
       org: rus, sty: cus, gnr: stu, ton: ami, frm: [scl, seq], bss: [frb, scl, in6], lvl: elb }
+  # FBBMS11P1977
+  - { id: x9n6, tit: Етюд D minor,
+      com: А. Шусер, src: FBBMS11P1977,
+      org: rus, sty: cus, gnr: stu, ton: dmi, frm: [arp, brk], bss: [frb, scl, in3, cr5], lvl: elb }
+  # p. 34
+  # - { id: ej0o, tit: Етюд C major,
+  #     com: К. Черні, src: FBBMS11P1977,
+  #     org: aut, sty: cls, gnr: stu, ton: cmj, frm: [in3, in4, in6, cr5], bss: [frb, scl, seq, arp], lvl: elb }
