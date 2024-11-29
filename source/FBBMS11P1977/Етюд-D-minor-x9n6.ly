@@ -7,6 +7,11 @@
   {{ .a }} f a | g a cis, a'=' |
 {{ end }}
 
+{{ define "lh1" }}
+  {{ .a }} | <d f a> <d g bes> | <d f a>4 <c=' e> \clef bass |
+  <bes= d>4 <a cis> | \rep 2 { <f= a>4 d' | cis a= | }
+{{ end }}
+
 {{ define "rightHand" }}
 \relative {
   \tempo Allegro
@@ -39,12 +44,22 @@
   \clef treble
   \key d \minor
   \meter 1/2 #'(1)
-  <d'=' f a>4-\frBass <d g bes>_\aSta | <d f a> <d g bes> |
-  <d=' f a>4 <c=' e> \clef bass | <bes= d> <a cis> |
-  \rep 2 { <f= a>4 d' | cis a= | } \rep 2 { d='4 a | e' a,= | } \clef treble |
+  {{ template "lh1" (w `<d'=' f a>4-\frBass <d g bes>_\aSta`) }}
+  \rep 2 { d='4 a | e' a,= | } \clef treble |
 
   bes=8_\aLeg cis d e | f g a bes | \rep 3 { cis=''8 d e d='' | }
   cis=''8 bes a g | a bes cis bes | a g f e |
-  \rep 2 { <a,= cis>4.-- 8-. | <bes= d>4.-- 8-. | }
+  \rep 2 { <bes= d>4.-- 8-. | <a= cis>4.-- 8-. | }
+  <bes= d>4_\aSta <cis e> | <d f> <e g> | <f a> <g bes> |
+  <a=' cis>4 <bes d> | <cis e> <bes d> | <a cis> <g bes> |
+  <f=' a>4 <e g> | <d f> <cis e> | <d f>4.-- 8-. |
+  <e=' g>4.-- 8-. | <d f>4.-- 8-. | <cis=' e>4.-- 8-. |
+
+  {{ template "lh1" (w `<d=' f a>4_\aSta <d g bes>`) }}
+  \rep 2 { <d,= f a>4 <d= g bes> | } | <d f a> <c e> |
+  <bes=, d>4 <a cis> | \rep 2 { <f=, a>4 d' | cis a=, | }
+  d,=,8[-> r r a'] | d[ r r a'=] \clef treble |
+  d='8[ r r a'] | d[ r r a] | d='' r r4 \clef bass |
+  a,,=,8 r r4 | d,=,8 r r4 |
 }
 {{ end }}
