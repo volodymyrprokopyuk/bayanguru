@@ -17,6 +17,7 @@
   {{ template "rh1" (w `d''=''8->\f cis_\aLeg`) }}
   {{ template "rh2" (w `r8\p a'='8`) }}
   {{ template "rh2" (w `r8 a='8`) }}
+
   d,='8\< e f g | a bes cis \af 8\! d | e\mf f g f |
   \rep 2 { e=''8 f g f='' | } | e d cis bes | cis d e d |
   cis=''8 bes a g | \rep 2 { f='8 g f g | e f e a=' | }
@@ -35,7 +36,15 @@
 
 {{ define "leftHand" }}
 \relative {
-  \clef bass
+  \clef treble
   \key d \minor
+  \meter 1/2 #'(1)
+  <d'=' f a>4-\frBass <d g bes>_\aSta | <d f a> <d g bes> |
+  <d=' f a>4 <c=' e> \clef bass | <bes= d> <a cis> |
+  \rep 2 { <f= a>4 d' | cis a= | } \rep 2 { d='4 a | e' a,= | } \clef treble |
+
+  bes=8_\aLeg cis d e | f g a bes | \rep 3 { cis=''8 d e d='' | }
+  cis=''8 bes a g | a bes cis bes | a g f e |
+  \rep 2 { <a,= cis>4.-- 8-. | <bes= d>4.-- 8-. | }
 }
 {{ end }}
