@@ -224,7 +224,7 @@ pieces:
       org: rus, sty: cus, gnr: dnc, ton: emi, frm: rep, bss: [frb, in3, in5], lvl: elb }
   - { id: 3kj1, tit: Как у нас на улице, sub: rusfs,
       arr: В. Накапкин, src: FBBMS8N1976,
-      org: rus, sty: flk, gnr: sng, ton: [cmj, cmi], frm: [var, in3, cr5], bss: [frb, stb], lvl: elb }
+      org: rus, sty: flk, gnr: sng, ton: [cmj, cmi], frm: [var, in3, cr5, syn], bss: [frb, stb], lvl: elb }
   - { id: ufhc, tit: "Ах во саду, саду", sub: rusfs,
       arr: В. Накапкин, src: FBBMS8N1976,
       org: rus, sty: flk, gnr: sng, ton: [cmj, cmi], frm: [var, cr5], bss: [stb, pub, frb, syn], lvl: elb }
@@ -241,7 +241,7 @@ pieces:
       org: rus, sty: flk, gnr: sng, ton: emi, frm: vo2, bss: [vo2, frb], lvl: elb }
   - { id: 6g7e, tit: "Ах реченьки, реченьки", sub: rusfs,
       arr: В. Накапкин, src: FBBMS10N1977,
-      org: rus, sty: flk, gnr: sng, ton: ami, frm: var, bss: [stb, frb], lvl: elb }
+      org: rus, sty: flk, gnr: sng, ton: ami, frm: [var, jmp], bss: [stb, frb, syn], lvl: elb }
   # FBBMS11P1977
   - { id: dgcf, tit: Канон,
       arr: С. Майкапар, src: FBBMS11P1977,

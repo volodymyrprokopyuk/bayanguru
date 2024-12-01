@@ -9,10 +9,24 @@
   \clef treble
   \key c \major
   \time 2/4
+  \meter 1/2 #'(1)
   \af 2\! <e'=' c'>2\mf\> |
   \duo { <e'=' c'>4(\p 4 | c'-> b='8) } { s2 | f'='4~ f='8 } r8 |
   \duo { <f'=' d'>4(_\dCre 4 | d'->\< \af 8\! c=''8) } { s2 | g'='4~ g='8 } r8 |
   \duo { <g'=' e'>4( 4 | e'-> d=''8) } { s2 | a'='4~ a='8 } r8 |
+  <d'='' f>4( 4 | 4->\f <c e>8) r8 | <b d> r <c e> r | <d f>4(\sf <c e>8) r |
+  <b=' d>8 r <c e> 4 | <a c fis>2 | 4(\f 4 | <b=' d g>) r_ \dDim | R2 |
+
+  <d='' b'>4( 4 | 4-> <c a'>_\dCre | <b g'>8) r %
+  \duo {
+    \stemDown <b''='' d>4( | 4-> <a='' c> \stemUp |
+    \ottava #1 b=''8\f c d e | f=''') %
+  } { s4 | s2 | g''=''2~ | g=''8 } <e'=''' a>8\( <d g> <c f> |
+  <b='' e>8 <a d> <g c> <f='' b> \ottava #0 | <e='' a> <d g> <c f> <b e> |
+  <a=' d>8 <g c> <f b> <e a> | <d g>4\) <d f>( |
+  <c=' e>4) <e c'>( <d a' d> <d f g b> | <e g c>) <f a c>( |
+  <e=' g c>4) <f a c>( | <e g c>2) | <e g c e>4-.\ff <g c e g>-. |
+  <c='' e g c>4-. r \fermata \bar "|."
 }
 {{ end }}
 
