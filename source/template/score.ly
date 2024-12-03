@@ -114,7 +114,8 @@ meter = #(define-music-function (scope moment beat)
   ((symbol? 'Staff) fraction? list?)
   #{
     \set #scope .beamExceptions = #'()
-    \set #scope .baseMoment = #(ly:make-moment (/ (car moment) (cdr moment)))
+    % \set #scope .baseMoment = #(ly:make-moment (/ (car moment) (cdr moment)))
+    \set #scope .beatBase = #(/ (car moment) (cdr moment))
     \set #scope .beatStructure = #beat
   #}
 )

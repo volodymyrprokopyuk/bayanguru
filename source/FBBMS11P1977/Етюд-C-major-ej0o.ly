@@ -37,11 +37,35 @@
   \set subdivideBeams = ##t
   \omit TupletBracket
   {{ template "t1" (split `c=16-\frBass e f ; g a b ; c d c ; b c b`) }}
-  {{ template "t1" (split `a=16 c a ; g a g ; f g f ; e f e`) }}
-  {{ template "t1" (split `d=16 f e ; a b c ; d e d ; c d c`) }}
+  {{ template "t1" (split `a=16 b a ; g a g ; f g f ; e f e`) }}
+  \omit TupletNumber
+  {{ template "t1" (split `d=16 f g ; a b c ; d e d ; c d c`) }}
   {{ template "t1" (split `b=16 c b ; a b a ; g a g ; f g f`) }}
-  {{ template "t1" (split `e=16 g a ; b c d ; e g e ; d e d`) }}
+  {{ template "t1" (split `e=16 g a ; b c d ; e f e ; d e d`) }}
   {{ template "t1" (split `c='16 d c ; b c b ; a b a ; g a g`) }}
   {{ template "t1" (split `f=16 a b ; c d e=' ; \clef treble f=' g f ; e f e`) }}
+  {{ template "t1" (split `d='16 e d ; c d c=' ; \clef bass b= c b ; a b a`) }}
+  \rep 2 {
+    {{ template "t1" (split `g=16 b c ; d c b ; g c d ; e d c`) }}
+    {{ template "t1" (split `g=16 d' e ; f e d ; g, c d ; e d c`) }}
+  }
+  \rep 2 { {{ template "t1" (split `g=16 c d ; ees d c ; g c d ; ees d c='`) }} | }
+  {{ template "t1" (split `g=16 b c ; d c b ; g b ais ; b ais b=`) }}
+
+  {{ template "t1" (split `d,=16 g fis ; g fis g ; b, d cis ; d cis d`) }}
+  {{ template "t1" (split `g,=,16 fis g ; a g a ; b a b ; c b c`) }}
+  {{ template "t1" (split `d=16 cis d ; e d e ; fis e fis ; d e fis`) }}
+  {{ template "t1" (split `g=16 fis g ; a g a ; b a b ; c b c=' \clef treble`) }}
+  {{ template "t1" (split `d='16 cis d ; e d e ; fis e fis ; d e fis`) }}
+  {{ template "t1" (split `g='16 fis g ; a g a ; b a b ; cis b cis`) }}
+  {{ template "t1" (split `d=''16 e d ; c d c ; b c b ; a b a`) }}
+  {{ template "t1" (split `g='16 a g ; f g f ; e f e ; d e d=' \clef bass`) }}
+  {{ template "t1" (split `c='16 d c ; b c b ; a b a ; g a g`) }}
+  {{ template "t1" (split `f=16 g f ; e f e ; d e d ; c d c`) }}
+  {{ template "t1" (split `b=,16 d c ; b c d ; g, b a ; g a b`) }}
+  {{ template "t1" (split `c=16 e d ; c d e ; a, c b ; a b c`) }}
+  {{ template "t1" (split `f,=,16 a g ; f e f ; g a g ; f e d`) }}
+  \rep 2 { {{ template "t1" (split `c=,16 e g ; c e g ; c a f ; c a f=,`) }} | }
+  c=,2 | <c c'>4-. <c' e g c>-. | <c,=, c'>-. r \fermata |
 }
 {{ end }}
