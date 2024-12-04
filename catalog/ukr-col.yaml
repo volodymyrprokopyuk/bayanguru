@@ -8,3 +8,6 @@ pieces:
   - { id: lfc5, tit: Ой на горі та женці жнуть, sub: ukrfs,
       arr: М. Різоль, src: UFSFBR1978,
       org: ukr, sty: flk, gnr: sng, ton: dmi, frm: in3, bss: stb, lvl: elb }
+  - { id: 3g03, tit: Засвіт встали козаченьки, sub: ukrfs,
+      arr: М. Різоль, src: UFSFBR1978,
+      org: ukr, sty: flk, gnr: sng, ton: gmi, frm: [in3, in8, cr5], bss: [stb, pub, var], lvl: elc }
