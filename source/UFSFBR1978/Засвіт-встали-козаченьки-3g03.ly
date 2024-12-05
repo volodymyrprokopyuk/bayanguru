@@ -1,3 +1,8 @@
+{{ define "lh1" }}
+  d=4 e,8 fis g f ees4 {{ .a }} | d'=4. c8 %
+  \duo { r8 g@m! r8 d7! | } { d=4 d= | }
+{{ end }}
+
 {{ define "rightHand" }}
 \relative {
   \tempo Moderato
@@ -53,13 +58,15 @@
   g=,8 gm! ees' eesM! ees eesM d c | b g@7! g8 g7 c cm! c cm |
   bes=,8 besM! bes besM bes besM ees eesM! |
   bes=,8 besM!16 besM besM8 besM16 besM bes8-> c-> d4-> |
-  g,=,8 gm! g gm g gm c cm! | d4 e,8 fis g f ees4 |
-  d'=4. c8 \duo { r8 g@m! r8 d7! | } { d=4 d= | }
+  g,=,8 gm! g gm g gm c cm! | {{ template "lh1" (w ``) }}
   \rep 2 { \duo { r8 gm!16 gm gm8[ gm16 gm] gm8 } { g,=,2~ g=,8 } r8 r4 | }
 
   \meter 1/2 1,1
   r2 ees=4 d8 c | b a g4 c8 g c4 | bes8 a bes f bes a g ees' |
   bes=,8 a bes c d ees, e fis | g c bes a g f g a |
   bes=,8 c cis d ees d c bes | a c g a bes c d4 | g,8 f' ees d c r f= r |
+  \duo { r8 besM! r bes@M! r8 gm! r cm! | } { bes,=,4 a g c= | }
+  {{ template "lh1" (w ` \fermata`) }} |
+  g=,8 gm!16 gm gm8[ gm16 gm] g+gm8 r r4 |
 }
 {{ end }}
