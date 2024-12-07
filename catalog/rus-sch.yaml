@@ -247,7 +247,6 @@ pieces:
       arr: С. Майкапар, src: FBBMS11P1977,
       org: rus, sty: cus, gnr: can, ton: gmi, frm: mel, bss: frb, lvl: elb }
   # FBBMS12N1978
-  # p. 12
-  # - { id: 8tgp, tit: Веселая прогулка,
-  #     com: В. Накапкин, src: FBBMS12N1978,
-  #     org: rus, sty: cus, gnr: pie, ton: [dmj, gmj], frm: [in3, in4, in5], bss: [stb, frb, in3, in5], lvl: elc }
+  - { id: 8tgp, tit: Веселая прогулка,
+      com: В. Накапкин, src: FBBMS12N1978,
+      org: rus, sty: cus, gnr: pie, ton: [dmj, gmj], frm: [in3, in4, in5], bss: [stb, frb, in3, in5], lvl: elc }
