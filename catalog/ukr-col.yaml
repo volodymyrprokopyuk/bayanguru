@@ -11,3 +11,7 @@ pieces:
   - { id: 3g03, tit: Засвіт встали козаченьки, sub: ukrfs,
       arr: М. Різоль, src: UFSFBR1978,
       org: ukr, sty: flk, gnr: sng, ton: gmi, frm: [in3, in8, cr5], bss: [stb, pub, var], lvl: elc }
+  # p. 6
+  # - { id: nc73, tit: "Ой п'є Байда", sub: ukrfs,
+  #     arr: М. Різоль, src: UFSFBR1978,
+  #     org: ukr, sty: flk, gnr: sng, ton: dmi, frm: [in3, cr5, dot], bss: [stb, pub], lvl: elc }
