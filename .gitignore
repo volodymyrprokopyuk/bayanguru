@@ -1,9 +1,10 @@
 bayanguru
-pagefind
-piece/*.pdf
-book/*.pdf
-site/public/
+piece/
+book/
 .played
+site/public/
 package.json
 bun.lockb
+node_modules/
 .wrangler/
+pagefind
