@@ -43,6 +43,7 @@ Piece ID generation
 
 #+BEGIN_SRC fish
 tr -dc a-z0-9 </dev/urandom | head -c 4
+open /dev/urandom | tr -dc a-z0-9 | head -c 4
 #+END_SRC
 
 ** License
