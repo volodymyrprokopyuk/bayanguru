@@ -250,10 +250,9 @@ pieces:
   - { id: 8tgp, tit: Веселая прогулка,
       com: В. Накапкин, src: FBBMS12N1978,
       org: rus, sty: cus, gnr: pie, ton: [dmj, gmj], frm: [in3, in4, in5], bss: [stb, frb, in3, in5], lvl: elc }
-  # p. 17
-  # - { id: dod3, tit: Вальс,
-  #     com: В. Накапкин, src: FBBMS12N1978,
-  #     org: rus, sty: cus, gnr: vls, ton: amj, frm: cr5, bss: [vo2, frb], lvl: elb }
+  - { id: dod3, tit: Вальс,
+      com: В. Накапкин, src: FBBMS12N1978,
+      org: rus, sty: cus, gnr: vls, ton: amj, frm: cr5, bss: [vo2, frb], lvl: elb }
   # p. 20
   # - { id: rla9, tit: Танец двух зверюшек,
   #     com: В. Ефимов, src: FBBMS12N1978,
