@@ -1,4 +1,0 @@
-site: public
-glob: piece/*.html
-root_selector: main
-verbose: true

@@ -342,21 +342,12 @@ func indexPieces(siteDir, publicDir string) error {
   if err != nil {
     return err
   }
-  cwd, err := os.Getwd()
-  if err != nil {
-    return err
-  }
-  err = os.Chdir(siteDir)
-  if err != nil {
-    return err
-  }
-  defer func() {
-    _ = os.Chdir(cwd)
-  }()
-  pfFile := filepath.Join(cwd, "pagefind")
-  pfCmd := exec.Command(pfFile)
-  // pfCmd.Stdout = os.Stdout
-  // pfCmd.Stderr = os.Stderr
+  pfCmd := exec.Command(
+    "./pagefind", "--quiet", "--site", publicDir, "--glob", "piece/*.html",
+    "--root-selector", "main", "--output-path", pfDir,
+  )
+  pfCmd.Stdout = os.Stdout
+  pfCmd.Stderr = os.Stderr
   return pfCmd.Run()
 }
 
