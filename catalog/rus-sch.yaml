@@ -253,10 +253,9 @@ pieces:
   - { id: dod3, tit: Вальс,
       com: В. Накапкин, src: FBBMS12N1978,
       org: rus, sty: cus, gnr: vls, ton: amj, frm: cr5, bss: [vo2, frb], lvl: elb }
-  # p. 20
-  # - { id: rla9, tit: Танец двух зверюшек,
-  #     com: В. Ефимов, src: FBBMS12N1978,
-  #     org: rus, sty: cus, gnr: dnc, ton: amj, frm: cr5, bss: [frb, in4, in5], lvl: elb }
+  - { id: rla9, tit: Танец двух зверюшек,
+      com: В. Ефимов, src: FBBMS12N1978,
+      org: rus, sty: cus, gnr: dnc, ton: amj, frm: cr5, bss: [frb, in4, in5], lvl: elb }
   # FBBMS13P1978
   # p. 7
   # - { id: bqfe, tit: Полифоническая пьеса,
