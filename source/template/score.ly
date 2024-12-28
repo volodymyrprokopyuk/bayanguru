@@ -356,6 +356,13 @@ markupInsideSlur = {
     }
   #}
 ))
+#(define-markup-command (lyrRep layout props lyr n)
+  (markup? markup?)
+  (interpret-markup layout props
+  #{
+    \markup { \line { #lyr \hspace #3 \italic \concat { (#n) } } }
+  #}
+))
 
 % TOC
 tocSection = #(define-music-function
