@@ -120,3 +120,8 @@ pieces:
   - { id: 04s3, tit: Ой під горою, sub: ukrfs,
       arr: В. Платонов, src: FBBMS11P1977,
       org: ukr, sty: flk, gnr: sng, ton: gmj, frm: [vo2, var, in3, in6], bss: [frb, stb, pub], lvl: elc }
+  # FBBMS13P1978
+  # p. 6
+  # - { id: w4q9, tit: Пісня,
+  #     com: Ю. Щуровський, src: FBBMS13P1978,
+  #     org: ukr, sty: cus, gnr: sng, ton: emi, frm: dot, bss: frb, lvl: elb }
