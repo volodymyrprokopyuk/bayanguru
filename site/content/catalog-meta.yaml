@@ -57,6 +57,7 @@ meta:
           - { name: plk, eng: Polka, ukr: Полька }
           - { name: mzr, eng: Mazurka, ukr: Мазурка }
           - { name: qdr, eng: Quadrille, ukr: Кадриль }
+          - { name: men, eng: Menuet, ukr: Менует }
           - { name: koz, eng: Kozachok, ukr: Козачок }
           - { name: gop, eng: Gopak, ukr: Гопак }
           - { name: vls, eng: Valse, ukr: Вальс }
