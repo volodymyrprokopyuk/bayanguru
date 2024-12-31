@@ -265,3 +265,7 @@ pieces:
   # - { id: iuku, tit: Менуэт,
   #     com: А. Копылов, src: FBBMS13P1978,
   #     org: rus, sty: cus, gnr: men, ton: gmj, frm: vo2, bss: frb, lvl: elb }
+  # p. 8
+  # - { id: eju2, tit: Танец куклы,
+  #     com: В. Ефимов, src: FBBMS13P1978,
+  #     org: rus, sty: cus, gnr: dnc, ton: [dmj, fismi], frm: mel, bss: [frb, in3, in5], lvl: elb }
