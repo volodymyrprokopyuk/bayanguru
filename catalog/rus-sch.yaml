@@ -257,10 +257,9 @@ pieces:
       com: В. Ефимов, src: FBBMS12N1978,
       org: rus, sty: cus, gnr: dnc, ton: amj, frm: cr5, bss: [frb, in4, in5], lvl: elb }
   # FBBMS13P1978
-  # p. 7
-  # - { id: bqfe, tit: Полифоническая пьеса,
-  #     com: А. Черных, src: FBBMS13P1978,
-  #     org: rus, sty: cus, gnr: pie, ton: ami, frm: vo2, bss: [vo2, frb, in5], lvl: elb }
+  - { id: bqfe, tit: Полифоническая пьеса,
+      com: А. Черных, src: FBBMS13P1978,
+      org: rus, sty: cus, gnr: pie, ton: ami, frm: vo2, bss: [vo2, frb, in5], lvl: elb }
   # p. 7
   # - { id: iuku, tit: Менуэт,
   #     com: А. Копылов, src: FBBMS13P1978,

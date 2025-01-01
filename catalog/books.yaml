@@ -312,7 +312,9 @@ books:
         # FBBMS11P1977
         dgcf,
         # FBBMS12N1978
-        8tgp, dod3, rla9
+        8tgp, dod3, rla9,
+        # FBBMS13P1978
+        bqfe
       ] }
   - { id: sfr1, tit: Вибрані етюди, sub: для готово-виборного баяна,
       sections: [
