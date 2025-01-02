@@ -30,5 +30,10 @@
   \key a \minor
   R1 | a'='8(-\frBass g f e d4 c) | f2 e4( a,) | d2 e8( f e d) |
   c='2 cis | d2 g8( f e d) | e4( a,) f'2 | e2( a,=) |
+
+  f'='8( e d c) <bes= d>2 \clef bass | <a= c>2 %
+  \duo { bes=2 | a f~ | f4 aes~ aes2 | g2 ees( | d cis=) | }
+  { g=4( c,) | d4( c) bes2 | b bes | ees aes,~ | aes=,1 | }
+  <g,=, d'>2 r2 | <e b'> <e'= b'> |
 }
 {{ end }}
