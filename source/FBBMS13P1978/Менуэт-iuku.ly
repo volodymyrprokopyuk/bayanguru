@@ -8,6 +8,11 @@
   d='4 d8~-> | d4 d8[~-> | d] r4 | r4 \rep 2 { g='8~-> | g='4 } %
 {{ end }}
 
+{{ define "lh1" }}
+  {{ .a }} r r | <fis c'>-. r r | g-. g16[-. fis-. g-. a]-. |
+  b=4 c8[(-> | a)-. a]-. b[(-> | g)-. g=]-. %
+{{ end }}
+
 {{ define "rightHand" }}
 \relative {
   \tempo Allegretto
@@ -48,5 +53,15 @@
 \relative {
   \clef bass
   \key g \major
+  \partial 8 { r8 | }
+  {{ template "lh1" (w `b=8-.-\frBass`) }} a=8[(-> |
+  fis=8])-. fis16-. g-. fis-. e-. | d=4 r8 |
+  {{ template "lh1" (w `b'=8-.`) }} e'='8[(-> |
+  d='8 b])-. <d, c'>( | <g= b>4) r8 |
+
+  fis=8-. fis16[-. e-. fis-. g]-. | a4 r8 |
+  g=8-. g16[-. fis-. g-. a]-. | b4 r8 |
+  e='8-. e-. c-. | b4 r8 | c8-. c-. a-. | g4 r8 |
+  a=4 r8 | b4 r8 | c4 c8 | b=4 \fermata %
 }
 {{ end }}
