@@ -39,7 +39,7 @@
   <d=' fis>8 a a | <d fis> b b | <e gis> e, <d' gis> | <cis a'> fis e |
   <e=' gis>8 a, <ees' g> | <d=' fis>4 r8 \clef bass |
 
-  <fis,= cis'>4 8[~ | 8] 4 | gis16( a gis8) fis16( a | g8) eis-. cis-. |
+  <fis,= cis'>4 8[~ | 8] 4 | gis16( a gis8) fis16( a | gis8) eis-. cis-. |
   <d= a'>4 8[~ | 8] 4 | <e b'>4. | <e d'> | <e b'>4 <e d'>8 | <fis= cis'>4. |
 }
 {{ end }}
