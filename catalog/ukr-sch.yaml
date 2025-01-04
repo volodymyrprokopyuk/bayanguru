@@ -124,7 +124,6 @@ pieces:
   - { id: w4q9, tit: Пісня,
       com: Ю. Щуровський, src: FBBMS13P1978,
       org: ukr, sty: cus, gnr: sng, ton: emi, frm: dot, bss: frb, lvl: elb }
-  # p. 10
-  # - { id: u4zt, tit: Заїнько,
-  #     com: В. Барвінський, src: FBBMS13P1978,
-  #     org: ukr, sty: cus, gnr: chd, ton: gmj, frm: [in3, dot], bss: [frb, in3], lvl: elb }
+  - { id: u4zt, tit: Заїнько,
+      com: В. Барвінський, src: FBBMS13P1978,
+      org: ukr, sty: cus, gnr: chd, ton: gmj, frm: [in3, dot], bss: [frb, in3], lvl: elb }
