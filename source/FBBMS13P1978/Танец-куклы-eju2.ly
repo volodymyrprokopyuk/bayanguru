@@ -33,7 +33,13 @@
 
 {{ define "leftHand" }}
 \relative {
-  \clef bass
+  \clef treble
   \key d \major
+  <d'=' fis>8-\frBass a a | <d fis> a a | <ees' g> a, a | <e' gis> a, <cis g'> |
+  <d=' fis>8 a a | <d fis> b b | <e gis> e, <d' gis> | <cis a'> fis e |
+  <e=' gis>8 a, <ees' g> | <d=' fis>4 r8 \clef bass |
+
+  <fis,= cis'>4 8[~ | 8] 4 | gis16( a gis8) fis16( a | g8) eis-. cis-. |
+  <d= a'>4 8[~ | 8] 4 | <e b'>4. | <e d'> | <e b'>4 <e d'>8 | <fis= cis'>4. |
 }
 {{ end }}
