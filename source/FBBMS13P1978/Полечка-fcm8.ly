@@ -38,5 +38,16 @@
 \relative {
   \clef treble
   \key ees \major
+  R2 | bes'='16(-\frBass c bes8) g-. ees-. | R2 | f16( g aes c bes='4) |
+
+  r8 <ees,=' g>8[ bes c] | r <d fis>[ c d] | aes f' aes, f' |
+  g,=8 ees' d bes= \clef bass | <g= bes>8 <f bes> <ees= bes'>4 |
+
+  c=8 g' aes4-- | g8 f' <c ees>4 | <fis, d'>8 d <g d'> d |
+  <fis= d'>8 d g16( f ees d) | <fis d'>8 d <g d'> f' |
+  <c=' ees>8 aes <c,= g'>4 |
+
+  ees=8 <ees' g> bes c | ees, <d' f> c d | <ees, aes> bes' d bes |
+  <ees,= g>8 bes' d bes | <g bes> <f bes> <ees= bes'>4 |
 }
 {{ end }}
