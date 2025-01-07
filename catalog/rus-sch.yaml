@@ -269,10 +269,9 @@ pieces:
   - { id: fcm8, tit: Полечка,
       com: Ф. Бушуев, src: FBBMS13P1978,
       org: rus, sty: cus, gnr: plk, ton: eesmj, frm: in3, bss: [frb, in3, in6, jmp], lvl: elb }
-  # p. 17
-  # - { id: 0ngj, tit: Со вьюном я хожу, sub: rusfs,
-  #     arr: А. Гречанинов, src: FBBMS13P1978,
-  #     org: rus, sty: flk, gnr: sng, ton: fmj, frm: [vo2, in3], bss: [vo2, frb, jmp], lvl: elb }
+  - { id: 0ngj, tit: Со вьюном я хожу, sub: rusfs,
+      arr: А. Гречанинов, src: FBBMS13P1978,
+      org: rus, sty: flk, gnr: sng, ton: fmj, frm: [vo2, in3], bss: [vo2, frb, jmp], lvl: elb }
   # p. 17
   # - { id: hm6a, tit: Я пойду во Китай-город гуляти, sub: rusfs,
   #     arr: В. Платонов, src: FBBMS13P1978,
