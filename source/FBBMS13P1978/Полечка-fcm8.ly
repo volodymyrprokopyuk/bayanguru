@@ -25,7 +25,7 @@
     <ees'='' g>8\f 16( <d fis>) <des f>8 16( <c e>) |
     \duo { ees''=''8 ees16( d) c8( g'='') | } { b'='8 b c=''4 | }
     \alternative {
-      \volta 1 { a='16( b c8) b16( c d8) | c16( d ees fis) <b,=' g'>4 | }
+      \volta 1 { a='16( b c8) b16( c d8) | c16( d e fis) <b,=' g'>4 | }
       \volta 2 { a='16( b c8) b16( c d ees) | c( d c b c=''4) | }
     }
   }
@@ -47,7 +47,7 @@
   <fis= d'>8 d g16( f ees d) | <fis d'>8 d <g d'> f' |
   <c=' ees>8 aes <c,= g'>4 |
 
-  ees=8 <ees' g> bes c | ees, <d' f> c d | <ees, aes> bes' d bes |
+  ees=8 <ees' g> bes c | ees, <d' fis> c d | <ees, aes> bes' d bes |
   <ees,= g>8 bes' d bes | <g bes> <f bes> <ees= bes'>4 |
 }
 {{ end }}
