@@ -14,7 +14,8 @@
   \duo {
     {{ template "rh1" (w `ees'='8(\p` `d)`) }}
   } {
-
+    s4 f'='4 | ees c8 bes | ees\< d \af 4\! ees4 |
+    ees='2 | d4 c | bes d8 bes | bes4\< \af 4\! d='4 | s2 |
   }
 }
 {{ end }}
