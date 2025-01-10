@@ -95,7 +95,9 @@ books:
         # BSN1985
         i349,
         # FBBMS11P1977
-        ltm8
+        ltm8,
+        # FBBMS13P1978
+        hrdv
       ] },
       { tit: Готово-виборний баян, pieces: [ # Free bass
         # FBB3BZ1982

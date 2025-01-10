@@ -59,3 +59,7 @@ pieces:
   - { id: ltm8, tit: "Кума моя, кумонька", sub: blrfs,
       arr: В. Платонов, src: FBBMS11P1977,
       org: blr, sty: flk, gnr: sng, ton: dmi, frm: [vo2, in3, cr5], bss: [frb, stb], lvl: elc }
+  # FBBMS13P1978
+  - { id: hrdv, tit: Ой чи я, sub: blrfs,
+      arr: В. Платонов, src: FBBMS13P1978,
+      org: blr, sty: flk, gnr: sng, ton: cmj, frm: [vo2, in6], bss: frb, lvl: elb }
