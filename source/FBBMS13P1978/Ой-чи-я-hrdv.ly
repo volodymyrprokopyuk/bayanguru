@@ -7,7 +7,7 @@
 \relative {
   \tempo Adagio
   \clef treble
-  \key c \major
+  \key a \minor
   \time 4/4
   \meter 1/4 1,1,1,1
   {{ template "rh1" (w `e'='4(\p` `a='2)\>`) }}
@@ -26,7 +26,7 @@
 {{ define "leftHand" }}
 \relative {
   \clef bass
-  \key c \major
+  \key a \minor
   \meter 1/4 1,1,1,1
   r2 e=4(-\frBass fis8 gis | a4.) b8( c a g f |
   e=2) e8( c' b a | gis4 e8 e) a2 | e'8 d c b a4 g |
