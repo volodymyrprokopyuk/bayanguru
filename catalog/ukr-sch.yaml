@@ -127,3 +127,6 @@ pieces:
   - { id: u4zt, tit: Заїнько,
       com: В. Барвінський, src: FBBMS13P1978,
       org: ukr, sty: cus, gnr: chd, ton: gmj, frm: [in3, dot], bss: [frb, in3], lvl: elb }
+  - { id: ypxl, tit: "Ой джигуне, джигуне", sub: ukrfs,
+      arr: І. Беркович, src: FBBMS13P1978,
+      org: ukr, sty: flk, gnr: sng, ton: emi, frm: [in3, in4], bss: [frb, in6], lvl: elb }
