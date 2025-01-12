@@ -275,3 +275,15 @@ pieces:
   - { id: hm6a, tit: Я пойду во Китай-город гуляти, sub: rusfs,
       arr: В. Платонов, src: FBBMS13P1978,
       org: rus, sty: flk, gnr: sng, ton: eesmj, frm: [vo2, var], bss: [frb, stb, in3], lvl: elb }
+  # FBBMS14N1979
+  - { id: tcub, tit: Шла тропинка, sub: rusfs,
+      arr: А. Талакин, src: FBBMS14N1979,
+      org: rus, sty: flk, gnr: sng, ton: fmj, frm: cr5, bss: [frb, in3, in5], lvl: elb }
+  # p. 12
+  # - { id: py6y, tit: Новогодняя полька,
+  #     arr: А. Александров, src: FBBMS14N1979,
+  #     org: rus, sty: cus, gnr: plk, ton: amj, frm: rep, bss: frb, lvl: elb }
+  # p. 15
+  # - { id: g6tw, tit: Плясовая,
+  #     arr: В. Накапкин, src: FBBMS14N1979,
+  #     org: rus, sty: cus, gnr: dnc, ton: cmj, frm: [in3, cr5], bss: [frb, in3, cr5], lvl: elb }
