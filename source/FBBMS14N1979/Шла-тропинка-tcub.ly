@@ -27,5 +27,14 @@
 \relative {
   \clef bass
   \key f \major
+  \meter 1/2 #'(1)
+  R2 | f=4(-\frBass c' | bes a8 g | f4) g8( a) | g4( e | f) a8 f |
+  bes=8 a g f | e d e c | f g a f | bes a g f | e d e c | f e d c= |
+
+  f=4 <a, e'> | <g d'> <c e> | d e | f <a, e'> | <g d'> <c e> |
+  <bes=, f'>4 <a f'>8 8 | <bes f'> <a f'> <g f'>8 8 |
+  <c= d>4 <c e>8 8 | d4 <a' f'>8 8 | <bes f'> <a f'> <g f'>4 |
+  \duo { d'='4( e=') | } { c'='2 | } | f'8 e d c |
+  \duo { d'='2 | } { bes=4 a8 g= | } <f,= c'>2 |
 }
 {{ end }}
