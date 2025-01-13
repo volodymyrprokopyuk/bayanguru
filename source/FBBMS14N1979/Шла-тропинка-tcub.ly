@@ -5,7 +5,7 @@
   \key f \major
   \time 2/4
   \meter 1/2 #'(1)
-  f'='4(\mp c' | bes a8 g | f4) d8( e) | f4( c' | bes8 a16 bes c8 bes |
+  f'='4(\mp c' | bes a8 g | f4) d8( e) | f4( c' | bes8 a16 bes c8[ bes] |
   a='4) c8 c | d c bes a | g g c bes | a4 c8 c | d c bes a | g g c c | f,='2 |
 
   \repeat volta 2 {
