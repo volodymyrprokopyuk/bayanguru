@@ -282,7 +282,6 @@ pieces:
   - { id: py6y, tit: Новогодняя полька,
       arr: А. Александров, src: FBBMS14N1979,
       org: rus, sty: cus, gnr: plk, ton: amj, frm: rep, bss: frb, lvl: elb }
-  # p. 15
-  # - { id: g6tw, tit: Плясовая,
-  #     arr: В. Накапкин, src: FBBMS14N1979,
-  #     org: rus, sty: cus, gnr: dnc, ton: cmj, frm: [in3, cr5], bss: [frb, in3, cr5], lvl: elb }
+  - { id: g6tw, tit: Плясовая,
+      arr: В. Накапкин, src: FBBMS14N1979,
+      org: rus, sty: cus, gnr: dnc, ton: cmj, frm: [in3, cr5], bss: [frb, in3, cr5], lvl: elb }
