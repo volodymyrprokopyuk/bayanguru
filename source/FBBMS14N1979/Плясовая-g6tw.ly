@@ -2,6 +2,15 @@
   {{ .a }} e16( g c,8)-> e16( g | d8)-> d16( f e-> d c8) | e-> e16( g='' %
 {{ end }}
 
+{{ define "lh1" }}
+  c='8-> <e g>8-. a,-> <c e>-. | b-> <f' g>-. c-> <e g>-. |
+  b=8-> <c e>-. a-> <c e>-. | g-> <f' a>-. <c=' e g>-- r |
+{{ end }}
+
+{{ define "lh2" }}
+  a=8-> e-. d-> e-. | a-> e-. d-> r | c-> d-. {{ .a }} |
+{{ end }}
+
 {{ define "rightHand" }}
 \relative {
   \tempo Allegro
@@ -9,6 +18,7 @@
   \key c \major
   \time 2/4
   <c''='' e g>8->\mf <c f a>-> \rep 3 { <c='' e g>8-> <c='' f a>-> } \bar "||"
+
   \repeat segno 2 {
     {{ template "rh1" (w `e=''8->`) }} c,=''8)-> e16( g | f-> e d e c d e f |
     {{ template "rh1" (w `e=''8)->`) }} c,=''8)-> c16( a=' \bar "||"
@@ -31,7 +41,13 @@
 
 {{ define "leftHand" }}
 \relative {
-  \clef bass
+  \clef treble
   \key c \major
+  <g'=' c e>8->-\frBass <f c' d>-> \rep 3 { <g=' c e>8-> <f=' c' d>-> } |
+
+  \rep 2 { {{ template "lh1" }} } \clef bass |
+  {{ template "lh2" (w `e=8-. fis-.`) }} | g=8-> g-. gis-. gis-. |
+  {{ template "lh2" (w `e=8-> f-.`) }} | fis=8-> fis-. g-> g=-. \clef treble |
+  g=8-> <f' a>-. <c=' e g>8-- r |
 }
 {{ end }}

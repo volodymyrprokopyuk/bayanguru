@@ -39,7 +39,7 @@ pieces:
   # FBBSC1978
   - { id: bx7x, tit: Чому ж мені не співати, sub: blrfs,
       src: FBBSC1978,
-      org: blr, sty: flk, gnr: sng, ton: dmi, frm: mel, bss: frb, lvl: ela }
+      org: blr, sty: flk, gnr: sng, ton: dmi, frm: rep, bss: frb, lvl: ela }
   - { id: cyj2, tit: Перепілочка, sub: blrfs,
       arr: С. Чапкій, src: FBBSC1978,
       org: blr, sty: flk, gnr: sng, ton: gmi, frm: [vo2, cr5], bss: [vo2, frb, var, syn, jmp], lvl: elc }

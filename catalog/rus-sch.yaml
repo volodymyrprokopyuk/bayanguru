@@ -280,7 +280,7 @@ pieces:
       arr: А. Талакин, src: FBBMS14N1979,
       org: rus, sty: flk, gnr: sng, ton: fmj, frm: cr5, bss: [frb, in3, in5], lvl: elb }
   - { id: py6y, tit: Новогодняя полька,
-      arr: А. Александров, src: FBBMS14N1979,
+      com: А. Александров, src: FBBMS14N1979,
       org: rus, sty: cus, gnr: plk, ton: amj, frm: rep, bss: frb, lvl: elb }
   - { id: g6tw, tit: Плясовая,
       arr: В. Накапкин, src: FBBMS14N1979,
