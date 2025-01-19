@@ -131,10 +131,9 @@ pieces:
       arr: І. Беркович, src: FBBMS13P1978,
       org: ukr, sty: flk, gnr: sng, ton: emi, frm: [in3, in4], bss: [frb, in6], lvl: elb }
   # FBBMS14N1979
-  # p. 19
-  # - { id: d1xo, tit: Гаєм зелененьким, sub: ukrfs,
-  #     arr: В. Накапкин, src: FBBMS14N1979,
-  #     org: ukr, sty: flk, gnr: sng, ton: gmj, frm: [vo2, in3, rep], bss: frb, lvl: elb }
+  - { id: d1xo, tit: Гаєм зелененьким, sub: ukrfs,
+      arr: В. Накапкин, src: FBBMS14N1979,
+      org: ukr, sty: flk, gnr: sng, ton: gmj, frm: [vo2, in3, rep], bss: frb, lvl: elb }
   # FBBMS15P1979
   # p. 5
   # - { id: 61up, tit: Дівка в сінях стояла, sub: ukrfs,

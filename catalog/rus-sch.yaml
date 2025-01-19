@@ -283,7 +283,7 @@ pieces:
       com: А. Александров, src: FBBMS14N1979,
       org: rus, sty: cus, gnr: plk, ton: amj, frm: rep, bss: frb, lvl: elb }
   - { id: g6tw, tit: Плясовая,
-      arr: В. Накапкин, src: FBBMS14N1979,
+      com: В. Накапкин, src: FBBMS14N1979,
       org: rus, sty: cus, gnr: dnc, ton: cmj, frm: [in3, cr5], bss: [frb, in3, cr5], lvl: elb }
   # p. 19
   # - { id: 4rko, tit: Перевейся хмелек, sub: rusfs,
