@@ -20,7 +20,7 @@
   \meter 1/2 #'(1)
   {{ template "rh1" (w `g'='8(\mf` `e-.`) }}
   {{ template "rh1" (w `g,='8(` `g-.`) }}
-  {{ template "rh2" (w `b='8(\mp`) }} | d=''4)-> r |
+  {{ template "rh2" (w `b='8(\mp`) }} | b='4)-> r |
   {{ template "rh2" (w `b='8(\p`) }} | g='4)\pp r \bar "|."
 }
 {{ end }}
