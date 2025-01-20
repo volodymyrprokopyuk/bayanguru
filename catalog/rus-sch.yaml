@@ -289,10 +289,9 @@ pieces:
       arr: В. Ефимов, src: FBBMS14N1979,
       org: rus, sty: flk, gnr: sng, ton: eesmj, frm: cr5, bss: frb, lvl: elb }
   # FBBMS15P1979
-  # p. 5
-  # - { id: 6v25, tit: Хороводная, sub: rusfs,
-  #     arr: А. Николаев, src: FBBMS15P1979,
-  #     org: rus, sty: flk, gnr: sng, ton: ami, frm: mel, bss: [frb, in3], lvl: elb }
+  - { id: 6v25, tit: Хороводная, sub: rusfs,
+      arr: А. Николаев, src: FBBMS15P1979,
+      org: rus, sty: flk, gnr: sng, ton: ami, frm: mel, bss: [frb, in3], lvl: elb }
   # p. 8
   # - { id: ctx1, tit: Как вечор тоска нападала, sub: rusfs,
   #     arr: В. Платонов, src: FBBMS15P1979,

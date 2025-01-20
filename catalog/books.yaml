@@ -320,7 +320,9 @@ books:
         # FBBMS13P1978
         bqfe, iuku, eju2, fcm8, 0ngj, hm6a,
         # FBBMS14N1979
-        tcub, py6y, g6tw, 4rko
+        tcub, py6y, g6tw, 4rko,
+        # FBBMS15P1979
+        6v25
       ] }
   - { id: sfr1, tit: Вибрані етюди, sub: для готово-виборного баяна,
       sections: [
