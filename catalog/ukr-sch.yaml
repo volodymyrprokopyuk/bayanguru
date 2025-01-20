@@ -135,10 +135,9 @@ pieces:
       arr: В. Накапкин, src: FBBMS14N1979,
       org: ukr, sty: flk, gnr: sng, ton: gmj, frm: [vo2, in3, rep], bss: frb, lvl: elb }
   # FBBMS15P1979
-  # p. 5
-  # - { id: 61up, tit: Дівка в сінях стояла, sub: ukrfs,
-  #     arr: В. Платонов, src: FBBMS15P1979,
-  #     org: ukr, sty: flk, gnr: sng, ton: ami, frm: mel, bss: frb, lvl: ela }
+  - { id: 61up, tit: Дівка в сінях стояла, sub: ukrfs,
+      arr: В. Платонов, src: FBBMS15P1979,
+      org: ukr, sty: flk, gnr: sng, ton: ami, frm: mel, bss: frb, lvl: ela }
   # p. 9
   # - { id: zgyl, tit: "На горі, горі", sub: ukrfs,
   #     arr: М. Лисенко, src: FBBMS15P1979,
