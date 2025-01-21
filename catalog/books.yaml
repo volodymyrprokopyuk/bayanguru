@@ -282,7 +282,7 @@ books:
         # FBBMS14N1979
         d1xo,
         # FBBMS15P1979
-        61up, zgyl
+        61up, zgyl, lubs
       ] }
   - { id: rfr1, tit: Російські народні пісні і танці,
       sub: для готово-виборного баяна,
