@@ -333,7 +333,7 @@ func keyByOrg(piece catalog.Piece) []string {
     key = "belarusian"
   case "hun":
     key = "hungarian"
-  case "mda", "pol", "cze", "svk", "lva":
+  case "mda", "pol", "cze", "svk", "svn", "lva", "est":
     key = "extra"
   case "aut", "deu", "dnk", "fra", "swe":
     key = "european"

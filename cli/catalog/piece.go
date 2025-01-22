@@ -318,7 +318,7 @@ var (
   validArt = regexp.MustCompile(`^arr|ipr|hrm$`)
   validLcs = regexp.MustCompile(`^cpl|cpr$`)
   orgParts = []string{
-    `^ukr|rus|blr|hun|mda|pol|cze|svk|svn|lva`,
+    `^ukr|rus|blr|hun|mda|pol|cze|svk|svn|lva|est`,
     `|aut|deu|dnk|fra|swe$`,
   }
   validOrg = regexp.MustCompile(strings.Join(orgParts, ""))
