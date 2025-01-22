@@ -147,7 +147,7 @@ books:
         # FBBMS4NP1974
         3uhy,
         # FBBMS15P1979
-        d51e
+        d51e, ed21
       ] }
   # Study class
   - { id: stu1, tit: Вибрані етюди, sub: для готового баяна,

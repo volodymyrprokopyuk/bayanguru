@@ -59,7 +59,6 @@ pieces:
   - { id: d51e, tit: Білка співала і танцювала, sub: Словенська народна пісня,
       arr: В. Платонов, src: FBBMS15P1979,
       org: svn, sty: flk, gnr: sng, ton: dmj, frm: [vo2, cr5, rep], bss: [frb, stb], lvl: ela }
-  # p. 18
-  # - { id: ed21, tit: Естонська полька,
-  #     arr: В. Рейман, src: FBBMS15P1979,
-  #     org: est, sty: flk, gnr: plk, ton: gmj, frm: [in3, in6], bss: [frb, jmp], lvl: elb }
+  - { id: ed21, tit: Естонська полька,
+      arr: В. Рейман, src: FBBMS15P1979,
+      org: est, sty: flk, gnr: plk, ton: gmj, frm: [in3, in6], bss: [frb, jmp], lvl: elb }
