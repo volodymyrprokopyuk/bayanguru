@@ -307,3 +307,12 @@ pieces:
   # - { id: 2kti, tit: "Уж ты, сад", sub: rusfs,
   #     arr: А. Черных, src: FBBMS15P1979,
   #     org: rus, sty: flk, gnr: sng, ton: cmj, frm: cr5, bss: [frb, in3], lvl: elb }
+  # FBBMS15N1980
+  # p. 15
+  # - { id: toek, tit: Колыбельная, sub: 'из оперы \"Садко\"',
+  #     com: Н. Римский-Корсаков, src: FBBMS15N1980,
+  #     org: rus, sty: cus, gnr: lul, ton: gmj, frm: [vo2, cr5], bss: [frb, in3, in5, in6], lvl: elb }
+  # p. 16
+  # - { id: bq7b, tit: Каватина Людмилы, sub: 'из оперы \"Руслан и Людмила\"',
+  #     com: М. Глинка, src: FBBMS15N1980,
+  #     org: rus, sty: cus, gnr: pie, ton: gmj, frm: mel, bss: [frb, in3, in4, cr5], lvl: elb }
