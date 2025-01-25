@@ -1,46 +1,40 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
-  html {
-    font-family: "Noto Sans", sans-serif;
-  }
+html {
+  font-family: "Noto Sans", sans-serif;
 }
 
-@layer components {
-  .head1 {
-    @apply text-2xl font-semibold
-  }
-  .head2 {
-    @apply mt-6 text-xl font-semibold
-  }
-  .tagline {
-    @apply text-center italic
-  }
-  .link {
-    @apply text-lg font-medium text-blue-700
-  }
-  .link-block {
-    @apply inline-block min-w-64
-  }
-  .link-button {
-    @apply px-2 py-1 bg-blue-100
-  }
-  .list {
-    @apply list-disc list-outside ml-4
-  }
-  .tag {
-    @apply inline-block mx-0.5 my-0.5 px-1 py-0.5
-    rounded-md border border-neutral-400 bg-yellow-100
-  }
-  .tag-value {
-    @apply font-medium
-  }
-  .score {
-    @apply w-full min-h-screen my-8 lg:w-[80%] lg:mx-[10%]
-      shadow-[0_0_0.75rem_rgb(96,165,250)]
-  }
+.head1 {
+  @apply text-2xl font-semibold
+}
+.head2 {
+  @apply mt-6 text-xl font-semibold
+}
+.tagline {
+  @apply text-center italic
+}
+.link {
+  @apply text-lg font-medium text-blue-700
+}
+.link-block {
+  @apply inline-block min-w-64
+}
+.link-button {
+  @apply px-2 py-1 bg-blue-100
+}
+.list {
+  @apply list-disc list-outside ml-4
+}
+.tag {
+  @apply inline-block mx-0.5 my-0.5 px-1 py-0.5
+  rounded-md border border-neutral-400 bg-yellow-100
+}
+.tag-value {
+  @apply font-medium
+}
+.score {
+  @apply w-full min-h-screen my-8 lg:w-[80%] lg:mx-[10%]
+    shadow-[0_0_0.75rem_rgb(96,165,250)]
 }
 
 a {

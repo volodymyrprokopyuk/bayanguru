@@ -14,7 +14,7 @@ yay -S ghostscript gsfonts fontforge t1utils texlive-{metapost,langcyrillic}
 # Upload scores to Cloudflare R2 object store with rclone
 yay -S rclone
 # Style the website with TailwindCSS
-bun install tailwindcss
+bun install tailwindcss @tailwindcss/cli
 # Index the website for searching with pagefind
 yay -S pagefind
 # Validate the website HTML locally with html-validate

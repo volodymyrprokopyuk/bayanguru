@@ -351,17 +351,15 @@ func indexPieces(siteDir, publicDir string) error {
   return pfCmd.Run()
 }
 
-func publishStyle(siteDir, templateDir, publicDir string) error {
-  twConfig := filepath.Join(siteDir, "tailwind.config.js")
+func publishStyle(templateDir, publicDir string) error {
   inStyle := filepath.Join(templateDir, "style.css")
   outStyle := filepath.Join(publicDir, "tw.css")
   fmt.Printf("%v %v\n", style.Org("publish"), style.Lvl(outStyle))
   twCmd := exec.Command(
-    "bunx", "tailwindcss", "--config", twConfig,
-    "--input", inStyle, "--output", outStyle, "--minify",
+    "bunx", "@tailwindcss/cli", "--input", inStyle, "--output", outStyle, "--minify",
   )
-  // twCmd.Stdout = os.Stdout
-  // twCmd.Stderr = os.Stderr
+  twCmd.Stdout = os.Stdout
+  twCmd.Stderr = os.Stderr
   return twCmd.Run()
 }
 
@@ -415,7 +413,7 @@ func Publish(pc PublishCommand) error {
   if err != nil {
     return siteError("%v", err)
   }
-  err = publishStyle(pc.SiteDir, pc.TemplateDir, pc.PublicDir)
+  err = publishStyle(pc.TemplateDir, pc.PublicDir)
   if err != nil {
     return siteError("%v", err)
   }
