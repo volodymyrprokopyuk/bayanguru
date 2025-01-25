@@ -295,10 +295,9 @@ pieces:
   - { id: ctx1, tit: Как вечор тоска нападала, sub: rusfs,
       arr: В. Платонов, src: FBBMS15P1979,
       org: rus, sty: flk, gnr: sng, ton: dmi, frm: vo2, bss: frb, lvl: ela }
-  # p. 10
-  # - { id: jzfs, tit: Родина, sub: rusfs,
-  #     arr: А. Флярковский, src: FBBMS15P1979,
-  #     org: rus, sty: flk, gnr: sng, ton: emi, frm: dot, bss: frb, lvl: ela }
+  - { id: jzfs, tit: Родина, sub: rusfs,
+      arr: А. Флярковский, src: FBBMS15P1979,
+      org: rus, sty: flk, gnr: sng, ton: emi, frm: dot, bss: frb, lvl: ela }
   # p. 11
   # - { id: np8l, tit: За рекою было, sub: rusfs,
   #     arr: В. Платонов, src: FBBMS15P1979,
