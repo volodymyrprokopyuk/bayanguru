@@ -144,3 +144,7 @@ pieces:
   - { id: lubs, tit: Ой чому ж соловейку, sub: ukrfs,
       src: FBBMS15P1979,
       org: ukr, sty: flk, gnr: sng, ton: ami, frm: mel, bss: frb, lvl: elb }
+  # p. 18
+  # - { id: x4nz, tit: Радісно нам стало, sub: ukrfs,
+  #     arr: В. Назимов, src: FBBMS15P1979,
+  #     org: ukr, sty: flk, gnr: sng, ton: ami, frm: var, bss: [vo2, frb, in3, in4], lvl: elb }
