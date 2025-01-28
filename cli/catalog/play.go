@@ -32,8 +32,8 @@ func scoreFile(tit, ID string) string {
 func PrintStat(catalog, selected int) {
   fmt.Printf(
     "%v %v\n%v %v\n",
-    Bss1("%10v", "Catalog"), Lvl("%4v", catalog),
-    Bss1("%10v", "Selected"), Lvl("%4v", selected),
+    RedSub("%10v", "Catalog"), BlueTit("%4v", catalog),
+    RedSub("%10v", "Selected"), BlueTit("%4v", selected),
   )
 }
 

@@ -143,7 +143,7 @@ func initPiece(pieces []catalog.Piece, sourceDir string) error {
   if err != nil {
     return err
   }
-  fmt.Printf("%v %v\n", catalog.Org("init"), catalog.Lvl(pieceFile))
+  fmt.Printf("%v %v\n", catalog.GreenSub("init"), catalog.BlueSub(pieceFile))
   return nil
 }
 

@@ -12,7 +12,7 @@ func main() {
   bayanguruCmd := command.BayanguruCmd()
   err := bayanguruCmd.Execute()
   if err != nil {
-    fmt.Fprintf(os.Stderr, "%v\n", catalog.Err("%v", err))
+    fmt.Fprintf(os.Stderr, "%v\n", catalog.RedTit("%v", err))
     os.Exit(1)
   }
 }

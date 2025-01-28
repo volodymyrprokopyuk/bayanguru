@@ -50,7 +50,7 @@ func makeTemplate(sourceDir, targetFile string) (*template.Template, error) {
 
 func engraveScore(w io.Writer, score, scoreFile, scoreDir string) error {
   scorePDF := filepath.Join(scoreDir, scoreFile)
-  fmt.Fprintf(w, "%v %v\n", catalog.Org("engrave"), catalog.Lvl(scorePDF + ".pdf"))
+  fmt.Fprintf(w, "%v %v\n", catalog.GreenSub("engrave"), catalog.BlueSub(scorePDF + ".pdf"))
   lyCmd := exec.Command(
     "lilypond", "-d", "backend=cairo", "-l", "WARN",
     "-f", "pdf", "-o", scorePDF, "-",
@@ -63,7 +63,7 @@ func engraveScore(w io.Writer, score, scoreFile, scoreDir string) error {
 
 func optimizeScore(w io.Writer, scoreFile, scoreDir  string) error {
   scorePDF := filepath.Join(scoreDir, scoreFile + ".pdf")
-  fmt.Fprintf(w, "%v %v\n", catalog.Org("optimize"), catalog.Lvl(scorePDF))
+  fmt.Fprintf(w, "%v %v\n", catalog.GreenSub("optimize"), catalog.BlueSub(scorePDF))
   return pdf.OptimizeFile(scorePDF, scorePDF, nil)
 }
 

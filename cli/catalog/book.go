@@ -154,6 +154,6 @@ func readBooks(
 func PrintBook(w io.Writer, book Book) {
   fmt.Fprintf(
     w, "%v %v %v\n",
-    ID(book.ID), Tit(book.Tit), Com("%v pieces", len(book.Pieces)),
+    GreenTit(book.ID), YellowTit(book.Tit), YellowSub("%v pieces", len(book.Pieces)),
   )
 }

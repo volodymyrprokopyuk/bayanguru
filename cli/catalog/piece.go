@@ -496,8 +496,8 @@ func PrintPiece(w io.Writer, piece Piece) {
   spaceLen := 53 - titLen - comLen
   fmt.Fprintf(
     w, "%v %v %v %v %v %v %v %v %v\n",
-    ID(piece.ID), Tit(tit), strings.Repeat(" ", spaceLen), Com(com),
-    Org(piece.Org), Org(piece.Sty), Org(piece.Gnr),
-    Bss1(Bss(piece.Bss, piece.ID)), Lvl(piece.Lvl),
+    GreenTit(piece.ID), YellowTit(tit), strings.Repeat(" ", spaceLen), YellowSub(com),
+    GreenSub(piece.Org), GreenSub(piece.Sty), GreenSub(piece.Gnr),
+    RedSub(Bss(piece.Bss, piece.ID)), BlueSub(piece.Lvl),
   )
 }
