@@ -9,8 +9,6 @@ import (
 	"path/filepath"
 	"regexp"
 	"strings"
-
-	"github.com/volodymyrprokopyuk/bayanguru/cli/style"
 )
 
 type PieceQueries map[string]string
@@ -34,8 +32,8 @@ func scoreFile(tit, ID string) string {
 func PrintStat(catalog, selected int) {
   fmt.Printf(
     "%v %v\n%v %v\n",
-    style.Bss("%10v", "Catalog"), style.Lvl("%4v", catalog),
-    style.Bss("%10v", "Selected"), style.Lvl("%4v", selected),
+    Bss1("%10v", "Catalog"), Lvl("%4v", catalog),
+    Bss1("%10v", "Selected"), Lvl("%4v", selected),
   )
 }
 

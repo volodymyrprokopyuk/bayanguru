@@ -15,7 +15,6 @@ import (
 	"text/template"
 
 	"github.com/volodymyrprokopyuk/bayanguru/cli/catalog"
-	"github.com/volodymyrprokopyuk/bayanguru/cli/style"
 	"github.com/yuin/goldmark"
 	"gopkg.in/yaml.v3"
 )
@@ -48,7 +47,7 @@ func copyFile(src, dst string) (int64, error) {
 func engraveImage(siteDir, publicDir, image string) error {
   lyImage := filepath.Join(siteDir, image + ".ly")
   svgImage := filepath.Join(publicDir, image)
-  fmt.Printf("%v %v\n", style.Org("engrave"), style.Lvl(svgImage + ".svg"))
+  fmt.Printf("%v %v\n", catalog.Org("engrave"), catalog.Lvl(svgImage + ".svg"))
   lyCmd := exec.Command(
     "lilypond", "-d", "backend=cairo", "-l", "WARN", "-f", "svg",
     "-o", svgImage, lyImage,
@@ -98,7 +97,7 @@ func initSite(siteDir, publicDir string) error {
   }
   for _, dir := range dirs {
     d := filepath.Join(publicDir, dir)
-    fmt.Printf("%v %v\n", style.Org("init"), style.Lvl(d))
+    fmt.Printf("%v %v\n", catalog.Org("init"), catalog.Lvl(d))
     err := os.MkdirAll(d, 0755)
     if err != nil {
       return err
@@ -142,7 +141,7 @@ func publishFile(
 ) error {
   file := filepath.Join(publicDir, publicFile + ".html")
   if !strings.Contains(file, "/catalog/") {
-    fmt.Fprintf(w, "%v %v\n", style.Org("publish"), style.Lvl(file))
+    fmt.Fprintf(w, "%v %v\n", catalog.Org("publish"), catalog.Lvl(file))
   }
   w, err := os.Create(file) // overwrites an existing file
   if err != nil {
@@ -239,7 +238,7 @@ func publishIndex(tpl *template.Template, pc PublishCommand) error {
 
 func uploadPiece(w io.Writer, pieceFile, uploadURL string) error {
   file := fmt.Sprintf("piece/%v.pdf", pieceFile)
-  fmt.Fprintf(w, "%v %v\n", style.Org("upload"), style.Lvl(file))
+  fmt.Fprintf(w, "%v %v\n", catalog.Org("upload"), catalog.Lvl(file))
   copyCmd := exec.Command(
     "rclone", "copy", "--s3-no-check-bucket", file, uploadURL,
   )
@@ -335,7 +334,7 @@ func publishPieces(pieces []catalog.Piece, pc PublishCommand) error {
 
 func indexPieces(siteDir, publicDir string) error {
   fmt.Printf(
-    "%v %v\n", style.Org("index"), style.Lvl(publicDir + "/piece/..."),
+    "%v %v\n", catalog.Org("index"), catalog.Lvl(publicDir + "/piece/..."),
   )
   pfDir := filepath.Join(publicDir, "pagefind")
   err := os.RemoveAll(pfDir) // removes an existing index
@@ -354,7 +353,7 @@ func indexPieces(siteDir, publicDir string) error {
 func publishStyle(templateDir, publicDir string) error {
   inStyle := filepath.Join(templateDir, "style.css")
   outStyle := filepath.Join(publicDir, "tw.css")
-  fmt.Printf("%v %v\n", style.Org("publish"), style.Lvl(outStyle))
+  fmt.Printf("%v %v\n", catalog.Org("publish"), catalog.Lvl(outStyle))
   twCmd := exec.Command(
     "bunx", "@tailwindcss/cli", "--input", inStyle, "--output", outStyle, "--minify",
   )

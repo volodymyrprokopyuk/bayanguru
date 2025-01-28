@@ -10,7 +10,6 @@ import (
 
 	pdf "github.com/pdfcpu/pdfcpu/pkg/api"
 	"github.com/volodymyrprokopyuk/bayanguru/cli/catalog"
-	"github.com/volodymyrprokopyuk/bayanguru/cli/style"
 )
 
 type EngraveCommand struct {
@@ -51,7 +50,7 @@ func makeTemplate(sourceDir, targetFile string) (*template.Template, error) {
 
 func engraveScore(w io.Writer, score, scoreFile, scoreDir string) error {
   scorePDF := filepath.Join(scoreDir, scoreFile)
-  fmt.Fprintf(w, "%v %v\n", style.Org("engrave"), style.Lvl(scorePDF + ".pdf"))
+  fmt.Fprintf(w, "%v %v\n", catalog.Org("engrave"), catalog.Lvl(scorePDF + ".pdf"))
   lyCmd := exec.Command(
     "lilypond", "-d", "backend=cairo", "-l", "WARN",
     "-f", "pdf", "-o", scorePDF, "-",
@@ -64,7 +63,7 @@ func engraveScore(w io.Writer, score, scoreFile, scoreDir string) error {
 
 func optimizeScore(w io.Writer, scoreFile, scoreDir  string) error {
   scorePDF := filepath.Join(scoreDir, scoreFile + ".pdf")
-  fmt.Fprintf(w, "%v %v\n", style.Org("optimize"), style.Lvl(scorePDF))
+  fmt.Fprintf(w, "%v %v\n", catalog.Org("optimize"), catalog.Lvl(scorePDF))
   return pdf.OptimizeFile(scorePDF, scorePDF, nil)
 }
 

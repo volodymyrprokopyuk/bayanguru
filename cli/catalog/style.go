@@ -1,4 +1,4 @@
-package style
+package catalog
 
 import "github.com/gookit/color"
 
@@ -30,7 +30,7 @@ func Org(format string, args ...any) string {
   return org.Sprintf(format, args...)
 }
 
-func Bss(format string, args ...any) string {
+func Bss1(format string, args ...any) string {
   return bss.Sprintf(format, args...)
 }
 

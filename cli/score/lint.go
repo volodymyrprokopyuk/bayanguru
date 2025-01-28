@@ -10,7 +10,6 @@ import (
 	"strings"
 
 	"github.com/volodymyrprokopyuk/bayanguru/cli/catalog"
-	"github.com/volodymyrprokopyuk/bayanguru/cli/style"
 )
 
 type Line struct {
@@ -247,16 +246,16 @@ func lintDurationAfterBoundChord(lines []Line) []Line {
 }
 
 func printErrors(w io.Writer, title string, errors []Line) {
-  fmt.Fprintf(w, "%v\n", style.Com(title))
+  fmt.Fprintf(w, "%v\n", catalog.Com(title))
   for _, error := range errors {
     err := strings.ReplaceAll(error.Text, "%", "%%")
-    fmt.Fprintf(w, "%v %v\n", style.Lvl("%3v:", error.Num), style.Bss(err))
+    fmt.Fprintf(w, "%v %v\n", catalog.Lvl("%3v:", error.Num), catalog.Bss1(err))
   }
 }
 
 func lintPiece(w io.Writer, piece catalog.Piece, sourceDir string) error {
   pieceFile := filepath.Join(sourceDir, piece.Src, piece.File + ".ly")
-  fmt.Fprintf(w, "%v %v\n", style.Org("lint"), style.Lvl(pieceFile))
+  fmt.Fprintf(w, "%v %v\n", catalog.Org("lint"), catalog.Lvl(pieceFile))
   hasErrors := false
   lines, err := rawLines(pieceFile)
   if err != nil {

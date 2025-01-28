@@ -6,7 +6,6 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/volodymyrprokopyuk/bayanguru/cli/style"
 	"gopkg.in/yaml.v3"
 )
 
@@ -155,7 +154,6 @@ func readBooks(
 func PrintBook(w io.Writer, book Book) {
   fmt.Fprintf(
     w, "%v %v %v\n",
-    style.ID(book.ID), style.Tit(book.Tit),
-    style.Com("%v pieces", len(book.Pieces)),
+    ID(book.ID), Tit(book.Tit), Com("%v pieces", len(book.Pieces)),
   )
 }

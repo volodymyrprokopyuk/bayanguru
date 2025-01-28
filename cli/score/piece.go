@@ -13,7 +13,6 @@ import (
 	"text/template"
 
 	"github.com/volodymyrprokopyuk/bayanguru/cli/catalog"
-	"github.com/volodymyrprokopyuk/bayanguru/cli/style"
 )
 
 var chordNames = map[string]string{"M": "Б", "m": "М", "7": "7", "d": "У"}
@@ -144,7 +143,7 @@ func initPiece(pieces []catalog.Piece, sourceDir string) error {
   if err != nil {
     return err
   }
-  fmt.Printf("%v %v\n", style.Org("init"), style.Lvl(pieceFile))
+  fmt.Printf("%v %v\n", catalog.Org("init"), catalog.Lvl(pieceFile))
   return nil
 }
 

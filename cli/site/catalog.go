@@ -11,7 +11,6 @@ import (
 	"text/template"
 
 	"github.com/volodymyrprokopyuk/bayanguru/cli/catalog"
-	"github.com/volodymyrprokopyuk/bayanguru/cli/style"
 	"golang.org/x/text/collate"
 	"golang.org/x/text/language"
 )
@@ -457,7 +456,7 @@ func publishRobots(pc PublishCommand) error {
   file := "robots.txt"
   src := filepath.Join(pc.SiteDir, file)
   dst := filepath.Join(pc.PublicDir, file)
-  fmt.Printf("%v %v\n", style.Org("publish"), style.Lvl(dst))
+  fmt.Printf("%v %v\n", catalog.Org("publish"), catalog.Lvl(dst))
   _, err := copyFile(src, dst)
   return err
 }
@@ -465,7 +464,7 @@ func publishRobots(pc PublishCommand) error {
 func publishSitemap(pieces []catalog.Piece, pc PublishCommand) error {
   file := "sitemap.txt"
   path := filepath.Join(pc.PublicDir, file)
-  fmt.Printf("%v %v\n", style.Org("publish"), style.Lvl(path))
+  fmt.Printf("%v %v\n", catalog.Org("publish"), catalog.Lvl(path))
   slices.SortStableFunc(pieces, func(a, b catalog.Piece) int {
     return collator.CompareString(a.Tit, b.Tit)
   })
@@ -479,7 +478,7 @@ func publishSitemap(pieces []catalog.Piece, pc PublishCommand) error {
 
 func publishCatalog(tpl *template.Template, pc PublishCommand) error {
   fmt.Printf(
-    "%v %v\n", style.Org("publish"), style.Lvl(pc.PublicDir + "/catalog/..."),
+    "%v %v\n", catalog.Org("publish"), catalog.Lvl(pc.PublicDir + "/catalog/..."),
   )
   pieces, _, catLen, err := catalog.ReadPiecesAndBooks(
     pc.CatalogDir, "", nil, pc.BookFile, nil, false, true,
