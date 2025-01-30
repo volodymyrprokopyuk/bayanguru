@@ -10,15 +10,15 @@ import (
 )
 
 const (
-  catalogDir = "catalog"
-  bookFile = "books.yaml"
-  sourceDir = "source"
-  pieceDir = "piece"
-  bookDir = "book"
-  siteDir = "site"
+  CatalogDir = "catalog"
+  BookFile = "books.yaml"
+  SourceDir = "source"
+  PieceDir = "piece"
+  BookDir = "book"
+  SiteDir = "site"
 )
 
-var queries = map[string]string{
+var Queries = map[string]string{
   "tit": "piece title",
   "com": "piece composer",
   "arr": "piece arranger",
@@ -39,7 +39,7 @@ var queries = map[string]string{
 var reQuery = regexp.MustCompile(`^\^?\pL[-\pL,]*[^,]$`)
 var reID = regexp.MustCompile(`^[0-9a-z]{4}$`)
 
-func validateReq(catalog string, args []string) error {
+func ValidateReq(catalog string, args []string) error {
   if len(catalog) > 0 && !reQuery.MatchString(catalog) {
     return fmt.Errorf("valid pattern ukr-cls or ^rus,blr, got -c %v", catalog)
   }
@@ -57,22 +57,37 @@ func validateReq(catalog string, args []string) error {
   return nil
 }
 
+func ValidateQueries(cmd *cli.Command) (map[string]string, error) {
+  queries := make(map[string]string, len(Queries))
+  for name := range Queries {
+    query := cmd.String(name)
+    if len(query) > 0 {
+      if !reQuery.MatchString(query) {
+        return nil, fmt.Errorf(
+          "valid pattern ukr,stu or ^rus,blr, got --%v %v", name, query,
+        )
+      }
+      queries[name] = query
+    }
+  }
+  return queries, nil
+}
+
 func playAction(ctx context.Context, cmd *cli.Command) error {
-  catalog := cmd.String("catalog")
+  cat := cmd.String("catalog")
   book := cmd.Bool("book")
   random := cmd.Bool("random")
   list := cmd.Bool("list")
   args := cmd.Args()
-  err := validateReq(catalog, args.Slice())
+  err := ValidateReq(cat, args.Slice())
   if err != nil {
     return err
   }
   pc := PlayCommand{
-    CatalogDir: catalogDir, BookFile: bookFile,
-    PieceDir: pieceDir, BookDir: bookDir, Catalog: catalog,
+    CatalogDir: CatalogDir, BookFile: BookFile, PieceDir: PieceDir,
+    BookDir: BookDir, Catalog: cat,
     All: args.Len() == 1 && args.First() == "all",
     Book: book, Random: random, List: list,
-    Queries: make(map[string]string, len(queries)),
   }
   if !pc.All {
     if book {
@@ -81,16 +96,9 @@ func playAction(ctx context.Context, cmd *cli.Command) error {
       pc.Pieces = args.Slice()
     }
   }
-  for name := range queries {
-    query := cmd.String(name)
-    if len(query) > 0 {
-      if !reQuery.MatchString(query) {
-        return fmt.Errorf(
-          "valid pattern ukr,stu or ^rus,blr, got --%v %v", name, query,
-        )
-      }
-      pc.Queries[name] = query
-    }
+  pc.Queries, err = ValidateQueries(cmd)
+  if err != nil {
+    return err
   }
   return Play(pc)
 }
@@ -126,7 +134,7 @@ bayanguru play all --query... --random --list
       Aliases: []string{"l"},
     },
   }
-  for name, usage := range queries {
+  for name, usage := range Queries {
     flag := &cli.StringFlag{Name: name, Usage: usage}
     cmd.Flags = append(cmd.Flags, flag)
   }

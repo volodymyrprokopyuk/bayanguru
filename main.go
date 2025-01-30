@@ -7,6 +7,8 @@ import (
 
 	"github.com/urfave/cli/v3"
 	"github.com/volodymyrprokopyuk/bayanguru/cli/catalog"
+	"github.com/volodymyrprokopyuk/bayanguru/cli/score"
+	"github.com/volodymyrprokopyuk/bayanguru/cli/site"
 )
 
 func bayanguruCmd() *cli.Command{
@@ -20,8 +22,9 @@ based on catalog metadata. Bayanguru publishes high quality PDF pieces, lyrics,
 and books on the web`,
     ArgsUsage: "bayanguru engrave | play | publish pieces... | books... [flags]",
     Version: "0.1.0",
+    UseShortOptionHandling: true,
     Commands: []*cli.Command{
-      catalog.PlayCmd(),
+      score.EngraveCmd(), catalog.PlayCmd(), site.PublishCmd(),
     },
   }
   return cmd
