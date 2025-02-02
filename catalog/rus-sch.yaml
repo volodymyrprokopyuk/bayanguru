@@ -298,10 +298,9 @@ pieces:
   - { id: jzfs, tit: Родина, sub: rusfs,
       arr: А. Флярковский, src: FBBMS15P1979,
       org: rus, sty: flk, gnr: sng, ton: emi, frm: dot, bss: frb, lvl: ela }
-  # p. 11
-  # - { id: np8l, tit: За рекою было, sub: rusfs,
-  #     arr: В. Платонов, src: FBBMS15P1979,
-  #     org: rus, sty: flk, gnr: sng, ton: dmi, frm: vo2, bss: frb, lvl: ela }
+  - { id: np8l, tit: За рекою было, sub: rusfs,
+      arr: В. Платонов, src: FBBMS15P1979,
+      org: rus, sty: flk, gnr: sng, ton: dmi, frm: vo2, bss: frb, lvl: ela }
   # p. 23
   # - { id: 2kti, tit: "Уж ты, сад", sub: rusfs,
   #     arr: А. Черных, src: FBBMS15P1979,
