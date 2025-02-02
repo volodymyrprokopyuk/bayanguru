@@ -17,5 +17,16 @@
 \relative {
   \clef bass
   \key e \minor
+  \duo {
+    r4 <b= e>4 <c e> | <b e> <c e>( <c d>) |
+    r4 <d=' g>4 <ees g>~ | 4 <d g> <d f> | r4 <c e>2 |
+    r4 <g= b>4 <g bes> | r <a c> <a b> | r4 <g= b>4 4 |
+  } {
+    e=2.~-\frBass | e4 fis2 | g2. | g2 gis4 | a2 e4 | d2 des4 | c2 b4 | e=2. |
+  }
+
+  e'='2( ees4 | d2 c4) | b2( a4 | b2 b4) |
+  \duo { r4 <c'=' e>4 r | r <g b> r | r <a c> <g= a> | }
+  { a=2 e4 | d2 des4 | c=2 r4 } | e='2. |
 }
 {{ end }}
