@@ -108,7 +108,7 @@ pieces:
   # FBBMS7PT1975
   - { id: yevq, tit: Щедрик,
       com: М. Леонтович, src: FBBMS7PT1975,
-      org: ukr, sty: cus, gnr: kol, ton: gmi, frm: vo2, bss: [vo2, frb, in3, in5, cr5], lvl: elb }
+      org: ukr, sty: cus, gnr: kol, ton: gmi, frm: vo2, bss: [vo2, frb, in3, in5], lvl: elb }
   - { id: wzhz, tit: Ой з-за гори кам'яної, sub: ukrfs,
       arr: М. Леонтович, src: FBBMS7PT1975,
       org: ukr, sty: flk, gnr: sng, ton: fmi, frm: vo2, bss: [vo2, frb], lvl: elb }
@@ -133,7 +133,7 @@ pieces:
   # FBBMS14N1979
   - { id: d1xo, tit: Гаєм зелененьким, sub: ukrfs,
       arr: В. Накапкин, src: FBBMS14N1979,
-      org: ukr, sty: flk, gnr: sng, ton: gmj, frm: [vo2, in3, rep], bss: frb, lvl: elb }
+      org: ukr, sty: flk, gnr: sng, ton: emi, frm: [vo2, in3, rep], bss: frb, lvl: elb }
   # FBBMS15P1979
   - { id: 61up, tit: Дівка в сінях стояла, sub: ukrfs,
       arr: В. Платонов, src: FBBMS15P1979,
