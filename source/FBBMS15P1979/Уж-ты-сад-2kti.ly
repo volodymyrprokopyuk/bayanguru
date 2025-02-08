@@ -29,6 +29,6 @@
   f=4. g8 a[ c] | g4~ g8 f16 e) d8( c | f4. g8 a[ c] | g2) g8( g |
   c='4. d8 c[ bes] | f2)  c'8( a | g bes a g d'4 | c2) r8 f( |
   e='8 d c bes a g | f c f4) \fermata r |
-  \duo { e'='4( f8 e f='4) | } { s2 r8 e=8-- | } | <c'=' e>2-- %
+  \duo { e'='4( f8 e f='4) | } { s2 r8 g=8-- | } | <c'=' e>2-- %
 }
 {{ end }}
