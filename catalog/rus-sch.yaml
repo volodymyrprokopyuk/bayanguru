@@ -308,7 +308,6 @@ pieces:
   - { id: toek, tit: Колыбельная, sub: 'из оперы \"Садко\"',
       com: Н. Римский-Корсаков, src: FBBMS16N1980,
       org: rus, sty: cus, gnr: lul, ton: gmj, frm: [vo2, cr5], bss: [frb, in3, in5, in6], lvl: elb }
-  # p. 16
-  # - { id: bq7b, tit: Каватина Людмилы, sub: 'из оперы \"Руслан и Людмила\"',
-  #     com: М. Глинка, src: FBBMS16N1980,
-  #     org: rus, sty: cus, gnr: pie, ton: gmj, frm: mel, bss: [frb, in3, in4, cr5], lvl: elb }
+  - { id: bq7b, tit: Каватина Людмилы, sub: 'из оперы \"Руслан и Людмила\"',
+      com: М. Глинка, src: FBBMS16N1980,
+      org: rus, sty: cus, gnr: pie, ton: gmj, frm: mel, bss: [frb, in3, in4, cr5], lvl: elb }

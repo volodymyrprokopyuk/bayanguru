@@ -330,7 +330,7 @@ books:
         # FBBMS15P1979
         6v25, ctx1, jzfs, np8l, 2kti,
         # FBBMS16N1980
-        toek
+        toek, bq7b
       ] }
   - { id: sfr1, tit: Вибрані етюди, sub: для готово-виборного баяна,
       sections: [
