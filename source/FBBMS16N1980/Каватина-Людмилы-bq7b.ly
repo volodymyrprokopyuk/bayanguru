@@ -29,13 +29,13 @@
   \key g \major
   \partial 4 { r4 | }
   {{ template "lh1" (w `g=8-\frBass <d' g>_\aSta`) }} | g=8 <b d> g <b d> |
-  {{ template "lh1" (w `g=8 <d' g>`) }} | g=8 <b d> g= r |
+  {{ template "lh1" (w `g=8 <d' g>`) }} | g=8 <b d> g r |
   dis=8 <fis b> b, <dis a' b> | e <g b> g <bes e> |
   a=8 <cis e> g <a cis e> | fis <a d> a <cis g'> |
   d,=8 <fis a d> dis <fis a b> | e <g b> g, <b e> |
   a=,8 <e' g> a, <e' a> | d <fis= a> r4 |
 
   {{ template "lh1" (w `g=8 <d' g>`) }} | g=8 <b d> g <b d> |
-  g=8 <d' g> f, <g d'> | e <g c> c,= r | r4 <d a' c>8 r | <g= b d>4 %
+  g=8 <d' g> f, <g d'> | e <g c> c, r | r4 <d a' c>8 r | <g= b d>4 %
 }
 {{ end }}
