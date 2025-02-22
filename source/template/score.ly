@@ -332,7 +332,7 @@ markupInsideSlur = {
     }
   #}
 ))
-#(define-markup-command (lyrTowColEight layout props a aa b bb c cc d dd e ee f ff g gg h hh)
+#(define-markup-command (lyrTwoColEight layout props a aa b bb c cc d dd e ee f ff g gg h hh)
   (markup? markup? markup? markup?
    markup? markup? markup? markup?
    markup? markup? markup? markup?

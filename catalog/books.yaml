@@ -387,4 +387,8 @@ books:
       { tit: Пісні для дітей, pieces: [
         # IIDBF2021
         1737, pd1j, 6swu, onsj, tjzc, kddy, gzmy
+      ] },
+      { tit: Українські пісні, pieces: [
+        # OZGGP1993
+        igzh
       ] } ] }

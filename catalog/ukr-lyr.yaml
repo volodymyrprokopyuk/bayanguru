@@ -30,3 +30,7 @@ pieces:
       com: Я. Степовий, aut: Л. Українка, src: IIDBF2021, lcs: cpr,
       org: ukr, sty: cus, gnr: chd, ton: dmj, frm: in3, bss: stb,
       lvl: ela, ens: vc1, lyr: lyr }
+  # OZGGP1993
+  - { id: igzh, tit: "Не щебечи, соловейко", sub: ukrfs,
+      src: OZGGP1993,
+      org: ukr, sty: flk, gnr: sng, ton: dmi, frm: [vo2, dot], bss: frb, lvl: elb, lyr: lyr }
