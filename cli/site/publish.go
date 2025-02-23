@@ -82,9 +82,9 @@ var catGroups = map[string][]string{
   "level": {
     "elementary-a", "elementary-b", "elementary-c",
   },
-  // "lyrics": {
-  //   "lyrics",
-  // },
+  "lyrics": {
+    "lyrics",
+  },
 }
 
 func initSite(siteDir, publicDir string) error {
@@ -226,7 +226,7 @@ func publishIndex(tpl *template.Template, pc PublishCommand) error {
     {URL: "/catalog/study-frb/scale/1", Title: "Study frb | Етюди frb"},
     {URL: "/catalog/bass/standard-bass/1", Title: "Bass | Бас"},
     {URL: "/catalog/level/elementary-c/1", Title: "Level | Рівень"},
-    // {URL: "/catalog/lyrics/lyrics/1", Title: "Lyrics | Пісні"},
+    {URL: "/catalog/lyrics/lyrics/1", Title: "Lyrics | Пісні"},
   }
   indexData := struct {
     CatalogGroups []Link

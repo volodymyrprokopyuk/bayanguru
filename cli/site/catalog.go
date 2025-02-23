@@ -49,7 +49,7 @@ var tr = map[string]string{
   "elementary-b": "Elementary B | Простий B",
   "elementary-c": "Elementary C | Простий C",
   // ens
-  // "lyrics": "Lyrics | Пісні",
+  "lyrics": "Lyrics | Пісні",
 }
 
 type PieceGroups map[string][]catalog.Piece
@@ -66,7 +66,6 @@ func groupPieces(
       groups[key] = append(groups[key], piece)
     }
   }
-
   return groups
 }
 
@@ -448,9 +447,9 @@ func keyByLvl(piece catalog.Piece) []string {
   return []string{key}
 }
 
-// func keyByLyr(_ catalog.Piece) []string {
-//   return []string{"lyrics"}
-// }
+func keyByLyr(_ catalog.Piece) []string {
+  return []string{"lyrics"}
+}
 
 func publishRobots(pc PublishCommand) error {
   file := "robots.txt"
@@ -569,15 +568,15 @@ func publishCatalog(tpl *template.Template, pc PublishCommand) error {
   if err != nil {
     return err
   }
-  // lyrPieces := filterPieces(pieces, func(piece catalog.Piece) bool {
-  //   return piece.Ens == "vc1" || piece.Ens == "vc2"
-  // })
-  // err = publishGroup(
-  //   tpl, lyrPieces, keyByLyr, keyTit, "lyrics", catGroups["lyrics"], pc,
-  // )
-  // if err != nil {
-  //   return err
-  // }
+  lyrPieces := filterPieces(pieces, func(piece catalog.Piece) bool {
+    return piece.Ens == "vc1" || piece.Ens == "vc2" || piece.Lyr == "lyr"
+  })
+  err = publishGroup(
+    tpl, lyrPieces, keyByLyr, keyTit, "lyrics", catGroups["lyrics"], pc,
+  )
+  if err != nil {
+    return err
+  }
   err = publishRobots(pc)
   if err != nil {
     return err
