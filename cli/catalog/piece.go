@@ -54,9 +54,9 @@ var meta = map[string]string{
   "svkfs": "Словацька народна пісня",
   "svkfd": "Словацький народний танець",
   "stu": "Етюд",
-  // Piece arrangment type (art)
-  "arr": "Обр. ", // обробка = arrangment (default)
-  "ipr": "Пер. ", // переклад = interpratation
+  // Piece arrangement type (art)
+  "arr": "Обр. ", // обробка = arrangement (default)
+  "ipr": "Пер. ", // переклад = interpretation
   "hrm": "Гарм. ", // гармонізація = harmonization
 }
 
@@ -64,17 +64,17 @@ type StrSlice []string
 
 func (ss *StrSlice) UnmarshalYAML(node *yaml.Node) error {
   var slc []string
-  err := node.Decode(&slc) // try a string slice
+  err := node.Decode(&slc) // Try decoding a string slice
   if err != nil {
     var str string
-    err := node.Decode(&str) // try a single string
+    err := node.Decode(&str) // Try decoding a single string
     if err != nil {
       return err
     }
-    *ss = []string{str} // convert a single string into a string slice
+    *ss = []string{str} // Convert the single string into a string slice
     return nil
   }
-  *ss = slc // return a string slice
+  *ss = slc // Return the string slice
   return nil
 }
 
@@ -86,7 +86,7 @@ type Piece struct {
   Com string `yaml:"com"`
   Arr string `yaml:"arr"`
   Art string `yaml:"art"`
-  ArtUkr string
+  UkrArt string
   Aut string `yaml:"aut"`
 
   Src string `yaml:"src"`
@@ -249,22 +249,19 @@ func listCatalogFiles(catDir, catQuery string) ([]string, error) {
   if err != nil {
     return nil, err
   }
-  match, err := makeMatchStr(catQuery)
-  if err != nil {
-    return nil, err
-  }
   files := make([]string, 0, 50)
   for _, entry := range entries {
-    if !entry.IsDir() && strings.HasSuffix(entry.Name(), ".yaml") &&
-      match(strings.TrimSuffix(entry.Name(), ".yaml")) {
-      files = append(files, entry.Name())
+    name := entry.Name()
+    if entry.Type().IsRegular() && strings.HasSuffix(name, ".yaml") &&
+      strings.Contains(name, catQuery) {
+      files = append(files, name)
     }
   }
   return files, nil
 }
 
-func readCatalogFile(catalogFile string) ([]Piece, error) {
-  file, err := os.Open(catalogFile)
+func readCatalogFile(catFile string) ([]Piece, error) {
+  file, err := os.Open(catFile)
   if err != nil {
     return nil, err
   }
@@ -277,27 +274,35 @@ func readCatalogFile(catalogFile string) ([]Piece, error) {
   return pieces.Pieces, nil
 }
 
+var reCleanTit = regexp.MustCompile(`[^- \pL\d]+`)
+
+func scoreFile(tit, ID string) string {
+  tit = strings.ReplaceAll(reCleanTit.ReplaceAllLiteralString(tit, ""), " ", "-")
+  return fmt.Sprintf("%s-%s", tit, ID)
+}
+
 func addMetaToPieces(pieces []Piece) {
   for i := range pieces {
     piece := &pieces[i]
     // sub
-    if sub, exists := meta[piece.Sub]; exists {
+    sub, exists := meta[piece.Sub]
+    if exists {
       piece.Sub = sub
     }
     // art
     if len(piece.Arr) > 0 {
       if len(piece.Art) == 0 {
-        piece.Art = "arr" // default: arrangement
+        piece.Art = "arr" // Default: arrangement
       }
-      piece.ArtUkr = meta[piece.Art]
+      piece.UkrArt = meta[piece.Art]
     }
     // lcs
     if len(piece.Lcs) == 0 {
-      piece.Lcs = "cpl" // default: copyleft
+      piece.Lcs = "cpl" // Default: copyleft
     }
     // ens
     if len(piece.Ens) == 0 {
-      piece.Ens = "sol" // default: solo
+      piece.Ens = "sol" // Default: solo
     }
     // file
     piece.File = scoreFile(piece.Tit, piece.ID)
@@ -438,13 +443,13 @@ func readPieces(catDir, catQuery string) (PieceMap, []string, error) {
   pieceMap := make(PieceMap, 1000)
   pieceIDs := make([]string, 0, 1000) // ordered pieces for all
   for _, catFile := range catFiles {
-    catalogFile := filepath.Join(catDir, catFile)
-    pieces, err := readCatalogFile(catalogFile)
+    catFile = filepath.Join(catDir, catFile)
+    pieces, err := readCatalogFile(catFile)
     if err != nil {
       return nil, nil, err
     }
     addMetaToPieces(pieces)
-    err = validatePieces(pieces, catalogFile)
+    err = validatePieces(pieces, catFile)
     if err != nil {
       return nil, nil, err
     }
@@ -485,7 +490,7 @@ func Bss(bss []string, ID string) string {
 
 func PrintPiece(w io.Writer, piece Piece) {
   tit := piece.Tit
-  com := fmt.Sprintf("%v %v%v", piece.Com, piece.ArtUkr, piece.Arr)
+  com := fmt.Sprintf("%v %v%v", piece.Com, piece.UkrArt, piece.Arr)
   com = strings.TrimSpace(com)
   titLen, comLen := len([]rune(tit)), len([]rune(com))
   maxTit := 53 - comLen

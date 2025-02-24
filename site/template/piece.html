@@ -1,9 +1,9 @@
 {{ define "meta" }}
   <meta name="robots" content="index,follow">
   {{ with .Piece }}
-    <title>{{ .Tit }} {{ .Com }} {{ .ArtUkr }}{{ .Arr }}</title>
+    <title>{{ .Tit }} {{ .Com }} {{ .UkrArt }}{{ .Arr }}</title>
     <meta name="description"
-          content="{{ .Tit }} {{ .Com }} {{ .ArtUkr }}{{ .Arr }}">
+          content="{{ .Tit }} {{ .Com }} {{ .UkrArt }}{{ .Arr }}">
   {{ end }}
 {{ end }}
 
@@ -11,11 +11,11 @@
   {{ with .Piece }}
     <div data-pagefind-body>
       <h1 data-pagefind-meta="title" class="head1 text-center">
-        {{ .Tit }} {{ .Com }} {{ .ArtUkr }}{{ .Arr }}
+        {{ .Tit }} {{ .Com }} {{ .UkrArt }}{{ .Arr }}
       </h1>
       <p class="text-center text-lg">
         Downlaod | Заватнажити
-        <a href="{{ .URL }}">{{ .Tit }} {{ .Com }} {{ .ArtUkr }}{{ .Arr }}</a>
+        <a href="{{ .URL }}">{{ .Tit }} {{ .Com }} {{ .UkrArt }}{{ .Arr }}</a>
       </p>
       <div data-nosnippet class="hidden">
         <div data-pagefind-meta="id">{{ .ID }}</div>
@@ -35,7 +35,7 @@
         <div data-pagefind-meta="lyr">{{ .Lyr }}</div>
       </div>
       <object id="score" type="application/pdf" data="{{ .URL }}" class="score">
-        {{ .Tit }} {{ .Com }} {{ .ArtUkr }}{{ .Arr }}</object>
+        {{ .Tit }} {{ .Com }} {{ .UkrArt }}{{ .Arr }}</object>
     </div>
   {{ end }}
   <div data-nosnippet>

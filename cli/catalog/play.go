@@ -7,8 +7,6 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
-	"regexp"
-	"strings"
 )
 
 type PieceQueries map[string]string
@@ -20,13 +18,6 @@ type PlayCommand struct {
   Random, List bool
   Pieces, Books []string
   Queries PieceQueries
-}
-
-var cleanTit = regexp.MustCompile(`[^- \pL\d]+`)
-
-func scoreFile(tit, ID string) string {
-  tit = strings.ReplaceAll(cleanTit.ReplaceAllLiteralString(tit, ""), " ", "-")
-  return fmt.Sprintf("%v-%v", tit, ID)
 }
 
 func PrintStat(catalog, selected int) {
