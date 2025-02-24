@@ -67,7 +67,7 @@ func selectRawBooks(rawBooks []RawBook, bookIDs []string) ([]RawBook, error) {
   return selRawBooks, nil
 }
 
-func addPiecesToBooks(rawBooks []RawBook, pieceMap PieceMap) ([]Book, error) {
+func addPiecesToBooks(rawBooks []RawBook, pieceMap map[string]Piece) ([]Book, error) {
   books := make([]Book, 0, 50)
   for _, rawBook := range rawBooks {
     book := Book{ID: rawBook.ID, Tit: rawBook.Tit, Sub: rawBook.Sub}
@@ -132,7 +132,7 @@ func SectionPieces(book Book) (next func() bool, value func() *Piece) {
 }
 
 func readBooks(
-  catDir, bookFile string, bookIDs []string, all bool, pieceMap PieceMap,
+  catDir, bookFile string, bookIDs []string, all bool, pieceMap map[string]Piece,
 ) ([]Book, error) {
   rawBooks, err := readBookFile(catDir, bookFile)
   if err != nil {

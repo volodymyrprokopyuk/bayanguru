@@ -37,7 +37,6 @@ var Queries = map[string]string{
 }
 
 var reQuery = regexp.MustCompile(`^\^?\pL[-\pL,]*[^,]$`)
-var reID = regexp.MustCompile(`^[0-9a-z]{4}$`)
 
 func ValidateReq(catalog string, args []string) error {
   if len(catalog) > 0 && !reQuery.MatchString(catalog) {
