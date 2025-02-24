@@ -171,12 +171,14 @@ func templatePiece(
       return err
     }
     piece.LeftHand = stradella(w.String())
-    w.Reset()
-    err = tpl.ExecuteTemplate(&w, "lyrics", piece)
-    if err != nil {
-      return err
+    if len(piece.Lyr) != 0 {
+      w.Reset()
+      err = tpl.ExecuteTemplate(&w, "lyrics", piece)
+      if err != nil {
+        return err
+      }
+      piece.Lyrics = w.String()
     }
-    piece.Lyrics = w.String()
   case "duo":
     w.Reset()
     err = tpl.ExecuteTemplate(&w, "rightHandOne", piece)
