@@ -244,6 +244,8 @@ func makeMatchPiece(queries PieceQueries) (MatchPiece, error) {
   return matchPiece, nil
 }
 
+var reCatFile = regexp.MustCompile(`^\w+-\w+\.yaml$`)
+
 func listCatalogFiles(catDir, catQuery string) ([]string, error) {
   entries, err := os.ReadDir(catDir)
   if err != nil {
@@ -253,9 +255,12 @@ func listCatalogFiles(catDir, catQuery string) ([]string, error) {
   for _, entry := range entries {
     name := entry.Name()
     if entry.Type().IsRegular() && strings.HasSuffix(name, ".yaml") &&
-      strings.Contains(name, catQuery) {
+      reCatFile.MatchString(name) && strings.Contains(name, catQuery) {
       files = append(files, name)
     }
+  }
+  if len(files) == 0 {
+    return nil, fmt.Errorf("no catalog files selected")
   }
   return files, nil
 }
