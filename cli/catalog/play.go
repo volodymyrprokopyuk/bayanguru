@@ -9,13 +9,11 @@ import (
 	"path/filepath"
 )
 
-type PlayCommand struct {
-  CatalogDir, BookFile, PieceDir, BookDir string
-  Catalog string
-  All, Book bool
-  Random, List bool
-  Pieces, Books []string
-  Queries map[string]string
+type playCmd struct {
+  catalogDir, bookFile, pieceDir, bookDir, catalog string
+  all, book, random, list bool
+  pieces, books []string
+  queries map[string]string
 }
 
 func PrintStat(catalog, selected int) {
@@ -119,16 +117,16 @@ func catError(format string, args ...any) error {
   return fmt.Errorf("catalog: " + format, args...)
 }
 
-func Play(pc PlayCommand) error {
+func Play(pc playCmd) error {
   pieces, _, catLen, err := ReadPiecesAndBooks(
-    pc.CatalogDir, pc.Catalog, pc.Pieces,
-    pc.BookFile, pc.Books, pc.Book, pc.All,
+    pc.catalogDir, pc.catalog, pc.pieces,
+    pc.bookFile, pc.books, pc.book, pc.all,
   )
   if err != nil {
     return catError("%v", err)
   }
-  if len(pc.Queries) > 0 {
-    pieces, err = QueryPieces(pieces, pc.Queries)
+  if len(pc.queries) > 0 {
+    pieces, err = QueryPieces(pieces, pc.queries)
     if err != nil {
       return catError("%v", err)
     }
@@ -139,12 +137,12 @@ func Play(pc PlayCommand) error {
     return catError("%v", err)
   }
   PrintStat(catLen, len(pieces))
-  indices := arrangePieces(len(pieces), pc.Random)
+  indices := arrangePieces(len(pieces), pc.random)
   for _, i := range indices {
     piece := pieces[i]
     PrintPiece(os.Stdout, piece)
-    if !pc.List {
-      err := openPiece(pc.PieceDir, piece)
+    if !pc.list {
+      err := openPiece(pc.pieceDir, piece)
       if err != nil {
         return catError("%v", err)
       }

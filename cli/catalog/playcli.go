@@ -3,7 +3,6 @@ package catalog
 import (
 	"context"
 	"fmt"
-	"os"
 	"regexp"
 	"slices"
 
@@ -83,40 +82,40 @@ func playAction(ctx context.Context, cmd *cli.Command) error {
   if err != nil {
     return err
   }
-  pc := PlayCommand{
-    CatalogDir: CatalogDir, BookFile: BookFile, PieceDir: PieceDir,
-    BookDir: BookDir,
-    Catalog: cat, Book: book, Random: random, List: list,
-    All: args.Len() == 1 && args.First() == "all",
+  pc := playCmd{
+    catalogDir: CatalogDir, bookFile: BookFile,
+    pieceDir: PieceDir, bookDir: BookDir,
+    catalog: cat, book: book, random: random, list: list,
+    all: args.Len() == 1 && args.First() == "all",
   }
-  if !pc.All {
+  if !pc.all {
     if book {
-      pc.Books = args.Slice()
+      pc.books = args.Slice()
     } else {
-      pc.Pieces = args.Slice()
+      pc.pieces = args.Slice()
     }
   }
-  pc.Queries, err = ValidateQueries(cmd)
+  pc.queries, err = ValidateQueries(cmd)
   if err != nil {
     return err
   }
-  // return Play(pc)
+  return Play(pc)
 
-  pieces, _, err := readPieces(pc.CatalogDir, pc.Catalog)
-  if err != nil {
-    return err
-  }
-  fmt.Println(len(pieces))
-  pcs := make([]Piece, 0, len(pieces))
-  for _, piece := range pieces {
-    pcs = append(pcs, piece)
-  }
-  pcs, _ = QueryPieces(pcs, pc.Queries)
-  fmt.Println(len(pcs))
-  for _, p := range pcs {
-    PrintPiece(os.Stdout, p)
-  }
-  return nil
+  // pieces, _, err := readPieces(pc.CatalogDir, pc.Catalog)
+  // if err != nil {
+  //   return err
+  // }
+  // fmt.Println(len(pieces))
+  // pcs := make([]Piece, 0, len(pieces))
+  // for _, piece := range pieces {
+  //   pcs = append(pcs, piece)
+  // }
+  // pcs, _ = QueryPieces(pcs, pc.Queries)
+  // fmt.Println(len(pcs))
+  // for _, p := range pcs {
+  //   PrintPiece(os.Stdout, p)
+  // }
+  // return nil
 }
 
 func PlayCmd() *cli.Command {
@@ -126,10 +125,10 @@ func PlayCmd() *cli.Command {
     Description:
 `Play command searches, lists, and plays pieces from a catalog or a book`,
     ArgsUsage:
-`bayanguru play [-c catalog] pieces...
-bayanguru play [-c catalog] -b books... [--query...]
-bayanguru play all --random --list [--query...]
-`,
+`
+   bayanguru play [-c catalog] pieces...
+   bayanguru play [-c catalog] -b books... [--query...]
+   bayanguru play all --random --list [--query...]`,
     Action: playAction,
   }
   cmd.Flags = []cli.Flag{

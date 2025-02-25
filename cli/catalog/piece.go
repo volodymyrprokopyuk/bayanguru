@@ -6,6 +6,7 @@ import (
 	"os"
 	"path/filepath"
 	"regexp"
+	"slices"
 	"strings"
 	"sync"
 
@@ -398,34 +399,30 @@ func QueryPieces(pieces []Piece, queries map[string]string) ([]Piece, error) {
   return selected, nil
 }
 
-func Bss(bss []string, ID string) string {
-  for _, b := range bss {
-    switch b {
-    case "stb", "pub", "frb":
+func bass(bss []string) string {
+  for _, b := range []string{"frb", "pub", "stb"} { // Bass priority
+    if slices.Contains(bss, b) {
       return b
     }
   }
-  err := fmt.Sprintf(
-    "catalog: piece %v missing bass type, expected: stb, pub, frb", ID,
-  )
-  panic(err)
+  return "___"
 }
 
 func PrintPiece(w io.Writer, piece Piece) {
   tit := piece.Tit
-  com := fmt.Sprintf("%v %v%v", piece.Com, piece.UkrArt, piece.Arr)
+  com := fmt.Sprintf("%s %s%s", piece.Com, piece.UkrArt, piece.Arr)
   com = strings.TrimSpace(com)
   titLen, comLen := len([]rune(tit)), len([]rune(com))
   maxTit := 53 - comLen
   if titLen > maxTit {
-    tit = fmt.Sprintf("%v…", string([]rune(tit)[:maxTit - 1]))
+    tit = fmt.Sprintf("%s…", string([]rune(tit)[:maxTit - 1]))
     titLen = maxTit
   }
   spaceLen := 53 - titLen - comLen
   fmt.Fprintf(
-    w, "%v %v %v %v %v %v %v %v %v\n",
-    GreenTit(piece.ID), YellowTit(tit), strings.Repeat(" ", spaceLen), YellowSub(com),
+    w, "%s %s %s %s %s %s %s %s %s\n",
+    GreenTit(piece.ID), YellowTit(tit), strings.Repeat(" ", spaceLen), BlueTit(com),
     GreenSub(piece.Org), GreenSub(piece.Sty), GreenSub(piece.Gnr),
-    RedSub(Bss(piece.Bss, piece.ID)), BlueSub(piece.Lvl),
+    RedTit(bass(piece.Bss)), BlueSub(piece.Lvl),
   )
 }
