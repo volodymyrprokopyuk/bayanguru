@@ -3,6 +3,7 @@ package catalog
 import (
 	"context"
 	"fmt"
+	"os"
 	"regexp"
 	"slices"
 
@@ -24,37 +25,39 @@ var Queries = map[string]string{
   "arr": "piece arranger",
   "art": "arrangement type",
   "aut": "lyrics author",
-  "lcs": "piece license e.g. cpl,cpr",
-  "org": "piece origin e.g. ukr,rus",
-  "sty": "piece style e.g. flk,cls",
-  "gnr": "piece genre e.g. sng,stu",
-  "ton": "piece tonality e.g. cmj,ami",
-  "frm": "piece form e.g. mel,var",
-  "bss": "piece bass e.g. stb,frb",
-  "lvl": "piece level e.g. ela,inb",
-  "ens": "piece ensemble e.g. duo,vc1",
-  "lyr": "piece lyrics e.g. lyr",
+  "lcs": "piece license",
+  "org": "piece origin",
+  "sty": "piece style",
+  "gnr": "piece genre",
+  "ton": "piece tonality",
+  "frm": "piece form",
+  "bss": "piece bass",
+  "lvl": "piece level",
+  "ens": "piece ensemble",
+  "lyr": "piece lyrics",
 }
 
-var reQuery = regexp.MustCompile(`^\^?\pL[-\pL,]*[^,]$`)
+var reCatalog = regexp.MustCompile(`^\w+(?:-\w+)?$`)
 
 func ValidateReq(catalog string, args []string) error {
-  if len(catalog) > 0 && !reQuery.MatchString(catalog) {
-    return fmt.Errorf("valid pattern ukr-cls or ^rus,blr, got -c %v", catalog)
+  if len(catalog) > 0 && !reCatalog.MatchString(catalog) {
+    return fmt.Errorf("invalid catalog %v", catalog)
   }
   if len(args) == 0 {
-    return fmt.Errorf("at least one piece or book is required, got none")
+    return fmt.Errorf("at least one piece or book is required")
   }
   if len(args) > 1 && slices.Contains(args, "all") {
-    return fmt.Errorf("either all or pieces and books, got %v", args)
+    return fmt.Errorf("all is mutually exclusive with pieces and books")
   }
   for _, arg := range args {
-    if !reID.MatchString(arg) && arg != "all" {
-      return fmt.Errorf("valid ID [0-9a-z]{4} or all, got %v", arg)
+    if arg != "all" && !reID.MatchString(arg) {
+      return fmt.Errorf("invalid ID %v", arg)
     }
   }
   return nil
 }
+
+var reQuery = regexp.MustCompile(`^\^?\pL+(?:,\pL+)*$`)
 
 func ValidateQueries(cmd *cli.Command) (map[string]string, error) {
   queries := make(map[string]string, len(Queries))
@@ -62,9 +65,7 @@ func ValidateQueries(cmd *cli.Command) (map[string]string, error) {
     query := cmd.String(name)
     if len(query) > 0 {
       if !reQuery.MatchString(query) {
-        return nil, fmt.Errorf(
-          "valid pattern ukr,stu or ^rus,blr, got --%v %v", name, query,
-        )
+        return nil, fmt.Errorf("invalid query --%v %v", name, query)
       }
       queries[name] = query
     }
@@ -84,9 +85,9 @@ func playAction(ctx context.Context, cmd *cli.Command) error {
   }
   pc := PlayCommand{
     CatalogDir: CatalogDir, BookFile: BookFile, PieceDir: PieceDir,
-    BookDir: BookDir, Catalog: cat,
+    BookDir: BookDir,
+    Catalog: cat, Book: book, Random: random, List: list,
     All: args.Len() == 1 && args.First() == "all",
-    Book: book, Random: random, List: list,
   }
   if !pc.All {
     if book {
@@ -99,7 +100,23 @@ func playAction(ctx context.Context, cmd *cli.Command) error {
   if err != nil {
     return err
   }
-  return Play(pc)
+  // return Play(pc)
+
+  pieces, _, err := readPieces(pc.CatalogDir, pc.Catalog)
+  if err != nil {
+    return err
+  }
+  fmt.Println(len(pieces))
+  pcs := make([]Piece, 0, len(pieces))
+  for _, piece := range pieces {
+    pcs = append(pcs, piece)
+  }
+  pcs, _ = QueryPieces(pcs, pc.Queries)
+  fmt.Println(len(pcs))
+  for _, p := range pcs {
+    PrintPiece(os.Stdout, p)
+  }
+  return nil
 }
 
 func PlayCmd() *cli.Command {
@@ -111,26 +128,22 @@ func PlayCmd() *cli.Command {
     ArgsUsage:
 `bayanguru play [-c catalog] pieces...
 bayanguru play [-c catalog] -b books... [--query...]
-bayanguru play all --query... --random --list
+bayanguru play all --random --list [--query...]
 `,
     Action: playAction,
   }
   cmd.Flags = []cli.Flag{
     &cli.StringFlag{
-      Name: "catalog", Usage: "read catalog files e.g. ukr,rus, ^stu,sch",
-      Aliases: []string{"c"},
+      Name: "catalog", Usage: "read catalog files", Aliases: []string{"c"},
     },
     &cli.BoolFlag{
-      Name: "book", Usage: "play pieces from books",
-      Aliases: []string{"b"},
+      Name: "book", Usage: "play pieces from books", Aliases: []string{"b"},
     },
     &cli.BoolFlag{
-      Name: "random", Usage: "play pieces in a random order",
-      Aliases: []string{"r"},
+      Name: "random", Usage: "play pieces in random", Aliases: []string{"r"},
     },
     &cli.BoolFlag{
-      Name: "list", Usage: "list pieces without playing",
-      Aliases: []string{"l"},
+      Name: "list", Usage: "list pieces without playing", Aliases: []string{"l"},
     },
   }
   for name, usage := range Queries {

@@ -9,15 +9,13 @@ import (
 	"path/filepath"
 )
 
-type PieceQueries map[string]string
-
 type PlayCommand struct {
   CatalogDir, BookFile, PieceDir, BookDir string
   Catalog string
   All, Book bool
   Random, List bool
   Pieces, Books []string
-  Queries PieceQueries
+  Queries map[string]string
 }
 
 func PrintStat(catalog, selected int) {

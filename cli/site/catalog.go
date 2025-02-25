@@ -485,7 +485,7 @@ func publishCatalog(tpl *template.Template, pc PublishCommand) error {
   if err != nil {
     return err
   }
-  queries := make(catalog.PieceQueries, len(pieces))
+  queries := make(map[string]string, len(pieces))
   queries["lcs"] = "^cpr" // exclude lcs: cpr pieces
   pieces, err = catalog.QueryPieces(pieces, queries)
   if err != nil {

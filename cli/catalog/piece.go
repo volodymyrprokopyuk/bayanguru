@@ -121,127 +121,6 @@ type Piece struct {
   AlphaLink string
 }
 
-type MatchStr func(str string) bool
-
-func makeMatchStr(pattern string) (MatchStr, error) {
-  isNeg := strings.HasPrefix(pattern, "^")
-  pattern = regexp.QuoteMeta(strings.TrimPrefix(pattern, "^"))
-  pattern = fmt.Sprintf("(?i:%v)", strings.ReplaceAll(pattern, ",", "|"))
-  re, err := regexp.Compile(pattern)
-  if err != nil {
-    return nil, err
-  }
-  match := func(str string) bool {
-    if isNeg {
-      return !re.MatchString(str)
-    }
-    return re.MatchString(str)
-  }
-  return match, nil
-}
-
-type MatchPiece func(piece Piece) bool
-
-func makeMatchPiece(queries PieceQueries) (MatchPiece, error) {
-  matches := make(map[string]MatchStr, len(queries))
-  for opt, query := range queries {
-    match, err := makeMatchStr(query)
-    if err != nil {
-      return nil, err
-    }
-    matches[opt] = match
-  }
-  matchSlice := func(slc StrSlice, match MatchStr, negMatch bool) bool {
-    if negMatch {
-      for _, str := range slc {
-        if !match(str) {
-          return false // first false on negative match e.g. ^frb
-        }
-      }
-      return true
-    }
-    for _, str := range slc {
-      if match(str) {
-        return true // first true on positive match e.g. frb
-      }
-    }
-    return false
-  }
-  matchPiece := func(piece Piece) bool {
-    for opt, match := range matches {
-      switch opt {
-      case "tit":
-        if !match(piece.Tit) {
-          return false
-        }
-      case "com":
-        if !match(piece.Com) {
-          return false
-        }
-      case "arr":
-        if !match(piece.Arr) {
-          return false
-        }
-      case "art":
-        if !match(piece.Art) {
-          return false
-        }
-      case "aut":
-        if !match(piece.Aut) {
-          return false
-        }
-      case "lcs":
-        if !match(piece.Lcs) {
-          return false
-        }
-      case "org":
-        if !match(piece.Org) {
-          return false
-        }
-      case "sty":
-        if !match(piece.Sty) {
-          return false
-        }
-      case "gnr":
-        if !match(piece.Gnr) {
-          return false
-        }
-      case "ton":
-        negMatch := strings.HasPrefix(queries["ton"], "^")
-        if !matchSlice(piece.Ton, match, negMatch) {
-          return false
-        }
-      case "frm":
-        negMatch := strings.HasPrefix(queries["frm"], "^")
-        if !matchSlice(piece.Frm, match, negMatch) {
-          return false
-        }
-      case "bss":
-        negMatch := strings.HasPrefix(queries["bss"], "^")
-        if !matchSlice(piece.Bss, match, negMatch) {
-          return false
-        }
-      case "lvl":
-        if !match(piece.Lvl) {
-          return false
-        }
-      case "ens":
-        if !match(piece.Ens) {
-          return false
-        }
-      case "lyr":
-        if !match(piece.Lyr) {
-          return false
-        }
-      default:
-        panic(fmt.Sprintf("catalog: unknown query option %v", opt))
-      }
-    }
-    return true
-  }
-  return matchPiece, nil
-}
-
 var reCatFile = regexp.MustCompile(`^\w+-\w+\.yaml$`)
 
 func listCatalogFiles(catDir, catQuery string) ([]string, error) {
@@ -256,9 +135,6 @@ func listCatalogFiles(catDir, catQuery string) ([]string, error) {
       reCatFile.MatchString(name) && strings.Contains(name, catQuery) {
       files = append(files, name)
     }
-  }
-  if len(files) == 0 {
-    return nil, fmt.Errorf("no catalog files selected")
   }
   return files, nil
 }
@@ -310,14 +186,6 @@ func addMetaToPieces(pieces []Piece) {
     // file
     piece.File = scoreFile(piece.Tit, piece.ID)
   }
-}
-
-func reCompile(reParts []string) []*regexp.Regexp {
-  res := make([]*regexp.Regexp, 0, len(reParts))
-  for _, re := range reParts {
-    res = append(res, regexp.MustCompile(re))
-  }
-  return res
 }
 
 var (
@@ -399,13 +267,16 @@ func validatePieces(pieces []Piece) error {
 }
 
 func readPieces(catDir, catQuery string) (map[string]Piece, []string, error) {
-  catFiles, err := listCatalogFiles(catDir, catQuery)
+  files, err := listCatalogFiles(catDir, catQuery)
   if err != nil {
     return nil, nil, err
   }
+  if len(files) == 0 {
+    return nil, nil, fmt.Errorf("no catalog files selected")
+  }
   pieceMap := make(map[string]Piece, 1000)
   pieceIDs := make([]string, 0, 1000) // Piece order
-  for _, catFile := range catFiles {
+  for _, catFile := range files {
     catFile = filepath.Join(catDir, catFile)
     pieces, err := readCatalogFile(catFile)
     if err != nil {
@@ -424,18 +295,107 @@ func readPieces(catDir, catQuery string) (map[string]Piece, []string, error) {
   return pieceMap, pieceIDs, nil
 }
 
-func QueryPieces(pieces []Piece, queries PieceQueries) ([]Piece, error) {
+func makeMatchStr(query string) (func(value string) bool, error) {
+  invert := strings.HasPrefix(query, "^")
+  query = strings.ReplaceAll(query, "^", "")
+  query = strings.ReplaceAll(query, ",", "|")
+  query = fmt.Sprintf("(?i:%v)", query)
+  reQuery, err := regexp.Compile(query)
+  if err != nil {
+    return nil, err
+  }
+  return func(value string) bool {
+    m := reQuery.MatchString(value)
+    if invert {
+      return !m
+    }
+    return m
+  }, nil
+}
+
+func makeMatchPiece(queries map[string]string) (func(piece Piece) bool, error) {
+  ms := make([]func(piece Piece) bool, 0, len(queries))
+  for name, query := range queries {
+    match, err := makeMatchStr(query)
+    if err != nil {
+      return nil, err
+    }
+    switch name {
+    case "tit":
+      ms = append(ms, func(piece Piece) bool { return match(piece.Tit) })
+    case "com":
+      ms = append(ms, func(piece Piece) bool { return match(piece.Com) })
+    case "arr":
+      ms = append(ms, func(piece Piece) bool { return match(piece.Arr) })
+    case "art":
+      ms = append(ms, func(piece Piece) bool { return match(piece.Art) })
+    case "aut":
+      ms = append(ms, func(piece Piece) bool { return match(piece.Aut) })
+    case "lcs":
+      ms = append(ms, func(piece Piece) bool { return match(piece.Lcs) })
+    case "org":
+      ms = append(ms, func(piece Piece) bool { return match(piece.Org) })
+    case "sty":
+      ms = append(ms, func(piece Piece) bool { return match(piece.Sty) })
+    case "gnr":
+      ms = append(ms, func(piece Piece) bool { return match(piece.Gnr) })
+    case "ton":
+      ms = append(ms, func(piece Piece) bool {
+        for _, ton := range piece.Ton {
+          if match(ton) {
+            return true
+          }
+        }
+        return false
+      })
+    case "frm":
+      ms = append(ms, func(piece Piece) bool {
+        for _, frm := range piece.Frm {
+          if match(frm) {
+            return true
+          }
+        }
+        return false
+      })
+    case "bss":
+      ms = append(ms, func(piece Piece) bool {
+        for _, bss := range piece.Bss {
+          if match(bss) {
+            return true
+          }
+        }
+        return false
+      })
+    case "lvl":
+      ms = append(ms, func(piece Piece) bool { return match(piece.Lvl) })
+    case "ens":
+      ms = append(ms, func(piece Piece) bool { return match(piece.Ens) })
+    case "lyr":
+      ms = append(ms, func(piece Piece) bool { return match(piece.Lyr) })
+    }
+  }
+  return func(piece Piece) bool {
+    for _, match := range ms {
+      if !match(piece) {
+        return false
+      }
+    }
+    return true
+  }, nil
+}
+
+func QueryPieces(pieces []Piece, queries map[string]string) ([]Piece, error) {
   match, err := makeMatchPiece(queries)
   if err != nil {
     return nil, err
   }
-  selPieces := make([]Piece, 0, 200)
+  selected := make([]Piece, 0, 200)
   for _, piece := range pieces {
     if match(piece) {
-      selPieces = append(selPieces, piece)
+      selected = append(selected, piece)
     }
   }
-  return selPieces, nil
+  return selected, nil
 }
 
 func Bss(bss []string, ID string) string {

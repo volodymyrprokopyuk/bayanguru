@@ -24,7 +24,7 @@ type PublishCommand struct {
   Catalog string
   Init, All, Book, Upload bool
   Pieces, Books []string
-  Queries catalog.PieceQueries
+  Queries map[string]string
   SiteDir, TemplateDir, ContentDir, PublicDir string
   UploadURL, ScoreURL, PieceURL string
   PageSize int
