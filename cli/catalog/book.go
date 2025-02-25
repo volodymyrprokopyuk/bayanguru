@@ -9,6 +9,30 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
+// TODO
+func SectionPieces(book Book) (next func() bool, value func() *Piece) {
+  i, j := 0, 0
+  next = func() bool { // check for the next iterator value
+    return i < len(book.Sections) && j < len(book.Sections[i].Pieces)
+  }
+  value = func() *Piece { // return a current iterator value
+    if !next() {
+      panic("out of bound Section Piece")
+    }
+    piece := &book.Sections[i].Pieces[j]
+    switch {
+    case j < len(book.Sections[i].Pieces) - 1:
+      j++
+    case i < len(book.Sections):
+      i++
+      j = 0
+    default: i++
+    }
+    return piece
+  }
+  return next, value
+}
+
 type RawSection struct {
   Tit string `yaml:"tit"`
   Pieces []string `yaml:"pieces"`
@@ -43,64 +67,64 @@ func readBookFile(catDir, bookFile string) ([]RawBook, error) {
     return nil, err
   }
   defer file.Close()
-  var books struct { Books []RawBook `yaml:"books"` }
-  err = yaml.NewDecoder(file).Decode(&books)
+  var rbooks struct { Books []RawBook `yaml:"books"` }
+  err = yaml.NewDecoder(file).Decode(&rbooks)
   if err != nil {
     return nil, err
   }
-  return books.Books, nil
+  return rbooks.Books, nil
 }
 
-func selectRawBooks(rawBooks []RawBook, bookIDs []string) ([]RawBook, error) {
-  rawBookMap := make(map[string]RawBook, 50)
-  for _, rawBook := range rawBooks {
-    rawBookMap[rawBook.ID] = rawBook
+func queryBooks(rbooks []RawBook, bookIDs []string) ([]RawBook, error) {
+  bookMap := make(map[string]RawBook, 50)
+  for _, rbook := range rbooks {
+    bookMap[rbook.ID] = rbook
   }
-  selRawBooks := make([]RawBook, 0, 50)
+  selected := make([]RawBook, 0, 50)
   for _, bookID := range bookIDs {
-    if rawBook, exists := rawBookMap[bookID]; exists {
-      selRawBooks = append(selRawBooks, rawBook)
-    } else {
-      return nil, fmt.Errorf("invalid book %v", bookID)
+    rbook, exists := bookMap[bookID]
+    if !exists {
+      return nil, fmt.Errorf("invalid book %s", bookID)
     }
+    selected = append(selected, rbook)
   }
-  return selRawBooks, nil
+  return selected, nil
 }
 
-func addPiecesToBooks(rawBooks []RawBook, pieceMap map[string]Piece) ([]Book, error) {
+func addPiecesToBooks(
+  rbooks []RawBook, pieceMap map[string]Piece,
+) ([]Book, error) {
   books := make([]Book, 0, 50)
-  for _, rawBook := range rawBooks {
-    book := Book{ID: rawBook.ID, Tit: rawBook.Tit, Sub: rawBook.Sub}
+  for _, rbook := range rbooks {
+    book := Book{ID: rbook.ID, Tit: rbook.Tit, Sub: rbook.Sub}
     book.File = scoreFile(book.Tit, book.ID)
     book.Pieces = make([]Piece, 0, 200)
-    if len(rawBook.Sections) > 0 { // book with sections
+    if len(rbook.Sections) > 0 { // Book with sections
       book.Sections = make([]Section, 0, 10)
-      for _, rawSec := range rawBook.Sections {
-        sec := Section{Tit: rawSec.Tit}
-        sec.Pieces = make([]Piece, 0, 20)
-        for _, pieceID := range rawSec.Pieces {
-          if piece, ok := pieceMap[pieceID]; ok {
-            sec.Pieces = append(sec.Pieces, piece)
-            book.Pieces = append(book.Pieces, piece)
-          } else {
-            err := fmt.Errorf(
-              "piece %v from book %v is not in catalog", pieceID, book.ID,
+      for _, rsec := range rbook.Sections {
+        sec := Section{Tit: rsec.Tit}
+        sec.Pieces = make([]Piece, 0, 50)
+        for _, pieceID := range rsec.Pieces {
+          piece, exists := pieceMap[pieceID]
+          if !exists {
+            return nil, fmt.Errorf(
+              "book %s piece %s is not in catalog", pieceID, book.ID,
             )
-            return nil, err
           }
+          sec.Pieces = append(sec.Pieces, piece)
+          book.Pieces = append(book.Pieces, piece)
         }
         book.Sections = append(book.Sections, sec)
       }
-    } else { // book without sections
-      for _, pieceID := range rawBook.Pieces {
-        if piece, ok := pieceMap[pieceID]; ok {
-          book.Pieces = append(book.Pieces, piece)
-        } else {
-          err := fmt.Errorf(
-            "piece %v from book %v is not in catalog", pieceID, book.ID,
+    } else { // Book without sections
+      for _, pieceID := range rbook.Pieces {
+        piece, exists := pieceMap[pieceID]
+        if !exists {
+          return nil, fmt.Errorf(
+            "book %s piece %s is not in catalog", pieceID, book.ID,
           )
-          return nil, err
         }
+        book.Pieces = append(book.Pieces, piece)
       }
     }
     books = append(books, book)
@@ -108,52 +132,26 @@ func addPiecesToBooks(rawBooks []RawBook, pieceMap map[string]Piece) ([]Book, er
   return books, nil
 }
 
-func SectionPieces(book Book) (next func() bool, value func() *Piece) {
-  i, j := 0, 0
-  next = func() bool { // check for the next iterator value
-    return i < len(book.Sections) && j < len(book.Sections[i].Pieces)
-  }
-  value = func() *Piece { // return a current iterator value
-    if !next() {
-      panic("out of bound Section Piece")
-    }
-    piece := &book.Sections[i].Pieces[j]
-    switch {
-    case j < len(book.Sections[i].Pieces) - 1:
-      j++
-    case i < len(book.Sections):
-      i++
-      j = 0
-    default: i++
-    }
-    return piece
-  }
-  return next, value
-}
-
 func readBooks(
   catDir, bookFile string, bookIDs []string, all bool, pieceMap map[string]Piece,
 ) ([]Book, error) {
-  rawBooks, err := readBookFile(catDir, bookFile)
+  rbooks, err := readBookFile(catDir, bookFile)
   if err != nil {
     return nil, err
   }
   if !all {
-    rawBooks, err = selectRawBooks(rawBooks, bookIDs)
+    rbooks, err = queryBooks(rbooks, bookIDs)
     if err != nil {
       return nil, err
     }
   }
-  books, err := addPiecesToBooks(rawBooks, pieceMap)
-  if err != nil {
-    return nil, err
-  }
-  return books, nil
+  return addPiecesToBooks(rbooks, pieceMap)
 }
 
 func PrintBook(w io.Writer, book Book) {
   fmt.Fprintf(
-    w, "%v %v %v\n",
-    GreenTit(book.ID), YellowTit(book.Tit), YellowSub("%v pieces", len(book.Pieces)),
+    w, "%s %s %s\n",
+    GreenTit(book.ID), YellowTit(book.Tit),
+    RedSub("%v pieces", len(book.Pieces)),
   )
 }

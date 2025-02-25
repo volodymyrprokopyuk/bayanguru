@@ -13,6 +13,7 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
+// TODO
 func FanIn(ins []chan error) <-chan error {
   out := make(chan error)
   var wg sync.WaitGroup
