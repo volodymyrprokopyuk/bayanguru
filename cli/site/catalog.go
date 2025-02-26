@@ -480,7 +480,7 @@ func publishCatalog(tpl *template.Template, pc PublishCommand) error {
     "%v %v\n", catalog.GreenSub("publish"), catalog.BlueSub(pc.PublicDir + "/catalog/..."),
   )
   pieces, _, catLen, err := catalog.ReadPiecesAndBooks(
-    pc.CatalogDir, "", nil, pc.BookFile, nil, false, true,
+    pc.CatalogDir, "", nil, false, pc.BookFile, nil,
   )
   if err != nil {
     return err

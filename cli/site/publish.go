@@ -372,8 +372,7 @@ func siteError(format string, args ...any) error {
 
 func Publish(pc PublishCommand) error {
   pieces, _, catLen, err := catalog.ReadPiecesAndBooks(
-    pc.CatalogDir, pc.Catalog, pc.Pieces,
-    pc.BookFile, pc.Books, pc.Book, pc.All,
+    pc.CatalogDir, pc.Catalog, pc.Pieces, pc.Book, pc.BookFile, pc.Books,
   )
   if err != nil {
     return catError("%v", err)

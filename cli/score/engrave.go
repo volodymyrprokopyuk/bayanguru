@@ -77,8 +77,7 @@ func scoreError(format string, args ...any) error {
 
 func Engrave (ec EngraveCommand) error {
   pieces, books, catLen, err := catalog.ReadPiecesAndBooks(
-    ec.CatalogDir, ec.Catalog, ec.Pieces,
-    ec.BookFile, ec.Books, ec.Book, ec.All,
+    ec.CatalogDir, ec.Catalog, ec.Pieces, ec.Book, ec.BookFile, ec.Books,
   )
   if err != nil {
     return catError("%v", err)

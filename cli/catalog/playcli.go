@@ -16,6 +16,7 @@ const (
   PieceDir = "piece"
   BookDir = "book"
   SiteDir = "site"
+  PlayedFile = ".played"
 )
 
 var Queries = map[string]string{
@@ -86,36 +87,17 @@ func playAction(ctx context.Context, cmd *cli.Command) error {
     catalogDir: CatalogDir, bookFile: BookFile,
     pieceDir: PieceDir, bookDir: BookDir,
     catalog: cat, book: book, random: random, list: list,
-    all: args.Len() == 1 && args.First() == "all",
   }
-  if !pc.all {
-    if book {
-      pc.books = args.Slice()
-    } else {
-      pc.pieces = args.Slice()
-    }
+  if book {
+    pc.bookIDs = args.Slice()
+  } else {
+    pc.pieceIDs = args.Slice()
   }
   pc.queries, err = ValidateQueries(cmd)
   if err != nil {
     return err
   }
   return Play(pc)
-
-  // pieces, _, err := readPieces(pc.CatalogDir, pc.Catalog)
-  // if err != nil {
-  //   return err
-  // }
-  // fmt.Println(len(pieces))
-  // pcs := make([]Piece, 0, len(pieces))
-  // for _, piece := range pieces {
-  //   pcs = append(pcs, piece)
-  // }
-  // pcs, _ = QueryPieces(pcs, pc.Queries)
-  // fmt.Println(len(pcs))
-  // for _, p := range pcs {
-  //   PrintPiece(os.Stdout, p)
-  // }
-  // return nil
 }
 
 func PlayCmd() *cli.Command {

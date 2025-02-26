@@ -61,6 +61,14 @@ type Book struct {
   Meta bool
 }
 
+func PrintBook(w io.Writer, book Book) {
+  fmt.Fprintf(
+    w, "%s %s %s\n",
+    GreenTit(book.ID), YellowTit(book.Tit),
+    RedSub("%v pieces", len(book.Pieces)),
+  )
+}
+
 func readBookFile(catDir, bookFile string) ([]RawBook, error) {
   file, err := os.Open(filepath.Join(catDir, bookFile))
   if err != nil {
@@ -133,25 +141,17 @@ func addPiecesToBooks(
 }
 
 func readBooks(
-  catDir, bookFile string, bookIDs []string, all bool, pieceMap map[string]Piece,
+  catDir, bookFile string, bookIDs []string, pieceMap map[string]Piece,
 ) ([]Book, error) {
   rbooks, err := readBookFile(catDir, bookFile)
   if err != nil {
     return nil, err
   }
-  if !all {
+  if len(bookIDs) > 0 && bookIDs[0] != "all" {
     rbooks, err = queryBooks(rbooks, bookIDs)
     if err != nil {
       return nil, err
     }
   }
   return addPiecesToBooks(rbooks, pieceMap)
-}
-
-func PrintBook(w io.Writer, book Book) {
-  fmt.Fprintf(
-    w, "%s %s %s\n",
-    GreenTit(book.ID), YellowTit(book.Tit),
-    RedSub("%v pieces", len(book.Pieces)),
-  )
 }

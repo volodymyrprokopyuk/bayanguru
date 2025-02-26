@@ -123,6 +123,25 @@ type Piece struct {
   AlphaLink string
 }
 
+func PrintPiece(w io.Writer, piece Piece) {
+  tit := piece.Tit
+  com := fmt.Sprintf("%s %s%s", piece.Com, piece.UkrArt, piece.Arr)
+  com = strings.TrimSpace(com)
+  titLen, comLen := len([]rune(tit)), len([]rune(com))
+  maxTit := 53 - comLen
+  if titLen > maxTit {
+    tit = fmt.Sprintf("%s…", string([]rune(tit)[:maxTit - 1]))
+    titLen = maxTit
+  }
+  spaceLen := 53 - titLen - comLen
+  fmt.Fprintf(
+    w, "%s %s %s %s %s %s %s %s %s\n",
+    GreenTit(piece.ID), YellowTit(tit), strings.Repeat(" ", spaceLen), BlueTit(com),
+    GreenSub(piece.Org), GreenSub(piece.Sty), GreenSub(piece.Gnr),
+    RedTit(bass(piece.Bss)), BlueSub(piece.Lvl),
+  )
+}
+
 var reCatFile = regexp.MustCompile(`^\w+-\w+\.yaml$`)
 
 func listCatalogFiles(catDir, catQuery string) ([]string, error) {
@@ -407,23 +426,4 @@ func bass(bss []string) string {
     }
   }
   return "___"
-}
-
-func PrintPiece(w io.Writer, piece Piece) {
-  tit := piece.Tit
-  com := fmt.Sprintf("%s %s%s", piece.Com, piece.UkrArt, piece.Arr)
-  com = strings.TrimSpace(com)
-  titLen, comLen := len([]rune(tit)), len([]rune(com))
-  maxTit := 53 - comLen
-  if titLen > maxTit {
-    tit = fmt.Sprintf("%s…", string([]rune(tit)[:maxTit - 1]))
-    titLen = maxTit
-  }
-  spaceLen := 53 - titLen - comLen
-  fmt.Fprintf(
-    w, "%s %s %s %s %s %s %s %s %s\n",
-    GreenTit(piece.ID), YellowTit(tit), strings.Repeat(" ", spaceLen), BlueTit(com),
-    GreenSub(piece.Org), GreenSub(piece.Sty), GreenSub(piece.Gnr),
-    RedTit(bass(piece.Bss)), BlueSub(piece.Lvl),
-  )
 }

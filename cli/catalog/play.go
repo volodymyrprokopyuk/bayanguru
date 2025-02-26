@@ -11,17 +11,73 @@ import (
 
 type playCmd struct {
   catalogDir, bookFile, pieceDir, bookDir, catalog string
-  all, book, random, list bool
-  pieces, books []string
+  book, random, list bool
+  pieceIDs, bookIDs []string
   queries map[string]string
 }
 
 func PrintStat(catalog, selected int) {
   fmt.Printf(
-    "%v %v\n%v %v\n",
-    RedSub("%10v", "Catalog"), BlueTit("%4v", catalog),
-    RedSub("%10v", "Selected"), BlueTit("%4v", selected),
+    "%s %s\n%s %s\n",
+    YellowSub("%10s", "Catalog"), BlueTit("%4d", catalog),
+    YellowSub("%10s", "Selected"), BlueTit("%4d", selected),
   )
+}
+
+func ReadPiecesAndBooks(
+  catDir, catQuery string, cmdPieceIDs []string,
+  book bool, bookFile string, cmdBookIDs []string,
+) ([]Piece, []Book, int, error) {
+  pieceMap, pieceIDs, err := readPieces(catDir, catQuery)
+  if err != nil {
+    return nil, nil, 0, err
+  }
+  // Read books
+  if book {
+    books, err := readBooks(catDir, bookFile, cmdBookIDs, pieceMap)
+    if err != nil {
+      return nil, nil, 0, err
+    }
+    pieces := make([]Piece, 0, 500)
+    for _, book := range books {
+      pieces = append(pieces, book.Pieces...)
+    }
+    return pieces, books, len(pieceMap), nil
+  }
+  // Read pieces
+  if len(cmdPieceIDs) > 0 && cmdPieceIDs[0] != "all" {
+    pieceIDs = cmdPieceIDs
+  }
+  pieces := make([]Piece, 0, len(pieceIDs))
+  for _, pieceID := range pieceIDs {
+    piece, exists := pieceMap[pieceID]
+    if !exists {
+      return nil, nil, 0, fmt.Errorf("piece %v not in catalog", pieceID)
+    }
+    pieces = append(pieces, piece)
+  }
+  return pieces, nil, len(pieceMap), nil
+}
+
+func filterPlayed(pieces []Piece, playedFile string) ([]Piece, error) {
+  file, err := os.OpenFile(playedFile, os.O_CREATE | os.O_RDONLY, 0644)
+  if err != nil {
+    return nil, err
+  }
+  defer file.Close()
+  played := make(map[string]bool, 100)
+  scanner := bufio.NewScanner(file)
+  for scanner.Scan() {
+    pieceID := scanner.Text()
+    played[pieceID] = true
+  }
+  nplayed := make([]Piece, 0, len(pieces))
+  for _, piece := range pieces {
+    if !played[piece.ID] {
+      nplayed = append(nplayed, piece)
+    }
+  }
+  return nplayed, nil
 }
 
 func makeRange(start, end int) []int {
@@ -35,7 +91,9 @@ func makeRange(start, end int) []int {
 func arrangePieces(pieceLen int, random bool) []int {
   idx := makeRange(0, pieceLen)
   if random {
-    rand.Shuffle(pieceLen, func (i, j int) { idx[i], idx[j] = idx[j], idx[i] })
+    rand.Shuffle(pieceLen, func (i, j int) {
+      idx[i], idx[j] = idx[j], idx[i]
+    })
   }
   return idx
 }
@@ -45,42 +103,7 @@ func openPiece(pieceDir string, piece Piece) error {
   return exec.Command("xdg-open", piecePDF).Run()
 }
 
-func ReadPiecesAndBooks(
-  catDir, catQuery string, cmdPieceIDs []string,
-  bookFile string, cmdBookIDs []string, book, all bool,
-) ([]Piece, []Book, int, error) {
-  pieceMap, pieceIDs, err := readPieces(catDir, catQuery)
-  if err != nil {
-    return nil, nil, 0, err
-  }
-  // read books
-  if book {
-    books, err := readBooks(catDir, bookFile, cmdBookIDs, all, pieceMap)
-    if err != nil {
-      return nil, nil, 0, err
-    }
-    pieces := make([]Piece, 0, 1000)
-    for _, book := range books {
-      pieces = append(pieces, book.Pieces...)
-    }
-    return pieces, books, len(pieceMap), nil
-  }
-  // read pieces
-  if !all {
-    pieceIDs = cmdPieceIDs
-  }
-  pieces := make([]Piece, 0, len(pieceIDs))
-  for _, pieceID := range pieceIDs {
-    if piece, exists := pieceMap[pieceID]; exists {
-      pieces = append(pieces, piece)
-    } else {
-      return nil, nil, 0, fmt.Errorf("piece %v not in catalog", pieceID)
-    }
-  }
-  return pieces, nil, len(pieceMap), nil
-}
-
-func addToPlayed(pieceID string, fileName string) error {
+func addToPlayed(pieceID, fileName string) error {
   file, err := os.OpenFile(
     fileName, os.O_CREATE | os.O_WRONLY | os.O_APPEND, 0644,
   )
@@ -92,63 +115,36 @@ func addToPlayed(pieceID string, fileName string) error {
   return err
 }
 
-func filterPlayed(allPieces []Piece, fileName string) ([]Piece, error) {
-  file, err := os.OpenFile(fileName, os.O_CREATE | os.O_RDONLY, 0644)
-  if err != nil {
-    return nil, err
-  }
-  defer file.Close()
-  played := make(map[string]bool, 100)
-  scanner := bufio.NewScanner(file)
-  for scanner.Scan() {
-    pieceID := scanner.Text()
-    played[pieceID] = true
-  }
-  pieces := make([]Piece, 0, len(allPieces))
-  for _, piece := range allPieces {
-    if !played[piece.ID] {
-      pieces = append(pieces, piece)
-    }
-  }
-  return pieces, nil
-}
-
-func catError(format string, args ...any) error {
-  return fmt.Errorf("catalog: " + format, args...)
-}
-
 func Play(pc playCmd) error {
   pieces, _, catLen, err := ReadPiecesAndBooks(
-    pc.catalogDir, pc.catalog, pc.pieces,
-    pc.bookFile, pc.books, pc.book, pc.all,
+    pc.catalogDir, pc.catalog, pc.pieceIDs, pc.book, pc.bookFile, pc.bookIDs,
   )
   if err != nil {
-    return catError("%v", err)
+    return err
   }
   if len(pc.queries) > 0 {
     pieces, err = QueryPieces(pieces, pc.queries)
     if err != nil {
-      return catError("%v", err)
+      return err
     }
   }
-  played := ".played"
-  pieces, err = filterPlayed(pieces, played)
+  pieces, err = filterPlayed(pieces, PlayedFile)
   if err != nil {
-    return catError("%v", err)
+    return err
   }
   PrintStat(catLen, len(pieces))
-  indices := arrangePieces(len(pieces), pc.random)
-  for _, i := range indices {
+  idx := arrangePieces(len(pieces), pc.random)
+  for _, i := range idx {
     piece := pieces[i]
     PrintPiece(os.Stdout, piece)
     if !pc.list {
       err := openPiece(pc.pieceDir, piece)
       if err != nil {
-        return catError("%v", err)
+        return err
       }
-      err = addToPlayed(piece.ID, played)
+      err = addToPlayed(piece.ID, PlayedFile)
       if err != nil {
-        return catError("%v", err)
+        return err
       }
     }
   }
