@@ -20,7 +20,8 @@ func bayanguruCmd() *cli.Command{
 selectively plays pieces from a catalog using a classification and search system
 based on catalog metadata. Bayanguru publishes high quality PDF pieces, lyrics,
 and books on the web`,
-    ArgsUsage: "bayanguru engrave | play | publish pieces... | books... [flags]",
+    ArgsUsage: `
+   bayanguru engrave | play | publish pieces... | books... [options]`,
     Version: "0.1.0",
     UseShortOptionHandling: true,
     Commands: []*cli.Command{

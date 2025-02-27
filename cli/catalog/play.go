@@ -115,7 +115,7 @@ func addToPlayed(pieceID, fileName string) error {
   return err
 }
 
-func Play(pc playCmd) error {
+func play(pc playCmd) error {
   pieces, _, catLen, err := ReadPiecesAndBooks(
     pc.catalogDir, pc.catalog, pc.pieceIDs, pc.book, pc.bookFile, pc.bookIDs,
   )

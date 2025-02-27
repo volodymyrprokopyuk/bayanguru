@@ -97,7 +97,7 @@ func playAction(ctx context.Context, cmd *cli.Command) error {
   if err != nil {
     return err
   }
-  return Play(pc)
+  return play(pc)
 }
 
 func PlayCmd() *cli.Command {
