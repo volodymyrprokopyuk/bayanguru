@@ -9,11 +9,16 @@ import (
 	"path/filepath"
 )
 
+type BaseCmd struct {
+  CatalogDir, BookFile, SourceDir, PieceDir, BookDir, Catalog string
+  Book bool
+  PieceIDs, BookIDs []string
+  Queries map[string]string
+}
+
 type playCmd struct {
-  catalogDir, bookFile, pieceDir, bookDir, catalog string
-  book, random, list bool
-  pieceIDs, bookIDs []string
-  queries map[string]string
+  BaseCmd
+  random, list bool
 }
 
 func PrintStat(catalog, selected int) {
@@ -24,17 +29,14 @@ func PrintStat(catalog, selected int) {
   )
 }
 
-func ReadPiecesAndBooks(
-  catDir, catQuery string, cmdPieceIDs []string,
-  book bool, bookFile string, cmdBookIDs []string,
-) ([]Piece, []Book, int, error) {
-  pieceMap, pieceIDs, err := readPieces(catDir, catQuery)
+func ReadPiecesAndBooks(bc BaseCmd) ([]Piece, []Book, int, error) {
+  pieceMap, pieceIDs, err := readPieces(bc.CatalogDir, bc.Catalog)
   if err != nil {
     return nil, nil, 0, err
   }
   // Read books
-  if book {
-    books, err := readBooks(catDir, bookFile, cmdBookIDs, pieceMap)
+  if bc.Book {
+    books, err := readBooks(bc.CatalogDir, bc.BookFile, bc.BookIDs, pieceMap)
     if err != nil {
       return nil, nil, 0, err
     }
@@ -45,8 +47,8 @@ func ReadPiecesAndBooks(
     return pieces, books, len(pieceMap), nil
   }
   // Read pieces
-  if len(cmdPieceIDs) > 0 && cmdPieceIDs[0] != "all" {
-    pieceIDs = cmdPieceIDs
+  if len(bc.PieceIDs) > 0 && bc.PieceIDs[0] != "all" {
+    pieceIDs = bc.PieceIDs
   }
   pieces := make([]Piece, 0, len(pieceIDs))
   for _, pieceID := range pieceIDs {
@@ -116,14 +118,12 @@ func addToPlayed(pieceID, fileName string) error {
 }
 
 func play(pc playCmd) error {
-  pieces, _, catLen, err := ReadPiecesAndBooks(
-    pc.catalogDir, pc.catalog, pc.pieceIDs, pc.book, pc.bookFile, pc.bookIDs,
-  )
+  pieces, _, catLen, err := ReadPiecesAndBooks(pc.BaseCmd)
   if err != nil {
     return err
   }
-  if len(pc.queries) > 0 {
-    pieces, err = QueryPieces(pieces, pc.queries)
+  if len(pc.Queries) > 0 {
+    pieces, err = QueryPieces(pieces, pc.Queries)
     if err != nil {
       return err
     }
@@ -138,7 +138,7 @@ func play(pc playCmd) error {
     piece := pieces[i]
     PrintPiece(os.Stdout, piece)
     if !pc.list {
-      err := openPiece(pc.pieceDir, piece)
+      err := openPiece(pc.PieceDir, piece)
       if err != nil {
         return err
       }

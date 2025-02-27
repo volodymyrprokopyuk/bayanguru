@@ -15,7 +15,6 @@ const (
   SourceDir = "source"
   PieceDir = "piece"
   BookDir = "book"
-  SiteDir = "site"
   PlayedFile = ".played"
 )
 
@@ -84,16 +83,18 @@ func playAction(ctx context.Context, cmd *cli.Command) error {
     return err
   }
   pc := playCmd{
-    catalogDir: CatalogDir, bookFile: BookFile,
-    pieceDir: PieceDir, bookDir: BookDir,
-    catalog: cat, book: book, random: random, list: list,
+    BaseCmd: BaseCmd{
+      CatalogDir: CatalogDir, BookFile: BookFile, PieceDir: PieceDir,
+      BookDir: BookDir, Catalog: cat, Book: book,
+    },
+    random: random, list: list,
   }
-  if book {
-    pc.bookIDs = args.Slice()
+  if pc.Book {
+    pc.BookIDs = args.Slice()
   } else {
-    pc.pieceIDs = args.Slice()
+    pc.PieceIDs = args.Slice()
   }
-  pc.queries, err = ValidateQueries(cmd)
+  pc.Queries, err = ValidateQueries(cmd)
   if err != nil {
     return err
   }

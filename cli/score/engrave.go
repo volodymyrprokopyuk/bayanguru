@@ -12,12 +12,9 @@ import (
 	"github.com/volodymyrprokopyuk/bayanguru/cli/catalog"
 )
 
-type EngraveCommand struct {
-  CatalogDir, BookFile, SourceDir, PieceDir, BookDir string
-  Catalog string
-  All, Book, Piece bool
-  Init, Lint, Optimize, Meta bool
-  Pieces, Books []string
+type engraveCommand struct {
+  catalog.BaseCmd
+  piece, init, lint, optimize, meta bool
 }
 
 func withArgs(args ...string) map[string]string {
@@ -75,14 +72,12 @@ func scoreError(format string, args ...any) error {
   return fmt.Errorf("score: " + format, args...)
 }
 
-func Engrave (ec EngraveCommand) error {
-  pieces, books, catLen, err := catalog.ReadPiecesAndBooks(
-    ec.CatalogDir, ec.Catalog, ec.Pieces, ec.Book, ec.BookFile, ec.Books,
-  )
+func Engrave (ec engraveCommand) error {
+  pieces, books, catLen, err := catalog.ReadPiecesAndBooks(ec.BaseCmd)
   if err != nil {
     return catError("%v", err)
   }
-  if ec.Init {
+  if ec.init {
     err := initPiece(pieces, ec.SourceDir)
     if err != nil {
       return catError("%v", err)
@@ -91,7 +86,7 @@ func Engrave (ec EngraveCommand) error {
   }
   catalog.PrintStat(catLen, len(pieces))
   if ec.Book {
-    if ec.Piece {
+    if ec.piece {
       goto pieces
     }
     err := engraveBooks(books, ec)

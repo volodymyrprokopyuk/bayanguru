@@ -302,9 +302,9 @@ func publishGroup(
   tpl *template.Template, pieces []catalog.Piece,
   groupKey func(piece catalog.Piece) []string,
   sortKey func(piece catalog.Piece) string,
-  group string, groupNames []string, pc PublishCommand,
+  group string, groupNames []string, pc publishCommand,
 ) error {
-  groupDir := filepath.Join(pc.PublicDir, "catalog", group)
+  groupDir := filepath.Join(pc.publicDir, "catalog", group)
   groupURL := "/catalog/" + group
   if len(pieces) == 0 {
     return fmt.Errorf("no pieces for %v", groupURL)
@@ -316,7 +316,7 @@ func publishGroup(
   }
   sortGroups(groups, sortKey)
   markAlphaPieces(groups, sortKey)
-  groupPages := pageGroups(groups, pc.PageSize)
+  groupPages := pageGroups(groups, pc.pageSize)
   return publishGroupPages(tpl, groupPages, groupNames, groupDir, groupURL)
 }
 
@@ -451,37 +451,40 @@ func keyByLyr(_ catalog.Piece) []string {
   return []string{"lyrics"}
 }
 
-func publishRobots(pc PublishCommand) error {
+func publishRobots(pc publishCommand) error {
   file := "robots.txt"
-  src := filepath.Join(pc.SiteDir, file)
-  dst := filepath.Join(pc.PublicDir, file)
+  src := filepath.Join(pc.siteDir, file)
+  dst := filepath.Join(pc.publicDir, file)
   fmt.Printf("%v %v\n", catalog.GreenSub("publish"), catalog.BlueSub(dst))
   _, err := copyFile(src, dst)
   return err
 }
 
-func publishSitemap(pieces []catalog.Piece, pc PublishCommand) error {
+func publishSitemap(pieces []catalog.Piece, pc publishCommand) error {
   file := "sitemap.txt"
-  path := filepath.Join(pc.PublicDir, file)
+  path := filepath.Join(pc.publicDir, file)
   fmt.Printf("%v %v\n", catalog.GreenSub("publish"), catalog.BlueSub(path))
   slices.SortStableFunc(pieces, func(a, b catalog.Piece) int {
     return collator.CompareString(a.Tit, b.Tit)
   })
   var buf bytes.Buffer
   for _, piece := range pieces {
-    pieceURL := fmt.Sprintf("%v/%v\n", pc.PieceURL, piece.File)
+    pieceURL := fmt.Sprintf("%v/%v\n", pc.pieceURL, piece.File)
     buf.WriteString(pieceURL)
   }
   return os.WriteFile(path, buf.Bytes(), 0644)
 }
 
-func publishCatalog(tpl *template.Template, pc PublishCommand) error {
+func publishCatalog(tpl *template.Template, pc publishCommand) error {
   fmt.Printf(
-    "%v %v\n", catalog.GreenSub("publish"), catalog.BlueSub(pc.PublicDir + "/catalog/..."),
+    "%v %v\n", catalog.GreenSub("publish"),
+    catalog.BlueSub(pc.publicDir + "/catalog/..."),
   )
-  pieces, _, catLen, err := catalog.ReadPiecesAndBooks(
-    pc.CatalogDir, "", nil, false, pc.BookFile, nil,
-  )
+  bc := catalog.BaseCmd{
+    CatalogDir: pc.CatalogDir, BookFile: pc.BookFile,Catalog: "",
+    Book: false, PieceIDs: nil, BookIDs: nil,
+  }
+  pieces, _, catLen, err := catalog.ReadPiecesAndBooks(bc)
   if err != nil {
     return err
   }
@@ -499,7 +502,7 @@ func publishCatalog(tpl *template.Template, pc PublishCommand) error {
     }
   }
   catalog.PrintStat(catLen, len(pieces))
-  catalogFile := filepath.Join(pc.TemplateDir, "catalog.html")
+  catalogFile := filepath.Join(pc.templateDir, "catalog.html")
   _, err = tpl.ParseFiles(catalogFile)
   if err != nil {
     return err

@@ -28,10 +28,10 @@ func bookPieces(book catalog.Book) []*catalog.Piece {
 }
 
 func engraveBook(
-  w io.Writer, tplPool *sync.Pool, book catalog.Book, ec EngraveCommand,
+  w io.Writer, tplPool *sync.Pool, book catalog.Book, ec engraveCommand,
 ) error {
   catalog.PrintBook(w, book)
-  if ec.Lint {
+  if ec.lint {
     for _, piece := range book.Pieces {
       err := lintPiece(w, piece, ec.SourceDir)
       if err != nil {
@@ -39,11 +39,11 @@ func engraveBook(
       }
     }
   }
-  book.Meta = ec.Meta
+  book.Meta = ec.meta
   pieces := bookPieces(book)
   tpl := tplPool.Get().(*template.Template)
   for _, piece := range pieces {
-    err := templatePiece(tpl, piece, ec.SourceDir, ec.Meta)
+    err := templatePiece(tpl, piece, ec.SourceDir, ec.meta)
     if err != nil {
       return err
     }
@@ -58,7 +58,7 @@ func engraveBook(
   if err != nil {
     return err
   }
-  if ec.Optimize {
+  if ec.optimize {
     err := optimizeScore(w, book.File, ec.BookDir)
     if err != nil {
       return err
@@ -69,7 +69,7 @@ func engraveBook(
 
 func receiveAndEngraveBooks(
   ctx context.Context, bookCh <-chan catalog.Book, errorCh chan<- error,
-  tplPool *sync.Pool, ec EngraveCommand,
+  tplPool *sync.Pool, ec engraveCommand,
 ) {
   defer close(errorCh)
   var w strings.Builder
@@ -92,7 +92,7 @@ func receiveAndEngraveBooks(
   }
 }
 
-func engraveBooks(books []catalog.Book, ec EngraveCommand) error {
+func engraveBooks(books []catalog.Book, ec engraveCommand) error {
   _, err := makeTemplate(ec.SourceDir, "book.ly") // validate template
   if err != nil {
     return err

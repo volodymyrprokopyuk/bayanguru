@@ -2,10 +2,20 @@ package site
 
 import (
 	"context"
-	"path/filepath"
 
 	"github.com/urfave/cli/v3"
 	"github.com/volodymyrprokopyuk/bayanguru/cli/catalog"
+)
+
+const (
+  SiteDir = "site"
+  TemplateDir = "site/template"
+  ContentDir = "site/content"
+  PublicDir = "site/public"
+  UploadURL = "bayanguru:bayanguru/score"
+  ScoreURL = "https://score.bayanguru.org/score"
+  PieceURL = "https://bayanguru.org/piece"
+  PageSize = 24
 )
 
 func publishAction(ctx context.Context, cmd *cli.Command) error {
@@ -18,25 +28,20 @@ func publishAction(ctx context.Context, cmd *cli.Command) error {
   if err != nil {
     return err
   }
-  pc := PublishCommand{
-    CatalogDir: catalog.CatalogDir, BookFile: catalog.BookFile,
-    PieceDir: catalog.PieceDir, BookDir: catalog.BookDir, SiteDir: catalog.SiteDir,
-    Catalog: cat, Init: init, Book: book, Upload: upload,
-    All: args.Len() == 1 && args.First() == "all",
-    TemplateDir: filepath.Join(catalog.SiteDir, "template"),
-    ContentDir: filepath.Join(catalog.SiteDir, "content"),
-    PublicDir: filepath.Join(catalog.SiteDir, "public"),
-    UploadURL: "bayanguru:bayanguru/score",
-    ScoreURL: "https://score.bayanguru.org/score",
-    PieceURL: "https://bayanguru.org/piece",
-    PageSize: 24,
+  pc := publishCommand{
+    BaseCmd: catalog.BaseCmd{
+      CatalogDir: catalog.CatalogDir, BookFile: catalog.BookFile,
+      PieceDir: catalog.PieceDir, BookDir: catalog.BookDir,
+      Catalog: cat, Book: book,
+    },
+    siteDir: SiteDir, templateDir: TemplateDir, contentDir: ContentDir,
+    publicDir: PublicDir, init: init, upload: upload,
+    uploadURL: UploadURL, scoreURL: ScoreURL, pieceURL: PieceURL, pageSize: 24,
   }
-  if !pc.All {
-    if book {
-      pc.Books = args.Slice()
-    } else {
-      pc.Pieces = args.Slice()
-    }
+  if pc.Book {
+    pc.BookIDs = args.Slice()
+  } else {
+    pc.PieceIDs = args.Slice()
   }
   pc.Queries, err = catalog.ValidateQueries(cmd)
   if err != nil {

@@ -265,17 +265,17 @@ func templatePiece(
 }
 
 func engravePiece(
-  w io.Writer, tplPool *sync.Pool, piece catalog.Piece, ec EngraveCommand,
+  w io.Writer, tplPool *sync.Pool, piece catalog.Piece, ec engraveCommand,
 ) error {
   catalog.PrintPiece(w, piece)
-  if ec.Lint {
+  if ec.lint {
     err := lintPiece(w, piece, ec.SourceDir)
     if err != nil {
       return err
     }
   }
   tpl := tplPool.Get().(*template.Template)
-  err := templatePiece(tpl, &piece, ec.SourceDir, ec.Meta)
+  err := templatePiece(tpl, &piece, ec.SourceDir, ec.meta)
   if err != nil {
     return err
   }
@@ -289,7 +289,7 @@ func engravePiece(
   if err != nil {
     return err
   }
-  if ec.Optimize {
+  if ec.optimize {
     err := optimizeScore(w, piece.File, ec.PieceDir)
     if err != nil {
       return err
@@ -300,7 +300,7 @@ func engravePiece(
 
 func receiveAndEngravePieces(
   ctx context.Context, pieceCh <-chan catalog.Piece, errorCh chan<- error,
-  tplPool *sync.Pool, ec EngraveCommand,
+  tplPool *sync.Pool, ec engraveCommand,
 ) {
   defer close(errorCh)
   var w strings.Builder
@@ -323,7 +323,7 @@ func receiveAndEngravePieces(
   }
 }
 
-func engravePieces(pieces []catalog.Piece, ec EngraveCommand) error {
+func engravePieces(pieces []catalog.Piece, ec engraveCommand) error {
   _, err := makeTemplate(ec.SourceDir, "piece.ly") // validate template
   if err != nil {
     return err

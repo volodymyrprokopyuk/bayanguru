@@ -19,15 +19,12 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
-type PublishCommand struct {
-  CatalogDir, BookFile, PieceDir, BookDir string
-  Catalog string
-  Init, All, Book, Upload bool
-  Pieces, Books []string
-  Queries map[string]string
-  SiteDir, TemplateDir, ContentDir, PublicDir string
-  UploadURL, ScoreURL, PieceURL string
-  PageSize int
+type publishCommand struct {
+  catalog.BaseCmd
+  init, upload bool
+  siteDir, templateDir, contentDir, publicDir string
+  uploadURL, scoreURL, pieceURL string
+  pageSize int
 }
 
 func copyFile(src, dst string) (int64, error) {
@@ -203,17 +200,17 @@ func readCatalogMeta(contentDir, metaFile string) (CatalogMeta, error) {
   return meta, nil
 }
 
-func publishIndex(tpl *template.Template, pc PublishCommand) error {
-  indexFile := filepath.Join(pc.TemplateDir, "index.html")
+func publishIndex(tpl *template.Template, pc publishCommand) error {
+  indexFile := filepath.Join(pc.templateDir, "index.html")
   _, err := tpl.ParseFiles(indexFile)
   if err != nil {
     return err
   }
-  siteContent, err := readSiteContent(pc.ContentDir, "site-content.yaml")
+  siteContent, err := readSiteContent(pc.contentDir, "site-content.yaml")
   if err != nil {
     return err
   }
-  catalogMeta, err := readCatalogMeta(pc.ContentDir, "catalog-meta.yaml")
+  catalogMeta, err := readCatalogMeta(pc.contentDir, "catalog-meta.yaml")
   if err != nil {
     return err
   }
@@ -233,7 +230,7 @@ func publishIndex(tpl *template.Template, pc PublishCommand) error {
     SiteContent SiteContent
     CatalogMeta CatalogMeta
   }{catalogGroups, siteContent, catalogMeta}
-  return publishFile(os.Stdout, tpl, pc.PublicDir, "index", indexData)
+  return publishFile(os.Stdout, tpl, pc.publicDir, "index", indexData)
 }
 
 func uploadPiece(w io.Writer, pieceFile, uploadURL string) error {
@@ -249,10 +246,10 @@ func uploadPiece(w io.Writer, pieceFile, uploadURL string) error {
 
 func receiveAndPublishPieces(
   ctx context.Context, pieceCh <-chan catalog.Piece, errorCh chan<- error,
-  tplPool *sync.Pool, pc PublishCommand,
+  tplPool *sync.Pool, pc publishCommand,
 ) {
   defer close(errorCh)
-  pieceDir := filepath.Join(pc.PublicDir, "piece")
+  pieceDir := filepath.Join(pc.publicDir, "piece")
   var w strings.Builder
   for {
     select {
@@ -263,15 +260,15 @@ func receiveAndPublishPieces(
         return
       }
       w.Reset()
-      if pc.Upload {
-        err := uploadPiece(&w, piece.File, pc.UploadURL)
+      if pc.upload {
+        err := uploadPiece(&w, piece.File, pc.uploadURL)
         if err != nil {
           errorCh <- err
           pieceCh = nil
           break;
         }
       }
-      piece.URL = fmt.Sprintf("%v/%v.pdf", pc.ScoreURL, piece.File)
+      piece.URL = fmt.Sprintf("%v/%v.pdf", pc.scoreURL, piece.File)
       tpl := tplPool.Get().(*template.Template)
       pieceData := struct { Piece catalog.Piece }{piece}
       err := publishFile(&w, tpl, pieceDir, piece.File, pieceData)
@@ -285,19 +282,19 @@ func receiveAndPublishPieces(
   }
 }
 
-func publishPieces(pieces []catalog.Piece, pc PublishCommand) error {
-  tpl, err := makeTemplate(pc.TemplateDir) // validate template
+func publishPieces(pieces []catalog.Piece, pc publishCommand) error {
+  tpl, err := makeTemplate(pc.templateDir) // validate template
   if err != nil {
     return err
   }
-  pieceFile := filepath.Join(pc.TemplateDir, "piece.html")
+  pieceFile := filepath.Join(pc.templateDir, "piece.html")
   _, err = tpl.ParseFiles(pieceFile) // validate template
   if err != nil {
     return err
   }
   var tplPool = sync.Pool{
     New: func() any {
-      tpl, _ := makeTemplate(pc.TemplateDir)
+      tpl, _ := makeTemplate(pc.templateDir)
       _, _ = tpl.ParseFiles(pieceFile)
       return tpl
     },
@@ -370,10 +367,8 @@ func siteError(format string, args ...any) error {
   return fmt.Errorf("site: " + format, args...)
 }
 
-func Publish(pc PublishCommand) error {
-  pieces, _, catLen, err := catalog.ReadPiecesAndBooks(
-    pc.CatalogDir, pc.Catalog, pc.Pieces, pc.Book, pc.BookFile, pc.Books,
-  )
+func Publish(pc publishCommand) error {
+  pieces, _, catLen, err := catalog.ReadPiecesAndBooks(pc.BaseCmd)
   if err != nil {
     return catError("%v", err)
   }
@@ -385,13 +380,13 @@ func Publish(pc PublishCommand) error {
     }
   }
   catalog.PrintStat(catLen, len(pieces))
-  if pc.Init {
-    err := initSite(pc.SiteDir, pc.PublicDir)
+  if pc.init {
+    err := initSite(pc.siteDir, pc.publicDir)
     if err != nil {
       return siteError("%v", err)
     }
   }
-  tpl, err := makeTemplate(pc.TemplateDir)
+  tpl, err := makeTemplate(pc.templateDir)
   if err != nil {
     return siteError("%v", err)
   }
@@ -403,7 +398,7 @@ func Publish(pc PublishCommand) error {
   if err != nil {
     return siteError("%v", err)
   }
-  err = indexPieces(pc.SiteDir, pc.PublicDir)
+  err = indexPieces(pc.siteDir, pc.publicDir)
   if err != nil {
     return siteError("%v", err)
   }
@@ -411,7 +406,7 @@ func Publish(pc PublishCommand) error {
   if err != nil {
     return siteError("%v", err)
   }
-  err = publishStyle(pc.TemplateDir, pc.PublicDir)
+  err = publishStyle(pc.templateDir, pc.publicDir)
   if err != nil {
     return siteError("%v", err)
   }
