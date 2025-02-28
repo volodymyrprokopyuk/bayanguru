@@ -23,10 +23,10 @@ func engraveAction(ctx context.Context, cmd *cli.Command) error {
   }
   if init && args.Len() > 1 ||
     init && args.Len() == 1 && args.First() == "all" {
-    return fmt.Errorf("cannot initialize more than one piece, got %v", args)
+    return fmt.Errorf("cannot initialize more than one piece")
   }
   if book && init {
-    return fmt.Errorf("cannot initialize books")
+    return fmt.Errorf("cannot initialize a book")
   }
   if !book && piece {
     return fmt.Errorf("at least one book is required")
@@ -44,7 +44,7 @@ func engraveAction(ctx context.Context, cmd *cli.Command) error {
   } else {
     ec.PieceIDs = args.Slice()
   }
-  return Engrave(ec)
+  return engrave(ec)
 }
 
 func EngraveCmd() *cli.Command {
@@ -54,35 +54,31 @@ func EngraveCmd() *cli.Command {
     Description:
 `Engrave command initializes, lints, engraves, and optimizes pieces and books`,
     ArgsUsage:
-`bayanguru engrave [-c catalog] pieces... [--init]
-bayanguru engrave [-c catalog] -b books... [--piece]
-bayanguru engrave all --lint --optimize --meta=f`,
+`
+   bayanguru engrave [-c catalog] pieces... [--init]
+   bayanguru engrave [-c catalog] -b books... [--piece]
+   bayanguru engrave all --lint --optimize --meta=f`,
     Action: engraveAction,
   }
   cmd.Flags = []cli.Flag{
     &cli.StringFlag{
-      Name: "catalog", Usage: "read catalog files e.g. ukr,rus, ^stu,sch",
-      Aliases: []string{"c"},
+      Name: "catalog", Usage: "read catalog files", Aliases: []string{"c"},
     },
     &cli.BoolFlag{
-      Name: "book", Usage: "play pieces from books",
-      Aliases: []string{"b"},
+      Name: "book", Usage: "play pieces from books", Aliases: []string{"b"},
     },
     &cli.BoolFlag{
       Name: "piece", Usage: "engrave individual pieces from books",
       Aliases: []string{"p"},
     },
     &cli.BoolFlag{
-      Name: "init", Usage: "initialize a new piece",
-      Aliases: []string{"i"},
+      Name: "init", Usage: "initialize a new piece", Aliases: []string{"i"},
     },
     &cli.BoolFlag{
-      Name: "lint", Usage: "lint pieces before engraving",
-      Aliases: []string{"l"},
+      Name: "lint", Usage: "lint pieces before engraving", Aliases: []string{"l"},
     },
     &cli.BoolFlag{
-      Name: "optimize", Usage: "optimize PDF after engraving",
-      Aliases: []string{"o"},
+      Name: "optimize", Usage: "optimize PDF after engraving", Aliases: []string{"o"},
     },
     &cli.BoolFlag{
       Name: "meta", Usage: "include piece meta information", Value: true,

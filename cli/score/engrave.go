@@ -21,7 +21,7 @@ func withArgs(args ...string) map[string]string {
   keys := []string{"a", "b", "c", "d", "e", "f", "g", "h"}
   l := min(len(args), len(keys))
   argMap := make(map[string]string, l)
-  for i := 0; i < l; i++ {
+  for i := range l {
     argMap[keys[i]] = args[i]
   }
   return argMap
@@ -47,10 +47,11 @@ func makeTemplate(sourceDir, targetFile string) (*template.Template, error) {
 
 func engraveScore(w io.Writer, score, scoreFile, scoreDir string) error {
   scorePDF := filepath.Join(scoreDir, scoreFile)
-  fmt.Fprintf(w, "%v %v\n", catalog.GreenSub("engrave"), catalog.BlueSub(scorePDF + ".pdf"))
+  fmt.Fprintf(
+    w, "%s %s\n", catalog.RedTit("engrave"), catalog.BlueSub(scorePDF + ".pdf"),
+  )
   lyCmd := exec.Command(
-    "lilypond", "-d", "backend=cairo", "-l", "WARN",
-    "-f", "pdf", "-o", scorePDF, "-",
+    "lilypond", "-d", "backend=cairo", "-l", "WARN", "-f", "pdf", "-o", scorePDF, "-",
   )
   lyCmd.Stdin = strings.NewReader(score)
   lyCmd.Stdout = w
@@ -58,46 +59,23 @@ func engraveScore(w io.Writer, score, scoreFile, scoreDir string) error {
   return lyCmd.Run()
 }
 
-func optimizeScore(w io.Writer, scoreFile, scoreDir  string) error {
+func optimizeScore(w io.Writer, scoreFile, scoreDir string) error {
   scorePDF := filepath.Join(scoreDir, scoreFile + ".pdf")
-  fmt.Fprintf(w, "%v %v\n", catalog.GreenSub("optimize"), catalog.BlueSub(scorePDF))
+  fmt.Fprintf(w, "%s %s\n", catalog.BlueTit("optimize"), catalog.BlueSub(scorePDF))
   return pdf.OptimizeFile(scorePDF, scorePDF, nil)
 }
 
-func catError(format string, args ...any) error {
-  return fmt.Errorf("catalog: " + format, args...)
-}
-
-func scoreError(format string, args ...any) error {
-  return fmt.Errorf("score: " + format, args...)
-}
-
-func Engrave (ec engraveCommand) error {
+func engrave (ec engraveCommand) error {
   pieces, books, catLen, err := catalog.ReadPiecesAndBooks(ec.BaseCmd)
   if err != nil {
-    return catError("%v", err)
+    return err
   }
   if ec.init {
-    err := initPiece(pieces, ec.SourceDir)
-    if err != nil {
-      return catError("%v", err)
-    }
-    return nil
+    return initPiece(pieces, ec.SourceDir)
   }
   catalog.PrintStat(catLen, len(pieces))
-  if ec.Book {
-    if ec.piece {
-      goto pieces
-    }
-    err := engraveBooks(books, ec)
-    if err != nil {
-      return scoreError("%v", err)
-    }
-    return nil
+  if ec.Book && !ec.piece {
+    return engraveBooks(books, ec)
   }
-  pieces: err = engravePieces(pieces, ec)
-  if err != nil {
-    return scoreError("%v", err)
-  }
-  return nil
+  return engravePieces(pieces, ec)
 }

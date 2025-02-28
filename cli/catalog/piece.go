@@ -137,8 +137,8 @@ func PrintPiece(w io.Writer, piece Piece) {
   fmt.Fprintf(
     w, "%s %s %s %s %s %s %s %s %s\n",
     GreenTit(piece.ID), YellowTit(tit), strings.Repeat(" ", spaceLen), BlueTit(com),
-    GreenSub(piece.Org), GreenSub(piece.Sty), GreenSub(piece.Gnr),
-    RedTit(bass(piece.Bss)), BlueSub(piece.Lvl),
+    YellowSub(piece.Org), GreenSub(piece.Sty), GreenSub(piece.Gnr),
+    RedSub(bass(piece.Bss)), BlueSub(piece.Lvl),
   )
 }
 
