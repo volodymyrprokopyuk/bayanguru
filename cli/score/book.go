@@ -12,21 +12,6 @@ import (
 	"github.com/volodymyrprokopyuk/bayanguru/cli/catalog"
 )
 
-func bookPieces(book catalog.Book) []*catalog.Piece {
-  pieces := make([]*catalog.Piece, 0, 200)
-  if len(book.Sections) > 0 {
-    nextPiece, piece := catalog.SectionPieces(book)
-    for nextPiece() {
-      pieces = append(pieces, piece())
-    }
-  } else {
-    for i := range book.Pieces {
-      pieces = append(pieces, &book.Pieces[i])
-    }
-  }
-  return pieces
-}
-
 func engraveBook(
   w io.Writer, tplPool *sync.Pool, book catalog.Book, ec engraveCommand,
 ) error {
@@ -40,8 +25,12 @@ func engraveBook(
     }
   }
   book.Meta = ec.meta
-  pieces := bookPieces(book)
+  pieces := make([]*catalog.Piece, len(book.Pieces))
+  for i, piece := range book.PtrPieces() {
+    pieces[i] = piece
+  }
   tpl := tplPool.Get().(*template.Template)
+  defer tplPool.Put(tpl)
   for _, piece := range pieces {
     err := templatePiece(tpl, piece, ec.SourceDir, ec.meta)
     if err != nil {
@@ -50,7 +39,6 @@ func engraveBook(
   }
   var bookScore strings.Builder
   err := tpl.ExecuteTemplate(&bookScore, "score.ly", book)
-  tplPool.Put(tpl)
   if err != nil {
     return err
   }
@@ -67,17 +55,18 @@ func engraveBook(
   return nil
 }
 
-func receiveAndEngraveBooks(
-  ctx context.Context, bookCh <-chan catalog.Book, errorCh chan<- error,
+func fanOutEngraveBooks(
+  ctx context.Context, wg *sync.WaitGroup,
+  chBooks <-chan catalog.Book, chErrors chan<- error,
   tplPool *sync.Pool, ec engraveCommand,
 ) {
-  defer close(errorCh)
+  defer wg.Done()
   var w strings.Builder
   for {
     select {
     case <- ctx.Done():
       return
-    case book, open := <- bookCh:
+    case book, open := <- chBooks:
       if !open {
         return
       }
@@ -85,50 +74,46 @@ func receiveAndEngraveBooks(
       err := engraveBook(&w, tplPool, book, ec)
       fmt.Print(w.String())
       if err != nil {
-        errorCh <- err
-        bookCh = nil // do not engrave books after an error
+        chErrors <- err
+        return
       }
     }
   }
 }
 
 func engraveBooks(books []catalog.Book, ec engraveCommand) error {
-  _, err := makeTemplate(ec.SourceDir, "book.ly") // validate template
+  tplPool, err := templatePool(ec.SourceDir, "book.ly")
   if err != nil {
     return err
   }
-  var tplPool = sync.Pool {
-    New: func() any {
-      tpl, _ := makeTemplate(ec.SourceDir, "book.ly")
-      return tpl
-    },
-  }
+  n := min(len(books), runtime.GOMAXPROCS(0))
   var ctx, cancel = context.WithCancel(context.Background())
   defer cancel()
-  n := min(len(books), runtime.GOMAXPROCS(0))
-  bookCh := make(chan catalog.Book)
-  errorChs := make([]chan error, n)
-  for i := range n { // fan-out books
-    errorChs[i] = make(chan error)
-    go receiveAndEngraveBooks(ctx, bookCh, errorChs[i], &tplPool, ec)
-  }
-  errorCh := catalog.FanIn(errorChs) // fan-in books
+  chBooks, chErrors := make(chan catalog.Book), make(chan error)
+  var ewg sync.WaitGroup
+  ewg.Add(1)
   go func() {
-    books: for _, book := range books {
-      select {
-      case <- ctx.Done():
-        break books
-      case bookCh <- book:
-      }
-    }
-    close(bookCh)
-  }()
-  var firstErr error
-  for err := range errorCh {
-    if firstErr == nil {
+    defer ewg.Done()
+    err = <- chErrors
+    if err != nil {
       cancel()
-      firstErr = err // capture the first error
+    }
+  }()
+  var wg sync.WaitGroup
+  for range n {
+    wg.Add(1)
+    go fanOutEngraveBooks(ctx, &wg, chBooks, chErrors, tplPool, ec)
+  }
+  books: for _, book := range books {
+    select {
+    case <- ctx.Done():
+      break books
+    case chBooks <- book:
     }
   }
-  return firstErr
+  close(chBooks)
+  wg.Wait()
+  close(chErrors)
+  ewg.Wait()
+  return err
 }

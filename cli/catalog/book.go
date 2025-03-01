@@ -9,30 +9,6 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
-// TODO
-func SectionPieces(book Book) (next func() bool, value func() *Piece) {
-  i, j := 0, 0
-  next = func() bool { // check for the next iterator value
-    return i < len(book.Sections) && j < len(book.Sections[i].Pieces)
-  }
-  value = func() *Piece { // return a current iterator value
-    if !next() {
-      panic("out of bound Section Piece")
-    }
-    piece := &book.Sections[i].Pieces[j]
-    switch {
-    case j < len(book.Sections[i].Pieces) - 1:
-      j++
-    case i < len(book.Sections):
-      i++
-      j = 0
-    default: i++
-    }
-    return piece
-  }
-  return next, value
-}
-
 type RawSection struct {
   Tit string `yaml:"tit"`
   Pieces []string `yaml:"pieces"`
@@ -59,6 +35,32 @@ type Book struct {
   Sections []Section
   File string
   Meta bool
+}
+
+func (b *Book) PtrPieces() func(yield func(i int, piece *Piece) bool) {
+  if len(b.Sections) > 0 {
+    return func(yield func(i int, piece *Piece) bool) {
+      k := 0
+      sections: for i := range b.Sections {
+        sec := b.Sections[i]
+        for j := range sec.Pieces {
+          piece := &sec.Pieces[j]
+          if !yield(k, piece) {
+            break sections
+          }
+          k++
+        }
+      }
+    }
+  }
+  return func(yield func(i int, piece *Piece) bool) {
+    for i := range b.Pieces {
+      piece := &b.Pieces[i]
+      if !yield(i, piece) {
+        break
+      }
+    }
+  }
 }
 
 func PrintBook(w io.Writer, book Book) {
