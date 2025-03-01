@@ -6,6 +6,7 @@ import (
 	"os/exec"
 	"path/filepath"
 	"strings"
+	"sync"
 	"text/template"
 
 	pdf "github.com/pdfcpu/pdfcpu/pkg/api"
@@ -45,10 +46,24 @@ func makeTemplate(sourceDir, targetFile string) (*template.Template, error) {
   return tpl.ParseFiles(scoreFile, targetFile)
 }
 
+func templatePool(sourceDir, targetFile string) (*sync.Pool, error) {
+  _, err := makeTemplate(sourceDir, targetFile) // Validate template
+  if err != nil {
+    return nil, err
+  }
+  var tplPool = sync.Pool{
+    New: func() any {
+      tpl, _ := makeTemplate(sourceDir, targetFile)
+      return tpl
+    },
+  }
+  return &tplPool, nil
+}
+
 func engraveScore(w io.Writer, score, scoreFile, scoreDir string) error {
   scorePDF := filepath.Join(scoreDir, scoreFile)
   fmt.Fprintf(
-    w, "%s %s\n", catalog.RedTit("engrave"), catalog.BlueSub(scorePDF + ".pdf"),
+    w, "%s %s\n", catalog.BlueTit("engrave"), catalog.BlueSub(scorePDF + ".pdf"),
   )
   lyCmd := exec.Command(
     "lilypond", "-d", "backend=cairo", "-l", "WARN", "-f", "pdf", "-o", scorePDF, "-",

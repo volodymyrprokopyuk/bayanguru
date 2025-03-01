@@ -50,44 +50,46 @@ var stChords = map[string]string{
   "ges7": "bes, fes ges", "gesd": "beses, ees ges",
 }
 
-var stParts = []string{
-  `\b(?:([a-g](?:es|is|eses|isis)?[,']*)\+)?`, // [bass]
-  `([a-g](?:es|is)?[,']*)(@)?`, // root + [bind]
-  `([Mm7d])(!)?`, // chord + [name]
-  `(\S+)?`, // [modifiers]
-}
-var stNotation = regexp.MustCompile(strings.Join(stParts, ""))
-var cdeBass = regexp.MustCompile(`^[cde]`)
+var (
+  reStNotation = regexp.MustCompile(strings.Join([]string{
+    `\b(?:([a-g](?:es|is|eses|isis)?[,']*)\+)?`, // [bass]
+    `([a-g](?:es|is)?[,']*)(@)?`, // root + [bind]
+    `([Mm7d])(!)?`, // chord + [name]
+    `(\S+)?`, // [modifiers]
+  }, ""))
+  reCdeBass = regexp.MustCompile(`^[cde]`)
+)
 
 func lyNotation(stChord string) string {
-  c := stNotation.FindStringSubmatch(stChord)
+  c := reStNotation.FindStringSubmatch(stChord)
   bass, root, bind, chord, name, mods := c[1], c[2], c[3], c[4], c[5], c[6]
   if len(bass) > 0 {
-    if cdeBass.MatchString(bass) {
+    if reCdeBass.MatchString(bass) {
       bass += ","
     } else {
       bass += ",,"
     }
   }
-  if !cdeBass.MatchString(root) {
+  if !reCdeBass.MatchString(root) {
     root += ","
   }
   rootKey := strings.TrimRight(root, ",'")
-  if enharmKey, ok := noteEnharm[rootKey]; ok {
+  enharmKey, exists := noteEnharm[rootKey]
+  if exists {
     rootKey = enharmKey
   }
   triad := stChords[rootKey + chord]
   if len(name) > 0 {
-    name = fmt.Sprintf(`^\markup \smaller %v`, chordNames[chord])
+    name = fmt.Sprintf(`^\markup \smaller %s`, chordNames[chord])
   }
   if len(bass) > 0 {
-    chord = fmt.Sprintf(`\fixed c' { <%v %v>%v%v }`, bass, triad, mods, name)
+    chord = fmt.Sprintf(`\fixed c' { <%s %s>%s%s }`, bass, triad, mods, name)
   } else {
-    chord = fmt.Sprintf(`\fixed c' { <%v>%v%v }`, triad, mods, name)
+    chord = fmt.Sprintf(`\fixed c' { <%s>%s%s }`, triad, mods, name)
   }
   if len(bind) > 0 {
     return fmt.Sprintf(
-      `\afterGrace 1/4 %v { \fixed c { \once \hide Stem \parenthesize %v4 } }`,
+      `\afterGrace 1/4 %s { \fixed c { \once \hide Stem \parenthesize %s4 } }`,
       chord, root,
     )
   }
@@ -95,7 +97,7 @@ func lyNotation(stChord string) string {
 }
 
 func stradella(score string) string {
-  return stNotation.ReplaceAllStringFunc(score, lyNotation)
+  return reStNotation.ReplaceAllStringFunc(score, lyNotation)
 }
 
 func copyFile(src, dst string) (int64, error) {
@@ -120,7 +122,7 @@ func initPiece(pieces []catalog.Piece, sourceDir string) error {
   pieceFile := filepath.Join(sourceDir, piece.Src, piece.File + ".ly")
   _, err := os.Stat(pieceFile)
   if err == nil {
-    return fmt.Errorf("%v already exists", pieceFile)
+    return fmt.Errorf("%s already exists", pieceFile)
   }
   pieceDir := filepath.Join(sourceDir, piece.Src)
   err = os.MkdirAll(pieceDir, 0755)
@@ -143,7 +145,7 @@ func initPiece(pieces []catalog.Piece, sourceDir string) error {
   if err != nil {
     return err
   }
-  fmt.Printf("%v %v\n", catalog.GreenSub("init"), catalog.BlueSub(pieceFile))
+  fmt.Printf("%s %s\n", catalog.BlueTit("init"), catalog.BlueSub(pieceFile))
   return nil
 }
 
@@ -275,13 +277,13 @@ func engravePiece(
     }
   }
   tpl := tplPool.Get().(*template.Template)
+  defer tplPool.Put(tpl)
   err := templatePiece(tpl, &piece, ec.SourceDir, ec.meta)
   if err != nil {
     return err
   }
   var pieceScore strings.Builder
   err = tpl.ExecuteTemplate(&pieceScore, "score.ly", piece)
-  tplPool.Put(tpl)
   if err != nil {
     return err
   }
@@ -298,17 +300,18 @@ func engravePiece(
   return nil
 }
 
-func receiveAndEngravePieces(
-  ctx context.Context, pieceCh <-chan catalog.Piece, errorCh chan<- error,
+func fanOutEngravePieces(
+  ctx context.Context, wg *sync.WaitGroup,
+  chPieces <-chan catalog.Piece, chErrors chan<- error,
   tplPool *sync.Pool, ec engraveCommand,
 ) {
-  defer close(errorCh)
+  defer wg.Done()
   var w strings.Builder
   for {
     select {
     case <- ctx.Done():
       return
-    case piece, open := <- pieceCh:
+    case piece, open := <- chPieces:
       if !open {
         return
       }
@@ -316,50 +319,46 @@ func receiveAndEngravePieces(
       err := engravePiece(&w, tplPool, piece, ec)
       fmt.Print(w.String())
       if err != nil {
-        errorCh <- err
-        pieceCh = nil // do not engrave pieces after an error
+        chErrors <- err
+        return
       }
     }
   }
 }
 
 func engravePieces(pieces []catalog.Piece, ec engraveCommand) error {
-  _, err := makeTemplate(ec.SourceDir, "piece.ly") // validate template
+  tplPool, err := templatePool(ec.SourceDir, "piece.ly")
   if err != nil {
     return err
   }
-  var tplPool = sync.Pool{
-    New: func() any {
-      tpl, _ := makeTemplate(ec.SourceDir, "piece.ly")
-      return tpl
-    },
-  }
+  n := min(len(pieces), runtime.GOMAXPROCS(0))
   ctx, cancel := context.WithCancel(context.Background())
   defer cancel()
-  n := min(len(pieces), runtime.GOMAXPROCS(0))
-  pieceCh := make(chan catalog.Piece)
-  errorChs := make([]chan error, n)
-  for i := range n { // fan-out pieces
-    errorChs[i] = make(chan error)
-    go receiveAndEngravePieces(ctx, pieceCh, errorChs[i], &tplPool, ec)
-  }
-  errorCh := catalog.FanIn(errorChs) // fan-in pieces
+  chPieces, chErrors := make(chan catalog.Piece), make(chan error)
+  var ewg sync.WaitGroup
+  ewg.Add(1)
   go func() {
-    pieces: for _, piece := range pieces {
-      select {
-      case <- ctx.Done():
-        break pieces
-      case pieceCh <- piece:
-      }
-    }
-    close(pieceCh)
-  }()
-  var firstErr error
-  for err := range errorCh {
-    if firstErr == nil {
+    defer ewg.Done()
+    err = <- chErrors
+    if err != nil {
       cancel()
-      firstErr = err // capture the first error
+    }
+  }()
+  var wg sync.WaitGroup
+  for range n {
+    wg.Add(1)
+    go fanOutEngravePieces(ctx, &wg, chPieces, chErrors, tplPool, ec)
+  }
+  pieces: for _, piece := range pieces {
+    select {
+    case <- ctx.Done():
+      break pieces
+    case chPieces <- piece:
     }
   }
-  return firstErr
+  close(chPieces)
+  wg.Wait()
+  close(chErrors)
+  ewg.Wait()
+  return err
 }
