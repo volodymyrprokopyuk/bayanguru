@@ -34,12 +34,39 @@ var (
       return true
     },
     Sub: []Section{
-      {Name: "ukrainian"},
-      {Name: "russian"},
-      {Name: "belarusian"},
-      {Name: "hungarian"},
-      {Name: "extra"},
-      {Name: "european"},
+      {
+        Name: "ukrainian", Tit: "Ukrainian | Українські",
+        Query: func(piece catalog.Piece) bool {
+          return piece.Org == "ukr"
+        },
+      }, {
+        Name: "russian", Tit: "Russian | Російські",
+        Query: func(piece catalog.Piece) bool {
+          return piece.Org == "rus"
+        },
+      }, {
+        Name: "belarusian", Tit: "Belarusian | Білоруські",
+        Query: func(piece catalog.Piece) bool {
+          return piece.Org == "blr"
+        },
+      }, {
+        Name: "hungarian", Tit: "Hungarian | Угорські",
+        Query: func(piece catalog.Piece) bool {
+          return piece.Org == "hun"
+        },
+      }, {
+        Name: "extra", Tit: "Extra | Різне",
+        Query: func(piece catalog.Piece) bool {
+          extra := []string{"mda", "pol", "cze", "svk", "svn", "lva", "est"}
+          return slices.Contains(extra, piece.Org)
+        },
+      }, {
+        Name: "european", Tit: "European | Європейські",
+        Query: func(piece catalog.Piece) bool {
+          euro := []string{"aut", "deu", "dnk", "fra", "swe"}
+          return slices.Contains(euro, piece.Org)
+        },
+      },
     },
   }
   secSty = Section{
@@ -48,9 +75,22 @@ var (
       return true
     },
     Sub: []Section{
-      {Name: "folk"},
-      {Name: "custom"},
-      {Name: "classic"},
+      {
+        Name: "folk", Tit: "Folk | Фолькльор",
+        Query: func(piece catalog.Piece) bool {
+          return piece.Sty == "flk"
+        },
+      }, {
+        Name: "custom", Tit: "Custom | Авторська",
+        Query: func(piece catalog.Piece) bool {
+          return piece.Sty == "cus"
+        },
+      }, {
+        Name: "classic", Tit: "Classic | Класика",
+        Query: func(piece catalog.Piece) bool {
+          return piece.Sty == "cls"
+        },
+      },
     },
   }
   secGnr = Section{
@@ -59,9 +99,27 @@ var (
       return piece.Gnr != "stu"
     },
     Sub: []Section{
-      {Name: "song"},
-      {Name: "dance"},
-      {Name: "piece"},
+      {
+        Name: "song", Tit: "Song | Пісня",
+        Query: func(piece catalog.Piece) bool {
+          song := []string{"sng", "chd", "lul", "ves", "kol", "pry", "rmc", "mil"}
+          return slices.Contains(song, piece.Gnr)
+        },
+      }, {
+        Name: "dance", Tit: "Dance | Танець",
+        Query: func(piece catalog.Piece) bool {
+          dance := []string{
+            "dnc", "plk", "mzr", "qdr", "men", "koz", "gop", "vls", "tng", "mrc",
+          }
+          return slices.Contains(dance, piece.Gnr)
+        },
+      }, {
+        Name: "piece", Tit: "Piece | П'єса",
+        Query: func(piece catalog.Piece) bool {
+          pie := []string{"pie", "pre", "inv", "can", "gyp"}
+          return slices.Contains(pie, piece.Gnr)
+        },
+      },
     },
   }
   secCom = Section{
@@ -70,7 +128,12 @@ var (
       return len(piece.Com) > 0 || len(piece.Arr) > 0
     },
     Sub: []Section{
-      {Name: "composer"},
+      {
+        Name: "composer", Tit: "Composer | Композитор",
+        Query: func(piece catalog.Piece) bool {
+          return true
+        },
+      },
     },
   }
   secStb = Section{
@@ -78,16 +141,17 @@ var (
     Query: func(piece catalog.Piece) bool {
       return piece.Gnr == "stu" &&
         slices.ContainsFunc(piece.Bss, func(bss string) bool {
-          return bss == "stb" || bss == "pub"
+          bass := []string{"stb", "pub"}
+          return slices.Contains(bass, bss)
         })
     },
     Sub: []Section{
-      {Name: "scale"},
-      {Name: "arpeggio"},
-      {Name: "interval"},
-      {Name: "chord"},
-      {Name: "polyphony"},
-      {Name: "left-hand"},
+      {Name: "scale", Tit: "Scale | Гами"},
+      {Name: "arpeggio", Tit: "Arpeggio | Арпеджіо"},
+      {Name: "interval", Tit: "Interval | Інтревали"},
+      {Name: "chord", Tit: "Chord | Акорди"},
+      {Name: "polyphony", Tit: "Polyphony | Поліфонія"},
+      {Name: "left-hand", Tit: "Left hand | Ліва рука"},
     },
   }
   secFrb = Section{
@@ -96,11 +160,47 @@ var (
       return piece.Gnr == "stu" && slices.Contains(piece.Bss, "frb")
     },
     Sub: []Section{
-      {Name: "scale"},
-      {Name: "arpeggio"},
-      {Name: "interval"},
-      {Name: "chord"},
-      {Name: "polyphony"},
+      {
+        Name: "scale", Tit: "Scale | Гами",
+        Query: func(piece catalog.Piece) bool {
+          return slices.ContainsFunc(piece.Bss, func(bss string) bool {
+            scale := []string{"scl", "seq", "cro"}
+            return slices.Contains(scale, bss)
+          })
+        },
+      }, {
+        Name: "arpeggio", Tit: "Arpeggio | Арпеджіо",
+        Query: func(piece catalog.Piece) bool {
+          return slices.ContainsFunc(piece.Bss, func(bss string) bool {
+            arp := []string{"arp", "lng", "srt", "brk"}
+            return slices.Contains(arp, bss)
+          })
+        },
+      }, {
+        Name: "interval", Tit: "Interval | Інтревали",
+        Query: func(piece catalog.Piece) bool {
+          return slices.ContainsFunc(piece.Bss, func(bss string) bool {
+            inter := []string{"in3", "in4", "in5", "in6", "in7", "in8"}
+            return slices.Contains(inter, bss)
+          })
+        },
+      }, {
+        Name: "chord", Tit: "Chord | Акорди",
+        Query: func(piece catalog.Piece) bool {
+          return slices.ContainsFunc(piece.Bss, func(bss string) bool {
+            chord := []string{"cr5", "cr7"}
+            return slices.Contains(chord, bss)
+          })
+        },
+      }, {
+        Name: "polyphony", Tit: "Polyphony | Поліфонія",
+        Query: func(piece catalog.Piece) bool {
+          return slices.ContainsFunc(piece.Bss, func(bss string) bool {
+            poly := []string{"vo2", "vo3"}
+            return slices.Contains(poly, bss)
+          })
+        },
+      },
     },
   }
   secBss = Section{
@@ -109,9 +209,9 @@ var (
       return true
     },
     Sub: []Section{
-      {Name: "standard-bass"},
-      {Name: "pure-bass"},
-      {Name: "free-bass"},
+      {Name: "standard-bass", Tit: "Standard bass | Готовий аккорд"},
+      {Name: "pure-bass", Tit: "Pure bass | Чистий бас"},
+      {Name: "free-bass", Tit: "Free bass | Виборна система"},
     },
   }
   secLvl = Section{
@@ -120,9 +220,9 @@ var (
       return true
     },
     Sub: []Section{
-      {Name: "elementary-a"},
-      {Name: "elementary-b"},
-      {Name: "elementary-c"},
+      {Name: "elementary-a", Tit: "Elementary | Простий A"},
+      {Name: "elementary-b", Tit: "Elementary | Простий B"},
+      {Name: "elementary-c", Tit: "Elementary | Простий C"},
     },
   }
   secLyr = Section{
@@ -131,7 +231,7 @@ var (
       return piece.Lyr == "lyr"
     },
     Sub: []Section{
-      {Name: "lyrics"},
+      {Name: "lyrics", Tit: "Lyrics | Пісні"},
     },
   }
   sections2 = []Section{
