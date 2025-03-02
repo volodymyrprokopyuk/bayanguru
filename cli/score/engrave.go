@@ -45,7 +45,7 @@ func makeTemplate(sourceDir, targetFile string) (*template.Template, error) {
 }
 
 func templatePool(sourceDir, targetFile string) (*sync.Pool, error) {
-  _, err := makeTemplate(sourceDir, targetFile) // Validate template
+  _, err := makeTemplate(sourceDir, targetFile) // Validate Lilypond templates
   if err != nil {
     return nil, err
   }

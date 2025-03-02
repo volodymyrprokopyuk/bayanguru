@@ -466,11 +466,15 @@ func publishSitemap(pieces []catalog.Piece, pc publishCommand) error {
   return os.WriteFile(path, buf.Bytes(), 0644)
 }
 
-func publishCatalog(tpl *template.Template, pc publishCommand) error {
+func publishCatalog(pc publishCommand) error {
   fmt.Printf(
-    "%v %v\n", catalog.GreenSub("publish"),
+    "%s %s\n", catalog.BlueTit("publish"),
     catalog.BlueSub(pc.publicDir + "/catalog/..."),
   )
+  tpl, err := makeTemplate(pc.templateDir, "catalog.html")
+  if err != nil {
+    return err
+  }
   bc := catalog.BaseCmd{
     CatalogDir: pc.CatalogDir, BookFile: pc.BookFile,Catalog: "",
     Book: false, PieceIDs: nil, BookIDs: nil,
@@ -493,11 +497,11 @@ func publishCatalog(tpl *template.Template, pc publishCommand) error {
     }
   }
   catalog.PrintStat(catLen, len(pieces))
-  catalogFile := filepath.Join(pc.templateDir, "catalog.html")
-  _, err = tpl.ParseFiles(catalogFile)
-  if err != nil {
-    return err
-  }
+  // catalogFile := filepath.Join(pc.templateDir, "catalog.html")
+  // _, err = tpl.ParseFiles(catalogFile)
+  // if err != nil {
+  //   return err
+  // }
   err = publishGroup(
     tpl, pieces, keyByOrg, keyTit, "origin", sections["origin"], pc,
   )
