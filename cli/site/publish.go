@@ -10,6 +10,7 @@ import (
 	"path/filepath"
 	"regexp"
 	"runtime"
+	"slices"
 	"strings"
 	"sync"
 	"text/template"
@@ -27,48 +28,139 @@ type Link struct {
 type Section struct {
   Name string
   Tit string
+  Query func(piece catalog.Piece) bool
   Sub []string
 }
 
-var sections2 = []Section{
-  {
-    Name: "origin", Tit: "Origin | Країна", Sub: []string{
+var (
+  secOrg = Section{
+    Name: "origin", Tit: "Origin | Країна",
+    Query: func(piece catalog.Piece) bool {
+      return true
+    },
+    Sub: []string{
       "ukrainian", "russian", "belarusian", "hungarian", "extra", "european",
     },
-  }, {
-    Name: "style", Tit: "Style | Стиль", Sub: []string{
+  }
+  secSty = Section{
+    Name: "style", Tit: "Style | Стиль",
+    Query: func(piece catalog.Piece) bool {
+      return true
+    },
+    Sub: []string{
       "folk", "custom", "classic",
     },
-  }, {
-    Name: "genre", Tit: "Genre | Жанр", Sub: []string{
+  }
+  secGnr = Section{
+    Name: "genre", Tit: "Genre | Жанр",
+    Query: func(piece catalog.Piece) bool {
+      return piece.Gnr != "stu"
+    },
+    Sub: []string{
       "song", "dance", "piece",
     },
-  }, {
-    Name: "composer", Tit: "Composer | Композитор", Sub: []string{
+  }
+  secCom = Section{
+    Name: "composer", Tit: "Composer | Композитор",
+    Query: func(piece catalog.Piece) bool {
+      return len(piece.Com) > 0 || len(piece.Arr) > 0
+    },
+    Sub: []string{
       "composer",
     },
-  }, {
-    Name: "study-stb", Tit: "Study | Етюди stb", Sub: []string{
+  }
+  secStb = Section{
+    Name: "study-stb", Tit: "Study | Етюди stb",
+    Query: func(piece catalog.Piece) bool {
+      return piece.Gnr == "stu" &&
+        slices.ContainsFunc(piece.Bss, func(bss string) bool {
+          return bss == "stb" || bss == "pub"
+        })
+    },
+    Sub: []string{
       "scale", "arpeggio", "interval", "chord", "polyphony", "left-hand",
     },
-  }, {
-    Name: "study-frb", Tit: "Study | Етюди frb", Sub: []string{
+  }
+  secFrb = Section{
+    Name: "study-frb", Tit: "Study | Етюди frb",
+    Query: func(piece catalog.Piece) bool {
+      return piece.Gnr == "stu" && slices.Contains(piece.Bss, "frb")
+    },
+    Sub: []string{
       "scale", "arpeggio", "interval", "chord", //"polyphony",
     },
-  }, {
-    Name: "bass", Tit: "Bass | Бас", Sub: []string{
+  }
+  secBss = Section{
+    Name: "bass", Tit: "Bass | Бас",
+    Query: func(piece catalog.Piece) bool {
+      return true
+    },
+    Sub: []string{
       "standard-bass", "pure-bass", "free-bass",
     },
-  }, {
-    Name: "level", Tit: "Level | Рівень", Sub: []string{
+  }
+  secLvl = Section{
+    Name: "level", Tit: "Level | Рівень",
+    Query: func(piece catalog.Piece) bool {
+      return true
+    },
+    Sub: []string{
       "elementary-a", "elementary-b", "elementary-c",
     },
-  }, {
-    Name: "lyrics", Tit: "Lyrics | Пісні", Sub: []string{
+  }
+  secLyr = Section{
+    Name: "lyrics", Tit: "Lyrics | Пісні",
+    Query: func(piece catalog.Piece) bool {
+      return piece.Lyr == "lyr"
+    },
+    Sub: []string{
       "lyrics",
     },
-  },
-}
+  }
+  sections2 = []Section{
+    secOrg, secSty, secGnr, secCom, secStb, secFrb, secBss, secLvl, secLyr,
+  }
+)
+
+// var sections2 = []Section{
+//   {
+//     Name: "origin", Tit: "Origin | Країна", Sub: []string{
+//       "ukrainian", "russian", "belarusian", "hungarian", "extra", "european",
+//     },
+//   }, {
+//     Name: "style", Tit: "Style | Стиль", Sub: []string{
+//       "folk", "custom", "classic",
+//     },
+//   }, {
+//     Name: "genre", Tit: "Genre | Жанр", Sub: []string{
+//       "song", "dance", "piece",
+//     },
+//   }, {
+//     Name: "composer", Tit: "Composer | Композитор", Sub: []string{
+//       "composer",
+//     },
+//   }, {
+//     Name: "study-stb", Tit: "Study | Етюди stb", Sub: []string{
+//       "scale", "arpeggio", "interval", "chord", "polyphony", "left-hand",
+//     },
+//   }, {
+//     Name: "study-frb", Tit: "Study | Етюди frb", Sub: []string{
+//       "scale", "arpeggio", "interval", "chord", //"polyphony",
+//     },
+//   }, {
+//     Name: "bass", Tit: "Bass | Бас", Sub: []string{
+//       "standard-bass", "pure-bass", "free-bass",
+//     },
+//   }, {
+//     Name: "level", Tit: "Level | Рівень", Sub: []string{
+//       "elementary-a", "elementary-b", "elementary-c",
+//     },
+//   }, {
+//     Name: "lyrics", Tit: "Lyrics | Пісні", Sub: []string{
+//       "lyrics",
+//     },
+//   },
+// }
 
 var sections = map[string][]string{
   "origin": {
@@ -383,12 +475,13 @@ func publishPieces(pieces []catalog.Piece, pc publishCommand) error {
   return err
 }
 
-func indexPieces(siteDir, publicDir string) error {
+func indexPieces(publicDir string) error {
   fmt.Printf(
-    "%v %v\n", catalog.GreenSub("index"), catalog.BlueSub(publicDir + "/piece/..."),
+    "%s %s\n", catalog.BlueTit("index"),
+    catalog.BlueSub(publicDir + "/piece/..."),
   )
   pfDir := filepath.Join(publicDir, "pagefind")
-  err := os.RemoveAll(pfDir) // removes an existing index
+  err := os.RemoveAll(pfDir) // Remove the existing index
   if err != nil {
     return err
   }
@@ -404,7 +497,7 @@ func indexPieces(siteDir, publicDir string) error {
 func publishStyle(templateDir, publicDir string) error {
   inStyle := filepath.Join(templateDir, "style.css")
   outStyle := filepath.Join(publicDir, "tw.css")
-  fmt.Printf("%v %v\n", catalog.GreenSub("publish"), catalog.BlueSub(outStyle))
+  fmt.Printf("%s %s\n", catalog.BlueTit("publish"), catalog.BlueSub(outStyle))
   twCmd := exec.Command(
     "bunx", "@tailwindcss/cli", "--input", inStyle, "--output", outStyle, "--minify",
   )
@@ -425,33 +518,32 @@ func publish(pc publishCommand) error {
       return err
     }
   }
-  catalog.PrintStat(catLen, len(pieces))
   if pc.init {
     err := initSite(pc.siteDir, pc.publicDir)
     if err != nil {
       return err
     }
   }
-  err = publishIndex(pc)
-  if err != nil {
-    return err
-  }
-  err = publishPieces(pieces, pc)
-  if err != nil {
-    return err
-  }
-  err = indexPieces(pc.siteDir, pc.publicDir)
-  if err != nil {
-    return err
-  }
+  // err = publishIndex(pc)
+  // if err != nil {
+  //   return err
+  // }
+  // err = publishPieces(pieces, pc)
+  // if err != nil {
+  //   return err
+  // }
+  // err = indexPieces(pc.publicDir)
+  // if err != nil {
+  //   return err
+  // }
   err = publishCatalog(pc)
   if err != nil {
     return err
   }
-  err = publishStyle(pc.templateDir, pc.publicDir)
-  if err != nil {
-    return err
-  }
+  // err = publishStyle(pc.templateDir, pc.publicDir)
+  // if err != nil {
+  //   return err
+  // }
+  catalog.PrintStat(catLen, len(pieces))
   return nil
 }
-

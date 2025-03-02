@@ -471,37 +471,24 @@ func publishCatalog(pc publishCommand) error {
     "%s %s\n", catalog.BlueTit("publish"),
     catalog.BlueSub(pc.publicDir + "/catalog/..."),
   )
-  tpl, err := makeTemplate(pc.templateDir, "catalog.html")
+  bc := catalog.BaseCmd{CatalogDir: pc.CatalogDir}
+  pieces, _, _, err := catalog.ReadPiecesAndBooks(bc)
   if err != nil {
     return err
   }
-  bc := catalog.BaseCmd{
-    CatalogDir: pc.CatalogDir, BookFile: pc.BookFile,Catalog: "",
-    Book: false, PieceIDs: nil, BookIDs: nil,
-  }
-  pieces, _, catLen, err := catalog.ReadPiecesAndBooks(bc)
-  if err != nil {
-    return err
-  }
-  queries := make(map[string]string, len(pieces))
-  queries["lcs"] = "^cpr" // exclude lcs: cpr pieces
+  queries := make(map[string]string, 1)
+  queries["lcs"] = "^cpr"  // Exclude copyrighted pieces from publishing
   pieces, err = catalog.QueryPieces(pieces, queries)
   if err != nil {
     return err
   }
-  allPieces := slices.Clone(pieces)
-  if len(pc.Queries) > 0 {
-    pieces, err = catalog.QueryPieces(pieces, pc.Queries)
-    if err != nil {
-      return err
-    }
+
+
+  tpl, err := makeTemplate(pc.templateDir, "catalog.html")
+  if err != nil {
+    return err
   }
-  catalog.PrintStat(catLen, len(pieces))
-  // catalogFile := filepath.Join(pc.templateDir, "catalog.html")
-  // _, err = tpl.ParseFiles(catalogFile)
-  // if err != nil {
-  //   return err
-  // }
+
   err = publishGroup(
     tpl, pieces, keyByOrg, keyTit, "origin", sections["origin"], pc,
   )
@@ -575,13 +562,13 @@ func publishCatalog(pc publishCommand) error {
   if err != nil {
     return err
   }
-  err = publishRobots(pc)
-  if err != nil {
-    return err
-  }
-  err = publishSitemap(allPieces, pc)
-  if err != nil {
-    return err
-  }
+  // err = publishRobots(pc)
+  // if err != nil {
+  //   return err
+  // }
+  // err = publishSitemap(pieces, pc)
+  // if err != nil {
+  //   return err
+  // }
   return nil
 }

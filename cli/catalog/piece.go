@@ -8,30 +8,9 @@ import (
 	"regexp"
 	"slices"
 	"strings"
-	"sync"
 
 	"gopkg.in/yaml.v3"
 )
-
-// TODO
-func FanIn(ins []chan error) <-chan error {
-  out := make(chan error)
-  var wg sync.WaitGroup
-  for _, in := range ins {
-    wg.Add(1)
-    go func() {
-      defer wg.Done()
-      for val := range in {
-        out <- val
-      }
-    }()
-  }
-  go func() {
-    wg.Wait()
-    close(out)
-  }()
-  return out
-}
 
 var meta = map[string]string{
   // Piece subtitle (sub)
