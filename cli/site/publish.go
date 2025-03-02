@@ -19,6 +19,57 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
+type Link struct {
+  Tit, URL string
+  Disabled bool
+}
+
+type Section struct {
+  Name string
+  Tit string
+  Sub []string
+}
+
+var sections2 = []Section{
+  {
+    Name: "origin", Tit: "Origin | Країна", Sub: []string{
+      "ukrainian", "russian", "belarusian", "hungarian", "extra", "european",
+    },
+  }, {
+    Name: "style", Tit: "Style | Стиль", Sub: []string{
+      "folk", "custom", "classic",
+    },
+  }, {
+    Name: "genre", Tit: "Genre | Жанр", Sub: []string{
+      "song", "dance", "piece",
+    },
+  }, {
+    Name: "composer", Tit: "Composer | Композитор", Sub: []string{
+      "composer",
+    },
+  }, {
+    Name: "study-stb", Tit: "Study | Етюди stb", Sub: []string{
+      "scale", "arpeggio", "interval", "chord", "polyphony", "left-hand",
+    },
+  }, {
+    Name: "study-frb", Tit: "Study | Етюди frb", Sub: []string{
+      "scale", "arpeggio", "interval", "chord", //"polyphony",
+    },
+  }, {
+    Name: "bass", Tit: "Bass | Бас", Sub: []string{
+      "standard-bass", "pure-bass", "free-bass",
+    },
+  }, {
+    Name: "level", Tit: "Level | Рівень", Sub: []string{
+      "elementary-a", "elementary-b", "elementary-c",
+    },
+  }, {
+    Name: "lyrics", Tit: "Lyrics | Пісні", Sub: []string{
+      "lyrics",
+    },
+  },
+}
+
 var sections = map[string][]string{
   "origin": {
     "ukrainian", "russian", "belarusian", "hungarian", "extra", "european",
@@ -89,9 +140,9 @@ func engraveImage(siteDir, publicDir, image string) error {
 func initSite(siteDir, publicDir string) error {
   dirs := make([]string, 0, 100)
   dirs = append(dirs, "image", "piece")
-  for sec, subsecs := range sections {
-    for _, subsec := range subsecs {
-      dirs = append(dirs, filepath.Join("catalog", sec, subsec))
+  for _, sec := range sections2 {
+    for _, sub := range sec.Sub {
+      dirs = append(dirs, filepath.Join("catalog", sec.Name, sub))
     }
   }
   for _, dir := range dirs {
@@ -148,16 +199,16 @@ func publishFile(
   return tpl.ExecuteTemplate(w, "page.html", data)
 }
 
-type MetaEntry struct {
+type ContentEntry struct {
   Name string `yaml:"name"`
   Eng string `yaml:"eng"`
   Ukr string `yaml:"ukr"`
 }
 
 type SiteContent struct {
-  Purpose []MetaEntry `yaml:"purpose"`
-  UserFeatures []MetaEntry `yaml:"userFeatures"`
-  ContribFeatures []MetaEntry `yaml:"contribFeatures"`
+  Purpose []ContentEntry `yaml:"purpose"`
+  UserFeats []ContentEntry `yaml:"userFeats"`
+  ContribFeats []ContentEntry `yaml:"contribFeats"`
 }
 
 func readSiteContent(contentDir, contentFile string) (SiteContent, error) {
@@ -176,12 +227,12 @@ func readSiteContent(contentDir, contentFile string) (SiteContent, error) {
 }
 
 type CatalogMeta struct {
-  Purpose MetaEntry `yaml:"purpose"`
+  Purpose ContentEntry `yaml:"purpose"`
   Meta []struct{
-    Tit MetaEntry `yaml:"tit"`
+    Tit ContentEntry `yaml:"tit"`
     Sec []struct {
-      Tit MetaEntry `yaml:"tit"`
-      Sub []MetaEntry `yaml:"sub"`
+      Tit ContentEntry `yaml:"tit"`
+      Sub []ContentEntry `yaml:"sub"`
     } `yaml:"sec"`
   } `yaml:"meta"`
 }
@@ -207,6 +258,14 @@ func publishIndex(tpl *template.Template, pc publishCommand) error {
   if err != nil {
     return err
   }
+  sectionLinks := make([]Link, len(sections2))
+  for i, sec := range sections2 {
+    link := Link{
+      Tit: sec.Tit,
+      URL: filepath.Join("/", "catalog", sec.Name, sec.Sub[0], "1"),
+    }
+    sectionLinks[i] = link
+  }
   siteContent, err := readSiteContent(pc.contentDir, "site-content.yaml")
   if err != nil {
     return err
@@ -215,34 +274,23 @@ func publishIndex(tpl *template.Template, pc publishCommand) error {
   if err != nil {
     return err
   }
-  catalogGroups := []Link{
-    {URL: "/catalog/origin/ukrainian/1", Title: "Origin | Країна"},
-    {URL: "/catalog/style/folk/1", Title: "Style | Стиль"},
-    {URL: "/catalog/genre/song/1", Title: "Genre | Жанр"},
-    {URL: "/catalog/composer/composer/1", Title: "Composer | Композитор"},
-    {URL: "/catalog/study-stb/scale/1", Title: "Study stb | Етюди stb"},
-    {URL: "/catalog/study-frb/scale/1", Title: "Study frb | Етюди frb"},
-    {URL: "/catalog/bass/standard-bass/1", Title: "Bass | Бас"},
-    {URL: "/catalog/level/elementary-c/1", Title: "Level | Рівень"},
-    {URL: "/catalog/lyrics/lyrics/1", Title: "Lyrics | Пісні"},
-  }
   indexData := struct {
-    CatalogGroups []Link
+    SectionLinks []Link
     SiteContent SiteContent
     CatalogMeta CatalogMeta
-  }{catalogGroups, siteContent, catalogMeta}
+  }{sectionLinks, siteContent, catalogMeta}
   return publishFile(os.Stdout, tpl, pc.publicDir, "index", indexData)
 }
 
 func uploadPiece(w io.Writer, pieceFile, uploadURL string) error {
-  file := fmt.Sprintf("piece/%v.pdf", pieceFile)
-  fmt.Fprintf(w, "%v %v\n", catalog.GreenSub("upload"), catalog.BlueSub(file))
-  copyCmd := exec.Command(
+  file := fmt.Sprintf("piece/%s.pdf", pieceFile)
+  fmt.Fprintf(w, "%s %s\n", catalog.BlueTit("upload"), catalog.BlueSub(file))
+  rclCmd := exec.Command(
     "rclone", "copy", "--s3-no-check-bucket", file, uploadURL,
   )
-  copyCmd.Stdout = os.Stdout
-  copyCmd.Stderr = os.Stderr
-  return copyCmd.Run()
+  rclCmd.Stdout = w
+  rclCmd.Stderr = w
+  return rclCmd.Run()
 }
 
 func receiveAndPublishPieces(

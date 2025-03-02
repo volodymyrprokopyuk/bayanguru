@@ -158,11 +158,6 @@ func pageGroups(groups PieceGroups, pageSize int) PieceGroups {
   return pagedGroups
 }
 
-type Link struct{
-  URL, Title string
-  Disabled bool
-}
-
 func makeGroupLinksMap(
   groupNames []string, groupURL string,
 ) map[string][]Link {
@@ -172,7 +167,7 @@ func makeGroupLinksMap(
     for _, groupName := range groupNames {
       link := Link{
         URL: filepath.Join(groupURL, groupName, "1"),
-        Title: tr[groupName],
+        Tit: tr[groupName],
         Disabled: groupName == currentGroup,
       }
       links = append(links, link)
@@ -207,14 +202,10 @@ func makeAlphaLinksMap(
       var link Link
       if key, exists := alphaPage[alpha]; exists {
         link = Link{
-          URL: filepath.Join(groupURL, key + "#" + alpha),
-          Title: alpha,
+          Tit: alpha, URL: filepath.Join(groupURL, key + "#" + alpha),
         }
       } else {
-        link = Link{
-          Title: alpha,
-          Disabled: true,
-        }
+        link = Link{Tit: alpha, Disabled: true}
       }
       links = append(links, link)
     }
@@ -239,8 +230,8 @@ func makePageLinks(
     }
     strPage := strconv.Itoa(page)
     link := Link{
+      Tit: strPage,
       URL: filepath.Join(groupURL, currentGroup, strPage),
-      Title: strPage,
       Disabled: page == currPage,
     }
     links = append(links, link)

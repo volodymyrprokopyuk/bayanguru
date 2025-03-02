@@ -35,7 +35,7 @@ purpose:
       **Спосіб** (шлях досягнення мети, як?). Поєднати зусилля спільноти за
       створенням нот з програмою [LilyPond](https://lilypond.org/) для
       гравірування нот
-userFeatures:
+userFeats:
   - eng: The highest quality sheet music for bayan
     ukr: Ноти найвищої якості для баяна
   - eng: Ideal learning resource for bayan self-study
@@ -56,7 +56,7 @@ userFeatures:
     ukr: Гнучка система пошуку і автоматичної візуалізації п'єс (CLI)
   - eng: Robust custom book engraving system (CLI)
     ukr: Надійна система гравірування нотних книжок (CLI)
-contribFeatures:
+contribFeats:
   - eng: Clean and maintainable code base
     ukr: Чистий на зручний в розширенні програмний код
   - eng: Fully automated score lining, engraving, and publishing

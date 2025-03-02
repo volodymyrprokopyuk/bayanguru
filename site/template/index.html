@@ -1,8 +1,8 @@
 {{ define "body" }}
   <h2 class="head2">Catalog | Каталог</h2>
   <div data-nosnippet class="mt-2">
-    {{ range .CatalogGroups }}
-      <a href="{{ .URL }}" class="link link-block">{{ .Title }}</a>
+    {{ range .SectionLinks }}
+      <a href="{{ .URL }}" class="link link-block">{{ .Tit }}</a>
     {{ end }}
   </div>
   {{ with .SiteContent }}
@@ -12,13 +12,13 @@
     {{ end }}
     <h2 class="head2">User features | Можливості для користувача</h2>
     <ul class="list mt-2">
-      {{ range .UserFeatures }}
+      {{ range .UserFeats }}
         <li class="mt-2"><p>{{ .Eng }}</p> <p lang="uk">{{ .Ukr }}</p></li>
       {{ end }}
     </ul>
     <h2 class="head2">Features for contributors | Можливості для розробників</h2>
     <ul class="list mt-2">
-      {{ range .ContribFeatures }}
+      {{ range .ContribFeats }}
         <li class="mt-2"><p>{{ .Eng }}</p> <p lang="uk">{{ .Ukr }}</p></li>
       {{ end }}
     </ul>
