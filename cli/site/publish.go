@@ -10,7 +10,6 @@ import (
 	"path/filepath"
 	"regexp"
 	"runtime"
-	"slices"
 	"strings"
 	"sync"
 	"text/template"
@@ -19,178 +18,6 @@ import (
 	"github.com/yuin/goldmark"
 	"gopkg.in/yaml.v3"
 )
-
-type Link struct {
-  Tit, URL string
-  Disabled bool
-}
-
-type Section struct {
-  Name string
-  Tit string
-  Query func(piece catalog.Piece) bool
-  Sub []string
-}
-
-var (
-  secOrg = Section{
-    Name: "origin", Tit: "Origin | Країна",
-    Query: func(piece catalog.Piece) bool {
-      return true
-    },
-    Sub: []string{
-      "ukrainian", "russian", "belarusian", "hungarian", "extra", "european",
-    },
-  }
-  secSty = Section{
-    Name: "style", Tit: "Style | Стиль",
-    Query: func(piece catalog.Piece) bool {
-      return true
-    },
-    Sub: []string{
-      "folk", "custom", "classic",
-    },
-  }
-  secGnr = Section{
-    Name: "genre", Tit: "Genre | Жанр",
-    Query: func(piece catalog.Piece) bool {
-      return piece.Gnr != "stu"
-    },
-    Sub: []string{
-      "song", "dance", "piece",
-    },
-  }
-  secCom = Section{
-    Name: "composer", Tit: "Composer | Композитор",
-    Query: func(piece catalog.Piece) bool {
-      return len(piece.Com) > 0 || len(piece.Arr) > 0
-    },
-    Sub: []string{
-      "composer",
-    },
-  }
-  secStb = Section{
-    Name: "study-stb", Tit: "Study | Етюди stb",
-    Query: func(piece catalog.Piece) bool {
-      return piece.Gnr == "stu" &&
-        slices.ContainsFunc(piece.Bss, func(bss string) bool {
-          return bss == "stb" || bss == "pub"
-        })
-    },
-    Sub: []string{
-      "scale", "arpeggio", "interval", "chord", "polyphony", "left-hand",
-    },
-  }
-  secFrb = Section{
-    Name: "study-frb", Tit: "Study | Етюди frb",
-    Query: func(piece catalog.Piece) bool {
-      return piece.Gnr == "stu" && slices.Contains(piece.Bss, "frb")
-    },
-    Sub: []string{
-      "scale", "arpeggio", "interval", "chord", //"polyphony",
-    },
-  }
-  secBss = Section{
-    Name: "bass", Tit: "Bass | Бас",
-    Query: func(piece catalog.Piece) bool {
-      return true
-    },
-    Sub: []string{
-      "standard-bass", "pure-bass", "free-bass",
-    },
-  }
-  secLvl = Section{
-    Name: "level", Tit: "Level | Рівень",
-    Query: func(piece catalog.Piece) bool {
-      return true
-    },
-    Sub: []string{
-      "elementary-a", "elementary-b", "elementary-c",
-    },
-  }
-  secLyr = Section{
-    Name: "lyrics", Tit: "Lyrics | Пісні",
-    Query: func(piece catalog.Piece) bool {
-      return piece.Lyr == "lyr"
-    },
-    Sub: []string{
-      "lyrics",
-    },
-  }
-  sections2 = []Section{
-    secOrg, secSty, secGnr, secCom, secStb, secFrb, secBss, secLvl, secLyr,
-  }
-)
-
-// var sections2 = []Section{
-//   {
-//     Name: "origin", Tit: "Origin | Країна", Sub: []string{
-//       "ukrainian", "russian", "belarusian", "hungarian", "extra", "european",
-//     },
-//   }, {
-//     Name: "style", Tit: "Style | Стиль", Sub: []string{
-//       "folk", "custom", "classic",
-//     },
-//   }, {
-//     Name: "genre", Tit: "Genre | Жанр", Sub: []string{
-//       "song", "dance", "piece",
-//     },
-//   }, {
-//     Name: "composer", Tit: "Composer | Композитор", Sub: []string{
-//       "composer",
-//     },
-//   }, {
-//     Name: "study-stb", Tit: "Study | Етюди stb", Sub: []string{
-//       "scale", "arpeggio", "interval", "chord", "polyphony", "left-hand",
-//     },
-//   }, {
-//     Name: "study-frb", Tit: "Study | Етюди frb", Sub: []string{
-//       "scale", "arpeggio", "interval", "chord", //"polyphony",
-//     },
-//   }, {
-//     Name: "bass", Tit: "Bass | Бас", Sub: []string{
-//       "standard-bass", "pure-bass", "free-bass",
-//     },
-//   }, {
-//     Name: "level", Tit: "Level | Рівень", Sub: []string{
-//       "elementary-a", "elementary-b", "elementary-c",
-//     },
-//   }, {
-//     Name: "lyrics", Tit: "Lyrics | Пісні", Sub: []string{
-//       "lyrics",
-//     },
-//   },
-// }
-
-var sections = map[string][]string{
-  "origin": {
-    "ukrainian", "russian", "belarusian", "hungarian", "extra", "european",
-  },
-  "style": {
-    "folk", "custom", "classic",
-  },
-  "genre": {
-    "song", "dance", "piece",
-  },
-  "study-stb": {
-    "scale", "arpeggio", "interval", "chord", "polyphony", "left-hand",
-  },
-  "study-frb": {
-    "scale", "arpeggio", "interval", "chord", //"polyphony",
-  },
-  "composer": {
-    "composer",
-  },
-  "bass": {
-    "standard-bass", "pure-bass", "free-bass",
-  },
-  "level": {
-    "elementary-a", "elementary-b", "elementary-c",
-  },
-  "lyrics": {
-    "lyrics",
-  },
-}
 
 type publishCommand struct {
   catalog.BaseCmd
@@ -234,7 +61,7 @@ func initSite(siteDir, publicDir string) error {
   dirs = append(dirs, "image", "piece")
   for _, sec := range sections2 {
     for _, sub := range sec.Sub {
-      dirs = append(dirs, filepath.Join("catalog", sec.Name, sub))
+      dirs = append(dirs, filepath.Join("catalog", sec.Name, sub.Name))
     }
   }
   for _, dir := range dirs {
@@ -369,7 +196,7 @@ func publishIndex(pc publishCommand) error {
   for i, sec := range sections2 {
     link := Link{
       Tit: sec.Tit,
-      URL: filepath.Join("/", "catalog", sec.Name, sec.Sub[0], "1"),
+      URL: filepath.Join("/", "catalog", sec.Name, sec.Sub[0].Name, "1"),
     }
     sectionLinks[i] = link
   }

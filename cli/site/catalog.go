@@ -15,6 +15,160 @@ import (
 	"golang.org/x/text/language"
 )
 
+type Link struct {
+  Tit, URL string
+  Disabled bool
+}
+
+type Section struct {
+  Name string
+  Tit string
+  Query func(piece catalog.Piece) bool
+  Sub []Section
+}
+
+var (
+  secOrg = Section{
+    Name: "origin", Tit: "Origin | Країна",
+    Query: func(piece catalog.Piece) bool {
+      return true
+    },
+    Sub: []Section{
+      {Name: "ukrainian"},
+      {Name: "russian"},
+      {Name: "belarusian"},
+      {Name: "hungarian"},
+      {Name: "extra"},
+      {Name: "european"},
+    },
+  }
+  secSty = Section{
+    Name: "style", Tit: "Style | Стиль",
+    Query: func(piece catalog.Piece) bool {
+      return true
+    },
+    Sub: []Section{
+      {Name: "folk"},
+      {Name: "custom"},
+      {Name: "classic"},
+    },
+  }
+  secGnr = Section{
+    Name: "genre", Tit: "Genre | Жанр",
+    Query: func(piece catalog.Piece) bool {
+      return piece.Gnr != "stu"
+    },
+    Sub: []Section{
+      {Name: "song"},
+      {Name: "dance"},
+      {Name: "piece"},
+    },
+  }
+  secCom = Section{
+    Name: "composer", Tit: "Composer | Композитор",
+    Query: func(piece catalog.Piece) bool {
+      return len(piece.Com) > 0 || len(piece.Arr) > 0
+    },
+    Sub: []Section{
+      {Name: "composer"},
+    },
+  }
+  secStb = Section{
+    Name: "study-stb", Tit: "Study | Етюди stb",
+    Query: func(piece catalog.Piece) bool {
+      return piece.Gnr == "stu" &&
+        slices.ContainsFunc(piece.Bss, func(bss string) bool {
+          return bss == "stb" || bss == "pub"
+        })
+    },
+    Sub: []Section{
+      {Name: "scale"},
+      {Name: "arpeggio"},
+      {Name: "interval"},
+      {Name: "chord"},
+      {Name: "polyphony"},
+      {Name: "left-hand"},
+    },
+  }
+  secFrb = Section{
+    Name: "study-frb", Tit: "Study | Етюди frb",
+    Query: func(piece catalog.Piece) bool {
+      return piece.Gnr == "stu" && slices.Contains(piece.Bss, "frb")
+    },
+    Sub: []Section{
+      {Name: "scale"},
+      {Name: "arpeggio"},
+      {Name: "interval"},
+      {Name: "chord"},
+      {Name: "polyphony"},
+    },
+  }
+  secBss = Section{
+    Name: "bass", Tit: "Bass | Бас",
+    Query: func(piece catalog.Piece) bool {
+      return true
+    },
+    Sub: []Section{
+      {Name: "standard-bass"},
+      {Name: "pure-bass"},
+      {Name: "free-bass"},
+    },
+  }
+  secLvl = Section{
+    Name: "level", Tit: "Level | Рівень",
+    Query: func(piece catalog.Piece) bool {
+      return true
+    },
+    Sub: []Section{
+      {Name: "elementary-a"},
+      {Name: "elementary-b"},
+      {Name: "elementary-c"},
+    },
+  }
+  secLyr = Section{
+    Name: "lyrics", Tit: "Lyrics | Пісні",
+    Query: func(piece catalog.Piece) bool {
+      return piece.Lyr == "lyr"
+    },
+    Sub: []Section{
+      {Name: "lyrics"},
+    },
+  }
+  sections2 = []Section{
+    secOrg, secSty, secGnr, secCom, secStb, secFrb, secBss, secLvl, secLyr,
+  }
+)
+
+var sections = map[string][]string{
+  "origin": {
+    "ukrainian", "russian", "belarusian", "hungarian", "extra", "european",
+  },
+  "style": {
+    "folk", "custom", "classic",
+  },
+  "genre": {
+    "song", "dance", "piece",
+  },
+  "study-stb": {
+    "scale", "arpeggio", "interval", "chord", "polyphony", "left-hand",
+  },
+  "study-frb": {
+    "scale", "arpeggio", "interval", "chord", //"polyphony",
+  },
+  "composer": {
+    "composer",
+  },
+  "bass": {
+    "standard-bass", "pure-bass", "free-bass",
+  },
+  "level": {
+    "elementary-a", "elementary-b", "elementary-c",
+  },
+  "lyrics": {
+    "lyrics",
+  },
+}
+
 var tr = map[string]string{
   // org
   "ukrainian": "Ukrainian | Українські",
