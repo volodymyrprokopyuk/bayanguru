@@ -36,7 +36,8 @@ func publishAction(ctx context.Context, cmd *cli.Command) error {
     },
     siteDir: SiteDir, templateDir: TemplateDir, contentDir: ContentDir,
     publicDir: PublicDir, init: init, upload: upload,
-    uploadURL: UploadURL, scoreURL: ScoreURL, pieceURL: PieceURL, pageSize: 24,
+    uploadURL: UploadURL, scoreURL: ScoreURL, pieceURL: PieceURL,
+    pageSize: PageSize,
   }
   if pc.Book {
     pc.BookIDs = args.Slice()
@@ -47,7 +48,7 @@ func publishAction(ctx context.Context, cmd *cli.Command) error {
   if err != nil {
     return err
   }
-  return Publish(pc)
+  return publish(pc)
 }
 
 func PublishCmd() *cli.Command {
@@ -58,25 +59,24 @@ func PublishCmd() *cli.Command {
 `Publish command uploads PDF pieces to a cloud storage, generates and publishes
 a web site`,
     ArgsUsage:
-`bayanguru publish [-c catalog] [--upload] pieces...
-bayanguru publish [-c catalog] -b books... [--query]
-bayanguru publish all --query...`,
+`
+   bayanguru publish [-c catalog] [--upload] pieces...
+   bayanguru publish [-c catalog] -b books... [--query]
+   bayanguru publish all [--query...]`,
     Action: publishAction,
   }
   cmd.Flags = []cli.Flag{
     &cli.StringFlag{
-      Name: "catalog", Usage: "read catalog files e.g. ukr,rus, ^stu,sch",
-      Aliases: []string{"c"},
+      Name: "catalog", Usage: "read catalog files", Aliases: []string{"c"},
     },
     &cli.BoolFlag{
       Name: "init", Usage: "initialize the site",
     },
     &cli.BoolFlag{
-      Name: "book", Usage: "publish pieces from books",
-      Aliases: []string{"b"},
+      Name: "book", Usage: "publish pieces from books", Aliases: []string{"b"},
     },
     &cli.BoolFlag{
-      Name: "upload", Usage: "upload pieces to cloud storage",
+      Name: "upload", Usage: "upload pieces to a cloud storage",
       Aliases: []string{"u"},
     },
   }

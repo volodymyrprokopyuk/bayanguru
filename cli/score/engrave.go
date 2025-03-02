@@ -38,9 +38,7 @@ func strJoin(sep string, slc []string) string {
 
 func makeTemplate(sourceDir, targetFile string) (*template.Template, error) {
   tpl := template.New("score")
-  tpl.Funcs(template.FuncMap{
-    "w": withArgs, "split": splitArgs, "join": strJoin,
-  })
+  tpl.Funcs(template.FuncMap{"w": withArgs, "split": splitArgs, "join": strJoin})
   scoreFile := filepath.Join(sourceDir, "template", "score.ly")
   targetFile = filepath.Join(sourceDir, "template", targetFile)
   return tpl.ParseFiles(scoreFile, targetFile)

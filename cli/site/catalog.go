@@ -508,13 +508,13 @@ func publishCatalog(tpl *template.Template, pc publishCommand) error {
     return err
   }
   err = publishGroup(
-    tpl, pieces, keyByOrg, keyTit, "origin", catGroups["origin"], pc,
+    tpl, pieces, keyByOrg, keyTit, "origin", sections["origin"], pc,
   )
   if err != nil {
     return err
   }
   err = publishGroup(
-    tpl, pieces, keyBySty, keyTit, "style", catGroups["style"], pc,
+    tpl, pieces, keyBySty, keyTit, "style", sections["style"], pc,
   )
   if err != nil {
     return err
@@ -523,7 +523,7 @@ func publishCatalog(tpl *template.Template, pc publishCommand) error {
     return piece.Gnr != "stu"
   })
   err = publishGroup(
-    tpl, gnrPieces, keyByGnr, keyTit, "genre", catGroups["genre"], pc,
+    tpl, gnrPieces, keyByGnr, keyTit, "genre", sections["genre"], pc,
   )
   if err != nil {
     return err
@@ -536,7 +536,7 @@ func publishCatalog(tpl *template.Template, pc publishCommand) error {
     )
   })
   err = publishGroup(
-    tpl, stuStbPieces, keyByStu, keyCom, "study-stb", catGroups["study-stb"], pc,
+    tpl, stuStbPieces, keyByStu, keyCom, "study-stb", sections["study-stb"], pc,
   )
   if err != nil {
     return err
@@ -545,7 +545,7 @@ func publishCatalog(tpl *template.Template, pc publishCommand) error {
     return piece.Gnr == "stu" && slices.Contains(piece.Bss, "frb")
   })
   err = publishGroup(
-    tpl, stuFrbPieces, keyByStu, keyCom, "study-frb", catGroups["study-frb"], pc,
+    tpl, stuFrbPieces, keyByStu, keyCom, "study-frb", sections["study-frb"], pc,
   )
   if err != nil {
     return err
@@ -554,19 +554,19 @@ func publishCatalog(tpl *template.Template, pc publishCommand) error {
     return len(piece.Com) > 0 || len(piece.Arr) > 0
   })
   err = publishGroup(
-    tpl, comPieces, keyByCom, keyCom, "composer", catGroups["composer"], pc,
+    tpl, comPieces, keyByCom, keyCom, "composer", sections["composer"], pc,
   )
   if err != nil {
     return err
   }
   err = publishGroup(
-    tpl, pieces, keyByBss, keyTit, "bass", catGroups["bass"], pc,
+    tpl, pieces, keyByBss, keyTit, "bass", sections["bass"], pc,
   )
   if err != nil {
     return err
   }
   err = publishGroup(
-    tpl, pieces, keyByLvl, keyTit, "level", catGroups["level"], pc,
+    tpl, pieces, keyByLvl, keyTit, "level", sections["level"], pc,
   )
   if err != nil {
     return err
@@ -575,7 +575,7 @@ func publishCatalog(tpl *template.Template, pc publishCommand) error {
     return piece.Ens == "vc1" || piece.Ens == "vc2" || piece.Lyr == "lyr"
   })
   err = publishGroup(
-    tpl, lyrPieces, keyByLyr, keyTit, "lyrics", catGroups["lyrics"], pc,
+    tpl, lyrPieces, keyByLyr, keyTit, "lyrics", sections["lyrics"], pc,
   )
   if err != nil {
     return err

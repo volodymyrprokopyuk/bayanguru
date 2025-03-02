@@ -19,42 +19,7 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
-type publishCommand struct {
-  catalog.BaseCmd
-  init, upload bool
-  siteDir, templateDir, contentDir, publicDir string
-  uploadURL, scoreURL, pieceURL string
-  pageSize int
-}
-
-func copyFile(src, dst string) (int64, error) {
-  srcFile, err := os.Open(src)
-  if err != nil {
-    return 0, err
-  }
-  defer srcFile.Close()
-  dstFile, err := os.Create(dst)
-  if err != nil {
-    return 0, err
-  }
-  defer dstFile.Close()
-  return io.Copy(dstFile, srcFile)
-}
-
-func engraveImage(siteDir, publicDir, image string) error {
-  lyImage := filepath.Join(siteDir, image + ".ly")
-  svgImage := filepath.Join(publicDir, image)
-  fmt.Printf("%v %v\n", catalog.GreenSub("engrave"), catalog.BlueSub(svgImage + ".svg"))
-  lyCmd := exec.Command(
-    "lilypond", "-d", "backend=cairo", "-l", "WARN", "-f", "svg",
-    "-o", svgImage, lyImage,
-  )
-  lyCmd.Stdout = os.Stdout
-  lyCmd.Stderr = os.Stderr
-  return lyCmd.Run()
-}
-
-var catGroups = map[string][]string{
+var sections = map[string][]string{
   "origin": {
     "ukrainian", "russian", "belarusian", "hungarian", "extra", "european",
   },
@@ -84,17 +49,54 @@ var catGroups = map[string][]string{
   },
 }
 
+type publishCommand struct {
+  catalog.BaseCmd
+  init, upload bool
+  siteDir, templateDir, contentDir, publicDir string
+  uploadURL, scoreURL, pieceURL string
+  pageSize int
+}
+
+func copyFile(src, dst string) (int64, error) {
+  srcFile, err := os.Open(src)
+  if err != nil {
+    return 0, err
+  }
+  defer srcFile.Close()
+  dstFile, err := os.Create(dst)
+  if err != nil {
+    return 0, err
+  }
+  defer dstFile.Close()
+  return io.Copy(dstFile, srcFile)
+}
+
+func engraveImage(siteDir, publicDir, image string) error {
+  lyImage := filepath.Join(siteDir, image + ".ly")
+  svgImage := filepath.Join(publicDir, image)
+  fmt.Printf(
+    "%s %s\n", catalog.BlueTit("engrave"), catalog.BlueSub(svgImage + ".svg"),
+  )
+  lyCmd := exec.Command(
+    "lilypond", "-d", "backend=cairo", "-l", "WARN", "-f", "svg",
+    "-o", svgImage, lyImage,
+  )
+  lyCmd.Stdout = os.Stdout
+  lyCmd.Stderr = os.Stderr
+  return lyCmd.Run()
+}
+
 func initSite(siteDir, publicDir string) error {
   dirs := make([]string, 0, 100)
   dirs = append(dirs, "image", "piece")
-  for key, groups := range catGroups {
-    for _, group := range groups {
-      dirs = append(dirs, filepath.Join("catalog", key, group))
+  for sec, subsecs := range sections {
+    for _, subsec := range subsecs {
+      dirs = append(dirs, filepath.Join("catalog", sec, subsec))
     }
   }
   for _, dir := range dirs {
     d := filepath.Join(publicDir, dir)
-    fmt.Printf("%v %v\n", catalog.GreenSub("init"), catalog.BlueSub(d))
+    fmt.Printf("%s %s\n", catalog.BlueTit("init"), catalog.BlueSub(d))
     err := os.MkdirAll(d, 0755)
     if err != nil {
       return err
@@ -112,23 +114,22 @@ func initSite(siteDir, publicDir string) error {
 
 var reRemovePar = regexp.MustCompile(`<p>|</p>`)
 
-var tplFuncs = template.FuncMap{
-  "join": func(sep string, slc []string) string {
-    return strings.Join(slc, sep)
-  },
-  "md": func(md string) string {
-    var htmlBuf bytes.Buffer
-    err := goldmark.Convert([]byte(md), &htmlBuf)
-    if err != nil {
-      panic(err)
-    }
-    return reRemovePar.ReplaceAllString(htmlBuf.String(), "")
-  },
+func markdown(md string) string {
+  var html bytes.Buffer
+  err := goldmark.Convert([]byte(md), &html)
+  if err != nil {
+    panic(err)
+  }
+  return reRemovePar.ReplaceAllString(html.String(), "")
+}
+
+func strJoin(sep string, slc []string) string {
+  return strings.Join(slc, sep)
 }
 
 func makeTemplate(templateDir string) (*template.Template, error) {
   tpl := template.New("page")
-  tpl.Funcs(tplFuncs)
+  tpl.Funcs(template.FuncMap{"md": markdown, "join": strJoin})
   pageFile := filepath.Join(templateDir, "page.html")
   return tpl.ParseFiles(pageFile)
 }
@@ -138,9 +139,9 @@ func publishFile(
 ) error {
   file := filepath.Join(publicDir, publicFile + ".html")
   if !strings.Contains(file, "/catalog/") {
-    fmt.Fprintf(w, "%v %v\n", catalog.GreenSub("publish"), catalog.BlueSub(file))
+    fmt.Fprintf(w, "%s %s\n", catalog.BlueTit("publish"), catalog.BlueSub(file))
   }
-  w, err := os.Create(file) // overwrites an existing file
+  w, err := os.Create(file) // Overwrites an existing file
   if err != nil {
     return err
   }
@@ -359,56 +360,48 @@ func publishStyle(templateDir, publicDir string) error {
   return twCmd.Run()
 }
 
-func catError(format string, args ...any) error {
-  return fmt.Errorf("catalog: " + format, args...)
-}
-
-func siteError(format string, args ...any) error {
-  return fmt.Errorf("site: " + format, args...)
-}
-
-func Publish(pc publishCommand) error {
+func publish(pc publishCommand) error {
   pieces, _, catLen, err := catalog.ReadPiecesAndBooks(pc.BaseCmd)
   if err != nil {
-    return catError("%v", err)
+    return err
   }
-  pc.Queries["lcs"] = "^cpr" // exclude lcs: cpr pieces
+  pc.Queries["lcs"] = "^cpr" // Exclude copyrighted pieces from publishing
   if len(pc.Queries) > 0 {
     pieces, err = catalog.QueryPieces(pieces, pc.Queries)
     if err != nil {
-      return catError("%v", err)
+      return err
     }
   }
   catalog.PrintStat(catLen, len(pieces))
   if pc.init {
     err := initSite(pc.siteDir, pc.publicDir)
     if err != nil {
-      return siteError("%v", err)
+      return err
     }
   }
   tpl, err := makeTemplate(pc.templateDir)
   if err != nil {
-    return siteError("%v", err)
+    return err
   }
   err = publishIndex(tpl, pc)
   if err != nil {
-    return siteError("%v", err)
+    return err
   }
   err = publishPieces(pieces, pc)
   if err != nil {
-    return siteError("%v", err)
+    return err
   }
   err = indexPieces(pc.siteDir, pc.publicDir)
   if err != nil {
-    return siteError("%v", err)
+    return err
   }
   err = publishCatalog(tpl, pc)
   if err != nil {
-    return siteError("%v", err)
+    return err
   }
   err = publishStyle(pc.templateDir, pc.publicDir)
   if err != nil {
-    return siteError("%v", err)
+    return err
   }
   return nil
 }
