@@ -59,7 +59,7 @@ func engraveImage(siteDir, publicDir, image string) error {
 func initSite(siteDir, publicDir string) error {
   dirs := make([]string, 0, 100)
   dirs = append(dirs, "image", "piece")
-  for _, sec := range sections2 {
+  for _, sec := range sections {
     for _, sub := range sec.Sub {
       dirs = append(dirs, filepath.Join("catalog", sec.Name, sub.Name))
     }
@@ -214,7 +214,7 @@ func publishIndex(pc publishCommand) error {
     SiteContent SiteContent
     CatalogMeta CatalogMeta
   }{
-    SectionLinks: indexSectionLinks(sections2),
+    SectionLinks: indexSectionLinks(sections),
     SiteContent: siteContent,
     CatalogMeta: catalogMeta,
   }
@@ -356,26 +356,26 @@ func publish(pc publishCommand) error {
       return err
     }
   }
-  // err = publishIndex(pc)
-  // if err != nil {
-  //   return err
-  // }
-  // err = publishPieces(pieces, pc)
-  // if err != nil {
-  //   return err
-  // }
-  // err = indexPieces(pc.publicDir)
-  // if err != nil {
-  //   return err
-  // }
+  err = publishIndex(pc)
+  if err != nil {
+    return err
+  }
+  err = publishPieces(pieces, pc)
+  if err != nil {
+    return err
+  }
+  err = indexPieces(pc.publicDir)
+  if err != nil {
+    return err
+  }
   err = publishCatalog(pc)
   if err != nil {
     return err
   }
-  // err = publishStyle(pc.templateDir, pc.publicDir)
-  // if err != nil {
-  //   return err
-  // }
+  err = publishStyle(pc.templateDir, pc.publicDir)
+  if err != nil {
+    return err
+  }
   catalog.PrintStat(catLen, len(pieces))
   return nil
 }
