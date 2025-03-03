@@ -201,6 +201,7 @@ func publishIndex(pc publishCommand) error {
   if err != nil {
     return err
   }
+  sectionLinks := indexSectionLinks(sections)
   siteContent, err := readSiteContent(pc.contentDir, "site-content.yaml")
   if err != nil {
     return err
@@ -214,7 +215,7 @@ func publishIndex(pc publishCommand) error {
     SiteContent SiteContent
     CatalogMeta CatalogMeta
   }{
-    SectionLinks: indexSectionLinks(sections),
+    SectionLinks: sectionLinks,
     SiteContent: siteContent,
     CatalogMeta: catalogMeta,
   }

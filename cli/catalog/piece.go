@@ -216,50 +216,50 @@ func validatePieces(pieces []Piece) error {
   for _, piece := range pieces {
     errors := make([]string, 0, 5)
     if !reID.MatchString(piece.ID) {
-      errors = append(errors, fmt.Sprintf("invalid id %v", piece.ID))
+      errors = append(errors, fmt.Sprintf("invalid id %s", piece.ID))
     }
     if len(piece.Art) > 0 && !reArt.MatchString(piece.Art) {
-      errors = append(errors, fmt.Sprintf("invalid art %v", piece.Art))
+      errors = append(errors, fmt.Sprintf("invalid art %s", piece.Art))
     }
     if !reLcs.MatchString(piece.Lcs) {
-      errors = append(errors, fmt.Sprintf("invalid lcs %v", piece.Lcs))
+      errors = append(errors, fmt.Sprintf("invalid lcs %s", piece.Lcs))
     }
     if !reOrg.MatchString(piece.Org) {
-      errors = append(errors, fmt.Sprintf("invalid org %v", piece.Org))
+      errors = append(errors, fmt.Sprintf("invalid org %s", piece.Org))
     }
     if !reSty.MatchString(piece.Sty) {
-      errors = append(errors, fmt.Sprintf("invalid sty %v", piece.Sty))
+      errors = append(errors, fmt.Sprintf("invalid sty %s", piece.Sty))
     }
     if !reGnr.MatchString(piece.Gnr) {
-      errors = append(errors, fmt.Sprintf("invalid gnr %v", piece.Gnr))
+      errors = append(errors, fmt.Sprintf("invalid gnr %s", piece.Gnr))
     }
     for _, ton := range piece.Ton {
       if !reTon.MatchString(ton) {
-        errors = append(errors, fmt.Sprintf("invalid ton %v", ton))
+        errors = append(errors, fmt.Sprintf("invalid ton %s", ton))
       }
     }
     for _, frm := range piece.Frm {
       if !reFrm.MatchString(frm) {
-        errors = append(errors, fmt.Sprintf("invalid frm %v", frm))
+        errors = append(errors, fmt.Sprintf("invalid frm %s", frm))
       }
     }
     for _, bss := range piece.Bss {
       if !reFrm.MatchString(bss) {
-        errors = append(errors, fmt.Sprintf("invalid bss %v", bss))
+        errors = append(errors, fmt.Sprintf("invalid bss %s", bss))
       }
     }
     if !reLvl.MatchString(piece.Lvl) {
-      errors = append(errors, fmt.Sprintf("invalid lvl %v", piece.Lvl))
+      errors = append(errors, fmt.Sprintf("invalid lvl %s", piece.Lvl))
     }
     if !reEns.MatchString(piece.Ens) {
-      errors = append(errors, fmt.Sprintf("invalid ens %v", piece.Ens))
+      errors = append(errors, fmt.Sprintf("invalid ens %s", piece.Ens))
     }
     if len(piece.Lyr) > 0 && !reLyr.MatchString(piece.Lyr) {
-      errors = append(errors, fmt.Sprintf("invalid lyr %v", piece.Lyr))
+      errors = append(errors, fmt.Sprintf("invalid lyr %s", piece.Lyr))
     }
     if len(errors) > 0 {
       return fmt.Errorf(
-        "invalid piece %v\n%v", piece.ID, strings.Join(errors, "\n"),
+        "invalid piece %s\n%s", piece.ID, strings.Join(errors, "\n"),
       )
     }
   }
@@ -299,7 +299,7 @@ func makeMatchStr(query string) (func(value string) bool, error) {
   invert := strings.HasPrefix(query, "^")
   query = strings.ReplaceAll(query, "^", "")
   query = strings.ReplaceAll(query, ",", "|")
-  query = fmt.Sprintf("(?i:%v)", query)
+  query = fmt.Sprintf("(?i:%s)", query)
   reQuery, err := regexp.Compile(query)
   if err != nil {
     return nil, err

@@ -67,7 +67,7 @@ func PrintBook(w io.Writer, book Book) {
   fmt.Fprintf(
     w, "%s %s %s\n",
     GreenTit(book.ID), YellowTit(book.Tit),
-    RedSub("%v pieces", len(book.Pieces)),
+    RedSub("%d pieces", len(book.Pieces)),
   )
 }
 

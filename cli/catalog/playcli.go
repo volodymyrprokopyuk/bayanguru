@@ -40,7 +40,7 @@ var reCatalog = regexp.MustCompile(`^\w+(?:-\w+)?$`)
 
 func ValidateReq(catalog string, args []string) error {
   if len(catalog) > 0 && !reCatalog.MatchString(catalog) {
-    return fmt.Errorf("invalid catalog %v", catalog)
+    return fmt.Errorf("invalid catalog %s", catalog)
   }
   if len(args) == 0 {
     return fmt.Errorf("at least one piece or book is required")
@@ -50,7 +50,7 @@ func ValidateReq(catalog string, args []string) error {
   }
   for _, arg := range args {
     if arg != "all" && !reID.MatchString(arg) {
-      return fmt.Errorf("invalid ID %v", arg)
+      return fmt.Errorf("invalid ID %s", arg)
     }
   }
   return nil
@@ -64,7 +64,7 @@ func ValidateQueries(cmd *cli.Command) (map[string]string, error) {
     query := cmd.String(name)
     if len(query) > 0 {
       if !reQuery.MatchString(query) {
-        return nil, fmt.Errorf("invalid query --%v %v", name, query)
+        return nil, fmt.Errorf("invalid query --%s %s", name, query)
       }
       queries[name] = query
     }

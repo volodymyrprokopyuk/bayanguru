@@ -54,7 +54,7 @@ func ReadPiecesAndBooks(bc BaseCmd) ([]Piece, []Book, int, error) {
   for _, pieceID := range pieceIDs {
     piece, exists := pieceMap[pieceID]
     if !exists {
-      return nil, nil, 0, fmt.Errorf("piece %v not in catalog", pieceID)
+      return nil, nil, 0, fmt.Errorf("piece %s not in catalog", pieceID)
     }
     pieces = append(pieces, piece)
   }
