@@ -199,12 +199,12 @@ var (
   reGnr = regexp.MustCompile(strings.Join([]string{
     `^sng|chd|lul|ves|kol|pry|rmc|mil`,
     `|dnc|plk|mzr|qdr|men|koz|gop|vls|tng|mrc`,
-    `|pie|pre|inv|can|gyp|stu$`}, ""),
+    `|pie|inv|can|pre|gyp|stu$`}, ""),
   )
   reTon = regexp.MustCompile(`^[a-g](?:es|is)?m[ij]$`)
   reFrm = regexp.MustCompile(strings.Join([]string{
     `^mel|var|vo[23]|scl|seq|cro|arp|lng|srt|brk|in[3-8]|cr[57]`,
-    `|tu[356]|dot|syn|rep|tre|acc|mor|gru|tri|gli|cad|fi1|fi5|jmp`,
+    `|syn|tu[356]|dot|rep|tre|acc|mor|gru|tri|gli|cad|fi1|fi5|jmp`,
     `|stb|pub|frb$`}, ""),
   )
   reLvl = regexp.MustCompile(`^(?:el|in|pr|vi)[a-c]$`)

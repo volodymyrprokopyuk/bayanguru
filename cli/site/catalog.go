@@ -24,7 +24,14 @@ type Section struct {
   Name string
   Tit string
   Query func(piece catalog.Piece) bool
+  Sort func(piece catalog.Piece) string
   Sub []Section
+}
+
+func formQuery(form, query []string) bool {
+  return slices.ContainsFunc(form, func(frm string) bool {
+    return slices.Contains(query, frm)
+  })
 }
 
 var (
@@ -33,6 +40,7 @@ var (
     Query: func(piece catalog.Piece) bool {
       return true
     },
+    Sort: sortByTit,
     Sub: []Section{
       {
         Name: "ukrainian", Tit: "Ukrainian | Українські",
@@ -57,14 +65,14 @@ var (
       }, {
         Name: "extra", Tit: "Extra | Різне",
         Query: func(piece catalog.Piece) bool {
-          extra := []string{"mda", "pol", "cze", "svk", "svn", "lva", "est"}
-          return slices.Contains(extra, piece.Org)
+          ext := []string{"mda", "pol", "cze", "svk", "svn", "lva", "est"}
+          return slices.Contains(ext, piece.Org)
         },
       }, {
         Name: "european", Tit: "European | Європейські",
         Query: func(piece catalog.Piece) bool {
-          euro := []string{"aut", "deu", "dnk", "fra", "swe"}
-          return slices.Contains(euro, piece.Org)
+          eur := []string{"aut", "deu", "dnk", "fra", "swe"}
+          return slices.Contains(eur, piece.Org)
         },
       },
     },
@@ -74,6 +82,7 @@ var (
     Query: func(piece catalog.Piece) bool {
       return true
     },
+    Sort: sortByTit,
     Sub: []Section{
       {
         Name: "folk", Tit: "Folk | Фолькльор",
@@ -98,25 +107,28 @@ var (
     Query: func(piece catalog.Piece) bool {
       return piece.Gnr != "stu"
     },
+    Sort: sortByTit,
     Sub: []Section{
       {
         Name: "song", Tit: "Song | Пісня",
         Query: func(piece catalog.Piece) bool {
-          song := []string{"sng", "chd", "lul", "ves", "kol", "pry", "rmc", "mil"}
-          return slices.Contains(song, piece.Gnr)
+          sng := []string{
+            "sng", "chd", "lul", "ves", "kol", "pry", "rmc", "mil",
+          }
+          return slices.Contains(sng, piece.Gnr)
         },
       }, {
         Name: "dance", Tit: "Dance | Танець",
         Query: func(piece catalog.Piece) bool {
-          dance := []string{
+          dnc := []string{
             "dnc", "plk", "mzr", "qdr", "men", "koz", "gop", "vls", "tng", "mrc",
           }
-          return slices.Contains(dance, piece.Gnr)
+          return slices.Contains(dnc, piece.Gnr)
         },
       }, {
         Name: "piece", Tit: "Piece | П'єса",
         Query: func(piece catalog.Piece) bool {
-          pie := []string{"pie", "pre", "inv", "can", "gyp"}
+          pie := []string{"pie", "inv", "can", "pre", "gyp"}
           return slices.Contains(pie, piece.Gnr)
         },
       },
@@ -127,6 +139,7 @@ var (
     Query: func(piece catalog.Piece) bool {
       return len(piece.Com) > 0 || len(piece.Arr) > 0
     },
+    Sort: sortByCom,
     Sub: []Section{
       {
         Name: "composer", Tit: "Composer | Композитор",
@@ -139,19 +152,53 @@ var (
   secStb = Section{
     Name: "study-stb", Tit: "Study | Етюди stb",
     Query: func(piece catalog.Piece) bool {
-      return piece.Gnr == "stu" &&
-        slices.ContainsFunc(piece.Bss, func(bss string) bool {
-          bass := []string{"stb", "pub"}
-          return slices.Contains(bass, bss)
-        })
+      bss := []string{"stb", "pub"}
+      return piece.Gnr == "stu" && formQuery(piece.Bss, bss)
     },
+    Sort: sortByCom,
     Sub: []Section{
-      {Name: "scale", Tit: "Scale | Гами"},
-      {Name: "arpeggio", Tit: "Arpeggio | Арпеджіо"},
-      {Name: "interval", Tit: "Interval | Інтревали"},
-      {Name: "chord", Tit: "Chord | Акорди"},
-      {Name: "polyphony", Tit: "Polyphony | Поліфонія"},
-      {Name: "left-hand", Tit: "Left hand | Ліва рука"},
+      {
+        Name: "scale", Tit: "Scale | Гами",
+        Query: func(piece catalog.Piece) bool {
+          scl := []string{"scl", "seq", "cro"}
+          return formQuery(piece.Frm, scl)
+        },
+      }, {
+        Name: "arpeggio", Tit: "Arpeggio | Арпеджіо",
+        Query: func(piece catalog.Piece) bool {
+          arp := []string{"arp", "lng", "srt", "brk"}
+          return formQuery(piece.Frm, arp)
+        },
+      }, {
+        Name: "interval", Tit: "Interval | Інтревали",
+        Query: func(piece catalog.Piece) bool {
+          inv := []string{"in3", "in4", "in5", "in6", "in7", "in8"}
+          return formQuery(piece.Frm, inv)
+        },
+      }, {
+        Name: "chord", Tit: "Chord | Акорди",
+        Query: func(piece catalog.Piece) bool {
+          crd := []string{"cr5", "cr7"}
+          return formQuery(piece.Frm, crd)
+        },
+      }, {
+        Name: "polyphony", Tit: "Polyphony | Поліфонія",
+        Query: func(piece catalog.Piece) bool {
+          pph := []string{"vo2", "vo3"}
+          return formQuery(piece.Frm, pph)
+        },
+      }, {
+        Name: "polyrhythm", Tit: "Polyrhythm | Поліритмія",
+        Query: func(piece catalog.Piece) bool {
+          prh := []string{"syn", "tu3", "tu5", "tu6"}
+          return formQuery(piece.Frm, prh)
+        },
+      }, {
+        Name: "left-hand", Tit: "Left hand | Ліва рука",
+        Query: func(piece catalog.Piece) bool {
+          return slices.Contains(piece.Bss, "pub")
+        },
+      },
     },
   }
   secFrb = Section{
@@ -159,46 +206,43 @@ var (
     Query: func(piece catalog.Piece) bool {
       return piece.Gnr == "stu" && slices.Contains(piece.Bss, "frb")
     },
+    Sort: sortByCom,
     Sub: []Section{
       {
         Name: "scale", Tit: "Scale | Гами",
         Query: func(piece catalog.Piece) bool {
-          return slices.ContainsFunc(piece.Bss, func(bss string) bool {
-            scale := []string{"scl", "seq", "cro"}
-            return slices.Contains(scale, bss)
-          })
+          scl := []string{"scl", "seq", "cro"}
+          return formQuery(piece.Bss, scl)
         },
       }, {
         Name: "arpeggio", Tit: "Arpeggio | Арпеджіо",
         Query: func(piece catalog.Piece) bool {
-          return slices.ContainsFunc(piece.Bss, func(bss string) bool {
-            arp := []string{"arp", "lng", "srt", "brk"}
-            return slices.Contains(arp, bss)
-          })
+          arp := []string{"arp", "lng", "srt", "brk"}
+          return formQuery(piece.Bss, arp)
         },
       }, {
         Name: "interval", Tit: "Interval | Інтревали",
         Query: func(piece catalog.Piece) bool {
-          return slices.ContainsFunc(piece.Bss, func(bss string) bool {
-            inter := []string{"in3", "in4", "in5", "in6", "in7", "in8"}
-            return slices.Contains(inter, bss)
-          })
+          inv := []string{"in3", "in4", "in5", "in6", "in7", "in8"}
+          return formQuery(piece.Bss, inv)
         },
       }, {
         Name: "chord", Tit: "Chord | Акорди",
         Query: func(piece catalog.Piece) bool {
-          return slices.ContainsFunc(piece.Bss, func(bss string) bool {
-            chord := []string{"cr5", "cr7"}
-            return slices.Contains(chord, bss)
-          })
+          crd := []string{"cr5", "cr7"}
+          return formQuery(piece.Bss, crd)
         },
       }, {
         Name: "polyphony", Tit: "Polyphony | Поліфонія",
         Query: func(piece catalog.Piece) bool {
-          return slices.ContainsFunc(piece.Bss, func(bss string) bool {
-            poly := []string{"vo2", "vo3"}
-            return slices.Contains(poly, bss)
-          })
+          pph := []string{"vo2", "vo3"}
+          return formQuery(piece.Bss, pph)
+        },
+      }, {
+        Name: "polyrhythm", Tit: "Polyrhythm | Поліритмія",
+        Query: func(piece catalog.Piece) bool {
+          prh := []string{"syn", "tu3", "tu5", "tu6"}
+          return formQuery(piece.Bss, prh)
         },
       },
     },
@@ -208,10 +252,24 @@ var (
     Query: func(piece catalog.Piece) bool {
       return true
     },
+    Sort: sortByTit,
     Sub: []Section{
-      {Name: "standard-bass", Tit: "Standard bass | Готовий аккорд"},
-      {Name: "pure-bass", Tit: "Pure bass | Чистий бас"},
-      {Name: "free-bass", Tit: "Free bass | Виборна система"},
+      {
+        Name: "standard-bass", Tit: "Standard bass | Готовий аккорд",
+        Query: func(piece catalog.Piece) bool {
+          return slices.Contains(piece.Bss, "stb")
+        },
+      }, {
+        Name: "pure-bass", Tit: "Pure bass | Чистий бас",
+        Query: func(piece catalog.Piece) bool {
+          return slices.Contains(piece.Bss, "pub")
+        },
+      }, {
+        Name: "free-bass", Tit: "Free bass | Виборна система",
+        Query: func(piece catalog.Piece) bool {
+          return slices.Contains(piece.Bss, "frb")
+        },
+      },
     },
   }
   secLvl = Section{
@@ -219,10 +277,24 @@ var (
     Query: func(piece catalog.Piece) bool {
       return true
     },
+    Sort: sortByTit,
     Sub: []Section{
-      {Name: "elementary-a", Tit: "Elementary | Простий A"},
-      {Name: "elementary-b", Tit: "Elementary | Простий B"},
-      {Name: "elementary-c", Tit: "Elementary | Простий C"},
+      {
+        Name: "elementary-a", Tit: "Elementary | Простий A",
+        Query: func(piece catalog.Piece) bool {
+          return piece.Lvl == "ela"
+        },
+      }, {
+        Name: "elementary-b", Tit: "Elementary | Простий B",
+        Query: func(piece catalog.Piece) bool {
+          return piece.Lvl == "elb"
+        },
+      }, {
+        Name: "elementary-c", Tit: "Elementary | Простий C",
+        Query: func(piece catalog.Piece) bool {
+          return piece.Lvl == "elc"
+        },
+      },
     },
   }
   secLyr = Section{
@@ -230,8 +302,14 @@ var (
     Query: func(piece catalog.Piece) bool {
       return piece.Lyr == "lyr"
     },
+    Sort: sortByTit,
     Sub: []Section{
-      {Name: "lyrics", Tit: "Lyrics | Пісні"},
+      {
+        Name: "lyrics", Tit: "Lyrics | Пісні",
+        Query: func(piece catalog.Piece) bool {
+          return true
+        },
+      },
     },
   }
   sections2 = []Section{
@@ -352,7 +430,7 @@ func keyTit(piece catalog.Piece) string {
   return piece.Tit + keyCom(piece)
 }
 
-var collator = collate.New(language.Und)
+// var collator = collate.New(language.Und)
 
 func sortGroups(groups PieceGroups, sortKey func(piece catalog.Piece) string) {
   for _, pieces := range groups {
@@ -361,16 +439,6 @@ func sortGroups(groups PieceGroups, sortKey func(piece catalog.Piece) string) {
     })
   }
 }
-
-func makeAlphabet() []string {
-  var alphabet = strings.Split("АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЭЮЯ", "")
-  slices.SortStableFunc(alphabet, func(a, b string) int {
-    return collator.CompareString(a, b)
-  })
-  return alphabet
-}
-
-var alphabet = makeAlphabet()
 
 func markAlphaPieces(groups PieceGroups, sortKey func(piece catalog.Piece) string) {
   for _, pieces := range groups {
@@ -696,6 +764,96 @@ func keyByLyr(_ catalog.Piece) []string {
   return []string{"lyrics"}
 }
 
+///////////////////////////////////////////////
+
+func queryPieces(
+  pieces []catalog.Piece, query func(piece catalog.Piece) bool,
+) []catalog.Piece {
+  selected := make([]catalog.Piece, 0, len(pieces))
+  for _, piece := range pieces {
+    if query(piece) {
+      selected = append(selected, piece)
+    }
+  }
+  return selected
+}
+
+var collator = collate.New(language.Und)
+
+func makeAlphabet() []string {
+  var alphabet = strings.Split("АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЭЮЯ", "")
+  slices.SortStableFunc(alphabet, func(a, b string) int {
+    return collator.CompareString(a, b)
+  })
+  return alphabet
+}
+
+var alphabet = makeAlphabet()
+
+func sortByTit(piece catalog.Piece) string {
+  if piece.Gnr == "stu" {
+    return sortByCom(piece) // Sort studies by composer, then by title
+  }
+  return piece.Tit + sortByCom(piece) // Sort by composer for the same title
+}
+
+func sortByCom(piece catalog.Piece) string {
+  var sortKey string
+  if len(piece.Com) > 3 {
+    sortKey = string([]rune(piece.Com)[3:]) // Remove composer initials
+  }
+  if len(piece.Arr) > 3 {
+    sortKey = string([]rune(piece.Arr)[3:]) // Remove arranger initials
+  }
+  return sortKey + piece.Tit // Sort by title for the same composer
+}
+
+func sortPieces(
+  pieces []catalog.Piece, sortKey func(piece catalog.Piece) string,
+) {
+  slices.SortStableFunc(pieces, func(a, b catalog.Piece) int {
+    return collator.CompareString(sortKey(a), sortKey(b))
+  })
+}
+
+func alphaLinkPieces(
+  pieces []catalog.Piece, sortKey func(piece catalog.Piece) string,
+) {
+  i := 0
+  for _, alpha := range alphabet {
+    for j := i; j < len(pieces); j++ {
+      key := sortKey(pieces[j])
+      if collator.CompareString(string([]rune(key)[0:1]), alpha) == 0 {
+        pieces[j].AlphaLink = alpha
+        i = j + 1
+        break
+      }
+    }
+  }
+}
+
+func publicSection(
+  tpl *template.Template, pieces []catalog.Piece, sec Section, pc publishCommand,
+) error {
+  pieces = queryPieces(pieces, sec.Query)
+  for _, sub := range sec.Sub {
+    spieces := queryPieces(pieces, sub.Query)
+    if len(spieces) == 0 {
+      fmt.Printf(
+        "%s %s\n", catalog.YellowSub("warning"),
+        catalog.RedSub("%s %s has no pieces", sec.Name, sub.Name))
+    }
+    sortPieces(spieces, sec.Sort)
+    alphaLinkPieces(spieces, sec.Sort)
+    if sec.Name == "origin" && sub.Name == "belarusian" {
+      for _, piece := range spieces {
+        fmt.Println(sec.Sort(piece), piece.AlphaLink)
+      }
+    }
+  }
+  return nil
+}
+
 func publishRobots(pc publishCommand) error {
   file := "robots.txt"
   src := filepath.Join(pc.siteDir, file)
@@ -736,86 +894,94 @@ func publishCatalog(pc publishCommand) error {
   if err != nil {
     return err
   }
-
-
   tpl, err := makeTemplate(pc.templateDir, "catalog.html")
   if err != nil {
     return err
   }
 
-  err = publishGroup(
-    tpl, pieces, keyByOrg, keyTit, "origin", sections["origin"], pc,
-  )
-  if err != nil {
-    return err
+  for _, sec := range sections2 {
+    err := publicSection(tpl, pieces, sec, pc)
+    if err != nil {
+      return err
+    }
   }
-  err = publishGroup(
-    tpl, pieces, keyBySty, keyTit, "style", sections["style"], pc,
-  )
-  if err != nil {
-    return err
-  }
-  gnrPieces := filterPieces(pieces, func(piece catalog.Piece) bool {
-    return piece.Gnr != "stu"
-  })
-  err = publishGroup(
-    tpl, gnrPieces, keyByGnr, keyTit, "genre", sections["genre"], pc,
-  )
-  if err != nil {
-    return err
-  }
-  stuStbPieces := filterPieces(pieces, func(piece catalog.Piece) bool {
-    return piece.Gnr == "stu" && slices.ContainsFunc(
-      piece.Bss, func(bss string) bool {
-        return bss == "stb" || bss == "pub"
-      },
-    )
-  })
-  err = publishGroup(
-    tpl, stuStbPieces, keyByStu, keyCom, "study-stb", sections["study-stb"], pc,
-  )
-  if err != nil {
-    return err
-  }
-  stuFrbPieces := filterPieces(pieces, func(piece catalog.Piece) bool {
-    return piece.Gnr == "stu" && slices.Contains(piece.Bss, "frb")
-  })
-  err = publishGroup(
-    tpl, stuFrbPieces, keyByStu, keyCom, "study-frb", sections["study-frb"], pc,
-  )
-  if err != nil {
-    return err
-  }
-  comPieces := filterPieces(pieces, func(piece catalog.Piece) bool {
-    return len(piece.Com) > 0 || len(piece.Arr) > 0
-  })
-  err = publishGroup(
-    tpl, comPieces, keyByCom, keyCom, "composer", sections["composer"], pc,
-  )
-  if err != nil {
-    return err
-  }
-  err = publishGroup(
-    tpl, pieces, keyByBss, keyTit, "bass", sections["bass"], pc,
-  )
-  if err != nil {
-    return err
-  }
-  err = publishGroup(
-    tpl, pieces, keyByLvl, keyTit, "level", sections["level"], pc,
-  )
-  if err != nil {
-    return err
-  }
-  lyrPieces := filterPieces(pieces, func(piece catalog.Piece) bool {
-    return piece.Ens == "vc1" || piece.Ens == "vc2" || piece.Lyr == "lyr"
-  })
-  err = publishGroup(
-    tpl, lyrPieces, keyByLyr, keyTit, "lyrics", sections["lyrics"], pc,
-  )
-  if err != nil {
-    return err
-  }
+
+
+  // err = publishGroup(
+  //   tpl, pieces, keyByOrg, keyTit, "origin", sections["origin"], pc,
+  // )
+  // if err != nil {
+  //   return err
+  // }
+  // err = publishGroup(
+  //   tpl, pieces, keyBySty, keyTit, "style", sections["style"], pc,
+  // )
+  // if err != nil {
+  //   return err
+  // }
+  // gnrPieces := filterPieces(pieces, func(piece catalog.Piece) bool {
+  //   return piece.Gnr != "stu"
+  // })
+  // err = publishGroup(
+  //   tpl, gnrPieces, keyByGnr, keyTit, "genre", sections["genre"], pc,
+  // )
+  // if err != nil {
+  //   return err
+  // }
+  // stuStbPieces := filterPieces(pieces, func(piece catalog.Piece) bool {
+  //   return piece.Gnr == "stu" && slices.ContainsFunc(
+  //     piece.Bss, func(bss string) bool {
+  //       return bss == "stb" || bss == "pub"
+  //     },
+  //   )
+  // })
+  // err = publishGroup(
+  //   tpl, stuStbPieces, keyByStu, keyCom, "study-stb", sections["study-stb"], pc,
+  // )
+  // if err != nil {
+  //   return err
+  // }
+  // stuFrbPieces := filterPieces(pieces, func(piece catalog.Piece) bool {
+  //   return piece.Gnr == "stu" && slices.Contains(piece.Bss, "frb")
+  // })
+  // err = publishGroup(
+  //   tpl, stuFrbPieces, keyByStu, keyCom, "study-frb", sections["study-frb"], pc,
+  // )
+  // if err != nil {
+  //   return err
+  // }
+  // comPieces := filterPieces(pieces, func(piece catalog.Piece) bool {
+  //   return len(piece.Com) > 0 || len(piece.Arr) > 0
+  // })
+  // err = publishGroup(
+  //   tpl, comPieces, keyByCom, keyCom, "composer", sections["composer"], pc,
+  // )
+  // if err != nil {
+  //   return err
+  // }
+  // err = publishGroup(
+  //   tpl, pieces, keyByBss, keyTit, "bass", sections["bass"], pc,
+  // )
+  // if err != nil {
+  //   return err
+  // }
+  // err = publishGroup(
+  //   tpl, pieces, keyByLvl, keyTit, "level", sections["level"], pc,
+  // )
+  // if err != nil {
+  //   return err
+  // }
+  // lyrPieces := filterPieces(pieces, func(piece catalog.Piece) bool {
+  //   return piece.Ens == "vc1" || piece.Ens == "vc2" || piece.Lyr == "lyr"
+  // })
+  // err = publishGroup(
+  //   tpl, lyrPieces, keyByLyr, keyTit, "lyrics", sections["lyrics"], pc,
+  // )
+  // if err != nil {
+  //   return err
+  // }
+
+
   // err = publishRobots(pc)
   // if err != nil {
   //   return err
