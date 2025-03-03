@@ -232,19 +232,19 @@ var (
           crd := []string{"cr5", "cr7"}
           return formQuery(piece.Bss, crd)
         },
-      }, {
+      }, /*{
         Name: "polyphony", Tit: "Polyphony | Поліфонія",
         Query: func(piece catalog.Piece) bool {
           pph := []string{"vo2", "vo3"}
           return formQuery(piece.Bss, pph)
         },
-      }, {
+      },*/ /*{
         Name: "polyrhythm", Tit: "Polyrhythm | Поліритмія",
         Query: func(piece catalog.Piece) bool {
           prh := []string{"syn", "tu3", "tu5", "tu6"}
           return formQuery(piece.Bss, prh)
         },
-      },
+      },*/
     },
   }
   secBss = Section{
@@ -832,6 +832,116 @@ func alphaLinkPieces(
   }
 }
 
+func pagePieces(pieces []catalog.Piece, pageSize int) [][]catalog.Piece {
+  pages := make([][]catalog.Piece, 0, 20)
+  page := make([]catalog.Piece, 0, pageSize)
+  for i, piece := range pieces {
+    if i % pageSize == 0 && i != 0 {
+      pages = append(pages, page)
+      page = make([]catalog.Piece, 0, pageSize)
+    }
+    page = append(page, piece)
+  }
+  if len(page) > 0 {
+    pages = append(pages, page)
+  }
+  return pages
+}
+
+func catalogSectionLinks(sec, cur Section) []Link {
+  links := make([]Link, len(sec.Sub))
+  for i, sub := range sec.Sub {
+    url := filepath.Join("/catalog", sec.Name, sub.Name, "1")
+    links[i] = Link{Tit: sub.Tit, URL: url, Disabled: sub.Name == cur.Name}
+  }
+  return links
+}
+
+func catalogAlphaLinks(sec, sub Section, pages [][]catalog.Piece) []Link {
+  alphaLink := make(map[string]Link, len(alphabet))
+  for pageNum, page := range pages {
+    for _, piece := range page {
+      key := sec.Sort(piece)
+      alpha := string([]rune(key)[0:1])
+      _, exists := alphaLink[alpha]
+      if !exists {
+        frag := fmt.Sprintf("%d#%s", pageNum + 1, alpha)
+        url := filepath.Join("/catalog", sec.Name, sub.Name, frag)
+        alphaLink[alpha] = Link{Tit: alpha, URL: url}
+      }
+    }
+  }
+  links := make([]Link, len(alphabet))
+  for i, alpha := range alphabet {
+    link, exists := alphaLink[alpha]
+    if !exists {
+      links[i] = Link{Tit: alpha, Disabled: true}
+    } else {
+      links[i] = link
+    }
+  }
+  return links
+}
+
+func catalogPageLinks(sec, sub Section, curPage, pageTot, n int) []Link {
+  l, r := curPage - n / 2, curPage + n / 2
+  for l < 1 {
+    l++
+    if r < pageTot {
+      r++
+    }
+  }
+  for r > pageTot {
+    r--
+    if l > 1 {
+      l--
+    }
+  }
+  links := make([]Link, 0, n)
+  for i := l; i <= r; i++ {
+    pageNum := fmt.Sprintf("%d", i)
+    url := filepath.Join("/catalog", sec.Name, sub.Name, pageNum)
+    link := Link{Tit: pageNum, URL: url, Disabled: i == curPage}
+    links = append(links, link)
+  }
+  if len(links) == 1 {
+    return nil
+  }
+  return links
+}
+
+func publishSubsec(
+  tpl *template.Template, sec Section, sub Section,
+  pages [][]catalog.Piece, pc publishCommand,
+) error {
+  catalogDir := filepath.Join(pc.publicDir, "catalog", sec.Name, sub.Name)
+  sectionLinks := catalogSectionLinks(sec, sub)
+  alphaLinks := catalogAlphaLinks(sec, sub, pages)
+  for i, pieces := range pages {
+    pageNum := i + 1
+    pageFile := fmt.Sprintf("%d", pageNum)
+    pageLinks := catalogPageLinks(sec, sub, pageNum, len(pages), 3)
+    catalogData := struct {
+      Tit string
+      SectionLinks []Link
+      AlphaLinks []Link
+      Pieces []catalog.Piece
+      PageLinks []Link
+    }{
+      Tit: sub.Tit,
+      SectionLinks: sectionLinks,
+      AlphaLinks: alphaLinks,
+      Pieces: pieces,
+      PageLinks: pageLinks,
+    }
+    err := publishFile(os.Stdout, tpl, catalogDir, pageFile, catalogData)
+    if err != nil {
+      return err
+    }
+  }
+  return nil
+}
+
 func publicSection(
   tpl *template.Template, pieces []catalog.Piece, sec Section, pc publishCommand,
 ) error {
@@ -839,16 +949,14 @@ func publicSection(
   for _, sub := range sec.Sub {
     spieces := queryPieces(pieces, sub.Query)
     if len(spieces) == 0 {
-      fmt.Printf(
-        "%s %s\n", catalog.YellowSub("warning"),
-        catalog.RedSub("%s %s has no pieces", sec.Name, sub.Name))
+      return fmt.Errorf("%s %s has no pieces", sec.Name, sub.Name)
     }
     sortPieces(spieces, sec.Sort)
     alphaLinkPieces(spieces, sec.Sort)
-    if sec.Name == "origin" && sub.Name == "belarusian" {
-      for _, piece := range spieces {
-        fmt.Println(sec.Sort(piece), piece.AlphaLink)
-      }
+    pages := pagePieces(spieces, pc.pageSize)
+    err := publishSubsec(tpl, sec, sub, pages, pc)
+    if err != nil {
+      return err
     }
   }
   return nil

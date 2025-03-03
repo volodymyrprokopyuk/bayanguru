@@ -187,18 +187,19 @@ func readCatalogMeta(contentDir, metaFile string) (CatalogMeta, error) {
   return meta, nil
 }
 
+func indexSectionLinks(sections []Section) []Link {
+  links := make([]Link, len(sections))
+  for i, sec := range sections {
+    url := filepath.Join("/catalog", sec.Name, sec.Sub[0].Name, "1")
+    links[i] = Link{Tit: sec.Tit, URL: url}
+  }
+  return links
+}
+
 func publishIndex(pc publishCommand) error {
   tpl, err := makeTemplate(pc.templateDir, "index.html")
   if err != nil {
     return err
-  }
-  sectionLinks := make([]Link, len(sections2))
-  for i, sec := range sections2 {
-    link := Link{
-      Tit: sec.Tit,
-      URL: filepath.Join("/", "catalog", sec.Name, sec.Sub[0].Name, "1"),
-    }
-    sectionLinks[i] = link
   }
   siteContent, err := readSiteContent(pc.contentDir, "site-content.yaml")
   if err != nil {
@@ -212,7 +213,11 @@ func publishIndex(pc publishCommand) error {
     SectionLinks []Link
     SiteContent SiteContent
     CatalogMeta CatalogMeta
-  }{sectionLinks, siteContent, catalogMeta}
+  }{
+    SectionLinks: indexSectionLinks(sections2),
+    SiteContent: siteContent,
+    CatalogMeta: catalogMeta,
+  }
   return publishFile(os.Stdout, tpl, pc.publicDir, "index", indexData)
 }
 
@@ -254,7 +259,7 @@ func fanOutPublishPieces(
         }
       }
       piece.URL = fmt.Sprintf("%s/%s.pdf", pc.scoreURL, piece.File)
-      pieceData := struct { Piece catalog.Piece }{piece}
+      pieceData := struct { Piece catalog.Piece }{Piece: piece}
       err := publishFile(&w, tpl, pieceDir, piece.File, pieceData)
       fmt.Print(w.String())
       if err != nil {

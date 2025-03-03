@@ -1,6 +1,6 @@
 {{ define "meta" }}
   <meta name="robots" content="noindex,nofollow,nosnippet">
-  <title>{{ .Title }}</title>
+  <title>{{ .Tit }}</title>
   <meta name="description"
         content="Curated library of high quality sheet music for bayan. Бібліотека вибраних нот високої якості для баяна">
 {{ end }}
@@ -35,7 +35,7 @@
 
 {{ define "body" }}
   <div data-nosnippet>
-    {{ range .GroupLinks }}
+    {{ range .SectionLinks }}
       {{ if .Disabled }}
         <span class="link-block text-lg font-medium">{{ .Tit }}</span>
       {{ else }}
@@ -43,7 +43,7 @@
       {{ end }}
     {{ end }}
   </div>
-  <h2 class="head2">{{ .Title }}</h2>
+  <h2 class="head2">{{ .Tit }}</h2>
   <div data-nosnippet class="mt-4">
     {{ range .AlphaLinks }}
       {{ if .Disabled }}
