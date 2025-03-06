@@ -24,6 +24,7 @@ and books on the web`,
    bayanguru engrave | play | publish pieces... | books... [options]`,
     Version: "0.1.0",
     UseShortOptionHandling: true,
+    EnableShellCompletion: true,
     Commands: []*cli.Command{
       score.EngraveCmd(), catalog.PlayCmd(), site.PublishCmd(),
     },
