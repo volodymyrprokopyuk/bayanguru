@@ -363,6 +363,12 @@ markupInsideSlur = {
     \markup { \line { #lyr \hspace #3 \italic \concat { (#n) } } }
   #}
 ))
+#(define-markup-command (lyrChorus layout props) ()
+  (interpret-markup layout props
+  #{
+    \markup { \hspace #5 \italic Приспів }
+  #}
+))
 
 % TOC
 tocSection = #(define-music-function

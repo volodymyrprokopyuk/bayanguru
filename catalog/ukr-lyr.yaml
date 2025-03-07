@@ -34,3 +34,6 @@ pieces:
   - { id: igzh, tit: "Не щебечи, соловейко", sub: ukrfs,
       src: OZGGP1993,
       org: ukr, sty: flk, gnr: sng, ton: dmi, frm: [vo2, dot], bss: frb, lvl: elb, lyr: lyr }
+  - { id: yiry, tit: Ой на горі жито, sub: ukrfs,
+      src: OZGGP1993,
+      org: ukr, sty: flk, gnr: chd, ton: gmj, frm: in3, bss: frb, lvl: elb, lyr: lyr }
