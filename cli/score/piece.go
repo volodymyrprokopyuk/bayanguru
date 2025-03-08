@@ -132,7 +132,11 @@ func initPiece(pieces []catalog.Piece, sourceDir string) error {
   var initFile string
   switch piece.Ens {
   case "sol":
-    initFile = "initSol.ly"
+    if len(piece.Lyr) != 0 {
+      initFile = "initSolLyr.ly"
+    } else {
+      initFile = "initSol.ly"
+    }
   case "duo":
     initFile = "initDuo.ly"
   case "vc1":
