@@ -65,7 +65,7 @@ func EngraveCmd() *cli.Command {
       Name: "catalog", Usage: "read catalog files", Aliases: []string{"c"},
     },
     &cli.BoolFlag{
-      Name: "book", Usage: "play pieces from books", Aliases: []string{"b"},
+      Name: "book", Usage: "engrave books", Aliases: []string{"b"},
     },
     &cli.BoolFlag{
       Name: "piece", Usage: "engrave individual pieces from books",

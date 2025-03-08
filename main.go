@@ -14,7 +14,7 @@ import (
 func bayanguruCmd() *cli.Command{
   cmd := &cli.Command{
     Name: "bayanguru",
-    Usage: "Engrave, play and publish bayan sheet music",
+    Usage: "Engrave, play, and publish bayan sheet music",
     Description:
 `Bayanguru engraves pieces and books of sheet music for bayan. Bayanguru
 selectively plays pieces from a catalog using a classification and search system
