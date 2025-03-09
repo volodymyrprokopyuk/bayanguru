@@ -40,3 +40,7 @@ pieces:
   - { id: s9si, tit: Ой ходила дівчина бережком, sub: ukrfs,
       src: OZGGP1993,
       org: ukr, sty: flk, gnr: chd, ton: dmi, frm: mel, bss: frb, lvl: elb, lyr: lyr }
+  # p. 8
+  # - { id: 72ct, tit: "Ой за гаєм, гаєм", sub: ukrfs,
+  #     src: OZGGP1993,
+  #     org: ukr, sty: flk, gnr: sng, ton: gmj, frm: mel, bss: frb, lvl: elb, lyr: lyr }
