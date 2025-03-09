@@ -285,7 +285,7 @@ pieces:
       org: ukr, sty: flk, gnr: koz, ton: [gmj, gmi], frm: [var, in3, acc], bss: stb, lvl: elb }
   - { id: mf7s, tit: Дитяча полька,
       com: М. Глинка, src: B2AK1987,
-      org: rus, sty: cus, gnr: plk, ton: [gmi, fmj, besmj], frm: jmp, bss: stb, lvl: elb }
+      org: rus, sty: cus, gnr: plk, ton: [besmj, fmj], frm: [rep, jmp], bss: stb, lvl: elb }
   - { id: zykv, tit: Зайчик, sub: ukrfs,
       src: B2AK1987,
       org: ukr, sty: flk, gnr: chd, ton: amj, frm: [vo2, var, in3], bss: stb, lvl: elc }
