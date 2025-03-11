@@ -278,6 +278,23 @@ markupInsideSlur = {
     }
   #}
 ))
+#(define-markup-command (lyrOneColFour layout props a aa b bb c cc d dd)
+  (markup? markup? markup? markup? markup? markup? markup? markup?)
+  (interpret-markup layout props
+  #{
+    \markup \fill-line {
+      \column {
+        \override #'(padding . 10)
+        \table #`(,LEFT) {
+          \line { \vspace #1.5 #a #aa }
+          \line { \vspace #1.5 #b #bb }
+          \line { \vspace #1.5 #c #cc }
+          \line { \vspace #1.5 #d #dd }
+        }
+      }
+    }
+  #}
+))
 #(define-markup-command (lyrTwoColTwo layout props a aa b bb)
   (markup? markup? markup? markup?)
   (interpret-markup layout props
