@@ -32,18 +32,22 @@ pieces:
       lvl: ela, ens: vc1, lyr: lyr }
   # OZGGP1993
   - { id: igzh, tit: "Не щебечи, соловейко", sub: ukrfs,
-      src: OZGGP1993,
+      arr: Ю. Щуровський, src: OZGGP1993,
       org: ukr, sty: flk, gnr: sng, ton: dmi, frm: [vo2, dot], bss: frb, lvl: elb, lyr: lyr }
   - { id: yiry, tit: Ой на горі жито, sub: ukrfs,
-      src: OZGGP1993,
+      arr: М. Каландьонок, src: OZGGP1993,
       org: ukr, sty: flk, gnr: chd, ton: gmj, frm: in3, bss: frb, lvl: elb, lyr: lyr }
   - { id: s9si, tit: Ой ходила дівчина бережком, sub: ukrfs,
-      src: OZGGP1993,
+      arr: Ю. Щуровський, src: OZGGP1993,
       org: ukr, sty: flk, gnr: chd, ton: dmi, frm: mel, bss: frb, lvl: elb, lyr: lyr }
   - { id: 72ct, tit: "Ой за гаєм, гаєм", sub: ukrfs,
-      src: OZGGP1993,
+      arr: Ю. Щуровський, src: OZGGP1993,
       org: ukr, sty: flk, gnr: sng, ton: gmj, frm: mel, bss: frb, lvl: elb, lyr: lyr }
   # p. 13
   # - { id: zp94, tit: "Іди, іди, дощику", sub: ukrfs,
-  #     src: OZGGP1993,
+  #     arr: В. Гончаренко, src: OZGGP1993,
   #     org: ukr, sty: flk, gnr: sng, ton: fmj, frm: [vo2, cr5, rep], bss: [frb, vo2], lvl: elb, lyr: lyr }
+  # p. 18
+  # - { id: 47tq, tit: Заспіваймо пісню веселеньку, sub: ukrfs,
+  #     arr Ю. Соколовський, src: OZGGP1993,
+  #     org: ukr, sty: flk, gnr: sng, ton: dmi, frm: [in3, cr5], bss: [frb, in3, jmp], lvl: elb, lyr: lyr }
