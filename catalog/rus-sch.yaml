@@ -303,7 +303,7 @@ pieces:
       org: rus, sty: flk, gnr: sng, ton: dmi, frm: vo2, bss: frb, lvl: ela }
   - { id: 2kti, tit: "Уж ты, сад", sub: rusfs,
       arr: А. Черных, src: FBBMS15P1979,
-      org: rus, sty: flk, gnr: sng, ton: cmj, frm: cr5, bss: [frb, in3], lvl: elb }
+      org: rus, sty: flk, gnr: sng, ton: cmj, frm: [cr5, dot, syn], bss: [frb, in3, dot], lvl: elb }
   # FBBMS16N1980
   - { id: toek, tit: Колыбельная, sub: 'из оперы \"Садко\"',
       com: Н. Римский-Корсаков, src: FBBMS16N1980,

@@ -43,10 +43,9 @@ pieces:
   - { id: 72ct, tit: "Ой за гаєм, гаєм", sub: ukrfs,
       arr: Ю. Щуровський, src: OZGGP1993,
       org: ukr, sty: flk, gnr: sng, ton: gmj, frm: mel, bss: frb, lvl: elb, lyr: lyr }
-  # p. 13
-  # - { id: zp94, tit: "Іди, іди, дощику", sub: ukrfs,
-  #     arr: В. Гончаренко, src: OZGGP1993,
-  #     org: ukr, sty: flk, gnr: sng, ton: fmj, frm: [vo2, cr5, rep], bss: [frb, vo2], lvl: elb, lyr: lyr }
+  - { id: zp94, tit: "Іди, іди, дощику", sub: ukrfs,
+      arr: В. Гончаренко, src: OZGGP1993,
+      org: ukr, sty: flk, gnr: sng, ton: fmj, frm: [vo2, cr5, rep], bss: [frb, vo2], lvl: elb, lyr: lyr }
   # p. 18
   # - { id: 47tq, tit: Заспіваймо пісню веселеньку, sub: ukrfs,
   #     arr Ю. Соколовський, src: OZGGP1993,
