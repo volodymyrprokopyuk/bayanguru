@@ -49,3 +49,11 @@ pieces:
   - { id: 47tq, tit: Заспіваймо пісню веселеньку, sub: ukrfs,
       arr Ю. Соколовський, src: OZGGP1993,
       org: ukr, sty: flk, gnr: sng, ton: dmi, frm: [in3, cr5], bss: [frb, in3, jmp], lvl: elb, lyr: lyr }
+  # p. 19
+  # - { id: ke9a, tit: Ой на горі та женці жнуть, sub: ukrfs,
+  #     arr Ю. Соколовський, src: OZGGP1993,
+  #     org: ukr, sty: flk, gnr: sng, ton: dmi, frm: [in3, cr5], bss: [frb, in3, cr5], lvl: elb, lyr: lyr }
+  # p. 21
+  # - { id: 3vpj, tit: Їхав козак за Дунай, sub: ukrfs,
+  #     com: С. Климовський, arr Ю. Соколовський, src: OZGGP1993,
+  #     org: ukr, sty: flk, gnr: sng, ton: dmi, frm: [in3, cr5], bss: [frb, in3, cr5], lvl: elb, lyr: lyr }

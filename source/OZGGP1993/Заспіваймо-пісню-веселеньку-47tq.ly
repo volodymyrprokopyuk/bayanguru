@@ -26,12 +26,32 @@
   \key d \minor
   \meter 1/2 #'(1)
   <d= f a>4-\frBass r | <d g bes> r | a'-. e-. | a, r |
-  \rep 2 { d,=,8 a'4 a=,8 | } | <d, d'> a'4 a8 | g d'4 d8 |
+  \rep 4 { d,=,8 a'4 a=,8 | } | <d, d'> a'4 a8 | g d'4 d8 |
   \rep 2 { a=,8 <e' g>4 8 | } \rep 2 { f=8 <a c> c, <a'= c> | }
   g=8 <bes c>4 8 | f <a c> e <a c> | d, <f a> c <f a> |
   bes,=,8 g' e g | a, a' e a | c, g' bes=4 \fermata |
+
+  f=8 <a c> c, <a' c> | fis <c' d> d, <c' d> |
+  \rep 3 { g=8 <bes d> d, <bes'= d> | } | c, bes' g bes |
+  \rep 2 { f=8 <a c> c, <a'= c> | } \rep 2 { d,=8 <f a> a, <f'= a> | }
+  \rep 2 { g,=,8 bes' d, bes'= | } | e, <bes' d>4 8 |
+  a,=,8 g'4 g8 | d <f a> a, <f' a> | d <f= a>8 4 |
 }
 {{ end }}
 
 {{ define "lyrics" }}
+% \lyrTwoColEight
+\lyrOneColTwo
+"1." \column {
+  "Заспіваймо пісню веселньку"
+  "Про сусідку молоденьку,"
+  "Про сусідку заспіваймо,"
+  "Серце наше звеселяймо!"
+}
+"." \column {
+  ""
+  ""
+  \lyrRep "" 2
+  ""
+}
 {{ end }}
