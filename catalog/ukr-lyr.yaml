@@ -3,7 +3,7 @@
 pieces:
   # IIDBF2021, lcs: cpr
   - { id: 1737, tit: "Диби-диби", sub: ukrfs,
-      arr: О. Бубнов, art: hrm, aut: Слова народні, src: IIDBF2021, lcs: cpr,
+      arr: О. Бубнов, art: hrm, src: IIDBF2021, lcs: cpr,
       org: ukr, sty: flk, gnr: chd, ton: dmj, frm: [vo2, in3, cr5], bss: stb,
       lvl: elb, ens: vc1, lyr: lyr }
   - { id: pd1j, tit: Калачі,
@@ -47,7 +47,7 @@ pieces:
       arr: В. Гончаренко, src: OZGGP1993,
       org: ukr, sty: flk, gnr: sng, ton: fmj, frm: [vo2, cr5, rep], bss: [frb, vo2], lvl: elb, lyr: lyr }
   - { id: 47tq, tit: Заспіваймо пісню веселеньку, sub: ukrfs,
-      arr Ю. Соколовський, src: OZGGP1993,
+      arr: Ю. Соколовський, src: OZGGP1993,
       org: ukr, sty: flk, gnr: sng, ton: dmi, frm: [in3, cr5], bss: [frb, in3, jmp], lvl: elb, lyr: lyr }
   # p. 19
   # - { id: ke9a, tit: Ой на горі та женці жнуть, sub: ukrfs,
@@ -55,5 +55,5 @@ pieces:
   #     org: ukr, sty: flk, gnr: sng, ton: dmi, frm: [in3, cr5], bss: [frb, in3, cr5], lvl: elb, lyr: lyr }
   # p. 21
   # - { id: 3vpj, tit: Їхав козак за Дунай, sub: ukrfs,
-  #     com: С. Климовський, arr Ю. Соколовський, src: OZGGP1993,
+  #     com: С. Климовський, arr Ю. Соколовський, aut: С. Климовський, src: OZGGP1993,
   #     org: ukr, sty: flk, gnr: sng, ton: dmi, frm: [in3, cr5], bss: [frb, in3, cr5], lvl: elb, lyr: lyr }

@@ -8,3 +8,4 @@ bun.lock
 node_modules/
 .wrangler/
 pagefind
+.projectile-cache.eld
