@@ -11,7 +11,7 @@
   }
   f='8 f f a | <f c'>4. 8 | <f d'>8 8 8 8 | <a c>( <g bes> <f a>) <e g> |
   <d=' f>8 <e g> <cis a'>4 | d2 | <d bes' d>\f |
-  <a'=' c>8 <g bes> <f a> <g bes> | <d f a>2 |
+  <a'=' c>8 <g bes> <f a> <g bes> | <f a c>2 |
   <f=' a c>4 <f bes d> | <a c>8( <g bes> <f a>) <e g> |
   <d=' f>8 <e g> <cis a'>4 | <d=' d'>2 \bar "|."
 }
