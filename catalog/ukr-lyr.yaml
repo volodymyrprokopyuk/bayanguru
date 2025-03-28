@@ -56,3 +56,7 @@ pieces:
   # - { id: 3vpj, tit: Їхав козак за Дунай, sub: ukrfs,
   #     com: С. Климовський, arr: Ю. Соколовський, aut: С. Климовський, src: OZGGP1993,
   #     org: ukr, sty: flk, gnr: sng, ton: dmi, frm: [in3, cr5], bss: [frb, in3, cr5], lvl: elb, lyr: lyr }
+  # p. 23
+  # - { id: o581, tit: Тече річка невеличка, sub: ukrfs,
+  #     com: С. Климовський, arr: Ю. Соколовський, aut: С. Климовський, src: OZGGP1993,
+  #     org: ukr, sty: flk, gnr: sng, ton: gmi, frm: in3, bss: [frb, cr5], lvl: elb, lyr: lyr }
