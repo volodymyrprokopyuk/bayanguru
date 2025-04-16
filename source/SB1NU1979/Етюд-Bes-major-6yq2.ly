@@ -10,7 +10,7 @@
   \time 2/4
   \repeat volta 2 {
     f'='16\(\mf d f g f d f d' | c bes a g f ees d c\) |
-    ees='16\( c ees f ees d ees bes' | a g f ees d c d ees\) |
+    ees='16\( c ees f ees c ees bes' | a g f ees d c d ees\) |
     f='16_\( d f g f d f f' | ees d c bes a g fis g\) |
     c=''16\( bes a g f ees d c |
     \alternative {
