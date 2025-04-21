@@ -45,6 +45,12 @@ Piece ID generation
 tr -dc a-z0-9 </dev/urandom | head -c 4
 #+END_SRC
 
+Book engraving
+
+#+BEGIN_SRC fish
+yq --from-file catalog/select.yaml catalog/*-*.yaml > catalog/collect.yaml
+#+END_SRC
+
 ** License
 
 [[https://www.gnu.org/licenses/gpl-3.0.html][GPLv3 GNU General Public License v3.0]]
