@@ -1,2 +1,3 @@
-# .pieces[] | select(.org == "blr" and (.bss[] == "frb" or .bss == "frb"))
+.pieces[] | select(.org == "blr" and (.bss[] == "frb" or .bss == "frb"))
 .pieces[] | .bss |= [] + . | .bss
+# yq --from-file catalog/book.yaml catalog/*-all.yaml
