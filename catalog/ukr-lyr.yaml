@@ -32,7 +32,7 @@ pieces:
       lvl: ela, ens: vc1, lyr: lyr }
   # OZGGP1993
   - { id: igzh, tit: "Не щебечи, соловейко", sub: ukrfs,
-      arr: Ю. Щуровський, src: OZGGP1993,
+      com: М. Глінка, arr: Ю. Щуровський, aut: В. Забіла, src: OZGGP1993,
       org: ukr, sty: flk, gnr: sng, ton: dmi, frm: [vo2, dot], bss: frb, lvl: elb, lyr: lyr }
   - { id: yiry, tit: Ой на горі жито, sub: ukrfs,
       arr: М. Каландьонок, src: OZGGP1993,
