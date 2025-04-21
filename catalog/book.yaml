@@ -1,0 +1,2 @@
+# .pieces[] | select(.org == "blr" and (.bss[] == "frb" or .bss == "frb"))
+.pieces[] | .bss |= [] + . | .bss
