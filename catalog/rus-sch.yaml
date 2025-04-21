@@ -195,7 +195,7 @@ pieces:
       org: rus, sty: cus, gnr: sng, ton: emi, frm: [vo2, in3, in6], bss: [vo2, frb], lvl: ela }
   - { id: q4m2, tit: Маленький канон,
       com: В. Несторов, src: FBBMS6N1975,
-      org: rus, sty: cus, gnr: can, ton: cmi, frm: mel, bss: frb, lvl: ela }
+      org: rus, sty: cus, gnr: can, ton: cmi, frm: dot, bss: [frb, dot], lvl: ela }
   - { id: qqno, tit: Подблюдная, sub: rusfs,
       arr: А. Лядов, src: FBBMS6N1975,
       org: rus, sty: flk, gnr: sng, ton: amj, frm: [dot, in3], bss: frb, lvl: elb }
