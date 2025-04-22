@@ -1,3 +1,0 @@
-# .pieces[] | .bss |= [] + . | select(.org == "blr" and .bss[] == "frb")
-.pieces[] | .bss |= [] + . |
-  select(.org == "blr" and (.bss | contains(["frb", "in3"]))) | .id
