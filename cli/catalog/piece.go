@@ -298,15 +298,15 @@ func readPieces(catDir, catQuery string) (map[string]Piece, []string, error) {
 func makeMatchStr(query string) (func(value string) bool, error) {
   invert := strings.HasPrefix(query, "^")
   query = strings.ReplaceAll(query, "^", "")
-  query = strings.ReplaceAll(query, ",", "|")
-  query = fmt.Sprintf("(?i:%s)", query)
+  query = strings.ReplaceAll(query, ",", "|") // --org ukr,rus => ukr || rus
+  query = fmt.Sprintf("(?i:%s)", query) // Case insensitive
   reQuery, err := regexp.Compile(query)
   if err != nil {
     return nil, err
   }
   return func(value string) bool {
     m := reQuery.MatchString(value)
-    if invert {
+    if invert { // --org ^ukr,rus => not (ukr || rus)
       return !m
     }
     return m
@@ -322,60 +322,69 @@ func makeMatchPiece(queries map[string]string) (func(piece Piece) bool, error) {
     }
     switch name {
     case "tit":
-      ms = append(ms, func(piece Piece) bool { return match(piece.Tit) })
+      ms = append(ms, func(piece Piece) bool {
+        return match(piece.Tit)
+      })
     case "com":
-      ms = append(ms, func(piece Piece) bool { return match(piece.Com) })
+      ms = append(ms, func(piece Piece) bool {
+        return match(piece.Com)
+      })
     case "arr":
-      ms = append(ms, func(piece Piece) bool { return match(piece.Arr) })
+      ms = append(ms, func(piece Piece) bool {
+        return match(piece.Arr)
+      })
     case "art":
-      ms = append(ms, func(piece Piece) bool { return match(piece.Art) })
+      ms = append(ms, func(piece Piece) bool {
+        return match(piece.Art)
+      })
     case "aut":
-      ms = append(ms, func(piece Piece) bool { return match(piece.Aut) })
+      ms = append(ms, func(piece Piece) bool {
+        return match(piece.Aut)
+      })
     case "lcs":
-      ms = append(ms, func(piece Piece) bool { return match(piece.Lcs) })
+      ms = append(ms, func(piece Piece) bool {
+        return match(piece.Lcs)
+      })
     case "org":
-      ms = append(ms, func(piece Piece) bool { return match(piece.Org) })
+      ms = append(ms, func(piece Piece) bool {
+        return match(piece.Org)
+      })
     case "sty":
-      ms = append(ms, func(piece Piece) bool { return match(piece.Sty) })
+      ms = append(ms, func(piece Piece) bool {
+        return match(piece.Sty)
+      })
     case "gnr":
-      ms = append(ms, func(piece Piece) bool { return match(piece.Gnr) })
+      ms = append(ms, func(piece Piece) bool {
+        return match(piece.Gnr)
+      })
     case "ton":
       ms = append(ms, func(piece Piece) bool {
-        for _, ton := range piece.Ton {
-          if match(ton) {
-            return true
-          }
-        }
-        return false
+        return slices.ContainsFunc(piece.Ton, match)
       })
     case "frm":
       ms = append(ms, func(piece Piece) bool {
-        for _, frm := range piece.Frm {
-          if match(frm) {
-            return true
-          }
-        }
-        return false
+        return slices.ContainsFunc(piece.Frm, match)
       })
     case "bss":
       ms = append(ms, func(piece Piece) bool {
-        for _, bss := range piece.Bss {
-          if match(bss) {
-            return true
-          }
-        }
-        return false
+        return slices.ContainsFunc(piece.Bss, match)
       })
     case "lvl":
-      ms = append(ms, func(piece Piece) bool { return match(piece.Lvl) })
+      ms = append(ms, func(piece Piece) bool {
+        return match(piece.Lvl)
+      })
     case "ens":
-      ms = append(ms, func(piece Piece) bool { return match(piece.Ens) })
+      ms = append(ms, func(piece Piece) bool {
+        return match(piece.Ens)
+      })
     case "lyr":
-      ms = append(ms, func(piece Piece) bool { return match(piece.Lyr) })
+      ms = append(ms, func(piece Piece) bool {
+        return match(piece.Lyr)
+      })
     }
   }
   return func(piece Piece) bool {
-    for _, match := range ms {
+    for _, match := range ms { // --org && --bss
       if !match(piece) {
         return false
       }

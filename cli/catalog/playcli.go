@@ -11,7 +11,7 @@ import (
 
 const (
   CatalogDir = "catalog"
-  BookFile = "books.yaml"
+  BookFile = "book.yaml"
   SourceDir = "source"
   PieceDir = "piece"
   BookDir = "book"

@@ -3,8 +3,9 @@ package catalog
 import (
 	"fmt"
 	"io"
-	"os"
 	"path/filepath"
+	"strings"
+	"text/template"
 
 	"gopkg.in/yaml.v3"
 )
@@ -71,14 +72,56 @@ func PrintBook(w io.Writer, book Book) {
   )
 }
 
-func readBookFile(catDir, bookFile string) ([]RawBook, error) {
-  file, err := os.Open(filepath.Join(catDir, bookFile))
+// func readBookFile(catDir, bookFile string) ([]RawBook, error) {
+//   file, err := os.Open(filepath.Join(catDir, bookFile))
+//   if err != nil {
+//     return nil, err
+//   }
+//   defer file.Close()
+//   var rbooks struct { Books []RawBook `yaml:"books"` }
+//   err = yaml.NewDecoder(file).Decode(&rbooks)
+//   if err != nil {
+//     return nil, err
+//   }
+//   return rbooks.Books, nil
+// }
+
+func makeQueryPieces(pieceMap map[string]Piece) func(queries ...string) string {
+  return func(queries ...string) string {
+    if len(queries) % 2 != 0 {
+      return "query pieces: odd number of queries"
+    }
+    queryMap := make(map[string]string, len(queries) / 2)
+    for i := 0; i < len(queries) - 1; i += 2 {
+      queryMap[queries[i]] = queries[i + 1]
+    }
+    match, err := makeMatchPiece(queryMap)
+    if err != nil {
+      return err.Error()
+    }
+    pieceIDs := make([]string, 0, len(pieceMap))
+    for pieceID, piece := range pieceMap {
+      if match(piece) {
+        pieceIDs = append(pieceIDs, pieceID)
+      }
+    }
+    return strings.Join(pieceIDs, ", ")
+  }
+}
+
+func readBookFile(
+  catDir, bookFile string, pieceMap map[string]Piece,
+) ([]RawBook, error) {
+  tpl := template.New("book")
+  tpl.Funcs(template.FuncMap{"query": makeQueryPieces(pieceMap)})
+  _, err := tpl.ParseFiles(filepath.Join(catDir, bookFile))
   if err != nil {
     return nil, err
   }
-  defer file.Close()
+  var books strings.Builder
+  err = tpl.ExecuteTemplate(&books, "book.yaml", nil)
   var rbooks struct { Books []RawBook `yaml:"books"` }
-  err = yaml.NewDecoder(file).Decode(&rbooks)
+  err = yaml.NewDecoder(strings.NewReader(books.String())).Decode(&rbooks)
   if err != nil {
     return nil, err
   }
@@ -145,7 +188,7 @@ func addPiecesToBooks(
 func readBooks(
   catDir, bookFile string, bookIDs []string, pieceMap map[string]Piece,
 ) ([]Book, error) {
-  rbooks, err := readBookFile(catDir, bookFile)
+  rbooks, err := readBookFile(catDir, bookFile, pieceMap)
   if err != nil {
     return nil, err
   }
