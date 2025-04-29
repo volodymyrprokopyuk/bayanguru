@@ -3,6 +3,7 @@ package catalog
 import (
 	"fmt"
 	"io"
+	"math/rand/v2"
 	"os"
 	"path/filepath"
 	"regexp"
@@ -443,9 +444,9 @@ func SortByLvl(piece Piece) string {
   return piece.Lvl + SortByTit(piece)
 }
 
-var SortKeys = []string{"tit", "com", "lvl"}
+var sortKeys = []string{"tit", "com", "lvl", "rnd"}
 
-var SortKey = func() map[string]func(piece Piece) string {
+var sortBy = func() map[string]func(piece Piece) string {
   key := make(map[string]func(piece Piece) string, 4)
   key["tit"] = SortByTit
   key["com"] = SortByCom
@@ -459,4 +460,22 @@ func SortPieces(pieces []Piece, sortKey func(piece Piece) string) {
   slices.SortStableFunc(pieces, func(a, b Piece) int {
     return collator.CompareString(sortKey(a), sortKey(b))
   })
+}
+
+func RandPieces(pieces []Piece) {
+  rand.Shuffle(len(pieces), func(i, j int) {
+    pieces[i], pieces[j] = pieces[j], pieces[i]
+  })
+}
+
+func ArrangePieces(pieces []Piece, sortKey string) error {
+  if !slices.Contains(sortKeys, sortKey) {
+    return fmt.Errorf("invalid sort key %s", sortKey)
+  }
+  if sortKey == "rnd" {
+    RandPieces(pieces)
+  } else {
+    SortPieces(pieces, sortBy[sortKey])
+  }
+  return nil
 }

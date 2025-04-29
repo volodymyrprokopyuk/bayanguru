@@ -75,7 +75,7 @@ func ValidateQueries(cmd *cli.Command) (map[string]string, error) {
 func playAction(ctx context.Context, cmd *cli.Command) error {
   cat := cmd.String("catalog")
   book := cmd.Bool("book")
-  random := cmd.Bool("random")
+  sort := cmd.String("sort")
   list := cmd.Bool("list")
   args := cmd.Args()
   err := ValidateReq(cat, args.Slice())
@@ -87,7 +87,7 @@ func playAction(ctx context.Context, cmd *cli.Command) error {
       CatalogDir: CatalogDir, BookFile: BookFile, PieceDir: PieceDir,
       BookDir: BookDir, Catalog: cat, Book: book,
     },
-    random: random, list: list,
+    sort: sort, list: list,
   }
   if pc.Book {
     pc.BookIDs = args.Slice()
@@ -111,7 +111,7 @@ func PlayCmd() *cli.Command {
 `
    bayanguru play [-c catalog] pieces...
    bayanguru play [-c catalog] -b books... [--query...]
-   bayanguru play all --random --list [--query...]`,
+   bayanguru play all --sort tit|com|lvl|rnd --list [--query...]`,
     Action: playAction,
   }
   cmd.Flags = []cli.Flag{
@@ -121,8 +121,8 @@ func PlayCmd() *cli.Command {
     &cli.BoolFlag{
       Name: "book", Usage: "play pieces from books", Aliases: []string{"b"},
     },
-    &cli.BoolFlag{
-      Name: "random", Usage: "play pieces in random", Aliases: []string{"r"},
+    &cli.StringFlag{
+      Name: "sort", Usage: "sort or randomize pieces", Aliases: []string{"s"},
     },
     &cli.BoolFlag{
       Name: "list", Usage: "list pieces without playing", Aliases: []string{"l"},

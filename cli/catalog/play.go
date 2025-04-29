@@ -3,7 +3,6 @@ package catalog
 import (
 	"bufio"
 	"fmt"
-	"math/rand"
 	"os"
 	"os/exec"
 	"path/filepath"
@@ -18,7 +17,8 @@ type BaseCmd struct {
 
 type playCmd struct {
   BaseCmd
-  random, list bool
+  sort string
+  list bool
 }
 
 func PrintStat(catalog, selected int) {
@@ -82,24 +82,6 @@ func filterPlayed(pieces []Piece, playedFile string) ([]Piece, error) {
   return nplayed, nil
 }
 
-func makeRange(start, end int) []int {
-  slc := make([]int, end - start)
-  for i := range slc {
-    slc[i] = start + i
-  }
-  return slc
-}
-
-func arrangePieces(pieceLen int, random bool) []int {
-  idx := makeRange(0, pieceLen)
-  if random {
-    rand.Shuffle(pieceLen, func (i, j int) {
-      idx[i], idx[j] = idx[j], idx[i]
-    })
-  }
-  return idx
-}
-
 func openPiece(pieceDir string, piece Piece) error {
   piecePDF := filepath.Join(pieceDir, piece.File + ".pdf")
   return exec.Command("xdg-open", piecePDF).Run()
@@ -133,9 +115,13 @@ func play(pc playCmd) error {
     return err
   }
   PrintStat(catLen, len(pieces))
-  idx := arrangePieces(len(pieces), pc.random)
-  for _, i := range idx {
-    piece := pieces[i]
+  if len(pc.sort) > 0 {
+    err = ArrangePieces(pieces, pc.sort)
+    if err != nil {
+      return err
+    }
+  }
+  for _, piece := range pieces {
     PrintPiece(os.Stdout, piece)
     if !pc.list {
       err := openPiece(pc.PieceDir, piece)

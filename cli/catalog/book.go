@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"io"
 	"path/filepath"
-	"slices"
 	"strings"
 	"text/template"
 
@@ -77,17 +76,14 @@ func makeQuerySort(pieceMap map[string]Piece) func(queries ...string) string {
   return func(queries ...string) string {
     // Parse query
     if len(queries) % 2 != 0 {
-      return "query: odd number of queries"
+      return "odd number of queries"
     }
     queryMap := make(map[string]string, len(queries) / 2)
-    sortBy := ""
+    sortKey := ""
     for i := 0; i < len(queries) - 1; i += 2 {
       key, value := queries[i], queries[i + 1]
       if key == "sort" {
-        if !slices.Contains(SortKeys, value) {
-          return fmt.Sprintf("query: invalid sort key %s", value)
-        }
-        sortBy = value
+        sortKey = value
         continue
       }
       queryMap[key] = value
@@ -103,9 +99,12 @@ func makeQuerySort(pieceMap map[string]Piece) func(queries ...string) string {
         pieces = append(pieces, piece)
       }
     }
-    // Sort pieces
-    if len(sortBy) > 0 {
-      SortPieces(pieces, SortKey[sortBy])
+    // Sort or randomize pieces
+    if len(sortKey) > 0 {
+      err = ArrangePieces(pieces, sortKey)
+      if err != nil {
+        return err.Error()
+      }
     }
     pieceIDs := make([]string, 0, len(pieces))
     for _, piece := range pieces {
