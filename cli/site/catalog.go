@@ -39,7 +39,7 @@ var (
     Query: func(piece catalog.Piece) bool {
       return true
     },
-    Sort: sortByTit,
+    Sort: catalog.SortByTit,
     Sub: []Section{
       {
         Name: "ukrainian", Tit: "Ukrainian | Українські",
@@ -81,7 +81,7 @@ var (
     Query: func(piece catalog.Piece) bool {
       return true
     },
-    Sort: sortByTit,
+    Sort: catalog.SortByTit,
     Sub: []Section{
       {
         Name: "folk", Tit: "Folk | Фолькльор",
@@ -106,7 +106,7 @@ var (
     Query: func(piece catalog.Piece) bool {
       return piece.Gnr != "stu"
     },
-    Sort: sortByTit,
+    Sort: catalog.SortByTit,
     Sub: []Section{
       {
         Name: "song", Tit: "Song | Пісня",
@@ -138,7 +138,7 @@ var (
     Query: func(piece catalog.Piece) bool {
       return len(piece.Com) > 0 || len(piece.Arr) > 0
     },
-    Sort: sortByCom,
+    Sort: catalog.SortByCom,
     Sub: []Section{
       {
         Name: "composer", Tit: "Composer | Композитор",
@@ -154,7 +154,7 @@ var (
       bss := []string{"stb", "pub"}
       return piece.Gnr == "stu" && formQuery(piece.Bss, bss)
     },
-    Sort: sortByCom,
+    Sort: catalog.SortByCom,
     Sub: []Section{
       {
         Name: "scale", Tit: "Scale | Гами",
@@ -205,7 +205,7 @@ var (
     Query: func(piece catalog.Piece) bool {
       return piece.Gnr == "stu" && slices.Contains(piece.Bss, "frb")
     },
-    Sort: sortByCom,
+    Sort: catalog.SortByCom,
     Sub: []Section{
       {
         Name: "scale", Tit: "Scale | Гами",
@@ -251,7 +251,7 @@ var (
     Query: func(piece catalog.Piece) bool {
       return true
     },
-    Sort: sortByTit,
+    Sort: catalog.SortByTit,
     Sub: []Section{
       {
         Name: "standard-bass", Tit: "Standard bass | Готовий аккорд",
@@ -276,7 +276,7 @@ var (
     Query: func(piece catalog.Piece) bool {
       return true
     },
-    Sort: sortByTit,
+    Sort: catalog.SortByTit,
     Sub: []Section{
       {
         Name: "elementary-a", Tit: "Elementary | Простий A",
@@ -301,7 +301,7 @@ var (
     Query: func(piece catalog.Piece) bool {
       return piece.Lyr == "lyr"
     },
-    Sort: sortByTit,
+    Sort: catalog.SortByTit,
     Sub: []Section{
       {
         Name: "lyrics", Tit: "Lyrics | Пісні",
@@ -330,41 +330,13 @@ func queryPieces(
 
 var collator = collate.New(language.Und)
 
-func makeAlphabet() []string {
+var alphabet = func() []string {
   var alphabet = strings.Split("АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЭЮЯ", "")
   slices.SortStableFunc(alphabet, func(a, b string) int {
     return collator.CompareString(a, b)
   })
   return alphabet
-}
-
-var alphabet = makeAlphabet()
-
-func sortByTit(piece catalog.Piece) string {
-  if piece.Gnr == "stu" {
-    return sortByCom(piece) // Sort studies by composer, then by title
-  }
-  return piece.Tit + sortByCom(piece) // Sort by composer for the same title
-}
-
-func sortByCom(piece catalog.Piece) string {
-  var sortKey string
-  if len(piece.Com) > 3 {
-    sortKey = string([]rune(piece.Com)[3:]) // Remove composer initials
-  }
-  if len(piece.Arr) > 3 {
-    sortKey = string([]rune(piece.Arr)[3:]) // Remove arranger initials
-  }
-  return sortKey + piece.Tit // Sort by title for the same composer
-}
-
-func sortPieces(
-  pieces []catalog.Piece, sortKey func(piece catalog.Piece) string,
-) {
-  slices.SortStableFunc(pieces, func(a, b catalog.Piece) int {
-    return collator.CompareString(sortKey(a), sortKey(b))
-  })
-}
+}()
 
 func alphaLinkPieces(
   pieces []catalog.Piece, sortKey func(piece catalog.Piece) string,
@@ -501,7 +473,7 @@ func publishSection(
     if len(spieces) == 0 {
       return fmt.Errorf("%s %s has no pieces", sec.Name, sub.Name)
     }
-    sortPieces(spieces, sec.Sort)
+    catalog.SortPieces(spieces, sec.Sort)
     alphaLinkPieces(spieces, sec.Sort)
     pages := pagePieces(spieces, pc.pageSize)
     err := publishSubsec(tpl, sec, sub, pages, pc)
@@ -525,7 +497,7 @@ func publishSitemap(pieces []catalog.Piece, pc publishCommand) error {
   file := "sitemap.txt"
   path := filepath.Join(pc.publicDir, file)
   fmt.Printf("%s %s\n", catalog.BlueTit("publish"), catalog.BlueSub(path))
-  sortPieces(pieces, sortByTit)
+  catalog.SortPieces(pieces, catalog.SortByTit)
   var buf bytes.Buffer
   for _, piece := range pieces {
     pieceURL := fmt.Sprintf("%s/%s\n", pc.pieceURL, piece.File)

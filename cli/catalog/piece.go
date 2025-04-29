@@ -9,6 +9,8 @@ import (
 	"slices"
 	"strings"
 
+	"golang.org/x/text/collate"
+	"golang.org/x/text/language"
 	"gopkg.in/yaml.v3"
 )
 
@@ -414,4 +416,47 @@ func bass(bss []string) string {
     }
   }
   return "___"
+}
+
+func SortByTit(piece Piece) string {
+  // Sort studies by composer, then by title
+  if piece.Gnr == "stu" {
+    return SortByCom(piece)
+  }
+  // Sort by title, then by composer or arranger
+  return piece.Tit + SortByCom(piece)
+}
+
+func SortByCom(piece Piece) string {
+  // Sort by composer or arranger, then by title
+  if len(piece.Com) > 3 {
+    return string([]rune(piece.Com)[3:]) + piece.Tit
+  }
+  if len(piece.Arr) > 3 {
+    return string([]rune(piece.Arr)[3:]) + piece.Tit
+  }
+  return piece.Tit
+}
+
+func SortByLvl(piece Piece) string {
+  // Sort by level, then by title
+  return piece.Lvl + SortByTit(piece)
+}
+
+var SortKeys = []string{"tit", "com", "lvl"}
+
+var SortKey = func() map[string]func(piece Piece) string {
+  key := make(map[string]func(piece Piece) string, 4)
+  key["tit"] = SortByTit
+  key["com"] = SortByCom
+  key["lvl"] = SortByLvl
+  return key
+}()
+
+var collator = collate.New(language.Und)
+
+func SortPieces(pieces []Piece, sortKey func(piece Piece) string) {
+  slices.SortStableFunc(pieces, func(a, b Piece) int {
+    return collator.CompareString(sortKey(a), sortKey(b))
+  })
 }

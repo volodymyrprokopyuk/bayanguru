@@ -15,6 +15,10 @@ pieces:
   # - { id: nc73, tit: "Ой п'є Байда", sub: ukrfs,
   #     arr: М. Різоль, src: UFSFBR1978,
   #     org: ukr, sty: flk, gnr: sng, ton: dmi, frm: [in3, cr5, dot], bss: [stb, pub], lvl: elc }
+  # p. 6
+  # - { id: 0hjq, tit: "Ой гук, мати, гук", sub: ukrfs,
+  #     arr: М. Різоль, src: UFSFBR1978,
+  #     org: ukr, sty: flk, gnr: sng, ton: cmi, frm: [vo2, in3], bss: pub, lvl: elc }
   # OZGGP1993
   - { id: ntxe, tit: "Іванчику-будоланчику", sub: ukrfs,
       arr: Є. Льонок, src: OZGGP1993,

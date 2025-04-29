@@ -113,13 +113,23 @@ books:
       ] } ] }
   - { id: hun1, tit: Угорські народні пісні і танці,
       sub: для готового і готово-виборного баяна,
-      pieces: [{{ query "org" "hun" }}] }
+      pieces: [{{ query "org" "hun" "sort" "tit" }}] }
   - { id: mda1, tit: Молдавські народні пісні і танці,
       sub: для готового і готово-виборного баяна,
-      pieces: [{{ query "org" "mda" }}] }
+      pieces: [{{ query "org" "mda" "sort" "tit" }}] }
   - { id: pol1, tit: Польські народні пісні і танці,
       sub: для готового і готово-виборного баяна,
-      pieces: [{{ query "org" "pol,cze,svk,svn,lva,est" }}] }
+      sections: [
+      { tit: Готовий баян,
+        pieces: [
+        {{ query "org" "pol,cze,svk,svn,lva,est" "bss" "^frb" "sort" "tit"}}
+        ] },
+      { tit: Готово-виборний баян,
+        pieces: [
+        {{ query "org" "pol,cze,svk,svn,lva,est" "bss" "frb" "sort" "tit"}}
+        ] },
+      ]
+    }
   # Study class
   - { id: stu1, tit: Вибрані етюди, sub: для готового баяна,
       sections: [

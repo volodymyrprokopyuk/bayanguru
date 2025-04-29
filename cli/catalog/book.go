@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io"
 	"path/filepath"
+	"slices"
 	"strings"
 	"text/template"
 
@@ -72,38 +73,43 @@ func PrintBook(w io.Writer, book Book) {
   )
 }
 
-// func readBookFile(catDir, bookFile string) ([]RawBook, error) {
-//   file, err := os.Open(filepath.Join(catDir, bookFile))
-//   if err != nil {
-//     return nil, err
-//   }
-//   defer file.Close()
-//   var rbooks struct { Books []RawBook `yaml:"books"` }
-//   err = yaml.NewDecoder(file).Decode(&rbooks)
-//   if err != nil {
-//     return nil, err
-//   }
-//   return rbooks.Books, nil
-// }
-
-func makeQueryPieces(pieceMap map[string]Piece) func(queries ...string) string {
+func makeQuerySort(pieceMap map[string]Piece) func(queries ...string) string {
   return func(queries ...string) string {
+    // Parse query
     if len(queries) % 2 != 0 {
-      return "query pieces: odd number of queries"
+      return "query: odd number of queries"
     }
     queryMap := make(map[string]string, len(queries) / 2)
+    sortBy := ""
     for i := 0; i < len(queries) - 1; i += 2 {
-      queryMap[queries[i]] = queries[i + 1]
+      key, value := queries[i], queries[i + 1]
+      if key == "sort" {
+        if !slices.Contains(SortKeys, value) {
+          return fmt.Sprintf("query: invalid sort key %s", value)
+        }
+        sortBy = value
+        continue
+      }
+      queryMap[key] = value
     }
+    // Query pieces
     match, err := makeMatchPiece(queryMap)
     if err != nil {
       return err.Error()
     }
-    pieceIDs := make([]string, 0, len(pieceMap))
-    for pieceID, piece := range pieceMap {
+    pieces := make([]Piece, 0, len(pieceMap))
+    for _, piece := range pieceMap {
       if match(piece) {
-        pieceIDs = append(pieceIDs, pieceID)
+        pieces = append(pieces, piece)
       }
+    }
+    // Sort pieces
+    if len(sortBy) > 0 {
+      SortPieces(pieces, SortKey[sortBy])
+    }
+    pieceIDs := make([]string, 0, len(pieces))
+    for _, piece := range pieces {
+      pieceIDs = append(pieceIDs, piece.ID)
     }
     return strings.Join(pieceIDs, ", ")
   }
@@ -113,13 +119,16 @@ func readBookFile(
   catDir, bookFile string, pieceMap map[string]Piece,
 ) ([]RawBook, error) {
   tpl := template.New("book")
-  tpl.Funcs(template.FuncMap{"query": makeQueryPieces(pieceMap)})
+  tpl.Funcs(template.FuncMap{"query": makeQuerySort(pieceMap)})
   _, err := tpl.ParseFiles(filepath.Join(catDir, bookFile))
   if err != nil {
     return nil, err
   }
   var books strings.Builder
-  err = tpl.ExecuteTemplate(&books, "book.yaml", nil)
+  err = tpl.ExecuteTemplate(&books, bookFile, nil)
+  if err != nil {
+    return nil, err
+  }
   var rbooks struct { Books []RawBook `yaml:"books"` }
   err = yaml.NewDecoder(strings.NewReader(books.String())).Decode(&rbooks)
   if err != nil {
