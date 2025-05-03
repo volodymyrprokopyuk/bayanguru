@@ -13,6 +13,7 @@ func engraveAction(ctx context.Context, cmd *cli.Command) error {
   book := cmd.Bool("book")
   piece := cmd.Bool("piece")
   init := cmd.Bool("init")
+  lyr := cmd.Bool("lyr")
   lint := cmd.Bool("lint")
   optimize := cmd.Bool("optimize")
   meta := cmd.Bool("meta")
@@ -38,8 +39,8 @@ func engraveAction(ctx context.Context, cmd *cli.Command) error {
       SourceDir: catalog.SourceDir, PieceDir: catalog.PieceDir,
       BookDir: catalog.BookDir, Catalog: cat, Book: book,
     },
-    piece: piece, init: init, lint: lint, optimize: optimize, meta: meta,
-    lyrics: lyrics,
+    piece: piece, init: init, lyr: lyr, lint: lint, optimize: optimize,
+    meta: meta, lyrics: lyrics,
   }
   if ec.Book {
     ec.BookIDs = args.Slice()
@@ -75,6 +76,9 @@ func EngraveCmd() *cli.Command {
     },
     &cli.BoolFlag{
       Name: "init", Usage: "initialize a new piece", Aliases: []string{"i"},
+    },
+    &cli.BoolFlag{
+      Name: "lyr", Usage: "initialize lyrics for a piece",
     },
     &cli.BoolFlag{
       Name: "lint", Usage: "lint pieces before engraving", Aliases: []string{"l"},

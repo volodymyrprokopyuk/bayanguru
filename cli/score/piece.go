@@ -114,11 +114,7 @@ func copyFile(src, dst string) (int64, error) {
   return io.Copy(dstFile, srcFile)
 }
 
-func initPiece(pieces []catalog.Piece, sourceDir string) error {
-  if len(pieces) == 0 {
-    return fmt.Errorf("no piece to initialize")
-  }
-  piece := pieces[0]
+func initPiece(piece catalog.Piece, sourceDir string) error {
   pieceFile := filepath.Join(sourceDir, piece.Src, piece.File + ".ly")
   _, err := os.Stat(pieceFile)
   if err == nil {
@@ -146,6 +142,21 @@ func initPiece(pieces []catalog.Piece, sourceDir string) error {
     return err
   }
   fmt.Printf("%s %s\n", catalog.BlueTit("init"), catalog.BlueSub(pieceFile))
+  return nil
+}
+
+func initLyrics(piece catalog.Piece, sourceDir string) error {
+  lyricsFile := filepath.Join(sourceDir, "lyrics", piece.LyricsFile)
+  _, err := os.Stat(lyricsFile)
+  if err == nil {
+    return fmt.Errorf("%s already exists", lyricsFile)
+  }
+  initFile := filepath.Join(sourceDir, "template", "initLyr.ly")
+  _, err = copyFile(initFile, lyricsFile)
+  if err != nil {
+    return err
+  }
+  fmt.Printf("%s %s\n", catalog.BlueTit("init"), catalog.BlueSub(lyricsFile))
   return nil
 }
 
