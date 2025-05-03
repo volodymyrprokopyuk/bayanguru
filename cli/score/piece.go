@@ -366,7 +366,7 @@ func engravePieces(pieces []catalog.Piece, ec engraveCommand) error {
   n := min(len(pieces), runtime.GOMAXPROCS(0))
   ctx, cancel := context.WithCancel(context.Background())
   defer cancel()
-  chPieces, chErrors := make(chan catalog.Piece), make(chan error)
+  chPieces, chErrors := make(chan catalog.Piece), make(chan error, n)
   var ewg sync.WaitGroup
   ewg.Add(1)
   go func() {

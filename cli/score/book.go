@@ -89,7 +89,7 @@ func engraveBooks(books []catalog.Book, ec engraveCommand) error {
   n := min(len(books), runtime.GOMAXPROCS(0))
   var ctx, cancel = context.WithCancel(context.Background())
   defer cancel()
-  chBooks, chErrors := make(chan catalog.Book), make(chan error)
+  chBooks, chErrors := make(chan catalog.Book), make(chan error, n)
   var ewg sync.WaitGroup
   ewg.Add(1)
   go func() {

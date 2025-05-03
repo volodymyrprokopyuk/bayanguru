@@ -511,7 +511,7 @@ func publishCatalog(pc publishCommand) error {
     "%s %s\n", catalog.BlueTit("publish"),
     catalog.BlueSub(pc.publicDir + "/catalog/..."),
   )
-  bc := catalog.BaseCmd{CatalogDir: pc.CatalogDir}
+  bc := catalog.BaseCmd{CatalogDir: pc.CatalogDir, SourceDir: pc.SourceDir}
   pieces, _, _, err := catalog.ReadPiecesAndBooks(bc)
   if err != nil {
     return err

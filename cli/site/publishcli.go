@@ -31,8 +31,8 @@ func publishAction(ctx context.Context, cmd *cli.Command) error {
   pc := publishCommand{
     BaseCmd: catalog.BaseCmd{
       CatalogDir: catalog.CatalogDir, BookFile: catalog.BookFile,
-      PieceDir: catalog.PieceDir, BookDir: catalog.BookDir,
-      Catalog: cat, Book: book,
+      SourceDir: catalog.SourceDir, PieceDir: catalog.PieceDir,
+      BookDir: catalog.BookDir, Catalog: cat, Book: book,
     },
     siteDir: SiteDir, templateDir: TemplateDir, contentDir: ContentDir,
     publicDir: PublicDir, init: init, upload: upload,
