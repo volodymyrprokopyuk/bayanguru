@@ -86,9 +86,9 @@ type Piece struct {
 
   Lvl string `yaml:"lvl"`
   Ens string `yaml:"ens"`
-  Lyr string `yaml:"lyr"`
 
   File string
+  LyricsFile string
   URL string
   Meta bool
   // ens: sol
@@ -163,6 +163,11 @@ func scoreFile(tit, ID string) string {
   return fmt.Sprintf("%s-%s", tit, ID)
 }
 
+func lyricsFile(tit string) string {
+  tit = strings.ReplaceAll(reCleanTit.ReplaceAllLiteralString(tit, ""), " ", "-")
+  return fmt.Sprintf("%s.ly", tit)
+}
+
 func addMetaToPieces(pieces []Piece) {
   for i := range pieces {
     piece := &pieces[i]
@@ -188,6 +193,7 @@ func addMetaToPieces(pieces []Piece) {
     }
     // file
     piece.File = scoreFile(piece.Tit, piece.ID)
+    piece.LyricsFile = lyricsFile(piece.Tit)
   }
 }
 
@@ -212,7 +218,6 @@ var (
   )
   reLvl = regexp.MustCompile(`^(?:el|in|pr|vi)[a-c]$`)
   reEns = regexp.MustCompile(`^sol|duo|vc1|vc2$`)
-  reLyr = regexp.MustCompile(`^lyr$`)
 )
 
 func validatePieces(pieces []Piece) error {
@@ -256,9 +261,6 @@ func validatePieces(pieces []Piece) error {
     }
     if !reEns.MatchString(piece.Ens) {
       errors = append(errors, fmt.Sprintf("invalid ens %s", piece.Ens))
-    }
-    if len(piece.Lyr) > 0 && !reLyr.MatchString(piece.Lyr) {
-      errors = append(errors, fmt.Sprintf("invalid lyr %s", piece.Lyr))
     }
     if len(errors) > 0 {
       return fmt.Errorf(
@@ -379,10 +381,6 @@ func makeMatchPiece(queries map[string]string) (func(piece Piece) bool, error) {
     case "ens":
       ms = append(ms, func(piece Piece) bool {
         return match(piece.Ens)
-      })
-    case "lyr":
-      ms = append(ms, func(piece Piece) bool {
-        return match(piece.Lyr)
       })
     }
   }

@@ -6,6 +6,7 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
+	"strings"
 )
 
 type BaseCmd struct {
@@ -13,6 +14,7 @@ type BaseCmd struct {
   Book bool
   PieceIDs, BookIDs []string
   Queries map[string]string
+  Lyrics map[string]bool
 }
 
 type playCmd struct {
@@ -29,10 +31,36 @@ func PrintStat(catalog, selected int) {
   )
 }
 
+func readLyricsFiles(sourceDir string) (map[string]bool, error) {
+  lyricsDir := filepath.Join(sourceDir, "lyrics")
+  entries, err := os.ReadDir(lyricsDir)
+  if err != nil {
+    return nil, err
+  }
+  files := make(map[string]bool, 100)
+  for _, entry := range entries {
+    name := entry.Name()
+    if entry.Type().IsRegular() && strings.HasSuffix(name, ".ly") {
+      files[name] = true
+    }
+  }
+  return files, nil
+}
+
 func ReadPiecesAndBooks(bc BaseCmd) ([]Piece, []Book, int, error) {
   pieceMap, pieceIDs, err := readPieces(bc.CatalogDir, bc.Catalog)
   if err != nil {
     return nil, nil, 0, err
+  }
+  lyrics, err := readLyricsFiles(bc.SourceDir)
+  if err != nil {
+    return nil, nil, 0, err
+  }
+  for pieceID, piece := range pieceMap {
+    if !lyrics[piece.LyricsFile] {
+      piece.LyricsFile = "" // A pieces does not have lyrics
+      pieceMap[pieceID] = piece
+    }
   }
   // Read books
   if bc.Book {

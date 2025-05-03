@@ -299,7 +299,7 @@ var (
   secLyr = Section{
     Name: "lyrics", Tit: "Lyrics | Пісні",
     Query: func(piece catalog.Piece) bool {
-      return piece.Lyr == "lyr"
+      return len(piece.LyricsFile) > 0
     },
     Sort: catalog.SortByTit,
     Sub: []Section{

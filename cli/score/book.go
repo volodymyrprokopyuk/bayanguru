@@ -32,7 +32,7 @@ func engraveBook(
   tpl := tplPool.Get().(*template.Template)
   defer tplPool.Put(tpl)
   for _, piece := range pieces {
-    err := templatePiece(tpl, piece, ec.SourceDir, ec.meta)
+    err := templatePiece(tpl, piece, ec)
     if err != nil {
       return err
     }

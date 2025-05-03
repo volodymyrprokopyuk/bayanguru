@@ -20,6 +20,3 @@
   \key _
 }
 {{ end }}
-
-{{ define "lyrics" }}
-{{ end }}

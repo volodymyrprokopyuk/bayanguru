@@ -132,11 +132,7 @@ func initPiece(pieces []catalog.Piece, sourceDir string) error {
   var initFile string
   switch piece.Ens {
   case "sol":
-    if len(piece.Lyr) != 0 {
-      initFile = "initSolLyr.ly"
-    } else {
-      initFile = "initSol.ly"
-    }
+    initFile = "initSol.ly"
   case "duo":
     initFile = "initDuo.ly"
   case "vc1":
@@ -153,12 +149,29 @@ func initPiece(pieces []catalog.Piece, sourceDir string) error {
   return nil
 }
 
-func templatePiece(
-  tpl *template.Template, piece *catalog.Piece, sourceDir string, meta bool,
+func templateLyrics(
+  tpl *template.Template, piece *catalog.Piece, ec engraveCommand,
 ) error {
-  piece.Meta = meta
-  pieceFile := filepath.Join(sourceDir, piece.Src, piece.File + ".ly")
+  if len(piece.LyricsFile) > 0 && tpl.Lookup(piece.LyricsFile) == nil {
+    lyricsFile := filepath.Join(ec.SourceDir, "lyrics", piece.LyricsFile)
+    _, err := tpl.ParseFiles(lyricsFile)
+    if err != nil {
+      return err
+    }
+  }
+  return nil
+}
+
+func templatePiece(
+  tpl *template.Template, piece *catalog.Piece, ec engraveCommand,
+) error {
+  piece.Meta = ec.meta
+  pieceFile := filepath.Join(ec.SourceDir, piece.Src, piece.File + ".ly")
   _, err := tpl.ParseFiles(pieceFile)
+  if err != nil {
+    return err
+  }
+  err = templateLyrics(tpl, piece, ec)
   if err != nil {
     return err
   }
@@ -177,9 +190,9 @@ func templatePiece(
       return err
     }
     piece.LeftHand = stradella(w.String())
-    if len(piece.Lyr) != 0 {
+    if len(piece.LyricsFile) > 0 {
       w.Reset()
-      err = tpl.ExecuteTemplate(&w, "lyrics", piece)
+      err = tpl.ExecuteTemplate(&w, piece.LyricsFile, piece)
       if err != nil {
         return err
       }
@@ -230,7 +243,7 @@ func templatePiece(
     }
     piece.LeftHand = stradella(w.String())
     w.Reset()
-    err = tpl.ExecuteTemplate(&w, "lyrics", piece)
+    err = tpl.ExecuteTemplate(&w, piece.LyricsFile, piece)
     if err != nil {
       return err
     }
@@ -261,7 +274,7 @@ func templatePiece(
     }
     piece.LeftHand = stradella(w.String())
     w.Reset()
-    err = tpl.ExecuteTemplate(&w, "lyrics", piece)
+    err = tpl.ExecuteTemplate(&w, piece.LyricsFile, piece)
     if err != nil {
       return err
     }
@@ -282,7 +295,7 @@ func engravePiece(
   }
   tpl := tplPool.Get().(*template.Template)
   defer tplPool.Put(tpl)
-  err := templatePiece(tpl, &piece, ec.SourceDir, ec.meta)
+  err := templatePiece(tpl, &piece, ec)
   if err != nil {
     return err
   }

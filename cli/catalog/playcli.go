@@ -33,7 +33,6 @@ var Queries = map[string]string{
   "bss": "piece bass",
   "lvl": "piece level",
   "ens": "piece ensemble",
-  "lyr": "piece lyrics",
 }
 
 var reCatalog = regexp.MustCompile(`^\w+(?:-\w+)?$`)
