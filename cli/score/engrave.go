@@ -15,7 +15,7 @@ import (
 
 type engraveCommand struct {
   catalog.BaseCmd
-  piece, init, lint, optimize, meta bool
+  piece, init, lint, optimize, meta, lyrics bool
 }
 
 func withArgs(args ...string) map[string]string {

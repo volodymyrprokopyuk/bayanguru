@@ -21,6 +21,7 @@ type playCmd struct {
   BaseCmd
   sort string
   list bool
+  lyr bool
 }
 
 func PrintStat(catalog, selected int) {
@@ -89,6 +90,16 @@ func ReadPiecesAndBooks(bc BaseCmd) ([]Piece, []Book, int, error) {
   return pieces, nil, len(pieceMap), nil
 }
 
+func selectLyrics(pieces []Piece) []Piece {
+  selected := make([]Piece, 0, len(pieces))
+  for _, piece := range pieces {
+    if len(piece.LyricsFile) > 0 {
+      selected = append(selected, piece)
+    }
+  }
+  return selected
+}
+
 func filterPlayed(pieces []Piece, playedFile string) ([]Piece, error) {
   file, err := os.OpenFile(playedFile, os.O_CREATE | os.O_RDONLY, 0644)
   if err != nil {
@@ -137,6 +148,9 @@ func play(pc playCmd) error {
     if err != nil {
       return err
     }
+  }
+  if pc.lyr {
+    pieces = selectLyrics(pieces)
   }
   pieces, err = filterPlayed(pieces, PlayedFile)
   if err != nil {

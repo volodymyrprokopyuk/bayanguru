@@ -76,6 +76,7 @@ func playAction(ctx context.Context, cmd *cli.Command) error {
   book := cmd.Bool("book")
   sort := cmd.String("sort")
   list := cmd.Bool("list")
+  lyr := cmd.Bool("lyr")
   args := cmd.Args()
   err := ValidateReq(cat, args.Slice())
   if err != nil {
@@ -83,10 +84,10 @@ func playAction(ctx context.Context, cmd *cli.Command) error {
   }
   pc := playCmd{
     BaseCmd: BaseCmd{
-      CatalogDir: CatalogDir, BookFile: BookFile, PieceDir: PieceDir,
-      BookDir: BookDir, Catalog: cat, Book: book,
+      CatalogDir: CatalogDir, BookFile: BookFile, SourceDir: SourceDir,
+      PieceDir: PieceDir, BookDir: BookDir, Catalog: cat, Book: book,
     },
-    sort: sort, list: list,
+    sort: sort, list: list, lyr: lyr,
   }
   if pc.Book {
     pc.BookIDs = args.Slice()
@@ -110,7 +111,7 @@ func PlayCmd() *cli.Command {
 `
    bayanguru play [-c catalog] pieces...
    bayanguru play [-c catalog] -b books... [--query...]
-   bayanguru play all --sort tit|com|lvl|rnd --list [--query...]`,
+   bayanguru play all --sort tit|com|lvl|rnd --list --lyr [--query...]`,
     Action: playAction,
   }
   cmd.Flags = []cli.Flag{
@@ -125,6 +126,9 @@ func PlayCmd() *cli.Command {
     },
     &cli.BoolFlag{
       Name: "list", Usage: "list pieces without playing", Aliases: []string{"l"},
+    },
+    &cli.BoolFlag{
+      Name: "lyr", Usage: "list pieces with lyrics",
     },
   }
   for name, usage := range Queries {

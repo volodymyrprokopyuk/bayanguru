@@ -171,9 +171,13 @@ func templatePiece(
   if err != nil {
     return err
   }
-  err = templateLyrics(tpl, piece, ec)
-  if err != nil {
-    return err
+  if ec.lyrics {
+    err = templateLyrics(tpl, piece, ec)
+    if err != nil {
+      return err
+    }
+  } else {
+    piece.LyricsFile = ""
   }
   var w strings.Builder
   switch piece.Ens {

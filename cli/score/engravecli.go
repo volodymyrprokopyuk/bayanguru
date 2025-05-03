@@ -16,6 +16,7 @@ func engraveAction(ctx context.Context, cmd *cli.Command) error {
   lint := cmd.Bool("lint")
   optimize := cmd.Bool("optimize")
   meta := cmd.Bool("meta")
+  lyrics := cmd.Bool("lyrics")
   args := cmd.Args()
   err := catalog.ValidateReq(cat, args.Slice())
   if err != nil {
@@ -38,6 +39,7 @@ func engraveAction(ctx context.Context, cmd *cli.Command) error {
       BookDir: catalog.BookDir, Catalog: cat, Book: book,
     },
     piece: piece, init: init, lint: lint, optimize: optimize, meta: meta,
+    lyrics: lyrics,
   }
   if ec.Book {
     ec.BookIDs = args.Slice()
@@ -57,7 +59,7 @@ func EngraveCmd() *cli.Command {
 `
    bayanguru engrave [-c catalog] pieces... [--init]
    bayanguru engrave [-c catalog] -b books... [--piece]
-   bayanguru engrave all --lint --optimize --meta=f`,
+   bayanguru engrave all --lint --optimize --meta=f --lyrics=f`,
     Action: engraveAction,
   }
   cmd.Flags = []cli.Flag{
@@ -82,6 +84,9 @@ func EngraveCmd() *cli.Command {
     },
     &cli.BoolFlag{
       Name: "meta", Usage: "include piece meta information", Value: true,
+    },
+    &cli.BoolFlag{
+      Name: "lyrics", Usage: "include lyrics into pieces", Value: true,
     },
   }
   return cmd
