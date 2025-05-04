@@ -83,7 +83,8 @@ func initPieceLyrics(pieces []catalog.Piece, ec engraveCommand) error {
     return fmt.Errorf("no pieces to initialize")
   }
   piece := pieces[0]
-  if ec.lyr && len(piece.LyricsFile) > 0 {
+  if ec.lyr {
+    piece.LyricsFile = catalog.LyricsFile(piece.Tit)
     err := initLyrics(piece, ec.SourceDir)
     if err != nil {
       return err

@@ -32,7 +32,7 @@ func PrintStat(catalog, selected int) {
   )
 }
 
-func readLyricsFiles(sourceDir string) (map[string]bool, error) {
+func listLyricsFiles(sourceDir string) (map[string]bool, error) {
   lyricsDir := filepath.Join(sourceDir, "lyrics")
   entries, err := os.ReadDir(lyricsDir)
   if err != nil {
@@ -53,7 +53,7 @@ func ReadPiecesAndBooks(bc BaseCmd) ([]Piece, []Book, int, error) {
   if err != nil {
     return nil, nil, 0, err
   }
-  lyrics, err := readLyricsFiles(bc.SourceDir)
+  lyrics, err := listLyricsFiles(bc.SourceDir)
   if err != nil {
     return nil, nil, 0, err
   }

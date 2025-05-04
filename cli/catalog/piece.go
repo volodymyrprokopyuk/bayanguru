@@ -163,7 +163,7 @@ func scoreFile(tit, ID string) string {
   return fmt.Sprintf("%s-%s", tit, ID)
 }
 
-func lyricsFile(tit string) string {
+func LyricsFile(tit string) string {
   tit = strings.ReplaceAll(reCleanTit.ReplaceAllLiteralString(tit, ""), " ", "-")
   return fmt.Sprintf("%s.ly", tit)
 }
@@ -193,7 +193,7 @@ func addMetaToPieces(pieces []Piece) {
     }
     // file
     piece.File = scoreFile(piece.Tit, piece.ID)
-    piece.LyricsFile = lyricsFile(piece.Tit)
+    piece.LyricsFile = LyricsFile(piece.Tit)
   }
 }
 

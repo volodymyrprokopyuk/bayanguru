@@ -344,7 +344,7 @@ func publish(pc publishCommand) error {
   if err != nil {
     return err
   }
-  pc.Queries["lcs"] = "^cpr" // Exclude copyrighted pieces from publishing
+  // pc.Queries["lcs"] = "^cpr" // Exclude copyrighted pieces from publishing
   if len(pc.Queries) > 0 {
     pieces, err = catalog.QueryPieces(pieces, pc.Queries)
     if err != nil {

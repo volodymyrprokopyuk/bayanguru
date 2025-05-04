@@ -516,12 +516,12 @@ func publishCatalog(pc publishCommand) error {
   if err != nil {
     return err
   }
-  queries := make(map[string]string, 1)
-  queries["lcs"] = "^cpr"  // Exclude copyrighted pieces from publishing
-  pieces, err = catalog.QueryPieces(pieces, queries)
-  if err != nil {
-    return err
-  }
+  // queries := make(map[string]string, 1)
+  // queries["lcs"] = "^cpr"  // Exclude copyrighted pieces from publishing
+  // pieces, err = catalog.QueryPieces(pieces, queries)
+  // if err != nil {
+  //   return err
+  // }
   tpl, err := makeTemplate(pc.templateDir, "catalog.html")
   if err != nil {
     return err
