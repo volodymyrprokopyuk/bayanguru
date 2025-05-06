@@ -65,7 +65,7 @@ func (b *Book) PtrPieces() func(yield func(i int, piece *Piece) bool) {
 }
 
 func PrintBook(w io.Writer, book Book) {
-  fmt.Fprintf(
+  _, _ = fmt.Fprintf(
     w, "%s %s %s\n",
     GreenTit(book.ID), YellowTit(book.Tit),
     RedSub("%d pieces", len(book.Pieces)),

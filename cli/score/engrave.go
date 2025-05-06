@@ -60,7 +60,7 @@ func templatePool(sourceDir, targetFile string) (*sync.Pool, error) {
 
 func engraveScore(w io.Writer, score, scoreFile, scoreDir string) error {
   scorePDF := filepath.Join(scoreDir, scoreFile)
-  fmt.Fprintf(
+  _, _ = fmt.Fprintf(
     w, "%s %s\n", catalog.BlueTit("engrave"), catalog.BlueSub(scorePDF + ".pdf"),
   )
   lyCmd := exec.Command(
@@ -74,7 +74,9 @@ func engraveScore(w io.Writer, score, scoreFile, scoreDir string) error {
 
 func optimizeScore(w io.Writer, scoreFile, scoreDir string) error {
   scorePDF := filepath.Join(scoreDir, scoreFile + ".pdf")
-  fmt.Fprintf(w, "%s %s\n", catalog.BlueTit("optimize"), catalog.BlueSub(scorePDF))
+  _, _ = fmt.Fprintf(
+    w, "%s %s\n", catalog.BlueTit("optimize"), catalog.BlueSub(scorePDF),
+  )
   return pdf.OptimizeFile(scorePDF, scorePDF, nil)
 }
 

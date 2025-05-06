@@ -116,7 +116,7 @@ func PrintPiece(w io.Writer, piece Piece) {
     titLen = maxTit
   }
   spaceLen := 53 - titLen - comLen
-  fmt.Fprintf(
+  _, _ = fmt.Fprintf(
     w, "%s %s %s %s %s %s %s %s %s\n",
     GreenTit(piece.ID), YellowTit(tit), strings.Repeat(" ", spaceLen), BlueTit(com),
     YellowSub(piece.Org), GreenSub(piece.Sty), GreenSub(piece.Gnr),
@@ -147,7 +147,9 @@ func readCatalogFile(catFile string) ([]Piece, error) {
   if err != nil {
     return nil, err
   }
-  defer file.Close()
+  defer func() {
+    _ = file.Close()
+  }()
   var pieces struct { Pieces []Piece `yaml:"pieces"` }
   err = yaml.NewDecoder(file).Decode(&pieces)
   if err != nil {

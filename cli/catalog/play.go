@@ -105,7 +105,9 @@ func filterPlayed(pieces []Piece, playedFile string) ([]Piece, error) {
   if err != nil {
     return nil, err
   }
-  defer file.Close()
+  defer func() {
+    _ = file.Close()
+  }()
   played := make(map[string]bool, 100)
   scanner := bufio.NewScanner(file)
   for scanner.Scan() {
@@ -133,7 +135,9 @@ func addToPlayed(pieceID, fileName string) error {
   if err != nil {
     return err
   }
-  defer file.Close()
+  defer func() {
+    _ = file.Close()
+  }()
   _, err = file.WriteString(pieceID + "\n")
   return err
 }

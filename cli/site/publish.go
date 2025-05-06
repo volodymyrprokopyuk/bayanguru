@@ -32,12 +32,16 @@ func copyFile(src, dst string) (int64, error) {
   if err != nil {
     return 0, err
   }
-  defer srcFile.Close()
+  defer func() {
+    _ = srcFile.Close()
+  }()
   dstFile, err := os.Create(dst)
   if err != nil {
     return 0, err
   }
-  defer dstFile.Close()
+  defer func() {
+    _ = dstFile.Close()
+  }()
   return io.Copy(dstFile, srcFile)
 }
 
@@ -124,13 +128,17 @@ func publishFile(
 ) error {
   file := filepath.Join(publicDir, publicFile + ".html")
   if !strings.Contains(file, "/catalog/") {
-    fmt.Fprintf(w, "%s %s\n", catalog.BlueTit("publish"), catalog.BlueSub(file))
+    _, _ = fmt.Fprintf(
+      w, "%s %s\n", catalog.BlueTit("publish"), catalog.BlueSub(file),
+    )
   }
   htmlFile, err := os.Create(file) // Overwrites an existing file
   if err != nil {
     return err
   }
-  defer htmlFile.Close()
+  defer func() {
+    _ = htmlFile.Close()
+  }()
   return tpl.ExecuteTemplate(htmlFile, "page.html", data)
 }
 
@@ -152,7 +160,9 @@ func readSiteContent(contentDir, contentFile string) (SiteContent, error) {
   if err != nil {
     return SiteContent{}, err
   }
-  defer file.Close()
+  defer func() {
+    _ = file.Close()
+  }()
   var content SiteContent
   err = yaml.NewDecoder(file).Decode(&content)
   if err != nil {
@@ -178,7 +188,9 @@ func readCatalogMeta(contentDir, metaFile string) (CatalogMeta, error) {
   if err != nil {
     return CatalogMeta{}, err
   }
-  defer file.Close()
+  defer func() {
+    _ = file.Close()
+  }()
   var meta CatalogMeta
   err = yaml.NewDecoder(file).Decode(&meta)
   if err != nil {
@@ -224,7 +236,9 @@ func publishIndex(pc publishCommand) error {
 
 func uploadPiece(w io.Writer, pieceFile, uploadURL string) error {
   file := fmt.Sprintf("piece/%s.pdf", pieceFile)
-  fmt.Fprintf(w, "%s %s\n", catalog.BlueTit("upload"), catalog.BlueSub(file))
+  _, _ = fmt.Fprintf(
+    w, "%s %s\n", catalog.BlueTit("upload"), catalog.BlueSub(file),
+  )
   rclCmd := exec.Command(
     "rclone", "copy", "--s3-no-check-bucket", file, uploadURL,
   )
