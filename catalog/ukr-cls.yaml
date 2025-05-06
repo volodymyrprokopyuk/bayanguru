@@ -222,7 +222,7 @@ pieces:
   - { id: ohmw, tit: Вальс,
       com: М. Чайкін, src: B2AK1979,
       org: ukr, sty: cus, gnr: vls, ton: [dmi, fmj, dmj], frm: [in3, in6], bss: stb, lvl: elb }
-  - { id: stil, tit: Сусідка, sub: ukrfs,
+  - { id: stil, tit: Заспіваймо пісню веселеньку, sub: ukrfs,
       arr: М. Чайкін, src: B2AK1979,
       org: ukr, sty: flk, gnr: sng, ton: [ami, cmj], frm: cr5, bss: stb, lvl: elb }
   - { id: nizv, tit: "Чом, чом не прийшов", sub: ukrfs,
@@ -286,7 +286,7 @@ pieces:
   - { id: mf7s, tit: Дитяча полька,
       com: М. Глинка, src: B2AK1987,
       org: rus, sty: cus, gnr: plk, ton: [besmj, fmj], frm: [rep, jmp], bss: stb, lvl: elb }
-  - { id: zykv, tit: Зайчик, sub: ukrfs,
+  - { id: zykv, tit: Ой на горі жито, sub: ukrfs,
       src: B2AK1987,
       org: ukr, sty: flk, gnr: chd, ton: amj, frm: [vo2, var, in3], bss: stb, lvl: elc }
   - { id: 26qx, tit: Казка,
