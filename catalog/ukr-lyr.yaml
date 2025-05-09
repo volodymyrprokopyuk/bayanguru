@@ -45,7 +45,7 @@ pieces:
       org: ukr, sty: flk, gnr: sng, ton: gmj, frm: mel, bss: frb, lvl: elb }
   - { id: zp94, tit: "Іди, іди, дощику", sub: ukrfs,
       arr: В. Гончаренко, src: OZGGP1993,
-      org: ukr, sty: flk, gnr: sng, ton: fmj, frm: [vo2, cr5, rep], bss: [frb, vo2], lvl: elb }
+      org: ukr, sty: flk, gnr: chd, ton: fmj, frm: [vo2, cr5, rep], bss: [frb, vo2], lvl: elb }
   - { id: 47tq, tit: Заспіваймо пісню веселеньку, sub: ukrfs,
       arr: Ю. Соколовський, src: OZGGP1993,
       org: ukr, sty: flk, gnr: sng, ton: dmi, frm: [in3, cr5], bss: [frb, in3, jmp], lvl: elb }

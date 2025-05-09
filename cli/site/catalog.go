@@ -62,16 +62,16 @@ var (
           return piece.Org == "hun"
         },
       }, {
-        Name: "extra", Tit: "Extra | Різне",
-        Query: func(piece catalog.Piece) bool {
-          ext := []string{"mda", "pol", "cze", "svk", "svn", "lva", "est"}
-          return slices.Contains(ext, piece.Org)
-        },
-      }, {
         Name: "european", Tit: "European | Європейські",
         Query: func(piece catalog.Piece) bool {
           eur := []string{"aut", "deu", "dnk", "fra", "swe"}
           return slices.Contains(eur, piece.Org)
+        },
+      }, {
+        Name: "extra", Tit: "Extra | Різне",
+        Query: func(piece catalog.Piece) bool {
+          ext := []string{"mda", "pol", "cze", "svk", "svn", "lva", "est"}
+          return slices.Contains(ext, piece.Org)
         },
       },
     },
@@ -141,9 +141,26 @@ var (
     Sort: catalog.SortByCom,
     Sub: []Section{
       {
-        Name: "composer", Tit: "Composer | Композитор",
+        Name: "ukrainian", Tit: "Ukrainian | Українські",
         Query: func(piece catalog.Piece) bool {
-          return true
+          return piece.Org == "ukr"
+        },
+      }, {
+        Name: "russian", Tit: "Russian | Російські",
+        Query: func(piece catalog.Piece) bool {
+          return piece.Org == "rus"
+        },
+      }, {
+        Name: "european", Tit: "European | Європейські",
+        Query: func(piece catalog.Piece) bool {
+          eur := []string{"aut", "deu", "dnk", "fra", "swe"}
+          return slices.Contains(eur, piece.Org)
+        },
+      }, {
+        Name: "extra", Tit: "Extra | Різне",
+        Query: func(piece catalog.Piece) bool {
+          ext := []string{"mda", "pol", "cze", "svk", "svn", "lva", "est"}
+          return slices.Contains(ext, piece.Org)
         },
       },
     },
@@ -193,6 +210,12 @@ var (
           return formQuery(piece.Frm, prh)
         },
       }, {
+        Name: "ornament", Tit: "Ornament | Орнамент",
+        Query: func(piece catalog.Piece) bool {
+          orn := []string{"tre", "acc", "mor", "gru", "tri", "gli", "cad"}
+          return formQuery(piece.Frm, orn)
+        },
+      }, {
         Name: "left-hand", Tit: "Left hand | Ліва рука",
         Query: func(piece catalog.Piece) bool {
           return slices.Contains(piece.Bss, "pub")
@@ -237,11 +260,17 @@ var (
           pph := []string{"vo2", "vo3"}
           return formQuery(piece.Bss, pph)
         },
-      },*/ /*{
+      }, {
         Name: "polyrhythm", Tit: "Polyrhythm | Поліритмія",
         Query: func(piece catalog.Piece) bool {
           prh := []string{"syn", "tu3", "tu5", "tu6"}
           return formQuery(piece.Bss, prh)
+        },
+      }, {
+        Name: "ornament", Tit: "Ornament | Орнамент",
+        Query: func(piece catalog.Piece) bool {
+          orn := []string{"tre", "acc", "mor", "gru", "tri", "gli", "cad"}
+          return formQuery(piece.Frm, orn)
         },
       },*/
     },
@@ -304,9 +333,14 @@ var (
     Sort: catalog.SortByTit,
     Sub: []Section{
       {
+        Name: "children", Tit: "For children | Для дітей",
+        Query: func(piece catalog.Piece) bool {
+          return piece.Gnr == "chd"
+        },
+      }, {
         Name: "lyrics", Tit: "Lyrics | Пісні",
         Query: func(piece catalog.Piece) bool {
-          return true
+          return piece.Gnr == "sng"
         },
       },
     },
