@@ -81,35 +81,11 @@ books:
   - { id: blr1, tit: Білоруські народні пісні і танці,
       sub: для готового і готово-виборного баяна,
       sections: [
-      { tit: Готовий баян, pieces: [ # Stradella bass
-        # B0D1973
-        bv2w,
-        # B1AK1985
-        v99z,
-        # BTBC1936
-        8ec9,
-        # BTB1989
-        2q9x,
-        # TYBCB21971
-        vhri,
-        # BSN1985
-        i349,
-        # FBBMS11P1977
-        ltm8,
-        # FBBMS13P1978
-        hrdv
+      { tit: Готовий баян, pieces: [
+        {{ query "org" "blr" "bss" "stb,pub" "sort" "tit" }}
       ] },
-      { tit: Готово-виборний баян, pieces: [ # Free bass
-        # FBB3BZ1982
-        wnc5,
-        # FBBSC1978
-        bx7x, cyj2,
-        # BSA1983
-        em1w,
-        # BSN1985
-        f3gw,
-        # FBBMS9P1976
-        ghle
+      { tit: Готово-виборний баян, pieces: [
+        {{ query "org" "blr" "bss" "frb" "sort" "tit" }}
       ] } ] }
   - { id: hun1, tit: Угорські народні пісні і танці,
       sub: для готового і готово-виборного баяна,
@@ -120,12 +96,10 @@ books:
   - { id: pol1, tit: Польські народні пісні і танці,
       sub: для готового і готово-виборного баяна,
       sections: [
-      { tit: Готовий баян,
-        pieces: [
-        {{ query "org" "pol,cze,svk,svn,lva,est" "bss" "^frb" "sort" "tit"}}
+      { tit: Готовий баян, pieces: [
+        {{ query "org" "pol,cze,svk,svn,lva,est" "bss" "stb,pub" "sort" "tit"}}
         ] },
-      { tit: Готово-виборний баян,
-        pieces: [
+      { tit: Готово-виборний баян, pieces: [
         {{ query "org" "pol,cze,svk,svn,lva,est" "bss" "frb" "sort" "tit"}}
         ] },
       ]
@@ -363,13 +337,11 @@ books:
       ] }
       ] }
   # Lyrics
-  - { id: uly1, tit: Українські пісні, sub: в супроводі баяна,
+  - { id: lyr1, tit: Українські пісні, sub: в супроводі баяна,
       sections: [
       { tit: Пісні для дітей, pieces: [
-        # IIDBF2021
-        1737, pd1j, 6swu, onsj, tjzc, kddy, gzmy
+        {{ query "org" "ukr" "gnr" "chd" "lyr" "true" "sort" "tit" }}
       ] },
       { tit: Українські пісні, pieces: [
-        # OZGGP1993
-        igzh, yiry, s9si, 72ct, zp94, 47tq, ke9a
+        {{ query "org" "ukr" "gnr" "sng" "lyr" "true" "sort" "tit" }}
       ] } ] }

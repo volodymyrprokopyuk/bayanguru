@@ -80,9 +80,14 @@ func makeQuerySort(pieceMap map[string]Piece) func(queries ...string) string {
     }
     queryMap := make(map[string]string, len(queries) / 2)
     sortKey := ""
+    lyr := false
     for i := 0; i < len(queries) - 1; i += 2 {
       key, value := queries[i], queries[i + 1]
-      if key == "sort" {
+      switch key {
+      case "lyr":
+        lyr = true
+        continue
+      case "sort":
         sortKey = value
         continue
       }
@@ -98,6 +103,9 @@ func makeQuerySort(pieceMap map[string]Piece) func(queries ...string) string {
       if match(piece) {
         pieces = append(pieces, piece)
       }
+    }
+    if lyr {
+      pieces = selectLyrics(pieces)
     }
     // Sort or randomize pieces
     if len(sortKey) > 0 {

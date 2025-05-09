@@ -191,8 +191,6 @@ func templatePiece(
     if err != nil {
       return err
     }
-  } else {
-    piece.LyricsFile = ""
   }
   var w strings.Builder
   switch piece.Ens {
@@ -209,7 +207,7 @@ func templatePiece(
       return err
     }
     piece.LeftHand = stradella(w.String())
-    if len(piece.LyricsFile) > 0 {
+    if ec.lyrics && len(piece.LyricsFile) > 0 {
       w.Reset()
       err = tpl.ExecuteTemplate(&w, piece.LyricsFile, piece)
       if err != nil {
@@ -261,12 +259,14 @@ func templatePiece(
       return err
     }
     piece.LeftHand = stradella(w.String())
-    w.Reset()
-    err = tpl.ExecuteTemplate(&w, piece.LyricsFile, piece)
-    if err != nil {
-      return err
+    if ec.lyrics && len(piece.LyricsFile) > 0 {
+      w.Reset()
+      err = tpl.ExecuteTemplate(&w, piece.LyricsFile, piece)
+      if err != nil {
+        return err
+      }
+      piece.Lyrics = w.String()
     }
-    piece.Lyrics = w.String()
   case "vc2":
     w.Reset()
     err = tpl.ExecuteTemplate(&w, "vocalOne", piece)
@@ -292,12 +292,14 @@ func templatePiece(
       return err
     }
     piece.LeftHand = stradella(w.String())
-    w.Reset()
-    err = tpl.ExecuteTemplate(&w, piece.LyricsFile, piece)
-    if err != nil {
-      return err
+    if ec.lyrics && len(piece.LyricsFile) > 0 {
+      w.Reset()
+      err = tpl.ExecuteTemplate(&w, piece.LyricsFile, piece)
+      if err != nil {
+        return err
+      }
+      piece.Lyrics = w.String()
     }
-    piece.Lyrics = w.String()
   }
   return nil
 }
