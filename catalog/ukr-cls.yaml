@@ -335,7 +335,7 @@ pieces:
       org: ukr, sty: cus, gnr: sng, ton: emi, frm: dot, bss: frb, lvl: ela }
   - { id: dsj8, tit: Полечка,
       com: В. Власов, src: FBB1BZ1980,
-      org: ukr, sty: cus, gnr: plk, ton: dmi, frm: mel, bss: frb, lvl: ela }
+      org: ukr, sty: cus, gnr: plk, ton: dmi, frm: syn, bss: frb, lvl: ela }
   - { id: c1dx, tit: "Ой не ходи, Грицю",
       arr: М. Різоль, src: FBB1BZ1980,
       org: ukr, sty: flk, gnr: sng, ton: ami, frm: dot, bss: [frb, dot], lvl: ela }
