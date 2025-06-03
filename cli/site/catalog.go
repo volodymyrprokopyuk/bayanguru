@@ -333,14 +333,14 @@ var (
     Sort: catalog.SortByTit,
     Sub: []Section{
       {
-        Name: "children", Tit: "For children | Для дітей",
-        Query: func(piece catalog.Piece) bool {
-          return piece.Gnr == "chd"
-        },
-      }, {
         Name: "lyrics", Tit: "Lyrics | Пісні",
         Query: func(piece catalog.Piece) bool {
           return piece.Gnr == "sng"
+        },
+      }, {
+        Name: "children", Tit: "For children | Для дітей",
+        Query: func(piece catalog.Piece) bool {
+          return piece.Gnr == "chd"
         },
       },
     },
