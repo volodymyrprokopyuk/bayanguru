@@ -39,10 +39,23 @@ go install github.com/volodymyrprokopyuk/bayanguru@latest
 cp bayanguru.fish ~/.config/fish/completions/bayanguru.fish
 #+END_SRC
 
-Piece ID generation
+Generate a piece ID
 
 #+BEGIN_SRC fish
 tr -dc a-z0-9 </dev/urandom | head -c 4
+#+END_SRC
+
+Initialize a piece and lyrics
+
+#+BEGIN_SRC fish
+bayanguru engrave pieceID -i
+bayanguru engrave pieceID -i --lyr
+#+END_SRC
+
+Initialize a site
+
+#+BEGIN_SRC fish
+bayanguru publish all --init
 #+END_SRC
 
 ** License
