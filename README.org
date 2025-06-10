@@ -55,6 +55,7 @@ bayanguru engrave pieceID -i --lyr
 Initialize a site
 
 #+BEGIN_SRC fish
+rm -rf site/public
 bayanguru publish all --init
 #+END_SRC
 
