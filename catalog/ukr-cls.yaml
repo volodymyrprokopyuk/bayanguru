@@ -391,7 +391,7 @@ pieces:
       org: ukr, sty: flk, gnr: sng, ton: fismi, frm: [vo2, in3, cr5], bss: [frb, in3], lvl: elb }
   - { id: x6ez, tit: Козачок,
       arr: М. Різоль, src: FBB3BZ1982,
-      org: ukr, sty: flk, gnr: koz, ton: [dmj, gmj], frm: [var, acc], bss: [vo2, frb, var, cr7], lvl: elc }
+      org: ukr, sty: flk, gnr: koz, ton: [dmj, gmj], frm: [var, acc], bss: [frb, vo2, var, cr7], lvl: elc }
   - { id: u5b8, tit: Горобчик, sub: stu,
       com: А. Тихончук, src: FBB3BZ1982,
       org: ukr, sty: cus, gnr: pie, ton: cmj, frm: [arp, brk, tri], bss: [frb, arp, brk], lvl: elb }

@@ -42,7 +42,7 @@ pieces:
       org: blr, sty: flk, gnr: sng, ton: dmi, frm: rep, bss: frb, lvl: ela }
   - { id: cyj2, tit: Перепілочка, sub: blrfs,
       arr: С. Чапкій, src: FBBSC1978,
-      org: blr, sty: flk, gnr: sng, ton: gmi, frm: [vo2, cr5], bss: [vo2, frb, var, syn, jmp], lvl: elc }
+      org: blr, sty: flk, gnr: sng, ton: gmi, frm: [vo2, cr5], bss: [frb, vo2, var, syn, jmp], lvl: elc }
   # BSA1983
   - { id: em1w, tit: Ой біля саду річенька, sub: blrfs,
       arr: А. Талакин, src: BSA1983,
