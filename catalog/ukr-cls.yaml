@@ -256,7 +256,7 @@ pieces:
   - { id: fngd, tit: Колискова,
       com: Я. Степовий, src: B2AK1987,
       org: ukr, sty: cus, gnr: lul, ton: gmi, frm: mel, bss: stb, lvl: ela }
-  - { id: cpdc, tit: Ніч яка місячна, sub: ukrfs,
+  - { id: cpdc, tit: Місяць на небі, sub: ukrfs,
       src: B2AK1987,
       org: ukr, sty: flk, gnr: sng, ton: ami, frm: mel, bss: stb, lvl: ela }
   - { id: 9k9u, tit: Горлиця, sub: ukrfs,
@@ -352,13 +352,13 @@ pieces:
   - { id: a5cv, tit: Полька,
       com: Г. Шевчук, src: FBB2BZ1981,
       org: ukr, sty: cus, gnr: plk, ton: cmj, frm: jmp, bss: [frb, in3, jmp], lvl: elb }
-  - { id: y632, tit: Ніч яка місячна,
+  - { id: y632, tit: Місяць на небі, sub: ukrfs,
       arr: М. Різоль, src: FBB2BZ1981,
       org: ukr, sty: flk, gnr: sng, ton: emi, frm: in3, bss: frb, lvl: elb }
   - { id: 8o6w, tit: "Ой у полі, ой у полі",
       arr: М. Різоль, src: FBB2BZ1981,
       org: ukr, sty: flk, gnr: sng, ton: ami, frm: [in3, cr5, dot], bss: frb, lvl: ela }
-  - { id: zbgg, tit: Ніч яка місячна,
+  - { id: zbgg, tit: Місяць на небі, sub: ukrfs,
       arr: Т. Мурзина, src: FBB2BZ1981,
       org: ukr, sty: flk, gnr: sng, ton: gmi, frm: [vo2, in6], bss: [frb, vo2], lvl: elb }
   - { id: 27p8, tit: Веснянка,
