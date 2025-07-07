@@ -61,10 +61,9 @@ pieces:
   - { id: 671i, tit: Місяць на небі, sub: ukrfs,
       arr: Ю. Соколовський, src: OZGGP1993,
       org: ukr, sty: flk, gnr: sng, ton: emi, frm: [in3, cr5], bss: [frb, jmp], lvl: elb }
-  # p. 27
-  # - { id: 1a98, tit: Несе галя воду, sub: ukrfs,
-  #     arr: Ю. Соколовський, src: OZGGP1993,
-  #     org: ukr, sty: flk, gnr: sng, ton: gmi, frm: [in3, cr5], bss: [frb, in3], lvl: elb }
+  - { id: 1a98, tit: Несе галя воду, sub: ukrfs,
+      arr: Ю. Соколовський, src: OZGGP1993,
+      org: ukr, sty: flk, gnr: sng, ton: gmi, frm: [in3, cr5], bss: [frb, in3], lvl: elb }
   # p. 28
   # - { id: h0f5, tit: Гандзя, sub: ukrfs,
   #     arr: Ю. Соколовський, src: OZGGP1993,
@@ -73,3 +72,11 @@ pieces:
   # - { id: ua9j, tit: По садочку ходжу, sub: ukrfs,
   #     arr: Ю. Соколовський, src: OZGGP1993,
   #     org: ukr, sty: flk, gnr: sng, ton: gmi, frm: [in3, dot], bss: [frb, jmp], lvl: elb }
+  # p. 31
+  # - { id: 0t0d, tit: "Копав, копав криниченьку", sub: ukrfs,
+  #     arr: Ю. Соколовський, src: OZGGP1993,
+  #     org: ukr, sty: flk, gnr: sng, ton: besmj, frm: [in3, cr5], bss: [frb, in5, cr5, jmp], lvl: elb }
+  # p. 33
+  # - { id: kekq, tit: Цвіте терен, sub: ukrfs,
+  #     arr: Ю. Соколовський, src: OZGGP1993,
+  #     org: ukr, sty: flk, gnr: sng, ton: gmi, frm: in3, bss: [frb, jmp], lvl: elb }
