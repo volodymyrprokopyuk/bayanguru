@@ -28,7 +28,7 @@
   bes=4-\frBass d | c8 ees d d, | <g d'>4 4 |
   \duo { c'='4 bes=2 | } { ees=8( d) g=2 | }
   g=8 d'4 8 | g,[ <c d>] g <bes d>4 8 |
-  bes=8 f'4 f8 | f, ees' bes <d f>4 8 |
+  bes=8 f'4 f8 | f,[ ees'] bes <d f>4 8 |
   bes=8 <bes d> f <bes d> | c, <g' ees'> d <fis c'> |
   g=8 <bes d> f <bes d> | <ees, g>( <d fis>) <g= bes>2 |
 }
