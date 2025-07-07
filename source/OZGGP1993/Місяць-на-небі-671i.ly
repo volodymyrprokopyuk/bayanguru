@@ -17,7 +17,7 @@
     <e,=' b' d>4 <c' e> <b d> | <a c> b a\) |
     b,=4\(\mp dis fis | <e c'>2 <g b>4 | <fis a>_\dDim <e g> <dis fis> |
     \alternative {
-      \volta 1 { <g,= b e>2.\) \sSlur ub #'((wb . 5.5) (ws . 9.5)) ( | }
+      \volta 1 { <g,= b e>2.\) \sSlur ub #'((wb . 5.5) (ws . 11.5)) ( | }
       \volta 2 { \hSpace <g= b e>2.) \bar "|." }
     }
   }
@@ -28,5 +28,12 @@
 \relative {
   \clef bass
   \key e \minor
+  <e= g b>2.-\frBass | <e fis a c>2.~ | 2. | <b=, a'> \fermata |
+  e,=,4\( b' g' | e, b' fis' | e, b' g' | a, e' c'\) |
+  b,=,4( fis' a | a, e' c') | b,( cis dis | <e g> b g=,) |
+
+  <e=, e'>2\( <d d'>4 | c g' e' | e, fis gis | a b c\) |
+  b=,4\( fis' a | a, e' c' | b, cis dis | e b g=,\) %
+  \sSlur nf #'((ws . 4.5)) ( | <e=, e'>2.) \bar "|."
 }
 {{ end }}
