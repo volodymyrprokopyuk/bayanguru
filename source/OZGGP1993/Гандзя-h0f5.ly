@@ -16,7 +16,7 @@
   e'='8\mf e e g | g f16( e) f8 d | d-. f-. a-. d-. | <d,=' f g>4 r \fermata |
   \tempo Vivo
   <c=' e>8\mf 8 8 <e g> | g f16( e) f8 d | d <d f>8 8 <f a> |
-  <f=' a>8 <e g>16( fis) <e g>8 e |
+  <f=' a>8 <e g>16( fis) <e g>8 e | \mergeDifferentlyDottedOn
   {{ template "rh1" (w `g='8`) }} | g='8 g g f | f e16( dis) e8( c) |
   {{ template "rh1" (w `g'='8`) }} | g='8 <c e> <b f'> b |
   d=''8 c16( b) c8 c | d,='\p <b f'>8 8. 16 | e8 <e c'>8 8. 16 |
