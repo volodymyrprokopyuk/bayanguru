@@ -23,7 +23,7 @@
   g='8_\dCre <f d'>8 8 8 | <g e'>8. d'16 c16( b) a( g=') |
 
   \repeat volta 2 {
-    a='8\mf a <a f'> a | g <g e'> e' g, | f <f d'>8 8 b |
+    a='8\f a <a f'> a | g <g e'> e' g, | f <f d'>8 8 b |
     \alternative {
       \volta 1 { <e,=' d'>8 c'16( b) <e,=' c'>8 8 | }
       \volta 2 { <e=' d'>4 c'8 b | <e, c'>4 <e=' g>4 \bar "|." }
