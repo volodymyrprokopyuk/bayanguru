@@ -64,10 +64,9 @@ pieces:
   - { id: 1a98, tit: Несе галя воду, sub: ukrfs,
       arr: Ю. Соколовський, src: OZGGP1993,
       org: ukr, sty: flk, gnr: sng, ton: gmi, frm: [in3, cr5], bss: [frb, in3], lvl: elb }
-  # p. 28
-  # - { id: h0f5, tit: Гандзя, sub: ukrfs,
-  #     arr: Ю. Соколовський, src: OZGGP1993,
-  #     org: ukr, sty: flk, gnr: sng, ton: cmj, frm: [in3, in6], bss: [frb, in3, jmp], lvl: elb }
+  - { id: h0f5, tit: Гандзя, sub: ukrfs,
+      arr: Ю. Соколовський, src: OZGGP1993,
+      org: ukr, sty: flk, gnr: sng, ton: cmj, frm: [in3, in6], bss: [frb, in3, jmp], lvl: elb }
   # p. 30
   # - { id: ua9j, tit: По садочку ходжу, sub: ukrfs,
   #     arr: Ю. Соколовський, src: OZGGP1993,
