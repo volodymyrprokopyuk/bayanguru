@@ -24,7 +24,7 @@
 \relative {
   \clef bass
   \key g \minor
-  c=8( g' ees' f, c' ees | bes, f' g a bes d) |
+  c=8(-\frBass g' ees' f, c' ees | bes, f' g a bes d) |
   c,=8( g' ees' d, a' c | <g bes> d' d, g4.) |
   g,=,8( d' bes' g, ees' a | g, d' bes' g, d' bes') |
   g,=,8( d' bes' g, d' fis | g, d' g a bes d=') |
