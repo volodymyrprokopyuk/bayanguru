@@ -67,10 +67,9 @@ pieces:
   - { id: h0f5, tit: Гандзя, sub: ukrfs,
       arr: Ю. Соколовський, src: OZGGP1993,
       org: ukr, sty: flk, gnr: sng, ton: cmj, frm: [in3, in6], bss: [frb, in3, jmp], lvl: elb }
-  # p. 30
-  # - { id: ua9j, tit: По садочку ходжу, sub: ukrfs,
-  #     arr: Ю. Соколовський, src: OZGGP1993,
-  #     org: ukr, sty: flk, gnr: sng, ton: gmi, frm: [in3, dot], bss: [frb, jmp], lvl: elb }
+  - { id: ua9j, tit: По садочку ходжу, sub: ukrfs,
+      arr: Ю. Соколовський, src: OZGGP1993,
+      org: ukr, sty: flk, gnr: sng, ton: gmi, frm: [in3, dot], bss: [frb, jmp], lvl: elb }
   # p. 31
   # - { id: 0t0d, tit: "Копав, копав криниченьку", sub: ukrfs,
   #     arr: Ю. Соколовський, src: OZGGP1993,
@@ -79,3 +78,11 @@ pieces:
   # - { id: kekq, tit: Цвіте терен, sub: ukrfs,
   #     arr: Ю. Соколовський, src: OZGGP1993,
   #     org: ukr, sty: flk, gnr: sng, ton: gmi, frm: in3, bss: [frb, jmp], lvl: elb }
+  # p. 35
+  # - { id: oskw, tit: "І шумить, і гуде", sub: ukrfs,
+  #     arr: Ю. Соколовський, src: OZGGP1993,
+  #     org: ukr, sty: flk, gnr: sng, ton: besmj, frm: [in3, in6, in8, cr5], bss: [frb, in8, jmp], lvl: elb }
+  # p. 36
+  # - { id: dbl3, tit: Спать мені не хочеться, sub: ukrfs,
+  #     arr: Ю. Соколовський, src: OZGGP1993,
+  #     org: ukr, sty: flk, gnr: sng, ton: emi, frm: in3, bss: [frb, vo2, in3], lvl: elb }
