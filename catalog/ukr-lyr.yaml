@@ -73,10 +73,9 @@ pieces:
   - { id: 0t0d, tit: "Копав, копав криниченьку", sub: ukrfs,
       arr: Ю. Соколовський, src: OZGGP1993,
       org: ukr, sty: flk, gnr: sng, ton: besmj, frm: [in3, cr5], bss: [frb, in5, cr5, jmp], lvl: elb }
-  # p. 33
-  # - { id: kekq, tit: Цвіте терен, sub: ukrfs,
-  #     arr: Ю. Соколовський, src: OZGGP1993,
-  #     org: ukr, sty: flk, gnr: sng, ton: gmi, frm: in3, bss: [frb, jmp], lvl: elb }
+  - { id: kekq, tit: Цвіте терен, sub: ukrfs,
+      arr: Ю. Соколовський, src: OZGGP1993,
+      org: ukr, sty: flk, gnr: sng, ton: gmi, frm: in3, bss: [frb, jmp], lvl: elb }
   # p. 35
   # - { id: oskw, tit: "І шумить, і гуде", sub: ukrfs,
   #     arr: Ю. Соколовський, src: OZGGP1993,
