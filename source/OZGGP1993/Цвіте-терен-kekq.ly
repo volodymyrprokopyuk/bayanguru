@@ -29,7 +29,7 @@
   {{ template "lh1" (w `g,=,8(-\frBass` `g=)`) }}
   {{ template "lh1" (w `g,=,8(` `f=)`) }}
 
-  g,=,8( d' bes') g,( d' bes') | f( c' ees) fis,( c' d) |
+  bes,=,8( f' bes) bes,( f' bes) | f( c' ees) fis,( c' d) |
   g,=8( bes d) f,( g bes) | ees,( a d,) g( g, f') | ees( a d,) <g= bes>4. |
 }
 {{ end }}
