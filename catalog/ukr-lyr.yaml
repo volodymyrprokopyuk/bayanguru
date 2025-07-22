@@ -76,11 +76,30 @@ pieces:
   - { id: kekq, tit: Цвіте терен, sub: ukrfs,
       arr: Ю. Соколовський, src: OZGGP1993,
       org: ukr, sty: flk, gnr: sng, ton: gmi, frm: in3, bss: [frb, jmp], lvl: elb }
-  # p. 35
-  # - { id: oskw, tit: "І шумить, і гуде", sub: ukrfs,
-  #     arr: Ю. Соколовський, src: OZGGP1993,
-  #     org: ukr, sty: flk, gnr: sng, ton: besmj, frm: [in3, in6, in8, cr5], bss: [frb, in8, jmp], lvl: elb }
+  - { id: oskw, tit: "І шумить, і гуде", sub: ukrfs,
+      arr: Ю. Соколовський, src: OZGGP1993,
+      org: ukr, sty: flk, gnr: sng, ton: besmj, frm: [in3, in6, in8, cr5], bss: [frb, in8, jmp], lvl: elb }
   # p. 36
   # - { id: dbl3, tit: Спать мені не хочеться, sub: ukrfs,
   #     arr: Ю. Соколовський, src: OZGGP1993,
   #     org: ukr, sty: flk, gnr: sng, ton: emi, frm: in3, bss: [frb, vo2, in3], lvl: elb }
+  # p. 38
+  # - { id: d80b, tit: Дощик, sub: ukrfs,
+  #     arr: Ю. Соколовський, src: OZGGP1993,
+  #     org: ukr, sty: flk, gnr: sng, ton: emi, frm: [in3, in6, cr5], bss: [frb, jmp], lvl: elb }
+  # p. 40
+  # - { id: emb1, tit: Ой під вишнею, sub: ukrfs,
+  #     arr: Ю. Соколовський, src: OZGGP1993,
+  #     org: ukr, sty: flk, gnr: sng, ton: gmj, frm: [in3, in6], bss: [frb, jmp], lvl: elb }
+  # p. 41
+  # - { id: dkx8, tit: Ніч яка місячна, sub: ukrfs,
+  #     arr: Ю. Соколовський, src: OZGGP1993,
+  #     org: ukr, sty: flk, gnr: sng, ton: ami, frm: [in3, cr5], bss: [frb, vo2], lvl: elb }
+  # p. 43
+  # - { id: y4xn, tit: Ой на горі два дубки, sub: ukrfs,
+  #     arr: Ю. Соколовський, src: OZGGP1993,
+  #     org: ukr, sty: flk, gnr: sng, ton: ami, frm: [vo2, in3, cr5, syn], bss: [frb, jmp], lvl: elb }
+  # p. 45
+  # - { id: j22q, tit: Ти ж мене підманула, sub: ukrfs,
+  #     arr: Ю. Соколовський, src: OZGGP1993,
+  #     org: ukr, sty: flk, gnr: sng, ton: gmi, frm: [in3, in6], bss: [frb, in3, jmp], lvl: elb }
