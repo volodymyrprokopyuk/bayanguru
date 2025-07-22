@@ -6,6 +6,11 @@
   \duo { b=4 c=' | } { {{ .a }} | } b=4 a | <e g> <b=, a'> |
 {{ end }}
 
+{{ define "lh2" }}
+  \duo { \rep 2 { r8 <g= b>4 8 | } r <ais cis>4 8 | r <fis= a>4 8 | }
+  { \rep 3 { e=2 | } {{ .a }} | }
+{{ end }}
+
 {{ define "rightHand" }}
 \relative {
   \tempo Allegro
@@ -35,10 +40,8 @@
   \clef bass
   \key e \minor
   {{ template "lh1" (w `e=2-\frBass`) }} | <e= g>4 e,=, |
-  \rep 2 {
-    \duo { \rep 2 { r8 <g= b>4 8 | } r <ais cis>4 8 | r <fis= a>4 8 | }
-    { \rep 4 { e=2 | } | }
-  }
+  {{ template "lh2" (w `e=2`) }}
+  {{ template "lh2" (w `b=,2`) }}
 
   \rep 2 { g=,8 d' b' d,= | } | g,=,8 d' fis d | g, d' b' dis |
   \rep 2 { g,=8 <b= d>4 8 | } | a=8 <c d>4 8 | g <b d> fis <a= b dis> \fermata |
