@@ -2,7 +2,7 @@ package score
 
 import (
 	"context"
-	"fmt"
+	"errors"
 
 	"github.com/urfave/cli/v3"
 	"github.com/volodymyrprokopyuk/bayanguru/cli/catalog"
@@ -25,13 +25,13 @@ func engraveAction(ctx context.Context, cmd *cli.Command) error {
   }
   if init && args.Len() > 1 ||
     init && args.Len() == 1 && args.First() == "all" {
-    return fmt.Errorf("cannot initialize more than one piece")
+    return errors.New("cannot initialize more than one piece")
   }
   if book && init {
-    return fmt.Errorf("cannot initialize a book")
+    return errors.New("cannot initialize a book")
   }
   if !book && piece {
-    return fmt.Errorf("at least one book is required")
+    return errors.New("at least one book is required")
   }
   ec := engraveCommand{
     BaseCmd: catalog.BaseCmd{

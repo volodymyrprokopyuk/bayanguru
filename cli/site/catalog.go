@@ -6,6 +6,7 @@ import (
 	"os"
 	"path/filepath"
 	"slices"
+	"strconv"
 	"strings"
 	"text/template"
 
@@ -365,11 +366,11 @@ func queryPieces(
 var collator = collate.New(language.Und)
 
 var alphabet = func() []string {
-  var alphabet = strings.Split("АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЭЮЯ", "")
-  slices.SortStableFunc(alphabet, func(a, b string) int {
+  var alpha = strings.Split("АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЭЮЯ", "")
+  slices.SortStableFunc(alpha, func(a, b string) int {
     return collator.CompareString(a, b)
   })
-  return alphabet
+  return alpha
 }()
 
 func alphaLinkPieces(
@@ -407,6 +408,7 @@ func pagePieces(pieces []catalog.Piece, pageSize int) [][]catalog.Piece {
 func catalogSectionLinks(sec, cur Section) []Link {
   links := make([]Link, len(sec.Sub))
   for i, sub := range sec.Sub {
+    //nolint:gocritic
     url := filepath.Join("/catalog", sec.Name, sub.Name, "1")
     links[i] = Link{Tit: sub.Tit, URL: url, Disabled: sub.Name == cur.Name}
   }
@@ -422,6 +424,7 @@ func catalogAlphaLinks(sec, sub Section, pages [][]catalog.Piece) []Link {
       _, exists := alphaLink[alpha]
       if !exists {
         frag := fmt.Sprintf("%d#%s", pageNum + 1, alpha)
+        //nolint:gocritic
         url := filepath.Join("/catalog", sec.Name, sub.Name, frag)
         alphaLink[alpha] = Link{Tit: alpha, URL: url}
       }
@@ -455,7 +458,8 @@ func catalogPageLinks(sec, sub Section, curPage, pageTot, n int) []Link {
   }
   links := make([]Link, 0, n)
   for i := l; i <= r; i++ {
-    pageNum := fmt.Sprintf("%d", i)
+    pageNum := strconv.Itoa(i)
+    //nolint:gocritic
     url := filepath.Join("/catalog", sec.Name, sub.Name, pageNum)
     link := Link{Tit: pageNum, URL: url, Disabled: i == curPage}
     links = append(links, link)
@@ -475,7 +479,7 @@ func publishSubsec(
   alphaLinks := catalogAlphaLinks(sec, sub, pages)
   for i, pieces := range pages {
     pageNum := i + 1
-    pageFile := fmt.Sprintf("%d", pageNum)
+    pageFile := strconv.Itoa(pageNum)
     pageLinks := catalogPageLinks(sec, sub, pageNum, len(pages), 5)
     catalogData := struct {
       Tit string
@@ -537,7 +541,7 @@ func publishSitemap(pieces []catalog.Piece, pc publishCommand) error {
     pieceURL := fmt.Sprintf("%s/%s\n", pc.pieceURL, piece.File)
     buf.WriteString(pieceURL)
   }
-  return os.WriteFile(path, buf.Bytes(), 0644)
+  return os.WriteFile(path, buf.Bytes(), 0o644) //nolint:gosec,gocritic
 }
 
 func publishCatalog(pc publishCommand) error {
@@ -550,6 +554,7 @@ func publishCatalog(pc publishCommand) error {
   if err != nil {
     return err
   }
+  //nolint:gocritic
   // queries := make(map[string]string, 1)
   // queries["lcs"] = "^cpr"  // Exclude copyrighted pieces from publishing
   // pieces, err = catalog.QueryPieces(pieces, queries)
@@ -561,7 +566,7 @@ func publishCatalog(pc publishCommand) error {
     return err
   }
   for _, sec := range sections {
-    err := publishSection(tpl, pieces, sec, pc)
+    err = publishSection(tpl, pieces, sec, pc)
     if err != nil {
       return err
     }

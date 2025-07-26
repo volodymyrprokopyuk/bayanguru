@@ -1,6 +1,7 @@
 package catalog
 
 import (
+	"errors"
 	"fmt"
 	"io"
 	"math/rand/v2"
@@ -112,7 +113,7 @@ func PrintPiece(w io.Writer, piece Piece) {
   titLen, comLen := len([]rune(tit)), len([]rune(com))
   maxTit := 53 - comLen
   if titLen > maxTit {
-    tit = fmt.Sprintf("%s…", string([]rune(tit)[:maxTit - 1]))
+    tit = string([]rune(tit)[:maxTit - 1]) + "…"
     titLen = maxTit
   }
   spaceLen := 53 - titLen - comLen
@@ -143,7 +144,7 @@ func listCatalogFiles(catDir, catQuery string) ([]string, error) {
 }
 
 func readCatalogFile(catFile string) ([]Piece, error) {
-  file, err := os.Open(catFile)
+  file, err := os.Open(catFile) //nolint:gosec,gocritic
   if err != nil {
     return nil, err
   }
@@ -160,14 +161,18 @@ func readCatalogFile(catFile string) ([]Piece, error) {
 
 var reCleanTit = regexp.MustCompile(`[^- \pL\d]+`)
 
-func scoreFile(tit, ID string) string {
-  tit = strings.ReplaceAll(reCleanTit.ReplaceAllLiteralString(tit, ""), " ", "-")
-  return fmt.Sprintf("%s-%s", tit, ID)
+func scoreFile(tit, id string) string {
+  tit = strings.ReplaceAll(
+    reCleanTit.ReplaceAllLiteralString(tit, ""), " ", "-",
+  )
+  return fmt.Sprintf("%s-%s", tit, id)
 }
 
 func LyricsFile(tit string) string {
-  tit = strings.ReplaceAll(reCleanTit.ReplaceAllLiteralString(tit, ""), " ", "-")
-  return fmt.Sprintf("%s.ly", tit)
+  tit = strings.ReplaceAll(
+    reCleanTit.ReplaceAllLiteralString(tit, ""), " ", "-",
+  )
+  return tit + ".ly"
 }
 
 func addMetaToPieces(pieces []Piece) {
@@ -207,66 +212,66 @@ var (
     `^ukr|rus|blr|hun|mda|pol|cze|svk|svn|lva|est|aut|deu|dnk|fra|swe$`,
   )
   reSty = regexp.MustCompile(`^flk|cus|cls$`)
-  reGnr = regexp.MustCompile(strings.Join([]string{
-    `^sng|chd|lul|ves|kol|pry|rmc|mil`,
-    `|dnc|plk|mzr|qdr|men|koz|gop|vls|tng|mrc`,
-    `|pie|inv|can|pre|gyp|stu$`}, ""),
+  reGnr = regexp.MustCompile(
+    `^sng|chd|lul|ves|kol|pry|rmc|mil` +
+    `|dnc|plk|mzr|qdr|men|koz|gop|vls|tng|mrc` +
+    `|pie|inv|can|pre|gyp|stu$`,
   )
   reTon = regexp.MustCompile(`^[a-g](?:es|is)?m[ij]$`)
-  reFrm = regexp.MustCompile(strings.Join([]string{
-    `^mel|var|vo[23]|scl|seq|cro|arp|lng|srt|brk|in[3-8]|cr[57]`,
-    `|syn|tu[356]|dot|rep|tre|acc|mor|gru|tri|gli|cad|fi1|fi5|jmp`,
-    `|stb|pub|frb$`}, ""),
+  reFrm = regexp.MustCompile(
+    `^mel|var|vo[23]|scl|seq|cro|arp|lng|srt|brk|in[3-8]|cr[57]` +
+    `|syn|tu[356]|dot|rep|tre|acc|mor|gru|tri|gli|cad|fi1|fi5|jmp` +
+    `|stb|pub|frb$`,
   )
-  reLvl = regexp.MustCompile(`^(?:el|in|pr|vi)[a-c]$`)
+  reLvl = regexp.MustCompile(`^(?:el|in|pr|vi)[abc]$`)
   reEns = regexp.MustCompile(`^sol|duo|vc1|vc2$`)
 )
 
 func validatePieces(pieces []Piece) error {
   for _, piece := range pieces {
-    errors := make([]string, 0, 5)
+    errs := make([]string, 0, 5)
     if !reID.MatchString(piece.ID) {
-      errors = append(errors, fmt.Sprintf("invalid id %s", piece.ID))
+      errs = append(errs, "invalid id " + piece.ID)
     }
     if len(piece.Art) > 0 && !reArt.MatchString(piece.Art) {
-      errors = append(errors, fmt.Sprintf("invalid art %s", piece.Art))
+      errs = append(errs, "invalid art " + piece.Art)
     }
     if !reLcs.MatchString(piece.Lcs) {
-      errors = append(errors, fmt.Sprintf("invalid lcs %s", piece.Lcs))
+      errs = append(errs, "invalid lcs " + piece.Lcs)
     }
     if !reOrg.MatchString(piece.Org) {
-      errors = append(errors, fmt.Sprintf("invalid org %s", piece.Org))
+      errs = append(errs, "invalid org " + piece.Org)
     }
     if !reSty.MatchString(piece.Sty) {
-      errors = append(errors, fmt.Sprintf("invalid sty %s", piece.Sty))
+      errs = append(errs, "invalid sty " + piece.Sty)
     }
     if !reGnr.MatchString(piece.Gnr) {
-      errors = append(errors, fmt.Sprintf("invalid gnr %s", piece.Gnr))
+      errs = append(errs, "invalid gnr " + piece.Gnr)
     }
     for _, ton := range piece.Ton {
       if !reTon.MatchString(ton) {
-        errors = append(errors, fmt.Sprintf("invalid ton %s", ton))
+        errs = append(errs, "invalid ton " + ton)
       }
     }
     for _, frm := range piece.Frm {
       if !reFrm.MatchString(frm) {
-        errors = append(errors, fmt.Sprintf("invalid frm %s", frm))
+        errs = append(errs, "invalid frm " + frm)
       }
     }
     for _, bss := range piece.Bss {
       if !reFrm.MatchString(bss) {
-        errors = append(errors, fmt.Sprintf("invalid bss %s", bss))
+        errs = append(errs, "invalid bss " + bss)
       }
     }
     if !reLvl.MatchString(piece.Lvl) {
-      errors = append(errors, fmt.Sprintf("invalid lvl %s", piece.Lvl))
+      errs = append(errs, "invalid lvl " + piece.Lvl)
     }
     if !reEns.MatchString(piece.Ens) {
-      errors = append(errors, fmt.Sprintf("invalid ens %s", piece.Ens))
+      errs = append(errs, "invalid ens " + piece.Ens)
     }
-    if len(errors) > 0 {
+    if len(errs) > 0 {
       return fmt.Errorf(
-        "invalid piece %s\n%s", piece.ID, strings.Join(errors, "\n"),
+        "invalid piece %s\n%s", piece.ID, strings.Join(errs, "\n"),
       )
     }
   }
@@ -279,7 +284,7 @@ func readPieces(catDir, catQuery string) (map[string]Piece, []string, error) {
     return nil, nil, err
   }
   if len(files) == 0 {
-    return nil, nil, fmt.Errorf("no catalog files selected")
+    return nil, nil, errors.New("no catalog files selected")
   }
   pieceMap := make(map[string]Piece, 1000)
   pieceIDs := make([]string, 0, 1000) // Piece order

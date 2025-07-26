@@ -18,7 +18,7 @@ type lyLine struct {
 }
 
 func rawLines(pieceFile string) ([]lyLine, error) {
-  file, err := os.Open(pieceFile)
+  file, err := os.Open(pieceFile) //nolint:gosec,gocritic
   if err != nil {
     return nil, err
   }
@@ -45,7 +45,7 @@ var (
     `(\S*) (:?\\clef (:?treble|bass)|\\ottava #\d) (\S*)`,
   )
   reNoteOrChord = regexp.MustCompile(`^<?[a-g]`)
-  reChordEnd = regexp.MustCompile(`[a-g](:?es|is){0,2}[']*>`)
+  reChordEnd = regexp.MustCompile(`[a-g](:?es|is){0,2}'*>`)
 )
 
 func lintClefOttavaOctaveCheck(lines []lyLine) []lyLine {
@@ -102,7 +102,7 @@ var (
 )
 
 func cleanLines(pieceFile string) ([]lyLine, error) {
-  file, err := os.Open(pieceFile)
+  file, err := os.Open(pieceFile) //nolint:gosec,gocritic
   if err != nil {
     return nil, err
   }
@@ -132,15 +132,15 @@ func cleanLines(pieceFile string) ([]lyLine, error) {
 }
 
 var (
-  reFirstNote = regexp.MustCompile(strings.Join([]string{
-    `^[a-g]\S*`, // first note
+  reFirstNote = regexp.MustCompile(
+    `^[a-g]\S*|` + // first note
     `^<[a-g][^>]+>\S*`, // first chord
-  }, "|"))
-  reOctaveCheck = regexp.MustCompile(strings.Join([]string{
-    `^[a-g](?:es|is){0,2}[,']*=[,']*\d+`, // valid first note
-    `^<[a-g](?:es|is){0,2}[,']*=[^>]+>\d+`, // valid first chord
+  )
+  reOctaveCheck = regexp.MustCompile(
+    `^[a-g](?:es|is){0,2}[,']*=[,']*\d+|` + // valid first note
+    `^<[a-g](?:es|is){0,2}[,']*=[^>]+>\d+|` + // valid first chord
     `^[a-g](?:es|is){0,2}[+@Mm7d]`, // valid Stradella chord (no octave check)
-  }, "|"))
+  )
 )
 
 func lintFirstNoteOctaveCheck(lines []lyLine) []lyLine {
@@ -156,10 +156,10 @@ func lintFirstNoteOctaveCheck(lines []lyLine) []lyLine {
   return errors
 }
 
-var reNewContext = regexp.MustCompile(strings.Join([]string{
-  "(?:{ |w `)[a-g]\\S*", // first note in new context
+var reNewContext = regexp.MustCompile(
+  "(?:{ |w `)[a-g]\\S*|" + // first note in new context
   "(?:{ |w `)<[a-g][^>]+>\\S*", // first chord in new context
-}, "|"))
+)
 
 func lintNewContextOctaveCheck(lines []lyLine) []lyLine {
   errors := make([]lyLine, 0, 10)
@@ -174,10 +174,10 @@ func lintNewContextOctaveCheck(lines []lyLine) []lyLine {
   return errors
 }
 
-var reBarCheck = regexp.MustCompile(strings.Join([]string{
-  `(?:\||"\|\|"|"\|\.")(?: })?$`, // | or | }
+var reBarCheck = regexp.MustCompile(
+  `(?:\||"\|\|"|"\|\.")(?: })?$|` + // | or | }
   "(?:`|" + `}}|%)$`, // ` or }} or %
-}, "|"))
+)
 
 func lintLineEndBarCheck(lines []lyLine) []lyLine {
   errors := make([]lyLine, 0, 10)
@@ -194,10 +194,10 @@ func lintLineEndBarCheck(lines []lyLine) []lyLine {
 }
 
 var (
-  reNoteChord = regexp.MustCompile(strings.Join([]string{
-    `\b[a-g]\S*`, // first note
+  reNoteChord = regexp.MustCompile(
+    `\b[a-g]\S*|` + // first note
     `<[a-g][^>]+>\S*`, // first chord
-  }, "|"))
+  )
   reNoteComponents = regexp.MustCompile(strings.Join([]string{
     `(?:^[a-g](?:es|is){0,2}[,']{0,4}=?[,']{0,4}`, // either note
     `|^<[a-g][^>]+>`, // or chord
@@ -229,10 +229,10 @@ func lintNoteComponentOrder(lines []lyLine) []lyLine {
 
 var (
   reBoundChord = regexp.MustCompile(`@[Mm7d]\S+ `)
-  reNoteDuration = regexp.MustCompile(strings.Join([]string{
-    `^\S+[123468]`, // next note with duration
-    `^[\.<][a-g]`, // skip {{ .a }}, <c e>8
-  }, "|"))
+  reNoteDuration = regexp.MustCompile(
+    `^\S+[123468]|` + // next note with duration
+    `^[.<][a-g]`, // skip {{ .a }}, <c e>8
+  )
 )
 
 func lintDurationAfterBoundChord(lines []lyLine) []lyLine {

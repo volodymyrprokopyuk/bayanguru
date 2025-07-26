@@ -28,14 +28,14 @@ type publishCommand struct {
 }
 
 func copyFile(src, dst string) (int64, error) {
-  srcFile, err := os.Open(src)
+  srcFile, err := os.Open(src) //nolint:gosec,gocritic
   if err != nil {
     return 0, err
   }
   defer func() {
     _ = srcFile.Close()
   }()
-  dstFile, err := os.Create(dst)
+  dstFile, err := os.Create(dst) //nolint:gosec,gocritic
   if err != nil {
     return 0, err
   }
@@ -51,7 +51,7 @@ func engraveImage(siteDir, publicDir, image string) error {
   fmt.Printf(
     "%s %s\n", catalog.BlueTit("engrave"), catalog.BlueSub(svgImage + ".svg"),
   )
-  lyCmd := exec.Command(
+  lyCmd := exec.Command( //nolint:gosec,gocritic
     "lilypond", "-d", "backend=cairo", "-l", "WARN", "-f", "svg",
     "-o", svgImage, lyImage,
   )
@@ -71,7 +71,7 @@ func initSite(siteDir, publicDir string) error {
   for _, dir := range dirs {
     d := filepath.Join(publicDir, dir)
     fmt.Printf("%s %s\n", catalog.BlueTit("init"), catalog.BlueSub(d))
-    err := os.MkdirAll(d, 0755)
+    err := os.MkdirAll(d, 0o755) //nolint:gosec,gocritic
     if err != nil {
       return err
     }
@@ -132,7 +132,8 @@ func publishFile(
       w, "%s %s\n", catalog.BlueTit("publish"), catalog.BlueSub(file),
     )
   }
-  htmlFile, err := os.Create(file) // Overwrites an existing file
+  // Overwrites an existing file
+  htmlFile, err := os.Create(file) //nolint:gosec,gocritic
   if err != nil {
     return err
   }
@@ -156,7 +157,7 @@ type SiteContent struct {
 
 func readSiteContent(contentDir, contentFile string) (SiteContent, error) {
   contentFile = filepath.Join(contentDir, contentFile)
-  file, err := os.Open(contentFile)
+  file, err := os.Open(contentFile) //nolint:gosec,gocritic
   if err != nil {
     return SiteContent{}, err
   }
@@ -184,7 +185,7 @@ type CatalogMeta struct {
 
 func readCatalogMeta(contentDir, metaFile string) (CatalogMeta, error) {
   metaFile = filepath.Join(contentDir, metaFile)
-  file, err := os.Open(metaFile)
+  file, err := os.Open(metaFile) //nolint:gosec,gocritic
   if err != nil {
     return CatalogMeta{}, err
   }
@@ -202,6 +203,7 @@ func readCatalogMeta(contentDir, metaFile string) (CatalogMeta, error) {
 func indexSectionLinks(sections []Section) []Link {
   links := make([]Link, len(sections))
   for i, sec := range sections {
+    //nolint:gocritic
     url := filepath.Join("/catalog", sec.Name, sec.Sub[0].Name, "1")
     links[i] = Link{Tit: sec.Tit, URL: url}
   }
@@ -239,7 +241,7 @@ func uploadPiece(w io.Writer, pieceFile, uploadURL string) error {
   _, _ = fmt.Fprintf(
     w, "%s %s\n", catalog.BlueTit("upload"), catalog.BlueSub(file),
   )
-  rclCmd := exec.Command(
+  rclCmd := exec.Command( //nolint:gosec,gocritic
     "rclone", "copy", "--s3-no-check-bucket", file, uploadURL,
   )
   rclCmd.Stdout = w
@@ -255,7 +257,7 @@ func fanOutPublishPieces(
   defer wg.Done()
   var w strings.Builder
   pieceDir := filepath.Join(pc.publicDir, "piece")
-  tpl := tplPool.Get().(*template.Template)
+  tpl := tplPool.Get().(*template.Template) //nolint:errcheck,gocritic
   defer tplPool.Put(tpl)
   for {
     select {
@@ -332,7 +334,7 @@ func indexPieces(publicDir string) error {
   if err != nil {
     return err
   }
-  pfCmd := exec.Command(
+  pfCmd := exec.Command( //nolint:gosec,gocritic
     "./pagefind", "--quiet", "--site", publicDir, "--glob", "piece/*.html",
     "--root-selector", "main", "--output-path", pfDir,
   )
@@ -345,8 +347,9 @@ func publishStyle(templateDir, publicDir string) error {
   inStyle := filepath.Join(templateDir, "style.css")
   outStyle := filepath.Join(publicDir, "tw.css")
   fmt.Printf("%s %s\n", catalog.BlueTit("publish"), catalog.BlueSub(outStyle))
-  twCmd := exec.Command(
-    "bunx", "@tailwindcss/cli", "--input", inStyle, "--output", outStyle, "--minify",
+  twCmd := exec.Command( //nolint:gosec,gocritic
+    "bunx", "@tailwindcss/cli", "--input", inStyle,
+    "--output", outStyle, "--minify",
   )
   twCmd.Stdout = os.Stdout
   twCmd.Stderr = os.Stderr
@@ -358,6 +361,7 @@ func publish(pc publishCommand) error {
   if err != nil {
     return err
   }
+  //nolint:gocritic
   // pc.Queries["lcs"] = "^cpr" // Exclude copyrighted pieces from publishing
   if len(pc.Queries) > 0 {
     pieces, err = catalog.QueryPieces(pieces, pc.Queries)
@@ -366,7 +370,7 @@ func publish(pc publishCommand) error {
     }
   }
   if pc.init {
-    err := initSite(pc.siteDir, pc.publicDir)
+    err = initSite(pc.siteDir, pc.publicDir)
     if err != nil {
       return err
     }

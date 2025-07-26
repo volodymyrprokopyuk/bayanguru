@@ -29,7 +29,7 @@ func engraveBook(
   for i, piece := range book.PtrPieces() {
     pieces[i] = piece
   }
-  tpl := tplPool.Get().(*template.Template)
+  tpl := tplPool.Get().(*template.Template) //nolint:errcheck,gocritic
   defer tplPool.Put(tpl)
   for _, piece := range pieces {
     err := templatePiece(tpl, piece, ec)

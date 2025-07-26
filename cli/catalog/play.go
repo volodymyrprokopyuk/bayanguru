@@ -101,7 +101,8 @@ func selectLyrics(pieces []Piece) []Piece {
 }
 
 func filterPlayed(pieces []Piece, playedFile string) ([]Piece, error) {
-  file, err := os.OpenFile(playedFile, os.O_CREATE | os.O_RDONLY, 0644)
+  //nolint:gosec,gocritic
+  file, err := os.OpenFile(playedFile, os.O_CREATE | os.O_RDONLY, 0o644)
   if err != nil {
     return nil, err
   }
@@ -125,12 +126,12 @@ func filterPlayed(pieces []Piece, playedFile string) ([]Piece, error) {
 
 func openPiece(pieceDir string, piece Piece) error {
   piecePDF := filepath.Join(pieceDir, piece.File + ".pdf")
-  return exec.Command("xdg-open", piecePDF).Run()
+  return exec.Command("xdg-open", piecePDF).Run() //nolint:gosec,gocritic
 }
 
 func addToPlayed(pieceID, fileName string) error {
-  file, err := os.OpenFile(
-    fileName, os.O_CREATE | os.O_WRONLY | os.O_APPEND, 0644,
+  file, err := os.OpenFile( //nolint:gosec,gocritic
+    fileName, os.O_CREATE | os.O_WRONLY | os.O_APPEND, 0o644,
   )
   if err != nil {
     return err

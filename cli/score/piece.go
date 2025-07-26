@@ -80,7 +80,7 @@ func lyNotation(stChord string) string {
   }
   triad := stChords[rootKey + chord]
   if len(name) > 0 {
-    name = fmt.Sprintf(`^\markup \smaller %s`, chordNames[chord])
+    name = `^\markup \smaller ` + chordNames[chord]
   }
   if len(bass) > 0 {
     chord = fmt.Sprintf(`\fixed c' { <%s %s>%s%s }`, bass, triad, mods, name)
@@ -101,14 +101,14 @@ func stradella(score string) string {
 }
 
 func copyFile(src, dst string) (int64, error) {
-  srcFile, err := os.Open(src)
+  srcFile, err := os.Open(src) //nolint:gosec,gocritic
   if err != nil {
     return 0, err
   }
   defer func() {
     _ = srcFile.Close()
   }()
-  dstFile, err := os.Create(dst)
+  dstFile, err := os.Create(dst) //nolint:gosec,gocritic
   if err != nil {
     return 0, err
   }
@@ -125,7 +125,7 @@ func initPiece(piece catalog.Piece, sourceDir string) error {
     return fmt.Errorf("%s already exists", pieceFile)
   }
   pieceDir := filepath.Join(sourceDir, piece.Src)
-  err = os.MkdirAll(pieceDir, 0755)
+  err = os.MkdirAll(pieceDir, 0o755) //nolint:gosec,gocritic
   if err != nil {
     return err
   }
@@ -314,7 +314,7 @@ func engravePiece(
       return err
     }
   }
-  tpl := tplPool.Get().(*template.Template)
+  tpl := tplPool.Get().(*template.Template) //nolint:errcheck,gocritic
   defer tplPool.Put(tpl)
   err := templatePiece(tpl, &piece, ec)
   if err != nil {

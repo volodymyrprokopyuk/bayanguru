@@ -2,6 +2,7 @@ package catalog
 
 import (
 	"context"
+	"errors"
 	"fmt"
 	"regexp"
 	"slices"
@@ -42,10 +43,10 @@ func ValidateReq(catalog string, args []string) error {
     return fmt.Errorf("invalid catalog %s", catalog)
   }
   if len(args) == 0 {
-    return fmt.Errorf("at least one piece or book is required")
+    return errors.New("at least one piece or book is required")
   }
   if len(args) > 1 && slices.Contains(args, "all") {
-    return fmt.Errorf("all is mutually exclusive with pieces and books")
+    return errors.New("all is mutually exclusive with pieces and books")
   }
   for _, arg := range args {
     if arg != "all" && !reID.MatchString(arg) {

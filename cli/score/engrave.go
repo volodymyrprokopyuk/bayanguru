@@ -1,6 +1,7 @@
 package score
 
 import (
+	"errors"
 	"fmt"
 	"io"
 	"os/exec"
@@ -63,7 +64,7 @@ func engraveScore(w io.Writer, score, scoreFile, scoreDir string) error {
   _, _ = fmt.Fprintf(
     w, "%s %s\n", catalog.BlueTit("engrave"), catalog.BlueSub(scorePDF + ".pdf"),
   )
-  lyCmd := exec.Command(
+  lyCmd := exec.Command( //nolint:gosec,gocritic
     "lilypond", "-d", "backend=cairo", "-l", "WARN", "-f", "pdf", "-o", scorePDF, "-",
   )
   lyCmd.Stdin = strings.NewReader(score)
@@ -82,7 +83,7 @@ func optimizeScore(w io.Writer, scoreFile, scoreDir string) error {
 
 func initPieceLyrics(pieces []catalog.Piece, ec engraveCommand) error {
   if len(pieces) == 0 {
-    return fmt.Errorf("no pieces to initialize")
+    return errors.New("no pieces to initialize")
   }
   piece := pieces[0]
   if ec.lyr {
