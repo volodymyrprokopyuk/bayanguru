@@ -20,20 +20,20 @@ type RawBook struct {
   Tit string `yaml:"tit"`
   Sub string `yaml:"sub"`
   Pieces []string `yaml:"pieces"`
-  Sections []RawSection `yaml:"sections"`
+  Sections []*RawSection `yaml:"sections"`
 }
 
 type Section struct {
   Tit string
-  Pieces []Piece
+  Pieces []*Piece
 }
 
 type Book struct {
   ID string
   Tit string
   Sub string
-  Pieces []Piece
-  Sections []Section
+  Pieces []*Piece
+  Sections []*Section
   File string
   Meta bool
 }
@@ -45,7 +45,7 @@ func (b *Book) PtrPieces() func(yield func(i int, piece *Piece) bool) {
       sections: for i := range b.Sections {
         sec := b.Sections[i]
         for j := range sec.Pieces {
-          piece := &sec.Pieces[j]
+          piece := sec.Pieces[j]
           if !yield(k, piece) {
             break sections
           }
@@ -56,7 +56,7 @@ func (b *Book) PtrPieces() func(yield func(i int, piece *Piece) bool) {
   }
   return func(yield func(i int, piece *Piece) bool) {
     for i := range b.Pieces {
-      piece := &b.Pieces[i]
+      piece := b.Pieces[i]
       if !yield(i, piece) {
         break
       }
@@ -64,7 +64,7 @@ func (b *Book) PtrPieces() func(yield func(i int, piece *Piece) bool) {
   }
 }
 
-func PrintBook(w io.Writer, book Book) {
+func PrintBook(w io.Writer, book *Book) {
   _, _ = fmt.Fprintf(
     w, "%s %s %s\n",
     GreenTit(book.ID), YellowTit(book.Tit),
@@ -72,7 +72,7 @@ func PrintBook(w io.Writer, book Book) {
   )
 }
 
-func makeQuerySort(pieceMap map[string]Piece) func(queries ...string) string {
+func makeQuerySort(pieceMap map[string]*Piece) func(queries ...string) string {
   return func(queries ...string) string {
     // Parse query
     if len(queries) % 2 != 0 {
@@ -98,7 +98,7 @@ func makeQuerySort(pieceMap map[string]Piece) func(queries ...string) string {
     if err != nil {
       return err.Error()
     }
-    pieces := make([]Piece, 0, len(pieceMap))
+    pieces := make([]*Piece, 0, len(pieceMap))
     for _, piece := range pieceMap {
       if match(piece) {
         pieces = append(pieces, piece)
@@ -123,8 +123,8 @@ func makeQuerySort(pieceMap map[string]Piece) func(queries ...string) string {
 }
 
 func readBookFile(
-  catDir, bookFile string, pieceMap map[string]Piece,
-) ([]RawBook, error) {
+  catDir, bookFile string, pieceMap map[string]*Piece,
+) ([]*RawBook, error) {
   tpl := template.New("book")
   tpl.Funcs(template.FuncMap{"query": makeQuerySort(pieceMap)})
   _, err := tpl.ParseFiles(filepath.Join(catDir, bookFile))
@@ -136,7 +136,7 @@ func readBookFile(
   if err != nil {
     return nil, err
   }
-  var rbooks struct { Books []RawBook `yaml:"books"` }
+  var rbooks struct { Books []*RawBook `yaml:"books"` }
   err = yaml.NewDecoder(strings.NewReader(books.String())).Decode(&rbooks)
   if err != nil {
     return nil, err
@@ -144,12 +144,12 @@ func readBookFile(
   return rbooks.Books, nil
 }
 
-func queryBooks(rbooks []RawBook, bookIDs []string) ([]RawBook, error) {
-  bookMap := make(map[string]RawBook, 50)
+func queryBooks(rbooks []*RawBook, bookIDs []string) ([]*RawBook, error) {
+  bookMap := make(map[string]*RawBook, 50)
   for _, rbook := range rbooks {
     bookMap[rbook.ID] = rbook
   }
-  selected := make([]RawBook, 0, 50)
+  selected := make([]*RawBook, 0, 50)
   for _, bookID := range bookIDs {
     rbook, exists := bookMap[bookID]
     if !exists {
@@ -161,18 +161,18 @@ func queryBooks(rbooks []RawBook, bookIDs []string) ([]RawBook, error) {
 }
 
 func addPiecesToBooks(
-  rbooks []RawBook, pieceMap map[string]Piece,
-) ([]Book, error) {
-  books := make([]Book, 0, 50)
+  rbooks []*RawBook, pieceMap map[string]*Piece,
+) ([]*Book, error) {
+  books := make([]*Book, 0, 50)
   for _, rbook := range rbooks {
-    book := Book{ID: rbook.ID, Tit: rbook.Tit, Sub: rbook.Sub}
+    book := &Book{ID: rbook.ID, Tit: rbook.Tit, Sub: rbook.Sub}
     book.File = scoreFile(book.Tit, book.ID)
-    book.Pieces = make([]Piece, 0, 200)
+    book.Pieces = make([]*Piece, 0, 200)
     if len(rbook.Sections) > 0 { // Book with sections
-      book.Sections = make([]Section, 0, 10)
+      book.Sections = make([]*Section, 0, 10)
       for _, rsec := range rbook.Sections {
-        sec := Section{Tit: rsec.Tit}
-        sec.Pieces = make([]Piece, 0, 50)
+        sec := &Section{Tit: rsec.Tit}
+        sec.Pieces = make([]*Piece, 0, 50)
         for _, pieceID := range rsec.Pieces {
           piece, exists := pieceMap[pieceID]
           if !exists {
@@ -202,8 +202,8 @@ func addPiecesToBooks(
 }
 
 func readBooks(
-  catDir, bookFile string, bookIDs []string, pieceMap map[string]Piece,
-) ([]Book, error) {
+  catDir, bookFile string, bookIDs []string, pieceMap map[string]*Piece,
+) ([]*Book, error) {
   rbooks, err := readBookFile(catDir, bookFile, pieceMap)
   if err != nil {
     return nil, err

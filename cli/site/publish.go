@@ -20,7 +20,7 @@ import (
 )
 
 type publishCommand struct {
-  catalog.BaseCmd
+  *catalog.BaseCmd
   init, upload bool
   siteDir, templateDir, contentDir, publicDir string
   uploadURL, scoreURL, pieceURL string
@@ -200,7 +200,7 @@ func readCatalogMeta(contentDir, metaFile string) (CatalogMeta, error) {
   return meta, nil
 }
 
-func indexSectionLinks(sections []Section) []Link {
+func indexSectionLinks(sections []*Section) []Link {
   links := make([]Link, len(sections))
   for i, sec := range sections {
     //nolint:gocritic
@@ -210,7 +210,7 @@ func indexSectionLinks(sections []Section) []Link {
   return links
 }
 
-func publishIndex(pc publishCommand) error {
+func publishIndex(pc *publishCommand) error {
   tpl, err := makeTemplate(pc.templateDir, "index.html")
   if err != nil {
     return err
@@ -251,8 +251,8 @@ func uploadPiece(w io.Writer, pieceFile, uploadURL string) error {
 
 func fanOutPublishPieces(
   ctx context.Context, wg *sync.WaitGroup,
-  chPieces <-chan catalog.Piece, chErrors chan<- error,
-  tplPool *sync.Pool, pc publishCommand,
+  chPieces <-chan *catalog.Piece, chErrors chan<- error,
+  tplPool *sync.Pool, pc *publishCommand,
 ) {
   defer wg.Done()
   var w strings.Builder
@@ -276,7 +276,7 @@ func fanOutPublishPieces(
         }
       }
       piece.URL = fmt.Sprintf("%s/%s.pdf", pc.scoreURL, piece.File)
-      pieceData := struct { Piece catalog.Piece }{Piece: piece}
+      pieceData := struct { Piece *catalog.Piece }{Piece: piece}
       err := publishFile(&w, tpl, pieceDir, piece.File, pieceData)
       fmt.Print(w.String())
       if err != nil {
@@ -287,7 +287,7 @@ func fanOutPublishPieces(
   }
 }
 
-func publishPieces(pieces []catalog.Piece, pc publishCommand) error {
+func publishPieces(pieces []*catalog.Piece, pc *publishCommand) error {
   tplPool, err := templatePool(pc.templateDir, "piece.html")
   if err != nil {
     return err
@@ -295,7 +295,7 @@ func publishPieces(pieces []catalog.Piece, pc publishCommand) error {
   n := min(len(pieces), runtime.GOMAXPROCS(0))
   ctx, cancel := context.WithCancel(context.Background())
   defer cancel()
-  chPieces, chErrors := make(chan catalog.Piece), make(chan error, n)
+  chPieces, chErrors := make(chan *catalog.Piece), make(chan error, n)
   var ewg sync.WaitGroup
   ewg.Add(1)
   go func() {
@@ -356,7 +356,7 @@ func publishStyle(templateDir, publicDir string) error {
   return twCmd.Run()
 }
 
-func publish(pc publishCommand) error {
+func publish(pc *publishCommand) error {
   pieces, _, catLen, err := catalog.ReadPiecesAndBooks(pc.BaseCmd)
   if err != nil {
     return err

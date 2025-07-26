@@ -83,8 +83,8 @@ func playAction(ctx context.Context, cmd *cli.Command) error {
   if err != nil {
     return err
   }
-  pc := playCmd{
-    BaseCmd: BaseCmd{
+  pc := &playCmd{
+    BaseCmd: &BaseCmd{
       CatalogDir: CatalogDir, BookFile: BookFile, SourceDir: SourceDir,
       PieceDir: PieceDir, BookDir: BookDir, Catalog: cat, Book: book,
     },

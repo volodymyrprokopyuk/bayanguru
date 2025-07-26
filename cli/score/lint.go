@@ -261,7 +261,7 @@ func printErrors(w io.Writer, title string, errors []lyLine) {
   }
 }
 
-func lintPiece(w io.Writer, piece catalog.Piece, sourceDir string) error {
+func lintPiece(w io.Writer, piece *catalog.Piece, sourceDir string) error {
   pieceFile := filepath.Join(sourceDir, piece.Src, piece.File + ".ly")
   _, _ = fmt.Fprintf(
     w, "%s %s\n", catalog.BlueTit("lint"), catalog.BlueSub(pieceFile),

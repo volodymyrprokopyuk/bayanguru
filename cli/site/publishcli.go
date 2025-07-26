@@ -28,8 +28,8 @@ func publishAction(ctx context.Context, cmd *cli.Command) error {
   if err != nil {
     return err
   }
-  pc := publishCommand{
-    BaseCmd: catalog.BaseCmd{
+  pc := &publishCommand{
+    BaseCmd: &catalog.BaseCmd{
       CatalogDir: catalog.CatalogDir, BookFile: catalog.BookFile,
       SourceDir: catalog.SourceDir, PieceDir: catalog.PieceDir,
       BookDir: catalog.BookDir, Catalog: cat, Book: book,

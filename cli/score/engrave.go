@@ -15,7 +15,7 @@ import (
 )
 
 type engraveCommand struct {
-  catalog.BaseCmd
+  *catalog.BaseCmd
   piece, init, lyr, lint, optimize, meta, lyrics bool
 }
 
@@ -81,7 +81,7 @@ func optimizeScore(w io.Writer, scoreFile, scoreDir string) error {
   return pdf.OptimizeFile(scorePDF, scorePDF, nil)
 }
 
-func initPieceLyrics(pieces []catalog.Piece, ec engraveCommand) error {
+func initPieceLyrics(pieces []*catalog.Piece, ec *engraveCommand) error {
   if len(pieces) == 0 {
     return errors.New("no pieces to initialize")
   }
@@ -96,7 +96,7 @@ func initPieceLyrics(pieces []catalog.Piece, ec engraveCommand) error {
   return initPiece(piece, ec.SourceDir)
 }
 
-func engrave (ec engraveCommand) error {
+func engrave (ec *engraveCommand) error {
   pieces, books, catLen, err := catalog.ReadPiecesAndBooks(ec.BaseCmd)
   if err != nil {
     return err

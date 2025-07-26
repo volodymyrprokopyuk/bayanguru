@@ -106,7 +106,7 @@ type Piece struct {
   AlphaLink string
 }
 
-func PrintPiece(w io.Writer, piece Piece) {
+func PrintPiece(w io.Writer, piece *Piece) {
   tit := piece.Tit
   com := fmt.Sprintf("%s %s%s", piece.Com, piece.UkrArt, piece.Arr)
   com = strings.TrimSpace(com)
@@ -143,7 +143,7 @@ func listCatalogFiles(catDir, catQuery string) ([]string, error) {
   return files, nil
 }
 
-func readCatalogFile(catFile string) ([]Piece, error) {
+func readCatalogFile(catFile string) ([]*Piece, error) {
   file, err := os.Open(catFile) //nolint:gosec,gocritic
   if err != nil {
     return nil, err
@@ -151,7 +151,7 @@ func readCatalogFile(catFile string) ([]Piece, error) {
   defer func() {
     _ = file.Close()
   }()
-  var pieces struct { Pieces []Piece `yaml:"pieces"` }
+  var pieces struct { Pieces []*Piece `yaml:"pieces"` }
   err = yaml.NewDecoder(file).Decode(&pieces)
   if err != nil {
     return nil, err
@@ -175,9 +175,8 @@ func LyricsFile(tit string) string {
   return tit + ".ly"
 }
 
-func addMetaToPieces(pieces []Piece) {
-  for i := range pieces {
-    piece := &pieces[i]
+func addMetaToPieces(pieces []*Piece) {
+  for _, piece := range pieces {
     // sub
     sub, exists := meta[piece.Sub]
     if exists {
@@ -227,7 +226,7 @@ var (
   reEns = regexp.MustCompile(`^sol|duo|vc1|vc2$`)
 )
 
-func validatePieces(pieces []Piece) error {
+func validatePieces(pieces []*Piece) error {
   for _, piece := range pieces {
     errs := make([]string, 0, 5)
     if !reID.MatchString(piece.ID) {
@@ -278,7 +277,7 @@ func validatePieces(pieces []Piece) error {
   return nil
 }
 
-func readPieces(catDir, catQuery string) (map[string]Piece, []string, error) {
+func readPieces(catDir, catQuery string) (map[string]*Piece, []string, error) {
   files, err := listCatalogFiles(catDir, catQuery)
   if err != nil {
     return nil, nil, err
@@ -286,7 +285,7 @@ func readPieces(catDir, catQuery string) (map[string]Piece, []string, error) {
   if len(files) == 0 {
     return nil, nil, errors.New("no catalog files selected")
   }
-  pieceMap := make(map[string]Piece, 1000)
+  pieceMap := make(map[string]*Piece, 1000)
   pieceIDs := make([]string, 0, 1000) // Piece order
   for _, catFile := range files {
     catFile = filepath.Join(catDir, catFile)
@@ -325,8 +324,10 @@ func makeMatchStr(query string) (func(value string) bool, error) {
   }, nil
 }
 
-func makeMatchPiece(queries map[string]string) (func(piece Piece) bool, error) {
-  ms := make([]func(piece Piece) bool, 0, len(queries))
+func makeMatchPiece(
+  queries map[string]string,
+) (func(piece *Piece) bool, error) {
+  ms := make([]func(piece *Piece) bool, 0, len(queries))
   for name, query := range queries {
     match, err := makeMatchStr(query)
     if err != nil {
@@ -334,64 +335,64 @@ func makeMatchPiece(queries map[string]string) (func(piece Piece) bool, error) {
     }
     switch name {
     case "tit":
-      ms = append(ms, func(piece Piece) bool {
+      ms = append(ms, func(piece *Piece) bool {
         return match(piece.Tit)
       })
     case "com":
-      ms = append(ms, func(piece Piece) bool {
+      ms = append(ms, func(piece *Piece) bool {
         return match(piece.Com)
       })
     case "arr":
-      ms = append(ms, func(piece Piece) bool {
+      ms = append(ms, func(piece *Piece) bool {
         return match(piece.Arr)
       })
     case "art":
-      ms = append(ms, func(piece Piece) bool {
+      ms = append(ms, func(piece *Piece) bool {
         return match(piece.Art)
       })
     case "aut":
-      ms = append(ms, func(piece Piece) bool {
+      ms = append(ms, func(piece *Piece) bool {
         return match(piece.Aut)
       })
     case "lcs":
-      ms = append(ms, func(piece Piece) bool {
+      ms = append(ms, func(piece *Piece) bool {
         return match(piece.Lcs)
       })
     case "org":
-      ms = append(ms, func(piece Piece) bool {
+      ms = append(ms, func(piece *Piece) bool {
         return match(piece.Org)
       })
     case "sty":
-      ms = append(ms, func(piece Piece) bool {
+      ms = append(ms, func(piece *Piece) bool {
         return match(piece.Sty)
       })
     case "gnr":
-      ms = append(ms, func(piece Piece) bool {
+      ms = append(ms, func(piece *Piece) bool {
         return match(piece.Gnr)
       })
     case "ton":
-      ms = append(ms, func(piece Piece) bool {
+      ms = append(ms, func(piece *Piece) bool {
         return slices.ContainsFunc(piece.Ton, match)
       })
     case "frm":
-      ms = append(ms, func(piece Piece) bool {
+      ms = append(ms, func(piece *Piece) bool {
         return slices.ContainsFunc(piece.Frm, match)
       })
     case "bss":
-      ms = append(ms, func(piece Piece) bool {
+      ms = append(ms, func(piece *Piece) bool {
         return slices.ContainsFunc(piece.Bss, match)
       })
     case "lvl":
-      ms = append(ms, func(piece Piece) bool {
+      ms = append(ms, func(piece *Piece) bool {
         return match(piece.Lvl)
       })
     case "ens":
-      ms = append(ms, func(piece Piece) bool {
+      ms = append(ms, func(piece *Piece) bool {
         return match(piece.Ens)
       })
     }
   }
-  return func(piece Piece) bool {
+  return func(piece *Piece) bool {
     for _, match := range ms { // --org && --bss
       if !match(piece) {
         return false
@@ -401,12 +402,12 @@ func makeMatchPiece(queries map[string]string) (func(piece Piece) bool, error) {
   }, nil
 }
 
-func QueryPieces(pieces []Piece, queries map[string]string) ([]Piece, error) {
+func QueryPieces(pieces []*Piece, queries map[string]string) ([]*Piece, error) {
   match, err := makeMatchPiece(queries)
   if err != nil {
     return nil, err
   }
-  selected := make([]Piece, 0, 200)
+  selected := make([]*Piece, 0, 200)
   for _, piece := range pieces {
     if match(piece) {
       selected = append(selected, piece)
@@ -424,7 +425,7 @@ func bass(bss []string) string {
   return "___"
 }
 
-func SortByTit(piece Piece) string {
+func SortByTit(piece *Piece) string {
   // Sort studies by composer, then by title
   if piece.Gnr == "stu" {
     return SortByCom(piece)
@@ -433,7 +434,7 @@ func SortByTit(piece Piece) string {
   return piece.Tit + SortByCom(piece)
 }
 
-func SortByCom(piece Piece) string {
+func SortByCom(piece *Piece) string {
   // Sort by composer or arranger, then by title
   if len(piece.Com) > 3 {
     return string([]rune(piece.Com)[3:]) + piece.Tit
@@ -444,15 +445,15 @@ func SortByCom(piece Piece) string {
   return piece.Tit
 }
 
-func SortByLvl(piece Piece) string {
+func SortByLvl(piece *Piece) string {
   // Sort by level, then by title
   return piece.Lvl + SortByTit(piece)
 }
 
 var sortKeys = []string{"tit", "com", "lvl", "rnd"}
 
-var sortBy = func() map[string]func(piece Piece) string {
-  key := make(map[string]func(piece Piece) string, 4)
+var sortBy = func() map[string]func(piece *Piece) string {
+  key := make(map[string]func(piece *Piece) string, 4)
   key["tit"] = SortByTit
   key["com"] = SortByCom
   key["lvl"] = SortByLvl
@@ -461,19 +462,19 @@ var sortBy = func() map[string]func(piece Piece) string {
 
 var collator = collate.New(language.Und)
 
-func SortPieces(pieces []Piece, sortKey func(piece Piece) string) {
-  slices.SortStableFunc(pieces, func(a, b Piece) int {
+func SortPieces(pieces []*Piece, sortKey func(piece *Piece) string) {
+  slices.SortStableFunc(pieces, func(a, b *Piece) int {
     return collator.CompareString(sortKey(a), sortKey(b))
   })
 }
 
-func RandPieces(pieces []Piece) {
+func RandPieces(pieces []*Piece) {
   rand.Shuffle(len(pieces), func(i, j int) {
     pieces[i], pieces[j] = pieces[j], pieces[i]
   })
 }
 
-func ArrangePieces(pieces []Piece, sortKey string) error {
+func ArrangePieces(pieces []*Piece, sortKey string) error {
   if !slices.Contains(sortKeys, sortKey) {
     return fmt.Errorf("invalid sort key %s", sortKey)
   }

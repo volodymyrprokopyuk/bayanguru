@@ -23,9 +23,9 @@ type Link struct {
 type Section struct {
   Name string
   Tit string
-  Query func(piece catalog.Piece) bool
-  Sort func(piece catalog.Piece) string
-  Sub []Section
+  Query func(piece *catalog.Piece) bool
+  Sort func(piece *catalog.Piece) string
+  Sub []*Section
 }
 
 func formQuery(form, query []string) bool {
@@ -35,83 +35,83 @@ func formQuery(form, query []string) bool {
 }
 
 var (
-  secOrg = Section{
+  secOrg = &Section{
     Name: "origin", Tit: "Origin | Країна",
-    Query: func(piece catalog.Piece) bool {
+    Query: func(piece *catalog.Piece) bool {
       return true
     },
     Sort: catalog.SortByTit,
-    Sub: []Section{
+    Sub: []*Section{
       {
         Name: "ukrainian", Tit: "Ukrainian | Українські",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           return piece.Org == "ukr"
         },
       }, {
         Name: "russian", Tit: "Russian | Російські",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           return piece.Org == "rus"
         },
       }, {
         Name: "belarusian", Tit: "Belarusian | Білоруські",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           return piece.Org == "blr"
         },
       }, {
         Name: "hungarian", Tit: "Hungarian | Угорські",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           return piece.Org == "hun"
         },
       }, {
         Name: "european", Tit: "European | Європейські",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           eur := []string{"aut", "deu", "dnk", "fra", "swe"}
           return slices.Contains(eur, piece.Org)
         },
       }, {
         Name: "extra", Tit: "Extra | Різне",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           ext := []string{"mda", "pol", "cze", "svk", "svn", "lva", "est"}
           return slices.Contains(ext, piece.Org)
         },
       },
     },
   }
-  secSty = Section{
+  secSty = &Section{
     Name: "style", Tit: "Style | Стиль",
-    Query: func(piece catalog.Piece) bool {
+    Query: func(piece *catalog.Piece) bool {
       return true
     },
     Sort: catalog.SortByTit,
-    Sub: []Section{
+    Sub: []*Section{
       {
         Name: "folk", Tit: "Folk | Фолькльор",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           return piece.Sty == "flk"
         },
       }, {
         Name: "custom", Tit: "Custom | Авторська",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           return piece.Sty == "cus"
         },
       }, {
         Name: "classic", Tit: "Classic | Класика",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           return piece.Sty == "cls"
         },
       },
     },
   }
-  secGnr = Section{
+  secGnr = &Section{
     Name: "genre", Tit: "Genre | Жанр",
-    Query: func(piece catalog.Piece) bool {
+    Query: func(piece *catalog.Piece) bool {
       return piece.Gnr != "stu"
     },
     Sort: catalog.SortByTit,
-    Sub: []Section{
+    Sub: []*Section{
       {
         Name: "song", Tit: "Song | Пісня",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           sng := []string{
             "sng", "chd", "lul", "ves", "kol", "pry", "rmc", "mil",
           }
@@ -119,7 +119,7 @@ var (
         },
       }, {
         Name: "dance", Tit: "Dance | Танець",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           dnc := []string{
             "dnc", "plk", "mzr", "qdr", "men", "koz", "gop", "vls", "tng", "mrc",
           }
@@ -127,234 +127,234 @@ var (
         },
       }, {
         Name: "piece", Tit: "Piece | П'єса",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           pie := []string{"pie", "inv", "can", "pre", "gyp"}
           return slices.Contains(pie, piece.Gnr)
         },
       },
     },
   }
-  secCom = Section{
+  secCom = &Section{
     Name: "composer", Tit: "Composer | Композитор",
-    Query: func(piece catalog.Piece) bool {
+    Query: func(piece *catalog.Piece) bool {
       return len(piece.Com) > 0 || len(piece.Arr) > 0
     },
     Sort: catalog.SortByCom,
-    Sub: []Section{
+    Sub: []*Section{
       {
         Name: "ukrainian", Tit: "Ukrainian | Українські",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           return piece.Org == "ukr"
         },
       }, {
         Name: "russian", Tit: "Russian | Російські",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           return piece.Org == "rus"
         },
       }, {
         Name: "european", Tit: "European | Європейські",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           eur := []string{"aut", "deu", "dnk", "fra", "swe"}
           return slices.Contains(eur, piece.Org)
         },
       }, {
         Name: "extra", Tit: "Extra | Різне",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           ext := []string{"mda", "pol", "cze", "svk", "svn", "lva", "est"}
           return slices.Contains(ext, piece.Org)
         },
       },
     },
   }
-  secStb = Section{
+  secStb = &Section{
     Name: "study-stb", Tit: "Study | Етюди stb",
-    Query: func(piece catalog.Piece) bool {
+    Query: func(piece *catalog.Piece) bool {
       bss := []string{"stb", "pub"}
       return piece.Gnr == "stu" && formQuery(piece.Bss, bss)
     },
     Sort: catalog.SortByCom,
-    Sub: []Section{
+    Sub: []*Section{
       {
         Name: "scale", Tit: "Scale | Гами",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           scl := []string{"scl", "seq", "cro"}
           return formQuery(piece.Frm, scl)
         },
       }, {
         Name: "arpeggio", Tit: "Arpeggio | Арпеджіо",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           arp := []string{"arp", "lng", "srt", "brk"}
           return formQuery(piece.Frm, arp)
         },
       }, {
         Name: "interval", Tit: "Interval | Інтревали",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           inv := []string{"in3", "in4", "in5", "in6", "in7", "in8"}
           return formQuery(piece.Frm, inv)
         },
       }, {
         Name: "chord", Tit: "Chord | Акорди",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           crd := []string{"cr5", "cr7"}
           return formQuery(piece.Frm, crd)
         },
       }, {
         Name: "polyphony", Tit: "Polyphony | Поліфонія",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           pph := []string{"vo2", "vo3"}
           return formQuery(piece.Frm, pph)
         },
       }, {
         Name: "polyrhythm", Tit: "Polyrhythm | Поліритмія",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           prh := []string{"syn", "tu3", "tu5", "tu6"}
           return formQuery(piece.Frm, prh)
         },
       }, {
         Name: "ornament", Tit: "Ornament | Орнамент",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           orn := []string{"tre", "acc", "mor", "gru", "tri", "gli", "cad"}
           return formQuery(piece.Frm, orn)
         },
       }, {
         Name: "left-hand", Tit: "Left hand | Ліва рука",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           return slices.Contains(piece.Bss, "pub")
         },
       },
     },
   }
-  secFrb = Section{
+  secFrb = &Section{
     Name: "study-frb", Tit: "Study | Етюди frb",
-    Query: func(piece catalog.Piece) bool {
+    Query: func(piece *catalog.Piece) bool {
       return piece.Gnr == "stu" && slices.Contains(piece.Bss, "frb")
     },
     Sort: catalog.SortByCom,
-    Sub: []Section{
+    Sub: []*Section{
       {
         Name: "scale", Tit: "Scale | Гами",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           scl := []string{"scl", "seq", "cro"}
           return formQuery(piece.Bss, scl)
         },
       }, {
         Name: "arpeggio", Tit: "Arpeggio | Арпеджіо",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           arp := []string{"arp", "lng", "srt", "brk"}
           return formQuery(piece.Bss, arp)
         },
       }, {
         Name: "interval", Tit: "Interval | Інтревали",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           inv := []string{"in3", "in4", "in5", "in6", "in7", "in8"}
           return formQuery(piece.Bss, inv)
         },
       }, {
         Name: "chord", Tit: "Chord | Акорди",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           crd := []string{"cr5", "cr7"}
           return formQuery(piece.Bss, crd)
         },
       }, /*{
         Name: "polyphony", Tit: "Polyphony | Поліфонія",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           pph := []string{"vo2", "vo3"}
           return formQuery(piece.Bss, pph)
         },
       }, {
         Name: "polyrhythm", Tit: "Polyrhythm | Поліритмія",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           prh := []string{"syn", "tu3", "tu5", "tu6"}
           return formQuery(piece.Bss, prh)
         },
       }, {
         Name: "ornament", Tit: "Ornament | Орнамент",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           orn := []string{"tre", "acc", "mor", "gru", "tri", "gli", "cad"}
           return formQuery(piece.Frm, orn)
         },
       },*/
     },
   }
-  secBss = Section{
+  secBss = &Section{
     Name: "bass", Tit: "Bass | Бас",
-    Query: func(piece catalog.Piece) bool {
+    Query: func(piece *catalog.Piece) bool {
       return true
     },
     Sort: catalog.SortByTit,
-    Sub: []Section{
+    Sub: []*Section{
       {
         Name: "standard-bass", Tit: "Standard bass | Готовий аккорд",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           return slices.Contains(piece.Bss, "stb")
         },
       }, {
         Name: "pure-bass", Tit: "Pure bass | Чистий бас",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           return slices.Contains(piece.Bss, "pub")
         },
       }, {
         Name: "free-bass", Tit: "Free bass | Виборна система",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           return slices.Contains(piece.Bss, "frb")
         },
       },
     },
   }
-  secLvl = Section{
+  secLvl = &Section{
     Name: "level", Tit: "Level | Рівень",
-    Query: func(piece catalog.Piece) bool {
+    Query: func(piece *catalog.Piece) bool {
       return true
     },
     Sort: catalog.SortByTit,
-    Sub: []Section{
+    Sub: []*Section{
       {
         Name: "elementary-a", Tit: "Elementary | Простий A",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           return piece.Lvl == "ela"
         },
       }, {
         Name: "elementary-b", Tit: "Elementary | Простий B",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           return piece.Lvl == "elb"
         },
       }, {
         Name: "elementary-c", Tit: "Elementary | Простий C",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           return piece.Lvl == "elc"
         },
       },
     },
   }
-  secLyr = Section{
+  secLyr = &Section{
     Name: "lyrics", Tit: "Lyrics | Пісні",
-    Query: func(piece catalog.Piece) bool {
+    Query: func(piece *catalog.Piece) bool {
       return len(piece.LyricsFile) > 0
     },
     Sort: catalog.SortByTit,
-    Sub: []Section{
+    Sub: []*Section{
       {
         Name: "lyrics", Tit: "Lyrics | Пісні",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           return piece.Gnr == "sng"
         },
       }, {
         Name: "children", Tit: "For children | Для дітей",
-        Query: func(piece catalog.Piece) bool {
+        Query: func(piece *catalog.Piece) bool {
           return piece.Gnr == "chd"
         },
       },
     },
   }
-  sections = []Section{
+  sections = []*Section{
     secOrg, secSty, secGnr, secCom, secStb, secFrb, secBss, secLvl, secLyr,
   }
 )
 
 func queryPieces(
-  pieces []catalog.Piece, query func(piece catalog.Piece) bool,
-) []catalog.Piece {
-  selected := make([]catalog.Piece, 0, len(pieces))
+  pieces []*catalog.Piece, query func(piece *catalog.Piece) bool,
+) []*catalog.Piece {
+  selected := make([]*catalog.Piece, 0, len(pieces))
   for _, piece := range pieces {
     if query(piece) {
       selected = append(selected, piece)
@@ -374,7 +374,7 @@ var alphabet = func() []string {
 }()
 
 func alphaLinkPieces(
-  pieces []catalog.Piece, sortKey func(piece catalog.Piece) string,
+  pieces []*catalog.Piece, sortKey func(piece *catalog.Piece) string,
 ) {
   i := 0
   for _, alpha := range alphabet {
@@ -389,13 +389,13 @@ func alphaLinkPieces(
   }
 }
 
-func pagePieces(pieces []catalog.Piece, pageSize int) [][]catalog.Piece {
-  pages := make([][]catalog.Piece, 0, 20)
-  page := make([]catalog.Piece, 0, pageSize)
+func pagePieces(pieces []*catalog.Piece, pageSize int) [][]*catalog.Piece {
+  pages := make([][]*catalog.Piece, 0, 20)
+  page := make([]*catalog.Piece, 0, pageSize)
   for i, piece := range pieces {
     if i % pageSize == 0 && i != 0 {
       pages = append(pages, page)
-      page = make([]catalog.Piece, 0, pageSize)
+      page = make([]*catalog.Piece, 0, pageSize)
     }
     page = append(page, piece)
   }
@@ -405,7 +405,7 @@ func pagePieces(pieces []catalog.Piece, pageSize int) [][]catalog.Piece {
   return pages
 }
 
-func catalogSectionLinks(sec, cur Section) []Link {
+func catalogSectionLinks(sec, cur *Section) []Link {
   links := make([]Link, len(sec.Sub))
   for i, sub := range sec.Sub {
     //nolint:gocritic
@@ -415,7 +415,7 @@ func catalogSectionLinks(sec, cur Section) []Link {
   return links
 }
 
-func catalogAlphaLinks(sec, sub Section, pages [][]catalog.Piece) []Link {
+func catalogAlphaLinks(sec, sub *Section, pages [][]*catalog.Piece) []Link {
   alphaLink := make(map[string]Link, len(alphabet))
   for pageNum, page := range pages {
     for _, piece := range page {
@@ -442,7 +442,7 @@ func catalogAlphaLinks(sec, sub Section, pages [][]catalog.Piece) []Link {
   return links
 }
 
-func catalogPageLinks(sec, sub Section, curPage, pageTot, n int) []Link {
+func catalogPageLinks(sec, sub *Section, curPage, pageTot, n int) []Link {
   l, r := curPage - n / 2, curPage + n / 2
   for l < 1 {
     l++
@@ -471,8 +471,8 @@ func catalogPageLinks(sec, sub Section, curPage, pageTot, n int) []Link {
 }
 
 func publishSubsec(
-  tpl *template.Template, sec Section, sub Section,
-  pages [][]catalog.Piece, pc publishCommand,
+  tpl *template.Template, sec *Section, sub *Section,
+  pages [][]*catalog.Piece, pc *publishCommand,
 ) error {
   catalogDir := filepath.Join(pc.publicDir, "catalog", sec.Name, sub.Name)
   sectionLinks := catalogSectionLinks(sec, sub)
@@ -485,7 +485,7 @@ func publishSubsec(
       Tit string
       SectionLinks []Link
       AlphaLinks []Link
-      Pieces []catalog.Piece
+      Pieces []*catalog.Piece
       PageLinks []Link
     }{
       Tit: sub.Tit,
@@ -503,7 +503,8 @@ func publishSubsec(
 }
 
 func publishSection(
-  tpl *template.Template, pieces []catalog.Piece, sec Section, pc publishCommand,
+  tpl *template.Template, pieces []*catalog.Piece, sec *Section,
+  pc *publishCommand,
 ) error {
   pieces = queryPieces(pieces, sec.Query)
   for _, sub := range sec.Sub {
@@ -522,7 +523,7 @@ func publishSection(
   return nil
 }
 
-func publishRobots(pc publishCommand) error {
+func publishRobots(pc *publishCommand) error {
   file := "robots.txt"
   src := filepath.Join(pc.siteDir, file)
   dst := filepath.Join(pc.publicDir, file)
@@ -531,7 +532,7 @@ func publishRobots(pc publishCommand) error {
   return err
 }
 
-func publishSitemap(pieces []catalog.Piece, pc publishCommand) error {
+func publishSitemap(pieces []*catalog.Piece, pc *publishCommand) error {
   file := "sitemap.txt"
   path := filepath.Join(pc.publicDir, file)
   fmt.Printf("%s %s\n", catalog.BlueTit("publish"), catalog.BlueSub(path))
@@ -544,12 +545,12 @@ func publishSitemap(pieces []catalog.Piece, pc publishCommand) error {
   return os.WriteFile(path, buf.Bytes(), 0o644) //nolint:gosec,gocritic
 }
 
-func publishCatalog(pc publishCommand) error {
+func publishCatalog(pc *publishCommand) error {
   fmt.Printf(
     "%s %s\n", catalog.BlueTit("publish"),
     catalog.BlueSub(pc.publicDir + "/catalog/..."),
   )
-  bc := catalog.BaseCmd{CatalogDir: pc.CatalogDir, SourceDir: pc.SourceDir}
+  bc := &catalog.BaseCmd{CatalogDir: pc.CatalogDir, SourceDir: pc.SourceDir}
   pieces, _, _, err := catalog.ReadPiecesAndBooks(bc)
   if err != nil {
     return err

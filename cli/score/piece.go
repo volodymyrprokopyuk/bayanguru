@@ -118,7 +118,7 @@ func copyFile(src, dst string) (int64, error) {
   return io.Copy(dstFile, srcFile)
 }
 
-func initPiece(piece catalog.Piece, sourceDir string) error {
+func initPiece(piece *catalog.Piece, sourceDir string) error {
   pieceFile := filepath.Join(sourceDir, piece.Src, piece.File + ".ly")
   _, err := os.Stat(pieceFile)
   if err == nil {
@@ -149,7 +149,7 @@ func initPiece(piece catalog.Piece, sourceDir string) error {
   return nil
 }
 
-func initLyrics(piece catalog.Piece, sourceDir string) error {
+func initLyrics(piece *catalog.Piece, sourceDir string) error {
   lyricsFile := filepath.Join(sourceDir, "lyrics", piece.LyricsFile)
   _, err := os.Stat(lyricsFile)
   if err == nil {
@@ -165,7 +165,7 @@ func initLyrics(piece catalog.Piece, sourceDir string) error {
 }
 
 func templateLyrics(
-  tpl *template.Template, piece *catalog.Piece, ec engraveCommand,
+  tpl *template.Template, piece *catalog.Piece, ec *engraveCommand,
 ) error {
   if len(piece.LyricsFile) > 0 && tpl.Lookup(piece.LyricsFile) == nil {
     lyricsFile := filepath.Join(ec.SourceDir, "lyrics", piece.LyricsFile)
@@ -178,7 +178,7 @@ func templateLyrics(
 }
 
 func templatePiece(
-  tpl *template.Template, piece *catalog.Piece, ec engraveCommand,
+  tpl *template.Template, piece *catalog.Piece, ec *engraveCommand,
 ) error {
   piece.Meta = ec.meta
   pieceFile := filepath.Join(ec.SourceDir, piece.Src, piece.File + ".ly")
@@ -305,7 +305,7 @@ func templatePiece(
 }
 
 func engravePiece(
-  w io.Writer, tplPool *sync.Pool, piece catalog.Piece, ec engraveCommand,
+  w io.Writer, tplPool *sync.Pool, piece *catalog.Piece, ec *engraveCommand,
 ) error {
   catalog.PrintPiece(w, piece)
   if ec.lint {
@@ -316,7 +316,7 @@ func engravePiece(
   }
   tpl := tplPool.Get().(*template.Template) //nolint:errcheck,gocritic
   defer tplPool.Put(tpl)
-  err := templatePiece(tpl, &piece, ec)
+  err := templatePiece(tpl, piece, ec)
   if err != nil {
     return err
   }
@@ -340,8 +340,8 @@ func engravePiece(
 
 func fanOutEngravePieces(
   ctx context.Context, wg *sync.WaitGroup,
-  chPieces <-chan catalog.Piece, chErrors chan<- error,
-  tplPool *sync.Pool, ec engraveCommand,
+  chPieces <-chan *catalog.Piece, chErrors chan<- error,
+  tplPool *sync.Pool, ec *engraveCommand,
 ) {
   defer wg.Done()
   var w strings.Builder
@@ -364,7 +364,7 @@ func fanOutEngravePieces(
   }
 }
 
-func engravePieces(pieces []catalog.Piece, ec engraveCommand) error {
+func engravePieces(pieces []*catalog.Piece, ec *engraveCommand) error {
   tplPool, err := templatePool(ec.SourceDir, "piece.ly")
   if err != nil {
     return err
@@ -372,7 +372,7 @@ func engravePieces(pieces []catalog.Piece, ec engraveCommand) error {
   n := min(len(pieces), runtime.GOMAXPROCS(0))
   ctx, cancel := context.WithCancel(context.Background())
   defer cancel()
-  chPieces, chErrors := make(chan catalog.Piece), make(chan error, n)
+  chPieces, chErrors := make(chan *catalog.Piece), make(chan error, n)
   var ewg sync.WaitGroup
   ewg.Add(1)
   go func() {

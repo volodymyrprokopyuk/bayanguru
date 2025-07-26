@@ -13,7 +13,7 @@ import (
 )
 
 func engraveBook(
-  w io.Writer, tplPool *sync.Pool, book catalog.Book, ec engraveCommand,
+  w io.Writer, tplPool *sync.Pool, book *catalog.Book, ec *engraveCommand,
 ) error {
   catalog.PrintBook(w, book)
   if ec.lint {
@@ -57,8 +57,8 @@ func engraveBook(
 
 func fanOutEngraveBooks(
   ctx context.Context, wg *sync.WaitGroup,
-  chBooks <-chan catalog.Book, chErrors chan<- error,
-  tplPool *sync.Pool, ec engraveCommand,
+  chBooks <-chan *catalog.Book, chErrors chan<- error,
+  tplPool *sync.Pool, ec *engraveCommand,
 ) {
   defer wg.Done()
   var w strings.Builder
@@ -81,7 +81,7 @@ func fanOutEngraveBooks(
   }
 }
 
-func engraveBooks(books []catalog.Book, ec engraveCommand) error {
+func engraveBooks(books []*catalog.Book, ec *engraveCommand) error {
   tplPool, err := templatePool(ec.SourceDir, "book.ly")
   if err != nil {
     return err
@@ -89,7 +89,7 @@ func engraveBooks(books []catalog.Book, ec engraveCommand) error {
   n := min(len(books), runtime.GOMAXPROCS(0))
   var ctx, cancel = context.WithCancel(context.Background())
   defer cancel()
-  chBooks, chErrors := make(chan catalog.Book), make(chan error, n)
+  chBooks, chErrors := make(chan *catalog.Book), make(chan error, n)
   var ewg sync.WaitGroup
   ewg.Add(1)
   go func() {

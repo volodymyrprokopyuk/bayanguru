@@ -33,8 +33,8 @@ func engraveAction(ctx context.Context, cmd *cli.Command) error {
   if !book && piece {
     return errors.New("at least one book is required")
   }
-  ec := engraveCommand{
-    BaseCmd: catalog.BaseCmd{
+  ec := &engraveCommand{
+    BaseCmd: &catalog.BaseCmd{
       CatalogDir: catalog.CatalogDir, BookFile: catalog.BookFile,
       SourceDir: catalog.SourceDir, PieceDir: catalog.PieceDir,
       BookDir: catalog.BookDir, Catalog: cat, Book: book,

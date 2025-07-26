@@ -18,7 +18,7 @@ type BaseCmd struct {
 }
 
 type playCmd struct {
-  BaseCmd
+  *BaseCmd
   sort string
   list bool
   lyr bool
@@ -48,7 +48,7 @@ func listLyricsFiles(sourceDir string) (map[string]bool, error) {
   return files, nil
 }
 
-func ReadPiecesAndBooks(bc BaseCmd) ([]Piece, []Book, int, error) {
+func ReadPiecesAndBooks(bc *BaseCmd) ([]*Piece, []*Book, int, error) {
   pieceMap, pieceIDs, err := readPieces(bc.CatalogDir, bc.Catalog)
   if err != nil {
     return nil, nil, 0, err
@@ -69,7 +69,7 @@ func ReadPiecesAndBooks(bc BaseCmd) ([]Piece, []Book, int, error) {
     if err != nil {
       return nil, nil, 0, err
     }
-    pieces := make([]Piece, 0, 500)
+    pieces := make([]*Piece, 0, 500)
     for _, book := range books {
       pieces = append(pieces, book.Pieces...)
     }
@@ -79,7 +79,7 @@ func ReadPiecesAndBooks(bc BaseCmd) ([]Piece, []Book, int, error) {
   if len(bc.PieceIDs) > 0 && bc.PieceIDs[0] != "all" {
     pieceIDs = bc.PieceIDs
   }
-  pieces := make([]Piece, 0, len(pieceIDs))
+  pieces := make([]*Piece, 0, len(pieceIDs))
   for _, pieceID := range pieceIDs {
     piece, exists := pieceMap[pieceID]
     if !exists {
@@ -90,8 +90,8 @@ func ReadPiecesAndBooks(bc BaseCmd) ([]Piece, []Book, int, error) {
   return pieces, nil, len(pieceMap), nil
 }
 
-func selectLyrics(pieces []Piece) []Piece {
-  selected := make([]Piece, 0, len(pieces))
+func selectLyrics(pieces []*Piece) []*Piece {
+  selected := make([]*Piece, 0, len(pieces))
   for _, piece := range pieces {
     if len(piece.LyricsFile) > 0 {
       selected = append(selected, piece)
@@ -100,7 +100,7 @@ func selectLyrics(pieces []Piece) []Piece {
   return selected
 }
 
-func filterPlayed(pieces []Piece, playedFile string) ([]Piece, error) {
+func filterPlayed(pieces []*Piece, playedFile string) ([]*Piece, error) {
   //nolint:gosec,gocritic
   file, err := os.OpenFile(playedFile, os.O_CREATE | os.O_RDONLY, 0o644)
   if err != nil {
@@ -115,7 +115,7 @@ func filterPlayed(pieces []Piece, playedFile string) ([]Piece, error) {
     pieceID := scanner.Text()
     played[pieceID] = true
   }
-  nplayed := make([]Piece, 0, len(pieces))
+  nplayed := make([]*Piece, 0, len(pieces))
   for _, piece := range pieces {
     if !played[piece.ID] {
       nplayed = append(nplayed, piece)
@@ -124,7 +124,7 @@ func filterPlayed(pieces []Piece, playedFile string) ([]Piece, error) {
   return nplayed, nil
 }
 
-func openPiece(pieceDir string, piece Piece) error {
+func openPiece(pieceDir string, piece *Piece) error {
   piecePDF := filepath.Join(pieceDir, piece.File + ".pdf")
   return exec.Command("xdg-open", piecePDF).Run() //nolint:gosec,gocritic
 }
@@ -143,7 +143,7 @@ func addToPlayed(pieceID, fileName string) error {
   return err
 }
 
-func play(pc playCmd) error {
+func play(pc *playCmd) error {
   pieces, _, catLen, err := ReadPiecesAndBooks(pc.BaseCmd)
   if err != nil {
     return err
