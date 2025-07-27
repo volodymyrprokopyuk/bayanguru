@@ -82,10 +82,9 @@ pieces:
   - { id: dbl3, tit: Спать мені не хочеться, sub: ukrfs,
       arr: Ю. Соколовський, src: OZGGP1993,
       org: ukr, sty: flk, gnr: sng, ton: emi, frm: in3, bss: [frb, vo2, in3], lvl: elb }
-  # p. 38
-  # - { id: d80b, tit: Дощик, sub: ukrfs,
-  #     arr: Ю. Соколовський, src: OZGGP1993,
-  #     org: ukr, sty: flk, gnr: sng, ton: emi, frm: [in3, in6, cr5], bss: [frb, jmp], lvl: elb }
+  - { id: d80b, tit: Дощик, sub: ukrfs,
+      arr: Ю. Соколовський, src: OZGGP1993,
+      org: ukr, sty: flk, gnr: sng, ton: emi, frm: [in3, in6, cr5], bss: [frb, jmp], lvl: elb }
   # p. 40
   # - { id: emb1, tit: Ой під вишнею, sub: ukrfs,
   #     arr: Ю. Соколовський, src: OZGGP1993,
