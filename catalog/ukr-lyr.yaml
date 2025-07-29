@@ -89,7 +89,7 @@ pieces:
       arr: Ю. Соколовський, src: OZGGP1993,
       org: ukr, sty: flk, gnr: sng, ton: gmj, frm: [in3, in6], bss: [frb, jmp], lvl: elb }
   - { id: dkx8, tit: Ніч яка місячна, sub: ukrfs,
-      arr: Ю. Соколовський, src: OZGGP1993,
+      com: А. Волощенко, arr: Ю. Соколовський, aut: М. Старицький, src: OZGGP1993,
       org: ukr, sty: flk, gnr: sng, ton: ami, frm: [in3, cr5], bss: [frb, vo2], lvl: elb }
   # p. 43
   # - { id: y4xn, tit: Ой на горі два дубки, sub: ukrfs,
