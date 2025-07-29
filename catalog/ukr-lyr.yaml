@@ -85,10 +85,9 @@ pieces:
   - { id: d80b, tit: Дощик, sub: ukrfs,
       arr: Ю. Соколовський, src: OZGGP1993,
       org: ukr, sty: flk, gnr: sng, ton: emi, frm: [in3, in6, cr5], bss: [frb, jmp], lvl: elb }
-  # p. 40
-  # - { id: emb1, tit: Ой під вишнею, sub: ukrfs,
-  #     arr: Ю. Соколовський, src: OZGGP1993,
-  #     org: ukr, sty: flk, gnr: sng, ton: gmj, frm: [in3, in6], bss: [frb, jmp], lvl: elb }
+  - { id: emb1, tit: Ой під вишнею, sub: ukrfs,
+      arr: Ю. Соколовський, src: OZGGP1993,
+      org: ukr, sty: flk, gnr: sng, ton: gmj, frm: [in3, in6], bss: [frb, jmp], lvl: elb }
   # p. 41
   # - { id: dkx8, tit: Ніч яка місячна, sub: ukrfs,
   #     arr: Ю. Соколовський, src: OZGGP1993,
