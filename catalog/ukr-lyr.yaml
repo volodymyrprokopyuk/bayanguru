@@ -94,7 +94,6 @@ pieces:
   - { id: y4xn, tit: Ой на горі два дубки, sub: ukrfs,
       arr: Ю. Соколовський, src: OZGGP1993,
       org: ukr, sty: flk, gnr: sng, ton: ami, frm: [vo2, in3, cr5, syn], bss: [frb, jmp], lvl: elb }
-  # p. 45
-  # - { id: j22q, tit: Ти ж мене підманула, sub: ukrfs,
-  #     arr: Ю. Соколовський, src: OZGGP1993,
-  #     org: ukr, sty: flk, gnr: sng, ton: gmi, frm: [in3, in6], bss: [frb, in3, jmp], lvl: elb }
+  - { id: j22q, tit: Ти ж мене підманула, sub: ukrfs,
+      arr: Ю. Соколовський, src: OZGGP1993,
+      org: ukr, sty: flk, gnr: sng, ton: gmi, frm: [in3, in6], bss: [frb, in3, jmp], lvl: elb }
