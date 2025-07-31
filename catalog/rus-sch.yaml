@@ -312,6 +312,10 @@ pieces:
       com: М. Глинка, src: FBBMS16N1980,
       org: rus, sty: cus, gnr: pie, ton: gmj, frm: mel, bss: [frb, in3, in4, cr5], lvl: elb }
   # FBBMS17P1980
-  # - { id: tz81, tit: Былина,
-  #     com: Д. Львов-Компанеец, src: FBBMS17P1980,
-  #     org: rus, sty: cus, gnr: pie, ton: eesmj, frm: vo2, bss: [frb, in3, in5, jmp], lvl: elb }
+  - { id: tz81, tit: Былина,
+      com: Д. Львов-Компанеец, src: FBBMS17P1980,
+      org: rus, sty: cus, gnr: pie, ton: eesmj, frm: vo2, bss: [frb, in3, in5, jmp], lvl: elb }
+  # p. 6
+  # - { id: as9u, tit: Прелюдія,
+  #     com: А. Салин, src: FBBMS17P1980,
+  #     org: rus, sty: cus, gnr: pre, ton: amj, frm: [vo2, rep], bss: frb, lvl: elb }
