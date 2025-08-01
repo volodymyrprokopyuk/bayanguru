@@ -315,7 +315,6 @@ pieces:
   - { id: tz81, tit: Былина,
       com: Д. Львов-Компанеец, src: FBBMS17P1980,
       org: rus, sty: cus, gnr: pie, ton: eesmj, frm: vo2, bss: [frb, in3, in5, jmp], lvl: elb }
-  # p. 6
-  # - { id: as9u, tit: Прелюдія,
-  #     com: А. Салин, src: FBBMS17P1980,
-  #     org: rus, sty: cus, gnr: pre, ton: amj, frm: [vo2, rep], bss: frb, lvl: elb }
+  - { id: as9u, tit: Прелюдія,
+      com: А. Салин, src: FBBMS17P1980,
+      org: rus, sty: cus, gnr: pre, ton: amj, frm: [vo2, rep], bss: frb, lvl: elb }
