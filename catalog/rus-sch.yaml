@@ -318,6 +318,10 @@ pieces:
   - { id: as9u, tit: Прелюдія,
       com: А. Салин, src: FBBMS17P1980,
       org: rus, sty: cus, gnr: pre, ton: amj, frm: [vo2, rep], bss: frb, lvl: elb }
-  - { id: hls8, tit: Семейная,
+  - { id: hls8, tit: Семейная, sub: rusfs,
       arr: А. Лядов, src: FBBMS17P1980,
       org: rus, sty: flk, gnr: sng, ton: ami, frm: [in3, in6, dot], bss: [frb, in3], lvl: elb }
+  # p. 30
+  # - { id: xi7r, tit: Озера, sub: rusfs,
+  #     arr: І. Назаренко, src: FBBMS17P1980,
+  #     org: rus, sty: flk, gnr: sng, ton: ami, frm: [vo2, in3, cr5, syn], bss: frb, lvl: elb }
