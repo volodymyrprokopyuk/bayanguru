@@ -149,10 +149,9 @@ pieces:
       arr: В. Назимов, src: FBBMS16N1980,
       org: ukr, sty: flk, gnr: sng, ton: emi, frm: var, bss: [frb, vo2, in3, in4], lvl: elb }
   # FBBMS17P1980
-  # p. 13
-  # - { id: 6eir, tit: Казка,
-  #     com: І. Беркович, src: FBBMS17P1980,
-  #     org: ukr, sty: cus, gnr: pie, ton: bmi, frm: mel, bss: [frb, in3, in4, in5], lvl: elb }
+  - { id: 6eir, tit: Казка,
+      com: І. Беркович, src: FBBMS17P1980,
+      org: ukr, sty: cus, gnr: pie, ton: bmi, frm: mel, bss: [frb, in3, in4, in5], lvl: elb }
   # p. 14
   # - { id: 225w, tit: Гопак,
   #     com: Ю. Щуровський, src: FBBMS17P1980,
