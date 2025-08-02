@@ -152,7 +152,6 @@ pieces:
   - { id: 6eir, tit: Казка,
       com: І. Беркович, src: FBBMS17P1980,
       org: ukr, sty: cus, gnr: pie, ton: bmi, frm: mel, bss: [frb, in3, in4, in5], lvl: elb }
-  # p. 14
-  # - { id: 225w, tit: Гопак,
-  #     com: Ю. Щуровський, src: FBBMS17P1980,
-  #     org: ukr, sty: flk, gnr: dnc, ton: dmj, frm: [in3, cr5, syn], bss: [frb, in3, in4, in5], lvl: elb }
+  - { id: 225w, tit: Гопак,
+      com: Ю. Щуровський, src: FBBMS17P1980,
+      org: ukr, sty: flk, gnr: dnc, ton: dmj, frm: [in3, cr5, syn], bss: [frb, in3, in4, in5, jmp], lvl: elb }
