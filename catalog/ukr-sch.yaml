@@ -155,7 +155,6 @@ pieces:
   - { id: 225w, tit: Гопак, sub: ukrfd,
       com: Ю. Щуровський, src: FBBMS17P1980,
       org: ukr, sty: flk, gnr: dnc, ton: dmj, frm: [in3, cr5, syn], bss: [frb, in3, in4, in5, jmp], lvl: elb }
-  # p. 32
-  # - { id: 3suo, tit: Ой літає соколонько, sub: ukrfs,
-  #     com: І. Беркович, src: FBBMS17P1980,
-  #     org: ukr, sty: flk, gnr: sng, ton: emi, frm: [vo2, rep], bss: [frb, rep], lvl: elb }
+  - { id: 3suo, tit: Ой літає соколонько, sub: ukrfs,
+      com: І. Беркович, src: FBBMS17P1980,
+      org: ukr, sty: flk, gnr: sng, ton: emi, frm: [vo2, rep], bss: [frb, rep], lvl: elb }
