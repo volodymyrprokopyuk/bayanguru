@@ -57,9 +57,9 @@ pieces:
   - { id: w6w8, tit: Женчичок-бренчичок, sub: ukrfs,
       src: FBBSC1978,
       org: ukr, sty: flk, gnr: sng, ton: gmj, frm: rep, bss: [frb, in3], lvl: elb }
-  - { id: lspg, tit: "Гей, не літав соколонько", sub: ukrfs,
+  - { id: lspg, tit: Ой літає соколонько, sub: ukrfs,
       arr: Л. Вільчик, src: FBBSC1978,
-      org: ukr, sty: flk, gnr: sng, ton: emi, frm: in3, bss: [frb, vo2, in3], lvl: elb }
+      org: ukr, sty: flk, gnr: sng, ton: emi, frm: [in3, rep], bss: [frb, vo2, in3], lvl: elb }
   - { id: gahw, tit: Болить моя голівонька, sub: ukrfs,
       arr: А. Лазаренко, src: FBBSC1978,
       org: ukr, sty: flk, gnr: sng, ton: fmi, frm: [vo2, in3], bss: frb, lvl: elb }
@@ -152,6 +152,10 @@ pieces:
   - { id: 6eir, tit: Казка,
       com: І. Беркович, src: FBBMS17P1980,
       org: ukr, sty: cus, gnr: pie, ton: bmi, frm: mel, bss: [frb, in3, in4, in5], lvl: elb }
-  - { id: 225w, tit: Гопак,
+  - { id: 225w, tit: Гопак, sub: ukrfd,
       com: Ю. Щуровський, src: FBBMS17P1980,
       org: ukr, sty: flk, gnr: dnc, ton: dmj, frm: [in3, cr5, syn], bss: [frb, in3, in4, in5, jmp], lvl: elb }
+  # p. 32
+  # - { id: 3suo, tit: Ой літає соколонько, sub: ukrfs,
+  #     com: І. Беркович, src: FBBMS17P1980,
+  #     org: ukr, sty: flk, gnr: sng, ton: emi, frm: [vo2, rep], bss: [frb, rep], lvl: elb }
