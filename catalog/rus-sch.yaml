@@ -324,10 +324,9 @@ pieces:
   - { id: xi7r, tit: Озера, sub: rusfs,
       arr: І. Назаренко, src: FBBMS17P1980,
       org: rus, sty: flk, gnr: sng, ton: ami, frm: [vo2, in3, cr5, syn], bss: frb, lvl: elb }
-  # p. 33
-  # - { id: 7acg, tit: В кузне, sub: rusfs,
-  #     arr: В. Платонов, src: FBBMS17P1980,
-  #     org: rus, sty: flk, gnr: sng, ton: fmj, frm: [vo2, in3], bss: [frb, rep], lvl: elb }
+  - { id: 7acg, tit: В кузне, sub: rusfs,
+      arr: В. Платонов, src: FBBMS17P1980,
+      org: rus, sty: flk, gnr: sng, ton: fmj, frm: [vo2, in3], bss: [frb, rep], lvl: elb }
   # p. 34
   # - { id: wf7u, tit: "А у лесе, лесе", sub: rusfs,
   #     arr: В. Платонов, src: FBBMS17P1980,
