@@ -158,3 +158,6 @@ pieces:
   - { id: 3suo, tit: Ой літає соколонько, sub: ukrfs,
       com: І. Беркович, src: FBBMS17P1980,
       org: ukr, sty: flk, gnr: sng, ton: emi, frm: [vo2, rep], bss: [frb, rep], lvl: elb }
+  - { id: 7q6v, tit: Чорна гречка, sub: ukrfs,
+      arr: В. Платонов, src: FBBMS17P1980,
+      org: ukr, sty: flk, gnr: sng, ton: bmi, frm: [vo2, in5, syn], bss: frb, lvl: elc }
