@@ -21,7 +21,7 @@
     \time 6/4 g''=''4(\pp f8 ees d4 g8 b, c=''2) |
     \repeat volta 2 {
       \time 4/4 ees=''8(\< g fis \af 16\! g ees\> d \af 4\! c4^\tTen |
-      b='8\p\< g c <g bes> a \af 16\! <e g> f4)\mf^\tTen |
+      b='8\p\< g c <g bes> aes \af 16\! <e g> f4)\mf^\tTen |
       \time 6/4 d'=''8(\< ees16 f ees d c8 b \af 16\! g %
       c=''8)\f\> c-- \af 2\! \af 4.\p g='2 \fermata |
     }
