@@ -331,3 +331,6 @@ pieces:
   - { id: z0tt, tit: Ходил Ваня, sub: rusfs,
       arr: А. Лядов, src: FBBMS19N1981,
       org: rus, sty: flk, gnr: sng, ton: cmj, frm: [vo2, in3], bss: [frb, jmp], lvl: ela }
+  - { id: jqtg, tit: Маленький рассказ,
+      com: И. Лунин, src: FBBMS19N1981,
+      org: rus, sty: cus, gnr: pie, ton: gmj, frm: mel, bss: [frb, vo2], lvl: ela }
