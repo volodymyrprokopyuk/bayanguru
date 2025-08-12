@@ -19,6 +19,6 @@
   \duo {
     d'='1( | e2 d) | e( d | c4 cis d8 e d4) |
     d='1( | c2 d) | c d | r4 <c d>( d='2) |
-  } { g=1~ | g | g~ | g2 r | g1~ | g2~ g4( gis | a2) b | d,( <g= b>) | }
+  } { g=1~-\frBass | g | g~ | g2 r | g1~ | g2~ g4( gis | a2) b | d,( <g= b>) | }
 }
 {{ end }}
