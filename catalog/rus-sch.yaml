@@ -340,10 +340,9 @@ pieces:
   - { id: st4v, tit: "Ах во саду, саду", sub: rusfs,
       arr: В. Накапкин, src: FBBMS19N1981,
       org: rus, sty: flk, gnr: sng, ton: cmj, frm: [vo2,in3], bss: [frb, vo2, var, syn], lvl: elb }
-  # p. 9
-  # - { id: 19x7, tit: Полечка,
-  #     arr: В. Накапкин, src: FBBMS19N1981,
-  #     org: rus, sty: cus, gnr: plk, ton: ami, frm: acc, bss: [frb, in3], lvl: elb }
+  - { id: 19x7, tit: Полечка,
+      com: А. Бурмистров, src: FBBMS19N1981,
+      org: rus, sty: cus, gnr: plk, ton: ami, frm: acc, bss: [frb, in3], lvl: elb }
   # FBBMS20P1981
   # p. 2
   # - { id: m2eg, tit: В зоопарке,
