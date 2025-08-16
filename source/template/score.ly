@@ -45,6 +45,7 @@ dDim = \markup \lower #3 \italic "dim."
 % Tempo
 tRit = "rit."
 tRal = "rall."
+tLarg = "allarg."
 tATem = "a tempo"
 tAcc = "accel."
 tSos = "sost."

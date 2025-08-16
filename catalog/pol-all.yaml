@@ -63,7 +63,6 @@ pieces:
       arr: В. Рейман, src: FBBMS15P1979,
       org: est, sty: flk, gnr: plk, ton: gmj, frm: [in3, in6], bss: [frb, jmp], lvl: elb }
   # FBBMS20P1981
-  # p. 21
-  # - { id: rskf, tit: "Вийди, Марися",
-  #     arr: С. Стемпневський, src: FBBMS20P1981,
-  #     org: pol, sty: flk, gnr: sng, ton: cmj, frm: in6, bss: [frb, cr5, jmp], lvl: elb }
+  - { id: rskf, tit: "Вийди, Марися", sub: polfs,
+      arr: С. Стемпневський, src: FBBMS20P1981,
+      org: pol, sty: flk, gnr: sng, ton: cmj, frm: in6, bss: [frb, cr5, jmp], lvl: elb }
