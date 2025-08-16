@@ -18,7 +18,7 @@
   d=''8( c b a) c( b a e) | b'( a gis4) \af 2\! <c,=' a'>2\> |
 
   {{ template "rh1" (w `<e'='' c'>16(\p`) }}
-  c=''8(-. d)-. <c, a'>4 <c'='' a'>8-.\pp r \bar "|."
+  c=''8(-. b)-. <c, a'>4 <c'='' a'>8-.\pp r \bar "|."
 }
 {{ end }}
 
