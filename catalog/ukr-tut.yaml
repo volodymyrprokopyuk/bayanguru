@@ -28,5 +28,5 @@ pieces:
       com: В. Михайлюк, arr: А. Басурманов, art: ipr, src: BTB1978,
       org: ukr, sty: cus, gnr: sng, ton: emi, frm: [cr5, dot, syn, rep], bss: stb, lvl: elb }
   - { id: ndwb, tit: Реве та стогне Дніпр широкий,
-      com: Д. Крижанівський, arr: А. Басурманов, art: ipr, src: BTB1978,
+      com: Д. Крижанівський, arr: А. Басурманов, art: ipr, aut: Т. Шевченко, src: BTB1978,
       org: ukr, sty: cus, gnr: sng, ton: dmi, frm: [in3, cr5], bss: pub, lvl: elb }
