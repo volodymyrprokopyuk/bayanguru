@@ -63,7 +63,7 @@ pieces:
   - { id: gahw, tit: Болить моя голівонька, sub: ukrfs,
       arr: А. Лазаренко, src: FBBSC1978,
       org: ukr, sty: flk, gnr: sng, ton: fmi, frm: [vo2, in3], bss: frb, lvl: elb }
-  - { id: bjyu, tit: Реве на стогне Дніпр широкий,
+  - { id: bjyu, tit: Реве та стогне Дніпр широкий,
       com: Д. Крижанівський, arr: С. Чапкій, src: FBBSC1978,
       org: ukr, sty: cus, gnr: sng, ton: emi, frm: [vo2, cr5], bss: [frb, vo2], lvl: elc }
   - { id: rzwj, tit: Їхав козак за Дунай, sub: ukrfs,
@@ -95,7 +95,7 @@ pieces:
   - { id: 0s2r, tit: Прилетіла перепілонька, sub: ukrfs,
       arr: А. Талакин, src: FBBMS4NP1974,
       org: ukr, sty: flk, gnr: sng, ton: bmi, frm: vo2, bss: frb, lvl: elc }
-  - { id: 6rfp, tit: Реве на стогне Дніпр широкий,
+  - { id: 6rfp, tit: Реве та стогне Дніпр широкий,
       com: Д. Крижанівський, arr: В. Накапкин, src: FBBMS4NP1974,
       org: ukr, sty: cus, gnr: sng, ton: dmi, frm: mel, bss: frb, lvl: elb }
   # FBBMS6N1975
@@ -163,12 +163,11 @@ pieces:
       org: ukr, sty: flk, gnr: sng, ton: bmi, frm: [vo2, in5, syn], bss: frb, lvl: elc }
   # FBBMS21N1982
   - { id: q640, tit: "За селом, за селом", sub: ukrfs,
-      arr: Г. Орляньський, src: FBBMS21N1982,
+      arr: Г. Орлянський, src: FBBMS21N1982,
       org: ukr, sty: flk, gnr: sng, ton: gmi, frm: mel, bss: frb, lvl: ela }
-  # p. 7
-  # - { id: 33xq, tit: Реве на стогне Дніпр широкий,
-  #     com: Д. Крижанівський, arr: В. Назимов, art: ipr, src: FBBMS21N1982,
-  #     org: ukr, sty: cus, gnr: sng, ton: emi, frm: mel, bss: frb, lvl: ela }
+  - { id: 33xq, tit: Реве та стогне Дніпр широкий,
+      com: Д. Крижанівський, arr: В. Назимов, art: ipr, src: FBBMS21N1982,
+      org: ukr, sty: cus, gnr: sng, ton: emi, frm: mel, bss: frb, lvl: ela }
   # p. 8
   # - { id: 8y90, tit: Ой піду я до млина, sub: ukrfs,
   #     arr: В. Накапкин, src: FBBMS21N1982,
