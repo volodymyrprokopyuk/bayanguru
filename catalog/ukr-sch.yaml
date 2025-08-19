@@ -168,7 +168,6 @@ pieces:
   - { id: 33xq, tit: Реве та стогне Дніпр широкий,
       com: Д. Крижанівський, arr: В. Назимов, art: ipr, aut: Т. Шевченко, src: FBBMS21N1982,
       org: ukr, sty: cus, gnr: sng, ton: emi, frm: mel, bss: frb, lvl: ela }
-  # p. 8
-  # - { id: 8y90, tit: Ой піду я до млина, sub: ukrfs,
-  #     arr: В. Накапкин, src: FBBMS21N1982,
-  #     org: ukr, sty: flk, gnr: sng, ton: emi, frm: [vo2, var, ch5, syn], bss: [pub, frb], lvl: elb }
+  - { id: 8y90, tit: Ой піду я до млина, sub: ukrfs,
+      arr: В. Накапкин, src: FBBMS21N1982,
+      org: ukr, sty: flk, gnr: sng, ton: emi, frm: [vo2, var, cr5, syn], bss: [pub, frb], lvl: elb }
