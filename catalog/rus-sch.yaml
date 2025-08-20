@@ -348,7 +348,11 @@ pieces:
       com: А. Островский, src: FBBMS20P1981,
       org: rus, sty: cus, gnr: pie, ton: cmj, frm: vo2, bss: [frb, in5, in7], lvl: elb }
   # FBBMS21N1982
-  # p. 12
-  # - { id: qmc0, tit: Речка, sub: rusfs,
-  #     arr: В. Накапкин, src: FBBMS21N1982,
-  #     org: rus, sty: flk, gnr: sng, ton: dmi, frm: mel, bss: [frb, var, in3, in6], lvl: elb }
+  - { id: qmc0, tit: Речка, sub: rusfs,
+      arr: В. Накапкин, src: FBBMS21N1982,
+      org: rus, sty: flk, gnr: sng, ton: dmi, frm: mel, bss: [frb, var, in3, in6], lvl: elb }
+  # FBBMS22P1982
+  # p. 3
+  # - { id: cffb, tit: Колыбельная,
+  #     arr: В. Накапкин, src: FBBMS22P1982,
+  #     org: rus, sty: cus, gnr: lul, ton: dmi, frm: dot, bss: [frb, dot], lvl: elb }
