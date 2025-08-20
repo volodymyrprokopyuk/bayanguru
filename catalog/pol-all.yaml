@@ -67,7 +67,6 @@ pieces:
       arr: С. Стемпневський, src: FBBMS20P1981,
       org: pol, sty: flk, gnr: sng, ton: cmj, frm: in6, bss: [frb, cr5, jmp], lvl: elb }
   # FBBMS21N1982
-  # p. 18
-  # - { id: oon9, tit: Ковалі, sub: polfs,
-  #     arr: В. Накапкин, src: FBBMS21N1982,
-  #     org: pol, sty: flk, gnr: sng, ton: dmi, frm: [vo2, var], bss: [frb, vo2, in3], lvl: elb }
+  - { id: oon9, tit: Ковалі, sub: polfs,
+      arr: В. Накапкин, src: FBBMS21N1982,
+      org: pol, sty: flk, gnr: sng, ton: dmi, frm: [vo2, var], bss: [frb, vo2, in3], lvl: elb }
