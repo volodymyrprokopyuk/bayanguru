@@ -30,7 +30,7 @@
   \duo {
     r16 <cis'=' g'>16 16 16 | r <a d>[ r <bes d>] g8 <a= cis> \clef bass |
     r8 <g bes>16 16 <f= a>4 \clef treble |
-  } { a=4 | f g8 f16 e | e=2 | }
+  } { a=4 | f g8 f16 e | d=2 | }
 
   f'='8.( e16 ees4 | d c16 bes a g) | a-. c-. f-. e-. ees-. d-. ees-. c-. |
   bes=16-. d-. e-. d-. cis8-- a-- | bes16-. c-. bes-. <a c>-. %

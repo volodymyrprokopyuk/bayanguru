@@ -37,7 +37,7 @@
   d'='8 e f4 | cis4 d8 c | <bes d>4 %
   \duo {
     g=8 <a cis> | r8 <a d>4 8 | r <bes d>[ r <a d>] |
-    r8 <g= cis>8[ r <cis ees>] | r <d f>[ r <a cis>] | r <a d> f'='4 |
+    r8 <g= cis>8[ r <c ees>] | r <d f>[ r <a cis>] | r <a d> f'='4 |
   } { g=4 | f2 | g4 f | e f | bes g | f d'=' | }
 
   \rep 3 { a=4~ a16 b a=8~ } | a=4 d8 c=' |
