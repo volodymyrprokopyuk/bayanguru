@@ -353,5 +353,5 @@ pieces:
       org: rus, sty: flk, gnr: sng, ton: dmi, frm: mel, bss: [frb, var, in3, in6], lvl: elb }
   # FBBMS22P1982
   - { id: cffb, tit: Колыбельная,
-      arr: В. Накапкин, src: FBBMS22P1982,
+      com: Т. Хренников, src: FBBMS22P1982,
       org: rus, sty: cus, gnr: lul, ton: dmi, frm: dot, bss: [frb, dot], lvl: elb }

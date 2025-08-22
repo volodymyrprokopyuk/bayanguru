@@ -171,3 +171,8 @@ pieces:
   - { id: 8y90, tit: Ой піду я до млина, sub: ukrfs,
       arr: В. Накапкин, src: FBBMS21N1982,
       org: ukr, sty: flk, gnr: sng, ton: emi, frm: [vo2, var, cr5, syn], bss: [pub, frb], lvl: elb }
+  # FBBMS22P1982
+  # p. 14
+  # - { id: hg6u, tit: Пілша я, sub: ukrfs,
+  #     arr: В. Платонов, src: FBBMS22P1982,
+  #     org: ukr, sty: flk, gnr: sng, ton: amj, frm: [vo2, in6, dot], bss: frb, lvl: elb }
