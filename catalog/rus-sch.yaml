@@ -358,7 +358,6 @@ pieces:
   - { id: b3re, tit: Уж и я ли молода, sub: rusfs,
       arr: В. Платонов, src: FBBMS22P1982,
       org: rus, sty: flk, gnr: sng, ton: besmj, frm: [dot, var], bss: [frb, pub], lvl: ela }
-  # p. 17
-  # - { id: 1dyr, tit: Холсточек, sub: rusfs,
-  #     arr: В. Платонов, src: FBBMS22P1982,
-  #     org: rus, sty: flk, gnr: sng, ton: dmi, frm: var, bss: [frb, vo2], lvl: elb }
+  - { id: 1dyr, tit: Холсточек, sub: rusfs,
+      arr: В. Платонов, src: FBBMS22P1982,
+      org: rus, sty: flk, gnr: sng, ton: dmi, frm: var, bss: [frb, vo2], lvl: elb }
