@@ -355,10 +355,9 @@ pieces:
   - { id: cffb, tit: Колыбельная,
       com: Т. Хренников, src: FBBMS22P1982,
       org: rus, sty: cus, gnr: lul, ton: dmi, frm: dot, bss: [frb, dot], lvl: elb }
-  # p. 16
-  # - { id: b3re, tit: Уж и я ли молода, sub: rusfs,
-  #     arr: В. Платонов, src: FBBMS22P1982,
-  #     org: rus, sty: flk, gnr: sng, ton: besmj, frm: [dot, var], bss: [frb, pub], lvl: ela }
+  - { id: b3re, tit: Уж и я ли молода, sub: rusfs,
+      arr: В. Платонов, src: FBBMS22P1982,
+      org: rus, sty: flk, gnr: sng, ton: besmj, frm: [dot, var], bss: [frb, pub], lvl: ela }
   # p. 17
   # - { id: 1dyr, tit: Холсточек, sub: rusfs,
   #     arr: В. Платонов, src: FBBMS22P1982,
