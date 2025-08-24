@@ -162,7 +162,7 @@ pieces:
       arr: В. Платонов, src: FBBMS17P1980,
       org: ukr, sty: flk, gnr: sng, ton: bmi, frm: [vo2, in5, syn], bss: frb, lvl: elc }
   # FBBMS21N1982
-  - { id: q640, tit: "За селом, за селом", sub: ukrfs,
+  - { id: q640, tit: "За селом, за селом", sub: ukrfs, # nolyr
       arr: Г. Орлянський, src: FBBMS21N1982,
       org: ukr, sty: flk, gnr: sng, ton: gmi, frm: mel, bss: frb, lvl: ela }
   - { id: 33xq, tit: Реве та стогне Дніпр широкий,
@@ -172,7 +172,6 @@ pieces:
       arr: В. Накапкин, src: FBBMS21N1982,
       org: ukr, sty: flk, gnr: sng, ton: emi, frm: [vo2, var, cr5, syn], bss: [pub, frb], lvl: elb }
   # FBBMS22P1982
-  # p. 14
-  # - { id: hg6u, tit: Пілша я, sub: ukrfs,
-  #     arr: В. Платонов, src: FBBMS22P1982,
-  #     org: ukr, sty: flk, gnr: sng, ton: amj, frm: [vo2, in6, dot], bss: frb, lvl: elb }
+  - { id: hg6u, tit: Пілша я, sub: ukrfs, # nolyr
+      arr: В. Платонов, src: FBBMS22P1982,
+      org: ukr, sty: flk, gnr: sng, ton: amj, frm: [vo2, in6, dot], bss: frb, lvl: elb }
