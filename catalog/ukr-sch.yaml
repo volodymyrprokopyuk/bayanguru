@@ -175,3 +175,7 @@ pieces:
   - { id: hg6u, tit: Пілша я, sub: ukrfs, # nolyr
       arr: В. Платонов, src: FBBMS22P1982,
       org: ukr, sty: flk, gnr: sng, ton: amj, frm: [vo2, in6, dot], bss: frb, lvl: elb }
+  # FBBMS23T1982
+  - { id: 6fyg, tit: Пісня,
+      com: М. Любарський, src: FBBMS23T1982,
+      org: ukr, sty: cus, gnr: sng, ton: gmi, frm: dot, bss: [frb, in5, in7], lvl: elb }
