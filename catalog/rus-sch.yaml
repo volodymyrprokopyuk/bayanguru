@@ -368,3 +368,7 @@ pieces:
   - { id: kgx8, tit: Пастушок,
       com: Д. Кабалевский, src: FBBMS23T1982,
       org: rus, sty: cus, gnr: chd, ton: dmj, frm: dot, bss: [frb, in5], lvl: ela }
+  # p. 21
+  # - { id: fr7h, tit: Песня,
+  #     com: В. Ефимов, src: FBBMS23T1982,
+  #     org: rus, sty: cus, gnr: pie, ton: dmi, frm: vo2, bss: [frb, vo2], lvl: elb }
