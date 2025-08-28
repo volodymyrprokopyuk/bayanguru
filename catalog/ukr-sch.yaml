@@ -179,3 +179,12 @@ pieces:
   - { id: 6fyg, tit: Пісня,
       com: М. Любарський, src: FBBMS23T1982,
       org: ukr, sty: cus, gnr: sng, ton: gmi, frm: dot, bss: [frb, in5, in7], lvl: elb }
+  # FBBMS24N1983
+  # p. 4
+  # - { id: 5fz2, tit: Канонічна імітація,
+  #     com: Є. Юцевич, src: FBBMS24N1983,
+  #     org: ukr, sty: cus, gnr: can, ton: cmi, frm: mel, bss: frb, lvl: elb }
+  # p. 5
+  # - { id: s7ml, tit: "Маленька п'єса",
+  #     com: І. Назаренко, src: FBBMS24N1983,
+  #     org: ukr, sty: cus, gnr: pie, ton: ami, frm: mel, bss: frb, lvl: ela }
