@@ -8,7 +8,7 @@
 {{ end }}
 
 {{ define "rh2a" }}
-  <d=' b' d>4(--\> <e c'>8 | b'4 \af 8\! a8 | {{ .a }} |
+  <d=' b' d>4(->\> <e c'>8 | b'4 \af 8\! a8 | {{ .a }} |
 {{ end }}
 
 {{ define "rh2b" }}
@@ -62,5 +62,14 @@
 \relative {
   \clef bass
   \key a \minor
+  e,=,8(-\puBass a b | c b a) | a4( e'8 | c b a) | a4.( | a4 c8 | e=4.) |
+
+  c=4( e8 | a, g f') | e( a, c | d e f) | g,4( c8 | b d f | e=4.) \fermata |
+  g,=,4( c8 | g b d | e=4.) \fermata |
+
+  e,=,8\( a b | c b a | c[ e] dis16 e | c8 b a~\) | a+am!4 b8( |
+  c=8 d dis | e4.~ | e) | c4\( e8 | a, g f' | e a, c | d e f |
+  g,=,4 a8 | b d f | e4.\) | c4\( e8 | a, b c | b a c | d e f\) |
+  g,=,4( a8 | b d f | e=4.) \fermata |
 }
 {{ end }}
