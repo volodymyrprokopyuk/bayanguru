@@ -45,7 +45,16 @@
   \duo {
     {{ template "rh1a" (w `<e'=' g c>8[\(\p\<^\tATem`) }}
     {{ template "rh2a" (w `e='4.)\p`) }}
-   } { {{ template "rh1b" }} {{ template "rh2b" }} }
+  } { {{ template "rh1b" }} {{ template "rh2b" }} }
+
+  \duo { s4. | e''=''4. | e | a,=' | }
+  {
+    <c''='' e c'>8[^\(\mf\< <e e'>] <dis b' dis>16 \af 16\! <e e'> |
+    <c='' a' c>8\f <b b'> <a a'> | <gis gis'> <a a'> <e e'> |
+    \acc { <g=' g'>8 } <f=' f'>8 <e e'> <d=' d'>\) |
+  }
+  <d'='' b' d>8.[\( c32 b] <e c' e>8 | <b g' b>4\>^\tRit <a f' a>8 |
+  \af 4\! \af 4\p <e'='' e'>4.\) \fermata \bar "|."
 }
 {{ end }}
 
