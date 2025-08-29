@@ -21,9 +21,13 @@ pieces:
   - { id: 7egi, tit: За Сибіром сонце сходить, sub: ukrfs, # badlyr
       arr: М. Лисенко, art: hrm, src: UFSFBR1978,
       org: ukr, sty: flk, gnr: sng, ton: emi, frm: cr5, bss: pub, lvl: elc }
-  - { id: 9nxg, tit: Ой наступила та чорна хмара, sub: ukrfs,
-      arr: М. Лисенко, art: hrm, src: UFSFBR1978,
+  - { id: 9nxg, tit: Ой наступала та чорна хмара, sub: ukrfs,
+      arr: М. Лисенко, src: UFSFBR1978,
       org: ukr, sty: flk, gnr: sng, ton: ami, frm: [in3, in8, cr5], bss: pub, lvl: elc }
+  # p. 9
+  # - { id: hf2g, tit: "Ой гай, мати, гай зелененький", sub: ukrfs,
+  #     arr: М. Лисенко, src: UFSFBR1978,
+  #     org: ukr, sty: flk, gnr: sng, ton: dmi, frm: [vo2, in3, in8, cr5], bss: pub, lvl: elc }
   # OZGGP1993
   - { id: ntxe, tit: "Іванчику-бідоланчику", sub: ukrfs, # badlyr
       arr: Є. Льонок, src: OZGGP1993,
