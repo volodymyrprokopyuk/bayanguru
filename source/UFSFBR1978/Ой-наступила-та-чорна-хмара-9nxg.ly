@@ -53,7 +53,7 @@
     <c='' a' c>8\f <b b'> <a a'> | <gis gis'> <a a'> <e e'> |
     \acc { <g=' g'>8 } <f=' f'>8 <e e'> <d=' d'>\) |
   }
-  <d'='' b' d>8.[\( c32 b] <e c' e>8 | <b g' b>4\>^\tRit <a f' a>8 |
+  <d'='' b' d>8.[\( c'32 b] <e, c' e>8 | <b g' b>4\>^\tRit <a f' a>8 |
   \af 4\! \af 4\p <e'='' e'>4.\) \fermata \bar "|."
 }
 {{ end }}
@@ -69,7 +69,7 @@
 
   e,=,8\( a b | c b a | c[ e] dis16 e | c8 b a~\) | a+am!4 b8( |
   c=8 d dis | e4.~ | e) | c4\( e8 | a, g f' | e a, c | d e f |
-  g,=,4 a8 | b d f | e4.\) | c4\( e8 | a, b c | b a c | d e f\) |
+  g,=,4 c8 | b d f | e4.\) | c4\( e8 | a, b c | b a c | d e f\) |
   g,=,4( a8 | b d f | e=4.) \fermata |
 }
 {{ end }}
