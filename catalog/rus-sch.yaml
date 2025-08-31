@@ -330,7 +330,7 @@ pieces:
   # FBBMS19N1981
   - { id: z0tt, tit: Ходил Ваня, sub: rusfs,
       arr: А. Лядов, src: FBBMS19N1981,
-      org: rus, sty: flk, gnr: sng, ton: cmj, frm: [vo2, in3], bss: [frb, jmp], lvl: ela }
+      org: rus, sty: flk, gnr: sng, ton: cmj, frm: vo2, bss: [frb, jmp], lvl: ela }
   - { id: jqtg, tit: Маленький рассказ,
       com: И. Лунин, src: FBBMS19N1981,
       org: rus, sty: cus, gnr: pie, ton: gmj, frm: mel, bss: [frb, vo2], lvl: ela }
@@ -368,10 +368,9 @@ pieces:
   - { id: kgx8, tit: Пастушок,
       com: Д. Кабалевский, src: FBBMS23T1982,
       org: rus, sty: cus, gnr: chd, ton: dmj, frm: dot, bss: [frb, in5], lvl: ela }
-  # p. 21
-  # - { id: fr7h, tit: Песня,
-  #     com: В. Ефимов, src: FBBMS23T1982,
-  #     org: rus, sty: cus, gnr: pie, ton: dmi, frm: vo2, bss: [frb, vo2], lvl: elb }
+  - { id: fr7h, tit: Песня,
+      com: В. Ефимов, src: FBBMS23T1982,
+      org: rus, sty: cus, gnr: pie, ton: dmi, frm: vo2, bss: [frb, vo2], lvl: elb }
   # FBBMS24N1983
   # p. 11
   # - { id: ogav, tit: Пионерская полька,
