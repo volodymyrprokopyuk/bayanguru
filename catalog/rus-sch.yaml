@@ -372,7 +372,6 @@ pieces:
       com: В. Ефимов, src: FBBMS23T1982,
       org: rus, sty: cus, gnr: pie, ton: dmi, frm: vo2, bss: [frb, vo2], lvl: elb }
   # FBBMS24N1983
-  # p. 11
-  # - { id: ogav, tit: Пионерская полька,
-  #     com: В. Накапкин, src: FBBMS24N1983,
-  #     org: rus, sty: cus, gnr: plk, ton: [besmj, gmi], frm: [in3, acc], bss: stb, lvl: elb }
+  - { id: ogav, tit: Пионерская полька,
+      com: В. Накапкин, src: FBBMS24N1983,
+      org: rus, sty: cus, gnr: plk, ton: [besmj, gmi], frm: [in3, acc], bss: stb, lvl: elb }
