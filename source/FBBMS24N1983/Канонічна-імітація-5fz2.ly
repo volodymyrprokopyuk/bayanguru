@@ -27,9 +27,9 @@
   \clef bass
   \key c \minor
   \meter 1/4 1,2
-  g=2.~-\frBass | g8 g g( ees' d c) | bes16( g) ees'( d) c4( bes8) a |
-  g=8 g c16( g) ees'( c) c4~ | c d16( c bes aes) g8[( f'] |
+  g=2.~-\frBass | g8 g g( ees' d c) | b16( g) ees'( d) c4( bes8) aes |
+  g=8 g c16( g) ees'( d) c4~ | c d16( c bes aes) g8[( f'] |
   ees='8 c) bes[( c16 d]) ees8.( d16 | c4) d16( c bes aes) g8[( f'] |
-  ees='8 d) c4( bes8 aes) | ees'( d) c='2 \fermata |
+  ees='8 d) c4( bes8 aes) | ees'( d) g,=2 \fermata |
 }
 {{ end }}
