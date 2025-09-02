@@ -43,6 +43,9 @@ pieces:
   - { id: 72ct, tit: "Ой за гаєм, гаєм", sub: ukrfs,
       arr: Ю. Щуровський, src: OZGGP1993,
       org: ukr, sty: flk, gnr: sng, ton: gmj, frm: mel, bss: frb, lvl: elb }
+  - { id: ntxe, tit: "Іванчику-бідоланчику", sub: ukrfs, # badlyr
+      arr: Є. Льонок, src: OZGGP1993,
+      org: ukr, sty: flk, gnr: sng, ton: gmi, frm: in3, bss: [frb, jmp], lvl: elb }
   - { id: zp94, tit: "Іди, іди, дощику", sub: ukrfs,
       arr: В. Гончаренко, src: OZGGP1993,
       org: ukr, sty: flk, gnr: chd, ton: fmj, frm: [vo2, cr5, rep], bss: [frb, vo2], lvl: elb }

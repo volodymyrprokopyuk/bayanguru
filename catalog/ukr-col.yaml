@@ -28,7 +28,3 @@ pieces:
   # - { id: hf2g, tit: "Ой гай, мати, гай зелененький", sub: ukrfs,
   #     arr: М. Лисенко, src: UFSFBR1978,
   #     org: ukr, sty: flk, gnr: sng, ton: dmi, frm: [vo2, in3, in8, cr5], bss: pub, lvl: elc }
-  # OZGGP1993
-  - { id: ntxe, tit: "Іванчику-бідоланчику", sub: ukrfs, # badlyr
-      arr: Є. Льонок, src: OZGGP1993,
-      org: ukr, sty: flk, gnr: sng, ton: gmi, frm: in3, bss: [frb, jmp], lvl: elb }
