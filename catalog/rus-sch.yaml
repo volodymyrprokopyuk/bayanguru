@@ -375,3 +375,7 @@ pieces:
   - { id: ogav, tit: Пионерская полька,
       com: В. Накапкин, src: FBBMS24N1983,
       org: rus, sty: cus, gnr: plk, ton: [besmj, gmi], frm: [in3, acc], bss: stb, lvl: elb }
+  # p. 25
+  # - { id: ahho, tit: Веселая полька,
+  #     com: В. Накапкин, src: FBBMS24N1983,
+  #     org: rus, sty: cus, gnr: plk, ton: [besmj, gmi], frm: [in3, acc], bss: stb, lvl: elb }

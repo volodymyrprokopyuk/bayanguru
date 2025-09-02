@@ -183,7 +183,6 @@ pieces:
   - { id: 5fz2, tit: Канонічна імітація,
       com: Є. Юцевич, src: FBBMS24N1983,
       org: ukr, sty: cus, gnr: can, ton: cmi, frm: mel, bss: frb, lvl: elb }
-  # p. 5
-  # - { id: s7ml, tit: "Маленька п'єса",
-  #     com: І. Назаренко, src: FBBMS24N1983,
-  #     org: ukr, sty: cus, gnr: pie, ton: ami, frm: mel, bss: frb, lvl: ela }
+  - { id: s7ml, tit: "Маленька п'єса",
+      com: І. Назаренко, src: FBBMS24N1983,
+      org: ukr, sty: cus, gnr: pie, ton: ami, frm: mel, bss: frb, lvl: ela }
