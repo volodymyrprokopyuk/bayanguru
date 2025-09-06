@@ -102,7 +102,7 @@ pieces:
   - { id: i8pf, tit: "Люблю, мати, Петруся", sub: ukrfs,
       arr: В. Грачев, src: FBBMS6N1975,
       org: ukr, sty: flk, gnr: sng, ton: gmj, frm: [in3, dot], bss: frb, lvl: elb }
-  - { id: mcz2, tit: "Жито, мати, жито", sub: ukrfs,
+  - { id: mcz2, tit: "Жито, мати, жито", sub: ukrfs, # nolyr
       arr: В. Накапкин, src: FBBMS6N1975,
       org: ukr, sty: flk, gnr: sng, ton: ami, frm: [vo2, syn, acc], bss: [frb, cr5, syn], lvl: elb }
   # FBBMS7PT1975
@@ -186,3 +186,7 @@ pieces:
   - { id: s7ml, tit: "Маленька п'єса",
       com: І. Назаренко, src: FBBMS24N1983,
       org: ukr, sty: cus, gnr: pie, ton: ami, frm: mel, bss: frb, lvl: ela }
+  # FBBMS25P1983
+  - { id: 2ywt, tit: Ой захадить сонечко, sub: ukrfs, # nolyr
+      arr: В. Ефимов, src: FBBMS25P1983,
+      org: ukr, sty: flk, gnr: sng, ton: dmi, frm: [vo2, cr5], bss: frb, lvl: elb }
