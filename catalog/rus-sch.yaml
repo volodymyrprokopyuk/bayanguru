@@ -379,10 +379,9 @@ pieces:
       com: В. Накапкин, src: FBBMS24N1983,
       org: rus, sty: cus, gnr: plk, ton: [besmj, gmi], frm: [in3, acc], bss: stb, lvl: elb }
   # FBBMS25P1983
-  # p. 6
-  # - { id: rtp9, tit: "Как у нас-то козел", sub: rusfs,
-  #     arr: В. Платонов, src: FBBMS25P1983,
-  #     org: rus, sty: flk, gnr: sng, ton: fmj, frm: cr5, bss: [frb, syn], lvl: elb }
+  - { id: rtp9, tit: "Как у нас-то козел", sub: rusfs,
+      arr: В. Платонов, src: FBBMS25P1983,
+      org: rus, sty: flk, gnr: sng, ton: fmj, frm: cr5, bss: [frb, syn], lvl: elb }
   # p. 9
   # - { id: fhff, tit: "Полно, полно вам, ребята", sub: rusfs,
   #     arr: В. Платонов, src: FBBMS25P1983,
@@ -391,3 +390,7 @@ pieces:
   # - { id: 61ms, tit: "Ой не вечор, то ли не вечор", sub: rusfs,
   #     arr: Ю. Слонов, src: FBBMS25P1983,
   #     org: rus, sty: flk, gnr: sng, ton: cmi, frm: [vo2, in3], bss: frb, lvl: elb }
+  # p. 15
+  # - { id: oyl7, tit: "Из-за лесу", sub: rusfs,
+  #     arr: В. Ефимов, src: FBBMS25P1983,
+  #     org: rus, sty: flk, gnr: sng, ton: eesmj, frm: [vo2, in3], bss: frb, lvl: elb }
