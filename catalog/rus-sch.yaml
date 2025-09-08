@@ -382,10 +382,9 @@ pieces:
   - { id: rtp9, tit: "Как у нас-то козел", sub: rusfs,
       arr: В. Платонов, src: FBBMS25P1983,
       org: rus, sty: flk, gnr: sng, ton: fmj, frm: cr5, bss: [frb, syn], lvl: elb }
-  # p. 9
-  # - { id: fhff, tit: "Полно, полно вам, ребята", sub: rusfs,
-  #     arr: В. Платонов, src: FBBMS25P1983,
-  #     org: rus, sty: flk, gnr: sng, ton: ami, frm: vo2, bss: frb, lvl: elb }
+  - { id: fhff, tit: "Полно, полно вам, ребята", sub: rusfs,
+      arr: В. Платонов, src: FBBMS25P1983,
+      org: rus, sty: flk, gnr: sng, ton: ami, frm: vo2, bss: frb, lvl: elb }
   # p. 11
   # - { id: 61ms, tit: "Ой не вечор, то ли не вечор", sub: rusfs,
   #     arr: Ю. Слонов, src: FBBMS25P1983,
