@@ -22,5 +22,9 @@
 \relative {
   \clef treble
   \key a \minor
+  R1 | R1 | r4 d'='2( f4 | e d c b=) \clef bass |
+  r4 c='4( g2) | r4 c( f,2) | c'4( e, b' e, | a e d) g |
+  a=2( a8 g f e | g4. f8 e4 c) | r a'( c b8 a | g4. f8 e4 d) |
+  r4 e=4( d c8 d) | e4( e b c8 d) | e4( e g g | a2) a,=,4-> \fermata r |
 }
 {{ end }}
