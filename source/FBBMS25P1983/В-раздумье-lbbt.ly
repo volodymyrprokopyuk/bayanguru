@@ -22,7 +22,7 @@
 \relative {
   \clef bass
   \key e \minor
-  r2 \duo { b=2~ \l b= | } { dis=2( \l e=) | }
+  r2 \duo { b=2~ \l b= | } { dis=2(-\frBass \l e=) | }
   \rep 2 { {{ template "lh1" }} } {{ template "lh2" }}
   {{ template "lh1" }} {{ template "lh2" }}
 }

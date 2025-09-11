@@ -2,7 +2,7 @@
 \relative {
   \tempo Largo
   \clef treble
-  \key aes \major
+  \key f \minor
   \time 4/4
   bes'='4.(\mp c8 aes g f4) | ees4(\< f8 g aes4 \af 4\! des='') |
   \duo {
@@ -22,7 +22,7 @@
 {{ define "leftHand" }}
 \relative {
   \clef treble
-  \key aes \major
+  \key f \minor
   R1 | ees'='4(-\frBass des c8 f4 e8 | ees8 aes g4) aes8( f ees des |
   c='2) des4( ees~ | ees c des8 bes des='4) \clef bass | c=' aes g2 |
   bes=4( aes g2) | aes8( g f ees) aes( f) ees16( des c bes) |
