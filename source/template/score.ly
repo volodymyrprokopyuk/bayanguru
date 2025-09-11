@@ -63,6 +63,8 @@ sRep = #(define-music-function (a b) (markup? markup?)
 )
 
 % Bars
+l = \bar "|" % \compoundMeter
+
 barFermata = \mark \markup \musicglyph #"scripts.ufermata"
 \defineBarLine "!!" #'("!!" "!!" "!!")
 
