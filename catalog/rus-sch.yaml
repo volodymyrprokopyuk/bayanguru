@@ -391,7 +391,6 @@ pieces:
   - { id: oyl7, tit: "Из-за лесу", sub: rusfs,
       arr: В. Ефимов, src: FBBMS25P1983,
       org: rus, sty: flk, gnr: sng, ton: eesmj, frm: [vo2, in3], bss: frb, lvl: elb }
-  # p. 21
-  # - { id: lbbt, tit: В раздумье, sub: rusfs,
-  #     arr: В. Грачев, src: FBBMS25P1983,
-  #     org: rus, sty: cus, gnr: pie, ton: emi, frm: mel, bss: [frb, vo2, in3, in7], lvl: elb }
+  - { id: lbbt, tit: В раздумье, sub: rusfs,
+      arr: В. Грачев, src: FBBMS25P1983,
+      org: rus, sty: cus, gnr: pie, ton: emi, frm: mel, bss: [frb, vo2, in3, in7], lvl: elb }
