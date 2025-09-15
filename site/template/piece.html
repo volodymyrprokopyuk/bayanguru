@@ -17,6 +17,18 @@
         Downlaod | Заватнажити
         <a href="{{ .URL }}">{{ .Tit }} {{ .Com }} {{ .UkrArt }}{{ .Arr }}</a>
       </p>
+      <div data-nosnippet>
+        <p class="text-red-700">If you find this content useful, please
+          <strong>share this page or this site</strong> on social networks and
+          relevant forums in order to help growing our community. Thank you for
+          your support!
+        </p>
+        <p class="mt-2 text-red-700">Якщо вам корисний цей контент, будь-ласка
+          <strong>поширте цю сторінку або цей сайт</strong> в соціальних мережах та
+          тематичних форумах, щоб допомогти розширити нашу спільноту. Дякую за
+          вашу підтримку!
+        </p>
+      </div>
       <div data-nosnippet class="hidden">
         <div data-pagefind-meta="id">{{ .ID }}</div>
         <div data-pagefind-meta="com">{{ .Com }}</div>
@@ -38,11 +50,13 @@
   {{ end }}
   <div data-nosnippet>
     <p class="text-red-700">Note: the <strong>Firefox web brower</strong> is
-    recommended on mobile devices to directly preview a piece PDF. Other browsers
-    on mobile devices may lack native support for direct PDF preview</p>
+      recommended on mobile devices to directly preview a piece PDF. Other browsers
+      on mobile devices may lack native support for direct PDF preview
+    </p>
     <p class="mt-2 text-red-700">Примітка: для корректної візуалізації PDF п'єси
-    на мобільних пристроях рекомендується <strong>Firefox веб браузер</strong>.
-    Інші веб браузери для мобільних пристроїв можуть не підтримувати
-    безпосередньої візуалізації PDF</p>
+      на мобільних пристроях рекомендується <strong>Firefox веб браузер</strong>.
+      Інші веб браузери для мобільних пристроїв можуть не підтримувати
+      безпосередньої візуалізації PDF
+    </p>
   </div>
 {{ end }}
