@@ -190,7 +190,6 @@ pieces:
   - { id: 2ywt, tit: Ой захадить сонечко, sub: ukrfs, # nolyr
       arr: В. Ефимов, src: FBBMS25P1983,
       org: ukr, sty: flk, gnr: sng, ton: dmi, frm: [vo2, cr5], bss: frb, lvl: elb }
-  # p. 27
-  # - { id: xppc, tit: Гречаники, sub: ukrfs,
-  #     arr: В. Платонов, src: FBBMS25P1983,
-  #     org: ukr, sty: flk, gnr: sng, ton: fmj, frm: [vo2, cr5], bss: frb, lvl: elb }
+  - { id: xppc, tit: Гречаники, sub: ukrfs,
+      arr: В. Платонов, src: FBBMS25P1983,
+      org: ukr, sty: flk, gnr: sng, ton: fmj, frm: [vo2, cr5], bss: frb, lvl: elb }

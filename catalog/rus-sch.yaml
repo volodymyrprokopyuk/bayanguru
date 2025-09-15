@@ -394,3 +394,16 @@ pieces:
   - { id: lbbt, tit: В раздумье,
       com: В. Грачев, src: FBBMS25P1983,
       org: rus, sty: cus, gnr: pie, ton: emi, frm: mel, bss: [frb, vo2, in3, in7], lvl: elb }
+  # FBBMS26N1983
+  # p. 10
+  # - { id: nsza, tit: Как на лен, sub: rusfs,
+  #     com: І. Назаренко, src: FBBMS26N1983,
+  #     org: rus, sty: flk, gnr: sng, ton: gmi, frm: [in5, cr5], bss: frb, lvl: elb }
+  # p. 11
+  # - { id: j2f3, tit: "Ой ты, утка, утица", sub: rusfs,
+  #     com: В. Грачев, src: FBBMS26N1983,
+  #     org: rus, sty: flk, gnr: sng, ton: cmj, frm: var, bss: [frb, in3, syn], lvl: elb }
+  # p. 14
+  # - { id: rog0, tit: Русская песня, sub: rusfs,
+  #     com: В. Егоров, src: FBBMS26N1983,
+  #     org: rus, sty: cus, gnr: sng, ton: bmi, frm: in3, bss: [frb, cr5, cr7], lvl: elb }
