@@ -399,7 +399,7 @@ pieces:
       arr: І. Назаренко, src: FBBMS26N1983,
       org: rus, sty: flk, gnr: sng, ton: gmi, frm: [in5, cr5], bss: frb, lvl: elb }
   - { id: j2f3, tit: "Ой ты, утка, утица", sub: rusfs,
-      com: В. Грачев, src: FBBMS26N1983,
+      arr: В. Грачев, src: FBBMS26N1983,
       org: rus, sty: flk, gnr: sng, ton: cmj, frm: var, bss: [frb, in3, syn], lvl: elb }
   # p. 14
   # - { id: rog0, tit: Русская песня,

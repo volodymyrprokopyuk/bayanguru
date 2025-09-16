@@ -32,6 +32,6 @@
   \key g \minor
   R2 | R2 | g'='4(-\frBass f | e ees) | d( a | bes c) | <des f> <ces ees> |
   <g= c e>4 <g= bes d> \clef bass | \rep 2 { g=8( g d' g, | bes a16 bes g=4) | }
-  {{ template "lh1" (w `g=4)`) }} {{ template "lh1" (w `g=4~`) }} | <g= bes>2) |
+  {{ template "lh1" (w `g=4)`) }} {{ template "lh1" (w `g=4~`) }} | g=2) |
 }
 {{ end }}
