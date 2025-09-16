@@ -404,6 +404,10 @@ pieces:
   #     com: В. Грачев, src: FBBMS26N1983,
   #     org: rus, sty: flk, gnr: sng, ton: cmj, frm: var, bss: [frb, in3, syn], lvl: elb }
   # p. 14
-  # - { id: rog0, tit: Русская песня, sub: rusfs,
+  # - { id: rog0, tit: Русская песня,
   #     com: В. Егоров, src: FBBMS26N1983,
   #     org: rus, sty: cus, gnr: sng, ton: bmi, frm: in3, bss: [frb, cr5, cr7], lvl: elb }
+  # p. 28
+  # - { id: rog0, tit: Русский танец,
+  #     com: В. Стародубровский, src: FBBMS26N1983,
+  #     org: rus, sty: cus, gnr: dnc, ton: ami, frm: [vo2, var, cr5], bss: [stb, frb, vo2, var], lvl: elc }
