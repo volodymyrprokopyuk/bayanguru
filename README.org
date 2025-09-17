@@ -27,7 +27,8 @@ yay -S caddy
 caddy run --config site/Caddyfile
 # Deploy the website to Cloudflare Pages with wrangler
 bun install wrangler
-bunx wrangler pages deploy site/public --project-name bayanguru --branch main
+bunx wrangler pages deploy site/public --project-name bayanguru --branch main \
+  --skip-caching
 #+END_SRC
 
 ** Usage
