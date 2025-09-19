@@ -24,7 +24,6 @@ pieces:
   - { id: 9nxg, tit: Ой наступала та чорна хмара, sub: ukrfs,
       arr: М. Лисенко, src: UFSFBR1978,
       org: ukr, sty: flk, gnr: sng, ton: ami, frm: [in3, in8, cr5], bss: pub, lvl: elc }
-  # p. 9
-  # - { id: hf2g, tit: "Ой гай, мати, гай зелененький", sub: ukrfs,
-  #     arr: М. Лисенко, src: UFSFBR1978,
-  #     org: ukr, sty: flk, gnr: sng, ton: dmi, frm: [vo2, in3, in8, cr5], bss: pub, lvl: elc }
+  - { id: hf2g, tit: "Ой гай, мати, гай зелененький", sub: ukrfs,
+      arr: М. Лисенко, src: UFSFBR1978,
+      org: ukr, sty: flk, gnr: sng, ton: dmi, frm: [vo2, in3, in8, cr5], bss: pub, lvl: elc }
