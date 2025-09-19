@@ -411,7 +411,6 @@ pieces:
   - { id: cbxf, tit: Сказка,
       com: П. Лондонов, src: FBBMS27N1984,
       org: rus, sty: cus, gnr: pie, ton: ami, frm: mel, bss: [frb, in3, in5], lvl: elb }
-  # p. 11
-  # - { id: fbmj, tit: Весеннее настроение,
-  #     com: Н. Мясковский, src: FBBMS27N1984,
-  #     org: rus, sty: cus, gnr: pie, ton: fmj, frm: mel, bss: [frb, in5], lvl: elb }
+  - { id: fbmj, tit: Весеннее настроение,
+      com: Н. Мясковский, src: FBBMS27N1984,
+      org: rus, sty: cus, gnr: pie, ton: fmj, frm: mel, bss: [frb, in5], lvl: elb }
