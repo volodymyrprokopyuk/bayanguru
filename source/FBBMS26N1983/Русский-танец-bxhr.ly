@@ -110,6 +110,6 @@
 
   d,=8 dm! g, gM! | c cM! e c@M | f8 fM! f fM | c cM! c cd! | c cM! b=, e@M! |
 
-  a=,8 am b d@m! | c8 a@m! d8 dm! | e a@m! e8 b@d! | a,8 f e' d | r b a=,4 |
+  a=,8 am! b d@m! | c8 a@m! d8 dm! | e a@m! e8 b@d! | a,8 f e' d | r b a=,4 |
 }
 {{ end }}

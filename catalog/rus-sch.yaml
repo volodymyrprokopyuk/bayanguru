@@ -414,3 +414,8 @@ pieces:
   - { id: fbmj, tit: Весеннее настроение,
       com: Н. Мясковский, src: FBBMS27N1984,
       org: rus, sty: cus, gnr: pie, ton: fmj, frm: mel, bss: [frb, in5], lvl: elb }
+  # FBBMS28P1984
+  # p. 3
+  # - { id: qezj, tit: В полдень,
+  #     com: Г. Фрид, src: FBBMS27N1984,
+  #     org: rus, sty: cus, gnr: pie, ton: cmj, frm: [vo2, cr5], bss: [frb, cr5, rep], lvl: elc }
