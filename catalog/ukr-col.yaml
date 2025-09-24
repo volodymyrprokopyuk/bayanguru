@@ -27,3 +27,7 @@ pieces:
   - { id: hf2g, tit: "Ой гай, мати, гай зелененький", sub: ukrfs,
       arr: М. Лисенко, src: UFSFBR1978,
       org: ukr, sty: flk, gnr: sng, ton: dmi, frm: [vo2, in3, in8, cr5], bss: pub, lvl: elc }
+  # p. 10
+  # - { id: 238r, tit: Їхав козак на війноньку, sub: ukrfs,
+  #     arr: М. Різоль, src: UFSFBR1978,
+  #     org: ukr, sty: flk, gnr: sng, ton: gmi, frm: [vo2, var, in3, in8, cr5], bss: stb, lvl: elb }

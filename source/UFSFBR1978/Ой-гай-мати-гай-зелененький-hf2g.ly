@@ -48,5 +48,15 @@
 \relative {
   \clef bass
   \key d \minor
+  \meter 1/4 1,2
+  R2. | a,=,8-\puBass a d4~ d8 r | R2. | a8 a d4 d | g,8( d' g,4. g8 |
+  a=,8 a a8. g16 f4) | bes8( d g,4. g8 | a=,2.) \fermata |
+
+  R2. | a=,8 a d4~ d8 r | R2. | a8( cis d2) | bes16( a g fis g8 bes c g |
+  a=,8 a a8. g16 f4) | bes16( a g fis g4. g8 | a=,2.) |
+
+  a=,8-> a-> a-> f'-> e-> d-> | cis-> a-> d4( e8 d) | a( cis d2 | cis8 a d2) |
+  bes=,8-. a-. g4( f8)-. e-. | a-. g-. a4( f) | bes8-. f-. g4. g8( |
+  a=,2.) \fermata |
 }
 {{ end }}
