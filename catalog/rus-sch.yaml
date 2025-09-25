@@ -415,10 +415,9 @@ pieces:
       com: Н. Мясковский, src: FBBMS27N1984,
       org: rus, sty: cus, gnr: pie, ton: fmj, frm: mel, bss: [frb, in5], lvl: elb }
   # FBBMS28P1984
-  # p. 3
-  # - { id: qezj, tit: В полдень,
-  #     com: Г. Фрид, arr: В. Платонов , art: ipr, src: FBBMS28P1984,
-  #     org: rus, sty: cus, gnr: pie, ton: cmj, frm: [vo2, cr5], bss: [frb, cr5, rep], lvl: elc }
+  - { id: qezj, tit: В полдень,
+      com: Г. Фрид, arr: В. Платонов , art: ipr, src: FBBMS28P1984,
+      org: rus, sty: cus, gnr: pie, ton: cmj, frm: [vo2, cr5], bss: [frb, cr5, rep], lvl: elc }
   # p. 6
   # - { id: nlwa, tit: Родные дали,
   #     com: В. Ефимов, src: FBBMS28P1984,
