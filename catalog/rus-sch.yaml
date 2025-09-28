@@ -421,10 +421,9 @@ pieces:
   - { id: nlwa, tit: Родные дали,
       com: В. Ефимов, src: FBBMS28P1984,
       org: rus, sty: cus, gnr: pie, ton: dmi, frm: [vo2, in3, in6, cr5], bss: frb, lvl: elb }
-  # p. 7
-  # - { id: 0s2x, tit: Соловьем залетным,
-  #     com: И. Ильин, arr: В. Платонов, art: ipr, src: FBBMS28P1984,
-  #     org: rus, sty: cus, gnr: can, ton: gmi, frm: [vo2, in3, cr5], bss: [frb, in3, cr5], lvl: elc }
+  - { id: 0s2x, tit: Соловьем залетным,
+      com: И. Ильин, arr: В. Платонов, art: ipr, src: FBBMS28P1984,
+      org: rus, sty: cus, gnr: can, ton: gmi, frm: [vo2, in3, cr5], bss: [frb, in3, cr5], lvl: elc }
   # p. 33
   # - { id: i8gz, tit: Шла тропинка, sub: rusfs,
   #     arr: В. Ефимов, src: FBBMS28P1984,
