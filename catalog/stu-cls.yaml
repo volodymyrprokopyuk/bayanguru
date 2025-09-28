@@ -376,7 +376,7 @@ pieces:
   # FBB3BZ1982
   - { id: iwqa, tit: Етюд A minor,
       com: А. Зубарев, src: FBB3BZ1982,
-      org: rus, sty: cus, gnr: stu, ton: ami, frm: scl, bss: [frb, scl], lvl: ela }
+      org: rus, sty: cus, gnr: stu, ton: ami, frm: [vo2, scl], bss: [frb, scl], lvl: ela }
   - { id: 6ky7, tit: Етюд C major,
       com: С. Чапкій, src: FBB3BZ1982,
       org: ukr, sty: cus, gnr: stu, ton: cmj, frm: [scl, in3, cr5], bss: [frb, cr5], lvl: elb }

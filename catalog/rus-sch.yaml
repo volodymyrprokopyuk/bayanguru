@@ -416,13 +416,16 @@ pieces:
       org: rus, sty: cus, gnr: pie, ton: fmj, frm: mel, bss: [frb, in5], lvl: elb }
   # FBBMS28P1984
   - { id: qezj, tit: В полдень,
-      com: Г. Фрид, arr: В. Платонов , art: ipr, src: FBBMS28P1984,
+      com: Г. Фрид, arr: В. Платонов, art: ipr, src: FBBMS28P1984,
       org: rus, sty: cus, gnr: pie, ton: cmj, frm: [vo2, cr5], bss: [frb, cr5, rep], lvl: elc }
-  # p. 6
-  # - { id: nlwa, tit: Родные дали,
-  #     com: В. Ефимов, src: FBBMS28P1984,
-  #     org: rus, sty: cus, gnr: pie, ton: dmi, frm: [vo2, in3, in6, cr5], bss: frb, lvl: elb }
+  - { id: nlwa, tit: Родные дали,
+      com: В. Ефимов, src: FBBMS28P1984,
+      org: rus, sty: cus, gnr: pie, ton: dmi, frm: [vo2, in3, in6, cr5], bss: frb, lvl: elb }
   # p. 7
   # - { id: 0s2x, tit: Соловьем залетным,
-  #     com: И. Ильин, src: FBBMS28P1984,
+  #     com: И. Ильин, arr: В. Платонов, art: ipr, src: FBBMS28P1984,
   #     org: rus, sty: cus, gnr: can, ton: gmi, frm: [vo2, in3, cr5], bss: [frb, in3, cr5], lvl: elc }
+  # p. 33
+  # - { id: i8gz, tit: Шла тропинка, sub: rusfs,
+  #     arr: В. Ефимов, src: FBBMS28P1984,
+  #     org: rus, sty: flk, gnr: sng, ton: fmj, frm: [vo2, var, in3, cr5, syn], bss: frb, lvl: elb }
