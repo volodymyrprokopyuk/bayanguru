@@ -424,7 +424,6 @@ pieces:
   - { id: 0s2x, tit: Соловьем залетным,
       com: И. Ильин, arr: В. Платонов, art: ipr, src: FBBMS28P1984,
       org: rus, sty: cus, gnr: can, ton: gmi, frm: [vo2, in3, cr5], bss: [frb, in3, cr5], lvl: elc }
-  # p. 33
-  # - { id: i8gz, tit: Шла тропинка, sub: rusfs,
-  #     arr: В. Ефимов, src: FBBMS28P1984,
-  #     org: rus, sty: flk, gnr: sng, ton: fmj, frm: [vo2, var, in3, cr5, syn], bss: frb, lvl: elb }
+  - { id: i8gz, tit: Шла тропинка, sub: rusfs,
+      arr: В. Ефимов, src: FBBMS28P1984,
+      org: rus, sty: flk, gnr: sng, ton: fmj, frm: [vo2, var, in3, cr5, syn], bss: frb, lvl: elb }
