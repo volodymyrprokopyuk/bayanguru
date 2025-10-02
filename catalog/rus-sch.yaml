@@ -287,7 +287,7 @@ pieces:
       org: rus, sty: cus, gnr: dnc, ton: cmj, frm: [in3, cr5], bss: [frb, in3, cr5], lvl: elb }
   - { id: 4rko, tit: Перевейся хмелек, sub: rusfs,
       arr: В. Ефимов, src: FBBMS14N1979,
-      org: rus, sty: flk, gnr: sng, ton: eesmj, frm: cr5, bss: frb, lvl: elb }
+      org: rus, sty: flk, gnr: sng, ton: eesmj, frm: cr5, bss: [frb, var], lvl: elb }
   # FBBMS15P1979
   - { id: 6v25, tit: Хороводная, sub: rusfs,
       arr: А. Николаев, src: FBBMS15P1979,
