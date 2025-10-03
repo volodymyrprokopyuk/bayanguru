@@ -68,10 +68,9 @@ pieces:
       arr: В. Платонов, src: FBBMS17P1980,
       org: blr, sty: flk, gnr: sng, ton: gmj, frm: vo2, bss: [frb, vo2, in5], lvl: elb }
   # FBBMS28P1984
-  # p. 34
-  # - { id: halr, tit: Маленький соловейку, sub: blrfs,
-  #     arr: Н. Чуркин, src: FBBMS28P1984,
-  #     org: blr, sty: flk, gnr: sng, ton: gmi, frm: [vo2, in6], bss: frb, lvl: elb }
+  - { id: halr, tit: Маленький соловейку, sub: blrfs,
+      arr: Н. Чуркин, src: FBBMS28P1984,
+      org: blr, sty: flk, gnr: sng, ton: gmi, frm: [vo2, in6], bss: frb, lvl: elb }
   # p. 34
   # - { id: halr, tit: Маленький соловейку, sub: blrfs,
   #     arr: В. Платонов, src: FBBMS28P1984,
