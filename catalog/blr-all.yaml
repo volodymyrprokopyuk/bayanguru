@@ -71,7 +71,6 @@ pieces:
   - { id: halr, tit: Маленький соловейку, sub: blrfs,
       arr: Н. Чуркин, src: FBBMS28P1984,
       org: blr, sty: flk, gnr: sng, ton: gmi, frm: [vo2, in6], bss: frb, lvl: elc }
-  # p. 34
-  # - { id: halr, tit: Маленький соловейку, sub: blrfs,
-  #     arr: В. Платонов, src: FBBMS28P1984,
-  #     org: blr, sty: flk, gnr: sng, ton: gmj, frm: [vo2, var], bss: [frb, vo2, in5], lvl: elb }
+  - { id: lsv3, tit: Лявоніха, sub: blrfs,
+      arr: В. Платонов, src: FBBMS28P1984,
+      org: blr, sty: flk, gnr: sng, ton: gmj, frm: [vo2, var, dot], bss: [frb, in5, in6], lvl: elb }
