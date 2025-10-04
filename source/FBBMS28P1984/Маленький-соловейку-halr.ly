@@ -41,5 +41,14 @@
 \relative {
   \clef bass
   \key g \minor
+  \meter 1/2 #'(1)
+  bes=8(-\frBass g ees c | d2) | g8( f ees d | g, ees' g) r |
+  bes,=,8( d ees c | f2) | bes,8( c d ees | f ges bes) r |
+  g=2( | ges | f) | f,8( c' f) r | g2( | ges | c,8)-> d ees e | f=4 r |
+
+  bes=8( d ees c | d4 d,) | g8( f ees d | g, ees' g) r |
+  bes,=,8( d ees c | f2) | bes,8( c d ees | f ges f) r |
+  <f= a>8 r r4 | \duo { bes,=,4( a=,8) } { f,=,4. } r8 |
+  <f= c' ees>4. <f a ees'>8 \fermata | bes,( f' bes=) r |
 }
 {{ end }}
