@@ -373,7 +373,7 @@ pieces:
       org: ukr, sty: flk, gnr: sng, ton: dmi, frm: mel, bss: frb, lvl: ela }
   - { id: jclp, tit: "Віє вітер, віє буйний", sub: ukrfs,
       arr: И. Шестириков, src: FBB3BZ1982,
-      org: ukr, sty: flk, gnr: sng, ton: dmi, frm: dot, bss: frb, lvl: ela }
+      org: ukr, sty: flk, gnr: sng, ton: dmi, frm: vo2, bss: frb, lvl: ela }
   - { id: ekrs, tit: Аркан,
       arr: Л. Колодуб, src: FBB3BZ1982,
       org: ukr, sty: flk, gnr: dnc, ton: emi, frm: mel, bss: [frb, jmp], lvl: ela }

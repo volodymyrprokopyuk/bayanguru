@@ -1,5 +1,5 @@
 {{ define "rh1" }}
-  {{ .a }} d b d a d g, d' | fis, d' e, d' {{ .b }} |
+  {{ .a }} d b d a d g, d' | \stemDown fis, d' e, d' \stemNeutral {{ .b }} |
 {{ end }}
 
 {{ define "rh2" }}
