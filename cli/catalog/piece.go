@@ -208,7 +208,7 @@ var (
   reArt = regexp.MustCompile(`^arr|ipr|hrm$`)
   reLcs = regexp.MustCompile(`^cpl|cpr$`)
   reOrg = regexp.MustCompile(
-    `^ukr|rus|blr|hun|mda|pol|cze|svk|svn|lva|est|aut|deu|dnk|fra|swe$`,
+    `^ukr|rus|blr|hun|mda|pol|cze|svk|svn|lva|ltu|est|aut|deu|dnk|fra|swe$`,
   )
   reSty = regexp.MustCompile(`^flk|cus|cls$`)
   reGnr = regexp.MustCompile(

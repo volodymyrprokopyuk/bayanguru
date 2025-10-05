@@ -70,3 +70,8 @@ pieces:
   - { id: oon9, tit: Ковалі, sub: polfs,
       arr: В. Накапкин, src: FBBMS21N1982,
       org: pol, sty: flk, gnr: sng, ton: dmi, frm: [vo2, var], bss: [frb, vo2, in3], lvl: elb }
+  # FBBMS29P1985
+  # p. 18
+  # - { id: 7a5v, tit: Міша ведмідь, sub: Литовська народна пісня,
+  #     arr: В. Жигалов, src: FBBMS29P1985,
+  #     org: ltu, sty: flk, gnr: sng, ton: cmj, frm: in3, bss: frb, lvl: ela }

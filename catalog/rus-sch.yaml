@@ -427,3 +427,28 @@ pieces:
   - { id: i8gz, tit: Шла тропинка, sub: rusfs,
       arr: В. Ефимов, src: FBBMS28P1984,
       org: rus, sty: flk, gnr: sng, ton: fmj, frm: [vo2, var, in3, cr5, syn], bss: frb, lvl: elb }
+  # FBBMS29P1985
+  # p. 3
+  # - { id: pvsu, tit: Прогулка,
+  #     com: А. Абрамов, arr: В. Платонов, art: ipr, src: FBBMS29P1985,
+  #     org: rus, sty: cus, gnr: pie, ton: fmj, frm: mel, bss: frb, lvl: ela }
+  # p. 6
+  # - { id: npl2, tit: Ночка темная, sub: rusfs,
+  #     arr: С. Ляховицька, src: FBBMS29P1985,
+  #     org: rus, sty: flk, gnr: sng, ton: fmj, frm: mel, bss: frb, lvl: ela }
+  # p. 7
+  # - { id: k1cg, tit: Три садочка, sub: rusfs,
+  #     arr: В. Платонов, src: FBBMS29P1985,
+  #     org: rus, sty: flk, gnr: sng, ton: dmi, frm: in3, bss: frb, lvl: ela }
+  # p. 7
+  # - { id: 5mpb, tit: "Я пойду ли, молоденька", sub: rusfs,
+  #     arr: В. Платонов, art: ipr, src: FBBMS29P1985,
+  #     org: rus, sty: flk, gnr: sng, ton: dmi, frm: mel, bss: frb, lvl: ela }
+  # p. 11
+  # - { id: 47rv, tit: В разлуке,
+  #     com: В. Ефимов, src: FBBMS29P1985,
+  #     org: rus, sty: cus, gnr: pie, ton: cmi, frm: vo2, bss: frb, lvl: ela }
+  # p. 12
+  # - { id: dz9d, tit: Котик, sub: Дитяча пісенька,
+  #     arr: В. Жигалов, src: FBBMS29P1985,
+  #     org: rus, sty: cus, gnr: chd, ton: cmj, frm: mel, bss: [frb, in4, in5], lvl: elb }
