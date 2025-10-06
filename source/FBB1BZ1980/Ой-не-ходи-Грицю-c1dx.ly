@@ -11,8 +11,11 @@
   {{ template "rh1" (w `a'='4.\(\p`) }} | a2 a4\) r |
   {{ template "rh1" (w `a='4.\(`) }} | a2 \af 2\! <g=' b>\)\< |
 
-  <e=' c'>4.\(\mf g8 c4 e_~ | <e g>2 f8 e d c |
-  b='4 d \duo { g''=''4 a='' | } { b'='2 | } | e4 d c\> \af 4\! b\) |
+  \duo {
+    <e'=' c'>4.\(\mf g8 \stemDown c4 e_~ | <e g>2 f8 e d c |
+    b='4 d \stemUp g a \stemDown | e4 d c\> \af 4\! b='\) |
+  } { s1 | s1 | s2  b'='2 | s1 | }
+
   \duo { {{ template "rh1" (w `a'='4.\(\p`) }} | a2 a='\) \bar "|." }
   { s1 | s1 | s1 | r2 c'='2 | }
 }

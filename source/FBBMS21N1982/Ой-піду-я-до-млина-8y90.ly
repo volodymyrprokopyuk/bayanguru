@@ -31,7 +31,7 @@
   d@7!8[ r8 g@M!] r8 | b@7!8[ r8 b7] r | e@m![ r8 c@M!] r8 | b@7![ r8 b7] r |
   e@m![ r8 em] r | a,=,8 am! b b7! | e em! r em | c a@m! b8 b7! | e em! e=4 |
 
-  e'='4(-\frBass dis | d cis~ | cis8) b a fis | g a b e, |
+  e'='4(-\frBass dis | d cis | c8) b a fis | g a b e, |
   b'=8( a g fis | e fis g4) | fis8( g a4) |
   \duo { r8 <a= cis>8 <g= b>4 | } { e=2 | }
   \rep 2 { b=8 <dis=' fis> } | \rep 2 { b=8 <c=' e> } |
