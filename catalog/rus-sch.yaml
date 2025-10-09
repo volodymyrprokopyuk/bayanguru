@@ -241,7 +241,7 @@ pieces:
       org: rus, sty: flk, gnr: sng, ton: emi, frm: vo2, bss: [frb, vo2], lvl: elb }
   - { id: 6g7e, tit: "Ах реченьки, реченьки", sub: rusfs,
       arr: В. Накапкин, src: FBBMS10N1977,
-      org: rus, sty: flk, gnr: sng, ton: ami, frm: [var, jmp], bss: [stb, frb, syn], lvl: elb }
+      org: rus, sty: flk, gnr: sng, ton: ami, frm: [var, syn, jmp], bss: [stb, frb, syn], lvl: elb }
   # FBBMS11P1977
   - { id: dgcf, tit: Канон,
       arr: С. Майкапар, src: FBBMS11P1977,
@@ -428,10 +428,9 @@ pieces:
       arr: В. Ефимов, src: FBBMS28P1984,
       org: rus, sty: flk, gnr: sng, ton: fmj, frm: [vo2, var, in3, cr5, syn], bss: frb, lvl: elb }
   # FBBMS29P1985
-  # p. 3
-  # - { id: pvsu, tit: Прогулка,
-  #     com: А. Абрамов, arr: В. Платонов, art: ipr, src: FBBMS29P1985,
-  #     org: rus, sty: cus, gnr: pie, ton: fmj, frm: mel, bss: frb, lvl: ela }
+  - { id: pvsu, tit: Прогулка,
+      com: А. Абрамов, arr: В. Платонов, art: ipr, src: FBBMS29P1985,
+      org: rus, sty: cus, gnr: pie, ton: fmj, frm: mel, bss: frb, lvl: ela }
   # p. 6
   # - { id: npl2, tit: Ночка темная, sub: rusfs,
   #     arr: С. Ляховицька, src: FBBMS29P1985,

@@ -156,7 +156,7 @@ pieces:
       com: Ю. Щуровський, src: FBBMS17P1980,
       org: ukr, sty: flk, gnr: gop, ton: dmj, frm: [in3, cr5, syn], bss: [frb, in3, in4, in5, jmp], lvl: elb }
   - { id: 3suo, tit: Ой літає соколонько, sub: ukrfs,
-      com: І. Беркович, src: FBBMS17P1980,
+      arr: І. Беркович, src: FBBMS17P1980,
       org: ukr, sty: flk, gnr: sng, ton: emi, frm: [vo2, rep], bss: [frb, rep], lvl: elb }
   - { id: 7q6v, tit: Чорна гречка, sub: ukrfs,
       arr: В. Платонов, src: FBBMS17P1980,
