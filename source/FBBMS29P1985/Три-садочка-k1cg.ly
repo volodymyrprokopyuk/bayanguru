@@ -20,7 +20,7 @@
 \relative {
   \clef bass
   \key d \minor
-  \rep 3 { R2 | } | d'='4 c | bes a | g f | a8 c bes a |
+  \rep 3 { R2 | } | d'='4-\frBass c | bes a | g f | a8 c bes a |
   g=8 f e ees | d c f e | d c bes a | g e f4 | e d=, |
 }
 {{ end }}

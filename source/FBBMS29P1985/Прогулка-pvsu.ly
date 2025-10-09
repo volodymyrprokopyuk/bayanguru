@@ -17,7 +17,7 @@
 \relative {
   \clef treble
   \key f \major
-  f'='2( e) | f( c) | d( c) | d( c) | f( e) |
+  f'='2(-\frBass e) | f( c) | d( c) | d( c) | f( e) |
   f='2( c) | d4( bes c2) | bes4 c f,=2 |
 }
 {{ end }}
