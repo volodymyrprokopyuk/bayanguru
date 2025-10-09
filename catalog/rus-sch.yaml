@@ -440,10 +440,9 @@ pieces:
   - { id: 5mpb, tit: "Я пойду ли, молоденька", sub: rusfs,
       arr: В. Платонов, art: ipr, src: FBBMS29P1985,
       org: rus, sty: flk, gnr: sng, ton: bmi, frm: mel, bss: frb, lvl: ela }
-  # p. 11
-  # - { id: 47rv, tit: В разлуке,
-  #     com: В. Ефимов, src: FBBMS29P1985,
-  #     org: rus, sty: cus, gnr: pie, ton: cmi, frm: vo2, bss: frb, lvl: ela }
+  - { id: 47rv, tit: В разлуке,
+      com: В. Ефимов, src: FBBMS29P1985,
+      org: rus, sty: cus, gnr: pie, ton: cmi, frm: vo2, bss: frb, lvl: ela }
   # p. 12
   # - { id: dz9d, tit: Котик, sub: Дитяча пісенька,
   #     arr: В. Жигалов, src: FBBMS29P1985,
