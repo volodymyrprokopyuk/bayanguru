@@ -434,10 +434,9 @@ pieces:
   - { id: npl2, tit: Ночка темная, sub: rusfs,
       arr: С. Ляховицька, src: FBBMS29P1985,
       org: rus, sty: flk, gnr: sng, ton: emi, frm: mel, bss: frb, lvl: ela }
-  # p. 7
-  # - { id: k1cg, tit: Три садочка, sub: rusfs,
-  #     arr: В. Платонов, src: FBBMS29P1985,
-  #     org: rus, sty: flk, gnr: sng, ton: dmi, frm: in3, bss: frb, lvl: ela }
+  - { id: k1cg, tit: Три садочка, sub: rusfs,
+      arr: В. Платонов, src: FBBMS29P1985,
+      org: rus, sty: flk, gnr: sng, ton: dmi, frm: in3, bss: frb, lvl: ela }
   # p. 7
   # - { id: 5mpb, tit: "Я пойду ли, молоденька", sub: rusfs,
   #     arr: В. Платонов, art: ipr, src: FBBMS29P1985,
