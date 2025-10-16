@@ -65,7 +65,7 @@ pieces:
   # FBBMS20P1981
   - { id: rskf, tit: "Вийди, Марися", sub: polfs,
       arr: С. Стемпневський, src: FBBMS20P1981,
-      org: pol, sty: flk, gnr: sng, ton: cmj, frm: in6, bss: [frb, cr5, jmp], lvl: elb }
+      org: pol, sty: flk, gnr: sng, ton: cmj, frm: in6, bss: [frb, var, cr5, jmp], lvl: elc }
   # FBBMS21N1982
   - { id: oon9, tit: Ковалі, sub: polfs,
       arr: В. Накапкин, src: FBBMS21N1982,
