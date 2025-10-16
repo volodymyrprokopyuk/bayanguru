@@ -19,7 +19,7 @@
 \relative {
   \clef treble
   \key c \major
-  R2. | R2. | d''=''4 d e | c( g) g | a2( aes4 | g2.) | f( | e) |
+  R2. | R2. | d''=''4-\frBass d e | c( g) g | a2( aes4 | g2.) | f( | e) |
   c='8-> r r4 r | bes8-> r r4 r | a(-> aes g | c4.)-> r8 r4 |
   <a= e'>4-> r <a f'>8 r | <g c>4-> r <g= cis>8 r \clef bass |
   \duo { d'='4(-> a b | c='8) } { f=2.( | e=8) } r8 \clef treble <c=' g'>2-> |
