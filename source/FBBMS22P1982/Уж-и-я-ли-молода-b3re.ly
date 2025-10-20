@@ -27,6 +27,6 @@
 
   f=,4-\stBass fM! g a | bes besM! g gm! | c cm! f ees |
   d=4 bes@M! g,4 bes@M! | c4 cm! ees c@m! | d4 dm! g, g7! |
-  c=4 cm! f f7! | bes,=, ees@M! bes@M2 |
+  c=4 cm! f f7! | bes,=, ees@M! bes@M!2 |
 }
 {{ end }}

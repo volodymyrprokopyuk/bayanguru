@@ -357,7 +357,7 @@ pieces:
       org: rus, sty: cus, gnr: lul, ton: dmi, frm: dot, bss: [frb, dot], lvl: elb }
   - { id: b3re, tit: Уж и я ли молода, sub: rusfs,
       arr: В. Платонов, src: FBBMS22P1982,
-      org: rus, sty: flk, gnr: sng, ton: besmj, frm: [dot, var], bss: [frb, pub], lvl: ela }
+      org: rus, sty: flk, gnr: sng, ton: besmj, frm: [var, dot], bss: [frb, stb], lvl: ela }
   - { id: 1dyr, tit: Холсточек, sub: rusfs,
       arr: В. Платонов, src: FBBMS22P1982,
       org: rus, sty: flk, gnr: sng, ton: dmi, frm: var, bss: [frb, vo2], lvl: elb }
@@ -393,7 +393,7 @@ pieces:
       org: rus, sty: flk, gnr: sng, ton: fmi, frm: [vo2, in3], bss: frb, lvl: elb }
   - { id: lbbt, tit: В раздумье,
       com: В. Грачев, src: FBBMS25P1983,
-      org: rus, sty: cus, gnr: pie, ton: emi, frm: mel, bss: [frb, vo2, in3, in7], lvl: elb }
+      org: rus, sty: cus, gnr: pie, ton: emi, frm: mel, bss: [frb, in7], lvl: ela }
   # FBBMS26N1983
   - { id: nsza, tit: Как на лен, sub: rusfs,
       arr: І. Назаренко, src: FBBMS26N1983,
@@ -450,3 +450,16 @@ pieces:
   # - { id: nh8m, tit: Со венком я хожу, sub: rusfs,
   #     arr: В. Платонов, src: FBBMS29P1985,
   #     org: rus, sty: flk, gnr: sng, ton: dmj, frm: vo2, bss: [frb, syn], lvl: elb }
+  # FBBMS30N1985
+  # p. 9
+  # - { id: cqmh, tit: Сладкий сон,
+  #     arr: А. Шустов, src: FBBMS30N1985,
+  #     org: rus, sty: cus, gnr: pie, ton: fmj, frm: [vo2, cr5], bss: [frb, jmp], lvl: elb }
+  # p. 18
+  # - { id: 1fg8, tit: Грустный напев,
+  #     arr: В. Накапкин, src: FBBMS30N1985,
+  #     org: rus, sty: cus, gnr: pie, ton: gmi, frm: vo2, bss: [frb, vo2, in5], lvl: elb }
+  # p. 19
+  # - { id: pb3x, tit: Комариный танец,
+  #     arr: В. Накапкин, src: FBBMS30N1985,
+  #     org: rus, sty: cus, gnr: pie, ton: [dmj, fismi], frm: [var, acc], bss: [frb, in3], lvl: elc }
