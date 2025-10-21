@@ -5,6 +5,7 @@ bayanURL = "https://bayanguru.org"
 bayanLogo = \markup \serif \bold \concat {
   \magnify #0.75 \musicglyph "clefs.G"
   \magnify #1.45 { \rotate #30 Б \lower #0.35 а \raise #0.35 я \rotate #-30 Н }
+  \magnify #0.85 { \raise #0.75 \musicglyph "clefs.F" }
 }
 logoURL = \markup {
   \with-url \bayanURL \bayanLogo \fontsize #1 \with-url \bayanURL \bayanURL
