@@ -450,10 +450,9 @@ pieces:
       arr: В. Платонов, src: FBBMS29P1985,
       org: rus, sty: flk, gnr: sng, ton: dmj, frm: vo2, bss: [frb, syn], lvl: elb }
   # FBBMS30N1985
-  # p. 9
-  # - { id: cqmh, tit: Сладкий сон,
-  #     arr: А. Шустов, src: FBBMS30N1985,
-  #     org: rus, sty: cus, gnr: pie, ton: fmj, frm: [vo2, cr5], bss: [frb, jmp], lvl: elb }
+  - { id: cqmh, tit: Сладкий сон,
+      arr: А. Шустов, src: FBBMS30N1985,
+      org: rus, sty: cus, gnr: pie, ton: fmj, frm: [vo2, cr5], bss: [frb, jmp], lvl: elb }
   # p. 18
   # - { id: 1fg8, tit: Грустный напев,
   #     arr: В. Накапкин, src: FBBMS30N1985,
