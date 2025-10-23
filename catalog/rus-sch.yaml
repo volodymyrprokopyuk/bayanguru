@@ -446,10 +446,9 @@ pieces:
   - { id: dz9d, tit: Котик, sub: Дитяча пісенька,
       arr: В. Жигалов, src: FBBMS29P1985,
       org: rus, sty: cus, gnr: chd, ton: cmj, frm: mel, bss: [frb, in4, in5], lvl: elb }
-  # p. 23
-  # - { id: nh8m, tit: Со венком я хожу, sub: rusfs,
-  #     arr: В. Платонов, src: FBBMS29P1985,
-  #     org: rus, sty: flk, gnr: sng, ton: dmj, frm: vo2, bss: [frb, syn], lvl: elb }
+  - { id: nh8m, tit: Со венком я хожу, sub: rusfs,
+      arr: В. Платонов, src: FBBMS29P1985,
+      org: rus, sty: flk, gnr: sng, ton: dmj, frm: vo2, bss: [frb, syn], lvl: elb }
   # FBBMS30N1985
   # p. 9
   # - { id: cqmh, tit: Сладкий сон,
