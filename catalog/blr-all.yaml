@@ -75,7 +75,6 @@ pieces:
       arr: В. Платонов, src: FBBMS28P1984,
       org: blr, sty: flk, gnr: sng, ton: gmj, frm: [vo2, var, dot], bss: [frb, in5, in6], lvl: elb }
   # FBBMS29P1985
-  # p. 26
-  # - { id: h6dw, tit: Уляна, sub: blrfs,
-  #     arr: Н. Чуркин, src: FBBMS29P1985,
-  #     org: blr, sty: flk, gnr: sng, ton: gmi, frm: [in3, in4, in5], bss: frb, lvl: elb }
+  - { id: h6dw, tit: Уляна, sub: blrfs,
+      arr: Н. Чуркин, src: FBBMS29P1985,
+      org: blr, sty: flk, gnr: sng, ton: gmi, frm: [in3, in4, in5], bss: frb, lvl: elb }
