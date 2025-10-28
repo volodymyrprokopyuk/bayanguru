@@ -16,6 +16,15 @@
   {{ .a }} <f a> | <e bes'> <a=' c> |
 {{ end }}
 
+{{ define "lh1" }}
+  {{ .a }} c' f, c' | f, c' g' c,= |
+{{ end }}
+
+{{ define "lh2" }}
+  c=16-. g'-. c,8-- f16-. c-. f8-- |
+  c=16-. g'-. c,8-- f,16-. c'-. f=8-- {{ .a }} |
+{{ end }}
+
 {{ define "rightHand" }}
 \relative {
   \tempo "Moderato cantabile"
@@ -47,5 +56,11 @@
 \relative {
   \clef bass
   \key f \major
+  {{ template "lh1" (w `f,=,8-\frBass`) }}
+  \rep 2 { {{ template "lh1" (w `f,=,8`) }} | }
+  f,=,8 c' g' c, | f, c' f c= |
+
+  \rep 3 { {{ template "lh2" (w ``) }} | }
+  {{ template "lh2" (w ` \fermata`) }}
 }
 {{ end }}

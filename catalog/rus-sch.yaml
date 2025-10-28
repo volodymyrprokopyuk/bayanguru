@@ -451,13 +451,17 @@ pieces:
       org: rus, sty: flk, gnr: sng, ton: dmj, frm: vo2, bss: [frb, syn], lvl: elb }
   # FBBMS30N1985
   - { id: cqmh, tit: Сладкий сон,
-      arr: А. Шустов, src: FBBMS30N1985,
+      com: А. Шустов, src: FBBMS30N1985,
       org: rus, sty: cus, gnr: pie, ton: fmj, frm: [vo2, cr5], bss: [frb, jmp], lvl: elb }
   # p. 18
   # - { id: 1fg8, tit: Грустный напев,
-  #     arr: В. Накапкин, src: FBBMS30N1985,
+  #     com: В. Накапкин, src: FBBMS30N1985,
   #     org: rus, sty: cus, gnr: pie, ton: gmi, frm: vo2, bss: [frb, vo2, in5], lvl: elb }
   # p. 19
   # - { id: pb3x, tit: Комариный танец,
-  #     arr: В. Накапкин, src: FBBMS30N1985,
+  #     com: В. Накапкин, src: FBBMS30N1985,
   #     org: rus, sty: cus, gnr: pie, ton: [dmj, fismi], frm: [var, acc], bss: [frb, in3], lvl: elc }
+  # p. 28
+  # - { id: isoe, tit: В разлуке,
+  #     com: А. Гречанинов, src: FBBMS30N1985,
+  #     org: rus, sty: cus, gnr: pie, ton: emi, frm: dot, bss: [frb, in3], lvl: elb }
