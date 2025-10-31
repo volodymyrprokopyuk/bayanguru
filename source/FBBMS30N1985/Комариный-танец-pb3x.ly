@@ -45,7 +45,20 @@
 
 {{ define "leftHand" }}
 \relative {
-  \clef bass
+  \clef treble
   \key d \major
+  d'='8->-\frBass <a' b>-. a,-. <a' b>-. |
+  \rep 2 { e='8-> <a b>-. cis,-. <a' b>-. | }
+  d,='8-> <a' b>-. e-. <g a>-. | d-> <a' b>-. a,-. <a' b>-. |
+  e='8-> <a b>-. cis,-. <a'=' b>-. |
+  <g=' a b>16-> r8 16-> r8 16-> r16 | 16-> r16 r16 16-. <g a cis>-> r r8 |
+  ais='8-> fis-. \duo { r8 d''=''8 | } { b'='4 | }
+
+  <b=' d>8_\aSta 8 <b cis>8 8 | <ais cis> fis <b d> g |
+  <g=' a>8 e <d fis>8 8 | <e g>-> b'-. <e, fis>-> r |
+  <b'=' d>16_\aSta 16 16 r <b cis>16 16 16 r | <ais cis>16 16 r8 <b d>16 16 r8 |
+  <g=' a>16 16 cis, r <fis a>16 16 d r | <g=' a>16-> 16-. r8 16-> r r8 |
+
+  <g=' a b>16-> r8 16-. 16-> r r8 | r8. <g a cis>16-. r8 <cis='' d>8-> |
 }
 {{ end }}
