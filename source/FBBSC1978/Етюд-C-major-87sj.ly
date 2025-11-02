@@ -21,7 +21,9 @@
     a='16( g f e d8 e16 f |
     \alternative {
       \volta 1 { e='16 f e f <e=' g>4) | }
-      \volta 2 { e='8 \sSlur ub #'((wb . 3)) ( <d f b>)-> <e=' g c>4-> \bar "|." }
+      \volta 2 {
+        \hSpace e='8 \sSlur ub #'((wb . 3)) ( <d f b>)-> <e=' g c>4-> \bar "|."
+      }
     }
   }
 }
