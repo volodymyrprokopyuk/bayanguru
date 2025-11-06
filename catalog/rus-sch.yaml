@@ -459,7 +459,6 @@ pieces:
   - { id: pb3x, tit: Комариный танец,
       com: В. Накапкин, src: FBBMS30N1985,
       org: rus, sty: cus, gnr: pie, ton: [dmj, fismi], frm: [var, acc], bss: [frb, in3], lvl: elc }
-  # p. 28
-  # - { id: isoe, tit: В разлуке,
-  #     com: А. Гречанинов, src: FBBMS30N1985,
-  #     org: rus, sty: cus, gnr: pie, ton: emi, frm: dot, bss: [frb, in3], lvl: elb }
+  - { id: isoe, tit: В разлуке,
+      com: А. Гречанинов, src: FBBMS30N1985,
+      org: rus, sty: cus, gnr: pie, ton: emi, frm: dot, bss: [frb, in3], lvl: elb }

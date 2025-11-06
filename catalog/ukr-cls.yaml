@@ -355,7 +355,7 @@ pieces:
   - { id: y632, tit: Місяць на небі, sub: ukrfs,
       arr: М. Різоль, src: FBB2BZ1981,
       org: ukr, sty: flk, gnr: sng, ton: emi, frm: in3, bss: frb, lvl: elb }
-  - { id: 8o6w, tit: "Ой у полі, ой у полі",
+  - { id: 8o6w, tit: "Ой у полі, ой у полі", # nolyr
       arr: М. Різоль, src: FBB2BZ1981,
       org: ukr, sty: flk, gnr: sng, ton: ami, frm: [in3, cr5, dot], bss: frb, lvl: ela }
   - { id: zbgg, tit: Місяць на небі, sub: ukrfs,
