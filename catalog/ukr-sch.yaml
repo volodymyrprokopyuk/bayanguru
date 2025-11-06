@@ -208,7 +208,6 @@ pieces:
   - { id: 8akn, tit: "Прийди, прийди", sub: ukrfs,
       arr: В. Накапкин, src: FBBMS30N1985,
       org: ukr, sty: flk, gnr: sng, ton: ami, frm: [var, vo2], bss: stb, lvl: elb }
-  # p. 34
-  # - { id: jr37, tit: "І шумить, і гуде", sub: ukrfs,
-  #     arr: С. Павин, src: FBBMS30N1985,
-  #     org: ukr, sty: flk, gnr: sng, ton: [cmj, fmj], frm: [var, in3, cr5], bss: [frb, in3, cr5], lvl: elb }
+  - { id: jr37, tit: "І шумить, і гуде", sub: ukrfs,
+      arr: С. Павин, src: FBBMS30N1985,
+      org: ukr, sty: flk, gnr: sng, ton: [cmj, fmj], frm: [var, in3, cr5], bss: [frb, in3, cr5], lvl: elb }
