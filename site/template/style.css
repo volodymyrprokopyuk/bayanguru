@@ -57,11 +57,11 @@ a {
 .pagefind-ui__search-input::placeholder {
   color: rgb(115 115 115);
 }
-.pagefind-ui__search-clear, .pagefind-ui__drawer {
+.pagefind-ui__search-clear {
   display: none;
 }
 .pagefind-ui__drawer {
-  margin-bottom: 1rem;
+  margin-bottom: 0.2rem;
 }
 .pagefind-ui__result-title {
   margin-top: 0.4rem;
