@@ -44,7 +44,7 @@ a {
 .pagefind-ui__search-input {
   display: block;
   width: 100%;
-  margin: 1rem 0;
+  margin: 1rem 0 0.2rem;
   padding: 0.6rem 0.8rem;
   border: 0.1rem solid rgb(163 163 163);
   border-radius: 0.375rem;
@@ -57,7 +57,7 @@ a {
 .pagefind-ui__search-input::placeholder {
   color: rgb(115 115 115);
 }
-.pagefind-ui__search-clear {
+.pagefind-ui__search-clear, .pagefind-ui__drawer {
   display: none;
 }
 .pagefind-ui__drawer {

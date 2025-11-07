@@ -1,0 +1,32 @@
+{{ define "body" }}
+  {{ with .CatalogMeta }}
+    <h2 class="head2">Advanced search | Розширений пошук</h2>
+    <p class="mt-2">{{ .Purpose.Eng | md }}</p>
+    <p lang="uk" class="mt-2">{{ .Purpose.Ukr | md }}</p>
+    <table data-nosnippet class="mt-2 text-sm lg:text-base">
+      {{ range .Meta }}
+        <tr class="bg-yellow-100">
+          <th scope="col"></th>
+          <th scope="col" class="font-medium text-left">{{ .Tit.Eng }}</th>
+          <th lang="uk" scope="col" class="font-medium text-left pl-4">
+            {{ .Tit.Ukr }}
+          </th>
+        </tr>
+        {{ range .Sec }}
+          <tr class="even:bg-blue-50">
+            <td><span class="tag font-medium">{{ .Tit.Name }}</span></td>
+            <td>{{ .Tit.Eng }}</td>
+            <td lang="uk" class="pl-4">{{ .Tit.Ukr }}</td>
+          </tr>
+          {{ range .Sub }}
+            <tr class="even:bg-blue-50">
+              <td class="pl-6"><span class="tag">{{ .Name }}</span></td>
+              <td>{{ .Eng }}</td>
+              <td lang="uk" class="pl-4">{{ .Ukr }}</td>
+            </tr>
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    </table>
+  {{ end }}
+{{ end }}

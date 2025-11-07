@@ -212,6 +212,7 @@ func indexSectionLinks(sections []*Section) []Link {
 }
 
 func publishIndex(pc *publishCommand) error {
+  // Publish index
   tpl, err := makeTemplate(pc.templateDir, "index.html")
   if err != nil {
     return err
@@ -221,20 +222,32 @@ func publishIndex(pc *publishCommand) error {
   if err != nil {
     return err
   }
+  indexData := struct {
+    SectionLinks []Link
+    SiteContent SiteContent
+  }{
+    SectionLinks: sectionLinks,
+    SiteContent: siteContent,
+  }
+  err = publishFile(os.Stdout, tpl, pc.publicDir, "index", indexData)
+  if err != nil {
+    return err
+  }
+  // Publish advanced search
+  tpl, err = makeTemplate(pc.templateDir, "advanced-search.html")
+  if err != nil {
+    return err
+  }
   catalogMeta, err := readCatalogMeta(pc.contentDir, "catalog-meta.yaml")
   if err != nil {
     return err
   }
-  indexData := struct {
-    SectionLinks []Link
-    SiteContent SiteContent
+  searchData := struct {
     CatalogMeta CatalogMeta
   }{
-    SectionLinks: sectionLinks,
-    SiteContent: siteContent,
     CatalogMeta: catalogMeta,
   }
-  return publishFile(os.Stdout, tpl, pc.publicDir, "index", indexData)
+  return publishFile(os.Stdout, tpl, pc.publicDir, "advanced-search", searchData)
 }
 
 func uploadPiece(w io.Writer, pieceFile, uploadURL string) error {
