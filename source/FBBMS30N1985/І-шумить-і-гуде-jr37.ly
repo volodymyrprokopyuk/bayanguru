@@ -1,7 +1,7 @@
 {{ define "rh1" }}
   e='16( f <e g>8) <e g>16( fis <e g>8) |
-  f='16( g <f a>8) <d a'>16( gis <d a'>8) |
-  <b= d g>8 <d g b> <d a' d> <f a b> | <e=' g c>8 8 {{ .a }}
+  f='16( g <f a>8) {{ .a }}16( gis {{ .a }}8) |
+  {{ .b }} <d g b> <d a' d> <f=' a b> |
 {{ end }}
 
 {{ define "rh2" }}
@@ -26,7 +26,8 @@
   <e'=' c'>8\mf <e g> <c' e>4 | \rep 2 { <e,=' c'>8 <e g> <c'='' e>4 | }
   \duo { d''=''16 c b a=' } { fis'='4 } <b,= d g>4 |
   e='8 <e g>8 8 8 | f <f a>8 8 8 | <d g> <d g b> <f a d> <f a b> |
-  <e=' g c>8 8 4 | {{ template "rh1" (w `8 r \bar "||"`) }}
+  <e=' g c>8 8 4 |
+  {{ template "rh1" (w ` <d=' a'>` `<b= d g>8`) }} <e=' g c>8 8 8 r \bar "||"
 
   \key f \major
   <a,= c f>8\f <f a c> <c' f a>4 | <a c f>8 <f a c> <c' f a>4 |
@@ -40,9 +41,10 @@
   \key c \major
   {{ template "rh3" (w `c'=''16(\mf`) }}
   c'=''16( e, g c) \acc { dis=''8 } e16( c g e) |
-  {{ template "rh3" (w `c'=''16(`) }}
-  d'=''16( c b a g f e d) | {{ template "rh1" (w `4 |`) }}
-  {{ template "rh1" (w `8 r \bar "|."`) }}
+  {{ template "rh3" (w `c'=''16(`) }} | d'=''16( c b a g f e d) |
+  {{ template "rh1" (w ` <f=' a>` `<b,= d g>8`) }} | <e=' g c>8 8 4 |
+  {{ template "rh1" (w ` <f=' a>` `<b,= d g>8`) }}
+  <e=' g c>8^\tRit <f a c> <e=' g c> r \bar "|."
 }
 {{ end }}
 
