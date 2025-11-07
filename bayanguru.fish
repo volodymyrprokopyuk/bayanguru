@@ -21,7 +21,6 @@ end
 
 function bayanguru_publish
   echo "=> publishing bayanguru"
-  source .secret
   rm -rf site/public
   ./bin/bayanguru publish all --init
 end
@@ -33,6 +32,7 @@ end
 
 function bayanguru_deploy
   echo "=> deploying bayanguru to https://bayanguru.org"
+  source .secret
   bunx wrangler pages deploy site/public --project-name bayanguru \
     --branch main --skip-caching
 end

@@ -47,9 +47,9 @@ Author, engrave, and publish pieces
 tr -dc a-z0-9 </dev/urandom | head -c 4
 # Initialize piece source code
 ./bin/bayanguru engrave pieceID -i
-# Initialize piece lyrics source code
+# Initialize lyrics source code
 ./bin/bayanguru engrave pieceID -i --lyr
-# Lint piece source code, engrave piece, and optimize piece PDF
+# Lint piece source code, engrave piece, optimize piece PDF
 ./bin/bayanguru engrave pieceID -lo
 # Publish piece PDF to Cloudflare
 ./bin/bayanguru publish pieceID -u
