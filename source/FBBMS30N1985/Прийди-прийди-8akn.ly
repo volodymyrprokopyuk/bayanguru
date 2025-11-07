@@ -40,7 +40,7 @@
   a@m!4 d@m!8 r8 | a@m![ f@M!8] a@m!4 |
 
   c=8[ cM! r8 cM] | f, d@m! g8 g7! |
-  c=8 cM! e c@m! | d8 dm! g, g7! |
+  c=8 cM! e c@M! | d8 dm! g, g7! |
   r8 c@M![ r8 d@m!] | r8 a@m!( d@M!4) |
   d@m!4 e@7!8[ e78] | a@m![ d@m!8] a=,4 |
 
