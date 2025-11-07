@@ -1,5 +1,5 @@
 .secret
-bayanguru
+bin/
 piece/
 book/
 .played
@@ -7,6 +7,5 @@ site/public/
 package.json
 bun.lock
 node_modules/
-.wrangler/
 pagefind
-.projectile-cache.eld
+.wrangler/

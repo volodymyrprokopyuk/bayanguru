@@ -105,7 +105,7 @@ var (
   secGnr = &Section{
     Name: "genre", Tit: "Genre | Жанр",
     Query: func(piece *catalog.Piece) bool {
-      return piece.Gnr != "stu"
+      return piece.Gnr != "stu" //nolint:goconst,gocritic
     },
     Sort: catalog.SortByTit,
     Sub: []*Section{
@@ -527,7 +527,9 @@ func publishRobots(pc *publishCommand) error {
   file := "robots.txt"
   src := filepath.Join(pc.siteDir, file)
   dst := filepath.Join(pc.publicDir, file)
-  fmt.Printf("%s %s\n", catalog.BlueTit("publish"), catalog.BlueSub(dst))
+  fmt.Printf(
+    "%s %s\n", catalog.BlueTit("publish"), catalog.BlueSub("%s", dst),
+  )
   _, err := copyFile(src, dst)
   return err
 }
@@ -535,7 +537,9 @@ func publishRobots(pc *publishCommand) error {
 func publishSitemap(pieces []*catalog.Piece, pc *publishCommand) error {
   file := "sitemap.txt"
   path := filepath.Join(pc.publicDir, file)
-  fmt.Printf("%s %s\n", catalog.BlueTit("publish"), catalog.BlueSub(path))
+  fmt.Printf(
+    "%s %s\n", catalog.BlueTit("publish"), catalog.BlueSub("%s", path),
+  )
   catalog.SortPieces(pieces, catalog.SortByTit)
   var buf bytes.Buffer
   for _, piece := range pieces {
@@ -547,8 +551,8 @@ func publishSitemap(pieces []*catalog.Piece, pc *publishCommand) error {
 
 func publishCatalog(pc *publishCommand) error {
   fmt.Printf(
-    "%s %s\n", catalog.BlueTit("publish"),
-    catalog.BlueSub(pc.publicDir + "/catalog/..."),
+    "%s %s\n",
+    catalog.BlueTit("publish"), catalog.BlueSub("%s/catalog/...", pc.publicDir),
   )
   bc := &catalog.BaseCmd{CatalogDir: pc.CatalogDir, SourceDir: pc.SourceDir}
   pieces, _, _, err := catalog.ReadPiecesAndBooks(bc)

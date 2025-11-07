@@ -9,6 +9,8 @@ import (
 	"strings"
 )
 
+const pieAll = "all"
+
 type BaseCmd struct {
   CatalogDir, BookFile, SourceDir, PieceDir, BookDir, Catalog string
   Book bool
@@ -76,7 +78,7 @@ func ReadPiecesAndBooks(bc *BaseCmd) ([]*Piece, []*Book, int, error) {
     return pieces, books, len(pieceMap), nil
   }
   // Read pieces
-  if len(bc.PieceIDs) > 0 && bc.PieceIDs[0] != "all" {
+  if len(bc.PieceIDs) > 0 && bc.PieceIDs[0] != pieAll {
     pieceIDs = bc.PieceIDs
   }
   pieces := make([]*Piece, 0, len(pieceIDs))

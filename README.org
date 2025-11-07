@@ -3,61 +3,77 @@
 ** Dependencies
 
 - [[https://lilypond.org/][LilyPond]] sheet music engraving system
-- [[https://go.dev/][Go]] programming language
 - [[https://tailwindcss.com/][TailwindCSS]] CSS framework
 - [[https://pagefind.app/][PageFind]] static full-text search
 - [[https://html-validate.org/][HTML validate]] offline HTML validation
+- [[https://go.dev/][Go]] programming language
+- [[https://fishshell.com/][Fish]] command line shell
+
+Install dependencies
 
 #+BEGIN_SRC fish
-# Engrave pieces with LilyPond
+# Build bayanguru command with Go
+yay -S go golangci-lint
+# Automate bayanguru commands with Fish
+yay -S fish
+# Engrave pieces and books with LilyPond
 yay -S ghostscript gsfonts fontforge t1utils texlive-{metapost,langcyrillic}
 # Upload scores to Cloudflare R2 object store with rclone
 yay -S rclone
-# Style the website with TailwindCSS
+# Style bayanguru website with TailwindCSS
 bun install tailwindcss @tailwindcss/cli
-# Index the website for searching with pagefind
+# Index bayanguru website for searching with pagefind
 yay -S pagefind
-# Validate the website HTML locally with html-validate
+# Validate bayanguru website HTML locally with html-validate
 bun install html-validate
-bunx html-validate --formatter codeframe site/public/index.html \
-  site/public/piece/Largo-c3bd.html \
-  site/public/catalog/level/elementary-a/1.html
-# Serve the website locally with Caddy
+# Serve bayanguru website locally with Caddy
 yay -S caddy
-caddy run --config site/Caddyfile
-# Deploy the website to Cloudflare Pages with wrangler
+# Deploy bayanguru website to Cloudflare Pages with wrangler
 bun install wrangler
-bunx wrangler pages deploy site/public --project-name bayanguru --branch main \
-  --skip-caching
 #+END_SRC
 
 ** Usage
 
-Fish completions
+Install bayanguru
 
 #+BEGIN_SRC fish
 go install github.com/volodymyrprokopyuk/bayanguru@latest
-cp bayanguru.fish ~/.config/fish/completions/bayanguru.fish
 #+END_SRC
 
-Generate a piece ID
+Author, engrave, and publish pieces
 
 #+BEGIN_SRC fish
+# Generate random piece ID
 tr -dc a-z0-9 </dev/urandom | head -c 4
+# Initialize piece source code
+./bin/bayanguru engrave pieceID -i
+# Initialize piece lyrics source code
+./bin/bayanguru engrave pieceID -i --lyr
+# Lint piece source code, engrave piece, and optimize piece PDF
+./bin/bayanguru engrave pieceID -lo
+# Publish piece PDF to Cloudflare
+./bin/bayanguru publish pieceID -u
 #+END_SRC
 
-Initialize a piece and lyrics
+** Development
+
+Bayanguru development workflow
 
 #+BEGIN_SRC fish
-bayanguru engrave pieceID -i
-bayanguru engrave pieceID -i --lyr
-#+END_SRC
-
-Initialize a site
-
-#+BEGIN_SRC fish
-rm -rf site/public
-bayanguru publish all --init
+# Lint Go code
+./bayanguru.fish lint
+# Build Go code
+./bayanguru.fish build
+# Validate website HTML
+./bayanguru.fish validate
+# Publish website locally
+./bayanguru.fish publish
+# Server website locally
+./bayanguru.fish serve
+# Deploy website to Cloudflare
+./bayanguru.fish deploy
+# Install bayanguru Fish completions
+./bayanguru.fish completions
 #+END_SRC
 
 ** License

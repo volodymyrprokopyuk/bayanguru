@@ -49,7 +49,8 @@ func engraveImage(siteDir, publicDir, image string) error {
   lyImage := filepath.Join(siteDir, image + ".ly")
   svgImage := filepath.Join(publicDir, image)
   fmt.Printf(
-    "%s %s\n", catalog.BlueTit("engrave"), catalog.BlueSub(svgImage + ".svg"),
+    "%s %s\n",
+    catalog.BlueTit("engrave"), catalog.BlueSub("%s.svg", svgImage),
   )
   lyCmd := exec.Command( //nolint:gosec,gocritic
     "lilypond", "-d", "backend=cairo", "-l", "WARN", "-f", "svg",
@@ -70,7 +71,7 @@ func initSite(siteDir, publicDir string) error {
   }
   for _, dir := range dirs {
     d := filepath.Join(publicDir, dir)
-    fmt.Printf("%s %s\n", catalog.BlueTit("init"), catalog.BlueSub(d))
+    fmt.Printf("%s %s\n", catalog.BlueTit("init"), catalog.BlueSub("%s", d))
     err := os.MkdirAll(d, 0o755) //nolint:gosec,gocritic
     if err != nil {
       return err
@@ -129,7 +130,7 @@ func publishFile(
   file := filepath.Join(publicDir, publicFile + ".html")
   if !strings.Contains(file, "/catalog/") {
     _, _ = fmt.Fprintf(
-      w, "%s %s\n", catalog.BlueTit("publish"), catalog.BlueSub(file),
+      w, "%s %s\n", catalog.BlueTit("publish"), catalog.BlueSub("%s", file),
     )
   }
   // Overwrites an existing file
@@ -239,7 +240,7 @@ func publishIndex(pc *publishCommand) error {
 func uploadPiece(w io.Writer, pieceFile, uploadURL string) error {
   file := fmt.Sprintf("piece/%s.pdf", pieceFile)
   _, _ = fmt.Fprintf(
-    w, "%s %s\n", catalog.BlueTit("upload"), catalog.BlueSub(file),
+    w, "%s %s\n", catalog.BlueTit("upload"), catalog.BlueSub("%s", file),
   )
   rclCmd := exec.Command( //nolint:gosec,gocritic
     "rclone", "copy", "--s3-no-check-bucket", file, uploadURL,
@@ -327,7 +328,7 @@ func publishPieces(pieces []*catalog.Piece, pc *publishCommand) error {
 func indexPieces(publicDir string) error {
   fmt.Printf(
     "%s %s\n", catalog.BlueTit("index"),
-    catalog.BlueSub(publicDir + "/piece/..."),
+    catalog.BlueSub("%s/piece/...", publicDir),
   )
   pfDir := filepath.Join(publicDir, "pagefind")
   err := os.RemoveAll(pfDir) // Remove the existing index
@@ -346,7 +347,9 @@ func indexPieces(publicDir string) error {
 func publishStyle(templateDir, publicDir string) error {
   inStyle := filepath.Join(templateDir, "style.css")
   outStyle := filepath.Join(publicDir, "tw.css")
-  fmt.Printf("%s %s\n", catalog.BlueTit("publish"), catalog.BlueSub(outStyle))
+  fmt.Printf(
+    "%s %s\n", catalog.BlueTit("publish"), catalog.BlueSub("%s", outStyle),
+  )
   twCmd := exec.Command( //nolint:gosec,gocritic
     "bunx", "@tailwindcss/cli", "--input", inStyle,
     "--output", outStyle, "--minify",

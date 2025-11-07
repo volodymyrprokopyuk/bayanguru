@@ -67,7 +67,7 @@ func (b *Book) PtrPieces() func(yield func(i int, piece *Piece) bool) {
 func PrintBook(w io.Writer, book *Book) {
   _, _ = fmt.Fprintf(
     w, "%s %s %s\n",
-    GreenTit(book.ID), YellowTit(book.Tit),
+    GreenTit("%s", book.ID), YellowTit("%s", book.Tit),
     RedSub("%d pieces", len(book.Pieces)),
   )
 }
@@ -208,7 +208,7 @@ func readBooks(
   if err != nil {
     return nil, err
   }
-  if len(bookIDs) > 0 && bookIDs[0] != "all" {
+  if len(bookIDs) > 0 && bookIDs[0] != pieAll {
     rbooks, err = queryBooks(rbooks, bookIDs)
     if err != nil {
       return nil, err

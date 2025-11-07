@@ -252,11 +252,12 @@ func lintDurationAfterBoundChord(lines []lyLine) []lyLine {
 }
 
 func printErrors(w io.Writer, title string, errors []lyLine) {
-  _, _ = fmt.Fprintf(w, "%s\n", catalog.YellowSub(title))
+  _, _ = fmt.Fprintf(w, "%s\n", catalog.YellowSub("%s", title))
   for _, error := range errors {
     err := strings.ReplaceAll(error.text, "%", "%%")
     _, _ = fmt.Fprintf(
-      w, "%s %s\n", catalog.BlueSub("%3d:", error.num), catalog.RedSub(err),
+      w, "%s %s\n",
+      catalog.BlueSub("%3d:", error.num), catalog.RedSub("%s", err),
     )
   }
 }
@@ -264,7 +265,8 @@ func printErrors(w io.Writer, title string, errors []lyLine) {
 func lintPiece(w io.Writer, piece *catalog.Piece, sourceDir string) error {
   pieceFile := filepath.Join(sourceDir, piece.Src, piece.File + ".ly")
   _, _ = fmt.Fprintf(
-    w, "%s %s\n", catalog.BlueTit("lint"), catalog.BlueSub(pieceFile),
+    w, "%s %s\n",
+    catalog.BlueTit("lint"), catalog.BlueSub("%s", pieceFile),
   )
   hasErrors := false
   lines, err := rawLines(pieceFile)

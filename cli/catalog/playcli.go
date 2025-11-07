@@ -45,11 +45,11 @@ func ValidateReq(catalog string, args []string) error {
   if len(args) == 0 {
     return errors.New("at least one piece or book is required")
   }
-  if len(args) > 1 && slices.Contains(args, "all") {
+  if len(args) > 1 && slices.Contains(args, pieAll) {
     return errors.New("all is mutually exclusive with pieces and books")
   }
   for _, arg := range args {
-    if arg != "all" && !reID.MatchString(arg) {
+    if arg != pieAll && !reID.MatchString(arg) {
       return fmt.Errorf("invalid ID %s", arg)
     }
   }

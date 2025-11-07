@@ -8,6 +8,8 @@ import (
 	"github.com/volodymyrprokopyuk/bayanguru/cli/catalog"
 )
 
+const pieAll = "all"
+
 func engraveAction(ctx context.Context, cmd *cli.Command) error {
   cat := cmd.String("catalog")
   book := cmd.Bool("book")
@@ -24,7 +26,7 @@ func engraveAction(ctx context.Context, cmd *cli.Command) error {
     return err
   }
   if init && args.Len() > 1 ||
-    init && args.Len() == 1 && args.First() == "all" {
+    init && args.Len() == 1 && args.First() == pieAll {
     return errors.New("cannot initialize more than one piece")
   }
   if book && init {
@@ -60,7 +62,7 @@ func EngraveCmd() *cli.Command {
 `
    bayanguru engrave [-c catalog] pieces... [--init]
    bayanguru engrave [-c catalog] -b books... [--piece]
-   bayanguru engrave all --lint --optimize --meta=f --lyrics=f`,
+   bayanguru engrave all --lint --optimize --meta --lyrics=f`,
     Action: engraveAction,
   }
   cmd.Flags = []cli.Flag{
@@ -87,7 +89,7 @@ func EngraveCmd() *cli.Command {
       Name: "optimize", Usage: "optimize PDF after engraving", Aliases: []string{"o"},
     },
     &cli.BoolFlag{
-      Name: "meta", Usage: "include piece meta information", Value: true,
+      Name: "meta", Usage: "include piece meta information",
     },
     &cli.BoolFlag{
       Name: "lyrics", Usage: "include lyrics into pieces", Value: true,

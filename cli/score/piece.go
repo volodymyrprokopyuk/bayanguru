@@ -145,7 +145,9 @@ func initPiece(piece *catalog.Piece, sourceDir string) error {
   if err != nil {
     return err
   }
-  fmt.Printf("%s %s\n", catalog.BlueTit("init"), catalog.BlueSub(pieceFile))
+  fmt.Printf(
+    "%s %s\n", catalog.BlueTit("init"), catalog.BlueSub("%s", pieceFile),
+  )
   return nil
 }
 
@@ -160,7 +162,9 @@ func initLyrics(piece *catalog.Piece, sourceDir string) error {
   if err != nil {
     return err
   }
-  fmt.Printf("%s %s\n", catalog.BlueTit("init"), catalog.BlueSub(lyricsFile))
+  fmt.Printf(
+    "%s %s\n", catalog.BlueTit("init"), catalog.BlueSub("%s", lyricsFile),
+  )
   return nil
 }
 

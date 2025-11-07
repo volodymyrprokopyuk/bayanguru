@@ -1,7 +1,7 @@
 version: "2"
 linters:
   enable:
-    # - goconst
+    - goconst
     - perfsprint
     - gocritic
     - gosec
@@ -12,9 +12,9 @@ linters:
       enable-all: true
       disable:
         - fieldalignment
-    # goconst:
-    #   match-constant: true
-    #   find-duplicates: true
+    goconst:
+      match-constant: true
+      find-duplicates: true
     gocritic:
       enable-all: true
       disabled-checks:
