@@ -493,6 +493,10 @@ func publishSection(
       return fmt.Errorf("%s %s has no pieces", sec.Name, sub.Name)
     }
     catalog.SortPieces(spieces, sec.Sort)
+    // Reset alpha links from previous section
+    for _, piece := range spieces {
+      piece.AlphaLink = ""
+    }
     alphaLinkPieces(spieces, sec.Sort)
     pages := pagePieces(spieces, pc.pageSize)
     err := publishSubsec(tpl, sec, sub, pages, pc)
