@@ -26,9 +26,9 @@ pieces:
   - { id: hv2p, tit: Ой минула вже зима, sub: ukrfs,
       src: B0D1973,
       org: ukr, sty: flk, gnr: chd, ton: cmj, frm: mel, bss: stb, lvl: ela }
-  - { id: siv0, tit: А вже красне сонечко, sub: ukrfs,
-      com: П. Козицький, src: B0D1973,
-      org: ukr, sty: flk, gnr: chd, ton: ami, frm: mel, bss: stb, lvl: ela }
+  - { id: siv0, tit: А вже красне сонечко,
+      com: П. Козицький, aut: О. Олесь, src: B0D1973,
+      org: ukr, sty: cus, gnr: ves, ton: ami, frm: mel, bss: stb, lvl: ela }
   - { id: kakw, tit: Дощик, sub: ukrfs,
       src: B0D1973,
       org: ukr, sty: flk, gnr: sng, ton: emi, frm: rep, bss: stb, lvl: ela }
@@ -151,9 +151,9 @@ pieces:
   - { id: d7eu, tit: Бандура, sub: ukrfs,
       arr: И. Гладков, art: ipr, src: B1AK1979,
       org: ukr, sty: flk, gnr: sng, ton: emi, frm: mel, bss: stb, lvl: ela }
-  - { id: d0hr, tit: А вже ясне сонечко, sub: ukrfs,
-      com: П. Козицький, src: B1AK1979,
-      org: ukr, sty: flk, gnr: chd, ton: emi, frm: mel, bss: stb, lvl: ela }
+  - { id: d0hr, tit: А вже красне сонечко,
+      com: П. Козицький, aut: О. Олесь, src: B1AK1979,
+      org: ukr, sty: cus, gnr: ves, ton: emi, frm: mel, bss: stb, lvl: ela }
   - { id: itrq, tit: Женчичок-бренчичок, sub: ukrfs,
       src: B1AK1979,
       org: ukr, sty: flk, gnr: sng, ton: gmj, frm: mel, bss: stb, lvl: ela }
