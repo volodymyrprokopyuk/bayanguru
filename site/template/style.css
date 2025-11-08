@@ -25,13 +25,6 @@ html {
 .list {
   @apply list-disc list-outside ml-4
 }
-.tag {
-  @apply inline-block mx-0.5 my-0.5 px-1 py-0.5
-  rounded-md border border-neutral-400 bg-yellow-100
-}
-.tag-value {
-  @apply font-medium
-}
 .score {
   @apply w-full min-h-screen my-8 lg:w-[80%] lg:mx-[10%]
     shadow-[0_0_0.75rem_rgb(96,165,250)]
@@ -73,17 +66,10 @@ a {
   display: none;
 }
 .pagefind-ui__result-tag {
-  display: inline-block;
-  margin: 0.2rem;
-  padding: 0rem 0.25rem;
-  border: 1px solid rgb(115 115 115);
-  border-radius: 0.375rem;
-  background-color: rgb(254 249 195);
-}
-.pagefind-ui__result-tag:first-letter {
-  text-transform: lowercase;
+  display: none;
 }
 .pagefind-ui__message {
+  margin: 1rem 0;
   font-size: 1.125rem;
   font-weight: 500;
 }
@@ -92,7 +78,7 @@ a {
   font-weight: 500;
   margin: 1rem 0.25rem;
   padding: 0.25rem 0.75rem;
-  color: rgb(29 78 216);
-  border: 0.08rem solid rgb(29 78 216);
+  background-color: rgb(254 249 195);
+  border: 0.08rem solid black;
   border-radius: 0.375rem;
 }

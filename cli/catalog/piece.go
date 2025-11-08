@@ -16,7 +16,7 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
-var meta = map[string]string{
+var metaSub = map[string]string{
   // Piece subtitle (sub)
   "ukrfs": "Українська народна пісня",
   "ukrfsvar": "Варіації на тему української народної пісні",
@@ -43,6 +43,73 @@ var meta = map[string]string{
   "arr": "Обр. ", // обробка = arrangement (default)
   "ipr": "Пер. ", // переклад = interpretation
   "hrm": "Гарм. ", // гармонізація = harmonization
+}
+
+var metaDesc = map[string]string{
+  // Origin
+  "ukr": "Укр.",
+  "rus": "Рос.",
+  "blr": "Біл.",
+  "hun": "Угор.",
+  "mda": "Мол.",
+  "pol": "Пол.",
+  "cze": "Чес.",
+  "svk": "Слов.",
+  "svn": "Слов.",
+  "lva": "Лат.",
+  "ltu": "Лит.",
+  "est": "Ест.",
+  "aut": "Авст.",
+  "deu": "Нім.",
+  "dnk": "Дац.",
+  "fra": "Фран.",
+  "swe": "Швед.",
+  // Style
+  "flk": "нар.",
+  "cus": "авт.",
+  "cls": "клас.",
+  // Genre
+  "sng": "пісня.",
+  "chd": "дитяча п'єса.",
+  "lul": "колискова.",
+  "ves": "веснянка.",
+  "kol": "колядка.",
+  "pry": "коломийка.",
+  "rmc": "романс.",
+  "mil": "віськ. пісня.",
+  "dnc": "танець.",
+  "plk": "полька.",
+  "mzr": "мазурка.",
+  "qdr": "кадриль.",
+  "men": "менует.",
+  "koz": "козачок.",
+  "gop": "гопак.",
+  "vls": "вальс.",
+  "tng": "танго.",
+  "mrc": "марш.",
+  "pie": "п'єса.",
+  "inv": "інвенція.",
+  "can": "санон.",
+  "pre": "прелюдія.",
+  "gyp": "циг. п'єса.",
+  "stu": "етюд.",
+  // Bass
+  "frb": "Виборна система.",
+  "stb": "Готовий акорд.",
+  "pub": "Чистий бас.",
+  // Level
+  "ela": "Рівень простий A",
+  "elb": "Рівень простий B",
+  "elc": "Рівень простий C",
+  "ina": "Рівень середній A",
+  "inb": "Рівень середній B",
+  "inc": "Рівень середній C",
+  "pra": "Рівень складний A",
+  "prb": "Рівень складний B",
+  "prc": "Рівень складний C",
+  "via": "Рівень віртуозний A",
+  "vib": "Рівень віртуозний B",
+  "vic": "Рівень віртуозний C",
 }
 
 type StrSlice []string
@@ -87,6 +154,8 @@ type Piece struct {
 
   Lvl string `yaml:"lvl"`
   Ens string `yaml:"ens"`
+
+  Desc string
 
   File string
   LyricsFile string
@@ -165,6 +234,97 @@ func readCatalogFile(catFile string) ([]*Piece, error) {
   return pieces.Pieces, nil
 }
 
+func FormQuery(form, query []string) bool {
+  return slices.ContainsFunc(form, func(frm string) bool {
+    return slices.Contains(query, frm)
+  })
+}
+
+func FrmScale(frm []string) bool {
+  scl := []string{"scl", "seq", "cro"}
+  return FormQuery(frm, scl)
+}
+
+func FrmArpeggio(frm []string) bool {
+  arp := []string{"arp", "lng", "srt", "brk"}
+  return FormQuery(frm, arp)
+}
+
+func FrmInterval(frm []string) bool {
+  inv := []string{"in3", "in4", "in5", "in6", "in7", "in8"}
+  return FormQuery(frm, inv)
+}
+
+func FrmChord(frm []string) bool {
+  crd := []string{"cr5", "cr7"}
+  return FormQuery(frm, crd)
+}
+
+func FrmPolyphony(frm []string) bool {
+  pph := []string{"vo2", "vo3"}
+  return FormQuery(frm, pph)
+}
+
+func FrmPolyrhythm(frm []string) bool {
+  prh := []string{"syn", "tu3", "tu5", "tu6"}
+  return FormQuery(frm, prh)
+}
+
+func FrmOrnament(frm []string) bool {
+  orn := []string{"tre", "acc", "mor", "gru", "tri", "gli", "cad"}
+  return FormQuery(frm, orn)
+}
+
+func FrmLeftHand(frm []string) bool {
+  return slices.Contains(frm, "pub")
+}
+
+func pieceDesc(piece *Piece) string {
+  desc := make([]string, 10)
+  // Origin, style, genre
+  desc = append(
+    desc, metaDesc[piece.Org], metaDesc[piece.Sty], metaDesc[piece.Gnr],
+  )
+  // Bass
+  for _, bss := range []string{"frb", "stb", "pub"}{
+    if slices.Contains(piece.Bss, bss) {
+      desc = append(desc, metaDesc[bss])
+    }
+  }
+  // Study form
+  if piece.Gnr == "stu" {
+    frm := append([]string{}, piece.Frm...)
+    frm = append(frm, piece.Bss...)
+    if FrmScale(frm) {
+      desc = append(desc, "Гами.")
+    }
+    if FrmArpeggio(frm) {
+      desc = append(desc, "Арпеджіо.")
+    }
+    if FrmInterval(frm) {
+      desc = append(desc, "Інтревали.")
+    }
+    if FrmChord(frm) {
+      desc = append(desc, "Акорди.")
+    }
+    if FrmPolyphony(frm) {
+      desc = append(desc, "Поліфонія.")
+    }
+    if FrmPolyrhythm(frm) {
+      desc = append(desc, "Поліритмія.")
+    }
+    if FrmOrnament(frm) {
+      desc = append(desc, "Орнамент.")
+    }
+    if FrmLeftHand(frm) {
+      desc = append(desc, "Ліва рука.")
+    }
+  }
+  // Level
+  desc = append(desc, metaDesc[piece.Lvl])
+  return strings.Join(desc, " ")
+}
+
 var reCleanTit = regexp.MustCompile(`[^- \pL\d]+`)
 
 func scoreFile(tit, id string) string {
@@ -184,7 +344,7 @@ func LyricsFile(tit string) string {
 func addMetaToPieces(pieces []*Piece) {
   for _, piece := range pieces {
     // sub
-    sub, exists := meta[piece.Sub]
+    sub, exists := metaSub[piece.Sub]
     if exists {
       piece.Sub = sub
     }
@@ -193,7 +353,7 @@ func addMetaToPieces(pieces []*Piece) {
       if len(piece.Art) == 0 {
         piece.Art = "arr" // Default: arrangement
       }
-      piece.UkrArt = meta[piece.Art]
+      piece.UkrArt = metaSub[piece.Art]
     }
     // lcs
     if len(piece.Lcs) == 0 {
@@ -203,6 +363,8 @@ func addMetaToPieces(pieces []*Piece) {
     if len(piece.Ens) == 0 {
       piece.Ens = "sol" // Default: solo
     }
+    // desc
+    piece.Desc = pieceDesc(piece)
     // file
     piece.File = scoreFile(piece.Tit, piece.ID)
     piece.LyricsFile = LyricsFile(piece.Tit)

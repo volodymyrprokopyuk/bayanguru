@@ -28,12 +28,6 @@ type Section struct {
   Sub []*Section
 }
 
-func formQuery(form, query []string) bool {
-  return slices.ContainsFunc(form, func(frm string) bool {
-    return slices.Contains(query, frm)
-  })
-}
-
 var (
   secOrg = &Section{
     Name: "origin", Tit: "Origin | Країна",
@@ -170,56 +164,49 @@ var (
     Name: "study-stb", Tit: "Study | Етюди stb",
     Query: func(piece *catalog.Piece) bool {
       bss := []string{"stb", "pub"}
-      return piece.Gnr == "stu" && formQuery(piece.Bss, bss)
+      return piece.Gnr == "stu" && catalog.FormQuery(piece.Bss, bss)
     },
     Sort: catalog.SortByCom,
     Sub: []*Section{
       {
         Name: "scale", Tit: "Scale | Гами",
         Query: func(piece *catalog.Piece) bool {
-          scl := []string{"scl", "seq", "cro"}
-          return formQuery(piece.Frm, scl)
+          return catalog.FrmScale(piece.Frm)
         },
       }, {
         Name: "arpeggio", Tit: "Arpeggio | Арпеджіо",
         Query: func(piece *catalog.Piece) bool {
-          arp := []string{"arp", "lng", "srt", "brk"}
-          return formQuery(piece.Frm, arp)
+          return catalog.FrmArpeggio(piece.Frm)
         },
       }, {
         Name: "interval", Tit: "Interval | Інтревали",
         Query: func(piece *catalog.Piece) bool {
-          inv := []string{"in3", "in4", "in5", "in6", "in7", "in8"}
-          return formQuery(piece.Frm, inv)
+          return catalog.FrmInterval(piece.Frm)
         },
       }, {
         Name: "chord", Tit: "Chord | Акорди",
         Query: func(piece *catalog.Piece) bool {
-          crd := []string{"cr5", "cr7"}
-          return formQuery(piece.Frm, crd)
+          return catalog.FrmChord(piece.Frm)
         },
       }, {
         Name: "polyphony", Tit: "Polyphony | Поліфонія",
         Query: func(piece *catalog.Piece) bool {
-          pph := []string{"vo2", "vo3"}
-          return formQuery(piece.Frm, pph)
+          return catalog.FrmPolyphony(piece.Frm)
         },
       }, {
         Name: "polyrhythm", Tit: "Polyrhythm | Поліритмія",
         Query: func(piece *catalog.Piece) bool {
-          prh := []string{"syn", "tu3", "tu5", "tu6"}
-          return formQuery(piece.Frm, prh)
+          return catalog.FrmPolyrhythm(piece.Frm)
         },
       }, {
         Name: "ornament", Tit: "Ornament | Орнамент",
         Query: func(piece *catalog.Piece) bool {
-          orn := []string{"tre", "acc", "mor", "gru", "tri", "gli", "cad"}
-          return formQuery(piece.Frm, orn)
+          return catalog.FrmOrnament(piece.Frm)
         },
       }, {
         Name: "left-hand", Tit: "Left hand | Ліва рука",
         Query: func(piece *catalog.Piece) bool {
-          return slices.Contains(piece.Bss, "pub")
+          return catalog.FrmLeftHand(piece.Bss)
         },
       },
     },
@@ -234,46 +221,39 @@ var (
       {
         Name: "scale", Tit: "Scale | Гами",
         Query: func(piece *catalog.Piece) bool {
-          scl := []string{"scl", "seq", "cro"}
-          return formQuery(piece.Bss, scl)
+          return catalog.FrmScale(piece.Bss)
         },
       }, {
         Name: "arpeggio", Tit: "Arpeggio | Арпеджіо",
         Query: func(piece *catalog.Piece) bool {
-          arp := []string{"arp", "lng", "srt", "brk"}
-          return formQuery(piece.Bss, arp)
+          return catalog.FrmArpeggio(piece.Bss)
         },
       }, {
         Name: "interval", Tit: "Interval | Інтревали",
         Query: func(piece *catalog.Piece) bool {
-          inv := []string{"in3", "in4", "in5", "in6", "in7", "in8"}
-          return formQuery(piece.Bss, inv)
+          return catalog.FrmInterval(piece.Bss)
         },
       }, {
         Name: "chord", Tit: "Chord | Акорди",
         Query: func(piece *catalog.Piece) bool {
-          crd := []string{"cr5", "cr7"}
-          return formQuery(piece.Bss, crd)
+          return catalog.FrmChord(piece.Bss)
         },
-      }, /*{
+      }, /* {
         Name: "polyphony", Tit: "Polyphony | Поліфонія",
         Query: func(piece *catalog.Piece) bool {
-          pph := []string{"vo2", "vo3"}
-          return formQuery(piece.Bss, pph)
+          return catalog.FrmPolyphony(piece.Bss)
         },
       }, {
         Name: "polyrhythm", Tit: "Polyrhythm | Поліритмія",
         Query: func(piece *catalog.Piece) bool {
-          prh := []string{"syn", "tu3", "tu5", "tu6"}
-          return formQuery(piece.Bss, prh)
+          return catalog.FrmPolyrhythm(piece.Bss)
         },
       }, {
         Name: "ornament", Tit: "Ornament | Орнамент",
         Query: func(piece *catalog.Piece) bool {
-          orn := []string{"tre", "acc", "mor", "gru", "tri", "gli", "cad"}
-          return formQuery(piece.Frm, orn)
+          return catalog.FrmOrnament(piece.Bss)
         },
-      },*/
+      }, */
     },
   }
   secBss = &Section{
