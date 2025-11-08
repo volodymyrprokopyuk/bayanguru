@@ -462,3 +462,16 @@ pieces:
   - { id: isoe, tit: В разлуке,
       com: А. Гречанинов, src: FBBMS30N1985,
       org: rus, sty: cus, gnr: pie, ton: emi, frm: dot, bss: [frb, in3], lvl: elb }
+  # FBBMS31N1986
+  # p. 3
+  # - { id: ya9l, tit: Колыбельная песенка,
+  #     com: Г. Свиридов, arr: В. Накапкин, art: ipr, src: FBBMS31N1986,
+  #     org: rus, sty: cus, gnr: pie, ton: cmj, frm: dot, bss: [frb, dot, in3], lvl: elb }
+  # p. 16
+  # - { id: 72r6, tit: Песня,
+  #     com: И. Лунин, src: FBBMS31N1986,
+  #     org: rus, sty: cus, gnr: sng, ton: dmi, frm: mel, bss: [stb, syn], lvl: elb }
+  # p. 16
+  # - { id: tvx2, tit: Веселая прогулка,
+  #     com: В. Залипаев, src: FBBMS31N1986,
+  #     org: rus, sty: cus, gnr: pie, ton: dmi, frm: [in3, cr5, acc], bss: [stb, rep], lvl: elb }
