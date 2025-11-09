@@ -33,7 +33,7 @@ pieces:
       com: М. Любарський, src: SB1NU1979,
       org: ukr, sty: cus, gnr: stu, ton: gmj, frm: arp, bss: stb, lvl: ela }
   - { id: h8lm, tit: Етюд C major,
-      com: К. Черні, src: SB1NU1979,
+      com: К. Черні–Г. Гермер, src: SB1NU1979,
       org: aut, sty: cls, gnr: stu, ton: cmj, frm: [arp, brk], bss: stb, lvl: ela }
   - { id: 09ok, tit: Етюд G minor,
       com: С. Аксюк, src: SB1NU1979,
