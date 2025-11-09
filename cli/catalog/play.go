@@ -60,11 +60,15 @@ func ReadPiecesAndBooks(bc *BaseCmd) ([]*Piece, []*Book, int, error) {
     return nil, nil, 0, err
   }
   for _, piece := range pieceMap {
-    lyrFile := piece.Lyr + ".ly"
-    if lyrics[lyrFile] {
-      // Override automatic Lyrics with Lyrics2
-      piece.LyricsFile = lyrFile
-      continue
+    if len(piece.Lyr) > 0 && piece.Lyr != "none" {
+      lyrFile := piece.Lyr + ".ly"
+      if lyrics[lyrFile] {
+        // Override automatic Lyrics with lyr: Lyrics2
+        piece.LyricsFile = lyrFile
+        continue
+      }
+      err2 := fmt.Errorf("piece %s missing lyrics file %s", piece.ID, lyrFile)
+      return nil, nil, 0, err2
     }
     if piece.Lyr == "none" || !lyrics[piece.LyricsFile] {
       piece.LyricsFile = "" // Piece does not have lyrics
