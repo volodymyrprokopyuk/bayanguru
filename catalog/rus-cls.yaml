@@ -36,7 +36,7 @@ pieces:
   # B1AK1979
   - { id: ebam, tit: Елочка,
       com: М. Красев, src: B1AK1979,
-      org: rus, sty: cus, gnr: chd, ton: cmj, frm: mel, bss: stb, lvl: ela }
+      org: rus, sty: cus, gnr: chd, ton: cmj, frm: mel, bss: stb, lvl: ela, lyr: "none"}
   - { id: 6sx9, tit: Девицы-красавицы, sub: rusfs,
       src: B1AK1979,
       org: rus, sty: flk, gnr: sng, ton: gmj, frm: mel, bss: stb, lvl: ela }

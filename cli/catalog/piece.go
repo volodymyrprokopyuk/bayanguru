@@ -154,8 +154,11 @@ type Piece struct {
 
   Lvl string `yaml:"lvl"`
   Ens string `yaml:"ens"`
+  // none prevents automatic Lyrics for this piece
+  // Lyrics2 overrides automatic Lyrics with Lyrics2
+  Lyr string `yaml:"lyr"`
 
-  Desc string
+  Desc string // Website catalog and piece view
 
   File string
   LyricsFile string

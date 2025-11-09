@@ -59,10 +59,15 @@ func ReadPiecesAndBooks(bc *BaseCmd) ([]*Piece, []*Book, int, error) {
   if err != nil {
     return nil, nil, 0, err
   }
-  for pieceID, piece := range pieceMap {
-    if !lyrics[piece.LyricsFile] {
-      piece.LyricsFile = "" // A pieces does not have lyrics
-      pieceMap[pieceID] = piece
+  for _, piece := range pieceMap {
+    lyrFile := piece.Lyr + ".ly"
+    if lyrics[lyrFile] {
+      // Override automatic Lyrics with Lyrics2
+      piece.LyricsFile = lyrFile
+      continue
+    }
+    if piece.Lyr == "none" || !lyrics[piece.LyricsFile] {
+      piece.LyricsFile = "" // Piece does not have lyrics
     }
   }
   // Read books
