@@ -295,7 +295,7 @@ func pieceDesc(piece *Piece) string {
     }
   }
   // Study form
-  if piece.Gnr == "stu" {
+  if piece.Gnr == "stu" { //nolint:goconst,gocritic
     frm := append([]string{}, piece.Frm...)
     frm = append(frm, piece.Bss...)
     if FrmScale(frm) {
@@ -344,6 +344,8 @@ func LyricsFile(tit string) string {
   return tit + ".ly"
 }
 
+var reCleanStudyComposer = regexp.MustCompile(`.?\pL\.`)
+
 func addMetaToPieces(pieces []*Piece) {
   for _, piece := range pieces {
     // sub
@@ -369,7 +371,12 @@ func addMetaToPieces(pieces []*Piece) {
     // desc
     piece.Desc = pieceDesc(piece)
     // file
-    piece.File = scoreFile(piece.Tit, piece.ID)
+    if piece.Gnr == "stu" {
+      com := reCleanStudyComposer.ReplaceAllLiteralString(piece.Com, "")
+      piece.File = scoreFile(piece.Tit + com, piece.ID)
+    } else {
+      piece.File = scoreFile(piece.Tit, piece.ID)
+    }
     piece.LyricsFile = LyricsFile(piece.Tit)
   }
 }
