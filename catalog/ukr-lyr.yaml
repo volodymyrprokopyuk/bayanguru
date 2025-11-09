@@ -23,7 +23,7 @@ pieces:
       org: ukr, sty: cus, gnr: chd, ton: eesmj, frm: mel, bss: stb,
       lvl: ela, ens: vc1 }
   - { id: kddy, tit: Два півники,
-      arr: Г. Компанієць, aut: Слова народні, src: IIDBF2021, lcs: cpr,
+      arr: Г. Компанієць, src: IIDBF2021, lcs: cpr,
       org: ukr, sty: flk, gnr: chd, ton: eesmj, frm: [in3, cr5, acc], bss: stb,
       lvl: elb, ens: vc1 }
   - { id: gzmy, tit: "Вишеньки-черешеньки",
