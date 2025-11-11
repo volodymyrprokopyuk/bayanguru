@@ -2,6 +2,7 @@ package site
 
 import (
 	"bytes"
+	"cmp"
 	"context"
 	"fmt"
 	"io"
@@ -10,6 +11,7 @@ import (
 	"path/filepath"
 	"regexp"
 	"runtime"
+	"slices"
 	"strings"
 	"sync"
 	"text/template"
@@ -59,6 +61,43 @@ func engraveImage(siteDir, publicDir, image string) error {
   lyCmd.Stdout = os.Stdout
   lyCmd.Stderr = os.Stderr
   return lyCmd.Run()
+}
+
+func pieceTit(piece *catalog.Piece) string {
+  trimID := len(piece.File) - 5
+  return piece.File[0:trimID]
+}
+
+func canonicalSimilar(pieces []*catalog.Piece, pc *publishCommand) {
+  // Group similar pieces by title without ID
+  similar := make(map[string][]*catalog.Piece, len(pieces))
+  for _, piece := range pieces {
+    tit := pieceTit(piece)
+    similar[tit] = append(similar[tit], piece)
+  }
+  // Sort similar pieces by level descending and ID ascending
+  for tit := range similar {
+    slices.SortStableFunc(similar[tit], func(a, b *catalog.Piece) int {
+      c := cmp.Compare(a.Lvl, b.Lvl)
+      if c != 0 {
+        return -c
+      }
+      return cmp.Compare(a.ID, b.ID)
+    })
+  }
+  // Assign canonical URL and similar pieces
+  for _, piece := range pieces {
+    tit := pieceTit(piece)
+    sims := similar[tit]
+    piece.CanonURL = filepath.Join(pc.pieceURL, sims[0].File)
+    if len(sims) > 1 {
+      for _, sim := range sims {
+        if sim.ID != piece.ID {
+          piece.Similar = append(piece.Similar, sim)
+        }
+      }
+    }
+  }
 }
 
 func initSite(siteDir, publicDir string) error {
@@ -289,7 +328,7 @@ func fanOutPublishPieces(
           return
         }
       }
-      piece.URL = fmt.Sprintf("%s/%s.pdf", pc.scoreURL, piece.File)
+      piece.ScoreURL = fmt.Sprintf("%s/%s.pdf", pc.scoreURL, piece.File)
       pieceData := struct { Piece *catalog.Piece }{Piece: piece}
       err := publishFile(&w, tpl, pieceDir, piece.File, pieceData)
       fmt.Print(w.String())
@@ -377,6 +416,7 @@ func publish(pc *publishCommand) error {
   if err != nil {
     return err
   }
+  canonicalSimilar(pieces, pc)
   //nolint:gocritic
   // pc.Queries["lcs"] = "^cpr" // Exclude copyrighted pieces from publishing
   if len(pc.Queries) > 0 {

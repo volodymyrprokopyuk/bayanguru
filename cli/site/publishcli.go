@@ -19,9 +19,8 @@ const (
 )
 
 func publishAction(ctx context.Context, cmd *cli.Command) error {
-  cat := cmd.String("catalog")
+  cat := ""
   init := cmd.Bool("init")
-  book := cmd.Bool("book")
   upload := cmd.Bool("upload")
   args := cmd.Args()
   err := catalog.ValidateReq(cat, args.Slice())
@@ -32,22 +31,18 @@ func publishAction(ctx context.Context, cmd *cli.Command) error {
     BaseCmd: &catalog.BaseCmd{
       CatalogDir: catalog.CatalogDir, BookFile: catalog.BookFile,
       SourceDir: catalog.SourceDir, PieceDir: catalog.PieceDir,
-      BookDir: catalog.BookDir, Catalog: cat, Book: book,
+      BookDir: catalog.BookDir, Catalog: cat,
     },
     siteDir: SiteDir, templateDir: TemplateDir, contentDir: ContentDir,
     publicDir: PublicDir, init: init, upload: upload,
     uploadURL: UploadURL, scoreURL: ScoreURL, pieceURL: PieceURL,
     pageSize: PageSize,
   }
-  if pc.Book {
-    pc.BookIDs = args.Slice()
-  } else {
-    pc.PieceIDs = args.Slice()
-  }
   pc.Queries, err = catalog.ValidateQueries(cmd)
   if err != nil {
     return err
   }
+  pc.PieceIDs = args.Slice()
   return publish(pc)
 }
 
@@ -57,23 +52,16 @@ func PublishCmd() *cli.Command {
     Usage: "Publish pieces on the web",
     Description:
 `Publish command uploads PDF pieces to a cloud storage, generates and publishes
-a web site`,
+the website`,
     ArgsUsage:
 `
-   bayanguru publish [-c catalog] [--upload] pieces...
-   bayanguru publish [-c catalog] -b books... [--query]
-   bayanguru publish all [--query...]`,
+   bayanguru publish all [--init] [--upload] [--query...]
+   bayanguru publish pieces... [--init] [--upload] [--query...]`,
     Action: publishAction,
   }
   cmd.Flags = []cli.Flag{
-    &cli.StringFlag{
-      Name: "catalog", Usage: "read catalog files", Aliases: []string{"c"},
-    },
     &cli.BoolFlag{
-      Name: "init", Usage: "initialize the site",
-    },
-    &cli.BoolFlag{
-      Name: "book", Usage: "publish pieces from books", Aliases: []string{"b"},
+      Name: "init", Usage: "initialize the website",
     },
     &cli.BoolFlag{
       Name: "upload", Usage: "upload pieces to a cloud storage",

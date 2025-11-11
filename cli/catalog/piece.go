@@ -162,7 +162,9 @@ type Piece struct {
 
   File string
   LyricsFile string
-  URL string
+  ScoreURL string
+  CanonURL string
+  Similar []*Piece
   Meta bool
   // ens: sol
   RightHand, LeftHand string

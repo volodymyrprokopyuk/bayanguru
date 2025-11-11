@@ -10,7 +10,7 @@
             content="Curated library of high quality sheet music for bayan. Бібліотека вибраних нот високої якості для баяна">
     {{ end }}
     <link type="image/svg+xml" href="/image/icon.svg" rel="icon">
-    <link href="/tw.css" rel="stylesheet">
+    <link rel="stylesheet" href="/tw.css">
   </head>
   <body class="text-base font-light">
     <div class="m-2 lg:mx-[10%]">
@@ -81,3 +81,13 @@
     </script>
   </body>
 </html>
+
+{{ define "piece" }}
+  <div {{ if .AlphaLink }} id="{{ .AlphaLink }}" {{ end }}>
+    <div>
+      <a href="/piece/{{ .File }}" class="link">{{ .Tit }}</a>
+      <span class="text-lg italic">{{ .Com }} {{ .UkrArt }} {{ .Arr }} {{ .Aut }}</span>
+    </div>
+    <div>{{ .Desc }}</div>
+  </div>
+{{ end }}

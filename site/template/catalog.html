@@ -5,16 +5,6 @@
         content="Curated library of high quality sheet music for bayan. Бібліотека вибраних нот високої якості для баяна">
 {{ end }}
 
-{{ define "piece" }}
-  <div {{ if .AlphaLink }} id="{{ .AlphaLink }}" {{ end }}>
-    <div>
-      <a href="/piece/{{ .File }}" class="link">{{ .Tit }}</a>
-      <span class="text-lg italic">{{ .Com }} {{ .UkrArt }} {{ .Arr }} {{ .Aut }}</span>
-    </div>
-    <div>{{ .Desc }}</div>
-  </div>
-{{ end }}
-
 {{ define "body" }}
   <div data-nosnippet>
     {{ range .SectionLinks }}

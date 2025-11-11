@@ -4,6 +4,7 @@
     <title>{{ .Tit }} {{ .Com }} {{ .UkrArt }}{{ .Arr }}</title>
     <meta name="description"
           content="{{ .Tit }} {{ .Com }} {{ .UkrArt }}{{ .Arr }} баян ноти">
+    <link rel="canonical" href="{{ .CanonURL }}">
   {{ end }}
 {{ end }}
 
@@ -15,7 +16,7 @@
       </h1>
       <div class="text-center">{{ .Desc }}</div>
       <div class=" my-[0.5rem] text-center">
-        <a href="{{ .URL }}" class="button" >Downlaod | Заватнажити</a>
+        <a href="{{ .ScoreURL }}" class="button" >Downlaod | Заватнажити</a>
       </div>
       <div data-nosnippet>
         <p class="text-emerald-700">If you find this content useful, please
@@ -44,11 +45,19 @@
         <div data-pagefind-meta="lvl" data-pagefind-sort="lvl">{{ .Lvl }}</div>
         <div data-pagefind-meta="ens">{{ .Ens }}</div>
       </div>
-      <object id="score" type="application/pdf" data="{{ .URL }}" class="score">
+      <object id="score" type="application/pdf" data="{{ .ScoreURL }}" class="score">
         {{ .Tit }} {{ .Com }} {{ .UkrArt }}{{ .Arr }}</object>
     </div>
+    {{ if .Similar }}
+      <h2 class="head2">Similar | Подібні</h2>
+      <ul>
+      {{ range .Similar }}
+        <li class="mt-2">{{ template "piece" . }}</li>
+      {{ end }}
+      </ul>
+    {{ end }}
   {{ end }}
-  <div data-nosnippet>
+  <div data-nosnippet class="mt-2">
     <p class="text-red-700">Note: the <strong>Firefox web browser</strong> is
       recommended on mobile devices to directly preview a piece PDF. Other
       browsers on mobile devices may lack native support for direct PDF preview

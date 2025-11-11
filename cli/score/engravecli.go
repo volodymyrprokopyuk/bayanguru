@@ -77,19 +77,22 @@ func EngraveCmd() *cli.Command {
       Aliases: []string{"p"},
     },
     &cli.BoolFlag{
-      Name: "init", Usage: "initialize a new piece", Aliases: []string{"i"},
+      Name: "init", Usage: "initialize a new piece from template",
+      Aliases: []string{"i"},
     },
     &cli.BoolFlag{
-      Name: "lyr", Usage: "initialize lyrics for a piece",
+      Name: "lyr", Usage: "initialize lyrics for a piece (requires --init)",
     },
     &cli.BoolFlag{
-      Name: "lint", Usage: "lint pieces before engraving", Aliases: []string{"l"},
+      Name: "lint", Usage: "lint piece source code before engraving",
+      Aliases: []string{"l"},
     },
     &cli.BoolFlag{
-      Name: "optimize", Usage: "optimize PDF after engraving", Aliases: []string{"o"},
+      Name: "optimize", Usage: "optimize piece PDF after engraving",
+      Aliases: []string{"o"},
     },
     &cli.BoolFlag{
-      Name: "meta", Usage: "include piece meta information",
+      Name: "meta", Usage: "include piece meta information below title",
     },
     &cli.BoolFlag{
       Name: "lyrics", Usage: "include lyrics into pieces", Value: true,
