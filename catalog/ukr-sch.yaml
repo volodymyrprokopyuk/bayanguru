@@ -67,7 +67,7 @@ pieces:
       com: Д. Крижанівський, arr: С. Чапкій, aut: Т. Шевченко, src: FBBSC1978,
       org: ukr, sty: cus, gnr: sng, ton: emi, frm: [vo2, cr5], bss: [frb, vo2], lvl: elc }
   - { id: rzwj, tit: Їхав козак за Дунай, sub: ukrfs,
-      arr: С. Чапкій, src: FBBSC1978,
+      com: С. Климовський, arr: С. Чапкій, aut: С. Климовський, src: FBBSC1978,
       org: ukr, sty: flk, gnr: sng, ton: ami, frm: [vo2, var, cr5], bss: [frb, var, in3, in8, cr5], lvl: elc }
   # BSN1985
   - { id: 55kn, tit: "Ой за гаєм, гаєм", sub: ukrfs,
