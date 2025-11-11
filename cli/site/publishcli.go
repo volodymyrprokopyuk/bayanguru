@@ -51,7 +51,7 @@ func PublishCmd() *cli.Command {
     Name: "publish",
     Usage: "Publish pieces on the web",
     Description:
-`Publish command uploads PDF pieces to a cloud storage, generates and publishes
+`Publish command uploads PDF pieces to cloud storage, generates and publishes
 the website`,
     ArgsUsage:
 `
@@ -64,7 +64,7 @@ the website`,
       Name: "init", Usage: "initialize the website",
     },
     &cli.BoolFlag{
-      Name: "upload", Usage: "upload pieces to a cloud storage",
+      Name: "upload", Usage: "upload pieces to cloud storage",
       Aliases: []string{"u"},
     },
   }

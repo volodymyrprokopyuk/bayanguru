@@ -14,15 +14,15 @@ import (
 func bayanguruCmd() *cli.Command{
   cmd := &cli.Command{
     Name: "bayanguru",
-    Usage: "Engrave, play, and publish bayan sheet music",
+    Usage: "Engrave, play, and publish sheet music for bayan",
     Description:
 `Bayanguru engraves pieces and books of sheet music for bayan. Bayanguru
-selectively plays pieces from a catalog using a classification and search system
-based on catalog metadata. Bayanguru publishes high quality PDF pieces, lyrics,
-and books on the web`,
+selectively plays pieces from the catalog using a classification and search
+system based on catalog metadata. Bayanguru publishes high quality PDF pieces,
+lyrics, and books on the web`,
     ArgsUsage: `
    bayanguru engrave | play | publish pieces... | books... [options]`,
-    Version: "0.1.0",
+    Version: "rolling release",
     UseShortOptionHandling: true,
     Commands: []*cli.Command{
       score.EngraveCmd(), catalog.PlayCmd(), site.PublishCmd(),

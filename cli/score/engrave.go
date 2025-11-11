@@ -16,7 +16,7 @@ import (
 
 type engraveCommand struct {
   *catalog.BaseCmd
-  piece, init, lyr, lint, optimize, meta, lyrics bool
+  init, lyr, lint, optimize, meta, lyrics bool
 }
 
 func withArgs(args ...string) map[string]string {
@@ -106,7 +106,7 @@ func engrave (ec *engraveCommand) error {
     return initPieceLyrics(pieces, ec)
   }
   catalog.PrintStat(catLen, len(pieces))
-  if ec.Book && !ec.piece {
+  if ec.Book {
     return engraveBooks(books, ec)
   }
   return engravePieces(pieces, ec)

@@ -91,9 +91,14 @@ func canonicalSimilar(pieces []*catalog.Piece, pc *publishCommand) {
     sims := similar[tit]
     piece.CanonURL = filepath.Join(pc.pieceURL, sims[0].File)
     if len(sims) > 1 {
+      cnt := 0
       for _, sim := range sims {
         if sim.ID != piece.ID {
           piece.Similar = append(piece.Similar, sim)
+          cnt++
+          if cnt > pc.pageSize {
+            break
+          }
         }
       }
     }

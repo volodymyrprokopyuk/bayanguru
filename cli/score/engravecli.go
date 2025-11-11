@@ -13,7 +13,6 @@ const pieAll = "all"
 func engraveAction(ctx context.Context, cmd *cli.Command) error {
   cat := cmd.String("catalog")
   book := cmd.Bool("book")
-  piece := cmd.Bool("piece")
   init := cmd.Bool("init")
   lyr := cmd.Bool("lyr")
   lint := cmd.Bool("lint")
@@ -32,16 +31,13 @@ func engraveAction(ctx context.Context, cmd *cli.Command) error {
   if book && init {
     return errors.New("cannot initialize a book")
   }
-  if !book && piece {
-    return errors.New("at least one book is required")
-  }
   ec := &engraveCommand{
     BaseCmd: &catalog.BaseCmd{
       CatalogDir: catalog.CatalogDir, BookFile: catalog.BookFile,
       SourceDir: catalog.SourceDir, PieceDir: catalog.PieceDir,
       BookDir: catalog.BookDir, Catalog: cat, Book: book,
     },
-    piece: piece, init: init, lyr: lyr, lint: lint, optimize: optimize,
+    init: init, lyr: lyr, lint: lint, optimize: optimize,
     meta: meta, lyrics: lyrics,
   }
   if ec.Book {
@@ -60,8 +56,8 @@ func EngraveCmd() *cli.Command {
 `Engrave command initializes, lints, engraves, and optimizes pieces and books`,
     ArgsUsage:
 `
-   bayanguru engrave [-c catalog] pieces... [--init]
-   bayanguru engrave [-c catalog] -b books... [--piece]
+   bayanguru engrave [-c catalog] pieces... [--init] [--lyr]
+   bayanguru engrave [-c catalog] --book books...
    bayanguru engrave all --lint --optimize --meta --lyrics=f`,
     Action: engraveAction,
   }
@@ -71,10 +67,6 @@ func EngraveCmd() *cli.Command {
     },
     &cli.BoolFlag{
       Name: "book", Usage: "engrave books", Aliases: []string{"b"},
-    },
-    &cli.BoolFlag{
-      Name: "piece", Usage: "engrave individual pieces from books",
-      Aliases: []string{"p"},
     },
     &cli.BoolFlag{
       Name: "init", Usage: "initialize a new piece from template",
@@ -95,7 +87,7 @@ func EngraveCmd() *cli.Command {
       Name: "meta", Usage: "include piece meta information below title",
     },
     &cli.BoolFlag{
-      Name: "lyrics", Usage: "include lyrics into pieces", Value: true,
+      Name: "lyrics", Usage: "include lyrics after piece score", Value: true,
     },
   }
   return cmd
