@@ -2,6 +2,10 @@
   \duo { c''=''4. | } { a'='4( g='8) | }
 {{ end }}
 
+{{ define "lh1" }}
+  b=,8 e@m! g8 e@m! | a8 am! e' a@m! | d8 d7! a d@7! | g8[ gM! gM] %
+{{ end }}
+
 {{ define "rightHand" }}
 \relative {
   \tempo "Allegro moderato"
@@ -43,5 +47,17 @@
 \relative {
   \clef bass
   \key g \major
+  \partial 8 { r8 | }
+  g,=,8[ gM! gM] r | b[ g@M! gM8] r | c a@m! d8 d7! | g, gM! d' r |
+  g,=,8 gM! b g@M! | d8[ g@M! gM8] r | a d@7! d8 d7! | g, gM! fis b@7! |
+  e=,8 e7! gis e@7! | a8[ am! am] r | d d7! fis, d@7! | g8[ gM! gM] r |
+  a=,8 am! d d7! | g, a b c | d d d d |d d d c= |
+
+  {{ template "lh1" }} r8 |
+  e'=8 em! dis d | c a@m! e8 a@m! | d8 d d d | d d d  c |
+  {{ template "lh1" }} fis=,8 |
+  e=,8 em! b' e@m! | a8 am! e' a@m! | d8 d7! a d@7! | d8 e fis= r |
+
+  \rep 3 { g,=,8 d' g, d'= | } | g, g g=,4 \fermata |
 }
 {{ end }}
