@@ -25,7 +25,7 @@
   \clef bass
   \key c \major
   \rep 4 { R2. | }
-  c'='4.( g | e d) | c2. | g'4.( c) | e,( d4 c8 | a'4 c8 g4.) |
+  c'='4.(-\frBass g | e d) | c2. | g'4.( c) | e,( d4 c8 | a'4 c8 g4.) |
   e=8( g c e4 e8) | e4( d8 c4.) | c8( b a g4.) | f4.(~ f8 e d |
   c=4.) d8( e f | g a b c) e,( f | <c g'>2.) | <c f g>4. <c e g> |
   <f= a>2. | <e b'>4. <a c> | <g b> <f a> | <e g> <d f> | <c g'>2. |
