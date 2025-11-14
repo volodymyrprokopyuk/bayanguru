@@ -472,3 +472,7 @@ pieces:
   - { id: tvx2, tit: Веселая прогулка,
       com: В. Залипаев, src: FBBMS31N1986,
       org: rus, sty: cus, gnr: pie, ton: gmj, frm: [in3, cr5, acc], bss: [stb, rep], lvl: elb }
+  # p. 20
+  # - { id: 5i7b, tit: На качелях, sub: Вальс,
+  #     com: В. Накапкин, src: FBBMS31N1986,
+  #     org: rus, sty: cus, gnr: vls, ton: gmi, frm: [vo2, in3, ch5], bss: stb, lvl: elb }
