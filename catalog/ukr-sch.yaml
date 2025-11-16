@@ -211,3 +211,8 @@ pieces:
   - { id: jr37, tit: "І шумить, і гуде", sub: ukrfs,
       arr: С. Павин, src: FBBMS30N1985,
       org: ukr, sty: flk, gnr: sng, ton: [cmj, fmj], frm: [var, in3, cr5], bss: [frb, in3, cr5], lvl: elb }
+  # FBBMS31N1986
+  # p. 30
+  # - { id: hoef, tit: Варені рибки, sub: ukrfs,
+  #     arr: Ю. Грибков, src: FBBMS31N1986,
+  #     org: ukr, sty: flk, gnr: sng, ton: fmj, frm: [vo2, var, in6], bss: [frb, stb], lvl: elb }
