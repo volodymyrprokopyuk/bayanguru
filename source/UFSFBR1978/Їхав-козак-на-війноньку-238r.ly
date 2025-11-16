@@ -19,6 +19,10 @@
   {{ template "rh1" }}
 {{ end }}
 
+{{ define "lh1" }}
+  c=8-. bes-. a4(-> | d=8) r r4 | \rep 2 { g,=,8 gm! g=, gm | }
+{{ end }}
+
 {{ define "rightHand" }}
 \relative {
   \tempo "Tempo di marcia"
@@ -52,5 +56,29 @@
 \relative {
   \clef bass
   \key g \minor
+  g,=,8-\stBass gm! g gm | \rep 3 { g=,8 gm! g gm | }
+  fis=,8 d@7! d'8 d7! | g, gm! a f@7! | \rep 2 { bes=,8 besM! bes besM | }
+  a=,8 f@7! f8 f7! | bes besM! g gM! | c cm! c cm | g gm! f g@m! |
+  ees'=8 c@m! d8 d7! | g, gm! g gm | {{ template "lh1" }}
+  \rep 2 { c=8 cm! d d7! | g, gm! g=, gm | } | {{ template "lh1" }}
+
+  g=,8 gm! g d@M! | g8 gm! bes g@m! | d8 d7! fis, d@7! | g8 gm! f f7! |
+  bes=,8 besM! bes f@M! | bes8 besM! d bes@M! | f,8 f7! a f@7! |
+  bes=,8 besM! bes besM | c cm! f, f7! | bes besM! ees eesM! |
+  a,=,8 c@m! d8 d7! | g, gm! bes b | c cm! a c@m! | d=8 r r4 |
+
+  g,=,8( gm!) d'( dM!) | g,( gm!) g( g7!) | c cm! f, f7! |
+  bes=,8 besM! ees eesM! | a, c@m! d8 d7! | g, gm! bes g@m! |
+  {{ template "lh1" }}
+
+  g=,8(-> gm!16) gm16 gm8 d' | g,(-> gm!16) gm16 gm8 g |
+  fis=,8[(-> d@7!16) d716] d78 fis | g gm! a f@7! |
+  bes=,8(-> besM!16) besM16 besM8 f | bes(-> besM!16) besM16 besM8 bes |
+  a=,8[(-> f@7!16) f716] f78 a | bes besM! g gM! | c(-> cm!16) cm16 cm8 cm8 |
+  g=,8 gm! f g@m! | ees'8[(-> c@m!16) cm16] d8 d7! | g, gm! g gm |
+  {{ template "lh1" }}
+
+  \rep 2 { c=8 cm! d d7! | g, gm! g=, gm | } | {{ template "lh1" }}
+  \rep 2 { g=,8 gm! g=, gm | } | g+gm! r r4 |
 }
 {{ end }}

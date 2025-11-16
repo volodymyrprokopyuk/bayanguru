@@ -40,7 +40,7 @@ pieces:
       arr: М. Леонтович, src: FBBSC1978,
       org: ukr, sty: flk, gnr: sng, ton: gmi, frm: dot, bss: [frb, dot], lvl: ela }
   - { id: z6yg, tit: Їхав козак на війноньку, sub: ukrfs,
-      arr: Є. Юцевич, src: FBBSC1978,
+      com: М. Гайворонський, arr: Є. Юцевич, aut: М. Гайворонський, src: FBBSC1978,
       org: ukr, sty: flk, gnr: sng, ton: ami, frm: mel, bss: frb, lvl: ela }
   - { id: mq61, tit: "Ой ти, дівчино зарученая", sub: ukrfs,
       arr: С. Чапкій, src: FBBSC1978,

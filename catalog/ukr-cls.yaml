@@ -164,7 +164,7 @@ pieces:
       com: А. Філіпенко, src: B1AK1979,
       org: ukr, sty: cus, gnr: chd, ton: fmj, frm: mel, bss: stb, lvl: ela }
   - { id: qxq9, tit: Їхав козак на війноньку, sub: ukrfs,
-      src: B1AK1979,
+      com: М. Гайворонський, aut: М. Гайворонський, src: B1AK1979,
       org: ukr, sty: flk, gnr: sng, ton: emi, frm: in3, bss: stb, lvl: elb }
   - { id: e78y, tit: Кучерява Катерина, sub: ukrfs,
       src: B1AK1979,
