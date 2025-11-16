@@ -16,7 +16,8 @@
           cis,=''16(-> d e8)-. a, a16[ \sSlur uf #'((ww . 2)) ( g=']) |
         }
         \volta 2 {
-          cis=''16(-> d e8)-. <fis, d'>\f \fine \bar "!!" <b,= d>16\p 16 |
+          cis=''16(-> d e8)-. <fis, d'>\f \fine \bar "!!" %
+          <b,= d>16\p 16 \bar "||"
         }
       }
     }
