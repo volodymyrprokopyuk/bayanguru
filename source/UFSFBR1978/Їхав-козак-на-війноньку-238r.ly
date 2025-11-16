@@ -6,7 +6,7 @@
 {{ define "rh2" }}
   {{ .a }} 8 <d a'> | <d g bes>4 <d a'>8 <bes d g> |
   <d=' a'>4 <d a' d> | <bes d g> <c ees f> | <d f bes>4 8 <f c'> |
-  <bes=' d>4 <f c'>8 <d f bes> | <f c'>4 <f c' f> |
+  <f=' bes d>4 <f c'>8 <d f bes> | <f c'>4 <f c' f> |
   \duo { <f'=' d'>2 | } { bes'='4( b=') | }
   <g=' c ees>4 <g bes d>8 <g a c> | <g bes d>4 <g bes> |
   <g=' c>4 <fis bes>8 <fis a> | <g bes>4 g | <ees g>( <ees' g>8 <c ees> |
