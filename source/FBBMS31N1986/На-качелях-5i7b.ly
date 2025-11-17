@@ -77,8 +77,8 @@
 
   g=,4 gm! d' | ees c@m! cm4 | d d7! d7 | d g@m! gm4 |
   g,=,4 gm! d'4 | c cm! cm | c f@7! f74 | d bes@M! f,4 |
-  d'=4 bes@M! besM4 | e c@m! cm4 | f, f7! f7 | bes besM! d |
-  c=4 cm! r | bes g@m! d4 | ees ees ees | d d d | f f ees= |
+  d'=4 bes@M! besM4 | ees c@m! cm4 | f, f7! f7 | bes besM! d |
+  c=4 cm! r | bes g@m! r4 | ees ees ees | d d d | f f ees= |
 
   d=4 bes@M! r4 | c cm! bes | a f@7! r4 | bes besM! aes |
   g=,4 g7! g7 | c cm! cm | f, f7! f7 | bes besM! a |
