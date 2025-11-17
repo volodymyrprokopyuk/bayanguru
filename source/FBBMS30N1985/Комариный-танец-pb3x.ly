@@ -35,10 +35,9 @@
   d='''16(-> cis) e-. d-. cis(->\< <eis,='' fis>16) 16-. \af 16\! 16-. |
   {{ template "rh2" (w `fis=''16-.\mf`) }}
   a=''16-. cis, a'(-> b) a-. d,-. a'(-> b) |
-  a=''16( ais) b-. d-. cis(-> <g='' a>16) 16-. 16-. %
-  \sRep \markup { D.C. al \coda } "e poi la Coda" \bar "||"
+  a=''16( ais) b-. d-. cis(-> <g='' a>16) 16-. 16-. \segnoDC \bar "||"
 
-  e=''16(->^\sCoda fis) g(-> a) b(-> a) b-. a-. |
+  e=''16(->^\segnoCoda fis) g(-> a) b(-> a) b-. a-. |
   <b='' cis d>16-> 16-. 16-. a-. \acc { a=''8 } d='''4-> \bar "|."
 }
 {{ end }}

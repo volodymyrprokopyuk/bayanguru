@@ -30,7 +30,7 @@
 
   {{ template "rh1" (w `bes=8[-.\mf`) }} a( e) |
   {{ template "rh1" (w `bes=8[-.`) }} a='2 %
-  \sRep \markup { D.C. al \coda }
+  \segnoRep \markup { D.C. al \coda }
   \markup { e poi \concat { \coda \coda } al Fine } \bar "||"
 }
 {{ end }}

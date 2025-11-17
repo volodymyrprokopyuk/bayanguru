@@ -42,12 +42,11 @@
         c=''8-> <ees g>-> \duo { g''=''8( f='') | } { b'='4 | }
       }
       \volta 2 {
-        ees=''8-> <ees g>-> d16 c bes aes=' %
-        \sRep \markup { D.C. al \coda } "e poi la Coda" \bar "||"
+        ees=''8-> <ees g>-> d16 c bes aes=' \segnoDC \bar "||"
       }
     }
   }
-  <g=' ees'>8^\sCoda <bes g'> <g=' ees'> r \bar "|."
+  <g=' ees'>8^\segnoCoda <bes g'> <g=' ees'> r \bar "|."
 }
 {{ end }}
 

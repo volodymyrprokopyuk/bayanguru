@@ -43,9 +43,9 @@
     d=''16\< gis b a gis b d c b d f \af 16\! e) |
     \af 4.\! e='''4.\> e8(-.\< e-. \af 8\! e)-. |
     e,=''4.\>^\tRit e8(-.\< e-. %
-    \af 8\! e='')-. \sRep "D.C. al Fine" "e poi Trio" \bar "||"
+    \af 8\! e='')-. \segnoRep "D.C. al Fine" "e poi Trio" \bar "||"
 
-    {{ template "rh1" (w ` \acc { a,='8 } a'=''4~\mf^\sTrio`) }}
+    {{ template "rh1" (w ` \acc { a,='8 } a'=''4~\mf^\segnoTrio`) }}
 
     \tempo "Più mosso"
     \meter 1/4 1,1,1
