@@ -475,7 +475,6 @@ pieces:
   - { id: 5i7b, tit: На качелях, sub: Вальс,
       com: В. Накапкин, src: FBBMS31N1986,
       org: rus, sty: cus, gnr: vls, ton: gmi, frm: [vo2, in3, cr5], bss: [stb, pub], lvl: elb }
-  # p. 29
-  # - { id: 7ile, tit: Коровушка, sub: rusfs,
-  #     arr: В. Савелов, src: FBBMS31N1986,
-  #     org: rus, sty: flk, gnr: sng, ton: emi, frm: [vo2, var, ch5], bss: [frb, stb, in3,], lvl: elb }
+  - { id: 7ile, tit: Коровушка, sub: rusfs,
+      arr: В. Савелов, src: FBBMS31N1986,
+      org: rus, sty: flk, gnr: sng, ton: emi, frm: [vo2, var, cr5], bss: [frb, stb, in3,], lvl: elb }
