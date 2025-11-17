@@ -7,46 +7,64 @@
   <bes= d g>8\pp g' \rep 2 { <bes=' d g>8 g=' } |
   <bes,= ees g>8 g' \rep 2 { <bes=' ees g>8 g=' } |
   <c,=' d fis>8\< <c d g> \af 2\! \rep 2 { <c=' fis a>8 bes'=' } |
-  <c,=' d bes'>4~->\>^\tRit \af 8\! 8 r r4 |
+  <c,=' d bes'>4~->\>^\tRit \af 8\! 8 r r4 \barSegno \bar "||"
 
-  \repeat segno 2 {
-    \repeat volta 2 {
-      bes=4(\mp^\tATem d8 g) a-. bes-. |
-      \duo { \rep 2 { c'='4( bes' a=') | } | bes,( a' g=') | }
-      { c'='2. | c | bes= | } | bes,=8(\< d g a) bes-. \af 8\! d-. |
-      \duo { ees'='4( d' c) | ees,( d'8 c) bes a=' | }
-      { ees'='2. | ees='2 r4 | } | g,='8( a) g-. f-. g-. a-. |
-      \duo {
-        r8 <d''='' f>8-. 8-. 8-. 8-. 8-. |
-        r8 <c='' ees>8-. 8-. <d f>-. <c ees>4-- |
-        r8 <d='' f>8-. 8-. <c ees>8-. 8-. 8-. |
-        r8 <bes=' d>8-. 8-. <a c>-. <bes d>4-- |
-      } { bes'='4.( a) | g2. | a4. ( g) | f='2. | }
-      ees='4.(\mp\< <c' ees>8) <bes d>-. <a c>-. |
-      d,='4.( <bes' d>8) <a c>-. \af 8\! <g bes>-. |
-      c,='8( ees <c ees bes'>4) <c ees a> \bar "||"
+  \repeat volta 2 {
+    bes=4(\mp^\tATem d8 g) a-. bes-. |
+    \duo { \rep 2 { c'='4( bes' a=') | } | bes,( a' g=') | }
+    { c'='2. | c | bes= | } | bes,=8(\< d g a) bes-. \af 8\! d-. |
+    \duo { ees'='4( d' c) | ees,( d'8 c) bes a=' | }
+    { ees'='2. | ees='2 r4 | } | g,='8( a) g-. f-. g-. a-. |
+    \duo {
+      r8 <d''='' f>8-. 8-. 8-. 8-. 8-. |
+      r8 <c='' ees>8-. 8-. <d f>-. <c ees>4-- |
+      r8 <d='' f>8-. 8-. <c ees>8-. 8-. 8-. |
+      r8 <bes=' d>8-. 8-. <a c>-. <bes d>4-- |
+    } { bes'='4.( a) | g2. | a4. ( g) | f='2. | }
+    ees='4.(\mp\< <c' ees>8) <bes d>-. <a c>-. |
+    d,='4.( <bes' d>8) <a c>-. \af 8\! <g bes>-. |
+    c,='8( ees <c ees bes'>4) <c ees a> \codaMark 1 \bar "||"
+    \alternative {
+      \volta 1 {
+        \duo { \af 2\! d'='2\> } { d'='4 c^\tRit bes8 a= | }
+      }
+      \volta 2 { <c=' ees g>4 <c ees a> <ees=' f c'> | }
+    }
+  }
+
+  \repeat volta 2 {
+    bes'='8\mf f g f ees d | ees g c d ees d |
+    c=''8 g a g f ees | f g a bes c d |
+    <d='' f>4--\f g,8 <d' f> <ees g> <d f> |
+    <d='' f>8 <c ees>8 8 <g d'> <c ees>4 |
+    <ees='' g>4 <f, a>8 <ees' g> <d f> <c ees> |
+    <d='' f>8 <c ees> \duo { d''=''2 | } { bes'='4( c='') | }
+
+    \duo { d''=''2.\p | cis | c | bes | a | g | }
+    {
+      r4 bes'='8( a bes g) | r4_ \dCre a8( g a g) |
+      r4 g='8( fis e fis) | r4 fis8( g a g) |
+      r4 f='8( e f e) | r4 ees8( d ees d=') |
     }
     \alternative {
       \volta 1 {
-        \alternative {
-          \volta 1 {
-            \duo { \af 2\! d'='2\> } { d'='4 c^\tRit bes8 a= | }
-          }
-          \volta 2 { <c=' ees g>4 <c ees a> <ees=' f c'> | }
-        }
-
-        \repeat volta 2 {
-          bes'='8\mf f g f ees d | ees g c d ees d |
-          c=''8 g a g f ees | f g a bes c d |
-          \alternative {
-            \volta 1 {  }
-            \volta 2 {  }
-          }
-        }
+        \duo { fis'='2. | g='2\< \af 4\! r4 | }
+        { r4 d'='8( ees d c) | r8 bes c d ees16 f g a=' | }
       }
-      \volta 2 { \section \sectionLabel "Coda"  }
+      \volta 2 {
+        \duo { fis'='2. | g=' | }
+        { r8 d'='8( d c bes a) | r8 bes( ees d f ees=') \segnoDS \bar "||" }
+      }
     }
   }
+
+  ees,='8(\<^\segnoCoda g <ees f d'>4) \af 4\! <ees f c'> |
+  bes'='8 f g d ees d | c^\tRit ees bes' a g fes |
+  \duo {
+    r4\> <bes'=' d g>8 <a c g'> <bes d g>4 |
+    r4 <c='' e g>8 <c e a> <c e g>4 |
+    r4 <c='' e g>4 \af 4\! 4 | <b=' d g>2.\pp \fermata \bar "|."
+  } { g'='2. | g | g~ | g \fermata | }
 }
 {{ end }}
 

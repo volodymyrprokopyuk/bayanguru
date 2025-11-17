@@ -53,20 +53,22 @@ tSos = "sost."
 tTen = "ten."
 
 % Segno section
-sTrio = \markup { \fontsize #2 "Trio" }
-sCoda = \markup { \fontsize #2 "Coda" }
-sRep = #(define-music-function (a b) (markup? markup?)
+barFermata = \mark \markup \musicglyph #"scripts.ufermata"
+barSegno = \mark \markup \segno
+segnoTrio = \markup { \fontsize #2 "Trio" }
+segnoCoda = \markup { \fontsize #2 "Coda" }
+segnoRep = #(define-music-function (a b) (markup? markup?)
   #{
     \tweak direction #DOWN \textEndMark \markup {
       \italic \right-column { #a #b }
     }
   #}
 )
+segnoDC = \segnoRep \markup { D.C. al \coda } "e poi la Coda"
+segnoDS = \segnoRep \markup { D.S. \segno al \coda } "e poi la Coda"
 
 % Bars
 l = \bar "|" % \compoundMeter
-
-barFermata = \mark \markup \musicglyph #"scripts.ufermata"
 \defineBarLine "!!" #'("!!" "!!" "!!")
 
 keyCancelChangeBar = \once {
