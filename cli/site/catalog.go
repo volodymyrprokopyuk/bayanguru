@@ -65,7 +65,9 @@ var (
       }, {
         Name: "extra", Tit: "Extra | Різне",
         Query: func(piece *catalog.Piece) bool {
-          ext := []string{"mda", "pol", "cze", "svk", "svn", "lva", "ltu", "est"}
+          ext := []string{
+            "mda", "srb", "pol", "cze", "svk", "svn", "lva", "ltu", "est",
+          }
           return slices.Contains(ext, piece.Org)
         },
       },
@@ -154,7 +156,9 @@ var (
       }, {
         Name: "extra", Tit: "Extra | Різне",
         Query: func(piece *catalog.Piece) bool {
-          ext := []string{"mda", "pol", "cze", "svk", "svn", "lva", "est"}
+          ext := []string{
+            "mda", "srb", "pol", "cze", "svk", "svn", "lva", "ltu", "est",
+          }
           return slices.Contains(ext, piece.Org)
         },
       },

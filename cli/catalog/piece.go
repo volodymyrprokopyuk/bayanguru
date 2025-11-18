@@ -52,6 +52,7 @@ var metaDesc = map[string]string{
   "blr": "Біл.",
   "hun": "Угор.",
   "mda": "Мол.",
+  "srb": "Серб.",
   "pol": "Пол.",
   "cze": "Чес.",
   "svk": "Слов.",
@@ -388,7 +389,7 @@ var (
   reArt = regexp.MustCompile(`^arr|ipr|hrm$`)
   reLcs = regexp.MustCompile(`^cpl|cpr$`)
   reOrg = regexp.MustCompile(
-    `^ukr|rus|blr|hun|mda|pol|cze|svk|svn|lva|ltu|est|aut|deu|dnk|fra|swe$`,
+    `^ukr|rus|blr|hun|mda|srb|pol|cze|svk|svn|lva|ltu|est|aut|deu|dnk|fra|swe$`,
   )
   reSty = regexp.MustCompile(`^flk|cus|cls$`)
   reGnr = regexp.MustCompile(
