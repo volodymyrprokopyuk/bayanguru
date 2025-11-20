@@ -479,10 +479,9 @@ pieces:
       arr: В. Савелов, src: FBBMS31N1986,
       org: rus, sty: flk, gnr: sng, ton: emi, frm: [vo2, var, cr5], bss: [frb, stb, in3], lvl: elb }
   # FBBMS32P1986
-  # p. 26
-  # - { id: ouyg, tit: Каватина Людмилы, sub: 'из оперы \"Руслан и Людмила\"',
-  #     com: М. Глинка, arr: В. Платонов, art: ipr, src: FBBMS32P1986,
-  #     org: rus, sty: flk, gnr: sng, ton: emi, frm: mel, bss: [frb, jmp], lvl: elb }
+  - { id: ouyg, tit: Каватина Людмилы, sub: 'из оперы \"Руслан и Людмила\"',
+      com: М. Глинка, arr: В. Платонов, art: ipr, src: FBBMS32P1986,
+      org: rus, sty: flk, gnr: sng, ton: gmj, frm: mel, bss: [frb, jmp], lvl: elb }
   # p. 26
   # - { id: eohe, tit: Полька,
   #     com: М. Балакирев, src: FBBMS32P1986,
