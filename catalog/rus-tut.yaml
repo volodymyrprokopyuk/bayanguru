@@ -38,9 +38,9 @@ pieces:
   - { id: 7s64, tit: Жди солдата,
       com: Б. Мокроусов, arr: М. Чайкін, art: ipr, src: BTBC1936,
       org: rus, sty: cus, gnr: mil, ton: dmi, frm: in3, bss: stb, lvl: elb }
-  - { id: blt6, tit: Родина, sub: rusfs,
+  - { id: blt6, tit: Родина,
       com: В. Смыслов, arr: М. Чайкін, art: hrm, src: BTBC1936,
-      org: rus, sty: flk, gnr: sng, ton: dmi, frm: in3, bss: stb, lvl: elb }
+      org: rus, sty: cus, gnr: sng, ton: dmi, frm: in3, bss: stb, lvl: elb }
   - { id: l1zm, tit: Лирическая,
       com: Н. Поликарпов, src: BTBC1936,
       org: rus, sty: cus, gnr: pie, ton: dmj, frm: [in3, dot, syn], bss: stb, lvl: elb }
@@ -53,9 +53,9 @@ pieces:
   - { id: wkmw, tit: Не сама машина ходит, sub: Алтайские частушки,
       arr: Н. Кутузов, src: BTBC1936,
       org: rus, sty: flk, gnr: pry, ton: dmi, frm: [in3, cr5, syn, jmp], bss: stb, lvl: elc }
-  - { id: ecde, tit: Мчатся гуси вереницей, sub: rusfs,
+  - { id: ecde, tit: Мчатся гуси вереницей,
       com: У. Жук, arr: М. Чайкін, art: hrm, src: BTBC1936,
-      org: rus, sty: flk, gnr: sng, ton: dmi, frm: in3, bss: [stb, syn], lvl: elb }
+      org: rus, sty: cus, gnr: sng, ton: dmi, frm: in3, bss: [stb, syn], lvl: elb }
   - { id: vmd4, tit: "Цвети, наш край",
       com: С. Туликов, arr: А. Басурманов, art: ipr, src: BTBC1936,
       org: rus, sty: cus, gnr: pie, ton: [eesmj, cmi], frm: in3, bss: [stb, syn], lvl: elb }
