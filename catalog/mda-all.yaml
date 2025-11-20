@@ -11,9 +11,3 @@ pieces:
   - { id: epyc, tit: Молдовеняска, sub: mdafd,
       arr: М. Чайкін, art: ipr, src: BTBC1936,
       org: mda, sty: flk, gnr: dnc, ton: [dmi, fmj], frm: [var, dot, acc], bss: stb, lvl: elb }
-  # School
-  # FBBMS31N1986
-  # p. 32
-  # - { id: g0wj, tit: Блакитною весняною нічкою, sub: Сербська народна пісня,
-  #     arr: В. Накапкин, src: FBBMS31N1986,
-  #     org: srb, sty: flk, gnr: sng, ton: dmj, frm: [vo2, in3, cr5], bss: stb, lvl: elb }
