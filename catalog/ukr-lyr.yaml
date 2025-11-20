@@ -31,9 +31,9 @@ pieces:
       org: ukr, sty: cus, gnr: chd, ton: dmj, frm: in3, bss: stb,
       lvl: ela, ens: vc1 }
   # OZGGP1993
-  - { id: igzh, tit: "Не щебечи, соловейко", sub: ukrfs,
+  - { id: igzh, tit: "Не щебечи, соловейко",
       com: М. Глінка, arr: Ю. Щуровський, aut: В. Забіла, src: OZGGP1993,
-      org: ukr, sty: flk, gnr: sng, ton: dmi, frm: [vo2, dot], bss: frb, lvl: elb }
+      org: ukr, sty: cus, gnr: sng, ton: dmi, frm: [vo2, dot], bss: frb, lvl: elb }
   - { id: yiry, tit: Ой на горі жито, sub: ukrfs,
       arr: М. Каландьонок, src: OZGGP1993,
       org: ukr, sty: flk, gnr: chd, ton: gmj, frm: in3, bss: frb, lvl: elb }
@@ -55,9 +55,9 @@ pieces:
   - { id: ke9a, tit: Ой на горі та женці жнуть, sub: ukrfs,
       arr: Ю. Соколовський, src: OZGGP1993,
       org: ukr, sty: flk, gnr: sng, ton: dmi, frm: [in3, cr5], bss: [frb, in3, cr5], lvl: elb }
-  - { id: 3vpj, tit: Їхав козак за Дунай, sub: ukrfs,
+  - { id: 3vpj, tit: Їхав козак за Дунай,
       com: С. Климовський, arr: Ю. Соколовський, aut: С. Климовський, src: OZGGP1993,
-      org: ukr, sty: flk, gnr: sng, ton: ami, frm: in3, bss: [frb, in3], lvl: elb }
+      org: ukr, sty: cus, gnr: sng, ton: ami, frm: in3, bss: [frb, in3], lvl: elb }
   - { id: o581, tit: Тече річка невеличка, sub: ukrfs,
       arr: Ю. Соколовський, src: OZGGP1993,
       org: ukr, sty: flk, gnr: sng, ton: gmi, frm: in3, bss: [frb, cr5], lvl: elb }
@@ -91,9 +91,9 @@ pieces:
   - { id: emb1, tit: Ой під вишнею, sub: ukrfs,
       arr: Ю. Соколовський, src: OZGGP1993,
       org: ukr, sty: flk, gnr: sng, ton: gmj, frm: [in3, in6], bss: [frb, jmp], lvl: elb }
-  - { id: dkx8, tit: Ніч яка місячна, sub: ukrfs,
+  - { id: dkx8, tit: Ніч яка місячна,
       com: А. Волощенко, arr: Ю. Соколовський, aut: М. Старицький, src: OZGGP1993,
-      org: ukr, sty: flk, gnr: sng, ton: ami, frm: [in3, cr5], bss: [frb, vo2], lvl: elb }
+      org: ukr, sty: cus, gnr: sng, ton: ami, frm: [in3, cr5], bss: [frb, vo2], lvl: elb }
   - { id: y4xn, tit: Ой на горі два дубки, sub: ukrfs,
       arr: Ю. Соколовський, src: OZGGP1993,
       org: ukr, sty: flk, gnr: sng, ton: ami, frm: [vo2, in3, cr5, syn], bss: [frb, jmp], lvl: elb }

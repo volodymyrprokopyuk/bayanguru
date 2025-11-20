@@ -39,9 +39,9 @@ pieces:
   - { id: 8w4m, tit: Гра в зайчика, sub: ukrfs,
       arr: М. Леонтович, src: FBBSC1978,
       org: ukr, sty: flk, gnr: sng, ton: gmi, frm: dot, bss: [frb, dot], lvl: ela }
-  - { id: z6yg, tit: Їхав козак на війноньку, sub: ukrfs,
+  - { id: z6yg, tit: Їхав козак на війноньку,
       com: М. Гайворонський, arr: Є. Юцевич, aut: М. Гайворонський, src: FBBSC1978,
-      org: ukr, sty: flk, gnr: sng, ton: ami, frm: mel, bss: frb, lvl: ela }
+      org: ukr, sty: cus, gnr: sng, ton: ami, frm: mel, bss: frb, lvl: ela }
   - { id: mq61, tit: "Ой ти, дівчино зарученая", sub: ukrfs,
       arr: С. Чапкій, src: FBBSC1978,
       org: ukr, sty: flk, gnr: sng, ton: ami, frm: jmp, bss: [frb, vo2], lvl: ela }
@@ -66,9 +66,9 @@ pieces:
   - { id: bjyu, tit: Реве та стогне Дніпр широкий,
       com: Д. Крижанівський, arr: С. Чапкій, aut: Т. Шевченко, src: FBBSC1978,
       org: ukr, sty: cus, gnr: sng, ton: emi, frm: [vo2, cr5], bss: [frb, vo2], lvl: elc }
-  - { id: rzwj, tit: Їхав козак за Дунай, sub: ukrfs,
+  - { id: rzwj, tit: Їхав козак за Дунай,
       com: С. Климовський, arr: С. Чапкій, aut: С. Климовський, src: FBBSC1978,
-      org: ukr, sty: flk, gnr: sng, ton: ami, frm: [vo2, var, cr5], bss: [frb, var, in3, in8, cr5], lvl: elc }
+      org: ukr, sty: cus, gnr: sng, ton: ami, frm: [vo2, var, cr5], bss: [frb, var, in3, in8, cr5], lvl: elc }
   # BSN1985
   - { id: 55kn, tit: "Ой за гаєм, гаєм", sub: ukrfs,
       src: BSN1985,
