@@ -5,26 +5,26 @@
   \key g \minor
   \time 3/4
   \meter 1/4 2,1
-  \partial 4 { g'='8\p bes | }
+  \partial 4 { g'='8\p\< bes | }
   d=''4.( ees8 d c | bes a g4) <d' f>8( <bes d> |
-  <ees='' g>4. <g bes>8\mp <f a> <ees g> | <d f>2) bes8\(\< d |
+  \af 8.\! <ees='' g>4. <g bes>8\mp <f a>\> <ees g> | \af 2\! <d f>2) bes8\(\< d |
   <d='' f>8[ <f a>] <ees g> <b d>16 <d f> <c ees>8 \af 8\! <bes d> |
   <a=' c>8\mp\> <g bes> <fis a> g <ees' g>8 8 |
-  <d='' f>8 <c ees> <bes d> <a c> <g bes> <fis a> | \af 4.\! g='2\) %
+  <d='' f>8 <c ees> <bes d> <a c> <g bes> <fis a> | \af 4\! g='2\) %
 
   \duo {
     bes=8\(\mp\< d | <d f> <f a> <g b>4 <c, g' c>8 \af 8\! <d g d'> |
     <ees=' g c ees>8\mf\> <f bes d f> <fis c' d fis> \af 8\! <g bes d g>\) %
-    <ees'='' g>8\(\p 8 | <d f>8 \tuplet 3/2 { <c='' ees>16 <d f> <c ees> } %
-    <bes=' d>8 <a c> <g bes> <fis a> | g2\) g8\(\mp\< bes=' |
+    <ees'='' g>8\(\p\< 8 | <d f>8 \tuplet 3/2 { <c='' ees>16 <d f> <c ees> } %
+    <bes=' d>8 <a c> <g bes> <fis a> | \af 4\! g2\) g8\(\mp\< bes=' |
 
-    d=''4. \af 8\! ees8 d\mf c | bes\> a g4 <bes f'>8 \af 8\! d |
-    <ees='' g>4.\< <g bes>8 <f a> \af 8\! <ees g> | <d f>2\) bes8\( d='' |
+    d=''4. \af 8\! ees8 d\mf c\> | bes a g4 <bes f'>8 \af 8\! d |
+    <ees='' g>4.\< <g bes>8 <f a> <ees g> | \af 4\! <d f>2\) bes8\(\< d='' |
 
-    <d='' f>8[ <f a>] <ees g>\< d16 f ees8 d | c bes a \af 8\! g g'\f g~ |
-    g=''2~\> g8\) r | \af 4.\! s2 bes,,8\( d=' |
+    <d='' f>8[ <f a>] <ees g> d16 f ees8 d | c bes a \af 8\! g g'\f g~ |
+    g=''2~\> g8\) r | \af 4\! s2 bes,,8\(\< d=' |
 
-    <d=' f>8\< <f a> <g b>4 <c, g' c>8 <d g d'> |
+    <d=' f>8 <f a> <g b>4 <c, g' c>8 <d g d'> |
     <ees=' g c ees>8 <f bes d f> \af 8\! <fis c' d fis>^\tRit %
     <g=' bes d g>8\)\f \fermata g'8\p^\tATem g~ | g=''2 %
   } {
