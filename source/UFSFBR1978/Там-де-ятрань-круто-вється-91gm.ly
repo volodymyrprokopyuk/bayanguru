@@ -35,7 +35,7 @@
     s2 ees'=''8( ees | <d f> \tuplet 3/2 { <c='' ees>16 <d f> <c ees> } %
     <bes=' d>8 <a=' c>)^\tTen %
   }
-  <g=' bes>8(^\tRit <fis a> | g2.~ | g=') \bar "|."
+  <g=' bes>8(^\tRit <fis a> | g2.^~ | g=') \bar "|."
 }
 {{ end }}
 
