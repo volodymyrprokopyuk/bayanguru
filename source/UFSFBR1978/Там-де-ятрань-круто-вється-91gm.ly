@@ -7,7 +7,7 @@
   \meter 1/4 2,1
   \partial 4 { g'='8\p\< bes | }
   d=''4.( ees8 d c | bes a g4) <d' f>8( <bes d> |
-  \af 8.\! <ees='' g>4. <g bes>8\mp <f a>\> <ees g> | \af 2\! <d f>2) bes8\(\< d |
+  \af 8.\! <ees='' g>4. <g bes>8\mp <f a> <ees g>\> | \af 2\! <d f>2) bes8\(\< d |
   <d='' f>8[ <f a>] <ees g> <b d>16 <d f> <c ees>8 \af 8\! <bes d> |
   <a=' c>8\mp\> <g bes> <fis a> g <ees' g>8 8 |
   <d='' f>8 <c ees> <bes d> <a c> <g bes> <fis a> | \af 4\! g='2\) %
@@ -43,5 +43,18 @@
 \relative {
   \clef bass
   \key g \minor
+  \partial 4 { r4 | }
+  R2. | r4 r bes,=,4(-\puBass | ees2 f4 | bes,2) r4 |
+  bes=,8( d g,4 c^~ | c d8 g,) a4_( | bes8 c d ees d4 | g,=,2) r4 |
+
+  bes=,4( g8) d'16[( f] ees8 d | c bes a g) a4_( | bes8 c d ees d4 | g,=,2) r4 |
+
+  r8 g=,8_( bes c d4~ | d g,) bes( ees,4. c'8 f, g16 a) |
+  \duo { r4 besM!4 } { bes,=,2 } r4 | bes8_( d g,4 c^~ |
+  c+cm!4) \duo { r4 r8 c@m! | } { d=8 g, a=,4 | } |
+  bes=,8_( c d ees d4 | g,=,2) r4 |
+
+  bes=,4( g8) d'16[( f] ees8 d | c bes a g) \fermata a4( |
+  bes=,8 c d ees) d4_( | g,=,2.^~ | g+gm!) |
 }
 {{ end }}
