@@ -216,10 +216,9 @@ pieces:
       arr: Ю. Грибков, src: FBBMS31N1986,
       org: ukr, sty: flk, gnr: sng, ton: fmj, frm: [vo2, var, in6], bss: [frb, stb], lvl: elb }
   # FBBMS32P1986
-  # p. 31
-  # - { id: cynd, tit: Та нема гірш нікому, sub: ukrfs,
-  #     arr: М. Лисенко, src: FBBMS32P1986,
-  #     org: ukr, sty: flk, gnr: sng, ton: gmi, frm: vo2, bss: frb, lvl: elb }
+  - { id: cynd, tit: Та нема гірш нікому, sub: ukrfs,
+      arr: М. Лисенко, src: FBBMS32P1986,
+      org: ukr, sty: flk, gnr: sng, ton: gmi, frm: vo2, bss: frb, lvl: elb }
   - { id: mfdx, tit: Тече річка невеличка, sub: ukrfs,
       arr: В. Платонов, src: FBBMS32P1986,
       org: ukr, sty: flk, gnr: sng, ton: fmj, frm: vo2, bss: [frb, stb, pub], lvl: elb }

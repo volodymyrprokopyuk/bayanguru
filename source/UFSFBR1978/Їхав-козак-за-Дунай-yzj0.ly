@@ -74,10 +74,10 @@
   d=8 d7! d d7 | {{ template "lh1" }} | bes besM! bes besM |
   bes=,8 besM! d bes@M! | f,8 fM! f fM | f fM! d' dM! | {{ template "lh1" }}
 
-  bes=,16 besM! \rep 3 { bes=,16 besM } | bes8 besM! bes besM |
-  f=,16 fM! \rep 3 { f=,16 fM } | f8 fM! d' dM! |
+  bes=,16 besM! \rep 3 { bes=,16 besM } | bes8 besM! d bes@M! |
+  f,=,16 fM! \rep 3 { f=,16 fM } | f8 fM! d' dM! |
   g,=,16 gm! \rep 3 { g=,16 gm } | g8 gm! c( cis) |
-  d=8 dM! d dm | {{ template "lh3" }}
+  d=8 dM! d dM | {{ template "lh3" }}
 
   g,=,8 gm! bes g@m! | g8[ gm!-. gm-. gm]-. |
   a=,8 d@7! d8 d7! | a[ d@7!-. d78-. d7]-. | {{ template "lh2" (w `g=,8`) }}
