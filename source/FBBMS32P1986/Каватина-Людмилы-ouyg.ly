@@ -33,6 +33,6 @@
   dis='4 a' b, a' | e g g, bes | a e' g, e' | fis, d' a cis |
   d='4 fis dis a' | e g g, b | a g' a, e' | d fis=' r2 \clef bass |
   {{ template "lh1" (w `g,=4`) }} | g,=4 d' b d |
-  g,=4 d' f, g | e g c, r | r2 <d c'>4 r | <e= g>2 r2 |
+  g,=4 d' f, g | e g c, r | r2 <d c'>4 r | <g= b>2 r2 |
 }
 {{ end }}
