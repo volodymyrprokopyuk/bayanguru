@@ -82,7 +82,7 @@
   g,=,8 gm! bes g@m! | g8[ gm!-. gm-. gm]-. |
   a=,8 d@7! d8 d7! | a[ d@7!-. d78-. d7]-. | {{ template "lh2" (w `g=,8`) }}
   bes=,8 besM! d bes@M! | bes8[ besM!-. besM-. besM]-. |
-  f=,8 fM! a f@M! | f8[ fM!-. d@M!]-. d'8 | {{ template "lh2" (w `g,=,8`) }}
+  f=,8 fM! a f@M! | f8[ fM!-. d@M!]-. d'8-. | {{ template "lh2" (w `g,=,8`) }}
 
   bes=,16 besM! \rep 3 { bes=,16 besM } | bes8 besM! bes besM |
   f=,16 fM! \rep 3 { f=,16 fM } | f8 fM! d' dM! |

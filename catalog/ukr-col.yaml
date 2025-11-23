@@ -35,4 +35,4 @@ pieces:
       org: ukr, sty: flk, gnr: sng, ton: gmi, frm: [vo2, in3, cr5, cr7], bss: pub, lvl: elc }
   - { id: yzj0, tit: Їхав козак за Дунай,
       com: С. Климовський, arr: М. Різоль, aut: С. Климовський, src: UFSFBR1978,
-      org: ukr, sty: cus, gnr: sng, ton: gmi, frm: [var, in3, in4, cr5], bss: stb, lvl: elc }
+      org: ukr, sty: cus, gnr: sng, ton: gmi, frm: [var, in3, in4, cr5], bss: stb, lvl: elb }
