@@ -484,4 +484,12 @@ pieces:
       org: rus, sty: flk, gnr: sng, ton: gmj, frm: mel, bss: [frb, jmp], lvl: elb }
   - { id: eohe, tit: Полька,
       com: М. Балакирев, src: FBBMS32P1986,
-      org: rus, sty: cus, gnr: plk, ton: emi, frm: mel, bss: [frb, in5, cr5 jmp], lvl: elb }
+      org: rus, sty: cus, gnr: plk, ton: emi, frm: mel, bss: [frb, in5, cr5, jmp], lvl: elb }
+  # p. 29
+  # - { id: coeh, tit: Калинка, sub: rusfs,
+  #     arr: А. Астафьева, src: FBBMS32P1986,
+  #     org: rus, sty: flk, gnr: sng, ton: gmi, frm: in3, bss: [frb, in3, syn], lvl: elb }
+  # p. 30
+  # - { id: 9iq8, tit: "Ах ты, ноченька", sub: rusfs,
+  #     arr: В. Ефимов, src: FBBMS32P1986,
+  #     org: rus, sty: flk, gnr: sng, ton: emi, frm: vo2, bss: frb, lvl: elb }
