@@ -222,3 +222,8 @@ pieces:
   - { id: mfdx, tit: Тече річка невеличка, sub: ukrfs,
       arr: В. Платонов, src: FBBMS32P1986,
       org: ukr, sty: flk, gnr: sng, ton: fmj, frm: vo2, bss: [frb, stb, pub], lvl: elb }
+  # FBBMS33P1987
+  # p. 11
+  # - { id: c5gv, tit: Бджілка,
+  #     com: Я. Степовий, arr: В. Платонов, art: ipr, src: FBBMS33P1987,
+  #     org: ukr, sty: cus, gnr: chd, ton: gmj, frm: mel, bss: frb, lvl: ela }

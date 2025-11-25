@@ -33,6 +33,10 @@ pieces:
   - { id: 91gm, tit: "Там, де ятрань круто в'ється", sub: ukrfs,
       arr: М. Різоль, src: UFSFBR1978,
       org: ukr, sty: flk, gnr: sng, ton: gmi, frm: [vo2, in3, cr5, cr7], bss: pub, lvl: elc }
+  # p. 14
+  # - { id: z4ho, tit: Ой у лузі та ще й при березі, sub: ukrfs,
+  #     arr: М. Різоль, src: UFSFBR1978,
+  #     org: ukr, sty: flk, gnr: sng, ton: gmi, frm: [in3, cr5], bss: pub, lvl: elb }
   - { id: yzj0, tit: Їхав козак за Дунай,
       com: С. Климовський, arr: М. Різоль, aut: С. Климовський, src: UFSFBR1978,
       org: ukr, sty: cus, gnr: sng, ton: gmi, frm: [var, in3, in4, cr5], bss: stb, lvl: elb }
