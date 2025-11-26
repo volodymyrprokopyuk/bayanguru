@@ -33,6 +33,7 @@
   <d= a'>2.~-\frBass | 2. | 2.~ | 2. |
   \rep 2 { a'=4( a a8 g | fis4. a8 d='4) | }
   cis='8( d e d cis a | fis4 d' fis,) | cis'( b cis | d2 d,=4) |
+
   <a'=_~ cis>2. | <a d> | <a_~ e'> | <a d> |
   e'='4( cis a) | d( b a) | g( a g) | fis( a d) |
   a=4( cis a) | fis( a fis) | e( cis a) | d-- a-- d,=,-- |
