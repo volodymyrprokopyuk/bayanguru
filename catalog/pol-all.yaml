@@ -75,7 +75,6 @@ pieces:
       arr: В. Жигалов, src: FBBMS29P1985,
       org: ltu, sty: flk, gnr: sng, ton: cmj, frm: in3, bss: frb, lvl: ela }
   # FBBMS33P1987
-  # p. 11
-  # - { id: 2n02, tit: Маленька латиська полька,
-  #     com: Л. Гарута, arr: В. Платонов, art: ipr, src: FBBMS33P1987,
-  #     org: lva, sty: cus, gnr: plk, ton: fmj, frm: mel, bss: frb, lvl: elb }
+  - { id: 2n02, tit: Маленька латиська полька,
+      com: Л. Гарута, arr: В. Платонов, art: ipr, src: FBBMS33P1987,
+      org: lva, sty: cus, gnr: plk, ton: fmj, frm: mel, bss: frb, lvl: elb }
