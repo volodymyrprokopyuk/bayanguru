@@ -488,3 +488,15 @@ pieces:
   - { id: 9iq8, tit: "Ах ты, ноченька", sub: rusfs,
       arr: В. Ефимов, src: FBBMS32P1986,
       org: rus, sty: flk, gnr: sng, ton: emi, frm: vo2, bss: frb, lvl: elb }
+  # FBBMS33P1987
+  - { id: osy0, tit: "Уж ты, Ванька, пригнись", sub: rusfs,
+      arr: В. Платонов, art: ipr, src: FBBMS33P1987,
+      org: rus, sty: flk, gnr: sng, ton: fmj, frm: mel, bss: frb, lvl: ela }
+  # p. 24
+  # - { id: tcgn, tit: Лучина, sub: rusfs,
+  #     arr: В. Платонов, art: ipr, src: FBBMS33P1987,
+  #     org: rus, sty: flk, gnr: sng, ton: gmi, frm: mel, bss: frb, lvl: elb }
+  # p. 26
+  # - { id: t8ql, tit: Как пошли наши подружки, sub: rusfs,
+  #     arr: Ф. Бушуев, src: FBBMS33P1987,
+  #     org: rus, sty: flk, gnr: sng, ton: dmj, frm: [vo2, var], bss: [frb, stb], lvl: elb }
