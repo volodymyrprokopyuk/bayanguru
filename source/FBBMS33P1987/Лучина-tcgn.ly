@@ -7,7 +7,7 @@
   \meter 1/4 1,1,1,1
   bes'='4(\mf g ees'4. d16 c | d4~ d16 a bes a g4) g8( a |
   bes='4 g g'4. f16 ees | d4 g, c2) | bes8( g ees' d c d16 ees d8 c |
-  bes='4. a16 g f4 d) | g4.( ees'8 d c bes a | \af 2\! g'=''2.)\> r4 \bar "|."
+  bes='4. a16 g f4 d) | g4.( ees'8 d c bes a | \af 2.\! g'=''2.)\> r4 \bar "|."
 }
 {{ end }}
 
