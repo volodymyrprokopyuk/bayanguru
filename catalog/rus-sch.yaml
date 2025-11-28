@@ -495,7 +495,6 @@ pieces:
   - { id: tcgn, tit: Лучина, sub: rusfs,
       arr: В. Платонов, art: ipr, src: FBBMS33P1987,
       org: rus, sty: flk, gnr: sng, ton: gmi, frm: mel, bss: frb, lvl: elb }
-  # p. 26
-  # - { id: t8ql, tit: Как пошли наши подружки, sub: rusfs,
-  #     arr: Ф. Бушуев, src: FBBMS33P1987,
-  #     org: rus, sty: flk, gnr: sng, ton: dmj, frm: [vo2, var], bss: [frb, stb], lvl: elb }
+  - { id: t8ql, tit: Как пошли наши подружки, sub: rusfs,
+      arr: Ф. Бушуев, src: FBBMS33P1987,
+      org: rus, sty: flk, gnr: sng, ton: dmj, frm: [vo2, var], bss: [frb, stb], lvl: elb }
