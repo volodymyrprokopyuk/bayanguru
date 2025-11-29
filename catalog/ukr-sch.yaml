@@ -99,7 +99,7 @@ pieces:
       com: Д. Крижанівський, arr: В. Накапкин, aut: Т. Шевченко, src: FBBMS4NP1974,
       org: ukr, sty: cus, gnr: sng, ton: dmi, frm: mel, bss: frb, lvl: elb }
   # FBBMS6N1975
-  - { id: i8pf, tit: "Люблю, мати, Петруся", sub: ukrfs,
+  - { id: i8pf, tit: А я люблю Петруся, sub: ukrfs,
       arr: В. Грачев, src: FBBMS6N1975,
       org: ukr, sty: flk, gnr: sng, ton: gmj, frm: [in3, dot], bss: frb, lvl: elb }
   - { id: mcz2, tit: "Жито, мати, жито", sub: ukrfs, # nolyr
@@ -238,6 +238,14 @@ pieces:
   #     arr: І. Беркович, src: FBBMS33P1987,
   #     org: ukr, sty: flk, gnr: sng, ton: gmj, frm: mel, bss: [frb, in3], lvl: elb }
   # p. 28
-  # - { id: 7k11, tit: ,
+  # - { id: 7k11, tit: Хміль лугами,
   #     arr: Я. Степовий, src: FBBMS33P1987, sub: ukrfs,
   #     org: ukr, sty: flk, gnr: sng, ton: emi, frm: mel, bss: frb, lvl: elb }
+  # p. 28
+  # - { id: krlm, tit: Ой що ж бо то та й за ворон,
+  #     arr: І. Беркович, src: FBBMS33P1987, sub: ukrfs,
+  #     org: ukr, sty: flk, gnr: sng, ton: dmi, frm: mel, bss: frb, lvl: elb }
+  # p. 29
+  # - { id: hzgn, tit: "Чи ти чула, дівчинонько",
+  #     arr: В. Платонов, src: FBBMS33P1987, sub: ukrfs,
+  #     org: ukr, sty: flk, gnr: sng, ton: gmi, frm: var, bss: [frb, stb, vo2], lvl: elb }
