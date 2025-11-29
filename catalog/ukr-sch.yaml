@@ -232,10 +232,9 @@ pieces:
   - { id: ou03, tit: Гречаники, sub: ukrfs,
       arr: В. Платонов, art: ipr, src: FBBMS33P1987,
       org: ukr, sty: flk, gnr: sng, ton: fmj, frm: mel, bss: frb, lvl: elb }
-  # p. 27
-  # - { id: z4ar, tit: Женчичок-бренчичок, sub: ukrfs,
-  #     arr: І. Беркович, src: FBBMS33P1987,
-  #     org: ukr, sty: flk, gnr: sng, ton: gmj, frm: mel, bss: [frb, in3], lvl: elb }
+  - { id: z4ar, tit: Женчичок-бренчичок, sub: ukrfs,
+      arr: І. Беркович, src: FBBMS33P1987,
+      org: ukr, sty: flk, gnr: sng, ton: gmj, frm: mel, bss: [frb, in3], lvl: elb }
   # p. 28
   # - { id: 7k11, tit: Хміль лугами,
   #     arr: Я. Степовий, src: FBBMS33P1987, sub: ukrfs,
