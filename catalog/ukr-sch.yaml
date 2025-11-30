@@ -238,10 +238,9 @@ pieces:
   - { id: 7k11, tit: Хміль лугами,
       arr: Я. Степовий, src: FBBMS33P1987, sub: ukrfs,
       org: ukr, sty: flk, gnr: sng, ton: emi, frm: mel, bss: frb, lvl: elb }
-  # p. 28
-  # - { id: krlm, tit: Ой що ж бо то та й за ворон,
-  #     arr: І. Беркович, src: FBBMS33P1987, sub: ukrfs,
-  #     org: ukr, sty: flk, gnr: sng, ton: dmi, frm: mel, bss: frb, lvl: elb }
+  - { id: krlm, tit: Ой що ж бо то та й за ворон,
+      arr: І. Беркович, src: FBBMS33P1987, sub: ukrfs,
+      org: ukr, sty: flk, gnr: sng, ton: dmi, frm: mel, bss: frb, lvl: elb }
   # p. 29
   # - { id: hzgn, tit: "Чи ти чула, дівчинонько",
   #     arr: В. Платонов, src: FBBMS33P1987, sub: ukrfs,
