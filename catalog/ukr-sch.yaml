@@ -231,7 +231,7 @@ pieces:
       org: ukr, sty: cus, gnr: pie, ton: gmi, frm: mel, bss: frb, lvl: elb }
   - { id: ou03, tit: Гречаники, sub: ukrfs,
       arr: В. Платонов, art: ipr, src: FBBMS33P1987,
-      org: ukr, sty: flk, gnr: sng, ton: fmj, frm: mel, bss: frb, lvl: elb }
+      org: ukr, sty: flk, gnr: sng, ton: fmj, frm: mel, bss: frb, lvl: ela }
   - { id: z4ar, tit: Женчичок-бренчичок, sub: ukrfs,
       arr: І. Беркович, src: FBBMS33P1987,
       org: ukr, sty: flk, gnr: sng, ton: gmj, frm: mel, bss: [frb, in3], lvl: elb }
