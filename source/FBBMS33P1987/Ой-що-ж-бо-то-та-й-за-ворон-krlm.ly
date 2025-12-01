@@ -18,7 +18,12 @@
 
 {{ define "leftHand" }}
 \relative {
-  \clef bass
+  \clef treble
   \key d \minor
+  r4 g'='4(-\frBass f d) | cis8( d e4) r bes( | c e f) r |
+  e='4( d <a cis>2) | d4( f g8 bes a g) | a4( a, bes f') |
+  e='8( f e d c4) r | bes( e8 d <a= cis>4) r \clef bass |
+  d,=4( f g8 bes a g) | a4( <a, g'> <bes f'> <d f>) |
+  e=8( f e d c4) r | bes( a <d,=, a'>2) |
 }
 {{ end }}
