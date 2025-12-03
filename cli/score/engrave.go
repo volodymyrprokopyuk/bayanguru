@@ -102,6 +102,12 @@ func engrave (ec *engraveCommand) error {
   if err != nil {
     return err
   }
+  if len(ec.Queries) > 0 {
+    pieces, err = catalog.QueryPieces(pieces, ec.Queries)
+    if err != nil {
+      return err
+    }
+  }
   if ec.init {
     return initPieceLyrics(pieces, ec)
   }

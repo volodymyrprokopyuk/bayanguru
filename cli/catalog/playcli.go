@@ -108,7 +108,7 @@ func PlayCmd() *cli.Command {
     Description: "Play command searches, lists, and plays pieces from catalog",
     ArgsUsage:
 `
-   bayanguru play [-c catalog] pieces...
+   bayanguru play [-c catalog] pieces... [--query...]
    bayanguru play all --sort tit|com|lvl|rnd --list --lyr [--query...]`,
     Action: playAction,
   }

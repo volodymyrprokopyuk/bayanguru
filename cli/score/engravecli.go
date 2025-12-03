@@ -45,6 +45,10 @@ func engraveAction(ctx context.Context, cmd *cli.Command) error {
   } else {
     ec.PieceIDs = args.Slice()
   }
+  ec.Queries, err = catalog.ValidateQueries(cmd)
+  if err != nil {
+    return err
+  }
   return engrave(ec)
 }
 
@@ -56,9 +60,9 @@ func EngraveCmd() *cli.Command {
 `Engrave command initializes, lints, engraves, and optimizes pieces and books`,
     ArgsUsage:
 `
-   bayanguru engrave [-c catalog] pieces... [--init] [--lyr]
+   bayanguru engrave [-c catalog] pieces... [--init] [--lyr] [--query...]
    bayanguru engrave [-c catalog] --book books...
-   bayanguru engrave all --lint --optimize --meta --lyrics=f`,
+   bayanguru engrave all --lint --optimize --meta --lyrics=f [--query...]`,
     Action: engraveAction,
   }
   cmd.Flags = []cli.Flag{
@@ -89,6 +93,10 @@ func EngraveCmd() *cli.Command {
     &cli.BoolFlag{
       Name: "lyrics", Usage: "include lyrics after piece score", Value: true,
     },
+  }
+  for name, usage := range catalog.Queries {
+    flag := &cli.StringFlag{Name: name, Usage: usage}
+    cmd.Flags = append(cmd.Flags, flag)
   }
   return cmd
 }
