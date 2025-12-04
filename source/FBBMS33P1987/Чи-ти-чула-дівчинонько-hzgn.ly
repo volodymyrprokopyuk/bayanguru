@@ -22,7 +22,7 @@
   \clef treble
   \key g \minor
   R2. | R2. | bes=4(-\frBass d2 | f4 bes2) |
-  \duo { f'='4( ees2) | f( d4) | ees4 d2( | f='2.) \clef bass | }
+  \duo { f'='4( ees2) | f( d4) | ees4 d2~ | d='2. \clef bass | }
   { bes=2( c4) | a4( bes2) | c4( fis,2 | g=2.) | }
 
   g,,=,4-\stBass gm! gm | d' d7! d7 | bes besM! besM | f f7! bes+besM! |

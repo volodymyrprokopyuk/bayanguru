@@ -499,11 +499,10 @@ pieces:
       arr: Ф. Бушуев, src: FBBMS33P1987,
       org: rus, sty: flk, gnr: sng, ton: dmj, frm: [vo2, var], bss: [frb, stb], lvl: elb }
   # FBBMS34N1987
-  # p. 10
-  # - { id: 4drn, tit: Зайка,
-  #     arr: Г. Левкодимов, src: FBBMS34N1987,
-  #     org: rus, sty: cus, gnr: chd, ton: gmi, frm: vo2, bss: [frb, in3], lvl: elb }
+  - { id: 4drn, tit: Зайка,
+      com: Г. Левкодимов, src: FBBMS34N1987,
+      org: rus, sty: cus, gnr: chd, ton: gmi, frm: vo2, bss: [frb, in3], lvl: elb }
   # p. 12
   # - { id: l77i, tit: Весеннее настроение,
-  #     arr: В. Залипаев, src: FBBMS34N1987,
+  #     com: В. Залипаев, src: FBBMS34N1987,
   #     org: rus, sty: cus, gnr: pie, ton: gmj, frm: [vo2, var], bss: stb, lvl: elb }
