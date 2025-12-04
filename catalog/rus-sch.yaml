@@ -502,7 +502,6 @@ pieces:
   - { id: 4drn, tit: Зайка,
       com: Г. Левкодимов, src: FBBMS34N1987,
       org: rus, sty: cus, gnr: chd, ton: gmi, frm: vo2, bss: [frb, in3], lvl: elb }
-  # p. 12
-  # - { id: l77i, tit: Весеннее настроение,
-  #     com: В. Залипаев, src: FBBMS34N1987,
-  #     org: rus, sty: cus, gnr: pie, ton: gmj, frm: [vo2, var], bss: stb, lvl: elb }
+  - { id: l77i, tit: Весеннее настроение,
+      com: В. Залипаев, src: FBBMS34N1987,
+      org: rus, sty: cus, gnr: pie, ton: gmj, frm: [vo2, var], bss: stb, lvl: elb }
