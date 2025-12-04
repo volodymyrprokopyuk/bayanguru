@@ -241,7 +241,6 @@ pieces:
   - { id: krlm, tit: Ой що ж бо то та й за ворон,
       arr: І. Беркович, src: FBBMS33P1987, sub: ukrfs,
       org: ukr, sty: flk, gnr: sng, ton: dmi, frm: mel, bss: frb, lvl: elb }
-  # p. 29
-  # - { id: hzgn, tit: "Чи ти чула, дівчинонько",
-  #     arr: В. Платонов, src: FBBMS33P1987, sub: ukrfs,
-  #     org: ukr, sty: flk, gnr: sng, ton: gmi, frm: var, bss: [frb, stb, vo2], lvl: elb }
+  - { id: hzgn, tit: "Чи ти чула, дівчинонько",
+      arr: В. Платонов, src: FBBMS33P1987, sub: ukrfs,
+      org: ukr, sty: flk, gnr: sng, ton: gmi, frm: var, bss: [frb, stb, vo2], lvl: elb }
