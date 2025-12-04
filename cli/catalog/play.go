@@ -168,7 +168,9 @@ func play(pc *playCmd) error {
   if pc.lyr {
     pieces = selectLyrics(pieces)
   }
-  pieces, err = filterPlayed(pieces, PlayedFile)
+  if !pc.list {
+    pieces, err = filterPlayed(pieces, PlayedFile)
+  }
   if err != nil {
     return err
   }
