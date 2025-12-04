@@ -79,7 +79,6 @@ pieces:
       com: Л. Гарута, arr: В. Платонов, art: ipr, src: FBBMS33P1987,
       org: lva, sty: cus, gnr: plk, ton: fmj, frm: mel, bss: frb, lvl: elb }
   # FBBMS33P1987
-  # p. 31
-  # - { id: 5thh, tit: Вісла, sub: polfs,
-  #     arr: В. Платонов, art: ipr, src: FBBMS33P1987,
-  #     org: pol, sty: flk, gnr: sng, ton: gmi, frm: mel, bss: [frb, cr5], lvl: elb }
+  - { id: 5thh, tit: Вісла, sub: polfs,
+      arr: В. Платонов, art: ipr, src: FBBMS33P1987,
+      org: pol, sty: flk, gnr: sng, ton: gmi, frm: mel, bss: [frb, cr5], lvl: elb }
