@@ -505,3 +505,6 @@ pieces:
   - { id: l77i, tit: Весеннее настроение,
       com: В. Залипаев, src: FBBMS34N1987,
       org: rus, sty: cus, gnr: pie, ton: gmj, frm: [vo2, var], bss: stb, lvl: elb }
+  - { id: 6wyy, tit: Лирическая песня,
+      com: А. Мордухович, src: FBBMS34N1987,
+      org: rus, sty: cus, gnr: sng, ton: dmi, frm: mel, bss: stb, lvl: elb }
