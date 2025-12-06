@@ -41,6 +41,6 @@
   \clef bass c,=4 d d= |
 
   <g,=, d'>4 r | \rep 2 { c=4( d | g,=,) r | }
-  c=4( ees | g8 d bes4) | c( d) | g,8( d' ees) r | <g,=, d'>2 %
+  c=4( ees | g8 d bes4) | c( d) | g,8( d' g) r | <g,=, d'>2 %
 }
 {{ end }}

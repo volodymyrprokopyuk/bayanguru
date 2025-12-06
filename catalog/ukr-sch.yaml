@@ -244,3 +244,8 @@ pieces:
   - { id: hzgn, tit: "Чи ти чула, дівчинонько",
       arr: В. Платонов, src: FBBMS33P1987, sub: ukrfs,
       org: ukr, sty: flk, gnr: sng, ton: gmi, frm: var, bss: [frb, stb, vo2], lvl: elb }
+  # FBBMS34N1987
+  # p. 15
+  # - { id: uwm5, tit: Піонерський хоровод,
+  #     com: А. Дядченко, src: FBBMS34N1987,
+  #     org: ukr, sty: cus, gnr: dnc, ton: dmi, frm: [vo2, var], bss: stb, lvl: elb }
