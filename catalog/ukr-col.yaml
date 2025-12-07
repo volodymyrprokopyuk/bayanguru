@@ -39,3 +39,7 @@ pieces:
   - { id: yzj0, tit: Їхав козак за Дунай,
       com: С. Климовський, arr: М. Різоль, aut: С. Климовський, src: UFSFBR1978,
       org: ukr, sty: cus, gnr: sng, ton: gmi, frm: [var, in3, in4, cr5], bss: stb, lvl: elb }
+  # p. 17
+  # - { id: bpe3, tit: "Ой при лужку, при лужку", sub: ukrfs,
+  #     arr: М. Різоль, src: UFSFBR1978,
+  #     org: ukr, sty: flk, gnr: sng, ton: gmi, frm: [var, in3, cr5], bss: [stb, pub, var], lvl: elb }
