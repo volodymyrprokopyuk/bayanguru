@@ -37,7 +37,7 @@
   g,=,8 gM! d' g@M! | c8 a@m! e8 a@m! | d8 d7! c d@7! |
   b=,8 g@M! b8( a | g) gM! d' g@M! | c8 a@m! e8 a@m! |
   d=8 d7! a d@7! | b8 b7! b b | b e@m! b8( bes |
-  a=,8) am! c a@m! | g8 e@m! fis8 b@7! | b8 a@m! b8( bes |
+  a=,8) am! c a@m! | g8 e@m! fis8 b@7! | b8 e@m! b8( bes |
   a=,8) am! c a@m! | b8 b7! a b@7! | g8 e@m! fis=,8 b@7! |
 
   e'=8[ em! r em] | fis[ fis7! r fis7] | b,[ b7! r b7] |
