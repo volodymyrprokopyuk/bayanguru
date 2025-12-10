@@ -511,3 +511,6 @@ pieces:
   - { id: ajlm, tit: Весенний вальс,
       com: В. Бухвостов, src: FBBMS34N1987,
       org: rus, sty: cus, gnr: vls, ton: ami, frm: [vo2, in3, cr5], bss: stb, lvl: elb }
+  - { id: zi37, tit: По садочку хожу,
+      arr: В. Накапкин, src: FBBMS34N1987,
+      org: rus, sty: flk, gnr: sng, ton: emi, frm: [var, in3, cr5, syn], bss: [frb, stb], lvl: elb }
