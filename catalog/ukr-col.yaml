@@ -43,3 +43,7 @@ pieces:
   # - { id: bpe3, tit: "Ой при лужку, при лужку", sub: ukrfs,
   #     arr: М. Різоль, src: UFSFBR1978,
   #     org: ukr, sty: flk, gnr: sng, ton: gmi, frm: [var, in3, cr5], bss: [stb, pub, var], lvl: elb }
+  # p. 18
+  # - { id: fygw, tit: "Розпрягайте, хлопці, коні", sub: ukrfs,
+  #     arr: М. Різоль, src: UFSFBR1978,
+  #     org: ukr, sty: flk, gnr: sng, ton: gmi, frm: [in3, cr5, cr7], bss: stb, lvl: elb }

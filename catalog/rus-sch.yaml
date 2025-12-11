@@ -514,3 +514,7 @@ pieces:
   - { id: zi37, tit: По садочку хожу,
       arr: В. Накапкин, src: FBBMS34N1987,
       org: rus, sty: flk, gnr: sng, ton: emi, frm: [var, in3, cr5, syn], bss: [frb, stb], lvl: elb }
+  # FBBMS35N1988
+  - { id: fac3, tit: "Палочка-выручалочка",
+      com: В. Залипаев, src: FBBMS35N1988,
+      org: rus, sty: cus, gnr: pie, ton: besmj, frm: [in3, cr7], bss: [stb, pub], lvl: elb }
