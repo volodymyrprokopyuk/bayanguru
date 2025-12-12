@@ -17,7 +17,7 @@
   <e=' gis b>4-> |
   \time 2/2
   <e=' a cis>4-> <e b'>-> a8-> gis-> b-> a-> |
-  <e=' e'>2-> \fermata r2 \bar "|."
+  <e=' e'>2->\ff \fermata r2 \bar "|."
 }
 {{ end }}
 
