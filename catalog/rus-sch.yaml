@@ -521,7 +521,6 @@ pieces:
   - { id: b3ok, tit: Колыбельная утят, sub: 'из \"Детской сюиты\"',
       com: В. Бухвостов, src: FBBMS35N1988,
       org: rus, sty: cus, gnr: lul, ton: ami, frm: [in3, in6], bss: frb, lvl: ela }
-  # p. 21
-  # - { id: qjf7, tit: Вальс цыплят, sub: 'из \"Детской сюиты\"',
-  #     com: В. Бухвостов, src: FBBMS35N1988,
-  #     org: rus, sty: cus, gnr: vls, ton: ami, frm: acc, bss: [frb, in3], lvl: elb }
+  - { id: qjf7, tit: Вальс цыплят, sub: 'из \"Детской сюиты\"',
+      com: В. Бухвостов, src: FBBMS35N1988,
+      org: rus, sty: cus, gnr: vls, ton: ami, frm: acc, bss: [frb, in3], lvl: elb }
