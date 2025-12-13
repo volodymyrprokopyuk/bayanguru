@@ -12,7 +12,7 @@
   \af 2.\! a=''2.->\> | e'='''8(->\f c) e-. c-. b-. a-. |
   \af 2.\! b=''2.\> | e,8(\< f) fis-. g-. gis-. \af 8\! b-. |
   \af 2.\! a=''2.\> | g8(\p a) g-._\dCre f-. e-. g-. |
-  f=''4( \acc { gis=''8 } a4) a-. | b8( c) b-. fis-. g-. a |
+  f=''4( \acc { gis=''8 } a4) a-. | b8( c) b-. fis-. gis-. a |
   \acc { ais=''8 } b=''4->\f\> <dis, e>4-- \af 4\! 4-- |
   c'='''8(->\f a e4) g-. | \af 2.\! f2.\> |
   e=''8-.\< f-. e-. f-. fis-. \af 8\! gis-. |
