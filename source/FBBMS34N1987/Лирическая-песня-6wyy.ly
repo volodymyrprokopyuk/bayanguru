@@ -39,7 +39,7 @@
 
   d=8[ dm! dm] f, e[ g@M! gM8] g | a[ c@M! cM8] a r bes( a g |
   f=,8[) d@m! dm8] d' g,[ gm! gm] bes | c[ d7! d7] c f( g f e |
-  d=8[) dm! dm] a g( a bes g | f[) c@7! c78] c' a[ f@M! fM8] a |
+  d=8[) dm! dm] a g( a bes g | c[) c7! c78] c a[ f@M! fM8] a |
   g=,8[ gm! gm] bes a[ d@m! dm8] f | g f@M! a8 a7! d bes@M! d@m!4-\fermata |
 }
 {{ end }}
