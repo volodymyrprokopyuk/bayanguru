@@ -248,7 +248,7 @@ pieces:
   - { id: uwm5, tit: Піонерський хоровод,
       com: А. Дядченко, src: FBBMS34N1987,
       org: ukr, sty: cus, gnr: dnc, ton: dmi, frm: [vo2, var], bss: stb, lvl: elb }
-  - { id: aumd, tit: "Білодень, білодень",
+  - { id: aumd, tit: "Білодень, білодень", # nolyr
       arr: И. Лунин, src: FBBMS34N1987,
       org: ukr, sty: flk, gnr: sng, ton: cmj, frm: [var, in3], bss: [frb, cr5], lvl: elb }
   # FBBMS35N1988
