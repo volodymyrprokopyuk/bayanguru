@@ -259,7 +259,6 @@ pieces:
       arr: В. Накапкин, src: FBBMS35N1988,
       org: ukr, sty: flk, gnr: sng, ton: dmj, frm: [vo2, var, in3, cr5], bss: stb, lvl: elc }
   # FBBMS36P1988
-  # p. 8
-  # - { id: aywe, tit: Метелиця, sub: ukrfd,
-  #     arr: П. Глушков, src: FBBMS36P1988,
-  #     org: ukr, sty: flk, gnr: dnc, ton: gmi, frm: [in3, syn], bss: frb, lvl: elb }
+  - { id: aywe, tit: Метелиця, sub: ukrfd,
+      arr: П. Глушков, src: FBBMS36P1988,
+      org: ukr, sty: flk, gnr: dnc, ton: gmi, frm: [in3, syn], bss: frb, lvl: elb }
