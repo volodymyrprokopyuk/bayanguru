@@ -524,3 +524,12 @@ pieces:
   - { id: qjf7, tit: Вальс цыплят, sub: 'из \"Детской сюиты\"',
       com: В. Бухвостов, src: FBBMS35N1988,
       org: rus, sty: cus, gnr: vls, ton: ami, frm: acc, bss: [frb, in3], lvl: elb }
+  # FBBMS36P1988
+  # p. 26
+  # - { id: nzdv, tit: "Как у нас-то козел", sub: rusfs,
+  #     arr: В. Иванов, src: FBBMS36P1988,
+  #     org: rus, sty: flk, gnr: sng, ton: dmj, frm: [vo2, var, in6, cr5], bss: [frb, var, in3, in6], lvl: elc }
+  # p. 29
+  # - { id: 7m3z, tit: Солнце село за горою дальней, sub: rusfs,
+  #     arr: В. Платонов, src: FBBMS36P1988,
+  #     org: rus, sty: flk, gnr: sng, ton: dmi, frm: vo2, bss: [frb, stb], lvl: elb }
