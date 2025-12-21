@@ -27,6 +27,7 @@
   R2. | r4 e=4\(-\frBass g | b e2~ | e4 b a~ | a g fis~ | fis2\) a4\(~ |
   a=4 b c~ | c b a | g fis e~ | e=2\) \clef treble b'=4 |
   e='4 fis g~ | g fis e~ | e b d~ | d c8 b a4~ |
-  a=4 a c | e b c~ | c b a= \clef bass | g= fis e( | g) fis e~ | e=2. |
+  a=4 a c | e b c~ | c b a= \clef bass | g= fis \sSlur nf #'((ws . 3)) ( e) |
+  g=4 fis e~ | e=2. |
 }
 {{ end }}

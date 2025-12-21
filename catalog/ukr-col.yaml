@@ -46,3 +46,7 @@ pieces:
   # - { id: fygw, tit: "Розпрягайте, хлопці, коні", sub: ukrfs,
   #     arr: М. Різоль, src: UFSFBR1978,
   #     org: ukr, sty: flk, gnr: sng, ton: gmi, frm: [in3, cr5, cr7], bss: stb, lvl: elb }
+  # p. 19
+  # - { id: pllj, tit: Верховино, sub: ukrfs,
+  #     arr: М. Різоль, src: UFSFBR1978,
+  #     org: ukr, sty: flk, gnr: sng, ton: gmi, frm: [vo2, in5], bss: [stb, pub], lvl: elc }
