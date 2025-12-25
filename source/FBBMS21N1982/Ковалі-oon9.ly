@@ -44,6 +44,6 @@
   \duo { \rep 2 { r8 <d'=' e>8[ r <a= d>] | } } { bes=4 f | g f= | }
   \rep 2 { a=8-> <g= cis>-. } | \rep 2 { a=8-> <f= d'>-. } |
   \rep 2 { a=8-> <f= bes d>-. } |
-  \duo { bes=4( a=) | } { <d= d'>2-> \fermata | }
+  \duo { bes=4( a=) | } { <d= d'>2^\accent \fermata | }
 }
 {{ end }}
