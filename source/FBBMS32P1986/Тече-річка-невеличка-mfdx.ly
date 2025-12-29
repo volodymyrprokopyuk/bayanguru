@@ -36,7 +36,7 @@
   \key f \major
   \meter 1/4 1,1,1
   \rep 3 { R2. | }
-  r4. bes=8( a g) | a2( g4 | f2 e8 d) | cis2( a4 |
+  r4. bes=8(-\frBass a g) | a2( g4 | f2 e8 d) | cis2( a4 |
   d=4. f8 d4) | e4. c8( d e) | f4. g8( f d) |
   e=8( f g a g e) | d( e f g f e) | d4( bes g | f d e) |
   g=,4( a cis | d4. a8 d,=,4) |
