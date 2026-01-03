@@ -16,7 +16,7 @@
 \relative {
   \clef treble
   \key a \minor
-  a'='2~ | a | g~ | g | fis( | f4~ f8 e16 d) |
+  a'='2~-\frBass | a | g~ | g | fis( | f4~ f8 e16 d) |
   c='8( e g16 f e d) | e( d c b a4) |
   <a= g'>2~ | 2 | <g f'>~ | 2 | \duo { e'='4 dis=' | } { f=2 | } \clef bass |
   <e= d'>4 <ees des'> | <d c'>2 | r8 <a g' b> <a=, a'>4 |
