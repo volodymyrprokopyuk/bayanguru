@@ -21,6 +21,7 @@
   \clef treble
   \key g \minor
   \meter 1/4 1,1,1
-  R2. | R2. | d'='8 d d d d d | d d d g f f | bes,4 c8 f ees ees | d4 g=' r |
+  R2. | R2. | d'='8-\frBass d d d d d | d d d g f f |
+  bes,=4 c8 f ees ees | d4 g=' r |
 }
 {{ end }}

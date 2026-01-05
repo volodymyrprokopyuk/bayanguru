@@ -29,7 +29,7 @@
 \relative {
   \clef treble
   \key a \minor
-  R1 | R1 | a'='2( g | e4 g8 f e2) | a1~ | a~ | a2. g4 | a='1 |
+  R1 | R1 | a'='2(-\frBass g | e4 g8 f e2) | a1~ | a~ | a2. g4 | a='1 |
 
   a='4( a a e8 f | g f e d e4 a,) | g'8( f e d  c4 b | a=1) |
 

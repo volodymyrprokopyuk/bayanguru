@@ -31,7 +31,7 @@
 \relative {
   \clef treble
   \key f \major
-  \rep 3 { R2 | } | f'='2(~ | f4 e | f) e( | ees d | e8 d c c |
+  \rep 3 { R2 | } | f'='2(~-\frBass | f4 e | f) e( | ees d | e8 d c c |
   d='4) \clef bass c='4 | b8 bes4 bes8 | a g c, c | f16 g a c bes g d e= |
 
   f=4( c' | bes8 a16 bes a8 g | f4. f8) | f4( c' | bes c8 bes | a4) c8( c |

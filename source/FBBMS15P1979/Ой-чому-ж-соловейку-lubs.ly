@@ -17,7 +17,7 @@
   \clef treble
   \key a \minor
   \meter 1/4 1,1,1
-  R2. | e'='8( fis gis e a4) | g8( a e f e d) | c( a b e a,=4) \fermata |
+  R2. | e'='8(-\frBass fis gis e a4) | g8( a e f e d) | c( a b e a,=4) \fermata |
   e'='8( e e16 d c b a8 c) | e( e e16 d c b a8 e') |
   d='8( c b a16 b c8 b) | a16( c e8 d c16 b a=4) \fermata |
 }

@@ -15,7 +15,7 @@
 \relative {
   \clef bass
   \key e \minor
-  R1 | r2 r8 d'='8-. c-. b-. | a4.( b8 c4 b8 a | g4)-. e'-. d-. e-. |
+  R1 | r2 r8 d'='8-.-\frBass c-. b-. | a4.( b8 c4 b8 a | g4)-. e'-. d-. e-. |
   e='2( fis | g b,4) e8-. d-. | c-. b-. a4( g fis | g fis e=2) |
 }
 {{ end }}

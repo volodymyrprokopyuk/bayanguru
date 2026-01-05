@@ -34,7 +34,7 @@
 \relative {
   \clef bass
   \key e \minor
-  \rep 3 { R2 | } b=4( a | g d | e fis) |
+  \rep 3 { R2 | } b=4(-\frBass a | g d | e fis) |
   g=4( a8 b | c4 b) | a( <b, b'> | <c g'> <d fis>) |
   \duo { e=2 | e8( g a16 b a8 | g=2) | } { e=4 c | b2 | e= | } \clef treble |
 

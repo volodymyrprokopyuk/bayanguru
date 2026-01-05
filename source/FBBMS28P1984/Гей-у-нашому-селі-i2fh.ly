@@ -26,7 +26,7 @@
 \relative {
   \clef bass
   \key f \major
-  R2 | R2 | c'='4( a | bes a8 g | f e f d | c2) |
+  R2 | R2 | c'='4(-\frBass a | bes a8 g | f e f d | c2) |
   e=4( d8 e | f4 d8 c) | bes4( f') | ees( e) | f( a) | g( bes) |
   a=4( c) | b( g8 f | e4 c) | bes( a | g c) | a( f) | g2 | bes |
   c=4 c, | f=,2 \fermata |

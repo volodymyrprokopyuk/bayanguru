@@ -28,7 +28,7 @@
   \clef bass
   \key e \minor
   \partial 2 { r4 r | }
-  e=4 em! em | b b7! b7 | \rep 3 { e=4 em! em | }
+  e=4-\stBass em! em | b b7! b7 | \rep 3 { e=4 em! em | }
   b=,4 b7! b7 | \rep 2 { {{ template "lh1" }} } | e=4 em! em | e+em!4 %
 }
 {{ end }}

@@ -15,7 +15,7 @@
 \relative {
   \clef treble
   \key e \minor
-  \rep 4 { R2 | } | c'='4\( c | b c8 d | e4 fis | g fis\) \fermata |
+  \rep 4 { R2 | } | c'='4\(-\frBass c | b c8 d | e4 fis | g fis\) \fermata |
   e='4( fis8 gis | a4) r | b,( cis8 dis | e4) r8 d( | c4 a | b2~ | b | e=') |
 }
 {{ end }}

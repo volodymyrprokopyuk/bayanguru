@@ -42,7 +42,7 @@
 \relative {
   \clef bass
   \key d \minor
-  d=8 dm! dm f[ d@m dm8] | e[ g@m! gm8] g, gm gm |
+  d=8-\stBass dm! dm f[ d@m dm8] | e[ g@m! gm8] g, gm gm |
   c=8 c7! c7 e[ c@7 c78] | f fM! fM f fM fM |
   fis=8[ d@M! dM8] a,[ d@M dM8] | g gm! gm g gm gm |
   f'=8[ d@m! dm8] a, aM! aM | d16( a bes a bes a d=8) dm! r |

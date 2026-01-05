@@ -21,7 +21,7 @@
   \clef treble
   \key e \minor
   \meter 1/2 #'(1)
-  R2 | {{ template "rh1" (w `g'='8(`) }} | e='4 d | c a' | b8( c b a) |
+  R2 | {{ template "rh1" (w `g'='8(-\frBass`) }} | e='4 d | c a' | b8( c b a) |
   {{ template "rh1" (w `g='8(`) }}
   r8 a'='8( g fis) | g( b a g | c4 a) | b b, | e='2 |
 }

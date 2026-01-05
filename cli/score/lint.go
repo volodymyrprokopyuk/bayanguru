@@ -65,6 +65,17 @@ func lintClefOttavaOctaveCheck(lines []lyLine) []lyLine {
   return errors
 }
 
+var reBassIndicator = regexp.MustCompile(`(:?st|pu|fr)Bass`)
+
+func lintBassIndicatorCheck(lines []lyLine) []lyLine {
+  for _, line := range lines {
+    if reBassIndicator.MatchString(line.text) {
+      return nil
+    }
+  }
+  return []lyLine{{num: len(lines), text: "missing bass indicator"}}
+}
+
 var (
   reExcludeLine = regexp.MustCompile(strings.Join([]string{
     `^{{ define "\w+" }}$`,
@@ -276,6 +287,11 @@ func lintPiece(w io.Writer, piece *catalog.Piece, sourceDir string) error {
   errors := lintClefOttavaOctaveCheck(lines)
   if len(errors) > 0 {
     printErrors(w, "* Missing octave checks around clef or ottava", errors)
+    hasErrors = true
+  }
+  errors = lintBassIndicatorCheck(lines)
+  if len(errors) > 0 {
+    printErrors(w, "* Missing bass indicator", errors)
     hasErrors = true
   }
   lines, err = cleanLines(pieceFile)

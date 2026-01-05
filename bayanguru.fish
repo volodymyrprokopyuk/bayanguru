@@ -2,21 +2,30 @@
 
 function bayanguru_lint
   echo -n "=> linting bayanguru "
-  golangci-lint run ./... || return 1
+  golangci-lint run ./...
 end
 
 function bayanguru_build
-  echo "=> updating bayanguru"
-  go get -u ./... && go mod tidy
   echo "=> building bayanguru"
+  go get ./...
+  or return 1
+  go mod tidy
+  or return 1
   go build -o bin/bayanguru ./cmd/bayanguru
+end
+
+function bayanguru_update
+  echo "=> updating bayanguru"
+  go get -u ./...
+  or return 1
+  go mod tidy
 end
 
 function bayanguru_validate
   echo -n "=> validating bayanguru "
   bunx html-validate --formatter codeframe site/public/index.html \
     site/public/catalog/level/elementary-a/1.html \
-    site/public/piece/Largo-c3bd.html || return 1
+    site/public/piece/Largo-c3bd.html
 end
 
 function bayanguru_publish
@@ -33,6 +42,7 @@ end
 function bayanguru_deploy
   echo "=> deploying bayanguru to https://bayanguru.org"
   source .secret
+  or return 1
   bunx wrangler pages deploy site/public --project-name bayanguru \
     --branch main --skip-caching
 end
@@ -50,6 +60,8 @@ function main
     bayanguru_lint
   case build
     bayanguru_build
+  case update
+    bayanguru_update
   case validate
     bayanguru_validate
   case publish
@@ -61,7 +73,8 @@ function main
   case completions
     bayanguru_completions
   case '*'
-    echo "unknown command $cmd" && return 1
+    echo "unknown command $cmd"
+    return 1
   end
 end
 

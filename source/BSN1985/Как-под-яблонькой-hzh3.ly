@@ -15,7 +15,7 @@
 \relative {
   \clef bass
   \key g \major
-  b=4( a | cis8 a d c) | b4( a | cis8 a d d,) |
+  b=4(-\frBass a | cis8 a d c) | b4( a | cis8 a d d,) |
   e=4 d8 g | fis d g b, | e4 d8 g | fis4 d= |
 }
 {{ end }}

@@ -24,7 +24,7 @@
 \relative {
   \clef bass
   \key b \minor
-  b,=,4 bm! bm | d( b@m!) r4 |
+  b,=,4-\stBass bm! bm | d( b@m!) r4 |
   \rep 2 { fis,=,4 fis7! fis7 | cis'= fis@7! fis74 | }
   \rep 2 { b=,4 bm! bm | } b( bm!) cis | d b@m! dis4 |
   e=4 em! em | g, e@m! em4 | fis b@m! e@m!4 | fis4 b@m! fis@7!4 |

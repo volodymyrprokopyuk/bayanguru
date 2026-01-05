@@ -24,7 +24,7 @@
 \relative {
   \clef treble
   \key e \minor
-  R1 | R1 | r2 r4 b'='4 | a2 g | gis( a4 g) |
+  R1 | R1 | r2 r4 b'='4-\frBass | a2 g | gis( a4 g) |
   fis='8( e4 fis8 g fis e d=') \clef bass |
   c='2 b | a8 c b a g4 fis | e8 d' c b a b a g |
   fis=8 a d c b4 d | c2~ c8 b a g | fis4 g8 fis e=2 \fermata |

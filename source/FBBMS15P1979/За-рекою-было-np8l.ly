@@ -21,7 +21,7 @@
   \clef bass
   \key d \minor
   \meter 1/4 1,1,1
-  d'='2. | c | bes2( a4) | g2( f8 e) | \rep 2 { d=8( a'4 g8 f d=) | }
+  d'='2.-\frBass | c | bes2( a4) | g2( f8 e) | \rep 2 { d=8( a'4 g8 f d=) | }
   e=4( f8 e d4) | g( f8 e d4) | d'8 a d cis d a | c f, c' bes a f |
   g=4 gis a \fermata | g a, <d= f> \bar "|."
 }

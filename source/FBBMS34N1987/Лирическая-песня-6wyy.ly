@@ -29,7 +29,7 @@
 \relative {
   \clef bass
   \key d \minor
-  R1 | r2 r8 bes,=,8( a g | f4) d@m! g4 gm! |
+  R1 | r2 r8 bes,=,8(-\stBass a g | f4) d@m! g4 gm! |
   f=,4 c@7! r8 g( f e | d4) dm! g8( a bes4) |
   c=4 c7! f,8( g a4) | bes g@m! a4 d@m! |
   a=,4 a7! d dm! | e c@7! f4 fM! | g, c@7! a4 f@M! |

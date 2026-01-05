@@ -3,7 +3,7 @@
 {{ end }}
 
 {{ define "lh1" }}
-  a=8-.-> r r fis'-. r r | f-. r r e-. r r | dis-. r r d='-. r r |
+  {{ .a }} r r fis'-. r r | f-. r r e-. r r | dis-. r r d='-. r r |
 {{ end }}
 
 {{ define "rightHand" }}
@@ -35,14 +35,14 @@
 \relative {
   \clef treble
   \key a \minor
-  {{ template "lh1" }} | c='8-. r r d( c b) |
-  {{ template "lh1" }} | g='8( f e) d( c b) | f'( e d) c( b a=) |
+  {{ template "lh1" (w `a=8-.->-\frBass`) }} | c='8-. r r d( c b) |
+  {{ template "lh1" (w `a=8-.->`) }} | g='8( f e) d( c b) | f'( e d) c( b a=) |
 
   gis=4.( d') | a( c) | b g8( a b) | c( b c) b( a g) |
   b=4.( dis) | gis( e) | dis( a') | gis d8( c b=) |
 
-  {{ template "lh1" }} | c='8-. r r d( c b) |
-  {{ template "lh1" }} | c='8[-.-> r a]-. b( g e) |
+  {{ template "lh1" (w `a=8-.->`) }} | c='8-. r r d( c b) |
+  {{ template "lh1" (w `a=8-.->`) }} | c='8[-.-> r a]-. b( g e) |
   R2. | <a= e'>8-> r4 r4. |
 }
 {{ end }}

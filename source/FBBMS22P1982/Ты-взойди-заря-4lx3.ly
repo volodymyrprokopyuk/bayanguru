@@ -27,7 +27,7 @@
   \clef treble
   \key a \minor
   \meter 1/4 1,1,1,1
-  \partial 4 { r4 | } R1 | R2. | R2. | r4 r c''=''4( | f8 c4. c8 d cis a |
+  \partial 4 { r4 | } R1 | R2. | R2. | r4 r c''=''4(-\frBass | f8 c4. c8 d cis a |
   <f=' a>2) a4( | c a b8 g | a='2.) \clef bass a,=8( a | d4. f8 e d c e |
   a,=2) a4( | d c b8 g | c2) c,8 d16 e | f4 f e8 a,4 a8 | d2 a'4( | c a b8 g |
   a=2.) %
