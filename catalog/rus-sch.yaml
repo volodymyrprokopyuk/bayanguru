@@ -528,10 +528,9 @@ pieces:
   - { id: nzdv, tit: "Как у нас-то козел", sub: rusfs,
       arr: В. Иванов, src: FBBMS36P1988,
       org: rus, sty: flk, gnr: sng, ton: dmj, frm: [vo2, var, in6, cr5], bss: [frb, var, in3, in6], lvl: elc }
-  # p. 29
-  # - { id: 7m3z, tit: Солнце село за горою дальней, sub: rusfs,
-  #     arr: В. Платонов, src: FBBMS36P1988,
-  #     org: rus, sty: flk, gnr: sng, ton: dmi, frm: vo2, bss: [frb, stb], lvl: elb }
+  - { id: 7m3z, tit: Солнце село за горою дальней, sub: rusfs,
+      arr: В. Платонов, src: FBBMS36P1988,
+      org: rus, sty: flk, gnr: sng, ton: dmi, frm: vo2, bss: [frb, stb], lvl: elb }
   # p. 29
   # - { id: mmld, tit: А я по лугу, sub: rusfs,
   #     arr: В. Накапкин, src: FBBMS36P1988,
