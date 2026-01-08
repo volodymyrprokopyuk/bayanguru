@@ -48,5 +48,33 @@
 \relative {
   \clef bass
   \key d \major
+  \partial 4 { <c'=' d>4-\frBass | }
+  <b= d>4 <g d'> | <fis d'> <c' d> | <b d> <g d'> | <fis d'>4 4 |
+  <a= cis>4 4 | <a d> <fis b> | <g b> <a, g'> | <d= fis> r \clef treble |
+
+  \rep 2 { r8 <b''=' d>4.-> | r8 <a=' d>4.-> | }
+  r8 <a=' cis>4.-> | r8 <a d>4.-> | r8 <a cis>4.-> |
+  r8 <fis=' d'> r4 \clef bass |
+
+  g,=8 <b d> d, <b' d> | fis <c' d> d, <c' d> |
+  g=8 <b d> d, <b' d> | fis <a d> d, <a' d> |
+  e=8 <a cis> a, <a' cis> | d, <a' d> d, <fis b> |
+  e=8 <g b> a, <g' a> | <d fis a> r d d= |
+
+  g=4 b8 b | a4 d,8 d | g4 b | a a8 a | g g e e |
+  fis=4 d8 d | e4 fis8 fis | b,=,4 r |
+
+  b'=8\( ais a4 | gis g | fis eis | fis\) dis\( | e4 cis |
+  d=4 b8 a | gis g fis=,4\) | b16 d fis b cis d e fis=' \clef treble |
+
+  b='16\( ais a ais b ais a gis | a gis g gis a gis g fis |
+  a='16 gis g fis g fis e cis | fis cis ais fis\) dis'( d dis fis=' \clef bass |
+  e='16 b g e) cis'\( c cis e | d cis d cis b ais a gis |
+  a=16 gis g gis g fis cis fis | b,4\) <d= a'> |
+
+  g=16 fis g d g fis g d | fis eis fis d a' gis a d, |
+  g=16 fis g d g fis g d | fis eis fis d fis eis fis d |
+  e=16 dis e a, g' fis g a, | fis' eis fis d b' ais b b, |
+  e=16 dis e e, e' dis e a, | <d,=, a' fis'>4 %
 }
 {{ end }}
