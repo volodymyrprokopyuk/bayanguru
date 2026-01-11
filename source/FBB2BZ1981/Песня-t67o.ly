@@ -21,6 +21,6 @@
   \meter 1/4 1,1,1
   <g= bes>4-\frBass 2 | <d fis>4 2 | <bes d> <d f>4 | <f a>2 r4 |
   <ees= g>8( c <d fis>) r d'( c | bes8. a16 g=4)-- r \clef treble |
-  <a= f'>2 <a g'>4 | <d=' f>2. \clef bass |
+  <a= f'>2 <a g'>4 | <d=' f>2. |
 }
 {{ end }}
