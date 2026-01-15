@@ -40,7 +40,7 @@
   \clef bass
   \key g \minor
   \meter 1/2 #'(1)
-  {{ template "lh1" (w `<g= d'>4`) }}
+  {{ template "lh1" (w `<g= d'>4-\frBass`) }}
 
   R2 | r8 c='8[-- d-- c]~ | c4 r | r8 bes[-- c-- bes]~ |
   bes=8 a4 bes8~ | bes c4 d8~ | d4 g, | r8 <c d>8[ 8 <bes= d>] \clef treble |

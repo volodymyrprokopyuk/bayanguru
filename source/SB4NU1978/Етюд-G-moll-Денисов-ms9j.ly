@@ -66,7 +66,7 @@
 \relative {
   \clef bass
   \key g \minor
-  g,=,8( gm!)-. gm-. | fis'[( g@m!)-. gm8]-. |
+  g,=,8(-\stBass gm!)-. gm-. | fis'[( g@m!)-. gm8]-. |
   f=8[_\aSim g@m! e8] | {{ template "lh1" }}
   d=8[ bes@M! besM8] | d[ f@m! fm8] | c[ f@m! fm8] |
   b=,8[ f@d! g@7!8] | c8 cm! bes |
