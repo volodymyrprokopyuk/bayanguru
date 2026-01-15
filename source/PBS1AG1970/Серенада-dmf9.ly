@@ -29,7 +29,7 @@
   \clef bass
   \key a \minor
   \partial 4 { r8 r | }
-  a,=,8 am! am am r r | gis[ e@7! e78] e7 r r |
+  a,=,8-\stBass am! am am r r | gis[ e@7! e78] e7 r r |
   e'=8 e7! e7 e7 r r | a, am! am am r r | d dm! dm g+g7! r r |
   c=8 cM! cM f+fM! r r | b[ d@m! dm8] e+e7! r r | a=, am! am am r r |
 

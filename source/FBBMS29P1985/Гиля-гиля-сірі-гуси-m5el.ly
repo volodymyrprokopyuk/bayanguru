@@ -19,7 +19,7 @@
 \relative {
   \clef bass
   \key g \minor
-  bes=2( ees | d c) | bes4( g bes f) | ees( c ees c) |
+  bes=2(-\frBass ees | d c) | bes4( g bes f) | ees( c ees c) |
   bes=,2( a | g a) | bes( c | d4) fis( g=2) |
 }
 {{ end }}

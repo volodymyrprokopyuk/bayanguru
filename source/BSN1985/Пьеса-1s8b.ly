@@ -15,7 +15,7 @@
 \relative {
   \clef treble
   \key g \major
-  e'='4.( fis | g8 fis e dis e fis) | e4.( fis | g8 fis g a g fis) |
+  e'='4.(-\frBass fis | g8 fis e dis e fis) | e4.( fis | g8 fis g a g fis) |
   e='4.( fis | g gis) | a( g | fis e=') |
 }
 {{ end }}

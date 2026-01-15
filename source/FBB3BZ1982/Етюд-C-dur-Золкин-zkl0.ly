@@ -34,7 +34,7 @@
   \clef treble
   \key c \major
   \meter 1/2 #'(1)
-  c'='8\( d e f | g a g f | e f e d | c d c b\) |
+  c'='8\(-\frBass d e f | g a g f | e f e d | c d c b\) |
   a=8\( b c d | e f e d | c d c b | a b a g\) |
   f=8( g a b | c d c g) | f( g aes bes | c d e c=') |
   \clef bass {{ template "lh1" }} | cis dis e fis | g a ais b=\) |

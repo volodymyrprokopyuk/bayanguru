@@ -37,7 +37,7 @@
     s4. | r4 b='8( | e d c | a4.) |
     {{ template "lh1a" }}
   } {
-    c''=''8( d c | e,4.~ | e) | s4. |
+    c''=''8(-\frBass d c | e,4.~ | e) | s4. |
     {{ template "lh1b" (w `c'=''8(`) }}
 
     f'=''8\( e d | g,4.~ | g | a\) |

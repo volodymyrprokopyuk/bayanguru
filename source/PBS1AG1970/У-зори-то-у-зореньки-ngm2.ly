@@ -44,7 +44,7 @@
   \clef bass
   \key a \minor
   \rep 12 { R1 | }
-  a@m!2 e@7!2 | c@M!2 d@7!2 | f@M!2 g@7!2 | c@M!2 g@m!4 a@7!4 |
+  a@m!2-\stBass e@7!2 | c@M!2 d@7!2 | f@M!2 g@7!2 | c@M!2 g@m!4 a@7!4 |
   d=8( dm!4) dm8 e( e7!4) e78 | f( fM!4) fM8 d( d7!4) d78 |
   g,=,8_\aSim g7!4 g78 a[( cM!]) g( gM!) |
   \duo { r8 am!4 r8 r2 | } { a,=,4.( g8 f4 e=,) | }

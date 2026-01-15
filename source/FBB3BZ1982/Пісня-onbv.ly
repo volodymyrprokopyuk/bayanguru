@@ -17,7 +17,7 @@
 \relative {
   \clef treble
   \key a \minor
-  a=2( c4 e | g fis f e) | d2( dis | e4 d c b) |
+  a=2(-\frBass c4 e | g fis f e) | d2( dis | e4 d c b) |
   a=4-- a'-- g-- f-- | e-- d-- c-- b=-- |
   \clef bass a=4-- f-- d-- e-- | a2-- a,=,-- |
   \clef treble r4 a''='4( g f | e d c b=) |

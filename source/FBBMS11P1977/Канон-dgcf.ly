@@ -4,8 +4,8 @@
 {{ end }}
 
 {{ define "lh1" }}
-  {{ .a }} bes \af 8\! d | ees4 d8 c a bes |
-  c='4) g8( fis-- ees' ees | d4 c8 bes\> c \af 8\! a | {{ .b }} %
+  {{ .a }} bes d | ees4 d8 c a bes |
+  c='4) g8( fis-- ees' ees | d4 c8 bes c a | {{ .b }} %
 {{ end }}
 
 {{ define "rightHand" }}
@@ -29,12 +29,12 @@
 \relative {
   \clef bass
   \key g \minor
-  r4 r8 {{ template "lh1" (w `g=8(\<` `g=4.)`) }} g=8(\< bes \af 8\! d |
-  g='4 f8 f ees d | f4.) f,=8(\< a \af 8\! c | f4 ees8 ees d c |
+  r4 r8 {{ template "lh1" (w `g=8(-\frBass` `g=4.)`) }} g=8( bes d |
+  g='4 f8 f ees d | f4.) f,=8( a c | f4 ees8 ees d c |
   ees='4) a,8( a-- bes c | fis,) r d\( d-- e fis |
   fis=8 g a a bes c | c d ees ees4 a,8 | c4 fis,8 a4 d,=8 |
 
-  d'='4.\) {{ template "lh1" (w `g,=8(\<` `g=4) r8`) }} \af 4.\! d'='4.(\> |
+  d'='4.\) {{ template "lh1" (w `g,=8(` `g=4) r8`) }} d'='4.( |
   g='2.) | R2. \fermata |
 }
 {{ end }}

@@ -41,7 +41,7 @@
 \relative {
   \clef bass
   \key a \major
-  R2 | {{ template "lh1" (w `cis'='8(`) }}
+  R2 | {{ template "lh1" (w `cis'='8(-\frBass`) }}
   \rep 4 { e,=16 <a cis> e <a= b> } | cis,8 <d fis> e <a b> | fis <d e> b e,=, |
 
   \rep 8 { a=,16 e=, } | \rep 2 { a=,16 <e'= fis> } d8 b | e, d b' e,=, |

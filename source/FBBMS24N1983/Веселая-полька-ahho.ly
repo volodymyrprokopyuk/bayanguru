@@ -51,7 +51,7 @@
 \relative {
   \clef bass
   \key bes \major
-  r8 bes+besM![ r d+bes@M] | r8 c+f@7! r4 |
+  r8 bes+besM![-\stBass r d+bes@M] | r8 c+f@7! r4 |
 
   {{ template "lh1" (w `bes,=,8` `ees=8`) }} | d=8 bes@M! c8 f@7! |
   {{ template "lh1" (w `bes=,8` `c=8`) }} | \rep 2 { f=8 f7! bes+besM! r | }

@@ -60,7 +60,7 @@
   \key ees \major
   \rep 4 { R2 | }
 
-  \rep 2 { ees@M!8 r8 r4 | } | aes@M!8 r8 aes@M r8 |
+  ees@M!8-\stBass r8 r4 | ees@M!8 r8 r4 | aes@M!8 r8 aes@M r8 |
   r8 bes,=,16-> c-> bes8-> bes-> | ees@M! r8 aes@M! r8 |
   ees@M!8 r8 f@m! r8 | aes@M! r8 bes@7! r8 | ees@M! r8 ees@M r8 |
   \rep 2 { r8 d=8[-. c-. bes=,]-. | } | r bes+besM! r bes+bes7! |

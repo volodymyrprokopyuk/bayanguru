@@ -20,7 +20,7 @@
   \clef bass
   \key g \major
   \meter 1/2 #'(1)
-  g,=,8( gM!) gM gM | d'( d7!) d7 d7 | g,_\aSim gM! gM gM |
+  g,=,8(-\stBass gM!) gM gM | d'( d7!) d7 d7 | g,_\aSim gM! gM gM |
   b=,8( g@M!) g8( g7!) | c cM! cM cM | g gM! gM gM |
   d'=8 dM! dm dm | a aM! aM aM | cis( a@7!) d8( dM!) |
   g,=,8[( gM!]) e( g@M) | a8 a7! a7 a7 | d( c b a) |
