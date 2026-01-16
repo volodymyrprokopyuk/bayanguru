@@ -52,8 +52,8 @@
   g='4) fis8( fis | fis a g fis | e4) fis16( g a8 |
   a='8 c b a | e='4) r4 |
 
-  r8 <c'='' e fis>8[_\aSta 8 8] | <b cis e>8 8 r4 |
-  r8 <c='' e fis>8[ 8 8] | <b cis e>8 8 r e( |
+  r8 <c'='' e fis>8[-. 8-. 8]-. | <b cis e>8-. 8-. r4 |
+  r8 <c='' e fis>8[-. 8-. 8]-. | <b cis e>8-. 8-. r e( |
   d=''8 c b a | g b) fis16 g a8 | a fis~ fis e~ |
   e='8 \clef bass e,=-- r4 |
 
