@@ -1,23 +1,39 @@
 version: "2"
 linters:
+  default: standard
   enable:
+    - govet
+    - staticcheck
+    - ineffassign
+    - unused
+    - exhaustive
+    - errcheck
+    - errorlint
+    - nilnil
+    - nilerr
     - goconst
-    - perfsprint
     - gocritic
     - gosec
   settings:
-    errcheck:
-      check-type-assertions: true
     govet:
       enable-all: true
       disable:
         - fieldalignment
+    staticcheck:
+      checks:
+        - all
+        - -ST1000 # Package comment
+        - -ST1005 # Capitalized error message
+    errcheck:
+      check-type-assertions: true
     goconst:
       match-constant: true
       find-duplicates: true
     gocritic:
       enable-all: true
       disabled-checks:
-        - sprintfQuotedString
-        - emptyStringTest
-        - unnamedResult
+        - whyNoLint # Disable linting with //nolint:
+        - unnamedResult # Unnamed function return values
+    gosec:
+      excludes:
+        - G404 # Weak random number generator math/rand/v2
