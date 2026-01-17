@@ -534,3 +534,16 @@ pieces:
   - { id: mmld, tit: А я по лугу, sub: rusfs,
       arr: В. Накапкин, src: FBBMS36P1988,
       org: rus, sty: flk, gnr: sng, ton: emi, frm: [vo2, var, in3], bss: [frb, stb, cr5], lvl: elb }
+  # FBBMS37N1988
+  # p. 18
+  # - { id: uxqo, tit: Юмореска,
+  #     arr: И. Лунин, src: FBBMS37N1988,
+  #     org: rus, sty: cus, gnr: pie, ton: emi, frm: [in3, in6], bss: stb, lvl: elb }
+  # p. 19
+  # - { id: rzrb, tit: "А ну-ка, догони!",
+  #     arr: В. Бухвостов, src: FBBMS37N1988,
+  #     org: rus, sty: cus, gnr: pie, ton: emi, frm: var, bss: stb, lvl: elb }
+  # p. 20
+  # - { id: qrol, tit: Детский вальс,
+  #     arr: В. Накапкин, src: FBBMS37N1988,
+  #     org: rus, sty: cus, gnr: vls, ton: [dmj, bmi], frm: in3, bss: stb, lvl: elb }
