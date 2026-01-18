@@ -34,7 +34,7 @@
 \relative {
   \clef bass
   \key c \minor
-  \rep 5 { R2 | } bes=2( | aes4 g | c2) | r4 ees8( f | c2) |
+  \rep 5 { R2 | } bes=2(-\frBass | aes4 g | c2) | r4 ees8( f | c2) |
   bes=4.( g8 | aes[ g f ees]) | c'( bes aes4 | g2) | aes8( f g4 | c,=2) |
 
   <f= aes>4( ees'8 des | <aes ees'>2) | e'8( g, aes bes16 c |

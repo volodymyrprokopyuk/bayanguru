@@ -24,7 +24,7 @@
 \relative {
   \clef bass
   \key a \minor
-  a,=,4 am! | e' e7! | a, am! | d dM! |
+  a,=,4-\stBass am! | e' e7! | a, am! | d dM! |
   a=,4 am! | e' em! | b gm! | e em! |
   a,=,4 am! | e' e7! | e a@m! | d4 dM! |
   g,=,4 g7! | c cM! | d dM! | a am! |

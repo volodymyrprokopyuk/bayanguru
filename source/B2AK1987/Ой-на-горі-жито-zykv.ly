@@ -45,7 +45,7 @@
   \clef bass
   \key a \major
   \meter 1/4 1,1,1,1
-  r8 a@M! r8 d@M! r8 a@M! r8 d@M! |
+  r8 a@M!-\stBass r8 d@M! r8 a@M! r8 d@M! |
   \rep 2 {
     a,=,8 aM! e' e7! a, aM! e' e7! |
     a,=,8 aM! e'= e7! {{ template "lh1" }} %

@@ -17,7 +17,7 @@
 \relative {
   \clef bass
   \key g \major
-  g,=,4( gM!)-. gM-. | g( gM)-. gM-. |
+  g,=,4(-\stBass gM!)-. gM-. | g( gM)-. gM-. |
   fis=,4_\aSim d@7! d74 | fis d@7 d74 |
   g=,4 gM! gM | g gM gM | d'=4 d7! d7 | g+gM! g+gM r |
 }

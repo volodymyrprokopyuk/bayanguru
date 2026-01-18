@@ -4,7 +4,7 @@
 
 {{ define "lh1" }}
   \duo { c'='4 e e | e d c | d f f | f g a | }
-  { <a,=, e'>2.~ | 2. | <d= a'>2.~ | 2. | }
+  { <a,=, e'>2.~ {{ .a }} | 2. | <d= a'>2.~ | 2. | }
 {{ end }}
 
 {{ define "rightHand" }}
@@ -33,11 +33,11 @@
 \relative {
   \clef bass
   \key a \minor
-  {{ template "lh1" }}
+  {{ template "lh1" (w `- \frBass`) }}
   <e= a c>2. | <e e'>2 <e d'>4 | a e c | a=,2. |
   \rep 2 { a=,4 e' c'=' | } \rep 4 { a,=,4 e' gis= | }
   a,=,4 e' f | e c b=, |
 
-  {{ template "lh1" }} | <e= a c>2. | <e d'>2 4 | a2 e4 | a,=,2. |
+  {{ template "lh1" (w ``) }} | <e= a c>2. | <e d'>2 4 | a2 e4 | a,=,2. |
 }
 {{ end }}

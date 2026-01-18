@@ -29,7 +29,7 @@
 \relative {
   \clef bass
   \key f \major
-  f,=,8 fM!4 c@7!8 | d'8 dm!4 dm8 |
+  f,=,8-\stBass fM!4 c@7!8 | d'8 dm!4 dm8 |
   g,=,8 g7!4 g78 | c cM!4 c7!8 |
   f,=,8 fM! c' c7! | d dm! d dm |
   c=8 cM! d dm! | c= cM! r cM |

@@ -35,7 +35,7 @@
 \relative {
   \clef bass
   \key a \major
-  a,=,8 d@M! a@M!4 | e'8 e7! cis a@M! | a8 d@M! a@M!4 | e'8 e7! a+aM!4 |
+  a,=,8-\stBass d@M! a@M!4 | e'8 e7! cis a@M! | a8 d@M! a@M!4 | e'8 e7! a+aM!4 |
   e=8 eM! b b7! | e eM! a, am! | b e@M! b8 b7! | e= e7! a+aM!4 |
 
   \key d \major

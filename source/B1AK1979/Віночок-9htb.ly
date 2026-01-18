@@ -18,7 +18,7 @@
   \clef bass
   \key c \major
   \rep 4 { R2 | }
-  c=8 cM! c cM | d g@7! g,8 g7 | c cM! g c@M | c8 cM! g c@M |
+  c=8-\stBass cM! c cM | d g@7! g,8 g7 | c cM! g c@M | c8 cM! g c@M |
   a=,4 b | c f, | fis g | \duo { r4 cM! | } { c=2 | }
 }
 {{ end }}

@@ -23,7 +23,7 @@
 \relative {
   \clef bass
   \key g \major
-  g,=,4( gM!) gM-. | fis( d@7!) d74-. | g_\aSim gM! gM | g gM! gM |
+  g,=,4(-\stBass gM!) gM-. | fis( d@7!) d74-. | g_\aSim gM! gM | g gM! gM |
   d'=4 d7! d7 | d g@M! gM4 | cis a@7! a74 | d= dM! dM |
   g,=,4 gM! gM | fis d@7! d74 | g gM! gM | f g@M! gM4 |
   e=,4 c@M! cM4 | d' g@M! gM4 | d= d7! d7 | g+gM! r r |

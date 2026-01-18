@@ -77,7 +77,7 @@
 \relative {
   \clef bass
   \key f \minor
-  \grace { s16 s s } f=2 des | c bes |
+  \grace { s16 s s } f=2-\stBass des | c bes |
   c+f@m!4 r4 c+c7!2 | f+fm!4 r r2 |
   \rep 2 { f=,4 fm! c'= f@m | }
   \rep 2 { e=4 c@7! c=4 c7 | }
@@ -89,11 +89,11 @@
   f,=,4 fm! c' aes | f+fm! r r2 |
   f=,4 fm! c' aes | f+fm! r c=2 |
 
-  aes'=1~ | aes2 g4. f8 | g1~ | g4 r c,2 |
+  aes'=1~-\puBass | aes2 g4. f8 | g1~ | g4 r c,2 |
   g'=1~ | g2 aes4. g8 | f1~ | f4 r c2 |
   f=1~ | f2 g4. f8 | bes,1~ | bes4 bes c des |
   c=2 g | aes2. g4 | f2 c'4 aes | f r c'2 |
-  f+fm!4 r c+c7!2 | f,=,4 fm! fm r |
+  f+fm!4-\stBass r c+c7!2 | f,=,4 fm! fm r |
 
   aes=,2-> ees'-> | c-> aes-> |
   ees'=4 des c bes | aes r c+c7!2 |

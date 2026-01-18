@@ -28,7 +28,7 @@
 \relative {
   \clef bass
   \key b \minor
-  R1 | R1 | b,=,8[ r bm!] r bm[ r bm] r |
+  R1 | R1 | b,=,8[-\stBass r bm!] r bm[ r bm] r |
   e+em![ r e+em] r fis+fisM! r fis+fisM4 |
 
   \rep 3 { e+em!8[ r b+bm!] r } b+bm r b=,16( a g fis) |

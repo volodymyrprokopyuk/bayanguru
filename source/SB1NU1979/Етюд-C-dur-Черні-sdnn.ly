@@ -27,7 +27,7 @@
   \clef bass
   \key c \major
   \meter 1/2 #'(1)
-  c=8 cM! cM cM | c cM! cM cM | g g7! g7 g7 |
+  c=8-\stBass cM! cM cM | c cM! cM cM | g g7! g7 g7 |
   \rep 3 { c=8 cM! cM cM | } b g@M! c8 cM! | g=, gM! g+gM4 |
 
   \rep 3 { g=,8 g7! g7 g7 | g=,[ c@M! cM8 cM] | }

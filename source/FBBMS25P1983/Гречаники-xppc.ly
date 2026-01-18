@@ -37,7 +37,7 @@
   \clef treble
   \key f \major
   \rep 8 { R2 | }
-  bes'='4 g8 a | bes2 | a4 f8 g | a2 | g8 d e fis | g2 | f8 c e c |
+  bes'='4-\frBass g8 a | bes2 | a4 f8 g | a2 | g8 d e fis | g2 | f8 c e c |
   a=8 bes c ees | d4 d8 d | d e f d | c4 c8 c | c4 f | bes,8 bes bes bes |
   bes=8 c d bes | a a g g | f-> c'-> f='-> r |
 

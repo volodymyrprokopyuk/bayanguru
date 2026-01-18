@@ -28,7 +28,7 @@
   \clef bass
   \key g \minor
   \meter 1/4 1,1,1
-  g,=,4( gm!) r | g( c@m!) r4 |
+  g,=,4(-\stBass gm!) r | g( c@m!) r4 |
   g=,4( gm!) r | c( cm!) f+fM! |
   bes+besM!2 g+g7!4 | c( cm!) c |
   bes=,4( g@m!) g4 | ees' g, ees'= |
