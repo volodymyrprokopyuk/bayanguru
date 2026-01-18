@@ -108,7 +108,7 @@ func makeQuerySort(pieceMap map[string]*Piece) func(queries ...string) string {
       pieces = selectLyrics(pieces)
     }
     // Sort or randomize pieces
-    if len(sortKey) > 0 {
+    if sortKey != "" {
       err = ArrangePieces(pieces, sortKey)
       if err != nil {
         return err.Error()

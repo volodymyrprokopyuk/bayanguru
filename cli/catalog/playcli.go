@@ -39,7 +39,7 @@ var Queries = map[string]string{
 var reCatalog = regexp.MustCompile(`^\w+(?:-\w+)?$`)
 
 func ValidateReq(catalog string, args []string) error {
-  if len(catalog) > 0 && !reCatalog.MatchString(catalog) {
+  if catalog != "" && !reCatalog.MatchString(catalog) {
     return fmt.Errorf("invalid catalog %s", catalog)
   }
   if len(args) == 0 {
@@ -62,7 +62,7 @@ func ValidateQueries(cmd *cli.Command) (map[string]string, error) {
   queries := make(map[string]string, len(Queries))
   for name := range Queries {
     query := cmd.String(name)
-    if len(query) > 0 {
+    if query != "" {
       if !reQuery.MatchString(query) {
         return nil, fmt.Errorf("invalid query --%s %s", name, query)
       }

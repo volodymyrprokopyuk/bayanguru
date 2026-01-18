@@ -63,7 +63,7 @@ var (
 func lyNotation(stChord string) string {
   c := reStNotation.FindStringSubmatch(stChord)
   bass, root, bind, chord, name, mods := c[1], c[2], c[3], c[4], c[5], c[6]
-  if len(bass) > 0 {
+  if bass != "" {
     if reCdeBass.MatchString(bass) {
       bass += ","
     } else {
@@ -79,15 +79,15 @@ func lyNotation(stChord string) string {
     rootKey = enharmKey
   }
   triad := stChords[rootKey + chord]
-  if len(name) > 0 {
+  if name != "" {
     name = `^\markup \smaller ` + chordNames[chord]
   }
-  if len(bass) > 0 {
+  if bass != "" {
     chord = fmt.Sprintf(`\fixed c' { <%s %s>%s%s }`, bass, triad, mods, name)
   } else {
     chord = fmt.Sprintf(`\fixed c' { <%s>%s%s }`, triad, mods, name)
   }
-  if len(bind) > 0 {
+  if bind != "" {
     return fmt.Sprintf(
       `\afterGrace 1/4 %s { \fixed c { \once \hide Stem \parenthesize %s4 } }`,
       chord, root,
@@ -171,7 +171,7 @@ func initLyrics(piece *catalog.Piece, sourceDir string) error {
 func templateLyrics(
   tpl *template.Template, piece *catalog.Piece, ec *engraveCommand,
 ) error {
-  if len(piece.LyricsFile) > 0 && tpl.Lookup(piece.LyricsFile) == nil {
+  if piece.LyricsFile != "" && tpl.Lookup(piece.LyricsFile) == nil {
     lyricsFile := filepath.Join(ec.SourceDir, "lyrics", piece.LyricsFile)
     _, err := tpl.ParseFiles(lyricsFile)
     if err != nil {
@@ -211,7 +211,7 @@ func templatePiece(
       return err
     }
     piece.LeftHand = stradella(w.String())
-    if ec.lyrics && len(piece.LyricsFile) > 0 {
+    if ec.lyrics && piece.LyricsFile != "" {
       w.Reset()
       err = tpl.ExecuteTemplate(&w, piece.LyricsFile, piece)
       if err != nil {
@@ -263,7 +263,7 @@ func templatePiece(
       return err
     }
     piece.LeftHand = stradella(w.String())
-    if ec.lyrics && len(piece.LyricsFile) > 0 {
+    if ec.lyrics && piece.LyricsFile != "" {
       w.Reset()
       err = tpl.ExecuteTemplate(&w, piece.LyricsFile, piece)
       if err != nil {
@@ -296,7 +296,7 @@ func templatePiece(
       return err
     }
     piece.LeftHand = stradella(w.String())
-    if ec.lyrics && len(piece.LyricsFile) > 0 {
+    if ec.lyrics && piece.LyricsFile != "" {
       w.Reset()
       err = tpl.ExecuteTemplate(&w, piece.LyricsFile, piece)
       if err != nil {

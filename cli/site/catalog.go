@@ -133,7 +133,7 @@ var (
   secCom = &Section{
     Name: "composer", Tit: "Composer | Композитор",
     Query: func(piece *catalog.Piece) bool {
-      return len(piece.Com) > 0 || len(piece.Arr) > 0
+      return piece.Com != "" || piece.Arr != ""
     },
     Sort: catalog.SortByCom,
     Sub: []*Section{
@@ -313,7 +313,7 @@ var (
   secLyr = &Section{
     Name: "lyrics", Tit: "Lyrics | Пісні",
     Query: func(piece *catalog.Piece) bool {
-      return len(piece.LyricsFile) > 0
+      return piece.LyricsFile != ""
     },
     Sort: catalog.SortByTit,
     Sub: []*Section{

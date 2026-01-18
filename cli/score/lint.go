@@ -129,7 +129,7 @@ func cleanLines(pieceFile string) ([]lyLine, error) {
       cleanLine := reRemoveKnownCmd.ReplaceAllLiteralString(line, "")
       cleanLine = reRemoveOtherCmd.ReplaceAllLiteralString(cleanLine, "")
       cleanLine = strings.Trim(cleanLine, " ")
-      if len(cleanLine) > 0 && reHasMusic.MatchString(cleanLine) {
+      if cleanLine != "" && reHasMusic.MatchString(cleanLine) {
         line := lyLine{num: num, text: strings.Trim(cleanLine, " ")}
         lines = append(lines, line)
       }
@@ -158,7 +158,7 @@ func lintFirstNoteOctaveCheck(lines []lyLine) []lyLine {
   errors := make([]lyLine, 0, 10)
   for _, line := range lines {
     fstNote := reFirstNote.FindString(line.text)
-    if len(fstNote) > 0 {
+    if fstNote != "" {
       if !reOctaveCheck.MatchString(fstNote) {
         errors = append(errors, lyLine{num: line.num, text: fstNote})
       }
@@ -176,7 +176,7 @@ func lintNewContextOctaveCheck(lines []lyLine) []lyLine {
   errors := make([]lyLine, 0, 10)
   for _, line := range lines {
     fstNote := reNewContext.FindString(line.text)
-    if len(fstNote) > 0 {
+    if fstNote != "" {
       if !reOctaveCheck.MatchString(strings.TrimLeft(fstNote, "{ w`")) {
         errors = append(errors, lyLine{num: line.num, text: fstNote})
       }
@@ -254,7 +254,7 @@ func lintDurationAfterBoundChord(lines []lyLine) []lyLine {
       chord := line.text[idx[0]:idx[1]]
       nextNote := line.text[idx[1]:]
       nextNote = strings.TrimLeft(nextNote, " {|}%")
-      if len(nextNote) > 0 && !reNoteDuration.MatchString(nextNote) {
+      if nextNote != "" && !reNoteDuration.MatchString(nextNote) {
         errors = append(errors, lyLine{num: line.num, text: chord})
       }
     }

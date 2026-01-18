@@ -1,7 +1,7 @@
 #!/usr/bin/env fish
 
 function bayanguru_lint
-  echo -n "=> linting bayanguru "
+  echo "=> linting bayanguru "
   golangci-lint run ./...
 end
 

@@ -356,18 +356,18 @@ func addMetaToPieces(pieces []*Piece) {
       piece.Sub = sub
     }
     // art
-    if len(piece.Arr) > 0 {
-      if len(piece.Art) == 0 {
+    if piece.Arr != "" {
+      if piece.Art == "" {
         piece.Art = "arr" // Default: arrangement
       }
       piece.UkrArt = metaSub[piece.Art]
     }
     // lcs
-    if len(piece.Lcs) == 0 {
+    if piece.Lcs == "" {
       piece.Lcs = "cpl" // Default: copyleft
     }
     // ens
-    if len(piece.Ens) == 0 {
+    if piece.Ens == "" {
       piece.Ens = "sol" // Default: solo
     }
     // desc
@@ -412,7 +412,7 @@ func validatePieces(pieces []*Piece) error {
     if !reID.MatchString(piece.ID) {
       errs = append(errs, "invalid id " + piece.ID)
     }
-    if len(piece.Art) > 0 && !reArt.MatchString(piece.Art) {
+    if piece.Art != "" && !reArt.MatchString(piece.Art) {
       errs = append(errs, "invalid art " + piece.Art)
     }
     if !reLcs.MatchString(piece.Lcs) {

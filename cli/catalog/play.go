@@ -60,7 +60,7 @@ func ReadPiecesAndBooks(bc *BaseCmd) ([]*Piece, []*Book, int, error) {
     return nil, nil, 0, err
   }
   for _, piece := range pieceMap {
-    if len(piece.Lyr) > 0 && piece.Lyr != "none" {
+    if piece.Lyr != "" && piece.Lyr != "none" {
       lyrFile := piece.Lyr + ".ly"
       if lyrics[lyrFile] {
         // Override automatic Lyrics with lyr: Lyrics2
@@ -104,7 +104,7 @@ func ReadPiecesAndBooks(bc *BaseCmd) ([]*Piece, []*Book, int, error) {
 func selectLyrics(pieces []*Piece) []*Piece {
   selected := make([]*Piece, 0, len(pieces))
   for _, piece := range pieces {
-    if len(piece.LyricsFile) > 0 {
+    if piece.LyricsFile != "" {
       selected = append(selected, piece)
     }
   }
@@ -175,7 +175,7 @@ func play(pc *playCmd) error {
     return err
   }
   PrintStat(catLen, len(pieces))
-  if len(pc.sort) > 0 {
+  if pc.sort != "" {
     err = ArrangePieces(pieces, pc.sort)
     if err != nil {
       return err
