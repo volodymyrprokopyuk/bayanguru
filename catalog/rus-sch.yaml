@@ -536,23 +536,22 @@ pieces:
       org: rus, sty: flk, gnr: sng, ton: emi, frm: [vo2, var, in3], bss: [frb, stb, cr5], lvl: elb }
   # FBBMS37N1988
   - { id: uxqo, tit: Юмореска,
-      arr: И. Лунин, src: FBBMS37N1988,
+      com: И. Лунин, src: FBBMS37N1988,
       org: rus, sty: cus, gnr: pie, ton: emi, frm: [in3, in6], bss: stb, lvl: elb }
-  # p. 19
-  # - { id: rzrb, tit: "А ну-ка, догони!",
-  #     arr: В. Бухвостов, src: FBBMS37N1988,
-  #     org: rus, sty: cus, gnr: pie, ton: emi, frm: var, bss: stb, lvl: elb }
+  - { id: rzrb, tit: "А ну-ка, догони!",
+      com: В. Бухвостов, src: FBBMS37N1988,
+      org: rus, sty: cus, gnr: pie, ton: emi, frm: var, bss: stb, lvl: elb }
   # p. 20
   # - { id: qrol, tit: Детский вальс,
-  #     arr: В. Накапкин, src: FBBMS37N1988,
+  #     com: В. Накапкин, src: FBBMS37N1988,
   #     org: rus, sty: cus, gnr: vls, ton: [dmj, bmi], frm: in3, bss: stb, lvl: elb }
   # p. 21
   # - { id: hmzz, tit: Песня,
-  #     arr: Ю. Грибков, src: FBBMS37N1988,
+  #     com: Ю. Грибков, src: FBBMS37N1988,
   #     org: rus, sty: cus, gnr: sng, ton: emi, frm: vo2, bss: stb, lvl: elb }
   # p. 22
   # - { id: 0dbh, tit: Пионерский хоровод,
-  #     arr: В. Залипаев, src: FBBMS37N1988,
+  #     com: В. Залипаев, src: FBBMS37N1988,
   #     org: rus, sty: cus, gnr: dnc, ton: cmi, frm: [vo2, var, in3], bss: stb, lvl: elb }
   # p. 28
   # - { id: d0ke, tit: "Хожи ли я кружком, пешком", sub: rusfs,
