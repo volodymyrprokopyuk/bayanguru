@@ -541,10 +541,9 @@ pieces:
   - { id: rzrb, tit: "А ну-ка, догони!",
       com: В. Бухвостов, src: FBBMS37N1988,
       org: rus, sty: cus, gnr: pie, ton: emi, frm: var, bss: stb, lvl: elb }
-  # p. 20
-  # - { id: qrol, tit: Детский вальс,
-  #     com: В. Накапкин, src: FBBMS37N1988,
-  #     org: rus, sty: cus, gnr: vls, ton: [dmj, bmi], frm: in3, bss: stb, lvl: elb }
+  - { id: qrol, tit: Детский вальс,
+      com: В. Накапкин, src: FBBMS37N1988,
+      org: rus, sty: cus, gnr: vls, ton: [dmj, bmi], frm: in3, bss: stb, lvl: elb }
   # p. 21
   # - { id: hmzz, tit: Песня,
   #     com: Ю. Грибков, src: FBBMS37N1988,
