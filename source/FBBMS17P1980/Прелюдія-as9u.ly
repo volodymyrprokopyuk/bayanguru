@@ -36,7 +36,7 @@
     }
   }
   \duo { e'='16(\< a) a( d) cis8. \af 32\! b='16 | } { e'='4 <d=' gis> | }
-  \af 4\! <cis=' e a>4\> r \bar "|."
+  <cis=' e a>4\> \af 4\! r \bar "|."
 }
 {{ end }}
 
