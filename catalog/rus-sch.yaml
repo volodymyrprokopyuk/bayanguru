@@ -547,10 +547,9 @@ pieces:
   - { id: hmzz, tit: Песня,
       com: Ю. Грибков, src: FBBMS37N1988,
       org: rus, sty: cus, gnr: sng, ton: emi, frm: vo2, bss: stb, lvl: elb }
-  # p. 22
-  # - { id: 0dbh, tit: Пионерский хоровод,
-  #     com: В. Залипаев, src: FBBMS37N1988,
-  #     org: rus, sty: cus, gnr: dnc, ton: cmi, frm: [vo2, var, in3], bss: stb, lvl: elb }
+  - { id: 0dbh, tit: Пионерский хоровод,
+      com: В. Залипаев, src: FBBMS37N1988,
+      org: rus, sty: cus, gnr: dnc, ton: cmi, frm: [vo2, var, in3], bss: stb, lvl: elb }
   # p. 28
   # - { id: d0ke, tit: "Хожи ли я кружком, пешком", sub: rusfs,
   #     arr: В. Накапкин, src: FBBMS37N1988,
