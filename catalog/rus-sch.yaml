@@ -544,10 +544,9 @@ pieces:
   - { id: qrol, tit: Детский вальс,
       com: В. Накапкин, src: FBBMS37N1988,
       org: rus, sty: cus, gnr: vls, ton: [dmj, bmi], frm: in3, bss: stb, lvl: elb }
-  # p. 21
-  # - { id: hmzz, tit: Песня,
-  #     com: Ю. Грибков, src: FBBMS37N1988,
-  #     org: rus, sty: cus, gnr: sng, ton: emi, frm: vo2, bss: stb, lvl: elb }
+  - { id: hmzz, tit: Песня,
+      com: Ю. Грибков, src: FBBMS37N1988,
+      org: rus, sty: cus, gnr: sng, ton: emi, frm: vo2, bss: stb, lvl: elb }
   # p. 22
   # - { id: 0dbh, tit: Пионерский хоровод,
   #     com: В. Залипаев, src: FBBMS37N1988,
