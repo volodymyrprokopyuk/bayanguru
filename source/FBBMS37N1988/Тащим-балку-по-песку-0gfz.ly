@@ -44,7 +44,7 @@
   ees=4 d | c aes | a b | c4. d8 | ees( c f4) | ees8( c f4) |
   ees=8 ees d4 | c8 c c=4 |
 
-  c=8 cm! bes aes | g ees@M! aes8 f@m! | f8 fM! g g7! | c g c d |
+  c=8-\stBass cm! bes aes | g ees@M! aes8 f@m! | f8 fM! g g7! | c g c d |
   ees=8 eesM! aes, aesM! | c cm! f, fm! | d' d7! g, g7! | c g c g |
   f=,8 f7! bes+bes7!4 | ees'8 eesM! aes,4 | d8 d g,4 |
   aes=,8-- bes-- c=4-- \fermata |
