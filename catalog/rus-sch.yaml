@@ -551,7 +551,7 @@ pieces:
       com: В. Залипаев, src: FBBMS37N1988,
       org: rus, sty: cus, gnr: dnc, ton: cmi, frm: [vo2, var, in3], bss: stb, lvl: elb }
   # p. 28
-  # - { id: d0ke, tit: "Хожи ли я кружком, пешком", sub: rusfs,
+  # - { id: d0ke, tit: "Хожу ли я кружком, пешком", sub: rusfs,
   #     arr: В. Накапкин, src: FBBMS37N1988,
   #     org: rus, sty: flk, gnr: sng, ton: cmj, frm: [var, in3, cr5, syn], bss: stb, lvl: elb }
   # p. 29

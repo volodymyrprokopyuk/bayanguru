@@ -40,6 +40,18 @@
   \clef bass
   \key c \minor
   \acc { s8. } c=4-\stBass cm! ees c@m! | f,4 fm! g g7! |
-  c=4 cm! bes bes7! | ees eesM! e c@7! |
+  c=4 cm! bes bes7! | ees eesM! e c@7! | c4 f@m! bes4 bes7! |
+  ees=4 eesM! g, ees@M! | aes4 f@m! bes4 bes7! | ees4 eesM! d= g@7! |
+
+  c=4 cm! f, fm! | bes bes7! bes ees@M! |
+  aes=,4 f@m! c4 f@m! | bes4 bes7! ees eesM! |
+  bes=,4 ees@M! aes4 f@m! | bes4 bes7! ees bes |
+  ees=4 ees@M!8[ des8] c4 c7! | f, f@m!8[ c'8] f,4 f@m!8[ aes8] |
+  bes=,4 bes7! d bes@7! | ees4 eesM! d= g@7! |
+
+  c=4 cm! ees c@m! | f,4 fm! g g7! | c cm! aes f@m! |
+  bes=,4 bes7! ees eesM! | c c@m!8[ g8] f4 fm! |
+  bes=,4 bes7! ees d | c cm! aes=, f@m! |
+  \duo { r4 r8 g7! r4 cm!4 \fermata | } { g,=,2 c= \fermata | }
 }
 {{ end }}
