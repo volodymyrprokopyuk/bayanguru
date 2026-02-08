@@ -556,3 +556,12 @@ pieces:
   - { id: 0gfz, tit: Тащим балку по песку, sub: rusfs,
       arr: В. Платонов, src: FBBMS37N1988,
       org: rus, sty: flk, gnr: sng, ton: cmi, frm: [vo2, cr5], bss: [frb, stb], lvl: elb }
+  # FBBMS38P1988
+  # p. 3
+  # - { id: nj3n, tit: Пьеса,
+  #     com: А. Гедике, arr: В. Платонов, art: ipr, src: FBBMS38P1988,
+  #     org: rus, sty: cus, gnr: pie, ton: ami, frm: in6, bss: [frb, in3, in5], lvl: elb }
+  # p. 4
+  # - { id: 7zdy, tit: Бабушкина сказка,
+  #     com: Б. Фоготин, src: FBBMS38P1988,
+  #     org: rus, sty: cus, gnr: pie, ton: gmi, frm: vo2, bss: [frb, vo2], lvl: elb }
