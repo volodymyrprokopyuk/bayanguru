@@ -395,8 +395,3 @@ pieces:
   - { id: u5b8, tit: Горобчик, sub: stu,
       com: А. Тихончук, src: FBB3BZ1982,
       org: ukr, sty: cus, gnr: pie, ton: cmj, frm: [arp, brk, tri], bss: [frb, arp, brk], lvl: elb }
-  # FBBMS37N1988
-  # p. 30
-  # - { id: lq6g, tit: Колядка, sub: ukrfs,
-  #     arr: В. Накапкин, src: FBBMS37N1988,
-  #     org: ukr, sty: flk, gnr: sng, ton: ami, frm: [vo2, var, in3, cr5], bss: [stb, pub], lvl: elb }

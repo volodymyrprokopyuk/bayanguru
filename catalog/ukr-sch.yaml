@@ -262,3 +262,7 @@ pieces:
   - { id: aywe, tit: Метелиця, sub: ukrfd,
       arr: П. Глушков, src: FBBMS36P1988,
       org: ukr, sty: flk, gnr: dnc, ton: gmi, frm: [in3, syn], bss: frb, lvl: elb }
+  # FBBMS37N1988
+  - { id: lq6g, tit: Колядка, sub: ukrfs,
+      arr: В. Накапкин, src: FBBMS37N1988,
+      org: ukr, sty: flk, gnr: sng, ton: ami, frm: [vo2, var, in3, cr5], bss: [stb, pub], lvl: elb }
