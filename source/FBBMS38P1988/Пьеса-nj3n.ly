@@ -9,7 +9,7 @@
   \clef treble
   \key a \minor
   \time 2/4
-  {{ template "rh1" (w `e''=''16(`) }}
+  {{ template "rh1" (w `e''=''16(\mf`) }}
   b='8[-. a-. g-. fis]-. | g4( e8)-. e-. |
   fis='8[( a)-. g-. fis]-. | e='4. r8 |
 
