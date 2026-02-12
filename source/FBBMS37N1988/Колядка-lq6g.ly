@@ -71,7 +71,31 @@
 \relative {
   \clef bass
   \key a \minor
+  \meter 1/4 1,1,1
   \rep 4 { R2. | }
-  r8 a@m![-\stBass r8 d@m! r8 a@m!] |
+  r8 a@m![-\stBass r8 d@m! r8 a@m!] | r8 d@m![ r8 d@m! r8 a@m!] |
+  c=8 cM! d dm! a r | g gM! f d@m! e'=8 a@m! |
+
+  \rep 5 { a,=,8[-. r r a]-. a=,4-- | } | r8 a[ a a a a=,] |
+
+  a=,8 am! r e'-. a, am! | e' a@m! r8 g,-. c f@M! |
+  a=,8[ r g r c] r | d dm! e em! a,4 | c8 cM! d dm! f fM! |
+  c=8 a@m! b8 d@m! a8 e'= |
+
+  a,=,8 am! b e@7! c8 a@m! | c8 cM! b g@7! c8 cM! |
+  c=8 b bes g c cM! | g c@M! g8 g7! c cM! |
+  a=,8 c@M! d8 dm! c a@m! | f,8[ f7! f7] g a=,4 |
+
+  \rep 4 { \rep 3 { a=,8-. e'=-. } | }
+  a,=,8 g@M! a8 g@M! a8 f@M! | d+dm!8 r f+d@m! r8 a=, r |
+
+  r8 a+am! r e=,[-. a]-. r | r c+a@m! r8 e[-. a]-. r |
+  f'=8 fM! e a@m! d8 dm! | g, c@M! g8 g7! e' e7! |
+  a,=,8 am! f fM! a=, am! |
+
+  a@m!8[ am8] a@m![ f@M!8] a@m!8[ am8] | c@M!8[ cM8] c@M![ d@M!8] a@m!8[ am8] |
+  a=,8[-> r b-> r cis-> r d]-> r | e4-> e-> a,-> |
+  \rep 2 { a=,8-> r r e'[-. a,=,]-> r | }
+  f=,8[ f7! f7 f7] a am! | f[ f f f] a=,4 \fermata |
 }
 {{ end }}

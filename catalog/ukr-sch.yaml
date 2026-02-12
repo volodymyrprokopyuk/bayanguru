@@ -266,3 +266,8 @@ pieces:
   - { id: lq6g, tit: Колядка,
       arr: В. Накапкин, src: FBBMS37N1988,
       org: ukr, sty: flk, gnr: sng, ton: ami, frm: [vo2, var, in3, cr5], bss: [stb, pub], lvl: elb }
+  # FBBMS38P1988
+  # p. 12
+  # - { id: kc2s, tit: Пісня без слів,
+  #     com: Р. Бойко, arr: В. Платонов, art: ipr, src: FBBMS38P1988,
+  #     org: ukr, sty: cus, gnr: sng, ton: cmj, frm: mel, bss: frb, lvl: elb }
