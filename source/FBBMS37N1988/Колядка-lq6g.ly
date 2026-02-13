@@ -90,7 +90,7 @@
   a,=,8 g@M! a8 g@M! a8 f@M! | d+dm!8 r f+d@m! r8 a=, r |
 
   r8 a+am! r e=,[-. a]-. r | r c+a@m! r8 e[-. a]-. r |
-  f'=8 fM! e a@m! d8 dm! | g, c@M! g8 g7! e' e7! |
+  f'=8 fM! e f@m! d8 dm! | g, c@M! g8 g7! e' e7! |
   a,=,8 am! f fM! a=, am! |
 
   a@m!8[ am8] a@m![ f@M!8] a@m!8[ am8] | c@M!8[ cM8] c@M![ d@M!8] a@m!8[ am8] |
