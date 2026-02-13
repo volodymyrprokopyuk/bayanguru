@@ -567,3 +567,7 @@ pieces:
   # - { id: egy2, tit: В народном стиле,
   #     com: Е. Яхнина, src: FBBMS38P1988,
   #     org: rus, sty: cus, gnr: pie, ton: ami, frm: [vo2, cr5, ch7], bss: frb, lvl: elb }
+  # p. 15
+  # - { id: y8hc, tit: Маленький романс,
+  #     com: К. Эйгес, src: FBBMS38P1988,
+  #     org: rus, sty: cus, gnr: rmc, ton: ami, frm: [vo2, dot], bss: [frb, vo2, dot], lvl: elb }

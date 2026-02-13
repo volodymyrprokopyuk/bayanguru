@@ -25,7 +25,7 @@
   \time 4/4 bes='4 g c8 d16 c g8 f | \time 2/4 bes4 g8 g |
   \time 4/4 c=''8 bes a g fis4_\dCre bes8 a | <ees g>2 \fermata r4 g8 a |
   \duo { bes'='4 a8 g a4 f=' | } { e'='2 r4 c=' | }
-  <bes,= g'>1~^\tRit | 1~_\dDim | 2. r4 \bar "|."
+  <bes,= g'>1~^\tRit | 1~_ \dDim | 2. r4 \bar "|."
 }
 {{ end }}
 
@@ -33,7 +33,7 @@
 \relative {
   \clef bass
   \key g \minor
-  \partial 4 { r4 | } | \rep 2 { R1 | R2 | } | e=4 ees d2 | ees4 r |
+  \partial 4 { r4 | } | \rep 2 { R1 | R2 | } | e=4-\frBass ees d2 | ees4 r |
   r2 r4 d=4 | g, r | <g' d'>2 r4 <d c'>4 | <g bes>4 r | r2 <g ees'>4 <a ees'> |
   <bes= d>4 r | \duo { r4 c'='2. | } { ees=2( d=) | } | <ees, bes'>4 r |
   <c= g'>2 r4 <d a'> | \duo { g=2 f | ees } { \rep 3 { r4 g,=,4 } } %
