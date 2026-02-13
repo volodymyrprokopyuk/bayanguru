@@ -50,7 +50,7 @@
   a=''16 c a c aes c aes c g c f, c' | e, g e g d g d g c, d c b |
   a='16 e' a e a, c b c a='4 |
 
-  a,=8(-> c)-. e-. d-. c(-> e)-. | a,16(-> b cis8)-. e-. d-. cis(-> a=)-. |
+  a,=8(-> c)-. e-. d-. c(-> e)-. | a,16(-> b c8)-. e-. d-. c(-> a=)-. |
   \duo {
     \time 4/4
     r8\< <e'=' a>8[ r <fis a> r <a cis> r \af 8\! <b d>] |
