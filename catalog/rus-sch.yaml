@@ -560,10 +560,9 @@ pieces:
   - { id: nj3n, tit: Пьеса,
       com: А. Гедике, arr: В. Платонов, art: ipr, src: FBBMS38P1988,
       org: rus, sty: cus, gnr: pie, ton: ami, frm: in6, bss: [frb, in3, in5], lvl: elb }
-  # p. 4
-  # - { id: 7zdy, tit: Бабушкина сказка,
-  #     com: Б. Фоготин, src: FBBMS38P1988,
-  #     org: rus, sty: cus, gnr: pie, ton: gmi, frm: vo2, bss: [frb, vo2], lvl: elb }
+  - { id: 7zdy, tit: Бабушкина сказка,
+      com: Б. Фиготин, src: FBBMS38P1988,
+      org: rus, sty: cus, gnr: pie, ton: gmi, frm: vo2, bss: [frb, vo2], lvl: elb }
   # p. 7
   # - { id: egy2, tit: В народном стиле,
   #     com: Е. Яхнина, src: FBBMS38P1988,
