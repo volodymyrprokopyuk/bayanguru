@@ -272,4 +272,4 @@ pieces:
       org: ukr, sty: cus, gnr: sng, ton: cmj, frm: mel, bss: frb, lvl: elb }
   - { id: ktkz, tit: Ой на горі жито, sub: ukrfs,
       arr: Г. Орлянський, src: FBBMS38P1988,
-      org: ukr, sty: flk, gnr: chd, ton: gmj, frm: in3, bss: frb, lvl: ela }
+      org: ukr, sty: flk, gnr: chd, ton: gmj, frm: [in3, jmp], bss: [frb, jmp], lvl: ela }

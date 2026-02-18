@@ -573,3 +573,7 @@ pieces:
   # - { id: 1z4h, tit: Колыбельная,
   #     com: Д. Девидова, src: FBBMS38P1988,
   #     org: rus, sty: cus, gnr: lul, ton: ami, frm: mel, bss: [frb, vo2, in3], lvl: elb }
+  # p. 18
+  # - { id: 9mha, tit: Собирайся в поход,
+  #     com: В. Накапкин, src: FBBMS38P1988,
+  #     org: rus, sty: cus, gnr: mrc, ton: fmj, frm: dot, bss: [frb, in3, cr5], lvl: elb }
