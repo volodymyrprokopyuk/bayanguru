@@ -270,7 +270,6 @@ pieces:
   - { id: kc2s, tit: Пісня без слів,
       com: Р. Бойко, arr: В. Платонов, art: ipr, src: FBBMS38P1988,
       org: ukr, sty: cus, gnr: sng, ton: cmj, frm: mel, bss: frb, lvl: elb }
-  # p. 16
-  # - { id: ktkz, tit: Ой на горі жито, sub: ukrfs,
-  #     arr: Г. Орлянський, src: FBBMS38P1988,
-  #     org: ukr, sty: flk, gnr: chd, ton: gmj, frm: in3, bss: frb, lvl: ela }
+  - { id: ktkz, tit: Ой на горі жито, sub: ukrfs,
+      arr: Г. Орлянський, src: FBBMS38P1988,
+      org: ukr, sty: flk, gnr: chd, ton: gmj, frm: in3, bss: frb, lvl: ela }
