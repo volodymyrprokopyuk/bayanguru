@@ -82,3 +82,8 @@ pieces:
   - { id: 5thh, tit: Вісла, sub: polfs,
       arr: В. Платонов, art: ipr, src: FBBMS33P1987,
       org: pol, sty: flk, gnr: sng, ton: gmi, frm: mel, bss: [frb, cr5], lvl: elb }
+  # FBBMS38P1988
+  # p. 33
+  # - { id: dg8x, tit: "Співай, співай, співуча пташко",
+  #     arr: В. Платонов, src: FBBMS38P1988,
+  #     org: pol, sty: flk, gnr: sng, ton: dmi, frm: [vo2, dot], bss: [frb, stb], lvl: elb }

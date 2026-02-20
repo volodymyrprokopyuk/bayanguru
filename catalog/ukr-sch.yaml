@@ -273,3 +273,11 @@ pieces:
   - { id: ktkz, tit: Ой на горі жито, sub: ukrfs,
       arr: Г. Орлянський, src: FBBMS38P1988,
       org: ukr, sty: flk, gnr: chd, ton: gmj, frm: [in3, jmp], bss: [frb, jmp], lvl: ela }
+  # p. 30
+  # - { id: svpi, tit: "Ой при лужку, при лужку", sub: ukrfs,
+  #     arr: Л. Власова, src: FBBMS38P1988,
+  #     org: ukr, sty: flk, gnr: sng, ton: gmi, frm: mel, bss: frb, lvl: ela }
+  # p. 32
+  # - { id: wczz, tit: Їхав козак на війноньку,
+  #     com: М. Гайворонський, arr: І. Беркович, aut: М. Гайворонський, src: FBBMS38P1988,
+  #     org: ukr, sty: cus, gnr: sng, ton: ami, frm: mel, bss: frb, lvl: ela }
