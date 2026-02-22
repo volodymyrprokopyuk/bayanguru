@@ -572,10 +572,9 @@ pieces:
   - { id: 9mha, tit: Собирайся в поход,
       com: В. Накапкин, src: FBBMS38P1988,
       org: rus, sty: cus, gnr: mrc, ton: fmj, frm: dot, bss: [frb, in3, cr5], lvl: elb }
-  # p. 29
-  # - { id: 1rs4, tit: "Заиграй, моя волинка", sub: rusfs,
-  #     arr: В. Семенов, src: FBBMS38P1988,
-  #     org: rus, sty: flk, gnr: sng, ton: cmj, frm: mel, bss: [frb, in3, in4, in5], lvl: ela }
+  - { id: 1rs4, tit: "Заиграй, моя волынка", sub: rusfs,
+      arr: В. Семенов, src: FBBMS38P1988,
+      org: rus, sty: flk, gnr: sng, ton: cmj, frm: mel, bss: [frb, in3, in4, in5], lvl: ela }
   # p. 20
   # - { id: gfhu, tit: "Ах ты, зимушка-зима", sub: rusfs,
   #     arr: В. Платонов, art: ipr, src: FBBMS38P1988,

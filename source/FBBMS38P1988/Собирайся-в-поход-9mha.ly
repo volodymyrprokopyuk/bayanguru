@@ -18,7 +18,7 @@
     c=''8.(-> a16) c8 d c(-> bes) a-. g='-. \bar "||"
     \alternative {
       \volta 1 {
-        f='8.(-> c16) a'8 g f(-> g) f-. e-. | d4(->\mp a) f'( d) |
+        f='8.(-> c16) a'8 g f(-> g) f-. e-. | d4(->\mp a) f'(-> d) |
         f='8(-> f) e-. d-. cis4-> a | cis-> d-> e-> g-> |
         a='8.(-> g16) f8 e d(-> a) b-. cis-. | d4(-> a) f'(-> a) |
         g='8.(-> d16) g8 bes d2-> | c8.(-> a16) c8 d bes8.(-> g16) bes8 d |
