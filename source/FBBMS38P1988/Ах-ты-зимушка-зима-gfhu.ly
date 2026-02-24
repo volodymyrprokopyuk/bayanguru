@@ -18,7 +18,7 @@
   \key c \major
   \meter 1/2 #'(1)
   R2 | R2 | e'='4(-\frBass e | f e8 d) | c4( a | d f) |
-  e='4( e | g8 f e d) | c4( a  | a8 b c d) | e4( g | f e8 c) |
+  e='4( e | g8 f e d) | c4( a  | a8 b c d) | e4( g | f e8 d) |
   c='8( b a4 | d f) | e\( g | g8 f e d | c4 a | a=\) r |
 }
 {{ end }}
