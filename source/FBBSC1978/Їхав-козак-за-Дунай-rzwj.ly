@@ -99,7 +99,7 @@
   <c=' e>4\( <d f> | <dis fis>2 | <d f>4 <c e>8 <b d> | <a c>4.\) <g d'>8( |
   <c=' e>4) <d f> | <e g^~>2( | <f g>) |
   \duo {
-    gis'='2\( | <c, e>4( <e g>) | fis fis | <d f> <c e>8 <b d> | <a= c>4\) %
+    gis'='2\( | <c, e>4( <e g>) | fis fis | <d f> <c e>8 <b d> | <a= c>4.\) %
   } { e'='4. d8 | s2 | dis='2 | s2 | s4. } %
   <g,= d'>8( | <d' f>4 <c e>8 <b d> | <a c> <gis d'> %
   <a= c>8) r \fermata \clef bass |
