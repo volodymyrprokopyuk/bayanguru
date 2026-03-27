@@ -46,7 +46,7 @@
   \clef bass
   \key d \major
   \partial 8 { r8 | }
-  d=8-\stBass dM! a a@M | g8 e@m! b8 e@m | a8 a7! cis a@7 |
+  d=8-\stBass dM! a d@M | g8 e@m! b8 e@m | a8 a7! cis a@7 |
   d=8 dM! e a@7! | d8 dM! a d@M | g8 e@m! fis=,8 b@7! |
   e+em!8 r a+a7! r | e+a@7! r8 a+a7! r | e+a@7![ a+a78] d+dM! r |
 
