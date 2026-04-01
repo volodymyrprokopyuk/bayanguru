@@ -578,7 +578,6 @@ pieces:
   - { id: gfhu, tit: "Ах ты, зимушка-зима", sub: rusfs,
       arr: В. Платонов, art: ipr, src: FBBMS38P1988,
       org: rus, sty: flk, gnr: sng, ton: cmj, frm: mel, bss: frb, lvl: ela }
-  # p. 21
-  # - { id: 8the, tit: На крутой горе высокой, sub: rusfs,
-  #     arr: В. Платонов, src: FBBMS38P1988,
-  #     org: rus, sty: flk, gnr: sng, ton: fismi, frm: vo2, bss: [frb, stb, vo2], lvl: elb }
+  - { id: 8the, tit: На крутой горе высокой, sub: rusfs,
+      arr: В. Платонов, src: FBBMS38P1988,
+      org: rus, sty: flk, gnr: sng, ton: fismi, frm: vo2, bss: [frb, stb, vo2], lvl: elb }
