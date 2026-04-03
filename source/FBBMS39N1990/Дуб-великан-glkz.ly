@@ -19,7 +19,7 @@
 {{ end }}
 
 {{ define "lh2" }}
-  \rep 2 { {{ .a }} <ees= bes'>8 } |
+  \rep 2 { {{ .a }} <g= d'>8 } |
 {{ end }}
 
 {{ define "rightHand" }}
@@ -72,5 +72,7 @@
   {{ template "lh2" (w `<d,= a'>4.`) }} | <d= a'>4 <a' c> <f= ees'>2 |
 
   \duo { f=4( f8 g g4 a) | a8( g a bes d4 c=') | } { bes,=,2 c | d ees= | }
+  <ees= bes'>4. <ees c'>8 <d a'>4 <g bes> | <c, g'>2 <f bes>4 <f a> |
+  <bes,=, f'>2. r4 |
 }
 {{ end }}
