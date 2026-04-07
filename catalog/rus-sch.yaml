@@ -588,10 +588,9 @@ pieces:
   - { id: bt5g, tit: Маленькая пьеса, sub: Канон,
       com: О. Агафонов, src: FBBMS39N1990,
       org: rus, sty: cus, gnr: can, ton: cmi, frm: dot, bss: [frb, dot], lvl: ela }
-  # p. 20
-  # - { id: b7k4, tit: Тихая река,
-  #     com: Н. Липов, src: FBBMS39N1990,
-  #     org: rus, sty: cus, gnr: pie, ton: [bmi, dmj], frm: [cr5, syn], bss: [stb, pub], lvl: elb }
+  - { id: b7k4, tit: Тихая река,
+      com: Н. Липов, src: FBBMS39N1990,
+      org: rus, sty: cus, gnr: pie, ton: [bmi, dmj], frm: [cr5, syn], bss: [stb, pub], lvl: elb }
   # p. 23
   # - { id: pedt, tit: Утушка молодая, sub: rusfs,
   #     arr: В. Накапкин, src: FBBMS39N1990,
@@ -601,3 +600,11 @@ pieces:
   # - { id: e037, tit: Край любимый,
   #     com: А. Абрамов, src: FBBMS41N1991,
   #     org: rus, sty: cus, gnr: pie, ton: emi, frm: vo2, bss: [frb, vo2], lvl: elb }
+  # p. 19
+  # - { id: 988y, tit: Мотылек,
+  #     com: В. Накапкин, src: FBBMS41N1991,
+  #     org: rus, sty: cus, gnr: pie, ton: dmi, frm: [var, in3], bss: [stb, syn], lvl: elb }
+  # p. 21
+  # - { id: w1ck, tit: Танец,
+  #     com: В. Залипаев, src: FBBMS41N1991,
+  #     org: rus, sty: cus, gnr: dnc, ton: eesmj, frm: [var, vo2, in3, in6, cr5], bss: stb, lvl: elb }
