@@ -33,5 +33,30 @@
 \relative {
   \clef bass
   \key a \minor
+  \duo {
+    \rep 2 { r8 <c'=' e>8[ r <b e>] | r <b d>[ r <c ees>] | }
+    r8 <c=' e>8[ r <b e>] | r <b d>[ r <d f>] | r <d e>[ r <c=' d>] |
+  } {
+    a=4-\frBass c | a e | a c | a e | a c | a a | e e= |
+  }
+
+  c'='8-. b-. c-. a-. | e-. b'-. e,-. a-. | gis4-- a-- |
+  d='2( | c4) f8 e~ | e d~ d16 c b8 | a4 f8 g | \rep 2 { e=8 <d'=' e> } |
+  c='8 b a c | e,4 gis | a8 e a,=,4 |
+
+  \key a \major
+  a=,8-\stBass aM! e' a@M! | b8 bm! e a@M! | e8 e7! fis, fisM! | a aM!4 aM8 |
+  d=8 b@m! e8 e7! | a, aM! r aM | d dM! d dis | e a@M! cis8 a@M! |
+  d=8 b@m! e8 e7! | gis, e@7! e'8 a@M! | b8 e@7! gis8 e@7! | e'8 a@M! b8 bm! |
+  e=8 e7! b e@7! | cis8 a@M! a=,8 r |
+
+  \meter 1/2 #'(1)
+  a=,8-\puBass a a a | \rep 2 { a=,8 a a a=, | } | a gis fis e |
+  d=,8 d e e | d d cis' cis= |
+
+  \meter 1/4 1,1
+  d=8-\stBass b@m! e8 a@M! | b8 bm! e a@M! | b8 bm! d b@m! |
+  cis=8 a@M! e8 a@M! | d8 b@m! e8 e7! | a, aM! e' a@M! |
+  b=,8 bm! e e7! | a, aM! a=, r |
 }
 {{ end }}
