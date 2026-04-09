@@ -591,10 +591,9 @@ pieces:
   - { id: b7k4, tit: Тихая река,
       com: Н. Липов, src: FBBMS39N1990,
       org: rus, sty: cus, gnr: pie, ton: [bmi, dmj], frm: [cr5, syn], bss: [stb, pub], lvl: elb }
-  # p. 23
-  # - { id: pedt, tit: Утушка молодая, sub: rusfs,
-  #     arr: В. Накапкин, src: FBBMS39N1990,
-  #     org: rus, sty: flk, gnr: sng, ton: [ami, amj], frm: [var, cr5], bss: [frb, stb, pub, vo2], lvl: elb }
+  - { id: pedt, tit: Утушка молодая, sub: rusfs,
+      arr: В. Накапкин, src: FBBMS39N1990,
+      org: rus, sty: flk, gnr: sng, ton: [ami, amj], frm: [var, cr5], bss: [frb, stb, pub, vo2], lvl: elb }
   # FBBMS41N1991
   # p. 13
   # - { id: e037, tit: Край любимый,
