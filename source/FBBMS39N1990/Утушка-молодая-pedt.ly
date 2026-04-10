@@ -45,7 +45,7 @@
   c='8 b a c | e,4 gis | a8 e a,=,4 |
 
   \key a \major
-  a=,8-\stBass aM! e' a@M! | b8 bm! e a@M! | e8 e7! fis, fisM! | a aM!4 aM8 |
+  a=,8-\stBass aM! e' a@M! | b8 bm! e a@M! | e8 e7! a, aM! | a aM!4 aM8 |
   d=8 b@m! e8 e7! | a, aM! r aM | d dM! d dis | e a@M! cis8 a@M! |
   d=8 b@m! e8 e7! | gis, e@7! e'8 a@M! | b8 e@7! gis8 e@7! | e'8 a@M! b8 bm! |
   e=8 e7! b e@7! | cis8 a@M! a=,8 r |
