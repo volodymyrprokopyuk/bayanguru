@@ -279,3 +279,8 @@ pieces:
   - { id: wczz, tit: Їхав козак на війноньку,
       com: М. Гайворонський, arr: І. Беркович, aut: М. Гайворонський, src: FBBMS38P1988,
       org: ukr, sty: cus, gnr: sng, ton: ami, frm: mel, bss: frb, lvl: ela }
+  # FBBMS41N1991
+  # p. 26
+  # - { id: khd5, tit: Та нема гірш нікому, sub: ukrfs,
+  #     arr: В. Накапкин, src: FBBMS41N1991,
+  #     org: ukr, sty: flk, gnr: sng, ton: fismi, frm: [vo2, in3], bss: frb, lvl: elc }
