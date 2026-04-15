@@ -50,7 +50,7 @@
 \relative {
   \clef bass
   \key g \minor
-  \rep 3{ R2 | } | r4 c'='4-\frBass | bes c | cis2 | d4 cis | c8 ees d c=' |
+  \rep 3{ R2 | } | r4 c'='4-\frBass | bes c | cis2 | d4 cis | d8 ees d c=' |
 
   bes=2 | d8 d d c | bes a aes4 | g f | e ees | d8 des c4 |
   bes=,8 c cis d | g fis g a | g4 d= |
