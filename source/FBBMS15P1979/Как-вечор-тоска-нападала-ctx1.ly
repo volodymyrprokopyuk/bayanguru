@@ -10,10 +10,10 @@
   \duo {
     d''=''4( a' f e | d cis d2) | f4(_\dCre f f g | a1) |
     a=''4( a g g) | f( f e e) | d(\> f e^\tRit a |
-    \af 4\! d,=''1) \fermata \bar "|."
+    \af 1\! d,=''1) \fermata \bar "|."
   } {
     d''=''2(\mf a | bes a) | bes1 | a4 e' d c | d2 des | c b |
-    bes='2 a~ | a4 g f='2\p \fermata |
+    bes='2 a~ | a4 g f='2 \fermata |
   }
 }
 {{ end }}
