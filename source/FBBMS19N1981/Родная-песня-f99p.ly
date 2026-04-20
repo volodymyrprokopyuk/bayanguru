@@ -12,7 +12,7 @@
     fis'='4( e8 fis \af 2\! b2)\< |
     e=''8(\mf fis e d16 e c4\< c8 \af 8\! e) |
     d=''4(\f e8 fis16 e d4 b) \barFermata | a8( g fis e b'2) |
-    a='8(^\tRit c b4 \af 4.\! \af 4.\p e=''2)\> \fermata \bar "|."
+    a='8(^\tRit c b4 \af 2\! e=''2)\> \fermata \bar "|."
   } {
     fis'='4 e dis2 | <e gis> <e a> | <d a'>4 <fis a> g8 a g fis |
     e='4. e8~ <e g>2 | <e a>4 <dis a'> <e=' g>2 |
