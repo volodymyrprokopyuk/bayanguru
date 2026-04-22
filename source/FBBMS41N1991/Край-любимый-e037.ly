@@ -25,12 +25,12 @@
   \key e \minor
   \meter 1/4 1,1,1,1
   \duo {
-    e'='1-\frBass | c4 fis fis( f) | e2 c8( b e d) |
+    e'='1 | c4 fis fis( f) | e2 c8( b e d) |
     c='4 e~ e dis | e1 | e4 s2. | e2 d8( cis e d) |
     c='2 b | c b | c d | e fis | e e4( dis) | e1 |
     e='4 fis d2 | e e4 e=' \fermata |
   } {
-    e'='4( d c b) | a d g,2 | fis g | a b |
+    e'='4(-\frBass d c b) | a d g,2 | fis g | a b |
     e='4( d c b) | a d g, d' | c2 g | \rep 2 { a=4( d,) g( d=) | }
     a'=4( d,) b'( d,) | cis'( fis,) dis'( fis,) |
     cis'='4( fis,) b2 | e4( d c b) | a d g,2 | fis b4 c=' \fermata |
