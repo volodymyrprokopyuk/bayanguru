@@ -4,8 +4,6 @@ piece/
 book/
 .played
 site/public/
-package.json
-bun.lock
 node_modules/
 pagefind
 .wrangler/
