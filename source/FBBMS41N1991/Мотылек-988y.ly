@@ -22,7 +22,7 @@
     <a=' c>16(->\p f) f8 <a c>16(-> f) f'8 |
     <bes,=' d>16(-> g) g8 <bes d>16(-> g) g'8 |
     e=''16(-> g) d g c,(-> g') bes, g' | a, c f a g(-> bes) d, c |
-    <a=' c>(-> f) f f <a c>(-> f) f' f, |
+    <a=' c>16(-> f) f f <a c>(-> f) f' f, |
     <bes=' d>16(-> g) g g <bes d>(-> g) g' g, | e' g d g c, g' bes, g' |
     a,='16(->^\tRit c) f a g(-> f) e a='' \bar "||"
   }
@@ -39,7 +39,7 @@
   f@M!8[ r8 d@m!] r8 | a@M![ a@7!8] d@m!8 r8 |
 
   d=8 dm! cis c | bes g@m! d8 g@m! | c8 c7! bes c@7! |
-  a=,8 f@M! e'8 r | d dm! f d@M! | g, 8 c@7! f8 bes@M! |
+  a=,8 f@M! e'8 r | d dm! f d@M! | g,8 c@7! f8 bes@M! |
   a=,8 d@m! f=,8 d@m! | r8 a+a7![ d+dm!] r8 |
 
   f@M![ fM8] f@M![ d@m!8] | g@m!8[ gm8] bes@M!8[ g@m!8] |
