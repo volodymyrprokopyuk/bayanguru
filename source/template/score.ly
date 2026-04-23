@@ -1,4 +1,4 @@
-\version "2.25.28"
+\version "2.26.0"
 
 % Logo
 bayanURL = "https://bayanguru.org"
