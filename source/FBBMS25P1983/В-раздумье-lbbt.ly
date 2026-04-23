@@ -11,7 +11,7 @@
   \tempo Adagio
   \clef treble
   \key e \minor
-  \compoundMeter #'((4 4) (2 4))
+  \timeAbbrev #'((4 4) (2 4))
   b=4(\p g' fis8 a g fis \l e2) | b4( g' a8 g fis d \l g2) |
   b='4( b c8 b a c \l b4 g) | a( g fis fis8 g \l e2) |
   b'='4( b c8 b e d \l c[ b a g]) | a4( g fis fis8 g) \l e='2 \bar "|."

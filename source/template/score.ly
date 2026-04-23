@@ -68,7 +68,7 @@ segnoDC = \segnoRep \markup { D.C. al \coda } "e poi la Coda"
 segnoDS = \segnoRep \markup { D.S. \segno al \coda } "e poi la Coda"
 
 % Bars
-l = \bar "|" % \compoundMeter
+l = \bar "|" % For \timeAbbrev
 \defineBarLine "!!" #'("!!" "!!" "!!")
 
 keyCancelChangeBar = \once {
