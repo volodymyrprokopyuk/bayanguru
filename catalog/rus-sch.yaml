@@ -598,10 +598,9 @@ pieces:
   - { id: e037, tit: Край любимый,
       com: А. Абрамов, src: FBBMS41N1991,
       org: rus, sty: cus, gnr: pie, ton: emi, frm: vo2, bss: [frb, vo2], lvl: elb }
-  # p. 19
-  # - { id: 988y, tit: Мотылек,
-  #     com: В. Накапкин, src: FBBMS41N1991,
-  #     org: rus, sty: cus, gnr: pie, ton: dmi, frm: [var, in3], bss: [stb, syn], lvl: elb }
+  - { id: 988y, tit: Мотылек,
+      com: В. Накапкин, src: FBBMS41N1991,
+      org: rus, sty: cus, gnr: pie, ton: dmi, frm: [var, in3], bss: [stb, syn], lvl: elb }
   # p. 21
   # - { id: w1ck, tit: Танец,
   #     com: В. Залипаев, src: FBBMS41N1991,
