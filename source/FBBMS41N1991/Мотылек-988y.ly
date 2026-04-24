@@ -39,11 +39,11 @@
   f@M!8[ r8 d@m!] r8 | a@M![ a@7!8] d@m!8 r8 |
 
   d=8 dm! cis c | bes g@m! d8 g@m! | c8 c7! bes c@7! |
-  a=,8 f@M! e'8 r | d dm! f d@M! | g,8 c@7! f8 bes@M! |
+  a=,8 f@M! e'8 r | d dm! f, d@m! | g8 c@7! f8 bes@M! |
   a=,8 d@m! f=,8 d@m! | r8 a+a7![ d+dm!] r8 |
 
   f@M![ fM8] f@M![ d@m!8] | g@m!8[ gm8] bes@M!8[ g@m!8] |
-  a=,8 a a a | f fM! e' c@7! | f,8 fM! r d@m! |
+  c'=8 c c c | f, fM! e' c@7! | f,8 fM! r d@m! |
   bes=,8 g@m! r8  g@m! | c8 c7! e c@7! | f,8 fM! e'= a@7! |
 }
 {{ end }}
