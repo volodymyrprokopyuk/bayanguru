@@ -1,3 +1,8 @@
+{{ define "rh1" }}
+  {{ .a }} g bes8) c,(-> bes) | <d aes'>8(-> c) <d aes'>(-> bes) |
+  aes=16(-> c f8) c(-> <aes= d>) |
+{{ end }}
+
 {{ define "rightHand" }}
 \relative {
   \tempo Allegro
@@ -15,7 +20,7 @@
       c=''8 <c ees f>( <d f>) <c='' ees> |
     } {
       d'='4 ees | g aes8( f)~ | f( d) f( ees) |
-      <ees=' g>8 g16 aes!~ <aes c>4 |
+      <ees=' g>8 g16 aes~ <aes c>4 |
       <f=' aes>8 d16 aes' <g=' bes>4 |
     }
     <c'=''ees>8-> f,16( ees) <bes' d>8-> f16( ees) |
@@ -24,6 +29,16 @@
       \volta 2 { <d=' aes' c>8-> c16( bes) c bes c d=' | }
     }
   }
+
+  {{ template "rh1" (w `ees='16(->`) }}
+  <g= ees'>8( <bes g>) <bes g>(-> <aes f'>) |
+  {{ template "rh1" (w `ees'='16(->`) }}
+  ees'='16(->\< f) g aes a( bes) c \af 16\! d |
+  ees=''16(-> g bes8) c,(-> bes) | <d aes'>(-> c) <d aes'>(-> bes) |
+  aes='16(-> c f8) \duo { c''=''8( d='') | } { aes'='4 | }
+  <g,=' ees'>8(-> <bes g'> <d g bes> <c f aes>) |
+  ees=''16(-> g bes8) c,16 d c bes | <d aes>8(-> c) <d aes>(-> bes) |
+  aes='16 c f, g aes bes c d | ees\< g c, c ees g a \af 16\! b='' |
 }
 {{ end }}
 
