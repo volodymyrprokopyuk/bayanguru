@@ -601,10 +601,9 @@ pieces:
   - { id: 988y, tit: Мотылек,
       com: В. Накапкин, src: FBBMS41N1991,
       org: rus, sty: cus, gnr: pie, ton: dmi, frm: [var, in3], bss: [stb, syn], lvl: elb }
-  # p. 21
-  # - { id: w1ck, tit: Танец,
-  #     com: В. Залипаев, src: FBBMS41N1991,
-  #     org: rus, sty: cus, gnr: dnc, ton: eesmj, frm: [vo2, var, in3, in6, cr5], bss: stb, lvl: elb }
+  - { id: w1ck, tit: Танец,
+      com: В. Залипаев, src: FBBMS41N1991,
+      org: rus, sty: cus, gnr: dnc, ton: eesmj, frm: [vo2, var, in3, in6, cr5], bss: stb, lvl: elb }
   # p. 23
   # - { id: zjvs, tit: За грибами в лес девицы, sub: rusfs,
   #     arr: В. Платонов, src: FBBMS41N1991,
