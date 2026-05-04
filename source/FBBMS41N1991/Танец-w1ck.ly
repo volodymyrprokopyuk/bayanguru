@@ -52,5 +52,13 @@
   bes=,8 ees@M! f8 fm! | f bes@7! ees'8 eesM! | c cm! c f@m! |
   f,=,8 bes@7! g8 ees@M! | bes8 ees@M! c8 f@m! | aes8 f@m c8 cm! |
   aes=,8 f@m! g8 c@m! | f8 bes@7! g8 ees@M! | f8 bes@7! ees=,8 r |
+
+  bes'=,8 ees@M! r8 ees@M! | f8 fm! r d' | c f@m! r8 bes8 |
+  ees=8 eesM! c aes@M! | bes8 ees@M! g8 ees@M! |
+  f=,8 fm! r fm! | c' f@m! r8 bes | g ees@M! f8 bes@7! |
+  g=,8 ees@M! r8 ees@M! | f8 fm! r8 d' | c f@m! r8 bes |
+  c=8 cm! bes bes7! | g ees@M! bes8 ees@M! | f8 fm! r g |
+  f=,8 fm! f bes@7! | ees'8 bes c d | c bes aes g |
+  f=,8 fm! d' f@m! | aes8 f@m! g8 c@m! | d'8 f@m! ees4 |
 }
 {{ end }}
