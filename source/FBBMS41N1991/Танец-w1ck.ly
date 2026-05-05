@@ -39,6 +39,24 @@
   <g,=' ees'>8(-> <bes g'> <d g bes> <c f aes>) |
   ees=''16(-> g bes8) c,16 d c bes | <d aes>8(-> c) <d aes>(-> bes) |
   aes='16 c f, g aes bes c d | ees\< g c, c ees g a \af 16\! b='' |
+
+  c='''8-> ees16( g,) <f d'>8-> <ees c'>-> |
+  bes'=''8-> c16 aes <bes, g'>8-> <aes f'>-> |
+  \duo { <c''='' ees>4-> <bes d>-> | <aes c>-> <g=' bes> | }
+  { aes'='8( f) g( ees) | f( d) ees( c=') | }
+
+  aes,=16-> c f aes g f ees g | f-> g aes c bes aes g bes |
+  aes='16-> bes c d \duo { ees''=''8 d16 c='' | } { ees''=''16 g, f ees=' | }
+  bes='8(->\< f) bes16( aes g \af 16\! f=') |
+
+  \duo {
+    ees'='8(->\f <g bes>) ees(-> <aes c>) |
+    bes='8(-> <aes c>) c(-> <g bes>) | ees'(-> g) g(-> f='') |
+  } { ees'='4 ees | <d g> <ees g> | <g bes>8 <bes ees> <aes=' c>4 | }
+  <c'='' f aes>16(-> 16 <bes d g>8) <aes c f>(-> <g bes ees>) |
+  aes='16(-> c) f aes g f ees g | f(-> g) aes c bes aes g bes |
+  aes=''16(-> g) f ees d(-> c) bes aes | g(-> bes) f(-> bes) %
+  \duo { ees'='8(-> <g=' bes ees>) \bar "|." } { ees'='4 | }
 }
 {{ end }}
 
@@ -59,6 +77,6 @@
   g=,8 ees@M! r8 ees@M! | f8 fm! r8 d' | c f@m! r8 bes |
   c=8 cm! bes bes7! | g ees@M! bes8 ees@M! | f8 fm! r g |
   f=,8 fm! f bes@7! | ees'8 bes c d | c bes aes g |
-  f=,8 fm! d' f@m! | aes8 f@m! g8 c@m! | d'8 f@m! ees4 |
+  f=,8 fm! d' f@m! | aes8 f@m! g8 c@m! | d'8 f@m! ees=4 |
 }
 {{ end }}
