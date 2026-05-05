@@ -78,5 +78,10 @@
   c=8 cm! bes bes7! | g ees@M! bes8 ees@M! | f8 fm! r g |
   f=,8 fm! f bes@7! | ees'8 bes c d | c bes aes g |
   f=,8 fm! d' f@m! | aes8 f@m! g8 c@m! | d'8 f@m! ees=4 |
+
+  c=8 f@m bes8 ees@M! | aes8 f@m! g8 ees@M! | c8 f@m! g8 c@m! |
+  f=,8 aes@M! d'8 bes@7! | g,8 ees@M! aes8 f@m! | bes8 bes7! ees eesM! |
+  c=8 cm! aes f@m! | bes8 bes7! bes ees@M! | f8 fm! ees' c@m! |
+  d=8 bes@7! ees8 eesM! | c aes@M! c8 f@m! | d8 bes@7! ees=4-> |
 }
 {{ end }}
