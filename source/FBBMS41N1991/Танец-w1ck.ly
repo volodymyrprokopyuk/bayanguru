@@ -12,12 +12,13 @@
   ees'='16->\f f g bes f g aes c | bes c d f ees f ees f |
   g=''16-> f ees d f ees d c | bes aes g f ees^\tRit d c d=' |
 
+  \tempo "Allegro moderato"
   \repeat volta 2 {
     ees='8->\mf <g bes>16 ees( <ees aes c>8) 8 |
     \duo {
       <g'=' bes>8( <aes c>) <g c> <g bes> | bes ees( <c ees>4) |
       <g=' bes>2 | c8 <c ees> <ees g> <c ees f> |
-      c=''8 <c ees f>( <d f>) <c='' ees> |
+      c=''8 <c ees f~> <d f> <c='' ees> |
     } {
       d'='4 ees | g aes8( f)~ | f( d) f( ees) |
       <ees=' g>8 g16 aes~ <aes c>4 |
@@ -31,18 +32,18 @@
   }
 
   {{ template "rh1" (w `ees='16(->`) }}
-  <g= ees'>8( <bes g>) <bes g>(-> <aes f'>) |
+  <g= ees'>8( <bes g'>) <bes g'>(-> <aes f'>) |
   {{ template "rh1" (w `ees'='16(->`) }}
   ees'='16(->\< f) g aes a( bes) c \af 16\! d |
   ees=''16(-> g bes8) c,(-> bes) | <d aes'>(-> c) <d aes'>(-> bes) |
   aes='16(-> c f8) \duo { c''=''8( d='') | } { aes'='4 | }
   <g,=' ees'>8(-> <bes g'> <d g bes> <c f aes>) |
-  ees=''16(-> g bes8) c,16 d c bes | <d aes>8(-> c) <d aes>(-> bes) |
-  aes='16 c f, g aes bes c d | ees\< g c, c ees g a \af 16\! b='' |
+  ees=''16(-> g bes8) c,16 d c bes | <d aes'>8(-> c) <d aes'>(-> bes) |
+  aes='16 c f, g aes bes c d | ees\< g c, d ees g a \af 16\! b='' |
 
-  c='''8-> ees16( g,) <f d'>8-> <ees c'>-> |
-  bes'=''8-> c16 aes <bes, g'>8-> <aes f'>-> |
-  \duo { <c''='' ees>4-> <bes d>-> | <aes c>-> <g=' bes> | }
+  c='''8->\f ees16( g,) <f d'>8-> <ees c'>-> |
+  bes'=''8-> c16( aes) <bes, g'>8-> <aes f'>-> |
+  \duo { <c''='' ees>4-> <bes d>-> | <aes c>-> <g=' bes>-> | }
   { aes'='8( f) g( ees) | f( d) ees( c=') | }
 
   aes,=16-> c f aes g f ees g | f-> g aes c bes aes g bes |
@@ -76,10 +77,10 @@
   f=,8 fm! r fm! | c' f@m! r8 bes | g ees@M! f8 bes@7! |
   g=,8 ees@M! r8 ees@M! | f8 fm! r8 d' | c f@m! r8 bes |
   c=8 cm! bes bes7! | g ees@M! bes8 ees@M! | f8 fm! r g |
-  f=,8 fm! f bes@7! | ees'8 bes c d | c bes aes g |
+  f=,8 fm! f bes@7! | ees'8 bes ees d | c bes aes g |
   f=,8 fm! d' f@m! | aes8 f@m! g8 c@m! | d'8 f@m! ees=4 |
 
-  c=8 f@m bes8 ees@M! | aes8 f@m! g8 ees@M! | c8 f@m! g8 c@m! |
+  c=8 f@m! bes8 ees@M! | aes8 f@m! g8 ees@M! | c8 f@m! g8 c@m! |
   f=,8 aes@M! d'8 bes@7! | g,8 ees@M! aes8 f@m! | bes8 bes7! ees eesM! |
   c=8 cm! aes f@m! | bes8 bes7! bes ees@M! | f8 fm! ees' c@m! |
   d=8 bes@7! ees8 eesM! | c aes@M! c8 f@m! | d8 bes@7! ees=4-> |
