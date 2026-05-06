@@ -604,10 +604,9 @@ pieces:
   - { id: w1ck, tit: Танец,
       com: В. Залипаев, src: FBBMS41N1991,
       org: rus, sty: cus, gnr: dnc, ton: eesmj, frm: [vo2, var, in3, in6, cr5], bss: stb, lvl: elb }
-  # p. 23
-  # - { id: zjvs, tit: За грибами в лес девицы, sub: rusfs,
-  #     arr: В. Платонов, src: FBBMS41N1991,
-  #     org: rus, sty: flk, gnr: sng, ton: gmj, frm: [vo2, in3], bss: [frb, stb], lvl: elb }
+  - { id: zjvs, tit: За грибами в лес девицы, sub: rusfs,
+      arr: В. Платонов, src: FBBMS41N1991,
+      org: rus, sty: flk, gnr: sng, ton: gmj, frm: [vo2, in3], bss: [frb, stb], lvl: elb }
   # p. 24
   # - { id: nlob, tit: Сама садик я садила, sub: rusfs,
   #     arr: В. Гусев, src: FBBMS41N1991,
