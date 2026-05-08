@@ -69,7 +69,7 @@
   c=8 cm! c f@m! | d=8 bes@7! ees+eesM!8 r |
 
   bes=,8 ees@M! f8 fm! | f bes@7! ees'8 eesM! | c cm! c f@m! |
-  f,=,8 bes@7! g8 ees@M! | bes8 ees@M! c8 f@m! | aes8 f@m c8 cm! |
+  f,=,8 bes@7! g8 ees@M! | bes8 ees@M! c8 f@m! | aes8 f@m! c8 cm! |
   aes=,8 f@m! g8 c@m! | f8 bes@7! g8 ees@M! | f8 bes@7! ees=,8 r |
 
   bes'=,8 ees@M! r8 ees@M! | f8 fm! r d' | c f@m! r8 bes8 |
