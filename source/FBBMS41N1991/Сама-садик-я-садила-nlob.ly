@@ -39,7 +39,30 @@
 
 {{ define "leftHand" }}
 \relative {
-  \clef bass
+  \clef treble
   \key g \major
+  \meter 1/4 2,1
+  \partial 4 { r4 | }
+  r8 d'='8(-\frBass b d) e( c | b) g'( fis f) e( d | c d e fis) e( c |
+  b=8 d b g) b( d | c4 a) e'8( d | b4 g) g'8( e | d4. b8) c( a |
+  g=8) \clef bass d=8( e fis) g( gis | a a, a' g) fis( d | g g, a b) c( cis |
+  d=8 g, d' g) a( c | b a g=) r r4 |
+
+  \key g \minor
+  \duo {r8 d'='4 d8 r c | r d4 r8 r4 | r8 g,4 r8 r4 | r8 g4 g8 r g= | }
+  { g=2 g4 | g4. bes8 a g | c,4. ees8 d c | bes2 g=,4 | }
+  a,=,8 d, d' d, bes' a | g a bes b c cis= |
+  \duo { d=2 d=4 | } { r8 d,=,4 d8 r d=, | } | g=,8 a bes c d bes=, |
+  \duo { r8 d=4 d8 r d= | } { a,=,2 d,=,4 | } | g=,8(  d' g f) ees( cis=) |
+  \duo { d=2 d=4 | } { r8 d,=,4 d8 r d=, | } | g=,8( d' g=) r r4 |
+
+  \key g \major
+  \meter 1/4 1,1,1
+  g,=,8-\stBass gM! d' g@M! c8 cM! | b g@M! g8 gM! d' g@M! |
+  c=8 cM! g c@M! c8 cM! | b g@M! g8 gM! b g@M! |
+  a=,8 d@7! d8 d7! fis, d@7! | g8 gM! b g@M! c8 cM! |
+  d=8 g@M! d8 g@M! d8 d7! | g, gM! d' g@M! g,8 gis |
+  a=,8 am! c a@m! d8 d7! | g, gM! b d@M! c8 cis |
+  d=8 g@M! d8 g@M! d8 d7! | g,=, gM! g+gM! r r4 |
 }
 {{ end }}
