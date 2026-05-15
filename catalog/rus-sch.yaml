@@ -610,3 +610,12 @@ pieces:
   - { id: nlob, tit: Сама садик я садила, sub: rusfs,
       arr: В. Гусев, src: FBBMS41N1991,
       org: rus, sty: flk, gnr: sng, ton: [gmj, gmi], frm: [vo2, var, in3], bss: [frb, stb, vo2], lvl: elb }
+  # FBBMS42P1991
+  # p. 12
+  # - { id: t1wh, tit: "Возвращайтесь домой, мужики!",
+  #     com: Г. Гладков-Югин, src: FBBMS42P1991,
+  #     org: rus, sty: cus, gnr: sng, ton: bmi, frm: vo2, bss: stb, lvl: elb }
+  # p. 13
+  # - { id: yqs8, tit: "Поговори со мною, мама",
+  #     com: В. Мигуля, src: FBBMS42P1991,
+  #     org: rus, sty: cus, gnr: sng, ton: dmi, frm: [vo2, in3, in6], bss: [frb, jmp], lvl: elc }
