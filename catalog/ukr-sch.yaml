@@ -287,7 +287,6 @@ pieces:
   - { id: bijl, tit: Колобок,
       com: А. Лазаренко, src: FBBMS42P1991,
       org: ukr, sty: cus, gnr: pie, ton: emi, frm: dot, bss: frb, lvl: elb }
-  # p. 10
-  # - { id: whvu, tit: Пісня,
-  #     com: М. Дремлюга, src: FBBMS42P1991,
-  #     org: ukr, sty: cus, gnr: sng, ton: emi, frm: mel, bss: [frb, in3], lvl: elb }
+  - { id: whvu, tit: Пісня,
+      com: М. Дремлюга, src: FBBMS42P1991,
+      org: ukr, sty: cus, gnr: sng, ton: emi, frm: mel, bss: [frb, in3], lvl: elb }
