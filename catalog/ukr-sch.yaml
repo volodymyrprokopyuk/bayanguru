@@ -284,10 +284,9 @@ pieces:
       arr: В. Накапкин, src: FBBMS41N1991,
       org: ukr, sty: flk, gnr: sng, ton: fismi, frm: [vo2, in3], bss: frb, lvl: elc }
   # FBBMS42P1991
-  # p. 6
-  # - { id: bijl, tit: Колобок,
-  #     com: А. Лазаренко, src: FBBMS42P1991,
-  #     org: ukr, sty: cus, gnr: pie, ton: emi, frm: dot, bss: frb, lvl: elb }
+  - { id: bijl, tit: Колобок,
+      com: А. Лазаренко, src: FBBMS42P1991,
+      org: ukr, sty: cus, gnr: pie, ton: emi, frm: dot, bss: frb, lvl: elb }
   # p. 10
   # - { id: whvu, tit: Пісня,
   #     com: М. Дремлюга, src: FBBMS42P1991,
