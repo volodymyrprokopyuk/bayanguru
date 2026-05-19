@@ -21,7 +21,13 @@
 
 {{ define "leftHand" }}
 \relative {
-  \clef bass
+  \clef treble
   \key e \minor
+  g'='4-\frBass e~ e8 a( g fis) | e4 b= \clef bass c='8( b a4) |
+  g=4.( b8 c4 a) | <g b>( <fis a> <e g>) e,8 r | r2 r4 <c'' ees>-- |
+  dis='4(-- <g, b>) e'(-- <g, b>) | g8-. d'-. b-. d-. <g,= bes>2-> \clef treble |
+  d'='8(-- e d b) dis(-- e dis b) | e(-- fis e b) fis'(-- g fis b,) |
+  g'='4 e~ e8 a( g fis) | e4 b= \clef bass c='8( b a4) |
+  g=4.( b8 c4 a) | \duo { b=2 b4~ b=8 } { g=4( fis) e( e=8)  } r8 \bar "|."
 }
 {{ end }}
