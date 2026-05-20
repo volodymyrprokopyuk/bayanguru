@@ -49,8 +49,8 @@
   R1 | fis,=,2-\frBass \fermata | R1 |
   r8 d''='8 d cis~ cis4 d | r8 d cis b a gis a4 |
   r8 e=16( fis gis4~ gis8) a b ais | b2~ b4 a |
-  cis='8 fis,16 gis a8 b cis4 a8 b | a a gis fis e b cis a' |
-  gis=4 f e d | e8 fis e fis gis4 a8 gis |
+  cis='8 fis,16 gis a8 b cis4 a8 b | a a gis fis e d cis a' |
+  gis=4 fis e d | e8 fis e fis gis4 a8 gis |
   r8 d=8 d d  fis=4 \fermata r4 |
 
   r8 fis=4-> e8-> r d4-- r8 | r gis,4 b8 d4 cis |
