@@ -5,7 +5,6 @@
   \key b \minor
   \time 3/4
   \meter 1/4 1,1,1,1
-  \repeat volta 2 {
     <g'=' b>4\mf 8 <fis a> <g b> <a cis> | <b d>4 <a cis> <g b> |
     \duo { a'='4 g fis=' | } { d'='2. | } | <g b>4 <d a'> <b g'> |
     <cis=' e>4 <cis e>8 <b d> <cis e> <d fis> | <e g>4 <b fis'> <cis e> |
@@ -20,14 +19,17 @@
     r4 \duo {
       e'='4\( fis g e fis | g fis e | d2. | d4\) a'\( a | a g fis | a g fis |
       b='4 e,2~ | e4\) b'\( b | b gis ais | b ais b |
-      <e,='_~ fis_~ cis'~>2. | 4\) d'\( cis | b a g | b a g | fis d2~ |
-      d='4\) a'\( a | a g fis | e d e | fis2.~ | fis4\) cis'\( d | e d cis |
-      b='4 ais cis | fis,2. | b4\) b\( b | b2.~ | b4 a g | fis d cis |
-      \alternative {
-        \volta 1 { b=2.\) | }
-        \volta 2 {
-          \hSpace b=2._~ \sSlur nf #'((wb . 0) (ws . -2) (ww . 4.5)) ( |
-          b=2.) \bar "|."
+      <e,='_~ fis_~ cis'~>2. | 4\) d'\( cis='' |
+      \repeat volta 2 {
+        b='4 a g | b a g | fis d2~ |
+        d='4\) a'\( a | a g fis | e d e | fis2.~ | fis4\) cis'\( d | e d cis |
+        b='4 ais cis | fis,2. | b4\) b\( b | b2.~ | b4 a g | fis d cis |
+        \alternative {
+          \volta 1 { b=2.\) | }
+          \volta 2 {
+            \hSpace b=2._~ \sSlur nf #'((wb . 0) (ws . -2) (ww . 4.5)) ( |
+            b=2.) \bar "|."
+          }
         }
       }
     } {
@@ -36,7 +38,6 @@
       d='4 a'2 | <e b'>2. | e | d2 cis4 | b g' a | g2 fis4 | e2 b4 | ais=2. |
       \rep 3 { s2. | }
     }
-  }
 }
 {{ end }}
 
