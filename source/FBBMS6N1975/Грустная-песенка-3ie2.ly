@@ -20,8 +20,8 @@
   \clef bass
   \key e \minor
   \meter 1/4 1,1,1,1
-  \duo { b=2(-\frBass d | c b8 c b a) | b2( d | c b=) | }
-  { \rep 2 { e=1~ | e= | } } |
+  \duo { b=2( d | c b8 c b a) | b2( d | c b=) | }
+  { e=1~-\frBass | e | e~ | e= | }
   a=2 g | d g | a8( c e fis g fis e d | c e b4 e,=2) |
 }
 {{ end }}
