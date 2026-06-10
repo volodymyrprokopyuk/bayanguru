@@ -106,7 +106,7 @@ var (
     `\\(?:tuplet|time) \d+/\d+`,
     `\\fixed c'?`,
     `\\(?:hide|omit) \S+`,
-    `D\.C\. al`, `e poi`, `al Fine`} , "|"),
+    `D\.C\. al`, `e poi`, `al Fine`, `\\fp`} , "|"),
   )
   reRemoveOtherCmd = regexp.MustCompile(` \\[-\w]+`)
   reHasMusic = regexp.MustCompile(`[a-g]`)
