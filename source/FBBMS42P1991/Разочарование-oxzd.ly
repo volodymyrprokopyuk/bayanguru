@@ -1,6 +1,6 @@
 {{ define "rightHand" }}
 \relative {
-  \tempo "Andante sostenuno"
+  \tempo "Andante sostenuto"
   \clef treble
   \key e \minor
   \time 2/4
