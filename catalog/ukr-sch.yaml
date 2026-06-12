@@ -290,3 +290,11 @@ pieces:
   - { id: whvu, tit: Пісня,
       com: М. Дремлюга, src: FBBMS42P1991,
       org: ukr, sty: cus, gnr: sng, ton: emi, frm: mel, bss: [frb, in3], lvl: elb }
+  # p. 30
+  # - { id: 66k2, tit: З весни літку у прилітку, sub: ukrfs,
+  #     arr: В. Грачев, src: FBBMS42P1991,
+  #     org: ukr, sty: flk, gnr: sng, ton: fmj, frm: [vo2, cr5], bss: [frb, in3], lvl: elb }
+  # p. 31
+  # - { id: p8rt, tit: Ой на горі жито, sub: ukrfs,
+  #     arr: В. Накапкин, src: FBBMS42P1991,
+  #     org: ukr, sty: flk, gnr: sng, ton: gmj, frm: [vo2, var, cr5], bss: [frb, in3], lvl: elb }

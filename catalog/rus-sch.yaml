@@ -620,3 +620,7 @@ pieces:
   - { id: oxzd, tit: Разочарование, sub: Романс,
       com: А. Алябьев, src: FBBMS42P1991,
       org: rus, sty: cus, gnr: rmc, ton: emi, frm: [vo2, cr5], bss: [frb, vo2], lvl: elb }
+  # p. 29
+  # - { id: 4yd2, tit: Лучинукша, sub: rusfs,
+  #     arr: В. Ефимов, src: FBBMS42P1991,
+  #     org: rus, sty: flk, gnr: sng, ton: gmi, frm: [vo2, in3], bss: frb, lvl: elb }

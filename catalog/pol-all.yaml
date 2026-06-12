@@ -94,3 +94,7 @@ pieces:
   - { id: ybcd, tit: Чеська полька,
       com: І. Флегль, src: FBBMS42P1991,
       org: cze, sty: cus, gnr: plk, ton: gmj, frm: in3, bss: [frb, in3, cr5], lvl: elb }
+  # p. 33
+  # - { id: vka9, tit: Вечірні сутінки, sub: Словацька народна пісня,
+  #     com: В. Платонов, src: FBBMS42P1991,
+  #     org: svk, sty: flk, gnr: sng, ton: emi, frm: [vo2, in6], bss: [frb, stb], lvl: elb }
