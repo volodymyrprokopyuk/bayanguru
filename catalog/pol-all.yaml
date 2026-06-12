@@ -91,7 +91,6 @@ pieces:
       arr: В. Ефимов, src: FBBMS39N1990,
       org: cze, sty: flk, gnr: sng, ton: gmi, frm: [vo2, cr5], bss: frb, lvl: elb }
   # FBBMS42P1991
-  # p. 20
-  # - { id: ybcd, tit: Чеська полька,
-  #     com: І. Флегль, src: FBBMS42P1991,
-  #     org: cze, sty: cus, gnr: plk, ton: gmj, frm: in3, bss: [frb, in3, cr5], lvl: elb }
+  - { id: ybcd, tit: Чеська полька,
+      com: І. Флегль, src: FBBMS42P1991,
+      org: cze, sty: cus, gnr: plk, ton: gmj, frm: in3, bss: [frb, in3, cr5], lvl: elb }
