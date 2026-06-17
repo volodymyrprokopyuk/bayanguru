@@ -23,15 +23,15 @@
 
   \tempo Sostenuto
   {{ template "rh1" (w `g'=''8[(->\p`) }}
-  b=''16(->  c d8)-. a16(-> b c8)-. g16(-> f a8)-. e(-> d)-. |
+  b=''16(->  c d8)-. a16(-> b c8)-. g16(-> fis a8)-. e(-> d)-. |
   {{ template "rh1" (w `g=''8[(->`) }}
-  b=''8(-> d) c-. d-. g,-> fis16 e d c b a |
-  b='16 ais b d a d fis, d' f,(-> e) d f e(-> d c8) |
+  b=''8(-> d) a-. d-. g,-> fis16 e d c b a |
+  b='16 ais b d ais d fis, d' f,(-> e) d f e(-> d c8) |
   b=8-> b16 d c d a d g, gis a b c d e fis |
   g='16 fis e d e f fis a b a b d c d e fis |
   g=''16 a b c <fis, b d>4 <d='' g b>2 |
   \tempo Adagio
-  <c,=' e g b>4\f <c fis c' d>8 8 <d=' g b g'>2 \fermata \bar "|."
+  <c,=' e g b>4->\f <c fis c' d>8 8 <d=' g b g'>2 \fermata \bar "|."
 }
 {{ end }}
 
@@ -47,9 +47,9 @@
 
   <b''=' d>8[_\aSta 8 8 <a c>] <b d>8[ 8  <c e>8 8] |
   <b=' d>8 8 <c d>8 8 <c ees>8 8 <c d>8 8 |
-  g='8[(-> fis) f e] d[(-> c) b a=] \clef bass |
-  g=8 g fis fis e e gis gis |
-  g=8 <b d> b <c=' d> \duo { aes=8( b) } { aes=4 } g=8 <a c> |
+  g='8[(-> fis) f-. e]-. d[(-> c) b-. a=]-. \clef bass |
+  g=8 g fis fis e e fis fis |
+  g=8 <b d> b <c=' d> \duo { aes=8( b) } { aes=4 } g=8 <aes c> |
   g=8 <b d> a <c d> g fis e <c' e> | b, <b' d> fis <c' d> g <b d> a <c e> |
   d,=8 <g b> d <fis c'> \duo { <g= b>2 | } { r4 g,=,4 | }
   c=4-> a8-- d-- g,=,2 \fermata |
