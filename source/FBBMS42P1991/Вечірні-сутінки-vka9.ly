@@ -42,7 +42,7 @@
   a=,8(-\stBass b@M!) bM8 bM | gis( e@M!) eM8 eM |
   g=,8_\aSim gM! e eis | fis b@m! fis8 fis7! | b bm! d b@m! |
   g,=,8 e@m! e8 em! | fis b@m! fis8 fis7! | b[ bm! bm] a+a7! |
-  fis=,8 d@M! g8 gM! | a am! d+dM!4 | g8 e@m! em8 em | fis fisM! b+b7!4 |
+  fis=,8 d@M! g8 gM! | a aM! d+dM!4 | g8 e@m! em8 em | fis fisM! b+b7!4 |
   g=,8 e@m! em8 em | c= a@m! am8 am | b+e@m!4 b+b7!4 | e+em! e+em |
 }
 {{ end }}
