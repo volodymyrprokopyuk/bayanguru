@@ -29,7 +29,7 @@
   \partial 4 { r4 | }
   \meter 1/4 1,1,1,1
   g+gm!4-\stBass g+gm g+gm c+cm! | g+gm! g+gm g+gm8 d=8[ e fis] |
-  g+d@m!4 a+a7!4 bes+g@m! c+cm!4 | g+gm! g+gm g+gm bes+bes7! |
+  g+gm!4 a+d@7!4 bes+g@m!4 c+cm!4 | g+gm! g+gm g+gm bes+bes7! |
   ees+eesM!4 bes+besM! c+cm! bes+besM! | f+fM! f+fM f+fM ees+eesM! |
   bes+besM!4 c+cm! d+g@m! d+dM!4 | \duo { r4 gm!8. gm16 gm4 } { g,=,2. } %
   bes,=,8 bes7! | ees eesM! d bes@M! c8 cm! bes besM! |

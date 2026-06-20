@@ -623,3 +623,12 @@ pieces:
   - { id: 4yd2, tit: Лучинушка, sub: rusfs,
       arr: В. Ефимов, src: FBBMS42P1991,
       org: rus, sty: flk, gnr: sng, ton: gmi, frm: [vo2, in3], bss: frb, lvl: elb }
+  # FBBMS43N1992
+  # p. 6
+  # - { id: 6yll, tit: Спят усталые игрушки,
+  #     arr: А. Островский, src: FBBMS43N1992,
+  #     org: rus, sty: cus, gnr: lul, ton: dmj, frm: [in4, cr5], bss: [frb, in3, cr5], lvl: elc }
+  # p. 17
+  # - { id: kmdv, tit: Прелюдія,
+  #     arr: В. Бухвостов, src: FBBMS43N1992,
+  #     org: rus, sty: cus, gnr: pre, ton: dmi, frm: [in4, cr5], bss: [frb, in3, cr5], lvl: elc }
