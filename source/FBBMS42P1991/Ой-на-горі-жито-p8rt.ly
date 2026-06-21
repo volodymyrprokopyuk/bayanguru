@@ -14,7 +14,7 @@
   r8\> <g'=' b d>[ r <a c d> r <g b d> r \af 8\! <a c d>] |
   g='8->\mf g b c d4. c8 | b-> b a4 g='2 |
   \duo {
-    g'='8 g b c d4.( a8) | b b a4 g2 | \rep 2 { b='8( d) a a b b c( a=') | }
+    g'='8 g b c d4.( c8) | b b a4 g2 | \rep 2 { b='8( d) a a b b c( a=') | }
     b='8 c d4 r4 <b g'> | <g b>4\> <fis a>8 8 \af 2\! g='2 |
   } {
     s4 f'='4 e2 | g8 g d c b2 | g'4 fis8 e d d ees4 | d8 e fis e d f e4 |

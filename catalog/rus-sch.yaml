@@ -626,9 +626,17 @@ pieces:
   # FBBMS43N1992
   # p. 6
   # - { id: 6yll, tit: Спят усталые игрушки,
-  #     arr: А. Островский, src: FBBMS43N1992,
+  #     com: А. Островский, src: FBBMS43N1992,
   #     org: rus, sty: cus, gnr: lul, ton: dmj, frm: [in4, cr5], bss: [frb, in3, cr5], lvl: elc }
   # p. 17
   # - { id: kmdv, tit: Прелюдія,
-  #     arr: В. Бухвостов, src: FBBMS43N1992,
+  #     com: В. Бухвостов, src: FBBMS43N1992,
   #     org: rus, sty: cus, gnr: pre, ton: dmi, frm: [in4, cr5], bss: [frb, in3, cr5], lvl: elc }
+  # p. 29
+  # - { id: fbhr, tit: Меж крутых бережков, sub: rusfs,
+  #     arr: В. Гусев, src: FBBMS43N1992,
+  #     org: rus, sty: flk, gnr: sng, ton: emi, frm: in3, bss: [pub, stb], lvl: elb }
+  # p. 29
+  # - { id: 3zfp, tit: "Как в лесу, лесу, лесочке", sub: rusfs,
+  #     arr: В. Платонов, src: FBBMS43N1992,
+  #     org: rus, sty: flk, gnr: sng, ton: emi, frm: vo2, bss: frb, lvl: elb }

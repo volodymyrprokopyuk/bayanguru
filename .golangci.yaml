@@ -36,4 +36,5 @@ linters:
         - unnamedResult # Unnamed function return values
     gosec:
       excludes:
+        - G117 # Exported struct field Password
         - G404 # Weak random number generator math/rand/v2
