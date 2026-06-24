@@ -297,7 +297,6 @@ pieces:
       arr: В. Накапкин, src: FBBMS42P1991,
       org: ukr, sty: flk, gnr: sng, ton: gmj, frm: [vo2, var, cr5], bss: [frb, in3], lvl: elb }
   # FBBMS43N1992
-  # p. 31
-  # - { id: arhu, tit: Веселі гуси, sub: ukrfs
-  #     arr: В. Накапкин, src: FBBMS43N1992,
-  #     org: ukr, sty: flk, gnr: chd, ton: fmj, frm: [vo2, var, in3, cr5, syn], bss: [frb, stb], lvl: elb }
+  - { id: arhu, tit: Веселі гуси, sub: ukrfs,
+      arr: В. Накапкин, src: FBBMS43N1992,
+      org: ukr, sty: flk, gnr: chd, ton: fmj, frm: [vo2, var, in3, cr5, syn], bss: [frb, stb], lvl: elb }
