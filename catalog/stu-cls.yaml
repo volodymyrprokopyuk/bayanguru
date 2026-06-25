@@ -351,10 +351,9 @@ pieces:
   - { id: 5r2y, tit: Етюд A-moll,
       com: К. Мясков, src: FBB1BZ1980,
       org: ukr, sty: cus, gnr: stu, ton: ami, frm: scl, bss: [frb, scl], lvl: ela }
-  # p. 73
-  # - { id: pv35, tit: Етюд G-moll,
-  #     com: В. Власов, src: FBB1BZ1980,
-  #     org: ukr, sty: cus, gnr: stu, ton: gmi, frm: arp, bss: [frb, scl], lvl: ela }
+  - { id: pv35, tit: Етюд G-moll,
+      com: В. Власов, src: FBB1BZ1980,
+      org: ukr, sty: cus, gnr: stu, ton: gmi, frm: arp, bss: [frb, scl], lvl: ela }
   - { id: ksld, tit: Етюд E-moll,
       com: М. Чайкін, src: FBB1BZ1980,
       org: ukr, sty: cus, gnr: stu, ton: emi, frm: [in3, in4], bss: [frb, scl], lvl: ela }
