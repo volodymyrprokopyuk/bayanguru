@@ -357,10 +357,9 @@ pieces:
   - { id: ksld, tit: Етюд E-moll,
       com: М. Чайкін, src: FBB1BZ1980,
       org: ukr, sty: cus, gnr: stu, ton: emi, frm: [in3, in4], bss: [frb, scl], lvl: ela }
-  # p. 74
-  # - { id: 2jzv, tit: Етюд C-dur,
-  #     com: Н. Марьина, src: FBB1BZ1980,
-  #     org: rus, sty: cus, gnr: stu, ton: cmj, frm: scl, bss: [frb, scl], lvl: ela }
+  - { id: 2jzv, tit: Етюд C-dur,
+      com: Н. Марьина, src: FBB1BZ1980,
+      org: rus, sty: cus, gnr: stu, ton: cmj, frm: scl, bss: [frb, scl], lvl: ela }
   # p. 75
   # - { id: re6d, tit: Етюд C-dur,
   #     com: А. Сурков, src: FBB1BZ1980,
