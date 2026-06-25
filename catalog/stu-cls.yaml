@@ -360,10 +360,9 @@ pieces:
   - { id: 2jzv, tit: Етюд C-dur,
       com: Н. Марьина, src: FBB1BZ1980,
       org: rus, sty: cus, gnr: stu, ton: cmj, frm: scl, bss: [frb, scl], lvl: ela }
-  # p. 75
-  # - { id: re6d, tit: Етюд C-dur,
-  #     com: А. Сурков, src: FBB1BZ1980,
-  #     org: rus, sty: cus, gnr: stu, ton: cmj, frm: arp, bss: [frb, in3, in5], lvl: ela }
+  - { id: re6d, tit: Етюд C-dur,
+      com: А. Сурков, src: FBB1BZ1980,
+      org: rus, sty: cus, gnr: stu, ton: cmj, frm: arp, bss: [frb, in3, in5], lvl: ela }
   # p. 76
   # - { id: 18xt, tit: Етюд G-dur,
   #     com: К. Мясков, src: FBB1BZ1980,
