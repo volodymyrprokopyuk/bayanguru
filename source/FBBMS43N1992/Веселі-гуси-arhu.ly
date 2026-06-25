@@ -59,6 +59,21 @@
   {{ template "lh1" (w `f=8->-\frBass`) }}
   \rep 5 { {{ template "lh1" (w `f,=8->`) }} | }
   c,=8-> bes'16( a bes8) c,-. | c-> a'16( g a8) c,-. |
-  d=8-> d'16( c d8) bes-. | a-. g-. a=4-- |
+  d=8-> d'16( c d8) bes-. | a-. g-. a4-- |
+  <g= bes>8-> 8 c, <e bes'> | <f a>8-> 8 c <f a> |
+  c=8-> <bes' c> c, <bes' c> | <a c> f <a= c>4 |
+
+  g=8 <bes d> d, <a' c> | \rep 2 { e=8 <bes' c> c, <bes'= c> | }
+  <a= c>8 f <a c> c, | <bes' d>-> g c,4 | d8-> e f4 |
+  bes,=,8 <bes' d> c, <bes' c> | <a c> f <a c> r |
+  g=8 <bes d> c, <g' bes> | f c d <fis c'> |
+  bes,=,8 <g' bes> g, <g' bes> | a,=,2 |
+
+  \rep 7 { R2 | } | f=,8-\stBass r r4 | R2 | bes8-> a g f |
+  c'=4-> c-> | bes8-> a g f | c'-> c16( d c8)-> a=, |
+
+  bes=,8 g@m! c8 c7! | f, fM! fis d@7! | g8 gm! c c7! |
+  f,=,8 fM! c' f@M! | g8 gm! c c7! | f, fM! d' d7! |
+  g,=,8 gm! g c@7! | f8 e d c | f=,4 d@m!4-\fermata |
 }
 {{ end }}
