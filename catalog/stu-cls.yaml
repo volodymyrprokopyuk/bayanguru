@@ -345,10 +345,9 @@ pieces:
       org: aut, sty: cls, gnr: stu, ton: fmj, frm: [scl, cro], bss: stb, lvl: elb }
   # * Free bass
   # FBB1BZ1980
-  # p. 66
-  # - { id: 6vw6, tit: Етюд C-dur,
-  #     com: Ю. Слонов, src: FBB1BZ1980,
-  #     org: rus, sty: cus, gnr: stu, ton: cmj, frm: arp, bss: [frb, scl], lvl: ela }
+  - { id: 6vw6, tit: Етюд C-dur,
+      com: Ю. Слонов, src: FBB1BZ1980,
+      org: rus, sty: cus, gnr: stu, ton: cmj, frm: arp, bss: [frb, scl], lvl: ela }
   # p. 69
   # - { id: 5r2y, tit: Етюд A-moll,
   #     com: К. Мясков, src: FBB1BZ1980,
