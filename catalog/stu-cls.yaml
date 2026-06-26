@@ -366,10 +366,9 @@ pieces:
   - { id: 18xt, tit: Етюд G-dur,
       com: К. Мясков, src: FBB1BZ1980,
       org: ukr, sty: cus, gnr: stu, ton: gmj, frm: arp, bss: [frb, scl], lvl: ela }
-  # p. 77
-  # - { id: va2k, tit: Етюд A-moll,
-  #     com: Є. Чернявська, src: FBB1BZ1980,
-  #     org: ukr, sty: cus, gnr: stu, ton: ami, frm: seq, bss: [frb, seq, in5], lvl: ela }
+  - { id: va2k, tit: Етюд A-moll,
+      com: Є. Чернявська, src: FBB1BZ1980,
+      org: ukr, sty: cus, gnr: stu, ton: ami, frm: seq, bss: [frb, seq, in5], lvl: ela }
   - { id: 8kpq, tit: Етюд F-dur,
       com: Л. Шітте, src: FBB1BZ1980,
       org: dnk, sty: cls, gnr: stu, ton: fmj, frm: [arp, brk], bss: [frb, arp], lvl: ela }
