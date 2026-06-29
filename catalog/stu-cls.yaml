@@ -381,10 +381,9 @@ pieces:
   - { id: 4juf, tit: Етюд A-moll,
       com: В. Подгорний, src: FBB1BZ1980,
       org: ukr, sty: cus, gnr: stu, ton: ami, frm: arp, bss: [frb, arp], lvl: elb }
-  # p. 90
-  # - { id: xakj, tit: Етюд C-dur,
-  #     com: В. Подгорний, src: FBB1BZ1980,
-  #     org: ukr, sty: cus, gnr: stu, ton: cmj, frm: [seq, rep], bss: [frb, seq, in6, rep], lvl: elb }
+  - { id: xakj, tit: Етюд C-dur,
+      com: В. Подгорний, src: FBB1BZ1980,
+      org: ukr, sty: cus, gnr: stu, ton: cmj, frm: [seq, rep], bss: [frb, seq, in6, rep], lvl: elb }
   # FBB2BZ1981
   - { id: qio4, tit: Етюд A-moll,
       com: К. Ошлаков, src: FBB2BZ1981,
