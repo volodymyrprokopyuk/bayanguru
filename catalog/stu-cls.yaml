@@ -375,10 +375,9 @@ pieces:
   - { id: juc2, tit: Етюд F-dur,
       com: А. Зубарев, src: FBB1BZ1980,
       org: rus, sty: cus, gnr: stu, ton: fmj, frm: seq, bss: [frb, scl], lvl: ela }
-  # p. 87
-  # - { id: eazn, tit: Етюд C-dur,
-  #     com: О. Мунтян, src: FBB1BZ1980,
-  #     org: rus, sty: cus, gnr: stu, ton: cmj, frm: scl, bss: [frb, scl], lvl: ela }
+  - { id: eazn, tit: Етюд C-dur,
+      com: О. Мунтян, src: FBB1BZ1980,
+      org: rus, sty: cus, gnr: stu, ton: cmj, frm: scl, bss: [frb, scl], lvl: ela }
   # p. 88
   # - { id: 4juf, tit: Етюд A-moll,
   #     com: В. Подгорний, src: FBB1BZ1980,
