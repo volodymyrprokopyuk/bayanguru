@@ -372,6 +372,21 @@ pieces:
   - { id: 8kpq, tit: Етюд F-dur,
       com: Л. Шітте, src: FBB1BZ1980,
       org: dnk, sty: cls, gnr: stu, ton: fmj, frm: [arp, brk], bss: [frb, arp], lvl: ela }
+  - { id: juc2, tit: Етюд F-dur,
+      com: А. Зубарев, src: FBB1BZ1980,
+      org: rus, sty: cus, gnr: stu, ton: fmj, frm: seq, bss: [frb, scl], lvl: ela }
+  # p. 87
+  # - { id: eazn, tit: Етюд C-dur,
+  #     com: О. Мунтян, src: FBB1BZ1980,
+  #     org: rus, sty: cus, gnr: stu, ton: cmj, frm: scl, bss: [frb, scl], lvl: ela }
+  # p. 88
+  # - { id: 4juf, tit: Етюд A-moll,
+  #     com: В. Подгорний, src: FBB1BZ1980,
+  #     org: ukr, sty: cus, gnr: stu, ton: ami, frm: arp, bss: [frb, arp], lvl: elb }
+  # p. 90
+  # - { id: xakj, tit: Етюд C-dur,
+  #     com: В. Подгорний, src: FBB1BZ1980,
+  #     org: ukr, sty: cus, gnr: stu, ton: cmj, frm: [seq, rep], bss: [frb, seq, in6, rep], lvl: elb }
   # FBB2BZ1981
   - { id: qio4, tit: Етюд A-moll,
       com: К. Ошлаков, src: FBB2BZ1981,
