@@ -309,10 +309,9 @@ pieces:
       org: ukr, sty: cus, gnr: pre, ton: emi, frm: [in3, dot], bss: stb, lvl: elb }
   # * Free bass
   # FBB1BZ1980
-  # p. 12
-  # - { id: e11y, tit: Маленька п'єса,
-  #     com: Л. Вільчик, src: FBB1BZ1980,
-  #     org: ukr, sty: cus, gnr: pie, ton: cmj, frm: mel, bss: frb, lvl: ela }
+  - { id: e11y, tit: Маленька п'єса,
+      com: Л. Вільчик, src: FBB1BZ1980,
+      org: ukr, sty: cus, gnr: pie, ton: cmj, frm: mel, bss: frb, lvl: ela }
   # p. 13
   # - { id: xu4i, tit: Котик,
   #     com: Ю. Щуровський, src: FBB1BZ1980,
