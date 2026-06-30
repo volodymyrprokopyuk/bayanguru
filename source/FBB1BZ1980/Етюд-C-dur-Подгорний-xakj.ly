@@ -7,6 +7,10 @@
   <e='' c'>4-- <dis b'>-- <c='' a'>2-- |
 {{ end }}
 
+{{ define "lh1" }}
+  b=4-. g-. \duo { r4 e'='4 | } { c'='2 | }
+{{ end }}
+
 {{ define "rightHand" }}
 \relative {
   \tempo Moderato
@@ -28,7 +32,13 @@
 
 {{ define "leftHand" }}
 \relative {
-  \clef bass
+  \clef treble
   \key c \major
+  e'='2-\frBass cis | d b | c a | b g | e'8( dis e dis) e4-. cis-. |
+  d='8( cis d cis) d4-. b-. | c8( b c b) c4-. a-. | {{ template "lh1" }}
+  r2 dis'='8( e dis e) | r2 e8( f e f) | r2 dis8( e dis e) |
+  r2 e='8( f e dis) | e4 dis e cis | d cis d b | c b c a |
+  b=4 ais b8( c d dis) | e( dis e dis e dis e cis) |
+  d='8( cis d cis d cis d b) | c( b c b c b c a) | {{ template "lh1" }} \bar "|."
 }
 {{ end }}
