@@ -151,10 +151,9 @@ pieces:
   - { id: 4wbu, tit: Хоровод,
       com: Б. Кабанкин, src: FBB1BZ1980,
       org: rus, sty: cus, gnr: dnc, ton: gmj, frm: in3, bss: frb, lvl: ela }
-  # p. 44
-  # - { id: 3xrf, tit: Утренняя песня,
-  #     com: О. Мунтян, src: FBB1BZ1980,
-  #     org: rus, sty: cus, gnr: sng, ton: gmj, frm: mel, bss: frb, lvl: ela }
+  - { id: 3xrf, tit: Утренняя песня,
+      com: О. Мунтян, src: FBB1BZ1980,
+      org: rus, sty: cus, gnr: sng, ton: gmj, frm: mel, bss: frb, lvl: ela }
   # p. 45
   # - { id: w1lc, tit: Игра,
   #     com: О. Мунтян, src: FBB1BZ1980,
