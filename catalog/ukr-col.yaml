@@ -49,3 +49,11 @@ pieces:
   # - { id: pllj, tit: Верховино, sub: ukrfs,
   #     arr: М. Різоль, src: UFSFBR1978,
   #     org: ukr, sty: flk, gnr: sng, ton: gmi, frm: [vo2, in5], bss: [stb, pub], lvl: elc }
+  # p. 21
+  # - { id: xn9t, tit: "Копав, копав криниченьку", sub: ukrfs,
+  #     arr: М. Різоль, src: UFSFBR1978,
+  #     org: ukr, sty: flk, gnr: sng, ton: besmj, frm: [vo2, in3, acc], bss: [stb, pub], lvl: elb }
+  # p. 22
+  # - { id: ap3m, tit: "Ой хмелю, мій хмелю", sub: ukrfs,
+  #     arr: М. Різоль, src: UFSFBR1978,
+  #     org: ukr, sty: flk, gnr: sng, ton: fmi, frm: [in3, cr5], bss: [stb, pub], lvl: elb }
