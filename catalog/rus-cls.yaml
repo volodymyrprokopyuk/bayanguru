@@ -167,6 +167,10 @@ pieces:
   - { id: g7mu, tit: Колыбельная,
       com: Т. Назарова, src: FBB2BZ1981,
       org: rus, sty: cus, gnr: lul, ton: emi, frm: mel, bss: [frb, in3, in5], lvl: ela }
+  # p. 19
+  # - { id: 9bl6, tit: Веселая песенка,
+  #     com: А. Сапалов, src: FBB2BZ1981,
+  #     org: rus, sty: cus, gnr: sng, ton: fmj, frm: dot, bss: frb, lvl: elb }
   - { id: t67o, tit: Песня,
       com: М. Глинка, src: FBB2BZ1981,
       org: rus, sty: cus, gnr: sng, ton: gmi, frm: mel, bss: [frb, in3], lvl: elb }
