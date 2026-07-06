@@ -12,6 +12,18 @@
   a='8 c16( b a8) e | a4\sf <a=' c e a>\sf |
 {{ end }}
 
+{{ define "lh1" }}
+  a=,8 {{ .a }} e a e | \rep {{ .b }} { a=,8 e a e=, | }
+{{ end }}
+
+{{ define "lh2" }}
+  {{ template "lh1" (w `-\puBass`  `2`) }} | <a e'>4 4 |
+  {{ template "lh1" (w `` `1`) }}
+  f=,8 f e e | a4 <a e'>4 | \rep 2 { g=,8 d' g, d'= | }
+  g,=,4(-> a8)-. b-. | c4 b | {{ template "lh1" (w `` `2`) }} |
+  a=,4 a+am! |
+{{ end }}
+
 {{ define "rightHand" }}
 \relative {
   \tempo Adagio
@@ -70,6 +82,17 @@
   \clef bass
   \key a \minor
   \partial 2 { r4 r | }
-  a,=,4-\stBass am!-- r | e a7!-- r |
+  a,=,4-\stBass am!-- r | e a7!-- r | b' d@m!-- %
+  \duo { s4 | r4 am!8 } { e,=,4( | a~ a=,8) } r8 r4 |
+  a=,4 am!-- r | e e7!-- r | b'=, d@m!-- %
+  \duo { s4 | r4 am!2 | } { e,=,4( | a=,2.) | }
+
+  {{ template "lh2" }}
+
+  R1 | a=,4( am!8)-. am-. am4 r | e( e7!8)-. e7-. e74 r |
+  b'=,4( e@7!8[)-. e78]-. d@m!4 e,4( | a)( am!8)-. am-. am4 r |
+  a=,4( g fis f | e2) eM!4 r | b'( d@m!) dm4 e,( | a=,)( am!) a+am!2 \fermata |
+
+  {{ template "lh2" }}
 }
 {{ end }}
