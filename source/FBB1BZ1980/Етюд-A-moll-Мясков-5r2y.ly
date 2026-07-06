@@ -4,7 +4,7 @@
   \clef treble
   \key a \minor
   \time 4/4
-  e'='1(\mp\< | \af 1\! f) | g4(\< a b \af 4\! d | d\>  e c \af 4\! b) |
+  e'='1(\mp\< | \af 1\! f) | g4(\< a b \af 4\! c | d\>  e c \af 4\! b) |
   c=''2( b4 a) | g2.( f4) | e( f e d | a'='1) \bar "|."
 }
 {{ end }}
