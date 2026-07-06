@@ -374,6 +374,10 @@ pieces:
   - { id: 27p8, tit: Веснянка,
       com: В. Власов, src: FBB2BZ1981,
       org: ukr, sty: cus, gnr: ves, ton: gmj, frm: mel, bss: [frb, vo2, var], lvl: elb }
+  # p. 62
+  # - { id: m01v, tit: Гра в м'ячик,
+  #     com: К. Мясков, src: FBB2BZ1981,
+  #     org: ukr, sty: cus, gnr: pie, ton: gmj, frm: [in2, acc], bss: [frb, in2, in3], lvl: elb }
   # FBB3BZ1982
   - { id: ltfu, tit: Поліфонічна п'єса,
       com: Ю. Щуровський, src: FBB3BZ1982,
