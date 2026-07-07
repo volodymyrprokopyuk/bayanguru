@@ -398,7 +398,7 @@ var (
   )
   reTon = regexp.MustCompile(`^[a-g](?:es|is)?m[ij]$`)
   reFrm = regexp.MustCompile(
-    `^mel|var|vo[23]|scl|seq|cro|arp|lng|srt|brk|in[3-8]|cr[57]` +
+    `^mel|var|vo[23]|scl|seq|cro|arp|lng|srt|brk|in[2-8]|cr[57]` +
     `|syn|tu[356]|dot|rep|tre|acc|mor|gru|tri|gli|cad|fi1|fi5|jmp` +
     `|stb|pub|frb$`,
   )
