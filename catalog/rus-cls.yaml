@@ -173,10 +173,9 @@ pieces:
   - { id: t67o, tit: Песня,
       com: М. Глинка, src: FBB2BZ1981,
       org: rus, sty: cus, gnr: sng, ton: gmi, frm: mel, bss: [frb, in3], lvl: elb }
-  # p. 27
-  # - { id: twj9⏎, tit: Маленький канон,
-  #     com: В. Пятигорский, src: FBB2BZ1981,
-  #     org: rus, sty: cus, gnr: can, ton: gmi, frm: mel, bss: frb, lvl: elb }
+  - { id: twj9, tit: Маленький канон,
+      com: В. Пятигорский, src: FBB2BZ1981,
+      org: rus, sty: cus, gnr: can, ton: gmi, frm: mel, bss: frb, lvl: elb }
   - { id: 2lhn, tit: Русская хороводная,
       com: В. Подгорний, src: FBB2BZ1981,
       org: rus, sty: cus, gnr: dnc, ton: gmi, frm: [vo2, in3], bss: [frb, vo2, in3], lvl: elb }
