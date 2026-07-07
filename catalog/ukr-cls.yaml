@@ -349,10 +349,9 @@ pieces:
   - { id: qxub, tit: Танець урожаю,
       com: Т. Шутенко, src: FBB2BZ1981,
       org: ukr, sty: cus, gnr: dnc, ton: [cmj, ami], frm: mel, bss: frb, lvl: ela }
-  # p. 25
-  # - { id: moge, tit: На гойдалці,
-  #     com: Я. Степовий, src: FBB2BZ1981,
-  #     org: ukr, sty: cus, gnr: pie, ton: dmj, frm: dot, bss: frb, lvl: elb }
+  - { id: moge, tit: На гойдалці,
+      com: Я. Степовий, src: FBB2BZ1981,
+      org: ukr, sty: cus, gnr: pie, ton: dmj, frm: dot, bss: frb, lvl: elb }
   - { id: 1se4, tit: Пливе човен, sub: ukrfs,
       arr: М. Леонтович, src: FBB2BZ1981,
       org: ukr, sty: flk, gnr: sng, ton: gmi, frm: [vo2, in3], bss: frb, lvl: ela }
