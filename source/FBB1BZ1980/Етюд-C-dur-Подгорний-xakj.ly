@@ -26,7 +26,7 @@
 
   {{ template "rh1" (w `g'=''8(`) }} | g( fis g fis g fis g a) |
   f=''8( e f e f e f g) | e( dis e dis e dis e f) |
-  d=''8( e f d='') \duo { c''=''2 \bar "|." } { r4 <g''='' c>4 | }
+  d=''8( e f d='') \duo { r4 <g''='' c>4 \bar "|." } { c''=''2 | }
 }
 {{ end }}
 

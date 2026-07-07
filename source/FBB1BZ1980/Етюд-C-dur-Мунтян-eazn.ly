@@ -15,7 +15,7 @@
   {{ template "rh1" (w `e'='8\(\mf`) }}
   f=''8\( e d e | d c d c | b\> a b a | g a g \af 8\! f\) |
   {{ template "rh1" (w `e='8\(\mf`) }}
-  f=''8\(\> e d e | d c b \af 8\! a | g fis <f a>4\f | <e=' c'>2\) \bar "|."
+  f=''8\(\> e d e | d c b \af 8\! a | g fis <f b>4\f | <e=' c'>2\) \bar "|."
 }
 {{ end }}
 
