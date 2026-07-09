@@ -29,6 +29,6 @@
   \clef treble
   \key a \minor
   c''=''4-\frBass b c a | c b c a | e f g c, | e fis gis a |
-  \rep 2 { c=''4 e c8-. b-. c=''4 | } | e, f g c, | b'8-. a-. g-. f-. e4 a,= |
+  \rep 2 { c=''4 e c8-. b-. c=''4 | } | e, f g c, | b'8-. a-. g-. f-. e4 a,=-- |
 }
 {{ end }}
