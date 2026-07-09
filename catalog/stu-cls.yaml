@@ -388,10 +388,9 @@ pieces:
   - { id: ss58, tit: Етюд A-moll,
       com: Ю. Щуровський, src: FBB2BZ1981,
       org: ukr, sty: cus, gnr: stu, ton: ami, frm: [scl, rep], bss: [frb, scl], lvl: elb }
-  # p. 82
-  # - { id: klrx, tit: Етюд C-dur,
-  #     com: С. Ляховицька, src: FBB2BZ1981,
-  #     org: ukr, sty: cus, gnr: stu, ton: cmj, frm: scl, bss: [frb, scl], lvl: ela }
+  - { id: klrx, tit: Етюд C-dur,
+      com: С. Ляховицька, src: FBB2BZ1981,
+      org: ukr, sty: cus, gnr: stu, ton: cmj, frm: scl, bss: [frb, scl], lvl: ela }
   # p. 83
   # - { id: 612f, tit: Етюд G-dur,
   #     com: В. Власов, src: FBB2BZ1981,
