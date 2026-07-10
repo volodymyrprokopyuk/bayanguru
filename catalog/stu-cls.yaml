@@ -391,10 +391,9 @@ pieces:
   - { id: klrx, tit: Етюд C-dur,
       com: С. Ляховицька, src: FBB2BZ1981,
       org: ukr, sty: cus, gnr: stu, ton: cmj, frm: scl, bss: [frb, scl], lvl: ela }
-  # p. 83
-  # - { id: 612f, tit: Етюд G-dur,
-  #     com: В. Власов, src: FBB2BZ1981,
-  #     org: ukr, sty: cus, gnr: stu, ton: gmj, frm: arp, bss: [frb, scl, arp], lvl: ela }
+  - { id: 612f, tit: Етюд G-dur,
+      com: В. Власов, src: FBB2BZ1981,
+      org: ukr, sty: cus, gnr: stu, ton: gmj, frm: arp, bss: [frb, scl, arp], lvl: ela }
   # p. 84
   # - { id: krjc, tit: Етюд C-dur,
   #     com: А. Золкин, src: FBB2BZ1981,
@@ -410,6 +409,18 @@ pieces:
   - { id: qio4, tit: Етюд A-moll,
       com: К. Ошлаков, src: FBB2BZ1981,
       org: rus, sty: cus, gnr: stu, ton: ami, frm: [arp, brk], bss: [frb, arp, scl], lvl: ela }
+  # p. 89
+  # - { id: emgy, tit: Етюд F-dur,
+  #     com: А. Сапалов, src: FBB2BZ1981,
+  #     org: rus, sty: cus, gnr: stu, ton: fmj, frm: seq, bss: [frb, seq], lvl: elb }
+  # p. 91
+  # - { id: stpb, tit: Етюд F-dur,
+  #     com: В. Пятигорский, src: FBB2BZ1981,
+  #     org: rus, sty: cus, gnr: stu, ton: fmj, frm: arp, bss: [frb, arp], lvl: elb }
+  # p. 93
+  # - { id: r5uy, tit: Етюд G-dur,
+  #     com: О. Мунтян, src: FBB2BZ1981,
+  #     org: rus, sty: cus, gnr: stu, ton: gmj, frm: scl, bss: [frb, in3], lvl: elb }
   - { id: ibmb, tit: Етюд C-dur,
       com: А. Зубарев, src: FBB2BZ1981,
       org: rus, sty: cus, gnr: stu, ton: cmj, frm: scl, bss: [frb, scl, in3], lvl: elb }
