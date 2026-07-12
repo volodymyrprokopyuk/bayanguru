@@ -3,7 +3,7 @@
 {{ end }}
 
 {{ define "rh2" }}
-  {{ .a }} a d8.\< c16) | b8( \af 8\! g e' d | c) c {{ .b }} |
+  {{ .a }} a d8.\< c16) | b8( g e' \af 8\! d | c) c {{ .b }} |
 {{ end }}
 
 {{ define "rightHand" }}

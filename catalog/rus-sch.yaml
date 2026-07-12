@@ -584,7 +584,7 @@ pieces:
   # FBBMS39N1990
   - { id: glkz, tit: "Дуб-великан",
       com: А. Абрамов, src: FBBMS39N1990,
-      org: rus, sty: cus, gnr: pie, ton: besmj, frm: [vo2, cr5], bss: [frb, vo2, in5], lvl: elb }
+      org: rus, sty: cus, gnr: pie, ton: besmj, frm: [vo2, cr5], bss: [frb, vo2, in5], lvl: elc }
   - { id: bt5g, tit: Маленькая пьеса, sub: Канон,
       com: О. Агафонов, src: FBBMS39N1990,
       org: rus, sty: cus, gnr: can, ton: cmi, frm: dot, bss: [frb, dot], lvl: ela }
