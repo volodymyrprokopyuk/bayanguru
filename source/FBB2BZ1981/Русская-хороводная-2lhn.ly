@@ -24,8 +24,9 @@
   } { s4 bes'='2. | s4 a2. | s4 a='2. | }
   g='8(\p^\tATem bes <bes d>4. <a c>8 <g bes>4) |
   \duo {
-    g'='8( bes <bes d>4. \duo { c''=''16 d='' } { a'='8 } g'=''4) \fermata \bar "|."
-  } { g'='4 f fis <g=' bes> | }
+    g'='8( bes <bes d>4. \duo { c''=''16 d='' } %
+    { a'='8 } g'=''4) \fermata \bar "|."
+  } { g'='4 f fis <g=' bes> \fermata | }
 }
 {{ end }}
 
