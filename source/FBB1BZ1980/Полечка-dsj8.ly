@@ -14,7 +14,7 @@
   \time 2/4
   \repeat volta 2 {
     \partial 8 { a'='8(\mf | }
-    {{ template "rh1" }} g='16\mf f e f d8) a'( |
+    {{ template "rh1" }} g='16\mf f e f d8) \noBeam a'( |
     {{ template "rh1" }} | d) a'-> d=''-> %
   }
 }
