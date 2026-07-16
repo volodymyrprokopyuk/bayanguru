@@ -2,6 +2,10 @@
   \rep {{ .a }} { r8 <g=' b d>8 8 8 | } r8 <fis=' a d>8 8 8 |
 {{ end }}
 
+{{ define "rh2" }}
+  \rep {{ .a }} { r8 <e=' g b>8 8 8 | }
+{{ end }}
+
 {{ define "lh1" }}
   {{ .a }} b d8 e d | g4 fis8 e | d4 b=) |
 {{ end }}
@@ -15,8 +19,9 @@
   \meter 1/8 1,3
   r8\mf <g'=' b d>8 8 8 | {{ template "rh1" (w `2`) }}
   {{ template "rh1" (w `4`) }} | r <fis a b>8 8 8 |
-  \rep 3 { r8 <g=' b d>8 8 8 | } | r <dis fis b>8 8 8 |
-  {{ template "rh1" (w `4`) }} | r\> <g b d>8^\tRit 8 \af 8\! 8 |
+  {{ template "rh2" (w `3`) }} | r <dis fis b>8 8 8 |
+  {{ template "rh2" (w `2`) }} | r <e a c>8 8 8 |
+  {{ template "rh1" (w `1`) }} | r\> <g b d>8^\tRit 8 \af 8\! 8 |
   <b=' d g>4~\p 8 r \bar "|."
 }
 {{ end }}
