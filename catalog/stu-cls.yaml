@@ -397,10 +397,9 @@ pieces:
   - { id: krjc, tit: Етюд C-dur,
       com: А. Золкин, src: FBB2BZ1981,
       org: rus, sty: cus, gnr: stu, ton: cmj, frm: in3, bss: [frb, arp, syn], lvl: elb }
-  # p. 85
-  # - { id: 99cw, tit: Етюд C-dur,
-  #     com: В. Власов, src: FBB2BZ1981,
-  #     org: ukr, sty: cus, gnr: stu, ton: cmj, frm: [in3, in6], bss: [frb, scl], lvl: elb }
+  - { id: 99cw, tit: Етюд C-dur,
+      com: В. Власов, src: FBB2BZ1981,
+      org: ukr, sty: cus, gnr: stu, ton: cmj, frm: [in3, in6], bss: [frb, scl], lvl: elb }
   # p. 85
   # - { id: gmy6, tit: Етюд E-moll,
   #     com: А. Золкин, src: FBB2BZ1981,
