@@ -406,10 +406,9 @@ pieces:
   - { id: qio4, tit: Етюд A-moll,
       com: К. Ошлаков, src: FBB2BZ1981,
       org: rus, sty: cus, gnr: stu, ton: ami, frm: [arp, brk], bss: [frb, arp, scl], lvl: ela }
-  # p. 89
-  # - { id: emgy, tit: Етюд F-dur,
-  #     com: А. Сапалов, src: FBB2BZ1981,
-  #     org: rus, sty: cus, gnr: stu, ton: fmj, frm: seq, bss: [frb, seq], lvl: elb }
+  - { id: emgy, tit: Етюд F-dur,
+      com: А. Сапалов, src: FBB2BZ1981,
+      org: rus, sty: cus, gnr: stu, ton: fmj, frm: seq, bss: [frb, seq], lvl: elb }
   # p. 91
   # - { id: stpb, tit: Етюд F-dur,
   #     com: В. Пятигорский, src: FBB2BZ1981,
@@ -445,7 +444,7 @@ pieces:
   #     com: Ю. Филлер, src: FBB2BZ1981,
   #     org: rus, sty: cls, gnr: stu, ton: cmj, frm: scl, bss: [frb, scl], lvl: elb }
   # p. 110
-  # - { id: s4t2⏎, tit: Етюд C-dur,
+  # - { id: s4t2, tit: Етюд C-dur,
   #     com: М. Різоль, src: FBB2BZ1981,
   #     org: ukr, sty: cus, gnr: stu, ton: cmj, frm: in3, bss: [frb, scl, syn], lvl: elb }
   # FBB3BZ1982
