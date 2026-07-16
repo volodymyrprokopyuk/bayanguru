@@ -409,10 +409,9 @@ pieces:
   - { id: emgy, tit: Етюд F-dur,
       com: А. Сапалов, src: FBB2BZ1981,
       org: rus, sty: cus, gnr: stu, ton: fmj, frm: seq, bss: [frb, seq], lvl: elb }
-  # p. 91
-  # - { id: stpb, tit: Етюд F-dur,
-  #     com: В. Пятигорский, src: FBB2BZ1981,
-  #     org: rus, sty: cus, gnr: stu, ton: fmj, frm: arp, bss: [frb, arp], lvl: elb }
+  - { id: stpb, tit: Етюд F-dur,
+      com: В. Пятигорский, src: FBB2BZ1981,
+      org: rus, sty: cus, gnr: stu, ton: fmj, frm: arp, bss: [frb, arp], lvl: elb }
   # p. 93
   # - { id: r5uy, tit: Етюд G-dur,
   #     com: О. Мунтян, src: FBB2BZ1981,
