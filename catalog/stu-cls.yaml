@@ -412,10 +412,9 @@ pieces:
   - { id: stpb, tit: Етюд F-dur,
       com: В. Пятигорский, src: FBB2BZ1981,
       org: rus, sty: cus, gnr: stu, ton: fmj, frm: arp, bss: [frb, arp], lvl: elb }
-  # p. 93
-  # - { id: r5uy, tit: Етюд G-dur,
-  #     com: О. Мунтян, src: FBB2BZ1981,
-  #     org: rus, sty: cus, gnr: stu, ton: gmj, frm: scl, bss: [frb, in3], lvl: elb }
+  - { id: r5uy, tit: Етюд G-dur,
+      com: О. Мунтян, src: FBB2BZ1981,
+      org: rus, sty: cus, gnr: stu, ton: gmj, frm: scl, bss: [frb, in3], lvl: elb }
   - { id: ibmb, tit: Етюд C-dur,
       com: А. Зубарев, src: FBB2BZ1981,
       org: rus, sty: cus, gnr: stu, ton: cmj, frm: scl, bss: [frb, scl, in3], lvl: elb }
