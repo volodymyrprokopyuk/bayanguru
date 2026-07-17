@@ -26,7 +26,7 @@
   c=''8-. c-. bes-. bes-. | a-. f-. des-. bes-. | b4(-> c=')-. |
 
   <a= c>8-. r r4 | c8-. f-. e-. f-. | <bes, f'>-. r r4 |
-  e='8-. g-. fis-. g-. | d-. bes'-. a-. bes-. |
+  e='8-. g-. fis-. g-. | e-. bes'-. a-. bes-. |
   a='8-. bes-. c(-> bes) | g f e c | <c f>4 f,=-> |
 }
 {{ end }}
