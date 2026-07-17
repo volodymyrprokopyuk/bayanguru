@@ -19,7 +19,14 @@
 
 {{ define "leftHand" }}
 \relative {
-  \clef bass
+  \clef treble
   \key f \major
+  <f'=' a>8-.-\frBass r r4 | c8(-> f)-. e-. f-. | <c g'>-. r r4 |
+  e='8(-> g)-. fis-. g-. | e-. c-. a'( bes)-. |
+  c=''8-. c-. bes-. bes-. | a-. f-. des-. bes-. | b4(-> c=')-. |
+
+  <a= c>8-. r r4 | c8-. f-. e-. f-. | <bes, f'>-. r r4 |
+  e='8-. g-. fis-. g-. | d-. bes'-. a-. bes-. |
+  a='8-. bes-. c(-> bes) | g f e c | <c f>4 f,=-> |
 }
 {{ end }}
