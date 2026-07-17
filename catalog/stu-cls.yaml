@@ -424,10 +424,9 @@ pieces:
   - { id: spcw, tit: Етюд D-dur,
       com: Ю. Акимов, src: FBB2BZ1981,
       org: rus, sty: cls, gnr: stu, ton: dmj, frm: [arp, brk, in3], bss: [frb, arp, brk, in3], lvl: elb }
-  # p. 103
-  # - { id: vh5x, tit: Етюд C-dur,
-  #     com: В. Подгорний, src: FBB2BZ1981,
-  #     org: ukr, sty: cus, gnr: stu, ton: cmj, frm: [scl, cr5], bss: frb, lvl: elb }
+  - { id: vh5x, tit: Етюд C-dur,
+      com: В. Подгорний, src: FBB2BZ1981,
+      org: ukr, sty: cus, gnr: stu, ton: cmj, frm: [scl, cr5], bss: frb, lvl: elb }
   - { id: y8qb, tit: Етюд C-dur,
       com: В. Хаперський, src: FBB2BZ1981,
       org: ukr, sty: cus, gnr: stu, ton: cmj, frm: scl, bss: [frb, scl], lvl: elb }
