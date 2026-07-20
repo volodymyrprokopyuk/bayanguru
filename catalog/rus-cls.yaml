@@ -189,3 +189,7 @@ pieces:
   - { id: w7lt, tit: Ничто в полюшке не колышется, sub: rusfs,
       arr: А. Зубарев, src: FBB3BZ1982,
       org: rus, sty: flk, gnr: sng, ton: emi, frm: [vo2, in3, syn], bss: [frb, syn], lvl: elb }
+  # p. 46
+  # - { id: 43ui, tit: Грезы,
+  #     com: В. Пятигорский, src: FBB3BZ1982,
+  #     org: rus, sty: cus, gnr: pie, ton: gmi, frm: jmp, bss: [frb, vo2], lvl: elb }
