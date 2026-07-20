@@ -18,6 +18,14 @@
   \tuplet 3/2 { {{ .a }} d fis } \tuplet 3/2 { a=''8 fis a } |
 {{ end }}
 
+{{ define "lh1" }}
+  \rep {{ .a }} { d=8 <fis a> a, <fis'= a> | }
+{{ end }}
+
+{{ define "lh2" }}
+  \rep {{ .a }} { <d= a'>8-> r r4 | } \rep 4 { <a=, g'>8-> r r4 | }
+{{ end }}
+
 {{ define "rightHand" }}
 \relative {
   \tempo "Tempo di marcia"
@@ -38,7 +46,7 @@
     <g=' e'>4. <e g>8 | 8. <dis fis>16 <e g>8. <cis a'>16 | <d fis>2 |
     {{ template "rh2" (w `<fis=' a>4`) }}
     <fis=' ais>8. 16 <gis b>8 <ais cis> | <cis e>4 <b d> |
-    <d='' fis>8-> <cis e>8 <b d> <a cis> | <gis b> <fis a> <e gis> fis |
+    <d='' fis>8.-> <cis e>16 <b d>8 <a cis> | <gis b> <fis a> <e gis> fis |
     e='8. <fis d'>16 <e cis'>8 <d b'> | <cis a'>8 a'16-. a-. a8-. a16-. a-. |
     a='8-. g-. fis-. e='-. |
   }
@@ -55,6 +63,14 @@
   \clef bass
   \key d \major
   \rep 4 { R2 | }
-  <d= a'>8->-\frBass r r4 |
+  <d= a'>8->-\frBass r r4 | {{ template "lh2" (w `2`) }} | <d= fis>8-> r r4 |
+
+  {{ template "lh1" (w `2`) }} | \rep 5 { cis=8 <g' a> a, <g'= a> | }
+  {{ template "lh1" (w `3`) }} | \rep 2 { cis=8 <fis= ais> } |
+  b,=,8 <fis' b> d <fis b> | <fis b d>-> r r4 | R2 |
+  <e= gis d'>8 r r4 | a2~ | a8-. g-. fis-. e= |
+
+  {{ template "lh2" (w `3`) }} | <d= a'>8-> r r4 | R2 | R2 |
+  r4 ees,=,4-> | d=,-> r |
 }
 {{ end }}
