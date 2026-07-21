@@ -404,10 +404,9 @@ pieces:
   - { id: s2hf, tit: Ой зав'ю вінки, sub: ukrfs,
       arr: А. Должиков, src: FBB3BZ1982,
       org: ukr, sty: flk, gnr: sng, ton: fismi, frm: [vo2, in3, cr5], bss: [frb, in3], lvl: elb }
-  # p. 41
-  # - { id: davn, tit: Танець,
-  #     com: Л. Вільчик, src: FBB3BZ1982,
-  #     org: ukr, sty: cus, gnr: dnc, ton: gmi, frm: [in3, in6, cr5], bss: frb, lvl: elb }
+  - { id: davn, tit: Танець,
+      com: Л. Вільчик, src: FBB3BZ1982,
+      org: ukr, sty: cus, gnr: dnc, ton: gmi, frm: [in3, in6, cr5], bss: frb, lvl: elb }
   - { id: x6ez, tit: Козачок,
       arr: М. Різоль, src: FBB3BZ1982,
       org: ukr, sty: flk, gnr: koz, ton: [dmj, gmj], frm: [var, acc], bss: [frb, vo2, var, cr7], lvl: elc }
