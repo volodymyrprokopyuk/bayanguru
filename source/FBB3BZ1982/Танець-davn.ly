@@ -6,6 +6,12 @@
   <bes= g'>4\f <bes= d g>-- |
 {{ end }}
 
+{{ define "lh1" }}
+  {{ .a }} a8-. a-. | fis4 g8-. ees-. | ees'-. ees-. d-. <c d>-. |
+  <bes=~ d~>8 <g bes d> r g16( a | bes8) r a-. a-. | fis4 g8-. ees-. |
+  ees'='16( d c8 d) d,-. | g-. d-. g,=,4-- |
+{{ end }}
+
 {{ define "rightHand" }}
 \relative {
   \tempo "Allegro moderato"
@@ -35,6 +41,11 @@
 \relative {
   \clef bass
   \key g \minor
-  g=4-\frBass a8-. a-. | fis4 g8-. ees-. | ees'-. ees-. d-. <c d>-. |
+  {{ template "lh1" (w `g=4-\frBass`) }}
+
+  \rep 3 { ees'=4-- ees-- | bes8( f' g a=) | }
+  \duo { s2 | r4 d'='4 | } { ees=2( | d=) | }
+
+  {{ template "lh1" (w `g=4`) }}
 }
 {{ end }}
