@@ -414,7 +414,6 @@ pieces:
       com: А. Тихончук, src: FBB3BZ1982,
       org: ukr, sty: cus, gnr: pie, ton: cmj, frm: [arp, brk, tri], bss: [frb, arp, brk], lvl: elb }
   # FBB4BZ1983
-  # p. 4
-  # - { id: vfrm, tit: Дівочий танок,
-  #     com: Ю. Щуровський, src: FBB4BZ1983,
-  #     org: ukr, sty: cus, gnr: dnc, ton: ami, frm: mel, bss: frb, lvl: elb }
+  - { id: vfrm, tit: Дівочий танок,
+      com: Ю. Щуровський, src: FBB4BZ1983,
+      org: ukr, sty: cus, gnr: dnc, ton: ami, frm: mel, bss: frb, lvl: elb }
