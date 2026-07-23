@@ -192,3 +192,8 @@ pieces:
   - { id: 43ui, tit: Грезы,
       com: В. Пятигорский, src: FBB3BZ1982,
       org: rus, sty: cus, gnr: pie, ton: gmi, frm: jmp, bss: [frb, vo2], lvl: elb }
+  # FBB4BZ1983
+  # p. 5
+  # - { id: tyyk, tit: Бурре,
+  #     com: И. Шестириков, src: FBB4BZ1983,
+  #     org: rus, sty: cus, gnr: pie, ton: emi, frm: mel, bss: frb, lvl: elb }
