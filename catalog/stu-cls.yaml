@@ -458,10 +458,9 @@ pieces:
   - { id: pk9l, tit: Етюд C-dur,
       com: Б. Вольф, src: FBB3BZ1982,
       org: deu, sty: cls, gnr: stu, ton: cmj, frm: [arp, brk, cr5], bss: [frb, arp, brk, cr5], lvl: elb }
-  # p. 89
-  # - { id: 2dex, tit: Етюд G-dur,
-  #     com: В. Власов, src: FBB3BZ1982,
-  #     org: ukr, sty: cus, gnr: stu, ton: gmj, frm: [arp, dot, rep], bss: [frb, vo2], lvl: elb }
+  - { id: 2dex, tit: Етюд G-dur,
+      com: В. Власов, src: FBB3BZ1982,
+      org: ukr, sty: cus, gnr: stu, ton: gmj, frm: [arp, dot, rep], bss: [frb, vo2], lvl: elb }
   - { id: zp6s, tit: Етюд D-dur,
       com: В. Хаперський, src: FBB3BZ1982,
       org: ukr, sty: cus, gnr: stu, ton: dmj, frm: [scl], bss: [frb, scl], lvl: elb }
