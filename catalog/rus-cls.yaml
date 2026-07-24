@@ -196,3 +196,7 @@ pieces:
   - { id: tyyk, tit: Бурре,
       com: И. Шестириков, src: FBB4BZ1983,
       org: rus, sty: cus, gnr: pie, ton: emi, frm: mel, bss: frb, lvl: elb }
+  # p. 11
+  # - { id: w2hd, tit: На ярмарке,
+  #     com: В. Пятигорский, src: FBB4BZ1983,
+  #     org: rus, sty: cus, gnr: pie, ton: cmj, frm: [var, in6], bss: [frb, in3, cr5], lvl: elb }

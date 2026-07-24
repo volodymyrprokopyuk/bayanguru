@@ -417,3 +417,11 @@ pieces:
   - { id: vfrm, tit: Дівочий танок,
       com: Ю. Щуровський, src: FBB4BZ1983,
       org: ukr, sty: cus, gnr: dnc, ton: ami, frm: mel, bss: frb, lvl: elb }
+  # p. 10
+  # - { id: 3h8n, tit: "Ой за гаєм, гаєм", sub: ukrfs,
+  #     arr: В. Подгорний, src: FBB4BZ1983,
+  #     org: ukr, sty: flk, gnr: sng, ton: [gmj, gmi], frm: [vo2, in3, in6, cr5], bss: [frb, vo2, cr5], lvl: elb }
+  # p. 18
+  # - { id: 2t0k, tit: Мені сумно,
+  #     com: Л. Вільчик, src: FBB4BZ1983,
+  #     org: ukr, sty: cus, gnr: pie, ton: dmi, frm: [vo2, dot], bss: [frb, vo2, jmp], lvl: elb }
