@@ -30,7 +30,7 @@
 \relative {
   \clef treble
   \key c \major
-  {{ template "lh1" (w `c'='8(`) }} {{ template "lh2" }}
+  {{ template "lh1" (w `c'='8(-\frBass`) }} {{ template "lh2" }}
   {{ template "lh1" (w `c='8(`) }} | d='8( g b d, fis a | g a g f e d=') |
 
   {{ template "lh1" (w `c='8(`) }} {{ template "lh2" }}
