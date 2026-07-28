@@ -23,7 +23,7 @@
   } \keyCancelBarChange \bar "||"
 
   \key g \major
-  \duo { g'='8(\p a b c) | d4 g | e8( e g e) | d4 b=' | }
+  \duo { g'='8(\f a b c) | d4 g | e8( e g e) | d4 b=' | }
   { s4 g'='8 r | g4 <g b> | c8 c c c | b4 g=' | }
   r8 <g'=' a e'>8 r8 8 | r <g b d>8 r8 8 | r <fis a d>8 r8 8 |
   r8 <g=' b d>8 r8 8 |
