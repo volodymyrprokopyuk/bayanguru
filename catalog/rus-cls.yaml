@@ -196,7 +196,14 @@ pieces:
   - { id: tyyk, tit: Бурре,
       com: И. Шестириков, src: FBB4BZ1983,
       org: rus, sty: cus, gnr: pie, ton: emi, frm: mel, bss: frb, lvl: elb }
-  # p. 11
-  # - { id: w2hd, tit: На ярмарке,
-  #     com: В. Пятигорский, src: FBB4BZ1983,
-  #     org: rus, sty: cus, gnr: pie, ton: cmj, frm: [var, in6], bss: [frb, in3, cr5], lvl: elb }
+  - { id: w2hd, tit: На ярмарке,
+      com: В. Пятигорский, src: FBB4BZ1983,
+      org: rus, sty: cus, gnr: pie, ton: cmj, frm: [var, in6], bss: [frb, in3, cr5], lvl: elb }
+  # p. 29
+  # - { id: 346l, tit: "Не кукуй, кукушечка", sub: rusfs,
+  #     arr: Е. Дербенко, src: FBB4BZ1983,
+  #     org: rus, sty: flk, gnr: sng, ton: dmi, frm: [vo2, syn], bss: frb, lvl: elb }
+  # p. 30
+  # - { id: tv69, tit: За горою у колодца, sub: rusfs,
+  #     arr: С. Булатов, src: FBB4BZ1983,
+  #     org: rus, sty: flk, gnr: sng, ton: dmi, frm: vo2, bss: frb, lvl: elb }
