@@ -473,3 +473,16 @@ pieces:
   - { id: f0py, tit: Етюд C-dur,
       com: М. Різоль, src: FBB3BZ1982,
       org: ukr, sty: cus, gnr: stu, ton: cmj, frm: [in3, in8, dot], bss: [frb, scl, jmp], lvl: elb }
+  # FBB4BZ1983
+  # p. 81
+  # - { id: xda1, tit: Етюд A-moll,
+  #     com: Л. Вільчик, src: FBB4BZ1983,
+  #     org: ukr, sty: cus, gnr: stu, ton: ami, frm: [scl, arp], bss: [frb, scl], lvl: elb }
+  # p. 88
+  # - { id: juaw, tit: Етюд F-dur,
+  #     com: Е. Дербенко, src: FBB4BZ1983,
+  #     org: rus, sty: cus, gnr: stu, ton: fmj, frm: syn, bss: [frb, in3], lvl: elb }
+  # p. 94
+  # - { id: 9mxq, tit: Етюд C-dur,
+  #     com: В. Дикусаров, src: FBB4BZ1983,
+  #     org: rus, sty: cus, gnr: stu, ton: cmj, frm: scl, bss: [frb, vo2], lvl: elb }
