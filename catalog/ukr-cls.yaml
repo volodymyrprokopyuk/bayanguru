@@ -423,10 +423,9 @@ pieces:
   - { id: 3h8n, tit: "Ой за гаєм, гаєм", sub: ukrfs,
       arr: В. Подгорний, src: FBB4BZ1983,
       org: ukr, sty: flk, gnr: sng, ton: [gmj, gmi], frm: [vo2, in3, in6, cr5], bss: [frb, vo2, cr5], lvl: elb }
-  # p. 18
-  # - { id: 2t0k, tit: Мені сумно,
-  #     com: Л. Вільчик, src: FBB4BZ1983,
-  #     org: ukr, sty: cus, gnr: pie, ton: dmi, frm: [vo2, dot], bss: [frb, vo2, jmp], lvl: elb }
+  - { id: 2t0k, tit: Мені сумно,
+      com: Л. Вільчик, src: FBB4BZ1983,
+      org: ukr, sty: cus, gnr: pie, ton: dmi, frm: [vo2, dot], bss: [frb, vo2, jmp], lvl: elb }
   # p. 19
   # - { id: ccjc, tit: Табакерка,
   #     com: С. Чапкій, src: FBB4BZ1983,
@@ -448,3 +447,7 @@ pieces:
   # - { id: vdym, tit: Ми з товаришем удвох,
   #     arr: М. Чайкін, src: FBB5BZ1984,
   #     org: ukr, sty: cus, gnr: pie, ton: gmj, frm: vo2, bss: stb, lvl: elb }
+  # p. 39
+  # - { id: p45u, tit: Веснянка,
+  #     arr: Г. Шевчук, src: FBB5BZ1984,
+  #     org: ukr, sty: cus, gnr: ves, ton: bmi, frm: var, bss: [frb, var vo2], lvl: elb }
