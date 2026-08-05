@@ -451,3 +451,7 @@ pieces:
   # - { id: p45u, tit: Веснянка,
   #     arr: Г. Шевчук, src: FBB5BZ1984,
   #     org: ukr, sty: cus, gnr: ves, ton: bmi, frm: var, bss: [frb, var vo2], lvl: elb }
+  # p. 43
+  # - { id: i3vx, tit: Піонерська святкова,
+  #     arr: І. Яшкевич, src: FBB5BZ1984,
+  #     org: ukr, sty: cus, gnr: pie, ton: cmj, frm: [in3, in6], bss: [frb, in8], lvl: elb }
