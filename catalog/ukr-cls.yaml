@@ -442,6 +442,10 @@ pieces:
   #     arr: В. Троценко, src: FBB4BZ1983,
   #     org: ukr, sty: flk, gnr: plk, ton: ami, frm: in3, bss: [frb, in3], lvl: elb }
   # FBB5BZ1984
+  # p. 15
+  # - { id: is9b, tit: Ноктюрн,
+  #     arr: В. Дикусаров, src: FBB5BZ1984,
+  #     org: ukr, sty: cus, gnr: pie, ton: cismi, frm: [in3, vo2], bss: [frb, vo2, in3], lvl: elc }
   # p. 27
   # - { id: vdym, tit: Ми з товаришем удвох,
   #     arr: М. Чайкін, src: FBB5BZ1984,
@@ -458,3 +462,7 @@ pieces:
   # - { id: hbcj, tit: Колискова,
   #     arr: Л. Вільчик, src: FBB5BZ1984,
   #     org: ukr, sty: cus, gnr: lul, ton: gmi, frm: vo2, bss: [frb, vo2], lvl: elb }
+  # p. 60
+  # - { id: fdus, tit: Перепілка, sub: Український танок,
+  #     arr: М. Різоль, src: FBB5BZ1984,
+  #     org: ukr, sty: flk, gnr: dnc, ton: gmi, frm: vo2, bss: frb, lvl: elb }

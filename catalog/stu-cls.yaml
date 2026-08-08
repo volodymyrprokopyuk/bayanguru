@@ -485,4 +485,13 @@ pieces:
   # p. 94
   # - { id: 9mxq, tit: Етюд C-dur,
   #     com: В. Дикусаров, src: FBB4BZ1983,
-  #     org: rus, sty: cus, gnr: stu, ton: cmj, frm: scl, bss: [frb, vo2], lvl: elb }
+  #     org: ukr, sty: cus, gnr: stu, ton: cmj, frm: scl, bss: [frb, vo2], lvl: elb }
+  # FBB5BZ1984
+  # p. 82
+  # - { id: c8km, tit: Етюд G-moll,
+  #     com: В. Дикусаров, src: FBB5BZ1984,
+  #     org: ukr, sty: cus, gnr: stu, ton: gmi, frm: [arp, cr5, syn], bss: [frb, arp], lvl: elb }
+  # p. 83
+  # - { id: ef9k, tit: Етюд D-moll,
+  #     com: І. Бурий, src: FBB5BZ1984,
+  #     org: ukr, sty: cus, gnr: stu, ton: dmi, frm: [arp, brk, cr6, dot], bss: [frb, arp, in3, in5, cr7], lvl: elc }
