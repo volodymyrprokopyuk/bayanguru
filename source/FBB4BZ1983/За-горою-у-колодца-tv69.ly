@@ -24,7 +24,7 @@
       {{ template "rh1a" (w `^\tRit`) }}| d'=''2~\> | d4~ \af 8\! d=''8 %
     } {
       s2 | d'='2~ | d4. d8 | <c f>2 | g'8 g f e | f4. e8 | <f a>4 f~ | f2~ |
-      {{ template "lh1a" }} | d='2 | f4 f~ | f2 |
+      {{ template "lh1a" }} | d='2 | f4 f~ | f2~ |
       {{ template "lh1a" }} | d='2~ | d4~ d='8 %
     } r8 |
   }
