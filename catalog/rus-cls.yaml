@@ -202,7 +202,6 @@ pieces:
   - { id: 346l, tit: "Не кукуй, кукушечка", sub: rusfs,
       arr: Е. Дербенко, src: FBB4BZ1983,
       org: rus, sty: flk, gnr: sng, ton: dmi, frm: [vo2, syn], bss: frb, lvl: elb }
-  # p. 30
-  # - { id: tv69, tit: За горою у колодца, sub: rusfs,
-  #     arr: С. Булатов, src: FBB4BZ1983,
-  #     org: rus, sty: flk, gnr: sng, ton: dmi, frm: vo2, bss: frb, lvl: elb }
+  - { id: tv69, tit: За горою у колодца, sub: rusfs,
+      arr: С. Булатов, src: FBB4BZ1983,
+      org: rus, sty: flk, gnr: sng, ton: dmi, frm: vo2, bss: frb, lvl: elb }
