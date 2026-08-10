@@ -21,8 +21,8 @@
   \trio {
     a'='4( g8 a bes4 a8 g | a4. bes8 g4 g | d'1~\> |
     \af 1\! d='')\pp \bar "|."
-  } { c'='2\f bes | c2 e4 e | d1~ | d=' | }
-  { f'='1_~ | f2 s2 | a1_~ | a=' | }
+  } { c'='2\f bes | c1 | d~ | d=' | }
+  { f'='1_~ | f2 \stemDown e4 e | a1_~ | a=' | }
 }
 {{ end }}
 
