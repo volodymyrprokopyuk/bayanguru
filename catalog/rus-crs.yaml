@@ -35,3 +35,7 @@ pieces: []
   # - { id: oin8, tit: Колыбельная,
   #     arr: А. Холминов, src: CLFBBS1979,
   #     org: rus, sty: cus, gnr: lul, ton: fmj, frm: mel, bss: frb, lvl: elb }
+  # p. 75
+  # - { id: izd7, tit: На качелях,
+  #     arr: А. Герчанинов, src: CLFBBS1979,
+  #     org: rus, sty: cus, gnr: pie, ton: cmj, frm: [in3, dot], bss: [frb, cr5], lvl: elb }
