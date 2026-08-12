@@ -6,6 +6,18 @@ pieces:
   - { id: 5zzk, tit: Етюд B-moll,
       com: А. Судариков, src: CLFBBS1979,
       org: rus, sty: cus, gnr: stu, ton: [bmi, amj], frm: [vo2, in3], bss: [frb, scl, in3], lvl: elb }
+  # p. 87
+  # - { id: vx01, tit: Етюд A-moll,
+  #     com: А. Розе, src: CLFBBS1979,
+  #     org: aut, sty: cls, gnr: stu, ton: ami, frm: [arb, brk], bss: [frb, arp, brk], lvl: elb }
+  # p. 89
+  # - { id: lbbp, tit: Етюд Fis-moll,
+  #     com: Е. Мегюль, src: CLFBBS1979,
+  #     org: fra, sty: cls, gnr: stu, ton: fismi, frm: arb, bss: [frb, arp, brk], lvl: elb }
   - { id: auxu, tit: Етюд C-dur,
       com: А. Гедике, src: CLFBBS1979,
       org: rus, sty: cus, gnr: stu, ton: cmj, frm: [in3, in4, in5], bss: [frb, scl], lvl: elb }
+  # p. 93
+  # - { id: 4axf, tit: Етюд C-moll, sub: Канон на українську тему,
+  #     com: В. Несторов, src: CLFBBS1979,
+  #     org: rus, sty: cus, gnr: stu, ton: cmi, frm: scl, bss: [frb, scl], lvl: elb }

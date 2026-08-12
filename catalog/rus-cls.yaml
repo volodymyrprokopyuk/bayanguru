@@ -205,3 +205,6 @@ pieces:
   - { id: tv69, tit: За горою у колодца, sub: rusfs,
       arr: С. Булатов, src: FBB4BZ1983,
       org: rus, sty: flk, gnr: sng, ton: dmi, frm: vo2, bss: frb, lvl: elb }
+  - { id: 43pq, tit: Рассказ,
+      com: Н. Раков, src: FBB4BZ1983,
+      org: rus, sty: cus, gnr: pie, ton: ami, frm: vo2, bss: [frb, vo2], lvl: elc }
