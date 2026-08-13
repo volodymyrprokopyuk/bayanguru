@@ -21,3 +21,7 @@ pieces:
   # - { id: 4axf, tit: Етюд C-moll, sub: Канон на українську тему,
   #     com: В. Несторов, src: CLFBBS1979,
   #     org: rus, sty: cus, gnr: stu, ton: cmi, frm: scl, bss: [frb, scl], lvl: elb }
+  # p. 96
+  # - { id: 1agz, tit: Етюд G-dur,
+  #     com: А. Суханов, src: CLFBBS1979,
+  #     org: rus, sty: cus, gnr: stu, ton: gmj, frm: [scl, seq, syn], bss: [frb, scl, seq, in3], lvl: elb }

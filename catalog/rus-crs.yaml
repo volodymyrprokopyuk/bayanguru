@@ -17,7 +17,7 @@ pieces: []
   #     org: rus, sty: cus, gnr: sng, ton: fmj, frm: mel, bss: frb, lvl: ela }
   # p. 49
   # - { id: ypj1, tit: Русская песня,
-  #     com: Е. Аглинцева, src: CLFBBS1979,
+  #     com: Е. Аглинцева, ipr: А. Сурков, src: CLFBBS1979,
   #     org: rus, sty: cus, gnr: sng, ton: ami, frm: mel, bss: frb, lvl: ela }
   # p. 50
   # - { id: rne4, tit: Ивушка, sub: rusfs,
@@ -25,11 +25,11 @@ pieces: []
   #     org: rus, sty: flk, gnr: sng, ton: emi, frm: mel, bss: frb, lvl: ela }
   # p. 53
   # - { id: oq4y, tit: Песенка,
-  #     arr: Я. Кепитис, src: CLFBBS1979,
+  #     arr: Я. Кепитис, ipr: А. Сурков, src: CLFBBS1979,
   #     org: rus, sty: cus, gnr: can, ton: emi, frm: mel, bss: frb, lvl: ela }
   # p. 53
   # - { id: g096, tit: Утро в лесу,
-  #     arr: Я. Кепитис, src: CLFBBS1979,
+  #     arr: Я. Кепитис, ipr: А. Сурков, src: CLFBBS1979,
   #     org: rus, sty: cus, gnr: sng, ton: fmj, frm: mel, bss: frb, lvl: ela }
   # p. 60
   # - { id: oin8, tit: Колыбельная,
@@ -37,5 +37,5 @@ pieces: []
   #     org: rus, sty: cus, gnr: lul, ton: fmj, frm: mel, bss: frb, lvl: elb }
   # p. 75
   # - { id: izd7, tit: На качелях,
-  #     arr: А. Герчанинов, src: CLFBBS1979,
+  #     arr: А. Герчанинов, ipr: А. Сурков, src: CLFBBS1979,
   #     org: rus, sty: cus, gnr: pie, ton: cmj, frm: [in3, dot], bss: [frb, cr5], lvl: elb }
