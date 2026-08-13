@@ -28,6 +28,8 @@
     <a'=' c>2~ | 2 | b4(-- a) | a2~ | a | g4(-- fis) | dis2 |
     g='4( fis) | s2 | c4( b) | a2 | s2 | b=4. %
   } r8 |
+
+  r8\p^\tATem a'='( c e | d f e c | b d c b) |
 }
 {{ end }}
 
