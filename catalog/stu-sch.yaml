@@ -13,6 +13,10 @@ pieces:
   # - { id: 5z6e, tit: Етюд F-dur,
   #     com: Л. Шітте, src: BSO1981,
   #     org: dnk, sty: cls, gnr: stu, ton: fmj, frm: arp, bss: stb, lvl: ela }
+  # p. 47
+  # - { id: ud8w, tit: Етюд G-dur,
+  #     com: Г. Беренс, src: BSO1981,
+  #     org: swe, sty: cls, gnr: stu, ton: gmj, frm: arp, bss: stb, lvl: elb }
   - { id: uuc1, tit: Етюд D-moll,
       com: Л. Шітте, src: BSO1981,
       org: dnk, sty: cus, gnr: stu, ton: dmi, frm: [scl, tu3], bss: stb, lvl: ela }

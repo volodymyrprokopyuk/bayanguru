@@ -56,3 +56,11 @@ pieces:
   # - { id: ap3m, tit: "Ой хмелю, мій хмелю", sub: ukrfs,
   #     arr: М. Різоль, src: UFSFBR1978,
   #     org: ukr, sty: flk, gnr: sng, ton: fmi, frm: [in3, cr5], bss: [stb, pub], lvl: elb }
+  # p. 23
+  # - { id: ii5k, tit: "Лугом іду, коня веду", sub: ukrfs,
+  #     arr: М. Різоль, src: UFSFBR1978,
+  #     org: ukr, sty: flk, gnr: sng, ton: fmj, frm: [vo2, in3], bss: [stb, pub], lvl: elb }
+  # p. 24
+  # - { id: ii5k, tit: "Ой гиля-гиля, гусоньки, на став", sub: ukrfs,
+  #     arr: М. Різоль, src: UFSFBR1978,
+  #     org: ukr, sty: flk, gnr: sng, ton: emi, frm: [var, vo2, in3, cr5, cr7], bss: [stb, pub], lvl: elc }

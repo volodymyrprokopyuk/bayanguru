@@ -44,6 +44,10 @@ pieces:
       arr: В. Куканов, src: BSN1985,
       org: cze, sty: flk, gnr: lul, ton: gmi, frm: [cr5, syn], bss: [stb, pub], lvl: elb }
   # BSO1981
+  # p. 58
+  # - { id: dwyz, tit: Пастух, sub: czefs,
+  #     src: BSO1981,
+  #     org: cze, sty: flk, gnr: sng, ton: gmj, frm: [in3, syn], bss: stb, lvl: elb }
   - { id: s6k4, tit: Мазурка,
       com: Г. Венявський, src: BSO1981,
       org: pol, sty: cus, gnr: dnc, ton: [ami, cmj], frm: [cr5, dot, acc, tri, mor], bss: stb, lvl: elb }
