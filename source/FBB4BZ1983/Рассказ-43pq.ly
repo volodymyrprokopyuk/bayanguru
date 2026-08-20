@@ -77,9 +77,9 @@
   r8 \duo { f,=,8( c'=4) | } { f,=,4. | }
   {{ template "rh1" }} \clef treble |
 
-  \duo { r4 e'='4( | f g | f e8 d=') | } { a=2~ | a~ | a= | }
+  \duo { b'='4 \rest e,='4( | f g | f e8 d=') | } { a=2~ | a~ | a= | }
   r4 b=4( | fis gis=) \clef bass |
-  \duo { r4 e=4( | f g | fis f8 e=) | } { a,=,2~ | a~ | a=, | }
+  \duo { g=4 \rest e=4( | f g | fis f8 e=) | } { a,=,2~ | a~ | a=, | }
   R2 | R2 | <dis= f>2 |
   \duo { r4 <a e'>4~ | 2 \fermata | } { <a,=, e'>2~ | 2 \fermata | }
 
