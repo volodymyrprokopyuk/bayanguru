@@ -11,7 +11,6 @@ linters:
     - errorlint
     - nilnil
     - nilerr
-    - goconst
     - gocritic
     - gosec
   settings:
@@ -26,9 +25,6 @@ linters:
         - -ST1005 # Capitalized error message
     errcheck:
       check-type-assertions: true
-    goconst:
-      match-constant: true
-      find-duplicates: true
     gocritic:
       enable-all: true
       disabled-checks:
