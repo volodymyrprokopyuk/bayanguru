@@ -82,5 +82,13 @@
 \relative {
   \clef bass
   \key g \major
+  <g,=, d'>8-\frBass r8 8_ \aSta r | \rep 2 { <g=, d'>8 r8 8 r8 | } | 8 8 8 r8 |
+  \rep 2 { d'=8 d' a d | g, d' g, r | } | g d g,=, r |
+
+  g'=8 d' <c e>4-> | g8 d' a d | g, d' <c e>4-> | g8 b d d,= | g d' g,= r |
+  \duo { b=4 a= | } { g=8 d fis d= | } | g8 d' <c e>4-> |
+  g=8 d' a d | g, d' g, r | g d' g,= r |
+
+  \rep 3 { <g,=, d'>8 r8 8 r8 | } | 8 8 8 r8 | <d' a'> r <g,=, g'>4-> |
 }
 {{ end }}
