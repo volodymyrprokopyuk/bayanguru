@@ -376,10 +376,9 @@ pieces:
   - { id: m01v, tit: Гра в м'ячик,
       com: К. Мясков, src: FBB2BZ1981,
       org: ukr, sty: cus, gnr: pie, ton: gmj, frm: [in2, acc], bss: [frb, in2, in3], lvl: elb }
-  # p. 66
-  # - { id: f1jx, tit: Танець ляльок,
-  #     com: В. Дикусаров, src: FBB2BZ1981,
-  #     org: ukr, sty: cus, gnr: pie, ton: amj, frm: [in3, in4, in6], bss: [frb, in3], lvl: elb }
+  - { id: f1jx, tit: Танець ляльок,
+      com: В. Дикусаров, src: FBB2BZ1981,
+      org: ukr, sty: cus, gnr: pie, ton: amj, frm: [in3, in4, in6], bss: [frb, in3], lvl: elb }
   # FBB3BZ1982
   - { id: ltfu, tit: Поліфонічна п'єса,
       com: Ю. Щуровський, src: FBB3BZ1982,
