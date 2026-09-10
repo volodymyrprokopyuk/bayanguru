@@ -438,10 +438,9 @@ pieces:
   - { id: y01l, tit: Українська колискова,
       arr: К. Сорокин, src: FBB4BZ1983,
       org: ukr, sty: flk, gnr: lul, ton: ami, frm: vo2, bss: [frb, vo2], lvl: elb }
-  # p. 75
-  # - { id: 8c0m, tit: Українська полька,
-  #     arr: В. Троценко, src: FBB4BZ1983,
-  #     org: ukr, sty: flk, gnr: plk, ton: ami, frm: in3, bss: [frb, in3], lvl: elb }
+  - { id: 8c0m, tit: Українська полька,
+      arr: В. Троценко, src: FBB4BZ1983,
+      org: ukr, sty: flk, gnr: plk, ton: ami, frm: in3, bss: [frb, in3], lvl: elb }
   # FBB5BZ1984
   # p. 15
   # - { id: is9b, tit: Ноктюрн,
