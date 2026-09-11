@@ -442,7 +442,6 @@ pieces:
       arr: В. Троценко, src: FBB4BZ1983,
       org: ukr, sty: flk, gnr: plk, ton: ami, frm: in3, bss: [frb, in3], lvl: elb }
   # FBB5BZ1984
-  # p. 15
   # - { id: is9b, tit: Ноктюрн,
   #     arr: В. Дикусаров, src: FBB5BZ1984,
   #     org: ukr, sty: cus, gnr: pie, ton: cismi, frm: [in3, vo2], bss: [frb, vo2, in3], lvl: elc }
