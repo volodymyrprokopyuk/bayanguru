@@ -3,7 +3,7 @@
 {{ end }}
 
 {{ define "rh1b" }}
-  g='8-. e-.  g16( fis g e' | f,8)-. d-. f16( e f d'='' |
+  g='8-. e-.  g16( fis g e | f8)-. d-. f16( e f d=' |
 {{ end }}
 
 {{ define "rh2a" }}
@@ -47,17 +47,17 @@
     {{ template "rh2a" (w `e=''8(` `g=''`) }} |
     {{ template "rh3a" (w `f=''8` `d='')`) }}
     {{ template "rh2a" (w `e=''8(` `g='')`) }} |
-    f=''16( e dis e f fis g gis | a4)-> c,=''-> \bar "|."
+    f=''16( e dis e f fis g gis | a4)-> a,='-> \bar "|."
   } {
     g'='4 a | {{ template "rh1b" }}
-    g,='8)-. e-. e16( f g a | g4) a |
-    {{ template "rh1b" }} | e,='8)-. e-. c='4 |
+    g='8)-. e-. e16( f g a | g4) a |
+    {{ template "rh1b" }} | e='8)-. e-. c='4 |
 
     {{ template "rh2b" }} {{ template "rh3b" (w `a=8(` `a=4)`) }}
     {{ template "rh2b" }} | gis4 d'8 b | c16( b c d e d e f) |
-    e='8( e' d c | b a~ a4) | {{ template "rh3b" (w `a='8(` `a='4)`) }}
+    c'=''8( e d c | b a~ a4) | {{ template "rh3b" (w `a='8(` `a='4)`) }}
 
-    c=''8( e d c | b a~ a4) | <b d>2 | <a c>4-> <c,=' e a>-> |
+    c=''8( e d c | b a~ a4) | <b d>2 | <a c>4-> <a,= c e>-> |
   }
 }
 {{ end }}
