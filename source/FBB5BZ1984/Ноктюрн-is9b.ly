@@ -1,3 +1,11 @@
+{{ define "lh1a" }}
+  r4 <e= gis>4 | r a | r <a b> | r <gis b> | r <e a> | r <fis= a> |
+{{ end }}
+
+{{ define "lh1b" }}
+  cis=2 | fis | dis | e | a, | dis= |
+{{ end }}
+
 {{ define "rightHand" }}
 \relative {
   \tempo Moderato
@@ -49,8 +57,17 @@
   fis=8\( fisis gis a | ais4 b | bis e | cis8 a gis e=\) |
 
   \duo {
-    r4 <e= gis>4 | r a | r <a b> | r <gis b> | r <e a> | r <fis a> |
+    {{ template "lh1a" }}
     r4 <dis= gis>4 | r <e gis>8 d \rest | r4 <gis cis> | r <gis= b> |
-  } { cis=2 | fis | dis | e | a, | dis | gis, | cis4~ cis8 s8 | cis2 | dis= | }
+  } { {{ template "lh1b" (w ``) }} | gis,=, | cis4~ cis8 s8 | cis2 | dis= | }
+  dis=4( b'8 ais | gis e dis b) | cis4\( cisis | dis8 gis b4 |
+  ais=4 a | gis8 ais b bis\) | dis4( a | ais b8 ais) |
+  a=4( fis | e gis8 bis) | cis4\( cisis | dis8 e dis cis | b4 ais |
+  gis=8 fis e dis=\) |
+
+  \duo { {{ template "lh1a" }} } { {{ template "lh1b" }} }
+  gis,=,4( dis'8 fis | fisis gis ais bis) | cis( b ais a |
+  gis=8 g fis4 | fisis gis | a8) cis,-- dis-- eis-- |
+  fis=8\( fisis gis a | ais4 b | bis e | cis4~ cis='8\) r |
 }
 {{ end }}
