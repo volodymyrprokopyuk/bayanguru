@@ -76,5 +76,22 @@
   \clef bass
   \key g \major
   c+cM!8->-\stBass r8 r4 | a+c@M!8-> r8 r4 | d+d7!8-> r8 r4 | R2 \fermata |
+
+  g,=,8-. gM!4-- gM8-. | g-. a@M!4-- aM8-. | fis d@M! d'8 dM! | g, gM! gM r |
+  b=,8-. g@M!4-- gM8-. | c-. a@m!4-- am8-. | e a@m! d8 a@m! | g,8 gM! gM r |
+  r8 g@M!8-. r8 gM-. | r c@M!-. r8 cM8-. | r d@7!-. r8 d7-. | r g@M!-. r8 gM-. |
+  b=,8-. g@M!4-- gM8-. | c-. a@m!4-- am8-. | a am! d a@m! | g,=,8 gM! gM r |
+
+  r8 e'=8[( em!]) r | r e[( fis@M!) fisM!8]-. | r e[( a@m!]) r8 | r e[( em!) em]-. |
+  r8 c=8[( cM!]) r | r g[( gM!) gM]-. | r a[( am!]) r | r b[( b7!])-> r |
+  r8 g=,8[( gM!) gM]-. | r a-. b-. b7!-. | r e=[-. em!]-> r |
+
+  r8 g@M!8-. r8 gM-. | r a@7!-. r8 a78-. | r d@7!-. r8 d7-. | r g@M!-. r8 gM-. |
+  b=,8-. g@M!4-- gM8-. | c-. a@m!4-- am8-. | e em! d a@m! | g,=,8 gM! gM r |
+
+  d'=4( g,) | a( e') | fis8-. e-. d-. r | g, gM! gM r |
+  d'=4( g,) | a( e') | d8-. e-. fis-. r | g,=, gM! gM r |
+
+  c+cM!8-> r8 r4 | a+c@M!8-> r8 r4 | d+d7!8-> r8 r4 | g+gM!8 r g+gM-> r |
 }
 {{ end }}
