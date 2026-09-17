@@ -448,10 +448,9 @@ pieces:
   - { id: vdym, tit: Ми з товаришем удвох,
       com: М. Чайкін, src: FBB5BZ1984,
       org: ukr, sty: cus, gnr: pie, ton: gmj, frm: vo2, bss: stb, lvl: elb }
-  # p. 39
-  # - { id: p45u, tit: Веснянка,
-  #     com: Г. Шевчук, src: FBB5BZ1984,
-  #     org: ukr, sty: cus, gnr: ves, ton: bmi, frm: var, bss: [frb, var vo2], lvl: elb }
+  - { id: p45u, tit: Веснянка,
+      com: Г. Шевчук, src: FBB5BZ1984,
+      org: ukr, sty: cus, gnr: ves, ton: bmi, frm: var, bss: [frb, var vo2], lvl: elb }
   # p. 43
   # - { id: i3vx, tit: Піонерська святкова,
   #     com: І. Яшкевич, src: FBB5BZ1984,
