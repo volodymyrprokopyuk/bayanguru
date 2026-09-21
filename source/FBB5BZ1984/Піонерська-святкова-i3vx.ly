@@ -11,6 +11,14 @@
   <d,=' g>8\< b' d g) \af 4\! <b,=' g'>4-- %
 {{ end }}
 
+{{ define "lh1" }}
+  {{ .a }} g)-. r4 <c g'>8(-> g)-. r4 |
+  r8 a=8-. b-. c-. d(-> c)-. b-. a-. |
+  \rep 2 { <g= d'>8(-> d=)-. r4 } | r8 g-. a-. b-. c( b a g) |
+  <f= c'>2(~ 8 a c f) | <c, c'>2(~ 8 e g c) | <g= b>2. d'4 |
+  r8 d,=8-. e-. fis-. g( f e d) | <c c'>2(~ 8 e g c=') |
+{{ end }}
+
 {{ define "rightHand" }}
 \relative {
   \tempo "Tempo di marcia"
@@ -72,18 +80,31 @@
   \clef bass
   \key c \major
   \partial 4 { r4 | }
-  <c'=' g'>8(->-\frBass g)-. r4 <c g'>8(-> g)-. r4 |
-  r8 a=8-. b-. c-. d(-> c)-. b-. a-. |
-  \rep 2 { <g= d'>8(-> d=)-. r4 } | r8 g-. a-. b-. c( b a g) |
-  <f= c'>2(~ 8 a c f) | <c, c'>2(~ 8 e g c) | <g b>2. d'4 |
-  r8 d,=8-. e-. fis-. g( f e d) | <c c'>2(~ 8 e g c) |
+  {{ template "lh1" (w `<c'=' g'>8(->-\frBass`) }}
   <g= b>2(~ 8 d' b g) | d2-> e4-- fis-- | g-- g,-- g'=-- r |
 
   d=8( a' fis a fis a) e( fis | g d' b d g, d') a( d |
   d,=8 d' c d a d) fis,( d' | g, g' fis e d) r r4 |
-  r8 c='8( c e fis g a d, | g fis f e ees d) a( b |
+  r8 c='8( d e fis g a d, | g fis f e ees d) a( b |
   c='8 cis d4) e( fis | g) fis-- e-- d-- |
   c='8( c, d e fis g a d | g, d' g fis f e) a,( b |
-  c='8 cis d4) d,~ <d a'> | \rep 2 { g=4-- d-- g,=,-- r | }
+  c='8 cis d4) d,_~ <d a'> | \rep 2 { g=4-- d-- g,=,-- r | }
+
+  r8 e'=( fis g a d,) r4 | r8 fis( g a bes4) r |
+  \rep 2 { <g= d'>8(-> d=)-. r4 } | d8( ees f fis g d) r4 |
+  \rep 2 { <c'=' g'>8(-> g=) r4 } | g8( a b c d g,) r4 |
+  r8 g=8~-> g4~ g8 fis~-> fis4~ | fis8 f~-> f4~ f8 ees~-> ees4 |
+  d=2_~-> <d a' d> | g8 r f'4( e d=') |
+
+  {{ template "lh1" (w `<c=' g'>8(->` `<g= b>2`) }}
+  <g= b>2 f'8( e d c) | b(-> a) g f e d c g | e4-- c'-- c,=, r |
+  g''=8( d' b d g, d') a( b | c g' e g c, g') d( g |
+  g,=8 g' f g d g) b,( g' | c, g a b c b a g) |
+  r8 f=8( g a b c d g,= \clef treble | c='8 g' c b bes a) d,( e | f fis=') %
+  \duo { g'='2.~ | g=' b4 \rest \clef bass | } { r4 a=4( b c b a g=) | }
+  f='8( f, g a b c d g, | c b bes a aes g) d( e | f fis g4) g,-- d'8( e |
+  f=8 fis g4) g,-- d'8( e | f fis) \duo { g=2. | } { r4 d=4-- g,=,-- | }
+  <c= g'>2. r4 | <e c'>2. r4 | c'='8-. g-. e-. d-. c-. g e-. d-. |
+  c=,4-- r <c c'>-- r | <c=, c'>-- r r2 |
 }
 {{ end }}
