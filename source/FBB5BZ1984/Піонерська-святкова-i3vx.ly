@@ -1,13 +1,13 @@
 {{ define "rh1" }}
-  \rep 2 { <c,='' e>4-> g8-. g'=''-. } |
-  <f='' a>8(->\> <e g>) <d f> <c e> \af 4\! <g d'>4-- g8-.\f g'-. |
+  {{ .a }} g8-. g'-. <c, e>4-> g8-. g'-. |
+  <f='' a>8(->\> <e g>)-. <d f>-. <c e>-. \af 4\! <g d'>4-- g8-.\f g'-. |
   \rep 2 { <b,=' d>4-> g8-. g'=''-. } |
   <e='' g>8(->\> <d f>)-. <c e>-. <g d'>-. \af 4\! <e c'>4-- c'8(\mp b |
-  <f=' a>8\< c' f a) \af 4\! <c, a'>4-- c8( a |
-  <e=' g>8\> c' e g) \af 4\! <c, g'>4-- e,8( a |
+  <f=' a>8\< c' f a) \af 8.\! <c, a'>4-- c8( a |
+  <e=' g>8\< c' e g) \af 8.\! <c, g'>4-- e,8( a |
   <d,=' g>8\< b' d g) <b, g'>-. <c a'>-. <d b'>-. \af 8\! <e c'>-. |
   <fis='' d'>8(-> <e c'>)-. <d b'>-. <c a'>-. \af 4\! <b g'>4-- g8(\p f |
-  <e=' g>8\< c' e g) \af 4\! <c, g'>4-- b8( a |
+  <e=' g>8\< c' e g) \af 8.\! <c, g'>4-- b8( a |
   <d,=' g>8\< b' d g) \af 4\! <b,=' g'>4-- %
 {{ end }}
 
@@ -17,9 +17,9 @@
   \clef treble
   \key c \major
   \time 4/4
-  \partial 4 { g'='8-.\f g' | }
+  \partial 4 { g'='8-.\f g'-. | }
   \repeat volta 2 {
-    {{ template "rh1" }} <a=' fis'>8-.\f <b g'>-. |
+    {{ template "rh1" (w `<c,='' e>4->`) }} <a=' fis'>8-.\f <b g'>-. |
     <c='' a'>8(-> <b g'>)-. <a fis'>-. <g e'>-. %
     <fis=' d'>8-. <e c'>-. <d b'>-. <c=' a'>-. |
 
@@ -44,20 +44,21 @@
   <aes=' f'>8( <g ees'> <f d'> <ees c'> <d b'>4)-- g8-.\mf g'-. |
   \rep 2 { <c,='' ees>4-> g8-. g'=''-. } |
   <f='' aes>8( <ees g> <d f> <c ees> <b d>4)-- d16(_\dCre ees f fis |
-  <b,=' f>4)-> d16( ees f fis <b, g'>4)-> e16( f fis g |
-  <c,='' aes'>4)-> ees16( f fis g <c, a'>4)-> a'16( b c d |
+  <b,=' g'>4)-> d16( ees f fis <b, g'>4)-> ees16( f fis g |
+  <c,='' aes'>4)-> ees16( f fis g <c, aes'>4)-> a'16( b c d |
   ees='''8)->\f <ees, c'>-. <c a'>-. <a fis'>-. %
-  <fis=' e'>8-.\> <ees c'>-. <c a'>-. \af 8\! <a fis'>-. |
+  <fis=' ees'>8-.\> <ees c'>-. <c a'>-. \af 8\! <a fis'>-. |
   <b= g'>8\< <g' g'>8^\tRit 8 8 8[ \af 8\! 8] g--\f g'=''-- |
 
-  {{ template "rh1" }} f'=''8 e | d(-> c) b a g\> f e d |
+  {{ template "rh1"  (w `<c,='' e>4->^\tATem`) }}
+  f'=''8 e | d(-> c) b a g\> f e d |
   c='4-- <g e'>-- \af 4\! <e c'>4-- b''='8(\p c | d4 g,2) <d' f>4( |
   <c='' e>4 c2) b8( c | d4 g,2) <f' a>4( | <e g>2~ 8) r <f a>8(\< <g b> |
-  <a='' c>4 <g b> <f a> <b, f'> | <c e> \af 8\! <e g>2) <a, f'>8( e' <c d>4) %
-  \duo { g''=''2.\>~ | g2~ \af 8\! g=''8 } %
-  { b'='4 c d | e2~ e=''8 s8 } <f a>8( <g b> |
-  <a,=' f>4\< <g b> <f a> <b, f'> | <c e>4 \af 2\! <c e>2) <a f'>8(\sp e' %
-  <c'='' d>4) <b g'>2-> <a, f'>8\f( e' | <c d>4) <b g'>2-> <a' f'>8(\p e' %
+  <a='' c>4 <g b> <f a> <b, f'> | <c e> \af 8\! <e='' g>2) %
+  \duo { <a'=' f'>8( e' d4) g2.~\> | g2~ \af 8\! g=''8 } %
+  { s4 | c''=''4 b c d | e2~ e=''8 } r8 <f,=' a>8( <g b> |
+  <a=' c>4\< <g b> <f a> <b, f'> | <c e>4 \af 2\! <e g>2) <a f'>8(\sp e' %
+  <c='' d>4) <b g'>2-> <a, f'>8(\f e' | <c d>4) <b g'>2-> <a' f'>8(\p e' %
   <c='' d>4) <b g'>4->^\tRit <c a'>-> <d b'>-> |
   <e='' c'>4->  g,8-.\f^\tATem g'-. <c, e>4->\> e,8-. e'-. |
   <g,=' c>4-> c,8-. c'-. <e, g>4-> g,8-. \af 8\! g'-. |
@@ -72,5 +73,17 @@
   \key c \major
   \partial 4 { r4 | }
   <c'=' g'>8(->-\frBass g)-. r4 <c g'>8(-> g)-. r4 |
+  r8 a=8-. b-. c-. d(-> c)-. b-. a-. |
+  \rep 2 { <g= d'>8(-> d=)-. r4 } | r8 g-. a-. b-. c( b a g) |
+  <f= c'>2(~ 8 a c f) | <c, c'>2(~ 8 e g c) | <g b>2. d'4 |
+  r8 d,=8-. e-. fis-. g( f e d) | <c c'>2(~ 8 e g c) |
+  <g= b>2(~ 8 d' b g) | d2-> e4-- fis-- | g-- g,-- g'=-- r |
+
+  d=8( a' fis a fis a) e( fis | g d' b d g, d') a( d |
+  d,=8 d' c d a d) fis,( d' | g, g' fis e d) r r4 |
+  r8 c='8( c e fis g a d, | g fis f e ees d) a( b |
+  c='8 cis d4) e( fis | g) fis-- e-- d-- |
+  c='8( c, d e fis g a d | g, d' g fis f e) a,( b |
+  c='8 cis d4) d,~ <d a'> | \rep 2 { g=4-- d-- g,=,-- r | }
 }
 {{ end }}
