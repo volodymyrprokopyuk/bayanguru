@@ -15,6 +15,10 @@
   r8 {{ .a }} r8 <g_~bes d>]-- g8( ees' c ees) |
 {{ end }}
 
+{{ define "lh2" }}
+  \duo { fis=4 s4 g= s4 | } { fis=8( c' d c) g( d' ees d=') | }
+{{ end }}
+
 {{ define "rightHand" }}
 \relative {
   \tempo "Adagio cantabile"
@@ -48,13 +52,21 @@
 \relative {
   \clef bass
   \key g \minor
-  {{ template "lh1" (w `<g= bes d>8[---\frBass`) }}
-  \duo { fis=4 s4 g= s4 | } { fis=8( c' d c) g( d' ees d=') | }
+  {{ template "lh1" (w `<g= bes d>8[---\frBass`) }} {{ template "lh2" }}
   {{ template "lh1" (w `<g,= bes d>8[--`) }}
   \duo {
     r8 c'='8( a c) g4 s4 | r8 c4 c8 bes( c bes4) |
     r8 fis=8( g c) g4 s4 | r8 c4 c8 bes( c bes4) |
     r8 bes=8( g bes) r bes( f bes=) |
   } { \rep 2 { d=2 g8( d' bes g) | ees2 g4. ees=8 | } | ees=2 d= | }
+  \rep 2 { g,=2-- fis-- | g4( ees d=2) | }
+
+  {{ template "lh1" (w `<g= bes d>8[--`) }} {{ template "lh2" }}
+  {{ template "lh1" (w `<g,= bes d>8[--`) }}
+  \duo { r8 ees'='8( d c) g=4 s4 | } { fis=2 g8( d' bes g=) | }
+  a,=8(-> bes a4) g8(-> a g4) |
+  \duo { r8 c'='4 c8 g=4 s4 | } { fis=4( d) g8( d' bes g=) | }
+  a=8(-> bes a4) g8(-> a g4) |
+  \duo { r8 c'='4 c8 r <bes= d>8~ 4 \fermata | } { fis=4( d) g=2 \fermata | }
 }
 {{ end }}
