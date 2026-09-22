@@ -457,7 +457,6 @@ pieces:
   - { id: hbcj, tit: Колискова,
       com: Л. Вільчик, src: FBB5BZ1984,
       org: ukr, sty: cus, gnr: lul, ton: gmi, frm: vo2, bss: [frb, vo2], lvl: elb }
-  # p. 60
-  # - { id: fdus, tit: Перепілка, sub: Український танок,
-  #     arr: М. Різоль, src: FBB5BZ1984,
-  #     org: ukr, sty: flk, gnr: dnc, ton: gmi, frm: vo2, bss: frb, lvl: elb }
+  - { id: fdus, tit: Перепілка, sub: Український танок,
+      arr: М. Різоль, src: FBB5BZ1984,
+      org: ukr, sty: flk, gnr: dnc, ton: gmi, frm: vo2, bss: frb, lvl: elb }
