@@ -477,10 +477,9 @@ pieces:
   - { id: xda1, tit: Етюд A-moll,
       com: Л. Вільчик, src: FBB4BZ1983,
       org: ukr, sty: cus, gnr: stu, ton: ami, frm: [scl, arp], bss: [frb, scl], lvl: elb }
-  # p. 88
-  # - { id: juaw, tit: Етюд F-dur,
-  #     com: Е. Дербенко, src: FBB4BZ1983,
-  #     org: rus, sty: cus, gnr: stu, ton: fmj, frm: syn, bss: [frb, in3], lvl: elb }
+  - { id: juaw, tit: Етюд F-dur,
+      com: Е. Дербенко, src: FBB4BZ1983,
+      org: rus, sty: cus, gnr: stu, ton: fmj, frm: syn, bss: [frb, in3], lvl: elb }
   # p. 94
   # - { id: 9mxq, tit: Етюд C-dur,
   #     com: В. Дикусаров, src: FBB4BZ1983,
