@@ -38,6 +38,12 @@
 \relative {
   \clef bass
   \key f \major
-  f=4-\frBass <a c>_\aSta g <bes d> |
+  f=4-\frBass <a c>_\aSta g <bes d> | c, <g' bes> d <f a> |
+  bes,=,4 <d g> c <f a> | des <g bes> c, <g' bes> | c, e f= r |
+
+  d=4 <f a> d <f a> | d <g bes> d <g bes> | d <f a> d <f a> |
+  bes,=,2( a4) r | d <f a> d <f a> | d <g bes> c, <g' bes> |
+  f=4 <a c> d, <a' c> | g bes \duo { r4 <g= bes> | } { c=2 | }
+  d,=2 bes | b c= |
 }
 {{ end }}
