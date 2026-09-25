@@ -3,6 +3,6 @@
     "@tailwindcss/cli": "^4.3.3",
     "html-validate": "^9.7.1",
     "tailwindcss": "^4.3.3",
-    "wrangler": "^4.132.0"
+    "wrangler": "^4.140.0"
   }
 }
