@@ -487,7 +487,6 @@ pieces:
   - { id: c8km, tit: Етюд G-moll,
       com: В. Дикусаров, src: FBB5BZ1984,
       org: ukr, sty: cus, gnr: stu, ton: gmi, frm: [arp, cr5, syn], bss: [frb, arp], lvl: elb }
-  # p. 83
-  # - { id: ef9k, tit: Етюд D-moll,
-  #     com: І. Бурий, src: FBB5BZ1984,
-  #     org: ukr, sty: cus, gnr: stu, ton: dmi, frm: [arp, brk, cr6, dot], bss: [frb, arp, in3, in5, cr7], lvl: elc }
+  - { id: ef9k, tit: Етюд D-moll,
+      com: І. Бурий, src: FBB5BZ1984,
+      org: ukr, sty: cus, gnr: stu, ton: dmi, frm: [arp, brk, cr5, dot], bss: [frb, arp, in3, in5, cr7], lvl: elc }
