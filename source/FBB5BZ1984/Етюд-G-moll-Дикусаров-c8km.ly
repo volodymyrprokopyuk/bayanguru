@@ -25,9 +25,15 @@
 \relative {
   \clef bass
   \key g \minor
+  \meter 1/2 #'(1)
   g=8-\frBass d' bes d | g, ees' c ees | f, ees' c ees | f, d' bes d |
   g,=8 ees' des ees | aes, ees' c ees | a, d c fis | bes, g' d g |
   aes,=8  f' d f | g, ees' c ees | fis, ees' c ees | g, d' bes d |
   g,=8 e' c e | g, ees' des ees | fis, a d c | bes a g fis= |
+
+  g=8 bes d bes | ees c a g | f a c cis | d4 bes |
+  ees,=8 g bes b | c bes aes g | fis a d c | d4 bes |
+  b=8 d g d | f ees c bes | a c ees a, | c4 bes |
+  g=8 bes d c | bes a a g | fis a d c | bes a g=4 |
 }
 {{ end }}
