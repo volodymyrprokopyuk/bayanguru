@@ -14,6 +14,14 @@
   {{ .a }} 16 4~ | 16 a( b cis d e fis g='' |
 {{ end }}
 
+{{ define "lh1" }}
+  {{ .a }} a' f d' | a <d f> f, <a= d> |
+{{ end }}
+
+{{ define "lh2" }}
+  {{ .a }} 16 4~ | 16 f( g a bes c d e=' |
+{{ end }}
+
 {{ define "rightHand" }}
 \relative {
   \tempo Allegro
@@ -40,6 +48,14 @@
 \relative {
   \clef bass
   \key d \minor
-  d=8-\frBass a' f d' |
+  {{ template "lh1" (w `d=8-\frBass`) }}
+  e=8 <bes' d> f <a d> | <g bes e>4 <gis d' f>8 <a cis g'> |
+  {{ template "lh1" (w `d,=8`) }}
+  e=8 <gis d'> a <cis g'> | d, <fis c'> g <b f'> |
+  c,=8 <e bes'> f <a c e> | <e g bes d>4 <a= cis e> |
+
+  {{ template "lh2" (w `<f= a c f>8.`) }}
+  {{ template "lh2" (w `<f,= a c f>8.)`) }}
+  <f,= a c f>8.) 16 4 | <dis fis a cis>8. 16 4 |
 }
 {{ end }}
