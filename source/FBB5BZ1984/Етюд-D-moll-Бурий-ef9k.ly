@@ -19,7 +19,20 @@
 {{ end }}
 
 {{ define "lh2" }}
+  e=8 <bes' d> f <a d> | <g bes e>4 <gis d' f>8 <a= cis g'> |
+{{ end }}
+
+{{ define "lh3" }}
+  e=8 <gis d'> a <cis g'> | d, <fis c'> g <bes f'> |
+  c,=8 <e bes'> f <a= c e> |
+{{ end }}
+
+{{ define "lh4" }}
   {{ .a }} 16 4~ | 16 f( g a bes c d e=' |
+{{ end }}
+
+{{ define "lh5" }}
+  {{ .a }} 16 4~ | 16 fis( g a b cis d e=' |
 {{ end }}
 
 {{ define "rightHand" }}
@@ -48,14 +61,20 @@
 \relative {
   \clef bass
   \key d \minor
-  {{ template "lh1" (w `d=8-\frBass`) }}
-  e=8 <bes' d> f <a d> | <g bes e>4 <gis d' f>8 <a cis g'> |
-  {{ template "lh1" (w `d,=8`) }}
-  e=8 <gis d'> a <cis g'> | d, <fis c'> g <b f'> |
-  c,=8 <e bes'> f <a c e> | <e g bes d>4 <a= cis e> |
+  {{ template "lh1" (w `d=8-\frBass`) }} {{ template "lh2" }}
+  {{ template "lh1" (w `d,=8`) }} {{ template "lh3" }}
+  <e= g bes d>4 <a= cis e> |
 
-  {{ template "lh2" (w `<f= a c f>8.`) }}
-  {{ template "lh2" (w `<f,= a c f>8.)`) }}
+  {{ template "lh4" (w `<f= a c f>8.`) }}
+  {{ template "lh4" (w `<f,= a c f>8.)`) }}
   <f,= a c f>8.) 16 4 | <dis fis a cis>8. 16 4 |
+  {{ template "lh5" (w `<d= fis a d>8.`) }}
+  {{ template "lh5" (w `<d,= fis a d>8.)`) }}
+  <d,= fis a d>8.) 16 4 | <bes des f a>8. 16 4 |
+  <a=, cis f g>8. 16 4 | <a' cis f g>4 <a,=, cis f g> |
+
+  {{ template "lh1" (w `d=8`) }} {{ template "lh2" }}
+  {{ template "lh1" (w `d,=8`) }} {{ template "lh3" }}
+  <e= g bes d>4 <f g b d> | <f g bes des> <e g a cis> | <d= f a d>2 |
 }
 {{ end }}
