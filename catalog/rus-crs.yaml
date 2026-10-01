@@ -9,10 +9,9 @@ pieces:
   - { id: zql2, tit: Песенка,
       com: А. Гольденвейзер, src: CLFBBS1979,
       org: rus, sty: cus, gnr: sng, ton: gmj, frm: mel, bss: frb, lvl: ela }
-  # p. 20
-  # - { id: 6oyo, tit: Шутливая песенка,
-  #     com: Ю. Слонов, src: CLFBBS1979,
-  #     org: rus, sty: cus, gnr: sng, ton: fmj, frm: mel, bss: frb, lvl: ela }
+  - { id: 6oyo, tit: Шутливая песенка,
+      com: Ю. Слонов, src: CLFBBS1979,
+      org: rus, sty: cus, gnr: sng, ton: fmj, frm: mel, bss: frb, lvl: ela }
   # p. 49
   # - { id: ypj1, tit: Русская песня,
   #     com: Е. Аглинцева, arr: А. Сурков, art: ipr, src: CLFBBS1979,
