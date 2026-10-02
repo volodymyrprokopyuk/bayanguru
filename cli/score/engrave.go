@@ -1,6 +1,7 @@
 package score
 
 import (
+	"context"
 	"errors"
 	"fmt"
 	"io"
@@ -11,6 +12,7 @@ import (
 	"text/template"
 
 	pdf "github.com/pdfcpu/pdfcpu/pkg/api"
+	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/model"
 	"github.com/volodymyrprokopyuk/bayanguru/cli/catalog"
 )
 
@@ -74,12 +76,14 @@ func engraveScore(w io.Writer, score, scoreFile, scoreDir string) error {
   return lyCmd.Run()
 }
 
+var pdfCfg = model.NewDefaultConfiguration()
+
 func optimizeScore(w io.Writer, scoreFile, scoreDir string) error {
   scorePDF := filepath.Join(scoreDir, scoreFile + ".pdf")
   _, _ = fmt.Fprintf(
     w, "%s %s\n", catalog.BlueTit("optimize"), catalog.BlueSub("%s", scorePDF),
   )
-  return pdf.OptimizeFile(scorePDF, scorePDF, nil)
+  return pdf.OptimizeFile(context.Background(), scorePDF, scorePDF, pdfCfg, nil)
 }
 
 func initPieceLyrics(pieces []*catalog.Piece, ec *engraveCommand) error {

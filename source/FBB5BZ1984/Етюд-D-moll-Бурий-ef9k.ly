@@ -1,6 +1,6 @@
 {{ define "rh1" }}
   {{ .a }} a gis a e' d cis d | e d e f bes a gis a |
-  c='''16 bes fis g bes a e fis | a g cis, d f e dis e |
+  c='''16 bes fis g bes a e f | a g cis, d f e dis e |
   bes='16 a gis a e' d cis d | e d e f bes a cis d |
   f='''16 e ais, b d cis cis ais | ees' d gis, a c bes bes e, |
   d'='''16 c fis, g bes a e f='' |
