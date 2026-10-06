@@ -15,10 +15,9 @@ pieces:
   - { id: ypj1, tit: Русская песня,
       com: Е. Аглинцева, arr: А. Сурков, art: ipr, src: CLFBBS1979,
       org: rus, sty: cus, gnr: sng, ton: ami, frm: mel, bss: frb, lvl: ela }
-  # p. 50
-  # - { id: rne4, tit: Ивушка, sub: rusfs,
-  #     arr: Т. Салютринская, src: CLFBBS1979,
-  #     org: rus, sty: flk, gnr: sng, ton: emi, frm: mel, bss: frb, lvl: ela }
+  - { id: rne4, tit: Ивушка, sub: rusfs,
+      arr: Т. Салютринская, src: CLFBBS1979,
+      org: rus, sty: flk, gnr: sng, ton: emi, frm: mel, bss: frb, lvl: ela }
   # p. 53
   # - { id: oq4y, tit: Песенка,
   #     arr: Я. Кепитис, arr: А. Сурков, art: ipr, src: CLFBBS1979,
