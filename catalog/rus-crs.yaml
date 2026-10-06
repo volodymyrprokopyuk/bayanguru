@@ -21,10 +21,9 @@ pieces:
   - { id: oq4y, tit: Песенка,
       com: Я. Кепитис, arr: А. Сурков, art: ipr, src: CLFBBS1979,
       org: rus, sty: cus, gnr: can, ton: emi, frm: mel, bss: frb, lvl: ela }
-  # p. 53
-  # - { id: g096, tit: Утро в лесу,
-  #     com: Я. Кепитис, arr: А. Сурков, art: ipr, src: CLFBBS1979,
-  #     org: rus, sty: cus, gnr: sng, ton: fmj, frm: mel, bss: frb, lvl: ela }
+  - { id: g096, tit: Утро в лесу,
+      com: Я. Кепитис, arr: А. Сурков, art: ipr, src: CLFBBS1979,
+      org: rus, sty: cus, gnr: sng, ton: fmj, frm: mel, bss: frb, lvl: ela }
   # p. 60
   # - { id: oin8, tit: Колыбельная,
   #     arr: А. Холминов, arr: В. Грачев, art: ipr, src: CLFBBS1979,
