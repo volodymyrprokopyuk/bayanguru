@@ -76,6 +76,13 @@ Bayanguru development workflow
 ./bayanguru.fish completions
 #+END_SRC
 
+*** Improvements
+
+- Catalog :: Migrate from YAML to https://codeberg.org/shimeoki/kdly
+- HTML templates :: Migrate from template/html to https://github.com/a-h/templ
+- CSS :: Migration from TailwindCSS to plain CSS
+- CLI color :: Consider https://github.com/fatih/color vs https://github.com/gookit/color
+
 ** License
 
 [[https://www.gnu.org/licenses/gpl-3.0.html][GPLv3 GNU General Public License v3.0]]
