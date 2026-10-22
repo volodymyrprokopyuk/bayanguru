@@ -27,7 +27,6 @@ pieces:
   - { id: oin8, tit: Колыбельная,
       com: А. Холминов, arr: В. Грачев, art: ipr, src: CLFBBS1979,
       org: rus, sty: cus, gnr: lul, ton: ami, frm: mel, bss: frb, lvl: elb }
-  # p. 75
-  # - { id: izd7, tit: На качелях,
-  #     arr: А. Гречанинов, arr: А. Сурков, art: ipr, src: CLFBBS1979,
-  #     org: rus, sty: cus, gnr: pie, ton: cmj, frm: [in3, dot], bss: [frb, cr5], lvl: elb }
+  - { id: izd7, tit: На качелях,
+      com: А. Гречанинов, arr: А. Сурков, art: ipr, src: CLFBBS1979,
+      org: rus, sty: cus, gnr: pie, ton: cmj, frm: [in3, dot], bss: [frb, cr5], lvl: elb }
