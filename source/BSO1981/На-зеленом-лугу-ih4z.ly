@@ -16,6 +16,7 @@
   \clef bass
   \key g \major
   \partial 4 { r4 | }
-  g,=,4 gM! | d' dM! | \rep 3 { g,=,4 gM! | g gM! | d'= dM! | } | g+gM! %
+  g,=,4-\stBass gM! | d' dM! |
+  \rep 3 { g,=,4 gM! | g gM! | d'= dM! | } | g+gM! %
 }
 {{ end }}
