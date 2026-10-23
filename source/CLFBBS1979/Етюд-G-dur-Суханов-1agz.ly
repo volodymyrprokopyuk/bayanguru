@@ -7,7 +7,7 @@
   \repeat segno 2 {
     \volta 1
     \repeat volta 2 {
-      g''=''16\mf d_\aLeg cis d e d cis d | g d cis d e d cis d |
+      g''=''16\mf d cis_\aLeg d e d cis d | g d cis d e d cis d |
       \rep 2 { a'=''16 c, b c d c b c='' | }
       \rep 2 { g'=''16 d cis d e d cis d='' | }
       \alternative {
