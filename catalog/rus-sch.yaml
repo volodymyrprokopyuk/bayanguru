@@ -39,6 +39,10 @@ pieces:
   - { id: 59uu, tit: Песенка,
       com: Е. Дербенко, src: BSO1981,
       org: rus, sty: cus, gnr: sng, ton: dmi, frm: dot, bss: stb, lvl: elb }
+  # p. 67
+  # - { id: vd8x, tit: Итальянская полька,
+  #     com: С. Рахманинов, src: BSO1981,
+  #     org: rus, sty: cus, gnr: plk, ton: [dmi, dmj], frm: [var, cr5, acc], bss: stb, lvl: elb }
   - { id: vg9l, tit: Лебедушка, sub: rusfs,
       arr: Е. Кузнецов, src: BSO1981,
       org: rus, sty: flk, gnr: sng, ton: [dmi, ami], frm: cr5, bss: stb, lvl: elb }

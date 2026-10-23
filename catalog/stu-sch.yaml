@@ -20,6 +20,14 @@ pieces:
   - { id: uuc1, tit: Етюд D-moll,
       com: Л. Шітте, src: BSO1981,
       org: dnk, sty: cus, gnr: stu, ton: dmi, frm: [scl, tu3], bss: stb, lvl: ela }
+  # p. 60
+  # - { id: hoc4, tit: Етюд G-dur,
+  #     com: А. Онегин, src: BSO1981,
+  #     org: rus, sty: cus, gnr: stu, ton: gmj, frm: [arp, brk, dot], bss: stb, lvl: elb }
+  # p. 79
+  # - { id: dfwq, tit: Етюд G-dur,
+  #     com: Н. Горлов, src: BSO1981,
+  #     org: rus, sty: cus, gnr: stu, ton: gmj, frm: [arp, brk, dot], bss: [frb, arp, brk], lvl: elb }
   # BSA1983
   - { id: 0jom, tit: Етюд C-dur,
       com: А. Талакин, src: BSA1983,
