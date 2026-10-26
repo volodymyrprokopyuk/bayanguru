@@ -9,10 +9,9 @@ pieces:
       com: В. Гусев, src: BSN1985,
       org: rus, sty: cus, gnr: stu, ton: [amj, fismi], frm: [vo2, in3, in4, syn], bss: stb, lvl: elb }
   # BSO1981
-  # p. 42
-  # - { id: 5z6e, tit: Етюд F-dur,
-  #     com: Л. Шітте, src: BSO1981,
-  #     org: dnk, sty: cls, gnr: stu, ton: fmj, frm: arp, bss: stb, lvl: ela }
+  - { id: 5z6e, tit: Етюд F-dur,
+      com: Л. Шітте, src: BSO1981,
+      org: dnk, sty: cls, gnr: stu, ton: fmj, frm: arp, bss: stb, lvl: ela }
   # p. 47
   # - { id: ud8w, tit: Етюд G-dur,
   #     com: Г. Беренс, src: BSO1981,
