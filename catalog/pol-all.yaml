@@ -48,6 +48,10 @@ pieces:
   # - { id: dwyz, tit: Пастух, sub: czefs,
   #     src: BSO1981,
   #     org: cze, sty: flk, gnr: sng, ton: gmj, frm: [in3, syn], bss: stb, lvl: elb }
+  # p. 89
+  # - { id: mwwn, tit: Мазурка,
+  #     com: А. Гречанинов, src: BSO1981,
+  #     org: pol, sty: cus, gnr: dnc, ton: gmi, frm: [vo2, dot], bss: frb, lvl: elb }
   - { id: s6k4, tit: Мазурка,
       com: Г. Венявський, src: BSO1981,
       org: pol, sty: cus, gnr: dnc, ton: [ami, cmj], frm: [cr5, dot, acc, tri, mor], bss: stb, lvl: elb }
