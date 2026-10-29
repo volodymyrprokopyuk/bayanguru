@@ -30,10 +30,9 @@ pieces:
   - { id: o7ao, tit: На горе-то калина, sub: rusfs,
       src: BSO1981,
       org: rus, sty: flk, gnr: sng, ton: cmj, frm: var, bss: stb, lvl: ela }
-  # p. 55
-  # - { id: 1byz, tit: Вальс,
-  #     com: М. Глинка, src: BSO1981,
-  #     org: rus, sty: cus, gnr: vls, ton: [cmj, ami], frm: [rep, acc], bss: stb, lvl: elb }
+  - { id: 1byz, tit: Вальс,
+      com: М. Глинка, src: BSO1981,
+      org: rus, sty: cus, gnr: vls, ton: [cmj, ami], frm: [rep, acc], bss: stb, lvl: elb }
   - { id: 59uu, tit: Песенка,
       com: Е. Дербенко, src: BSO1981,
       org: rus, sty: cus, gnr: sng, ton: dmi, frm: dot, bss: stb, lvl: elb }
@@ -41,6 +40,17 @@ pieces:
   # - { id: vd8x, tit: Итальянская полька,
   #     com: С. Рахманинов, src: BSO1981,
   #     org: rus, sty: cus, gnr: plk, ton: [dmi, dmj], frm: [var, cr5, acc], bss: stb, lvl: elb }
+  # p. 94
+  # - { id: a7md, tit: Осеннее утро,
+  #     com: Н. Горлов, src: BSO1981,
+  #     org: rus, sty: cus, gnr: pie, ton: ami, frm: [vo2, syn], bss: [frb, vo2], lvl: elb }
+  - { id: oow8, tit: Полька,
+      com: А. Онегин, src: BSO1981,
+      org: rus, sty: cus, gnr: plk, ton: [cmj, ami], frm: [var, cr5], bss: [frb, stb, cr5, syn], lvl: elb }
+  # p. 100
+  # - { id: 7mbo, tit: Маленький романс,
+  #     com: А. Онегин, src: BSO1981,
+  #     org: rus, sty: cus, gnr: rmc, ton: ami, frm: syn, bss: [stb, frb, in3, rep], lvl: elb }
   - { id: vg9l, tit: Лебедушка, sub: rusfs,
       arr: Е. Кузнецов, src: BSO1981,
       org: rus, sty: flk, gnr: sng, ton: [dmi, ami], frm: cr5, bss: stb, lvl: elb }
@@ -186,10 +196,6 @@ pieces:
   - { id: fcch, tit: Ходила младешенька за водой, sub: rusfs,
       arr: Н. Канаев, src: BSN1985,
       org: rus, sty: flk, gnr: sng, ton: cismi, frm: [vo2, var], bss: [frb, pub, var], lvl: elc }
-  # BSO1981
-  - { id: oow8, tit: Полька,
-      com: А. Онегин, src: BSO1981,
-      org: rus, sty: cus, gnr: plk, ton: [cmj, ami], frm: [var, cr5], bss: [frb, stb, cr5, syn], lvl: elb }
   # FBBMS4NP1974
   - { id: axb1, tit: Кума, sub: rusfs,
       arr: А. Александров, src: FBBMS4NP1974,
