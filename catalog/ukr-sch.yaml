@@ -8,7 +8,20 @@ pieces:
   - { id: zgec, tit: Чабан, sub: Пастуший мотив і танок,
       arr: А. Онегин, src: BSO1981,
       org: ukr, sty: flk, gnr: dnc, ton: ami, frm: [var, tu5, tu6, rep, acc, tri, cad], bss: stb, lvl: elb }
+  # BSO1986
+  # p. 39
+  # - { id: 5n4c, tit: Дитячий валсь, sub: 'із збірника \"Гусельки\"',
+  #     src: BSO1986,
+  #     org: ukr, sty: cus, gnr: vls, ton: dmi, frm: mel, bss: stb, lvl: elb }
   # PBS1AG1970
+  # p. 18
+  # - { id: 85s4, tit: На жовтневе свято,
+  #     com: А. Штогаренко, src: PBS1AG1970,
+  #     org: ukr, sty: cus, gnr: pie, ton: cmj, frm: mel, bss: stb, lvl: ela }
+  # p. 26
+  # - { id: v30f, tit: Пісня про великого Леніна,
+  #     com: А. Філіпенко, src: PBS1AG1970,
+  #     org: ukr, sty: cus, gnr: sng, ton: gmj, frm: mel, bss: stb, lvl: ela }
   - { id: dmf9, tit: Серенада,
       com: М. Чайкін, src: PBS1AG1970,
       org: ukr, sty: cus, gnr: pie, ton: [ami, cmj], frm: dot, bss: stb, lvl: elb }

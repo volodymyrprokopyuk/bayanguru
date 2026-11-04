@@ -64,6 +64,18 @@ pieces:
       com: В. Соловьев-Седой, arr: В. Клиберн, art: hrm, src: BSO1981,
       org: rus, sty: cus, gnr: pie, ton: cmi, frm: [cr5, cr7], bss: stb, lvl: elc }
   # PBS1AG1970
+  # p. 29
+  # - { id: pvbh, tit: Отдавали молоду, sub: rusfs,
+  #     src: PBS1AG1970,
+  #     org: rus, sty: flk, gnr: sng, ton: ami, frm: mel, bss: stb, lvl: ela }
+  # p. 30
+  # - { id: pvbh, tit: Грустная песенка,
+  #     com: Д. Львов-Компанеец, src: PBS1AG1970,
+  #     org: rus, sty: cus, gnr: sng, ton: ami, frm: mel, bss: stb, lvl: elb }
+  # p. 32
+  # - { id: c31x, tit: Песня о Ленине,
+  #     com: А. Новиков, src: PBS1AG1970,
+  #     org: rus, sty: cus, gnr: sng, ton: fmj, frm: in3, bss: stb, lvl: elb }
   - { id: fovi, tit: Про Петю,
       com: Д. Кабалевский, src: PBS1AG1970,
       org: rus, sty: cus, gnr: pie, ton: cmj, frm: mel, bss: stb, lvl: ela }
