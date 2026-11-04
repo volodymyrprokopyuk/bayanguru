@@ -27,6 +27,6 @@
   r16 e,=,16( f g a bes c d | e4) r | r16 f,( g a bes c d e | f4) r |
   r16 f,=,16( g aes bes c d e | f4) r |
   \rep 2 { r16 g,=,( a b c d e f | g=4) r | }
-  r16 c,=16( b a g f' e d | c=4) r |
+  r16 c,=16( b a g f e d | c=,4) r |
 }
 {{ end }}
