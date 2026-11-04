@@ -24,8 +24,8 @@
   \clef treble
   \key d \minor
   \time 2/4
-  \partial 8 { \tuplet 3/2 { a'='16(\mp d f } | }
   \repeat volta 2 {
+    \partial 8 { \tuplet 3/2 { a'='16(\mp d f } | }
     {{ template "rh1" }} {{ template "rh2" }} | a=''8-! a-! a-! a-! |
     a=''16( g f e d) a( d f | {{ template "rh1" }} {{ template "rh2" }}
     a=''16(^\tRit gis a gis a bes b cis |
@@ -49,10 +49,6 @@
     cis='''8)-. <e, g>8-! 16( b' a g | b8)-. <d, fis>8-! 8-! a'16-.\f a-. |
     {{ template "rh4" }} | cis='''16 b ais b a g b e,) |
     f=''16( g gis a ais b c cis | d8) <d,='' fis d'>16-. 16-. %
-    \keyCancelBarChange \fine \bar "!!"
-
-    \key d \minor
-    \tuplet 3/2 { a='16[ d f=''] } %
   }
 }
 {{ end }}
