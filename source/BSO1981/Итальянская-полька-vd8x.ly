@@ -1,11 +1,11 @@
 {{ define "rh1" }}
   a=''8) <d, f a>16( bes' a8)-. f-. | g-! <e g a>8-! 4-> |
-  a=''8-! a16( bes a8)-. g-. | f-! <d='' f a>8-! 4-> |
+  a=''8-! a16( bes a8)-. e-! | f-! <d='' f a>8-! 4-> |
 {{ end }}
 
 {{ define "rh2" }}
   \acc { d=''16 f } d'8-! d-! \acc { d,=''16 fis } d'8-! d-! |
-  \acc { d,=''16 g } d'16( c bes a g8)-. bes='' |
+  \acc { d,=''16 g } d'16( c bes a g8)-. bes=''-. |
 {{ end }}
 
 {{ define "rh3" }}
@@ -43,12 +43,12 @@
     gis=''16 a gis fis gis) d'( cis b | a b a gis a)^\tRit e'( d cis |
     b=''16\> a gis fis e d cis \af 16\! b=' |
 
-    a='8) cis16( e a8)\f \tempo Allegretto a16-. a-. |
+    a='8) cis16( e \tempo Allegretto a8)\f a16-. a-. |
 
     {{ template "rh4" }} | cis='''8)-. <e, g>-! 16(-!^\tATem b' a g |
     cis='''8)-. <e, g>8-! 16( b' a g | b8)-. <d, fis>8-! 8-! a'16-.\f a-. |
     {{ template "rh4" }} | cis='''16 b ais b a g b e,) |
-    f=''16( g gis a ais b c cis | d8) <d,='' fis d'>16-. 16-. %
+    fis=''16( g gis a ais b c cis | d8) <d,='' fis d'>16-. 16-. 8-. %
   }
 }
 {{ end }}

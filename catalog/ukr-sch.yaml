@@ -22,6 +22,10 @@ pieces:
   # - { id: v30f, tit: Пісня про великого Леніна,
   #     com: А. Філіпенко, src: PBS1AG1970,
   #     org: ukr, sty: cus, gnr: sng, ton: gmj, frm: mel, bss: stb, lvl: ela }
+  # p. 50
+  # - { id: xsrx, tit: Ой єсть в лісі калина, sub: ukrfs,
+  #     src: PBS1AG1970,
+  #     org: ukr, sty: flk, gnr: sng, ton: ami, frm: mel, bss: stb, lvl: ela }
   - { id: dmf9, tit: Серенада,
       com: М. Чайкін, src: PBS1AG1970,
       org: ukr, sty: cus, gnr: pie, ton: [ami, cmj], frm: dot, bss: stb, lvl: elb }

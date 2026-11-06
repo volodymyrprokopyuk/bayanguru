@@ -75,6 +75,14 @@ pieces:
   # - { id: c31x, tit: Песня о Ленине,
   #     com: А. Новиков, src: PBS1AG1970,
   #     org: rus, sty: cus, gnr: sng, ton: fmj, frm: in3, bss: stb, lvl: elb }
+  # p. 47
+  # - { id: 3vsi, tit: "Заплетися, плетень", sub: rusfs,
+  #     src: PBS1AG1970,
+  #     org: rus, sty: flk, gnr: sng, ton: cmj, frm: mel, bss: stb, lvl: ela }
+  # p. 47
+  # - { id: 5bb7, tit: "Заплетися, плетень", sub: rusfs,
+  #     arr: Ю. Акимов, src: PBS1AG1970,
+  #     org: rus, sty: flk, gnr: sng, ton: cmj, frm: mel, bss: [frb, in4], lvl: ela }
   - { id: fovi, tit: Про Петю,
       com: Д. Кабалевский, src: PBS1AG1970,
       org: rus, sty: cus, gnr: pie, ton: cmj, frm: mel, bss: stb, lvl: ela }
