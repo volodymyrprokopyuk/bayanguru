@@ -18,6 +18,19 @@
   d='''16( cis fis e d cis b a='' |
 {{ end }}
 
+{{ define "lh1" }}
+  {{ .a }} dm! a d@m! | cis8 a@7! a74 | cis8 a@7! a8 a7! | d dm! dm4 |
+  d=8 dm! c d@M! | bes=,8 g@m! r8 gm |
+{{ end }}
+
+{{ define "lh2" }}
+  \rep {{ .a }} { d=8 dM! a=, d@M! | } |
+{{ end }}
+
+{{ define "lh3" }}
+  \rep 2 { cis=8 a@7! a=,8 a7! | }
+{{ end }}
+
 {{ define "rightHand" }}
 \relative {
   \tempo Allegretto
@@ -58,6 +71,17 @@
   \clef bass
   \key d \minor
   \partial 8 { r8 | }
-  d=8-\stBass dm! a d@m! | cis8 a@7! a74 |
+  {{ template "lh1" (w `d=8-\stBass`) }} | a=,8[ aM! d@m! a@7!8] | d8 dm! r4 |
+  {{ template "lh1" (w `d=8`) }} | a=,8 aM! r a@7! | dm!8 d d= r |
+
+  \key d \major
+  {{ template "lh2" (w `3`) }} | e'=8 a@7! a,8 a7! |
+  {{ template "lh3" }} | e'8 a@7! a,8 a7! |
+  {{ template "lh2" (w `4`) }} | e'=8 a@M! aM4 |
+  b=,8 e@7! e8 e7! | a, aM! cis a@M! | d8 b@m! e8 e7! |
+  a@M!8 r8 r4 | R2 | {{ template "lh3" }}
+  {{ template "lh2" (w `2`) }} | e'=8 a@7! a74 | a,8 a7! a74 |
+  d=8 dM! dM r | R2 | {{ template "lh3" }} | {{ template "lh2" (w `1`) }}
+  d=8 dM! fis d@M! | g,8 e@m! e'8 em! | a, d@M! a=,8 a7! | d+dM!8 d+dM d+dM %
 }
 {{ end }}

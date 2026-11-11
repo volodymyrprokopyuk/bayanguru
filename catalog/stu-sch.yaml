@@ -37,9 +37,17 @@ pieces:
       com: І. Яшкевич, src: BSA1983,
       org: ukr, sty: cus, gnr: stu, ton: fmi, frm: [arp, in3, tu3, syn], bss: [stb, syn], lvl: elc }
   # PBS1AG1970
+  # p. 57
+  # - { id: 7p41, tit: Етюд F-dur,
+  #     com: Л. Шітте, src: PBS1AG1970,
+  #     org: dnk, sty: cls, gnr: stu, ton: fmj, frm: scl, bss: stb, lvl: elb }
   - { id: zizx, tit: Етюд F-dur,
       com: А. Салин, src: PBS1AG1970,
       org: rus, sty: cus, gnr: stu, ton: fmj, frm: arp, bss: stb, lvl: elb }
+  # p. 83
+  # - { id: t5b5, tit: Етюд G-dur,
+  #     com: Ф. Бушуев, src: PBS1AG1970,
+  #     org: rus, sty: cus, gnr: stu, ton: gmj, frm: [scl, seq, rep, dot], bss: stb, lvl: elb }
   - { id: vq40, tit: Етюд A-moll,
       com: Н. Горлов, src: PBS1AG1970,
       org: rus, sty: cus, gnr: stu, ton: ami, frm: [arp, rep, jmp], bss: stb, lvl: elb }

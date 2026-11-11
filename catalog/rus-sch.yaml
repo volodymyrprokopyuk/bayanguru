@@ -89,9 +89,21 @@ pieces:
   - { id: cf7n, tit: Песенка,
       com: П. Гвоздев, src: PBS1AG1970,
       org: rus, sty: cus, gnr: pie, ton: cmj, frm: mel, bss: stb, lvl: ela }
+  # p. 61
+  # - { id: pzy0, tit: Гуси, sub: rusfs,
+  #     arr: Ф. Бушуев, src: PBS1AG1970,
+  #     org: rus, sty: flk, gnr: sng, ton: gmj, frm: [in3, in4], bss: frb, lvl: elb }
+  # p. 67
+  # - { id: 4j8t, tit: Маленький валс,
+  #     com: И. Шишов, src: PBS1AG1970,
+  #     org: rus, sty: cus, gnr: vls, ton: besmj, frm: acc, bss: stb, lvl: elb }
   - { id: d1vq, tit: "Полноте, ребята", sub: rusfs,
       arr: В. Накапкин, src: PBS1AG1970,
       org: rus, sty: flk, gnr: sng, ton: ami, frm: [vo2, var], bss: stb, lvl: elb }
+  # p. 70
+  # - { id: 8yo9, tit: На прогулке,
+  #     com: В. Мотов, src: PBS1AG1970,
+  #     org: rus, sty: cus, gnr: pie, ton: cmj, frm: syn, bss: stb, lvl: elb }
   - { id: 4e0q, tit: Вальс,
       com: В. Иванов, src: PBS1AG1970,
       org: rus, sty: cus, gnr: vls, ton: [gmj, emi], frm: [dot, syn], bss: stb, lvl: elb }
