@@ -125,10 +125,18 @@ pieces:
       org: rus, sty: flk, gnr: sng, ton: ami, frm: [vo2, in3], bss: [stb, syn], lvl: elc }
   - { id: zxjv, tit: Пьеса,
       com: С. Ляпунов, src: PBS1AG1970,
-      org: rus, sty: cus, gnr: pie, ton: fismi, frm: dot, bss: [pub, dot], lvl: elc }
+      org: rus, sty: cus, gnr: pie, ton: fismi, frm: dot, bss: [frb, dot], lvl: elc }
+  # p. 92
+  # - { id: ep8c, tit: На закате,
+  #     com: В. Иванов, src: PBS1AG1970,
+  #     org: rus, sty: cus, gnr: pie, ton: gmj, frm: [in3, in5, in6], bss: frb, lvl: elb }
+  # p. 92
+  # - { id: i0xc, tit: Менуэт,
+  #     com: А. Салин, src: PBS1AG1970,
+  #     org: rus, sty: cus, gnr: men, ton: fmj, frm: cr5, bss: [stb, pub], lvl: elb }
   - { id: jwdy, tit: Полифоническая пьеса,
       com: В. Мотов, src: PBS1AG1970,
-      org: rus, sty: cus, gnr: pie, ton: emi, frm: [vo2, acc], bss: pub, lvl: elb }
+      org: rus, sty: cus, gnr: pie, ton: emi, frm: [vo2, acc], bss: frb, lvl: elb }
   # BSA1983
   - { id: df0g, tit: "Как в лесу, лесу, лесочке", sub: rusfs,
       src: BSA1983,

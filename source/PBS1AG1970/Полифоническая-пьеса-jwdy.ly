@@ -40,7 +40,7 @@
   \clef bass
   \key e \minor
   \partial 8 { r8 | }
-  {{ template "lh1" (w `b,=,8(-\puBass`) }} | b=,8 a g=,) r |
+  {{ template "lh1" (w `b,=,8(-\frBass`) }} | b=,8 a g=,) r |
 
   a'=4 g | fis f | e d c b=,8 r |
 

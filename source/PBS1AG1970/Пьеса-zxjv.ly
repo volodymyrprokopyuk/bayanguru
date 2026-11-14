@@ -18,7 +18,7 @@
 \relative {
   \clef bass
   \key fis \minor
-  R2. | fis,=,4(-\puBass gis8 b a fis) | d'4.( fis,8 gis b) |
+  R2. | fis,=,4(-\frBass gis8 b a fis) | d'4.( fis,8 gis b) |
   cis=4.( eis,8 fis a) | b4.( dis,8 eis gis) |
   a=,8( gis fis a b4) | cis4.( b8 a gis=,) |
 
