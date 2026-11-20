@@ -1,8 +1,8 @@
 {
   "dependencies": {
-    "@tailwindcss/cli": "^4.3.3",
+    "@tailwindcss/cli": "^4.3.5",
     "html-validate": "^9.7.1",
-    "tailwindcss": "^4.3.3",
-    "wrangler": "^4.152.0"
+    "tailwindcss": "^4.3.5",
+    "wrangler": "^4.165.0"
   }
 }
