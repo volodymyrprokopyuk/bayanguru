@@ -22,11 +22,11 @@
     d=''8.( c16 e,8. fis16 \af 2\! g='2) \fine \bar "||"
 
     \volta 2
-    fis='8[(\p a]) a r a r a r |
+    fis='8[(\p a]) a-. r a-. r a-. r |
     a='4\< c8.( b16 d8. c16 b8. \af 16\! a16) |
-    b='8[(\mp d]) d r d r d r |
+    b='8[(\mp d]) d-. r d-. r d-. r |
     b='4\< d8.( e16 fis8. g16 a8. \af 16\! b16) |
-    ais=''8[(\mf cis]) cis r cis r cis r |
+    ais=''8[(\mf cis]) cis-. r cis-. r cis-. r |
     ais=''4\< cis8. d16 e8. d16 cis8. \af 16\! e16 |
     d='''8.\f cis16 b8. a16 g8. fis16 e8. d16 |
     c=''8.\> b16 a8. g16 fis8. e16 d8. \af 16\! c='16 \bar "||"
