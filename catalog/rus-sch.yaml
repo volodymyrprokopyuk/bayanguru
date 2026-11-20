@@ -94,7 +94,7 @@ pieces:
   #     arr: Ф. Бушуев, src: PBS1AG1970,
   #     org: rus, sty: flk, gnr: sng, ton: gmj, frm: [in3, in4], bss: frb, lvl: elb }
   # p. 67
-  # - { id: 4j8t, tit: Маленький валс,
+  # - { id: 4j8t, tit: Маленький вальс,
   #     com: И. Шишов, src: PBS1AG1970,
   #     org: rus, sty: cus, gnr: vls, ton: besmj, frm: acc, bss: stb, lvl: elb }
   - { id: d1vq, tit: "Полноте, ребята", sub: rusfs,
@@ -137,6 +137,14 @@ pieces:
   - { id: jwdy, tit: Полифоническая пьеса,
       com: В. Мотов, src: PBS1AG1970,
       org: rus, sty: cus, gnr: pie, ton: emi, frm: [vo2, acc], bss: frb, lvl: elb }
+  # p. 105
+  # - { id: mb3u, tit: Утренний урок,
+  #     com: Н. Раков, src: PBS1AG1970,
+  #     org: rus, sty: cus, gnr: pie, ton: cmj, frm: [vo2, in3], bss: frb, lvl: elb }
+  # p. 109
+  # - { id: qnf0, tit: Октябрята идут,
+  #     com: С. Стемпневский, src: PBS1AG1970,
+  #     org: rus, sty: cus, gnr: pie, ton: gmj, frm: dot, bss: frb, lvl: elb }
   # BSA1983
   - { id: df0g, tit: "Как в лесу, лесу, лесочке", sub: rusfs,
       src: BSA1983,
