@@ -62,7 +62,7 @@
   c=8 cM! g c@M! c8 cM! | b g@M! g8 gM! b g@M! |
   a=,8 d@7! d8 d7! fis, d@7! | g8 gM! b g@M! c8 cM! |
   d=8 g@M! d8 g@M! d8 d7! | g, gM! d' g@M! g,8 gis |
-  a=,8 am! c a@m! d8 d7! | g, gM! b d@M! c8 cis |
+  a=,8 am! c a@m! d8 d7! | g, gM! b g@M! c8 cis |
   d=8 g@M! d8 g@M! d8 d7! | g,=, gM! g+gM! r r4 |
 }
 {{ end }}
