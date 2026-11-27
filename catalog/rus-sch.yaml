@@ -39,10 +39,9 @@ pieces:
   - { id: vd8x, tit: Итальянская полька,
       com: С. Рахманинов, src: BSO1981,
       org: rus, sty: cus, gnr: plk, ton: [dmi, dmj], frm: [var, cr5, acc], bss: stb, lvl: elb }
-  # p. 94
-  # - { id: a7md, tit: Осеннее утро,
-  #     com: Н. Горлов, src: BSO1981,
-  #     org: rus, sty: cus, gnr: pie, ton: ami, frm: [vo2, syn], bss: [frb, vo2], lvl: elb }
+  - { id: a7md, tit: Осеннее утро,
+      com: Н. Горлов, src: BSO1981,
+      org: rus, sty: cus, gnr: pie, ton: ami, frm: [vo2, syn], bss: [frb, vo2], lvl: elb }
   - { id: oow8, tit: Полька,
       com: А. Онегин, src: BSO1981,
       org: rus, sty: cus, gnr: plk, ton: [cmj, ami], frm: [var, cr5], bss: [frb, stb, cr5, syn], lvl: elb }
